@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Maquetación</title>
+	<link rel="icon" href="media/logo.png">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header id="header">
+		<img src="media/logo.png" alt="Logo Maquetación"/>
+		<div class="header">
+			<h1>Maquetacion Avanzada</h1>
+			<p class="subtitle">
+				que la clase te acompañe
+			</p>
+		</div>
+		<nav>
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li class="active"><a href="#">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="servicios.html">Servicios</a></li>
+				<li><a href="#footer">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<section>
+				<header>
+					<h1>Titulo</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, libero adipisci veritatis corrupti sequi laboriosam, qui, in voluptate eligendi saepe incidunt! Obcaecati ratione, voluptates a harum animi temporibus nesciunt, quidem.</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0685403760644!2d-58.37586840000002!3d-34.6024283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1577998007800!5m2!1ses-419!2sar" width="600" height="300" frameborder="0" allowfullscreen></iframe>
+				<embed src="media/documento.pdf" />
+				<div>
+					<ul>
+						<li>HTML
+							<meter value="70" min="0" max="100"></meter>
+						</li>
+						<li>CSS
+							<meter value="50" min="0" max="100"></meter>
+						</li>
+						<li>JS
+							<meter value="30" min="0" max="100"></meter>
+						</li>
+						<progress></progress>
+					</ul>
+				</div>
+				<footer>
+					<p><strong>Autor:</strong>Cristian Racedo
+					<br> <strong>Contacto:</strong><a href="mailto:Cristiandracedo@hotmail.com">Cristiandracedo@hotmail.com</a>
+					</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Titulo</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit repellendus ab voluptatem, recusandae sed sequi dolores eaque in, qui, quo omnis harum. Ullam sed ratione earum omnis quam minima, excepturi.</p>
+				<footer>
+					<p><strong>Autor:</strong>Cristian Racedo
+					<br> <strong>Contacto:</strong><a href="mailto:Cristiandracedo@hotmail.com">Cristiandracedo@hotmail.com</a>
+					</p>
+					<div>
+						<img src="media/logo.png" alt="" style="width:150px">
+						<img src="media/logo.svg" alt="" style="width:150px">
+
+						<svg width="300" height="300">
+							<rect width="50" height="10" 
+									x="10" y="30"
+									fill="blue" stroke="red"/>
+						</svg>
+					</div>
+				</footer>
+			</section>
+		</article>
+		<aside>
+			
+		</aside>
+	</main>
+	<footer id="footer">
+		<form 	action="mailto:CristianDRacedo@hotmail.com" 
+				method="post">
+			<label for="nombre">Nombre:</label>
+			<input 	type="text"
+					name="nombre"
+					placeholder="Nombre: Juan Perez" 
+			/>
+			<label for="correo">Correo:</label>
+			<input 	type="email"
+					name="correo" 
+					placeholder="Correo: J.Perez@mail.com" 
+			/>
+			<label for="celular">Celular:</label>
+			<input 	type="text"
+					name="celular"
+					placeholder="Tel: 11-1234-5678" 
+			/>
+			<label for="consulta">Consulta:</label>
+			<textarea name="consulta"></textarea>
+			<input 	type="submit"
+					value="Consultar" 
+			/>
+		</form>
+		<div class="social-media">
+			<a 	href="https://facebook.com" 
+				target="_blank">facebook</a>
+			<a 	href="https://twitter.com" 
+				target="_blank">twitter</a>
+			<a 	href="https://instagram.com" 
+				target="_blank">instagram</a>
+			<a href="https://api.whatsapp.com/send?phone=1123456789&text=%22Buenas,%20quisiera%20realizar%20una%20consulta%22">whatsapp</a>
+		</div>
+		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  	<script>
+  		$("#menu").click(function(){
+  			$(".menu").slideToggle();
+  		})
+  	</script>
+</body>
+</html>

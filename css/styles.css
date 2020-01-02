@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|Inconsolata|Raleway|Ubuntu&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin:0;
+	font-family: Raleway, Ubuntu, sans-serif;
+}
+
+#header, #footer, .menu, main, article, section, form{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#header,#footer,nav, #menu{
+	color:white;
+	background-color: rgba(50,50,150,.5);
+}
+
+#header{
+	flex-direction: row;
+	align-items: center;
+}
+
+#header img{
+	height: 80px;
+}
+
+#header .subtitle{
+	margin-top: -1.8rem;
+	padding-left: 4.25rem;
+}
+
+nav{
+	width:100%;
+}
+
+#menu{
+	font-size: 2rem;
+	width:50px;
+	height:50px;
+	border-radius: 5px;
+}
+
+.menu{
+	display:none;
+	list-style: none;
+	padding:0;
+}
+
+.menu li{
+	padding-left: 30%;
+}
+
+.menu a{
+	color:white;
+	text-decoration: none;
+}
+
+
+
+/* BOX-SIZING
+	Content-box:
+		Ancho Final => Width+Padding*2+Border*2;
+	Border-box:
+		Ancho Final = Width
+		Content-width => width-Padding*2-Border*2;
+*/
