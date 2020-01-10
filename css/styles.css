@@ -1,0 +1,96 @@
+body,#header,#footer,.menu,main{
+	margin:0;
+	border: 0;
+	padding:0;
+	font-family: century gothic, segoe ui, sans-serif;
+}
+
+a{
+	color:black;
+	text-decoration: none;
+}
+
+#header, #footer{
+	color:lightgrey;
+	background-color: #012;
+	padding:20px 0 0 0;
+}
+
+#header h1, #header p, #footer p{
+	text-align: center;
+	margin: 0;
+	padding:0;
+}
+
+nav{
+	color:darkgrey;
+	background-color: lightgrey;
+	text-align: right;
+	height: 50px;
+	padding:0 10px;
+	overflow: hidden;
+}
+
+
+.menu{
+	float:left;
+	list-style: none;
+}
+
+.menu li{
+	display:inline-block;
+	padding:0 10px;
+	margin:0 -5px;
+	line-height: 50px;
+}
+
+nav .social-media{
+	float:right;
+}
+
+main{
+	padding:10px;
+}
+
+article{
+	display: inline-block;
+	width:450px;
+	padding:0;
+	margin:auto;
+}
+
+footer .social-media{
+	background-color: lightgrey;
+	text-align: center;
+	height: 50px;
+}
+.social-media img{
+	height:30px;
+	padding:10px;
+	border-radius: 5px;
+}
+
+.social-media a:hover img, .menu li:hover, .active{
+	background-color: white;
+}
+
+#contacto,input,textarea,select{
+	width:400px;
+	margin:10px auto;
+	padding:5px;
+	resize: none;
+}
+
+textarea{
+	height:80px;
+}
+
+#contacto button{
+	padding:5px;
+	width:410px;
+	margin:0;
+}
+
+#footer{
+	padding:10px 0;
+}
