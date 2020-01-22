@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Imágenes</title><!--comentario HTML-->
+	<style type="text/css">
+		/*comentario css*/
+		body{
+			margin:0;
+			font-family: segoe ui, sans-serif;
+		}
+
+		header, nav, footer{
+			color:lightgrey;
+			background-color: #192168;
+			text-align: center;
+			padding-top:10px;
+			padding-bottom:5px;
+			/*Colores
+				NOMBRE 	- 144 colores
+				RGB		- rgb(valorR, valorG, valorB)
+							0-255
+				HEX		- #valor  
+							0-9a-f(RGB)*/
+		}
+
+		header h1,header p{
+			margin:-10px;
+		}
+		
+		a{
+			color:white;
+			text-decoration: none;
+		}
+
+		.menu{
+			padding:0;
+			background-color: darkblue;
+		}
+
+		.menu li{
+			display: inline;
+			padding: 0 5px;
+		}
+
+		.menu li:hover,.active{
+			background-color: lightblue;
+		}
+
+		main{
+			padding:10px;
+		}
+
+		div{
+			color:darkblue;
+			background-color: lightgrey;
+		}
+
+		div img{
+			width:300px;
+
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Trabajando con Imágenes</h1>
+		<p>Vectoriales y Mapa de Bits</p>
+	</header>
+	<nav>
+		<ul class="menu">
+			<li class="active">
+				<a href="#">inicio</a>
+			</li>
+			<li>
+				<a href="galeria.html">galeria</a>
+			</li>
+			<li>
+				<a href="https://facebook.com">facebook</a>
+			</li>
+			<!--A = Anchor => HIPERVINCULO 
+					
+					Externos /Rutas Absolutas
+					EJ:https://www.facebook.com
+					
+					Internos /Rutas Relativas
+					EJ:galeria.html
+					
+					Marcador /Ancla
+					EJ:#parrafo-x
+					<p id="parrafo-x">
+						parrafo con Marcador
+					</p>
+					-->
+		</ul>
+	</nav>
+	<main>
+		<article>
+			<h1>Imagenes Mapa de Bits</h1>
+			<p>Las imagenes mapa de bits o pixelares son aquellas que estan compuestas de puntos(pixeles) y poseen un tamaño definido.
+			Existen diferentes tipos de formatos, entre los cuales destacan:</p>
+			<ul>
+				<li>JPG (Joint Photographic Expert Group)</li>
+				<li>PNG (Portable Network Graphics)</li>
+				<li>GIF (Graphics Interchange Format)</li>
+			</ul>
+			<div style="overflow:hidden">
+				<img style="float:left" src="img/ih-greenhulk-03.jpg" alt="Hulk Verde - Tintas">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div>
+				<p><img src="img/dices.png" alt="Imagen PNG dados">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div>
+				<img src="img/love-666.gif" alt="Gif Animado love-666">
+			</div>
+		</article>
+	</main>
+	<footer>
+		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; compañia</p>
+	</footer>
+</body>
+</html>
