@@ -1,137 +1,155 @@
 /*Formato General del Sitio Web*/
 	body,#header,#footer,.menu,main,a{
-		margin:0;
+		margin: 0;
 		border: 0;
-		padding:0;
-		font-family: century gothic, segoe ui, sans-serif;
-		color:black;
+		padding: 0;
+		color: #012;
 		text-decoration: none;
+		font-family: century gothic, segoe ui, sans-serif;
 	}
 
 	main,article,section{
-		padding:8px auto;
+		padding: 8px auto;
+	}
+
+	hr{
+		border: 1px solid #eee;
 	}
 
 /*Encabezado y Pie de Pagina Principales*/
 	#header, #footer{
-		text-align: center;
-		color:#EEE;
+		padding: 10px 0 0 0;
+		color: lightgrey;
 		background-color: #012;
-		padding:10px 0 0 0;
+		text-align: center;
 	}
 
-	main, h1,h2,h3, header p, #footer p{
+	main, h1,h2,h3, header p, footer p{
 		text-align: center;
 		margin: 0;
-		padding:0 2.5%;
+		padding: 0 2.5%;
 	}
 
-	#footer{
-		padding:10px 0;
-	}
-
-	#footer p{
-		padding:10px;
+	#footer, #footer p{
+		padding: 10px 0;
 	}
 
 /*Barra de Navegacion y Redes sociales*/
 	nav{
-		color:darkgrey;
-		background-color:#EEE;
-		text-align: right;
-		padding:0 10px;
+		background-color: lightgrey;
+		padding: 0 15px;
 		overflow: hidden;
 	}
 
 	.menu{
-		float:left;
+		float: left;
 		list-style: none;
 	}
 	
 	.menu li{
-		display:inline-block;
-		padding:0 10px;
-		margin:0 -2.5px;
+		display: inline-block;
+		padding: 0 10px;
+		margin: 0;
 		line-height: 50px;
 	}
 	
 	nav .social-media{
-		float:right;
+		float: right;
 	}
 	
 	.social-media{
-		background-color:#EEE;
+		background-color: lightgrey;
 		text-align: center;
 		height: 50px;
 	}
 	
 	.social-media img{
-		height:30px;
-		padding:10px;
+		height: 30px;
+		padding: 10px;
 		opacity: .25;
 	}
 	
-	.social-media a:hover img, .menu li:hover, .active{
+	a:hover img, .menu li:hover, .active{
 		background-color: white;
+		border-radius: 10px 10px 0 0;
 		opacity: 1;
 	}
 	
 	.index{
 		list-style: none;
-		width:380px;
-		margin:-10px auto 10px;
-		border: .5px solid #012;
+		width: 380px;
+		margin: 0 auto 2.5%;
+		border: 0;
 		border-radius: 15px;
-		padding:12.5px;
+		box-shadow: 5px 5px 10px #ccc, 
+					2.5px 2.5px 10px #ccc inset;
+		padding: 12.5px;
 		text-align: left;
 	}
 
 	.index p{
-		margin:5px 0;
-		color:#EEE;
-		background-color: #012;
+		margin: 5px 0;
 		padding: 0 20px;
+		color: #eee;
+		background-color: #012;
 		font-size: 24px;
 		font-weight: bold;
 	}
 	
 	.index li{
-		padding:0 25px;
+		padding: 0 25px;
 	}
 
 	.index li:hover{
-		background-color: #EEE;
+		background-color: lightgrey;
+	}
+	
+	img.index-back{
+		float: right;
+		height: 30px;
+		margin: 0 20px;
+		padding: 10px;
+		opacity: .25;
 	}
 
 /*Contenido Contextualizado == Conceptos Generales*/
 	section header h1, header h2, header h3, section header p{
-		text-align: left;
-		border: .5px solid #012;
+		padding: 5px;
 		color: lightgrey;
 		background-color: #012;
+		text-align: left;
+	}
+
+	main article section{
+		padding: 10px;
 	}
 
 	section{
-		padding:10px auto;
+		padding: 10px auto;
 	}
 
-	section>p{
-		margin:12px auto;
+	section header > *{
+		padding-left: 10px;
+	}
+
+	section > p{
+		width: 95%;
+		margin: 12px auto;
 		text-align: justify;
-		width:95%;
 	}
 
 /*Contenido Independiente == Definiciones*/
 	main{
-		padding:2%;
+		padding: 2%;
 	}
 	
 	main article{
-		margin:8px auto;
-		border: .5px solid #012;
+		display: none;
+		margin: 8px auto;
 		border-radius: 15px;
 		padding: 0;
-		display:none;
+		box-shadow: 5px 5px 10px lightgrey, 
+					-.5px -.5px 10px lightgrey inset;
 	}
 
 	main article:target{
@@ -139,58 +157,74 @@
 	}
 
 	main header{
-		padding:5px 0;
+		padding: 5px 0;
+	}
+
+	main > article > header{
+		padding-left:90px;
 	}
 
 	section article{
 		display: inline-block;
-		margin:4px auto;
+		width: 362.5px;
+		margin: 4px auto;
 		border-radius: 10px;
-		padding:15px;
-		width:362.5px;
+		padding: 15px;		
+		background-color: #eee;
 		text-align: justify;
-		background-color:#EEE;
+		opacity: 0.8;
+	}
+
+	section article:hover{
+		opacity: 1;
 	}
 	
 	article h1{
-		padding:10px 2.5% 0;
+		padding: 10px 2.5% 0;
 	}
 
-	main article section{
-		padding:10px;
+	article img{
+		border-radius: 50%;
 	}
 
 /*Formulario de Contacto*/
 	#contacto,label,input,textarea,select{
-		font:bold 16px century gothic, segoe ui, sans-serif;
-		width:400px;
-		margin:5px auto;
+		width: 400px;
+		margin: 5px auto;
 		outline: none;
-		border:0;
+		border: 0;
 		border-radius: 10px;
-		padding:10px 5px;
+		padding: 10px 10px;
 		resize: none;
 		text-align: left;
+		font-weight: bold;	
+		font-size: 16px;	
+		font-family: century gothic, segoe ui, sans-serif;
+
 	}
 
 	textarea{
-		height:80px;
+		height: 80px;
 		margin-bottom: 0;
 		border-radius: 10px 10px 0 0;
 	}
 
 	#contacto button{
-		font:bold 16px century gothic, segoe ui, sans-serif;
-		margin:-5px auto 10px;
-		border: 2px solid #EEE;
+		width: 420px;
+		margin: -5px auto 10px;
+		border: 2px solid #ccc;
 		border-radius: 0 0 10px 10px;
-		padding:5px;
-		width:410px;
-		color:#012;
-		background-color:#EEE;
+		padding: 5px;
+		color: #012;
+		background-color: lightgrey;
+		font-weight: bold;	
+		font-size: 16px;	
+		font-family: century gothic, segoe ui, sans-serif;
 	}
 
 	#contacto button:hover{
-		color:#EEE;
+		color:#ccc;
 		background-color:#012;
 	}
+
+/*Desarrollado por Cristian Racedo*/
