@@ -64,14 +64,21 @@
 	}
 	
 	.social-media img{
-		height: 30px;
-		padding: 10px;
+		height: 20px;
+		padding: 15px;
 		opacity: .25;
 	}
 	
-	a:hover img, .menu li:hover, .active{
+	.menu li:hover, .active{
 		background-color: white;
 		border-radius: 10px 10px 0 0;
+		opacity: 1;
+	}
+
+	.social-media a:hover img{
+		height: 40px;
+		border-radius: 7.5px;
+		padding: 5px;
 		opacity: 1;
 	}
 	
@@ -144,16 +151,13 @@
 	}
 	
 	main article{
-		display: none;
+		overflow: hidden;
 		margin: 8px auto;
 		border-radius: 15px;
 		padding: 0;
 		box-shadow: 5px 5px 10px lightgrey, 
 					-.5px -.5px 10px lightgrey inset;
-	}
-
-	main article:target{
-		display: block;
+		opacity: 95%;
 	}
 
 	main header{
@@ -166,13 +170,13 @@
 
 	section article{
 		display: inline-block;
-		width: 362.5px;
+		width: 365px;
 		margin: 4px auto;
 		border-radius: 10px;
-		padding: 15px;		
+		padding: 10px;		
 		background-color: #eee;
 		text-align: justify;
-		opacity: 0.8;
+		opacity: 80%;
 	}
 
 	section article:hover{
@@ -188,32 +192,43 @@
 	}
 
 /*Formulario de Contacto*/
-	#contacto,label,input,textarea,select{
-		width: 400px;
+	#contacto{
+		width: 420px;
 		margin: 5px auto;
+	}
+
+	label,input,textarea,select{
+		width: 400px;
+		margin: -5px auto;
 		outline: none;
 		border: 0;
-		border-radius: 10px;
+		border-radius: 7.5px;
 		padding: 10px 10px;
 		resize: none;
 		text-align: left;
 		font-weight: bold;	
 		font-size: 16px;	
 		font-family: century gothic, segoe ui, sans-serif;
+	}
 
+	label{
+		display: block;
+		margin-left: -7.5px;
+		height: 25px;
+		line-height: 30px;
 	}
 
 	textarea{
 		height: 80px;
 		margin-bottom: 0;
-		border-radius: 10px 10px 0 0;
+		border-radius: 7.5px 7.5px 0 0;
 	}
 
 	#contacto button{
 		width: 420px;
 		margin: -5px auto 10px;
 		border: 2px solid #ccc;
-		border-radius: 0 0 10px 10px;
+		border-radius: 0 0 7.5px 7.5px;
 		padding: 5px;
 		color: #012;
 		background-color: lightgrey;
