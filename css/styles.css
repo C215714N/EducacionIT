@@ -151,6 +151,7 @@
 	}
 	
 	main article{
+		display: none;
 		overflow: hidden;
 		margin: 8px auto;
 		border-radius: 15px;
@@ -158,6 +159,10 @@
 		box-shadow: 5px 5px 10px lightgrey, 
 					-.5px -.5px 10px lightgrey inset;
 		opacity: 95%;
+	}
+
+	main article:target{
+		display: block;
 	}
 
 	main header{
@@ -181,6 +186,7 @@
 
 	section article:hover{
 		opacity: 1;
+		cursor: pointer;
 	}
 	
 	article h1{
