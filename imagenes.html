@@ -19,14 +19,16 @@
 			padding-right:5px;
 		}	
 
-		.menu li:hover, .active{
+		.menu li:hover, 
+		.active{
 			background-color: darkblue;
 		}
 
 		a{
 			color:white;
 			text-decoration: none;
-		}	
+		}
+
 	</style>
 </head>
 <body>
@@ -71,6 +73,30 @@
 		</div>
 	</main>
 	<footer>
+		<!--FORMULARIOS: son una herramienta que permite al usuario tener una interaccion real con el sitio.
+			Consulta (Query): 	Buscadores 
+			Registro: 			Inscripcion
+			Sesion:				Acceso
+			Contacto:			Consulta Web -->
+		<form action="contacto.php" method="POST">
+			<!--METHOD: Como se va a enviar la informacion del formulario y cual es la finalidad de la misma
+					GET:	Obtener informacion de un servidor/base de datos.
+							- Menos seguro (NO ENCRIPTA LOS DATOS)
+							- Informacion visible (BARRA DE DIRECCIONES)
+							- Admite hasta 8kb
+					POST:	Enviar datos a un servidor para ser almacenados o distribuidos
+							- Mas Seguro (ENCRIPTACION DE DATOS)
+							- No se Visualiza la informacion (PRIORIDAD A LOS DATOS) 
+							- Admite hasta 8mb-->
+			<label for="nombre">Nombre: </label><!--Etiquetas: Rotulos-->
+			<input type="text" name="nombre" id="nombre" /> <!--Campo de Formulario-->
+			<label for="email">Correo: </label>
+			<input type="email" name="email" id="email">
+			<label for="consulta">Consulta: </label>
+			<textarea name="consulta" id="consulta"></textarea> <!--Campo Multilinea-->
+			<input type="submit"/>
+			<button type="submit">ENVIAR</button>
+		</form>
 		<ul class="menu">
 			<li>
 				<a href="https://facebook.com" target="_blank">Facebook</a>
@@ -79,7 +105,7 @@
 				<a href="https://instagram.com" target="_blank">Instagram</a>
 			</li>
 			<li>
-				<a href="https://wa.me/1512345678" target="_blank">Whatsapp</a>
+				<a href="https://api.whatsapp.com/send?phone=541156591548&text=&source=&data=" target="_blank">Whatsapp</a>
 			</li>
 		</ul>
 		<p>&copy; todos los derechos reservados | 
