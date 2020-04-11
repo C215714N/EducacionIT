@@ -70,6 +70,15 @@
 			background-color: tomato;
 		}
 
+		.options input{
+			width:25px;
+		}
+
+		.options label{
+			border-left: 1px solid white;
+			padding: 5px;
+		}
+
 	</style>
 </head>
 <body>
@@ -157,20 +166,27 @@
 						placeholder="Ingrese Consulta: PRESUPUESTO"></textarea> <!--Campo Multilinea-->
 			<input class="reset" type="reset"/>
 			<button class="enviar" type="submit">ENVIAR</button>
-			<label for="genero">genero</label>
-			<br>
-			<label for="m">masculino</label>
-			<input 	type="radio" 
-					value="m" 
-					id="m" 
-					name="genero">
-			<label for="f">femenino</label> 
-			<input 	type="radio" 
-					value="f"
-					id="f" 
-					name="genero">
-			<label for="pnd">Prefiero no decirlo</label>
-			<input type="radio" value="pnd" id="pnd" name="genero">
+			<label for="genero">Genero</label>
+			<div class="options">
+				<label for="m">masculino</label>
+				<input 	type="radio" 
+						value="m" 
+						id="m" 
+						name="genero"
+				/>
+				<label for="f">femenino</label> 
+				<input 	type="radio" 
+						value="f"
+						id="f" 
+						name="genero"
+				/>
+				<label for="pnd">Prefiero no decirlo</label>
+				<input 	type="radio" 
+						value="pnd" 
+						id="pnd" 
+						name="genero" 
+				/>
+			</div>
 			<input type="checkbox">
 			<input type="checkbox">
 		</form>
