@@ -73,12 +73,31 @@ body, header, nav, footer{
 			padding: 5px;
 		}
 
-		table, tr, td{
+		caption, table, tr, td{
 			border:1px solid white;
 			border-collapse: collapse;
 			background-color: rgba(150, 198, 120, 0.5);
 		}
 
 		table{
+			margin: auto;
 			background-image: url(img/bg-purple-pattern.jpg);
+		}
+		/*table heading - table division*/
+
+		th,td{
+			width:120px;
+		}
+
+		.tablas td{
+			width:50px;
+			text-align: center;
+		}
+
+		iframe, video, audio{
+			display: block;
+			margin:auto;
+			width: 600px;
+			height: 300px;
+			border-radius: 15px;
 		}

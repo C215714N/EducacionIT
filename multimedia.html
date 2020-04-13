@@ -84,8 +84,7 @@
 					<tbody>
 						<tr>
 							<th>Mañana</th>
-							<td></td>
-							<td>x</td>
+							<td colspan="2"></td>
 							<td></td>
 							<td>x</td>
 							<td></td>
@@ -116,11 +115,91 @@
 						<td colspan="6">9</td>
 					</tfoot>
 				</table>
-				<footer></footer>
+				<hr>
+				<table class="tablas">
+					<caption>Modelo Tablas</caption>
+					<tr>
+						<td rowspan="2">11</td>
+						<td>12</td>
+						<td rowspan="2">13</td>
+						<td>14</td>
+					</tr>
+					<tr>
+						<td rowspan="2">21</td>
+						<td rowspan="2">22</td>
+					</tr>
+					<tr>
+						<td rowspan="2">31</td>
+						<td rowspan="2">32</td>
+					</tr>
+					<tr>
+						<td>41</td>
+						<td>42</td>
+					</tr>
+				</table>
+				<hr>
+				<table>
+					<thead>
+						<th>desarrollo</th>
+						<th>lenguaje</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3">FrontEnd</td>
+							<td>HTML</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+						</tr>
+						<tr>
+							<td>JS</td>
+						</tr>
+						<tr>
+							<td rowspan="3">BackEnd</td>
+							<td>SQL</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<td>JAVA</td>
+						</tr>
+					</tbody>
+				</table>
+				<footer><strong>Autor:</strong> Cristian Racedo</footer>
 			</section>
 			<section>
-				<header></header>
-				<p></p>
+				<header>
+					<h1>iFrame</h1>
+				</header>
+				<p>marco flotante es una etiqueta que permite el uso de contenido embebido y la carga asincronica del mismo.</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.48919826077065!2d-58.37606434152355!3d-34.602416634669645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1586810383136!5m2!1ses!2sar" 
+					width="600" 
+					height="300" 
+					frameborder="0"
+					allowfullscreen="" 
+					aria-hidden="false" 
+					tabindex="0"></iframe>
+					<hr>
+					<iframe 
+						src="https://www.youtube.com/embed/W3gPP7Es1r8" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen></iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/hTWKbfoikeg" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen></iframe>
+					<hr>
+					<video src="media/rhcp-californication.mp4" controls>
+						Lo sentimos, pero su navegador no es compatible con la etiqueta VIDEO.
+					</video>
+					<audio id="audio_1" src="media/crush_40-what_im_made_of.MP3" controls>
+						Lo sentimos, pero su navegador no es compatible con la etiqueta AUDIO.
+					</audio>
 				<footer></footer>
 			</section>
 			<section>
@@ -133,5 +212,8 @@
 	<footer>
 		
 	</footer>
+	<script>
+		document.getElementById('audio').play()
+	</script>
 </body>
 </html>
