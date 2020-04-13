@@ -1,20 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Multimedia</title>
+	<link rel="icon" href="img/css3.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header></header>
+	<header>
+		<h1>Elementos Multimedia</h1>
+	</header>
 	<nav>
-		<ul>
-			<li><a href="#">link 1</a></li>
-			<li><a href="#">link 2</a></li>
-			<li><a href="#">link 3</a></li>
-			<li><a href="#">link 4</a></li>
+		<ul class="menu">
+			<li><a href="index.html">Clase 1</a></li>
+			<li><a href="imagenes.html">Clase 2-3</a></li>
+			<li><a href="#">Clase Actual</a></li>
+			<li><a href="https://github.com/C215714N/EducacionIT/tree/html-lunes-15hs">GitHub</a></li>
 		</ul>
 	</nav>
-	<main></main>
-	<footer></footer>
+	<main>
+		<article>
+			<h1>Ultima Clase Fundamentos HTML</h1>
+			<section>
+				<header>
+					<h1>Tablas HTML</h1>
+				</header>
+				<p>Son elementos que permiten organizar la informacion de manera tabular y a diferencia de otros programas en HTML las tablas se diseñan por filas y celdas.</p>
+
+				<p>
+					texto1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					texto2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					texto3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					texto4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					texto5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					texto6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					texto7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					texto8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					texto9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+				</p>
+				<hr>
+				<div style="overflow: hidden">
+					<p style="float:left; background-color: navy; width:300px;">texto</p>
+					<p style="float:left; background-color: navy; width:300px;">texto</p>
+					<p style="float:left; background-color: navy; width:300px;">texto</p>
+				</div>
+				<hr>
+				<table>
+					<tr><!--FILA DE TABLA-->
+						<td><!--CELDA DE TABLA-->
+							Fila 1 Celda 1
+						</td>
+						<td>Fila 1 Celda 2</td>
+						<td>Fila 1 Celda 3</td>
+						<td>Fila 1 Celda 4</td>
+						<td>Fila 1 Celda 5</td>
+						<td>Fila 1 Celda 6</td>
+						<td>Fila 1 Celda 7</td>
+					</tr>
+					<tr><!--FILA DE TABLA-->
+						<td><!--CELDA DE TABLA-->
+							Fila 2 Celda 1
+						</td>
+						<td>Fila 2 Celda 2</td>
+						<td>Fila 2 Celda 3</td>
+						<td>Fila 2 Celda 4</td>
+						<td>Fila 2 Celda 5</td>
+						<td>Fila 2 Celda 6</td>
+						<td>Fila 2 Celda 7</td>
+					</tr>
+				</table>
+				<hr>
+				<table>
+					<thead><!--Cabecera-->
+						<th>Turno</th><!--Titulo-->
+						<th>Lunes</th>
+						<th>Martes</th>
+						<th>Miercoles</th>
+						<th>Jueves</th>
+						<th>Viernes</th>
+						<th>Sabado</th>
+						<th>Total</th>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Mañana</th>
+							<td></td>
+							<td>x</td>
+							<td></td>
+							<td>x</td>
+							<td></td>
+							<td></td>
+							<td rowspan="4">9</td>
+						</tr>
+						<tr>
+							<th>Tarde</th>
+							<td>x</td>
+							<td></td>
+							<td>x</td>
+							<td></td>
+							<td>x</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Noche</th>
+							<td>x</td>
+							<td>x</td>
+							<td></td>
+							<td>x</td>
+							<td>x</td>
+							<td></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th>Total</th>
+						<td colspan="6">9</td>
+					</tfoot>
+				</table>
+				<footer></footer>
+			</section>
+			<section>
+				<header></header>
+				<p></p>
+				<footer></footer>
+			</section>
+			<section>
+				<header></header>
+				<p></p>
+				<footer></footer>
+			</section>
+		</article>
+	</main>
+	<footer>
+		
+	</footer>
 </body>
 </html>
