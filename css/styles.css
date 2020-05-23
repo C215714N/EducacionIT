@@ -1,4 +1,8 @@
 /*Formato General del Sitio Web*/
+	html{
+		scroll-behavior: smooth;
+	}
+
 	body,#header,#footer,.menu,main,a{
 		margin: 0;
 		border: 0;
@@ -24,10 +28,10 @@
 		text-align: center;
 	}
 
-	main, h1,h2,h3, header p, footer p{
+	main, h1,h2, header p, footer p{
 		text-align: center;
 		margin: 0;
-		padding: 0 2.5%;
+		padding: 0 5%;
 	}
 
 	#footer, #footer p{
@@ -169,11 +173,11 @@
 		padding: 5px 0;
 	}
 
-	main > article > header{
+	article > header{
 		padding-left:90px;
 	}
 
-	section article{
+	.article{
 		display: inline-block;
 		width: 365px;
 		margin: 4px auto;
@@ -184,7 +188,7 @@
 		opacity: 80%;
 	}
 
-	section article:hover{
+	.article:hover{
 		opacity: 1;
 		cursor: pointer;
 	}
