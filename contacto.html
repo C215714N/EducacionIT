@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Formularios HTML</title>
@@ -48,6 +48,44 @@
 			padding:24px;
 			background-color: rgba(220,220,220,.5);
 			border-radius: 16px;
+		}
+
+		.spot{
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 16px;
+		}
+
+		#contacto{
+			width:420px;
+			padding:30px;
+			margin:auto;
+			text-align:left;
+			border:2px solid darkslateblue;
+		}
+
+		#contacto input,#contacto select,#contacto textarea{
+			width:420px;
+			border:0;
+			padding:0;
+			height: 30px;
+			line-height: 30px;
+			font-family: century gothic;
+		}
+		#contacto textarea{
+			height: 120px;
+			resize: none;
+		}
+		.send{
+			color:white;
+			background-color: darkslateblue;
+		}
+		.send:hover{
+			background-color: slateblue;
+		}
+		#contacto .option{
+			width:30px;
+
 		}
 	</style>
 </head>
@@ -106,19 +144,65 @@
 					<li>submit: ejecuta la accion predeterminada</li>
 				</ul>
 			</section>
+			<section>
+				<h1>Acciones y Metodos</h1>
+				<p>Cuando se valida un formulario, el proposito del mismo, es que la informacion sea enviada a un servidor y que este ultimo la procese para determinar que hacer con ella.
+					El atributo <strong>method</strong>
+				define como se va a trabajar con dicha informacion y admite <span class="spot">2</span> valores:
+				</p>
+				<ul>
+					<li>GET: se utiliza cuando necesitamos obtener informacion de un servidor, es un metodo poco seguro ya que no encripta los datos y admite hasta 8kb de informacion; esta ultima se puede visualizar en la barra de navegacion.</li>
+					<li>POST: se utiliza cuando los datos enviados al servidor son prioridad, por ende estos se encriptan y no se visualiza la informacion en otro lugar que no sean los respectivos campos; a diferencia del metodo anterior, este admite 8mb de informacion.</li>
+				</ul>
+			</section>
 		</article>
 	</main>
 	<footer id="footer"><!--Pie-->
-		<form id="contacto" action="mailto:cristiandracedo@hotmail.com" method="POST">
+		<form id="contacto" action="contacto.php" method="POST">
 			<label for="nombre">Nombre: </label>
-			<input type="text" name="nombre"/>
+			<input 
+				type="text" 
+				name="nombre"
+				placeholder="Ingrese su Nombre" 
+				required 
+			/>
 			<label for="email">Correo: </label>
-			<input type="email" name="email"/>
+			<input 
+				type="email" 
+				name="email"
+				placeholder="Ingrese su Correo" 
+				required 
+			/>
+			<label for="lenguaje">Lenguajes: </label>
+			<select name="lenguaje">
+				<option value="html">HTML</option>
+				<option value="css">CSS</option>
+				<option value="javascript">JS</option>
+			</select>
 			<label for="consulta">Consulta: </label>
-			<textarea name="consulta"></textarea>
-			<input type="submit"/>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta"
+				required
+			></textarea>
+			<input 
+				class="send" 
+				type="submit"
+				value="Realizar Consulta" />
+			<label for="acepto">
+				<input class="option" id="acepto" type="radio" name="terminos" value="true">
+				Acepto todas las bases y condiciones, sin derecho a replica o reclamo alguna.
+			</label>
+			<br/>
+			<label for="no-acepto">
+				<input class="option" id="no-acepto" type="radio" name="terminos" value="false">
+				Rechazo los terminos y condiciones del contrato
+			</label>
 		</form>
-		<p>&copy; Todos los derechos reservados
+		<p>
+			&copy; Todos los derechos reservados
 			<br>
 		Para mas informacion envia un mail a <a href="mailto:cristiandracedo@hotmail.com">CristianDracedo@hotmail.com</a>
 		</p>
