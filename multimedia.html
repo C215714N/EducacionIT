@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Multimedia</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header id="header">
+		<h1>Fundamentos HTML</h1>
+		<p class="subtitle">Tablas <span>&amp;</span> Contenido Multimedia</p>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li class="active"><a href="#">Multimedia</a></li>
+				<li><a href="https://github.com/c215714n/EducacionIT/tree/html-martes-19hs">GitHub</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<section>
+				<header>
+					<h1>Tablas</h1>
+				</header>
+				<p>
+					Las tablas nos permiten disponer la informacion de manera tabular, sin el inconveniente de perder la forma estructurada.
+					Al igual que en cualquier programa, las tablas en html se representan con Filas y columnas, pero a diferencia del resto, el navegador genera las mismas teniendo en cuenta el modelo de cajas, es decir que debemos crear un contenedor <strong>&lt;table&gt;</strong> y dentro del mismos vamos a indicar la cantidad de filas <strong>&lt;tr&gt; (table row)</strong>, por ultimo en cada fila deberemos indicar la cantidad de celdas que componen a la misma con la etiqueta <strong>&lt;td&gt; (table division)</strong>.
+				</p>
+				<table>
+					<tr>
+						<td>fila 1 celda 1</td>
+						<td>fila 1 celda 2</td>
+						<td>fila 1 celda 3</td>
+						<td>fila 1 celda 4</td>
+						<td>fila 1 celda 5</td>
+					</tr>
+					<tr>
+						<td>fila 2 celda 1</td>
+						<td>fila 2 celda 2</td>
+						<td>fila 2 celda 3</td>
+						<td>fila 2 celda 4</td>
+						<td>fila 2 celda 5</td>
+					</tr>
+					<tr>
+						<td>fila 3 celda 1</td>
+						<td>fila 3 celda 2</td>
+						<td>fila 3 celda 3</td>
+						<td>fila 3 celda 4</td>
+						<td>fila 3 celda 5</td>
+					</tr>
+				</table>
+				<p>HTML5 incorpora a tablas una nueva estructura semantica, permitiendo aplicar nuevas combinaciones a los estilos y dando mayor protagonismo al indexado de contenido por parte de los motores de busqueda.</p>
+				<ul>
+					<li><strong>THEAD</strong> Cabecera de tabla, contiene los titulos y su propio tipo de celda de titulo que es &lt;th&gt;</li>
+					<li><strong>TBODY</strong> Cuerpo de tabla, es la unica de las etiquetas semanticas que mantiene la estructura de &lt;tr&gt;&lt;td&gt;</li>
+					<li><strong>TFOOT</strong> Pie de tabla, es una parte optativa de la tabla, que contiene informacion complementaria a lo exhibido en el cuerpo</li>
+				</ul>
+				<table>
+					<caption>Rutina Semanal</caption>
+					<thead>
+						<th>Dia & Horario</th>
+						<th>Lunes</th>
+						<th>Martes</th>
+						<th>Miercoles</th>
+						<th>Jueves</th>
+						<th>Viernes</th>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Mañana</th>
+							<td>X</td>
+							<td>X</td>
+							<td>X</td>
+							<td>X</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Tarde</th>
+							<td></td>
+							<td>X</td>
+							<td></td>
+							<td></td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<th>Noche</th>
+							<td></td>
+							<td>X</td>
+							<td>X</td>
+							<td>X</td>
+							<td>X</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th>Total</th>
+						<td colspan="5">12</td>
+					</tfoot>
+				</table>
+				<table>
+					<caption>Tipos de Desarrolladores</caption>
+					<thead>
+						<th>Area</th>
+						<th>Lenguajes</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3">Front-End</td>
+							<td>HTML</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+						</tr>
+						<tr>
+							<td>JS</td>
+						</tr>
+						<tr>
+							<td rowspan="3">Back-End</td>
+							<td>SQL</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<td>JAVA</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section>
+				
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contacto" action="" method="">
+			<label for="nombre">Nombre: </label>
+			<input 
+				type="text" 
+				name="nombre"
+				required />
+			<label for="email">Correo: </label>
+			<input 
+				type="email" 
+				name="email"
+				required/>
+			<label for="consulta">Consulta: </label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required></textarea>
+			<button class="send">Realizar Consulta</button>
+		</form>
+		<div class="social">
+			<a href="">Fb</a>
+			<a href="">Tw</a>
+			<a href="">Ins</a>
+			<a href="">Ws</a>
+		</div>
+		<p>&copy; todos los reservados | Cristian Racedo &amp; compañia</p>
+	</footer>
+</body>
+</html>
