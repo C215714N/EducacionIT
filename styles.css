@@ -82,6 +82,9 @@
 	}
 	.send{
 		color:white;
+		padding:4px 16px;
+		border:none;
+		border-radius: 16px;
 		background-color: darkslateblue;
 	}
 	.send:hover{
@@ -106,4 +109,15 @@
 
 	th, td{
 		width:120px;
+	}
+/*Multimedia*/
+	iframe,video,audio{
+		display: block;
+		width:600px; /*1,7 > alto*/
+		border-radius: 16px;
+		margin:auto;
+	}
+
+	iframe,video{
+		height:352px;
 	}
