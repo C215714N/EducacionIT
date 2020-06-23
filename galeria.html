@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div>
+		<h1>Fundamentos Web</h1>
+		<p>HTML &amp; CSS</p>
+	</div>
+	<div>
+		<ul>
+			<li>
+				<!--Ruta Relativa / Interna-->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<!--Ruta Ancla / Marcador-->
+				<a href="#">Galeria</a>
+			</li>
+			<li>
+				<a href="contacto.html">Contacto</a>
+			</li>
+			<li>
+				<!--Ruta Absoluta / Externa-->
+				<a 
+					href="https://github.com/c215714n/educacionit/tree/html5-martes-19hs" 
+					target="_blank">
+						GitHub
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<p>
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non blanditiis dolore error quam veritatis eveniet molestias magni quis accusantium incidunt itaque ut, beatae minus, fugiat ab culpa iure eum. Natus.
+		</p>
+		<p>
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ad temporibus accusamus aspernatur voluptate, perspiciatis! Libero, voluptatum nam, aut incidunt reiciendis voluptas, soluta rerum, quaerat sapiente quas aspernatur illo totam!
+		</p>
+		<div style="text-align: center;">
+			<img style="width:300px;"
+			src="img/ih-greenhulk-01.jpg" 
+			alt="Dibujo Green Hulk (Lapices)"/>
+		</div>
+		<p style="background-color: lightgreen; overflow: hidden;">
+			<img style="width:300px; float:left;" 
+				src="img/ih-greenhulk-02.jpg" 
+				alt="Dibujo Green Hulk (Sombras)"/>
+			Existen diferentes cuestiones a tener en cuenta a la hora de agregar tanto imagenes como cualquier tipo de archivo a una pagina web. 
+			<br>
+			<strong>No se deben utilizar espacios en los nombres de los archivos</strong> ya que en el direecionamiento internet no existe dicho carater, y se ve reemplazado por el siguiente: 
+			<em>%20</em>. Por lo tanto si escribimos como nombre de una imagen <em>"foto gatito.jpg"</em> este sera reemplazado por <em>"foto%20gatito.jpg"</em>. Una solucion a este inconveniente es reemplazar los espacios por guiones, por ejemplo <em>"foto-gatito.jpg" o "foto_gatito.jpg"</em>.
+			<br>
+			<strong>Evitar la implementacion de nombres genericos o no planificados</strong> ya que dificulta al desarrollador la utilizacion de las mismas. Un problema de dejar los nombres predeterminados es la complejidad de su locacion, por ejemplo en caso de tener una fotografia llamada
+			<em>"2020122320091544.jpg"</em> conviene 
+			cambiar el nombre a algo relacionado con su contexto <em>"paloma-muelle.jpg"</em>
+			<br>
+			<strong>Utilizar solamente minusculas</strong> debido a que de esta manera reducimos el margen de errores a la ubicacion del archivo o el formato del mismo. No es lo mismo, para los navegadores, <em>"gatito-saltando.jpg", "Gatito-Saltando.jpg", ni "GATITO-SALTANDO.JPG"</em>
+		</p>
+		<p>
+			<img style="width:300px; float:left;"
+			src="img/ih-greenhulk-02.jpg" 
+			alt="Dibujo Green Hulk (Lapices)"/>
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eum velit suscipit maiores. Odit autem harum debitis libero non eos porro, reiciendis nam animi. Ab, perspiciatis officiis nam. Est, ad.
+		</p>
+	</div>
+</body>
+</html>
