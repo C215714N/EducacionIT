@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<!--Comentario HTML-->
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*Selectores Generales*/
+			body{
+				margin:0;
+				font-family:candara, courier new,sans-serif;	
+			}
+		/*Selectores Multiples*/
+			header, footer{
+				color:white;
+				background-color: slateblue;
+				padding:20px;
+			}
+		/*Selectores Especificos*/
+			h1, header p{
+				margin:-10px;
+			}
+			header p{
+				letter-spacing: 4px;
+			}
+		/*Selectores de CLASE*/
+			.menu li{
+				display: inline;
+				padding:0 10px;
+			}
+			.menu{
+				list-style: none;
+				margin:0;
+				padding:0;
+				text-align: center;
+				background-color: darkslateblue;
+			}
+			.menu a{
+				color:lightgrey;
+				text-decoration: none;
+			}
+		/*Selectores de ID*/
+			#muestra{
+				text-align: center;
+			}
+			#muestra img{
+				width:200px;
+			}
+		/*resto*/
+			main{
+				padding:10px;
+			}
+			main p{
+				overflow: hidden;
+			}
+	</style>
 </head>
 <body>
-	<div>
+	<header>
 		<h1>Fundamentos Web</h1>
 		<p>HTML &amp; CSS</p>
-	</div>
-	<div>
-		<ul>
+	</header>
+	<nav>
+		<ul class="menu">
 			<li>
 				<!--Ruta Relativa / Interna-->
 				<a href="index.html">Inicio</a>
 			</li>
-			<li>
+			<li class="active">
 				<!--Ruta Ancla / Marcador-->
 				<a href="#">Galeria</a>
 			</li>
@@ -31,8 +82,8 @@
 				</a>
 			</li>
 		</ul>
-	</div>
-	<div>
+	</nav>
+	<main>
 		<p>
 			
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non blanditiis dolore error quam veritatis eveniet molestias magni quis accusantium incidunt itaque ut, beatae minus, fugiat ab culpa iure eum. Natus.
@@ -41,10 +92,19 @@
 
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ad temporibus accusamus aspernatur voluptate, perspiciatis! Libero, voluptatum nam, aut incidunt reiciendis voluptas, soluta rerum, quaerat sapiente quas aspernatur illo totam!
 		</p>
-		<div style="text-align: center;">
-			<img style="width:300px;"
-			src="img/ih-greenhulk-01.jpg" 
-			alt="Dibujo Green Hulk (Lapices)"/>
+		<div id="muestra">
+			<img 
+				src="img/ih-greenhulk-01.jpg" 
+				alt="Dibujo Green Hulk (Lapices)"/>
+			<img 
+				src="img/ih-greenhulk-02.jpg" 
+				alt="Dibujo Green Hulk (Lapices)"/>
+			<img 
+				src="img/ih-greenhulk-03.jpg" 
+				alt="Dibujo Green Hulk (Lapices)"/>
+			<img 
+				src="img/ih-greenhulk-04.jpg" 
+				alt="Dibujo Green Hulk (Lapices)"/>
 		</div>
 		<p style="background-color: lightgreen; overflow: hidden;">
 			<img style="width:300px; float:left;" 
@@ -68,6 +128,9 @@
 
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eum velit suscipit maiores. Odit autem harum debitis libero non eos porro, reiciendis nam animi. Ab, perspiciatis officiis nam. Est, ad.
 		</p>
-	</div>
+	</main>
+	<footer>
+		<p>&copy; Todos los derechos Reservados | Cristián Racedo &amp; Compañia</p>
+	</footer>
 </body>
 </html>
