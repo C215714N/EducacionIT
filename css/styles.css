@@ -1,91 +1,73 @@
-/*Formato General del Sitio Web*/
-	html{
-		scroll-behavior: smooth;
-	}
-
-	body,#header,#footer,.menu,main,a{
+/*Formato General*/
+	html { scroll-behavior: smooth; }
+	body,
+	.menu,
+	a{
 		margin: 0;
-		border: 0;
 		padding: 0;
 		color: #012;
 		text-decoration: none;
 		font-family: century gothic, segoe ui, sans-serif;
 	}
-
-	main,article,section{
-		padding: 8px auto;
-	}
-
-	hr{
-		border: 1px solid #eee;
-	}
-
-/*Encabezado y Pie de Pagina Principales*/
-	#header, #footer{
+/*Encabezado y Pie de Pagina*/
+	#header, 
+	#footer{
 		padding: 10px 0 0 0;
 		color: lightgrey;
 		background-color: #012;
 		text-align: center;
 	}
-
-	main, h1,h2, header p, footer p{
-		text-align: center;
-		margin: 0;
-		padding: 0 5%;
-	}
-
-	#footer, #footer p{
+	#footer, 
+	#footer p{
 		padding: 10px 0;
 	}
-
-/*Barra de Navegacion y Redes sociales*/
+	#footer a{
+		color:#ccc;
+		font-weight: bold;
+	}
+/*Barra de Navegacion*/
 	nav{
 		background-color: lightgrey;
 		padding: 0 15px;
 		overflow: hidden;
 	}
-
 	.menu{
 		float: left;
 		list-style: none;
 	}
-	
 	.menu li{
 		display: inline-block;
 		padding: 0 10px;
 		margin: 0;
 		line-height: 50px;
 	}
-	
+/*Redes Sociales*/
 	nav .social-media{
 		float: right;
 	}
-	
 	.social-media{
 		background-color: lightgrey;
 		text-align: center;
 		height: 50px;
 	}
-	
 	.social-media img{
 		height: 20px;
 		padding: 15px;
 		opacity: .25;
 	}
-	
-	.menu li:hover, .active{
+	.menu li:hover, 
+	.active{
 		background-color: white;
 		border-radius: 10px 10px 0 0;
 		opacity: 1;
 	}
-
 	.social-media a:hover img{
 		height: 40px;
 		border-radius: 7.5px;
 		padding: 5px;
 		opacity: 1;
 	}
-	
+/*Tabla de Contenidos*/
 	.index{
 		list-style: none;
 		width: 380px;
@@ -97,7 +79,6 @@
 		padding: 12.5px;
 		text-align: left;
 	}
-
 	.index p{
 		margin: 5px 0;
 		padding: 0 20px;
@@ -106,7 +87,6 @@
 		font-size: 24px;
 		font-weight: bold;
 	}
-	
 	.index li{
 		padding: 0 25px;
 	}
@@ -114,7 +94,6 @@
 	.index li:hover{
 		background-color: lightgrey;
 	}
-	
 	img.index-back{
 		float: right;
 		height: 30px;
@@ -122,61 +101,61 @@
 		padding: 10px;
 		opacity: .25;
 	}
-
-/*Contenido Contextualizado == Conceptos Generales*/
-	section header h1, header h2, header h3, section header p{
+/*Contenido Principal*/
+	main, 
+	h1,
+	h2, 
+	.subtitle{
+		text-align: center;
+		margin: 0;
+	}
+	main,
+	article,
+	section{
+		padding: 8px auto;
+	}
+	section h1, 
+	section h2, 
+	main .subtitle{
 		padding: 5px;
 		color: lightgrey;
 		background-color: #012;
 		text-align: left;
 	}
-
 	main article section{
-		padding: 10px;
-	}
-
-	section{
 		padding: 10px auto;
 	}
-
-	section header > *{
+	section header h1, 
+	section header .subtitle{
 		padding-left: 10px;
 	}
-
 	section > p{
 		width: 95%;
 		margin: 12px auto;
 		text-align: justify;
 	}
-
-/*Contenido Independiente == Definiciones*/
 	main{
 		padding: 2%;
 	}
-	
 	main article{
 		display: none;
 		overflow: hidden;
 		margin: 8px auto;
 		border-radius: 15px;
-		padding: 0;
+		padding: 0 0 10px;
 		box-shadow: 5px 5px 10px lightgrey, 
 					-.5px -.5px 10px lightgrey inset;
 		opacity: 95%;
 	}
-
 	main article:target{
 		display: block;
 	}
-
 	main header{
 		padding: 5px 0;
 	}
-
 	article > header{
 		padding-left:90px;
 	}
-
 	.article{
 		display: inline-block;
 		width: 365px;
@@ -187,29 +166,28 @@
 		text-align: justify;
 		opacity: 80%;
 	}
-
 	.article:hover{
 		opacity: 1;
 		cursor: pointer;
 	}
-	
 	article h1{
 		padding: 10px 2.5% 0;
 	}
-
 	article img{
 		border-radius: 50%;
 	}
-
+	hr{ border: 1px solid #eee; }
 /*Formulario de Contacto*/
 	#contacto{
 		width: 420px;
 		margin: 5px auto;
 	}
-
-	label,input,textarea,select{
+	label,
+	input,
+	textarea,
+	select{
 		width: 400px;
-		margin: -5px auto;
+		margin: 5px auto;
 		outline: none;
 		border: 0;
 		border-radius: 7.5px;
@@ -220,20 +198,17 @@
 		font-size: 16px;	
 		font-family: century gothic, segoe ui, sans-serif;
 	}
-
 	label{
-		display: block;
+		display: none;
 		margin-left: -7.5px;
 		height: 25px;
 		line-height: 30px;
 	}
-
 	textarea{
 		height: 80px;
 		margin-bottom: 0;
 		border-radius: 7.5px 7.5px 0 0;
 	}
-
 	#contacto button{
 		width: 420px;
 		margin: -5px auto 10px;
@@ -246,10 +221,8 @@
 		font-size: 16px;	
 		font-family: century gothic, segoe ui, sans-serif;
 	}
-
 	#contacto button:hover{
 		color:#ccc;
 		background-color:#012;
 	}
-
 /*Desarrollado por Cristian Racedo*/
