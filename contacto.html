@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p class="subtitle">HTML &amp; CSS</p>
+		<nav>
+			<ul class="menu"> 
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li class="active"><a href="#footer">Contacto</a></li>
+				<li>
+					<a href="https://github.com/c215714n/educacionit/tree/html5-martes-19hs">
+						GitHub
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header>
+				<h1>Formularios HTML</h1>
+			</header>
+			<section>
+				<header>
+					<h1>¿Para que sirven?</h1>
+				</header>
+				<p>
+					Son una herramienta que permite la interaccion real, entre el cliente y el servidor, ya que a diferencia de otros elementos que tienen un comportamiento predeterminado, la informacion almacenada en estos dependera pura y exclusivamente del usuario.
+					
+					En la mayoria de los casos dependeremos de un lenguaje de backend para poder validar la informacion completada en los mismos, ya que los datos seran enviados a un <strong>servidor</strong> para que este determine que hacer con dicha informacion.
+				</p>
+				<div class="example">
+					<label for="">Nombre: </label>
+					<input type="text" />
+					<button>enviar</button>
+				</div>
+				<p>
+					Dentro de un formulario vamos a encontrar diferentes elementos, que los podemos clasificar en <strong>Etiquetas (label)</strong> y <strong>Campos (select - textarea - input)</strong>. El primero se utiliza para identificar que tipo de informacion debemos escribir o seleccionar del formulario y, por otro lado, el segundo es un conjunto de elementos de diferente tipo que nos permite completar con datos o seleccionar informacion previamente establecida.
+				</p>
+				<ul class="example">
+					<li>
+						<input type="text"/> Input TEXTO
+					</li>
+					<li>
+						<input type="number"/> Input NUMERO
+					</li>
+					<li>
+						<input type="date"/> input FECHA
+					</li>
+					<li>
+						<input type="email"> input CORREO
+					</li>
+					<li>
+						<input type="password"> input CONTRASEÑA
+					</li>
+					<li>
+						<input type="radio"/> opcion UNICA
+					</li>
+					<li>
+						<input type="checkbox"> opcion MULTIPLE
+					</li>
+					<li>
+						<input type="reset">
+					</li>
+					<li>
+						<input type="submit">
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como funcionan?</h1>
+				</header>
+				<p>
+					Para poder enviar un formulario existen dos atributos fundamentales, que le indican al navegador que se debe hacer y de que manera, estos son <em>action</em> y <em>method</em>. Para saber que valor debemos utilizar, necesitamos tener en cuenta el tipo de formulario que vamos a implementar en nuestra pagina.
+				</p>
+				<ul class="example">
+					<li>Buscador (Consulta Query)</li>
+					<li>Inscripcion (Registro)</li>
+					<li>Acceso (Inicio Sesion)</li>
+					<li>Consulta Web (Contacto)</li>
+				</ul>
+				<p>
+					Antiguamente, antes de la llegada de la banda ancha, era comun que los usuarios utilizaran aplicaciones de correo para descargar el mismo en las computadoras y por lo tanto los formularios antiguos utilizaban <em>action="mailto:cristiandracedo@hotmail.com"</em>, pero debido a que hoy en dia esto es poco impractico, se utiliza un script en <em>lenguaje de servidor</em>. Por otro lado, exiten dos valores posibles para el <em>method</em> que se caracterizan por lo siguiente:
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET</strong>
+						<ul>
+							<li>Metodo menos seguro (No encripta los datos enviados)</li>
+							<li>Se implementa cuando la respuesta es lo mas importante y no tanto los datos</li>
+							<li>La informacion es accesible en todo momento</li>
+							<li>Admite hasta 8kb</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST</strong>
+						<ul>
+							<li>Metodo mas seguro (Cifra los datos al enviarse)</li>
+							<li>La informacion no es accesible directamente desde el navegador</li>
+							<li>Los datos enviados son la prioridad y no tanto la respuesta (que puede o no existir)</li>
+							<li>Admite hasta 8Mb</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>
