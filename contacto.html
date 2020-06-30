@@ -113,7 +113,24 @@
 		</article>
 	</main>
 	<footer id="footer">
-		
+		<form id="contact" action="mailto:cristiandracedo@hotmail.com" method="POST">
+			<label for="nombre">Nombre: </label>
+			<input 
+				type="text" 
+				name="nombre"
+			/>
+			<label for="email">Correo: </label>
+			<input 
+				type="email"
+				name="email" 
+			/>
+			<label for="consulta">Consulta: </label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200"></textarea>
+			<input type="submit">
+		</form>
 	</footer>
 </body>
 </html>
