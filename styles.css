@@ -1,0 +1,87 @@
+	/*Cabecera*/
+		body{
+			margin: 0;
+			font-family: candara, sans-serif;
+		}
+		#header, #footer{
+			padding:20px;
+			color:#ddd; /*RGB*/
+			background-color: darkslateblue;
+		}
+		header h1, .subtitle{
+			margin: -10px;
+			text-align: center;
+		}
+	/*Navegacion*/
+		.menu{
+			margin-bottom: 10px;
+			padding:0;
+			list-style: none;
+			background-color: slateblue;
+			border-radius: 5px;
+			text-align: center;
+		}
+		.menu li{
+			display: inline-block;
+			width:80px;
+			line-height: 30px;
+		}
+		.menu a{
+			color: white;
+			text-decoration:none;
+		}
+		.active, .menu li:hover{
+			background-color: mediumslateblue;
+		}
+	/*Cuerpo Principal*/
+		main, article, section{
+			margin:10px;
+			padding:10px;
+			border-radius: 10px;
+			background-color: rgba(210, 200, 220, 0.5);
+		}
+		.example{
+			padding:15px;
+			color:white;
+			background-color: #333;
+			list-style: none;
+		}
+	/*Formulario*/
+		#contact,
+		#contact input,
+		#contact textarea,
+		#contact select{
+			width: 400px;
+			margin: auto;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			line-height: 20px;
+			resize: none;
+		}
+		.send{
+			color:white;
+			background-color: slateblue;
+		}
+		.send:hover{
+			background-color: mediumslateblue;
+		}
+		/*
+		#header{color:blue;}/*identificador unico (solamente una id por etiqueta / no se debe repetir)
+		
+		.header{color:green;}/*identificador grupal (pueden existir diferentes etiquetas que sean de la misma clase)
+		
+		article header{color:red;} /*selector especifico (afecta a los elementos que cumplen con los requisitos)
+		
+		header{color:white;} /*selector general (es el ultimo en la escala jerarquica de estilos)
+		*/
+
+	/*Tablas*/
+	table, tr, td{
+		background-color: rgba(180, 180, 240, 0.5);
+	}
+	
+	th, td{
+		width:80px;
+		padding:5px;
+	}

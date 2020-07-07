@@ -3,76 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
-	<style>
-	/*Cabecera*/
-		body{
-			margin: 0;
-			font-family: candara, sans-serif;
-		}
-		#header, #footer{
-			padding:20px;
-			color:#ddd; /*RGB*/
-			background-color: darkslateblue;
-		}
-		header h1, .subtitle{
-			margin: -10px;
-			text-align: center;
-		}
-	/*Navegacion*/
-		.menu{
-			margin-bottom: 10px;
-			padding:0;
-			list-style: none;
-			background-color: slateblue;
-			border-radius: 5px;
-			text-align: center;
-		}
-		.menu li{
-			display: inline-block;
-			width:80px;
-			line-height: 30px;
-		}
-		.menu a{
-			color: white;
-			text-decoration:none;
-		}
-		.active, .menu li:hover{
-			background-color: mediumslateblue;
-		}
-	/*Cuerpo Principal*/
-		main, article, section{
-			margin:10px;
-			padding:10px;
-			border-radius: 10px;
-			background-color: rgba(210, 200, 220, 0.5);
-		}
-		.example{
-			padding:15px;
-			color:white;
-			background-color: #333;
-			list-style: none;
-		}
-	/*Formulario*/
-		#contact,
-		#contact input,
-		#contact textarea,
-		#contact select{
-			width: 400px;
-			margin: auto;
-			padding: 0;
-			border: 0;
-			outline: 0;
-			line-height: 20px;
-			resize: none;
-		}
-		.send{
-			color:white;
-			background-color: slateblue;
-		}
-		.send:hover{
-			background-color: mediumslateblue;
-		}
-	</style>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -181,8 +112,84 @@
 				</ul>
 			</section>
 		</article>
+		<hr/>
+		<article>
+			<header>
+				<h1>Tablas HTML</h1>
+			</header>
+			<section>
+				<header>
+					<h1>¿Que son?</h1>
+				</header>
+				<p>
+					
+					Son elementos que permiten <em>organizar la informacion de manera tabular</em>, y al igual que en cualquier otro ambito, estas se componen de <strong>filas</strong> y <strong>columnas</strong>, pero no funcionan de la misma que en el resto de los programas que las utilizan.
+
+					Las tablas en HTML respetan la estructura de cajas, utilizando como base las siguientes etiquetas: <strong>&lt;table&gt; - &lt;tr&gt; - &lt;td&gt;</strong> de forma tal que debemos utilizar un contenedor <em>TABLE</em> donde insertaremos el contenido, por cada fila debemos utilizar un contenedor <em>TR (Table Row)</em> para indicar donde deben alojarse las celdas, las cuales estaran marcadas con la etiqueta de contenido <em>TD (Table Division)</em>.
+				</p>
+				<table class="example">
+					<tr>
+						<td>A1</td>
+						<td>A2</td>
+						<td>A3</td>
+					</tr>
+					<tr>
+						<td>B1</td>
+						<td>B2</td>
+						<td>B3</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<header>
+					<h1>¿Nuevo paradigma?</h1>
+				</header>
+				<p>
+					
+					A partir de la standarizacion de HTML5, se incorporaron a estructura clasica de las tablas etiquetas con carga semantica. La razon por la que se implemento esto, fue para redefinir y reforzar la estructura y el contenido de las mismas, por un lado para mejorar la busqueda de contenidos por parte de los motores de busqueda y para facilitar el diseño de las mismas a los desarrolladores.
+					<br>
+					<strong>&lt;thead&gt;</strong> Cabecera de tabla que reemplaza a la primer fila y contiene los titulos de las columnas, en su interior reemplazamos las etiquetas <strong>&lt;td&gt;</strong> por etiquetas de encabezado <strong>&lt;th&gt;</strong>
+					<br>
+					<strong>&lt;tbody&gt;</strong> Cuerpo de Tabla, es la unica instancia donde se sigue utilizando la estructura clasica para los datos, pero contenida.
+					<br>
+					<strong>&lt;tfoot&gt;</strong> Pie de Tabla, etiqueta opcional que complementa la informacion desplegada en el cuerpo de la tabla, generalmente se suelen colocar detalles o totales.
+				</p>
+				<table class="example">
+					<thead>
+						<th>Producto</th>
+						<th>Precio</th>
+						<th>Cantidad</th>
+						<th>Total</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Teclado</td>
+							<td>800</td>
+							<td>2</td>
+							<td>1600</td>
+						</tr>
+						<tr>
+							<td>Monitor</td>
+							<td>7500</td>
+							<td>3</td>
+							<td>22500</td>
+						</tr>
+						<tr>
+							<td>Gabinete</td>
+							<td>3500</td>
+							<td>1</td>
+							<td>3500</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th colspan="3">Total</th>
+						<td>27600</td>
+					</tfoot>
+				</table>
+			</section>
+		</article>
 	</main>
-	<footer id="footer">
+	<footer style="color:blue;" id="footer">
 		<form id="contact" action="contacto.php" method="POST">
 			<label for="nombre">Nombre: </label>
 			<input 
