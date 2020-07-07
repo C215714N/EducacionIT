@@ -1,0 +1,66 @@
+/*Reglas Generales*/
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,100&display=swap');
+	*{
+		box-sizing: border-box;
+		font-family: Raleway, century gothic, segoe ui, sans-serif;
+		/*	CONTENT-BOX
+				tamaño final => width + padding + border
+				width:300px; (contenido)
+				padding:20px; (izq y der)
+				border: 5px solid black; (izq y der)
+				tamaño final = 350px
+				contenido:300px;
+			BORDER-BOX
+				tamaño final => width
+				contenido => width - padding - border
+				width:300px; (total)
+				padding:20px; (izq y der)
+				border: 5px solid black; (izq y der)
+				tamaño final:300px;
+				contenido:250px;
+		*/
+	}
+	
+/*Selectores ID (Maxima prioridad)*/
+	#header, #footer{
+		color:#ccc; /*HEX (#RRGGBB) - 16.777.216 colores*/
+		background-color: darkslateblue;/*140 colores*/
+		padding:2rem;
+	}
+/*Selectores CLASE*/
+	.header{
+		margin:1rem -1rem;
+		padding:1rem 2rem;
+		color:#ccc;
+		background-color: darkslateblue;
+	}
+	.menu{
+		list-style: none;
+		text-align: center;
+		padding:0;
+		background-color: slateblue;
+	}
+/*Selectores de Etiquetas*/
+	.header *{
+		margin:0;
+	}
+	.menu li{
+		display:inline-block;
+		width:80px;
+		line-height: 30px;
+	}
+	.menu a{
+		color:#ddd;
+		text-decoration: none;
+	}
+
+	article{
+		text-align: center;
+	}
+
+	section {
+		text-align: left;
+		display: inline-block;
+		width:400px;
+		margin:0 1rem;
+	}
