@@ -78,10 +78,28 @@
 
 	/*Tablas*/
 	table, tr, td{
+		margin:10px auto;
 		background-color: rgba(180, 180, 240, 0.5);
+	}
+
+	caption{
+		background-color: #333;
+		border-radius: 15px 15px 0 0; /*tl tr br bl*/
+		/*t ="top" r="right" b="bottom" l="left"*/
 	}
 	
 	th, td{
 		width:80px;
 		padding:5px;
 	}
+	/*Multimedia*/
+		iframe, video, audio{
+			width:380px;
+			height: 240px;
+			border-radius: 15px;
+		}
+
+		#footer iframe{
+			display: block;
+			margin:16px auto;
+		}
