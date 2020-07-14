@@ -30,21 +30,35 @@
 	#header, #footer{
 		color:#ccc; /*HEX (#RRGGBB) - 16.777.216 colores*/
 		background-color: darkslateblue;/*140 colores*/
+		background-image: url(../assets/bg-xl-header.png);
+		background-size: cover;
+		background-position: bottom center;
+		background-repeat: no-repeat;
 		padding:2rem;
 		border-radius: .5rem; /*tl tr br bl*/
 
 	}
 	#header{
 		overflow: hidden;
+		background-position: top center;
+		text-transform: capitalize;
 	}
 	#header .header{
 		float:left;
+		margin:0;
+		background-color: transparent;
 	}
 	.header{
 		margin:1rem -1rem;
 		padding:1rem 2rem;
 		color:#ccc;
+		font-size: 1.2rem;
 		background-color: darkslateblue;
+		font-variant: small-caps;
+	}
+	#footer{
+		text-align: center;
+		margin-top: 1rem;
 	}
 /*Navegacion 
 	Selectores CLASE*/
@@ -78,13 +92,16 @@
 /*Contenido Principal 
 	Selectores de Etiquetas*/
 	article{
-		text-align: center;
+		text-align: center;	
+		box-shadow: 1px 1px 5px darkslateblue;
+		border-radius: 0 0 1rem 1rem;
 	}
 	section {
 		text-align: left;
 		display: inline-block;
 		width:400px;
 		margin:0 1rem;
+		border-top: 1px solid darkslateblue;
 	}
 /*Formulario de Contacto*/
 	#contacto{
@@ -92,7 +109,7 @@
 		width:40%;
 		min-width: 300px;
 		max-width: 700px;
-		margin:0 1rem;
+		margin:0 1rem 1rem; /*top right bottom left*/
 		overflow: hidden;
 		text-align: left;
 	}
@@ -118,11 +135,33 @@
 /*Mapa*/
 	#footer iframe{
 		border-radius: .5rem;
-		width:450px;
-		height:300px;
+		width:40%;
+		min-width: 300px;
+		max-width: 700px;
+		height: 250px;
+		border:none;
 	}
-/*Pie de Pagina*/
-	#footer{
-		text-align: center;
+/*Redes Sociales*/
+	.social{
+		margin: 1rem auto;
 	}
+	.social a{
+		display:inline-block;
+		width:64px;
+		height: 64px;
+		background-size: 32px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.social a:hover{background-size: 64px}
+	.facebook	{ 	background-image: url(../assets/facebook.svg)	}
+	.instagram	{ 	background-image: url(../assets/instagram.svg)	}
+	.whatsapp	{	background-image: url(../assets/whatsapp.svg)	}
+	/*FUncionalidad*/
+		.menu{
+			display: none;
+		}
+		.activado{
+			display: block;
+		}
 /*Autor: Cristian Racedo*/
