@@ -20,27 +20,46 @@
 				contenido:250px;
 		*/
 	}
-	
-/*Selectores ID (Maxima prioridad)*/
+	body{
+		margin:0;
+		padding:1rem;
+		background-color: lightgrey;
+	}
+/*Cabecera y Pie de Pagina 
+	Selectores ID (Maxima prioridad)*/
 	#header, #footer{
 		color:#ccc; /*HEX (#RRGGBB) - 16.777.216 colores*/
 		background-color: darkslateblue;/*140 colores*/
 		padding:2rem;
+		border-radius: .5rem; /*tl tr br bl*/
+
 	}
-/*Selectores CLASE*/
+	#header{
+		overflow: hidden;
+	}
+	#header .header{
+		float:left;
+	}
 	.header{
 		margin:1rem -1rem;
 		padding:1rem 2rem;
 		color:#ccc;
 		background-color: darkslateblue;
 	}
+/*Navegacion 
+	Selectores CLASE*/
 	.menu{
+		float: right;
+		width:40%;
+		min-width:100px; 
+		max-width:900px;
 		list-style: none;
 		text-align: center;
 		padding:0;
+		border-radius: 5rem;
 		background-color: slateblue;
 	}
-/*Selectores de Etiquetas*/
+
 	.header *{
 		margin:0;
 	}
@@ -53,14 +72,57 @@
 		color:#ddd;
 		text-decoration: none;
 	}
-
+	.menu li:hover{
+		background-color: mediumslateblue;
+	}
+/*Contenido Principal 
+	Selectores de Etiquetas*/
 	article{
 		text-align: center;
 	}
-
 	section {
 		text-align: left;
 		display: inline-block;
 		width:400px;
 		margin:0 1rem;
 	}
+/*Formulario de Contacto*/
+	#contacto{
+		display: inline-block;
+		width:40%;
+		min-width: 300px;
+		max-width: 700px;
+		margin:0 1rem;
+		overflow: hidden;
+		text-align: left;
+	}
+	#contacto input,
+	#contacto textarea,
+	#contacto select{
+		width:100%;
+	}
+	#contacto textarea{
+		height: 5rem;
+	}
+	#contacto button{
+		float: right;
+		padding:.2rem .5rem;
+		color:#ccc;
+		border:1px solid slateblue;
+		background-color: slateblue;
+	}
+	#contacto button:hover{
+		cursor: pointer;
+		background-color: mediumslateblue;
+	}
+/*Mapa*/
+	#footer iframe{
+		border-radius: .5rem;
+		width:450px;
+		height:300px;
+	}
+/*Pie de Pagina*/
+	#footer{
+		text-align: center;
+	}
+/*Autor: Cristian Racedo*/
