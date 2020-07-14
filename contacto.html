@@ -258,9 +258,10 @@
 				<audio src="media/live-learn.mp3" controls>	
 					Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO.	
 				</audio>
-				<video src="media/californication.mp4" controls>
+				<video id="miVideo" src="media/californication.mp4" controls>
 					Lo sentimos, pero tu navegador NO es compatible con el elemento VIDEO.
 				</video>
+				<button id="playVideo">REPRODUCIR</button>
 			</section>
 		</article>
 	</main>
@@ -298,5 +299,11 @@
 			tabindex="0">
 		</iframe>
 	</footer>
+	<script type="text/javascript">
+		document.querySelector('#playVideo').addEventListener(
+			'click', () => 
+				document.querySelector('#miVideo').play()
+	)
+	</script>
 </body>
 </html>
