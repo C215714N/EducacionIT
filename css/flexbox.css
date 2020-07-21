@@ -1,0 +1,62 @@
+*{
+	box-sizing: border-box;
+	font-family: century gothic, sans-serif;
+}
+body{
+	margin:1rem;
+}
+#header,
+#footer,
+#contacto,
+.menu,
+article{
+	display: flex;
+	padding:1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+/*Cabecera de Pagina*/
+#header{
+	justify-content: space-between;
+}
+#header,
+#footer{
+	color:#ccc;
+	background-color:#331265;
+}
+.header,
+nav{
+	align-items: flex-start;
+}
+#menu,
+.menu{
+	margin:0;
+	background-color: darkslateblue;
+}
+.menu li{
+	width:125px;
+	line-height: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu a{
+	color:white;
+	text-decoration: none;
+}
+.menu a:hover{
+	font-size: 1.25rem;
+}
+/*Pie de Pagina*/
+#contacto, 
+#footer iframe{
+	width:100%;
+	margin:1rem;
+	padding:0;
+	max-width: 600px;
+	flex-direction: column;
+}
+#footer p{
+	width:100%;
+	text-align: center
+}
