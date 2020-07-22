@@ -34,27 +34,153 @@
 			<!--SECTION: Contenido Contextualizado (Funciona en su contexto)-->
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Tema 1: Contenido Multimedia</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					Con la llegada de HTML5 se incorporaron <span>2</span> nuevas etiquetas, estas son 
+					<strong> AUDIO </strong> y 
+					<strong> VIDEO </strong>, permitiendo a los navegadores la reproduccion de contenido multimedia de forma nativa sin necesidad de utilizar 
+					<em> plugins de terceros </em> como FLASH.
+					Los formatos soportados por los navegadores son 
+					<em> .mp3, .wav, .ogg</em> en el caso del elemento 
+					<strong> AUDIO </strong> y
+					<em> .mp4, .avi, .ogv</em> en el caso del elemento
+					<strong> VIDEO </strong>
+				</p>
+				<div class="example">
+					<audio controls>
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/californication.avi">
+						<source src="assets/media/californication.mp4">
+						Lo sentimos, pero su navegador NO es compatible con el elemento	AUDIO.
+					</audio>
+					<video controls>
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/californication.avi">
+						<source src="assets/media/californication.mp4">
+						Lo sentimos, pero su navegador NO es compatible con el elemento	VIDEO.
+					</video>
+					<video id="videoTag">
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/californication.avi">
+						<source src="assets/media/californication.mp4">
+						Lo sentimos, pero su navegador NO es compatible con el elemento	VIDEO.
+					</video>
+					<button id="videoControl">&times;</button>
+				</div>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Tema 2: Elementos Estadisticos</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					Al igual que los elementos anteriores, se incorporaron en HTML5 dos nuevas etiquetas, que permiten llevar un control a nivel estadistico.
+					Por un lado tenemos 
+					<strong> PROGRESS </strong>
+					que se utiliza para  
+					<em> indicar una instancia (avance) </em> 
+					de una tarea que aun no ha finalizado.
+					Por otro lado se encuentra
+					<strong> METER </strong>
+					que sirve para 
+					<em> evaludar los estados (Comparar)</em> de una tarea que ya fue finalizada, y por consecuente sus valores no pueden ser modificados
+				</p>
+				<ul class="example">
+					<li> Progress
+						<ul>
+							<li>
+							Sin Value
+							<progress 
+								id="pTag"
+								min="0"
+								max="100">
+							</progress>
+							<input 
+								id="pRange" 
+								type="number"
+								min="0"
+								max="100" 
+							/>
+						</li>
+						<li>
+							Con Value
+							<progress 
+								min="0"
+								value="20"
+								max="100">
+							</progress>
+						</li>
+						</ul>
+					</li>
+					<li>
+						Meter
+						<ul>
+							<li>
+								VALUE* <= LOW <= HIGH <= OPTIMUM
+ 								<meter
+									min="0"
+									value="30"
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+							</li>
+							<li>
+								LOW <= VALUE* <= HIGH <= OPTIMUM
+								<meter
+									min="0"
+									value="60"
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+							</li>
+							<li>
+								LOW <= HIGH <= VALUE* <= OPTIMUM
+								<meter
+									min="0"
+									value="90"
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+							</li>
+						</ul>
+					</li>
+				</ul>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Tema 3: API's de DIBUJO</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					Unas de las ultimas incorporaciones de los navegadores, son las API de dibujo, a las que podemos acceder utilizando las etiquetas 
+					<strong> SVG </strong>
+					para la crecion de graficos vectoriales y 
+					<strong> CANVAS </strong> para la creacion de mapa de bits. Debemos tener en cuenta que al trabajar en un editor de codigo con estos elementos necesitaremos implementar codigo 
+					<em> XML (svg)</em> y 
+					<em> JS (canvas) </em>.
+				</p>
+				<svg style="border:1px solid black; width:200px; height:200px">
+					<rect 
+						x="10" y="10" 
+						width="50" height="50" 
+						fill="tomato"
+					/>
+					<circle r="25" 
+						cx="60" cy="60" 
+						fill="rgba(30, 80, 150, .5)"/>
+					<text x="10" y="100" fill="transparent" stroke="black" stroke-width="1">
+						SVG
+					</text>
+				</svg>
+				<canvas id="jsCanvas" width="200" height="200" style="border:1px solid black;"></canvas>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
 				</footer>

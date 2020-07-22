@@ -1,2 +1,13 @@
 /*Maquetado Avanzado*/
+
+	/*Compatibilidad Meter*/
+		meter::-webkit-meter-optimum-value{
+			background-color:darkblue;
+		}
+		meter::-webkit-meter-suboptimum-value{
+			background-color: limegreen;
+		}
+		meter::-webkit-meter-even-less-good-value{
+			background: tomato;
+		}
 /*Autor: Cristian Racedo*/
