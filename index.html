@@ -46,13 +46,13 @@
 				<li class="active"><a href="#">Inicio</a></li>
 				<li><a href="galeria.html">Galeria</a></li>				
 				<li><a href="#contacto">Contacto</a></li>				
-				<li><a href="servicios.html">Servicios</a></li>			
+				<li><a href="https://github.com/C215714N/EducacionIT/tree/fundamentos-HTML" target="_blank">Repositorio</a></li>			
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<ul class="index">
-			<p>Tabla de Contenidos</p>
+			<h2>Tabla de Contenidos</h2>
 			<li><a href="#desarrolladores">Tipos de Desarrolladores</a></li>
 			<li><a href="#requerimientos">Requerimientos de un Sitio Web</a></li>
 			<li><a href="#html">Lenguaje de Marcas de Hipertexto</a></li>
@@ -319,7 +319,8 @@
 					<h2>¿Que es Estructural?</h2>
 					<p> 
 						<strong>El marcado estructural </strong>
-						describe el propósito del texto, no define cómo se verá el elemento, pero la mayoría de los navegadores web han estandarizado el formato de los elementos. <strong>Por ejemplo: &lt;h1&gt;</strong>...<strong>&lt;/h1&gt;</strong> define al Texto como un encabezado de Primer Nivel.
+						describe el propósito del texto, no define cómo se verá el elemento, pero la mayoría de los navegadores web han estandarizado el formato de los elementos. La etiqueta
+						<strong> &lt;h1&gt;</strong>...<strong>&lt;/h1&gt; </strong> define al Texto como un encabezado de Primer Nivel.
 					</p>				
 				</a>
 				<a href="https://google.com/search?=" class="article">
@@ -382,31 +383,78 @@
 					<img class="index-back" src="img/back.png" alt="volver">
 				</a>
 				<h1>Hojas de Estilo en Cascada</h1>
-			</header>
+			</header>			
+			<section>
+				<header>
+					<h1>Estilos CSS</h1>
+					<p class="subtitle">
+						Tipos de Implementación
+						<br>(Inline - Internal - External)
+					</p>
+				</header>
+				<p>
+					Las hojas de estilo en cascada (CSS) se utilizan para formatear el diseño de una página web.
+					Con CSS, se puede controlar el color, la fuente, el tamaño del texto, el espacio entre los elementos, cómo se colocan y distribuyen los elementos, qué imágenes de fondo o colores de fondo se utilizarán, diferentes pantallas para diferentes dispositivos y tamaños de pantalla, y muchas otras cosas más.
+				</p>
+				<a href="https://google.com/search?=" class="article">
+					<h2>¿Que es Inline CSS?</h2>
+					<p>
+						Se utiliza CSS en línea para aplicar estilo a un único elemento HTML mediante el atributo
+						<strong> &lt;body style="..."&gt; </strong> 
+						de un elemento HTML. Este puede contener cualquier propiedad CSS
+					</p>				
+				</a>
+				<a href="https://google.com/search?=" class="article">
+					<h2>¿Que es Internal CSS?</h2>
+					<p>
+						Se usa un CSS interno para definir un estilo para una sola página HTML.
+						Se define en la seccion
+						<strong>  &lt;head&gt; </strong> 
+						de una página HTML, dentro de un elemento
+						<strong> &lt;style&gt;...&lt;/style&gt; </strong>.
+					</p>
+				</a>
+				<a href="https://google.com/search?=" class="article">
+					<h2>¿Que es External CSS?</h2>
+					<p>
+						Las Hojas de Estilo Externa se usan para definir el estilo de multiples páginas HTML.
+						En la seccion <strong>&lt;head&gt;</strong> de cada página se agrega 
+						<strong> &lt;link rel="stylesheet" type="text/css" href="..."&gt; </strong>
+					</p>
+				</a>
+			</section>
+			<hr/>
 			<section>
 				<header>
 					<h1>Selectores</h1>
 					<p class="subtitle">
-						tipos de reglas
- 						<br> ( Tag - Class - Id )
+						Escala Jerarquica
+ 						<br> (Tag - Class - Id)
 					</p>
 				</header>
-				<p> </p>
+				<p> 
+					Una hoja de estilos consiste en una serie de reglas. Cada regla, o conjunto de reglas consisten en uno o más selectores, y un bloque de declaración.
+					CSS tiene una sintaxis simple y usa un conjunto de palabras clave en inglés para especificar los nombres de varias propiedades de estilo.
+
+					Un selector simple es aquel que está formado solo por una única cadena textual, sin ningún combinador. Son selectores simples el 
+					<strong> selector universal [*]</strong>, el selector por tipo de 
+					<strong> elemento del DOM</strong>, el selector de ID y de clase, el de atributo, el de pseudoclase y el de pseudoelemento.
+				</p>
 				<a href="https://google.com/search?=" class="article"> 
 					<h2>¿Que es Tag selector?</h2>
 					<p> 
 						Un selector de etiqueta permite indicar a cual de los elementos se les debe aplicar un estilo determinado mediante el nombre del mismo.
-						<strong>p{...} </strong> selecciona a todos los parrafos.
+						<strong> p{...} </strong> selecciona a todos los parrafos.
 					</p>				
 				</a>
 				<a href="https://google.com/search?=" class="article">
 					<h2>¿Que es Class selector?</h2>
 					<p> 
-						Para seleccionar elementos con una clase específica, escriba un
+						Para seleccionar elementos con una clase específica, debe escribirse un
 						<em> carácter de punto </em>
 						<strong> [.]</strong>,
 						Seguido del nombre de la clase.
-						<strong> p.css{...} </strong> selecciona los parrafos con clase css
+						<strong> p.css{...} </strong> selecciona los parrafos con clase css.
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
@@ -416,68 +464,7 @@
 						<em> carácter hash </em>
 						<strong> [#]</strong>,
 						 seguido del valor utilizado como identificacion unica.
-						 <strong> p#html{...} </strong> selecciona al parrafo con Id html
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h1>Reglas</h1>
-					<p>
-
-						<br>( -  - )
-					</p>
-				</header>
-				<p>
-					
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es ?</h2>
-					<p>
-						
-					</p>				
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es ?</h2>
-					<p>
-						
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es ?</h2>
-					<p>
-						
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h1>Pseudo Elementos</h1>
-					<p class="subtitle">
-						<br>( -  - )
-					</p>
-				</header>
-				<p>
-					
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es ?</h2>
-					<p>
-						
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es ?</h2>
-					<p>
-						
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es ?</h2>
-					<p>
-						
+						 <strong> p#html{...} </strong> selecciona al parrafo con Id html.
 					</p>
 				</a>
 			</section>
@@ -485,9 +472,7 @@
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contact.php" method="post">
-			<header>
-				<h2 class="subtitle">Información de Contacto</h2>
-			</header>
+			<h2 class="subtitle">Información de Contacto</h2>		
 			<label for="nombre">Nombre</label>
 			<input 
 				id="nombre" 
@@ -508,11 +493,11 @@
 			/>
 			<select id="curso" name="curso" required>
 				<option disabled selected>Lenguajes de Programacion</option>
-				<option>HTML</option>
-				<option>CSS</option>
-				<option>JS</option>
-				<option>SQL</option>
-				<option>PHP</option>
+				<option value="1">HTML</option>
+				<option value="2">CSS</option>
+				<option value="3">JS</option>
+				<option value="4">SQL</option>
+				<option value="5">PHP</option>
 			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 

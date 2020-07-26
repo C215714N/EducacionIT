@@ -1,8 +1,6 @@
 /*Formato General*/
 	body,
 	.menu,
-	h1,
-	h2,
 	a{
 		margin: 0;
 		padding: 0;
@@ -20,6 +18,11 @@
 		color: lightgrey;
 		background-color: #012;
 		text-align: center;
+	}
+	h1,
+	h2{
+		margin:0;
+		padding:0;
 	}
 	#footer, 
 	#footer p{
@@ -85,13 +88,11 @@
 		padding: 12.5px;
 		text-align: left;
 	}
-	.index p{
+	.index h2{
 		margin: 5px 0;
 		padding: 0 20px;
 		color: #eee;
 		background-color: #012;
-		font-size: 24px;
-		font-weight: bold;
 	}
 	.index li{
 		padding: 0 25px;
