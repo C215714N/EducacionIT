@@ -119,6 +119,81 @@
 	section:last-of-type{
 		border:1px solid black;
 	}
+/*Pseudo Elementos*/
+	.pseudo h1::before{
+		content:'Titulo ';
+	}
+	.pseudo h1::after{
+		content:'';
+	}
+	.pseudo p::before{
+		content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, itaque a accusantium similique quas possimus deleniti rem tenetur fuga magnam, odio pariatur incidunt libero, sint architecto. Doloribus, possimus reprehenderit rem!';
+		font-weight: bold;
+		background-color: yellow;
+	}
+	.pseudo p::after{
+		content: '';
+		display: block;
+		background-image: url(../assets/social-media.png);
+		background-size: contain;
+		width:250px;
+		height: 50px;
+
+	}
+	.pseudo address::before{
+		content: 'Autor: ';
+	}
+	.pseudo address a::before{
+		content:'Cristian Racedo';
+	}
+	/*Contadores*/
+		article{
+			counter-reset: tema;
+		}
+		.pseudo section h1::after{
+			counter-increment: tema;
+			content: counter(tema);
+		}
+		.pseudo li::before{
+			content: ''
+		}
+	/*Inicializacion de Contadores*/
+		.primario{
+			counter-reset: primario;
+		}
+		.secundario{
+			counter-reset: secundario;
+		}
+		.terciario{
+			counter-reset: terciario
+		}
+		.cuarto{
+			counter-reset:cuarto;
+		}
+	/*Incremento de Numeracion*/
+		.primario > li::before{
+			counter-increment: primario;
+		}
+		.secundario > li::before{
+			counter-increment: secundario;
+		}
+		.terciario > li::before{
+			counter-increment: terciario;
+		}
+		.cuarto > li::before{
+			counter-increment:cuarto;
+		}
+		.primario, .primario ol{
+			list-style: none;
+		}
+	/*Aplicacion a la lista*/
+		.primario li::before{
+			content: 
+				counter(primario) '.' 
+				counter(secundario) '.' 
+				counter(terciario) '.' 
+				counter(cuarto) ' - '		
+		}
 /*Pie de Pagina*/
 	/*Formulario*/
 		#contacto, 
