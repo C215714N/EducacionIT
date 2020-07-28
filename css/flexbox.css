@@ -129,7 +129,6 @@
 	.pseudo p::before{
 		content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, itaque a accusantium similique quas possimus deleniti rem tenetur fuga magnam, odio pariatur incidunt libero, sint architecto. Doloribus, possimus reprehenderit rem!';
 		font-weight: bold;
-		background-color: yellow;
 	}
 	.pseudo p::after{
 		content: '';
@@ -193,6 +192,78 @@
 				counter(secundario) '.' 
 				counter(terciario) '.' 
 				counter(cuarto) ' - '		
+		}
+	/*Propiedades de Lista*/
+		.li-style li{
+			overflow: hidden;
+		}
+		.li-style li::before{
+			counter-increment: star;
+			content: counter(star);
+			background-image: url(../assets/star.png);
+			float:left;
+			margin-right: 5px;
+			width:32px;
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+			background-size: 32px;
+			background-repeat: no-repeat;
+		}
+		.li-style{
+			counter-reset: star;
+			list-style: 
+				decimal-leading-zero 
+				url(../assets/stars.png) outside;
+			color:white;
+			background-color:purple; 
+			text-shadow: 0 0 1px black;
+			box-shadow: 
+				5px 5px 10px rgba(35, 80, 120,.8), 
+				10px 10px 10px darkgreen, 
+				5px 5px 10px limegreen inset, 
+				10px 10px 10px green inset; 
+		}
+/*Sprites*/
+	.social{
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+	.social a{
+		width:calc(64px);
+		height:calc(64px);
+		background-image: url(../assets/social-media.png);
+		background-size: calc(11 * 64px);
+	}
+	/*Iconos Sociales*/
+		.social a:nth-child(2){
+			background-position: calc(-8 * 64px) calc(0 *64px);
+		}
+		.social a:nth-child(3){
+			background-position: calc(-4 * 64px) calc(0 *64px);
+		}
+		.social a:nth-child(4){
+			background-position: calc(-5 * 64px) calc(0 *64px);
+		}
+		.social a:nth-child(5){
+			background-position: calc(-10 * 64px) calc(0 *64px);
+		}
+	/*Hover*/
+		.social a:nth-child(1):hover{
+			background-position: calc(-0 * 64px) calc(-1 *64px);
+		}
+		.social a:nth-child(2):hover{
+			background-position: calc(-8 * 64px) calc(-1 *64px);
+		}
+		.social a:nth-child(3):hover{
+			background-position: calc(-4 * 64px) calc(-1 *64px);
+		}
+		.social a:nth-child(4):hover{
+			background-position: calc(-5 * 64px) calc(-1 *64px);
+		}
+		.social a:nth-child(5):hover{
+			background-position: calc(-10 * 64px) calc(-1 *64px);
 		}
 /*Pie de Pagina*/
 	/*Formulario*/
