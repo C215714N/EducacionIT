@@ -14,18 +14,51 @@
 		#header, #footer{
 			padding:1rem;
 			color:white;
-			background-color:#124; 
+			background: 
+				linear-gradient(
+					15deg,
+					hsl(200, 50%, 60%),
+					hsl(200, 50%, 40%) 25%,
+					hsl(200, 50%, 80%)
+					), 
+				url(../assets/bg-lg-header.jpg),
+				url(../assets/bg-md-header.jpg);
+			background-size: cover;
+			background-position: center top;
+			background-blend-mode: soft-light, multiply;				
+				/*
+					rgb(64, 16, 128); 		0 - 255 
+					#201080;				00 - FF 
+					hsl(hue , saturation,  lightness)
+						TONO:	
+							ROJO 		0 - 360
+							AMARILLO 	60
+							VERDE 		120
+							CIAN 		180
+							AZUL 		240
+							MAGENTA 	300
+						SATURACION:
+							Brillante 	100%
+							Opaco 		50%
+							Desaturado 	0%
+						BRILLO
+							Blanco 		100%
+							Regular 	50%
+							Negro 		0%
+				*/
+		}
+		#footer{
+			background-position: center bottom;
 		}
 		.header h1, .header p{
 			margin:0;
 			padding:0 1rem;/*Top Right Bottom Left*/
-			color:#ccc;
-			background-color: #124;
+
 		}
 	/*Navegacion*/
 		nav{
 			margin:.2rem 1rem;
-			background-color: skyblue;
+			background-color: hsla(200, 40%, 40%, .7);
 			border-radius: .2rem;
 		}
 		#menu{
@@ -65,6 +98,36 @@
 			display: flex;
 			flex-direction: column;
 		}
+		#contact label{
+			margin:.5rem 0 0;
+		}
+		#contact input,
+		#contact textarea{
+			padding:.4rem;
+		}
+		#contactRange::-webkit-slider-runnable-track{
+			
+		}
+		#contact textarea{
+			resize: none;
+			height: 4rem;
+		}
+	/*Redes Sociales*/
+		.social {
+			display: flex;
+			justify-content: space-evenly;
+			width:320px;
+			margin:.5rem auto;
+		}
+		.social a{
+			color:white;
+			text-decoration: none;
+			font-size: 2rem;
+		}
+		.social a:hover{
+			text-shadow: 0 0 1rem white;
+		}
+		.icon-facebook:hover{color:darkblue; }
 	/*Compatibilidad Meter*/
 		meter::-webkit-meter-optimum-value{
 			background-color:darkblue;
@@ -105,4 +168,5 @@
 		nav, #footer{
 			display: none;
 		}
+	}
 /*Autor: Cristian Racedo*/
