@@ -1,4 +1,18 @@
 //Maquetado Avanzado
+	//Menu Desplegable
+		let mostrar = true;
+		document.querySelector('#menu').addEventListener(
+			'click', () => {
+				document.querySelector('.menu').classList.toggle('show')
+				if (mostrar) {
+					document.querySelector('#menu').innerHTML = '&times;'
+					mostrar = false;
+				} else {
+					document.querySelector('#menu').innerHTML = '&equiv;'
+					mostrar = true;
+				}
+			}
+		)
 	//Reproduccion VIDEO
 		let playVideo = true
 		document.querySelector('#videoControl').addEventListener(
@@ -30,4 +44,10 @@
 		//Texto
 			ctx.font = '16px arial';
 			ctx.strokeText('Canvas', 10, 100); //(Text, x, y)
+	//Rango de Formulario
+		document.querySelector('#contactRange').addEventListener(
+			'change', () => {
+				document.querySelector('#rValue span').innerHTML = document.querySelector('#contactRange').value
+			}
+		)
 //Autor: Cristian Racedo

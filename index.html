@@ -14,13 +14,13 @@
 			<p>HTML &amp; CSS</p>
 		</div>
 		<nav>
-			<button id="menu"></button>
+			<button id="menu">&equiv;</button>
 			<ul class="menu">
-				<li><a href="">Link 1</a></li>
-				<li><a href="">Link 2</a></li>
-				<li><a href="">Link 3</a></li>
-				<li><a href="">Link 4</a></li>
-				<li><a href="">Link 5</a></li>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="about.html">Acerca de</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<li><a href="#contact">Contacto</a></li>
+				<li><a href="https://github.com/c215714n/educacionit/tree/maquetado-miercoles-15hs">GitHub</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -173,10 +173,16 @@
 						width="50" height="50" 
 						fill="tomato"
 					/>
-					<circle r="25" 
+					<circle 
+						r="25" 
 						cx="60" cy="60" 
-						fill="rgba(30, 80, 150, .5)"/>
-					<text x="10" y="100" fill="transparent" stroke="black" stroke-width="1">
+						fill="rgba(30, 80, 150, .5)"
+					/>
+					<text 
+						x="10" y="100" 
+						fill="transparent" 
+						stroke="black" 
+						stroke-width="1">
 						SVG
 					</text>
 				</svg>
@@ -282,18 +288,54 @@
 				</footer>
 			</section>
 		</article>
+
 	</main>
 	<!--FOOTER: Pie (Contenido de Despedida)-->
 	<footer id="footer">
+		<a href="#header">Volver</a>
 		<form action="" id="contact">
-			<label for="campo1">Campo 1</label>
-			<input type="text" id="campo1" name="campo1" required="">
-			<label for="campo2">Campo 2</label>
-			<input type="text" id="campo2" name="campo2" required="">
-			<label for="campo3">Campo 3</label>
-			<input type="text" id="campo3" name="campo3" required="">
+			<label for="contactName">Nombre</label>
+			<input 
+				type="text" 
+				id="contactName" 
+				name="contactName"
+				placeholder="Ingrese su Nombre: Cristian Racedo" 
+				pattern = "[a-z A-Z]{2,50}"
+				title="Escriba su nombre sin numeros ni simbolos, el mismo debera tener entre 2 y 50 caracteres"
+				required
+			/>
+			<label for="contactEmail">Correo</label>
+			<input 
+				type="email" 
+				id="contactEmail" 
+				name="contactEmail"
+				placeholder="Ingrese su Correo: cristiandracedo@hotmail.com"
+				multiple 
+				required
+			/>
+			<label for="contactTel">Telefono</label>
+			<input 
+				type="tel" 
+				id="contactTel" 
+				name="contactTel"
+				placeholder="Ingrese su Telefonono: 1123456789"
+				pattern="[0-9]{6,20}"
+				title="Ingrese su numero de telefono " 
+				required
+			/>
+			<label id="rValue" for="contactRange">Edad: <span></span></label>
+			<input 
+				type="range" 
+				id="contactRange" 
+				name="contacRange"> 
 			<label for="contactConsult">Consulta</label>
-			<textarea name="contactConsult" id="contactConsult" cols="30" rows="10" minlength="10" maxlength="200" required=""></textarea>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				required
+			></textarea>
 			<button>Realizar Consulta</button>
 		</form>
 		<div class="social">

@@ -1,5 +1,70 @@
 /*Maquetado Avanzado*/
-
+/*Reglas Generales - XS Mobile First*/
+	*{
+		box-sizing: border-box;
+		font-family: roboto, raleway, sans-serif;
+	}
+	html{
+		scroll-behavior: smooth;
+	}
+	body{
+		margin:0;
+	}	
+	/*Encabezado y pie de pagina*/
+		#header, #footer{
+			padding:1rem;
+			color:white;
+			background-color:#124; 
+		}
+		.header h1, .header p{
+			margin:0;
+			padding:0 1rem;/*Top Right Bottom Left*/
+			color:#ccc;
+			background-color: #124;
+		}
+	/*Navegacion*/
+		nav{
+			margin:.2rem 1rem;
+			background-color: skyblue;
+			border-radius: .2rem;
+		}
+		#menu{
+			font-size: 2.5rem;
+			width:3rem;
+			border:none;
+			border-radius: .2rem
+		}
+		.menu{
+			height: 0;
+			overflow: hidden;
+			list-style: none;
+			margin: 0;
+			padding:0;
+		}
+		.menu a{
+			display: block;
+			padding:.2rem 4rem;
+			color:#124;
+			text-decoration: none;
+		}
+		.menu a:hover{
+			background-color: #ccc;
+		}
+		.show{
+			height:auto;
+		}
+	/*Cuerpo Principal*/
+		main{
+			margin:1rem 0;
+		}
+		section{
+			padding:1rem;
+		}
+	/*Formulario de Contacto*/
+		#contact{
+			display: flex;
+			flex-direction: column;
+		}
 	/*Compatibilidad Meter*/
 		meter::-webkit-meter-optimum-value{
 			background-color:darkblue;
@@ -9,5 +74,35 @@
 		}
 		meter::-webkit-meter-even-less-good-value{
 			background: tomato;
+		}
+/*SM (Small Devices)*/
+	@media screen and (min-width:576px){
+
+	}
+/*MD (Medium Devices)*/
+	@media screen and (min-width:768px){
+
+	}
+/*LG (Large Devices)*/
+	@media screen and (min-width:992px){
+		main .header{
+			width:100%;
+		}
+		article{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		section{
+			width:50%;
+		}
+	}
+/*XL (Extra Large Devices)*/
+	@media screen and (min-width:1200px){
+
+	}
+/*Printable*/
+	@media print {
+		nav, #footer{
+			display: none;
 		}
 /*Autor: Cristian Racedo*/
