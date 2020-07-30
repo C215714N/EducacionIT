@@ -20,11 +20,11 @@
 				if (playVideo) {
 					document.querySelector('#videoTag').play();
 					playVideo = false;
-					document.querySelector('#videoControl').innerHTML = 'pause';
+					document.querySelector('#videoControl').innerHTML = 'PAUSE';
 				} else {
 					document.querySelector('#videoTag').pause();
 					playVideo = true;
-					document.querySelector('#videoControl').innerHTML = 'play';
+					document.querySelector('#videoControl').innerHTML = 'PLAY';
 				}
 			}
 		)

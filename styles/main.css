@@ -26,40 +26,26 @@
 			background-size: cover;
 			background-position: center top;
 			background-blend-mode: soft-light, multiply;				
-				/*
-					rgb(64, 16, 128); 		0 - 255 
-					#201080;				00 - FF 
-					hsl(hue , saturation,  lightness)
-						TONO:	
-							ROJO 		0 - 360
-							AMARILLO 	60
-							VERDE 		120
-							CIAN 		180
-							AZUL 		240
-							MAGENTA 	300
-						SATURACION:
-							Brillante 	100%
-							Opaco 		50%
-							Desaturado 	0%
-						BRILLO
-							Blanco 		100%
-							Regular 	50%
-							Negro 		0%
-				*/
-		}
-		#footer{
-			background-position: center bottom;
-		}
+		}		
 		.header h1, .header p{
 			margin:0;
 			padding:0 1rem;/*Top Right Bottom Left*/
 
 		}
+		#footer{
+			background-position: center bottom;
+		}
+		footer a{
+			color:#ccc;
+			text-decoration: none;
+			font-size: 1.2rem;
+		}
 	/*Navegacion*/
-		nav{
+		nav {
 			margin:.2rem 1rem;
 			background-color: hsla(200, 40%, 40%, .7);
 			border-radius: .2rem;
+			transition: all 1s ease;
 		}
 		#menu{
 			font-size: 2.5rem;
@@ -73,14 +59,18 @@
 			list-style: none;
 			margin: 0;
 			padding:0;
+			transition: all 1s ease;
 		}
 		.menu a{
 			display: block;
 			padding:.2rem 4rem;
-			color:#124;
+			color:#ccc;
 			text-decoration: none;
+			font-family: roboto, raleway, sans-serif;
+			font-size: 1.2rem;
 		}
 		.menu a:hover{
+			color:#124;
 			background-color: #ccc;
 		}
 		.show{
@@ -90,8 +80,16 @@
 		main{
 			margin:1rem 0;
 		}
+		main .header{
+			padding:.5rem;
+			color:#ccc;
+			background: linear-gradient(
+				hsl(200, 50%, 40%),
+				hsl(200, 50%, 20%)
+			)
+		}
 		section{
-			padding:1rem;
+			padding:2rem;
 		}
 	/*Formulario de Contacto*/
 		#contact{
@@ -104,13 +102,17 @@
 		#contact input,
 		#contact textarea{
 			padding:.4rem;
-		}
-		#contactRange::-webkit-slider-runnable-track{
-			
+			font-size: 1rem;
 		}
 		#contact textarea{
 			resize: none;
-			height: 4rem;
+			height: 5rem;
+		}
+		#contactRange::-webkit-slider-runnable-track{
+			background: linear-gradient(
+				hsl(200, 50%, 60%),
+				hsl(200, 50%, 30%)
+			);
 		}
 	/*Redes Sociales*/
 		.social {
@@ -125,18 +127,40 @@
 			font-size: 2rem;
 		}
 		.social a:hover{
-			text-shadow: 0 0 1rem white;
+			text-shadow: 
+				.2rem .2rem .2rem white, 
+				-.2rem  -.2rem .2rem white,
+				.2rem -.2rem .2rem white,
+				-.2rem .2rem .2rem white;
 		}
-		.icon-facebook:hover{color:darkblue; }
+		.icon-facebook:hover{color:#3B5999;}
+		.icon-twitter:hover{color:#55ACEE;}
+		.icon-instagram:hover{color:#E4405F;}
+		.icon-linkedin:hover{color:#0077B5;}
 	/*Compatibilidad Meter*/
+		meter,
+		progress{
+			width: 90%;
+			height: 2rem;
+		}
 		meter::-webkit-meter-optimum-value{
-			background-color:darkblue;
+			background: linear-gradient(skyblue,darkblue);
 		}
 		meter::-webkit-meter-suboptimum-value{
-			background-color: limegreen;
+			background: linear-gradient(limegreen,darkgreen);
 		}
 		meter::-webkit-meter-even-less-good-value{
-			background: tomato;
+			background:  linear-gradient(tomato,darkred);
+		}
+	/*Multimedia*/
+		#videoControl{
+			width:10rem;
+			text-align: center;
+			background-color: transparent;
+			border: .2rem solid black;
+			border-radius: 0;
+			padding:.5rem;
+			font: bold 1.2rem roboto, raleway, sans-serif;
 		}
 /*SM (Small Devices)*/
 	@media screen and (min-width:576px){
@@ -154,6 +178,7 @@
 		article{
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-around;
 		}
 		section{
 			width:50%;

@@ -17,11 +17,31 @@
 		<nav>
 			<button id="menu">&equiv;</button>
 			<ul class="menu">
-				<li><a class="icon-home" href="#">Inicio</a></li>
-				<li><a class="icon-about" href="about.html">Acerca de</a></li>
-				<li><a class="icon-gallery" href="gallery.html">Galeria</a></li>
-				<li><a class="icon-contact" href="#contact">Contacto</a></li>
-				<li><a class="icon-github" href="https://github.com/c215714n/educacionit/tree/maquetado-miercoles-15hs">GitHub</a></li>
+				<li>
+					<a class="icon-home" href="#"> 
+						<span> Inicio </span>
+					</a>
+				</li>
+				<li>
+					<a class="icon-about" href="about.html"> 
+						<span> Acerca de </span>
+					</a>
+				</li>
+				<li>
+					<a class="icon-gallery" href="gallery.html"> 
+						<span> Galeria </span>
+					</a>
+				</li>
+				<li>
+					<a class="icon-contact" href="#contact"> 
+						<span> Contacto </span>
+					</a>
+				</li>
+				<li>
+					<a class="icon-github" href="https://github.com/c215714n/educacionit/tree/maquetado-miercoles-15hs"> 
+						<span> GitHub </span>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -55,19 +75,13 @@
 						<source src="assets/media/californication.mp4">
 						Lo sentimos, pero su navegador NO es compatible con el elemento	AUDIO.
 					</audio>
-					<video controls>
-						<source src="assets/media/californication.ogv">
-						<source src="assets/media/californication.avi">
-						<source src="assets/media/californication.mp4">
-						Lo sentimos, pero su navegador NO es compatible con el elemento	VIDEO.
-					</video>
 					<video id="videoTag">
 						<source src="assets/media/californication.ogv">
 						<source src="assets/media/californication.avi">
 						<source src="assets/media/californication.mp4">
 						Lo sentimos, pero su navegador NO es compatible con el elemento	VIDEO.
 					</video>
-					<button id="videoControl">&times;</button>
+					<button id="videoControl">PLAY</button>
 				</div>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
@@ -293,7 +307,9 @@
 	</main>
 	<!--FOOTER: Pie (Contenido de Despedida)-->
 	<footer id="footer">
-		<a href="#header">Volver</a>
+		<a class="icon-back" href="#header"> 
+			<span> Volver </span>
+		</a>
 		<form action="" id="contact">
 			<label for="contactName">Nombre</label>
 			<input 
@@ -319,9 +335,9 @@
 				type="tel" 
 				id="contactTel" 
 				name="contactTel"
-				placeholder="Ingrese su Telefonono: 1123456789"
+				placeholder="Ingrese su Telefono: 1123456789"
 				pattern="[0-9]{6,20}"
-				title="Ingrese su numero de telefono " 
+				title="Ingrese su numero de telefono sin guiones ni espacios, el mismo debe tener entre 6 y 20 digitos" 
 				required
 			/>
 			<label id="rValue" for="contactRange">Edad: <span></span></label>
