@@ -14,19 +14,23 @@
 /*Encabezado y Pie de Pagina*/
 	#header, 
 	#footer{
-		padding: 10px 0 0 0;
+		padding: 20px 0 0 0;
 		color: lightgrey;
 		background-color: #012;
 		text-align: center;
 	}
-	h1,
-	h2{
+	h1{
 		margin:0;
 		padding:0;
 	}
 	#footer, 
 	#footer p{
-		padding: 10px 0;
+		padding: 5px 0;
+	}
+	#footer iframe{
+		border:none;
+		width: 100%;
+		height: 240px;
 	}
 	#footer a{
 		color:#ccc;
@@ -97,21 +101,41 @@
 	.index li{
 		padding: 0 25px;
 	}
-
 	.index li:hover{
 		background-color: lightgrey;
 	}
-	img.index-back{
+/*Menu Principal*/
+	article .index-back{
 		float: right;
 		height: 30px;
 		margin: 0 20px;
 		padding: 10px;
 		opacity: .25;
 	}
-	img.index-back:hover{
+	article .index-back:hover,
+	.link:hover{
+		width:50px;
 		height:50px;
 		padding: 0;
 		opacity:1;
+	}
+	.link{
+		display: block;
+		width:30px;
+		height:30px;
+		margin: auto;
+		padding:10px;
+	}
+	.link .index-back{
+		width:20px;
+		border-radius: 32px;
+		padding:5px;
+		opacity: .5;
+	}
+	.link:hover .index-back{
+		width:45px;
+		opacity: 1;
+		box-shadow: 0 0 8px #ccc;
 	}
 /*Contenido Principal*/
 	main{
@@ -181,15 +205,25 @@
 	.article p{
 		margin-top:8px;
 	}
-	article img{
-		border-radius: 50%;
+	.article audio,
+	.article img,
+	.article video,
+	.article iframe{
+		width:100%;
+		outline: none;
+		border-radius: 5px;
+		box-shadow: 0px 0px 5px grey;
+	}
+	.article audio{
+		border-radius: 32px;
 	}
 	hr{ border: 1px solid #eee; }
 /*Formulario de Contacto*/
 	#contacto{
 		text-align: left;
 		width: 420px;
-		margin: 5px auto;
+		margin: auto;
+		padding: 20px 0 5px;
 	}
 	#contacto label,
 	#contacto input,
@@ -199,7 +233,7 @@
 		margin: 5px auto;
 		outline: none;
 		border: 0;
-		border-radius: 7.5px;
+		border-radius: 8px;
 		padding: 10px;
 		resize: none;
 		font-weight: bold;	
@@ -215,13 +249,13 @@
 	#contacto textarea{
 		height: 80px;
 		margin-bottom: 0;
-		border-radius: 7.5px 7.5px 0 0;
+		border-radius: 8px 8px 0 0;
 	}
 	#contacto button{
 		width: 420px;
 		margin: -5px auto 10px;
 		border: 2px solid #ccc;
-		border-radius: 0 0 7.5px 7.5px;
+		border-radius: 0 0 8px 8px;
 		padding: 5px;
 		color: #012;
 		background-color: lightgrey;

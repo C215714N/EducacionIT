@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos HTML5</title>
-	<link rel="icon" href="img/cr.png">
+	<link rel="icon" href="assets/img/cr.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,27 +19,27 @@
 			<div class="social-media">
 				<a 	href="https://www.facebook.com/RacedoCristian" 
 					target="_blank">
-					<img src="img/facebook.png" alt="Facebook"/>
+					<img src="assets/img/facebook.png" alt="Facebook"/>
 				</a>
 				<a 	href="https://twitter.com/Racedo_Cristian" 
 					target="_blank">
-					<img src="img/twitter.png" alt="Twitter"/>
+					<img src="assets/img/twitter.png" alt="Twitter"/>
 				</a>
 				<a 	href="https://instagram.com" 
 					target="_blank">
-					<img src="img/instagram.png" alt="Instagram"/>
+					<img src="assets/img/instagram.png" alt="Instagram"/>
 				</a>
 				<a 	href="https://www.linkedin.com/in/racedocristian/" 
 					target="_blank">
-					<img src="img/linkedin.png" alt="LinkdeIn"/>
+					<img src="assets/img/linkedin.png" alt="LinkdeIn"/>
 				</a>
 				<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 					target="_blank">
-					<img src="img/youtube.png" alt="YouTube"/>
+					<img src="assets/img/youtube.png" alt="YouTube"/>
 				</a>
 				<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 					target="_blank">
-					<img src="img/whatsapp.png" alt="Whatsapp"/>
+					<img src="assets/img/whatsapp.png" alt="Whatsapp"/>
 				</a>
 			</div>	
 			<ul class="menu">
@@ -61,7 +61,7 @@
 		<article id="desarrolladores">
 			<header>
 				<a href="#">
-					<img class="index-back" src="img/back.png" alt="volver"/>
+					<img class="index-back" src="assets/img/back.png" alt="volver"/>
 				</a>
 				<h1>Tipos de Desarrolladores</h1>
 			</header>
@@ -176,7 +176,7 @@
 		<article id="requerimientos">
 			<header>
 				<a href="#">
-					<img class="index-back" src="img/back.png" alt="volver">
+					<img class="index-back" src="assets/img/back.png" alt="volver">
 				</a>
 				<h1>Requerimientos de un Sitio Web</h1>
 			</header>
@@ -259,7 +259,7 @@
 		<article id="html">
 			<header>
 				<a href="#">
-					<img class="index-back" src="img/back.png" alt="volver">
+					<img class="index-back" src="assets/img/back.png" alt="volver">
 				</a>
 				<h1>Lenguaje de Marcas de Hipertexto</h1>
 			</header>
@@ -380,7 +380,7 @@
 		<article id="css">
 			<header>
 				<a href="#">
-					<img class="index-back" src="img/back.png" alt="volver">
+					<img class="index-back" src="assets/img/back.png" alt="volver">
 				</a>
 				<h1>Hojas de Estilo en Cascada</h1>
 			</header>			
@@ -393,7 +393,7 @@
 					</p>
 				</header>
 				<p>
-					Las hojas de estilo en cascada (CSS) se utilizan para formatear el diseño de una página web.
+					Las hojas de estilo en cascada se utilizan para formatear el diseño de una página web.
 					Con CSS, se puede controlar el color, la fuente, el tamaño del texto, el espacio entre los elementos, cómo se colocan y distribuyen los elementos, qué imágenes de fondo o colores de fondo se utilizarán, diferentes pantallas para diferentes dispositivos y tamaños de pantalla, y muchas otras cosas más.
 				</p>
 				<a href="https://google.com/search?=" class="article">
@@ -436,7 +436,7 @@
 					Una hoja de estilos consiste en una serie de reglas. Cada regla, o conjunto de reglas consisten en uno o más selectores, y un bloque de declaración.
 					CSS tiene una sintaxis simple y usa un conjunto de palabras clave en inglés para especificar los nombres de varias propiedades de estilo.
 
-					Un selector simple es aquel que está formado solo por una única cadena textual, sin ningún combinador. Son selectores simples el 
+					Un selector simple es aquel que está formado solo por una única cadena textual, sin ningún combinador, como el
 					<strong> selector universal [*]</strong>, el selector por tipo de 
 					<strong> elemento del DOM</strong>, el selector de ID y de clase, el de atributo, el de pseudoclase y el de pseudoelemento.
 				</p>
@@ -469,6 +469,9 @@
 				</a>
 			</section>
 		</article>
+		<a class="link" href="#">
+			<img class="index-back" src="assets/img/upload.png" alt="volver"/>
+		</a>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contact.php" method="post">
@@ -491,13 +494,11 @@
 				placeholder="Correo: cristiandracedo@hotmail.com" 
 				multiple required
 			/>
-			<select id="curso" name="curso" required>
-				<option disabled selected>Lenguajes de Programacion</option>
-				<option value="1">HTML</option>
-				<option value="2">CSS</option>
-				<option value="3">JS</option>
-				<option value="4">SQL</option>
-				<option value="5">PHP</option>
+			<select id="tipo" name="tipo" required>
+				<option disabled selected>Practical Web Development</option>
+				<option value="fewd">FrontEnd Web Development</option>
+				<option value="bewd">BackEnd Web Development</option>
+				<option value="fswd">FullStack Web Development</option>
 			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 
@@ -513,29 +514,34 @@
 		<div class="social-media">
 			<a 	href="https://www.facebook.com/RacedoCristian" 
 				target="_blank">
-				<img src="img/facebook.png" alt="Facebook"/>
+				<img src="assets/img/facebook.png" alt="Facebook"/>
 			</a>
 			<a 	href="https://twitter.com/Racedo_Cristian" 
 				target="_blank">
-				<img src="img/twitter.png" alt="Twitter"/>
+				<img src="assets/img/twitter.png" alt="Twitter"/>
 			</a>
 			<a 	href="https://instagram.com" 
 				target="_blank">
-				<img src="img/instagram.png" alt="Instagram"/>
+				<img src="assets/img/instagram.png" alt="Instagram"/>
 			</a>
 			<a 	href="https://www.linkedin.com/in/racedocristian/" 
 				target="_blank">
-				<img src="img/linkedin.png" alt="LinkdeIn"/>
+				<img src="assets/img/linkedin.png" alt="LinkdeIn"/>
 			</a>
 			<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 				target="_blank">
-				<img src="img/youtube.png" alt="YouTube"/>
+				<img src="assets/img/youtube.png" alt="YouTube"/>
 			</a>
 			<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 				target="_blank">
-				<img src="img/whatsapp.png" alt="Whatsapp"/>
+				<img src="assets/img/whatsapp.png" alt="Whatsapp"/>
 			</a>
 		</div>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar" 
+			allowfullscreen="" 
+			aria-hidden="false">
+		</iframe>
 		<p>
 			&copy; Todos los derechos Reservados | 
 			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a> 
