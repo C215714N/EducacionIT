@@ -300,3 +300,65 @@
 			width:100%;
 			text-align: center
 		}
+
+/*Navegacion Fixed*/
+	nav{
+		position:fixed;
+		bottom:0;
+		right: 0;
+	}
+	.social a:hover{
+		position: relative;
+		bottom: 10px;
+	}
+	#contacto{
+		position:relative;
+	}
+	#contacto button{
+		position:absolute;
+		bottom:0;
+		right:0;
+	}
+
+/*Menu emergente*/
+	.pseudo section{
+		width:100%;
+		min-width: 900px;
+	}
+	.emergente a{
+		color:white;
+		text-decoration: none;
+	}
+	.emergente,
+	.emergente ul{
+		padding: .2rem;
+		list-style: none;
+		background-color: darkblue;
+	}
+	.emergente li{
+		position:relative;
+		text-align: center;
+	}
+	.emergente > li{
+		text-align: center;
+		display: inline-block;
+		width: 120px;
+		background-color: navy;
+	}
+
+	.emergente li ul{
+		text-align: left;
+		display: none;
+		position:absolute;
+	}
+	.emergente li:hover > ul{
+		display: block;
+		text-align: left;
+	}
+	.emergente li li:hover ul{
+		top:0;
+		left:100%;
+	}
+	.emergente li:hover{
+		background-color: skyblue;
+	}
