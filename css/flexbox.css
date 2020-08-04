@@ -304,8 +304,8 @@
 /*Navegacion Fixed*/
 	nav{
 		position:fixed;
-		bottom:0;
-		right: 0;
+		top:0;
+		right:0;
 	}
 	.social a:hover{
 		position: relative;
@@ -361,4 +361,77 @@
 	}
 	.emergente li:hover{
 		background-color: skyblue;
+	}
+/*Boton Flotante*/
+	#contactButton{
+		background-image: url(../assets/whatsapp.svg);
+		background-size: cover;
+		width:50px;
+		height:50px;
+		border-radius: .5rem;
+		border:1px solid white;
+		background-color: white;
+		opacity: .3;
+		position:fixed;
+		bottom: 1rem;
+		right: 2rem;
+	}
+/*Modal*/
+	.modal{
+		display: none;
+	}
+	.modal-open{
+		display: block;
+		position: fixed;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		background-color: rgba(30,30,30,.8);
+	}
+
+	#contactForm{
+		position:absolute;
+		top:10%;
+		left:25%;
+		display: flex;
+		flex-direction: column;
+		padding:2rem;
+		width:50%;
+		min-width: 300px;
+		background-color: white;
+		border-radius: 2rem;
+	}
+
+	#contactForm input,
+	#contactForm textarea{
+		border:none;
+		border-bottom: .2rem solid darkslateblue;
+		line-height: 1.5rem;
+		padding:1rem;
+		outline: none;
+		resize: none;
+		font-size: 1.2rem;
+	}
+	#contactForm button{
+		margin:1rem 0;
+		text-transform: uppercase;
+		font-weight: bolder;
+		color:darkslateblue;
+		background-color: transparent;
+		border:.2rem solid;
+		line-height: 2rem;
+	}
+	#contactForm button:hover{
+		color:white;
+		box-shadow: 0 0 .4rem darkslateblue;
+		background-color: darkslateblue;
+	}
+	#cerrarForm{
+		position:absolute;
+		top:-.5rem;
+		right: .5rem;
+		width:50px;
+		height: 50px;
+		border-radius: 50%;
 	}

@@ -359,15 +359,69 @@
 			</section>
 			<section>
 				<header>
-					<h1></h1>
+					<h1>T</h1>
 				</header>
-				<p></p>
-				<p></p>
-				<p></p>
 				<footer>
 					<address><a href=""></a></address>
 				</footer>
 			</section>
+		</article>
+		<article>
+			<header>
+				<h1>Tablas</h1>
+			</header>
+			<table border="1">
+					<thead>
+						<th>Producto</th>
+						<th>Precio</th>
+						<th>Cantidad</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Teclado</td>
+							<td>800</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Monitor</td>
+							<td>5600</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>Gabinete</td>
+							<td>3000</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th colspan="2">Total</th>
+						<td>21400</td>
+					</tfoot>
+				</table>
+				<table border="1">
+					<tr>
+						<td colspan="2" rowspan="3">lorem 1.1</td>
+						<td>lorem 1.2</td>
+					</tr>
+					<tr>
+						<td>lorem 2.1</td>
+					</tr>
+					<tr>
+						<td>lorem 3.1</td>
+					</tr>
+					<tr>
+						<td>lorem 4.1</td>
+						<td>lorem 4.2</td>
+						<td>lorem 4.3</td>
+					</tr>
+					<tr>
+						<td>lorem 5.1</td>
+						<td colspan="2" rowspan="2">lorem 5.2</td>
+					</tr>
+					<tr>
+						<td>lorem 6.1</td>
+					</tr>
+				</table>
 		</article>
 	</main>
 	<!--Pie de Pagina-->
@@ -412,6 +466,18 @@
 			<a class="facebook" href="https://facebook.com"></a>
 			<a class="instagram" href="https://instagram.com"></a>
 			<a class="whatsapp" href="https://whatsapp.com"></a>
+		</div>
+		<button id="contactButton"></button>
+		<div class="modal">
+			<form action="" id="contactForm">
+				<h2>Contactate con Nosotros</h2>
+				<input type="text" placeholder="Ingrese su Nombre">
+				<input type="email" placeholder="Ingrese su Correo">
+				<input type="tel" placeholder="Ingrese su Telefono">
+				<textarea name="" placeholder="Ingrese su Consulta"></textarea>
+				<button type="submit">Enviar</button>
+				<button id="cerrarForm">&times;</button>
+			</form>
 		</div>
 		<p>
 			&copy; Todos los derechos Reservados
