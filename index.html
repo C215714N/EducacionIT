@@ -346,6 +346,9 @@
 				title="Escriba su nombre sin numeros ni simbolos, el mismo debera tener entre 2 y 50 caracteres"
 				required
 			/>
+			<div class="validate">
+				Escriba su nombre sin numeros ni simbolos, el mismo debera tener entre 2 y 50 caracteres"	
+			</div>
 			<label for="contactEmail">Correo</label>
 			<input 
 				type="email" 
@@ -355,6 +358,9 @@
 				multiple 
 				required
 			/>
+			<div class="validate">	
+				Escriba un correo valido, con un nombre de usuario seguido de un @ y luego el dominio.
+			</div>
 			<label for="contactTel">Telefono</label>
 			<input 
 				type="tel" 
@@ -365,11 +371,15 @@
 				title="Ingrese su numero de telefono sin guiones ni espacios, el mismo debe tener entre 6 y 20 digitos" 
 				required
 			/>
+			<div class="validate">	
+				Ingrese su numero de telefono sin guiones ni espacios, el mismo debe tener entre 6 y 20 digitos
+			</div>
 			<label id="rValue" for="contactRange">Edad: <span></span></label>
 			<input 
 				type="range" 
 				id="contactRange" 
-				name="contacRange"> 
+				name="contacRange"
+				required>
 			<label for="contactConsult">Consulta</label>
 			<textarea 
 				name="contactConsult" 
@@ -379,7 +389,7 @@
 				placeholder="Ingrese su Consulta" 
 				required
 			></textarea>
-			<button>Realizar Consulta</button>
+			<button class="validate">Realizar Consulta</button>
 		</form>
 		<div class="social">
 			<a class="icon-facebook" href="https://1.com" target="_blank"></a>

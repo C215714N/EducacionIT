@@ -164,6 +164,7 @@
 		#contact{
 			display: flex;
 			flex-direction: column;
+			margin:auto;
 		}
 		#contact label{
 			margin:.5rem 0 0;
@@ -183,7 +184,47 @@
 				hsl(200, 50%, 30%)
 			);
 		}
-	/*Redes Sociales*/
+	/*Validacion de Formulario*/
+		div.validate{
+			background-color: hsl(200,30%,30%);
+			overflow: hidden;
+			border:0;
+			padding:0;
+			height: 0
+		}
+		.validate{
+			opacity: .8;
+			color:white;
+			background-color: transparent;
+			border: .2rem solid white;
+			padding:.5rem;
+			font:bolder 1rem;
+			text-transform: uppercase;
+			transition: all .1s ease-in-out
+		}
+		#contact :focus + div.validate{
+			padding:1rem;
+			height: 4rem;
+			transition: all 1s ease;
+		}
+		#contact :valid + div.validate{
+			color:darkgreen;
+			background-color: limegreen;
+		}
+		#contact :invalid + div.validate{
+			color:darkred;
+			background-color: tomato;
+		}
+		#contact:valid button.validate{
+			background-color: darkgreen;
+		}
+		#contact:invalid button.validate{
+			background-color: darkred;
+		}
+		#contact > button.validate:hover{
+			background-color: hsl(200, 50%, 40%)
+		}	
+		/*Redes Sociales*/
 		.social {
 			display: flex;
 			justify-content: space-evenly;
@@ -222,11 +263,15 @@
 			background:  linear-gradient(tomato,darkred);
 		}
 	/*Multimedia*/
+		video, audio{
+			width:100%;
+		}
 		#videoControl{
 			width:10rem;
 			text-align: center;
+			color:white;
 			background-color: transparent;
-			border: .2rem solid black;
+			border: .2rem solid;
 			border-radius: 0;
 			padding:.5rem;
 			font: bold 1.2rem roboto, raleway, sans-serif;
@@ -237,12 +282,33 @@
 	}
 /*MD (Medium Devices)*/
 	@media screen and (min-width:768px){
-
-	}
-/*LG (Large Devices)*/
-	@media screen and (min-width:992px){
+		#header{
+			display: flex;
+		}
+		.header{
+			width:60%;
+		}
 		main .header{
 			width:100%;
+		}
+		#menu{
+			display: none;
+		}
+		nav{
+			width:40%;
+		}
+		.menu, .menu li{
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			height: 3rem;
+		}
+		.menu a{
+			line-height: 3rem;
+			padding:0 .5rem;
+		}
+		.menu a span{
+			display: none;
 		}
 		article{
 			display: flex;
@@ -252,10 +318,58 @@
 		section{
 			width:50%;
 		}
+		#contact{
+			max-width: 720px
+		}
+	}
+/*LG (Large Devices)*/
+	@media screen and (min-width:992px){
+		section:last-child:nth-child(even){
+			width:100%;
+			max-width: 900px;
+		}
+		#contact{
+			max-width: 900px;
+		}
+		#contact :focus{
+			transform: 
+				scale(1.1);
+		}
+		#contact :focus + div.validate{
+			margin-top: .5rem;
+		}
 	}
 /*XL (Extra Large Devices)*/
 	@media screen and (min-width:1200px){
-
+		.header{
+			width:40%;
+		}
+		nav{
+			width:60%;
+		}
+		.menu a span{
+			display: inline-block;
+		}
+		.menu li{
+			position:relative;
+			transition: all .25s ease-out
+		}
+		.menu li:hover{
+			transform: scale(1.15);
+		}
+		.menu li:before{
+			content: '';
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:0;
+			height: 5px;
+			background-color: #124;
+			transition: all .5s ease-in;
+		}
+		.menu li:hover:before{
+			width:100%;
+		}
 	}
 /*Printable*/
 	@media print {
