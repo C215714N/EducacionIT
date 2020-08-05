@@ -91,6 +91,14 @@
 		section{
 			padding:2rem;
 		}
+		.example{
+			list-style: none;
+			margin:1rem 0;
+			padding:1rem;
+			color:#ccc;
+			background-color: hsl(200, 50%, 30%);
+			border-left: .5rem solid hsl(200, 50%, 60%);
+		}
 	/*Formulario de Contacto*/
 		#contact{
 			display: flex;
