@@ -99,6 +99,67 @@
 			background-color: hsl(200, 50%, 30%);
 			border-left: .5rem solid hsl(200, 50%, 60%);
 		}
+		.example div{
+			width:10rem;
+			line-height: 2rem;
+			margin:1rem;
+			border:.4rem solid white;
+			padding:1rem;
+		}
+		/*Transformaciones*/
+			.transform div:hover{
+				background-color: navy;
+			}
+			/*Translate - Desplazar*/
+				.transform div:first-child{
+					transform: translateX(-5rem);
+					transform: translateY(5rem);
+					transform: translate(5rem, 5rem); /*X,Y*/
+				}
+			/*Scale - Redimensionar*/
+				.transform div:nth-child(2){
+					transform: scaleX(2);
+					transform: scaleY(2);
+					transform: 
+						scale(.5) /*Ambos Ejes o (X,Y)*/
+						translate(-2rem ,-2rem);/*(X,Y)*/
+				}
+			/*Rotate - Rotacion*/
+				.transform div:nth-child(3){
+					transform: 
+						rotate(90deg)
+						translate(-.5rem);/*Grados Inclinacion*/
+					transform-origin: center;
+				}
+			/*Skew - Sesgar*/
+				.transform div:nth-child(4){
+					transform: skewX(15deg);/*Angulo Inclinacion*/
+					transform: skewY(-15deg);
+					transform: 
+						skew(15deg, -30deg)
+						rotate(15deg)
+						translate(0, -1rem);
+				}
+			/*Perspectiva - Transformacion 3D*/
+				.transform div:nth-child(5){
+					transform: rotateX(15deg);
+					transform: rotateY();
+					transform: rotateZ();
+				}
+				.transform{
+					perspective: 50px;
+					perspective-origin: right bottom;
+				}
+			/*Transicion con Transformaciones*/
+				.transform div:last-child:hover{
+					transform: rotateY(30deg);
+					background-color: red;
+						transition-property: transform;
+						transition-duration: 2s;
+						transition-delay: 1s;
+						transition-timing-function: ease-in-out;
+					transition: all 1s ease;
+				}
 	/*Formulario de Contacto*/
 		#contact{
 			display: flex;
