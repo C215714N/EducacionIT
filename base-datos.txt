@@ -1,0 +1,44 @@
+INTRODUCCION Base de Datos (
+	Estructura para la organizacion de Datos,
+	Representada en tablas,
+	Se componen de Campos (columna) y registros(filas),
+	Existen diferentes Modelos(
+		'relacional', 'no relacional'
+	)
+);
+
+Lenguaje SQL (Structured Query Language)(
+	DDL(Data Definition Language){
+		"CREATE"
+			Creacion de Base de Datos,
+			Creacion de Usuarios,
+			Creacion de Tablas(Estructura),
+		"DROP"
+			Eliminacion de Base de Datos,
+			Eliminacion de Tablas,
+		"ALTER"
+			Modificacion de Tablas
+	}
+	DML(Data Manipulation Language){
+		"SELECT"
+			Obtener los datos de las Tablas
+		"INSERT"
+			Agregar datos a las Tablas
+		"DELETE"
+			ELiminar datos de las Tablas
+		"MODIFY / UPDATE"
+			Actualizar datos de las Tablas
+	}
+	DCL(Data Control Language){
+		"GRANT"
+			Otorgar permisos a los usuarios
+		"REVOKE"
+			Restringir permisos a los usuarios
+		"FLUSH PRIVILEGES"
+			Actualizar permisos de usuarios
+	}
+)
+
+Motor de Base de Datos (MySQL) (
+	
+);
