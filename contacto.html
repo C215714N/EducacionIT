@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/cr-logo.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -148,22 +150,36 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="contacto.php" method="POST">
+		<form id="contacto" 
+			onsubmit="alert('gracias por realizar su consulta')" action="contacto.php" method="POST">
 			<label for="nombre">Nombre: </label>
 			<input 
 				type="text" 
-				name="nombre" />
+				name="nombre"
+				pattern="[a-z A-Z]{2,50}"
+				title="Escriba su nombre sin numeros ni simbolos, el mismo debe tener entre 2 y 50 caracteres" 
+				required />
 			<label for="email">Correo: </label>
 			<input 
 				type="email"
-				name="email" />
+				name="email"
+				required />
 			<label for="consulta">Consulta: </label>
 			<textarea 
 				name="consulta"
 				minlength="10"
-				maxlength="200"></textarea>
-			<input type="submit" value="Realizar Consulta">
+				maxlength="200"
+				required></textarea>
+			<input 
+				class="enviar" 
+				type="submit" 
+				value="Realizar Consulta"/>
 		</form>
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
 	</footer>
 </body>
 </html>

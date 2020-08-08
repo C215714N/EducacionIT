@@ -8,8 +8,8 @@
 	// cuerpo del mail
 		$mensaje	= "
 			<strong>Nombre:</strong> $nombre <br/>
-			<strong>email:</strong> $email <br/>
-			<strong>consulta:</strong> $consulta <br/>
+			<strong>Correo:</strong> $email <br/>
+			<strong>Consulta:</strong> $consulta <br/>
 		";
 
 	// envío del mail
