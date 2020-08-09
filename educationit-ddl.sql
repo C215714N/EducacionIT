@@ -2,7 +2,7 @@
 CREATE DATABASE educacionit;
 USE educacionit;
 
-DROP TABLE alumnos IF EXISTS;
+DROP TABLE IF EXISTS alumnos ;
 
 CREATE TABLE alumnos(
 	id_alumno INT AUTO_INCREMENT,
@@ -14,7 +14,7 @@ CREATE TABLE alumnos(
 	telefono INT,
 	correo VARCHAR(200),
 	PRIMARY KEY (id_alumno),
-	UNIQUE KEY (tipo_doc, num_doc),
+	UNIQUE KEY (tipo_doc, num_doc)
 );
 ALTER TABLE alumnos 
 	ADD estado BOOLEAN;
