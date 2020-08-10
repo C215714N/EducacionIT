@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><!--Cabecera : configuraciones-->
+	<meta charset="utf-8">
+	<title>Fundamentos Web</title>
+</head>
+<body><!--Cuerpo : contenido visible-->
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;HTML> &amp; CSS</p>
+	</div>
+	<div>
+		<ul>
+			<li>
+				<!--Ruta Relativa / Interna-->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<!--Ruta Ancla / Marcador-->
+				<a href="#">Galeria</a>
+			</li>
+			<li>
+				<!--Ruta Ancla / Marcador-->
+				<a href="#contacto">Contacto</a>
+			</li>
+			<li>
+				<!--Ruta Absoluta / Externa-->
+				<a href="https://github.com/c215714n/educacionit/tree/html-lunes-10hs" target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li>
+				<strong> No utilizar Espacios </strong>
+				ya que este caracter sera reemplazado por <em>%20</em> y por lo tanto cualquier imagen que coloquemos en la pagina no estara disponible.
+				Por ejemplo, si nuestra imagen se llama <em>"foto 01.jpg"</em>, dicho nombre sera cambiado a <em>"foto%2001.jpg"</em>, por lo tanto, es prudente utilizar en su lugar <strong> guiones ("-""_")</strong>
+			</li>
+			<li>
+				<strong>Utilizar nombres referenciales</strong> que permitan al desarrollador implementar las imagenes con la mayor facilidad. Es decir que debemos evitar nombres genericos como <em>"foto-01.jpg"</em> o automatizados como <em>"2020-0810-11081500.jpg"</em> ya que en caso de utilizar multiples galerias, resultaria confusa la aplicacion de las mismas, siendo mas facil de recordad <em>"perritos-jugando.jpg"</em>
+			</li>
+			<li>
+				<strong>Trabajar solamente con minusculas</strong>, debido a que los servidores utilizan sistemas operativos basados en <strong>UNIX</strong>, estos son <em>Case Sensitive</em>. Esto permitira la reduccion de errores por parte del desarrollador, ya que <strong>NO es lo mismo</strong> 
+				<em>"perritos-jugando.jpg", "Perritos-Jugando.jpg", "PERRITOS-JUGANDO.jpg"</em>
+			</li>
+		</ul>
+		<div class="ejemplo">
+			<!--SRC="Ruta de la imagen"
+				ALT="Texto Alternativo"-->
+			<img src="img/usm-scorpion-01.jpg" alt="Dibujo Ultimate Scorpion"/>
+			<img src="img/usm-scorpion-02.jpg" alt="Dibujo Ultimate Scorpion"/>
+			<img src="img/usm-scorpion-03.jpg" alt="Dibujo Ultimate Scorpion"/>
+		</div>
+	</div>
+</body>
+</html>
