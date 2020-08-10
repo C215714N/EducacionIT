@@ -3,13 +3,62 @@
 <head><!--Cabecera : configuraciones-->
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*Selectores Generales*/
+		body{
+			margin:0;/*Distancia que separa a las etiquetas*/
+			font-family: calibri, verdana, sans-serif;
+		}
+		main{
+			padding:10px;
+		}
+		/*Selectores Multiples*/
+		header, footer{
+			padding:10px;/*Distancia que existe entre el contenido y el borde de la etiqueta (SUMA TAMAÑO)*/
+			color:#ccc;
+			background-color:#60A;	
+		}
+		/*Selectores Especificos - Selector #Id*/
+		#header h1, #header p{
+			margin:0;
+		}
+		/*Menu Horizontal*/
+		nav ul{
+			list-style: none;
+			margin:0;
+			padding:5px;
+			text-align: center;
+		}
+		nav li{
+			display: inline;
+			padding:5px;
+		}
+		nav a{
+			color:darkslateblue;
+			text-decoration: none;
+		}
+		/*Clases y PseudoClases*/
+		nav li:hover{
+			background-color: #A9F;
+		}
+
+		.ejemplo{
+			background-color: darkslateblue;
+			text-align: center;
+			padding:10px;
+		}
+		.ejemplo img{
+			margin:10px;
+			height: 200px;
+		}
+	</style>
 </head>
 <body><!--Cuerpo : contenido visible-->
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;HTML> &amp; CSS</p>
-	</div>
-	<div>
+	</header>
+	<nav>
 		<ul>
 			<li>
 				<!--Ruta Relativa / Interna-->
@@ -28,8 +77,8 @@
 				<a href="https://github.com/c215714n/educacionit/tree/html-lunes-10hs" target="_blank">GitHub</a>
 			</li>
 		</ul>
-	</div>
-	<div>
+	</nav>
+	<main>
 		<ul>
 			<li>
 				<strong> No utilizar Espacios </strong>
@@ -40,7 +89,7 @@
 				<strong>Utilizar nombres referenciales</strong> que permitan al desarrollador implementar las imagenes con la mayor facilidad. Es decir que debemos evitar nombres genericos como <em>"foto-01.jpg"</em> o automatizados como <em>"2020-0810-11081500.jpg"</em> ya que en caso de utilizar multiples galerias, resultaria confusa la aplicacion de las mismas, siendo mas facil de recordad <em>"perritos-jugando.jpg"</em>
 			</li>
 			<li>
-				<strong>Trabajar solamente con minusculas</strong>, debido a que los servidores utilizan sistemas operativos basados en <strong>UNIX</strong>, estos son <em>Case Sensitive</em>. Esto permitira la reduccion de errores por parte del desarrollador, ya que <strong>NO es lo mismo</strong> 
+				<strong>Trabajar solamente con minusculas</strong>, debido a que los servidores utilizan sistemas operativos basados en <strong>UNIX</strong> y estos son <em>Case Sensitive</em>. Esto permitira la reduccion de errores por parte del desarrollador, ya que <strong>NO es lo mismo</strong> 
 				<em>"perritos-jugando.jpg", "Perritos-Jugando.jpg", "PERRITOS-JUGANDO.jpg"</em>
 			</li>
 		</ul>
@@ -51,6 +100,12 @@
 			<img src="img/usm-scorpion-02.jpg" alt="Dibujo Ultimate Scorpion"/>
 			<img src="img/usm-scorpion-03.jpg" alt="Dibujo Ultimate Scorpion"/>
 		</div>
-	</div>
+	</main>
+	<footer>
+		<p>
+			&copy; Todos los derechos reservados |
+			 Cristian Racedo &amp; compañia
+		</p>
+	</footer>
 </body>
 </html>

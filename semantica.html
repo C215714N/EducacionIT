@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estructura Semantica</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*Eliminamos el formato predeterminado*/
+		body, header, header *, nav, ul.menu, main, article, section, aside, footer{
+			margin:0;
+			border:0;
+			padding:0;		
+			text-align: center;
+			font-family:'segoe ui', sans-serif;
+		}
+		/*Establecemos un nuevo formato*/
+		body,header, nav, footer, .menu{
+			color: white;
+			background-color: rgba(25,33,104,0.5);
+		}
+
+		/*Formato exclusivo del subtitulo que acompaña a H1 en el Header*/
+		.subtitle{
+			padding-left: 10px;
+			margin-top: -10px;
+		}
+
+			/*Nuevo formato para el menu*/
+			.menu li{
+				display:inline;
+				padding:0px 10px 0px 10px; 
+			}
+			/*Cambio de estado del menu en el evento hover*/
+			.menu li:hover{
+				background-color: rgba(104,33,75,0.5);
+			}
+			/*Establecemos un nuevo formato para los hipervinculos*/
+			a{
+				color: white;
+				text-decoration: none;
+			}
+		main{
+			overflow: hidden;
+		}
+
+			section h1{
+				margin: 5px;
+			}
+		/*Estilo exclusivo para la representacion de la estructura semantica de HTML5*/
+		div{
+			background-color: rgba(104,33,75,0.5);
+		}
+			.body{
+				width: 440px;
+				margin: 5px auto 20px auto;
+				padding: 5px;
+				border-radius: 10px;
+			}
+			.header, .nav, .main, .article, .section, .aside, .footer{
+				margin:10px;
+				padding:5px;
+				overflow:hidden;
+				border-radius:5px;
+			}
+			.aside{
+				float:right;
+				width:150px;
+				height:175px;
+			}
+			.article{
+				float:left;
+				width:auto;
+				width:200px;
+				height:175px;
+			}
+		/*Ubicamos el contenido tangencial a un costado*/
+		aside{
+			width:400px;
+			float:right;
+			margin: -20px 0px 0px 20px;
+			padding:20px;
+			text-align: justify;
+		}
+			/*modificamos el margen de los elementos de la etiqueta aside*/
+			aside h1, aside p{
+				margin:0;
+			}
+
+		section{
+			width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Etiquetas HTML5</h1>
+		<p class="subtitle">Estructura Semántica</p>
+	</header>
+	<nav>
+		<ul class="menu">
+			<li><a href="sem.html">Semantica</a></li>
+			<li><a href="sin.html">Sintaxis</a></li>
+			<li><a href="seo.html">SEO</a></li>
+		</ul>
+	</nav>
+	<main>
+		<article>
+			<aside>
+				<h1>Estructura semantica del BODY en HTML</h1>
+				<p><strong>HEADER:</strong> Cabecera de Pagina.
+					<br>Utilizada para etiquetas de titulo como <strong>&lt;H1&gt;&lt;/H1&gt;</strong>, imagenes a modo de banner o logo de la empresa en cuestion e incluso algun que otro slider.
+				</p>
+				<hr>
+				<p><strong>NAV:</strong> Barra de Navegacion.
+					<br>Aqui colocaremos los enlaces principales para el acceso a paginas en nuestro sitio, utilizando la etiqueta <strong>&lt;a&gt;&lt;/a&gt;</strong>, generalmente dentro de un <strong>&lt;li&gt;&lt;/li&gt;</strong> de una lista.
+				</p>
+				<hr>
+				<p><strong>MAIN:</strong> Elemento Principal
+					<br>Esta seccion esta destinada para el contenido principal de nuestra pagina, puede servir tanto como contenedor, asi como tambien como un elemento unico.
+				</p>
+				<hr>
+				<p><strong>ARTICLE:</strong> Contenido Independiente.
+					<br>Si el contenido de nuestra pagina web puede funcionar tanto dentro como fuera de la misma, debe colocarse en dicha etiqueta.
+				</p>
+				<hr>
+				<p><strong>SECTION:</strong> Contenido Contextualizada.
+					<br> Aqui colocaremos varios elementos que guarden una relacion directa con las demas secciones de nuestra pagina web, sin los cuales nuestro contenido no tendria fundamentacion alguna.
+				</p>
+				<hr>
+				<p><strong>ASIDE:</strong> Contenido Tangencial.
+					<br>Generalmente utilizada a modo de barra de contenido lateral, esta etiqueta es utilizara para aquel contenido que no se relaciona con el contenido principal, pero guarda una relacion tematica con el mismo.
+				</p>
+				<hr>
+				<p><strong>FOOTER:</strong> Pie de Pagina.
+					<br>Al final de nuestro documento, se suele colocar informacion sobre el desarrollo de la misma, como datos de &copy; Derechos de Autor, Propiedad intelectual, datos de contacto utilizando etiquetas como <strong>&lt;name&gt;&lt;/name&gt;,&lt;tel&gt;&lt;/tel&gt;,&lt;address&gt;&lt;/address&gt;,</strong> o un formulario de contacto con la etiqueta <strong>&lt;form&gt;&lt;/form&gt;</strong>.
+				</p>
+				<hr>
+				<p>
+					A diferencia del modelo de estructura en versiones anteriores de HTML, donde se realizaba un uso abusivo del <strong>&lt;DIV&gt;&lt;/DIV&gt;</strong>, las etiquetas Semanticas fueron pensadas para optimizar tanto del diseño como para reforzar la estructura de nuestra pagina web.
+					<br>Como su nombre lo indica, estas etiquetas alteran el significado de las expresiones segun como las utilicemos y en base a esto los Bots de los motores de busquedas, mediante algoritmos categorizaran e indexaran el contenido de nuestro sitio.
+				</p>
+			</aside>
+			<section>
+				<h1>Representacion Grafica de la Estructura Actual</h1>
+				<div class="body"> &lt;BODY&gt;
+					<div class="header">
+						&lt;HEADER&gt;
+						... &lt;/HEADER&gt;
+					</div>
+					<div class="nav">
+						&lt;NAV&gt; 
+						... &lt;/NAV&gt;
+					</div>
+					<div class="main">
+						&lt;MAIN&gt;
+						<br>
+						<div class="article">
+							&lt;ARTICLE&gt;
+							<div class="section">
+								&lt;SECTION&gt; 
+								&lt;/SECTION&gt;
+							</div>
+							<div class="section">
+								&lt;SECTION&gt; 
+								&lt;/SECTION&gt;
+							</div>
+							&lt;/ARTICLE&gt;
+						</div>
+						<div class="aside">
+							<p>&lt;ASIDE&gt;</p>
+							<br>
+							... 
+							<br>
+							<p>&lt;/ASIDE&gt;</p>
+						</div>
+						&lt;/MAIN&gt;
+					</div>
+					<div class="footer">
+						&lt;FOOTER&gt;
+						&lt;/FOOTER&gt;
+					</div>
+					&lt;/BODY&gt;
+				</div>
+			</section>
+			<section>
+				<h1>Representacion Grafica de la Estructura Anterior</h1>
+				<div class="body"> &lt;BODY&gt;
+					<div class="header">
+						&lt;DIV ID="header"&gt;
+						... &lt;/DIV&gt;
+					</div>
+					<div class="nav">
+						&lt;DIV ID="nav"&gt; 
+						... &lt;/DIV&gt;
+					</div>
+					<div class="main">
+						&lt;DIV ID="main"&gt;
+						<br>
+						<div class="article">
+							&lt;DIV ID="article"&gt;
+							<div class="section">
+								&lt;DIV ID="section-a"&gt; 
+								&lt;/DIV&gt;
+							</div>
+							<div class="section">
+								&lt;DIV ID="section-b"&gt; 
+								&lt;/DIV&gt;
+							</div>
+							&lt;/DIV&gt;
+						</div>
+						<div class="aside">
+							<p>&lt;DIV ID="aside"&gt;</p>
+							<br>
+							... 
+							<br>
+							<p>&lt;/DIV&gt;</p>
+						</div>
+						&lt;/DIV&gt;
+					</div>
+					<div class="footer">
+						&lt;DIV ID="footer"&gt;
+						&lt;/DIV&gt;
+					</div>
+					&lt;/BODY&gt;
+				</div>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<p>&copy; Todos los derechos reservados
+			<br>Cristian Racedo &amp; Compañia</p>
+	</footer>
+</body>
+</html>
