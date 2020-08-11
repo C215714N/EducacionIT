@@ -37,7 +37,7 @@
 					<h1>Tema 1: Dolor sit amet</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
+				<img src="assets/bg-sm-header.jpg" alt="background">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
 				<footer>
 					<address>
@@ -102,7 +102,7 @@
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
+				<img src="assets/bg-xl-header.png" alt="background">
 				<footer>
 					<address>
 						<strong>Autor:</strong>
@@ -186,7 +186,7 @@
 					<h1>Tema 4: Dolor sit amet</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
+				<img src="assets/bg-md-header.jpg" alt="background">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
 				<footer>
 					<address>
@@ -318,7 +318,7 @@
 				<header>
 					<h1>Tema 6: Dolor sit amet</h1>
 				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
+				<img src="assets/bg-lg-header.jpg" alt="background">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusamus dolorum minus quidem id qui, sapiente veniam impedit, nostrum a iusto, aut harum, expedita iure ipsam atque voluptatem officia corporis.</p>
 				<footer>
@@ -332,13 +332,14 @@
 			</section>
 		</article>
 	</main>
-	<footer>
+	<footer id="footer">
 		<form action="" id="contact">
 			<label for="nombre">nombre</label>
 			<input 
 				type="text" 
 				name="nombre" 
 				id="nombre"
+				pattern="[A-Z a-z]{2,50}"
 				placeholder="ingrese su nombre" 
 				required>
 			<label for="email">email</label>
@@ -353,6 +354,7 @@
 				type="tel" 
 				name="tel" 
 				id="tel"
+				pattern="[0-9]{6,20}" 
 				placeholder="ingrese su telefono" 
 				required>
 			<label for="consulta">Consulta</label>
@@ -367,9 +369,9 @@
 		</form>
 		<div class="social">
 			<a href="https://facebook.com" target="_blank"></a>
-			<a href="https://instagram.com" target="_blank"></a>
-			<a href="https://whatsapp.com" target="_blank"></a>
 			<a href="https://twitter.com" target="_blank"></a>
+			<a href="https://linkedin.com" target="_blank"></a>
+			<a href="https://youtube.com" target="_blank"></a>
 		</div>
 		<address> 
 			&copy; Todos los derechos reservados | 
@@ -381,5 +383,6 @@
 			</a>
 		</address>
 	</footer>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
