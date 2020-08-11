@@ -71,7 +71,7 @@
 		#contact{
 			display: flex;
 			flex-direction: column;
-			margin:.5rem;
+			margin:.5rem auto;
 			padding:.5rem;
 		}
 		#contact input,
@@ -134,31 +134,107 @@
 
 /*Dispositivos SM >= 576px Celulares landscape*/
 	@media screen and (min-width: 576px){
-		#header,
-		#footer{
-			background-color: mediumslateblue;
-		}
+
 	}
 /*Dispositivos MD >= 768px tablets portrait*/
 	@media screen and (min-width: 768px){
-		#header,
-		#footer{
-			background-color: darkslateblue;
-		}
+		/*Cabecera y Pie de pagina*/
+			#header{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			#footer address a{
+				display: inline;
+				margin:0;
+				padding:0;
+			}
+		/*Navegacion*/
+			#menu{
+				display: none;
+			}
+			.menu{
+				height:auto;
+				display: flex;
+				justify-content: center;
+			}
+			.menu a{
+				width:80px;
+				text-align: center;
+				padding:.5rem;
+			}
+			.menu li:last-child a{
+				display: none;
+			}
+		/*Contenido Principal*/
+			article{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			main .header{
+				width:100%;
+			}
+			section{
+				width:calc(50% - 1rem);
+				min-width: 480px;
+				position:relative;
+				margin:.5rem auto;
+				border:none;
+				border-radius: 1rem;
+				background-color: #ddd;
+			}
+			section p:last-of-type:nth-last-child(2),
+			section img:last-of-type:nth-last-child(2){
+				padding-bottom: 3rem;
+			}
+			section footer{
+				position:absolute;
+				bottom: 0;
+				left: 0;
+				padding:1rem;
+			}
+		/*Formulario Contacto*/
+			#contact{
+				max-width: 720px;
+			}
+		/*Redes Sociales*/
+			.social a{
+				width:64px;
+				height: 64px;
+				margin:.5rem;
+				background-size: 704px;
+			}
+		/*iconos social-media*/
+			.social a:nth-child(1){background-position: calc(-64px * 0) calc(-64px * 2)}
+			.social a:nth-child(2){background-position: calc(-64px * 8) calc(-64px * 2)}
+			.social a:nth-child(3){background-position: calc(-64px * 4) calc(-64px * 2)}
+			.social a:nth-child(4){background-position: calc(-64px * 10) calc(-64px * 2)}
+		/*social-media Hover*/
+			.social a:hover:nth-child(1){background-position: calc(-64px * 0) calc(-64px * 1)}
+			.social a:hover:nth-child(2){background-position: calc(-64px * 8) calc(-64px * 1)}
+			.social a:hover:nth-child(3){background-position: calc(-64px * 4) calc(-64px * 1)}
+			.social a:hover:nth-child(4){background-position: calc(-64px * 10) calc(-64px * 1)}
 	}
 /*Dispositivos LG >= 992px tablets landscape y desktop*/
 	@media screen and (min-width: 992px){
-		#header,
-		#footer{
-			color:darkslateblue;
-			background-color: #ccc;
-		}
+		/*Cabecera y Pie de Pagina*/
+		/*Navegacion*/
+			.menu li:last-child a{
+				display: block;
+			}
+		/*Formulario Contacto*/
+			#contact{
+				max-width: 900px;
+			}
 	}
 /*Dispositivos XL >=1200px desktop y smart-tv*/
 	@media screen and (min-width: 1200px){
-		#header,
-		#footer{
-			color:slateblue;
+		article{
+			justify-content: center;
+		}
+		section{
+			width:30%;
+			margin:1rem;
 		}
 	}
 /*Dispositivos de Impresion*/
