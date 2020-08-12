@@ -147,8 +147,10 @@
 					transform: rotateZ();
 				}
 				.transform{
-					perspective: 50px;
-					perspective-origin: right bottom;
+					perspective: 100px;
+					perspective-origin: center;
+					display: flex;
+					flex-wrap: wrap;
 				}
 			/*Transicion con Transformaciones*/
 				.transform div:last-child:hover{
@@ -173,6 +175,8 @@
 		#contact textarea{
 			padding:.4rem;
 			font-size: 1rem;
+			outline:none;
+			border-radius: .2rem
 		}
 		#contact textarea{
 			resize: none;
@@ -196,11 +200,18 @@
 			opacity: .8;
 			color:white;
 			background-color: transparent;
-			border: .2rem solid white;
+			border: .2rem solid;
 			padding:.5rem;
 			font:bolder 1rem;
+			font-weight: bolder;
 			text-transform: uppercase;
 			transition: all .1s ease-in-out
+		}
+		#contact :focus:invalid{
+			border:.2rem solid tomato;
+		}
+		#contact :focus:valid{
+			border:.2rem solid limegreen;
 		}
 		#contact :focus + div.validate{
 			padding:1rem;
@@ -278,7 +289,10 @@
 		}
 /*SM (Small Devices)*/
 	@media screen and (min-width:576px){
-
+		section{
+			max-width: 540px;
+			margin:0 auto;
+		}
 	}
 /*MD (Medium Devices)*/
 	@media screen and (min-width:768px){
@@ -313,21 +327,24 @@
 		article{
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-around;
+			justify-content: center;
 		}
 		section{
+			max-width: 720px;
 			width:50%;
 		}
 		#contact{
-			max-width: 720px
+			max-width: 720px;
 		}
 	}
 /*LG (Large Devices)*/
 	@media screen and (min-width:992px){
+	/*Contenido Principal*/
 		section:last-child:nth-child(even){
 			width:100%;
 			max-width: 900px;
 		}
+	/*Formulario de Contacto*/
 		#contact{
 			max-width: 900px;
 		}
@@ -341,9 +358,11 @@
 	}
 /*XL (Extra Large Devices)*/
 	@media screen and (min-width:1200px){
+	/*Cabecera*/
 		.header{
 			width:40%;
 		}
+	/*Navegacion*/
 		nav{
 			width:60%;
 		}
@@ -363,7 +382,7 @@
 			bottom:0;
 			left:0;
 			width:0;
-			height: 5px;
+			height: .5rem;
 			background-color: #124;
 			transition: all .5s ease-in;
 		}
@@ -373,6 +392,7 @@
 	}
 /*Printable*/
 	@media print {
+	/*Navegacion y Pie de Pagina*/
 		nav, #footer{
 			display: none;
 		}

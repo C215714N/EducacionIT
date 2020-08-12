@@ -18,7 +18,7 @@
 			<button id="menu">&equiv;</button>
 			<ul class="menu">
 				<li>
-					<a class="icon-home" href="#"> 
+					<a class="icon-home" tooltip="Inicio" href="#"> 
 						<span> Inicio </span>
 					</a>
 				</li>
@@ -182,26 +182,29 @@
 					<em> XML (svg)</em> y 
 					<em> JS (canvas) </em>.
 				</p>
-				<svg style="border:1px solid black; width:200px; height:200px">
-					<rect 
-						x="10" y="10" 
-						width="50" height="50" 
-						fill="tomato"
-					/>
-					<circle 
-						r="25" 
-						cx="60" cy="60" 
-						fill="rgba(30, 80, 150, .5)"
-					/>
-					<text 
-						x="10" y="100" 
-						fill="transparent" 
-						stroke="black" 
-						stroke-width="1">
-						SVG
-					</text>
-				</svg>
-				<canvas id="jsCanvas" width="200" height="200" style="border:1px solid black;"></canvas>
+				<div class="example">	
+					<svg style=" background-color:white; border:1px solid black; width:200px; height:200px">
+						<rect 
+							x="10" y="10" 
+							width="50" height="50" 
+							fill="tomato"
+						/>
+						<circle 
+							r="25" 
+							cx="60" cy="60" 
+							fill="rgba(30, 80, 150, .5)"
+						/>
+						<text 
+							x="10" y="100" 
+							fill="transparent" 
+							stroke="black" 
+							stroke-width="1">
+								SVG
+						</text>
+					</svg>
+					<canvas id="jsCanvas" width="200" height="200" style="background-color:white; border:1px solid black;">
+					</canvas>
+				</div>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
 				</footer>
@@ -216,7 +219,24 @@
 					<h1>Tema 1: Colores</h1>
 				</header>
 				<p>
-					Existen diferentes formas de representar colores en la web, por un lado tenemos los <strong>Colores HTML</strong> que se representan mediante nombres conocidos y existen un total de 140 valores disponibles, como por ejemplo <em>color: grey</em>. Otra forma de representarlos es mediante la <strong> Sintesis Adhitiva </strong>, en la que combinamos los canales de luz <em>Rojo, Verde y Azul </em> para la obtencion de un valor cromatico, las formas que existen de este metodo son <em>RGB(130,130,130)</em> y hexadecimal <em>#888888</em> cuyos digitos en orden representan cada uno de los valores mencionados anteriormente. Por ultimo se incorporo el <strong> Modelo HSL </strong> que utiliza los valores de <em>croma, saturacion y luminosidad </em> para la generacion de colores como <em>hsl(180,0%;50%)</em>.
+					Existen diferentes formas de representar colores en la web, como los 
+					<strong> Colores HTML </strong> 
+					que utilza nombres conocidos como  
+					<em> color: grey </em> 
+					y existen un total de 140 valores. Otra forma de representarlos es mediante la 
+					<strong> Sintesis Adhitiva </strong>,
+					utilizando canales de luz 
+					<em> Roja, Verde y Azul </em> 
+					para la obtencion de un valor cromatico decimal como
+					<em> RGB(130,130,130) </em>
+					o hexadecimal como 
+					<em> #888888 </em>. 
+					Por ultimo se incorporo el 
+					<strong> Modelo HSL </strong> 
+					que utiliza los valores de 
+					<em> croma, saturacion y luminosidad </em>
+					para la generacion de colores como 
+					<em> hsl(180,0%;50%)</em>.
 				</p>
 				<div class="example">
 					<div>color:Cyan;</div>
@@ -267,11 +287,6 @@
 					<div>Skew</div>
 					<div>Perspective</div>
 					<div>Transform</div>
-					<div>	
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
 				</div>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
@@ -282,6 +297,13 @@
 					<h1>Tema 2</h1>
 				</header>
 				<p>contenido</p>
+				<div class="example">	
+					1
+					<div>A</div>
+					<div>B</div>
+					<div>C</div>
+					2
+				</div>
 				<footer>
 					<address>Autor: <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a><br>Mas informacion en alumni.education </address>
 				</footer>
@@ -347,7 +369,7 @@
 				required
 			/>
 			<div class="validate">
-				Escriba su nombre sin numeros ni simbolos, el mismo debera tener entre 2 y 50 caracteres"	
+				Escriba su nombre sin numeros ni simbolos, el mismo debera tener entre 2 y 50 caracteres	
 			</div>
 			<label for="contactEmail">Correo</label>
 			<input 
@@ -379,7 +401,11 @@
 				type="range" 
 				id="contactRange" 
 				name="contacRange"
-				required>
+				required 
+			/>
+			<div class="validate">	
+				Arrastre la barra hasta seleccionar su edad (Debe ser mayor de Edad). 	
+			</div>
 			<label for="contactConsult">Consulta</label>
 			<textarea 
 				name="contactConsult" 
@@ -392,10 +418,26 @@
 			<button class="validate">Realizar Consulta</button>
 		</form>
 		<div class="social">
-			<a class="icon-facebook" href="https://1.com" target="_blank"></a>
-			<a class="icon-instagram" href="https://2.com" target="_blank"></a>
-			<a class="icon-twitter" href="https://3.com" target="_blank"></a>
-			<a class="icon-linkedin" href="https://4.com" target="_blank"></a>
+			<a 
+				class="icon-facebook" 
+				href="https://facebook.com" 
+				target="_blank">
+			</a>
+			<a 
+				class="icon-instagram" 
+				href="https://instagram.com" 
+				target="_blank">
+			</a>
+			<a 
+				class="icon-twitter" 
+				href="https://twitter.com" 
+				target="_blank">
+			</a>
+			<a 
+				class="icon-linkedin" 
+				href="https://linkedin.com" 
+				target="_blank">
+			</a>
 		</div>
 		<p> &copy; Todos los derechos reservados <a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a> &amp; Compañia</p>
 	</footer>

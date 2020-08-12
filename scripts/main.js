@@ -48,6 +48,13 @@
 		document.querySelector('#contactRange').addEventListener(
 			'change', () => {
 				document.querySelector('#rValue span').innerHTML = document.querySelector('#contactRange').value
+				if(document.querySelector('#contactRange').value < 18){
+					document.querySelector('#contactRange + .validate').style.color = 'darkred';
+					document.querySelector('#contactRange + .validate').style.backgroundColor = 'tomato';
+				}else{
+					document.querySelector('#contactRange + .validate').style.color = 'darkgreen';
+					document.querySelector('#contactRange + .validate').style.backgroundColor = 'limegreen';
+				}
 			}
 		)
 //Autor: Cristian Racedo
