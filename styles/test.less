@@ -1,0 +1,125 @@
+//Variables
+	//colores
+		@fst:#248;
+		@snd:#ddd;
+		@trd: darken(@fst, 10%);
+	//MediaQueries
+		@sm: 576px;
+		@md: 768px;
+		@lg: 992px;
+		@xl: 1200px;
+
+//Mixins
+	.rounded(){
+		border-radius: 1rem;
+		--webkit-border-radius: 1rem;
+		--moz-border-radius:1rem;
+		--ms-border-radius:1rem;
+	}
+//Mixins Parametricos
+	.normalize (@p:0, @b:0, @m:0){
+		margin:@m;
+		border:@b;
+		padding:@p;
+	}
+	.flexbox (
+		@fJustify:space-evenly,
+		@fAlign:flex-start,
+		@fDir:row,
+		@fWrap:wrap,
+		@flex:flex,
+		){
+		display: @flex;
+		flex-direction: @fDir;
+		flex-wrap: @fWrap;
+		justify-content: @fJustify;
+		align-items: @fAlign;
+	}
+
+.MediaQueries (@vw){
+	@media screen and (min-width: @vw){
+		width:if(
+			@vw <= @md, 
+				100%, 
+				if( 
+					@vw <= @lg, 
+						50%, 
+						30%));
+		min-width: if(@vw <= @md, 150px, 300px);
+	}
+}
+
+body{
+	.normalize;
+	#header{
+		.normalize(1rem);
+		.flexbox;
+		.rounded;
+		background-color: @fst;
+		.header{
+			.normalize(0,0,0 auto);
+			.MediaQueries(@sm);
+			.MediaQueries(@lg);
+			.MediaQueries(@xl);
+			h1{
+				color:@snd;
+			}
+		}
+		nav{
+			.MediaQueries(@sm);
+			.MediaQueries(@lg);
+			background-color:@trd;
+			.menu{
+				.flexbox(center);
+			}
+		}
+	}
+	main{
+		article{
+			.flexbox;
+			section{
+				.MediaQueries(@sm);
+				.MediaQueries(@lg);
+				.MediaQueries(@xl);
+			}
+		}
+	}
+	#footer{
+		.normalize(1rem);
+		.rounded;
+		background-color:@trd;
+		#contact{
+			.normalize(.5rem 1rem, 0, 1rem auto);
+			.flexbox(center, flex-start,column);
+			input, textarea, select{
+				.normalize(.4rem);
+				outline: none;
+			}
+		}
+	}
+}
+
+//Bucles
+.grilla(@n, @i:1) when (@i <= @n){
+	.col-@{i}{
+		width:percentage(@i / @n);
+	}
+	.grilla(@n, @i + 1);
+}
+.grilla(24);
+
+.CrisTrap(@vn,@vw){
+	@media screen (min-width: @vw){
+		.grid (@n, @i:1) when (@i <= @n){
+			.col-@{vn}-@{i}{
+				width:percentage(@i / @n);
+			}
+			.grid (@n, @i + 1);
+		}
+		.grid(24);
+	}
+}
+.CrisTrap(sm,@sm);
+.CrisTrap(md,@md);
+.CrisTrap(lg,@lg);
+.CrisTrap(xl,@xl);

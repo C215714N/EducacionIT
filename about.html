@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div{
+			overflow: hidden;
+			position:relative;
+			width:100px;
+			line-height: 50px;
+			text-align: center;
+			color:#ddd;
+			background-color: #248;
+		}
+		div:before,
+		div:after{
+			content: '';
+			position:absolute;
+			top:-50%;
+			height:100px;
+			width: 100px;
+			border-radius: 50%;
+			transition: all .5s ease-in-out;
+			background-color: hsla(200, 50%, 60%, .5);
+		}
+		div:before{
+			left:-100%;
+		}
+		div:hover:before{
+			left:0;
+		}
+		div:after{
+			right: -100%;
+		}
+		div:hover:after{
+			right:0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		Hover Me
+	</div>
+</body>
+</html>
