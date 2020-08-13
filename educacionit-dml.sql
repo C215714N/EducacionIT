@@ -3,12 +3,14 @@ VALUES(
 	'',
 	'racedo',
 	'cristian',
-	'dni',
+	1,
 	35336446,
 	'estanislao del campo 95',
-	1156591548,
 	'cristiandracedo@hotmail.com',
-	true,
+	1156591548,
+    1991-04-18,
+    29,
+	true
 );
 
 SELECT * FROM alumnos;
