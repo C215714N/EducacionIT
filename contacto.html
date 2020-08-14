@@ -148,6 +148,144 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten
+				<em> organizar la informacion </em>
+				de <strong> manera tabular </strong>
+				y al igual que en cualquier ambito, las mismas se componen de  
+				<strong> filas y columnas </strong>,
+				pero a diferencia de la mayoria de los programas que utilizan tablas, en 
+				<strong> HTML </strong> estas se crean a partir del modelo de cajas, es decir, separando la estructura en
+				<em> contenedor y contenido </em>.
+			</p>			
+			<section>
+				<header>
+					<h1>¿Estructura Clasica?</h1>
+				</header>
+				<p>
+					Para definirlas, es necesario utilizar un <em> elemento contenedor </em> o especificamente hablando, la etiqueta 
+					<strong> TABLE </strong>, luego por cada fila implementaremos otra etiqueta contenedora la cual es 
+					<strong> TR (Table Row) </strong> y dentro de las mismas debemos colocar los
+					<em> elementos de contenido </em>, que son las etiquetas de celdas o 
+					<strong> TD (Table Division) </strong>.
+					Por defecto, como sucede con la mayoria de las etiquetas, 
+					<em> no poseen borde</em>.
+				</p>
+				<div class="example">
+					<p>
+						<strong>Emmet: </strong>
+						table>tr*3>td{Celda $}*3
+					</p>
+					<table>
+							<tr>
+								<td>Fila 1 Celda 1</td>
+								<td>Fila 1 Celda 2</td>
+								<td>Fila 1 Celda 3</td>
+							</tr>
+							<tr>
+								<td>Fila 2 Celda 1</td>
+								<td>Fila 2 Celda 2</td>
+								<td>Fila 2 Celda 3</td>
+							</tr>
+							<tr>
+								<td>Fila 3 Celda 1</td>
+								<td>Fila 3 Celda 2</td>
+								<td>Fila 3 Celda 3</td>
+							</tr>
+						</table>	
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Estructura Semantica?</h1>
+				</header>
+				<p>
+					Con el surgmiento del nuevo standard de 
+					<strong> HTML5 </strong> se incorporaron a la <em> estructura anterior </em> 
+					<strong> elementos de tipo semantico </strong>, es decir, que ademas de las etiquetas que utilizamos anteriormente, podemos indicar al <em>motor de busqueda</em> cuales son las partes que componen nuestra tabla.
+					Por un lado tenemos 
+					<strong> THEAD </strong> que marca cual es la <em>cabecera de tabla</em> y en su interior debe contener titulos utilizando la etiqueta 
+					<strong> TH (Table Heading) </strong> 
+					en lugar de los TD. Luego tenemos 
+					<strong> TBODY </strong> que mantiene la estructura clasica y se utiliza para la 
+					<em> Presentacion de los datos </em> aunque segun el tipo de tabla, tambien puede llevar <strong>TH</strong> en alguna columna.
+					Y por ultimo <strong> TFOOT </strong> se utiliza como pie o <em> informacion complementaria </em>, tambien puede llevar titulos y es opcional.
+				</p>
+				<div class="example">
+					<p>
+						<strong>Emmet: </strong>
+						table>(thead>th*4)+(tbody>tr*3>th*4)+(tfoot>th+td)
+					</p>
+					<table>
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th>Productos</th>
+							<th>Cant.</th>
+							<th>Precio.U</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>3</td>
+								<td>800</td>
+								<td>2400</td>
+							</tr>
+							<tr>
+								<td>Mouse</td>
+								<td>1</td>
+								<td>1200</td>
+								<td>1200</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>2</td>
+								<td>5600</td>
+								<td>11200</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>14800</td>
+						</tfoot>
+					</table>
+
+					<table>
+						<caption>Tipos de Desarrolladores</caption>
+						<thead>
+							<th>Desarrollo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+							<tr>
+								<td rowspan="3">BackEnd</td>
+								<td>SQL</td>
+							</tr>
+							<tr>
+								<td>PHP</td>
+							</tr>
+							<tr>
+								<td>JAVA</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" 
@@ -158,17 +296,20 @@
 				name="nombre"
 				pattern="[a-z A-Z]{2,50}"
 				title="Escriba su nombre sin numeros ni simbolos, el mismo debe tener entre 2 y 50 caracteres" 
+				placeholder="ingrese su nombre" 
 				required />
 			<label for="email">Correo: </label>
 			<input 
 				type="email"
 				name="email"
+				placeholder="ingrese su correo" 
 				required />
 			<label for="consulta">Consulta: </label>
 			<textarea 
 				name="consulta"
 				minlength="10"
 				maxlength="200"
+				placeholder="ingrese su consulta" 
 				required></textarea>
 			<input 
 				class="enviar" 

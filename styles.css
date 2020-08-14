@@ -70,3 +70,18 @@ main{
 #contacto .enviar:hover{
 	background-color: limegreen;
 }
+
+/*Tablas*/
+table, caption, tr, td{
+	color:white;
+	background-color: rgba(30, 120, 80, .5); 
+} 
+
+caption{
+	margin-top: 16px;
+	border-radius: 16px 16px 0 0; /*tl tr br bl*/
+}
+
+th,td{
+	width:100px;
+}
