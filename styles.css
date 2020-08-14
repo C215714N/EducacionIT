@@ -3,7 +3,7 @@ body{
 	font-family:  calibri, verdana, sans-serif;
 }
 #header, #footer, .header{
-	padding: 10px;
+	padding: 10px 20px;/*Vertical Horizontal*/
 	color:#ccc;
 	background-color: darkgreen;
 }
@@ -31,7 +31,7 @@ body{
 	text-decoration: none;
 }
 main{
-	padding:20px 10px;/*Vertical Horizontal*/
+	padding:20px;
 }
 
 .example{
@@ -41,6 +41,9 @@ main{
 	border-left: 4px solid darkgreen;
 	padding:20px;
 	background-color: lightgreen;
+}
+.example p{
+	margin:0;
 }
 #contacto{
 	width:420px;

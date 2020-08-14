@@ -176,27 +176,27 @@
 					<em> no poseen borde</em>.
 				</p>
 				<div class="example">
+					<table>
+						<tr>
+							<td>Fila 1 Celda 1</td>
+							<td>Fila 1 Celda 2</td>
+							<td>Fila 1 Celda 3</td>
+						</tr>
+						<tr>
+							<td>Fila 2 Celda 1</td>
+							<td>Fila 2 Celda 2</td>
+							<td>Fila 2 Celda 3</td>
+						</tr>
+						<tr>
+							<td>Fila 3 Celda 1</td>
+							<td>Fila 3 Celda 2</td>
+							<td>Fila 3 Celda 3</td>
+						</tr>
+					</table>
 					<p>
 						<strong>Emmet: </strong>
 						table>tr*3>td{Celda $}*3
-					</p>
-					<table>
-							<tr>
-								<td>Fila 1 Celda 1</td>
-								<td>Fila 1 Celda 2</td>
-								<td>Fila 1 Celda 3</td>
-							</tr>
-							<tr>
-								<td>Fila 2 Celda 1</td>
-								<td>Fila 2 Celda 2</td>
-								<td>Fila 2 Celda 3</td>
-							</tr>
-							<tr>
-								<td>Fila 3 Celda 1</td>
-								<td>Fila 3 Celda 2</td>
-								<td>Fila 3 Celda 3</td>
-							</tr>
-						</table>	
+					</p>	
 				</div>
 			</section>
 			<section>
@@ -216,10 +216,6 @@
 					Y por ultimo <strong> TFOOT </strong> se utiliza como pie o <em> informacion complementaria </em>, tambien puede llevar titulos y es opcional.
 				</p>
 				<div class="example">
-					<p>
-						<strong>Emmet: </strong>
-						table>(thead>th*4)+(tbody>tr*3>th*4)+(tfoot>th+td)
-					</p>
 					<table>
 						<caption>Venta de Productos</caption>
 						<thead>
@@ -253,7 +249,10 @@
 							<td>14800</td>
 						</tfoot>
 					</table>
-
+					<p>
+						<strong>Emmet: </strong>
+						table>(thead>th*4)+(tbody>tr*3>th*4)+(tfoot>th+td)
+					</p>
 					<table>
 						<caption>Tipos de Desarrolladores</caption>
 						<thead>
@@ -283,6 +282,10 @@
 							</tr>
 						</tbody>
 					</table>
+					<p>
+						<strong>Emmet: </strong>
+						table>(thead>th*2)+tbody>((tr>td*2)+(tr*2>td))*2
+					</p>
 				</div>
 			</section>
 		</article>
