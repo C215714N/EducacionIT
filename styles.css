@@ -88,3 +88,25 @@ caption{
 th,td{
 	width:100px;
 }
+
+/*Contenido Multimedia*/
+iframe, audio, video{
+	width: 600px;
+	height: 338px;
+	border-radius: 16px;
+}
+audio{
+	height: 50px;
+}
+#footer{
+	text-align: center;
+}
+#footer iframe{
+	width: 420px;
+	height: 300px;
+}
+#footer #contacto{
+	display: inline-block;
+	text-align: left;
+	margin:0 10px;
+}

@@ -289,6 +289,72 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<p>
+				Existen diferentes formas de integrar este tipo de contenido en nuestra web, desde comienzos del lenguaje, las mismas han ido evolucionando en funcion de la facilidad a la hora de implementarlas. La mayoria de este tipo de contenido pertenece a una categoria conocida como 
+				<strong> EMBED o embebido</strong> que representa a aquellos elementos que incorporamos en el universo HTML, pero que no pertenecen de forma nativa al mismo, tambien se implementa cuando utilizamos contenido de otra web en nuestro sitio de manera <em>asincronica</em>
+			</p>
+			<section id="iframe">
+				<header>
+					<h1>¿Marco Flotante?</h1>
+				</header>
+				<p>
+					Antiguamente, esta etiqueta se utilizaba para facilitar el desarrollo de paginas web, debido a que se utilizaba para mostrar dentro de la misma pagina en
+					<strong> una ventana flotante </strong>
+					contenido de otras paginas web, que generalmente pertenecian al mismo sitio. Hoy en dia se utiliza para insertar de forma <em>asincronica </em> contenido <strong>embebido</strong> en nuestro sitio, ya sean videos de servidores como <em>YouTube</em>, <em>Mapas de Google Maps</em> o presentacion de diapositivas como las de <em>SlideShare</em>
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/_AFuWCk5LR8" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h1>¿Sonidos en la Web?</h1>
+				</header>
+				<p>
+					<strong>HTML5 </strong>
+					incorpora nuevos elementos para la implementacion de audio en la web, ya que antiguamente esto solamente era posible mediante <em>plugins</em> o <strong>embebiendo</strong> contenido mediante la implementacion de la etiqueta <a href="#iframe">iframe</a>. Este elemento permite la reproduccion de <em> formatos de audio .mp3 .wav y .ogg</em>, aunque tambien permite reproducir <a href="#video">formatos de video</a> ya que toma solamente la pista de audio. Es necesario entender que la API de audio integrada en los navegadores debe tener los <strong>controles habilitados</strong> para funcionar y puede soportar otros formatos. 
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO
+					</audio>
+					<audio src="media/californication.mp4" controls>
+						Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO
+					</audio>
+				</div>
+			</section>
+			<section id="video">
+				<header>
+					<h1>¿Videos sin Plugins?</h1>
+				</header>
+				<p>
+					Como se menciona <a href="#iframe">anteriormente</a> para poder incluir contenido multimedia en la web, debiamos utilizar <em>plugins de terceros</em> u otros componentes que debian instalarse en los navegadores de los equipos cliente para su reproduccion. Actualmente con la incorporacion del nuevo standard, es posible sin necesidad de instalar ningun complemento extra, los <em>formatos soportados .mp4, .webm y .ogv</em> pueden reproducirse en cualquier navegador, ya que fueron pensados para su facil difusion. Este elemento a diferencia del elemento <a href="#audio">AUDIO</a> no puede reproducir los formatos del mismo. 
+				</p>
+				<div class="example">
+					<video src="media/cant-stop.mp4" controls>
+						Lo sentimos pero tu navegador NO es compatible con el elemento VIDEO
+					</video>
+					<video src="media/wimo.mp3" controls>
+						Lo sentimos pero tu navegador NO es compatible con el elemento VIDEO
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" 
@@ -319,6 +385,11 @@
 				type="submit" 
 				value="Realizar Consulta"/>
 		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0172178851101!2d-58.37636875929293!3d-34.60241992552396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1597449348500!5m2!1ses!2sar" 
+			frameborder="0"  
+			aria-hidden="false">
+		</iframe>
 		<p>
 			&copy; Todos los derechos reservados |
 			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
