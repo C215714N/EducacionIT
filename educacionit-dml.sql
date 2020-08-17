@@ -1,81 +1,80 @@
 /*Tabla Alumnos*/
 	TRUNCATE alumnos; ## reiniciamos la tabla Alumnos
-	INSERT INTO alumnos VALUES (nombre, apellido)
-		VALUES ('Abel',);
-		VALUES ('Ace',);
-		VALUES ('Adon',);
-		VALUES ('Akuma',);
-		VALUES ('Alex',);
-		VALUES ('Area',);
-		VALUES ('Balrog',);
-		VALUES ('Blair','Dame',);
-		VALUES ('Blanka',);
-		VALUES ('C.','Viper',);
-		VALUES ('Cammy',);
-		VALUES ('Charlie','Nash',);
-		VALUES ('Chun-Li',);
-		VALUES ('Dan','Hibiki',);
-		VALUES ('Darun',);
-		VALUES ('Decapre',);
-		VALUES ('Dee','Jay',);
-		VALUES ('Dhalsim',);
-		VALUES ('Doctrine','Dark',);
-		VALUES ('Dudley',);
-		VALUES ('Eagle',);
-		VALUES ('Edmond','Honda',);
-		VALUES ('El Fuerte',);
-		VALUES ('Elena',);
-		VALUES ('Eliza','Masters',);
-		VALUES ('Fei','Long',);
-		VALUES ('Geki',);
-		VALUES ('Gen',);
-		VALUES ('Gill',);
-		VALUES ('Gou','Hibiki',);
-		VALUES ('Gouken',);
-		VALUES ('Guile',);
-		VALUES ('Guy',);
-		VALUES ('Hakan',);
-		VALUES ('Hayate',);
-		VALUES ('Hugo','Andore',);
-		VALUES ('Ibuki',);
-		VALUES ('Ingrid',);
-		VALUES ('Juli',);
-		VALUES ('Juni',);
-		VALUES ('Juri','Han',);
-		VALUES ('Kairi',);
-		VALUES ('Karin','Kanzuki')
-		VALUES ('Ken','Masters')
-		VALUES ('Lee',);
-		VALUES ('M','Bison',);
-		VALUES ('Maki','Genryusai',);
-		VALUES ('Makoto',);
-		VALUES ('Mike',);
-		VALUES ('Necro',);
-		VALUES ('Oro',);
-		VALUES ('Poison',);
-		VALUES ('Rainbow','Mika',);
-		VALUES ('Remy',);
-		VALUES ('Rolento','Schugerg',);
-		VALUES ('Rose',);
-		VALUES ('Rufus',);
-		VALUES ('Ryu',);
-		VALUES ('Sagat')
-		VALUES ('Sakura','Kasugano',);
-		VALUES ('Sawada',);
-		VALUES ('Sean','Matsuda',);
-		VALUES ('Seth',);
-		VALUES ('Sharon',);
-		VALUES ('Hawk','Thunder',);
-		VALUES ('Toro',);
-		VALUES ('Cody','Travers',);
-		VALUES ('Twelve',);
-		VALUES ('Urien')
-		VALUES ('Vega',);
-		VALUES ('Rosso','Vulcano',);
-		VALUES ('Yang',);
-		VALUES ('Yun',);
-		VALUES ('Zangief',);
+	INSERT INTO alumnos(nombre, apellido)
+	VALUES	('Abel',''),
+			('Ace',''),
+			('Adon',''),
+			('Akuma',''),
+			('Alex',''),
+			('Area',''),
+			('Balrog',''),
+			('Blair','Dame'),
+			('Blanka',''),
+			('C.','Viper'),
+			('Cammy',''),
+			('Charlie','Nash'),
+			('Chun-Li',''),
+			('Dan','Hibiki'),
+			('Darun',''),
+			('Decapre',''),
+			('Dee','Jay'),
+			('Dhalsim',''),
+			('Doctrine','Dark'),
+			('Dudley',''),
+			('Eagle',''),
+			('Edmond','Honda'),
+			('El Fuerte',''),
+			('Elena',''),
+			('Eliza','Masters'),
+			('Fei','Long'),
+			('Geki',''),
+			('Gen',''),
+			('Gill',''),
+			('Gou','Hibiki'),
+			('Gouken',''),
+			('Guile',''),
+			('Guy',''),
+			('Hakan',''),
+			('Hayate',''),
+			('Hugo','Andore'),
+			('Ibuki',''),
+			('Ingrid',''),
+			('Juli',''),
+			('Juni',''),
+			('Juri','Han'),
+			('Kairi',''),
+			('Karin','Kanzuki'),
+			('Ken','Masters'),
+			('Lee',''),
+			('M','Bison'),
+			('Maki','Genryusai'),
+			('Makoto',''),
+			('Mike',''),
+			('Necro',''),
+			('Oro',''),
+			('Poison',''),
+			('Rainbow','Mika'),
+			('Remy',''),
+			('Rolento','Schugerg'),
+			('Rose',''),
+			('Rufus',''),
+			('Ryu',''),
+			('Sagat',''),
+			('Sakura','Kasugano'),
+			('Sawada',''),
+			('Sean','Matsuda'),
+			('Seth','SFIV'),
+			('Sharon',''),
+			('Hawk','Thunder'),
+			('Toro',''),
+			('Cody','Travers'),
+			('Twelve',''),
+			('Urien',''),
+			('Vega',''),
+			('Rosso','Vulcano'),
+			('Yang',''),
+			('Yun',''),
+			('Zangief','');
 	SELECT * FROM alumnos;
-
-	INSERT INTO profesores (nombre, apellido)
-
+    UPDATE alumnos 
+    SET correo=CONCAT(alumnos.nombre,alumnos.apellido,'@gmail.com');

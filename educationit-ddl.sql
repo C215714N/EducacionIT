@@ -73,7 +73,7 @@
 	    hora TIME, ## campo de hora
 	    PRIMARY KEY (id_clase),
 	    UNIQUE KEY (id_profesor, id_curso, dia, hora), ## Restricciones para el completado
-		FOREIGN KEY (id_profesor) REFERENCES profesores(id_profesor), ## relacionamos el campo id_profesor con el que se encuentra en la tabla profesores
+		FOREIGN KEY (id_profesor) REFERENCES profesores(id_profesor) ## relacionamos el campo id_profesor con el que se encuentra en la tabla profesores
 	);
 	ALTER TABLE clases
 		ADD CONSTRAINT FOREIGN KEY (id_curso) REFERENCES cursos(id_curso); ## agregamos una Clave Foranea a la tabla
