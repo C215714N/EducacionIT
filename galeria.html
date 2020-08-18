@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="cabecera">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;HTML&gt; &amp; CSS</p>
+	</div>
+	<div id="navegacion">
+		<ul>
+			<li>
+				<!--Ruta Relativa / Interna-->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<!--Marcador (Apunta a un Id) / Ancla-->
+				<a href="#">Galeria</a>
+			</li>
+			<li>
+				<a href="contacto.html">Contacto</a>
+			</li>
+			<li>
+				<!--Ruta Absoluta / Externa-->
+				<a href="https://github.com/c215714n/educacionit/tree/html-martes-19hs" 
+				target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</div>
+	<div id="principal">
+		<ul class="ejemplo">
+			<li>
+				<strong>NO utilizar espacios </strong>
+				ya que este caracter sera reemplazado por <em>%20</em>,si es necesario separar palabras en un nombre de archivos es preferible utilizar <em>guiones (-_)</em>.
+				 Esto se debe, a que el protocolo <strong>URL</strong> no procesa los espacios y por consecuentes nombrar a una imagen <em>"Foto 01.jpg"</em> haria que el navegador la interprete como <em>"Foto%2001.jpg"</em> resultando en una busqueda erronea.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos </strong> que permitan la facil ubicacion de los archivos por parte del desarrollador, ya que al utilizar nombres genericos como <em>"Foto_01.jpg"</em> o automatizados como <em>"2020-0818-201446098.jpg"</em> ante una situacion de localizacion entre multiples archivos, un desarrollador debe saber con rapidez cual es el archivo a utilizar; por lo tanto es preferible utilizar nombres mas intuitivos como <em>"perritos_jugando.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar solamente minusculas </strong> para nombrar los archivos que utilicemos en nuestro sitio, para descartar la mayor cantidad de errores posible, ya que los <strong> servidores de Hosting </strong> son <em>caseSensitive</em>, es decir que distinguen entre mayusculas y minusculas. Por lo tanto, no es lo mismo nombrar un archivo <em>"perritos_jugando.jpg", "Perritos_Jugando.jpg", ni "PERRITOS_JUGANDO.jpg"</em> 
+			</li>
+		</ul>
+		<div class="ejemplo">
+			<!--
+				SRC="Ubicacion - Ruta"
+				ALT="Texto Alternativo - SEO"
+			-->
+			<img 
+				style="height:300px;" 
+				src="img/usm-venom-01.jpg" 
+				alt="Dibujo Venom Ultimate Spiderman"/>
+			<img 
+				style="height:300px;" 
+				src="img/usm-venom-02.jpg" 
+				alt="Sombreado Venom Ultimate Spiderman"/>
+			<img 
+				style="height:300px;" 
+				src="img/usm-venom-03.jpg" 
+				alt="Coloreado Venom Ultimate Spiderman"/>
+			<img 
+				style="height:300px;" 
+				src="img/usm-venom-04.jpg" 
+				alt="Digitalizacion Venom Ultimate Spiderman"/>
+		</div>
+	</div>
+</body>
+</html>
