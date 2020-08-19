@@ -3,13 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*Selectores Generales*/
+		body{
+			font-family: calibri, verdana, century gothic, sans-serif;
+			margin:0;
+		}
+		/*Selectores Multiples*/
+		header, footer{
+			color:whitesmoke;
+			background-color: #124; /*RGB - 0:min F:max*/
+			padding:16px;
+		}
+		/*Selectores Especificos / Complejos*/
+		header h1, header p{
+			margin:0;
+		}
+		nav a{
+			color:white;
+			text-decoration: none;
+		}
+			/*Menu de Navegacion*/
+			nav ul{
+				list-style: none;
+				background-color: #012;
+				margin:0;
+				padding:8px;
+			}
+			nav li{
+				display: inline;
+				padding:4px;
+			}
+		/*Selectores de Class*/
+		.ejemplo{
+			margin:16px;
+			padding:16px;
+			background-color: cornflowerblue; 
+		}
+		div.ejemplo{
+			text-align: center;
+		}
+		/*Selectores de Id*/
+		#principal img{
+			height:150px;
+		}
+		/*Flotar imagenes*/
+		main p{
+			padding: 8px;
+			background-color: lightgrey;
+			overflow: hidden;
+		}
+		p img{
+			float:left;
+			margin-right: 8px;
+		}
+	</style>
 </head>
 <body>
-	<div id="cabecera">
+	<header id="cabecera">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;HTML&gt; &amp; CSS</p>
-	</div>
-	<div id="navegacion">
+	</header>
+	<nav id="navegacion">
 		<ul>
 			<li>
 				<!--Ruta Relativa / Interna-->
@@ -28,8 +83,8 @@
 				target="_blank">GitHub</a>
 			</li>
 		</ul>
-	</div>
-	<div id="principal">
+	</nav>
+	<main id="principal">
 		<ul class="ejemplo">
 			<li>
 				<strong>NO utilizar espacios </strong>
@@ -37,9 +92,11 @@
 				 Esto se debe, a que el protocolo <strong>URL</strong> no procesa los espacios y por consecuentes nombrar a una imagen <em>"Foto 01.jpg"</em> haria que el navegador la interprete como <em>"Foto%2001.jpg"</em> resultando en una busqueda erronea.
 			</li>
 			<li>
+
 				<strong>Utilizar nombres descriptivos </strong> que permitan la facil ubicacion de los archivos por parte del desarrollador, ya que al utilizar nombres genericos como <em>"Foto_01.jpg"</em> o automatizados como <em>"2020-0818-201446098.jpg"</em> ante una situacion de localizacion entre multiples archivos, un desarrollador debe saber con rapidez cual es el archivo a utilizar; por lo tanto es preferible utilizar nombres mas intuitivos como <em>"perritos_jugando.jpg"</em>
 			</li>
 			<li>
+
 				<strong>Utilizar solamente minusculas </strong> para nombrar los archivos que utilicemos en nuestro sitio, para descartar la mayor cantidad de errores posible, ya que los <strong> servidores de Hosting </strong> son <em>caseSensitive</em>, es decir que distinguen entre mayusculas y minusculas. Por lo tanto, no es lo mismo nombrar un archivo <em>"perritos_jugando.jpg", "Perritos_Jugando.jpg", ni "PERRITOS_JUGANDO.jpg"</em> 
 			</li>
 		</ul>
@@ -65,6 +122,33 @@
 				src="img/usm-venom-04.jpg" 
 				alt="Digitalizacion Venom Ultimate Spiderman"/>
 		</div>
-	</div>
+		<p>
+			<img 
+				src="img/ih-greenhulk-01.jpg" 
+				alt="Dibujo Incredible Hulk"/>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis deserunt exercitationem, aliquid, pariatur maiores enim iste iure ullam repellat consectetur aspernatur cumque quaerat labore facere animi voluptas nulla assumenda.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at nam libero ex consequatur incidunt quam expedita? Tempora, beatae ratione ducimus recusandae nemo doloribus cumque quam, omnis, incidunt neque praesentium!
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dicta itaque, vitae nobis quidem, fugiat sapiente. Vel repellendus, dolor, dignissimos placeat, consequuntur nulla officiis reiciendis delectus magni commodi unde quod.
+		</p>
+		<p>
+			<img 
+				src="img/ih-greenhulk-02.jpg" 
+				alt="Dibujo Incredible Hulk"/>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis deserunt exercitationem, aliquid, pariatur maiores enim iste iure ullam repellat consectetur aspernatur cumque quaerat labore facere animi voluptas nulla assumenda.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti delectus saepe odit, nemo dolor sed beatae maiores, cupiditate mollitia voluptatem ab sit, provident amet nam eaque incidunt sunt minus!
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia fugiat quas minus rerum! Quidem natus amet mollitia quos voluptatibus minima at distinctio eos quia quas. Omnis enim, dignissimos mollitia debitis.
+		</p>
+		<p>
+			<img 
+				src="img/ih-greenhulk-03.jpg" 
+				alt="Dibujo Incredible Hulk"/>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis deserunt exercitationem, aliquid, pariatur maiores enim iste iure ullam repellat consectetur aspernatur cumque quaerat labore facere animi voluptas nulla assumenda.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae accusamus eius laborum eos vero ex, nesciunt, sapiente, tenetur doloribus quidem cumque? Molestiae accusamus quaerat eum hic cumque dolor dolorum quisquam!
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, odit dignissimos modi quis quidem perspiciatis sapiente, ut vel sequi vitae, nulla fugit? Quibusdam in a architecto esse eos saepe voluptatum.
+		</p>
+	</main>
+	<footer>
+		<p>&copy; Todos los derechos reservados</p>
+	</footer>
 </body>
 </html>
