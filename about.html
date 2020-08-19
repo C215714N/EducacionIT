@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<style>
-		div{
+		.button{
 			overflow: hidden;
 			position:relative;
 			width:100px;
@@ -13,8 +13,8 @@
 			color:#ddd;
 			background-color: #248;
 		}
-		div:before,
-		div:after{
+		.button:before,
+		.button:after{
 			content: '';
 			position:absolute;
 			top:-50%;
@@ -24,23 +24,42 @@
 			transition: all .5s ease-in-out;
 			background-color: hsla(200, 50%, 60%, .5);
 		}
-		div:before{
+		.button:before{
 			left:-100%;
 		}
-		div:hover:before{
+		.button:hover:before{
 			left:0;
 		}
-		div:after{
+		.button:after{
 			right: -100%;
 		}
-		div:hover:after{
+		.button:hover:after{
 			right:0;
 		}
+		.animaciones div{
+			width:50px;
+			height: 50px;
+			background-color: darkblue;
+			color:white;
+			border:1px solid;
+		}
 	</style>
+	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<div>
+	<div class="button">
 		Hover Me
 	</div>
+	<div class="animaciones">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="shadow"></div>
+	<a href="https://github.com">1</a>
+	<a href="http://twitter.com.ar">2</a>
+	<a href="http://facebook.com">3</a>
 </body>
 </html>

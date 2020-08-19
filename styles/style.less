@@ -1,0 +1,152 @@
+@vn: sm, md, lg, xl;
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+@vw: @sm, @md, @lg, @xl;
+
+@colores: #012, #248, #48F, #8FF;
+.media(@i:1, @vn:@vn, @vw:@vw) when (@i <= length(@vw)){
+	@name: extract(@vn, @i);
+	@media screen (min-width: ~"extract(@vw,@i)"){
+		.grilla(@c, @n:1) when (@n <= @c){
+			.col-@{name}-@{n}{
+				width:percentage(@n / @c);
+			}
+			.grilla(@c, @n + 1)
+		}
+		.grilla(5);
+	}
+	.media(@i + 1);
+}
+.media;
+
+//Funciones matematicas
+
+/*Lineal*/
+@keyframes lineal{
+	.lineal (@x, @i:0%) when (@i <= 100%){
+		@{i}{
+			transform:
+				translate(@x, @x / 2);
+		}
+		.lineal(@x + 5, @i + 10);
+	}
+	.lineal(10px);
+}
+/*Cuadratica*/
+@keyframes cuadratica{
+	.cuadratica (@x, @i:0%) when (@i <= 100%){
+		@{i}{
+			transform:
+				translate(
+					@x * 2 + 200px, 
+					pow(@x,2));
+		}
+		.cuadratica(@x + 5, @i + 20);
+	}
+	.cuadratica(-10px);
+}
+/*Cubica*/
+/*Trigonometrica*/
+	@keyframes trigonometrica{
+		.trigonometrica (@x, @i:0%) when (@i <= 100%){
+			@{i}{
+				transform:
+					translate(
+						@x * 5px,
+						sin(@x) * 50px;
+					);
+			}
+			.trigonometrica(@x + 5, @i + 5);
+		}
+		.trigonometrica(10px);
+	}
+/*Limite*/
+@keyframes limite{
+	.limite (@x, @i:0%) when (@i <= 100%){
+		@{i}{
+			transform:
+				translate(
+					@x * 10px, 
+					pow(1.2px,@x));
+		}
+		.limite(@x + 5, @i + 10);
+	}
+	.limite(-25px);
+}
+/*Exponencial*/
+@keyframes exponencial{
+	.exponencial (@x, @i:0%) when (@i <= 100%){
+		@{i}{
+			transform:
+				translate(
+					@x * 10px, 
+					pow(1.2px,@x));
+		}
+		.exponencial(@x + 5, @i + 10);
+	}
+	.exponencial(-25px);
+}
+
+/*Hijos y animaciones*/
+.animaciones{
+	div{
+		.hijos (
+			@funciones; 
+			@i:1
+		) when (@i<= length(@funciones)){
+			&:nth-child(@{i}){
+				animation: extract(@funciones, @i) 2s ease;
+				-webkit-animation-iteration-count: infinite;
+				-moz-animation-iteration-count: infinite;
+				-ms-animation-iteration-count: infinite;
+				-o-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-delay:@i / 2s;
+			}
+			.hijos(@funciones, @i + 1);
+		}
+		.hijos(@func);
+	}
+}
+@func: lineal, cuadratica, trigonometrica, exponencial, limite;
+
+.sombras ( 
+	@i:0, 
+	@sin: sin(@i)*200px, 
+	@cos:cos(@i)*200px) when (@i <= 360){
+		box-shadow+: @sin @cos 1rem #248;
+	.sombras(@i + 10);
+}
+
+.shadow{
+	color:white;
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: limegreen;
+	transform:translate(300px);
+	box-shadow: 0 0 0;
+	transition: all 1s ease-in;
+}
+.shadow:hover{
+	.sombras;
+}
+
+a[href="#"]{
+	background-color:lightgrey;
+}
+/*comienza con: */
+	a[href^="https"]{
+		background-color: tomato;
+	}
+/*contiene:*/
+	a[href*="facebook"]{
+		background-color:darkblue;
+	}
+/*termina con:*/
+	a[href$=".com.ar"]{
+		background-color:darkgreen;
+	}
