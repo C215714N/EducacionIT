@@ -162,6 +162,23 @@
 						transition-timing-function: ease-in-out;
 					transition: all 1s ease;
 				}
+			/*Transiciones*/
+				.example:hover div{
+					transition:all 1s ease;
+					transform:translate(150%);
+				}
+				.example:hover div:nth-child(1){
+					transition-timing-function: ease-in; 
+				}
+				.example:hover div:nth-child(2){
+					transition-timing-function: ease-out;
+				}
+				.example:hover div:nth-child(3){
+					transition-timing-function: ease-in-out;
+				}
+				.example:hover div:nth-child(4){
+					transition-timing-function: linear;
+				}
 	/*Formulario de Contacto*/
 		#contact{
 			display: flex;
