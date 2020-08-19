@@ -163,22 +163,100 @@
 					transition: all 1s ease;
 				}
 			/*Transiciones*/
-				.example:hover div{
+				.transition:hover div,
+				.transform:hover div{
 					transition:all 1s ease;
 					transform:translate(150%);
 				}
-				.example:hover div:nth-child(1){
+				.transition:hover div:nth-child(1),
+				.transform:hover div:nth-child(1){
 					transition-timing-function: ease-in; 
 				}
-				.example:hover div:nth-child(2){
+				.transition:hover div:nth-child(2),
+				.transform:hover div:nth-child(2){
 					transition-timing-function: ease-out;
 				}
-				.example:hover div:nth-child(3){
+				.transition:hover div:nth-child(3),
+				.transform:hover div:nth-child(3){
 					transition-timing-function: ease-in-out;
 				}
 				.example:hover div:nth-child(4){
 					transition-timing-function: linear;
 				}
+			/*Animaciones*/
+				.animation div{
+					animation-name: avanzar;
+					animation-duration: 5s;
+					animation-delay: .5s;
+					animation-fill-mode: backwards;
+					animation-iteration-count: infinite;
+				}
+				/*Timing Function*/
+					.animation div:nth-child(1){
+						animation-timing-function: ease;
+					}
+					.animation div:nth-child(2){
+						animation-timing-function: ease-in;
+					}
+					.animation div:nth-child(3){
+						animation-timing-function: ease-out;
+					}
+					.animation div:nth-child(4){
+						animation-timing-function: ease-in-out;
+					}
+					.animation div:nth-child(5){
+						animation-timing-function: linear;
+					}
+				/*Animation Direction*/
+					.dir div{
+						animation-timing-function: ease;
+					}
+					.dir div:nth-child(1){
+						animation-direction: normal; 
+					}
+					.dir div:nth-child(2){
+						animation-direction: reverse;
+					}
+					.dir div:nth-child(3){
+						animation-direction: alternate;
+					}
+					.dir div:nth-child(4){
+						animation-direction: alternate-reverse;
+					}
+				/*Cargando*/
+					.circle div{
+						animation: carga 2s;
+						animation-iteration-count: infinite;
+						width:50px;
+						height: 50px;
+						border: .2rem solid;
+						border-color: #8ff #48F #248 #124;
+						border-radius: 50%;
+						box-shadow: 0 0 1rem, 0 0 1rem inset;
+					}
+				/*Fotogramas*/
+					@keyframes avanzar{
+						from{
+							transform:
+								translate(0)
+								rotate(0);
+							background-color: tomato;
+						}
+						to{	
+							transform: 
+								translate(200%)
+								rotate(360deg);
+							background-color: limegreen;
+						}
+					}
+					@keyframes carga{
+						from{
+							transform: rotate(0);
+						}
+						to{
+							transform: rotate(360deg);
+						}
+					}
 	/*Formulario de Contacto*/
 		#contact{
 			display: flex;
@@ -371,6 +449,45 @@
 		}
 		#contact :focus + div.validate{
 			margin-top: .5rem;
+		}
+	/*Animacion .header*/
+		#header .header{
+			animation:crash 2s ease-out;
+		}
+		@keyframes crash{
+			0%{
+				transform: 
+					skew(-15deg)
+					translate(200vw);
+			}
+			40%{
+				transform:
+					skew(15deg)
+					translate(-32px);
+			}
+			45%{
+				transform:
+					skew(15deg)
+					translate(-32px)
+					rotate(-15deg);
+			}
+			60%{
+				transform: 
+					rotate(15deg)
+					translate(-.5rem, -2rem);
+			}
+			80%{
+				transform: rotate(-5deg);
+			}
+			90%{
+				transform: rotate(5deg);
+			}
+			100%{
+				transform:
+					rotate(0)
+					skew(0)
+					translate(0);
+			}
 		}
 	}
 /*XL (Extra Large Devices)*/
