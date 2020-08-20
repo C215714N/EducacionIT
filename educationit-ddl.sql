@@ -54,7 +54,7 @@
 	CREATE TABLE cursos(
 		id_curso INT AUTO_INCREMENT,
 	    nombre VARCHAR(200) NOT NULL, ## campo obligatorio
-	    hora INT UNSIGNED, ##campo de valor positivo
+	    carga_horaria INT UNSIGNED, ##campo de valor positivo
 	    PRIMARY KEY (id_curso)
 	);
 /*Tabla Clases*/
