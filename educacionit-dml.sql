@@ -222,17 +222,19 @@
 			('Orochi','Yashiro'),
 			('Oswald','');
 	UPDATE alumnos
-		SET	correo = CONCAT(alumnos.nombre,alumnos.apellido, '@snk.com'),	## actualizacion de correos
+		SET	correo = CONCAT(nombre, apellido, '@snk.com'),	## actualizacion de correos
 			direccion = CONCAT('King of Fighters ', LENGTH(nombre), LENGTH(apellido))	## actualizacion de direcciones
         WHERE correo IS NULL OR direccion IS NULL;	## condicion: correo o direccion sea NULL
 	
     -- actualizaciones generales
     UPDATE alumnos
 		SET	num_doc = FLOOR(10000000 + RAND() * 99999999);	## numero aleatorio entre 10 y 100 millones
-	UPDATE alumnos SET 
+	
+    UPDATE alumnos SET 
     tipo_doc = 									## actualizacion tipo documento
 		CASE									## INICIO del Condicional
-			WHEN num_doc <= 54000000 THEN 'dni' ## dni para los numeros menores a 54 millones
+			WHEN num_doc <= 15000000 THEN 'le' 
+            WHEN num_doc <= 54000000 OR num_doc >= 9000000 THEN 'dni' ## dni para los numeros menores a 54 millones
             WHEN num_doc <= 80000000 THEN 'ci' 	## ci para los numeros menores a 80 millones
             ELSE 'lc' 							## lc para los numeros restantes
 		END;
@@ -283,6 +285,6 @@
 				('Introduccion a Redes', 36),
 				('Switching and Routing', 30);
 
-SELECT * FROM alumnos LIMIT 100;
-SELECT * FROM profesores LIMIT 10;
-SELECT * FROM cursos LIMIT 5;
+SELECT * FROM alumnos;
+SELECT * FROM profesores;
+SELECT * FROM cursos;

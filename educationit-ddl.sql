@@ -1,7 +1,7 @@
 /*Base de datos educacionit*/
-	DROP DATABASE IF EXISTS educacionit; ## eliminamos si existe
-	CREATE DATABASE educacionit; ## creamos el schema
-	USE educacionit; ## seleccionamos el schema
+    DROP DATABASE IF EXISTS educacionit; ## eliminamos si existe
+	CREATE DATABASE educacionit; ## creacion de Esquema
+	USE educacionit; ## seleccion de Esquema
 
 /*Tabla alumnos*/
 	DROP TABLE IF EXISTS alumnos; ## eliminamos si existe
@@ -16,7 +16,7 @@
 			'lc',
 			'pass'
 		), ## campo de lista de valores (Tipo_doc)
-		num_doc INT,
+		num_doc INT UNSIGNED,
 		direccion VARCHAR(200),
 		telefono INT, 
 		correo VARCHAR(200),
@@ -39,7 +39,7 @@
 			'lc',
 			'pass'
 		),
-		num_doc INT,
+		num_doc INT UNSIGNED,
 		direccion VARCHAR(200),
 		telefono INT,
 		correo VARCHAR(200),
