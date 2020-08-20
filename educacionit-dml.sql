@@ -80,9 +80,7 @@
 
     UPDATE alumnos 
 	    SET 
-	    	correo = CONCAT(alumnos.nombre,alumnos.apellido,'@capcom.com') ## Actualizamos los correos
-	   		tipo_doc = "dni" ## Actualizamos el tipo_doc
-	    	num_doc = CONCAT(2,LENGTH(alumnos.nombre),LENGTH(alumnos.apellido),DEC(alumnos.nombre)); ## Actualizamos el num_doc
+	    	correo = CONCAT(alumnos.nombre,alumnos.apellido,'@capcom.com') ## actualizacion de correos
 	;
 	INSERT INTO alumnos
 		VALUES
@@ -236,9 +234,13 @@
 			('Oswald','')
 
 	UPDATE alumnos
-		SET correo = CONCAT(alumnos.nombre,alumnos.apellido, '@snk.com')
-		WHERE correo IN ('', null);
+		SET correo = CONCAT(alumnos.nombre,alumnos.apellido, '@snk.com') ## Actualizamos correos
+		WHERE correo IN ('', null); ## solamente si estan vacios o completados con nada
 
+	UPDATE alumnos
+		SET
+			tipo_doc = "dni" ## Actualizamos el tipo_doc
+	    	num_doc = CONCAT(2,LENGTH(alumnos.nombre),LENGTH(alumnos.apellido),DEC(alumnos.nombre,DEC(alumnos.apellido))); ## Actualizamos el num_doc
 /*Tabla Profesores*/
 	TRUNCATE profesores;
 	INSERT INTO profesores
