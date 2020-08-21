@@ -234,7 +234,7 @@
     tipo_doc = 									## actualizacion tipo documento
 		CASE									## INICIO del Condicional
 			WHEN num_doc <= 15000000 THEN 'le' 
-            WHEN num_doc <= 54000000 OR num_doc >= 9000000 THEN 'dni' ## dni para los numeros menores a 54 millones
+            WHEN num_doc <= 54000000 OR num_doc >= 90000000 THEN 'dni' ## dni para los numeros menores a 54 millones
             WHEN num_doc <= 80000000 THEN 'ci' 	## ci para los numeros menores a 80 millones
             ELSE 'lc' 							## lc para los numeros restantes
 		END;

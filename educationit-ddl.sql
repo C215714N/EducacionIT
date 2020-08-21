@@ -55,7 +55,8 @@
 		id_curso INT AUTO_INCREMENT,
 	    nombre VARCHAR(200) NOT NULL, ## campo obligatorio
 	    carga_horaria INT UNSIGNED, ##campo de valor positivo
-	    PRIMARY KEY (id_curso)
+	    PRIMARY KEY (id_curso),
+        UNIQUE KEY (nombre, carga_horaria)
 	);
 /*Tabla Clases*/
 	CREATE TABLE clases(
