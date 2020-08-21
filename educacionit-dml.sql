@@ -76,8 +76,8 @@
 			('Yun',''),
 			('Zangief','');
     UPDATE alumnos
-	    SET correo = CONCAT(nombre, apellido,'@capcom.com'), ## actualizacion de correos
-			direccion = CONCAT ('Street Fighters ',LENGTH(nombre), id_alumno, LENGTH(apellido)); ## actualizacion de direcciones
+	SET correo = CONCAT(nombre, apellido,'@capcom.com'), ## actualizacion de correos
+		direccion = CONCAT ('Street Fighters ',LENGTH(nombre), id_alumno, LENGTH(apellido)); ## actualizacion de direcciones
 	
     -- Personajes King of Fighters
     INSERT INTO alumnos(nombre, apellido)
@@ -222,22 +222,23 @@
 			('Orochi','Yashiro'),
 			('Oswald','');
 	UPDATE alumnos
-		SET	correo = CONCAT(nombre, apellido, '@snk.com'),	## actualizacion de correos
-			direccion = CONCAT('King of Fighters ', LENGTH(nombre), LENGTH(apellido))	## actualizacion de direcciones
-        WHERE correo IS NULL OR direccion IS NULL;	## condicion: correo o direccion sea NULL
+	SET	correo = CONCAT(nombre, apellido, '@snk.com'),	## actualizacion de correos
+		direccion = CONCAT('King of Fighters ', LENGTH(nombre), LENGTH(apellido))	## actualizacion de direcciones
+    WHERE correo IS NULL OR direccion IS NULL;	## condicion: correo o direccion sea NULL
 	
     -- actualizaciones generales
     UPDATE alumnos
-		SET	num_doc = FLOOR(10000000 + RAND() * 99999999);	## numero aleatorio entre 10 y 100 millones
+	SET	num_doc = FLOOR(10000000 + RAND() * 99999999);	## numero aleatorio entre 10 y 100 millones
 	
-    UPDATE alumnos SET 
-    tipo_doc = 									## actualizacion tipo documento
-		CASE									## INICIO del Condicional
-			WHEN num_doc <= 15000000 THEN 'le' 
-            WHEN num_doc <= 54000000 OR num_doc >= 90000000 THEN 'dni' ## dni para los numeros menores a 54 millones
-            WHEN num_doc <= 80000000 THEN 'ci' 	## ci para los numeros menores a 80 millones
-            ELSE 'lc' 							## lc para los numeros restantes
-		END;
+    UPDATE alumnos 
+    SET tipo_doc =									## actualizacion tipo documento
+		CASE										## INICIO del Condicional
+			WHEN num_doc <= 15000000 THEN 'le' 		## LE para los numeros menores a 15 millones
+            WHEN num_doc <= 54000000 				## DNI para los numeros menores a 54 millones
+            	OR num_doc >= 90000000 THEN 'dni' 	## DNI para los numeros mayores a 90 millones
+            WHEN num_doc <= 80000000 THEN 'ci' 		## ci para los numeros menores a 80 millones
+            ELSE 'lc' 								## lc para los numeros restantes
+		END;										## FIN del Condicional
 
 /*Tabla Profesores*/
 	-- Personajes Street Fighters
@@ -247,8 +248,8 @@
             ('Sheng','Long'),
             ('Gouketsu','Sensei');
     UPDATE profesores
-	    SET correo = CONCAT(nombre, apellido,'@capcom.com'), ## actualizacion de correos
-			direccion = CONCAT ('Street Fighters ',LENGTH(nombre), id_profesor, LENGTH(apellido)); ## actualizacion de direcciones
+	SET correo = CONCAT(nombre, apellido,'@capcom.com'), ## actualizacion de correos
+		direccion = CONCAT ('Street Fighters ',LENGTH(nombre), id_profesor, LENGTH(apellido)); ## actualizacion de direcciones
             
 	-- Personajes King of Fighters
 	INSERT INTO profesores (nombre, apellido)
@@ -258,15 +259,15 @@
             ('Evil', 'Ash'),			
             ('Geese', 'Howard');
 	UPDATE profesores
-		SET	correo = CONCAT(nombre, apellido, '@snk.com'),	## actualizacion de correos
+	SET	correo = CONCAT(nombre, apellido, '@snk.com'),	## actualizacion de correos
 			direccion = CONCAT('King of Fighters ', LENGTH(nombre), LENGTH(apellido))	## actualizacion de direcciones
-        WHERE correo IS NULL OR direccion IS NULL;	## condicion: correo o direccion sea NULL
+    WHERE correo IS NULL OR direccion IS NULL;	## condicion: correo o direccion sea NULL
 	
     -- Actualizaciones Generales
 	UPDATE profesores
-		SET	num_doc = FLOOR(10000000 + RAND() * 99999999);	## numero aleatorio entre 10 y 100 millones
-	UPDATE profesores SET 
-    tipo_doc = 									## actualizacion tipo documento
+	SET	num_doc = FLOOR(10000000 + RAND() * 99999999);	## numero aleatorio entre 10 y 100 millones
+	UPDATE profesores 
+	SET tipo_doc =								## Actualizacion tipo documento
 		CASE									## INICIO del Condicional
 			WHEN num_doc <= 54000000 THEN 'dni' ## dni para los numeros menores a 54 millones
             WHEN num_doc <= 80000000 THEN 'ci' 	## ci para los numeros menores a 80 millones
@@ -274,17 +275,69 @@
 		END;									## FIN del Condicional
 
 /*Tabla Cursos*/
-	INSERT INTO cursos (nombre, carga_horaria)
-		VALUES	('Fundamentos Web', 12),
-				('Maquetacion Web', 18),
-				('Maquetado Avanzado', 15),
-				('Responsive Web Design', 12),
-				('Angular 2', 12),
-				('ReactJS', 12),
-				('Introduccion MySQL', 12),
-				('Introduccion a Redes', 36),
-				('Switching and Routing', 30);
+	INSERT INTO cursos (nombre, carga_horaria) 
+	VALUES	('Fundamentos Web', 12),
+			('Maquetacion Web', 18),
+			('Maquetado Avanzado', 15),
+			('Responsive Web Design', 12),
+			('Angular 2', 12),
+			('ReactJS', 12),
+			('Introduccion MySQL', 12),
+			('Introduccion a Redes', 36),
+			('Switching and Routing', 30);
 
-SELECT * FROM alumnos;
-SELECT * FROM profesores;
-SELECT * FROM cursos;
+/*Tabla Clases*/
+	INSERT INTO clases(id_profesor,id_curso,dia,hora) 
+	VALUES 	(1,3,4,'19:00'), 
+			(5,2,2,'15:00'),
+			(3,7,4,'10:00'),
+			(6,8,1,'19:00');
+
+/*Tabla Detalle_Clases*/
+	INSERT INTO detalle_clases(id_clase, id_alumno)
+	VALUES	(1,200),
+			(1,130),
+			(1,110),
+			(1,156),
+			(1,24),
+			(1,37),
+			(1,48),
+			(1,32),
+			(1,28),
+			(1,66),
+			(2,58),
+			(2,57),
+			(2,45),
+			(2,190),
+			(2,85),
+			(2,46),
+			(2,99),
+			(2,123),
+			(2,130),
+			(3,110),
+			(3,191),
+			(3,198),
+			(3,13),
+			(3,4),
+			(3,8),
+			(3,10),
+			(3,58),
+			(3,32),
+			(3,48),
+			(4,66),
+			(4,28),
+			(4,33),
+			(4,32),
+			(4,40),
+			(4,2),
+			(4,133),
+			(4,201),
+			(4,109),
+			(4,35);
+
+/*Consulta de Tablas*/
+	SELECT * FROM alumnos;
+	SELECT * FROM profesores;
+	SELECT * FROM cursos;
+	SELECT * FROM clases;
+	SELECT * FROM detalle_clases;

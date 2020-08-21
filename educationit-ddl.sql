@@ -1,9 +1,8 @@
-/*Base de datos educacionit*/
+/* Base de datos educacionit */
     DROP DATABASE IF EXISTS educacionit; ## eliminamos si existe
 	CREATE DATABASE educacionit; ## creacion de Esquema
 	USE educacionit; ## seleccion de Esquema
-
-/*Tabla alumnos*/
+/* Tabla alumnos */
 	DROP TABLE IF EXISTS alumnos; ## eliminamos si existe
 	CREATE TABLE alumnos(
 		id_alumno INT AUTO_INCREMENT, ## campo numerico / incrementacion automatica PK
@@ -25,8 +24,7 @@
 	);
 	ALTER TABLE alumnos 
 	    ADD estado BOOLEAN DEFAULT TRUE; ## agregamos un campo a la tabla
-
-/*Tabla Profesores*/
+/* Tabla Profesores */
 	DROP TABLE IF EXISTS profesores;
 	CREATE TABLE profesores(
 		id_profesor INT AUTO_INCREMENT,
@@ -49,8 +47,8 @@
 	);
 	ALTER TABLE profesores
 		MODIFY estado BOOLEAN DEFAULT TRUE; ## modificamos un campo existente
-
-/*Tabla Cursos*/
+/* Tabla Cursos */
+	DROP TABLE IF EXISTS cursos;
 	CREATE TABLE cursos(
 		id_curso INT AUTO_INCREMENT,
 	    nombre VARCHAR(200) NOT NULL, ## campo obligatorio
@@ -58,7 +56,8 @@
 	    PRIMARY KEY (id_curso),
         UNIQUE KEY (nombre, carga_horaria)
 	);
-/*Tabla Clases*/
+/* Tabla Clases */
+	DROP TABLE IF EXISTS clases;
 	CREATE TABLE clases(
 		id_clase INT AUTO_INCREMENT,
 	    id_profesor INT, ## campo relacional (debe ser igual al de la tabla relacionada)
@@ -78,8 +77,8 @@
 	);
 	ALTER TABLE clases
 		ADD CONSTRAINT FOREIGN KEY (id_curso) REFERENCES cursos(id_curso); ## agregamos una Clave Foranea a la tabla
-
-/*Tabla Clases_Detalle*/
+/* Tabla Clases_Detalle */
+	DROP TABLE IF EXISTS clases_detalle;
 	CREATE TABLE clases_detalle (
 		id_detalle INT AUTO_INCREMENT,
 	    id_clase INT,
