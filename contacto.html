@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/cr-logo.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -141,7 +143,29 @@
 		</article>
 	</main>
 	<footer id="footer">
-		
+		<form 
+			onsubmit="alert('gracias por realizar su consulta')" 
+			id="contacto" 
+			action="contacto.php" 
+			method="POST">
+			<label for="nombre">Nombre</label>
+			<input 
+				type="text" 
+				name="nombre"
+				required />
+			<label for="email">Correo</label>
+			<input 
+				type="email" 
+				name="email"
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required></textarea>
+			<button>Realizar Consulta</button>
+		</form>
 	</footer>
 </body>
 </html>

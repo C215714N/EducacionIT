@@ -1,0 +1,75 @@
+/*Estilo General*/
+	body{
+		margin:0;
+		font-family: segoe ui, sans-serif;
+	}
+
+/*Cabecera y Pie*/
+	#header, #footer, .header{
+		color:#DDD; /*Rojo Verde Azul*/
+		background-color: #248;
+		padding:10px;
+	}
+	.header h1, .header p{
+		margin:0;
+	}
+	.header span{
+		color: tomato;
+		font-size: 46px;
+		text-shadow: 0 0 5px white; /*X Y Blur Color*/
+	}
+/*Navegacion*/
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		background-color: #124;
+		text-align: center;
+	}
+	.menu a{
+		color:white;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		width:80px;
+		line-height: 30px;
+	}
+	.menu li:hover{
+		background-color: #48f;
+	}
+/*Contenido Principal*/
+	main, article{
+		margin: 10px 0; /*top right bottom left*/
+	}
+	article, section{
+		padding:0 20px;
+	}
+
+/*Formulario*/
+	#contacto{
+		width:420px;
+		margin:10px auto;
+		overflow: hidden;
+	}
+	#contacto input,
+	#contacto textarea{
+		width:400px;
+		outline:none;
+		border:none;
+		padding:5px 10px;
+	}
+	#contacto textarea{
+		height: 80px;
+		resize: none;
+	}
+	#contacto button{
+		float:right;
+		border: 2px solid white;
+		color:white;
+		font-size: 18px;
+		background-color: transparent;
+	}
+	#contacto button:hover{
+		background-color: #124;
+	}
