@@ -8,7 +8,7 @@
 	<header id="header">
 		<div class="header">
 			<h1> 
-				<span> </> </span> 
+				<span> &lt;/> </span> 
 				Fundamentos Web	
 			</h1>
 			<p> HTML &amp; CSS </p>
@@ -27,7 +27,54 @@
 		</nav>
 	</header>
 	<main>
-		
+		<article>
+			<header>
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				Son herramientas que permiten una 
+				<strong> interaccion real (intercambio de datos)</strong> entre
+				<em> cliente y servidor </em>, ya que a diferencia de otros elementos como los <em> hipervinculos </em>, los formularios generan una respuesta diferente en base a los parametros definidos por el desarrollador y los valores completados por el usuario. Para poder implementar un formulario en nuestra pagina, es necesario utilizar la etiqueta 
+				<strong> &lt;form&gt; </strong>
+			</p>
+			<section>
+				<header>
+					<h1>¿Como Funcionan?</h1>
+				</header>
+				<p>
+					Dentro de la etiqueta 
+					<em> mencionada anteriormente </em>
+					es necesario utilizar, por los menos,
+					<strong> 2 atributos</strong>.
+					Por un lado tenemos 
+					<em> action = "..."</em>
+					que se utiliza para definir que sucedera con la informacion completada en el mismo formulario al presionar el <strong> boton enviar </strong>;
+					antiguamente se utilizaba un valor <em> action="mailto:usuario@dominio"</em> para que el cliente utilizara su <strong>aplicacion de correo</strong> predeterminada, pero hoy en dia se utiliza algun <em>script</em> en lenguaje de servidor (PHP). 
+				</p>
+				<p>
+					Por otro lado, tenemos el atributo 
+					<em> method="" </em> que en definitiva define cual es la prioridad en el envio y como se va a trabajar la informacion; existen 2 valores posibles y estos son
+					<strong> method="GET" </strong>, un metodo menos seguro, cuya informacion es accesible desde la barra de direcciones y admite hasta 8kb, y 
+					<strong> method="POST"</strong> el cual se considera seguro debido a que encripta los datos del usuario antes de enviar el formulario, admite hasta 8mb y la informacion no es accesible desde la barra de direcciones.
+				</p>
+				<ul>
+					<li>
+						GET
+						<ul>
+							<li>Buscadores - Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						POST
+						<ul>
+							<li>Inscripcion - Registro</li>
+							<li>Acceso - Inicio Sesion</li>
+							<li>Consulta Web - Contacto</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		
