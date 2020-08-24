@@ -28,7 +28,7 @@
 	</header>
 	<main>
 		<article>
-			<header>
+			<header class="header">
 				<h1>Formularios HTML</h1>
 			</header>
 			<p>
@@ -57,7 +57,7 @@
 					<strong> method="GET" </strong>, un metodo menos seguro, cuya informacion es accesible desde la barra de direcciones y admite hasta 8kb, y 
 					<strong> method="POST"</strong> el cual se considera seguro debido a que encripta los datos del usuario antes de enviar el formulario, admite hasta 8mb y la informacion no es accesible desde la barra de direcciones.
 				</p>
-				<ul>
+				<ul class="example">
 					<li>
 						GET
 						<ul>
@@ -71,6 +71,70 @@
 							<li>Acceso - Inicio Sesion</li>
 							<li>Consulta Web - Contacto</li>
 						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como estan compuestos?</h1>
+				</header>
+				<p>
+					Dentro de un formulario encontraremos 2 elementos principales, por un lado tenemos las 
+					<strong> Etiquetas (LABEL) </strong> cuya finalidad es indicar al usuario que informacion debe colocar dentro del formulario, asi como tambien que opciones debe elegir; tambien se utiliza para los lectores de pantalla y SEO.
+
+					Por otro lado, existen los 
+					<strong> Campos (INPUT, TEXTAREA, SELECT)</strong> que son los elementos donde el usuario puede escribir o seleccionar opciones, es importante destacar que existen diferentes tipos, segun los valores que permitamos ingresar al usuario, destacando principalmente los campos de <em>tipo input</em>.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text"/>
+					</li>
+					<li>
+						<label>Campo de Numero (123456)</label>
+						<input min="0" max="100" type="number"/>
+					</li>
+					<li>
+						<label>Campo de Correo (*@*)</label>
+						<input type="email"/>
+					</li>
+					<li>
+						<label>Campo de Contraseña (****)</label>
+						<input type="password"/>
+					</li>
+					<li>
+						<label>Campo de Fecha</label>
+						<input type="date">
+					</li>
+					<li>
+						<label>Opcion Multiple (Hobbies)</label>
+						|Deportes 
+						<input type="checkbox" name="hobbies"/>|Musica 
+						<input type="checkbox" name="hobbies"/>
+						|Arte
+						<input type="checkbox" name="hobbies"/>
+					</li>
+					<li>
+						<label>Opcion Unica (Contrato)</label>
+						|Si <input type="radio" name="contrato"/>
+						|No <input type="radio" name="contrato"/>
+					</li>
+					<li>
+						<label>Texto Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista de Opciones</label>
+						<select>
+							<option value="1">HTML</option>
+							<option value="2">CSS</option>
+							<option value="3">JS</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset">
+						<input type="submit">
+						<button> ejecutar accion</button>
 					</li>
 				</ul>
 			</section>
