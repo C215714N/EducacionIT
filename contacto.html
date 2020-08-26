@@ -146,7 +146,26 @@
 		</article>
 	</main>
 	<footer id="footer">
-		
+		<form 
+			onsubmit="alert('Gracias por su consulta')" 
+			id="contact" 
+			action="contacto.php" 
+			method="POST">
+			<label for="nombre">Nombre</label>
+			<input 
+				name="nombre" 
+				type="text" />
+			<label for="email">Correo</label>
+			<input
+				name="email"
+				type="email" />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200"></textarea>
+			<button> REALIZAR CONSULTA </button>
+		</form>
 	</footer>
 </body>
 </html>
