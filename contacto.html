@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/cr-logo.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -151,21 +153,29 @@
 			id="contact" 
 			action="contacto.php" 
 			method="POST">
-			<label for="nombre">Nombre</label>
+			<label for="nombre">Nombre *</label>
 			<input 
 				name="nombre" 
-				type="text" />
-			<label for="email">Correo</label>
+				type="text" 
+				pattern="[A-Z a-z]{2,50}"
+				title="Escriba su nombre sin numeros ni simbolos, este debe contener entre 2 y 50 caracteres" 
+				required/>
+			<label for="email">Correo *</label>
 			<input
 				name="email"
-				type="email" />
-			<label for="consulta">Consulta</label>
+				type="email" 
+				required/>
+			<label for="consulta">Consulta *</label>
 			<textarea 
 				name="consulta"
 				minlength="10"
-				maxlength="200"></textarea>
+				maxlength="200"
+				required></textarea>
 			<button> REALIZAR CONSULTA </button>
 		</form>
+		<div class="validate">
+			Los campos con (*) son Obligatorios
+		</div>
 	</footer>
 </body>
 </html>
