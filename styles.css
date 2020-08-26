@@ -1,0 +1,71 @@
+/*Estilos generales*/
+	body{
+		margin:0;
+		font-family: segoe ui, century gothic, sans-serif;
+	}
+/*Encabezado y Pie de Pagina*/
+	#header, #footer, .header{
+		color:#ddd;
+		background-color: #248;
+		padding: 10px;
+	}
+
+	.header h1, .header p{
+		margin:0;
+	}
+	.header span{
+		font-size: 48px;
+		color:tomato;
+		text-shadow: 0 0 5px white;/*X Y Blur Color*/
+	}
+/*Navegacion*/
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		text-align: center;
+		background-color: #124;
+	}
+	.menu a{
+		color:white;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		width: 80px;
+		line-height: 30px; 
+	}
+	.menu li:hover{
+		background-color: #48F;
+	}
+/*Cuerpo Principal*/
+	main, article{
+		padding:10px 5px;/*Top Right Bottom Left*/
+	}
+/*Contacto*/
+	#contact{
+		width:420px;
+		margin:10px auto;
+		overflow: hidden;
+	}
+	#contact input,
+	#contact textarea{
+		outline:none;
+		border:none;
+		padding:10px;
+		width:400px;
+		line-height: 16px;
+	}
+	#contact textarea{
+		height:64px;
+		resize: none;
+	}
+	#contact button{
+		color:white;
+		background-color: transparent;
+		border: 2px solid white;
+		float:right;
+	}
+	#contact button:hover{
+		background-color: #124;
+	}
