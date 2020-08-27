@@ -5,16 +5,16 @@
 	GRANT ALL PRIVILEGES ON educacionit.* TO 'cristian'@'localhost'; ## asignacion total de los permisos
 
     -- Usuario Mantenimiento
-    DROP USER IF EXISTS 'supervisor'@'localhost' ## eliminacion si existe el usuario
+    DROP USER IF EXISTS 'supervisor'@'localhost'; ## eliminacion si existe el usuario
 	CREATE USER 'supervisor'@'localhost' IDENTIFIED BY 'security'; ## creacion del usuario
 	GRANT
-		CREATE TABLE,
-		ALTER TABLE,
-		DROP TABLE
+		CREATE,
+		ALTER,
+		DROP
 	ON educacionit.* TO 'supervisor'@'localhost'; ## asignacion de permisos DDL (CREATE, ALTER, DROP)
 
 	-- Usuario Supervisor
-	DROP USER IF EXISTS 'supervisor'@'localhost' ## eliminacion si existe el usuario
+	DROP USER IF EXISTS 'supervisor'@'localhost'; ## eliminacion si existe el usuario
 	CREATE USER 'supervisor'@'localhost' IDENTIFIED BY 'security'; ## creacion del usuario
 	GRANT 
 		SELECT, 
@@ -30,6 +30,6 @@
 	-- Usuario sin acceso
     DROP USER IF EXISTS 'denied'@'localhost';	##eliminacion de usuario
     CREATE USER 'denied'@'localhost' IDENTIFIED BY '1234'; ## creacion de usuario
-    REVOKE ALL PRIVILEGES ON educacionit.* TO 'denied'@'localost'; ## permisos de solo lectura (SELECT)
+    REVOKE ALL, GRANT OPTION FROM 'denied'@'localost'; ## permisos de solo lectura (SELECT)
 
 FLUSH PRIVILEGES; ## refrescamos todos los permisos

@@ -77,6 +77,7 @@
 	);
 	ALTER TABLE clases
 		ADD CONSTRAINT FOREIGN KEY (id_curso) REFERENCES cursos(id_curso); ## agregamos una Clave Foranea a la tabla
+
 /* Tabla Clases_Detalle */
 	DROP TABLE IF EXISTS clases_detalle;
 	CREATE TABLE clases_detalle (
@@ -89,3 +90,30 @@
 	    FOREIGN KEY (id_alumno) REFERENCES alumnos(id_alumno), 
 	    UNIQUE KEY (id_clase, id_alumno) ## clave UNICA
 	);
+    
+/*Tabla Facturacion*/
+	DROP TABLE IF EXISTS facturacion;
+    CREATE TABLE facturacion (
+		id_factura INT AUTO_INCREMENT,
+        id_alumno INT,
+        total INT,
+        fecha DATE,
+        tipo ENUM ('debe', 'haber'),
+        num_factura INT,
+        PRIMARY KEY (id_factura),
+        UNIQUE KEY (Tipo, num_factura),
+        FOREIGN KEY (id_alumno) REFERENCES alumnos(id_alumno)
+    );
+
+/*Tabla Facturacion_Detalle*/
+	DROP TABLE IF EXISTS facturacion_detalle;
+    CREATE TABLE facturacion_detalle(
+		id_detalle INT AUTO_INCREMENT,
+        id_factura INT,
+        descripcion VARCHAR(200),
+        cantidad INT,
+        precio INT,
+        PRIMARY KEY(id_detalle),
+        UNIQUE KEY(id_factura, descripcion, cantidad, precio),
+        FOREIGN KEY(id_factura) REFERENCES facturacion(id_factura)
+    );

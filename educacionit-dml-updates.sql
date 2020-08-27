@@ -29,10 +29,9 @@
 	-- eliminacion de duplicados
 		DELETE FROM alumnos ## Elimina los registros
 		WHERE id_alumno IN(177, 187); ## cuyos valores estan entre los parentesis 
-	--consulta de Id
+	-- consulta de Id
 		SELECT id_profesor, apellido, nombre FROM profesores ## consulta los Id, Apellidos y Nombres
 		WHERE apellido LIKE 'M%' OR nombre LIKE '%A'; ## Apellidos que empiecen con M || Nombres que terminen con A
-
 
 /*Tabla Alumnos*/
 	SELECT * FROM alumnos;

@@ -288,13 +288,13 @@
 
 /*Tabla Clases*/
 	INSERT INTO clases(id_profesor,id_curso,dia,hora) 
-	VALUES 	(1,3,4,'19:00'), 
-			(5,2,2,'15:00'),
-			(3,7,4,'10:00'),
+	VALUES 	(1,3,6,'19:00'), 
+			(5,2,8,'15:00'),
+			(7,7,4,'10:00'),
 			(6,8,1,'19:00');
 
 /*Tabla Detalle_Clases*/
-	INSERT INTO detalle_clases(id_clase, id_alumno)
+	INSERT INTO clases_detalle(id_clase, id_alumno)
 	VALUES	(1,200),
 			(1,130),
 			(1,110),
@@ -314,30 +314,30 @@
 			(2,99),
 			(2,123),
 			(2,130),
-			(3,110),
-			(3,191),
-			(3,198),
-			(3,13),
-			(3,4),
-			(3,8),
-			(3,10),
-			(3,58),
-			(3,32),
-			(3,48),
-			(4,66),
-			(4,28),
-			(4,33),
-			(4,32),
-			(4,40),
-			(4,2),
-			(4,133),
-			(4,201),
-			(4,109),
-			(4,35);
+			(7,110),
+			(7,191),
+			(7,198),
+			(7,13),
+			(7,4),
+			(7,8),
+			(7,10),
+			(7,58),
+			(7,32),
+			(7,48),
+			(8,66),
+			(8,28),
+			(8,33),
+			(8,32),
+			(8,40),
+			(8,2),
+			(8,133),
+			(8,201),
+			(8,109),
+			(8,35);
 
 /*Consulta de Tablas*/
 	SELECT * FROM alumnos;
 	SELECT * FROM profesores;
 	SELECT * FROM cursos;
 	SELECT * FROM clases;
-	SELECT * FROM detalle_clases;
+	SELECT * FROM clases_detalle;
