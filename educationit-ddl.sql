@@ -95,7 +95,7 @@
 	DROP TABLE IF EXISTS facturacion;
     CREATE TABLE facturacion (
 		id_factura INT AUTO_INCREMENT,
-        id_alumno INT,
+        id_alnum_facturaumno INT,
         total INT,
         fecha DATE,
         tipo ENUM ('debe', 'haber'),
@@ -110,7 +110,7 @@
     CREATE TABLE facturacion_detalle(
 		id_detalle INT AUTO_INCREMENT,
         id_factura INT,
-        descripcion VARCHAR(200),
+        id_curso INT,
         cantidad INT,
         precio INT,
         PRIMARY KEY(id_detalle),
