@@ -51,3 +51,5 @@
 	-- Consulta de Alumno
 		SELECT id_alumno, apellido, nombre FROM alumnos 
 		WHERE apellido LIKE '%YAGAMI%' AND nombre LIKE '%IORI%'; ## Nombre contiene Yagami && Apellido contiene Iori
+        
+        
