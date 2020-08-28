@@ -95,7 +95,7 @@
 	DROP TABLE IF EXISTS facturacion;
     CREATE TABLE facturacion (
 		id_factura INT AUTO_INCREMENT,
-        id_alnum_facturaumno INT,
+        id_alumno INT,
         total INT,
         fecha DATE,
         tipo ENUM ('debe', 'haber'),
@@ -113,7 +113,15 @@
         id_curso INT,
         cantidad INT,
         precio INT,
+        tipo_pago ENUM(
+            'efectivo',
+			'debito',
+            'credito',
+            'cheque',
+            'transferencia',
+            'pagare'
+        ),
         PRIMARY KEY(id_detalle),
-        UNIQUE KEY(id_factura, descripcion, cantidad, precio),
+        UNIQUE KEY(id_factura, id_curso, cantidad, precio),
         FOREIGN KEY(id_factura) REFERENCES facturacion(id_factura)
     );
