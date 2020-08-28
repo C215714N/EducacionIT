@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;HTML> &amp; {CSS}</p>
+		<div>
+			<ul>
+				<li>
+					<!-- Ruta Relativa / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li>
+					<!-- Ruta Ancla / Marcador (Reload) -->
+					<a href="#">Galeria</a>
+				</li>
+				<li>
+					<!-- Ruta Ancla / Marcador (id="footer")-->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li>
+					<!-- Ruta Absoluta / Externa -->
+					<a href="https://github.com/c215714n/educacionit/tree/html-viernes-19hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Consejo al Utilizar Archivos</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de Espacios </strong>
+				debido a que estos caracteres seran reemplazados por
+				<em> el simbolo %20 </em> y por ende si nuestra imagen se titula 
+				<em>"foto 01.jpg" </em> 
+				la misma sera identificada como 
+				<em> "foto%2001.jpg". </em>
+				Por estos motivos se aconseja el uso de 
+				<em> Caracteres como guiones (-_)</em> ya que permite generar separaciones en los nombres y suple muy bien al espacio, dando como resultado que si utilizamos el nombre
+				<em>"foto 01.jpg"</em> lo cambiemos por <em> "foto-01.jpg".</em>
+			</li>
+			<li>
+				<strong>Identificar los archivos mediante nombres descriptivos </strong>
+				ya que titulos genericos como
+				<em> "foto-01.jpg" </em>
+				o automatizados como
+				<em> "2020-0818-195053100.jpg" </em>
+				dificultan la tarea desarrollador al seleccionar los elementos de una gran cantidad de items. Por lo tanto es pertinente cambiar este tipo de nombre por algo que defina a la imagen como 
+				<em>"desierto-aguila_cazando.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar solamente minusculas para los nombres</strong>
+				debido a que los servidores son <strong>CaseSensitive</strong>, es decir que distinguen entre mayusculas y minusculas y por lo tanto, se pueden tener en la misma carpeta las siguientes archivos, identificados como diferentes,
+				<em>
+					"desierto-aguila_cazando.jpg",
+					"Desierto-Aguila_Cazando.jpg",
+					"DESIERTO-AGUILA_CAZANDO.jpg".
+				</em> Es por eso que realizar este tipo de practicas, reduce el margen de errores.
+			</li>
+		</ul>
+		<div class="example">
+			<!-- 
+				src: donde se encuentra (Ruta)
+				alt: texto alternativo (Img no se visualiza)
+			-->
+			<img src="img/usm-venom-01.jpg" alt="Dibujo Ultimate Spiderman - Venom" />
+			<img src="img/usm-venom-02.jpg" alt="Dibujo Ultimate Spiderman - Venom" />
+			<img src="img/usm-venom-03.jpg" alt="Dibujo Ultimate Spiderman - Venom" />
+			<img src="img/usm-venom-04.jpg" alt="Dibujo Ultimate Spiderman - Venom" />
+		</div>
+		<div>
+			<p style="overflow:hidden; background-color: limegreen;">
+				<img style="height:200px; float:left;" src="img/ih-greenhulk-01.jpg" alt="Dibujo Incredible Hulk" />
+				Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Dolore deserunt aliquid architecto aut ipsam. Nobis eaque, perferendis ad esse repellendus amet, dolor iusto quos, officia aliquid, quis! Dolores tenetur, voluptatum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Perspiciatis accusantium, repellat similique officia soluta iste minus eveniet dolor aliquid veritatis doloribus. Aperiam fugiat dolorem nulla reiciendis sapiente, consequuntur veritatis odit.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, totam aperiam magni labore quos eveniet nesciunt odio nam, aliquam veritatis. Architecto nam tenetur at, qui commodi vitae expedita nulla laudantium?
+			</p>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Veritatis eos corporis officia nostrum, ullam fugit! Ratione, adipisci quaerat, voluptatibus veritatis, autem eos aperiam earum nemo molestias, porro iusto illum voluptatem.</p>
+		</div>
+	</div>
+	<div id="footer">
+	</div>
+</body>
+</html>
