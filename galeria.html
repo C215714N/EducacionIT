@@ -3,12 +3,77 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			margin:0;
+			font-family: calibri, verdana, sans-serif;
+		}
+		/*Selectores Multiples*/
+		header, footer{
+			color:#ddd;/*Rojo - Verde - Azul (0-F)*/
+			background-color: #124;
+			padding:10px;
+		}
+		/*Selectores Especificos*/
+		header a, footer a{
+			color:white;
+			text-decoration: none;
+		}
+			/*Menu de Navegacion*/
+			nav ul{
+				list-style: none;
+				margin:0;
+				padding:0;
+				background-color: #012;
+				text-align: center;
+			}
+			nav li{
+				display:inline;/*representacion visual*/
+				padding:8px;
+				line-height: 32px; /*alto de linea*/
+			}
+		/*Selectores de Clase & PseudoClase*/
+			nav li:hover{ /*Mouse sobre el elemento*/
+				background-color: #248;
+			}
+			.example{
+				background-color: #124;
+				margin:10px;
+				padding:20px;
+				text-align: center;
+			}
+			.example img{
+				height:300px;
+				margin: 10px;
+			}
+			/*Selector de Id*/
+			#header h1, #header p{
+				margin:10px;
+				line-height: 20px;
+			}
+			/*Imagenes Flotantes*/
+			main p img{
+				float:left;
+				margin-right: 10px;
+				width:150px;
+			}
+			main p{
+				overflow: hidden;
+				padding:10px;
+				background-color: #ddd;
+			}
+		/*Titulos*/
+			#header, h2{
+				text-align: center;
+			}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;HTML> &amp; {CSS}</p>
-		<div>
+		<nav>
 			<ul>
 				<li>
 					<!-- Ruta Relativa / Interna -->
@@ -27,9 +92,9 @@
 					<a href="https://github.com/c215714n/educacionit/tree/html-viernes-19hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main>
 		<h2>Consejo al Utilizar Archivos</h2>
 		<ul>
 			<li>
@@ -73,16 +138,35 @@
 			<img src="img/usm-venom-04.jpg" alt="Dibujo Ultimate Spiderman - Venom" />
 		</div>
 		<div>
-			<p style="overflow:hidden; background-color: limegreen;">
-				<img style="height:200px; float:left;" src="img/ih-greenhulk-01.jpg" alt="Dibujo Incredible Hulk" />
+			<p>
+				<img src="img/ih-greenhulk-01.jpg" alt="Dibujo Incredible Hulk" />
 				Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Dolore deserunt aliquid architecto aut ipsam. Nobis eaque, perferendis ad esse repellendus amet, dolor iusto quos, officia aliquid, quis! Dolores tenetur, voluptatum.
 				Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Perspiciatis accusantium, repellat similique officia soluta iste minus eveniet dolor aliquid veritatis doloribus. Aperiam fugiat dolorem nulla reiciendis sapiente, consequuntur veritatis odit.
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, totam aperiam magni labore quos eveniet nesciunt odio nam, aliquam veritatis. Architecto nam tenetur at, qui commodi vitae expedita nulla laudantium?
 			</p>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Veritatis eos corporis officia nostrum, ullam fugit! Ratione, adipisci quaerat, voluptatibus veritatis, autem eos aperiam earum nemo molestias, porro iusto illum voluptatem.</p>
+			<p class="example">
+				Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Veritatis eos corporis officia nostrum, ullam fugit! Ratione, adipisci quaerat, voluptatibus veritatis, autem eos aperiam earum nemo molestias, porro iusto illum voluptatem.
+			</p>
+			<p>
+				<img src="img/ih-greenhulk-02.jpg" alt="Dibujo Incredible Hulk"/>
+				Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Maxime doloremque laudantium pariatur quisquam beatae suscipit possimus, id. Corrupti asperiores aperiam animi natus facilis a expedita incidunt, at, iste earum molestiae?
+				Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Deleniti atque eligendi facere, suscipit aspernatur sequi, molestiae? Voluptate, ipsa quo accusamus distinctio tempore delectus porro iusto, corporis cumque sit aspernatur provident!
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error eaque laborum voluptatum saepe minima molestias earum nesciunt quae aliquam dicta, modi quis aliquid, culpa placeat quasi nihil? Consectetur, esse, pariatur.
+			</p>
+			<p>
+				<img src="img/ih-greenhulk-03.jpg" alt="Dibujo Incredible Hulk"/>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ea perferendis praesentium itaque deserunt molestias repellat earum odit reprehenderit, optio cumque quas vitae quidem odio, blanditiis quaerat, asperiores dolorem dicta?
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quo facere, pariatur ipsa doloribus, maxime ipsam iusto harum? Alias vero excepturi dolores omnis temporibus, earum dolorum pariatur velit similique consectetur esse.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum magni accusantium aliquam harum odio in sequi, perferendis sint, aut recusandae praesentium maiores, commodi quaerat delectus voluptates accusamus aperiam, nisi omnis.
+			</p>
 		</div>
-	</div>
-	<div id="footer">
-	</div>
+	</main>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href="#"> Cristian Racedo </a>
+			&amp; compañia
+		</p>
+	</footer>
 </body>
 </html>
