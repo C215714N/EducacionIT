@@ -45,7 +45,28 @@
 	article, section{
 		padding:0 20px;
 	}
-
+	.example{
+		list-style: none;
+		margin-left: 40px;
+		border-left: 4px solid #012;
+		padding:20px;
+		color:#ddd;
+		background-color: #48f;
+		text-shadow: -1px 1px 2px black;
+	}
+	table, tr, td{
+		background-color: rgba(30, 60, 90,.5);
+	}
+	th,td{
+		width:100px;
+	}
+	.clasica, .clasica caption{
+		background-color: #CA3DBF;
+		margin:auto;
+	}
+	.semantica, .semantica caption{
+		background-color: limegreen;
+	}
 /*Formulario*/
 	#contacto{
 		width:420px;

@@ -141,6 +141,173 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten 
+				<strong> organizar la informacion de manera tabular </strong>
+				y a diferencia de la mayoria de los programas, en
+				<em> el Lenguaje HTML </em>
+				estas se crean a partir del
+				<strong> modelo de cajas </strong>,
+				es decir que en lugar de estructurar
+				<em> filas y columnas </em>, contemplaremos
+				<em> contenedores y contenido. </em>
+				Antiguamente, antes que se definiera CSS como lenguaje de diseño, era muy comun que las paginas web se crearan en base a trablas para la organizacion del contenido; hoy en dia se utilizan para presentar datos y al igual que la mayoria de las etiquetas HTML no poseen bordes visibles.
+			</p>
+			<section>
+				<header>
+					<h1>¿Estructura clasica?</h1>
+				</header>
+				<p>
+					Como se menciona anteriormente, la estructura de las tablas depende del modelo basado en jerarquias, en el cual para crear una tabla debemos utilizar un <em> contenedor principal </em> que es la <strong> etiqueta &lt;TABLE> </strong>
+					y dentro de la misma utilizaremos las etiquetas 
+					<strong> TR (Table Row) </strong>
+					para definir cada fila individualmente y 
+					<strong> TD (Table Division) </strong>
+					para indicar cada celda dentro de cada fila. Cabe destacar que a diferencia del resto de las
+					<strong> etiquetas de bloque </strong> que se <em> adaptan a su contenedor, </em>
+					las tablas <em> se adaptan a su contenido</em>
+				</p>
+				<div class="example">
+					<table class="clasica">
+						<caption>Tabla Clasica</caption>
+						<tr>
+							<td>F1 Celda 1</td>
+							<td>F1 Celda 2</td>
+							<td>F1 Celda 3</td>
+						</tr>
+						<tr>
+							<td>F2C1</td>
+							<td>F2C2</td>
+							<td>F2C3</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Estructura Semantica?</h1>
+				</header>
+				<p>
+					Con el surgimiento de HTML5 se incorporaron nuevas etiquetas a la estructura de las paginas web, entre las etiquetas involucradas se encuentran las tablas. Asi como podemos segmentar el <em>body</em> en <strong>header - main - footer</strong>, una tabla se puede segmentar en las siguientes etiquetas:
+				</p>
+				<ul>
+					<li>
+						<strong>THEAD: </strong> Es la cabecera de la tabla, representa la fila de titulos y debe tener en su interior <em>celdas de titulos</em> que se identifican con la etiqueta <strong> TH (Table Heading)</strong>. Estas etiquetas son obligatorias para definir el contenido.
+					</li>
+					<li>
+						<strong>TBODY: </strong> representa el cuerpo de la tabla, en esta etiqueta se sigue utilizando la estructura clasica, aunque en ocasiones se pueden utilizar
+						<em> celdas de titulo </em> en su interior, especialmente si se esta representando una <strong> tabla de referencias cruzadas </strong>. Es donde se colocan los datos pertinentes para el usuario.
+					</li>
+					<li>
+						<strong>TFOOT: </strong> el pie de tabla, es opcional, y representa una fila complementaria a los datos presentado anteriormente. puede contener algun titulo y normalmente se utiliza para los <em> totales, porcentajes o promedios</em>
+					</li>
+				</ul>
+				<div class="example">
+					<table class="semantica">
+						<caption>Cursos de la Semana</caption>
+						<thead>
+							<th>Dia/Hora</th>
+							<th>Lunes</th>
+							<th>Martes</th>
+							<th>Miercoles</th>
+							<th>Jueves</th>
+							<th>Viernes</th>
+							<th>Sabado</th>
+						</thead>
+						<tbody>
+							<tr><!-- fila -->
+								<th>Mañana</th>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>Tarde</th>
+								<td></td>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<th>Noche</th>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th>TOTALES</th>
+							<td>2</td>
+							<td>2</td>
+							<td>2</td>
+							<td>2</td>
+							<td>3</td>
+							<td>1</td>
+						</tfoot>
+					</table>
+					<hr/>
+					<table>
+						<caption>Tipos de Desarrolladores</caption>
+						<thead>
+							<th>Desarrollo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table>
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th>Producto</th>
+							<th>Precio.U</th>
+							<th>Cantidad</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>800</td>
+								<td>3</td>
+								<td>2400</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>5600</td>
+								<td>2</td>
+								<td>11200</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>13600</td>
+						</tfoot>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
