@@ -18,6 +18,10 @@
 		font-size: 46px;
 		text-shadow: 0 0 5px white; /*X Y Blur Color*/
 	}
+	#footer iframe{
+		display: block;
+		margin: auto;
+	}
 /*Navegacion*/
 	.menu{
 		list-style: none;
@@ -54,25 +58,45 @@
 		background-color: #48f;
 		text-shadow: -1px 1px 2px black;
 	}
-	table, tr, td{
-		background-color: rgba(30, 60, 90,.5);
-	}
-	th,td{
-		width:100px;
-	}
-	.clasica, .clasica caption{
-		background-color: #CA3DBF;
-		margin:auto;
-	}
-	.semantica, .semantica caption{
-		background-color: limegreen;
-	}
-	.combinadas{
-		display: inline-table;
-	}
-	.combinadas, .combinadas caption{
-		background-color: slateblue;
-	}
+	/*Tablas*/
+		table, tr, td{
+			margin:auto;
+			background-color: rgba(30, 60, 90,.5);
+		}
+		th,td{
+			width:100px;
+		}
+		.clasica, .clasica caption{
+			background-color: #BA3DBF;
+		}
+		.semantica, .semantica caption{
+			background-color: limegreen;
+		}
+		.combinadas{
+			display: inline-table;
+		}
+		.combinadas, .combinadas caption{
+			background-color: slateblue;
+		}
+	/*Multimedia*/
+		.example video,
+		.example audio,
+		.example iframe{
+			width:320px;
+			height:240px;
+			box-shadow: 0 0 10px black;
+			outline:none;
+			border-radius: 16px;
+			/*
+				4/3 => ancho(1.333 > alto) alto(75% < ancho)
+				16/9 => ancho(1.78 > alto) alto (56.2% < ancho)*/
+		}
+		.example audio{
+			height: 30px;
+		}
+		.multimedia{
+			text-align: center;
+		}
 /*Formulario*/
 	#contacto{
 		width:420px;
