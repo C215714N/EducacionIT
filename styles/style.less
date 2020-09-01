@@ -115,10 +115,10 @@
 
 .sombras ( 
 	@i:0, 
-	@sin: sin(@i)*200px, 
-	@cos:cos(@i)*200px) when (@i <= 360){
+	@sin: sin(@i)*100px, 
+	@cos:cos(@i)*100px) when (@i <= 360){
 		box-shadow+: @sin @cos 1rem #248;
-	.sombras(@i + 10);
+	.sombras(@i + 36);
 }
 
 .shadow{
