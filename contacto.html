@@ -94,7 +94,7 @@
 					<strong> Campos (INPUT - TEXTAREA - SELECT) </strong> que permiten al usuario escribir o seleccionar opciones dentro del formulario, existen de <em> diferentes tipos </em> segun el dato que se deba ingresar y la etiqueta mas utilizada es el campo monolinea 
 					<strong>&lt;INPUT /></strong>
 				</p>
-				<ul>
+				<ul class="example">
 					<li>
 						<label>Campo de Texto (Aa!#123)</label>
 						<input type="text"/>
@@ -144,6 +144,135 @@
 						</select>
 					</li>
 				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten
+				<strong> organizar la informacion de manera tabular </strong>
+				y al igual que en cualquier ambito, las  mismas se componen de
+				<em> filas y columnas </em>,
+				pero a diferencia del resto de los programas, 
+				en <strong> HTML </strong> se basan en el
+				<em> modelo de cajas para su creacion </em>,
+				es decir que debemos comtemplar que utiliza
+				<strong> etiquetas de tipo contenedor </strong>
+				y <strong> etiquetas de contenido </strong>.
+				A diferencia del resto de las <em> etiquetas de bloque </em>,
+				las tablas se ajustan al tamaño de su contenido y no al tamaño de su contendor.
+			</p>
+			<section>
+				<header>
+					<h1>¿Estructura Clasica?</h1>
+				</header>
+				<p>
+					<em>Como se menciona anteriormente</em>, las tablas en HTML son diferentes en su forma de creacion que en el resto de programas.
+					Para definir una debemos crear un 
+					<strong>Contenedor &lt;TABLE></strong> que servira como base para crear nuestra tabla, luego por cada fila debemos insertar otro 
+					<strong>Contenedor de tipo &lt;TR> (Table Row)</strong> y por ultimo dentro de cada fila
+					<strong>Las etiquetas de Contenido &lt;TD> (Table Division)</strong> por cada celda que posea la fila. Al igual que el resto de las etiquetas, las tablas no poseen bordes y si quisieramos visualizar las divisiones debemos habilitarlos
+				</p>
+				<div class="example">
+					<table>
+						<caption>Estructura Clasica</caption>
+						<tr>
+							<td>Fila 1 Celda 1</td>
+							<td>Fila 1 Celda 2</td>
+							<td>Fila 1 Celda 3</td>
+						</tr>
+						<tr>
+							<td>F2 C1</td>
+							<td>F2 C2</td>
+							<td>F2 C3</td>
+						</tr>
+					</table>
+					<table>
+						<caption>Celda Combinadas</caption>
+						<tr>
+							<td rowspan="5" colspan="2">1-1</td>
+							<td colspan="2">1-2</td>
+						</tr>
+						<tr>
+							<td colspan="2">2-1</td>
+						</tr>
+						<tr>
+							<td colspan="2">3-1</td>
+						</tr>
+						<tr>
+							<td colspan="2">4-1</td>
+						</tr>
+						<tr>
+							<td colspan="2">5-1</td>
+						</tr>
+						<tr>
+							<td>6-1</td>
+							<td colspan="2">6-2</td>
+							<td>6-3</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Estructura Semantica?</h1>
+				</header>
+				<p>
+					Con el surgimiento de HTML5 se redefinieron las etiquetas a utilizar dentro de una tabla, ya que la finalidad de las mismas, segun la <em>w3c</em>, es la presentacion de datos. Entre las etiquetas que se incorporaron estan
+					<strong>&lt;THEAD></strong> para la cabecera, seccion donde se definen los titulos de la misma y en su interior en lugar de utililzar TD se implementan las etiquetas <strong>TH (Table Heading)</strong>;
+					<strong>&lt;TBODY></strong> para el contenido, en esta seccion se sigue utilizando la estructura clasica debido a que las etiquetas semanticas solamente generan una fila y en este caso de requiere de mucho mas contenido. Tambien se pueden utilzar celdas de titulo en caso de armar una <em> tabla de referencias cruzadas.</em>
+					<strong>&lt;TFOOT></strong> funciona como complemento de los datos, generalmente para definir totales, detalles, promedios, etc. Tambien contener titulos, pero a diferencia de las dos anteriores, No es obligatoria.
+				</p>
+				<div class="example">
+					<table class="bor-3 bor-4">
+						<caption>Ventas</caption>
+						<thead>
+							<th>Producto</th>
+							<th>Cant.</th>
+							<th>Precio.U</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>1</td>
+								<td>1200</td>
+								<td>1200</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>3</td>
+								<td>7800</td>
+								<td>23400</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th class="bor-4" colspan="3">Total</th>
+							<td class="bor-3">24600</td>
+						</tfoot>
+					</table>
+					<table>
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Desarrollo</th>
+ 							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</section>
 		</article>
 	</main>

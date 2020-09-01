@@ -42,6 +42,37 @@
 	main, article{
 		padding:10px 5px;/*Top Right Bottom Left*/
 	}
+	.example{
+		list-style: none;
+		border-left: 4px solid #012;
+		padding:20px;
+		color:#ddd;
+		background-color: #48f;
+		text-shadow: -1px 1px 2px #012;
+		margin-left: 40px;
+		font-weight: bold;
+	}
+	/*Tablas*/
+		table,caption, tr, td{
+			margin:auto;
+			color:#ddd;
+			background-color: rgba(80, 30, 120,.5);
+		}
+		th, td{
+			padding:5px;
+			width:100px;
+		}
+		caption{
+			margin-top: 10px;
+			border-radius: 8px 8px 0 0;
+			/*Top Right Bottom Left*/
+		}
+		.bor-4{
+			border-bottom-left-radius: 8px;
+		}
+		.bor-3{
+			border-bottom-right-radius: 8px; 
+		}
 /*Contacto*/
 	#contact{
 		width:420px;
