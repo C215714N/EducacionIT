@@ -73,6 +73,26 @@
 		.bor-3{
 			border-bottom-right-radius: 8px; 
 		}
+	/*Multimedia*/
+		.example video,
+		.example audio,
+		.example iframe{
+			/*
+				aspecto
+				4/3		alto (75% = ancho)	ancho(1.33 = alto)
+				16/9	alto(56.2% = ancho)	ancho(1.78 = alto)
+			*/
+			width:420px;
+			height:315px;
+			outline:none;
+		}
+		.example audio{
+			height:42px;
+		}
+		#footer iframe{
+			width:100%;
+			height:200px;
+		}
 /*Contacto*/
 	#contact{
 		width:420px;

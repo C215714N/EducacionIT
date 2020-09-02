@@ -275,6 +275,71 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<p>
+				Desde el surgimiento de HTML se pueden compartir todo tipo de archivos, especialmente <strong>contenido multimedia</strong>. Pero para la reproduccion del mismo, durante mucho tiempo fue necesario la implementacion de algun <em> complemento o plugin</em> de navegador, debido a que sin estos era practicamente imposible llevar a cabo dicha practica. Uno de los plugins mas conocidos fue el discontinuado <strong>Flash player</strong>.
+			</p>
+			<section id="iframe">
+				<header>
+					<h1>¿Contenido Embebido?</h1>
+				</header>
+				<p>
+					Durante mucho tiempo la 
+					<strong> etiqueta &lt;iframe> (Marco Flotante) </strong> se utilizo para la implementacion todo tipo de archivos, incluido el contenido multimedia, en un sitio web de <em> forma asincronica </em>. Basicamente es una ventana dentro de la pagina, que muestra un elemento externo, ya sea que corresponda a un archivo dentro del sitio o directamente otro sitio web dentro de nuestra pagina. Hoy en dia este tipo de contenido corresponde a una categoria de HTML5 conocida como <em>Embebido (Embed),</em> pero si necesitamos incorporar este tipo de elementos de manera local podemo utilizar los
+					<a href="#audio"> elementos que se mencionan mas adelante</a>
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe  
+						src="https://www.youtube.com/embed/HO0U1M6179c" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h1>¿Sonidos en la Web?</h1>
+				</header>
+				<p>
+					<a href="#iframe">Como se menciono anteriormente</a> la unica forma de insertar contenido multimedia en nuestra web, sin utilizar plugins, era mediante una <em> etiqueta asicronica </em>. Pero con la incorporacion del nuestro standard se agregaron <strong>nuevas etiquetas</strong>,
+					entre ellas <strong>&lt;AUDIO></strong> que permite al navegador utilizar una API de reproduccion integrada que admite los formatos 
+					<em>.mp3 - .wav - .ogg</em>, pero tambien admite formatos de video como los que se mencionan 
+					<a href="#video"> mas adelante </a>. Cabe destacar que para utilizar esta etiqueta sin JS, es necesario implementar el <em>atributo controls</em> ya que de lo contrario el reproductor no sera visible, al igual que la misma etiqueta.
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO
+					</audio>
+					<audio src="media/californication.mp4" controls>
+						Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO
+					</audio>
+				</div>
+			</section>
+			<section id="video">
+				<header>
+					<h1>¿Multimedia sin Plugins?</h1>
+				</header>
+				<p>
+					A diferencia de <a href="#iframe"> la etiqueta &lt;iframe></a>, la etiqueta video carga su contenido conjuntamente con el resto de la pagina, pero a diferencia de <em>metodos anteriores</em> este no requiere de complementos que deban instalarse en el navegador. Entre los formatos admitidos se encuentran <em>.mp4 - .webm - .ogv (en general formatos pensados para compartir contenido en la web)</em> y a diferencia del <a href="#audio">elemento anterior</a> no puede reproducir sonidos, sin cambiar el tipo de reproductor.
+				</p>
+				<div class="example">
+					<video src="media/cant-stop.mp4" controls autoplay muted>
+						Lo sentimos, pero tu navegador NO es compatible con el elemento VIDEO
+					</video>
+					<video src="media/californication.mp4" controls>
+						Lo sentimos, pero tu navegador NO es compatible con el elemento VIDEO
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
@@ -301,10 +366,19 @@
 				maxlength="200"
 				required></textarea>
 			<button> REALIZAR CONSULTA </button>
+			<div class="validate">
+				Los campos con (*) son Obligatorios
+			</div>
 		</form>
-		<div class="validate">
-			Los campos con (*) son Obligatorios
+		<div>
+			<a href="https://api.whatsapp.com/?numero">Whatsapp</a>
 		</div>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2006.0700831792867!2d-58.376418837373464!3d-34.602495096225105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1599006239586!5m2!1ses!2sar" 
+			frameborder="0" 
+			aria-hidden="false" 
+			tabindex="0">
+		</iframe>
 	</footer>
 </body>
 </html>
