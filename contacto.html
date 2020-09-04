@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1>
+				<span>&lt;/></span>
+				 Fundamentos Web
+			</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+				<li>
+					<a href="https://github.com/c215714n/educacionit/tree/html-viernes-19hs" target="_blank">
+					    GitHub
+				    </a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten una
+				<strong>interaccion real (intercambio de datos)</strong>
+				entre <em> cliente y servidor </em>,
+				ya que permiten al usuario intervenir en la pagina mediante <em>completado y seleccion de opciones</em>. El servidor tras recibir la solicitud del cliente elabora una respuesta, que puede ser inmediata o no, y la misma dependera del tipo de formulario y los datos que haya ingresado el usuario.
+			</p>
+			<p>
+				Para poder utilizar dicho elemento es necesario implementar la
+				<strong>etiqueta &lt;form></strong> donde deberemos especificar determinados atributos para llevar a cabo su funcionamiento. Cuando el mismo se envia, todos los elementos dentro de la etiqueta seran procesados para la realizacion de la respuesta por parte del servidor.
+			</p>
+			<section>
+				<header>
+					<h1>¿Como funcionan?</h1>
+				</header>
+				<p>
+					Estos elementos requieren minimamente de dos atributos, siendo uno
+					<em>action="..."</em> que permite definir que sucedera con los datos ingresados en el formulario tras realizarse el envio de los mismo. Antiguamente, debido a las bajas velocidades de conexion era comun que las personas utilizaran <strong>aplicacion de correo</strong> como por ejemplo outlook y descargaran los mensajes, por lo tanto se utilizaba el valor <em>action="mailto:usuario@dominio"</em>; pero hoy en dia debido a que la mayoria de los usuario utiliza un servidor webmail, es comun utilizar un <strong>script en lenguaje de servidor</strong> como php dando como valor <em>action="contacto.php"</em> ya que a diferencia del caso anterior, es el servidor quien resuelve que hacer con los datos y no la computadora cliente.
+				</p>
+				<p>
+					Por otro lado, el atributo 
+					<em>method="..."</em> permite definir la prioridad de los datos y como se va a realizar el envio de los mismo. Este atributo recibe dos valores, uno es 
+					<em>method="GET"</em> el cual es un metodo poco seguro, los datos estan accesibles desde la barra de direcciones y admite hasta 8kb, <strong> la prioridad recide en la respuesta del servidor</strong>. En cambio el valor
+					<em>method="POST"</em> es mas seguro debido a que encripta los datos, los mismo no son visibles desde la barra de direcciones y admite hasta 8mb, <strong> siendo los datos del cliente en este caso la prioridad</strong>
+				</p>
+				<ul class="example">
+					<li>
+						GET
+						<ul>
+							<li>Buscadores - Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						POST
+						<ul>
+							<li>Inscripcion - Registro</li>
+							<li>Acceso - Inicio Sesion</li>
+							<li>Consulta Web - Contacto</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como estan compuestos?</h1>
+				</header>
+				<p>
+					Los formularios poseen dos tipos de elementos, en primaria instancia estan las
+					<strong> Etiquetas (label) </strong>
+					que se utilizan para indicar al usuario el tipo de dato que debe ingresar o seleccionar de una lista de opciones, tambien <em>se utiliza para el SEO</em> y permite a los lectores de pantalla leer su contenido cuando se pase el mouse por encima. Por otro lado, estan los 
+					<strong> Campos (input - textarea - select)</strong> que son aquellos elementos con los que el usuario interactua y se clasifican segun los <em>tipos de datos</em> que se indiquen; uno de los elementos que mas veces se suele implementar en un formulario es <strong>&lt;input></strong> ya que representa un <em>campo monolinea</em> en el que se puede especificar valores o tipos de datos a ingresar, segun corresponda.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa123!#%)</label>
+						<input type="text">
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number">
+					</li>
+					<li>
+						<label>Campo de Correo (*@*)</label>
+						<input type="email">
+					</li>
+					<li>
+						<label>Campo de Contraseña (****)</label>
+						<input type="password">
+					</li>
+					<li>
+						<label>Campo de Fecha (dd/mm/aaaa)</label>
+						<input type="date">
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						| arte <input name="hobbies" type="checkbox" value="art">
+						| musica <input name="hobbies" type="checkbox" value="music">
+						| deporte <input name="hobbies" type="checkbox" value="sports">
+					</li>
+					<li>
+						<label>Opcion Unica</label>
+						| si <input name="contrato" type="radio" value="true">
+						| no <input name="contrato" type="radio" value="false">
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Campo de Lista Desplegable</label>
+						<select>
+							<option value="html">HyperText Markup Language</option>
+							<option value="css">Cascading Styles Sheets</option>
+							<option value="js">Javascript</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset">
+						<input type="submit">
+						<button>Accion Predeterminada (Submit)</button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		
+		<p>
+			&copy; Todos los derechos reservados | 
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
+</body>
+</html>
