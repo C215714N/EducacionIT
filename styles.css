@@ -1,0 +1,33 @@
+/*Estilos generales*/
+	body{
+		margin:0;
+		font-family: calibri, sans-serif;
+	}
+/*Encabezado y pie de pagina*/
+	#header, #footer, .header{
+		color:#ddd;
+		background-color: darkslateblue;
+		padding:5px;
+	}
+/*Navegacion*/
+
+/*Cuerpo Principal*/
+	main{
+		padding:5px;
+	}
+/*Formulario*/
+	#contacto{
+		width:420px;
+		margin:auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		width:410px;
+		border:none;
+		outline: none;
+		padding:5px;
+	}
+	#contacto textarea{
+		height:80px;
+		resize: none;
+	}
