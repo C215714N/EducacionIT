@@ -6,6 +6,316 @@
     <title>Maquetado Avanzado</title>
 </head>
 <body>
-    (header#header>(.header>h1{Maquetado Avanzado}+p{HTML &amp; CSS})+nav>ul.menu>li*5>a[href="#"]{Link $})+(main>article*5>(header.header>h1{Clase $: })+section*3>(header>h1{Tema $: })+p{...}+footer>address{Para mas informacion, consultar las fuentes:}>a[href="https://alumni.education"]{Alumni}+br+strong{Autor: }+a[href="mailto:cristiandracedo@hotmail.com"]{Cristian Racedo})+(footer>(.social>a[href="https://*.com" target="_blank"])+form#contact>(label+input[required])*3+label[for="consulta"]{Consulta}+textarea#consulta[name="consulta" minlength="10" maxlength="200" required]+button{ENVIAR CONSULTA})+p{&copy; Todos los derechos reservados}>a[href="#"]{ Cristian Racedo }+{&amp; Compañia}.
+    <header id="header">
+        <div class="header">
+            <h1>Maquetado Avanzado</h1>
+            <p>HTML &amp; CSS</p>
+        </div>
+        <nav>
+        	<button id="menu">&equiv;</button>
+            <ul class="menu">
+                <li>
+                	<a href="#"><span>Inicio</span></a>
+                </li>
+                <li>
+                	<a href="about.html"><span>Acerca de</span></a>
+                </li>
+                <li>
+                	<a href="gallery.html"><span>Galeria</span></a>
+                </li>
+                <li>
+                	<a href="#contact"><span>Contacto</span></a>
+                </li>
+                <li>
+                	<a href="https://github.com/c215714n/educacionit/tree/maquetado-martes-19hs" target="_blank"><span>GitHub</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <header class="header">
+                <h1>Clase 1: Nuevos elementos HTML5</h1>
+            </header>
+            <section>
+                <header>
+                    <h1>Tema 1: Multimedia</h1>
+                </header>
+                <p>
+                	Con el surgimiento del nuevo standard, se incorporaron nuevas formas para agregar contenido multimedia dentro de nuestras paginas web <em> sin necesidad del uso de plugins o complementos de terceros. </em> Estas etiquetas son <strong> AUDIO y VIDEO</strong>, que admiten los formatos <em>.mp3/.wav/.ogg y .mp4/.webm/.ogv</em> respecticamente.
+                </p>
+                <div class="example">
+                	<video id="videoTag">
+                		<source src="assets/media/californication.ogv">
+                		<source src="assets/media/californication.webm">
+                		<source src="assets/media/californication.mp4">
+                		<p>
+                			Lo sentimos, pero tu navegador NO es compatible con el elemento VIDEO.
+                			Puedes descargar el tema desde la siguiente direccion: 
+                			<a href="assets/media/californication.ogv"> Californication - Red Hot Chili Peppers.</a>
+                		</p>
+                	</video>
+                	<button id="videoButton">PLAY</button>
+                </div>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 2: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 3: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h1>Clase 2: </h1>
+            </header>
+            <section>
+                <header>
+                    <h1>Tema 1: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 2: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 3: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h1>Clase 3: </h1>
+            </header>
+            <section>
+                <header>
+                    <h1>Tema 1: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 2: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 3: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h1>Clase 4: </h1>
+            </header>
+            <section>
+                <header>
+                    <h1>Tema 1: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 2: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 3: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h1>Clase 5: </h1>
+            </header>
+            <section>
+                <header>
+                    <h1>Tema 1: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 2: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+            <section>
+                <header>
+                    <h1>Tema 3: </h1>
+                </header>
+                <p>...</p>
+                <footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+                </footer>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="social"><a href="https://*.com" target="_blank"></a></div>
+        <form action="" id="contact">
+            <label for=""></label>
+            <input type="text" required="required">
+            <label for=""></label>
+            <input type="text" required="required">
+            <label for=""></label>
+            <input type="text" required="required">
+            <label for="consulta">Consulta</label>
+            <textarea name="consulta" id="consulta" cols="30" rows="10" minlength="10" maxlength="200" required="required"></textarea>
+            <button>ENVIAR CONSULTA</button>
+        </form>
+    </footer>
+    <p>&copy; Todos los derechos reservados<a href="#"> Cristian Racedo </a><span class="">&amp; Compañia</span></p>
+
+    <!--scripts-->
+    <script src="scripts/main.js"></script>
 </body>
 </html>
