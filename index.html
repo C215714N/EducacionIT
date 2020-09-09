@@ -37,7 +37,7 @@
             <header class="header">
                 <h1>Clase 1: Nuevos elementos HTML5</h1>
             </header>
-            <section>
+            <section id="multimedia">
                 <header>
                     <h1>Tema 1: Multimedia</h1>
                 </header>
@@ -45,7 +45,14 @@
                 	Con el surgimiento del nuevo standard, se incorporaron nuevas formas para agregar contenido multimedia dentro de nuestras paginas web <em> sin necesidad del uso de plugins o complementos de terceros. </em> Estas etiquetas son <strong> AUDIO y VIDEO</strong>, que admiten los formatos <em>.mp3/.wav/.ogg y .mp4/.webm/.ogv</em> respecticamente.
                 </p>
                 <div class="example">
-                	<video id="videoTag">
+                	<audio src="assets/media/by-the-way.mp4" controls>
+                		<p>
+                			Lo sentimos, pero tu navegador NO es compatible con el elemento VIDEO.
+                			Puedes descargar el tema desde la siguiente direccion: 
+                			<a href="assets/media/by-the-way.ogv"> By the Way - Red Hot Chili Peppers.</a>
+                		</p>
+                	</audio>
+                	<video id="videoTag" poster="assets/fender.png">
                 		<source src="assets/media/californication.ogv">
                 		<source src="assets/media/californication.webm">
                 		<source src="assets/media/californication.mp4">
@@ -56,6 +63,16 @@
                 		</p>
                 	</video>
                 	<button id="videoButton">PLAY</button>
+                </div>
+                <div class="example">
+                	<video class="background" autoplay muted>
+                		<source src="assets/media/cant-stop.ogv">
+                		<source src="assets/media/cant-stop.webm">
+                		<source src="assets/media/cant-stop.mp4">
+                	</video>
+                	<p class="background">
+                		es una canción de la banda californiana Red Hot Chili Peppers, de su álbum lanzado en 2002, By the Way. Es el tercer sencillo del álbum, la séptima canción del álbum, y una de las pocas canciones del disco que contiene los típicos versos cortos de la banda, es una de sus canciones más conocidas de sus últimos años y una de las favoritas del público
+                	</p>
                 </div>
                 <footer>
                     <address>
@@ -69,9 +86,72 @@
             </section>
             <section>
                 <header>
-                    <h1>Tema 2: </h1>
+                    <h1>Tema 2: Elementos estadisticos</h1>
                 </header>
-                <p>...</p>
+                <p>
+                	Otro de los elementos introducidos en HTML5 son <strong> Progress y Meter</strong>, y a diferencia de los elementos mencionados <a href="#multimedia">anteriormente</a> debemos llamar a la herramienta <em>::-webkit-element</em> para poder modificar su aspector visual. El primero se utiliza para definir el avance de una tarea, sin haber esta terminado y el ultimo se utiliza para comparar valores estadisticos una vez haya sido terminada su evaluacion.
+                </p>
+                <ul class="example">
+                	<li>
+                		<h2>PROGRESS</h2>
+                		<ul>
+                			<li>
+                				Sin valor definido
+                				<progress 
+                					id="progressBar"
+                					max="100">
+                				</progress>
+                				<input 
+                					id="progressInput" 
+                					type="number" 
+                					min="0" 
+                					max="100"/>
+                			</li>
+                			<li>
+                				Con valor 20/100
+                				<progress  
+                				    value="20"
+                				    max="100">
+                				</progress>
+                			</li>
+                		</ul>
+                	</li>	
+                	<li>
+                		<h2>METER</h2>
+                		<ul>
+                			<li>
+                				*value*< low < high < optimum
+                				<meter 
+                					min="0"
+                					low="40"
+                					high="70"
+                					optimum="90" 
+                					value="30" 
+                					max="100"></meter>
+                			</li>
+                			<li>
+                				low < *value* < high < optimum
+                				<meter 
+                					min="0"
+                					low="40"
+                					high="70"
+                					optimum="90" 
+                					value="60" 
+                					max="100"></meter>
+                			</li>
+                			<li>
+                				low < high < *value* < optimum
+                				<meter 
+                					min="0"
+                					low="40"
+                					high="70"
+                					optimum="90" 
+                					value="90" 
+                					max="100"></meter>
+                			</li>
+                		</ul>
+                	</li>
+                </ul>
                 <footer>
                     <address>
                         Para mas informacion, consultar las fuentes:
