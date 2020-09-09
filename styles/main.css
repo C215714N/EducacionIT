@@ -16,6 +16,30 @@
 		nav{
 			background-color: #86A;
 		}
+		#menu{
+			width:3rem;
+			line-height:2.5rem;
+			font-size: 2.5rem;
+		}
+		.menu{
+			list-style:none;
+			overflow: hidden;
+			height: 0;
+			margin:0;
+			padding:0;
+		}
+		.menu a {
+			display: block;
+			padding: .2rem 3rem; /*top right bottom left*/
+			color:#ddd;
+			text-decoration: none;
+		}
+		.menu a:hover{
+			background-color: #213;
+		}
+		.openMenu{
+			height:auto;
+		}
 	/*Pantallas Pequeñas SM celulares*/
 		@media screen and (min-width: 576px){
 		}
