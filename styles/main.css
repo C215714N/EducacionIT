@@ -1,3 +1,37 @@
 /*Maquetado Avanzado*/
-
+	/*Reglas Generales*/
+		*{
+			box-sizing: border-box;
+			/*
+				content-box : final with (width + padding + border);
+				border-box : final with (width) && content(width - border - padding);
+			*/
+			font-family: calibri, sans-serif;
+		}
+		#header, #footer{
+			padding:1rem;
+			color:#ccc;
+			background-color: #435;
+		}
+		nav{
+			background-color: #86A;
+		}
+	/*Pantallas Pequeñas SM celulares*/
+		@media screen and (min-width: 576px){
+		}
+	/*Pantallas Medianas MD tablets*/
+		@media screen and (min-width: 768px){
+		}
+	/*Pantallas Grandes LG small desktop*/
+		@media screen and (min-width: 992px) {
+		}
+	/*Pantallas Extra Grandes XL Desktop/SmartTV*/
+		@media screen and (min-width: 1200px) {
+		}
+	/*Medios de Impresion*/
+		@media print{
+			#header, #footer{
+				display: none;
+			}
+		}
 /*Autor: Cristian Racedo*/
