@@ -7,13 +7,57 @@
 	#header, #footer, .header{
 		color:#ddd;
 		background-color: darkslateblue;
+		padding:15px;
+	}
+	.header{
 		padding:5px;
 	}
+	.header h1, .header p{
+		margin:0;
+	}
+	.header span{
+		color:orange;
+		font-size: 56px;
+		text-shadow: 0 0 5px #ddd; /*X Y blur color*/
+	}
+	#header a, #footer a{
+		margin:0;
+		color:#ccc;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 20px;
+	}
 /*Navegacion*/
-
+	.menu{
+		list-style: none;
+		margin:0 -15px;/*top right bottom left*/
+		padding:0;
+		text-align: center;
+		background-color: slateblue;
+	}
+	.menu li{
+		display: inline-block;
+		width:100px;
+		margin:0 -2px;/*top right bottom left*/
+		border:1px solid #ddd;
+		border-width: 0 1px;
+		padding:5px;
+		line-height: 30px;
+	}
+	.menu li:hover{
+		background-color: #639;
+		text-shadow: 1px 1px 1px black;
+	}
 /*Cuerpo Principal*/
 	main{
-		padding:5px;
+		padding:15px;
+	}
+	.example{
+		list-style:none;
+		margin-left: 40px;
+		padding:15px;
+		border-left: 4px solid darkslateblue;
+		background-color: #9AF;
 	}
 /*Formulario*/
 	#contacto{

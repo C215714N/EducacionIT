@@ -137,6 +137,87 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<p>
+				Antiguamente para incorporar contenido de este tipo, era comun que necesitaramos instalar en los navegadores 
+				<em> plugins o complementos </em> 
+				que permitieran la reproduccion de los mismos, como el tan conocido 
+				<strong> flash player </strong>. A lo largo de los años han existido diferentes formas de integrar <strong>audio y video </strong> a las paginas web como las que detallaremos en las siguientes secciones.
+			</p>
+			<section id="iframe">
+				<header>
+					<h1>¿Contenido Embebido?</h1>
+				</header>
+				<p>
+					Unas de las formas de integrar 
+					<em> elementos externos </em>
+					a nuestra pagina web era mediante la etiqueta
+					<strong>&lt;iframe> (marco flotante) </strong>
+					que permitia integrar en una ventana, de
+					<em> manera asincronica </em> contenido de otra web como videos, documentos u otras paginas. Hoy en dia se utiliza para <strong>embeber (embed) contenido dentro de HTML</strong> de aquellos sitios que comparten su contenido, como es el caso de <em>Google Maps - Youtube - SlideShare</em> entre otros. Si bien este metodo quedo relegado para insertar contenido externo, en un comienzo se utilizo para multimedia, por lo que mas adelante se explicara como implementar elementos de <a href="#audio">audio</a> y <a href="#video">video</a> dentro de nuestra web, de forma nativa.
+				</p>
+				<div class="example">
+					<iframe 
+					    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d954.0622247959195!2d-58.376362431540684!3d-34.60218233188171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1599865192562!5m2!1ses!2sar"  
+					    frameborder="0"
+					    aria-hidden="false">
+					</iframe>
+					<iframe 
+					    src="https://www.youtube.com/embed/zJBzHQawsjs" 
+					    frameborder="0" 
+					    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					    allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/xv67794WvV0" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h1>¿Sonidos en la Web?</h1>
+				</header>
+				<p>
+					Con la incorporacion del nuevo standard de HTML5 se agregaron nuevos elementos que permiten a los navegadores reproducir 
+					<em> contenido multimedia</em> de forma nativa mediante un 
+					<strong> reproductor integrado </strong>, uno de ellos es el <strong> elemento &lt;audio> </strong> que permite la reproduccion de los formatos <em>.mp3, .wav, .ogg</em>, aunque tambien admite formatos de video, como los que se detallan <a href="#video">mas adelante</a>, ya que toma la pista de audio de dicho elemento y la carga sin imagen. Es importante entender que para manipular este elemento desde HTML, debemos especificar el atributo <em>"controls"</em> para que se vea se visualice el reproductor en pantalla.
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO.
+							podes descargar el tema en la siguiente direccion <a href="media/live-learn.mp3">Live &amp; Learn</a>
+						</p>
+					</audio>
+					<audio src="media/californication.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO.
+							podes descargar el tema en la siguiente direccion <a href="media/californication.mp4">Californication</a>
+						</p>
+					</audio>
+				</div>
+			</section>
+			<section id="video">
+				<header>
+					<h1>¿Sin Plugins?</h1>
+				</header>
+				<p>
+					Como se menciona en el caso del <a href="#audio">elemento anterior</a>, esta etiqueta tambien se incorporo con la llegada de HTML5, esta admite los formatos <em>.mp4, .webm, .ogv</em> que fueron diseñados y pensados para compartir mediante la web. Pero a diferencia de la etiqueta <strong> &lt;audio></strong>, <strong>el elemento &lt;video></strong> no permite la reproduccion de sonidos sin imagen, sino que cambia de reproductor al de sonido. Otra de las diferencias visibles, es que sin importar que este o no especificado el atributo <em>"controls"</em>, el reproductor siempre estara visible.
+				</p>
+				<div class="example">
+					<video src="media/by-the-way.mp4" autoplay muted>
+					</video>
+					<video src="media/cant-stop.mp4" controls>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
