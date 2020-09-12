@@ -218,6 +218,115 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten <em>organizar la informacion de manera tabular</em> y al igual que en cualquier ambito las mismas se componen de <strong>filas y columnas</strong>, pero a diferencia del resto, en HTML se utiliza como base <strong>el modelo de cajas</strong> y por lo tanto encontramos <em>elementos contenedores</em> y <em>elementos de contenido</em>. Otra caracteristica particular de este tipo de elementos, es que a diferencia del resto de las etiquetas de bloque, su tamaño se adapta a su contenido y no a su contendor, ademas no podeen borde de manera predeterminada.
+			</p>
+			<section>
+				<header>
+					<h1>¿Estructura Clásica?</h1>
+				</header>
+				<p>
+					Esta forma fue el puntapie inicial que se utilizo para el diseño de paginas web, durante los primeros años <strong>antes de la aparicion de css</strong>. permite acomodar contenido pero su defecto principal es que no responde a los standares actuales con respecto a la definicion de contenidos. Para crear una tabla con esta forma solamente necesitamos un contenedor <strong>&lt;table></strong> y luego por cada fila, se especifica un contenedor <strong>&lt;tr> (table row)</strong> y por ultimo una etiqueta de contenido igual a la cantidad de columnas, representadas por la etiqueta <strong>&lt;td> (table division)</strong> que representa cada celda.
+				</p>
+				<div class="example tables">
+					<table>
+						<tr>
+							<td>Fila 1 Celda 1</td>
+							<td>Fila 1 Celda 2</td>
+							<td>Fila 1 Celda 3</td>
+						</tr>
+						<tr>
+							<td>F2 C1</td>
+							<td>F2 C2</td>
+							<td>F2 C3</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>X</td> 	
+							<td>O</td>	
+							<td>O</td>	
+						</tr>
+						<tr>
+							<td>O</td>
+							<td>X</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>X</td>
+							<td>O</td>
+							<td>X</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Estructura Semántica?</h1>
+				</header>
+				<p>
+					Con la incorporacion de HTML5 como nuevo standard, las tablas sufrieron varios cambios, entre ellos estan la incorporacion de etiquetas semanticas. Se agrego una <em>fila de encabezados</em> representada con <strong>THEAD</strong> que suple a la primer fila y obligatoriamente de poseer <em>celdas de titulo</em> identificadas como <strong>th (table heading)</strong>, luego el contenido principal que mantiene la estructura clasica se coloca dentro de la etiqueta <strong>TBODY</strong>, aqui tambien se pueden colocar titulos en caso de crear una tabla de referencias cruzadas. Y por ultimo, una fila opcional para los detalles o complementaria al contenido principal que se indentifica con la etiqueta <strong>TFOOT</strong> y tambien puede poseer titulos.
+				</p>
+				<div class="example semantic">
+					<table>
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th>Productos</th>
+							<th>Cant.</th>
+							<th>Precio</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>1</td>
+								<td>800</td>
+								<td>800</td>
+							</tr>
+							<tr>
+								<td>Mouse</td>
+								<td>2</td>
+								<td>2300</td>
+								<td>4600</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>3</td>
+								<td>8200</td>
+								<td>24600</td>
+							</tr>
+							</tbody>
+							<tfoot>
+								<th colspan="3">Total</th>
+								<td>30000</td>
+							</tfoot>
+					</table>
+					<table>
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Desarrollo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 

@@ -59,6 +59,25 @@
 		border-left: 4px solid darkslateblue;
 		background-color: #9AF;
 	}
+	.tables table,
+	.tables td{
+		margin:5px;
+		border: 1px dashed white;
+		border-collapse: collapse;
+	}
+	.tables td{
+		width:100px;
+	}
+	.semantic table,
+	.semantic caption,
+	.semantic tr,
+	.semantic td{
+		color:white;
+		background-color: rgba(30, 120, 80, .5);
+	}
+	.semantic caption{
+		border-radius: 8px 8px 0 0;
+	}
 /*Formulario*/
 	#contacto{
 		width:420px;
