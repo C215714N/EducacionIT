@@ -4,12 +4,70 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fundamentos Web</title>
+	<!--CSS Interno / en BLOQUE-->
+	<style>
+		/*Selectores Generales*/
+		body{
+			font-family: calibri, century gothic, sans-serif;
+			margin:0;
+		}
+		/*Selectores Multiples ( , )*/
+		header, footer{
+			padding:16px;
+			text-align: center;
+			color:#ccc;
+			background-color: #0D6E3D; /*RRGGBB - 0:min F:max*/
+		}
+		/*Selectores Especificos (padre hijo)*/
+		header h1, header p{
+			margin:0;
+		}
+		nav ul{
+			list-style: none;
+			margin:5px;
+			padding:0;
+			background-color: #0C6;
+		}
+		nav a{
+			color:#ddd;
+			text-decoration: none;
+		}
+		nav li{
+			display: inline;
+			padding:5px;
+			line-height: 32px;
+		}
+		/*pseudoclase (Estado/caracteristica)*/
+		nav li:hover{
+			background-color: #093;
+		}
+		/*Selector de Clase (.clase)*/
+		.example{
+			list-style: none;
+			padding:20px;
+			background-color: #cfc;
+		}
+		main p{
+			overflow: hidden;
+			padding:20px;
+		}
+		main p img{
+			width:150px;
+			float: left;
+			margin-right: 20px;
+		}
+		/*Selector de Id (#)*/
+		#footer a{
+			color:grey;
+			font-weight: bolder;
+		}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;HTML> &amp; {CSS}</p>
-		<div id="nav">
+		<nav>
 			<ul>
 				<li>
 					<!--Ruta Relativa / Interna-->
@@ -28,9 +86,9 @@
 					<a href="https://github.com/c215714n/educacionit/tree/html-martes-10hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main>
 		<h2>Reglas de Nomenclatura</h2>
 		<ul class="example">
 			<li>
@@ -46,11 +104,30 @@
 			</li>
 		</ul>
 		<div>
-			<img src="img/jjba-theworld-01.jpg" alt="the World - Dibujo" style="width:300px;">
-			<img src="img/jjba-theworld-02.jpg" alt="the World - Dibujo" style="width:300px;">
-			<img src="img/jjba-theworld-03.jpg" alt="the World - Dibujo" style="width:300px;">
-			<img src="img/jjba-theworld-04.jpg" alt="the World - Dibujo" style="width:300px;">
+			<img src="img/jjba-theworld-01.jpg" alt="the World - Dibujo" style="width:300px;"/>
+			<img src="img/jjba-theworld-02.jpg" alt="the World - Dibujo" style="width:300px;"/>
+			<img src="img/jjba-theworld-03.jpg" alt="the World - Dibujo" style="width:300px;"/>
+			<img src="img/jjba-theworld-04.jpg" alt="the World - Dibujo" style="width:300px;"/>
 		</div>
-	</div>
+		<p class="example">
+			<img src="img/usm-scorpion-01.jpg" alt="">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores, laboriosam ducimus, laborum nulla optio expedita voluptatem, eius dolore odit suscipit velit accusamus error alias placeat distinctio esse numquam dolores.
+		</p>
+		<p class="example">
+			<img src="img/usm-scorpion-02.jpg">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores, laboriosam ducimus, laborum nulla optio expedita voluptatem, eius dolore odit suscipit velit accusamus error alias placeat distinctio esse numquam dolores.
+		</p>
+		<p>
+			<img src="img/usm-scorpion-03.jpg" alt="">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores, laboriosam ducimus, laborum nulla optio expedita voluptatem, eius dolore odit suscipit velit accusamus error alias placeat distinctio esse numquam dolores.
+		</p>
+	</main>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
 </body>
 </html>
