@@ -2,57 +2,104 @@
 	/*Reglas Generales*/
 		*{
 			box-sizing: border-box;
-			/*
-				content-box : final with (width + padding + border);
-				border-box : final with (width) && content(width - border - padding);
-			*/
 			font-family: calibri, sans-serif;
 		}
-		#header, #footer{
-			padding:1rem;
-			color:#ccc;
-			background-color: #435;
-		}
-		nav{
-			background-color: #86A;
-		}
-		#menu{
-			width:3rem;
-			line-height:2.5rem;
-			font-size: 2.5rem;
-		}
-		.menu{
-			list-style:none;
-			overflow: hidden;
-			height: 0;
-			margin:0;
-			padding:0;
-		}
-		.menu a {
-			display: block;
-			padding: .2rem 3rem; /*top right bottom left*/
-			color:#ddd;
-			text-decoration: none;
-		}
-		.menu a:hover{
-			background-color: #213;
-		}
-		.openMenu{
-			height:auto;
-		}
+		/*Cabecera y Pie de Pagina*/
+			#header, #footer{
+				padding:1rem;
+				color:#ccc;
+				background-color: #435;
+			}
+		/*Barra de Navegacion*/
+			nav{
+				background-color: #86A;
+			}
+			#menu{
+				width:3rem;
+				line-height:2.5rem;
+				font-size: 2.5rem;
+			}
+			.menu{
+				list-style:none;
+				overflow: hidden;
+				height: 0;
+				margin:0;
+				padding:0;
+			}
+			.menu a {
+				display: block;
+				padding: .2rem 3rem; /*top right bottom left*/
+				color:#ddd;
+				text-decoration: none;
+			}
+			.menu a:hover{
+				background-color: #213;
+			}
+			.openMenu{
+				height:auto;
+			}
+		/*Contenido Principal*/
+
+			/*Muestras y Ejemplos*/
+				.example{
+					/*Orientacion*/
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+					/*Aspecto*/
+					list-style: none;
+					margin:.5rem 2rem;
+					border-left: 4px solid #426;
+					padding:1rem;
+					background-color: #C6A4FF;
+				}
+				/*Contenido Multimedia*/
+					audio, video{
+						width:100%;
+						max-width: 420px;
+					}
+				/*Elementos estadisticos*/
+					progress, meter{
+						width:100%;
+						height:2rem;
+					}
+				/*API's de Dibujo*/
+					figure{
+						width:100%;
+						min-width: 150px;
+						max-width: 200px;
+						text-align: center;
+						border: 2px solid #213;
+						padding: .5rem;
+						background-color: #ccc;
+					}
+					figure img{
+						width:100%;
+					}
+					canvas, svg{
+						width:200px;
+						height:200px;
+						border: 2px solid #213;
+					}
+		/*Formulario de Contacto*/
 	/*Pantallas Pequeñas SM celulares*/
 		@media screen and (min-width: 576px){
+		
 		}
 	/*Pantallas Medianas MD tablets*/
 		@media screen and (min-width: 768px){
+		
 		}
 	/*Pantallas Grandes LG small desktop*/
 		@media screen and (min-width: 992px) {
+		
 		}
 	/*Pantallas Extra Grandes XL Desktop/SmartTV*/
 		@media screen and (min-width: 1200px) {
+		
 		}
 	/*Medios de Impresion*/
+		/*Elementos Ocultos*/
 		@media print{
 			#header, #footer{
 				display: none;

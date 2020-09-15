@@ -8,52 +8,45 @@
 </head>
 <body>
     <header id="header">
-        <div class="header">
-            <h1>Maquetado Avanzado</h1>
-            <p>HTML &amp; CSS</p>
-        </div>
-        <nav>
-        	<button id="menu">&equiv;</button>
-            <ul class="menu">
-                <li>
-                	<a href="#"><span>Inicio</span></a>
-                </li>
-                <li>
-                	<a href="about.html"><span>Acerca de</span></a>
-                </li>
-                <li>
-                	<a href="gallery.html"><span>Galeria</span></a>
-                </li>
-                <li>
-                	<a href="#contact"><span>Contacto</span></a>
-                </li>
-                <li>
-                	<a href="https://github.com/c215714n/educacionit/tree/maquetado-martes-19hs" target="_blank"><span>GitHub</span></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <header class="header">
-                <h1>Clase 1: Nuevos elementos HTML5</h1>
-            </header>
-            <section id="multimedia">
-                <header>
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li><a href="#"><span>Inicio</span></a></li>
+				<li><a href="about.html"><span>Acerca de</span></a></li>
+				<li><a href="gallery.html"><span>Galeria</span></a></li>
+				<li><a href="#contact"><span>Contacto</span></a></li>
+				<li><a href="https://github.com/c215714n/educacionit/tree/maquetado-martes-19hs" target="_blank"><span>GitHub</span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Clase 1: Nuevos elementos HTML5</h1>
+			</header>
+			<p>
+            	Con la incorporacion de la ultima version de HTML se modificaron e incluyeron diferentes elementos que antiguamente debian representarse de maneras alternativas, como por ejemplo <em>div para generar barras, utilizar js para determinada funcionalidad, o mediante herramientas de terceros</em>. Entre dichos elementos encuentramos <strong> contenido multimedia para la reproduccion de audio y video, etiquetas para reprentacion de elementos estadisticos y API´s de dibujo para facilitar el diseño con otros lenguajes.</strong>
+			</p>
+			<section id="multimedia">
+				<header>
                     <h1>Tema 1: Multimedia</h1>
-                </header>
-                <p>
+				</header>
+				<p>
                 	Con el surgimiento del nuevo standard, se incorporaron nuevas formas para agregar contenido multimedia dentro de nuestras paginas web <em> sin necesidad del uso de plugins o complementos de terceros. </em> Estas etiquetas son <strong> AUDIO y VIDEO</strong>, que admiten los formatos <em>.mp3/.wav/.ogg y .mp4/.webm/.ogv</em> respecticamente.
-                </p>
-                <div class="example">
-                	<audio src="assets/media/by-the-way.mp4" controls>
+				</p>
+				<div class="example">
+					<audio src="assets/media/by-the-way.mp4" controls>
                 		<p>
                 			Lo sentimos, pero tu navegador NO es compatible con el elemento VIDEO.
                 			Puedes descargar el tema desde la siguiente direccion: 
                 			<a href="assets/media/by-the-way.ogv"> By the Way - Red Hot Chili Peppers.</a>
                 		</p>
-                	</audio>
-                	<video id="videoTag" poster="assets/fender.png">
+					</audio>
+					<video id="videoTag" poster="assets/fender.png">
                 		<source src="assets/media/californication.ogv">
                 		<source src="assets/media/californication.webm">
                 		<source src="assets/media/californication.mp4">
@@ -62,37 +55,41 @@
                 			Puedes descargar el tema desde la siguiente direccion: 
                 			<a href="assets/media/californication.ogv"> Californication - Red Hot Chili Peppers.</a>
                 		</p>
-                	</video>
-                	<button id="videoButton">PLAY</button>
-                </div>
-                <div class="example">
-                	<video class="background" autoplay muted>
-                		<source src="assets/media/cant-stop.ogv">
-                		<source src="assets/media/cant-stop.webm">
-                		<source src="assets/media/cant-stop.mp4">
-                	</video>
-                	<p class="background">
+					</video>
+					<button id="videoButton">PLAY</button>
+				</div>
+				<p>
+                	Aprovechando las caracteristicas del navegador para poder reproducir el contenido multimedia de manera automatica al cargar la pagina mediante
+                	<strong>&lt;video <span>autoplay muted</span>>&lt;/video></strong> podemos utilizar el mismo como un fondo animado, para ello es necesario que posicionemos los elementos mediante el atributo <em>{position:absolute;}</em> con un <em>{width:100%;}</em>
+				</p>
+				<div class="example">
+					<video class="background" autoplay muted>
+						<source src="assets/media/cant-stop.ogv">
+						<source src="assets/media/cant-stop.webm">
+						<source src="assets/media/cant-stop.mp4">
+					</video>
+					<p class="background">
                 		es una canción de la banda californiana Red Hot Chili Peppers, de su álbum lanzado en 2002, By the Way. Es el tercer sencillo del álbum, la séptima canción del álbum, y una de las pocas canciones del disco que contiene los típicos versos cortos de la banda, es una de sus canciones más conocidas de sus últimos años y una de las favoritas del público
-                	</p>
+					</p>
                 </div>
                 <footer>
-                    <address>
+					<address>
                         Para mas informacion, consultar las fuentes:
-                        <a href="https://alumni.education">Alumni</a>
-                        <br>
-                        <strong>Autor: </strong>
-                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
-                    </address>
-                </footer>
-            </section>
-            <section>
-                <header>
+						<a href="https://alumni.education">Alumni</a>
+						<br>
+						<strong>Autor: </strong>
+						<a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+					</address>
+				</footer>
+			</section>
+			<section id="estadisticas">
+				<header>
                     <h1>Tema 2: Elementos estadisticos</h1>
-                </header>
-                <p>
+				</header>
+				<p>
                 	Otro de los elementos introducidos en HTML5 son <strong> Progress y Meter</strong>, y a diferencia de los elementos mencionados <a href="#multimedia">anteriormente</a> debemos llamar a la herramienta <em>::-webkit-element</em> para poder modificar su aspector visual. El primero se utiliza para definir el avance de una tarea, sin haber esta terminado y el ultimo se utiliza para comparar valores estadisticos una vez haya sido terminada su evaluacion.
-                </p>
-                <ul class="example">
+				</p>
+				<ul class="example">
                 	<li>
                 		<h2>PROGRESS</h2>
                 		<ul>
@@ -121,7 +118,7 @@
                 		<h2>METER</h2>
                 		<ul>
                 			<li>
-                				*value*< low < high < optimum
+                				<strong>value</strong> < low < high < optimum
                 				<meter 
                 					min="0"
                 					low="40"
@@ -131,7 +128,7 @@
                 					max="100"></meter>
                 			</li>
                 			<li>
-                				low < *value* < high < optimum
+                				low < <strong>value</strong> < high < optimum
                 				<meter 
                 					min="0"
                 					low="40"
@@ -141,7 +138,7 @@
                 					max="100"></meter>
                 			</li>
                 			<li>
-                				low < high < *value* < optimum
+                				low < high < <strong>value</strong> < optimum
                 				<meter 
                 					min="0"
                 					low="40"
@@ -152,8 +149,47 @@
                 			</li>
                 		</ul>
                 	</li>
-                </ul>
-                <footer>
+				</ul>
+				<p>
+                	Es importante destacar que la funcionalidad principal de estas etiquetas es semantica y no decorativa, como los <a href="#dibujo">elementos de dibujo</a> que se detallan mas adelante.
+				</p>
+				<footer>
+                    <address>
+                        Para mas informacion, consultar las fuentes:
+                        <a href="https://alumni.education">Alumni</a>
+                        <br>
+                        <strong>Autor: </strong>
+                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+                    </address>
+				</footer>
+			</section>
+			<section id="dibujo">
+				<header>
+                    <h1>Tema 3: API´s de dibujo</h1>
+				</header>
+				<p>
+                	Ademas de poder utilizar imagenes en nuestro proyecto, HTML5 nos permite utilizar elementos muy utiles para dibujar mediante codigo. Por un lado tenemos la etiqueta <strong>&lt;SVG></strong> que permite la creacion de <em>Graficos vectoriales mediante XML</em> y por el otro, la etiqueta <strong>&lt;CANVAS></strong> que permite la creacion de <em>Imagenes Mapa de Bits mediante la JS</em>
+				</p>
+				<div class="example">	
+					<figure>	
+						<img src="assets/css.svg" alt="Logo CSS3 - formato SVG" />
+						<figcaption>Grafico Vectorial</figcaption>
+					</figure>
+					<figure>	
+						<img src="assets/css.png" alt="Logo CSS3 - formato PNG" />
+						<figcaption>Mapa de Bits</figcaption>
+					</figure>
+				</div>
+				<p>	
+                	Una de las ventajas principales de los Graficos vectoriales es que, al ser calculados matematicamente, no se pixelan cuando se escala la pagina y por lo tanto se mantienen las proporciones. Pero a diferencia de <a href="#multimedia"> los elementos multimedia</a> y los <a href="#estadisticas"> elementos estadisticos</a> no estan pensados para ser manipulados mediante scripting. Por el contrario, los lienzos manipulados con Canvas, si fueron pensado para el desarrollo y mediante javascript se puede brindar funcionalidad a los dibujos realizados con dicha herramienta; pero una de las desventajas principales de este tipo de graficos es que son finitos y por ende se distorcionan al aumentar el tamaño de los elementos.
+				</p>	
+				<svg>
+
+				</svg>
+				<canvas id="canvas">	
+                
+				</canvas>
+				<footer>
                     <address>
                         Para mas informacion, consultar las fuentes:
                         <a href="https://alumni.education">Alumni</a>
@@ -162,24 +198,9 @@
                         <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
                     </address>
                 </footer>
-            </section>
-            <section>
-                <header>
-                    <h1>Tema 3: </h1>
-                </header>
-                <p>...</p>
-                <footer>
-                    <address>
-                        Para mas informacion, consultar las fuentes:
-                        <a href="https://alumni.education">Alumni</a>
-                        <br>
-                        <strong>Autor: </strong>
-                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
-                    </address>
-                </footer>
-            </section>
-        </article>
-        <article>
+			</section>
+		</article>
+		<article>
             <header class="header">
                 <h1>Clase 2: </h1>
             </header>
@@ -228,8 +249,8 @@
                     </address>
                 </footer>
             </section>
-        </article>
-        <article>
+		</article>
+		<article>
             <header class="header">
                 <h1>Clase 3: </h1>
             </header>
@@ -278,8 +299,8 @@
                     </address>
                 </footer>
             </section>
-        </article>
-        <article>
+		</article>
+		<article>
             <header class="header">
                 <h1>Clase 4: </h1>
             </header>
@@ -328,8 +349,8 @@
                     </address>
                 </footer>
             </section>
-        </article>
-        <article>
+		</article>
+		<article>
             <header class="header">
                 <h1>Clase 5: </h1>
             </header>
@@ -364,39 +385,49 @@
                 </footer>
             </section>
             <section>
-                <header>
-                    <h1>Tema 3: </h1>
-                </header>
-                <p>...</p>
-                <footer>
-                    <address>
-                        Para mas informacion, consultar las fuentes:
-                        <a href="https://alumni.education">Alumni</a>
-                        <br>
-                        <strong>Autor: </strong>
-                        <a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
-                    </address>
-                </footer>
-            </section>
-        </article>
-    </main>
-    <footer>
-        <div class="social"><a href="https://*.com" target="_blank"></a></div>
-        <form action="" id="contact">
-            <label for=""></label>
-            <input type="text" required="required">
-            <label for=""></label>
-            <input type="text" required="required">
-            <label for=""></label>
-            <input type="text" required="required">
-            <label for="consulta">Consulta</label>
-            <textarea name="consulta" id="consulta" cols="30" rows="10" minlength="10" maxlength="200" required="required"></textarea>
-            <button>ENVIAR CONSULTA</button>
-        </form>
-    </footer>
-    <p>&copy; Todos los derechos reservados<a href="#"> Cristian Racedo </a><span class="">&amp; Compañia</span></p>
+				<header>
+					<h1>Tema 3: </h1>
+				</header>
+				<p>...</p>
+				<footer>
+					<address>
+						Para mas informacion, consultar las fuentes:
+						<a href="https://alumni.education">Alumni</a>
+						<br>
+						<strong>Autor: </strong>
+						<a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
+					</address>
+				</footer>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div class="social">
+			<a href="https://*.com" target="_blank"></a>
+			<a href="https://*.com" target="_blank"></a>
+			<a href="https://*.com" target="_blank"></a>
+			<a href="https://*.com" target="_blank"></a>
+		</div>
+		<form action="" id="contact">
+			<label for=""></label>
+			<input type="text" required="required">
+			<label for=""></label>
+			<input type="text" required="required">
+			<label for=""></label>
+			<input type="text" required="required">
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta" 
+				id="consulta" 
+				minlength="10" 
+				maxlength="200" 
+				required></textarea>
+			<button>ENVIAR CONSULTA</button>
+		</form>
+	</footer>
+	<p>&copy; Todos los derechos reservados<a href="#"> Cristian Racedo </a><span class="">&amp; Compañia</span></p>
 
     <!--scripts-->
-    <script src="scripts/main.js"></script>
+	<script src="scripts/main.js"></script>
 </body>
 </html>
