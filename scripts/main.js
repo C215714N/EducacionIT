@@ -33,4 +33,17 @@
 		document.querySelector('#progressInput').addEventListener(
 			'change', () => document.querySelector('#progressBar').value = document.querySelector('#progressInput').value
 		)
+	//Dibujando con Canvas
+		let ctx = document.querySelector('#canvas').getContext('2d');
+		//Circulo
+			ctx.fillStyle = 'red';
+			ctx.arc(60, 60, 50, 0, 2*Math.PI);
+			ctx.fill();
+		//Rectangulo
+			ctx.fillStyle = 'rgba(0,0,255,.8)';
+			ctx.fillRect(60, 60, 100, 100);
+		//Texto
+			ctx.fillStyle = 'black';
+			ctx.font = '16px roboto';
+			ctx.fillText('Canvas', 60, 180);
 /*Autor: Cristian Racedo*/

@@ -89,45 +89,46 @@
 				<p>
                 	Otro de los elementos introducidos en HTML5 son <strong> Progress y Meter</strong>, y a diferencia de los elementos mencionados <a href="#multimedia">anteriormente</a> debemos llamar a la herramienta <em>::-webkit-element</em> para poder modificar su aspector visual. El primero se utiliza para definir el avance de una tarea, sin haber esta terminado y el ultimo se utiliza para comparar valores estadisticos una vez haya sido terminada su evaluacion.
 				</p>
-				<ul class="example">
-                	<li>
-                		<h2>PROGRESS</h2>
-                		<ul>
-                			<li>
-                				Sin valor definido
-                				<progress 
-                					id="progressBar"
-                					max="100">
-                				</progress>
-                				<input 
-                					id="progressInput" 
-                					type="number" 
-                					min="0" 
-                					max="100"/>
-                			</li>
-                			<li>
-                				Con valor 20/100
-                				<progress  
-                				    value="20"
-                				    max="100">
-                				</progress>
-                			</li>
-                		</ul>
-                	</li>	
-                	<li>
-                		<h2>METER</h2>
-                		<ul>
-                			<li>
-                				<strong>value</strong> < low < high < optimum
-                				<meter 
-                					min="0"
-                					low="40"
-                					high="70"
-                					optimum="90" 
-                					value="30" 
-                					max="100"></meter>
-                			</li>
-                			<li>
+                <ul class="example">
+                    <li>
+                        <h2>PROGRESS</h2>
+                        <ul>
+                            <li>
+                                Sin valor definido
+                                <progress 
+                                    id="progressBar"
+                                    max="100">
+                                </progress>
+                                <input 
+                                    id="progressInput" 
+                                    type="number" 
+                                    min="0" 
+                                    max="100"/>
+                            </li>
+                            <li>
+                                Con valor 20/100
+                                <progress  
+                                    value="20"
+                                    max="100">
+                                </progress>
+                            </li>
+                        </ul>
+                    </li>	
+                    <li>
+                        <h2>METER</h2>
+                        <ul>
+                            <li>
+                                <strong>value</strong> < low < high < optimum
+                                <meter 
+                                    min="0"
+                                    low="40"
+                                    high="70"
+                                    optimum="90" 
+                                    value="30" 
+                                    max="100">
+                                </meter>
+                            </li>
+                            <li>
                 				low < <strong>value</strong> < high < optimum
                 				<meter 
                 					min="0"
@@ -135,7 +136,8 @@
                 					high="70"
                 					optimum="90" 
                 					value="60" 
-                					max="100"></meter>
+                					max="100">
+                                </meter>
                 			</li>
                 			<li>
                 				low < high < <strong>value</strong> < optimum
@@ -145,7 +147,8 @@
                 					high="70"
                 					optimum="90" 
                 					value="90" 
-                					max="100"></meter>
+                					max="100">
+                                </meter>
                 			</li>
                 		</ul>
                 	</li>
@@ -173,21 +176,22 @@
 				<div class="example">	
 					<figure>	
 						<img src="assets/css.svg" alt="Logo CSS3 - formato SVG" />
-						<figcaption>Grafico Vectorial</figcaption>
+						<figcaption> Grafico Vectorial </figcaption>
 					</figure>
 					<figure>	
 						<img src="assets/css.png" alt="Logo CSS3 - formato PNG" />
-						<figcaption>Mapa de Bits</figcaption>
+						<figcaption> Mapa de Bits </figcaption>
 					</figure>
 				</div>
 				<p>	
                 	Una de las ventajas principales de los Graficos vectoriales es que, al ser calculados matematicamente, no se pixelan cuando se escala la pagina y por lo tanto se mantienen las proporciones. Pero a diferencia de <a href="#multimedia"> los elementos multimedia</a> y los <a href="#estadisticas"> elementos estadisticos</a> no estan pensados para ser manipulados mediante scripting. Por el contrario, los lienzos manipulados con Canvas, si fueron pensado para el desarrollo y mediante javascript se puede brindar funcionalidad a los dibujos realizados con dicha herramienta; pero una de las desventajas principales de este tipo de graficos es que son finitos y por ende se distorcionan al aumentar el tamaño de los elementos.
 				</p>	
 				<svg>
-
+                    <circle r="50" cx="60" cy="60" fill="red"/>
+                    <rect x="60" y="60" width="100" height="100" fill="rgba(0,0,255,.8)"/>
+                    <text x="60" y="180" fill="black">XML</text>
 				</svg>
-				<canvas id="canvas">	
-                
+				<canvas id="canvas" width="200" height="200">	
 				</canvas>
 				<footer>
                     <address>
@@ -202,13 +206,21 @@
 		</article>
 		<article>
             <header class="header">
-                <h1>Clase 2: </h1>
+                <h1>Clase 2: Estilos visuales</h1>
             </header>
             <section>
                 <header>
-                    <h1>Tema 1: </h1>
+                    <h1>Tema 1: Colores</h1>
                 </header>
-                <p>...</p>
+                <p>
+                    
+                </p>
+                <div class="example colores">
+                    <div>color: grey;</div>
+                    <div>rgb(128,128,128)</div>
+                    <div>hex:#808080;</div>
+                    <div>hsl(0,0%,50%)</div>
+                </div>
                 <footer>
                     <address>
                         Para mas informacion, consultar las fuentes:

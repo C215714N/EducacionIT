@@ -39,7 +39,46 @@
 				height:auto;
 			}
 		/*Contenido Principal*/
-
+			main,article{
+				padding:1rem;
+			}
+			article .header{
+				padding:.5rem;
+				border-radius: 1rem 1rem 0 0; /*topLeft topRight bottomRight bottomLeft*/
+				background: linear-gradient(
+					45deg,
+					hsl(260, 30%, 60%), 
+					hsl(260, 60%, 30%)
+				), 
+				url(../assets/fender.svg),
+				url(../assets/fender.png);
+				/*COLORES HSL
+					CROMA
+						Rojo = 0, 360
+						Amarillo = 60
+						Verde = 120
+						Cian = 180
+						Azul = 240
+						Magenta = 300
+					INTENSIDAD
+						Desaturado (gris) = 0
+						Opaco = 50%
+						Sobresaturado = 100%
+					LUMA
+						negro = 0%
+						color = 50%
+						blanco = 100%
+				*/
+				background-size: cover,100px;
+				background-repeat: no-repeat;
+				background-position:left center, right bottom;
+				background-blend-mode: multiply;
+				color: #ccc;
+				text-shadow: 1px 1px 2px black;
+				box-shadow: 
+					5px 5px 10px hsl(260, 60%, 20%) inset, 
+					5px 5px 10px hsl(260, 30%, 50%);
+			}
 			/*Muestras y Ejemplos*/
 				.example{
 					/*Orientacion*/
@@ -80,6 +119,25 @@
 						width:200px;
 						height:200px;
 						border: 2px solid #213;
+					}
+				/*Valores cromaticos*/
+					.colores div{
+						width:150px;
+						border:2px solid white;
+						text-align: center;
+						line-height: 50px;
+					}
+					.colores div:nth-child(1){
+						background-color: grey;
+					}
+					.colores div:nth-child(2){
+						background-color: rgb(128,128,128);
+					}
+					.colores div:nth-child(3){
+						background-color: #808080;
+					}
+					.colores div:nth-child(4){
+						background-color: hsl(0, 0%, 50%);
 					}
 		/*Formulario de Contacto*/
 	/*Pantallas Pequeñas SM celulares*/
