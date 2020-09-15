@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;HTML> &amp; {CSS}</p>
+		<div id="nav">
+			<ul>
+				<li>
+					<!--Ruta Relativa / Interna-->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li>
+					<!--Marcador / Ancla (Id)-->
+					<a href="#">Galeria</a>
+				</li>
+				<li>
+					<!--Marcador a Contacto-->
+					<a href="#contacto">Contacto</a>
+				</li>
+				<li>
+					<!--Ruta Absoluta / Externa-->
+					<a href="https://github.com/c215714n/educacionit/tree/html-martes-10hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul class="example">
+			<li>
+				<strong>Evitar el uso de espacios </strong> 
+				ya que estos seran reemplazados por el 
+				<em> caracter %20 </em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> este cambiara a <em>"foto%20.jpg"</em> dando como resultado la incapacidad de encontrar dicho archivo. Para evitar este tipo de situaciones se aconseja utilizar <strong>guiones (-_)</strong> dando como resultado un nombre como <em>"foto_01.jpg"</em>
+			</li>
+			<li>
+				<strong>No utilizar nombres genericos o automatizamos</strong> ya que dificultan el trabajo del desarrollador cuando se utilizan grandes cantidades de archivos. Es decir que en lugar de llamar a un archivo <em>"foto_01.jpg"</em> o <em>"2020-0915-110720100.jpg"</em> es preferible <strong>utilizar un nombre descriptivo</strong> como <em>"perritos_jugando.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar solamente minusculas</strong> para reducir el margen de error a la hora de utilizar imágenes. Esto se debe a que los <em>servidores de hosting son caseSensitive</em>, es decir, que hacen distincion entre mayusculas y minusculas y por ende, No es lo mismo <em>"perritos_jugando.jpg", "Perritos_Jugando.jpg", "PERRITOS_JUGANDO.jpg".</em>
+			</li>
+		</ul>
+		<div>
+			<img src="img/jjba-theworld-01.jpg" alt="the World - Dibujo" style="width:300px;">
+			<img src="img/jjba-theworld-02.jpg" alt="the World - Dibujo" style="width:300px;">
+			<img src="img/jjba-theworld-03.jpg" alt="the World - Dibujo" style="width:300px;">
+			<img src="img/jjba-theworld-04.jpg" alt="the World - Dibujo" style="width:300px;">
+		</div>
+	</div>
+</body>
+</html>
