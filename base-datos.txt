@@ -1,0 +1,54 @@
+(MySQL Workbench, XAMPP) 
+
+Base de Datos (
+	Estructura para organizacion y almacenamiento de datos,
+	Representada por tablas,
+	Compuestas por Campos(columna) y Registros(fila),
+	Existen diferentes Modelos(
+		-'relacional'-,
+		'jerarquica',
+		'transaccional',
+		'orientadas a objetos',
+		etc...
+	);
+)
+
+Motores de Base de Datos (MySQL Workbench)(
+	Proyecto Open Source desarrollado por IBM,
+	Adquirido por Oracle (MySQL , SQL Server),
+	MariaDB(Alternativa a MySQL),
+);
+	SQL (Structured Query Language)(
+		DDL(Data Definition Language)(
+			'CREATE'
+				Crear Base de Datos
+				Crear Tablas
+				Crear Usuarios
+			'DROP'
+				Eliminar Base de Datos
+				Eliminar Tablas
+				Eliminar Usuarios
+			'ALTER'
+				Modificar Tablas
+				Agregar Columnas
+				Eliminar Columnas
+		)
+		DML(Data Manipulation Language)(
+			'INSERT'
+				Agregar registros a una tabla
+			'DELETE'
+				Eliminar registros de una tabla
+			'UPDATE'
+				Modificar registros de una tabla
+			'SELECT'
+				Obtener registros de una tabla
+		)
+		DCL(Data Control Language)(
+			'GRANT'
+				Otorgar permisos a determinado usuario
+			'REVOKE'
+				Quitar perminsos a determinado usuario
+			'FLUSH PRIVILEGES'
+				refrescar los permisos
+		)
+	);
