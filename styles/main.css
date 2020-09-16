@@ -38,6 +38,25 @@
 			.openMenu{
 				height:auto;
 			}
+		/*Redes Sociales*/
+			.social{
+				display: flex;
+				justify-content: center;
+			}
+			.social a{
+				padding:.5rem;
+				border-radius: .5rem;
+				color:white;
+				text-decoration: none;
+				font-size: 2rem;
+			}
+			.social a:hover{
+				background-color: hsla(0, 0%, 90%, .8);
+			}
+			.icon-facebook:hover{color:#3B5998;}
+			.icon-instagram:hover{color:#E4405F;}
+			.icon-whatsapp:hover{color:#4DC247;}
+			.icon-twitter:hover{color:#55ACEE;}
 		/*Contenido Principal*/
 			main,article{
 				padding:1rem;
@@ -140,6 +159,74 @@
 						background-color: hsl(0, 0%, 50%);
 					}
 		/*Formulario de Contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				width:100%;
+			}
+			#contact .validation{
+				height:0;
+				font-weight: bolder;
+				overflow: hidden;
+			}
+			#contact .validation:last-child{
+				height: auto;
+			}
+
+			#contact input,
+			#contact textarea,
+			#contact select{
+				outline:none;
+				border:3px solid white;
+				border-radius: .5rem;
+				padding:.2rem;
+			}
+			#contact textarea{
+				resize: none;
+				height:5rem;
+			}
+			/*Validacion*/
+			#contact :focus + .validation{
+				height: auto;
+				padding: 1rem;
+				border-radius: 0 0 .5rem .5rem;
+			}
+			#contact :focus:valid{
+				box-shadow: 0 .5rem limegreen;
+				border-color: limegreen;
+			}
+			#contact :focus:valid + .validation{
+				color:darkgreen;
+				background-color: limegreen;
+			}
+			#contact :focus:invalid{
+				box-shadow: 0 .5rem tomato;
+				border-color: tomato;
+			}
+			#contact :focus:invalid + .validation{
+				color:darkred;
+				background-color: tomato;
+			}
+			#contact input[type="range"]:focus{
+				box-shadow: 0 0 transparent;
+			}
+			#contact button{
+				margin-top: .5rem;
+			}
+			#contact:valid button{
+				color:limegreen;
+				background-color: transparent;
+				border: 3px solid;
+			}
+			#contact:invalid button{
+				color:tomato;
+				background-color: transparent;
+				border: 3px solid;
+			}
+			#contact button:hover{
+				text-shadow: 0 0 2px black;
+				background-color: hsl(260, 30%, 40%);
+			}
 	/*Pantallas Pequeñas SM celulares*/
 		@media screen and (min-width: 576px){
 		

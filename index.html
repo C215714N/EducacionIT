@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquetado Avanzado</title>
+    <link rel="stylesheet" href="styles/icomoon.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -15,11 +16,11 @@
 		<nav>
 			<button id="menu">&equiv;</button>
 			<ul class="menu">
-				<li><a href="#"><span>Inicio</span></a></li>
-				<li><a href="about.html"><span>Acerca de</span></a></li>
-				<li><a href="gallery.html"><span>Galeria</span></a></li>
-				<li><a href="#contact"><span>Contacto</span></a></li>
-				<li><a href="https://github.com/c215714n/educacionit/tree/maquetado-martes-19hs" target="_blank"><span>GitHub</span></a></li>
+				<li><a class="icon-home" href="#"><span> Inicio</span></a></li>
+				<li><a class="icon-about" href="about.html"><span> Acerca de</span></a></li>
+				<li><a class="icon-gallery" href="gallery.html"><span> Galeria</span></a></li>
+				<li><a class="icon-contact" href="#contact"><span> Contacto</span></a></li>
+				<li><a class="icon-github" href="https://github.com/c215714n/educacionit/tree/maquetado-martes-19hs" target="_blank"><span> GitHub</span></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -413,21 +414,67 @@
 			</section>
 		</article>
 	</main>
-	<footer>
+	<footer id="footer">
 		<div class="social">
-			<a href="https://*.com" target="_blank"></a>
-			<a href="https://*.com" target="_blank"></a>
-			<a href="https://*.com" target="_blank"></a>
-			<a href="https://*.com" target="_blank"></a>
+			<a class="icon-facebook" href="https://*.com" target="_blank"></a>
+			<a class="icon-instagram" href="https://*.com" target="_blank"></a>
+			<a class="icon-whatsapp" href="https://*.com" target="_blank"></a>
+			<a class="icon-twitter" href="https://*.com" target="_blank"></a>
 		</div>
-		<form action="" id="contact">
-			<label for=""></label>
-			<input type="text" required="required">
-			<label for=""></label>
-			<input type="text" required="required">
-			<label for=""></label>
-			<input type="text" required="required">
-			<label for="consulta">Consulta</label>
+		<form id="contact" action="" method="post">
+			<label for="contactName">Nombre *</label>
+			<input 
+                id="contactName" 
+                name="contactName" 
+                type="text" 
+                pattern="[a-z A-Z]{2,50}"
+                title="
+                Ingrese su nombre, el mismo debe contener solamente letras, al menos 2 caracteres y como maximo 50" 
+                required />
+            <div class="validation">
+                Ingrese su nombre, el mismo debe contener solamente letras, al menos 2 caracteres y como maximo 50
+            </div>
+			<label for="contactEmail">Correo *</label>
+			<input 
+                id="contactEmail"
+                name="contactEmail" 
+                type="email" 
+                required />
+            <div class="validation">
+                Ingrese una direccion de correo valida, respetando la siguiente estructura "usuario@dominio"
+            </div>
+			<label for="contactTel">Telefono *</label>
+            <input 
+                id="contactTel"
+                name="contactTel" 
+                type="tel"
+                pattern="[0-9]{6,15}"
+                title="Ingrese su numero sin letras ni simbolos, el mismo debe contener entre 6 y 15 digitos" 
+                required />
+            <div class="validation">
+                Ingrese su numero sin letras ni simbolos, el mismo debe contener entre 6 y 15 digitos
+            </div>
+            <label for="contactBirth">Fecha de Nacimiento *</label>
+            <input 
+                id="contactBirth" 
+                name="contactBirth" 
+                type="date"
+                min="1920-09-01"
+                value="2002-09-01"
+                max="2020-09-01"
+                required />
+            <div class="validation">
+                Ingrese su fecha nacimiento, tenga en cuenta que debe ser mayor de edad para completar este formulario
+            </div>
+            <label for="contactAge">Edad *: <span id="ageValue"></span></label>
+            <input 
+                id="contactAge"
+                name="contactAge" 
+                type="range"
+                min="0"
+                max="100" 
+                required />
+			<label for="consulta">Consulta *</label>
 			<textarea 
 				name="consulta" 
 				id="consulta" 
@@ -435,10 +482,12 @@
 				maxlength="200" 
 				required></textarea>
 			<button>ENVIAR CONSULTA</button>
+            <div class="validation">
+                Todos los campos con un asterisco (*) son obligatorios
+            </div>
 		</form>
+        <p>&copy; Todos los derechos reservados<a href="#"> Cristian Racedo </a><span class="">&amp; Compañia</span></p>
 	</footer>
-	<p>&copy; Todos los derechos reservados<a href="#"> Cristian Racedo </a><span class="">&amp; Compañia</span></p>
-
     <!--scripts-->
 	<script src="scripts/main.js"></script>
 </body>

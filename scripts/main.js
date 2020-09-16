@@ -46,4 +46,8 @@
 			ctx.fillStyle = 'black';
 			ctx.font = '16px roboto';
 			ctx.fillText('Canvas', 60, 180);
+	//Manipulacion elemnto Range
+		document.querySelector('#contactAge').addEventListener(
+			'input', () => document.querySelector('#ageValue').innerHTML = document.querySelector('#contactAge').value
+		);
 /*Autor: Cristian Racedo*/
