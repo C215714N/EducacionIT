@@ -1,3 +1,52 @@
 /*Responsive Web Design*/
+	/*Reglas Generales*/
+		@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,100&family=Montserrat:ital,wght@0,100;0,300;0,700;1,100;1,600&family=Raleway:ital,wght@0,400;0,800;1,400;1,900&display=swap');
+		
+		*{
+			font-family: Lato, Raleway, Montserrat, sans-serif;
+			box-sizing:border-box;
+				/*border-box: width = tamaño final*/
+				/*content-box: width + padding + border = tamaño final*/
+		}
+	/*Encabezado y Pie de Pagina*/
+		#header,
+		#footer{
+			padding: 1em;
+			color: #ddd; /*0-f RGB*/
+			background-color: #248;
+		}
 
+	/*Barra de Navegacion*/
+		nav{
+			background-color: #48F;
+		}
+		#menu{
+			font-size: 2rem;
+			width:2.5rem;
+			line-height: 2rem;
+			color:#ccc;
+			outline: none;
+			border: 2px solid #ccc;
+			background-color: transparent;
+		}
+		.menu{
+			list-style: none;
+			margin: 0;
+			padding:0;
+			height: 0;
+			overflow: hidden;
+		}
+		.menu a{
+			display: block;
+			padding:.2rem 3rem; /*top right bottom left*/
+			color:#ccc;
+			text-decoration: none;
+		}
+		.menu a:hover{
+			background:#012;
+		}
+		.openMenu{
+			height: auto;
+		}
+	
 /*Autor: Cristian Racedo*/

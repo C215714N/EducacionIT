@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Responsive Web Design</title>
+	<!-- Styles -->
+		<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 	<header id="header">
@@ -12,6 +14,9 @@
 			<p>Responsive &amp; Bootstrap</p>
 		</div>
 		<nav>
+			<button id="menu">
+				&equiv;
+			</button>
 			<ul class="menu">
 				<li class="active"><a href="#">Inicio</a></li>
 				<li><a href="about.html">Acerca de</a></li>
@@ -29,6 +34,20 @@
 			<p>
 				
 			</p>
+			<ul>
+				<li>tipos de diseño
+					<ul>
+						<li>fluid</li>
+						<li>adaptive</li>
+						<li>responsive
+							<ul>
+								<li>mobile first</li>
+								<li>content first</li>
+							</ul>
+						</li>
+					</ul> 
+				</li>
+			</ul>
 			<section>
 				<header>
 					<h1>Tema 1: Fluid Web Design</h1>
@@ -50,8 +69,13 @@
 				</header>
 				<p>
 					<strong>
-						Utiliza medidas estaticas (px) para generar versiones reducidas/resumidas del contenido utilizando puntos de quiebre segun el tamaño de pantalla.	
+						Utiliza medidas estaticas (px) para generar versiones reducidas/resumidas del contenido utilizando puntos de quiebre segun el tamaño de pantalla. 	
 					</strong>
+					Uno de los mayores inconvenientes de este tipo de diseño fue que se comienza a partir de una
+					<em> Version de escritorio del contenido principal </em> 
+					y por lo tanto a la hora de generar una version movil del mismo, se deben quitar elementos del diseño, reestructura todo el contenido e incluso diseñar nuevamente el sitio en una version simplificada.
+					El problema de realizar este tipo de practicas es 
+					<em> el contenido duplicado que se genera en el sitio, sin mencionar que dificulta el mantenimiento del mismo.</em>
 				</p>
 			</section>
 			<section>
@@ -59,10 +83,20 @@
 					<h1>Tema 3: Responsive Web Design</h1>
 				</header>
 				<p>
-
 					Similar al Adaptive web design,
 					<strong> utiliza breakpoints para los diferentes diseños, pero a diferencia de este implementa medidas relativas para que la estructura responda al tamaño de la pantalla.
 					</strong>
+					Este tipo de diseño comienza a implementarse a partir de una publicacion de <strong>Ethan Marcotte</strong> en el sitio <a href="https://alistapart.com/article/responsive-web-design/">A list apart</a> donde menciona ciertos aspectos principales del diseño indicando las base de lo que hoy conocemos como <strong>Responsive Web Design.</strong>
+				</p>
+				<p>
+					Entre las caracteristicas principales encontramos la
+					<em> implementacion de un sistema de grillas, multimedia flexible y diseñar a partir de los dispositivos mas pequeños</em>. Esta ultima caracteristica da nombre al diseño <strong>Mobile Firt</strong>, que consiste en la elaboracion del sitio comenzando por la vista movil y a partir de esta, mostrar y ocultar elementos a medida que vaya cambiando el tamaño de la pantalla.
+				</p>
+				<p>
+					Una ultima evolucion del diseño es la que se conoce como 
+					<strong>Content First</strong>, donde en lugar de generar manchas de texto se utiliza directamente la informacion final que sera publicada una vez subido el sitio al servidor. Esto se debe a que cuando utilizamos 
+					<em> texto simulado (LOREM) </em> no sabemos como funcionara el contenido hasta que coloquemos la informacion, y si bien utilizar los textos finales parecia mas complicado al comienzo, facilita el diseño final del proyecto porque tenemos una <strong>vista real de contenido
+					</strong>.
 				</p>
 			</section>
 		</article>
@@ -102,5 +136,7 @@
 			<button>enviar</button>
 		</form>
 	</footer>
+	<!-- Scripts -->
+		<script src="scripts/main.js"></script>
 </body>
 </html>
