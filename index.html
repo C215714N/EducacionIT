@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Web Design</title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1>Web Design</h1>
+			<p>Responsive &amp; Bootstrap</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li class="active"><a href="#">Inicio</a></li>
+				<li><a href="about.html">Acerca de</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+				<li><a href="https://github.com/c215714n/educacionit/tree/responsive-miercoles-10hs" class="">GitHub</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Clase 1: Introduccion a los tipos de Diseño</h1>
+			</header>
+			<p>
+				
+			</p>
+			<section>
+				<header>
+					<h1>Tema 1: Fluid Web Design</h1>
+				</header>
+				<p>
+					<strong>
+						Utiliza porcentajes (%) y em (Ancho de la letra M) para definir los tamaños de elementos y tipografias respectivamente,
+					</strong>
+					si bien es funcional en pantallas medianas, en pantallas grandes o pequeñas se pierden algunos aspectos del diseño.
+					<br/>
+					Una solucion al conflicto generado por los tamaños de pantalla fue lo que se conoce como 
+					<em>Liquid Web Desing</em>, el cual simplemente agrega limites a los tamaños que pueden adquirir los diferentes elementos mediante los attributos <em>min-width:200px;</em> y <em>max-width:600px;</em> aunque este centra la atencion en los espacios generados por la separacion del contenido.
+
+				</p>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2: Adaptive Web Design</h1>
+				</header>
+				<p>
+					<strong>
+						Utiliza medidas estaticas (px) para generar versiones reducidas/resumidas del contenido utilizando puntos de quiebre segun el tamaño de pantalla.	
+					</strong>
+				</p>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3: Responsive Web Design</h1>
+				</header>
+				<p>
+
+					Similar al Adaptive web design,
+					<strong> utiliza breakpoints para los diferentes diseños, pero a diferencia de este implementa medidas relativas para que la estructura responda al tamaño de la pantalla.
+					</strong>
+				</p>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contacto" action="" method="POST">
+			<h2>Formulario de Contacto</h2>
+			<label for="nombre">nombre</label>
+			<input 
+				id="nombre"
+				name="nombre" 
+				type="text"
+				placeholder="Ingrese su Nombre" 
+				required />
+			<label for="tel">telefono</label>
+			<input 
+				id="tel"
+				name="tel" 
+				type="tel" 
+				placeholder="Ingrese su telefono" 
+				required />
+			<label for="email">correo electronico</label>
+			<input 
+				id="email"
+				name="email" 
+				type="email"
+				placeholder="Ingrese su correo electronico" 
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta" 
+				id="consulta" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button>enviar</button>
+		</form>
+	</footer>
+</body>
+</html>
