@@ -1,0 +1,54 @@
+BASE DE DATOS (SCHEMA)(
+	Estructura para organizar y almacenar datos,
+	Utiliza Tablas para representar los datos,
+	Se componen de Campos(columnas) y Registros(filas),
+
+	MODELOS (
+		'relacional' *,
+		'jerarquica',
+		'transaccional',
+		'orientada a objetos'
+		etc.
+	)
+);
+
+MOTOR BASE DATOS (MySQL Workbench) (
+	Lenguaje OpenSource desarrollado por IBM (SQL),
+	Adquirido por ORACLE y desarrollo (MySQL Workbench, SQL Server),
+	Varios desarrolladores llevaron a cabo el proyecto MariaDB, por el descontento con ORACLE,
+)
+
+SQL (Structured Query Language)(
+	DDL(Data Definition Language)(
+		'CREATE'
+			Crear Base Datos,
+			Crear Tablas,
+			Crear Usuarios,
+		'DROP'
+			Eliminar Base Datos,
+			Eliminar Tablas,
+			Eliminar Usuarios,
+		'ALTER'
+			Modificar Tablas,
+			Agregar Campos,
+			Eliminar Campos,
+	),
+	DML(Data Manipulation Language)(
+		'INSERT'
+			Agregar Registros en una tabla,
+		'DELETE'
+			Eliminar Registros en una tabla,
+		'UPDATE'
+			Actualizar Registros en una tabla,
+		'SELECT'
+			Realizar Consultas de Tablas,
+	),
+	DCL(Data Control Language)(
+		'GRANT'
+			Otorgar Permisos a usuarios
+		'REVOKE'
+			Quitar Permisos a usuarios
+		'FLUSH PRIVILEGES'
+			Refrescar Permisos
+	),
+);
