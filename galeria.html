@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;HTML> &amp; {CSS}</p>
+		<div id="nav">
+			<ul>
+				<li>
+					<!-- Ruta Relativa / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li>
+					<!-- Ruta Ancla / Marcador (Reload) -->
+					<a href="#">Galeria</a>
+				</li>
+				<li>
+					<!-- Ruta Ancla / Marcador-->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li>
+					<!-- Ruta Absoluta / Externa -->
+					<a href="https://github.com/c215714n/educacionit/tree/html-lunes-19hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<ul>
+			<h2>Reglas de Nomenclatura</h2>
+			<li>
+				<strong>Evitar el uso de espacios</strong>
+				porque dicho caracter es reemplazado por 
+				<em> %20 </em>y por lo tanto si nuestra imagen se llama <em>"foto 01.jpg"</em>, el navegador interpretara como nombre <em>"foto%2001.jpg"</em> impidiendo que se encuentre dicho elemento. Para evitar este inconveniente se aconseja <strong>Utilizar guiones (-_) para separar palabras</strong>, dando como resultado <em>"foto-01.jpg" o "foto_01.jpg"</em> que si son permitidos.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> para que sea mucho mas facil la implementacion de los elementos, ya que nombres automatizados como <em>"2020-0921-195280003.jpg"</em> o nombres genericos como <em>"foto-01.jpg"</em> al trabajar con muchos archivos, dificulta la manipulacion de los mismos por parte del desarrollador. Por lo tanto es prudente implementar nombres que hagan refencia al contenido, como <em>"perritos_jugando.jpg"</em>
+			</li>
+			<li>
+				<strong>Usar solamente minusculas</strong> para reducir el margen de errores, debido a que los servidores son <em>caseSensitive</em> y por lo tanto, no es lo mismo nombrar a un archivo <em>"PERRITOS_JUGANDO.jpg", "Perritos_Jugando.jpg", "perritos_jugando.jpg"</em>
+			</li>
+		</ul>
+		<div class="contenido">
+			<h2>Inserción de Imágenes</h2>
+			<img style="width:300px;" src="img/jjba-d4c-01.jpg" alt="Dibujo D4C" />
+			<img style="width:300px;" src="img/jjba-d4c-02.jpg" alt="Dibujo D4C" />
+			<img style="width:300px;" src="img/jjba-d4c-03.jpg" alt="Dibujo D4C" />
+			<img style="width:300px;" src="img/jjba-d4c-04.jpg" alt="Dibujo D4C" />
+		</div>
+		<div>
+			<h2>Organizando Elementos</h2>
+			<p class="contenido">
+				<img src="img/ih-greenhulk-02.jpg" alt="Dibujo Green Hulk">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p class="contenido">
+				<img src="img/ih-greenhulk-03.jpg" alt="Dibujo Green Hulk">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p class="contenido">
+				<img src="img/ih-greenhulk-04.jpg" alt="Dibujo Green Hulk">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+	<div id="footer">
+		<p>&copy; Todos los derechos reservados</p>
+	</div>
+</body>
+</html>
