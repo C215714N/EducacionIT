@@ -1,0 +1,84 @@
+/*Reglas generales*/
+	body{
+		margin:0;
+		font-family: calibri, segoe ui, century gothic, sans-serif;
+	}
+/*Encabezado y Pie de Pagina*/
+	#header, #footer{
+		padding: 20px;
+	}
+	#header, .header, #footer{
+		color: #ccc;
+		background-color: #248; /*RRGGBB*/
+	}
+	.header h1, .header p{
+		margin:0;
+	}
+	.header span{
+		color:tomato;
+		font-size: 48px;
+		text-shadow: 0 0 5px #ccc; /*X Y Blur Color*/
+	}
+/*Barra de Navegacion*/
+	nav{
+		margin:0 -20px;/*Top Right Bottom Left*/
+		background-color: #36c;
+	}
+	nav ul{
+		list-style: none;
+		margin:0;
+		padding:0;
+		text-align: center;
+	}
+	nav li{
+		display: inline-block;
+		padding:5px;
+		width:80px;
+	}
+	nav li:hover{
+		background-color: #124;
+	}
+	nav a{
+		color:#ddd;
+		text-decoration: none;
+	}
+/*Cuerpo Principal*/
+	main{
+		padding:20px;
+	}
+	.example{
+		list-style: none;
+		margin-left:40px;
+		border-left: 4px solid #248;
+		padding:20px;
+		background-color: #8cf;
+	}
+/*Formulario de Contacto*/
+	#contacto{
+		width:420px;
+		margin:auto;
+		overflow: hidden;
+	}
+	#contacto input,
+	#contacto textarea,
+	#contacto select{
+		width:400px;
+		outline: none;
+		border:0;
+		padding:10px;
+	}
+	#contacto textarea{
+		resize: none;
+		height: 64px;
+	}
+	#contacto button{
+		color:white;
+		border: 4px solid white;
+		background-color: transparent;
+		font-weight: bold;
+		width:420px;
+		line-height: 24px;
+	}
+	#contacto button:hover{
+		background-color: #124;
+	}

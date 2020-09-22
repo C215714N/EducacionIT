@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/cr-logo.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -13,10 +15,12 @@
 			<p>HTML &amp; CSS</p>
 		</div>
 		<nav>
-			<li><a href="index.html">Inicio</a></li>
-			<li><a href="galeria.html">Galeria</a></li>
-			<li><a href="#contacto">Contacto</a></li>
-			<li><a href="https://github.com/c215714/educacionit/tree/html-martes-10hs" target="_blank">GitHub</a></li>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+				<li><a href="https://github.com/c215714N/educacionit/tree/html-martes-10hs" target="_blank">GitHub</a></li>
+			</ul>	
 		</nav>
 	</header>
 	<main>
@@ -57,7 +61,7 @@
 				</ul>
 			</section>
 			<section>
-				<header class="header">
+				<header>
 					<h1>¿Como estan compuestos?</h1>
 				</header>
 				<p>
@@ -120,7 +124,7 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="" method="POST">
+		<form id="contacto" onsubmit="alert('Gracias por realizar su consulta')" action="contacto.php" method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Nombre</label>
 			<input 
