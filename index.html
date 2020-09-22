@@ -209,12 +209,12 @@
             <header class="header">
                 <h1>Clase 2: Estilos visuales</h1>
             </header>
-            <section>
+            <section id="colores">
                 <header>
                     <h1>Tema 1: Colores</h1>
                 </header>
                 <p>
-                    
+                    La representacion de los colores son la caracteristica mas comun de HTML. Los <strong>colores HTML</strong> poseen <em>140 valores definidos</em> y son respresentados por su nombre en ingles; luego estan los <strong>colores RGB</strong> que se escriben de manera <em>decimal "rgb(18,36,136)"</em> o <em>hexadecimal "#224488"</em>, siendo esta ultima la mas convencional, <em>con un total de 16.777.216 colores (256 por canal)</em>. Y por ultimo el <strong> modelo HSL</strong> que utiliza el circulo cromatico para su implementancion, ademas de porcentajes de luz y saturacion.
                 </p>
                 <div class="example colores">
                     <div>color: grey;</div>
@@ -232,11 +232,44 @@
                     </address>
                 </footer>
             </section>
-            <section>
+            <section id="degradados">
                 <header>
-                    <h1>Tema 2: </h1>
+                    <h1>Tema 2: Degradados</h1>
                 </header>
-                <p>...</p>
+                <p>
+                	Una de las caracteristicas incorporadas en las ultimas versiones de CSS son los <strong>degradados</strong>, los cuales son considerados como <em>imagenes de fondo</em> y a diferencia de cualquiera de los valores mencionados <a href="#colores">anteriormente</a> no se pueden aplicar utilizando atributos como <em>color o background-color</em>.
+                	Dentro de los gradientes que se pueden aplicar estan el <em>lineal</em> que utiliza definiciones de orientacion, color inicial y color final y por otro estan los degradados radiales, donde se define el tipo (elipse o circulo), posicion, color inicial y color final.
+                </p>
+				<div class="example colores degradados">
+					<div>
+						linear-gradient(
+							to right, 
+							slateblue, 
+							darkslateblue
+						);
+					</div>
+					<div>
+						linear-gradient(
+							45deg, 
+							skyblue, 
+							darkblue
+						);
+					</div>
+					<div>
+						radial-gradient(
+							circle at 75% 75%,
+							gold,
+							red
+						);
+					</div>
+					<div>
+						radial-gradient(
+							ellipse,
+							orange,
+							tomato
+						)
+					</div>
+                </div>
                 <footer>
                     <address>
                         Para mas informacion, consultar las fuentes:

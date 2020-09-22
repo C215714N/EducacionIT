@@ -142,7 +142,9 @@
 				/*Valores cromaticos*/
 					.colores div{
 						width:150px;
+						margin:1rem;
 						border:2px solid white;
+						padding:.5rem;
 						text-align: center;
 						line-height: 50px;
 					}
@@ -157,6 +159,39 @@
 					}
 					.colores div:nth-child(4){
 						background-color: hsl(0, 0%, 50%);
+					}
+				/*Tipos de Degradados*/
+					.degradados div:nth-child(1){
+						background: 
+							linear-gradient(
+								to right, 
+								slateblue, 
+								darkslateblue
+							);
+					}
+					.degradados div:nth-child(2){
+						background: 
+							linear-gradient(
+								45deg,
+								skyblue,
+								darkblue
+							);
+					}
+					.degradados div:nth-child(3){
+						background: 
+							radial-gradient(
+								circle at 75% 75%,
+								gold,
+								red
+							);
+					}
+					.degradados div:nth-child(4){
+						background: 
+							radial-gradient(
+								ellipse,
+								orange,
+								tomato
+							);
 					}
 		/*Formulario de Contacto*/
 			#contact{
@@ -211,7 +246,7 @@
 				box-shadow: 0 0 transparent;
 			}
 			#contact button{
-				margin-top: .5rem;
+				margin-top: 1rem;
 			}
 			#contact:valid button{
 				color:limegreen;
