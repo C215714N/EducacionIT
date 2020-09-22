@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1>
+				<span>&lt;/></span>
+				Fundamentos Web
+			</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+			<li><a href="#contacto">Contacto</a></li>
+			<li><a href="https://github.com/c215714/educacionit/tree/html-martes-10hs" target="_blank">GitHub</a></li>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten una 
+				<strong> interaccion real (intercambio de datos) </strong> entre 
+				<em> el cliente y el servidor</em>, 
+				ya que la respuesta que brinde este ultimo dependera de la informacion completada en el mismo. Para poder utilizar este elemento debemos implementar la etiqueta <strong>&lt; form></strong> y solamente se enviaran los datos que se encuentren dentro de la misma.
+			</p>
+			<section>
+				<header>
+					<h1>¿Como funcionan?</h1>
+				</header>
+				<p>
+					Dentro de la etiqueta mencionada anteriormente debemos especificar 2 atributos, por un lado <em>action="..."</em> que permite indicar <strong>que pasara con los datos completados en el formulario al presionar el boton enviar</strong> y por el otro <em>method="..."</em> que indica como se procesaran los datos para su envio, es decir, <strong>el tipo de prioridad de los mismos.</strong>
+					<br/>
+					En el caso de <em>action="script.php"</em> hoy en dia se suele implementar algun lenguaje de servidor, para que este ultimo trabaje con los datos enviados. En el cado de <em>method="..."</em> existen 2 valores posibles, estos son <em>GET</em> y <em>POST</em>.
+					<br>
+					<strong>GET</strong> se utiliza cuando la prioridad esta en la respuesta del servidor, admite hasta 8kb, es menos seguro y los datos son accesibles desde la barra de direcciones. Por otro lado <strong>POST</strong> se utiliza cuando la prioridad esta en los datos enviados por parte del cliente, admite 8mb, cifra los datos antes de enviarlos y los mismos no son accesibles desde la barra de direcciones.
+				</p>
+				<ul class="example">
+					<li>GET
+						<ul>
+							<li>BUSCADOR - CONSULTA QUERY</li>
+						</ul>
+					</li>
+					<li>POST
+						<ul>
+							<li>INSCRIPCION - REGISTRO</li>
+							<li>ACCESO - INICIO SESION</li>
+							<li>CONSULTA WEB - CONTACTO</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header class="header">
+					<h1>¿Como estan compuestos?</h1>
+				</header>
+				<p>
+					Dentro de los formularios encontraremos 2 tipos de elementos, por un lado tenemos <strong>las Etiquetas (LABEL)</strong> que se utilizan para identificar que tipo de dato debemos ingresar o seleccionar en el formulario, y por el otro tenemos <strong>los Campos (INPUT, TEXTAREA, SELECT)</strong>. En caso del primer elemento, este funciona para los screenreaders y para la busquedas mediante SEO y es obligatorio, el segundo por otro lado permite al usuario enviar datos al servidor y es necesario, existen diferentes <em>tipos de campos</em> segun el valor o tipo de dato a utilizar.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo de Correo (*@*)</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo de Contraseña (****)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo de Fecha (dd-mm-yyyy)</label>
+						<input type="date">
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						| arte 
+						<input type="checkbox" value="art" name="hobbies" />
+						| musica 
+						<input type="checkbox" value="music" name="hobbies" />
+						| deporte 
+						<input type="checkbox" value="sports" name="hobbies" />
+					</li>
+					<li>
+						<label>Opcion Unica</label>
+						| si <input type="radio" value="true" name="opt">
+						| no <input type="radio" value="false" name="opt">
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option value="html">HyperText Markup Language</option>
+							<option value="css">Cascading Styles Sheets</option>
+							<option value="js">JavaScript</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset" />
+						<input type="submit" />
+						<button>Texto de Boton</button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contacto" action="" method="POST">
+			<h2>Contactanos</h2>
+			<label for="nombre">Nombre</label>
+			<input 
+				type="text" 
+				name="nombre"
+				pattern="[A-Z a-z]{2,50}"
+				title="Ingrese su nombre sin numeros ni simbolos, el mismo debe tener entre 2 y 50 caracteres" 
+				required />
+			<label for="email">Correo</label>
+			<input 
+				type="email" 
+				name="email"
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required></textarea>
+			<button>Enviar Consulta</button>
+		</form>
+		<p>
+			&copy;Todos los derechos reservados |
+			<a href="mailto:cristiandracedo@hotmail.com" title="Cristian Racedo"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
+</body>
+</html>
