@@ -29,5 +29,33 @@ UPDATE proveedores
 
 -- Carga de Productos
 	INSERT INTO productos(marca, modelo, precio, stock, id_proveedor)
-		VALUES ('HP', '8470p', 25999, 100, 1);
-	SELECT marca, modelo, id_producto from productos;
+		VALUES 
+			('HP', '9460pb', 28999, 180, 1),
+			('HP', '2b16nr', 16500, 80, 1),
+            ('Apple', '1103', 59999, 50, 3),
+            ('Samsung', 'np150',17899,100,4),
+            ('Dell','v4200', 23899, 90,2);
+	SELECT * from productos;
+-- Productos por marca
+	SELECT 
+		marca,
+        ROUND(AVG(precio),2) as 'Promedio $/u', -- Promedio calculado
+        SUM(precio*stock) as 'Total a Recaudar' -- Total Final Calculado
+    FROM productos
+    GROUP BY marca;
+
+SELECT *, 'Reponer' as Situacion 
+	FROM productos
+	WHERE 
+		precio >= 20000 AND stock < 100;
+    
+/*Tablas de La verdad
+	AND	c1F	c1V
+    c2F	F	F
+    c2V	F 	V
+    
+    OR	c1F	c1V
+    c2F	F	V	
+    c2V	V 	V	
+*/
+DELETE FROM productos WHERE id_producto = 2;
