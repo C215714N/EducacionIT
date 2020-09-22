@@ -10,9 +10,20 @@
 				color:#ccc;
 				background-color: #435;
 			}
+			#header .header h1,
+			.header p{
+				margin:0;
+				line-height: 24px;
+			}
+			#footer p{
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+			}
 		/*Barra de Navegacion*/
 			nav{
 				background-color: #86A;
+				transition: all 1s ease-in-out;
 			}
 			#menu{
 				width:3rem;
@@ -25,6 +36,37 @@
 				height: 0;
 				margin:0;
 				padding:0;
+			}
+			.menu li{
+				position:relative;
+				transition: all .6s ease-in;
+			}
+			.menu li:before{
+				content:'';
+				position:absolute;
+				bottom:0;
+				left:0;
+				width:0;
+				height: 5px;
+				background-color: whitesmoke;
+				transition: all .6s ease-out;
+			}
+			.menu li:after{
+				content: '';
+				position: absolute;
+				top:0;
+				right: 0;
+				width:0;
+				height: 5px;
+				background-color: whitesmoke;
+				transition:all .6s linear;
+			}
+			.menu li:hover{
+				transform: scale(1.2);
+			}
+			.menu li:hover::before,
+			.menu li:hover::after{
+				width:100%;
 			}
 			.menu a {
 				display: block;
@@ -60,8 +102,10 @@
 		/*Contenido Principal*/
 			main,article{
 				padding:1rem;
+				transition: all 1s ease;
 			}
 			article .header{
+				transition: all .6s ease-out;
 				padding:.5rem;
 				border-radius: 1rem 1rem 0 0; /*topLeft topRight bottomRight bottomLeft*/
 				background: linear-gradient(
@@ -101,6 +145,7 @@
 			/*Muestras y Ejemplos*/
 				.example{
 					/*Orientacion*/
+					position: relative;
 					display: flex;
 					justify-content: center;
 					flex-wrap: wrap;
@@ -110,11 +155,55 @@
 					border-left: 4px solid #426;
 					padding:1rem;
 					background-color: #C6A4FF;
+					overflow: hidden;
+					transition: all 1.5s linear;
 				}
 				/*Contenido Multimedia*/
 					audio, video{
 						width:100%;
 						max-width: 420px;
+					}
+					#videoButton{
+						width:100%;
+						outline: none;
+						border: .2rem solid whitesmoke;
+						padding:.5rem;
+						font-size: 1.2rem;
+						color:whitesmoke;
+						background-color: transparent;
+					}
+					#videoButton:hover{
+						background-color: hsla(240, 30%, 30%, .5);
+					}
+					.video{
+						position:relative;
+						border:0;
+						padding:0;
+						padding-top:67.5%;
+						/*4:3 (ancho = 1.33(alto) || alto = 75%(ancho))*/
+						/*16:9 (ancho = 1.67(alto) || alto = 56.2%(ancho))*/
+						overflow: hidden;
+					}
+					video.background{
+						position:absolute;
+						max-width: 1200px;
+						top:0;
+						left:0;
+					}
+					p.background{
+						position: absolute;
+						bottom:-100%;
+						left:0;
+						width:100%;
+						margin:0;
+						padding:1rem;
+						background-color: #ccc;
+						transition: all 2s ease-in;
+					}
+					.video:hover p.background{
+						bottom:0;
+						color:whitesmoke;
+						background-color: hsla(300, 0%, 50%, .5);
 					}
 				/*Elementos estadisticos*/
 					progress, meter{
@@ -146,7 +235,7 @@
 						border:2px solid white;
 						padding:.5rem;
 						text-align: center;
-						line-height: 50px;
+						line-height: 30px;
 					}
 					.colores div:nth-child(1){
 						background-color: grey;
@@ -193,11 +282,51 @@
 								tomato
 							);
 					}
+				/*Transformaciones 2D*/
+					.transform div{
+						width: 100px;
+						line-height: 1.2rem;
+						margin:1rem;
+						border: 1px solid white;
+						padding:.5rem;
+						background-color: darkslateblue;
+					}
+					/*Redimensionar / SCALE(unidad) */ 
+					.transform div:nth-child(1){
+						transform: scaleX(3); /*solo a lo ancho*/
+						transform: scaleY(5); /*solo a lo alto*/
+						transform: scale(1.2); /*(X,Y) */
+					}
+					/*Desplazar / TRANSLATE (distancia)*/
+					.transform div:nth-child(2){
+						transform: translateX(-50px); /*horizontalmente*/
+						transform: translateY(50%);/*verticalmente*/
+						transform: translate(-2rem, 20px); /*desplazamiento (x,y)*/
+					}
+					/*Rotacion / ROTATE (grados)*/
+					.transform div:nth-child(3){
+						transform: rotate(15deg);/*sentido horario*/
+					}
+					/*Sesgar / SKEW(grados)*/
+					.transform div:nth-child(4){
+						transform: skewX(45deg); /*inclinacion eje x*/
+						transform: skewY(-15deg);/*inclinacion eje y*/
+						transform: skew(15deg, 15deg); /*inclinacion (x,y)*/
+					}
+				/*Transformaciones 3d*/
+					.transform{
+						perspective: 50px;
+						perspective-origin: 100%;
+					}
+					.transform div:nth-child(5){
+						transform: rotateY(15deg);
+					}
 		/*Formulario de Contacto*/
 			#contact{
 				display: flex;
 				flex-direction: column;
 				width:100%;
+				margin:auto;
 			}
 			#contact .validation{
 				height:0;
@@ -264,19 +393,111 @@
 			}
 	/*Pantallas Pequeñas SM celulares*/
 		@media screen and (min-width: 576px){
-		
+			/*Encabezado y Pie de Pagina*/
+				#footer p{
+					flex-direction: row;
+					flex-wrap: wrap;
+					width:50%;
+					max-width: 220px;
+					margin:auto;
+				}
+				#footer p a, #footer p span{
+					width:50%;
+				}
+			/*Formularios*/
+				#contact{
+					max-width: 540px;
+				}
 		}
 	/*Pantallas Medianas MD tablets*/
 		@media screen and (min-width: 768px){
-		
+			/*Navegacion*/
+				#header, .menu{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					align-items: flex-start;
+				}
+				nav{
+					width:30%;
+				}
+				#menu{
+					display: none;
+				}
+				.menu{
+					font-size: 1.2rem;
+					height: auto;
+				}
+				.menu a{
+					padding:.5rem;
+				}
+				.menu span{
+					display: none;
+				}
+			/*Contenido Principal*/
+			article:first-of-type{
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-template-rows: auto auto auto auto auto;
+			}
+			article .header,
+			article>p{
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+			section{
+				padding:.5rem;
+			}
+			section:nth-child(3){
+				grid-row-start: 3;
+				grid-row-end: 5;
+			}
+			section:nth-child(4),
+			section:nth-child(5){
+				grid-column-start: 2;
+				grid-column-end: 3;
+			}
+			/*Formulario*/
+				#contact{
+					max-width: 720px;
+				}
 		}
 	/*Pantallas Grandes LG small desktop*/
 		@media screen and (min-width: 992px) {
-		
+			/*Navegacion*/
+				nav{
+					width:60%;
+					max-width: 900px;
+				}
+				.menu{
+					justify-content: space-evenly;
+				}
+				.menu a{
+					display: flex;
+					justify-content: space-around;
+					width:100%;
+					min-width: 80px;
+				}
+				.menu span{
+					display: block;
+				}
+			/*Formulario*/
+				#contact{
+					max-width: 900px;
+				}
 		}
 	/*Pantallas Extra Grandes XL Desktop/SmartTV*/
 		@media screen and (min-width: 1200px) {
-		
+			/*Formularios*/
+				#contact :focus,
+				#contact :focus + .validation{
+					transform:
+						scale(1.25)
+						translateY(-.6rem);
+					transition-property: transform;
+					transition-duration: .5s;
+					transition-timing-function: ease-in;
+				}
 		}
 	/*Medios de Impresion*/
 		/*Elementos Ocultos*/
