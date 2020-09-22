@@ -3,18 +3,84 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<style type="text/css">
+		/*Selectores Generales*/
+			body{
+				margin:0;
+				font-family: calibri, segoe ui, century gothic, sans-serif;
+			}
+		/*Selectores Multiples (,)*/
+			header, footer{
+				padding:10px;
+				color:whitesmoke; /*140 colores*/
+				background-color: #248;/* RRGGBB 16777216 colores*/
+			}
+		/*Selector Especifico (padre hijo)*/
+			header h1, header p{
+				margin:0;
+				line-height: 20px;
+			}
+			/*Menu*/
+			nav a{
+				color:white;
+				text-decoration: none;
+			}
+			nav ul{
+				margin:0;
+				padding:0;
+				list-style: none;
+				background-color: #36C;
+			}
+			nav li{
+				display: inline;
+				padding: 5px;
+				line-height: 30px;
+			}
+		/*Selectores de .Clase y :pseudoclase*/
+			nav li:hover, .active{
+				background-color: #124;
+			}
+			.github{
+				background-color: #48f;
+			}
+		/*Selectores de #id*/
+			#footer{
+				color:#ccc;
+				background-color: #012;
+			}
+		/*Cuerpo Principal*/
+			main{
+				padding:10px;
+			}
+			main .contenido{
+				overflow: hidden;
+				padding:10px;
+				color:whitesmoke;
+				background-color: #36c;
+			}
+			div.contenido{
+				text-align: center;
+			}
+			.contenido img{
+				width:200px;
+			}
+			p.contenido img{
+				float: left;
+				margin-right: 10px;
+			}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;HTML> &amp; {CSS}</p>
-		<div id="nav">
+		<nav>
 			<ul>
 				<li>
 					<!-- Ruta Relativa / Interna -->
 					<a href="index.html">Inicio</a>
 				</li>
-				<li>
+				<li class="active">
 					<!-- Ruta Ancla / Marcador (Reload) -->
 					<a href="#">Galeria</a>
 				</li>
@@ -22,14 +88,14 @@
 					<!-- Ruta Ancla / Marcador-->
 					<a href="#footer">Contacto</a>
 				</li>
-				<li>
+				<li class="github">
 					<!-- Ruta Absoluta / Externa -->
 					<a href="https://github.com/c215714n/educacionit/tree/html-lunes-19hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main>
 		<ul>
 			<h2>Reglas de Nomenclatura</h2>
 			<li>
@@ -46,10 +112,10 @@
 		</ul>
 		<div class="contenido">
 			<h2>Inserción de Imágenes</h2>
-			<img style="width:300px;" src="img/jjba-d4c-01.jpg" alt="Dibujo D4C" />
-			<img style="width:300px;" src="img/jjba-d4c-02.jpg" alt="Dibujo D4C" />
-			<img style="width:300px;" src="img/jjba-d4c-03.jpg" alt="Dibujo D4C" />
-			<img style="width:300px;" src="img/jjba-d4c-04.jpg" alt="Dibujo D4C" />
+			<img src="img/jjba-d4c-01.jpg" alt="Dibujo D4C" />
+			<img src="img/jjba-d4c-02.jpg" alt="Dibujo D4C" />
+			<img src="img/jjba-d4c-03.jpg" alt="Dibujo D4C" />
+			<img src="img/jjba-d4c-04.jpg" alt="Dibujo D4C" />
 		</div>
 		<div>
 			<h2>Organizando Elementos</h2>
@@ -81,9 +147,9 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</div>
-	</div>
-	<div id="footer">
+	</main>
+	<footer id="footer">
 		<p>&copy; Todos los derechos reservados</p>
-	</div>
+	</footer>
 </body>
 </html>
