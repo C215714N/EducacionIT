@@ -29,7 +29,6 @@
         CHAR		TEXTO FIJO		'11-01234567-8'
         VARCHAR		TEXTO VARIABLE	'cristian'
         ENUM		LISTA OPCIONES	('mañana','tarde','noche')
-        
 */
 	CREATE TABLE clientes (
 		id_cliente INT AUTO_INCREMENT,
@@ -52,5 +51,24 @@
         UNIQUE KEY (tipo_doc, num_doc) -- Clave unica (No se puede repetir tipo y numero a la vez)
     );
     
+    ## tabla productos
+    CREATE TABLE productos(
+		id_producto INT AUTO_INCREMENT,
+        marca VARCHAR(50),
+        modelo VARCHAR(100),
+        categoria ENUM(
+            'indumentaria',
+            'limpieza',
+            'tecnologia',
+            'biblioteca'
+        ),
+        precio DECIMAL UNSIGNED,
+        stock INT UNSIGNED,
+        id_proveedor INT,
+        -- restricciones
+        PRIMARY KEY (id_producto),
+        UNIQUE KEY (marca, modelo, precio, categoria),
+        FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor)
+    );
 SHOW DATABASES; -- muestra los esquemas alojados en el servidor
 SHOW TABLES; -- muestra las tablas de la base de datos actual
