@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta 
+		name="viewport" 
+		content="width=device-width, initial-scale=1, maximum-scale=3">
 	<title>Responsive Web Design</title>
 	<!-- Styles -->
 		<link rel="stylesheet" href="styles/main.css">
@@ -98,6 +100,58 @@
 					<em> texto simulado (LOREM) </em> no sabemos como funcionara el contenido hasta que coloquemos la informacion, y si bien utilizar los textos finales parecia mas complicado al comienzo, facilita el diseño final del proyecto porque tenemos una <strong>vista real de contenido
 					</strong>.
 				</p>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 2: Grupos de Medidas</h1>
+			</header>
+			<p></p>
+			<section>
+				<header>
+					<h1>Tema 1: Medidas Relativas</h1>
+				</header>
+				<p>
+					Son aquellas que <strong>dependen del contexto para poder establecer su tamaño</strong>, principalmente toman de referencia al <em> elemento contenedor </em> y por lo tanto, se van a ver de manera diferente segun el tamaño del mismo. Por ejemplo una etiqueta que tenga un <em>width:80%</em> no ocupara lo mismo si en un caso el contenedor mide 1000px y en otro mide 2000px.
+				</p>
+				<ul>
+					<li><strong>%: </strong> Porcentaje de la etiqueta contenedora</li>
+					<li><strong>em: </strong> Ancho de la letra "M" del elemento padre</li>
+					<li><strong>ex: </strong> Alto de la letra "x" de la etiqueta padre</li>
+					<li><strong>ch:</strong> Ancho del numero "0" (cero) del elemento contenedor</li>
+				</ul>
+				<ul>
+					<li>% = (elemento objetivo / elemento contenedor) x 100</li>
+					<li>em = elemento objetivo / fuente elemento contenedor</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2: Medidas Absolutas</h1>
+				</header>
+				<p>
+					Son aquellas que <strong>no dependen del contexto y siempre representan lo mismo</strong>, sin importar tamaños de pantallas, cotenedores y ningun otro aspecto del sitio. La medida de este mas utilizada son los <em>pixeles</em> ya que representan la cantidad de puntos en pantallas, aunque tambien se la considera una <em>medida hibrida</em> debido a que depende directamente de la resolucion de la pantalla, lo que varia es el tamaño de los puntos
+				</p>
+				<ul>
+					<li><strong>cm: </strong> distancia base</li>
+					<li><strong>in: </strong> distancia 2.54cm</li>
+					<li><strong>pt: </strong> 1 punto = 1/72in</li>
+					<li><strong>px:</strong>puntos en pantalla</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3: Medidas Flexibles</h1>
+				</header>
+				<p>
+					Ademas de las medidas mencionadas anteriormentes, podemos encontrar un tipo de medida especial, que tecnicamente se cosidera relativa, pero en lugar de depender del contenedor, <strong>depende del tamaño del viewport, que es el area donde se renderiza la pagina web.</strong> Cabe destacar que no siempre el tamaño de ventana es igual al tamaño del sitio renderizado, debido a que el mismo puede estar trabajando con zoom.
+				</p>
+				<ul>
+					<li><strong>vw:</strong> Ancho del viewport</li>
+					<li><strong>vh:</strong> Alto del viewport</li>
+					<li><strong>vmin:</strong> Medida mas pequeña del viewport</li>
+					<li><strong>vmax:</strong> Medida mas grande del viewport</li>
+				</ul>
 			</section>
 		</article>
 	</main>
