@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS ecommerce ;
+
 ## Crea la  base de datos
     CREATE DATABASE ecommerce;
 	USE ecommerce; -- seleccionamos el esquema
