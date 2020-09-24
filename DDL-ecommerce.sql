@@ -60,3 +60,43 @@ DROP DATABASE IF EXISTS ecommerce ;
     ALTER TABLE clientes
 		ADD fecha_nac DATE;
 
+## tabla facturacion
+	CREATE TABLE facturacion(
+		id_factura INT AUTO_INCREMENT,
+        tipo ENUM ('debe', 'haber'),
+        categoria ENUM(
+			'Debito',
+            'Credito',
+            'Nota Debito',
+            'Nota Credito',
+            'Cheque',
+            'Deposito',
+            'Transferencia',
+            'Remito'
+		),
+        monto DECIMAL,
+        iva BOOLEAN, 
+        porcentaje_iva INT,
+        id_cliente INT,
+        fecha DATETIME,
+        PRIMARY KEY (id_factura),
+        UNIQUE KEY (tipo, categoria, monto, id_cliente, fecha),
+        FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+    );
+
+## tabla facturacion_detalle
+	CREATE TABLE facturacion_detalle(
+		id_detalle INT AUTO_INCREMENT,
+        id_factura INT,
+        id_producto INT,
+        cantidad INT UNSIGNED,
+        precio INT,
+        PRIMARY KEY (id_detalle),
+        UNIQUE KEY (id_factura, id_producto),
+        FOREIGN KEY (id_factura) REFERENCES facturacion(id_factura),
+        FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
+    );
+    -- Agregar restricciones a una tabla previamente creada
+		ALTER TABLE facturacion_detalle
+		ADD CONSTRAINT FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
+    SHOW Tables;

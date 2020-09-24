@@ -81,11 +81,20 @@ SELECT * FROM clientes;
             WHEN num_doc <= 80000000 THEN 'pass'
             ELSE 'ci'
         END;
-/*
-	lc <= 15
-    dni <= 54
-    pass <= 80
-    ci
-*/
-TRUNCATE proveedores;
-DELETE FROM clientes WHERE telefono IS NULL;
+	UPDATE clientes
+    SET correo = CONCAT( apellido ,'_', nombre , '@gmail.com');
+    
+DELETE FROM clientes WHERE tipo_doc IS NULL;
+SELECT * FROM proveedores;
+SELECT 
+	proveedor, 
+    LEFT(cuil, 2) AS 'N° inicial',
+    SUBSTRING(cuil, 4, 8) AS 'documento',
+    RIGHT(cuil,1) AS 'N° final'
+FROM proveedores;
+## consultas con operadores
+	SELECT * FROM productos
+	WHERE 
+		marca IN ('HP', 'Apple')
+		AND precio BETWEEN 26000 AND 60000
+		AND stock BETWEEN 50 AND 100;
