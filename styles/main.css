@@ -58,7 +58,59 @@
 		main{
 			padding:1rem;
 		}
-		
+		article{
+			margin:auto;
+			padding: 1rem 0;
+			border-bottom: 2px solid #248;
+		}
+		article:last-child{
+			border-bottom: none;
+		}
+		section > div{
+			text-align: center;
+			border-left: 2px solid #48F;
+			padding:.5rem;
+			background-color: #36f;
+		}
+		.relative img{
+			width: 100%;
+		}
+		.absolute img{
+			width:300px;
+		}
+		.flex img{
+			width: 90vw;
+		}
+		.contenedor{
+			overflow: hidden;
+			border: none;
+			padding:0;
+			padding-bottom:75%;
+			/*aspect-ratio 4:3 ancho = 1.33(alto) || alto = 75%(ancho)*/
+			/*aspect-ratio 16:9 ancho = 1.67(alto) || alto = 56.2%(ancho)*/
+			position: relative;
+		}
+		.contenedor video{
+			position: absolute;
+			top: 0;
+			left:0;
+			width:100%;
+		}
+		.contenedor p{
+			position:absolute;
+			bottom:-100%;
+			left:0;
+			width:100%;
+			margin:0;
+			padding:1rem;
+			padding-bottom: 3.5rem;
+			text-align: justify;
+			transition: all 1s ease;
+			background-color: rgba(200,200,200,.5);
+		}
+		.contenedor:hover p{
+			bottom:0;
+		}
 	/*Formulario de contacto*/
 		#contacto{
 			display: flex;
@@ -102,6 +154,16 @@
 	}
 /*Medium Devices (MD) >=768px  Celulares(landscape) & Tablets (portrait)*/
 	@media screen and (min-width: 768px) {
+		/*Contenido Principal*/
+			article{
+				max-width: 720px;
+			}
+			.relative img{
+				width: 45%;
+			}
+			.flex img{
+				width: 30vw;
+			}
 		/*Formulario de Contacto*/
 			#contacto{
 				max-width: 720px;
@@ -125,6 +187,25 @@
 				line-height: 2rem;
 				text-transform: uppercase;
 			}
+		/*Contenido Principal*/
+			article{
+				max-width: 960px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			article .header,
+			article ul{
+				width:100%;
+			}
+			section{
+				padding:.5rem;
+				max-width: 430px;
+			}
+			section:last-child{
+				width:100%;
+				max-width: 860px;
+			}
 		/*Formulario de Contacto*/
 			#contacto{
 				max-width: 900px;
@@ -132,7 +213,18 @@
 	}
 /*Extra Large Device (XL) >=1200px Desktop & Smart TV*/
 	@media screen and (min-width: 1200px){
-
+		/*Contenido Principal*/
+			.relative img{
+				width: 30%;
+			}
+			.absolute img{
+				width:120px;
+			}
+			.flex img{
+				width: 10vw;
+				min-width: 120px;
+				max-width: 300px;
+			}
 	}
 
 /*Autor: Cristian Racedo*/
