@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1>
+				<span>&lt;/> </span>
+				Fundamentos Web
+			</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html" title="Inicio">Inicio</a></li>
+				<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+				<li class="active"><a href="#contacto" title="Contacto">Contacto</a></li>
+				<li>
+					<a href="https://github.com/c215714n/educacionit/tree/html-lunes-19hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten una <strong>interaccion real (intercambio de datos) entre el cliente y el servidor,</strong> ya que <em>a diferencia de otras etiquetas como &lt;a>, donde el comportamiento esta predefinido</em>, en el caso de los primeros <strong>el resultado dependera pura y exclusivamente de tipo y la manera en que se manipulado los datos.</strong> Para poder implementar dicho elemento, debemos utilizar la etiqueta <strong>&lt;form></strong> y solamente se tendra en cuenta al momento de enviar el formulario, los elementos que se encuentren dentro de este; pudiendo de esta manera manipular multiples cantidades de datos por separado.
+			</p>
+			<section>
+				<header>
+					<h1>¿Como funcionan?</h1>
+				</header>
+				<p>
+					A la hora de utilizar la etiqueta mencionada anteriormente, debemos indicar por lo menos 2 atributos, estos son <em>action="..." &amp; method="..."</em>. El primero indica que sucede al enviar el formulario y normalmente se coloca como valor un <strong>script en lenguaje de servidor</strong> como por ejemplo PHP, esto se debe a que es mucho mas seguro y confiable que el mismo servidor procese los datos y no el cliente. En cambio, el atributo <strong>method</strong> solamente recibe 2 valores, <em>method="GET"</em> que se utiliza cuando la prioridad la posee la respuesta del servidor y los datos del cliente, no son tan importantes, admite 8kb y la informacion es accesible desde la barra de direcciones, <em>este metodo se considera poco seguro</em>. El otro valor es <em>method="POST"</em> que se utiliza cuando la prioridad esta en los datos provistos por el usuario, <em>se considera un metodo seguro</em> debido a que encripta los datos antes de enviarlos, admite hasta 8mb y la informacion no es accesible desde la barra de direcciones.
+				</p>
+				<ul class="example">
+					<h2>Tipos de Formularios</h2>
+					<li>
+						GET
+						<ul>
+							<li>Buscadores - Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						POST
+						<ul>
+							<li>Registro - Inscripción</li>
+							<li>Acceso - Inicio Sesión</li>
+							<li>Consulta Web - Contacto</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como estan compuestos?</h1>
+				</header>
+				<p>
+					Los formularios se componen de 2 tipos de elementos, por un lado estan las <strong> Etiquetas (Label) </strong>que permiten indicar con que datos se debe completar el mismo, facilita el trabajo de los screenreaders y permite a los motores de busquedas indexar el contenido del formulario segun la informacion que deba completarse. Otro de los elementos que encontramos son los <strong>Campos (Input, Textarea, Select)</strong> que permiten al usuario seleccionar o ingresar los datos que van a ser enviados a traves del mismo. En el caso de los campos es fundamental comprender que cuando se realiza el envio del formulario se envian los <em>valores (value="...")</em>, es decir que si el usuario escribe el valor esta definido por este, pero si no es asi, el valor debe estar previamente definido en la etiqueta. 
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa123!#)</label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo Numerico(123456)</label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo de Correo (*@*)</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo Contraseña (****)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo de Fecha (dd-mm-aaaa)</label>
+						<input type="date" />
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						 | arte <input name="hobbies" value="art" type="checkbox" />
+						 | musica <input name="hobbies" value="music" type="checkbox" />
+						 | deportes <input name="hobbies" value="sports" type="checkbox" />
+					</li>
+					<li>
+						<label>Opcion Unica</label>
+						 | si <input name="contract" value="true" type="radio" />
+						 | no <input name="contract" value="false" type="radio" />
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea minlength="10" maxlength="100"></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option value="html">HyperText Markup Language</option>
+							<option value="css">Cascading Styles Sheets</option>
+							<option value="js">Javascript</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset" />
+						<input type="submit" />
+						<button> Realizar acción</button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contacto" action="contacto.php" method="POST">
+			<label for="nombre">Nombre </label>
+			<input 
+				name="nombre" 
+				type="text" />
+			<label for="email">Correo</label>
+			<input 
+				name="email" 
+				type="email" />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta" 
+				minlength="10"
+				maxlength="200"></textarea>
+			<button>Realizar Consulta</button>
+		</form>
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+</body>
+</html>
