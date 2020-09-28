@@ -2,6 +2,69 @@
 <html>
 <head>
 	<title>Fundamentos Web</title>
+	<style>	
+		/* Selectores Generales */
+			body{
+				font-family: century gothic, segoe ui, calibri, sans-serif;
+				margin:0;
+			}
+		/*Selectores Multiples (,)*/
+			header, footer{
+				padding:10px;
+				color:#ccc; /*RRGGBB*/
+				background-color: #248; /*0 < F*/
+			}
+		/* Selectores Especificos (padre hijo)*/
+			header h1, header p{
+				margin:0;
+				line-height: 24px;
+			}
+			nav ul{
+				list-style: none;
+				margin:0;
+				padding:0;
+				line-height: 36px;
+				background-color: #36c;
+			}
+			nav a{
+				color:#ddd;
+				text-decoration: none;
+			}
+			nav li{
+				display: inline;
+				padding:8px;
+			}
+			/*Pseudoclase (:instancia)*/
+			nav li:hover{
+				background-color: #124;
+			}
+		/*Selectores de Clase (.class)*/
+			.reglas{
+				margin:16px;
+				border-radius: 16px;
+				padding:24px;
+				background-color: #ddd;
+			}
+		/*Selectores de Id (#id)*/
+			#reglas{
+				list-style: none;
+				line-height: 20px;
+				border:1px solid #248;
+				background-color: #aaa;
+			}
+
+			#orden p{
+				overflow: hidden;
+				margin:8px;
+				padding:8px;
+				background-color: #aaa;
+			}
+			#orden img{
+				width:200px;
+				float:left;
+				margin-right: 8px;
+			}
+	</style>	
 </head>
 <body>
 	<header>	
@@ -45,8 +108,55 @@
 		</ul>
 		<div class="reglas">
 			<img style="width:300px;" 
+				src="img/jjba-echoes-act3-01.jpg" 
+				alt="Dibujo Echoes Act 03" />
+			<img style="width:300px;" 
 				src="img/jjba-echoes-act3-02.jpg" 
 				alt="Dibujo Echoes Act 03" />
+			<img style="width:300px;" 
+				src="img/jjba-echoes-act3-03.jpg" 
+				alt="Dibujo Echoes Act 03" />
+			<img style="width:300px;" 
+				src="img/jjba-echoes-act3-04.jpg" 
+				alt="Dibujo Echoes Act 03" />
+		</div>
+		<div id="orden" class="reglas">	
+			<p>	
+				<img src="img/jjba-silverchariot-01.jpg" alt="Dibujo Silver Chariot" />
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Tenetur reiciendis modi minus inventore nisi ipsum, quod error in facere, ullam ipsa totam unde sed aut sapiente officiis doloremque molestiae. Quas.
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nostrum et sed aperiam nam neque voluptate vitae atque iure praesentium. Dolorem, non autem vitae ab at dignissimos iure dicta, beatae.	
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolor fugiat quasi officia sed incidunt quaerat. Laudantium quis sunt, fugit saepe fugiat, aliquam illum, nulla omnis magni atque quod cum!	
+			</p>
+			<p>	
+				<img src="img/jjba-silverchariot-02.jpg" alt="Dibujo Silver Chariot" />
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Tenetur reiciendis modi minus inventore nisi ipsum, quod error in facere, ullam ipsa totam unde sed aut sapiente officiis doloremque molestiae. Quas.
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nostrum et sed aperiam nam neque voluptate vitae atque iure praesentium. Dolorem, non autem vitae ab at dignissimos iure dicta, beatae.	
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolor fugiat quasi officia sed incidunt quaerat. Laudantium quis sunt, fugit saepe fugiat, aliquam illum, nulla omnis magni atque quod cum!	
+			</p>
+			<p>	
+				<img src="img/jjba-silverchariot-03.jpg" alt="Dibujo Silver Chariot" />
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Tenetur reiciendis modi minus inventore nisi ipsum, quod error in facere, ullam ipsa totam unde sed aut sapiente officiis doloremque molestiae. Quas.
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nostrum et sed aperiam nam neque voluptate vitae atque iure praesentium. Dolorem, non autem vitae ab at dignissimos iure dicta, beatae.	
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolor fugiat quasi officia sed incidunt quaerat. Laudantium quis sunt, fugit saepe fugiat, aliquam illum, nulla omnis magni atque quod cum!	
+			</p>
+			<p>	
+				<img src="img/jjba-silverchariot-04.jpg" alt="Dibujo Silver Chariot" />
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Tenetur reiciendis modi minus inventore nisi ipsum, quod error in facere, ullam ipsa totam unde sed aut sapiente officiis doloremque molestiae. Quas.
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nostrum et sed aperiam nam neque voluptate vitae atque iure praesentium. Dolorem, non autem vitae ab at dignissimos iure dicta, beatae.	
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolor fugiat quasi officia sed incidunt quaerat. Laudantium quis sunt, fugit saepe fugiat, aliquam illum, nulla omnis magni atque quod cum!	
+			</p>	
 		</div>
 	</main>
 	<footer>	
