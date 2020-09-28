@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<header>	
+		<h1>Fundamentos Web</h1>
+		<p>&lt;HTML> &amp; {CSS}</p>
+	</header>
+	<nav>	
+		<ul>	
+			<li>
+				<!-- Ruta relativa / Interna -->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<!-- Ruta ancla / Marcador (#) -->
+				<a href="#">Galeria</a> <!--Recarga la pagina-->
+			</li>
+			<li>
+				<!-- Ruta ancla / Marcador (#Id) -->
+				<a href="#contacto">Contacto</a><!--Etiqueta con Id contacto-->
+			</li>
+			<li>
+				<!-- Ruta absoluta / Externa -->
+				<a href="https://github.com/c215714n/educacionit/tree/html-lunes-15hs" target="_blank">GitHub</a>
+			</li>
+		</ul>	
+	</nav>	
+	<main>	
+		<ul id="reglas" class="reglas">	
+			<h2>Reglas de Nomenclatura</h2>
+			<li>	
+				<strong>Evitar el uso de espacios </strong>
+				ya que los mismos son ignorados y reemplazados por 
+				<em> el caracter %20. </em> Es decir que si nuestro archivo es nombrado <em>"foto 01.jpg"</em>, el nombre interpretado por el navegador sera <em>"foto%2001.jpg"</em> y dara como resultado que no se encuentra la misma; por lo tanto, una solucion a este inconveniente es utilizar <strong>guiones(_-)</strong> para los nombres, dando como resultado <em>"foto-01.jpg"</em>
+			</li>	
+			<li>	
+				<strong>Utilizar nombres descriptivos </strong> y <em>evitar la implementacion de nombres genericos como "foto-01.jpg" o nombres automatizados como "2020-0928-163010056.jpg"</em> porque dificultan la labor del desarrollador para encontrar elementos en concreto. Por el contrario, si se utilizan nombres funcionales como <em>main-logo.jpg</em> es mas facil determinar su disposicion.
+			</li>	
+			<li>	
+				<strong>Usar solamente minusculas </strong> para disminuir el margen de errores a la hora de utilizar archivos, debido a que los servidores son <strong>caseSensitive</strong>, es decir, hacen distincion entre mayusculas y minusculas. Por lo tanto no es lo mismo <em>"MAIN-LOGO.jpg", "Main-Logo.jpg", "main-logo.jpg".</em> 
+			</li>	
+		</ul>
+		<div class="reglas">
+			<img style="width:300px;" 
+				src="img/jjba-echoes-act3-02.jpg" 
+				alt="Dibujo Echoes Act 03" />
+		</div>
+	</main>
+	<footer>	
+		<p id="contacto">
+			&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia.
+		</p>
+	</footer>
+</body>
+</html>
