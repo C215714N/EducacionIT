@@ -1,0 +1,32 @@
+// Variables
+	@fst: #248;
+	@snd: #ccc;
+
+// Anidacion de Estilos
+	#header{
+		color:@snd;
+		background: 
+			linear-gradient(
+				lighten(@fst,20%),
+				darken(@fst,10%)
+			);
+		nav{
+			background-color: lighten(@fst,10%);
+			#menu{
+				width:2.5rem;
+				line-height: 2rem;
+				font-size: 2rem;
+			}
+			.menu{
+				overflow: hidden;
+				height:0;
+				margin:0;
+				padding: 0;
+				
+				a{
+					display: block;
+					padding: .5rem 3rem;
+				}
+			}
+		}
+	}
