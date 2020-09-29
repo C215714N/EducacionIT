@@ -46,11 +46,11 @@
 	main{
 		overflow: hidden;
 		padding:20px;
-		height: auto;
 	}
 	aside{
 		float: right;
-		width:300px;
+		width:30%;
+		min-width: 300px;
 		height: 2000px;
 		background-color: white;
 	}
@@ -71,6 +71,13 @@
 	.example caption{
 		margin-top: 16px;
 		border-radius: 8px 8px 0 0;
+	}
+	video, iframe{
+		/*4-3	ancho = 1.33(alto) alto = 75% ancho
+		16-9	ancho = 1.78 (alto) alto = 56.2% ancho
+		*/
+		width:420px;
+		height: 236.25px;
 	}
 /*Formulario de Contacto*/
 	#contacto{

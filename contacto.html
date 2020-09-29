@@ -24,16 +24,16 @@
 		</nav>
 	</header>
 	<main>
-		<aside>
+		<!--<aside>
 			<ul>
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi ea rerum beatae laudantium sapiente corporis deserunt, voluptas explicabo facilis. Unde amet optio explicabo officiis officia minus veritatis consectetur! Illo!</li>
-				
+
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi ea rerum beatae laudantium sapiente corporis deserunt, voluptas explicabo facilis. Unde amet optio explicabo officiis officia minus veritatis consectetur! Illo!</li>
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi ea rerum beatae laudantium sapiente corporis deserunt, voluptas explicabo facilis. Unde amet optio explicabo officiis officia minus veritatis consectetur! Illo!</li>
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi ea rerum beatae laudantium sapiente corporis deserunt, voluptas explicabo facilis. Unde amet optio explicabo officiis officia minus veritatis consectetur! Illo!</li>
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi ea rerum beatae laudantium sapiente corporis deserunt, voluptas explicabo facilis. Unde amet optio explicabo officiis officia minus veritatis consectetur! Illo!</li>
 			</ul>
-		</aside>
+		</aside>-->
 		<article>
 			<header class="header">
 				<h1>Formularios HTML</h1>
@@ -239,6 +239,60 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<section id="iframe">
+				<header>¿Contenido Embebido?</header>
+				<p>
+					Antiguamente la etiqueta <strong>&lt;iframe> (Marco Flotante)</strong> se utilizaba para simplicar el diseño, ya que permite mostrar de manera asincronica otro tipo de contenido dentro de la misma, como pueden ser otras paginas web, documentos, contenido multimedia, etc. Hoy en dia se utiliza para <em>embeber contenido (embed)</em> dentro de nuestra pagina, generalmente compartido desde otra web como es el caso de los <strong>videos de Youtube, presentaciones de SlideShare o mapas de Google Maps.</strong>
+					A diferencia de las etiquetas <a href="#audio">&lt;audio></a> y <a href="#video">&lt;video></a> que se mencionan mas adelante, iframe se utilizo mucho durante la epoca donde no era comun reproducir de forma nativa contenido multimedia.
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/a44plk5oC7o" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h1>¿Sonidos en la Web?</h1>
+				</header>
+				<p>
+					A diferencia del <a href="#iframe">elemento anterior</a>, el elemento <strong>&lt;audio></strong> permite la incorporacion de un reproductor de sonidos integrado al navegador, los formatos compatibles con este elemento son <em>.mp3 - .wav - .ogg</em>, aunque tambien admite formatos de video como los que se mencionan <a href="#video">mas adelante</a>
+				</p>
+				<audio id="audioEl" src="media/californication.mp4" controls>
+					<p>
+						Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. podes descargar el tema de la siguiente direccion: <a href="media/live-learn.mp3">Live &amp; Learn</a>
+					</p>
+				</audio>
+				<button id="playButton">PLAY</button>
+			</section>
+			<section id="video">
+				<header>
+					<h1>¿Videos sin Plugins?</h1>
+				</header>
+				<p>
+					A diferencia del <a href="#iframe">primer elemento</a>, la etiqueta <strong>&lt;video></strong> permite integrar este tipo de contenido de forma nativa, sin necesidad de complementos de terceros como el clasico <em>Flash Player</em> que utilizaba YouTube en sus comienzos.
+					Los formatos compatibles son <em>.mp4 - .webm - .ogv</em> pero a diferencia del <a href="#audio">elemento audio</a>, este cambia a un reproductor diferente cuando se intenta reproducir otro formato que no sea video.
+				</p>
+				<video src="media/cant-stop.webm" controls autoplay muted>
+					<p>
+						Lo sentimos, pero tu navegador No es compatible con el elemento VIDEO. podes descargar el tema de la siguiente direccion: <a href="media/cant-stop.webm">Can't Stop</a>
+					</p>
+				</video>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
@@ -270,11 +324,21 @@
 				required></textarea>
 			<button>Enviar Consulta</button>
 		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0687157585207!2d-58.37805708641994!3d-34.60242386493328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1601394004062!5m2!1ses!2sar"
+			frameborder="0"  
+			aria-hidden="false">
+		</iframe>
 		<p>
 			&copy;Todos los derechos reservados |
 			<a href="mailto:cristiandracedo@hotmail.com" title="Cristian Racedo"> Cristian Racedo </a>
 			&amp; Compañia.
 		</p>
 	</footer>
+	<script type="text/javascript">
+		document.querySelector('#playButton').addEventListener(
+			'click', () => document.querySelector('#audioEl').play()
+		)
+	</script>
 </body>
 </html>
