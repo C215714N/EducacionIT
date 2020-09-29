@@ -1,0 +1,69 @@
+/*Reglas Generales*/
+	body{
+		margin:0;
+		font-family: calibri, sans-serif;
+	}
+/*Encabezado y Pie de Pagina*/
+	#header, .header, #footer{
+		padding:16px;
+		color: whitesmoke;
+		background-color: #124;
+	}
+	.header{
+		padding:4px 8px;/*Top Right Bottom Left*/
+	}
+	.header h1, .header p{
+		margin:0;
+	}
+/*Barra de Navegacion*/
+	.menu{
+		margin:0;
+		padding: 0;
+		background-color: #248;
+		list-style: none;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.menu li{
+		display: inline-block;
+		width:90px;
+		line-height: 32px;
+	}
+	.menu li:hover{
+		background-color: #36c;
+	}
+	.menu a{
+		color:#ccc;
+		text-decoration: none;
+	}
+/*Contenido Principal*/
+	main{
+		padding:16px;
+	}
+/*Formulario de Contacto*/
+	#contacto{
+		overflow: hidden;
+		margin:auto;
+		width:450px;
+	}
+	#contacto input, #contacto textarea{
+		width:430px;
+		outline:none;
+		border:0;
+		padding: 5px 10px;
+	}
+	#contacto textarea{
+		resize: none;
+		height: 64px;
+	}
+
+	#contacto button{
+		float: right;
+		border: 2px solid whitesmoke;
+		padding:5px;
+		color:whitesmoke;
+		background-color: transparent;
+	}
+	#contacto button:hover{
+		background-color: #36c;
+	}

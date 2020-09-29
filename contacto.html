@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/cr-logo.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -119,20 +121,27 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="contacto.php" method="POST">
-			<label for="nombre">Nombre </label>
+		<form 
+			id="contacto" 
+			onsubmit="alert('Gracias por realizar su consulta')" 
+			action="contacto.php" method="POST">
+			<h2>Contactanos</h2>
+			<label for="nombre">Nombre *</label>
 			<input 
 				name="nombre" 
-				type="text" />
-			<label for="email">Correo</label>
+				type="text"
+				required />
+			<label for="email">Correo *</label>
 			<input 
 				name="email" 
-				type="email" />
-			<label for="consulta">Consulta</label>
+				type="email"
+				required />
+			<label for="consulta">Consulta *</label>
 			<textarea 
 				name="consulta" 
 				minlength="10"
-				maxlength="200"></textarea>
+				maxlength="200"
+				required></textarea>
 			<button>Realizar Consulta</button>
 		</form>
 		<p>
