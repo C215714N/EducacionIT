@@ -98,3 +98,18 @@ FROM proveedores;
 		marca IN ('HP', 'Apple')
 		AND precio BETWEEN 26000 AND 60000
 		AND stock BETWEEN 50 AND 100;
+        
+## consultas
+UPDATE proveedores
+	SET correo = LOWER(CONCAT('info@',proveedor,'.com'))
+    WHERE correo IS NULL;
+    
+## Carga de datos
+SELECT * FROM facturacion;
+INSERT INTO facturacion (tipo, categoria, id_cliente, fecha)
+	VALUES 
+		(2,2,1,'2020-09-22,14:00'),
+		(1,4,4,'2020-09-23,15:00');
+SELECT id_cliente, apellido 
+FROM clientes 
+WHERE apellido LIKE '%c%';
