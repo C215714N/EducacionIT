@@ -53,6 +53,17 @@
 		padding:20px;
 		background-color: #8cf;
 	}
+	.example table, .example caption, .example tr, .example td{
+		color:whitesmoke;
+		background-color: rgba(34, 136, 68,.5);
+	}
+	.example td{
+		width:100px;
+	}
+	.example caption{
+		margin-top: 16px;
+		border-radius: 8px 8px 0 0;
+	}
 /*Formulario de Contacto*/
 	#contacto{
 		width:420px;

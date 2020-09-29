@@ -122,9 +122,120 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten <strong>organizar la informacion de manera tabular</strong> y a diferencia de otras etiquetas, <em>el contenido siempre esta dispuesto en la posicion donde fue creada</em>, es decir, que las mismas se adaptan al tamaño del contenido y no al tamaño del contenedor como el resto de las etiquetas de bloque. En comparacion con diferentes programas que usan tablas, HTML utiliza el <strong>modelo de cajas</strong> para la creacion de las mismas y como es comun con la mayoria de las etiquetas, de manera predeterminada estas no poseen borde.
+			</p>
+			<section>
+				<header>
+					<h1>¿Estructura Clásica?</h1>
+				</header>
+				<p>
+					Antiguamente era comun utilizar estos elementos para el diseño de las paginas web, pero con el surgmiento de CSS, fueron dejandose de lado para solamente organizar bloques de contenido. Para crearlas debemos utilizar la etiqueta <strong>&lt;table></strong> como contenedor principal y para crear el contenido debemos insertar primero las filas con la etiqueta <strong>&lt;tr> (Table Row)</strong> y dentro de la misma la cantidad de celdas equivalente a la cantidad de columnas que necesitamos, utilizando la etiqueta <strong>&lt;td>(Table Division)</strong>
+				</p>
+				<div class="example">
+					<table border="1">
+						<tr>
+							<td>Fila 1 Celda 1: 1</td>
+							<td>Fila 1 Celda 2: 2</td>
+							<td>Fila 1 Celda 3: 3</td>
+						</tr>
+						<tr>
+							<td>F2 C1: 4</td>
+							<td>F2 C2: 5</td>
+							<td>F2 C3: 6</td>
+						</tr>
+						<tr>
+							<td>F3C1: 7</td>
+							<td>F3C2: 8</td>
+							<td>F3C3: 9</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Estructura Semantica?</h1>
+				</header>
+				<p>
+					Al igual que sucede con la estructura de una pagina, con la incorporacion del nuevo estandar, se agregaron nuevas etiquetas a las tablas para dotar de carga semantica a las mismas. Entre las etiquetas que se incorporaron estan <strong>&lt;THEAD></strong> que representa la cabecera de tabla, en su interior debe contener solamente titulos y estos se representan con la etiqueta <em>&lt;th> (Table Heading)</em>; <strong>&lt;TBODY></strong> que representa el cuerpo de la tabla y es la unica parte donde se sigue utilizando la estructura clasica, aunque si creamos una tabla de referencias cruzadas tambien puede poseer celdas de titulos. Por ultimo, <strong>&lt;TFOOT></strong> la cual es opcional, se utiliza como fila de detalles y al igual que el caso anterior, tambien puede poseer titulos.
+				</p>
+				<div class="example">
+					<table>
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th>Producto</th>
+							<th>Precio.U</th>
+							<th>Cantidad</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>800</td>
+								<td>1</td>
+								<td>800</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>8500</td>
+								<td>3</td>
+								<td>25500</td>
+							</tr>
+							<tr>
+								<td>Mouse</td>
+								<td>3200</td>
+								<td>2</td>
+								<td>6400</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>32700</td>
+						</tfoot>
+					</table>
+					<table>
+						<caption>Tipos de Desarrolladores</caption>
+						<thead>
+							<th>Desarrollador</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+							<tr>
+								<td rowspan="3">BackEnd</td>
+								<td>SQL</td>
+							</tr>
+							<tr>
+								<td>PHP</td>
+							</tr>
+							<tr>
+								<td>JAVA</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" onsubmit="alert('Gracias por realizar su consulta')" action="contacto.php" method="POST">
+		<form 
+			id="contacto" 
+			onsubmit="alert('Gracias por realizar su consulta')" 
+			action="contacto.php" 
+			method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Nombre</label>
 			<input 
@@ -132,17 +243,20 @@
 				name="nombre"
 				pattern="[A-Z a-z]{2,50}"
 				title="Ingrese su nombre sin numeros ni simbolos, el mismo debe tener entre 2 y 50 caracteres" 
+				placeholder="Ingrese su Nombre" 
 				required />
 			<label for="email">Correo</label>
 			<input 
 				type="email" 
 				name="email"
+				placeholder="Ingrese su Correo" 
 				required />
 			<label for="consulta">Consulta</label>
 			<textarea
 				name="consulta"
 				minlength="10"
 				maxlength="200"
+				placeholder="Ingrese su Consulta"
 				required></textarea>
 			<button>Enviar Consulta</button>
 		</form>
