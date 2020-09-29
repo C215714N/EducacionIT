@@ -37,7 +37,7 @@ DROP DATABASE IF EXISTS ecommerce ;
 		UNIQUE KEY (marca, modelo, precio), -- clave unica (Local)
         FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor) -- Clave Foranea (Relaciones tabla / campo)
     );
-    
+    -- clientes
     CREATE TABLE clientes (
 		id_cliente INT AUTO_INCREMENT,
         nombre VARCHAR(50),
@@ -60,7 +60,7 @@ DROP DATABASE IF EXISTS ecommerce ;
     ALTER TABLE clientes
 		ADD fecha_nac DATE;
 
-## tabla facturacion
+	-- tabla facturacion
 	CREATE TABLE facturacion(
 		id_factura INT AUTO_INCREMENT,
         tipo ENUM ('debe', 'haber'),
@@ -84,7 +84,7 @@ DROP DATABASE IF EXISTS ecommerce ;
         FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
     );
 
-## tabla facturacion_detalle
+	-- tabla facturacion_detalle
 	CREATE TABLE facturacion_detalle(
 		id_detalle INT AUTO_INCREMENT,
         id_factura INT,
@@ -93,10 +93,8 @@ DROP DATABASE IF EXISTS ecommerce ;
         precio INT,
         PRIMARY KEY (id_detalle),
         UNIQUE KEY (id_factura, id_producto),
-        FOREIGN KEY (id_factura) REFERENCES facturacion(id_factura),
-        FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
+        FOREIGN KEY (id_factura) REFERENCES facturacion(id_factura)
     );
-    -- Agregar restricciones a una tabla previamente creada
-		ALTER TABLE facturacion_detalle
-		ADD CONSTRAINT FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
-    SHOW Tables;
+## Agregar restricciones a una tabla previamente creada
+	ALTER TABLE facturacion_detalle
+	ADD CONSTRAINT FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
