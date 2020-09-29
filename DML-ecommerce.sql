@@ -105,11 +105,59 @@ UPDATE proveedores
     WHERE correo IS NULL;
     
 ## Carga de datos
-SELECT * FROM facturacion;
-INSERT INTO facturacion (tipo, categoria, id_cliente, fecha)
-	VALUES 
-		(2,2,1,'2020-09-22,14:00'),
-		(1,4,4,'2020-09-23,15:00');
+	SELECT * FROM facturacion;
+	INSERT INTO facturacion (tipo, categoria, id_cliente, fecha)
+		VALUES 
+			(2,2,1,'2020-09-22,14:00'),
+			(1,4,4,'2020-09-23,15:00');
+## detalle facturacion
+	SELECT * FROM facturacion_detalle;
+    INSERT INTO facturacion_detalle (id_factura, id_producto, cantidad)
+    VALUES 
+		(1,4,1),
+        (1,6,2),
+        (1,7,2);
+
+## consulta de precios de los productos vendidos
+	SELECT id_producto, precio 
+    FROM productos 
+    WHERE id_producto IN(4,6,7);
+    
+## actualizacion de precios
+	UPDATE facturacion_detalle
+    SET precio =
+		CASE
+			WHEN id_producto = 4 THEN 16500
+			WHEN id_producto = 6 THEN 17899
+			WHEN id_producto = 7 THEN 23899
+        END;
+        
+##consulta de totales
+	SELECT 
+		id_factura,
+        SUM(precio*cantidad) as Total
+	FROM facturacion_detalle
+    GROUP BY id_factura
+    ORDER BY id_factura DESC, id_producto DESC;
+
+UPDATE facturacion
+	SET 
+		monto = 100096, 
+		porcentaje_iva = 21,
+        iva = true
+	WHERE id_factura = 1;
+SELECT 
+	id_factura,
+    tipo,
+    categoria,
+    monto,
+    CONCAT(porcentaje_iva,'% +IVA') AS '% iva',
+    ROUND(monto * porcentaje_iva/100, 2) AS valor_iva,
+    ROUND(monto + porcentaje_iva * monto/100, 2) AS total
+    FROM facturacion
+    HAVING total >= 100000
+    ORDER BY total;
+    
 SELECT id_cliente, apellido 
 FROM clientes 
 WHERE apellido LIKE '%c%';
