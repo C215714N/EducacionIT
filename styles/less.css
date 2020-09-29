@@ -1,6 +1,7 @@
 #header {
   color: #ccc;
   background: linear-gradient(#4170cf, #18305f);
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 #header nav {
   background-color: #2c58b1;
@@ -15,8 +16,13 @@
   height: 0;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 #header nav .menu a {
   display: block;
   padding: 0.5rem 3rem;
+}
+#footer {
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: linear-gradient(#18305f, #4170cf);
 }

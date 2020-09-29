@@ -1,6 +1,7 @@
 // Variables
 	@fst: #248;
 	@snd: #ccc;
+	@rad: .5rem;
 
 // Anidacion de Estilos
 	#header{
@@ -10,6 +11,7 @@
 				lighten(@fst,20%),
 				darken(@fst,10%)
 			);
+		.rounded-top;
 		nav{
 			background-color: lighten(@fst,10%);
 			#menu{
@@ -20,13 +22,33 @@
 			.menu{
 				overflow: hidden;
 				height:0;
-				margin:0;
-				padding: 0;
-				
+				.normalize;
 				a{
 					display: block;
 					padding: .5rem 3rem;
 				}
 			}
 		}
+	}
+	#footer{
+		.rounded-bottom;
+		background: linear-gradient(
+			darken(@fst, 10%),
+			lighten(@fst, 20%)
+			);
+	}
+// Mixins (Estilo que se combina con una etiqueta como atributo)
+	.normalize(){
+		margin:0;
+		padding:0;
+		border:0;
+	}
+	.rounded(){
+		border-radius: @rad;
+	}
+	.rounded-top(){
+		border-radius: @rad @rad 0 0;
+	}
+	.rounded-bottom(){
+		border-radius: 0 0 @rad @rad;
 	}
