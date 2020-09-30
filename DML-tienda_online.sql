@@ -73,7 +73,17 @@ SELECT * FROM proveedores;
 	UPDATE productos SET categoria = 'tecnologia';
     
 SELECT marca, precio, stock, SUM(precio*stock) AS 'Total productos'
-FROM productos
-WHERE stock > 150
-GROUP BY marca
-ORDER BY marca;
+	FROM productos
+	WHERE stock > 150
+	GROUP BY marca
+	ORDER BY marca;
+
+UPDATE productos
+	SET categoria = 
+		CASE
+			WHEN marca IN('hp','dell','samsung','apple','toshiba') THEN 'tecnologia'
+            WHEN marca IN('adidas','nike','kappa') THEN 'indumentaria'
+            WHEN marca IN('ayudin','vim','comfort') THEN 'limpieza'
+            ELSE 'biblioteca'
+        END;
+SELECT * FROM productos;
