@@ -2,9 +2,17 @@
 	@fst: #248;
 	@snd: #ccc;
 	@rad: .5rem;
+	@sm: 576px;
+	@md: 768px;
+	@lg: 992px;
+	@xl: 1200px;
 
 // Anidacion de Estilos
+	*{
+		box-sizing: border-box;
+	}
 	#header{
+		padding:1rem;
 		color:@snd;
 		background: 
 			linear-gradient(
@@ -30,12 +38,38 @@
 			}
 		}
 	}
+	main{
+		section{
+			.flex(center; flex-start; row);
+		}
+	}
 	#footer{
 		.rounded-bottom;
+		padding:1rem;
 		background: linear-gradient(
 			darken(@fst, 10%),
 			lighten(@fst, 20%)
 			);
+		#contacto{
+			margin:auto;
+			padding:1rem;
+			.flex(center, center);
+			@media screen and (min-width: @sm){
+				.viewport(@sm);
+			}
+			@media screen and (min-width: @lg){
+				.viewport(@lg);
+			}
+			@media screen and (min-width: @xl){
+				.viewport(@xl);
+			}
+			input, textarea{
+				width:100%;
+			}
+			button{
+				.loop;
+			}
+		}
 	}
 // Mixins (Estilo que se combina con una etiqueta como atributo)
 	.normalize(){
@@ -52,3 +86,58 @@
 	.rounded-bottom(){
 		border-radius: 0 0 @rad @rad;
 	}
+// Mixins Parametricos (Funciones Clasicas)
+	.flex(
+		@jc: center; 
+		@ai: flex-start;  
+		@fd: column;
+		@fw: wrap;
+		@d: flex; 
+		){
+		display: @d;
+		flex-direction: @fd;
+		flex-wrap: @fw;
+		justify-content: @jc ;
+		align-items: @ai;
+	}
+	.viewport(@vw){
+		max-width: 
+			if(@vw >= 1200, 
+				900px,
+				if(@vw >= 768px,
+					720px,
+					540px
+					)
+				);
+	}
+	//sm:576px; md:768px; lg:992; xl:1200;
+// Mixins Recursivos (Bucles / Loops)
+	.loop (@i:1; @n:100px) when (@i <= 6){
+		width: @n * @i;
+		.loop(@i + 1);
+	}
+	//sistema de grilla
+	.grid (@n; @i:1) when (@i <= @n){
+		.col-@{i}{
+			width: percentage(@i / @n);
+		}
+		.grid(@n ; @i + 1);
+	}
+	.grid(24);
+
+	//Sistema de Grillas Responsive
+	.CrisTrap (@vn; @vw){
+		@media screen and (min-width: @vw){
+			.grid (@n:24; @i:1) when (@i <= @n){
+				.col-@{vn}-@{i}{
+					width: percentage(@i / @n);
+				}
+				.grid (@n; @i + 1);
+			}
+			.grid;
+		}
+	};
+	.CrisTrap(sm; @sm);
+	.CrisTrap(md; @md);
+	.CrisTrap(lg; @lg);
+	.CrisTrap(xl; @xl);
