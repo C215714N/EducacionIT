@@ -145,14 +145,14 @@
 		#contacto button:hover{
 			background-color: #124;
 		}
-/*Small Devices (SM) >= 576px Celulares */
+/*Small Devices (SM) >= 576px 540 Celulares */
 	@media screen and (min-width: 576px) {
 		/*Formulario de Contacto*/
 			#contacto{
 				max-width: 540px;
 			}
 	}
-/*Medium Devices (MD) >=768px  Celulares(landscape) & Tablets (portrait)*/
+/*Medium Devices (MD) >=768px 720 Celulares(landscape) & Tablets (portrait)*/
 	@media screen and (min-width: 768px) {
 		/*Contenido Principal*/
 			article{
@@ -174,7 +174,7 @@
 				font-variant: small-caps;
 			}
 	}
-/*Large Devices (LG) >= 992px Tablets(landscape) & Desktop*/
+/*Large Devices (LG) >= 992px 960 Tablets(landscape) & Desktop*/
 	@media screen and (min-width: 992px){
 		/*Barra de Navegacion*/
 			#menu{
@@ -211,7 +211,7 @@
 				max-width: 900px;
 			}
 	}
-/*Extra Large Device (XL) >=1200px Desktop & Smart TV*/
+/*Extra Large Device (XL) >=1200px 1140 Desktop & Smart TV*/
 	@media screen and (min-width: 1200px){
 		/*Contenido Principal*/
 			.relative img{
