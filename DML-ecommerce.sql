@@ -48,7 +48,6 @@ SELECT * FROM proveedores;
 SELECT *, 'Reponer' as Situacion 
 	FROM productos
 	WHERE precio >= 20000 AND stock < 100; -- condiciones
-    
 /*Tablas de La verdad
 	AND	c1F	c1V
     c2F	F	F

@@ -37,6 +37,16 @@ DROP DATABASE IF EXISTS ecommerce ;
 		UNIQUE KEY (marca, modelo, precio), -- clave unica (Local)
         FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor) -- Clave Foranea (Relaciones tabla / campo)
     );
+    -- Modificacion de campo categoria
+    ALTER TABLE productos
+		MODIFY categoria ENUM(
+			'tecnologia',
+            'hogar',
+            'indumentaria',
+            'limpieza',
+            'otros'
+        );
+        
     -- clientes
     CREATE TABLE clientes (
 		id_cliente INT AUTO_INCREMENT,
