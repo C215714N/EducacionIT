@@ -1,0 +1,41 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Abel&family=Raleway:ital,wght@0,400;0,900;1,200;1,600&family=Sansita+Swashed:wght@300;900&display=swap'
+		);
+	/*Todos los elementos*/
+	*{
+		box-sizing: border-box;
+		/*
+			CONTENT-BOX
+				width + padding + border = final-width
+				300px	50px	  2px	 = 404px
+			BORDER-BOX
+				width = final-width
+				300px = 300px
+				width - padding - border = content-width
+				300px	50px	  2px	 = 196px
+		*/
+		font-family: Raleway, Abel, sans-serif;
+	}
+	html{
+		scroll-behavior: smooth;
+	}
+	/*Encabezado y Pie de Pagina*/
+		#header, #footer{
+			color:#ccc;
+			background-color: #012;
+			text-transform: uppercase;
+			padding:20px;
+		}
+	/*
+		Selectores
+			Etiqueta (header)
+				generales header{color:darkblue;}
+				anidados header h1{color:blue;}
+			Clase (.header)
+				generales .header {color:yellow;}
+				anidados .header h1 {color:orange;}
+			Id (#header)
+				generales #header {color:tomato;}
+				anidados #header h1 {color:darkred;}
+	*/

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head><!-- CABECERA: Parte NO VISIBLE -->
 	<meta charset="UTF-8">
 	<meta 
 		name="viewport" 
@@ -9,14 +9,29 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Maquetación Web</title>
+	<link rel="icon" href="assets/img/css.png">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<!-- Estructura Basica con EMMET 
+<body><!-- CUERPO: Parte VISIBLE -->
+	<!-- Estructura Basica con EMMET 
 	(header#header>.header)+(main>article*3>section*3)+footer#footer -->
 	<header id="header">
 		<div class="header">
-			
+			<h1>Maquetacion Web</h1>
+			<p>&lt;HTML> &amp; {CSS}</p>
 		</div>
+		<nav>
+			<ul class="menu">
+				<!-- Rutas Internas / Relativas -->
+				<li><a href="#">Inicio</a></li>
+				<li><a href="about.html">Acerca</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<!-- Ruta Ancla / Marcador (#Id)-->
+				<li><a href="#contact">Contacto</a></li>
+				<!-- Rutas Externas / Absolutas -->
+				<li><a href="https://github.com/c215714n/educacionit/tree/maquetacion-lunes-10hs" target="_blank">GitHub</a></li>
+			</ul>
+		</nav>
 	</header>
 	<main>
 		<article>
@@ -35,6 +50,9 @@
 			<section></section>
 		</article>
 	</main>
-	<footer id="footer"></footer>
+	<footer id="footer">
+		<p>&copy;</p>
+	</footer>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
