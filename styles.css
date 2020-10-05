@@ -40,6 +40,34 @@
 	main{
 		padding:16px;
 	}
+	.example{
+		list-style: none;
+		margin-left: 40px;
+		border-left: 4px solid #248;
+		padding:20px;
+		background-color: #cce;
+	}
+	.example table, .example caption, .example tr, .example td{
+		color:#ccc;
+		background-color: rgba(18, 136, 36, .5);
+		border-collapse: collapse;
+	}
+	.example table, .example caption{
+		text-shadow: 2px 2px 5px rgba(33,33,33,.5);
+		box-shadow: 2px 2px 5px rgba(0,0,0,.8);
+	}
+	.example caption{
+		margin-top: 16px;
+		padding: 5px;
+		border-radius: 8px 8px 0 0; /*LeftTop RightTop RightBottom LeftBottom*/
+	}
+	.example td, .example th{
+		width:30px;
+		padding:5px;
+	}
+	.example thead, .example tfoot{
+		background-color: #248;
+	}
 /*Formulario de Contacto*/
 	#contacto{
 		overflow: hidden;
