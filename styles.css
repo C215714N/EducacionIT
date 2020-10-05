@@ -1,0 +1,47 @@
+/*Reglas Generales*/
+	body{
+		margin:0;
+		font-family: seoge ui, calibri, sans-serif;
+	}
+	#header,#footer,main{
+		padding: 20px;
+	}
+/*Encabezado y Pie de Pagina*/
+	#header, .header, #footer{
+		color:#ccc;
+		background-color: #248;
+	}
+	.header span{
+		color:tomato;
+		font-size: 42px;
+		text-shadow: 0 0 5px #ccc; /*X Y Blur Color*/
+	}
+	.header h1, .header p{
+		margin:0;
+		line-height: 24px;
+	}
+/*Barra de Navegacion*/
+/*Contenido Principal*/
+	.example{
+		list-style: none;
+		margin-left: 40px;
+		border-left: 4px solid #124;
+		padding:20px;
+		background-color: #ccd;
+	}
+/*Formulario de Contacto*/
+	#contacto{
+		width:420px;
+		margin: auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		width:410px;
+		outline:none;
+		border:0;
+		padding:5px; /*10px*/
+	}
+	#contacto textarea{
+		resize: none;
+		height: 80px;
+	}
