@@ -68,6 +68,19 @@
 	.example thead, .example tfoot{
 		background-color: #248;
 	}
+	/*Multimedia*/
+		/*aspect-ratio
+			4-3 ancho = 1.33(alto) / alto = 75%(ancho)
+			16-9 ancho = 1.78(alto) / alto = 56.25%(ancho)
+		*/
+	video, iframe, audio{
+		outline: none;
+		width:420px;
+		height:236.25px;
+	}
+	audio{
+		height: 50px;
+	}
 /*Formulario de Contacto*/
 	#contacto{
 		overflow: hidden;
