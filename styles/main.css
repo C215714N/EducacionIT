@@ -352,6 +352,73 @@
 					.transition div:nth-child(5){
 						transition: all 2s linear;
 					}
+				/*Animaciones*/
+					.animacion{
+						flex-direction: column;
+					}
+					.animacion div{
+						width:150px;
+						margin:.5rem;
+						border: 2px solid white;
+						padding:1rem;
+						color:white;
+						background-color: transparent;
+						/*Animacion*/
+							animation-name: mover;
+							animation-duration: 5s;
+							animation-delay: 1.5s; 
+							animation-iteration-count: infinite;
+					}
+				/*Timing-Function*/
+					.timing div:nth-child(1){animation-timing-function: ease;}
+					.timing div:nth-child(2){animation-timing-function: ease-in;}
+					.timing div:nth-child(3){animation-timing-function: ease-out;}
+					.timing div:nth-child(4){animation-timing-function: ease-in-out;}
+					.timing div:nth-child(5){animation-timing-function: linear;}
+					.timing div:nth-child(6){animation-timing-function: cubic-bezier(0,1,1,0);}
+				
+				/*Animation-Direction*/
+					.direction div:nth-child(1){animation-direction: normal;}
+					.direction div:nth-child(2){animation-direction: reverse;}
+					.direction div:nth-child(3){animation-direction: alternate;}
+					.direction div:nth-child(4){animation-direction: alternate-reverse;}
+		
+				/*Animacion de Carga*/
+					.loading div{
+						width:100px;
+						height: 100px;
+						margin:.5rem;
+						border-radius: 50%;
+						border:.5rem solid transparent;
+						border-right-color: skyblue;
+						border-bottom-color: blue;
+						border-left-color: darkblue;
+						/*animacion*/
+							animation-name: loading;
+							animation-duration: 2s;
+							animation-iteration-count: infinite; 
+					}
+					/*Regla Keyframes*/
+						@keyframes mover{
+							from{
+								transform: translateX(0);
+								background-color: skyblue;
+								box-shadow: 0 0 0 white;
+							}
+							to{
+								transform: translateX(450px);
+								background-color: darkslateblue;
+								box-shadow: 0 0 5px black;
+							}
+						}
+						@keyframes loading{
+							from{
+								transform: rotate(0);
+							}
+							to{
+								transform: rotate(720deg);
+							}
+						}
 		/*Formulario de Contacto*/
 			#contact{
 				display: flex;
@@ -495,6 +562,31 @@
 		}
 	/*Pantallas Grandes LG small desktop*/
 		@media screen and (min-width: 992px) {
+			#header .header{
+				animation:chocar 2s 1s ease-in;
+				animation-fill-mode: forwards;
+			}
+				@keyframes chocar{
+					0%{
+						text-shadow: 0 0 10px white;
+						color: black;
+						transform:
+							translate(-500%, -100%)
+							rotate(720deg);
+					}
+					40%{
+						color:grey;
+						transform: 
+							translate(150%, 0)
+							rotate(-720deg);
+					}
+					100%{
+						text-shadow: 0 0 5px black;
+						color:#ccc;
+						transform:translate(0,0)
+						rotate(0);
+					}
+				}
 			/*Navegacion*/
 				nav{
 					width:60%;

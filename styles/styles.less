@@ -6,7 +6,6 @@
 	@md: 768px;
 	@lg: 992px;
 	@xl: 1200px;
-
 // Anidacion de Estilos
 	*{
 		box-sizing: border-box;
@@ -127,8 +126,7 @@
 		.grid(@n ; @i + 1);
 	}
 	.grid(24);
-
-	//Sistema de Grillas Responsive
+//Sistema de Grillas Responsive
 	.CrisTrap (@vn; @vw){
 		@media screen and (min-width: @vw){
 			.grid (@n:24; @i:1) when (@i <= @n){

@@ -418,13 +418,23 @@
 		</article>
 		<article>
             <header class="header">
-                <h1>Clase 5: </h1>
+                <h1>Clase 5: Animaciones</h1>
             </header>
             <section>
                 <header>
-                    <h1>Tema 1: </h1>
+                    <h1>Tema 1: Conceptos Basicos</h1>
                 </header>
-                <p>...</p>
+                <p>
+                    La ultima version de CSS, incorpora la posibilidad de crear animaciones con los elementos de nuestra pagina web, utilizando las bases planteadas por programas como <em>Flash/Animate de Adobe</em>, es decir, <strong>implementando fotogramas clave (@keyframes)</strong> donde se especifica el estado de un elemento en determinado punto de nuestra pelicula y luego los espacios se rellenan con un <em>interpolacion de fotogramas entre el cambio de estado de un punto A a un punto B</em>. Podemos definir la duracion de la misma y como se llevara a cabo mediante transiciones.
+                </p>
+                <div class="example animacion timing">
+                    <div>ease</div>
+                    <div>ease-in</div>
+                    <div>ease-out</div>
+                    <div>ease-in-out</div>
+                    <div>linear</div>
+                    <div>bezier(x1,y1,x2,y2)</div>
+                </div>
                 <footer>
                     <address>
                         Para mas informacion, consultar las fuentes:
@@ -437,9 +447,17 @@
             </section>
             <section>
                 <header>
-                    <h1>Tema 2: </h1>
+                    <h1>Tema 2: Linea de Tiempo (Iteraciones)</h1>
                 </header>
-                <p>...</p>
+                <p>
+                    Cuando las animaciones poseen un atributo <em>animation-iteration-count:</em> mayor a 1, podemos especificar como sucedera nuestra animacion. Si bien el trayecto normal de la misma es <strong>del FROM al TO</strong> podemos alternar la direccion de la linea de tiempo, utilizando las repeticiones de la misma. Tambien podemos combinar multiples animaciones separando con coma las mismas.
+                </p>
+                <div class="example animacion direction">
+                    <div>Normal</div>
+                    <div>Reverse</div>
+                    <div>Alternate</div>
+                    <div>Alternate-Reverse</div>
+                </div>
                 <footer>
                     <address>
                         Para mas informacion, consultar las fuentes:
@@ -452,9 +470,16 @@
             </section>
             <section>
 				<header>
-					<h1>Tema 3: </h1>
+					<h1>Tema 3: Loading</h1>
 				</header>
 				<p>...</p>
+                <div class="example loading timing">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
 				<footer>
 					<address>
 						Para mas informacion, consultar las fuentes:
