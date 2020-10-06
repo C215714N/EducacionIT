@@ -304,6 +304,50 @@
 						src="https://www.youtube.com/embed/yB_oLsoG-Yw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</section>
+			<section id="audio">
+				<header>
+					<h1>¿Sonidos en la Web?</h1>
+				</header>
+				<p>
+					Con la aparicion del nuevo estandar, se facilito la implementacion de archivos de audio, sin necesidad de utilizarlos de forma embebida, como se menciono <a href="#iframe">anteriormente</a>. Los formatos compatibles con dicho elemento son <em>.mp3 - .wav - .ogg</em>, pero como adicion tambien permite la reproduccion del formatos de video como los que se mencionan <a href="#video">mas adelante.</a> Para poder visualizar el reproductor de sonido, debemos especificar el atributo <em>controls</em>.
+				</p>
+				<div class="example">
+					<h2>Audio - Formato .mp3</h2>
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO, podes descargar el contenido desde el siguiente link: <a href="media/live-learn.mp3">Live &amp; Learn</a>
+						</p>
+					</audio>
+					<h2>Audio - Formato de Video</h2>
+					<audio src="media/by-the-way.ogv" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO, podes descargar el contenido desde el siguiente link: <a href="media/by-the-way.ogv">Live &amp; Learn</a>
+						</p>
+					</audio>
+				</div>
+			</section>
+			<section id="video">
+				<header>
+					<h1>¿Multimedia sin Plugins?</h1>
+				</header>
+				<p>
+					Como se menciono <a href="#iframe">anteriormente</a>, en la actualidad ya no es necesario embeber contenido para poder reproducir elementos en nuestra web y mucho menos, la descarga de complementos de terceros. A diferencia del elemento <a href="#audio">audio</a> que no cambia su apariencia cuando se reproduce otro tipo de formato que no sea de sonido, este elemento cambia de aspecto. Los formatos admitidos por la etiqueta <strong>&lt;video></strong> son <em>.mp4 -.webm - .ogv</em>
+				</p>
+				<div class="example">
+					<h2>Video - Formato de Audio</h2>
+					<video src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO, podes descargar el contenido desde el siguiente link: <a href="media/live-learn.mp3">Live &amp; Learn</a>
+						</p>
+					</video>
+					<h2>Video - formato .mp4</h2>
+					<video src="media/cant-stop.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO, podes descargar el contenido desde el siguiente link: <a href="media/cant-stop.mp4">Live &amp; Learn</a>
+						</p>
+					</video>
+				</div>
+			</section>
 		</article>
 	</main>
 	<footer id="footer">
