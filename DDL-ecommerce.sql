@@ -1,11 +1,10 @@
-DROP DATABASE IF EXISTS ecommerce ;
-
+## elimina la base si existe	
+    DROP DATABASE IF EXISTS ecommerce ;
 ## Crea la  base de datos
     CREATE DATABASE ecommerce;
 	USE ecommerce; -- seleccionamos el esquema
 
-## Creacion tablas
-	-- proveedores
+## tabla proveedores
     CREATE TABLE proveedores(
 		id_proveedor INT AUTO_INCREMENT,
         proveedor VARCHAR(50),
@@ -23,7 +22,7 @@ DROP DATABASE IF EXISTS ecommerce ;
 	SHOW DATABASES;
 	SHOW TABLES;
 
-## Productos
+## tabla Productos
 	CREATE TABLE productos (
 		id_producto INT AUTO_INCREMENT,
         marca VARCHAR(50),
@@ -47,7 +46,7 @@ DROP DATABASE IF EXISTS ecommerce ;
             'otros'
         );
         
-    -- clientes
+## tabla clientes
     CREATE TABLE clientes (
 		id_cliente INT AUTO_INCREMENT,
         nombre VARCHAR(50),
@@ -66,11 +65,11 @@ DROP DATABASE IF EXISTS ecommerce ;
         PRIMARY KEY (id_cliente),
         UNIQUE KEY (tipo_doc, num_doc)
     );
-    
+   -- modificar tabla (agregar campo) 
     ALTER TABLE clientes
 		ADD fecha_nac DATE;
 
-	-- tabla facturacion
+## tabla facturacion
 	CREATE TABLE facturacion(
 		id_factura INT AUTO_INCREMENT,
         tipo ENUM ('debe', 'haber'),
@@ -94,7 +93,7 @@ DROP DATABASE IF EXISTS ecommerce ;
         FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
     );
 
-	-- tabla facturacion_detalle
+## tabla facturacion_detalle
 	CREATE TABLE facturacion_detalle(
 		id_detalle INT AUTO_INCREMENT,
         id_factura INT,
@@ -105,6 +104,7 @@ DROP DATABASE IF EXISTS ecommerce ;
         UNIQUE KEY (id_factura, id_producto),
         FOREIGN KEY (id_factura) REFERENCES facturacion(id_factura)
     );
+    
 ## Agregar restricciones a una tabla previamente creada
 	ALTER TABLE facturacion_detalle
 	ADD CONSTRAINT FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
