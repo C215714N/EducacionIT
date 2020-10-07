@@ -1,1 +1,86 @@
 //Arrays
+	@funciones: 
+		lineal, 
+		cuadratica, 
+		trigonometrica, 
+		exponencial, 
+		radical;
+//animaciones aplicadas
+	.animaciones div{
+		width:100px;
+		height:100px;
+		margin:.5rem;
+		padding:.5rem;
+		background-color: darkslateblue;
+		color:white;
+		border: 2px solid white;
+
+		.hijos(@i:1; @f:@funciones) when (@i <= length(@f)){
+			@funcion: extract(@f, @i);
+			&:nth-child(@{i}){
+				animation: @funcion 5s linear alternate infinite;
+			}
+			.hijos(@i + 1);
+		}
+		.hijos;
+	}
+//Animaciones
+	.keyFrames (@i:1; @f:@funciones) when (@i <= length(@f)){
+		@funcion: extract(@f, @i);
+		@keyframes @funcion{
+			.animacion (@x:-25px; @p:0%) when (@p <=100%){
+				@{p}{
+					transform:
+						if(@funcion = lineal,
+							translate(@x + 200px, @x/5),
+						if(@funcion =cuadratica,
+							translate(@x + 200px, pow(@x,2)/4),
+						if(@funcion = trigonometrica,
+							translate(@x + 200px, sin(@x)*50px),
+						if(@funcion = exponencial,
+							translate(@x + 200px, pow(1.5, @x / 2)),
+							translate(@x,@x)
+						))));
+				}
+				.animacion(@x + 5; @p + 2);
+			}
+			.animacion;
+		}
+		.keyFrames(@i + 1);
+	}
+	.keyFrames;
+
+.sombras{
+	display: block;
+	width:100px;
+	height: 100px;
+	border-radius: 50%;
+	margin:auto;
+}
+.sombras:hover{
+	animation:sombras 5s linear forwards;
+	box-shadow: 0 0 black;
+}
+
+@keyframes sombras {
+	.efectos (@s; @i:0%) when (@i <=100%){
+		@{i}{
+			box-shadow: cos(@s) * 150px sin(@s) * 150px tomato; 
+		}
+		.efectos(@s + 10; @i + 5);
+	} 
+	.efectos(0px);
+} 
+
+	a[href="#"]{
+		background-color: black;
+	}
+	a[href^="http"]{
+		background-color: darkslateblue;
+	}
+	a[href$="html"]{
+		background-color: whitesmoke;
+	}
+	a[href*="contacto"]{
+		background-color: tomato;
+	}
