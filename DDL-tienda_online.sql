@@ -4,8 +4,8 @@
 ## Crea la Base de Datos
 	CREATE DATABASE tienda_online;
 	USE tienda_online; -- uso el esquema
-
-## Crea la tabla
+/* creacion de tablas */
+## tabla proveedores
 	CREATE TABLE proveedores(
 		id_proveedor INT AUTO_INCREMENT,
         proveedor VARCHAR(20) NOT NULL,
@@ -30,6 +30,7 @@
         VARCHAR		TEXTO VARIABLE	'cristian'
         ENUM		LISTA OPCIONES	('mañana','tarde','noche')
 */
+## tabla clientes
 	CREATE TABLE clientes (
 		id_cliente INT AUTO_INCREMENT,
         apellido VARCHAR(50) NOT NULL,
@@ -70,5 +71,14 @@
         UNIQUE KEY (marca, modelo, precio, categoria),
         FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor)
     );
-SHOW DATABASES; -- muestra los esquemas alojados en el servidor
-SHOW TABLES; -- muestra las tablas de la base de datos actual
+
+/* modificacion de campos */
+	## tabla productos
+		ALTER TABLE productos
+			ADD CONSTRAINT UNIQUE KEY (marca, modelo); -- agrega clave unica
+    ## tabla clientes
+		ALTER TABLE clientes
+		ADD activo BOOLEAN DEFAULT TRUE;  -- agrega un campo
+## revision
+	SHOW DATABASES; -- muestra los esquemas alojados en el servidor
+	SHOW TABLES; -- muestra las tablas de la base de datos actual

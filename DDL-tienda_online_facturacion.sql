@@ -63,11 +63,19 @@ UPDATE facturacion
 
 SELECT * from Facturacion;
 
+	SELECT 
+		id_factura, 
+		SUM(cantidad * precio) AS total
+	FROM facturacion_detalle
+	GROUP BY id_factura;
+
 SELECT 
-	id_producto, 
-	SUM(cantidad * precio) AS total
-FROM facturacion_detalle
-GROUP BY id_factura;
+	*, 
+	ROUND(monto * porcentaje/100,2) as IVA, 
+    ROUND(monto*porcentaje/100 + monto,2) as Total
+FROM facturacion
+HAVING total > 100000 And iva > 10.5;
+
 SELECT * FROM facturacion_detalle;
 SELECT id_producto, marca, modelo FROM productos;
 SELECT id_cliente, nombre, apellido 

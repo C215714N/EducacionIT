@@ -11,6 +11,7 @@ SELECT * FROM proveedores;
 		'info@hpcom',
 		'Proveedor de impresoras y notebooks'
 	);
+
 ## Cargar multiples registros de manera selectiva
     INSERT INTO proveedores(cuil, proveedor, direccion) -- especificamos los campos a cargar
 		VALUES 
@@ -21,11 +22,12 @@ SELECT * FROM proveedores;
 
 ## actualizacion de Datos
 	UPDATE proveedores
-    SET correo = 'info@hp.com'
-    WHERE proveedor = 'HP';
+    SET correo = 'info@hp.com' -- valor
+    WHERE proveedor = 'HP'; -- condicion
     
 ## consulta los datos de productos
 	SELECT * from productos;
+    
 ## cargamos productos
     INSERT INTO productos(marca, modelo, precio, id_proveedor)
 		VALUES 
@@ -45,7 +47,6 @@ SELECT * FROM proveedores;
         ('Laura','Lopez',36129382,'1993-08-08');
 	
     SELECT * FROM clientes;
-    
 		/*
 			lc <= 15000000
             dni <= 5000000
@@ -56,34 +57,35 @@ SELECT * FROM proveedores;
 	UPDATE clientes
     SET tipo_doc = 
 		CASE
-			WHEN num_doc <= 15000000 THEN 'lc'
-            WHEN num_doc <= 50000000 THEN 'dni'
-            WHEN num_doc <= 80000000 THEN 'pass'
-            ELSE 'ci'
+			WHEN num_doc <= 15000000 THEN 'lc' -- valor A
+            WHEN num_doc <= 50000000 THEN 'dni' -- valor B / si A no se cumple
+            WHEN num_doc <= 80000000 THEN 'pass' -- valor C / si AB no se cumple
+            ELSE 'ci' -- valor D / si ABC no se cumple
 		END;
 			
 	SELECT * FROM productos;
 ## actualizacion del stock
 	UPDATE productos
-	SET stock =
-		CASE
-			WHEN marca IN ('HP', 'Samsung', 'Apple') THEN 200
-            ELSE 100
-		END;
+		SET stock =
+			CASE
+				WHEN marca IN ('HP', 'Samsung', 'Apple') THEN 200 -- valor A
+				ELSE 100 -- valor B / si A no se cumple
+			END;
+	-- actualizacion general
 	UPDATE productos SET categoria = 'tecnologia';
-    
-SELECT marca, precio, stock, SUM(precio*stock) AS 'Total productos'
-	FROM productos
-	WHERE stock > 150
-	GROUP BY marca
-	ORDER BY marca;
+		
+	SELECT marca, precio, stock, SUM(precio*stock) AS 'Total productos'
+		FROM productos
+		WHERE stock > 150
+		GROUP BY marca
+		ORDER BY marca;
 
-UPDATE productos
-	SET categoria = 
-		CASE
-			WHEN marca IN('hp','dell','samsung','apple','toshiba') THEN 'tecnologia'
-            WHEN marca IN('adidas','nike','kappa') THEN 'indumentaria'
-            WHEN marca IN('ayudin','vim','comfort') THEN 'limpieza'
-            ELSE 'biblioteca'
-        END;
-SELECT * FROM productos;
+-- actualizacion selectiva
+	UPDATE productos
+		SET categoria = 
+			CASE
+				WHEN marca IN('hp','dell','samsung','apple','toshiba') THEN 'tecnologia' -- valor A
+				WHEN marca IN('adidas','nike','kappa') THEN 'indumentaria' -- valor B / si A no se cumple
+				WHEN marca IN('ayudin','vim','comfort') THEN 'limpieza' -- valor C / si  AB no se cumple
+				ELSE 'biblioteca' -- valor D / si ABC no se cumple
+			END;
