@@ -52,20 +52,28 @@
 
 .sombras{
 	display: block;
-	width:100px;
-	height: 100px;
+	width:50px;
+	height: 50px;
 	border-radius: 50%;
 	margin:auto;
 }
 .sombras:hover{
-	animation:sombras 5s linear forwards;
-	box-shadow: 0 0 black;
+	transition: all 5s ease;
+	//animation:sombras 5s linear forwards;
+	.shadows (@i:0deg) when (@i <= 360deg){
+		box-shadow+: cos(@i) * 30px sin(@i) * 30px hsla(@i, 50%, 50%, .5); 
+		.shadows(@i + 30);
+	} 
+	.shadows;
 }
 
 @keyframes sombras {
 	.efectos (@s; @i:0%) when (@i <=100%){
+		0%{
+			box-shadow: 0 0 tomato;
+		}
 		@{i}{
-			box-shadow: cos(@s) * 150px sin(@s) * 150px tomato; 
+			box-shadow: cos(@s) * 50px sin(@s) * 50px tomato; 
 		}
 		.efectos(@s + 10; @i + 5);
 	} 
