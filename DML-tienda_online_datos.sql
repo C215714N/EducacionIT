@@ -48,9 +48,19 @@ SELECT * FROM proveedores;
 		(
 			SELECT sum(precio*cantidad) 
 			FROM facturacion_detalle
-			WHERE id_factura = 2 
+			WHERE id_factura = 1 
         ) -- condicion suma facturacion_detalle
-	WHERE id_factura=2; -- condicion update facturacion
+	WHERE id_factura=1; -- condicion update facturacion
     
 SELECT * FROM facturacion_detalle;
-    
+INSERT INTO facturacion_detalle (id_factura,id_producto,cantidad)
+	VALUES 
+		(,,),
+        (,,),
+        (,,),
+        (,,),
+        (,,),
+        (,,),
+        (,,),
+        (,,),
+        (,,);
