@@ -57,9 +57,9 @@
 		</ul>
 	</nav>
 	<header class="container">
-		<div id="galeriaSlider" class="col-lg-10 m-auto carousel slide" data-ride="carousel">
+		<div id="galeriaSlider" class="col-lg-10 m-auto carousel-fade carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
-				<div class="carousel-item active">
+				<div class="carousel-item active" data-interval="5000">
 					<img class="w-100" 
 						src="assets/img/osx-10.6-snow-leopard.png" 
 						alt="OS X - Snow Leopard" />
@@ -67,7 +67,7 @@
 						<p class="h3">OS X Snow Leopard</p>
 					</div>
 				</div>
-				<div class="carousel-item">
+				<div class="carousel-item" data-interval="5000">
 					<img class="w-100" 
 						src="assets/img/osx-10.7-lion.png" 
 						alt="OS X Lion" />
@@ -75,7 +75,7 @@
 						<p class="h3">OS X Lion</p>
 					</div>
 				</div>
-				<div class="carousel-item">
+				<div class="carousel-item" data-interval="5000">
 					<img class="w-100" 
 						src="assets/img/osx-10.9-mavericks.png" 
 						alt="OS X Mavericks" />
@@ -83,7 +83,7 @@
 						<p class="h3">OS X Mavericks</p>
 					</div>
 				</div>
-				<div class="carousel-item">
+				<div class="carousel-item" data-interval="5000">
 					<img class="w-100" 
 						src="assets/img/osx-10.10-yosemite.png" 
 						alt="OS X Yosemite" />
@@ -109,7 +109,121 @@
 			</a>
 		</div>
 	</header>
-
+	<main class="container">
+		<article class="row col-lg-10 my-2 mx-auto">
+			<section class="col-lg-8">
+				<header>
+					<h1 class="h4">Medidas Relativas y Flexibles</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis reprehenderit quasi laborum sapiente nobis ex a error perferendis ab, exercitationem molestias atque id illo mollitia eaque voluptatum fuga veritatis iste.</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus doloribus perspiciatis assumenda magnam iusto deleniti, facilis eaque voluptate magni, alias odit aliquid iure eligendi temporibus repellat, sit, reprehenderit minima quas.</p>
+			</section>
+			<section class="col">
+				<header>
+					<h1 class="h4">Medidas Absolutas</h1>
+				</header>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat placeat consequatur ducimus aliquam enim nobis nulla consequuntur odit modi repellendus maxime mollitia nostrum, hic commodi cum excepturi dolorem possimus impedit.</p>
+			</section>
+		</article>
+		<article class="row col-lg-10 mx-auto">
+			<section class="col-lg-4">
+				<div class="card">
+					<h1 class="card-header h5">Fluid Web Design</h1>
+					<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Repellendus quos eaque error aut blanditiis minima dolor dolores adipisci! Iure inventore, quis officia similique saepe nostrum explicabo neque maxime cumque facere.</p>
+				</div>
+			</section>
+			<section class="col-lg-4">
+				<div class="card">	
+					<h1 class="card-header h5">Adaptive Web Design</h1>
+					<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Repellendus quos eaque error aut blanditiis minima dolor dolores adipisci! Iure inventore, quis officia similique saepe nostrum explicabo neque maxime cumque facere.</p>
+				</div>
+			</section>
+			<section class="col-lg-4">
+				<div class="card">	
+					<h1 class="card-header h5">Responsive Web Design</h1>
+					<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Repellendus quos eaque error aut blanditiis minima dolor dolores adipisci! Iure inventore, quis officia similique saepe nostrum explicabo neque maxime cumque facere.</p>
+				</div>
+			</section>
+		</article>
+	</main>
+	<footer class="bg-dark p-3">
+		<form id="contactForm" class="row col-lg-8 mx-auto">
+			<div class="form-group col-lg-6">
+				<label for="contactName" class="sr-only">Nombre</label>
+				<input 
+					id="contactName" 
+					class="form-control" 
+					type="text"
+					placeholder="Ingrese su Nombre"
+					pattern="[a-z A-Z]{2,50}" 
+					required />
+				<div class="valid-feedback alert-success">
+					Parece que escribiste bien tu nombre
+				</div>
+				<div class="invalid-feedback alert-danger">
+					mmm... ¿estas seguro que ese es tu verdadero nombre?
+				</div>
+			</div>
+			<div class="form-group col-lg-6">
+				<label for="" class="sr-only">Apellido</label>
+				<input 
+					id="contactLastname" 
+					class="form-control" 
+					type="text"
+					placeholder="Ingrese su Apellido"
+					pattern="[a-z A-Z]{2,50}" 
+					required />
+				<div class="valid-feedback alert-success">
+					Parece que escribiste bien tu Apellido
+				</div>
+				<div class="invalid-feedback alert-danger">
+					mmm... ¿estas seguro que ese es tu verdadero Apellido?
+				</div>
+			</div>
+			<div class="form-group col-lg-6">
+				<label for="" class="sr-only">Correo</label>
+				<input 
+					id="contactEmail" 
+					class="form-control" 
+					type="email"
+					placeholder="Ingrese su Correo"
+					required />
+				<div class="valid-feedback alert-success">
+					Parece que escribiste bien tu Correo
+				</div>
+				<div class="invalid-feedback alert-danger">
+					mmm... ¿estas seguro que ese es tu verdadero Correo?
+				</div>
+			</div>
+			<div class="form-group col-lg-6">
+				<label for="contactTel" class="sr-only">Telefono</label>
+				<input 
+					id="contactTel" 
+					class="form-control" 
+					type="tel"
+					placeholder="Ingrese su Telefono"
+					pattern="[0-9]{6,20}" 
+					required />
+				<div class="valid-feedback alert-success">
+					Parece que escribiste bien tu Telefono
+				</div>
+				<div class="invalid-feedback alert-danger">
+					mmm... ¿estas seguro que ese es tu verdadero Telefono?
+				</div>
+			</div>
+			<div class="form-group col-12">
+				<label for="contactConsult" class="sr-only">Consulta</label>
+				<textarea 
+					id="contactConsult" 
+					class="form-control" 
+					placeholder="Ingrese su Consulta"
+					required></textarea>			
+			</div>
+			<div class="form-group col-12">
+				<button class="float-right btn btn-lg btn-outline-light">Consulta</button>
+			</div>
+		</form>
+	</footer>
 	<!-- Bootstrap Dependencies -->
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
@@ -127,5 +241,7 @@
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
 			crossorigin="anonymous"> //bootstrap
 		</script>
+	<!-- Script JS-->
+		<script src="scripts/bs-script.js"></script>
 </body>
 </html>
