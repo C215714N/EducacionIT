@@ -81,5 +81,34 @@ SELECT
     monto,
     monto * porcentaje/100 + monto AS "precio +iva",
     fecha
-FROM facturacion AS f, clientes AS c
-WHERE c.id_cliente = f.id_cliente;
+FROM facturacion AS f
+RIGHT JOIN clientes AS c
+ON c.id_cliente = f.id_cliente
+WHERE monto >= 50000;
+
+SELECT 
+	-- facturacion
+    	f.id_factura AS remito,
+		f.monto,
+    -- clientes
+		CONCAT(apellido, " ", nombre) AS cliente,
+        CONCAT("correo: ", c.correo,"; Tel: ", c.telefono) AS datos,
+	-- productos
+		p.marca,
+		p.modelo,
+	-- detalle
+		fd.precio,
+        fd.cantidad,
+        fd.precio * fd.cantidad AS total,
+	-- proveedor
+		pr.proveedor,
+        pr.correo
+FROM facturacion_detalle AS fd
+RIGHT JOIN productos AS p
+ON p.id_producto = fd.id_producto
+RIGHT JOIN facturacion AS f
+ON f.id_factura = fd.id_factura
+RIGHT JOIN clientes AS c
+ON c.id_cliente = f.id_cliente
+RIGHT JOIN proveedores AS pr
+ON pr.id_proveedor = p.id_producto
