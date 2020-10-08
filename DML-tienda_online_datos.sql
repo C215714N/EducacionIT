@@ -42,25 +42,44 @@ SELECT * FROM proveedores;
 			CONCAT("info@", LOWER(proveedor),".com");
 
 ## facturacion
-	SELECT * FROM facturacion;
-    UPDATE facturacion 
-    SET monto = 
-		(
-			SELECT sum(precio*cantidad) 
-			FROM facturacion_detalle
-			WHERE id_factura = 1 
-        ) -- condicion suma facturacion_detalle
-	WHERE id_factura=1; -- condicion update facturacion
+	SELECT *, monto * porcentaje/100 + monto AS "precio +iva" FROM facturacion;
+    UPDATE facturacion, facturacion_detalle
+    SET monto = (
+		SELECT SUM(precio*cantidad) 
+		FROM facturacion_detalle
+		WHERE id_factura = facturacion.id_factura
+		)  -- condicion suma facturacion_detalle
+	WHERE facturacion.id_factura = facturacion_detalle.id_factura; -- condicion update facturacion
     
-SELECT * FROM facturacion_detalle;
-INSERT INTO facturacion_detalle (id_factura,id_producto,cantidad)
-	VALUES 
-		(,,),
-        (,,),
-        (,,),
-        (,,),
-        (,,),
-        (,,),
-        (,,),
-        (,,),
-        (,,);
+SELECT *, precio*cantidad AS total 
+FROM facturacion_detalle;
+## carga de productos vendidos facturacion_detalle
+	INSERT INTO facturacion_detalle (id_factura,id_producto,cantidad)
+		VALUES 
+			(3,7,10),
+			(3,5,3),
+			(4,10,5),
+			(4,9,6),
+			(4,8,8),
+			(5,12,2),
+			(5,1,1),
+			(6,6,5),
+			(6,4,2);
+## actualizacion de precios
+	UPDATE facturacion_detalle
+		SET precio = 
+		(
+			SELECT precio FROM productos -- tabla de busqueda
+			WHERE id_producto = facturacion_detalle.id_producto -- validacion id_producto
+		);
+        
+SELECT
+	id_factura,
+    categoria,
+	CONCAT(apellido," ", nombre) AS cliente,
+    CONCAT(tipo_doc,": ",num_doc) AS identificacion,
+    monto,
+    monto * porcentaje/100 + monto AS "precio +iva",
+    fecha
+FROM facturacion AS f, clientes AS c
+WHERE c.id_cliente = f.id_cliente;
