@@ -1,0 +1,41 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Kurale&family=Raleway+Dots&family=Raleway:wght@100;300;500&family=Sansita+Swashed:wght@400;800&display=swap'
+	);
+
+	*{
+		box-sizing: border-box;
+			/*
+				content-box:
+					final-width = width + padding + border;
+					content-width = width;
+				border-box: 
+					final-width = width
+					content-width = width - padding - border
+					;
+			*/
+		font-family: Raleway, Kurale, sans-serif;
+	}
+	body{
+		margin:0;
+	}
+	/*
+		Escala Jerarquica (Menor a Mayor)
+			header => tag (etiqueta)
+			.header => class (grupo)
+			#header => Id (unico)
+	*/
+/*Encabezado y Pie de Pagina*/
+	#header, #footer{
+		padding: 1rem; /*ancho de M - 16px*/
+		text-transform: uppercase;
+	}
+	#header, .header, #footer{
+		color:#ccc;
+		background-color: #248;/*RGB*/
+	}
+/*Barra de Navegacion*/
+
+/*Redes Sociales*/
+/*Contenido Principal*/
+/*Formulario de Contacto*/
