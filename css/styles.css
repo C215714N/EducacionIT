@@ -79,3 +79,27 @@
 		border-radius: 8px;
 	}
 /*Formulario de Contacto*/
+	#contact{
+		margin:auto;
+		width:600px;
+		text-align: left;
+	}
+	#contact input,
+	#contact textarea{
+		width:100%;
+		cursor:pointer;
+		outline: none;
+		border-radius: .5em;
+		border:2px solid white;
+		padding:.5em 1em;/*ancho de la M en el elemento Padre*/
+	}
+	#contact textarea{
+		resize: none;
+		height: 96px;
+	}
+	#contact label{
+		display: block;
+		margin-top:.5em;
+		overflow: hidden;
+		height: 0;
+	}
