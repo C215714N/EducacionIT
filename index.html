@@ -112,8 +112,51 @@
 			</footer>
 		</article>
 	</main>
-	<footer><!-- Pie: Desenlace -->
-		
+	<footer id="footer"><!-- Pie: Desenlace -->
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName" 
+				type="text"  
+				placeholder="Ingrese su Nombre"
+				required />
+			<label for="contactEmail">Correo</label>
+			<input
+				id="contactEmail"
+				name="contactEmail" 
+				type="email"
+				placeholder="Ingrese su Correo"
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input
+				id="contactPhone"
+				name="contactPhone"
+				type="tel" 
+				placeholder="Ingrese su Telefono"
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea  
+				id="contactConsult" 
+				name="contactConsult"
+				minlength="10"
+				maxlength="200"
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button> Enviar Consulta </button>
+		</form>
+		<div class="social">
+			<a class="facebook" href="https://facebook.com">Fb</a>
+			<a class="whatsapp" href="https://api.whatsapp.com/1123456789">Ws</a>
+			<a class="instagram" href="https://instagram.com">I</a>
+			<a class="twitter" href="https://twitter.com">Tw</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
 	</footer>
 	<!-- Scripts JS -->
 		<script src="js/scripts.js"></script>

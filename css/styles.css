@@ -33,9 +33,49 @@
 	#header, .header, #footer{
 		color:#ccc;
 		background-color: #248;/*RGB*/
+		text-align: center;
 	}
 /*Barra de Navegacion*/
-
+	nav{
+		background-color: rgba(130, 25, 90, .5); /* 16.777.216 = HEX (00-ff) DEC(0-255)*/
+			/*
+			Rojo (255 0 0)
+			Verde (0 255 0)
+			Azul (0 0 255)
+			Cian (0 255 255)
+			Magenta (255 0 255)
+			Amarillo (255 255 0)
+			Blanco (255 255 255)
+			Negro (0 0 0)
+			*/
+		text-align: center;
+		border-radius: 8px;
+	}
+	.menu{
+		list-style: none;
+		margin:0;
+		padding: 0;
+	}
+	.menu a{
+		color:#ccc;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		margin:0 5px; /*top right bottom left*/
+		padding:5px;
+		border:2px solid transparent;
+	}
+	.menu li:hover{
+		border: 2px dashed #ccc;
+		background-color: rgba(0,0,0,.5);
+	}
 /*Redes Sociales*/
 /*Contenido Principal*/
+	main, article, section, aside{
+		background-color: rgba(136,85,230,.5);
+		padding:4px 8px;
+		margin:8px;
+		border-radius: 8px;
+	}
 /*Formulario de Contacto*/
