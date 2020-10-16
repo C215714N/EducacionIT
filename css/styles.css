@@ -29,10 +29,18 @@
 	#header, #footer{
 		padding: 1rem; /*ancho de M - 16px*/
 		text-transform: uppercase;
+		/*atributos de fondo*/
+			background-image: 
+				url(../assets/img/background.jpg);
+			background-size: cover;
+			background-position: top center;
 	}
-	#header, .header, #footer{
+	#footer{
+		background-position: bottom center;
+	}
+	#header, main .header, #footer{
 		color:#ccc;
-		background-color: #248;/*RGB*/
+		background-color: rgba(34, 68, 136, .5);/*RGB*/
 		text-align: center;
 	}
 /*Barra de Navegacion*/
@@ -71,15 +79,39 @@
 		background-color: rgba(0,0,0,.5);
 	}
 /*Redes Sociales*/
+
 /*Contenido Principal*/
 	main, article, section, aside{
+		overflow: hidden;
 		background-color: rgba(136,85,230,.5);
 		padding:4px 8px;
 		margin:8px;
 		border-radius: 8px;
 	}
+	main{
+		background-image: url(../assets/img/cr.png);
+		background-position: center;
+		background-size: 200px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	}
+	section{
+		width:68%;
+	}
+	aside{
+		float: right;
+		width:30%;
+		margin-left: 1em;
+	}
+
+	section img{
+		width:150px;
+		float: left;
+		margin-right: .5em;
+	}
 /*Formulario de Contacto*/
 	#contact{
+		overflow: hidden;
 		margin:auto;
 		width:600px;
 		text-align: left;
@@ -102,4 +134,18 @@
 		margin-top:.5em;
 		overflow: hidden;
 		height: 0;
+	}
+	#contact button{
+		float:right;
+		border:2px solid #ccc;
+		padding:.5em 1em;
+		color:#ccc;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: rgba(0,0,0,.3);
+		transition: all 1s ease;
+	}
+	#contact button:hover{
+		cursor: pointer;
+		background-color: rgba(136,85,230,.3);
 	}
