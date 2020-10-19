@@ -252,6 +252,73 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido multimedia</h1>
+			</header>
+			<section id="iframe">
+				<header>
+					<h1>Contenido Emebebido</h1>
+				</header>
+				<p>
+					Antiguamente para incorporar elementos externos en nuestra pagina web se solia utilizar la etiqueta <strong>&lt;iframe></strong> que permite la <em>carga asincronica de contenido</em> sea este perteneciente al mismo sitio o no. Hoy en dia existe una categoria web conocida como <strong>embed</strong> que engloba a todos los elementos compartidos que normalmente no pertecen al universo HTML.
+				</p>
+				<div class="example">
+					<iframe
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/JFTaEuich10" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</section>
+			<section id="audio"> 
+				<header>
+					<h1>Sonidos en la Web</h1>
+				</header>
+				<p>
+					
+					Como se menciono <a href="#iframe">anteriormente</a>, para poder utilizar contenido multimedia en la web era necesario algun complemento. Hoy en dia podemos reproducir de forma nativa este tipo de elementos a traves de la API del navegador, los formatos soportados por la etiqueta <strong>&lt;audio></strong> son <em>.mp3 - .wav - .ogg</em>, aunque tambien admite formatos de video como los que se mencionan <a href="#video">mas adelante</a>. Para que se vea el reproductor necesitamos indicar el atributo <em>controls</em>.
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO. Podes descargar el tema desde el siguiente link: <a href="media/live-learn.mp3">Live &amp; Learn</a>
+						</p>
+					</audio>
+					<audio src="media/cant-stop.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO. Podes descargar el tema desde el siguiente link: <a href="media/cant-stop.mp4">Live &amp; Learn</a>
+						</p>
+					</audio>
+				</div>
+			</section>
+			<section id="video">
+				<header>
+					<h1>Videos sin plugins</h1>
+				</header>
+				<p>
+					En la actualidad no es necesario instalar algun complemento o plugin para la reproduccion de este tipo de material, ya que los navegadores lo hacen de forma nativa. Esta, ademas de muchas otras, fue una de las razones por la cual el plugin de <em>Flash Player</em> fue quedando obsoleto hasta practicamente desaparecer de la web. Al igual que el elemento <a href="#audio">audio</a> permite la reproduccion de sonidos, pero a diferencia del primero el aspecto del reproducto cambia. Los formatos admitidos son <em>.mp4 - .webm - .ogv</em> y en contraposicion al elemento <a href="#iframe">iframe</a> el contenido afecta los tiempos de carga.
+				</p>
+				<div class="example">
+					<video id="videoPlay" src="media/cant-stop.webm" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO. Podes descargar el tema desde el siguiente link: <a href="media/cant-stop.webm">Live &amp; Learn</a>
+						</p>
+					</video>
+					<button id="videoButton">PLAY</button>
+					<video src="media/by-the-way.ogv" controls autoplay muted>
+						<p>
+							Lo sentimos, pero tu navegador NO es compatible con el elemento AUDIO. Podes descargar el tema desde el siguiente link: <a href="media/by-the-way.ogv">Live &amp; Learn</a>
+						</p>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<!-- Pie: Contenido Informativo (CopyRight) -->
 	<footer id="footer">
@@ -279,11 +346,21 @@
 				required ></textarea>
 			<button>Enviar</button>
 		</form>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d754.3268224454173!2d-58.37631885219312!3d-34.602455947377734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses!2sar!4v1603139936545!5m2!1ses!2sar"
+			frameborder="0" 
+			aria-hidden="false">
+		</iframe>
 		<p>
 			&copy; Todos los derechos reservados |
 			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
 			&amp; Compañia
 		</p>
 	</footer>
+	<script type="text/Javascript">
+		document.querySelector('#videoButton').addEventListener(
+			'click', () => document.querySelector('#videoPlay').play()
+			)
+	</script>
 </body>
 </html>

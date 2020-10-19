@@ -26,6 +26,11 @@
 		text-decoration: none;
 		font-weight: bold;
 	}
+	#footer iframe{
+		display: block;
+		margin: auto;
+		padding:10px 0;
+	}
 /*Barra de Navegacion*/
 	.menu{
 		list-style: none;
@@ -62,7 +67,7 @@
 			background-color: rgba(17,34,68,.5);
 		}
 		.example th, .example td{
-			width:80px;
+			width:90px;
 		}
 		.clasica, .clasica td{
 			border-collapse: collapse;
@@ -70,7 +75,21 @@
 			padding: 4px;
 		}
 		.semantica thead, .semantica tfoot{
-			background-color: #124;
+			background-color: #36c;
+		}
+	/*Contenido Multimedia*/
+		iframe, audio{
+			width:420px;
+			height:236px;
+			/*
+				Relacion de aspecto
+				16/9 (ancho/alto) => ancho = 1.78(alto) - alto = 0.562(ancho)
+				4/3	(ancho/alto) => ancho = 1.33(alto) - alto = 0.75(ancho)
+			*/
+		}
+		video{
+			width:420px;
+			height: 315px;
 		}
 /*Formulario de Contacto*/
 	#contacto{
