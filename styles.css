@@ -18,9 +18,32 @@
 	}
 	.header h1, .header p{
 		margin:0;
+		padding:3px 8px 2px;/*top right bottom left*/
 		line-height: 24px;
 	}
+	#header a, #footer a{
+		color:#ccc;
+		text-decoration: none;
+		font-weight: bold;
+	}
 /*Barra de Navegacion*/
+	.menu{
+		list-style: none;
+		margin:0; /*distancia exterior - margen*/
+		border-radius: 8px;
+		padding:0;/*distancia interior - relleno*/
+		text-align: center;
+		background-color: #124; /*RRGGBB*/
+	}
+	.menu li{
+		display: inline-block;
+		border:2px dashed transparent;/*border: -width -style -color*/
+		padding:10px;
+	}
+	.menu li:hover{
+		border-color: #ccc;
+		background-color: #36c;
+	}
 /*Contenido Principal*/
 	.example{
 		list-style: none;
@@ -29,8 +52,29 @@
 		padding:20px;
 		background-color: #ccd;
 	}
+	/*Tablas*/
+		.example caption{
+			margin-top: 8px;
+			border-radius: 8px 8px 0 0; /*tl tr br bl*/
+		}
+		.example table, .example caption, .example tr, .example td{
+			color:#ccc;
+			background-color: rgba(17,34,68,.5);
+		}
+		.example th, .example td{
+			width:80px;
+		}
+		.clasica, .clasica td{
+			border-collapse: collapse;
+			border: 2px dashed #ccc;
+			padding: 4px;
+		}
+		.semantica thead, .semantica tfoot{
+			background-color: #124;
+		}
 /*Formulario de Contacto*/
 	#contacto{
+		overflow: hidden;
 		width:420px;
 		margin: auto;
 	}
@@ -39,9 +83,20 @@
 		width:410px;
 		outline:none;
 		border:0;
-		padding:5px; /*10px*/
+		padding:5px; 
 	}
 	#contacto textarea{
 		resize: none;
 		height: 80px;
+	}
+	#contacto button{
+		float:right;
+		border:2px solid;
+		padding:8px 20px;
+		color:#ccc;
+		background-color: #124;
+		font-size: 16px;
+	}
+	#contacto button:hover{
+		background-color: #36c;
 	}

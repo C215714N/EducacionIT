@@ -43,9 +43,9 @@
 					<h1>¿Como Funcionan?</h1>
 				</header>
 				<p>
-					La etiqueta <em>mencionada anteriormente</em> debe contar con al menos 2 atributos principales, estos son<strong>action="..." y method="..."</strong>. En caso del primero,<strong> indica al navegador que debe suceder con los datos ingresados</strong>, normalmente se utiliza un <em>script en lenguaje de servidor</em> como por ejemplo PHP y es este ultimo quien se encarga de operar con los mismos ademas de elaborar una respuesta. Con respecto al otro atributo, <strong>indica como se deben procesar los datos y la prioridad de los mismos,</strong> existen 2 valores posibles que podemos utilizar a la hora de enviar nuestro formulario. 
+					La etiqueta <em>mencionada anteriormente</em> debe contar con al menos 2 atributos principales, estos son <strong>action="..." y method="..."</strong>. En caso del primero,<strong> indica al navegador que debe suceder con los datos ingresados</strong>, normalmente se utiliza un <em>script en lenguaje de servidor</em> como por ejemplo PHP y es este ultimo quien se encarga de operar con los mismos ademas de elaborar una respuesta. Con respecto al otro atributo, <strong>indica como se deben procesar los datos y la prioridad de los mismos,</strong> existen 2 valores posibles que podemos utilizar a la hora de enviar nuestro formulario. 
 					<br />
-					El primer valor es <em>method="GET"</em> cuya prioridad radica en <strong>obtener la respuesta del servidor</strong>, por lo tanto los datos del usuario no son relevantes y por eso no los encripta, admite hasta 8kb y la informacion es visible desde la barra de direcciones. El otro valor el <em>method="POST"</em> cuya prioridad radica en <strong>proteger lo maximo posible los datos del cliente</strong>, por eso encripta los datos antes de realizar el envio y admite hast 8mb.
+					El primer valor es <em> method="GET"</em> cuya prioridad radica en <strong>obtener la respuesta del servidor</strong>, por lo tanto los datos del usuario no son relevantes y por eso no los encripta, admite hasta 8kb y la informacion es visible desde la barra de direcciones. El otro valor el <em>method="POST"</em> cuya prioridad radica en <strong>proteger lo maximo posible los datos del cliente</strong>, por eso encripta los datos antes de realizar el envio y admite hast 8mb.
 				</p>
 				<ul class="example">
 					<li>
@@ -126,6 +126,130 @@
 						<button>Enviar</button>
 					</li>
 				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				
+				Son elementos que permiten <strong>organizar la informacion de manera tabular</strong>, al igual que en cualquier otro ambito, las mismas se componen de <em>filas, columnas y celdas</em>; pero a diferencia de la mayoria de los programas que utilizan tablas en informatica, HTML crea las tablas a partir del <strong>modelo de cajas</strong>, es decir que utiliza etiquetas que cumplen la funcion de contenedor y otras que cumplen la funcion de contenido. Para crear una tabla necesitamos implementar la etiqueta <strong>&lt;table></strong> y a diferencia del resto de las etiquetas de bloque, esta <em>se adapta a su contenido en lugar de su contenedor.</em>
+			</p>
+			<section>
+				<header>
+					<h1>Estructura Clasica</h1>
+				</header>
+				<p>
+					Como se menciona anteriormente, para crear una estructura de tablas es necesario respetar el modelo de cajas, es decir que dentro de la etiqueta principal utilizaremos por los 2 etiquetas mas. <strong>&lt;tr> (Table Row)</strong> para disponer las filas que componen nuestra tabla y por otro lado <strong>&lt;td> (Table Division)</strong> para colocar la informacion contenida en las celdas. Un detalle a destacar es que las tablas no poseen borde de manera predeterminada y tampoco poseen columnas como tales.
+				</p>
+				<div class="example">
+					<table class="clasica">
+						<caption>Estructura Tabla</caption>
+						<tr><!--Table Row (fila) -->
+							<td>Fila 1 celda 1</td> <!--Table division (celda)-->
+							<td>Fila 1 celda 2</td>
+							<td>Fila 1 celda 3</td>
+						</tr>
+						<tr>
+							<td>F2C1</td>
+							<td>F2C2</td>
+							<td>F2C3</td>
+						</tr>
+					</table>
+					<table class="clasica">
+						<caption>TA-TE-TI</caption>
+						<tr>
+							<td>X</td>
+							<td>X</td>
+							<td>O</td>
+						</tr>
+						<tr>
+							<td>O</td>
+							<td>X</td>
+							<td>O</td>
+						</tr>
+						<tr>
+							<td>O</td>
+							<td>O</td>
+							<td>X</td>
+						</tr>
+					</table>				
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Estructura Semantica</h1>
+				</header>
+				<p>
+					
+					Con la incorporacion del nuevo estandar, se agregaron nuevos elementos a las tablas para poder diferenciar por parte de los motores de busquedas el tipo de contenido de las mismas. Entre las etiquetas que se incorporaron encontramos
+					<strong>&lt;THEAD></strong> que representa la cabecera de la tabla, es obligatoria y debe contener en su interior <em>celdas de titulo</em> representadas por la etiqueta <strong>&lt;th></strong>; <strong>&lt;TBODY></strong> que representa el cuerpo de la tabla, es la unica etiqueta que mantiene en su interior la estructura clasica representada anteriormente, aunque tambien puede contener celdas de titulo, especialmente si estamos armando una <em>tabla de referencias cruzadas</em>; y por ultimo, <strong>&lt;TFOOT></strong> que representa el pie de la tabla, contiene informacion complementaria a la misma, asi como algunos titulos y es opcional.
+				</p>
+				<div class="example">
+					<table class="semantica">
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th>Producto</th>
+							<th>Precio/U</th>
+							<th>Cant.</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>1200</td>
+								<td>2</td>
+								<td>2400</td>
+							</tr>
+							<tr>
+								<td>Mouse</td>
+								<td>3600</td>
+								<td>1</td>
+								<td>3600</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>8900</td>
+								<td>3</td>
+								<td>26700</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>32700</td>
+						</tfoot>
+					</table>
+					<table>
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Desarrollo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+							<tr>
+								<td rowspan="3">BackEnd</td>
+								<td>SQL</td>
+							</tr>
+							<tr>
+								<td>PHP</td>
+							</tr>
+							<tr>
+								<td>JAVA</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</section>
 		</article>
 	</main>
