@@ -15,7 +15,7 @@
 <body><!-- CUERPO: Parte VISIBLE -->
 	<!-- Estructura Basica con EMMET 
 	(header#header>.header)+(main>article*3>section*3)+footer#footer -->
-	<header id="header">
+	<header id="header"><!-- Cabecera / Introduccion-->
 		<div class="header">
 			<h1>Maquetacion Web</h1>
 			<p>&lt;HTML> &amp; {CSS}</p>
@@ -33,10 +33,66 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<article>
-			<section></section>
-			<section></section>
+	<main><!-- Contenido Principal / nudo -->
+		<article><!-- Contenido Independiente / Articulo -->
+			<header class="header">
+				<h1>Clase 1: Introduccion Maquetacion</h1>
+			</header>
+			<section><!-- Contenido Contextualizado / Seccion -->
+				<header>
+					<h1>Tema 1: Elementos Semanticos</h1>
+				</header>
+				<p>
+					
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum sed repellendus necessitatibus omnis sunt maxime corrupti fugit, saepe porro facilis minima aperiam doloremque itaque, eum veritatis enim? Harum corporis iste, sint illo commodi non soluta eius, minima assumenda adipisci, temporibus cupiditate iusto? Hic, maiores praesentium accusantium harum dignissimos accusamus exercitationem rem ullam minus nostrum magnam, aperiam! Commodi, molestias, inventore. Incidunt neque harum sint, minima explicabo et nihil delectus accusamus quod? Ipsam aut illo, vitae blanditiis, qui quae aliquam dolorum corrupti harum modi, quisquam fugiat reiciendis error porro at est maxime perferendis nihil alias nostrum distinctio soluta ipsa accusantium eos. Error?
+				</p>
+				<ul>
+					<h2>Etiquetas</h2>
+					<li>&lt;header></li>
+					<li>&lt;nav></li>
+					<li>&lt;main>
+						<ul>
+							<li>&lt;article></li>
+							<li>&lt;section></li>
+							<li>&lt;aside></li>
+						</ul>
+					</li>
+					<li>&lt;footer></li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2: Jerarquia de Selectores</h1>
+				</header>
+				<p>
+					
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur dolorum laborum eveniet molestias omnis corporis. Sequi eligendi eum tempore velit. Ad non aspernatur obcaecati dolorum voluptatum, blanditiis, quas earum et mollitia, nobis nemo quis dignissimos sint provident ipsa. Sint exercitationem eos officia, culpa perspiciatis autem? Sit accusamus harum hic cum, veniam in, eligendi sapiente voluptas, error, nobis perspiciatis. Porro, sunt. Exercitationem vitae, maiores aliquam nostrum numquam rerum architecto velit unde distinctio hic amet debitis culpa enim, sunt perferendis illum! Odit earum, expedita consectetur dolorem recusandae vero distinctio, minima, ab velit quas suscipit hic? Nulla, minus natus at ipsa sapiente?
+				</p>
+				<ul>
+					<h2>Selectores</h2>
+					<li>
+						<strong>tag selector</strong>
+						<ul>
+							<li>header{...}</li>
+							<li>header h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>class selector</strong>
+						<ul>
+							<li><span>.header</span>{...}</li>
+							<li><span>.header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>id selector</strong>
+						<ul>
+							<li><span>#header</span>{...}</li>
+							<li><span>#header</span> h1{...}</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
 			<section></section>
 		</article>
 		<article>
@@ -50,7 +106,7 @@
 			<section></section>
 		</article>
 	</main>
-	<footer id="footer">
+	<footer id="footer"> <!--Pie / Descenlace-->
 		<p>&copy;</p>
 	</footer>
 	<script src="js/scripts.js"></script>
