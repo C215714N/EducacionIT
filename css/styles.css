@@ -39,7 +39,15 @@
 					generales #header {color:tomato;}
 					anidados #header h1 {color:darkred;}
 		*/
+		/*background*/
+			background-image: url(../assets/img/osx-mojave-night.jpg);
+			background-size: cover; /*x y*/
+			background-repeat: no-repeat;
+			background-position: top center; /*x y*/
 	}	
+	#footer{
+		background-position: bottom center;
+	}
 	#header a, 
 	#footer a{
 		color:#ddd;
@@ -73,4 +81,45 @@
 	}
 	.menu li:hover{
 		background-color: rgba(30,90,200,.3);
+	}
+/*Contenido Principal*/
+	main{
+		background-image: url(../assets/img/cr.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	main, article, section{
+		padding:1em;
+		background-color: rgba(230,230,230,.7);
+	}
+/*Formulario de Contacto*/
+	#contact{
+		overflow: hidden;
+		width:450px;
+		margin:auto;
+	}
+	#contact input,
+	#contact textarea{
+		width: 100%;
+		outline: none;
+		padding:.5em 1em; /*top right bottom left*/
+		font-size: 1em;
+	}
+	#contact textarea{
+		resize: none;
+		height: 80px;
+	}
+	#contact button{
+		float:right;
+		cursor: pointer;
+		border:2px solid;
+		padding:.5em;
+		text-transform: uppercase;
+		font-size: 1em;
+		color:#ccc;
+		background-color: rgba(34,68,136,.5);
+	}
+	#contact button:hover{
+		background-color: rgba(68, 136, 255, .5);
 	}

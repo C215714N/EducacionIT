@@ -107,7 +107,54 @@
 		</article>
 	</main>
 	<footer id="footer"> <!--Pie / Descenlace-->
-		<p>&copy;</p>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">F</a>
+			<a href="https://twitter.com" target="_blank">T</a>
+			<a href="https://instagram.com" target="_blank">I</a>
+			<a href="https://api.whatsapp.com/send?phone=1123456789" target="_blank">W</a>
+		</div>
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contacName">Nombre</label>
+			<input 
+				id="contacName"
+				name="contacName" 
+				type="text" 
+				placeholder="Ingrese su Nombre"
+				pattern="[a-z A-Z]{2,50}"
+				title="Escriba su nombre sin numeros ni simbolos, el mismo debe poseer entre 2 y 50 caracteres" 
+				required />
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo"  
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				placeholder="Ingrese su Telefono" 
+				pattern="[0-9]{6,20}"
+				title="Escriba su numero sin guiones ni espacios, este debe contener entre 6 y 20 digitos" 
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea 	
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10"
+				maxlength="200"
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button>Enviar Consulta</button>
+		</form>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; compañia
+		</p>
 	</footer>
 	<script src="js/scripts.js"></script>
 </body>
