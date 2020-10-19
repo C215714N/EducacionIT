@@ -20,22 +20,57 @@
 	html{
 		scroll-behavior: smooth;
 	}
-	/*Encabezado y Pie de Pagina*/
-		#header, #footer{
-			color:#ccc;
-			background-color: #012;
-			text-transform: uppercase;
-			padding:20px;
-		}
+/*Encabezado y Pie de Pagina*/
+	#header, 
+	#footer{
+		color:#ccc;
+		background-color: #012; /*RRGGBB*/
+		text-transform: uppercase;
+		padding:20px;
+		/*
+			Selectores
+				Etiqueta (header)
+					generales header{color:darkblue;}
+					anidados header h1{color:blue;}
+				Clase (.header)
+					generales .header {color:yellow;}
+					anidados .header h1 {color:orange;}
+				Id (#header)
+					generales #header {color:tomato;}
+					anidados #header h1 {color:darkred;}
+		*/
+	}	
+	#header a, 
+	#footer a{
+		color:#ddd;
+		text-decoration: none;
+		font-weight: bold;
+	}
+/*Barra de Navegacion*/
+	nav{
+		background-color: rgba(30,90,200,.2); /*alpha = transparencia*/
 	/*
-		Selectores
-			Etiqueta (header)
-				generales header{color:darkblue;}
-				anidados header h1{color:blue;}
-			Clase (.header)
-				generales .header {color:yellow;}
-				anidados .header h1 {color:orange;}
-			Id (#header)
-				generales #header {color:tomato;}
-				anidados #header h1 {color:darkred;}
-	*/
+		Sintesis Adhitiva (RR GG BB) dec 0 al 255 => hex 00 al ff
+			Rojo:		255 0 0;  	= ff0000
+			Cian:		0 255 255;	= 00ffff
+			Verde: 		0 255 0;	= 00ff00
+			Magenta:	255 0 255;	= ff00ff
+			Azul: 		0 0 255;	= 0000ff
+			Amarillo: 	255 255 0;	= ffff00
+			Negro: 		0 0 0;		= 000000
+			Blanco: 	255 255 255;= ffffff
+		*/
+	}
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		text-align: center;
+	}
+	.menu li{
+		display: inline-block;
+		padding:1em; /*ancho de la M del elemento Padre*/
+	}
+	.menu li:hover{
+		background-color: rgba(30,90,200,.3);
+	}
