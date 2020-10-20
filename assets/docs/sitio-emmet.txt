@@ -1,0 +1,33 @@
+(header#header>
+	(.header>h1{Maquetado Avanzado}
+	+p{HTML &amp; CSS})
+	+nav>
+		button#menu
+		+ul.menu>
+			li*5>
+				a{Link $})
++
+(main>
+	article*4>
+		(header.header>h1{Clase $})
+		+section*3>
+			(header>h1{Tema $})
+			+p{contenido}
+			+footer>
+				address{Autor: }>
+					a[href="mailto:cristiandracedo@hotmail.com"]{Cristian Racedo}
+					+br
+					+{Mas informacion en alumni.education })
++
+(footer>
+	(form#contact>
+		(label[for="campo$"]{Campo $}
+		+input#campo$[name="campo$" required])*3
+		+label[for="contactConsult"]{Consulta}
+		+textarea#contactConsult[name="contactConsult" minlength="10" maxlength="200" required]
+		+button{Realizar Consulta})
+	+.social>
+	a[href="https://$.com" target="_blank"]*4
+	+p{ &copy; Todos los derechos reservados }>
+		a[href="mailto:cristiandracedo@hotmail.com"]{ Cristian Racedo }
+		+{ &amp; Compañia})
