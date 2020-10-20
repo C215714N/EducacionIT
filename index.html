@@ -4,20 +4,18 @@
 	<meta charset="UTF-8">
 	<meta 
 		name="viewport" 
-		content="	width=device-width, 
-					initial-scale=1,
-					maximum-scale=3	">
+		content="width=device-width, initial-scale=1, maximum-scale=3">
 	<title>Maquetado Avanzado</title>
 	<!--Styles CSS-->
 		<link rel="stylesheet" href="styles/main.css">
 </head>
 <body><!-- Cuerpo: Parte VISIBLE -->
-	<header id="header">
+	<header id="header"><!--Cabecera: Introduccion-->
 		<div class="header">
 			<h1>Maquetado Avanzado</h1>
 			<p>HTML &amp; CSS</p>
 		</div>
-		<nav>
+		<nav><!--Navegacion: Indice-->
 			<button id="menu">&equiv;</button>
 			<ul class="menu">
 				<li><a href="">Link 1</a></li>
@@ -27,7 +25,7 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
+	<main><!-- Contenido Principal: Nudo -->
 		<article>
 			<header class="header">
 				<h1>Nuevos elementos HTML</h1>
@@ -51,11 +49,12 @@
 								<progress 
 									min="0"
 									max="100" 
-									value="40"></progress>
+									value="40">
+								</progress>
 							</li>
 							<li>
-								<progress max="100"></progress>
-								<input type="number" min="0" max="100" />
+								<progress id="pBar" max="100"></progress>
+								<input id="pIn" type="number" min="0" max="100" />
 							</li>
 						</ul>
 					</li>
@@ -69,7 +68,8 @@
 									value="30"
 									low="40"
 									high="70"
-									optimum="90"></meter>
+									optimum="90">
+								</meter>
 							</li>
 							<li>
 								<meter
@@ -78,7 +78,8 @@
 									value="60"
 									low="40"
 									high="70"
-									optimum="90"></meter>
+									optimum="90">
+								</meter>
 							</li>
 							<li>
 								<meter
@@ -87,7 +88,8 @@
 									value="90"
 									low="40"
 									high="70"
-									optimum="90"></meter>
+									optimum="90">
+								</meter>
 							</li>
 						</ul>
 					</li>
@@ -95,13 +97,59 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Tema 2: Contenido Multimedia</h1>
 				</header>
+				<p>
+					Ademas de los <em>elementos mencionados anteriormente</em>, HTML5 incorpora de forma nativa la reproduccion de contenido multimedia mediante las etiquetas <strong>&lt;audio> & &lt;video></strong> que permite al navegador reproducir los formatos <em>.mp3 - .wav - .ogg </em> para los sonidos y <em>.mp4 - .webm - .ogv</em> para los videos. A diferencia del apartado anterior, si se quiere personalizar el estilo de los reproductores, se debe hacer con HTML y CSS ya que no existe herramientas para editar el reproductor integrado al navegador. En caso de que el navegador no sea compatible con dichos elementos, debemos colocar un mensaje a modo de alternativa a nuestro material.
+				</p>
+				<div class="example">
+					<video autoplay muted>
+						<source src="assets/media/cant-stop.ogv">
+						<source src="assets/media/cant-stop.webm">
+						<source src="assets/media/cant-stop.mp4">
+						<p>
+							Lo sentimos, pero tu Navegador NO ES COMPATIBLE con el elemento VIDEO. Podes descargar el material desde la siguiente de direccion: <a href="assets/media/cant-stop.mp4">can't stop</a>
+						</p>
+					</video>
+					<video id="vidStart">
+						<source src="assets/media/by-the-way.ogv">
+						<source src="assets/media/by-the-way.mp4">
+						<p>
+							Lo sentimos, pero tu Navegador NO ES COMPATIBLE con el elemento VIDEO. Podes descargar el material desde la siguiente de direccion: <a href="assets/media/by-the-way.mp4">by the way</a>
+						</p>
+					</video>
+					<button id="vidPlay">PLAY</button>
+				</div>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Tema 3: API's de Dibujos</h1>
 				</header>
+				<p>
+					Antiguamente, si necesitabamos modificar un elemento a nivel visual, como un dibujo o realizar alguno, teniamos que utilizar herramientas como <em>Gimp, Inkscape</em> dependiendo del tipo de imagen. Hoy en dia se puede dibujar desde el navegador utilzando <strong>XML</strong> para la creacion de <em>Graficos vectoriales</em> tambien conocidos como <strong>SVG</strong>; asi como tambien podemos utilizar <strong>JavaScript</strong> para realizar dibujos <em>Mapa de Bits</em> mediante <strong>Canvas</strong>.
+				</p>
+				<div class="example">
+					<figure>
+						<img src="assets/css.png" alt="Logo CSS3">
+						<figcaption>Mapa de Bits</figcaption>
+					</figure>
+					<figure>
+						<img src="assets/css.svg" alt="Logo CSS3">
+						<figcaption>Grafico Vectorial</figcaption>
+					</figure>
+				</div>
+				<div>
+					<svg style="width:300px; height:300px; border:1px solid black;">
+						<rect 
+							x="50" y="50" 
+							width="100" height="100" 
+							fill="#248" />
+						<circle 
+							r="50" cx="150" cy="150" 
+							fill="rgba(200,30,60,.5)" />
+						<text x="50" y="250" fill="transparent" stroke="#333">Scalable Vector Graphics</text>
+					</svg>
+				</div>
 			</section>
 		</article>
 		<article>
@@ -185,10 +233,18 @@
 			</section>
 		</article>
 	</main>
-	<footer>
-		<form action="" id="contact"></form>
-		<div class="social"></div>
-		<p>&copy; Todos los derechos reservados |<a href=""> Cristian Racedo </a>&amp; compañia</p>
+	<footer><!-- Pie: Descenlace -->
+		<form action="" id="contact">
+			
+		</form>
+		<div class="social">
+			
+		</div>
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href=""> Cristian Racedo </a>
+			&amp; compañia
+		</p>
 	</footer>
 	<!--Scripts JS-->
 		<script src="scripts/main.js"></script>
