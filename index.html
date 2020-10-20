@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!-- Cabecera: Parte NO VISIBLE -->
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="	width=device-width, 
+					initial-scale=1,
+					maximum-scale=3	">
+	<title>Maquetado Avanzado</title>
+	<!--Styles CSS-->
+		<link rel="stylesheet" href="styles/main.css">
+</head>
+<body><!-- Cuerpo: Parte VISIBLE -->
+	<header id="header">
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li><a href="">Link 1</a></li>
+				<li><a href="">Link 2</a></li>
+				<li><a href="">Link 3</a></li>
+				<li><a href="">Link 4</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Nuevos elementos HTML</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Elementos Estadisticos</h1>
+				</header>
+				<p>
+					
+					Con la aparicion del nuevo estandar, se incorporaron herramientas para la evaluacion estadistica, entre los elementos encontramos las etiquetas <strong>&lt;progress></strong> que se utiliza para identificar el estado de una tarea cuando esta todavia no fue culminada y <strong>&lt;meter></strong> que se implementa para comparar valores estadisticos una vez finalizada determinada tarea. Para la manipulacion del aspecto visual de dichos elementos debemos recurrir a las herramientas de <em>:-webkit</em> debido a que cada navegador aplica su propio estilo sobre dichos elementos.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Elemento Progress</strong>
+						<ul>
+							<li>
+								<progress></progress>
+							</li>
+							<li>
+								<progress 
+									min="0"
+									max="100" 
+									value="40"></progress>
+							</li>
+							<li>
+								<progress max="100"></progress>
+								<input type="number" min="0" max="100" />
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Elemento Meter</strong>
+						<ul>
+							<li>
+								<meter
+									min=0
+									max=100
+									value="30"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+							</li>
+							<li>
+								<meter
+									min=0
+									max=100
+									value="60"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+							</li>
+							<li>
+								<meter
+									min=0
+									max=100
+									value="90"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 2</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 3</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 4</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 5</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<form action="" id="contact"></form>
+		<div class="social"></div>
+		<p>&copy; Todos los derechos reservados |<a href=""> Cristian Racedo </a>&amp; compañia</p>
+	</footer>
+	<!--Scripts JS-->
+		<script src="scripts/main.js"></script>
+</body>
+</html>
