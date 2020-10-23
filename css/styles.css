@@ -1,0 +1,112 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,800;1,300&display=swap'
+	);
+	*{
+		font-family: Raleway, Open Sans, sans-serif;
+		box-sizing:border-box;
+		/*
+			Content-Box: 
+				final-width = width + padding + border
+				content-width = width;
+
+			Border-Box:
+				final-width = width
+				conten-width = width - padding -border;
+		*/	
+	}
+	/*	
+		Jerarquias
+		
+		Tag Selector (todos los elementos)
+			header{background-color: tomato;} 
+			header h1{ background-color: darkred; } 
+		
+		Class Selector (grupo de elementos)
+			.header{background-color: limegreen;}
+			.header h1{ background-color: darkgreen; } 
+		
+		Id Selector (elemento especifico)
+			#header{background-color: cornflowerblue;}
+			#header h1{ background-color: navy; }
+	*/
+	body{
+		margin:0;
+	}
+/*Encabezado y Pie*/
+	#header,
+	.header, 
+	#footer{
+		color:#ccc; /*RRGGBB  dec(0-255) => hex(00-ff) */
+		background-color: #248;
+			/*
+				Rojo		#ff0000
+				Verde		#00ff00
+				Azul		#0000ff
+				Cian 		#00ffff
+				Magenta 	#ff00ff
+				Amarillo 	#ffff00
+				Blanco		#000000
+				Negro		#ffffff
+			*/
+		padding:8px 16px; /*top right bottom left*/
+		text-align: center;
+	}
+	.header h1,
+	.header p{
+		margin:0;
+		text-transform: uppercase;
+		line-height: 20px;
+	}
+	.header p{
+		letter-spacing: 10px;
+		text-transform: lowercase;
+		font-variant: small-caps;
+	}
+	#header a,
+	#footer a{
+		color:#ddd;
+		text-decoration: none;
+		font-weight:bold; 
+		font-variant: small-caps;
+		letter-spacing: 2px;
+	}
+/*Barra de Navegacion*/
+	.menu{
+		list-style: none;
+		background-color: #124;
+		margin:0;
+		padding:0;
+	}
+	.menu li{
+		display: inline-block;
+			/*
+				inline: contenido
+					se adaptan al contenido (tamaño automatico)
+					comparten espacio (linea)
+					padding - border - margin => eje x
+					;
+				inline-block: contenido
+					se adaptan al contenido (se les puede dar tamaño)
+					comparten espacio (definen el alto de linea)
+					padding - border - margin => eje x / y
+				;
+				block: contenedor
+					se adaptan al contenedor (tamaño 100%)
+					no comparten espacio (salto de linea)
+					padding - border - margin => eje x / y (auto)
+					;
+			*/
+		border: 2px dashed transparent;
+		padding:8px;
+	}
+	.menu li:hover{
+		border-color: #ddd;
+		background-color: #36c;
+	}
+/*Redes Sociales*/
+/*Contenido Principal*/
+	main{
+		padding:16px;
+	}
+/*Formulario de Contacto*/
