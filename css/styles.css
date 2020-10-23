@@ -79,7 +79,31 @@
 		background-color: rgba(0,0,0,.5);
 	}
 /*Redes Sociales*/
+	.social{
+		display: flex;
+		width:300px;
+		height: 64px;
+		margin: 1em auto;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 
+	.social a{
+		width:64px;
+		height: 64px;
+		background-size: 32px;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: .5em;
+	}
+	.social a:hover{
+		background-color: #fff;
+		background-size: 48px;
+	}
+	.facebook{background-image: url(../assets/img/social/facebook.svg)}
+	.whatsapp{background-image: url(../assets/img/social/whatsapp.svg)}
+	.instagram{background-image: url(../assets/img/social/instagram.svg)}
+	.twitter{background-image: url(../assets/img/social/twitter.svg)}
 /*Contenido Principal*/
 	main, article, section, aside{
 		overflow: hidden;
@@ -95,7 +119,11 @@
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 	}
-	article{
+	main a{
+		color:white;
+		text-decoration: none;
+	}
+	article:first-child{
 		overflow: visible;
 		display: flex;
 		justify-content: center;
@@ -138,17 +166,47 @@
 	.self{
 		align-self: flex-start;
 	}
+	section:first-of-type .flex:last-child div:first-child,
+	section:last-child .flex div:last-child{
+		background-color:red;
+	}
+	/*
+		Pseudo-class: 
+			instancia de un elemento (estado del mismo)
+			ejemplos
+				:link; hipervinculo (no visitado)
+				:visited; hipervinculo visitado
+				:active; hipervinculo seleccionado (manteniendo click)
+				:hover; pasar mouse por arriba
+				:focus; con foco establecido
+		Pseudo-element:;
+			caracteristica general referente a un contexto
+			ejemplos
+				:first-child; primer hijo dentro del contenedor
+				:last-child; ultimo hijo dentro del contenedor
+				:first-of-type; primero de su tipo en el elemento padre
+				:first-line; primera linea del elemento
+				:first-letter; primera letra del elemento
+	*/
+	article:last-child p:first-line{
+		color:white;
+	}
+	article:last-child p:first-letter{
+		font-size: 3em;
+		padding:.2em;
+		float: left;
+	}
 /*Formulario de Contacto*/
 	#contact{
-		overflow: hidden;
+		display: flex;
+		flex-direction: column;
 		margin:auto;
-		width:600px;
+		min-width: 360px;
+		max-width: 720px;
 		text-align: left;
 	}
 	#contact input,
 	#contact textarea{
-		width:100%;
-		cursor:pointer;
 		outline: none;
 		border-radius: .5em;
 		border:2px solid white;
@@ -158,6 +216,10 @@
 		resize: none;
 		height: 96px;
 	}
+	#contact input:focus,
+	#contact textarea:focus{
+		box-shadow: 0 0 10px white;/* x y blur color*/
+	}
 	#contact label{
 		display: block;
 		margin-top:.5em;
@@ -165,7 +227,7 @@
 		height: 0;
 	}
 	#contact button{
-		float:right;
+		margin-top: .5em;
 		border:2px solid #ccc;
 		padding:.5em 1em;
 		color:#ccc;
