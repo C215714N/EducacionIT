@@ -34,6 +34,36 @@
 			<header class="header">
 				<h1>Clase 1: Introduccion Maquetacion</h1>
 			</header>
+			<div class="section">
+				<section><!-- Seccion: Contenido Contextualizado -->
+					<header>
+						<h1>Tema 1: Elementos Semanticos</h1>
+					</header>
+					<p>
+						<img src="assets/img/dices.png" alt="Dados de colores" />
+
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magnam et, odit voluptas ducimus culpa atque, iure voluptates officia saepe. Quod, voluptas alias temporibus in dolorum nisi modi ipsum voluptate placeat quos dolores sit velit, reprehenderit? Iste, sapiente fugiat saepe quidem alias modi quod quam nam culpa reiciendis ex nostrum!
+					</p>
+					<p>
+						
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quasi similique qui quam, impedit inventore sint. Expedita nostrum vero corrupti, laudantium mollitia in alias quos nemo ab magni placeat deleniti eveniet ipsam, accusantium autem nobis, repudiandae voluptatem eius labore, asperiores perferendis earum. Dicta aliquid voluptatum harum, consequuntur voluptas labore. Mollitia cum, officiis repudiandae earum quae alias, obcaecati vitae explicabo suscipit adipisci fugiat iste sapiente dicta quis beatae porro quam ipsam sunt deserunt est nostrum quod autem. Cupiditate, voluptatem, iure. Nemo!
+					</p>
+				</section>
+				<section>
+					<header>
+						<h1>Tema 2: Tipos de selectores</h1>
+					</header>
+					<p>
+						<img src="assets/img/css.svg" alt="Logo CSS3">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sit impedit, error ullam cupiditate voluptatem dolorum nisi unde quia enim quibusdam eius est facilis iusto accusantium dicta veritatis. Fugit, ullam!
+					</p>
+					<p>
+						
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sit impedit, error ullam cupiditate voluptatem dolorum nisi unde quia enim quibusdam eius est facilis iusto accusantium dicta veritatis. Fugit, ullam!
+						Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Voluptates iste quos iusto repellendus dolorem sequi vitae maxime, corrupti ipsa ratione, rem soluta voluptatibus delectus illum et. Vitae delectus distinctio porro.
+					</p>
+				</section>
+			</div>
 			<aside><!-- Lateral: Contenido Tangencial -->
 				<header>
 					<h1>Contenido</h1>
@@ -74,34 +104,6 @@
 					</li>
 				</ul>
 			</aside>
-			<section><!-- Seccion: Contenido Contextualizado -->
-				<header>
-					<h1>Tema 1: Elementos Semanticos</h1>
-				</header>
-				<p>
-					<img src="assets/img/dices.png" alt="Dados de colores" />
-
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magnam et, odit voluptas ducimus culpa atque, iure voluptates officia saepe. Quod, voluptas alias temporibus in dolorum nisi modi ipsum voluptate placeat quos dolores sit velit, reprehenderit? Iste, sapiente fugiat saepe quidem alias modi quod quam nam culpa reiciendis ex nostrum!
-				</p>
-				<p>
-					
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quasi similique qui quam, impedit inventore sint. Expedita nostrum vero corrupti, laudantium mollitia in alias quos nemo ab magni placeat deleniti eveniet ipsam, accusantium autem nobis, repudiandae voluptatem eius labore, asperiores perferendis earum. Dicta aliquid voluptatum harum, consequuntur voluptas labore. Mollitia cum, officiis repudiandae earum quae alias, obcaecati vitae explicabo suscipit adipisci fugiat iste sapiente dicta quis beatae porro quam ipsam sunt deserunt est nostrum quod autem. Cupiditate, voluptatem, iure. Nemo!
-				</p>
-			</section>
-			<section>
-				<header>
-					<h1>Tema 2: Tipos de selectores</h1>
-				</header>
-				<p>
-					<img src="assets/img/css.svg" alt="Logo CSS3">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sit impedit, error ullam cupiditate voluptatem dolorum nisi unde quia enim quibusdam eius est facilis iusto accusantium dicta veritatis. Fugit, ullam!
-				</p>
-				<p>
-					
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sit impedit, error ullam cupiditate voluptatem dolorum nisi unde quia enim quibusdam eius est facilis iusto accusantium dicta veritatis. Fugit, ullam!
-					Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Voluptates iste quos iusto repellendus dolorem sequi vitae maxime, corrupti ipsa ratione, rem soluta voluptatibus delectus illum et. Vitae delectus distinctio porro.
-				</p>
-			</section>	
 			<footer>
 				<address>
 					para mas informacion, consultar el 
@@ -111,6 +113,64 @@
 					<a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>
 				</address>
 			</footer>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Introduccion a Flexbox</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Disposicion (Justify-Content)</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>space-between:</strong> distancia entre los extremos del flex
+					</li>
+					<li>
+						<strong>space-around:</strong> misma distancia de separacion entre etiquetas (sumatoria de espacios)
+					</li>
+					<li>
+						<strong>space-evenly</strong> misma distancia entre etiquetas (sin sumatoria)
+					</li>
+				</ul>
+				<div class="flex">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion (Align-Items)</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>flex-start:</strong> el comienzo del flex
+					</li>
+					<li>
+						<strong>flex-end:</strong> el final del flex
+					</li>
+					<li>
+						<strong>center:</strong> en la mitad del flex
+					</li>
+					<li>
+						<strong>baseline:</strong> en la linea base de la tipografia (legibilidad de textos)
+					</li>
+				</ul>
+				<div class="flex">
+					<div class="self">1</div>
+					<div>2</div>
+					<div style="font-size: 2em;">3</div>
+					<div class="self">4</div>
+					<div style="font-size: .5em;">5</div>
+					<div>6</div>
+					<div style="font-size: 2.5em;">7</div>
+				</div>
+			</section>
 		</article>
 	</main>
 	<footer id="footer"><!-- Pie: Desenlace -->
