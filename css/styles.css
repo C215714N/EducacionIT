@@ -120,13 +120,14 @@
 	.col-reverse{ flex-direction: column-reverse; }
 /*Formulario de Contacto*/
 	#contact{
-		overflow: hidden;
-		width:450px;
+		display: flex;
+		flex-direction: column;
+		min-width: 360px;
+		max-width: 720px;
 		margin:auto;
 	}
 	#contact input,
 	#contact textarea{
-		width: 100%;
 		outline: none;
 		padding:.5em 1em; /*top right bottom left*/
 		font-size: 1em;
@@ -136,7 +137,6 @@
 		height: 80px;
 	}
 	#contact button{
-		float:right;
 		cursor: pointer;
 		border:2px solid;
 		padding:.5em;
