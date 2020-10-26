@@ -82,6 +82,27 @@
 	.menu li:hover{
 		background-color: rgba(30,90,200,.3);
 	}
+/*Redes Sociales*/
+	.social{
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		border: 1px solid white;
+		padding:.5rem;
+		max-width: 280px;
+	}
+	.social a{
+		width:32px;
+		height:32px;
+		background-color: #fff;
+		border:1px dashed #ccc;
+	}
+	.social a:first-child{ 
+		background-image: url(../assets/social/facebook.svg); 
+	}
+	.social a:last-child{ 
+		background-image: url(../assets/social/whatsapp.svg);
+	}
 /*Contenido Principal*/
 	main{
 		background-image: url(../assets/img/cr.png);
@@ -93,31 +114,45 @@
 		padding:1em;
 		background-color: rgba(230,230,230,.7);
 	}
-	.flex{
-		border:2px solid #333;
-		padding:.2em;
-		/*FlexBox*/
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
+	article{
+		margin: auto;
+		max-width: 1440px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
-	.flex div{
-		width:80px;
-		line-height: 80px;
-		padding:0 1em;
-		border:2px dotted;
-		color:#ccc;
-		background-color: #248;
+	article header{
+		width: 100%;
 	}
-	.align{
-		height:240px;
-		/*FlexBox*/
-			align-items: center;
+	section{
+		width:50%;
+		min-width: 360px;
+		max-width: 720px;
 	}
-	.self{ align-self: flex-end; }
-	.col{ flex-direction: column; }
-	.reverse{ flex-direction: row-reverse; }
-	.col-reverse{ flex-direction: column-reverse; }
+	/*Flexbox*/
+		.flex{
+			border:2px solid #333;
+			padding:.2em;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+		}
+		.flex div{
+			width:80px;
+			line-height: 80px;
+			padding:0 1em;
+			border:2px dotted;
+			color:#ccc;
+			background-color: #248;
+		}
+		.align{
+			height:240px;
+				align-items: center;
+		}
+		.self{ align-self: flex-end; }
+		.col{ flex-direction: column; }
+		.reverse{ flex-direction: row-reverse; }
+		.col-reverse{ flex-direction: column-reverse; }
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
@@ -126,15 +161,26 @@
 		max-width: 720px;
 		margin:auto;
 	}
+	#contact label{
+		height:0;
+		margin-top: .5em;
+	}
 	#contact input,
 	#contact textarea{
 		outline: none;
 		padding:.5em 1em; /*top right bottom left*/
+		border-radius: .3em;
+		border: 2px solid #fff;
 		font-size: 1em;
 	}
 	#contact textarea{
 		resize: none;
 		height: 80px;
+	}
+	#contact input:focus,
+	#contact textarea:focus{
+		border-color:rgba(18,36, 136, .5);
+		box-shadow: 0 0 .5em #ccc;
 	}
 	#contact button{
 		cursor: pointer;
@@ -148,3 +194,27 @@
 	#contact button:hover{
 		background-color: rgba(68, 136, 255, .5);
 	}
+	/*
+		pseudo-class: 
+			instancia de un elemento, caracteristica o estado al que se hace referencia.
+			Todos
+				:hover 	(pasar el mouse por encima)
+				:firt-child (primer hijo del elemento contendor)
+				:last-child (ultimo hijo del elemento contenedor);
+				:first-of-type (primero de su tipo)
+			Hipervinculos
+				:link 	(hipervinculo sin visitar)
+				:visited(hipervinculo visitado)
+				:active (hipervinculo siendo presionado)
+			Campos de Form
+				:focus 	(foco sobre campo de formulario)
+		;
+		pseudo-element:
+			una parte del contenido del elemento al que se hace referencia
+			Todos
+				::first-letter (primera letra del contenido)
+				::first-line (primera linea del contenido)
+				::before (inserta contenido antes del contenido del elemento)
+				::after (inserta contenido despues del contenido del elemento)
+		;
+	*/
