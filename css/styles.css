@@ -84,24 +84,38 @@
 	}
 /*Redes Sociales*/
 	.social{
+		background-color: rgba(255,255,255,.5);
 		display: flex;
 		justify-content: space-between;
 		margin: auto;
-		border: 1px solid white;
+		border-radius: .5em;
 		padding:.5rem;
 		max-width: 280px;
 	}
 	.social a{
-		width:32px;
-		height:32px;
-		background-color: #fff;
-		border:1px dashed #ccc;
+		display: block;
+		width:64px;
+		height:64px;
+		border-radius: .2em;
+			background-size: 32px;
+			background-repeat: no-repeat;
+			background-position: center;
 	}
-	.social a:first-child{ 
-		background-image: url(../assets/social/facebook.svg); 
-	}
-	.social a:last-child{ 
-		background-image: url(../assets/social/whatsapp.svg);
+	/*Iconos*/
+		.social a:first-child{ 
+			background-image: url(../assets/social/facebook.svg); 
+		}
+		.social a:nth-child(2){
+			background-image: url(../assets/social/twitter.svg);
+		}
+		.social a:nth-child(3){
+			background-image: url(../assets/social/instagram.svg);
+		}
+		.social a:last-child{ 
+			background-image: url(../assets/social/whatsapp.svg);
+		}
+	.social a:hover{
+		background-size: 54px;
 	}
 /*Contenido Principal*/
 	main{
@@ -128,6 +142,15 @@
 		width:50%;
 		min-width: 360px;
 		max-width: 720px;
+	}
+	section p::first-line{
+		color:#124;
+		font-weight: bold;
+	}
+	section p:first-letter{
+		font-size: 4em;
+		float: left;
+		margin-right: .2em;
 	}
 	/*Flexbox*/
 		.flex{
