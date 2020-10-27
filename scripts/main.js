@@ -41,6 +41,13 @@
 			ctx.fillStyle = 'rgba(30, 80, 150, .5)';
 			ctx.arc(60,60,25,25,100);//(x, y, rWidth, rHeight, arc)
 			ctx.fill();
+		//Poligono
+			ctx.beginPath()
+			ctx.moveTo(0,100);
+			ctx.lineTo(100, 100);
+			ctx.lineTo(100,0);
+			ctx.closePath();
+			ctx.fill();
 		//Texto
 			ctx.font = '16px arial';
 			ctx.strokeText('Canvas', 10, 100); //(Text, x, y)
