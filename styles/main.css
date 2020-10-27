@@ -1,0 +1,78 @@
+/*Maquetado Avanzado*/
+	/*Mobile First - Reglas Generales*/
+		*{
+			box-sizing: border-box;
+			font-family: century gothic, segoe ui, sans-serif;
+		}
+		body{
+			margin:0;
+		}
+		/*Encabezado y Pie*/
+			#header,
+			.header,
+			#footer{
+				padding:1rem .5rem;
+				color:#ccc;
+				background-color: #248;
+			}
+			#header a,
+			#footer a{
+				color:#ddd;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.header h1,
+			.header p{
+				margin:0;
+				text-transform: capitalize;
+				font-variant: small-caps;
+				line-height: 1.5rem;
+			}
+		/*Barra de Navegacion*/
+			nav{
+				background-color: #124;
+			}
+			#menu{
+				cursor: pointer;
+				outline: none;
+				border:2px solid;
+				font-size: 2rem;
+				width:2.5rem;
+				line-height: 2rem;
+				color:#ddd;
+				background-color: transparent;
+			}
+			.menu{
+				overflow: hidden;
+				height:0;
+				list-style: none;
+				margin:0;
+				padding:0;
+			}
+			.menu a{
+				display: block;
+				padding: .2rem 3.5rem;
+			}
+			.menu a:hover{
+				background-color: #36c;
+			}
+			.openMenu{
+				height: auto;
+			}
+	/*Small Devices - */
+		@media screen and (min-width: 576px){
+			
+		}
+	/*Medium Devices*/
+		@media screen and (min-width: 768px){
+
+		}
+	/*Large Devices*/
+		@media screen and (min-width: 992px){
+
+		}
+	/*Extra Large Devices*/
+		@media screen and (min-width: 1200px){
+			
+		}
+/*Autor: Cristian Racedo*/

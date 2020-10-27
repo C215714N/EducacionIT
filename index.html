@@ -147,8 +147,16 @@
 						<circle 
 							r="50" cx="150" cy="150" 
 							fill="rgba(200,30,60,.5)" />
+						<polyline 
+							points="
+								150 50 , 
+								100 125, 
+								200 125" 
+							fill="rgba(100,100,20,.5)"/>
 						<text x="50" y="250" fill="transparent" stroke="#333">Scalable Vector Graphics</text>
 					</svg>
+					<canvas id="jsCanvas" width="300" height="300" style="border:1px solid black">
+					</canvas>
 				</div>
 			</section>
 		</article>
@@ -158,8 +166,18 @@
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Colores CSS</h1>
 				</header>
+				<p>
+					
+					Exiten diferentes formas de representar colores en la web, desde las mas simples como <strong>HTML colors</strong> que ofrece <em>140 combinaciones</em>; variantes de <strong>sintesis adhitiva</strong> con valores decimales como rgb(34,68,136) o hexadecimal como #224488; aunque en las ultimas versiones de CSS se incorporo el modelo <strong>HSL(hue, saturation, lightness)</strong> donde se utiliza el circulo cromatico para generar variantes tonales.
+				</p>
+				<div class="colors">
+					<div> limegreen </div>
+					<div> rgb()</div>
+					<div> #</div>
+					<div> hsl()</div>
+				</div>
 			</section>
 			<section>
 				<header>
@@ -233,7 +251,7 @@
 			</section>
 		</article>
 	</main>
-	<footer><!-- Pie: Descenlace -->
+	<footer id="footer"><!-- Pie: Descenlace -->
 		<form action="" id="contact">
 			
 		</form>
