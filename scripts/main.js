@@ -25,7 +25,7 @@
 			ctx.fillRect(50,50,100,100); /*x, y, w, h*/
 		//Circulo
 			ctx.fillStyle = 'rgba(200,30,60,.5)';
-			ctx.arc(150, 150, 50, 50, 100);/*x y */
+			ctx.arc(150, 150, 50, 0, 2*Math.PI);/*x, y, r, start, end*/
 			ctx.fill();
 		//Triangulo
 			ctx.beginPath();

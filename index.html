@@ -44,9 +44,11 @@
 						<strong>Elemento Progress</strong>
 						<ul>
 							<li>
+								default 
 								<progress></progress>
 							</li>
 							<li>
+								value = 40; max = 100 
 								<progress 
 									min="0"
 									max="100" 
@@ -54,6 +56,7 @@
 								</progress>
 							</li>
 							<li>
+								value = Javascript 
 								<progress id="pBar" max="100"></progress>
 								<input id="pIn" type="number" min="0" max="100" />
 							</li>
@@ -63,6 +66,7 @@
 						<strong>Elemento Meter</strong>
 						<ul>
 							<li>
+								<strong>value</strong> < low < high < optimum 
 								<meter
 									min=0
 									max=100
@@ -73,6 +77,7 @@
 								</meter>
 							</li>
 							<li>
+								low < <strong>value</strong> < high < optimum 
 								<meter
 									min=0
 									max=100
@@ -83,6 +88,7 @@
 								</meter>
 							</li>
 							<li>
+								low < high < <strong>value</strong> < optimum 
 								<meter
 									min=0
 									max=100
@@ -98,7 +104,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2: Contenido Multimedia</h1>
+					<h1>Contenido Multimedia</h1>
 				</header>
 				<p>
 					Ademas de los <em>elementos mencionados anteriormente</em>, HTML5 incorpora de forma nativa la reproduccion de contenido multimedia mediante las etiquetas <strong>&lt;audio> & &lt;video></strong> que permite al navegador reproducir los formatos <em>.mp3 - .wav - .ogg </em> para los sonidos y <em>.mp4 - .webm - .ogv</em> para los videos. A diferencia del apartado anterior, si se quiere personalizar el estilo de los reproductores, se debe hacer con HTML y CSS ya que no existe herramientas para editar el reproductor integrado al navegador. En caso de que el navegador no sea compatible con dichos elementos, debemos colocar un mensaje a modo de alternativa a nuestro material.
@@ -124,7 +130,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3: API's de Dibujos</h1>
+					<h1>API's de Dibujos</h1>
 				</header>
 				<p>
 					Antiguamente, si necesitabamos modificar un elemento a nivel visual, como un dibujo o realizar alguno, teniamos que utilizar herramientas como <em>Gimp, Inkscape</em> dependiendo del tipo de imagen. Hoy en dia se puede dibujar desde el navegador utilzando <strong>XML</strong> para la creacion de <em>Graficos vectoriales</em> tambien conocidos como <strong>SVG</strong>; asi como tambien podemos utilizar <strong>JavaScript</strong> para realizar dibujos <em>Mapa de Bits</em> mediante <strong>Canvas</strong>.
@@ -139,7 +145,7 @@
 						<figcaption>Grafico Vectorial</figcaption>
 					</figure>
 				</div>
-				<div>
+				<div class="example">
 					<svg>
 						<rect 
 							x="50" y="50" 
@@ -163,31 +169,45 @@
 		</article>
 		<article>
 			<header class="header">
-				<h1>Clase 2</h1>
+				<h1>Nuevas Caracteristicas CSS</h1>
 			</header>
 			<section>
 				<header>
-					<h1>Colores CSS</h1>
+					<h1>Modelos de Color CSS</h1>
 				</header>
 				<p>
 					
-					Exiten diferentes formas de representar colores en la web, desde las mas simples como <strong>HTML colors</strong> que ofrece <em>140 combinaciones</em>; variantes de <strong>sintesis adhitiva</strong> con valores decimales como rgb(34,68,136) o hexadecimal como #224488; aunque en las ultimas versiones de CSS se incorporo el modelo <strong>HSL(hue, saturation, lightness)</strong> donde se utiliza el circulo cromatico para generar variantes tonales.
+					Exiten diferentes formas de representar colores en la web, desde las mas simples como <strong>HTML colors</strong> que ofrece <em>140 combinaciones</em>; variantes de <strong>sintesis adhitiva</strong> con valores decimales como <em>rgb(34,68,136)</em> o hexadecimal como <em>#224488</em>; aunque en las ultimas versiones de CSS se incorporo el modelo <strong>HSL(hue, saturation, lightness)</strong> donde se utiliza el circulo cromatico para generar variantes tonales, variando la intensidad y el brillo.
 				</p>
-				<div class="colors">
-					<div> limegreen </div>
-					<div> rgb()</div>
-					<div> #</div>
-					<div> hsl()</div>
+				<div class=" example colors">
+					<div> <strong>HTML color:</strong> limegreen </div>
+					<div> <strong>RGB Decimal:</strong> rgb(50,205,50);</div>
+					<div> <strong>RGB Alpha:</strong> rgb(50,205,50,.5);</div>
+					<div> <strong>Hexadecimal:</strong> #3c3;</div>
+					<div> <strong>HSL Color:</strong> hsl(120,60%,50%);</div>
+					<div> <strong>HSL Alpha:</strong> hsl(120,60%,50%,.5);</div>
 				</div>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Gradientes de Fondo</h1>
 				</header>
+				<p>
+					
+					CSS incorporo los fondos con degradados, los cuales son considerados como <em>imagenes de fondo</em> y por lo tanto solo se pueden aplicar mediante el atributo <strong>background:</strong>; estos utilizan cualquiera de los modelos indicados en el <em>apartado anterior</em> y la estructura de los mismos se compone de la siguiente manera: <strong>tipo-degradado (color_a, color_b)</strong> pudiendo utilizar cualquier cantidad de colores. Tambien podemos indicar la direccion del mismo, si agregamos dicho valor antes de los colores, como por ejemplo: <em>linear-gradient(to right, skyblue, darkblue);</em>.
+				</p>
+				<div class=" example gradients">
+					<div> <strong>Lineal-gradient: </strong> (to bottom);</div>
+					<div> <strong>Lineal-gradient: </strong> (to right);</div>
+					<div> <strong>Lineal-gradient: </strong> (30deg);</div>
+					<div> <strong>Radial-gradient: </strong> (ellipse);</div>
+					<div> <strong>Radial-gradient: </strong> (circle);</div>
+					<div> <strong>Radial-gradient: </strong> (100px at 0 0);</div>
+				</div>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Modos de Fusion</h1>
 				</header>
 			</section>
 		</article>
