@@ -30,7 +30,59 @@
 		</div>
 	</div>
 	<div id="main">
-	
+		<ul>
+			<h2>Reglas de Nomenclatura</h2>
+			<li>
+				<strong>No utilizar espacios en los nombres de los archivos</strong> debido a que este caracter es reemplazado por <em> el conjunto %20</em> y por lo tanto si nuestra imagen se llama <em>"foto 01.jpg"</em> sera interpretado como <em>"foto%2001.jpg"</em>. Es por eso que en lugar de espacios es preferible <strong>utilizar guiones (-_)</strong> dando como resultado un nombre como <em>"foto-01.jpg"</em> que puede ser encontrado por el navegador.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> que resulten en una busqueda sencilla de las imagenes, debido a que nombres genericos como <em>"foto-01.jpg"</em> o nombres automatizados como <em>"2020-1028-155823100.jpg"</em> dificultan la tarea del desarrollado mientras mayor sea la cantidad de archivos. Por ende, nombres como <em>"perritos-jugando.jpg"</em> hacen mucho mas facil el trabajo de busqueda.
+			</li>
+			<li>
+				<strong>Utilizar solamente minusculas</strong> porque los servidores son <em>CaseSensitive</em>, es decir que distinguen entre mayusculas y minusculas y es por eso que los nombres <em>"perritos-jugando.jpg", "PERRITOS-JUGANDO.jpg" y "Perritos-Jugando.jpg"</em> se consideran archivos diferentes. <strong>Reducimos los margenes de error</strong>, debido a que solamente debemos estar pendientes de la ruta, nombre de archivo y el formato.
+			</li>
+		</ul>
+		<div class="example">
+			<!--
+				src = source (ruta/ubicacion)
+				alt = alternative (texto/imagen no encontrada)
+			-->
+			<img style="width:300px;" 
+				src="img/jjba-silverchariot-01.jpg" 
+				alt="Soy una Imagen" />
+			<img style="width:300px;" 
+				src="img/jjba-silverchariot-02.jpg" 
+				alt="Soy una Imagen" />
+			<img style="width:300px;" 
+				src="img/jjba-silverchariot-03.jpg" 
+				alt="Soy una Imagen" />
+			<img style="width:300px;" 
+				src="img/jjba-silverchariot-04.jpg" 
+				alt="Soy una Imagen" />
+		</div>
+		<div class="example">
+			<p>
+				<img src="img/ih-greenhulk-02.jpg" alt="Dibujo green Hulk">
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nulla animi fugit incidunt, quisquam, natus illo. Itaque obcaecati maiores, dicta ex laboriosam cum est aliquam aliquid, repellat animi recusandae praesentium.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ad velit aspernatur. Asperiores modi nobis dolorem, impedit quo illum mollitia tempore eius porro veniam molestiae nisi earum exercitationem maiores fugit.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti, at atque iste tempore dolor qui ipsa a eveniet minima totam nesciunt debitis placeat optio exercitationem explicabo veritatis? Et, non.x
+			</p>
+			<p>
+				<img src="img/ih-greenhulk-03.jpg" alt="Dibujo green Hulk">
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nulla animi fugit incidunt, quisquam, natus illo. Itaque obcaecati maiores, dicta ex laboriosam cum est aliquam aliquid, repellat animi recusandae praesentium.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ad velit aspernatur. Asperiores modi nobis dolorem, impedit quo illum mollitia tempore eius porro veniam molestiae nisi earum exercitationem maiores fugit.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti, at atque iste tempore dolor qui ipsa a eveniet minima totam nesciunt debitis placeat optio exercitationem explicabo veritatis? Et, non.x
+			</p>
+			<p>
+				<img src="img/ih-greenhulk-04.jpg" alt="Dibujo green Hulk">
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nulla animi fugit incidunt, quisquam, natus illo. Itaque obcaecati maiores, dicta ex laboriosam cum est aliquam aliquid, repellat animi recusandae praesentium.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ad velit aspernatur. Asperiores modi nobis dolorem, impedit quo illum mollitia tempore eius porro veniam molestiae nisi earum exercitationem maiores fugit.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti, at atque iste tempore dolor qui ipsa a eveniet minima totam nesciunt debitis placeat optio exercitationem explicabo veritatis? Et, non.x
+			</p>
+		</div>
 	</div>
 	<div id="footer">
 		<p>soy el footer</p>
