@@ -73,6 +73,30 @@
 					<h1>Tema 1</h1>
 				</header>
 				<p>contenido</p>
+				<ul>
+					<li>Item 1
+						<ul>
+							<li>SubItem 1</li>
+							<li>SubItem 2</li>
+						</ul>
+					</li>
+					<li>Item 2
+						<ul>
+							<li>SubItem 1</li>
+							<li>SubItem 2
+								<ul>
+									<li>SubSubItem 1</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Item 3
+						<ul>
+							<li>SubItem 1</li>
+							<li>SubItem 2</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 			<section>
 				<header>
@@ -112,6 +136,59 @@
 		</article>
 	</main>
 	<!-- Pie: Desenlace -->
+	<footer id="footer">
+		<form id="contact" action="" method="POST">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				name="contactName"
+				id="contactName" 
+				type="text" 
+				placeholder="Ingrese su Nombre" 
+				required />
+			<label for="contactEmail">Correo</label>
+			<input 
+				name="contactEmail"
+				id="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<label for="contactPhone">Teléfono</label>
+			<input 
+				name="contactPhone"
+				id="contactPhone" 
+				type="tel" 
+				placeholder="Ingrese su Telefono" 
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button>Enviar</button>
+		</form>
+		<div class="social">
+			<a 
+				class="facebook" 
+				href="https://facebook.com" 
+				target="_blank">
+			</a>
+			<a 
+				class="instagram" 
+				href="https://instagram.com" 
+				target="_blank">
+			</a>
+			<a 
+				class="twitter" 
+				href="https://twitter.com" 
+				target="_blank">
+			</a>
+		</div>
+		<p>&copy; Todos los derechos reservados<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a> &amp; compañia.</p>
+	</footer>
 	<!-- Scripts JS -->
 	<script src="js/scripts.js"></script>
 </body>

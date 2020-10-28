@@ -105,8 +105,76 @@
 		background-color: #36c;
 	}
 /*Redes Sociales*/
+
 /*Contenido Principal*/
 	main{
 		padding:16px;
 	}
 /*Formulario de Contacto*/
+	#contact{
+		overflow: hidden;
+		width:100%;
+		max-width:600px;
+		margin: auto;
+		text-align: left;
+	}
+	#contact h2{
+		margin:0;
+	}
+	#contact label{
+		display: block;
+		height:0;
+		margin-top: .5rem
+	}
+	#contact input,
+	#contact textarea{
+		width: 100%;
+		line-height: 1rem;
+		outline:none;
+		border-radius: .3rem;
+		border:none;
+		padding:.5rem 1rem;
+		font-size: 1rem;
+	}
+	#contact textarea{
+		resize: none;
+		height: 5rem;
+	}
+	#contact input:focus,
+	#contact textarea:focus{
+		box-shadow: 0 0 10px #ccc; /* x y blur color*/
+	}
+	#contact button{
+		float: right;
+		cursor: pointer;
+		border: 2px solid;
+		padding:.5rem 1rem;
+		color:#ddd;
+		background-color: transparent;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	#contact button:hover{
+		color:#248;
+		background-color: #ddd;
+	}
+	/*
+		Medidas Absolutas:
+			Son aquellas que independientemente del contexto, siempre abarcan el mismo espacio.
+			Ejemplos:
+				metricas (distancia): 	cm - pc - in;
+				tipograficas (fuente): 	pt ;
+				hibridas (resolucion): 	px;
+		;
+		Medidas Relativas:
+			Son aquellas que basan su tamaño en base a un contexto, es decir, que dependen del elemento contenedor (padre).
+			Ejemplos:
+				contenedor (tamaño): porcentaje % del contenedor,
+				tipograficas (fuente):	
+					porcentaje % de la fuente
+					em 	ancho de la letra M 
+					ex 	alto de la letra x
+					ch 	alto del numero 0
+					rem ancho del letra M en la raiz (HTML)
+		;
+	*/
