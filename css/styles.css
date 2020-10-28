@@ -35,7 +35,7 @@
 	}
 /*Encabezado y Pie*/
 	#header,
-	.header, 
+	main .header, 
 	#footer{
 		color:#ccc; /*RRGGBB  dec(0-255) => hex(00-ff) */
 		background-color: #248;
@@ -49,8 +49,17 @@
 				Blanco		#000000
 				Negro		#ffffff
 			*/
-		padding:8px 16px; /*top right bottom left*/
+		padding:1rem; /*top right bottom left*/
 		text-align: center;
+		text-shadow: 0 0 5px #000; /*x y blur color*/
+		/*Background*/
+			background-image: url(../assets/img/footer.jpg);
+			background-size: cover;/*x y*/
+			background-repeat: no-repeat;
+			background-position: top center;
+	}
+	#footer{
+		background-position: bottom center;
 	}
 	.header h1,
 	.header p{
@@ -60,8 +69,6 @@
 	}
 	.header p{
 		letter-spacing: 10px;
-		text-transform: lowercase;
-		font-variant: small-caps;
 	}
 	#header a,
 	#footer a{
@@ -74,8 +81,8 @@
 /*Barra de Navegacion*/
 	.menu{
 		list-style: none;
-		background-color: #124;
-		margin:0;
+		background-color: rgba(17,34,68,.5); /*hex 124 => rgb(17, 34, 68)*/
+		margin:1rem 0 0;
 		padding:0;
 	}
 	.menu li{
@@ -102,13 +109,62 @@
 	}
 	.menu li:hover{
 		border-color: #ddd;
-		background-color: #36c;
+		background-color: rgba(51,102,204,.5); /*hex 3366cc => dec 51 102 204 */
 	}
 /*Redes Sociales*/
-
+	.social{
+		width:100%;
+		max-width: 300px;
+		margin:auto;
+		padding:.5rem;
+		border-radius: .5rem;
+		text-align: center;
+		background-color: rgba(255,255,255,.7);
+	}
+	.social a{
+		display: inline-block;
+		width:4rem;
+		height:4rem;
+		border-radius: .5rem;
+			background-size: 2rem;
+			background-repeat: no-repeat;
+			background-position: center;
+	}
+	.social a:hover{
+		background-size: 3rem;
+		background-color: white;
+	}
+	.facebook{background-image: url(../assets/icon/facebook.svg)}
+	.twitter{background-image: url(../assets/icon/twitter.svg)}
+	.instagram{background-image: url(../assets/icon/instagram.svg)}
 /*Contenido Principal*/
-	main{
-		padding:16px;
+	article{
+		color:white;
+		text-shadow: 1px 1px 3px black;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	.fondo-1{ background-image: url(../assets/img/header.jpg); }
+	.fondo-2{ background-image: url(../assets/img/background.jpg); }
+	.fondo-3{ background-image: url(../assets/img/footer.jpg); }
+
+	main, article, main .header, section, figure{
+		margin:.5rem;
+		padding:1rem;
+		background-color: rgba(128,128,128,.5);
+	}
+	figure{
+		overflow: hidden;
+		padding:1rem;
+		border-radius: .4rem;
+	}
+	figure img{
+		float: left;
+		margin-right: 1rem;
+		border-radius: .4rem;
+		border:.5rem solid #333;
+		width:200px;
 	}
 /*Formulario de Contacto*/
 	#contact{
