@@ -3,12 +3,76 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selector General */
+			body{
+				margin:0;
+				font-family: segoe ui, calibri, sans-serif;
+			}
+		/* Selector multiple (,) */
+			header, footer{
+				padding:16px;
+				color: lightgrey; /*140 colores HTML*/
+				background-color:#248;/*RGB 16.777.216 colores*/
+				background-image: url(img/background.jpg)
+			}
+		/*Selectores Especificos (padre hijo)*/
+			header h1, header p{
+				margin:0;
+			}
+			header span{
+				color:tomato;
+				text-shadow: 0 0 10px #333; /*x y blur color*/
+			}
+			/*barra de navegacion*/
+			nav a{
+				color:#ddd;
+				text-decoration: none;
+			}
+			nav ul{
+				list-style: none;
+				margin:0;
+				padding:0;
+				background-color: #124;
+			}
+			nav li{
+				display: inline;
+				padding:8px;
+				line-height: 32px;
+			}
+			/*pseudoclase - instancia o caracteristica*/
+			nav li:hover{
+				background-color: #36c; /*RGB*/
+			}
+		/*Selector de Clase (.class)*/
+			.example{
+				text-align:center;
+				background-color: #ddd;
+				padding:16px;
+			}
+			.example img{
+				width:150px;
+			}
+			.example p{
+				text-align: left;
+				overflow: hidden;
+				padding:8px;
+			}
+			.example p img{
+				float:left;
+				margin-right: 8px;
+			}
+		/*Selector de Id (#id)*/
+			#footer{
+				font-weight: bold;
+			}
+	</style>
 </head>
 <body>
-	<div id="header">
-		<h1>Fundamentos Web</h1>
+	<header id="header">
+		<h1> <span>Fundamentos</span> Web</h1>
 		<p> &lt;HTML> &amp; CSS</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li>
 					<!-- Ruta Relativa - Interna -->
@@ -27,9 +91,9 @@
 					<a href="https://github.com/c215714n/educacionit/tree/html-miercoles-15hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<ul>
 			<h2>Reglas de Nomenclatura</h2>
 			<li>
@@ -83,9 +147,45 @@
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti, at atque iste tempore dolor qui ipsa a eveniet minima totam nesciunt debitis placeat optio exercitationem explicabo veritatis? Et, non.x
 			</p>
 		</div>
-	</div>
-	<div id="footer">
+		<ul>
+			<h2>Estructura Semantica</h2>
+			<li>
+				<strong>HEADER: </strong>
+				Cabecera de pagina (Introduccion), se utiliza para mostrar al visitante una paneo general de la imagen del sitio, contiene al H1 y en ocaciones alguna galeria slider.
+				<ul>
+					<li>
+						<strong>NAV: </strong>
+						Navegacion (Indice), indica cuales son los LINKS mas importantes del sitio. Si para acceder a un enlace debemos hacer mas de 3 clicks no vale la pena colocarlo en el NAV.
+						(Puede estar suelta en el Body)
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>MAIN: </strong>
+				Contenido Principal (Nudo), muestra la informacion solicitada/buscada por el usuario, practicamente todo el contenido de la pagina.
+				<ul>
+					<li>
+						<strong>ARTICLE: </strong>
+						Articulo, define a su contenido como independiente al contexto de la pagina, generalmente encontramos esta etiqueta en las noticias que podemos leer en cualquier sitio.
+					</li>
+					<li>
+						<strong>SECTION: </strong>
+						Seccion, define a su contenido como dependiente del contexto de la pagina, es decir que solamente se puede interpretar si se encuentra dentro del sitio.
+					</li>
+					<li>
+						<strong>ASIDE: </strong>
+						Tangencial, representa un contenido que guarda una relacion indirecta con su contexto (hermanos). Generalmente se representa como una barra lateral para publicidad o sugerencias.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>FOOTER: </strong>
+				Pie de Pagina (desenlace), contiene la informacion de copyright, sugerencias y contenido de interes para el lector como las redes sociales.
+			</li>
+		</ul>
+	</main>
+	<footer id="footer">
 		<p>soy el footer</p>
-	</div>
+	</footer>
 </body>
 </html>
