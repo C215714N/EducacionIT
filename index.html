@@ -66,7 +66,7 @@
 		</article>
 		<article class="fondo-2">
 			<header class="header">
-				<h1>Clase 2</h1>
+				<h1>Propiedades de Fondo</h1>
 			</header>
 			<section>
 				<header>
@@ -127,25 +127,111 @@
 		</article>
 		<article class="fondo-3">
 			<header class="header">
-				<h1>Clase 3</h1>
+				<h1>Introduccion a Flexbox</h1>
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Distrubucion de elementos (Justify-Content)</h1>
 				</header>
-				<p>contenido</p>
+				<ul>
+					<li>
+						<strong>Flex-Start: </strong> Distribuye todos los elementos al princio del flex, por defecto el lado izquierdo.
+					</li>
+					<li>
+						<strong>Flex-End: </strong> Distribuye todos los elementos al final del flex, por defecto el lado derecho.
+					</li>
+					<li>
+						<strong>Center: </strong> Distribuye todos los elementos hacia el centro del flex, por defecto de manera horizontal.
+					</li>
+					<li>
+						<strong>Space-Between: </strong> Distribuye los elementos entre el principio y el final del flex, estando el primer y ultimo item pegados a los bordes y separados con la misma distancia.
+					</li>
+					<li>
+						<strong>Space-Around: </strong> Distribuye los elementos de manera equitativa entre el princio y el final del flex, sumando las distancia entre los items, es decir, el primer y el ultimo tendran margenes dispares.
+					</li>
+					<li>
+						<strong>Space-Evenly: </strong> Similar a space-around, distribuye los elementos entre el princio y el final del flex sin sumar las distancias entre etiquetas, dando margenes iguales entre los elementos (no compatible con algunos navegadores).
+					</li>
+				</ul>
+				<div class="flex">
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<div>item 5</div>
+					<div>item 6</div>
+					<div>item 7</div>
+				</div>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Organizacion de elementos (Align-Items)</h1>
 				</header>
-				<p>contenido</p>
+				<ul>
+					<li>
+						<strong>Flex-Start: </strong> Distribuye todos los elementos al princio del flex, por defecto la parte superior.
+					</li>
+					<li>
+						<strong>Flex-End: </strong> Distribuye todos los elementos al final del flex, por defecto la parte inferior.
+					</li>
+					<li>
+						<strong>Center: </strong> Distribuye todos los elementos hacia el centro del flex, por defecto de manera vertical.
+					</li>
+					<li>
+						<strong>Baseline: </strong> Distribuye los elementos en base al tamaño de la tipografia al principio del flex indistintamente del tamaño de las etiquetas.
+					</li>
+					<li>
+						<strong>Align-Self: </strong> Distribuye la etiqueta especificada dentro del flex de manera independiente al resto de los elementos.
+					</li>
+				</ul>
+				<div class="flex align">
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<span>item 5</span>
+					<span>item 6</span>
+					<span>item 7</span>
+				</div>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Orientacion del Contenedor (Flex-Direction)</h1>
 				</header>
-				<p>contenido</p>
+				<ul>
+					<li>Jutify-Content: limegreen border</li>
+					<li>Align-Items: tomato border</li>
+				</ul>
+				<div class="flex align col">
+					<h2>column</h2>
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<span>item 5</span>
+					<span>item 6</span>
+					<span>item 7</span>
+				</div>
+				<div class="flex align reverse">
+					<h2>row-reverse</h2>
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<span>item 5</span>
+					<span>item 6</span>
+					<span>item 7</span>
+				</div>
+				<div class="flex align col-reverse">
+					<h2>column-reverse</h2>
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<span>item 5</span>
+					<span>item 6</span>
+					<span>item 7</span>
+				</div>
 			</section>
 		</article>
 	</main>

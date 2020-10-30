@@ -166,25 +166,64 @@
 		border:.5rem solid #333;
 		width:200px;
 	}
+	/*Flexbox*/
+		.flex{
+			margin: .5rem 0;
+			border: .2rem solid black;
+			padding:.5rem;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+		}
+		.flex div, 
+		.flex span{
+			width:10rem;
+			line-height: 2rem;
+			border:1px solid;
+			padding:.5rem;
+			color:#ccc;
+			background-color: #333;
+		}
+		.align{
+			height: 20rem;
+				align-items: baseline;
+		}
+		.align span{
+			font-size: 2.5rem;
+				align-self: center;
+		}
+		/*tomato:align-items limegreen:justify-content*/
+		.col{
+			flex-direction: column;
+			border-left-color:limegreen; 
+			border-top-color:tomato;
+		}
+		.reverse{
+			flex-direction: row-reverse;
+			border-top-color:limegreen; 
+			border-right-color:tomato;	
+		}
+		.col-reverse{
+			flex-direction: column-reverse;
+			border-left-color:limegreen; 
+			border-bottom-color:tomato;
+		}
 /*Formulario de Contacto*/
 	#contact{
-		overflow: hidden;
-		width:100%;
-		max-width:600px;
-		margin: auto;
-		text-align: left;
+		display: flex;
+		flex-direction: column;
+		max-width:720px;
+		margin: .5rem auto;
 	}
 	#contact h2{
 		margin:0;
 	}
 	#contact label{
-		display: block;
 		height:0;
 		margin-top: .5rem
 	}
 	#contact input,
 	#contact textarea{
-		width: 100%;
 		line-height: 1rem;
 		outline:none;
 		border-radius: .3rem;
@@ -201,7 +240,6 @@
 		box-shadow: 0 0 10px #ccc; /* x y blur color*/
 	}
 	#contact button{
-		float: right;
 		cursor: pointer;
 		border: 2px solid;
 		padding:.5rem 1rem;
@@ -209,6 +247,7 @@
 		background-color: transparent;
 		text-transform: uppercase;
 		font-weight: bold;
+		align-self: flex-end;
 	}
 	#contact button:hover{
 		color:#248;
