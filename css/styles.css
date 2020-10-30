@@ -113,16 +113,15 @@
 	}
 /*Redes Sociales*/
 	.social{
-		width:100%;
+		display: flex;
+		justify-content: space-evenly;
 		max-width: 300px;
 		margin:auto;
 		padding:.5rem;
 		border-radius: .5rem;
-		text-align: center;
 		background-color: rgba(255,255,255,.7);
 	}
 	.social a{
-		display: inline-block;
 		width:4rem;
 		height:4rem;
 		border-radius: .5rem;
@@ -208,6 +207,96 @@
 			border-left-color:limegreen; 
 			border-bottom-color:tomato;
 		}
+	article:first-child{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	article .header{
+		width: 100%;
+	}
+	article:first-child section{
+		max-width: 600px;
+	}
+	article:first-child section:last-child{
+		background-color: rgba(51,51,51,.5);
+		max-width: 1200px;
+	}
+	article section:first-of-type{
+		background-color: rgba(51,51,51,.5)
+	}
+	article:last-child section:last-child{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	article:last-child header,
+	article:last-child ul{
+		width:100%;
+	}
+	article:last-child section:last-child .flex{
+		width:100%;
+		max-width: 600px;
+		overflow: auto;
+	}
+	figure img:first-of-type{
+		float: right;
+		width:150px;
+		margin: 0 0 1rem 1rem;
+	}
+	figure img:first-child{
+		float: left;
+		width:200px;
+		margin: 0 1rem 1rem;
+	}
+	figure img:last-child{
+		float: left;
+		width:100%;
+		margin:1rem;
+		max-width: 600px;
+	}
+	/*
+		pseudo-class (:pseudoclass):
+			instancia o caracteristica de un elemento;
+			GENERAL
+				:hover = pasar el mouse sobre un elemento;
+				:first-child = primer hijo de un elemento;
+				:last-child = ultimo hijo de un elemento;
+				:first-of-type = primer elemento de su tipo;	
+				:last-of-type = ultimo elemento de su tipo;		
+			FORMULARIO
+				:focus = estamos en el elemento a completar;
+				:valid = valor escrito/seleccionado es validado;
+				:invalid = valor escrito/seleccionado es invalido;
+			HIPERVINCULOS
+				:link = enlace sin visitar;
+				:visited = enlace que fue previamente visitado;
+				:active = enlace que estamos seleccionando;
+		;
+	*/
+	section p:first-of-type::first-letter{
+		float: left;
+		font-size: 2rem;
+		padding-right: .2rem;
+	}
+	section p::first-line{
+		color:darkslateblue;
+		font-weight: bold;
+		text-shadow: 0 0 10px #ddd;
+	}
+	section p:last-of-type::first-line{
+		color:#248;
+	}
+	/*
+		pseudo-element(::pseudoelement)
+			partes o secciones dentro del elemento;
+			GENERAL
+				:first-line = primera linea o renglon;
+				:fist-letter =  primera letra;
+				:before = inserta contenido antes del contenido de la etiqueta;
+				:after = inserta contenido despues del contenido de la etiqueta;
+		;
+	*/
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
