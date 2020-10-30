@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p> &lt;HTML> &amp; {CSS} </p>
+		<div id="nav">
+			<ul>
+				<li> <!-- Ruta Relativa (Interna) -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li>
+					<!-- Ruta Ancla (Marcador) -->
+					<a href="#">Galeria</a><!-- refresh -->
+				</li>
+				<li>
+					<!-- Ruta Ancla (Marcador #id) -->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li>
+					<!-- Ruta Absolutas -->
+					<a href="https://github.com/c215714n/educacionit/tree/html-mj-20hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<ul>
+			<h2>Reglas de Nomenclatura</h2>
+			<li>
+				<strong>No utilizar caracteres de espacio </strong>
+				debido a que el navegador reemplazara los mismos por el <em>conjunto "%20"</em> y por lo tanto si tenemos un archivo llamado <em>"foto 01.jpg"</em> este interpretara como nombre del mismo <em>"foto%2001.jpg"</em> dando como resultado que no se encuentre el mismo. Para evitar este tipo de inconvenientes es preferible utilizar <strong>guiones(-_)</strong> dando como resultado <em>"foto-01.jpg"</em>.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos </strong>
+				que faciliten la tarea del desarrollador a la hora de implementar los archivos. Evitar nombres genericos como <em>"foto-01.jpg"</em>, asi como tambien nombres automatizados como <em>"2020-1029-22031500.jpg"</em> y reemplazarlos por algo que describa el elemento en cuestion como <em>"perritos-jugando.jpg"</em>
+			</li>
+			<li>
+				<strong>Implementar minusculas en los nomrbes</strong> debido a que los servidores de Hosting son <strong>caseSensitive</strong> y por lo tanto los nombres <em>"perritos-jugando.jpg", "PERRITOS-JUGANDO.jpg" y "Perritos-Jugando.jpg"</em> se consideran archivos totalmente diferentes. Otra razon para realizar esto es la reduccion de margen de error, ya que nos podemos equivocar al colocar la ruta, el nombre o el formato.
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; compañia.
+		</p>
+	</div>
+</body>
+</html>
