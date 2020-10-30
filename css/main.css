@@ -61,19 +61,26 @@
 	main{
 		display: grid;
 		grid-template-columns: auto auto auto;
-		gap: 1rem;
+		grid-gap: 1rem;
+		counter-reset: clase;
 	}
 	/*Articulos*/
 		article{
 			grid-column-start: 1; /*linea inicial*/
 			grid-column-end: 3; /*liena final*/
+			counter-reset: tema;
+		}
+		article h1:before{
+			counter-increment: clase;
+			content: 'Clase ' counter(clase);
 		}
 	/*Secciones*/
 		section{
 			max-width: 720px;
 		}
 		section h1:before{
-			content:'Tema ';
+			counter-increment: tema;
+			content:'Tema ' counter(tema);
 		}
 		section p:before{
 			content: 'Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Excepturi eveniet a ad, possimus commodi modi aspernatur! Tempore odio commodi modi fugiat eos ad placeat qui ullam cum, sunt rerum assumenda veniam, provident perferendis tempora nemo doloremque culpa recusandae corrupti doloribus! Tempore, maiores. Necessitatibus aperiam porro eum, dicta dolor incidunt velit omnis. Quae excepturi nostrum ea, harum quo veniam eum, at illo, vero architecto aspernatur, voluptatibus sequi! Doloribus voluptates id dolor quo eos praesentium expedita animi debitis suscipit architecto dicta ea quaerat atque accusantium quia temporibus rerum ratione porro, quidem illo ab nisi impedit ipsam molestiae. Distinctio ipsum rem dolore deserunt.';
@@ -93,10 +100,14 @@
 			counter-reset: terciario;
 			counter-increment: secundario;
 		}
-		.terciario{
+		.terciario li{
 			counter-increment: terciario;
 		}
-		li:before{
-			content: counter(principal)'.'counter(secundario)'.'counter(terciario)'algo de texto';
+		main li:before{
+			content: 
+				counter(principal) '.' 
+				counter(secundario) '.' 
+				counter(terciario) 
+				' algo de texto';
 		}
 /*Pie de Pagina*/
