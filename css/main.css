@@ -1,0 +1,102 @@
+/*reglas generales*/
+	*{
+		box-sizing: border-box;
+	}
+
+/*Barra de Navegacion*/
+	nav, .menu, .menu li{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	nav{
+		background-color: #ccc;
+	}
+	nav a{
+		line-height: 2.5rem;
+		padding:.2rem .5rem;
+		color:#333;
+		text-decoration: none;
+	}
+	nav > a{
+		font-size: 1.5rem;
+	}
+	.menu{
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.menu a:hover{
+		background-color: rgba(230,230,250,.5);
+	}
+	#menu{
+		display: none;
+	}
+/*Cabecera*/
+	#header{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		
+		height:400px;
+		border:1px solid black;
+		padding:.5rem;
+		font-size: 3rem;
+		color:#ccc;
+		text-shadow: 0 0 10px #333;
+		background-image: url(../assets/img/background.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	#header h1,
+	#header p{
+		margin:0;
+	}
+/*Contenido Principal*/
+	main, article, section, aside{
+		padding:1rem;
+		border: 1px solid #333;
+	}
+	main{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 1rem;
+	}
+	/*Articulos*/
+		article{
+			grid-column-start: 1; /*linea inicial*/
+			grid-column-end: 3; /*liena final*/
+		}
+	/*Secciones*/
+		section{
+			max-width: 720px;
+		}
+		section h1:before{
+			content:'Tema ';
+		}
+		section p:before{
+			content: 'Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Excepturi eveniet a ad, possimus commodi modi aspernatur! Tempore odio commodi modi fugiat eos ad placeat qui ullam cum, sunt rerum assumenda veniam, provident perferendis tempora nemo doloremque culpa recusandae corrupti doloribus! Tempore, maiores. Necessitatibus aperiam porro eum, dicta dolor incidunt velit omnis. Quae excepturi nostrum ea, harum quo veniam eum, at illo, vero architecto aspernatur, voluptatibus sequi! Doloribus voluptates id dolor quo eos praesentium expedita animi debitis suscipit architecto dicta ea quaerat atque accusantium quia temporibus rerum ratione porro, quidem illo ab nisi impedit ipsam molestiae. Distinctio ipsum rem dolore deserunt.';
+		}
+	/*Laterales*/
+		aside{
+			grid-column-start: 3;
+			grid-row-start: 1; /*linea inicial*/
+			grid-row-end: 3; /*linea final*/
+			counter-reset: principal;
+		}
+		.primario{
+			counter-reset: secundario;
+			counter-increment: principal;
+		}
+		.secundario{
+			counter-reset: terciario;
+			counter-increment: secundario;
+		}
+		.terciario{
+			counter-increment: terciario;
+		}
+		li:before{
+			content: counter(principal)'.'counter(secundario)'.'counter(terciario)'algo de texto';
+		}
+/*Pie de Pagina*/
