@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="width=device-width, initial-scale=1, maximum-scale=3">
+	<title>Maquetacion Web</title>
+</head>
+<body>
+	<nav>
+		<a href="#">Maquetacion</a>
+		<button id="menu">&equiv;</button>
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li class="active"><a href="#">Galeria</a></li>
+			<li><a href="#contact">Contacto</a></li>
+			<li><a href="https://github.com/c215714n/educacionit/tree/maquetacion-viernes-15hs" target="_blank">GitHub</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Maquetacion Web</h1>
+		<p>&lt;HTML> & {CSS}</p>
+	</header>
+	<main>
+		
+	</main>
+	<footer>
+		<form action="" id="contact">
+			<label for="contactName">Nombre</label>
+			<input
+				name="contactName"
+				id="contactName" 
+				type="text"
+				placeholder="Ingrese su Nombre"
+				pattern="[a-z A-Z]{2,50}"
+				required/>
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos, el mismo debe contar con al menos 2 caracteres y maximo 50.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input
+				name="contactEmail"
+				id="contactEmail" 
+				type="email"
+				placeholder="Ingrese su Correo"
+				required />
+			<div class="validate">
+				Ingrese una direccion de correo valida, la misma debe contar con la siguiente estructura "usuario@servidor"
+			</div>
+			<label for="contactTel">Telefono</label>
+			<input 
+				name="contactTel"
+				id="contactTel" 
+				type="tel" 
+				placeholder="Ingrese su Telefono"
+				pattern="[0-9]{6,20}" 
+				required />
+			<div class="validate">
+				Ingrese su numero de telefono sin espacios ni guiones, el mismo debera tener entre 6 y 20 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta"
+				required 
+				></textarea>
+			<button>Contactar</button>
+		</form>
+	</footer>
+</body>
+</html>
