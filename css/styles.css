@@ -187,6 +187,8 @@
 				:first-of-type; primero de su tipo en el elemento padre
 				:first-line; primera linea del elemento
 				:first-letter; primera letra del elemento
+				:before; permite insertar contenido antes del contenido de la etiqueta (inline)
+				:after; permite insertar contenido despues del contenido de la etiqueta (inline)
 	*/
 	article:last-child p:first-line{
 		color:white;
@@ -229,15 +231,44 @@
 				'header header header' 
 				'section article article'
 				'info1 info2 info3'
-				'footer footer footer'
+				'footer footer footer';
+			gap: .5rem;
 		}
 		.grid-area div{	grid-area: section;	}
-		.grid-area div:first-child{	grid-area: footer;	}
+		.grid-area div:first-child{	grid-area: header;	}
 		.grid-area .wide{ grid-area: article; }
 		.wide + div{ grid-area: info1; }
 		.wide + div + div { grid-area: info2; }
 		.wide + div + div + div { grid-area: info3 } 
-		.grid-area div:last-child{	grid-area: header; }
+		.grid-area div:last-child{	grid-area: footer; }
+	/*pseudo-elementos*/
+		.grid-area div:before{
+			content: 'grid-';
+		}
+		.grid-area div:first-child:after{
+			content: ': HEADER';
+		}
+		.grid-area div:last-child:after{
+			content: ': FOOTER'
+		}
+		.grid-area .wide:after{
+			content: ': ARTICLE';
+		}
+		.grid-area div:after{
+			content: ': SECTION';
+		}
+	/*contadores con pseudoelementos*/
+		body{
+			counter-reset: numClase; /*reinicio de contador*/
+		}
+		main .header:before{
+			counter-increment: numClase; /*contador + 1*/
+			content: 'Clase ' counter(numClase) ': '; /*aplicacion*/
+			display: block;
+			padding:1rem 0 0;
+			font-size: 1.5rem;
+			background-color: rgba(51,51,51,.5);
+		}
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
