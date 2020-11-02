@@ -223,15 +223,120 @@
 		.template div:nth-last-child(2){ grid-area: article; }
 		.template div:last-child{ grid-area: footer; }
 	/*Pseudo-elements ::BEFORE - ::AFTER*/
-		.header h1::before{
-			content: 'Clase: ';
-		}
-		section h1::before{
-			content: 'Tema: ';
-		}
 		.before .header h1::after{
 			content:'Pseudo-elementos AFTER & BEFORE';
 		}
+		.before p::before{
+		content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum beatae doloremque praesentium enim est, commodi, nisi necessitatibus et, suscipit explicabo labore architecto, aliquam reiciendis. Nam ducimus explicabo libero laboriosam aliquam dolores in laborum, placeat quos accusamus enim, facere itaque earum porro illo ab quo odit omnis laudantium quod voluptatem. Id in dolores, non? Accusamus sint corporis deserunt sunt hic sit consequatur beatae? Ad esse numquam, voluptas reprehenderit. Minus non, eaque asperiores porro assumenda doloribus inventore ad iusto incidunt. Magni optio ipsum nemo ratione, doloremque deserunt incidunt nihil excepturi, amet maiores reiciendis quas voluptatibus laborum enim provident facere natus rem commodi?'
+		}
+		/* Counters */
+			main{ counter-reset: clase;	}
+			main .header h1::before{
+				counter-increment: clase;
+				content: 'Clase ' counter(clase) ': ';
+			}
+			article{ counter-reset: tema; }
+			section h1::before{
+				counter-increment: tema;
+				content: 'Tema ' counter(tema) ': ';
+			}
+			.before ul{
+				list-style: none;
+			}
+			/*reinicio*/
+				section > ul{ counter-reset: primario; }
+				li > ul{ counter-reset: secundario; }
+				li > ul > li > ul{ counter-reset: terciario; } 
+				li > ul > li > ul > li > ul { counter-reset: cuarto }
+			/*incremento*/
+				section > ul > li{ counter-increment: primario; }
+				li > ul > li{ counter-increment: secundario; }
+				li > ul > li > ul > li{ counter-increment: terciario }
+				li > ul > li > ul > li > ul > li { counter-increment: cuarto }
+			/*aplicacion*/
+				section > ul > li::before,
+				li > ul > li::before,
+				li > ul > li > ul > li::before,
+				li > ul > li > ul > li > ul > li::before{
+					content: counter(primario) '.' counter(secundario) '.' counter(terciario) '.' counter(cuarto);
+					padding-right: 2rem;
+				}
+		/*Sprite*/
+			.sprite{
+				border: 2px solid #333;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+			}
+			.sprite a{
+				width:calc(32px);
+				height: calc(32px);
+				border:2px solid #333;
+					background-image: url(../assets/social/social-media.png);
+					background-size: 352px;
+					margin-right: 6rem; 
+			}
+			/*Texto*/
+				.sprite a:nth-child(1)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'facebook';
+					padding:.5rem;
+				}
+				.sprite a:nth-child(2)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'twitter';
+					padding:.5rem;
+				}
+				.sprite a:nth-child(3)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'linkein';
+					padding:.5rem;
+				}
+				.sprite a:nth-child(4)::after{
+					display: block;
+					margin-left: 32px;
+					content: 'youtube';
+					padding:.5rem;
+				}
+			/*Redes sociales - transparentes*/
+				.sprite a:nth-child(2){
+					background-position: calc(-8 * 32px) calc(0 * 32px); /*twitter*/
+				}
+				.sprite a:nth-child(3){
+					background-position: calc(-4 * 32px) calc(0 * 32px); /*linkedin*/
+				}
+				.sprite a:nth-child(4){
+					background-position: calc(-10 * 32px) calc(0 * 32px); /*youtube*/
+				}
+			/*redes sociales - color*/
+				.sprite a:nth-child(1):hover{
+					background-position: calc(0 * 32px) calc(-1 * 32px); /*Facebook*/	
+				}
+				.sprite a:nth-child(2):hover{
+					background-position: calc(-8 * 32px) calc(-1 * 32px); /*twitter*/
+				}
+				.sprite a:nth-child(3):hover{
+					background-position: calc(-4 * 32px) calc(-1 * 32px); /*linkedin*/
+				}
+				.sprite a:nth-child(4):hover{
+					background-position: calc(-10 * 32px) calc(-1 * 32px); /*youtube*/
+				}
+			/*redes sociales - fondo oscuro (ACTIVE) */
+				.sprite a:nth-child(1):active{
+					background-position: calc(0 * 32px) calc(-2 * 32px); /*Facebook*/	
+				}
+				.sprite a:nth-child(2):active{
+					background-position: calc(-8 * 32px) calc(-2 * 32px); /*twitter*/
+				}
+				.sprite a:nth-child(3):active{
+					background-position: calc(-4 * 32px) calc(-2 * 32px); /*linkedin*/
+				}
+				.sprite a:nth-child(4):active{
+					background-position: calc(-10 * 32px) calc(-2 * 32px); /*youtube*/
+				}
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
