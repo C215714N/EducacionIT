@@ -177,51 +177,61 @@
 		.reverse{ flex-direction: row-reverse; }
 		.col-reverse{ flex-direction: column-reverse; }
 	/*CSS Grid*/
-	.grid{
-		border: 2px solid #333;
-		padding:1rem;
-			display: grid;
-			grid-template-columns: auto auto auto;
-			grid-template-rows: 50px 50px 50px;
-			gap:1rem; /*row column*/
-	}
-	.grid div, .grid-align div{
-		border: 2px solid #ccc;
-	}
-	section:first-of-type .grid div:first-child{
-		grid-row-start: 1;
-		grid-row-end: 3;
-	}
-	section:first-of-type .grid div:last-child{
-		grid-row-start: 2;
-		grid-row-end: 4;
-		grid-column-start: 2;
-		grid-column-end: 4;
-	}
-	.grid-align{
-		height: 216px;
-		border: 2px solid #333;
-		padding:1rem;
-			display: grid;
-			grid-template-columns: auto auto;
-			justify-content: space-around;
-			align-content: center;
-	}
-	.template{
-		grid-template-areas: 
-			"header header header"
-			"section section aside"
-			"article article aside"
-			"footer footer footer"
-		;
-		grid-template-rows: 50px 50px 50px 50px;
-		gap:.5rem;
-	}
-	.template div:first-child{ grid-area: header; }
-	.template div:first-child + div{ grid-area: aside; }
-	.template div:nth-child(3){	grid-area: section; }
-	.template div:nth-last-child(2){ grid-area: article; }
-	.template div:last-child{ grid-area: footer; }
+		.grid{
+			border: 2px solid #333;
+			padding:1rem;
+				display: grid;
+				grid-template-columns: auto auto auto;
+				grid-template-rows: 50px 50px 50px;
+				gap:1rem; /*row column*/
+		}
+		.grid div, .grid-align div{
+			border: 2px solid #ccc;
+		}
+		section:first-of-type .grid div:first-child{
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+		section:first-of-type .grid div:last-child{
+			grid-row-start: 2;
+			grid-row-end: 4;
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
+		.grid-align{
+			height: 216px;
+			border: 2px solid #333;
+			padding:1rem;
+				display: grid;
+				grid-template-columns: auto auto;
+				justify-content: space-around;
+				align-content: center;
+		}
+		.template{
+			grid-template-areas: 
+				"header header header"
+				"section section aside"
+				"article article aside"
+				"footer footer footer"
+			;
+			grid-template-rows: 50px 50px 50px 50px;
+			gap:.5rem;
+		}
+		.template div:first-child{ grid-area: header; }
+		.template div:first-child + div{ grid-area: aside; }
+		.template div:nth-child(3){	grid-area: section; }
+		.template div:nth-last-child(2){ grid-area: article; }
+		.template div:last-child{ grid-area: footer; }
+	/*Pseudo-elements ::BEFORE - ::AFTER*/
+		.header h1::before{
+			content: 'Clase: ';
+		}
+		section h1::before{
+			content: 'Tema: ';
+		}
+		.before .header h1::after{
+			content:'Pseudo-elementos AFTER & BEFORE';
+		}
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
