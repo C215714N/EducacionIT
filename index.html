@@ -36,11 +36,11 @@
 	<main><!-- Contenido Principal / nudo -->
 		<article><!-- Contenido Independiente / Articulo -->
 			<header class="header">
-				<h1>Clase 1: Introduccion Maquetacion</h1>
+				<h1>Introduccion Maquetacion</h1>
 			</header>
 			<section><!-- Contenido Contextualizado / Seccion -->
 				<header>
-					<h1>Tema 1: Elementos Semanticos</h1>
+					<h1>Elementos Semanticos</h1>
 				</header>
 				<p>
 					
@@ -62,7 +62,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2: Jerarquia de Selectores</h1>
+					<h1>Jerarquia de Selectores</h1>
 				</header>
 				<p>
 					
@@ -100,7 +100,7 @@
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1: Distribucion (Justify-Content)</h1>
+					<h1>Distribucion (Justify-Content)</h1>
 				</header>
 				<p>
 					
@@ -138,7 +138,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2: Organizacion (Align-Items)</h1>
+					<h1>Organizacion (Align-Items)</h1>
 				</header>
 				<p>
 					
@@ -169,7 +169,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3: Direccion (Flex-Direction)</h1>
+					<h1>Direccion (Flex-Direction)</h1>
 				</header>
 				<p>
 					
@@ -204,9 +204,64 @@
 			</section>
 		</article>
 		<article>
-			<section><a href="algo.html">Hello World</a></section>
-			<section></section>
-			<section></section>
+			<header class="header">
+				<h1>Introduccion a CSS-Grid</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Sistema de Grillas</h1>
+				</header>
+				<div class="grid">
+					<div> celda 1</div>
+					<div> celda 2</div>
+					<div> celda 3</div>
+					<div> celda 4</div>
+					<div> celda 5</div>
+				</div>
+				<ul>
+					<li>
+						<strong>grid-template-columns: </strong> Permite crear las columnas para organizar el contenido, debemos indicar mediante tamaños o el valor auto la cantidad.
+					</li>
+					<li>
+						<strong>grid-template-rows: </strong> Permite crear y asignar el tamaño de las filas, a diferencia de <em>columns</em> NO define la cantidad maxima de las mismas.
+					</li>
+					<li>
+						<strong>gap: </strong> Permite definir el espaciado entre celdas, aplicandolo a filas y columnas respectivamente, aunque tambien existen los atributos <em>row-gap y column-gap.</em>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion y Distribucion</h1>
+				</header>
+				<div class="grid-align">
+					<div>Celda 1</div>
+					<div>Celda 2</div>
+					<div>Celda 3</div>
+					<div>Celda 4</div>
+					<div>Celda 5</div>
+				</div>
+				<ul>
+					<li>
+						<strong>Justify-content: </strong> Permite Distribuir el contenido de manera horizontal, admite los mismos valores que Flexbox.
+					</li>
+					<li>
+						<strong>Align-content: </strong> Permite Organizar el contenido de la grila de manera vertical, admite los mismos valores que el atributo <em>align-items de Flexbox.</em>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Plantilla de Grilla</h1>
+				</header>
+				<div class="grid template">
+					<div>Celda 1</div>
+					<div>Celda 2</div>
+					<div>Celda 3</div>
+					<div>Celda 4</div>
+					<div>Celda 5</div>
+				</div>
+			</section>
 		</article>
 	</main>
 	<footer id="footer"> <!--Pie / Descenlace-->
