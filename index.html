@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>	
+	<!-- HEAD: Parte NO VISIBLE
+			Configuraciones
+			Metadatos
+			Enlaces -->
+	<meta charset="UTF-8">
+	<meta name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1, 
+			maximum-scale=3">
+	<title>Maquetación Web</title>
+</head>
+<body>
+	<!-- BODY: Parte VISIBLE
+			Imagenes y texto
+			listas y tablas
+			hipervinculos -->
+	<header id="header"><!-- Cabecera (Introduccion) -->
+		<div class="header">
+			<h1>Maquetación Web</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav><!-- Links mas importantes -->
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li>
+					<!-- Ruta Ancla - Marcador (# = refresh) -->
+					<a href="#">inicio</a>
+				</li>
+				<li>
+					<!-- Ruta Relativa - Interna -->
+					<a href="about.html">acerca de</a>
+				</li>
+				<li>
+					<!-- Ruta Ancla - Marcador (#id) -->
+					<a href="#contact">contacto</a>
+				</li>
+				<li>
+					<!-- Ruta Absoluta - Externa -->
+					<a href="https://github.com/C215714N/EducacionIT/tree/maquetacion-martes-15hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main><!-- Contenido (Principal)-->
+		<article><!--Contenido Independiente (Articulo)-->
+			<header class="header">
+				<h1>Clase 1: Introduccion a la Maquetacion</h1>
+			</header>
+			<section><!-- Contenido Dependiente (Seccion) -->
+				<header>
+					<h1>Tema 1: Elementos Semanticos</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>HEADER</strong> es la cabecera de la pagina, debe encontrarse en la parte superior de la misma. Contiene los titulos mas importantes, usualmente tambien contiene la navegacion y a veces se lo utiliza para presentar alguna galeria al comienzo de la pagina.
+						<ul>
+							<li>
+								<strong>NAV</strong> representa la navegacion de la pagina, es decir, los enlaces mas importantes y solamente deben colocarse dentro aquellos que sean relevantes para el sitio. Si un link requiere de mas de 3clicks para acceder a el, no merece la pena.
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>MAIN</strong> comprende el contenido principal de la pagina, aquel que busca el usuario cuando visita la misma y segun la <em>W3C (world wide consortium)</em> solamente debe aparecer una vez.
+						<ul>
+							<li>
+								<strong>Article</strong> representa aquel contenido que funciona y comprende tanto dentro como fuera de la pagina, es decir, que no necesita de un contexto para entenderse. El ejemplo mas claro de esto son las noticias, debido a que se entienden debido a su estructura.
+							</li>
+							<li>
+								<strong>Section</strong> es aquel contenido que depende el contexto de la pagina para entenderse en su totalidad, normalmente se encuentra dentro de algun <em>article</em>, pero tambien se puede darse la situacion inversa.
+							</li>
+							<li>
+								<strong>Aside</strong> representa el contenido que guarda una relacion tangencial con el contenido principal, se asocia a sus hermanos y muestra informacion relacionada indirectamente con estos. Usualmente se lo utiliza para mostrar publicidad o sugerencias de contenido.
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>footer </strong>es el pie de pagina, el cual contiene la informacion de <em>copyright</em>, autor del sitio, datos y formulario de contacto, redes sociales y cualquier otro tipo de informacion que sea relevante, despues del contenido principal.
+					</li> 
+				</ul>
+				<p>
+					
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores voluptatum qui, sequi doloribus esse molestiae nobis, veniam dolorum corporis dolor, quo quisquam quasi explicabo corrupti illum aliquam culpa itaque libero ipsa. Iure sed culpa animi molestias, a perferendis repellendus quas blanditiis ipsa tenetur rem dignissimos cumque hic consectetur quia, neque, optio pariatur ex exercitationem corrupti in odit porro illo soluta nemo! Ut officiis aperiam, nostrum. Delectus vitae fuga, architecto pariatur libero quaerat nam doloremque maxime consectetur perferendis, sequi sunt placeat officiis, animi esse doloribus veniam nostrum laudantium reprehenderit numquam quod est. Rerum expedita alias ipsa, adipisci a mollitia molestias, ab.
+				</p>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 2</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+	</main>
+</body>
+</html>
