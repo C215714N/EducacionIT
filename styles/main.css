@@ -108,20 +108,21 @@
 					background-color: hsla(200, 50%, 60%,.5);
 				}
 				/*Elementos Estadisticos*/
-				.example progress, 
-				.example meter{
-					width:100%;
-					height: 2.5rem;
-				}
-				.example meter::-webkit-meter-optimum-value{
-					background: linear-gradient(limegreen, darkgreen);
-				}
-				.example meter::-webkit-meter-suboptimum-value{
-					background: linear-gradient(yellow, orange);	
-				}
-				.example meter::-webkit-meter-even-less-good-value{
-					background: linear-gradient(tomato, darkred);
-				}
+					.example progress, 
+					.example meter{
+						width:100%;
+						height: 2.5rem;
+					}
+					.example ::-webkit-meter-optimum-value{
+						background: linear-gradient(limegreen, darkgreen);
+					}
+
+					.example ::-webkit-meter-suboptimum-value{
+						background: linear-gradient(yellow, orange);	
+					}
+					.example ::-webkit-meter-even-less-good-value{
+						background: linear-gradient(tomato, darkred);
+					}
 				/*Contenido Multimedia*/
 					.example video,
 					.example img{
@@ -202,12 +203,72 @@
 							hsl(120, 60%, 30%)
 							); 
 					}
+				/*Transformaciones*/
+					.transform{
+						display: flex;
+						flex-wrap: wrap;
+					}
+					/* Translate => Mover */
+						.transform div:nth-child(1){
+							transform: translateX(50%);
+							transform: translateY(.5rem);
+							transform: translate(1rem, .5rem);/*x, y*/
+						}
+					/* Scale => Redimensionar */
+						.transform div:nth-child(2){
+							transform: scaleX(2);
+							transform: scaleY(1.5);
+							transform: scale(1.2);/*xy (x, y)*/
+						}
+					/*Rotate => Girar*/
+						.transform div:nth-child(3){
+							transform: rotate(-10deg); /*clockwise*/
+						}
+					/*Skew => Sesgar*/
+						.transform div:nth-child(4){
+							transform: skewX(30deg);
+							transform: skewY(15deg);
+							transform: skew(30deg, 5deg);
+						}
+						/*Transformaciones 2d*/
+							.transform div:nth-child(5){
+								transform: 
+									translate(1rem, -.5rem)
+									rotate(10deg)
+									scale(1.2)
+									skew(15deg)
+								;
+							}	
+				/*Transformaciones 3d*/
+					.perspective{
+						display: flex;
+						flex-wrap: wrap;
+						perspective: 300px;
+						perspective-origin: top left;
+					}
+					.perspective div:nth-child(1){
+						transform: rotateX(45deg);
+					}
+					.perspective div:nth-child(2){
+						transform: rotateY(45deg);
+					}
+					.perspective div:nth-child(3){
+						transform: rotateZ(15deg);
+					}
+					.perspective div:nth-child(4){
+						transform: 
+							translate(2rem)
+							scale(1.2)
+							rotateX(15deg)
+							rotateY(30deg);
+					}
 	/*Small Devices - */
 		@media screen and (min-width: 576px){
 			
 		}
 	/*Medium Devices*/
 		@media screen and (min-width: 768px){
+			/*Encabezado y Pie*/
 			#header{
 				display: flex;
 				justify-content: space-between;
