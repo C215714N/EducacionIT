@@ -246,21 +246,34 @@
 						perspective: 300px;
 						perspective-origin: top left;
 					}
-					.perspective div:nth-child(1){
+					.perspective div:nth-child(1):hover{
 						transform: rotateX(45deg);
 					}
-					.perspective div:nth-child(2){
+					.perspective div:nth-child(2):hover{
 						transform: rotateY(45deg);
 					}
-					.perspective div:nth-child(3){
+					.perspective div:nth-child(3):hover{
 						transform: rotateZ(15deg);
 					}
-					.perspective div:nth-child(4){
+					.perspective div:nth-child(4):hover{
 						transform: 
 							translate(2rem)
 							scale(1.2)
 							rotateX(15deg)
 							rotateY(30deg);
+					}
+					.perspective div{
+						transition-property: transform;
+						transition-duration: 3s;
+						transition-delay: .2s;
+						transition-timing-function: ease;
+							/*
+								ease: lento normal lento;
+								ease-in: lento rapido;
+								ease-out: rapido lento;
+								ease-in-out: lento rapido lento;
+								linear: igual igual igual;
+							*/
 					}
 	/*Small Devices - */
 		@media screen and (min-width: 576px){
