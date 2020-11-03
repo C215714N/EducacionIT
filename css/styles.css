@@ -1,0 +1,100 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,300&family=Roboto+Slab:wght@800&display=swap'
+	);
+	*{
+		font-family: Raleway, calibri, segoe ui, sans-serif;
+		box-sizing: border-box;
+			/*	
+				content-box:
+					content-width = width
+					final-width = width + padding + border
+				;
+				border-box:
+					final-width = with
+					content-width = width - padding - border
+				;
+			*/
+	}
+	body{
+		margin:0;
+	}
+/*Encabezado y Pie*/
+	#header,
+	main .header,
+	#footer{
+		padding:16px;
+		color:#ddd; /*rrggbb*/
+		background-color: #36c;
+		text-transform: capitalize;
+		font-variant: small-caps;
+	}
+	.header h1, 
+	.header p{
+		margin:0;
+		line-height: 20px;
+	}
+	.header p{
+		letter-spacing: 5px;
+	}
+	#header a,
+	#footer a{
+		color:#ddd;
+		text-decoration: none;
+	}
+/*Barra de Navegacion*/
+	nav{
+		background-color: #248;
+		margin:16px -16px 0;
+	}
+	#menu{
+		display: none;
+	}
+	.menu{
+		list-style: none; /*top right bottom left */
+		padding: 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.menu li{
+		display: inline-block;
+		padding:8px;
+		line-height: 32px;
+	}
+		/*
+			Block:
+				generan salto de linea
+				ocupan el 100% del contenedor
+				funcionan como contenedor
+			;
+			Inline:
+				comparten linea con otros elementos
+				se adaptan al contenido (automatico)
+				funcionan como contenido
+			;
+			Inline-Block:
+				comparten linea con otros elementos
+				se les puede dar tamaño
+				generalmente cumplen la funcion de contenido
+			;
+		*/
+	.menu li:hover{
+		background-color: #124;
+	}
+/*Contenido Principal*/
+	main, article{
+		padding:8px;
+	}
+	section strong{
+		text-transform: uppercase;
+	}
+	section > ul{
+		background-color: rgba(51,102,204,.5);
+	}
+	section li{
+		padding:4px;
+	}
+	section ul span{
+		color:#248;
+		font-weight: bold;
+	}
