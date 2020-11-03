@@ -248,7 +248,7 @@
 					<div>RotateZ</div>
 					<div>Perspective
 						<div>
-							Hijo de la perspective
+							<a href="#">Hijo de la perspective</a>
 						</div>
 					</div>
 				</div>
@@ -301,8 +301,54 @@
 		</article>
 	</main>
 	<footer id="footer"><!-- Pie: Descenlace -->
-		<form action="" id="contact">
-			
+		<form action="" id="contact" method="POST">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				name="contactName"
+				id="contactName" 
+				type="text" 
+				pattern="[a-z A-Z]{2,50}" 
+				placeholder="Ingrese su Nombre" 
+				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros, ni simbolos.
+				El mismo debe poseer entre 2 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				name="contactEmail"
+				id="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="validate">
+				Ingrese una direccion de correo valida.
+				La misma debe poseer la siguiete estructura "usuario@servidor".
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				name="contactPhone"
+				id="contactPhone" 
+				type="tel" 
+				pattern="[0-9]{6,20}" 
+				placeholder="Ingrese su Telefono" 
+				required />
+			<div class="validate">
+				Ingrese su telefono sin guiones, ni espacios.
+				El mismo debe poseer entre 6 y 20 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult" 
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required
+			></textarea>
+			<button>Enviar</button>
+			<div>Todos los campos con (*) son obligatorios</div>
 		</form>
 		<div class="social">
 			

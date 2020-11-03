@@ -246,16 +246,16 @@
 						perspective: 300px;
 						perspective-origin: top left;
 					}
-					.perspective div:nth-child(1):hover{
+					.perspective div:nth-child(1){
 						transform: rotateX(45deg);
 					}
-					.perspective div:nth-child(2):hover{
+					.perspective div:nth-child(2){
 						transform: rotateY(45deg);
 					}
-					.perspective div:nth-child(3):hover{
+					.perspective div:nth-child(3){
 						transform: rotateZ(15deg);
 					}
-					.perspective div:nth-child(4):hover{
+					.perspective div:nth-child(4){
 						transform: 
 							translate(2rem)
 							scale(1.2)
@@ -275,9 +275,99 @@
 								linear: igual igual igual;
 							*/
 					}
+					.perspective:hover div{
+						transform: 
+							translate(50%);
+					}
+		/*Formulario de Contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				margin:1rem auto;
+				padding:1rem;
+			}
+			#contact h2{
+				margin:0;
+			}
+			#contact label,
+			#contact .validate{
+				height: 0;
+				overflow: hidden;
+				margin-top: .2rem;
+			}
+			#contact input,
+			#contact textarea{
+				outline: none;
+				border:2px solid #fff;
+				padding:.2rem .5rem;
+				border-radius: .2rem;
+				line-height: 1.5rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				height: 7rem;
+				resize: none;
+			}
+			#contact button{
+				align-self: flex-end;
+				cursor: pointer;
+				margin:.5rem 0;
+				border: 2px solid;
+				border-radius: .2rem;
+				padding:.5rem;
+				color: #ccc;
+				background-color: transparent;
+				font-size: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			#contact label,
+			#contact input,
+			#contact textarea,
+			#contact button,
+			#contact div{
+				transition: all .5s ease-in;
+			}
+			#contact button:hover{
+				color:#248;
+				background-color: #ccc;
+			}
+			/*Validacion*/
+				#contact :focus + .validate{
+					margin:0 0 .5rem;
+					padding:.5rem;
+					height: auto;
+					border-radius: 0 0 .2rem .2rem; /*tl tr br bl*/
+				}
+				#contact :focus:valid + .validate{
+					color:darkgreen;
+					background-color: lightgreen;
+				}
+				#contact :focus:invalid + .validate{
+					color:darkred;
+					background-color: tomato;
+				}
+				#contact :focus:valid{
+					border-color: lightgreen;
+					box-shadow: 0 4px lightgreen;
+				}
+				#contact :focus:invalid{
+					border-color: tomato;
+					box-shadow: 0 4px tomato;
+				}
+				#contact textarea:focus:valid,
+				#contact textarea:focus:invalid{
+					box-shadow: 0 0 transparent;
+				}
+				#contact:invalid button{
+					background-color: darkred;
+				}
 	/*Small Devices - */
 		@media screen and (min-width: 576px){
-			
+			/*Formulario de Contacto*/
+				#contact{
+					max-width: 540px;
+				}
 		}
 	/*Medium Devices*/
 		@media screen and (min-width: 768px){
@@ -300,6 +390,10 @@
 				.menu span{
 					display: none;
 				}
+			/*Formulario de Contacto*/
+				#contact{
+					max-width: 720px;
+				}
 		}
 	/*Large Devices*/
 		@media screen and (min-width: 992px){
@@ -310,6 +404,16 @@
 				.menu span{
 					display: inline-block;
 					font-size: 1rem;
+				}
+			/*Formulario de Contacto*/
+				#contact{
+					max-width: 960px;
+				}
+				#contact :focus,
+				#contact :focus + .validate{
+					transform: 
+						scale(1.2)
+						translate(0, -.5rem);
 				}
 		}
 	/*Extra Large Devices*/
