@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/logo-it.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -127,24 +129,34 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="" method="POST">
+		<form 
+			id="contacto"
+			onsubmit="alert('Gracias por realizar tu consulta')"
+			action="contacto.php" 
+			method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Nombre</label>
 			<input 
-				name="nombre" 
-				minlength="2"
+				name="nombre"
+				type="text"
 				maxlength="50" 
-				type="text" />
+				placeholder="Ingrese su Nombre" 
+				pattern="[A-Z a-z]{2,50}" 
+				title="Ingrese su nombre sin numeros ni simbolos, el mismo debe tener entre 2 y 50 caracteres" 
+				required />
 			<label for="email">Correo</label>
 			<input 
 				name="email" 
-				type="email" />
+				type="email"
+				placeholder="Ingrese su Correo" 
+				required />
 			<label for="consulta">Consulta</label>
 			<textarea 
 				name="consulta"
 				minlength="10"
 				maxlength="200" 
-				></textarea>
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
 			<button>Consultar</button>
 		</form>
 	</footer>

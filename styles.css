@@ -1,0 +1,51 @@
+/*reglas generales*/
+	body{
+		margin:0;
+		font-family: calibri, segoe ui, sans-serif;
+	}
+/*Encabezado y Pie*/
+	#header, main .header, #footer{
+		padding:16px;
+		color:#ccc;
+		background-color: #248;
+	}
+	.header h1, .header p{
+		margin:0;
+	}
+/*Formulario de Contacto*/
+	#contacto{
+		overflow: hidden;
+		margin:auto;
+		width:450px;
+	}
+	#contacto h2{
+		margin:0;
+	}
+	#contacto label{
+		display: none;
+	}
+	#contacto input, #contacto textarea{
+		width:440px;
+		margin-bottom: 8px;
+		outline: none;
+		border:none;
+		padding:5px;
+		font-size: 16px;
+		font-family: calibri, segoe ui, sans-serif;
+	}
+	#contacto textarea{
+		height: 80px;
+		resize: none;
+	}
+
+	#contacto button{
+		float: right;
+		border:2px solid;
+		padding:8px;
+		color:#ccc;
+		background-color: transparent;
+	}
+	#contacto button:hover{
+		color:#248;
+		background-color: #ccc;
+	}
