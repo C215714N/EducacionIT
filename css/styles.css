@@ -253,7 +253,7 @@
 		float: left;
 		width:100%;
 		margin:1rem;
-		max-width: 600px;
+		max-width: 500px;
 	}
 	/*
 		pseudo-class (:pseudoclass):
@@ -297,6 +297,63 @@
 				:after = inserta contenido despues del contenido de la etiqueta;
 		;
 	*/
+	/*CSS-Grid*/
+		.grid{
+			padding: .5rem;
+			border:2px solid white;
+				display: grid;
+				grid-template-columns: auto auto auto;
+				grid-template-rows: 50px 50px 50px;
+				column-gap: .5rem; 
+				row-gap: 1rem;
+				gap: 1rem .5rem; /*row col*/
+		}
+		.grid span{
+			padding: .5rem;
+			border: 2px solid white;
+			background-color: #ccc;
+		}
+		.grid span:first-child{
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+		.grid span:last-child{
+			grid-row-start: 1;
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
+		.content{
+			height: 300px;
+			justify-content: space-around;
+			align-content: center;
+		}
+		.template{
+			grid-template-areas: 
+				"header header header"
+				"aside section section"
+				"aside info3 info4"
+				"aside article article"
+				"footer footer footer";
+		}
+		.template span:first-child{	grid-area: header; }
+		.template #aside{ grid-area: aside; }
+		.template #aside + span{ grid-area: section;	}
+		.template #aside + span + span{ grid-area: article; }
+		.template span:last-child{	grid-area: footer; }
+	/*Pseudoelementos AFTER & BEFORE*/
+		main .header h1::before{
+			content: 'Clase'  ': ';
+			display: block;
+		}
+		section h1::before{
+			content: 'Tema '  ': ';
+		}
+		.pseudo p::before{
+			
+			content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam accusamus quis eligendi amet maiores provident sunt eius aliquam, voluptas veniam velit facere, harum aspernatur nesciunt adipisci excepturi. Repellendus sint, excepturi corporis cumque at nam harum ipsam dolorum, hic, ducimus eius! Repellendus error amet facilis deserunt! Itaque quibusdam quisquam adipisci praesentium provident odit tempore ea veniam corrupti cumque minima sunt, et iure quaerat vel omnis, doloremque error dicta culpa soluta eum repudiandae alias voluptatibus, impedit officiis. Ut enim reprehenderit, quae aperiam quidem quas aspernatur aut, aliquid. Itaque sed animi nemo aliquid architecto maiores corrupti. Tenetur eligendi, necessitatibus ipsam, quisquam sequi minus.'
+			;
+		}
+
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;

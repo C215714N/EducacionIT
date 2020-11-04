@@ -123,7 +123,7 @@
 						
 						Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Voluptates ullam recusandae similique iusto totam soluta error saepe ducimus, quas illum asperiores maxime consequatur eveniet qui obcaecati accusamus sunt natus, vitae sapiente voluptate numquam? Sit reprehenderit consectetur beatae culpa quae nisi voluptas, error provident, alias vero est sint at officiis, blanditiis aliquam nostrum placeat, nobis facilis quis! Tempora a molestiae cum sunt, praesentium quis fuga sed totam sequi distinctio veritatis amet deserunt, aliquam error assumenda? Est, possimus, quod. Optio corrupti molestias vel porro quidem voluptatum quibusdam mollitia nisi, quia nulla veritatis nihil debitis modi dolores, distinctio ad ex non aliquam, ratione?
 					</p>
-					<img src="assets/img/jjba-silverchariot-01.jpg" alt="Dibujo Silver Chariot">
+					<img src="assets/img/jjba-silverchariot-02.jpg" alt="Dibujo Silver Chariot">
 					<p>
 						
 						Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Voluptates ullam recusandae similique iusto totam soluta error saepe ducimus, quas illum asperiores maxime consequatur eveniet qui obcaecati accusamus sunt natus, vitae sapiente voluptate numquam? Sit reprehenderit consectetur beatae culpa quae nisi voluptas, error provident, alias vero est sint at officiis, blanditiis aliquam nostrum placeat, nobis facilis quis! Tempora a molestiae cum sunt, praesentium quis fuga sed totam sequi distinctio veritatis amet deserunt, aliquam error assumenda? Est, possimus, quod. Optio corrupti molestias vel porro quidem voluptatum quibusdam mollitia nisi, quia nulla veritatis nihil debitis modi dolores, distinctio ad ex non aliquam, ratione?
@@ -147,7 +147,10 @@
 						
 						Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Voluptates ullam recusandae similique iusto totam soluta error saepe ducimus, quas illum asperiores maxime consequatur eveniet qui obcaecati accusamus sunt natus, vitae sapiente voluptate numquam? Sit reprehenderit consectetur beatae culpa quae nisi voluptas, error provident, alias vero est sint at officiis, blanditiis aliquam nostrum placeat, nobis facilis quis! Tempora a molestiae cum sunt, praesentium quis fuga sed totam sequi distinctio veritatis amet deserunt, aliquam error assumenda? Est, possimus, quod. Optio corrupti molestias vel porro quidem voluptatum quibusdam mollitia nisi, quia nulla veritatis nihil debitis modi dolores, distinctio ad ex non aliquam, ratione?
 					</p>
-					<img src="assets/img/jjba-silverchariot-01.jpg" alt="Dibujo Silver Chariot">
+					<div>
+						<img src="assets/img/jjba-silverchariot-03.jpg" alt="Dibujo Silver Chariot">
+					</div>
+					<img src="assets/img/jjba-silverchariot-04.jpg" alt="Dibujo Silver Chariot">
 				</figure>
 			</section>
 			<section>
@@ -265,6 +268,191 @@
 					<span>item 6</span>
 					<span>item 7</span>
 				</div>
+			</section>
+		</article>
+		<article class="fondo-1">
+			<header class="header">
+				<h1>Introduccion a CSS-Grid</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Sistema de Grillas</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>grid-template-columns: </strong> permite crear las columnas indicando la cantidad y el tamaño de las mismas, aunque este ultimo puede ser <em>auto</em>
+					</li>
+					<li>
+						<strong>grid-template-rows:</strong> Indica el tamaño de las filas siguiendo un orden correlativo, en caso que la grilla posea mas filas, estas tendran un tamaño automatico.
+					</li>
+					<li>
+						<strong>gap:</strong> Indica el espaciado entre celdas, podemos utilizar diferentes valores, aplicando el primero a las filas y el segundo a las columnas. Existen atributos individuales como <em>column-gap &amp; row-gap</em> para especificar el tamaño de las calles para las columnas y las filas respectivamente
+					</li>
+					<li>
+						<strong>grid-row-start:</strong> Indica en que fila iniciaria nuestro elemento, indistintamente de su posicion actual.
+					</li>
+					<li>
+						<strong>grid-row-end:</strong> Indica en fila terminaria nuestro elemento, indistintamente de su posicion actual.
+					</li>
+					<li>
+						<strong>grid-column-start:</strong> Indica en que columna empezaria nuestro elemento, indistintamente de su posicion actual.
+					</li>
+					<li>
+						<strong>grid-column-end:</strong> Indica en que columna finalizaria nuestro elemento, indistintamente de su posicion actual.
+					</li>
+				</ul>
+				<div class="grid">
+					<span>Celda 1</span>
+					<span>Celda 2</span>
+					<span>Celda 3</span>
+					<span>Celda 4</span>
+					<span>Celda 5</span>
+					<span>Celda 6</span>
+					<span>Celda 7</span>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion y distribucion</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>Justify-content</strong> Permite organizar el contenido de manera horizontal
+						<ul>
+							<li><strong>flex-start</strong> al comienzo (izquierda)</li>
+							<li><strong>center</strong> en el medio (horizontal)</li>
+							<li><strong>flex-end</strong> al final (derecha)</li>
+							<li><strong>space-between</strong> entre los extremos</li>
+							<li><strong>space-around</strong> con espacio entre etiquetas (sumando distancias)</li>
+							<li><strong>space-evenly</strong> con distancias iguales entre etiquetas (compatible con algunos navegadores)</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Align-Content</strong> Permite organizar el contenido de manera vertical
+						<ul>
+							<li><strong>flex-start</strong> al comienzo (arriba)</li>
+							<li><strong>center</strong> en el medio (vertical)</li>
+							<li><strong>flex-end</strong> al final (abajo)</li>
+							<li><strong>baseline</strong> en base a la tipografia</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="grid content">
+					<span>Celda 1</span>
+					<span>Celda 2</span>
+					<span>Celda 3</span>
+					<span>Celda 4</span>
+					<span>Celda 5</span>
+					<span>Celda 6</span>
+					<span>Celda 7</span>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Grilla con Plantilla</h1>
+				</header>
+				<ul>
+					<li><strong>grid-template-areas:</strong> Permite crear plantillas, en base a nombres definidos por nosotros colocados entre comillas segun la cantidad de columnas y filas</li>
+					<li><strong>grid-area:</strong> Asigna el nombre del area especificada a la etiqueta, permitiendo que ocupe el espacio predeterminado en la plantilla.</li>
+				</ul>
+				<div class="grid template">
+					<span>HEADER</span>
+					<span id="aside">ASIDE</span>
+					<span>INFO-1</span>
+					<span>INFO-2</span>
+					<span>INFO-3</span>
+					<span>INFO-4</span>
+					<span>FOOTER</span>
+				</div>
+			</section>
+		</article>
+		<article class="pseudo fondo-2">
+			<header class="header">
+				<h1></h1>
+			</header>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<p></p>
+				<p></p>
+				<ul>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<p></p>
+				<p></p>
+				<ul>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<p></p>
+				<p></p>
+				<ul>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
