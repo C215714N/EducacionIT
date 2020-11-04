@@ -341,19 +341,85 @@
 		.template #aside + span + span{ grid-area: article; }
 		.template span:last-child{	grid-area: footer; }
 	/*Pseudoelementos AFTER & BEFORE*/
-		main .header h1::before{
-			content: 'Clase'  ': ';
-			display: block;
-		}
-		section h1::before{
-			content: 'Tema '  ': ';
-		}
+		/*contador Clase N°*/
+			main{
+				counter-reset: clase;
+			}
+			main .header h1::before{
+				counter-increment: clase;
+				content: 'Clase ' counter(clase) ': ';
+				display: block;
+			}
+		/*contador Tema N°*/
+			article{
+				counter-reset: tema;
+			}
+			section h1::before{
+				counter-increment: tema;
+				content: 'Tema ' counter(tema) ': ';
+			}
 		.pseudo p::before{
 			
 			content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam accusamus quis eligendi amet maiores provident sunt eius aliquam, voluptas veniam velit facere, harum aspernatur nesciunt adipisci excepturi. Repellendus sint, excepturi corporis cumque at nam harum ipsam dolorum, hic, ducimus eius! Repellendus error amet facilis deserunt! Itaque quibusdam quisquam adipisci praesentium provident odit tempore ea veniam corrupti cumque minima sunt, et iure quaerat vel omnis, doloremque error dicta culpa soluta eum repudiandae alias voluptatibus, impedit officiis. Ut enim reprehenderit, quae aperiam quidem quas aspernatur aut, aliquid. Itaque sed animi nemo aliquid architecto maiores corrupti. Tenetur eligendi, necessitatibus ipsam, quisquam sequi minus.'
 			;
 		}
-
+		section ul{	
+			list-style: none; 
+			padding-left: .8rem;
+		}
+		/*Tabla de Contenidos*/	
+			section > ul{ counter-reset: primario; }
+			section > ul > li { counter-increment: primario; }
+			section > ul > li > ul{ counter-reset: secundario; }
+			section > ul > li > ul > li { counter-increment: secundario; }
+			section > ul > li > ul > li > ul { counter-reset: terciario; }
+			section > ul > li > ul > li > ul > li { counter-increment: terciario;}
+		section li::before{
+			content: 
+				counter(primario) '.'
+				counter(secundario)'.'
+				counter(terciario) ' - ';
+		}
+		section h1::after{
+			content: ' (' counter(clase)'.'counter(tema)')'
+		}
+	/*Propiedades de lista*/
+		.pseudo ul{
+			list-style: circle url(../assets/icon/check.png) inside;
+		}
+		.pseudo li{
+			padding:1rem;
+		}
+		.pseudo li::before{
+		content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem ut inventore impedit ipsam. Laborum eos optio ut magnam asperiores ducimus veniam distinctio non repellendus quos corrupti molestiae ratione recusandae id fugiat, officiis architecto nisi vel nihil facilis unde totam sint quas. Atque iusto voluptate quis necessitatibus minus, dolorem aperiam!';
+		}
+	/*Sprites*/
+		.sprite{
+			border:1px solid black;
+			display: flex;
+			justify-content: space-evenly;
+		}
+		.sprite a{
+			border:1px solid #ccc;
+			width:calc(64px);
+			height: calc(64px);
+			background-size: calc(64px * 11);
+			background-image: url(../assets/icon/social-media.png);
+		}
+	/*Iconos estandar*/
+		.sprite a:nth-child(2){background-position: calc(64px * -8) calc(64px * 0)}
+		.sprite a:nth-child(3){background-position: calc(64px * -4) calc(64px * 0)}
+		.sprite a:nth-child(4){background-position: calc(64px * -10) calc(64px * 0)}
+	/*Iconos :hover*/
+		.sprite a:nth-child(1):hover{background-position: calc(64px * 0) calc(64px * -2)}
+		.sprite a:nth-child(2):hover{background-position: calc(64px * -8) calc(64px * -2)}
+		.sprite a:nth-child(3):hover{background-position: calc(64px * -4) calc(64px * -2)}
+		.sprite a:nth-child(4):hover{background-position: calc(64px * -10) calc(64px * -2)}
+	/*Iconos :active*/
+		.sprite a:nth-child(1):active{background-position: calc(64px * 0) calc(64px * -1)}
+		.sprite a:nth-child(2):active{background-position: calc(64px * -8) calc(64px * -1)}
+		.sprite a:nth-child(3):active{background-position: calc(64px * -4) calc(64px * -1)}
+		.sprite a:nth-child(4):active{background-position: calc(64px * -10) calc(64px * -1)}
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
