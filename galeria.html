@@ -3,12 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Comentario CSS */
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p> &lt;HTML> &amp; {CSS} </p>
-		<div id="nav">
+		<nav>
 			<ul>
 				<li> <!-- Ruta Relativa (Interna) -->
 					<a href="index.html">Inicio</a>
@@ -26,9 +29,9 @@
 					<a href="https://github.com/c215714n/educacionit/tree/html-mj-20hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main>
 		<ul>
 			<h2>Reglas de Nomenclatura</h2>
 			<li>
@@ -40,16 +43,113 @@
 				que faciliten la tarea del desarrollador a la hora de implementar los archivos. Evitar nombres genericos como <em>"foto-01.jpg"</em>, asi como tambien nombres automatizados como <em>"2020-1029-22031500.jpg"</em> y reemplazarlos por algo que describa el elemento en cuestion como <em>"perritos-jugando.jpg"</em>
 			</li>
 			<li>
+
 				<strong>Implementar minusculas en los nombres</strong> debido a que los servidores de Hosting son <strong>caseSensitive</strong> y por lo tanto los nombres <em>"perritos-jugando.jpg", "PERRITOS-JUGANDO.jpg" y "Perritos-Jugando.jpg"</em> se consideran archivos totalmente diferentes. Otra razon para realizar esto es la reduccion de margen de error, ya que nos podemos equivocar al colocar la ruta, el nombre o el formato.
 			</li>
 		</ul>
-	</div>
-	<div id="footer">
+		<div class="example">
+			<img style="width:300px;" 
+				src="img/jjba-crazydiamond-01.jpg" 
+				alt="JOJO Crazy Diamond" />
+			<img style="width:300px;" 
+				src="img/jjba-crazydiamond-02.jpg" 
+				alt="JOJO Crazy Diamond" />
+			<img style="width:300px;" 
+				src="img/jjba-crazydiamond-03.jpg" 
+				alt="JOJO Crazy Diamond" />
+			<img style="width:300px;" 
+				src="img/jjba-crazydiamond-04.jpg" 
+				alt="JOJO Crazy Diamond" />
+		</div>
+		<ul>
+			<h2>Formatos de Imagen</h2>
+			<li>
+				<strong>Mapa de Bits</strong>
+				<ul>
+					<li>JPG (Joint Photographic Expert Group) - admiten compresion pero no transparencia</li>
+					<li>PNG (Portable Network Graphics) - admiten transparencia pero son mas pesadas</li>
+					<li>GIF (Graphics Interchange Format) - permiten interpolacion de imagenes y generalmente son de baja resolucion</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Graficos Vectoriales</strong>
+				<ul>
+					<li>SVG (Scalable Vector Graphics) - no se pixelan pero carecen de capacidad para generar campos de profundidad.</li>
+					<li>EPS (Encapsulated PostScript) - formato propietario de adobe compatible con documentos</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="example">
+			<h2>Organizacion texto e imagen</h2>
+			<p>
+
+				<img 
+					src="img/usm-scorpion-01.jpg" 
+					alt="Ultimate Spiderman Scorpion" />
+				Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Vero, cum. Modi voluptatem libero, excepturi? Veniam officiis quo perspiciatis nihil ex excepturi! Facere odit deleniti sunt, nihil repellendus nemo ab magnam.	
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae illum sapiente est eius doloremque sint omnis tenetur saepe, minus, aspernatur, ullam nisi repudiandae itaque. Sed dignissimos esse quam harum.
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, quam accusamus numquam pariatur dolorem sequi fugit sunt soluta aliquam voluptates. Voluptates voluptate maxime minima sed repellendus sint ut nobis accusamus!
+			</p>
+			<p>
+
+				<img 
+					src="img/usm-scorpion-02.jpg" 
+					alt="Ultimate Spiderman Scorpion" />
+				Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Vero, cum. Modi voluptatem libero, excepturi? Veniam officiis quo perspiciatis nihil ex excepturi! Facere odit deleniti sunt, nihil repellendus nemo ab magnam.	
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae illum sapiente est eius doloremque sint omnis tenetur saepe, minus, aspernatur, ullam nisi repudiandae itaque. Sed dignissimos esse quam harum.
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, quam accusamus numquam pariatur dolorem sequi fugit sunt soluta aliquam voluptates. Voluptates voluptate maxime minima sed repellendus sint ut nobis accusamus!
+			</p>
+			<p>
+
+				<img 
+					src="img/usm-scorpion-03.jpg" 
+					alt="Ultimate Spiderman Scorpion" />
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Vero, cum. Modi voluptatem libero, excepturi? Veniam officiis quo perspiciatis nihil ex excepturi! Facere odit deleniti sunt, nihil repellendus nemo ab magnam.	
+				
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae illum sapiente est eius doloremque sint omnis tenetur saepe, minus, aspernatur, ullam nisi repudiandae itaque. Sed dignissimos esse quam harum.
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, quam accusamus numquam pariatur dolorem sequi fugit sunt soluta aliquam voluptates. Voluptates voluptate maxime minima sed repellendus sint ut nobis accusamus!
+			</p>
+		</div>
+		<ul>
+			<h2>Elementos Semanticos</h2>
+			<li>
+				<strong>HEADER</strong> Cabecera de la pagina, contiene el contenido introductorio y responde a la pregunta <em>¿Quienes somos?</em>
+			</li>
+			<li>
+				<strong>NAV</strong> Navegacion de pagina, contiene los links mas importantes y responde a la pregunta 
+				<em>¿Que podes visitar?</em>
+			</li>
+			<li>
+				<strong>MAIN</strong> Contenido Principal, donde se coloca la informacion de la pagina y reponde a la pregunta <em>¿Que busca el usuario?</em>
+				<ul>
+					<li>
+						<strong>ARTICLE</strong> contenido funciona tanto dentro como fuera de la pagina, al ser un articulo se lo considera INDEPENDIENTE. el ejemplo mas claro son las noticias.
+					</li>
+					<li>
+						<strong>SECTION</strong> contenido que depende del contexto de la pagina para funcionar, al ser una seccion es DEPENDIENTE de otros elementos dentro de la pagina.
+					</li>
+					<li>
+						<strong>ASIDE</strong> contenido que guarda una relacion indirecta con el contenido principal, generalmente se utiliza para publicidad o sugerencias.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>FOOTER</strong> Pie de pagina, contiene la informacion de copyright, datos y formulario de contacto ademas de las redes sociales y responde a la pregunta <em>¿Que mas podes hacer?</em>
+			</li>
+		</ul>
+	</main>
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados
 			<a href="#"> Cristian Racedo </a>
 			&amp; compañia.
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
