@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1> 
+				<span>&lt;/></span> 
+				Fundamentos Web
+			</h1>
+			<p>HTML & CSS</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+				<li>
+					<a href="https://github.com/c215714n/educacionit/tree/html-miercoles-15hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				
+				Son elementos que permiten una 
+				<em> interaccion real (intercambio de datos) entre cliente y servidor</em>, es decir que podemos seleccionar y/o completar con datos en la pagina y luego mediante una solicitud enviarlos al servidor para que los procese y resuelva que hacer con los mismos. Para poder implementar un formulario en necesario utilizar la etiqueta <strong>&lt;form></strong> que contendra los elementos del mismo y solamente se enviara la informacion colocada dentro de esta etiqueta, cabe destacar que una pagina puede poseer mas de un formulario y existen diferentes tipos.
+			</p>
+			<section>
+				<header>
+					<h1>¿Como funciona?</h1>
+				</header>
+				<p>
+					Los formularios requieren de <em>2 atributos</em> para poder llevar a cabo el envio y procesamiento de la informacion. 
+
+					Por un lado tenemos el atributo <strong>action="..."</strong> que se utiliza para indicar que sucedera con la informacion una vez realizado el envio, antiguamente se utilizaba el valor <em>mailto:usuario@dominio</em> para abrir la aplicacion de correo predeterminada, pero hoy en dia se utiliza un <strong>script en lenguaje de servidor</strong> como por ejemplo PHP. 
+
+					Por otro lado, encontramos el atributo <strong>method="..."</strong> que indica como se realizara el envio del mismo, este atributo posee 2 valores; <em>GET</em> <strong>prioriza la respuesta del servidor</strong> para realizar peticiones, es menos seguro y admite hasta 8kb, y <em>POST</em> <strong>prioriza la seguiridad de los datos</strong> para enviarlos al servidor, ya que encripta los mismos y la informacion no es visible desde la barra de direcciones, ademas admite hasta 8mb.
+				</p>
+				<ul class="example">
+					<li>GET
+						<ul>
+							<li>Buscadores (Consulta Query)</li>
+						</ul>
+					</li>
+					<li>POST
+						<ul>
+							<li>Registro (Inscripcion)</li>
+							<li>Acceso (Inicio Sesion)</li>
+							<li>Consulta Web (Contacto)</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como esta compuesto?</h1>
+				</header>
+				<p>
+					
+					Dentro de un formulario encontramos 2 tipos de elementos. Por un lado estan las <strong>Etiquetas (LABEL)</strong> que funcionan como rotulos, ya que indican al usuario que debe seleccionar o escribir en el formulario, permite a los motores de busqueda el indexado de los campos y a los lectores de pantalla leer dicha informacion.
+
+					Por el otro estan los <strong>Campos (TEXTAREA / SELECT / INPUT)</strong> que representan las areas dentro del formulario donde podemos escribir o seleccionar opciones, los mismos poseen un atributo llamado <em>value=".."</em> el cual indica cuales son los datos que se estaran enviando (DINAMICO), asi como tambien un <em>type="..."</em> que indica cual es el tipo de dato permitido para el completado.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo Fecha (yyyy/mm/dd)</label>
+						<input type="date" />
+					</li>
+					<li>
+						<label>Campo de Correo ( *@* )</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo Contraseña (****)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						<input type="checkbox" name="hobbies" value="art"> Arte |
+						<input type="checkbox" name="hobbies" value="music"> Musica |
+						<input type="checkbox" name="hobbies" value="sport"> Deportes 
+					</li>
+					<li>
+						<label>Opcion Unica</label>
+						<input type="radio" name="contract" value="true"> si |
+						<input type="radio" name="contract" value="false"> no
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option disabled selected>Lenguajes</option>
+							<option value="html">HyperText Markup Language</option>
+							<option value="css">Cascading Styles Sheets</option>
+							<option value="js">JavaScript</option>
+							<option value="sql">Structured Query Language</option>
+							<option value="php">Hypertext PreProcesor</option>
+						</select>
+					</li>
+					<li>
+						<input type="submit">
+						<input type="reset">
+						<button>action</button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contacto" action="" method="POST">
+			<h2>Contactanos</h2>
+			<label for="nombre">Nombre</label>
+			<input 
+				name="nombre" 
+				minlength="2"
+				maxlength="50" 
+				type="text" />
+			<label for="email">Correo</label>
+			<input 
+				name="email" 
+				type="email" />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				></textarea>
+			<button>Consultar</button>
+		</form>
+	</footer>
+</body>
+</html>
