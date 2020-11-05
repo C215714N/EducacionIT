@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es"><!-- idioma de la pagina -->
+<head><!--HEAD: parte NO VISIBLE
+			configuracion/metadatos/enlaces -->
+	<meta charset="UTF-8"><!-- codificacion -->
+	<meta name="viewport" 
+		content="width=device-width, 
+				initial-scale=1,
+				maximum-scale=3">
+		<!-- tamaño de la ventana -->
+	<title>Maquetación Web</title>
+	<!--Styles CSS-->
+		<link rel="stylesheet" href="css/styles.css">
+</head>
+<body><!-- BODY: parte VISIBLE 
+			texto/imagenes/hipervinculos-->
+	<header id="header">
+		<div class="header">
+			<h1>Maquetación Web</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li><a href="#">inicio</a></li>
+				<li><!-- Ruta Interna (Relativa) -->
+					<a href="about.html">acerca de</a>
+				</li>
+				<li><!-- Ruta Ancla (Marcador #Id) -->
+					<a href="#contact">contacto</a>
+				</li>
+				<li><!-- Ruta Externa (Absoluta) -->
+					<a href="https://github.com/C215714N/EducacionIT/tree/maquetacion-jueves-10hs" target="_blank">github</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Introduccion a la Maquetacion</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Elementos Semanticos</h1>
+				</header>
+				<ul class="example">
+					<li>
+						<strong>header </strong>
+						representa la cabecera de pagina, donde colocamos el contenido introductorio. Entre las etiquetas que podemos encontrar en su interior estan los <em>H1</em>, algunos links e incluso la navegacion; aunque ocasionalmente tambien podemos apreciar alguna galeria. Esta etiqueta responde a la pregunta <em>¿quienes somos?</em>
+						<ul>
+							<li>
+								<strong>nav</strong>
+								representa la navegacion principal, es donde debemos colocar los links mas importantes y por lo tanto, tenemos de definir cuales son. Existe una regla que determina <em>"si para acceder a una pagina necesito hacer mas de 3 clicks, no merece la pena colocarla como parte de la navegacion principal"</em> asi como tambien otra que dice <em>"si todo es importante, nada es importante"</em>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>main </strong>
+						representa al contenido principal de la pagina, toda informacion relevante se va a encontrar aqui segmentada en grupos segun el tipo de contenido, en caso de ser necesario. Aunque solamente con esta etiqueta es mas que suficiente para el indexado del contenido, dependiendo de la complejidad del mismo deberemos utilzar otras. Esta etiqueta responde a la pregunta <em>¿que le interesa al usuario?</em>
+						<ul>
+							<li>
+								<strong>article </strong>
+								representa un articulo o contenido independiente dentro del sitio, es decir que funciona tanto dentro como fuera de la pagina, un ejemplo claro de este tipo de etiquetas son <em>las noticias</em> que poseen una estructura definida y se comprenden incluso fuera de su contexto original.
+							</li>
+							<li>
+								<strong>section</strong>
+								representa una seccion o parte de un contenido dentro del contexto, el necesario que este dentro del sitio con los elementos con los que se relaciona porque al utilizarlo fuera de la pagina se pierde nocion del contenido, comunmente identificamos estas etiquetas por textos como <em>"al igual que se menciona en el apartado anterior","se mencionara mas adelante"</em> o dando por sentado ciertos temas.
+							</li>
+							<li>
+								<strong>aside </strong>
+								representa el contenido lateral o tangencial, es decir, aquel que guarda una relacion indirecta con sus hermanos, normalmente se lo utiliza para <em>publicidad o sugerencias</em> dentro del mismo sitio y se le suele dar estilo de barra lateral, aunque al igual que el resto de las etiquetas semanticas, es de bloque.
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>footer </strong>
+						representa el pie de pagina, aqui colocamos el contenido de despedida, como por ejemplo <em>informacion del autor, copyright, redes sociales, mapa del sitio y datos o un formulario de contacto </em>. El contenido de esta etiqueta es relevante para el usuario despues del contenido principal, engloba cualquier dato de interes y responde a la pregunta <em>¿que mas puede visitar?</em>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 2:</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">1</a>
+			<a href="https://twitter.com" target="_blank">2</a>
+			<a href="https://instagram.com" target="_blank">3</a>
+			<a href="https://api.whatsapp.com" target="_blank">4</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+	<!--Scripts JS-->
+		<script src="js/scripts.js"></script>
+</body>
+</html>
