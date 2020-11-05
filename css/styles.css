@@ -23,7 +23,7 @@
 	#header,
 	main .header,
 	#footer{
-		padding:16px;
+		padding:16px 32px;
 		color:#ccc;
 		background-color:#248; /*rrggbb => 0:min; F:max*/
 	}
@@ -42,6 +42,7 @@
 	nav{
 		background-color: #124;
 		border-radius: 8px;
+			/*compatibilidad*/
 			-moz-border-radius:8px;
 			-ms-border-radius:8px;
 			-o-border-radius:8px;
