@@ -81,8 +81,34 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Jerarquias de Selectores</h1>
 				</header>
+				<ul class="example">
+					<li>
+						<strong>tag selector </strong>
+						Selector menos especifico, por lo tanto con menor prioridad a la hora de aplicar las reglas, ya que apunta a todas las etiquetas (general).
+						<ul>
+							<li>header{...}</li>
+							<li>header h1{..}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>class selector </strong>
+						selector con mayor especificidad, ya que apunta a todas las etiquetas que tengan la clase seleccionada, indistintamente si estas son del mismo tipo o no (grupal).
+						<ul>
+							<li><span>.header</span>{...}</li>
+							<li><span>.header </span>h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>id selector </strong>
+						selector mas especifico y por lo tanto con mayor prioridad, debido a que apunta a la etiqueta con el Id espeficado y como no debe existir mas de una etiqueta con el mismo id es lo considera unico (individual).
+						<ul>
+							<li><span>#header</span>{...}</li>
+							<li><span>#header </span>h1{...}</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 			<section>
 				<header>

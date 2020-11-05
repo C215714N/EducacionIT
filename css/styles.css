@@ -1,0 +1,90 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,100&display=swap'
+	);
+	*{
+		font-family: Raleway, calibri, segoe ui, sans-serif;
+		box-sizing: border-box;
+			/*
+				Content-Box:
+					content-width = width
+					final-width = width + padding + border
+				;
+				Border-Box:
+					content-width = width - padding - border
+					final-width = width
+				;
+			*/
+	}
+	body{
+		margin:0;
+	}
+/*Encabezado y Pie*/
+	#header,
+	main .header,
+	#footer{
+		padding:16px;
+		color:#ccc;
+		background-color:#248; /*rrggbb => 0:min; F:max*/
+	}
+	.header h1,
+	.header p{
+		margin:0;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+	#header a, 
+	#footer a{
+		color:#ddd;
+		text-decoration: none;
+	}
+/*Barra de Navegacion*/
+	nav{
+		background-color: #124;
+		border-radius: 8px;
+			-moz-border-radius:8px;
+			-ms-border-radius:8px;
+			-o-border-radius:8px;
+			-webkit-border-radius:8px;
+	}
+	#menu{
+		display: none;
+	}
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		text-align: center;
+	}
+	.menu li{
+		display: inline-block;
+		padding:8px;
+		/*
+			Block:
+				generan salto de linea
+				ocupan todo su contenedor
+				funcionan como contenedores;
+			Inline:
+				comparten espacio con otros elementos
+				su tamaño es automatico (horizontal)
+				funcionan como contenido;
+			Inline-Block:
+				comparten espacio con otros elementos
+				se les puede dar tamaño
+				determinan el alto de la linea (texto);
+		*/
+	}
+	.menu li:hover{
+		background-color: #36c;
+	}
+/*Redes sociales*/
+/*Contenido Principal*/
+	main,
+	article,
+	section{
+		padding: 8px 16px;/*top right bottom left*/
+	}
+	section{
+		background-color: #ccc;
+	}
+/*Formulario de Contacto*/
