@@ -1,0 +1,21 @@
+IP: 192.168.0.14 	     00001110
+
+RUTA ELEGIDA POR MEJOR COINCIDENCIA
+192.168.0.0	/26 S(1/0/0) 00   000000  no
+192.168.0.32	/27 S(0/1/0) 001  00000   x
+192.168.0.64	/26 S(0/0/1) 01   000000  x
+192.168.0.128	/25 S(0/0/0) 1 	  0000000 x
+192.168.0.0	/28 S(0/0/0) 0000 0000	  ok
+
+RUTA ELEGIDA POR PRIORIDAD (Conectada/Local/Estatica)
+C 172.168.0.0/24 => 254 direcciones
+D 172.168.0.0/26 => 62 direcciones
+O 172.168.0.0/28 => 14 direcciones 
+C 172.168.0.0/30 => 2 direcciones
+
+RUTA ELEGIDA POR MENOR 	AD (Distancia Administrativa)
+D 10.0.0.0/26 s0/0/0 => (90)
+O 10.0.0.0/26 s0/1/0 => (110)
+
+* RUTA PREDETERMINADA (ULTIMO RECURSO)
+0.0.0.0/0	4.294 millones hosts
