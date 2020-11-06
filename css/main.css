@@ -1,0 +1,141 @@
+/*Content First*/
+	/*Reglas generales*/
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,800;1,300&display=swap'
+		);
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, calibri, segoe ui, sans-serif;
+		}
+		body{ margin:0;	}
+	/*Cabecera y Pie*/
+		#header{
+			/*flexbox*/
+				display: flex;
+				flex-direction: column;
+				justify-content:center;
+				align-items: flex-end;
+			/*atributes*/
+				height: 600px;
+				padding: 1rem;
+				color:#eee;
+				font-size: 2.5rem;
+				text-shadow: 2px 2px .4rem #333;
+			/*background*/
+				background-image: url(../assets/img/header.jpg);
+				background-size: cover;
+				background-position: top center;
+				background-attachment: fixed;
+		}
+		#header h1, #header p{
+			margin:0;
+		}
+		#footer{
+			padding:1rem;
+			background-color: #eee;
+		}
+	/*Barra de Navegacion*/
+		nav, .menu, .menu li{
+			position: sticky;
+			top:0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #eee;
+		}
+		#menu{
+			display: none;
+			width: 2.5rem;
+			line-height: 1rem;
+			height: 2.5rem;
+			outline: none;
+			border: 2px solid #666;
+			padding:0;
+			background-color: transparent;
+			font-size: 2rem;
+		}
+		#menu:hover{
+			color:#eee;
+			background-color: #666;
+		}
+		.menu{
+			margin:0;
+			padding:0;
+		}
+		nav a{
+			padding:.5rem .8rem;
+			color:#666;
+			text-decoration: none;
+		}
+		.menu a:hover{
+			color:#eee;
+			background-color: #666;
+		}
+	/*Redes sociales*/
+	
+	/*Contenido Principal*/
+		/*CSS grid*/
+			main{
+				display: grid;
+				grid-template-areas: 
+					"article article aside"
+					"section section aside"
+					"info info aside";
+				justify-content: center;
+				gap: 1rem;
+			}
+			article:first-child{ grid-area: article; }
+			article:last-of-type{ grid-area: info; }
+			aside{ grid-area: aside; }
+		/*Contenido*/
+			main,article,section,aside{
+				padding:.2rem 1rem;
+			}
+	/*Formulario de Contacto*/
+		#contact{
+			display: flex;
+			flex-direction: column;
+			
+			max-width: 720px;
+			margin:auto;
+			font-size: 1rem;
+		}
+		#contact label{
+			display: none;
+		}
+		#contact input,
+		#contact textarea{
+			outline: none;
+			margin-top: .5rem;
+			border:2px solid #fff;
+			border-radius: .4rem;
+			padding:.5rem 1rem;
+			box-shadow: 0 0 .2rem;
+		}
+		#contact .validate{
+			display: none;
+			padding:1rem;
+			background-color: rgba(204,204,204, .5);
+		}
+		#contact :focus + .validate{
+			display: block;
+		}
+
+		#contact :focus:valid{
+			border-color: lightgreen;
+		}
+		#contact :focus:valid + .validate{
+			color:darkgreen;
+			border-radius: 0 0 .4rem .4rem;
+			background-color: lightgreen;
+			box-shadow: 0 -.2rem lightgreen;
+		}
+		#contact :focus:invalid{
+			border-color: tomato;
+		}
+		#contact :focus:invalid + .validate{
+			color: darkred;
+			border-radius: 0 0 .4rem .4rem;
+			background-color: tomato;
+			box-shadow: 0 -.2rem tomato;
+		}
