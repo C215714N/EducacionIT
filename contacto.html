@@ -3,6 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*Reglas generales*/
+			body{
+				margin:0;
+				font-family: calibri, segoe ui, sans-serif;
+			}
+		/*Encabezado y Pie*/
+			#header, #footer, main .header{
+				padding:8px 16px;/*top right bottom left*/
+				color:#ccc;
+				background-color: #248;
+			}
+			.header h1, .header p{
+				margin:0;
+				text-shadow: 2px 2px 4px #000;
+			}
+			.header span{
+				color:tomato;
+				text-shadow: 0 0 4px #ccc;/*x y blur color*/
+			}
+		/*Barra de Navegacion*/
+
+		/*contenido principal*/
+			main, article, section{
+				padding:16px;
+			}
+
+		/*Formulario de Contacto*/
+			#contacto{
+				overflow: hidden;
+				width:420px;
+				margin: auto;
+			}
+			#contacto input, #contacto textarea{
+				width:410px;
+				outline: none;
+				border:none;
+				border-radius: 4px;
+				padding:5px;
+			}
+			#contacto textarea{
+				resize: none;
+				height: 80px;
+			}
+			#contacto button{
+				float: right;
+				border: 2px solid; /*size style color*/
+				padding:5px;
+				color:#ccc;
+				background-color: transparent;
+				font-weight: bold;
+			}
+			#contacto button:hover{
+				color:#248;
+				background-color: #ddd;
+			}
+	</style>
 </head>
 <body>
 	<header id="header">
@@ -89,11 +146,66 @@
 					<label>Campo Numerico (12345e)</label>
 					<input type="number" />
 				</li>
+				<li>
+					<label>Campo Correo (***@***)</label>
+					<input type="email" />
+				</li>
+				<li>
+					<label>Campo Contraseña (*****)</label>
+					<input type="password" />
+				</li>
+				<li>
+					<label>Campo Fecha (yyyy/mm/dd)</label>
+					<input type="date" />
+				</li>
+				<li>
+					<label>Opcion Multiple</label>
+					<input type="checkbox" name="hobbie" value="art"/> arte |
+					<input type="checkbox" name="hobbie" value="music"/> musica |
+					<input type="checkbox" name="hobbie" value="sport"/> deportes 
+				</li>
+				<li>
+					<label>Opcion Unica</label>
+					<input type="radio" name="accept" value="true"> si |
+					<input type="radio" name="accept" value="false"> no 
+				</li>
+				<li>
+					<label>Campo Multilinea</label>
+					<textarea></textarea>
+				</li>
+				<li>
+					<label>Lista Desplegable</label>
+					<select>
+						<option disabled selected>Lenguaje</option>
+						<option value="1">HTML</option>
+						<option value="2">CSS</option>
+						<option value="3">JS</option>
+					</select>
+				</li>
 			</ul>
 		</article>
 	</main>
 	<footer id="footer">
-		
+		<form id="contacto" action="" method="POST">
+			<label for="nombre">Nombre</label>
+			<input 
+				name="nombre" 
+				type="text" 
+				required />
+			<label for="email">Correo</label>
+			<input 
+				name="email" 
+				type="email"
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required 
+			></textarea>
+			<button>Realizar Consulta</button>
+		</form>
 	</footer>
 </body>
 </html>
