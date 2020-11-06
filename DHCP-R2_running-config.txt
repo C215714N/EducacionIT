@@ -1,0 +1,169 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname DHCP-R2
+!
+!
+!
+!
+ip dhcp excluded-address 172.16.10.0 172.16.10.10
+ip dhcp excluded-address 172.16.20.0 172.16.20.10
+ip dhcp excluded-address 172.16.30.0 172.16.30.10
+ip dhcp excluded-address 172.16.40.0 172.16.40.10
+!
+ip dhcp pool POOL-ADM
+ network 172.16.10.0 255.255.255.224
+ default-router 172.16.10.1
+ dns-server 8.8.8.8
+ domain-name ADM.CISCO.COM
+ip dhcp pool POOL-FAC
+ network 172.16.20.0 255.255.255.224
+ default-router 172.16.20.1
+ dns-server 8.8.8.8
+ domain-name FAC.CISCO.COM
+ip dhcp pool POOL-COM
+ network 172.16.30.0 255.255.255.224
+ default-router 172.16.30.1
+ dns-server 8.8.8.8
+ domain-name COM.CISCO.COM
+ip dhcp pool POOl-SEC
+ network 172.16.40.0 255.255.255.224
+ default-router 172.16.40.1
+ dns-server 8.8.8.8
+ domain-name SEC.CISCO.COM
+!
+!
+!
+no ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FTX1524CF54-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 10.0.0.6 255.255.255.252
+ duplex auto
+ speed auto
+ ipv6 address FE80::B:2 link-local
+ ipv6 address 2001:B::2/64
+ ipv6 eigrp 1
+ ipv6 enable
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1.30
+ encapsulation dot1Q 30
+ ip address 172.16.30.1 255.255.255.224
+ ipv6 address FE80::C:A link-local
+ ipv6 address 2002:A::1/64
+ ipv6 eigrp 1
+ ipv6 enable
+!
+interface GigabitEthernet0/1.40
+ encapsulation dot1Q 40
+ ip address 172.16.40.1 255.255.255.224
+ ipv6 address FE80::D:A link-local
+ ipv6 address 2002:B::A/64
+ ipv6 eigrp 1
+ ipv6 enable
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2.10
+ encapsulation dot1Q 10
+ ip address 172.16.10.1 255.255.255.224
+ ipv6 address FE80::10:A link-local
+ ipv6 address 2003:A::A/64
+ ipv6 eigrp 1
+ ipv6 enable
+!
+interface GigabitEthernet0/2.20
+ encapsulation dot1Q 20
+ ip address 172.16.20.1 255.255.255.224
+ ipv6 address FE80::20:A link-local
+ ipv6 address 2003:B::A/64
+ ipv6 eigrp 1
+ ipv6 enable
+!
+interface GigabitEthernet0/0/0
+ no ip address
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router eigrp 1
+ eigrp router-id 3.3.3.3
+ network 172.16.10.0 0.0.0.31
+ network 172.16.20.0 0.0.0.31
+ network 10.0.0.4 0.0.0.3
+ network 172.16.30.0 0.0.0.31
+ network 172.16.40.0 0.0.0.31
+ 
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 172.16.0.0
+ no auto-summary
+!
+ipv6 router eigrp 1
+ eigrp router-id 3.3.3.3
+ shutdown 
+!
+ip classless
+!
+ip flow-export version 9
+!
+ipv6 route 2001:1:1:10::/64 2001:B::1
+ipv6 route 2001:1:1:20::/64 2001:B::1
+ipv6 route 2001:1:1:30::/64 2001:B::1
+ipv6 route 2001:1:1:40::/64 2001:B::1
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
