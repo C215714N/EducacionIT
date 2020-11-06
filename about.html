@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" 
+		content="width=device-width, 
+				 initial-scale=1, 
+				 maximum-scale=3">
+	<title>Maquetacion Web</title>
+</head>
+<body>
+	<nav>
+		<a href="#">Maquetacion</a>
+		<button id="menu">&equiv;</button>
+		<ul class="menu">
+			<li><a href="index.html">inicio</a></li>
+			<li><a href="#">acerca de</a></li>
+			<li><a href="#contact">contacto</a></li>
+			<li><a href="https://github.com/c215714n/educacionIT/tree/maquetacion-viernes-10hs" target="_blank">github</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Maquetacion Web</h1>
+		<p>html &amp; css</p>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Articulo</h1>
+			</header>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Articulo</h1>
+			</header>
+		</article>
+		<aside>
+			<h2>Seccion</h2>
+		</aside>
+	</main>
+	<footer id="footer">
+		<div class="social">
+			<a href="https://facebook.com"></a>
+			<a href="https://instagram.com"></a>
+			<a href="https://whastapp.com"></a>
+		</div>
+		<form id="contact" action="" method="POST">
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				maxlength="50" 
+				pattern="[A-Z a-z]{2,50}" 
+				placeholder="Ingrese su Nombre" 
+				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos, el mismo debe contener entre 2 y 50 caracteres
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="validate">
+				Ingrese un correo valido que respete la siguiente estructura "usuario@servidor"
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}"  
+				placeholder="Ingrese su Telefono" 
+				required />
+			<div class="validate">
+				Ingrese su telefono respetando alguna de las siguientes estructuras "(11)1234-5678" "(5411)2345-1234" "(02224)345-678"
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button id="contactSubmit">enviar</button>
+		</form>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+</body>
+</html>

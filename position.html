@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.position{
+			position: relative;
+			margin:5rem;
+			border:1px solid;
+			max-width: 1000px;
+			height: 300px;
+		}
+		.position div{
+			width:100px;
+			margin:1rem;
+			padding:1rem;
+			color:#ccc;
+			background-color: darkslateblue;
+			line-height: 3rem;
+
+		}
+		.absolute{
+			position: absolute; /*utiliza al ancentro mas proximo que no sea static como referente para su posicionamiento*/
+			top:50px;
+			right:50px;
+		}
+		.relative{
+			position: relative; /*la etiqueta es su propio referente para calcular su posicionamiento*/
+				bottom: 50px;
+				left: 50px;
+		}
+		.fixed{
+			position: fixed; /*utiliza la ventana como refente para su ubicacion, indistintamente de su posicion actual*/
+			bottom:50px;
+			right: 50px;
+		}
+		.sticky{
+			position: sticky;/*mantiene una posicion relativa hasta llegar al valor especificado en el position*/
+			top:0;
+			}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div class="sticky">sticky</div>
+		<div class="absolute">absolute</div>
+		<div class="relative">relative</div>
+		<div class="fixed">fixed</div>
+		<div>static</div>
+	</div>
+	<div class="position">
+		<div class="sticky">sticky</div>
+		<div class="absolute">absolute</div>
+		<div class="relative">relative</div>
+		<div class="fixed">fixed</div>
+		<div>static</div>
+	</div>
+</body>
+</html>
