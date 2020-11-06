@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1>
+				<span>&lt;/></span> Fundamentos Web
+			</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+				<li><a href="https://github.com/c215714n/educacionit/tree/html-mj-20hs" target="_blank">GitHub</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				
+				Son elementos que permiten una <strong>interaccion real (intercambio de datos) entre cliente y servidor</strong>, es decir que el navegador envia una solicitud/peticion y el servidor donde se aloja el sitio determina que debe hacer con la misma. Una pagina web puede poseer mas de un formulario, pero para poder distinguir que datos se deben enviar, el contenido a procesarse debe encontrarse dentro de una etiqueta conocida como <strong>&lt;form></strong>
+			</p>
+			<section>
+				<header>
+					<h1>¿Como funcionan?</h1>
+				</header>
+				<p>
+					
+					Dentro de la etiqueta <em>mencionada anteriormente</em> debemos colocar por lo menos 2 atributos. 
+
+					El primero es <strong>action="..."</strong> que determina que se debe hacer con los datos una vez enviado el formulario, antiguamente se utilizaba el valor <em>mailto:usuario@servidor</em> pero hoy en dia se utiliza un <em>script en lenguaje de servidor</em> como PHP, para asegurarse que los datos se trabajen correctamente. 
+
+					El otro atributo es <strong>method="..."</strong> que indica como se procesa la informacion del formulario, el mismo recibe 2 valores y estos son <em>GET</em> para realizar peticiones al servidor, <em>priorizando la respuesta</em> y por otro lado <em>POST</em> que realiza envios de datos para que servidor defina que hacer con ellos, <em>la prioridad se encuentra en la informacion provista por el usuario.</em>
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET</strong>
+						<ul>
+							<li>menos seguro (Prioridad Servidor)</li>
+							<li>la informacion es accesible desde la barra de direcciones</li>
+							<li>admite hasta 8kb</li>
+						</ul>
+						<hr />
+						<ul>
+							<li>Buscadores - Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST</strong>
+						<ul>
+							<li>cifra los datos (Prioridad Cliente)</li>
+							<li>los datos no son accesibles fuera del formulario</li>
+							<li>admite hasta 8mb</li>
+						</ul>
+						<hr />
+						<ul>
+							<li>Registro - Inscripcion</li>
+							<li>Acceso - Inicio sesion</li>
+							<li>Consulta web - contacto</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como estan compuestos?</h1>
+				</header>
+				<p>
+					
+					Los formularios poseen 2 tipos de elementos, estos son las <strong>etiquetas (LABEL)</strong> que funcionan como rotulos que indican al usuario cuales son los datos que debe ingresar o seleccionar, tambien permiten el indexado del contenido y ser leidos por parte de los screenreaders. Por otro lado encontramos los <strong>campos de formulario (INPUT / TEXTAREA / SELECT )</strong> en los cuales el usuario va a escribir o seleccionar datos, estos poseen 2 atributos escenciales; por un lado esta el <em>value="..."</em> que representa la informacion escrita o seleccionada y luego esta el <em>type="..."</em> que indica el valor admitido por el campo de formulario.
+				</p>
+			</section>
+			<ul class="example">
+				<li>
+					<label>Campo de Texto (Aa!#123)</label>
+					<input type="text" />
+				</li>
+				<li>
+					<label>Campo Numerico (12345e)</label>
+					<input type="number" />
+				</li>
+			</ul>
+		</article>
+	</main>
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>
