@@ -1,8 +1,14 @@
-/*reglas generales*/
+/*Reglas generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Kurale&family=Raleway+Dots&family=Raleway:wght@100;300;500&family=Sansita+Swashed:wght@400;800&display=swap'
+	);
 	*{
 		box-sizing: border-box;
+		font-family: Raleway, calibri, segoe ui, sans-serif;
 	}
-
+	body{
+		margin:0;
+	}
 /*Barra de Navegacion*/
 	nav, .menu, .menu li{
 		display: flex;
@@ -31,23 +37,34 @@
 	}
 	#menu{
 		display: none;
+		font-size: 2rem;
+		outline: none;
+		border-radius: .4rem;
+		padding:0 .8rem;
+		color:#333;
+		background-color: transparent;
+	}
+	#menu:hover{
+		color:#eee;
+		background-color: #333
 	}
 /*Cabecera*/
 	#header{
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: flex-end;
-		
-		height:400px;
-		border:1px solid black;
-		padding:.5rem;
-		font-size: 3rem;
-		color:#ccc;
-		text-shadow: 0 0 10px #333;
-		background-image: url(../assets/img/background.jpg);
-		background-size: cover;
-		background-attachment: fixed;
+		/*flexbox*/
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+		/*attributes*/
+			height:600px;
+			padding:1rem;
+			font-size: 2.5rem;
+			color:#ccc;
+			text-shadow: 0 0 10px #333;
+		/*background*/
+			background-image: url(../assets/img/background.jpg);
+			background-size: cover;
+			background-attachment: fixed;
 	}
 	#header h1,
 	#header p{
@@ -56,13 +73,15 @@
 /*Contenido Principal*/
 	main, article, section, aside{
 		padding:1rem;
-		border: 1px solid #333;
 	}
 	main{
 		display: grid;
 		grid-template-columns: auto auto auto;
-		grid-gap: 1rem;
+		justify-content: center;
+		gap: 1rem;
 		counter-reset: clase;
+		color:#ccc;
+		background-color: rgba(17, 27, 63,.8);
 	}
 	/*Articulos*/
 		article{
@@ -77,6 +96,10 @@
 	/*Secciones*/
 		section{
 			max-width: 720px;
+			margin: 1rem 0;
+			border-radius: .5rem;
+			text-shadow: 1px 1px .2rem black;
+			background-color: rgba(102,102,102,.5);
 		}
 		section h1:before{
 			counter-increment: tema;
@@ -111,3 +134,86 @@
 				' algo de texto';
 		}
 /*Pie de Pagina*/
+	#footer{
+		padding:1rem;
+		background-color: #ccc
+	}
+	/*Formulario de Contacto*/
+		#contact{
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			max-width: 720px;
+		}
+		#contact label{
+			overflow: hidden;
+			height:0;
+			margin-top: .5rem;
+		}
+		#contact input,
+		#contact textarea{
+			outline: none;
+			border:2px solid white;
+			padding:.5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			resize: none;
+			height: 6rem;
+		}
+	/*validacion formulario*/
+		#contact .validate{
+			display: none;
+			padding:.4rem 1rem;
+		}
+		#contact :focus + .validate{ display: block; }
+		#contact :focus:invalid{ border-color: tomato; }
+		#contact :focus:valid{ border-color: lightgreen; }
+		#contact :focus:invalid + .validate{
+			color:darkred;
+			background-color: tomato;
+		}
+		#contact :focus:valid + .validate{
+			color:darkgreen;
+			background-color: lightgreen;
+		}
+		/*Boton Enviar*/
+		#contact button{
+			margin-top: .5rem;
+			color:#333;
+			border:2px solid #333;
+			padding:.5rem 1rem;
+			text-transform: uppercase;
+			background-color: transparent;
+		}
+		#contact button:hover{
+			color:#ccc;
+			background-color: #333;
+		}
+	/*Redes sociales*/
+		.social{
+			display: flex;
+			justify-content: space-between;
+			max-width: 420px;
+			margin: 1rem auto;
+		}
+		.social a{
+			width:calc(84px);
+			height: calc(84px);
+			background-size: calc(84px * 11);
+			background-image: url(../assets/img/social/social-media.png);			
+		}
+	/*iconos*/
+		.social a:nth-child(2){background-position: calc(84px * -8) calc(84px * 0)}
+		.social a:nth-child(3){background-position: calc(84px * -4) calc(84px * 0)}
+		.social a:nth-child(4){background-position: calc(84px * -10) calc(84px * 0)}
+	/*:hover*/
+		.social a:nth-child(1):hover{background-position: calc(84px * 0) calc(84px * -2)}
+		.social a:nth-child(2):hover{background-position: calc(84px * -8) calc(84px * -2)}
+		.social a:nth-child(3):hover{background-position: calc(84px * -4) calc(84px * -2)}
+		.social a:nth-child(4):hover{background-position: calc(84px * -10) calc(84px * -2)}
+	/*:active*/
+		.social a:nth-child(1):active{background-position: calc(84px * 0) calc(84px * -1)}
+		.social a:nth-child(2):active{background-position: calc(84px * -8) calc(84px * -1)}
+		.social a:nth-child(3):active{background-position: calc(84px * -4) calc(84px * -1)}
+		.social a:nth-child(4):active{background-position: calc(84px * -10) calc(84px * -1)}
