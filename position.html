@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			max-width: 1000px;
+
+			position: relative;
+			border:1px solid black;
+			padding:1rem;
+			margin:1rem;
+		}
+		div div{
+			width:100px;
+		}
+		.absolute{
+			position:absolute;
+			/*la etiqueta toma de referencia al primer ancestro que no tenga un posicion estatica*/
+			top:0;
+			right: 0;
+		}
+		.relative{
+			position: relative;
+			/*la etiqueta sirve como su propio referente a la hora de orientarse dentro de la pagina*/
+			top:.5rem;
+			left: .5rem;
+		}
+		.fixed{
+			position: fixed;
+			/*el elemento utiliza como referente al viewport si siempre se maniene en la misma posicion (no ocupa lugar en el DOM)*/
+			bottom:0;
+			right:0;
+		}
+		.sticky{
+			position: sticky;
+			/*la posicion se define como relative hasta que se cumple la condicion establecida por la posicion*/
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="sticky">sticky</div>
+		<div>Position 1</div>
+		<div class="absolute">absolute</div>
+		<div class="relative">relative</div>
+		<div class="fixed">fixed</div>
+	</div>
+	<div>
+		<div class="sticky">sticky</div>
+		<div>Position 1</div>
+		<div class="absolute">absolute</div>
+		<div class="relative">relative</div>
+		<div class="fixed">fixed</div>
+	</div>
+	<div>
+		<div class="sticky">sticky</div>
+		<div>Position 1</div>
+		<div class="absolute">absolute</div>
+		<div class="relative">relative</div>
+		<div class="fixed">fixed</div>
+	</div>
+</body>
+</html>

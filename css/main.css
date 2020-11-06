@@ -11,9 +11,12 @@
 	}
 /*Barra de Navegacion*/
 	nav, .menu, .menu li{
+		position:sticky;
+		top:0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		z-index: 9999;
 	}
 	nav{
 		background-color: #ccc;
@@ -48,8 +51,26 @@
 		color:#eee;
 		background-color: #333
 	}
+	#back{
+		/*position*/
+			position: fixed;
+			bottom: 1rem;
+			right: 1rem;
+		/*attributes*/
+			width:3rem;
+			height: 3rem;
+			border-radius: 50%;
+			opacity: .5;
+		/*background*/
+			background-color: #ccc;
+			background-image: url(../assets/img/back.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 50%;
+	}
 /*Cabecera*/
 	#header{
+		position: relative;
 		/*flexbox*/
 			display: flex;
 			flex-direction: column;
@@ -70,6 +91,31 @@
 	#header p{
 		margin:0;
 	}
+	#header .social{
+		position:absolute;
+		top:0;
+		right:1rem;
+	}
+	#header a{
+		border-radius: 50%;
+		width: calc(48px);
+		height: calc(48px);
+		background-size: calc(48px * 11);
+	}
+	/*iconos*/
+		#header .social a:nth-child(2){background-position: calc(48px * -8) calc(48px * 0)}
+		#header .social a:nth-child(3){background-position: calc(48px * -4) calc(48px * 0)}
+		#header .social a:nth-child(4){background-position: calc(48px * -10) calc(48px * 0)}
+		/*:hover*/
+		#header .social a:nth-child(1):hover{background-position: calc(48px * 0) calc(48px * -2)}
+		#header .social a:nth-child(2):hover{background-position: calc(48px * -8) calc(48px * -2)}
+		#header .social a:nth-child(3):hover{background-position: calc(48px * -4) calc(48px * -2)}
+		#header .social a:nth-child(4):hover{background-position: calc(48px * -10) calc(48px * -2)}
+		/*:active*/
+		#header .social a:nth-child(1):active{background-position: calc(48px * 0) calc(48px * -1)}
+		#header .social a:nth-child(2):active{background-position: calc(48px * -8) calc(48px * -1)}
+		#header .social a:nth-child(3):active{background-position: calc(48px * -4) calc(48px * -1)}
+		#header .social a:nth-child(4):active{background-position: calc(48px * -10) calc(48px * -1)}
 /*Contenido Principal*/
 	main, article, section, aside{
 		padding:1rem;
@@ -178,19 +224,19 @@
 			background-color: lightgreen;
 		}
 		/*Boton Enviar*/
-		#contact button{
-			margin-top: .5rem;
-			color:#333;
-			border:2px solid #333;
-			padding:.5rem 1rem;
-			text-transform: uppercase;
-			background-color: transparent;
-		}
-		#contact button:hover{
-			color:#ccc;
-			background-color: #333;
-		}
-	/*Redes sociales*/
+			#contact button{
+				margin-top: .5rem;
+				color:#333;
+				border:2px solid #333;
+				padding:.5rem 1rem;
+				text-transform: uppercase;
+				background-color: transparent;
+			}
+			#contact button:hover{
+				color:#ccc;
+				background-color: #333;
+			}
+/*Redes sociales*/
 		.social{
 			display: flex;
 			justify-content: space-between;
@@ -203,17 +249,17 @@
 			background-size: calc(84px * 11);
 			background-image: url(../assets/img/social/social-media.png);			
 		}
-	/*iconos*/
-		.social a:nth-child(2){background-position: calc(84px * -8) calc(84px * 0)}
-		.social a:nth-child(3){background-position: calc(84px * -4) calc(84px * 0)}
-		.social a:nth-child(4){background-position: calc(84px * -10) calc(84px * 0)}
-	/*:hover*/
-		.social a:nth-child(1):hover{background-position: calc(84px * 0) calc(84px * -2)}
-		.social a:nth-child(2):hover{background-position: calc(84px * -8) calc(84px * -2)}
-		.social a:nth-child(3):hover{background-position: calc(84px * -4) calc(84px * -2)}
-		.social a:nth-child(4):hover{background-position: calc(84px * -10) calc(84px * -2)}
-	/*:active*/
-		.social a:nth-child(1):active{background-position: calc(84px * 0) calc(84px * -1)}
-		.social a:nth-child(2):active{background-position: calc(84px * -8) calc(84px * -1)}
-		.social a:nth-child(3):active{background-position: calc(84px * -4) calc(84px * -1)}
-		.social a:nth-child(4):active{background-position: calc(84px * -10) calc(84px * -1)}
+		/*iconos*/
+			.social a:nth-child(2){background-position: calc(84px * -8) calc(84px * 0)}
+			.social a:nth-child(3){background-position: calc(84px * -4) calc(84px * 0)}
+			.social a:nth-child(4){background-position: calc(84px * -10) calc(84px * 0)}
+		/*:hover*/
+			.social a:nth-child(1):hover{background-position: calc(84px * 0) calc(84px * -2)}
+			.social a:nth-child(2):hover{background-position: calc(84px * -8) calc(84px * -2)}
+			.social a:nth-child(3):hover{background-position: calc(84px * -4) calc(84px * -2)}
+			.social a:nth-child(4):hover{background-position: calc(84px * -10) calc(84px * -2)}
+		/*:active*/
+			.social a:nth-child(1):active{background-position: calc(84px * 0) calc(84px * -1)}
+			.social a:nth-child(2):active{background-position: calc(84px * -8) calc(84px * -1)}
+			.social a:nth-child(3):active{background-position: calc(84px * -4) calc(84px * -1)}
+			.social a:nth-child(4):active{background-position: calc(84px * -10) calc(84px * -1)}
