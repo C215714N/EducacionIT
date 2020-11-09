@@ -1,0 +1,63 @@
+/*Diseño general*/
+	/*Reglas Generales*/
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Abel&family=Raleway:ital,wght@0,400;0,900;1,200;1,600&family=Sansita+Swashed:wght@300;900&display=swap'
+		);
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, Abel, sans-serif;
+		}
+		html{ scroll-behavior: smooth; }
+		body{ margin:0;}
+	/*Barra de Navegacion*/
+		nav, .menu{
+			/*position*/
+				position: sticky;
+				top:0;
+			/*flexbox*/
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			/*atributes*/
+				list-style: none;
+				margin:0;
+				padding:0;
+				background-color: #fcd;
+		}
+		nav a{
+			color:#936;
+			text-decoration: none;
+			padding: .5rem;
+		}
+		nav > a{
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+		.menu a:hover{
+			color:white;
+			background-color: pink;
+		}
+		.menu li:last-child{
+			position: fixed;
+			bottom:1rem;
+			right:1rem;
+
+			overflow: hidden;
+			width:2rem;
+			height: 2rem;
+			text-align: center;
+			line-height: 2rem;
+			border-radius: 50%;
+			background-color: pink;
+			opacity: .5;
+		}
+		.menu li:last-child:hover{
+			opacity: 1;
+		}
+	/*Cabecera*/
+
+	/*Contenido Principal*/
+
+	/*Pie de Pagina*/
+
+	/*Redes Sociales*/
