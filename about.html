@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maquetacion Web</title>
+	<link rel="icon" href="assets/img/cr.png">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav>
+		<a href="#">Maquetacion</a>
+		<button id="menu">&equiv;</button>
+		<ul class="menu">
+			<li><a href="index.html">inicio</a></li>
+			<li><a href="#">acerca</a></li>
+			<li><a href="#contact">contacto</a></li>
+			<li><a href="https://github.com/c215714n/educacionIT/tree/maquetacion-lunes-10hs" target="_blank">github</a></li>
+			<li><a href="#header"></a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Maquetacion Web</h1>
+		<p>HTML &amp; CSS</p>
+		<ul class="galeria">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div>
+			<a href="#"><--</a>
+			<a href="#">--></a>
+		</div>
+	</header>
+	<main>
+		<section>
+			<header>
+				<h1>Elemento Section</h1>
+			</header>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi, aperiam excepturi voluptas aliquid ad esse aliquam molestiae delectus, nemo voluptatibus libero saepe quasi eaque ea perspiciatis ut est? Expedita!
+			</p>
+		</section>
+		<article>
+			<header>
+				<h1>Elemento Article</h1>
+			</header>
+			<p>
+				Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quisquam accusamus fugit perspiciatis quaerat, autem odio maiores vitae ea corporis atque, numquam aspernatur, nemo. Autem eius, sequi magnam dolores provident, molestias.
+			</p>
+		</article>
+		<article>
+			<header>
+				<h1>Elemento Article</h1>
+			</header>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iure odio nostrum, magnam fugit facilis vel a corporis aliquam mollitia praesentium debitis exercitationem, optio ab pariatur, temporibus. Nihil, consequatur deleniti.
+			</p>
+		</article>
+		<aside>
+			<h2>Aside</h2>
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+				<li>Item 4</li>
+				<li>Item 5</li>
+				<li>Item 6</li>
+			</ul>
+		</aside>
+	</main>
+	<footer>
+		<!-- form#contact>h2{Contactenos}+(label+input#[name="" placeholder="Ingrese su " required]+.validate)*3+label+textarea+button+div -->
+		<form action="" id="contact">
+			<h2>Contactenos</h2>
+			<label for="contactName">Nombre (*)</label>
+			<input 
+				type="text" 
+				id="contactName" 
+				name="contactName" 
+				maxlength="50" 
+				placeholder="Ingrese su Nombre" 
+				pattern="[A-Z a-z]{2,50}" 
+				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos, el mismo debe poseer entre 2 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo (*)</label>
+			<input 
+				type="email" 
+				id="contactEmail" 
+				name="contactEmail" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="validate">
+				Ingrese una direccion de correo valida, respentando la siguiente estructura "usuario@servidor"
+			</div>
+			<label for="contactPhone">Telefono (*)</label>
+			<input 
+				type="tel" 
+				id="contactPhone" 
+				name="contactPhone" 
+				maxlength="50" 
+				placeholder="Ingrese su Telefono" 
+				pattern="[0-9]{6,20}" 
+				required />
+			<div class="validate">
+				Ingrese su numero de telefono sin espacios ni simbolos, el mismo de contener entre 6 y 20 digitos
+			</div>
+			<label for="contactConsult">consulta (*)</label>
+			<textarea  
+				id="contactConsult" 
+				name="contactConsult"
+				minlength="10"
+				maxlength="200" 
+				required></textarea>
+			<button>Realizar Consulta</button>
+			<div>
+				Todos los campos con asterisco (*) son obligatorios.
+			</div>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank"></a>
+			<a href="https://instagram.com" target="_blank"></a>
+			<a href="https://twitter.com" target="_blank"></a>
+			<a href="https://api.whatsapp.com/send" target="_blank"></a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
