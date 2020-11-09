@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style>
+		.position{
+			position: relative;
+			max-width: 900px;
+			border:1px solid black;
+			margin:2rem;
+			padding:2rem;
+		}
+		.position div{
+			width: 100px;
+			line-height: 3rem;
+			margin: 1rem;
+			border: 1px solid #333;
+		}
+		.absolute{
+			position: absolute; /* el elemento toma como referente al ancestro mas proximo cuya posicion no sea static */
+				top: 0;
+				right: 0;
+		}
+		.relative:hover{
+			position: relative; /* el elemento se toma como referente a si mismo para calcular la nueva posicion */
+				bottom: .5rem;
+				left: .5rem;
+			box-shadow: -.5rem .5rem grey;
+		}
+		.fixed{
+			position:fixed;/* el elemento toma como referente a la ventana del navegador para su posicionamiento */
+				top:0;
+				left: 0;
+		}
+		.sticky{
+			position: sticky;/* el elemento se mantiene estatico hasta que se cumplen las condiciones de la posicion */
+				top:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div class="sticky">Sticky</div>
+		<div class="absolute">Absolute</div>
+		<div class="relative">Relative</div>
+		<div class="fixed">Fixed</div>
+		<div>Static</div>
+	</div>
+	<div class="position">
+		<div>Static</div>
+		<div class="fixed">Fixed</div>
+		<div class="sticky">Sticky</div>
+		<div class="relative">Relative</div>
+		<div class="absolute">Absolute</div>
+	</div>
+	<div class="position">
+		<div class="relative">Relative</div>
+		<div class="fixed">Fixed</div>
+		<div>Static</div>
+		<div class="absolute">Absolute</div>
+		<div class="sticky">Sticky</div>
+	</div>
+</body>
+</html>

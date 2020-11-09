@@ -244,20 +244,20 @@
 				list-style: none;
 			}
 			/*reinicio*/
-				section > ul{ counter-reset: primario; }
-				li > ul{ counter-reset: secundario; }
-				li > ul > li > ul{ counter-reset: terciario; } 
-				li > ul > li > ul > li > ul { counter-reset: cuarto }
+			.before	section > ul{ counter-reset: primario; }
+			.before	li > ul{ counter-reset: secundario; }
+			.before	li > ul > li > ul{ counter-reset: terciario; } 
+			.before	li > ul > li > ul > li > ul { counter-reset: cuarto }
 			/*incremento*/
-				section > ul > li{ counter-increment: primario; }
-				li > ul > li{ counter-increment: secundario; }
-				li > ul > li > ul > li{ counter-increment: terciario }
-				li > ul > li > ul > li > ul > li { counter-increment: cuarto }
+			.before	section > ul > li{ counter-increment: primario; }
+			.before	li > ul > li{ counter-increment: secundario; }
+			.before	li > ul > li > ul > li{ counter-increment: terciario }
+			.before	li > ul > li > ul > li > ul > li { counter-increment: cuarto }
 			/*aplicacion*/
-				section > ul > li::before,
-				li > ul > li::before,
-				li > ul > li > ul > li::before,
-				li > ul > li > ul > li > ul > li::before{
+			.before	section > ul > li::before,
+			.before	li > ul > li::before,
+			.before	li > ul > li > ul > li::before,
+			.before	li > ul > li > ul > li > ul > li::before{
 					content: counter(primario) '.' counter(secundario) '.' counter(terciario) '.' counter(cuarto);
 					padding-right: 2rem;
 				}
@@ -337,6 +337,77 @@
 				.sprite a:nth-child(4):active{
 					background-position: calc(-10 * 32px) calc(-2 * 32px); /*youtube*/
 				}
+		/*Position*/
+			.position{
+				list-style: none;
+				display: flex;
+				padding: 0;
+				color:#ccc;
+				background-color: #248;
+			}
+			.position li{
+				position: relative;
+				padding:1rem;
+				z-index: 9999;
+			}
+			.position ul{
+				list-style: none;
+				padding: 0;
+				display: none;
+				position: absolute;
+				top:100%;
+				left:0;
+			}
+			.position ul ul{
+				top:0;
+				left:100%;
+			}
+			.position li:hover,
+			.position li:hover ul,
+			.position ul ul li:hover,
+			.position ul ul li:hover ul{
+				background-color: #36c;
+			}
+			.position ul li:hover,
+			.position ul li:hover ul{
+				background-color: #124;
+			}
+			.position li:hover > ul{
+				display: block;
+			}
+			.vertical, .vertical ul{
+				list-style: none;
+				padding:0;
+				color:#ddd;
+				background-color: #284;
+			}
+			.vertical ul{
+				display: none;
+			}
+			.vertical li{
+				position: relative;
+				padding:.5rem 1rem;
+			}
+			.vertical li:hover{
+				background-color: #142;
+				z-index: 9999;
+			}
+			.vertical li:hover > ul{
+				display: inline;
+			}
+			.vertical ul li:hover,
+			.vertical ul li:hover ul{
+				background-color: #3c6;
+			}
+			.vertical ul ul li{
+				position: absolute;
+				top:0;
+				left:calc(50% - .5rem);
+				right: 0;
+			}
+			.vertical ul ul li:hover{
+				background-color: #284;
+			}
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
