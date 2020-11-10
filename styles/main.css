@@ -82,12 +82,28 @@
 				padding:0;
 			}
 			.menu a{
+				position:relative;
 				display: block;
 				font-size: 1.2rem;
-				padding: .2rem 3.5rem;
+				padding: .5rem 3.5rem;
+				transition: all .5s ease-out;
 			}
 			.menu a:hover{
 				background-color: #36c;
+			}
+			.menu a::before{
+				content:'';
+				position: absolute;
+				display: block;
+				width: 0;
+				height: 5px;
+				background-color: white;
+				transition: all .5s ease-in;
+				bottom:0;
+				left:0;
+			}
+			.menu a:hover::before{
+				width:100%;
 			}
 			.openMenu{
 				height: auto;
@@ -95,6 +111,9 @@
 		/*Contenido Principal*/
 			main{
 				padding:1rem 0;
+			}
+			article{
+				margin: auto;
 			}
 			section{
 				padding:1rem;
@@ -129,7 +148,9 @@
 						width:100%;
 					}
 					.example figure{
+						display: inline-block;
 						text-align: center;
+						max-width: 200px;
 					}
 					#vidPlay{
 						outline: none;
@@ -390,6 +411,30 @@
 				.menu span{
 					display: none;
 				}
+			/*Contenido Principal*/
+				article{
+					display: grid;
+					grid-template-columns: auto auto;
+					grid-template-rows: 200px;
+					grid-template-areas: 
+						"header header"
+						"section-a section-b"
+						"section-c section-c"
+						"footer footer";
+					gap:1rem;
+				}
+				article header{
+					grid-area: header;
+				}
+				section:first-of-type{
+					grid-area: section-a;
+				}
+				section:last-of-type{
+					grid-area: section-c;
+				}
+				.example video:first-of-type{
+					display: none;
+				}
 			/*Formulario de Contacto*/
 				#contact{
 					max-width: 720px;
@@ -405,6 +450,10 @@
 					display: inline-block;
 					font-size: 1rem;
 				}
+			/*Contenido Principal*/
+				article{
+					max-width: 960px;
+				}
 			/*Formulario de Contacto*/
 				#contact{
 					max-width: 960px;
@@ -418,6 +467,9 @@
 		}
 	/*Extra Large Devices*/
 		@media screen and (min-width: 1200px){
-			
+			/*contenido principal*/
+				article{
+					max-width: 1140px;
+				}
 		}
 /*Autor: Cristian Racedo*/

@@ -1,0 +1,100 @@
+// Variables
+	@color: #ccc;
+	@bg-color: #248;
+
+/*aplicando estilos*/
+	#header{
+		color:@color;
+		background-color:@bg-color;
+		nav{
+			.rounded;
+			background-color: darken(@bg-color, 10%);
+			display: flex;
+			justify-content: center;
+			a{
+				color: lighten(@color, 5%);	
+			}
+		}
+	}
+//anidacion de estilos
+	header#header{
+		.header{
+
+		}
+		nav{
+			.menu{
+				li{
+					a{
+
+					}
+				}
+			}
+		}
+	}
+	main{
+		article{
+			.header{
+
+			}
+			section{
+
+			}
+		}
+	}
+	footer#footer{
+		#contact{
+			label{
+
+			}
+			input,
+			textarea{
+				outline:0;
+				border:2px solid white;
+				padding:.5rem 1rem;
+
+				&:focus{
+
+					& + .validate{
+						height: auto;
+						background-color: @color;
+					}
+					&:valid{
+						border-color: lightgreen;
+						& + .validate{
+							color:darkgreen;
+							background-color: lightgreen;
+						}
+					}
+					&:invalid{
+						border-color: tomato;
+						& + .validate{
+							color:darkred;
+							background-color: tomato;
+						}
+					}
+				}
+			}
+			
+			button{
+
+			}
+		}
+		.social{
+
+		}
+		p{
+
+		}
+	}
+
+//mixins
+	.rounded (){
+		border-radius: .5rem;
+		--webkit-border-radius: .5rem;
+		--moz-border-radius: .5rem;
+		--o-border-radius: .5rem;
+		--ms-border-radius: .5rem;
+	}
+//mixins parametricos (funciones)
+
+//mixins recursivos (bucles)

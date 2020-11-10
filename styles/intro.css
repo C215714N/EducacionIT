@@ -1,0 +1,47 @@
+/*aplicando estilos*/
+#header {
+  color: #ccc;
+  background-color: #248;
+}
+#header nav {
+  border-radius: 0.5rem;
+  --webkit-border-radius: 0.5rem;
+  --moz-border-radius: 0.5rem;
+  --o-border-radius: 0.5rem;
+  --ms-border-radius: 0.5rem;
+  background-color: #18305f;
+  display: flex;
+  justify-content: center;
+}
+#header nav a {
+  color: #d9d9d9;
+}
+footer#footer #contact input,
+footer#footer #contact textarea {
+  outline: 0;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+}
+footer#footer #contact input:focus + .validate,
+footer#footer #contact textarea:focus + .validate {
+  height: auto;
+  background-color: #ccc;
+}
+footer#footer #contact input:focus:valid,
+footer#footer #contact textarea:focus:valid {
+  border-color: lightgreen;
+}
+footer#footer #contact input:focus:valid + .validate,
+footer#footer #contact textarea:focus:valid + .validate {
+  color: darkgreen;
+  background-color: lightgreen;
+}
+footer#footer #contact input:focus:invalid,
+footer#footer #contact textarea:focus:invalid {
+  border-color: tomato;
+}
+footer#footer #contact input:focus:invalid + .validate,
+footer#footer #contact textarea:focus:invalid + .validate {
+  color: darkred;
+  background-color: tomato;
+}
