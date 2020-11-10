@@ -57,7 +57,7 @@
 		text-align: center;
 	}
 	.menu li{
-		display: inline-block;
+		display:inline-block;
 		padding:8px;
 		line-height: 32px;
 	}
@@ -97,4 +97,81 @@
 	section ul span{
 		color:#248;
 		font-weight: bold;
+	}
+/*Formulario de Contacto*/
+	#contact {
+		max-width: 720px;
+		margin: 1rem auto; /*top right bottom left*/
+	}
+	#contact input,
+	#contact textarea{
+		width:100%;
+		outline: none;
+		border: 2px solid white; /*width style color*/
+		border-radius: .2rem;
+		padding:.5rem 1rem; /*top right bottom left*/
+		font-size: 1rem;
+			/*
+				Medidas Absolutas:
+					siempre representa la misma unidad
+					independientemente del tamaño de la pantalla
+					metricas: impresión
+						cm
+						in
+						pc
+					;
+					tipograficas:
+						pt (1/72in) letra
+					;
+					hibrida:
+						px (puntos en pantalla)
+							depende de la resolucion (cantidad/tamaño)
+							computadoras (1px = 1p/pantalla)
+							dispositivos moviles (1px = 3p/pantalla)
+					;
+				;
+
+				Medidas Relativas:
+					toman de referencia al elemento padre
+					dependen de este para representar su tamaño
+					tamaño:
+						padre: 700px;
+						hijo: 50%; => 350px
+						porcentaje: % del elemento padre (contenedor);
+					;
+					tipografica:
+						padre: 16px;
+						hijo: 2em; => 32px;
+						em: ancho de "M" del elemento padre;
+						ex: alto de "x" del elemento padre;
+						ch: alto de "0" del elemento padre;
+						porcentaje: % de la letra en el elemento padre;
+					;
+
+					hibrida:
+						rem (root em): ancho de "M" en html;
+						;
+				;
+			*/
+	}
+	#contact textarea{
+		resize: none;
+		height: 5rem;
+	}
+	#contact :focus{
+		border-color: rgba(34,68,136,.5);/* dec=0-255 hex=00-ff */
+		box-shadow: 0 0 5px #ccc; /* -x+ -y+ blur color */
+	}
+	#contact button{
+		margin-bottom: 1rem;
+		border:3px solid #ccc;
+		padding:1rem;
+		font:bold 1rem Raleway;/*style weight size family*/
+		text-transform: uppercase;
+		color:#ccc;
+		background-color: transparent;
+	}
+	#contact button:hover{
+		color: #248;
+		background-color: #ccc;
 	}

@@ -129,11 +129,11 @@
 		</article>
 		<article>
 			<header class="header">
-				<h1>Clase 2</h1>
+				<h1>Clase 2: Atributos de elementos en CSS</h1>
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Tema 1: Background</h1>
 				</header>
 			</section>
 			<section>
@@ -150,12 +150,41 @@
 	</main>
 	<footer id="footer">
 		<div class="social">
-			<a href="">1</a>
-			<a href="">2</a>
-			<a href="">3</a>
+			<a href="https://facebook.com">1</a>
+			<a href="https://instagram.com">2</a>
+			<a href="https://api.whatsapp.com/send/">3</a>
 		</div>
-		<form action="" id="contact">
-			
+		<form action="" id="contact" method="POST">
+			<h2>Contáctenos</h2>
+			<label for="contactName">Nombre (*)</label>
+			<input 
+				type="text" 
+				id="contactName" 
+				name="contactName" 
+				required />
+			<label for="contactEmail">Correo (*)</label>
+			<input 
+				type="email" 
+				id="contactEmail" 
+				name="contactEmail" 
+				required />
+			<label for="contactPhone">Teléfono (*)</label>
+			<input 
+				type="tel" 
+				id="contactPhone" 
+				name="contactPhone" 
+				required />
+			<label for="contactConsult">Consulta (*)</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult"  
+				minlength="10"
+				maxlength="200" 
+				required></textarea>
+			<button>Realizar Consulta</button>
+			<div>
+				Todos los campos con asterisco (*) son obilgatorios 
+			</div>
 		</form>
 		<p>
 			&copy; Todos los derechos reservados
