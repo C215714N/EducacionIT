@@ -18,16 +18,29 @@
 	}
 	body{
 		margin:0;
+		background-image: url(../assets/img/footer.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
 	}
 /*Encabezado y Pie*/
 	#header,
 	main .header,
 	#footer{
 		padding:16px;
-		color:#ddd; /*rrggbb*/
-		background-color: #36c;
 		text-transform: capitalize;
 		font-variant: small-caps;
+		color:#ddd; /*rrggbb*/
+		/*background attributes*/
+			background-color: #36c;
+			background-image: url(../assets/img/background.jpg);
+			background-repeat: no-repeat;
+			background-size: cover; /*x y*/
+			background-position: top center; /*x y*/
+			background-attachment: fixed;
+	}
+	#footer{
+		background-position: bottom center;
 	}
 	.header h1, 
 	.header p{
@@ -44,7 +57,7 @@
 	}
 /*Barra de Navegacion*/
 	nav{
-		background-color: #248;
+		background-color: rgba(34,68,136,.3);
 		margin:16px -16px 0;
 	}
 	#menu{
@@ -82,8 +95,10 @@
 		background-color: #124;
 	}
 /*Contenido Principal*/
-	main, article{
-		padding:8px;
+	main{
+		padding:1rem;
+		background-color: rgba(192,192,192,.5);
+		text-shadow: 0 0 1px #333;
 	}
 	section strong{
 		text-transform: uppercase;
@@ -98,6 +113,21 @@
 		color:#248;
 		font-weight: bold;
 	}
+	/*atributo Float*/
+		p{
+			overflow: hidden;/*impide el desbordamiento y oculta todos los elementos que superen al contenedor*/
+			margin:0;
+			border-top: 2px solid #ccc;
+			padding:.5rem;
+			line-height: 2rem;
+		}
+		section	p img{
+			float: right; /*flota el elemento y dipone los que esten despues de la etiqueta al costado*/
+			width:150px;
+			margin-right: 1rem;
+			border: .5rem solid #333;
+			border-radius: .4rem;
+			}
 /*Formulario de Contacto*/
 	#contact {
 		max-width: 720px;
