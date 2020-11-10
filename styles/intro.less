@@ -1,100 +1,102 @@
-// Variables
-	@color: #ccc;
-	@bg-color: #248;
+//Variables
+	//colores
+		@fst:#ccc; 
+		@snd:#248; 
+		@trd: #36c;
+	//tamaños
+		@sm: 576px;
+		@md:768px;
+		@lg:992px;
+		@xl:1200px;
 
-/*aplicando estilos*/
+// anidacion de estilos
+body{
+	.normalize;
 	#header{
-		color:@color;
-		background-color:@bg-color;
+		/*flexbox*/
+			.flexbox(row; space-between; center);
+		/*attributes*/
+			.normalize(.5rem 1rem);
+			color:@fst;
+			background-color: @snd;
 		nav{
-			.rounded;
-			background-color: darken(@bg-color, 10%);
-			display: flex;
-			justify-content: center;
-			a{
-				color: lighten(@color, 5%);	
-			}
-		}
-	}
-//anidacion de estilos
-	header#header{
-		.header{
-
-		}
-		nav{
-			.menu{
-				li{
-					a{
-
-					}
-				}
-			}
+			background-color: @trd;
 		}
 	}
 	main{
-		article{
-			.header{
-
-			}
-			section{
-
-			}
+		.header{
+			background-color:@trd;
+		}
+		section{
+			.mediaQuery(@sm);
+			.mediaQuery(@md);
+			.mediaQuery(@lg);
+			.mediaQuery(@xl);
 		}
 	}
-	footer#footer{
+	#footer{
+		color:@fst;
+		background-color: @snd;
 		#contact{
-			label{
-
+			*{
+				width:100%;
 			}
-			input,
-			textarea{
-				outline:0;
-				border:2px solid white;
-				padding:.5rem 1rem;
-
-				&:focus{
-
-					& + .validate{
-						height: auto;
-						background-color: @color;
-					}
-					&:valid{
-						border-color: lightgreen;
-						& + .validate{
-							color:darkgreen;
-							background-color: lightgreen;
-						}
-					}
-					&:invalid{
-						border-color: tomato;
-						& + .validate{
-							color:darkred;
-							background-color: tomato;
-						}
-					}
-				}
-			}
-			
-			button{
-
-			}
-		}
-		.social{
-
-		}
-		p{
-
+				.flexbox;
+				.normalize(0; 1rem auto);
+				.mediaQuery(@sm);
+				.mediaQuery(@md);
+				.mediaQuery(@lg);
 		}
 	}
 
-//mixins
+}
+// Mixins (estilos que se implementa en otro elemento)
 	.rounded (){
-		border-radius: .5rem;
-		--webkit-border-radius: .5rem;
-		--moz-border-radius: .5rem;
-		--o-border-radius: .5rem;
-		--ms-border-radius: .5rem;
+		border-radius: 50%;
+		--webkit-border-radius: 50%;
+		--moz-border-radius: 50%;
+		--o-border-radius: 50%;
+		--ms-border-radius: 50%;
 	}
-//mixins parametricos (funciones)
+// Mixins Parametricos (Funcion)
+	.normalize(@p:0; @m:0; @b:0){
+		margin:@m;
+		border:@b;
+		padding:@p;
+	}
+	.flexbox(
+			@fd:column;
+			@fj:center;
+			@fa:flex-start;
+			@fw:wrap;
+			@f:flex
+		){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+.mediaQuery (@vw){
+	@media screen and (max-width: @vw){
+		max-width: 	
+			if(@vw < @md, 540px,
+			if(@vw < @lg, 720px,
+			if(@vw < @xl, 992px,
+				1140px)));
+	}
+}
+//mixins parametricos (Bucles)
+	.width (@n; @i:0px)  when (@i <= @n){
+		width: @n * @i;
+		.width(@n; @i + 1);
+	}
 
-//mixins recursivos (bucles)
+	.grid ( @n; @i:1) when (@i <= @n){
+		.col-@{i}{
+			width: percentage(@i / @n);
+		}
+		.grid (@n; @i + 1);
+	}
+
+	.grid(24);
