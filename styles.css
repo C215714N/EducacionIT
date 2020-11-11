@@ -12,6 +12,63 @@
 	.header h1, .header p{
 		margin:0;
 	}
+	#header a, #footer a{
+		color:#ddd;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 18px;
+	}
+/*Barra de Navegacion*/
+	.menu{
+		list-style: none;
+		margin:16px -16px; /*top right bottom left*/
+		padding:0;
+		background-color: rgba(31,31,51,.5);
+		text-align: center;
+	}
+	.menu li{
+		display: inline-block;
+		padding:8px;
+	}
+	.menu li:hover{
+		background-color: rgba(31,31,51,.5);
+	}
+/*Contenido Principal*/
+	main{
+		padding:24px;
+	}
+	article{
+		margin: 16px 0;
+		padding:16px;
+		background-color: rgba(204,204,204,.5);
+	}
+	article .header{
+		margin: -16px -16px 0; /*top right bottom left*/
+	}
+	section header{
+		border-top: 2px solid #248; /*width style color*/
+	}
+	.example{
+		max-width:400px;
+		list-style: none;
+		margin-bottom: 16px;
+		margin-left: 20px;
+		border-left: 2px solid #333;
+		padding:20px;
+		color:#ddd;
+		background-color: rgba(51,102,204,.5);
+		text-shadow: 1px 1px 2px #333;
+	}	
+	/*Tablas HTML*/
+		table, caption, tr, td{
+			background-color: rgba(136,64,64,.3);
+		} 
+		table caption{
+			border-radius: 8px 8px 0 0; /*topLeft topRight bottomRight bottomLeft*/
+		}
+		th, td{
+			width:100px;
+		}
 /*Formulario de Contacto*/
 	#contacto{
 		overflow: hidden;

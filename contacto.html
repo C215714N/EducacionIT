@@ -127,6 +127,127 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				
+				Las tablas son elementos que permiten <strong>organizar la informacion de manera tabular</strong>, al igual que cualquier en otro ambito poseen <em>filas, columnas y celdas</em>; pero a diferencia de la mayoria de los progamas que las utilizan, en HTML las mismas se crean a partir del <em>modelo de cajas</em> utilizando la etiqueta <strong>&lt;TABLE></strong> como contenedor principal de nuestra tabla. Las tablas de HTML a diferencia del resto de las <strong>etiquetas de bloque</strong> se adaptan al contenido en lugar de adaptarse a su contenedor, por lo tanto el tamaño de las mismas depende pura y exclusivamente de los datos; pero al igual que la mayoria de las etiquetas de bloque, tampoco poseen bordes.
+			</p>
+			<section>
+				<header>
+					<h1>Estructura Clasica</h1>
+				</header>
+				<p>
+					A la etiqueta <em>mencionada anteriormente </em> se le agregan dos elementos mas, uno de estos son las <em>filas de la tabla</em> que se representan con la etiqueta <strong>&lt;TR> (TABLE ROW)</strong> que sirve como contenedor base para las <em>celdas</em>, y para poder crear estas ultimas debemos utilizar la etiqueta <strong>&lt;TD> (TABLE DIVISION)</strong> que funciona como una etiqueta de contenido y a diferencia de la primera, se visualiza correctamente en la estructura. Antiguamente esta estructura se implementaba para el diseño de las paginas web, un ejemplo vigente de esto es la pagina de <a href="https://spacejam.com" target="_blank">Space Jam</a> que fue desarrollada en el mismo año que surge CSS.
+				</p>
+				<div class="example">
+					<table>
+						<caption>Estructura Clasica</caption>
+						<tr><!-- fila 1 -->
+							<td>Celda 1 Fila 1</td>
+							<td>Celda 2 Fila 1</td>
+							<td>Celda 3 Fila 1</td>
+						</tr>
+						<tr><!-- fila 2 -->
+							<td>Celda 1 F2</td>
+							<td>Celda 2 F2</td>
+							<td>Celda 3 F2</td>
+						</tr>
+						<tr><!-- fila 3 -->
+							<td>C1F3</td>
+							<td>C2F3</td>
+							<td>C3F3</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Estructura Semantica</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>&lt;THEAD> </strong> 
+						representa la cabecera de tabla, donde se colocan los titulos y por ende reemplaza a la primer fila, en su interior en lugar de colocar celdas, debemos colocar las etiqueta <em>&lt;TH> (Table Heading)</em> para las celdas de encabezado.
+					</li>
+					<li>
+						<strong>&lt;TBODY> </strong>
+						corresponde al cuerpo de la tabla, la unica que mantiene la estructura clasica, pero tambien puede contener celdas de encabezado; especialmente si hablamos a una tabla de <em>referencias cruzadas.</em>
+					</li>
+					<li>
+						<strong>&lt;TFOOT></strong>
+						hace referencia al pie de tabla o el contenido complementario de la misma, normalmente se lo utiliza para representar valores que esten relacionados con el contenido del TBODY como <em>totales, promedios, etc.</em>
+					</li>
+				</ul>
+				<div class="example">
+					<table>
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th> producto </th>
+							<th> cant. </th>
+							<th> precio </th>
+							<th> total </th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>monitor</td>
+								<td>3</td>
+								<td>7200</td>
+								<td>21600</td>
+							</tr>
+							<tr>
+								<td>teclado</td>
+								<td>1</td>
+								<td>1500</td>
+								<td>1500</td>
+							</tr>
+							<tr>
+								<td>mouse</td>
+								<td>2</td>
+								<td>2500</td>
+								<td>5000</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>28100</td>
+						</tfoot>
+					</table>
+					<hr />
+					<table>
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Tipo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+							<tr>
+								<td rowspan="3">BackEnd</td>
+								<td>SQL</td>
+							</tr>
+							<tr>
+								<td>PHP</td>
+							</tr>
+							<tr>
+								<td>JAVA</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
