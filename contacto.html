@@ -36,12 +36,17 @@
 				width:420px;
 				margin: auto;
 			}
-			#contacto input, #contacto textarea{
+			#contacto input, #contacto textarea, #contacto select{
 				width:410px;
 				outline: none;
 				border:none;
 				border-radius: 4px;
 				padding:5px;
+				font-size: 16px;
+				font-family: segoe ui, calibri, sans-serif;
+			}
+			#contacto select{
+				width:420px;
 			}
 			#contacto textarea{
 				resize: none;
@@ -186,22 +191,34 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="" method="POST">
+		<form id="contacto" action="contacto.php" method="POST">
 			<label for="nombre">Nombre</label>
 			<input 
 				name="nombre" 
-				type="text" 
+				type="text"
+				pattern="[a-z A-Z]{2,50}"
+				title="Ingrese su Nombre sin numeros ni simbolos, este debe poseer entre 2 y 50 caracteres" 
+				placeholder="Ingrese su Nombre" 
 				required />
 			<label for="email">Correo</label>
 			<input 
 				name="email" 
 				type="email"
+				placeholder="Ingrese su Apellido" 
 				required />
+			<label for="asunto">Asunto</label>
+			<select name="asunto" required>
+				<option disabled selected>Seleccione el Asunto</option>
+				<option value="service">Servicio tecnico</option>
+				<option value="students">atencion alumnos</option>
+				<option value="management">administracion</option>
+			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 
 				name="consulta"
 				minlength="10"
 				maxlength="200"
+				placeholder="Ingrese su Consulta" 
 				required 
 			></textarea>
 			<button>Realizar Consulta</button>
