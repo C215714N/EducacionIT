@@ -1,4 +1,5 @@
 /*Content First*/
+/*Large Devices*/
 	/*Reglas generales*/
 		@import url(
 			'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,800;1,300&display=swap'
@@ -62,6 +63,10 @@
 			margin:0;
 			padding:0;
 		}
+		nav > a {
+			font-size: 1.2rem;
+			font-weight: bolder;
+		}
 		nav a{
 			padding:.5rem .8rem;
 			color:#666;
@@ -72,7 +77,26 @@
 			background-color: #666;
 		}
 	/*Redes sociales*/
-	
+		.social{
+			display: flex;
+			justify-content: space-around;
+
+			max-width: 320px;
+			margin:.5rem auto;
+		}
+		.social a{
+			width:5rem;
+			height:5rem;
+			background-image: url(../assets/icon/instagram.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 3rem;
+		}
+		.social a:first-child{background-image: url(../assets/icon/facebook.svg);}
+		.social a:last-child{background-image: url(../assets/icon/whatsapp.svg);}
+		.social a:hover{
+			background-size: 4rem;
+		}
 	/*Contenido Principal*/
 		/*CSS grid*/
 			main{
@@ -111,6 +135,11 @@
 			border-radius: .4rem;
 			padding:.5rem 1rem;
 			box-shadow: 0 0 .2rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			resize: none;
+			height: 5rem;
 		}
 		#contact .validate{
 			display: none;
@@ -120,7 +149,6 @@
 		#contact :focus + .validate{
 			display: block;
 		}
-
 		#contact :focus:valid{
 			border-color: lightgreen;
 		}
@@ -139,3 +167,96 @@
 			background-color: tomato;
 			box-shadow: 0 -.2rem tomato;
 		}
+		#contact button{
+			align-self: flex-end;
+			margin:.5rem 0;
+			outline: none;
+			border: 2px solid #666;
+			border-radius: .5rem;
+			padding:.5rem 2rem;
+			background-color: transparent;
+			font: bold 1.2rem Open Sans, Raleway, sans-serif;
+			text-transform: uppercase;
+		}
+		#contact button:hover{
+			position:relative;
+			top:.25rem;
+			left:.25rem;
+			color:#ddd;
+			background-color: #666;
+			box-shadow: -.25rem -.25rem #333;
+		}
+/*Medium Devices*/
+	@media screen and (max-width: 768px){
+		/*Barra de Navegacion*/
+			nav{
+				position: relative;
+				flex-wrap: wrap;
+			}
+			#menu{
+				display: block;
+			}
+			.menu{
+				position: absolute;
+				top:100%;
+				right:0;
+
+				overflow: hidden;
+				height: 0;
+			}
+			.menu, .menu a{
+				width:100%;
+				display: block;
+			}
+			.openMenu{
+				height: auto;
+				z-index: 9999;
+			}
+		/*Cabecera y Pie*/
+			#header{
+				position: relative;
+				font-size: 1.5rem;
+			}
+			#header:before{
+				content: 'v';
+				position: absolute;
+				bottom: 25%;
+				left: calc(50% - 1.5rem);
+
+				width:3rem;
+				height: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				border-radius: 50%;
+				color:#666;
+				background-color: white;
+			}
+		/*Contenido Principal*/
+			main{
+				display: block;
+			}
+			aside{
+				display: none;
+			}
+		/*Redes sociales*/
+			.social{
+				justify-content: center;
+			}
+			.social a{
+				width: 2.5rem;
+				height: 2.5rem;
+				margin: 0 .5rem;
+				background-size: 1.5rem;
+			}
+			.social a:hover{
+				background-size: 2.5rem;
+			}
+	}
+
+/*
+	Breakpoints
+		Small (sm)	=> 576px (celulares / tablet portrait)
+		Medium (md) => 768px (tablets)
+		Large (lg)	=> 992px (laptops / small desktop)
+		eXtraLarge (xl) => 1200px (desktop / smart TV)
+*/
