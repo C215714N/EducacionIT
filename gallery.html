@@ -8,7 +8,11 @@
 				 maximum-scale=3">
 	<title>Maquetacion Web</title>
 	<!-- Styles CSS -->
-	<link rel="stylesheet" href="css/main.css">
+	<link 
+		rel="stylesheet" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+		crossorigin="anonymous">
 </head>
 <body>
 	<nav>
@@ -21,12 +25,12 @@
 			<li><a href="https://github.com/c215714n/educacionIT/tree/maquetacion-viernes-10hs" target="_blank">github</a></li>
 		</ul>
 	</nav>
-	<header id="header">
-		<h1>Maquetacion Web</h1>
+	<header id="header" class="jumbotron text-light bg-secondary">
+		<h1 class="display-1">Maquetacion Web</h1>
 		<p>html &amp; css</p>
 	</header>
-	<main>
-		<article>
+	<main class="row container m-auto">
+		<article class="col-md-md-6">
 			<header class="header">
 				<h1>Articulo</h1>
 			</header>
@@ -39,29 +43,29 @@
 					Seccion
 				</header>
 				<figure>
-					<img src="assets/img/jjba-d4c-02.jpg" alt="proceso dibujo d4c">
+					<img class="w-100" src="assets/img/jjba-d4c-02.jpg" alt="proceso dibujo d4c">
 					<div id="slide-1">
-						<img src="assets/img/jjba-d4c-02.jpg" alt="proceso dibujo d4c">
+						<img class="w-100" src="assets/img/jjba-d4c-02.jpg" alt="proceso dibujo d4c">
 					</div>
 					<figcaption>Inicio</figcaption>
 				</figure>
 				<figure>
-					<img src="assets/img/jjba-d4c-03.jpg" alt="proceso dibujo d4c">
+					<img class="w-100" src="assets/img/jjba-d4c-03.jpg" alt="proceso dibujo d4c">
 					<div id="slide-2">
-						<img src="assets/img/jjba-d4c-03.jpg" alt="proceso dibujo d4c">
+						<img class="w-100" src="assets/img/jjba-d4c-03.jpg" alt="proceso dibujo d4c">
 					</div>
 					<figcaption>Proceso</figcaption>
 				</figure>
 				<figure>
-					<img src="assets/img/jjba-d4c-04.jpg" alt="proceso dibujo d4c">
+					<img class="w-100" src="assets/img/jjba-d4c-04.jpg" alt="proceso dibujo d4c">
 					<div id="slide-3">
-						<img src="assets/img/jjba-d4c-04.jpg" alt="proceso dibujo d4c">
+						<img class="w-100" src="assets/img/jjba-d4c-04.jpg" alt="proceso dibujo d4c">
 					</div>
 					<figcaption>Final</figcaption>
 				</figure>
 			</section>
 		</article>
-		<article>
+		<article class="col-md-6">
 			<header class="header">
 				<h1>Articulo</h1>
 			</header>
@@ -70,7 +74,7 @@
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia eaque eveniet ipsum, nostrum aliquid incidunt nam laudantium obcaecati dolorum recusandae consectetur soluta, labore magnam impedit cumque. Dolor eius, a iure, numquam magni quas ullam voluptas molestias, at perspiciatis eaque officia voluptatibus maxime et aperiam facere expedita voluptatum incidunt ut dolorem ducimus earum hic. Distinctio iste accusamus quis ullam sunt alias dolorum saepe vel iusto non, deleniti corporis, voluptatibus quo debitis? Aspernatur, explicabo fugit consectetur dolor assumenda nihil tempore doloremque sed maxime inventore eligendi, quia debitis repudiandae voluptate, odit nesciunt veniam. Nemo eius consectetur nihil optio, architecto perspiciatis fugit explicabo. Qui?
 			</p>
 		</article>
-		<article>
+		<article class="col-md-10">
 			<header class="header">
 				<h1>Articulo</h1>
 			</header>
@@ -79,7 +83,7 @@
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia eaque eveniet ipsum, nostrum aliquid incidunt nam laudantium obcaecati dolorum recusandae consectetur soluta, labore magnam impedit cumque. Dolor eius, a iure, numquam magni quas ullam voluptas molestias, at perspiciatis eaque officia voluptatibus maxime et aperiam facere expedita voluptatum incidunt ut dolorem ducimus earum hic. Distinctio iste accusamus quis ullam sunt alias dolorum saepe vel iusto non, deleniti corporis, voluptatibus quo debitis? Aspernatur, explicabo fugit consectetur dolor assumenda nihil tempore doloremque sed maxime inventore eligendi, quia debitis repudiandae voluptate, odit nesciunt veniam. Nemo eius consectetur nihil optio, architecto perspiciatis fugit explicabo. Qui?
 			</p>
 		</article>
-		<aside>
+		<aside class="col-md-2">
 			<h2>Sugerencias</h2>
 			<ul>
 				<li>Item 1
@@ -112,9 +116,9 @@
 			<a href="https://instagram.com"></a>
 			<a href="https://whastapp.com"></a>
 		</div>
-		<form id="contact" action="" method="POST">
+		<form class="col-md-8 m-auto" id="contact" action="" method="POST">
 			<label for="contactName">Nombre</label>
-			<input 
+			<input class="col-md-12 form-control" 
 				id="contactName" 
 				name="contactName" 
 				type="text" 
@@ -126,7 +130,7 @@
 				Ingrese su nombre sin numeros ni simbolos, el mismo debe contener entre 2 y 50 caracteres
 			</div>
 			<label for="contactEmail">Correo</label>
-			<input 
+			<input class="col-md-12 form-control" 
 				id="contactEmail" 
 				name="contactEmail" 
 				type="email" 
@@ -136,7 +140,7 @@
 				Ingrese un correo valido que respete la siguiente estructura "usuario@servidor"
 			</div>
 			<label for="contactPhone">Telefono</label>
-			<input 
+			<input class="col-md-12 form-control" 
 				id="contactPhone" 
 				name="contactPhone" 
 				type="tel" 
@@ -147,14 +151,14 @@
 				Ingrese su telefono con alguno de los siguientes formatos "(11)1234-5678","(02224)680-135"
 			</div>
 			<label for="contactConsult">Consulta</label>
-			<textarea 
+			<textarea class="col-md-12 form-control" 
 				id="contactConsult" 
 				name="contactConsult" 
 				minlength="10" 
 				maxlength="200" 
 				placeholder="Ingrese su Consulta" 
 				required></textarea>
-			<button id="contactSubmit">enviar</button>
+			<button class="btn btn-outline-dark" id="contactSubmit">enviar</button>
 		</form>
 		<p>
 			&copy; Todos los derechos reservados
@@ -164,5 +168,10 @@
 	</footer>
 	<!-- Scripts JS -->
 	<script src="js/scripts.js"></script>
+
+	<script 
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" 
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" 
+		crossorigin="anonymous"></script>
 </body>
 </html>

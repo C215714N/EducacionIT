@@ -1,262 +1,325 @@
 /*Content First*/
-/*Large Devices*/
-	/*Reglas generales*/
-		@import url(
-			'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,800;1,300&display=swap'
-		);
-		*{
-			box-sizing: border-box;
-			font-family: Raleway, calibri, segoe ui, sans-serif;
-		}
-		body{ margin:0;	}
-	/*Cabecera y Pie*/
-		#header{
-			/*flexbox*/
-				display: flex;
-				flex-direction: column;
-				justify-content:center;
-				align-items: flex-end;
-			/*atributes*/
-				height: 600px;
-				padding: 1rem;
-				color:#eee;
-				font-size: 2.5rem;
-				text-shadow: 2px 2px .4rem #333;
-			/*background*/
-				background-image: url(../assets/img/header.jpg);
-				background-size: cover;
-				background-position: top center;
-				background-attachment: fixed;
-		}
-		#header h1, #header p{
-			margin:0;
-		}
-		#footer{
-			padding:1rem;
-			background-color: #eee;
-		}
-	/*Barra de Navegacion*/
-		nav, .menu, .menu li{
-			position: sticky;
-			top:0;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background-color: #eee;
-		}
-		#menu{
-			display: none;
-			width: 2.5rem;
-			line-height: 1rem;
-			height: 2.5rem;
-			outline: none;
-			border: 2px solid #666;
-			padding:0;
-			background-color: transparent;
-			font-size: 2rem;
-		}
-		#menu:hover{
-			color:#eee;
-			background-color: #666;
-		}
-		.menu{
-			margin:0;
-			padding:0;
-		}
-		nav > a {
-			font-size: 1.2rem;
-			font-weight: bolder;
-		}
-		nav a{
-			padding:.5rem .8rem;
-			color:#666;
-			text-decoration: none;
-		}
-		.menu a:hover{
-			color:#eee;
-			background-color: #666;
-		}
-	/*Redes sociales*/
-		.social{
-			display: flex;
-			justify-content: space-around;
-
-			max-width: 320px;
-			margin:.5rem auto;
-		}
-		.social a{
-			width:5rem;
-			height:5rem;
-			background-image: url(../assets/icon/instagram.svg);
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: 3rem;
-		}
-		.social a:first-child{background-image: url(../assets/icon/facebook.svg);}
-		.social a:last-child{background-image: url(../assets/icon/whatsapp.svg);}
-		.social a:hover{
-			background-size: 4rem;
-		}
-	/*Contenido Principal*/
-		/*CSS grid*/
-			main{
-				display: grid;
-				grid-template-areas: 
-					"article article aside"
-					"section section aside"
-					"info info aside";
-				justify-content: center;
-				gap: 1rem;
+	/*Large Devices*/
+		/*Reglas generales*/
+			@import url(
+				'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,800;1,300&display=swap'
+			);
+			*{
+				box-sizing: border-box;
+				font-family: Raleway, calibri, segoe ui, sans-serif;
 			}
-			article:first-child{ grid-area: article; }
-			article:last-of-type{ grid-area: info; }
-			aside{ grid-area: aside; }
-		/*Contenido*/
-			main,article,section,aside{
-				padding:.2rem 1rem;
-			}
-	/*Formulario de Contacto*/
-		#contact{
-			display: flex;
-			flex-direction: column;
-			
-			max-width: 720px;
-			margin:auto;
-			font-size: 1rem;
-		}
-		#contact label{
-			display: none;
-		}
-		#contact input,
-		#contact textarea{
-			outline: none;
-			margin-top: .5rem;
-			border:2px solid #fff;
-			border-radius: .4rem;
-			padding:.5rem 1rem;
-			box-shadow: 0 0 .2rem;
-			font-size: 1rem;
-		}
-		#contact textarea{
-			resize: none;
-			height: 5rem;
-		}
-		#contact .validate{
-			display: none;
-			padding:1rem;
-			background-color: rgba(204,204,204, .5);
-		}
-		#contact :focus + .validate{
-			display: block;
-		}
-		#contact :focus:valid{
-			border-color: lightgreen;
-		}
-		#contact :focus:valid + .validate{
-			color:darkgreen;
-			border-radius: 0 0 .4rem .4rem;
-			background-color: lightgreen;
-			box-shadow: 0 -.2rem lightgreen;
-		}
-		#contact :focus:invalid{
-			border-color: tomato;
-		}
-		#contact :focus:invalid + .validate{
-			color: darkred;
-			border-radius: 0 0 .4rem .4rem;
-			background-color: tomato;
-			box-shadow: 0 -.2rem tomato;
-		}
-		#contact button{
-			align-self: flex-end;
-			margin:.5rem 0;
-			outline: none;
-			border: 2px solid #666;
-			border-radius: .5rem;
-			padding:.5rem 2rem;
-			background-color: transparent;
-			font: bold 1.2rem Open Sans, Raleway, sans-serif;
-			text-transform: uppercase;
-		}
-		#contact button:hover{
-			position:relative;
-			top:.25rem;
-			left:.25rem;
-			color:#ddd;
-			background-color: #666;
-			box-shadow: -.25rem -.25rem #333;
-		}
-/*Medium Devices*/
-	@media screen and (max-width: 768px){
-		/*Barra de Navegacion*/
-			nav{
-				position: relative;
-				flex-wrap: wrap;
-			}
-			#menu{
-				display: block;
-			}
-			.menu{
-				position: absolute;
-				top:100%;
-				right:0;
-
-				overflow: hidden;
-				height: 0;
-			}
-			.menu, .menu a{
-				width:100%;
-				display: block;
-			}
-			.openMenu{
-				height: auto;
-				z-index: 9999;
-			}
+			body{ margin:0;	}
 		/*Cabecera y Pie*/
 			#header{
-				position: relative;
-				font-size: 1.5rem;
+				/*flexbox*/
+					display: flex;
+					flex-direction: column;
+					justify-content:center;
+					align-items: flex-end;
+				/*atributes*/
+					height: 600px;
+					padding: 1rem;
+					color:#eee;
+					font-size: 2.5rem;
+					text-shadow: 2px 2px .4rem #333;
+				/*background*/
+					background-image: url(../assets/img/header.jpg);
+					background-size: cover;
+					background-position: top center;
+					background-attachment: fixed;
 			}
-			#header:before{
-				content: 'v';
-				position: absolute;
-				bottom: 25%;
-				left: calc(50% - 1.5rem);
-
-				width:3rem;
-				height: 3rem;
-				line-height: 3rem;
-				text-align: center;
-				border-radius: 50%;
+			#header h1, #header p{
+				margin:0;
+			}
+			#footer{
+				padding:1rem;
+				background-color: #eee;
+			}
+		/*Barra de Navegacion*/
+			nav, .menu, .menu li{
+				position: sticky;
+				z-index: 9999;
+				top:0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background-color: #eee;
+			}
+			#menu{
+				display: none;
+				width: 2.5rem;
+				line-height: 1rem;
+				height: 2.5rem;
+				outline: none;
+				border: 2px solid #666;
+				padding:0;
+				background-color: transparent;
+				font-size: 2rem;
+			}
+			#menu:hover{
+				color:#eee;
+				background-color: #666;
+			}
+			.menu{
+				margin:0;
+				padding:0;
+			}
+			nav > a {
+				font-size: 1.2rem;
+				font-weight: bolder;
+			}
+			nav a{
+				padding:.5rem .8rem;
 				color:#666;
-				background-color: white;
+				text-decoration: none;
+			}
+			.menu a:hover{
+				color:#eee;
+				background-color: #666;
+			}
+		/*Redes sociales*/
+			.social{
+				display: flex;
+				justify-content: space-around;
+
+				max-width: 320px;
+				margin:.5rem auto;
+			}
+			.social a{
+				width:5rem;
+				height:5rem;
+				background-image: url(../assets/icon/instagram.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 3rem;
+			}
+			.social a:first-child{background-image: url(../assets/icon/facebook.svg);}
+			.social a:last-child{background-image: url(../assets/icon/whatsapp.svg);}
+			.social a:hover{
+				background-size: 4rem;
 			}
 		/*Contenido Principal*/
+			/*CSS grid*/
+				main{
+					display: grid;
+					grid-template-areas: 
+						"article article aside"
+						"section section aside"
+						"info info aside";
+					justify-content: center;
+					gap: 1rem;
+				}
+				article:first-child{ grid-area: article; }
+				article:last-of-type{ grid-area: info; }
+				aside{ grid-area: aside; }
+			/*Contenido*/
+				main,article,section,aside{
+					padding:.2rem 1rem;
+				}
+				section{
+					display: grid;
+					grid-template-columns: 33% 33% 33%;
+				}
+				section header{
+					grid-column: 1 / 4;
+				}
+				figure{
+					position: relative;
+					margin:.5rem;
+					padding: 0;
+					border-radius: .5rem;
+					border:.5rem solid #333;
+					text-align: center;
+					color:#ccc;
+					background-color: #333;
+				}
+				figure img{
+					width:100%;
+				}
+				figure div img{
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+				.fixed{
+					position: fixed;
+					top:0;
+					left:0;
+					z-index: 9999;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					width:100% !important;
+					height: 100% !important;
+					margin:0;
+					border-radius: 0;
+					background-color: rgba(51,51,51,.8);
+				}
+				.fixed img{
+					position: relative;
+					width:25% !important;
+				}
+		/*Formulario de Contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				
+				max-width: 720px;
+				margin:auto;
+				font-size: 1rem;
+			}
+			#contact label{
+				display: none;
+			}
+			#contact input,
+			#contact textarea{
+				outline: none;
+				margin-top: .5rem;
+				border:2px solid #fff;
+				border-radius: .4rem;
+				padding:.5rem 1rem;
+				box-shadow: 0 0 .2rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				resize: none;
+				height: 5rem;
+			}
+			#contact .validate{
+				display: none;
+				padding:1rem;
+				background-color: rgba(204,204,204, .5);
+			}
+			#contact :focus + .validate{
+				display: block;
+			}
+			#contact :focus:valid{
+				border-color: lightgreen;
+			}
+			#contact :focus:valid + .validate{
+				color:darkgreen;
+				border-radius: 0 0 .4rem .4rem;
+				background-color: lightgreen;
+				box-shadow: 0 -.2rem lightgreen;
+			}
+			#contact :focus:invalid{
+				border-color: tomato;
+			}
+			#contact :focus:invalid + .validate{
+				color: darkred;
+				border-radius: 0 0 .4rem .4rem;
+				background-color: tomato;
+				box-shadow: 0 -.2rem tomato;
+			}
+			#contact button{
+				align-self: flex-end;
+				margin:.5rem 0;
+				outline: none;
+				border: 2px solid #666;
+				border-radius: .5rem;
+				padding:.5rem 2rem;
+				background-color: transparent;
+				font: bold 1.2rem Open Sans, Raleway, sans-serif;
+				text-transform: uppercase;
+			}
+			#contact button:hover{
+				position:relative;
+				top:.25rem;
+				left:.25rem;
+				color:#ddd;
+				background-color: #666;
+				box-shadow: -.25rem -.25rem #333;
+			}
+	/*Medium Devices*/
+		@media screen and (max-width: 768px){
+			/*Barra de Navegacion*/
+				nav{
+					position: relative;
+					flex-wrap: wrap;
+				}
+				#menu{
+					display: block;
+				}
+				.menu{
+					position: absolute;
+					top:100%;
+					right:0;
+
+					overflow: hidden;
+					height: 0;
+				}
+				.menu, .menu a{
+					width:100%;
+					display: block;
+				}
+				.openMenu{
+					height: auto;
+					z-index: 9999;
+				}
+			/*Cabecera y Pie*/
+				#header{
+					position: relative;
+					font-size: 1.5rem;
+				}
+				#header:before{
+					content: 'v';
+					position: absolute;
+					bottom: 25%;
+					left: calc(50% - 1.5rem);
+
+					width:3rem;
+					height: 3rem;
+					line-height: 3rem;
+					text-align: center;
+					border-radius: 50%;
+					color:#666;
+					background-color: white;
+				}
+			/*Redes sociales*/
+				.social{
+					justify-content: center;
+				}
+				.social a{
+					width: 2.5rem;
+					height: 2.5rem;
+					margin: 0 .5rem;
+					background-size: 1.5rem;
+				}
+				.social a:hover{
+					background-size: 2.5rem;
+				}
+		}
+	/*ExtraSmall Devices Portrait*/
+		@media screen and (max-width: 576px) and (orientation:portrait){
 			main{
 				display: block;
 			}
 			aside{
 				display: none;
 			}
-		/*Redes sociales*/
-			.social{
-				justify-content: center;
+			#footer{
+				color:#ccc;
+				background-image: url(../assets/img/background.jpg);
 			}
-			.social a{
-				width: 2.5rem;
-				height: 2.5rem;
-				margin: 0 .5rem;
-				background-size: 1.5rem;
+		}
+	/*Small Devices Landscape*/
+		@media screen and (min-width: 576px) and (orientation:landscape){
+			aside{
+				display: block;
 			}
-			.social a:hover{
-				background-size: 2.5rem;
+			#footer{
+				color:#ccc;
+				background-image: url(../assets/img/footer.jpg);
 			}
-	}
+		}
 
-/*
-	Breakpoints
-		Small (sm)	=> 576px (celulares / tablet portrait)
-		Medium (md) => 768px (tablets)
-		Large (lg)	=> 992px (laptops / small desktop)
-		eXtraLarge (xl) => 1200px (desktop / smart TV)
-*/
+	/*
+		Breakpoints
+			eXtraSmall (xs)	<	576px (celulares)
+			Small (sm)		>= 	576px (celulares / tablet portrait)
+			Medium (md) 	>= 	768px (tablets)
+			Large (lg)		>= 	992px (laptops / small desktop)
+			eXtraLarge (xl) >= 	1200px (desktop / smart TV)
+	*/
