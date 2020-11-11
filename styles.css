@@ -49,7 +49,7 @@
 		border-top: 2px solid #248; /*width style color*/
 	}
 	.example{
-		max-width:400px;
+		max-width:450px;
 		list-style: none;
 		margin-bottom: 16px;
 		margin-left: 20px;
@@ -72,6 +72,19 @@
 		th, td{
 			width:100px;
 		}
+	/*Contenido Multimedia*/
+		iframe, video, audio{
+			width:450px;
+			height: 337.5px;
+		}
+		audio{
+			height: 48px;
+		}
+		/*
+			Relacion de aspecto
+			16:9 	ancho = 1.78(alto) 	/	alto = 56.25%(ancho)
+			4:3 	ancho = 1.33(alto)	/	alto = 75%(ancho)
+		*/
 /*Formulario de Contacto*/
 	#contacto{
 		overflow: hidden;
