@@ -3,68 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
-	<style>
-		/*Reglas generales*/
-			body{
-				margin:0;
-				font-family: calibri, segoe ui, sans-serif;
-			}
-		/*Encabezado y Pie*/
-			#header, #footer, main .header{
-				padding:8px 16px;/*top right bottom left*/
-				color:#ccc;
-				background-color: #248;
-			}
-			.header h1, .header p{
-				margin:0;
-				text-shadow: 2px 2px 4px #000;
-			}
-			.header span{
-				color:tomato;
-				text-shadow: 0 0 4px #ccc;/*x y blur color*/
-			}
-		/*Barra de Navegacion*/
-
-		/*contenido principal*/
-			main, article, section{
-				padding:16px;
-			}
-
-		/*Formulario de Contacto*/
-			#contacto{
-				overflow: hidden;
-				width:420px;
-				margin: auto;
-			}
-			#contacto input, #contacto textarea, #contacto select{
-				width:410px;
-				outline: none;
-				border:none;
-				border-radius: 4px;
-				padding:5px;
-				font-size: 16px;
-				font-family: segoe ui, calibri, sans-serif;
-			}
-			#contacto select{
-				width:420px;
-			}
-			#contacto textarea{
-				resize: none;
-				height: 80px;
-			}
-			#contacto button{
-				float: right;
-				border: 2px solid; /*size style color*/
-				padding:5px;
-				color:#ccc;
-				background-color: transparent;
-				font-weight: bold;
-			}
-			#contacto button:hover{
-				color:#248;
-				background-color: #ddd;
-			}
-	</style>
+	<link rel="icon" href="img/dices.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -188,6 +128,81 @@
 					</select>
 				</li>
 			</ul>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+				<p>
+					Las tablas se componen de filas y columnas, pero a diferencia de cualquier otro programa html pemite su creacion basandose en el <em>modelo de cajas</em>, es decir utilizando la <strong>etiqueta contenedora &lt;TABLE></strong> y en su interior colocando el contenido distribuido en filas. A diferencia de la mayoria de las <em>etiquetas de bloque</em>, las tablas se <strong>adaptan a su contenido</strong>en lugar de adaptarse a su contenedor. Si bien hoy en dia se utilizar para presentar informacion de manear tabular, antiguamente se utilizaban para el diseño de las paginas hasta que empezo a implementar CSS como estandar.
+				</p>
+			<section>
+				<header>
+					<h1>Estructura Clasica</h1>
+				</header>
+				<p>
+					Para colocar la informacion dentro de las tablas, debemos insertar las etiquetas de fila <strong>&lt;TR> (table row)</strong> para organizar donde se colocaran las celdas mediante la etiqueta <strong>&lt;td> (table division)</strong> que funciona como etiqueta de contenido. Por defecto las tablas no poseen bordes y las celdas presentan lo que se conoce como <em>cellspacing</em>
+				</p>
+				<div class="example">
+					<table border="1">
+						<caption>Listado de Alumnos</caption>
+						<tr><!-- table row (fila) -->
+							<td>Nombre</td><!-- table division (celda) -->
+							<td>Apellido</td>
+							<td>Edad</td>
+						</tr>
+						<tr>
+							<td>Juan</td>
+							<td>Lopez</td>
+							<td>29</td>
+						</tr>
+						<tr>
+							<td>Julio</td>
+							<td>Cesar</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>Lucia</td>
+							<td>Dominguez</td>
+							<td>22</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Estructura Semantica</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>THEAD: </strong> fila de titulos, se utiliza para definir los encabezados de la tabla y en su interior debe poseer <em>celdas de titulo</em> utilizando la etiqueta <strong>th</strong>
+					</li>
+					<li>
+						<strong>TBODY: </strong> seccion de contenido, es donde se utiliza la estructura clasica ya que el mismo estara dividido en varias filas, aunque tambien se pueden utilizar titulos como en el caso de una <em>tabla de refencias cruzadas</em>
+					</li>
+					<li>
+						<strong>TFOOT: </strong> pie de tabla, o seccion de detalle se utiliza para ubicar la informacion complementaria a la tabla, como por ejemplo <em>totales, promedios, etc.</em>. Tambien puede presentar titulos aunque a diferencia de las anteriores es opcional.
+					</li>
+				</ul>
+				<table border="1">
+					<thead>
+						<th>nombre</th>
+						<th>apellido</th>
+						<th>edad</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Julio</td>
+							<td>Cesar</td>
+							<td>50</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th>total</th>
+						<td>1</td>
+					</tfoot>
+				</table>
+			</section>
 		</article>
 	</main>
 	<footer id="footer">
