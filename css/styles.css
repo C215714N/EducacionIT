@@ -16,22 +16,32 @@
 				;
 			*/
 	}
-	body{
-		margin:0;
-	}
+	html{ scroll-behavior: smooth; }
+	body{ margin:0; }
 /*Encabezado y Pie*/
 	#header,
 	main .header,
 	#footer{
-		padding:16px 32px;
+		padding:2rem;
 		color:#ccc;
 		background-color:#248; /*rrggbb => 0:min; F:max*/
+		background-image: url(../assets/img/background.jpg);
+		background-repeat: no-repeat;
+		background-size: cover; /*x y*/
+		background-position: top center; /*x y*/
+		background-attachment: fixed;
+	}
+	#footer{
+		background-position: bottom center;
 	}
 	.header h1,
 	.header p{
 		margin:0;
 		line-height: 20px;
 		text-transform: uppercase;
+	}
+	.header p{
+		letter-spacing: .65rem;
 	}
 	#header a, 
 	#footer a{
@@ -40,7 +50,7 @@
 	}
 /*Barra de Navegacion*/
 	nav{
-		background-color: #124;
+		background-color: rgba(34, 68, 136,.3); /*dec=0-255 hex=00-ff*/
 		border-radius: 8px;
 		/*compatibilidad*/
 			-moz-border-radius:8px;
@@ -79,6 +89,29 @@
 		background-color: #36c;
 	}
 /*Redes sociales*/
+	.social{
+		margin:1rem -2rem;
+		padding: .5rem;
+		text-align: center;
+		background-color: rgba(51,102,204,.3);
+	}
+	.social a{
+		display: inline-block;
+		border-radius: .5rem;
+		width: 5rem;
+		height: 5rem;
+
+		background-position: center;
+		background-size: 2rem;
+		background-repeat: no-repeat;
+	}
+	.social a:hover{
+		background-size: 4rem;
+	}
+	.facebook{ background-image: url(../assets/social/facebook.svg) }
+	.instagram{ background-image: url(../assets/social/instagram.svg) }
+	.whatsapp{ background-image: url(../assets/social/whatsapp.svg) }
+	.twitter{ background-image: url(../assets/social/twitter.svg) }
 /*Contenido Principal*/
 	main,
 	article,
@@ -90,6 +123,18 @@
 	}
 	li{
 		font-size: 1rem; 
+	}
+	section img{
+		width:100%;
+		max-width: 380px;
+		margin:0 1rem .5rem 0;
+		float: left;
+	}
+	section p{
+		overflow: hidden;
+		padding:1rem;
+		color:#ddd;
+		background-color: #333;
 	}
 /*Formulario de Contacto*/
 	#contact{
