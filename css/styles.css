@@ -42,7 +42,7 @@
 	nav{
 		background-color: #124;
 		border-radius: 8px;
-			/*compatibilidad*/
+		/*compatibilidad*/
 			-moz-border-radius:8px;
 			-ms-border-radius:8px;
 			-o-border-radius:8px;
@@ -88,4 +88,44 @@
 	section{
 		background-color: #ccc;
 	}
+	li{
+		font-size: 1rem; 
+	}
 /*Formulario de Contacto*/
+	#contact{
+		max-width: 720px;
+		margin:1rem auto; /*top right bottom left*/
+	}
+	#contact input,
+	#contact textarea{
+		width: 100%;
+		margin-bottom: .5rem;
+		outline: none;
+		border:2px solid white;
+		border-radius: .2rem;
+		padding:.5rem 1rem;
+		font-size: 1rem;
+	}
+	#contact textarea{
+		height: 8rem;
+		resize: none;
+	}
+	#contact :focus{
+		border-color: rgba(34,68,136,.3); /*224488*/
+		box-shadow: 0 0 8px #ccc;
+	}
+	#contact button{
+		display: block;
+		margin: 0 0 1rem auto; /*top right bottom left*/
+		outline: none;
+		border:2px solid #ddd;
+		padding:.5rem 1rem;
+		color:#ddd;
+		text-transform: uppercase;
+		background-color: transparent;
+		font: bold 1rem Raleway, sans-serif; /*style weight size family*/
+	}
+	#contact button:hover{
+		color:#248;
+		background-color: #ddd;
+	}

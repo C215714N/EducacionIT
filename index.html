@@ -86,7 +86,7 @@
 				<ul class="example">
 					<li>
 						<strong>tag selector </strong>
-						Selector menos especifico, por lo tanto con menor prioridad a la hora de aplicar las reglas, ya que apunta a todas las etiquetas (general).
+						selector menos especifico, por lo tanto con menor prioridad a la hora de aplicar las reglas, ya que apunta a todas las etiquetas (general). En el ejemplo se puede observar que se apunta a <em>todas las etiquetas header y a todos los h1 que se encuentren dentro de header</em>.
 						<ul>
 							<li>header{...}</li>
 							<li>header h1{..}</li>
@@ -94,7 +94,7 @@
 					</li>
 					<li>
 						<strong>class selector </strong>
-						selector con mayor especificidad, ya que apunta a todas las etiquetas que tengan la clase seleccionada, indistintamente si estas son del mismo tipo o no (grupal).
+						selector con mayor especificidad, ya que apunta a todas las etiquetas que posean la clase seleccionada, indistintamente si estas pertenecen, o no, al mismo tipo (grupal). En este caso se apunta a todas las etiquetas con Clase header y a todos los h1 dentro de un elemento con clase header.
 						<ul>
 							<li><span>.header</span>{...}</li>
 							<li><span>.header </span>h1{...}</li>
@@ -102,7 +102,7 @@
 					</li>
 					<li>
 						<strong>id selector </strong>
-						selector mas especifico y por lo tanto con mayor prioridad, debido a que apunta a la etiqueta con el Id espeficado y como no debe existir mas de una etiqueta con el mismo id es lo considera unico (individual).
+						selector mas especifico y por lo tanto con mayor prioridad, debido a que apunta a la etiqueta con el Id espeficado y como no debe existir mas de una con el mismo id es lo considera unico (individual). En esta situacion se apunta al elemento con id header y a todos los h1 dentro de dicha etiqueta.
 						<ul>
 							<li><span>#header</span>{...}</li>
 							<li><span>#header </span>h1{...}</li>
@@ -112,18 +112,52 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Introduccion Atributos CSS</h1>
 				</header>
+				<ul>
+					<li><strong>box-sizing:</strong> Indica al navegador que partes de las etiquetas se deben tomar en cuenta para calcular el tamaño final de las mismas, el valor predeterminado es <em>content-box</em> que contempla solamente el tamaño del contenido y luego debemos sumar el tamaño de padding  y border para saber cual es el tamaño final de nuestro elemento. Por el contrario <em>border-box</em> contempla todo esto al definir el width.
+					<ul>
+						<li>
+							<strong>Content-Box:</strong>
+							<span>content-width =</span> width || 
+							<span>final-width =</span> width + padding + border
+						</li>
+						<li>
+							<strong>Border-Box:</strong>
+							<span>content-width =</span> width - padding - border || 
+							<span>final-width =</span> width
+						</li>
+					</ul>
+				</li>
+				</ul>
 			</section>
 		</article>
 		<article>
 			<header class="header">
-				<h1>Clase 2:</h1>
+				<h1>Planificacion del Diseño</h1>
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Unidades de Medida</h1>
 				</header>
+				<ul>
+					<li>
+						<strong>Absolutas: </strong> son aquellas que, independientemente del tamaño de la pantalla donde se visualice el contenido, siempre representan lo mismo.
+						<ul>
+							<li><em>tamaños: </em> cm - mm(0.1cm) - in(2.54cm) - 1pc (0.6in)</li>
+							<li><em>tipográficas: </em> pt(1/72in - 0.35mm)</li>
+							<li><em>híbrida: </em> px(depende de la resolucion de pantalla) - desktop 1px = 1px || phones 1px = 3px</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Relativas: </strong> son aquellas que dependen exclusivamente de los valores que posea el elemento padre para determinar el aspecto de las etiquetas.
+						<ul>
+							<li><em>porcentaje: </em> % de tamaño del elemento padre (contenedor)</li>
+							<li><em>tipográficas: </em> em(ancho "M") - ex(alto "x") - ch(alto "0") - relativas al elemento padre</li>
+							<li><em>híbrida:</em> rem(root em - depende del valor tipografico de HTML) - predeterminado = 16px</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 			<section>
 				<header>
@@ -139,7 +173,40 @@
 	</main>
 	<footer id="footer">
 		<form action="" id="contact">
-			
+			<h2>Contactenos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				type="text" 
+				id="contactName" 
+				name="contactName"
+				placeholder="Ingrese su Nombre *" 
+				required />
+			<label for="contactEmail">Correo</label>
+			<input 
+				type="email" 
+				id="contactEmail" 
+				name="contactEmail" 
+				placeholder="Ingrese su Correo *" 
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input 
+				type="tel" 
+				id="contactPhone" 
+				name="contactPhone" 
+				placeholder="Ingrese su Telefono *" 
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult"
+				placeholder="Ingrese su Consulta *" 
+				minlength="10"
+				maxlength="200" 
+				required></textarea>
+			<button>enviar</button>
+			<div>
+				Todos los campos con asterisco (*) son obligatorios
+			</div>
 		</form>
 		<div class="social">
 			<a href="https://facebook.com" target="_blank">1</a>
