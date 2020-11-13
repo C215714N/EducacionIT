@@ -144,7 +144,7 @@
 					Para colocar la informacion dentro de las tablas, debemos insertar las etiquetas de fila <strong>&lt;TR> (table row)</strong> para organizar donde se colocaran las celdas mediante la etiqueta <strong>&lt;td> (table division)</strong> que funciona como etiqueta de contenido. Por defecto las tablas no poseen bordes y las celdas presentan lo que se conoce como <em>cellspacing</em>
 				</p>
 				<div class="example">
-					<table border="1">
+					<table>
 						<caption>Listado de Alumnos</caption>
 						<tr><!-- table row (fila) -->
 							<td>Nombre</td><!-- table division (celda) -->
@@ -184,26 +184,145 @@
 						<strong>TFOOT: </strong> pie de tabla, o seccion de detalle se utiliza para ubicar la informacion complementaria a la tabla, como por ejemplo <em>totales, promedios, etc.</em>. Tambien puede presentar titulos aunque a diferencia de las anteriores es opcional.
 					</li>
 				</ul>
-				<div class="example">
-					<table border="1">
-					<thead>
-						<th>nombre</th>
-						<th>apellido</th>
-						<th>edad</th>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Julio</td>
-							<td>Cesar</td>
-							<td>50</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<th>total</th>
-						<td>1</td>
-					</tfoot>
-				</table>
+				<div class="example inline">
+					<table>
+						<caption>Listado de Alumnos</caption>
+						<thead>
+							<th>nombre</th>
+							<th>apellido</th>
+							<th>edad</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Juan</td>
+								<td>Lopez</td>
+								<td>29</td>
+							</tr>
+							<tr>
+								<td>Julio</td>
+								<td>Cesar</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Lucia</td>
+								<td>Dominguez</td>
+								<td>22</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th>total</th>
+							<td colspan="2">1</td>
+						</tfoot>
+					</table>
+					<table>
+						<caption>Venta de Productos</caption>
+						<thead>
+							<th>Producto</th>
+							<th>Cant.</th>
+							<th>Precio.U</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>2</td>
+								<td>3500</td>
+								<td>7000</td>
+							</tr>
+							<tr>
+								<td>Mouse</td>
+								<td>1</td>
+								<td>2500</td>
+								<td>2500</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>3</td>
+								<td>8500</td>
+								<td>25500</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>35000</td>
+						</tfoot>
+					</table>
+					<table>
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Tipo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+							<tr>
+								<td rowspan="3">BackEnd</td>
+								<td>SQL</td>
+							</tr>
+							<tr>
+								<td>PHP</td>
+							</tr>
+							<tr>
+								<td>JAVA</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<p>
+				
+				Desde que existen las paginas web, se implementaron varias formas de utilizar contenido de este dentro de las mismas, ya se mediante <em>aplicaciones de terceros</em> para la reproduccion, utilizando etiquetas que permitian importar dicho contenido, hasta la mas actual que son los elementos que permiten la reproduccion nativa.
+			</p>
+			<section id="iframe">
+				<header>
+					<h1>¿Contenido Embebido?</h1>
+				</header>
+				<p>
+					Uno de los primeros elementos que permitio la insercion de contenido multimedia, ademas de otros formatos, fue la etiqueta <strong>&lt;iframe> (Marco Flotante)</strong>. La misma es asincronica a los tiempos de carga del sitio, es decir, que el contenido carga de manera aislada al resto del sitio. Hoy en dia se utiliza para compartir contenido dentro de nuestra web ya sea que forme parte del universo html o no; este tipo de elementos pertenece a una categoria conocida como <em>EMBED (embebido)</em>
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.53583867955!2d-58.376394595196295!3d-34.60284535716137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1605225799641!5m2!1ses-419!2sar"
+						frameborder="0" 
+						aria-hidden="false">
+					</iframe>
+					<iframe  
+						src="https://www.youtube.com/embed/_jd6ZFCugck" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/4v9CfE90Sts" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h1>¿Sonidos en la web?</h1>
+				</header>
+			</section>
+			<section id="video">
+				<header>
+					<h1>¿Video sin Plugins?</h1>
+				</header>
 			</section>
 		</article>
 	</main>

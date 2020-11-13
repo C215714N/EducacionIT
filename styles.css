@@ -51,6 +51,27 @@
 		background-color: rgba(34,68,136,.2);
 		text-shadow: 0 0 4px #ccc;
 	}
+	/*Tablas HTML*/
+		table, caption, tr, td{
+			margin: auto;
+			padding:4px;
+			color:#ddd;
+			text-shadow: 0 0 2px #333;
+			background-color: rgba(18, 136, 68, .5) ;/*284*/
+		}
+		caption{
+			margin-top: 8px;
+			border-radius: 8px 8px 0 0; /*topLeft TopRight BottomRight BottomLeft*/
+		}
+		th, td{
+			width:80px;
+		}
+		.inline{
+			text-align:center;
+		}
+		.inline table{
+			display: inline-table;
+		}
 /*Formulario de Contacto*/
 	#contacto{
 		overflow: hidden;
