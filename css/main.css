@@ -1,265 +1,338 @@
-/*Reglas generales*/
-	@import url(
-		'https://fonts.googleapis.com/css2?family=Kurale&family=Raleway+Dots&family=Raleway:wght@100;300;500&family=Sansita+Swashed:wght@400;800&display=swap'
-	);
-	*{
-		box-sizing: border-box;
-		font-family: Raleway, calibri, segoe ui, sans-serif;
-	}
-	body{
-		margin:0;
-	}
-/*Barra de Navegacion*/
-	nav, .menu, .menu li{
-		position:sticky;
-		top:0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		z-index: 9999;
-	}
-	nav{
-		background-color: #ccc;
-	}
-	nav a{
-		line-height: 2.5rem;
-		padding:.2rem .5rem;
-		color:#333;
-		text-decoration: none;
-	}
-	nav > a{
-		font-size: 1.5rem;
-	}
-	.menu{
-		list-style:none;
-		margin:0;
-		padding:0;
-	}
-	.menu a:hover{
-		background-color: rgba(230,230,250,.5);
-	}
-	#menu{
-		display: none;
-		font-size: 2rem;
-		outline: none;
-		border-radius: .4rem;
-		padding:0 .8rem;
-		color:#333;
-		background-color: transparent;
-	}
-	#menu:hover{
-		color:#eee;
-		background-color: #333
-	}
-	#back{
-		/*position*/
-			position: fixed;
-			bottom: 1rem;
-			right: 1rem;
-		/*attributes*/
-			width:3rem;
-			height: 3rem;
-			border-radius: 50%;
-			opacity: .5;
-		/*background*/
-			background-color: #ccc;
-			background-image: url(../assets/img/back.svg);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: 50%;
-	}
-/*Cabecera*/
-	#header{
-		position: relative;
-		/*flexbox*/
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-end;
-		/*attributes*/
-			height:600px;
-			padding:1rem;
-			font-size: 2.5rem;
-			color:#ccc;
-			text-shadow: 0 0 10px #333;
-		/*background*/
-			background-image: url(../assets/img/background.jpg);
-			background-size: cover;
-			background-attachment: fixed;
-	}
-	#header h1,
-	#header p{
-		margin:0;
-	}
-	#header .social{
-		position:absolute;
-		top:0;
-		right:1rem;
-	}
-	#header a{
-		border-radius: 50%;
-		width: calc(48px);
-		height: calc(48px);
-		background-size: calc(48px * 11);
-	}
-	/*iconos*/
-		#header .social a:nth-child(2){background-position: calc(48px * -8) calc(48px * 0)}
-		#header .social a:nth-child(3){background-position: calc(48px * -4) calc(48px * 0)}
-		#header .social a:nth-child(4){background-position: calc(48px * -10) calc(48px * 0)}
-		/*:hover*/
-		#header .social a:nth-child(1):hover{background-position: calc(48px * 0) calc(48px * -2)}
-		#header .social a:nth-child(2):hover{background-position: calc(48px * -8) calc(48px * -2)}
-		#header .social a:nth-child(3):hover{background-position: calc(48px * -4) calc(48px * -2)}
-		#header .social a:nth-child(4):hover{background-position: calc(48px * -10) calc(48px * -2)}
-		/*:active*/
-		#header .social a:nth-child(1):active{background-position: calc(48px * 0) calc(48px * -1)}
-		#header .social a:nth-child(2):active{background-position: calc(48px * -8) calc(48px * -1)}
-		#header .social a:nth-child(3):active{background-position: calc(48px * -4) calc(48px * -1)}
-		#header .social a:nth-child(4):active{background-position: calc(48px * -10) calc(48px * -1)}
-/*Contenido Principal*/
-	main, article, section, aside{
-		padding:1rem;
-	}
-	main{
-		display: grid;
-		grid-template-columns: auto auto auto;
-		justify-content: center;
-		gap: 1rem;
-		counter-reset: clase;
-		color:#ccc;
-		background-color: rgba(17, 27, 63,.8);
-	}
-	/*Articulos*/
-		article{
-			grid-column-start: 1; /*linea inicial*/
-			grid-column-end: 3; /*liena final*/
-			counter-reset: tema;
+/* Mobile First - Content First */
+	/*Reglas generales*/
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Kurale&family=Raleway+Dots&family=Raleway:wght@100;300;500&family=Sansita+Swashed:wght@400;800&display=swap'
+		);
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, calibri, segoe ui, sans-serif;
 		}
-		article h1:before{
-			counter-increment: clase;
-			content: 'Clase ' counter(clase);
+		body{
+			margin:0;
 		}
-	/*Secciones*/
-		section{
-			max-width: 720px;
-			margin: 1rem 0;
-			border-radius: .5rem;
-			text-shadow: 1px 1px .2rem black;
-			background-color: rgba(102,102,102,.5);
-		}
-		section h1:before{
-			counter-increment: tema;
-			content:'Tema ' counter(tema);
-		}
-		section p:before{
-			content: 'Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Excepturi eveniet a ad, possimus commodi modi aspernatur! Tempore odio commodi modi fugiat eos ad placeat qui ullam cum, sunt rerum assumenda veniam, provident perferendis tempora nemo doloremque culpa recusandae corrupti doloribus! Tempore, maiores. Necessitatibus aperiam porro eum, dicta dolor incidunt velit omnis. Quae excepturi nostrum ea, harum quo veniam eum, at illo, vero architecto aspernatur, voluptatibus sequi! Doloribus voluptates id dolor quo eos praesentium expedita animi debitis suscipit architecto dicta ea quaerat atque accusantium quia temporibus rerum ratione porro, quidem illo ab nisi impedit ipsam molestiae. Distinctio ipsum rem dolore deserunt.';
-		}
-	/*Laterales*/
-		aside{
-			grid-column-start: 3;
-			grid-row-start: 1; /*linea inicial*/
-			grid-row-end: 3; /*linea final*/
-			counter-reset: principal;
-		}
-		.primario{
-			counter-reset: secundario;
-			counter-increment: principal;
-		}
-		.secundario{
-			counter-reset: terciario;
-			counter-increment: secundario;
-		}
-		.terciario li{
-			counter-increment: terciario;
-		}
-		main li:before{
-			content: 
-				counter(principal) '.' 
-				counter(secundario) '.' 
-				counter(terciario) 
-				' algo de texto';
-		}
-/*Pie de Pagina*/
-	#footer{
-		padding:1rem;
-		background-color: #ccc
-	}
-	/*Formulario de Contacto*/
-		#contact{
-			display: flex;
-			flex-direction: column;
-			margin: auto;
-			max-width: 720px;
-		}
-		#contact label{
-			overflow: hidden;
-			height:0;
-			margin-top: .5rem;
-		}
-		#contact input,
-		#contact textarea{
-			outline: none;
-			border:2px solid white;
-			padding:.5rem 1rem;
-			font-size: 1rem;
-		}
-		#contact textarea{
-			resize: none;
-			height: 6rem;
-		}
-	/*validacion formulario*/
-		#contact .validate{
-			display: none;
-			padding:.4rem 1rem;
-		}
-		#contact :focus + .validate{ display: block; }
-		#contact :focus:invalid{ border-color: tomato; }
-		#contact :focus:valid{ border-color: lightgreen; }
-		#contact :focus:invalid + .validate{
-			color:darkred;
-			background-color: tomato;
-		}
-		#contact :focus:valid + .validate{
-			color:darkgreen;
-			background-color: lightgreen;
-		}
-		/*Boton Enviar*/
-			#contact button{
-				margin-top: .5rem;
-				color:#333;
-				border:2px solid #333;
-				padding:.5rem 1rem;
-				text-transform: uppercase;
-				background-color: transparent;
-			}
-			#contact button:hover{
-				color:#ccc;
-				background-color: #333;
-			}
-/*Redes sociales*/
-		.social{
+	/*Barra de Navegacion*/
+		nav, .menu, .menu li{
+			position:sticky;
+			top:0;
 			display: flex;
 			justify-content: space-between;
-			max-width: 420px;
-			margin: 1rem auto;
+			align-items: center;
+			z-index: 9999;
 		}
-		.social a{
-			width:calc(84px);
-			height: calc(84px);
-			background-size: calc(84px * 11);
-			background-image: url(../assets/img/social/social-media.png);			
+		nav{
+			background-color: #ccc;
+		}
+		nav a{
+			line-height: 2.5rem;
+			padding:.2rem .5rem;
+			color:#333;
+			text-decoration: none;
+		}
+		nav > a{
+			font-size: 1.5rem;
+		}
+		.menu{
+			list-style:none;
+			margin:0;
+			padding:0;
+		}
+		.menu a:hover{
+			background-color: rgba(230,230,250,.5);
+		}
+		#menu{
+			display: none;
+			font-size: 2rem;
+			outline: none;
+			border-radius: .4rem;
+			padding:0 .8rem;
+			color:#333;
+			background-color: transparent;
+		}
+		#menu:hover{
+			color:#eee;
+			background-color: #333
+		}
+		#back{
+			/*position*/
+				position: fixed;
+				bottom: 1rem;
+				right: 1rem;
+			/*attributes*/
+				width:3rem;
+				height: 3rem;
+				border-radius: 50%;
+				opacity: .3;
+			/*background*/
+				background-color: #ccc;
+				background-image: url(../assets/img/back.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 50%;
+		}
+		#back:hover{
+			opacity: .6;
+		}
+	/*Cabecera*/
+		#header{
+			position: relative;
+			/*flexbox*/
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+			/*attributes*/
+				height:600px;
+				padding:1rem;
+				font-size: 2.5rem;
+				color:#ccc;
+				text-shadow: 0 0 10px #333;
+			/*background*/
+				background-image: url(../assets/img/background.jpg);
+				background-size: cover;
+				background-attachment: fixed;
+		}
+		#header h1,
+		#header p{
+			margin:0;
+		}
+		#header .social{
+			position:absolute;
+			top:0;
+			right:1rem;
+		}
+		#header a{
+			border-radius: 50%;
+			width: calc(34px);
+			height: calc(34px);
+			background-size: calc(34px * 11);
 		}
 		/*iconos*/
-			.social a:nth-child(2){background-position: calc(84px * -8) calc(84px * 0)}
-			.social a:nth-child(3){background-position: calc(84px * -4) calc(84px * 0)}
-			.social a:nth-child(4){background-position: calc(84px * -10) calc(84px * 0)}
-		/*:hover*/
-			.social a:nth-child(1):hover{background-position: calc(84px * 0) calc(84px * -2)}
-			.social a:nth-child(2):hover{background-position: calc(84px * -8) calc(84px * -2)}
-			.social a:nth-child(3):hover{background-position: calc(84px * -4) calc(84px * -2)}
-			.social a:nth-child(4):hover{background-position: calc(84px * -10) calc(84px * -2)}
-		/*:active*/
-			.social a:nth-child(1):active{background-position: calc(84px * 0) calc(84px * -1)}
-			.social a:nth-child(2):active{background-position: calc(84px * -8) calc(84px * -1)}
-			.social a:nth-child(3):active{background-position: calc(84px * -4) calc(84px * -1)}
-			.social a:nth-child(4):active{background-position: calc(84px * -10) calc(84px * -1)}
+			#header .social a:nth-child(2){background-position: calc(34px * -8) calc(34px * 0)}
+			#header .social a:nth-child(3){background-position: calc(34px * -4) calc(34px * 0)}
+			#header .social a:nth-child(4){background-position: calc(34px * -10) calc(34px * 0)}
+			/*:hover*/
+			#header .social a:nth-child(1):hover{background-position: calc(34px * 0) calc(34px * -2)}
+			#header .social a:nth-child(2):hover{background-position: calc(34px * -8) calc(34px * -2)}
+			#header .social a:nth-child(3):hover{background-position: calc(34px * -4) calc(34px * -2)}
+			#header .social a:nth-child(4):hover{background-position: calc(34px * -10) calc(34px * -2)}
+			/*:active*/
+			#header .social a:nth-child(1):active{background-position: calc(34px * 0) calc(34px * -1)}
+			#header .social a:nth-child(2):active{background-position: calc(34px * -8) calc(34px * -1)}
+			#header .social a:nth-child(3):active{background-position: calc(34px * -4) calc(34px * -1)}
+			#header .social a:nth-child(4):active{background-position: calc(34px * -10) calc(34px * -1)}
+	/*Contenido Principal*/
+		main, article, section, aside{
+			padding:1rem;
+		}
+		main{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			justify-content: center;
+			gap: 1rem;
+			counter-reset: clase;
+			color:#ccc;
+			background-color: rgba(17, 27, 63,.8);
+		}
+		/*Articulos*/
+			article{
+				grid-column-start: 1; /*linea inicial*/
+				grid-column-end: 3; /*liena final*/
+				counter-reset: tema;
+			}
+			article h1:before{
+				counter-increment: clase;
+				content: 'Clase ' counter(clase);
+			}
+		/*Secciones*/
+			section{
+				max-width: 720px;
+				margin: 1rem 0;
+				border-radius: .5rem;
+				text-shadow: 1px 1px .2rem black;
+				background-color: rgba(102,102,102,.5);
+			}
+			section h1:before{
+				counter-increment: tema;
+				content:'Tema ' counter(tema);
+			}
+			section p:before{
+				content: 'Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Excepturi eveniet a ad, possimus commodi modi aspernatur! Tempore odio commodi modi fugiat eos ad placeat qui ullam cum, sunt rerum assumenda veniam, provident perferendis tempora nemo doloremque culpa recusandae corrupti doloribus! Tempore, maiores. Necessitatibus aperiam porro eum, dicta dolor incidunt velit omnis. Quae excepturi nostrum ea, harum quo veniam eum, at illo, vero architecto aspernatur, voluptatibus sequi! Doloribus voluptates id dolor quo eos praesentium expedita animi debitis suscipit architecto dicta ea quaerat atque accusantium quia temporibus rerum ratione porro, quidem illo ab nisi impedit ipsam molestiae. Distinctio ipsum rem dolore deserunt.';
+			}
+		/*Laterales*/
+			aside{
+				grid-column-start: 3;
+				grid-row-start: 1; /*linea inicial*/
+				grid-row-end: 3; /*linea final*/
+				counter-reset: principal;
+			}
+			.primario{
+				counter-reset: secundario;
+				counter-increment: principal;
+			}
+			.secundario{
+				counter-reset: terciario;
+				counter-increment: secundario;
+			}
+			.terciario li{
+				counter-increment: terciario;
+			}
+			main li:before{
+				content: 
+					counter(principal) '.' 
+					counter(secundario) '.' 
+					counter(terciario) 
+					' algo de texto';
+			}
+	/*Pie de Pagina*/
+		#footer{
+			padding:1rem;
+			background-color: #ccc
+		}
+		/*Formulario de Contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+				max-width: 720px;
+			}
+			#contact label{
+				overflow: hidden;
+				height:0;
+				margin-top: .5rem;
+			}
+			#contact input,
+			#contact textarea{
+				outline: none;
+				border:2px solid white;
+				padding:.5rem 1rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				resize: none;
+				height: 6rem;
+			}
+		/*validacion formulario*/
+			#contact .validate{
+				display: none;
+				padding:.4rem 1rem;
+			}
+			#contact :focus + .validate{ display: block; }
+			#contact :focus:invalid{ border-color: tomato; }
+			#contact :focus:valid{ border-color: lightgreen; }
+			#contact :focus:invalid + .validate{
+				color:darkred;
+				background-color: tomato;
+			}
+			#contact :focus:valid + .validate{
+				color:darkgreen;
+				background-color: lightgreen;
+			}
+			/*Boton Enviar*/
+				#contact button{
+					margin-top: .5rem;
+					color:#333;
+					border:2px solid #333;
+					padding:.5rem 1rem;
+					text-transform: uppercase;
+					background-color: transparent;
+				}
+				#contact button:hover{
+					color:#ccc;
+					background-color: #333;
+				}
+	/*Redes sociales*/
+			.social{
+				display: flex;
+				justify-content: space-between;
+				max-width: 420px;
+				margin: 1rem auto;
+			}
+			.social a{
+				width:calc(84px);
+				height: calc(84px);
+				background-size: calc(84px * 11);
+				background-image: url(../assets/img/social/social-media.png);			
+			}
+			/*iconos*/
+				.social a:nth-child(2){background-position: calc(84px * -8) calc(84px * 0)}
+				.social a:nth-child(3){background-position: calc(84px * -4) calc(84px * 0)}
+				.social a:nth-child(4){background-position: calc(84px * -10) calc(84px * 0)}
+			/*:hover*/
+				.social a:nth-child(1):hover{background-position: calc(84px * 0) calc(84px * -2)}
+				.social a:nth-child(2):hover{background-position: calc(84px * -8) calc(84px * -2)}
+				.social a:nth-child(3):hover{background-position: calc(84px * -4) calc(84px * -2)}
+				.social a:nth-child(4):hover{background-position: calc(84px * -10) calc(84px * -2)}
+			/*:active*/
+				.social a:nth-child(1):active{background-position: calc(84px * 0) calc(84px * -1)}
+				.social a:nth-child(2):active{background-position: calc(84px * -8) calc(84px * -1)}
+				.social a:nth-child(3):active{background-position: calc(84px * -4) calc(84px * -1)}
+				.social a:nth-child(4):active{background-position: calc(84px * -10) calc(84px * -1)}
+
+/* Constantes */
+	
+/* Variables */
+	@media screen and (max-width: 768px){	
+		/* Barra de Navegacion */	
+			nav{
+				flex-wrap: wrap;
+			}
+			#menu{
+				display: block;
+				margin:.5rem;
+			}
+			.menu{
+				display: none;
+			}
+			.menu, .menu li, .menu a{
+				width:100%;
+				flex-direction: column;
+				text-align: center;
+				background-color: rgba(204,204,204, .3);
+			}
+			.openMenu{
+				display:block;
+			}
+		/*Cabecera*/
+			#header{
+				font-size: 1.5rem;
+			}
+		/*Contenido Principal*/
+			main{
+				display: block;
+			}
+			aside{
+				display: none;
+			}
+		/*Redes sociales*/
+			.social{
+				justify-content: center;
+			}
+			.social a{
+				width:calc(48px);
+				height: calc(48px);
+				background-size: calc(48px * 11);			
+			}
+			/*iconos*/
+				.social a:nth-child(2){background-position: calc(48px * -8) calc(48px * 0)}
+				.social a:nth-child(3){background-position: calc(48px * -4) calc(48px * 0)}
+				.social a:nth-child(4){background-position: calc(48px * -10) calc(48px * 0)}
+			/*:hover*/
+				.social a:nth-child(1):hover{background-position: calc(48px * 0) calc(48px * -2)}
+				.social a:nth-child(2):hover{background-position: calc(48px * -8) calc(48px * -2)}
+				.social a:nth-child(3):hover{background-position: calc(48px * -4) calc(48px * -2)}
+				.social a:nth-child(4):hover{background-position: calc(48px * -10) calc(48px * -2)}
+			/*:active*/
+				.social a:nth-child(1):active{background-position: calc(48px * 0) calc(48px * -1)}
+				.social a:nth-child(2):active{background-position: calc(48px * -8) calc(48px * -1)}
+				.social a:nth-child(3):active{background-position: calc(48px * -4) calc(48px * -1)}
+				.social a:nth-child(4):active{background-position: calc(48px * -10) calc(48px * -1)}
+	}
+
+/* 
+	Bootstrap (Framework CSS)
+		xs	<	576px	phones (portrait)
+		sm 	>=	576px	tablet phones (landscape)
+		md 	>=	768px	tablet (portrait)
+		lg 	>=	992px	desktop tablet (landscape)
+		xl 	>=	1200px	desktop
+*/
