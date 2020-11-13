@@ -40,8 +40,12 @@
 	main, article, section{
 		padding:16px;
 	}
+	section{
+		background-color: #ddd;
+	}
 	header h1{
 		margin:0;
+		border-bottom: 2px solid #248;
 	}
 	.example{
 		list-style: none;
@@ -71,6 +75,30 @@
 		}
 		.inline table{
 			display: inline-table;
+		}
+	/*Multimedia*/
+		iframe, video, audio{
+			width:420px;
+			height: 315px;
+			/*
+				relacion de aspecto
+					4:3 	=	ancho = 1.33(alto) || alto = 75%(ancho)
+					16:9	=	ancho = 1.78(alto) || alto = 56.25%(ancho)
+			*/
+		}
+		audio{
+			height: 48px;
+		}
+		#vidPlay{
+			background-color: transparent;
+			color:#333;
+			border: 2px solid #333;
+			padding:8px 16px;
+			font-weight: bold;
+		}
+		#vidPlay:hover{
+			color:#ddd;
+			background-color: #333;
 		}
 /*Formulario de Contacto*/
 	#contacto{

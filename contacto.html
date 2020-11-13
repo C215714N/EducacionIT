@@ -292,7 +292,7 @@
 					<h1>¿Contenido Embebido?</h1>
 				</header>
 				<p>
-					Uno de los primeros elementos que permitio la insercion de contenido multimedia, ademas de otros formatos, fue la etiqueta <strong>&lt;iframe> (Marco Flotante)</strong>. La misma es asincronica a los tiempos de carga del sitio, es decir, que el contenido carga de manera aislada al resto del sitio. Hoy en dia se utiliza para compartir contenido dentro de nuestra web ya sea que forme parte del universo html o no; este tipo de elementos pertenece a una categoria conocida como <em>EMBED (embebido)</em>
+					Uno de los primeros elementos que permitio la insercion de contenido multimedia, ademas de otros formatos, fue la etiqueta <strong>&lt;iframe> (Marco Flotante)</strong>. La misma es asincronica a los tiempos de carga del sitio, es decir, que el contenido carga de manera aislada al resto la pagina. Hoy en dia se utiliza para compartir contenido dentro de nuestra web ya sea que forme parte del universo html o no; este tipo de elementos pertenece a una categoria conocida como <em>EMBED (embebido)</em>, relegando la reproduccion de contenido multimedia a <em>las etiquetas <a href="#audio">&lt;audio></a> y <a href="#video">&lt;video></a> que se detallan mas adelante</em> 
 				</p>
 				<div class="example">
 					<iframe 
@@ -318,11 +318,42 @@
 				<header>
 					<h1>¿Sonidos en la web?</h1>
 				</header>
+				<p>
+					A diferencia del <a href="#iframe">elemento anterior</a>, la etiqueta <strong>&lt;audio></strong> solamente permite la reproduccion de formatos de sonido <em>.mp3 - .wav - .ogg</em>, aunque tambien puede reproducir los formatos de video que se especifican <a href="#video">mas adelante</a>, ya que toma la pista de audio de estos ultimos. Una caracteristica fundamental de este elemento, es que debemos utilizar el atributo <em>controls</em> para que se habilite el reproductor integrado del navegador, ya que las pistas de audio al tener dimensiones no aparecen como elementos visibles.
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento AUDIO. Podes descargar el tema musical desde el siguiente link: <a href="media/live-learn.mp3">Live & Learn</a>
+						</p>
+					</audio>
+					<audio src="media/by-the-way.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento AUDIO. Podes descargar el tema musical desde el siguiente link: <a href="media/by-the-way.mp4">By the Way</a>
+						</p>
+					</audio>
+				</div>
 			</section>
 			<section id="video">
 				<header>
 					<h1>¿Video sin Plugins?</h1>
 				</header>
+				<p>
+					La etiqueta <strong>&lt;video></strong> permite la reproduccion nativa de los formatos multimedia <em>.mp4 - .webm - .ogv</em> a diferencia de la etiqueta <a href="#iframe">iframe</a> que toma el contenido de otro sitio y permite su reproducion en nuestra pagina. Si bien, como sucede con el elemento <a href="#audio">mencionado anteriormente</a> es necesario utilizar el atributo <em>controls</em> para habilitar el reproductor, no es obligatorio utilizarlo para ver el elemento video, ya que posee dimensiones. Tambien permite la reproduccion automatica del contenido siempre y cuando este silenciado mediante los atributos <em>autoplay y muted</em>
+				</p>
+				<div class="example">
+					<video src="media/cant-stop.webm" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento VIDEO. podes descargar el videoclip desde el siguiente enlace: <a href="media/cant-stop.webm">Can't Stop</a>
+						</p>
+					</video>
+					<video id="vidTag" src="media/californication.ogv">
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento VIDEO. podes descargar el videoclip desde el siguiente enlace: <a href="media/californication.ogv">Californication</a>
+						</p>
+					</video>
+					<button id="vidPlay">PLAY</button>
+				</div>
 			</section>
 		</article>
 	</main>
@@ -360,5 +391,11 @@
 			<button>Realizar Consulta</button>
 		</form>
 	</footer>
+	<script>
+		document.querySelector('#vidPlay').addEventListener(
+			'click', () => document.querySelector('#vidTag').play()
+			
+		)
+	</script>
 </body>
 </html>
