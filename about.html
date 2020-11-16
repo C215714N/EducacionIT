@@ -16,20 +16,20 @@
 			<li><a href="#">acerca</a></li>
 			<li><a href="#contact">contacto</a></li>
 			<li><a href="https://github.com/c215714n/educacionIT/tree/maquetacion-lunes-10hs" target="_blank">github</a></li>
-			<li><a href="#header"></a></li>
+			<li><a href="#"></a></li>
 		</ul>
 	</nav>
 	<header id="header">
 		<h1>Maquetacion Web</h1>
 		<p>HTML &amp; CSS</p>
 		<ul class="galeria">
-			<li></li>
+			<li class="active"></li>
 			<li></li>
 			<li></li>
 		</ul>
 		<div>
-			<a href="#"><--</a>
-			<a href="#">--></a>
+			<a id="prev" href="#"><</a>
+			<a id="next" href="#">></a>
 		</div>
 	</header>
 	<main>
@@ -69,7 +69,7 @@
 			</ul>
 		</aside>
 	</main>
-	<footer>
+	<footer id="footer">
 		<!-- form#contact>h2{Contactenos}+(label+input#[name="" placeholder="Ingrese su " required]+.validate)*3+label+textarea+button+div -->
 		<form action="" id="contact">
 			<h2>Contactenos</h2>
@@ -113,6 +113,7 @@
 				name="contactConsult"
 				minlength="10"
 				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
 				required></textarea>
 			<button>Realizar Consulta</button>
 			<div>

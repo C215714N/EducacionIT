@@ -23,6 +23,7 @@
 				margin:0;
 				padding:0;
 				background-color: #fcd;
+				z-index: 9999;
 		}
 		nav a{
 			color:#936;
@@ -32,6 +33,18 @@
 		nav > a{
 			font-size: 1.2rem;
 			font-weight: bold;
+		}
+		#menu{
+			display: none;
+			border:2px solid #936;
+			padding:.2rem .7rem;
+			color:#936;
+			background-color: transparent;
+			font-size: 2rem;
+		}		
+		#menu:hover{
+			color:pink;
+			background-color: #936;
 		}
 		.menu a:hover{
 			color:white;
@@ -55,9 +68,149 @@
 			opacity: 1;
 		}
 	/*Cabecera*/
-
+		#header{
+			/*position*/
+				position:relative;
+			/*flexbox*/
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			/*atributes*/
+				height: 600px;
+				padding:1rem;
+				color:#ccc;
+				font-size: 3rem;
+				text-shadow: .2rem .2rem .5rem black;
+		}
+		#header h1,
+		#header p{
+			margin:0;
+		}
+		.galeria li{
+			position: absolute;
+			list-style: none;
+			background-size: cover;
+			background-position: center;
+		}
+		.galeria li:nth-child(1){ background-image: url(../assets/img/osx-leopard.png)			}
+		.galeria li:nth-child(2){ background-image: url(../assets/img/osx-lion.png)			}
+		.galeria li:nth-child(3){ background-image: url(../assets/img/osx-mavericks.png)			}
+		.active{
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			z-index: -1;
+		}
+		#prev,
+		#next{
+			position: absolute;
+			top:0;
+			width:6rem;
+			height: 100%;
+			line-height: 600px;
+			text-align: center;
+			font-size: 3rem;
+			color:#ccc;
+			text-decoration: none;
+		}
+		#prev{
+			left:0;
+		}
+		#next{
+			right: 0;
+		}
+		#header a:hover{
+			background-color: rgba(204,204,204,.2);
+		}
 	/*Contenido Principal*/
-
+		/*CSS grid*/
+			main{
+				display: grid;
+				grid-template-areas: 
+					"section section aside"
+					"article-a article-b aside";
+				justify-content: center;
+				gap:1rem;
+				max-width: 1140px;
+				margin:auto;
+			}
+			section{
+				grid-area: section;
+			}
+			aside{
+				grid-area: aside;
+			}
+			article:first-of-type{
+				grid-area: article-a;
+			}
 	/*Pie de Pagina*/
+		#footer{
+			padding:1rem;
+			text-align: center;
+			color: #936;
+			background-color: pink;
+		}
+		#contact{
+			display: flex;
+			flex-direction: column;
 
+			max-width: 960px;
+			margin: 1rem auto;
+			text-align: left;
+		}
+		#contact label{
+			height: 0;
+			margin-top: .5rem;
+		}
+		#contact input,
+		#contact textarea{
+			outline: none;
+			border:2px solid white;
+			padding:.5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			height: 6rem;
+			resize: none;
+		}
+		.validate{
+			overflow: hidden;
+			height:0;
+			font-weight: bold;
+		}
+		#contact :focus + .validate{
+			height: auto;
+			padding:.5rem 1rem;
+		}
+		#contact :focus:invalid{
+			border-color: tomato;
+		}
+		#contact :focus:invalid + .validate{
+			color:darkred;
+			background-color: tomato;
+		}
+		#contact :focus:valid{
+			border-color: lightgreen;
+		}
+		#contact :focus:valid + .validate{
+			color:darkgreen;
+			background-color: lightgreen;
+		}
+		#contact button{
+			margin:.5rem 0 1rem;
+			border:2px solid #936;
+			padding:.5rem 1rem;
+			color:#936;
+			background-color: transparent;
+			font: 1.2rem Raleway;
+			text-transform: uppercase;
+
+			align-self: flex-end;
+		}
+		#contact button:hover{
+			color:pink;
+			background-color: #936;
+		}
 	/*Redes Sociales*/
