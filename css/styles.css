@@ -128,14 +128,66 @@
 			border: .5rem solid #333;
 			border-radius: .4rem;
 			}
+	/*flexbox*/
+		.flexbox{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			margin:.5rem 0;
+			padding:.5rem;
+			background-color: #ccc;
+			border:2px solid black;
+		}
+		.flexbox div{
+			width:150px;
+			line-height: 50px;
+			border:2px dashed #eee;
+			background-color: skyblue;
+		}
+		.align{
+			height: 300px;
+			align-items: center;
+		}
+		.self{
+			align-self: flex-start;
+			font-size: 3rem;
+		}
+		.col{
+			flex-direction: column;
+			border-top: .5rem dashed tomato;
+			border-left: .5rem dashed limegreen;
+		}
+		.row-r{
+			flex-direction: row-reverse;
+			border-right: .5rem dashed tomato;
+			border-top: .5rem dashed limegreen;
+		}
+		.col-r{
+			flex-direction: column-reverse;
+			border-bottom: .5rem dashed tomato;
+			border-left: .5rem dashed limegreen;
+		}
+		.limegreen, .tomato{
+			display: inline-block;
+			height: 15px;
+			width:15px;
+		}
+		.limegreen{ 
+			background-color: limegreen 
+		}
+		.tomato { 
+			background-color: tomato;	
+		}
 /*Formulario de Contacto*/
 	#contact {
+		display: flex;
+		flex-direction: column;
 		max-width: 720px;
 		margin: 1rem auto; /*top right bottom left*/
 	}
 	#contact input,
 	#contact textarea{
-		width:100%;
 		outline: none;
 		border: 2px solid white; /*width style color*/
 		border-radius: .2rem;
@@ -193,7 +245,8 @@
 		box-shadow: 0 0 5px #ccc; /* -x+ -y+ blur color */
 	}
 	#contact button{
-		margin-bottom: 1rem;
+		align-self: flex-end;
+		margin: .5rem 0 1rem;
 		border:3px solid #ccc;
 		padding:1rem;
 		font:bold 1rem Raleway;/*style weight size family*/

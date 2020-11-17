@@ -181,6 +181,95 @@
 				</header>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Introduccion a Flexbox</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Distribucion de elementos (Justify-content)</h1>
+				</header>
+				<ul>
+					<li><strong>flex-start: </strong> distribuye todos los elementos que se encuentren en la etiqueta al principio de la misma (Izquierda), es el valor predeterminado</li>
+					<li><strong>flex-end: </strong> distribuye todos los elementos que se encuentren en la etiqueta al final de la misma (Derecha) en orden</li>
+					<li><strong>center: </strong> distribuye hacia el centro de la etiqueta todos los elementos en su interior (horizontal)</li>
+					<li><strong>space-around: </strong> separa las etiquetas otorgando la misma distancia para cada una de ellas, pero entre etiquetas se suman las distancias que las separan (la distancia en el medio es mayor)</li>
+					<li><strong>space-between: </strong>Anexa la primera y ultima etiqueta a los extremos del flex y otorga la misma distancia de separacion a todas las etiquetas (en los extremos no hay distancia)</li>
+					<li><strong>space<span>-evenly</span>: </strong>Ajusta las distancias entre elementos para que cada etiqueta este distribuida de manera equitativa (no es compatible con todos los navegadores)</li>
+				</ul>
+				<div class="flexbox">
+					<div> item 1 </div>
+					<div> item 2 </div>
+					<div> item 3 </div>
+					<div> item 4 </div>
+					<div> item 5 </div>
+					<div> item 6 </div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion de elementos (Align-items)</h1>
+				</header>
+				<ul>
+					<li><strong>flex-start: </strong> Organiza todos los elementos que se encuentren en la etiqueta al principio de la fila (Arriba). Si no aplicamos algun valor, las etiquetas ocupan todo el alto.
+					</li>
+					<li><strong>flex-end: </strong> Organiza todos los elementos que se encuentren en la etiqueta al final de la fila (Abajo)</li>
+					<li><strong>center: </strong> Organiza hacia el centro de la etiqueta todos los elementos en su interior (vertical)</li>
+					<li><strong>baseline:</strong>Organiza todos los elementos en base a los tamaños de la tipografia, indistintamente al tamaño de las etiquetas. El objetivo es que todos los texto se lean de corrido.</li>
+					<li><strong>alig-self: </strong> Atributo que se utiliza para reorganizar la posicion de un elemento hijo que necesitamos que se encuentre en otra posicion dentro de flexbox.</li>
+				</ul>
+				<div class="flexbox align">
+					<div> item 1 </div>
+					<div> item 2 </div>
+					<div class="self"> item 3 </div>
+					<div> item 4 </div>
+					<div class="self"> item 5 </div>
+					<div> item 6 </div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Direccion Flexbox</h1>
+				</header>
+				<ul>
+					<li><strong>Row: </strong> es el valor predeterminado y establece la distribucion de manera horizontal y la organizacion de forma vertical</li>
+					<li><strong>Column: </strong> se invierten los valores de distribucion y organizacion, es decir que justify-content funciona en vertical y align-items funcion en horizontal</li>
+					<li><strong>Row-Reverse: </strong> de manera similar a Row, mantiene la distribucion y la organizacion, pero invierte el eje horizontal</li>
+					<li><strong>Column-Reverse:</strong>de manera similar a Column, invierte los valores de organizacion y distribucion, pero invierte la distribucion, creando los elemento desde abajo hacia arriba.</li>
+				</ul>
+				<div class="flexbox align col">
+					<strong>Column</strong>
+					<div> item 1 </div>
+					<div> item 2 </div>
+					<div> item 3 </div>
+					<div> item 4 </div>
+					<div> item 5 </div>
+					<div> item 6 </div>
+				</div>
+				<div class="flexbox align row-r">
+					<strong>Row-Reverse</strong>
+					<div> item 1 </div>
+					<div> item 2 </div>
+					<div> item 3 </div>
+					<div> item 4 </div>
+					<div> item 5 </div>
+					<div> item 6 </div>
+				</div>
+				<div class="flexbox align col-r">
+					<strong>Column-Reverse</strong>
+					<div> item 1 </div>
+					<div> item 2 </div>
+					<div> item 3 </div>
+					<div> item 4 </div>
+					<div> item 5 </div>
+					<div> item 6 </div>
+				</div>
+				<ul>
+					<li><strong>Justify-content:</strong> <span class="limegreen"></span> limegreen </li>
+					<li><strong>Align-items:</strong> <span class="tomato"></span> tomato</li>
+				</ul>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<div class="social">
