@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+body #header {
+  /*flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /*attributes*/
+  margin: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  color: #ccc;
+  background-color: #248;
+}
+body #header nav {
+  background-color: #36c;
+}
+body main .header {
+  background-color: #36c;
+}
+@media screen and (max-width: 576px) {
+  body main section {
+    max-width: 540px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main section {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body main section {
+    max-width: 992px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body main section {
+    max-width: 1140px;
+  }
+}
+body #footer {
+  color: #ccc;
+  background-color: #248;
+}
+body #footer #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  border: 0;
+  padding: 0;
+}
+body #footer #contact * {
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  body #footer #contact {
+    max-width: 540px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body #footer #contact {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body #footer #contact {
+    max-width: 992px;
+  }
+}
+.col-1 {
+  width: 4.16666667%;
+}
+.col-2 {
+  width: 8.33333333%;
+}
+.col-3 {
+  width: 12.5%;
+}
+.col-4 {
+  width: 16.66666667%;
+}
+.col-5 {
+  width: 20.83333333%;
+}
+.col-6 {
+  width: 25%;
+}
+.col-7 {
+  width: 29.16666667%;
+}
+.col-8 {
+  width: 33.33333333%;
+}
+.col-9 {
+  width: 37.5%;
+}
+.col-10 {
+  width: 41.66666667%;
+}
+.col-11 {
+  width: 45.83333333%;
+}
+.col-12 {
+  width: 50%;
+}
+.col-13 {
+  width: 54.16666667%;
+}
+.col-14 {
+  width: 58.33333333%;
+}
+.col-15 {
+  width: 62.5%;
+}
+.col-16 {
+  width: 66.66666667%;
+}
+.col-17 {
+  width: 70.83333333%;
+}
+.col-18 {
+  width: 75%;
+}
+.col-19 {
+  width: 79.16666667%;
+}
+.col-20 {
+  width: 83.33333333%;
+}
+.col-21 {
+  width: 87.5%;
+}
+.col-22 {
+  width: 91.66666667%;
+}
+.col-23 {
+  width: 95.83333333%;
+}
+.col-24 {
+  width: 100%;
+}
+.animacion div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  line-height: 50px;
+  text-align: center;
+}
+.animacion div:nth-child(1) {
+  animation: lineal 2s ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.animacion div:nth-child(2) {
+  animation: cuadratica 2s ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.animacion div:nth-child(3) {
+  animation: trigonometrica 2s ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.animacion div:nth-child(4) {
+  animation: exponencial 2s ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes lineal {
+  0% {
+    transform: translate(5px, 2.5px);
+  }
+  10% {
+    transform: translate(10px, 5px);
+  }
+  20% {
+    transform: translate(15px, 7.5px);
+  }
+  30% {
+    transform: translate(20px, 10px);
+  }
+  40% {
+    transform: translate(25px, 12.5px);
+  }
+  50% {
+    transform: translate(30px, 15px);
+  }
+  60% {
+    transform: translate(35px, 17.5px);
+  }
+  70% {
+    transform: translate(40px, 20px);
+  }
+  80% {
+    transform: translate(45px, 22.5px);
+  }
+  90% {
+    transform: translate(50px, 25px);
+  }
+  100% {
+    transform: translate(55px, 27.5px);
+  }
+}
+@keyframes cuadratica {
+  0% {
+    transform: translate(85px, 225px);
+  }
+  10% {
+    transform: translate(88px, 144px);
+  }
+  20% {
+    transform: translate(91px, 81px);
+  }
+  30% {
+    transform: translate(94px, 36px);
+  }
+  40% {
+    transform: translate(97px, 9px);
+  }
+  50% {
+    transform: translate(100px, 0px);
+  }
+  60% {
+    transform: translate(103px, 9px);
+  }
+  70% {
+    transform: translate(106px, 36px);
+  }
+  80% {
+    transform: translate(109px, 81px);
+  }
+  90% {
+    transform: translate(112px, 144px);
+  }
+  100% {
+    transform: translate(115px, 225px);
+  }
+}
