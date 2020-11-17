@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!-- Cabecera: Parte NO VISIBLE -->
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="width=device-width, initial-scale=1, maximum-scale=3">
+	<title>Maquetado Avanzado</title>
+	<!--Styles CSS-->
+		<link rel="stylesheet" href="styles/icomoon.css">
+		<link rel="stylesheet" href="styles/final.css">
+</head>
+<body><!-- Cuerpo: Parte VISIBLE -->
+	<header id="header"><!--Cabecera: Introduccion-->
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>HTML &amp; CSS</p>
+		</div>
+		<nav><!--Navegacion: Indice-->
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li><a class="icon-home" href="#"> <span> Inicio </span> </a></li>
+				<li><a class="icon-gallery" href="gallery.html"> <span> Galeria </span> </a></li>
+				<li><a class="icon-contact" href="#contact"> <span> Contacto </span> </a></li>
+				<li><a class="icon-github" href="https://github.com/c215714n/educacionit/tree/maquetado-martes-10hs" target="_blank"> <span> GitHub </span>  </a></li>
+			</ul>
+		</nav>
+	</header>
+	<main><!-- Contenido Principal: Nudo -->
+		<article>
+			<h1>animaciones</h1>
+			<div class="animacion">
+				<div> 1 </div>
+				<div> 2 </div>
+				<div> 3 </div>
+				<div> 4 </div>
+				<div> 5 </div>
+			</div>
+		</article>
+	</main>
+	<footer id="footer"><!-- Pie: Descenlace -->
+		<form action="" id="contact" method="POST" class="col-sm-16 col-md-12 col-lg-8">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				name="contactName"
+				id="contactName" 
+				type="text" 
+				pattern="[a-z A-Z]{2,50}" 
+				placeholder="Ingrese su Nombre" 
+				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros, ni simbolos.
+				El mismo debe poseer entre 2 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				name="contactEmail"
+				id="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="validate">
+				Ingrese una direccion de correo valida.
+				La misma debe poseer la siguiete estructura "usuario@servidor".
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				name="contactPhone"
+				id="contactPhone" 
+				type="tel" 
+				pattern="[0-9]{6,20}" 
+				placeholder="Ingrese su Telefono" 
+				required />
+			<div class="validate">
+				Ingrese su telefono sin guiones, ni espacios.
+				El mismo debe poseer entre 6 y 20 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult" 
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required
+			></textarea>
+			<button>Enviar</button>
+			<div>Todos los campos con (*) son obligatorios</div>
+		</form>
+		<div class="social">
+			<a href="https://api.whatsapp.com"> whatsapp </a>
+			<a href="https://facebook.com"> facebook </a>
+			<a href="https://instagram.com"> instagram </a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href=""> Cristian Racedo </a>
+			&amp; compañia
+		</p>
+	</footer>
+	<!--Scripts JS-->
+		<script src="scripts/main.js"></script>
+		<!--LESS compiler-->
+		<script src="//cdn.jsdelivr.net/npm/less" ></script>
+</body>
+</html>
