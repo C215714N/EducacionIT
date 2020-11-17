@@ -1,0 +1,19 @@
+@colores: #248, #999, #284, #ca3, #842, #3ac, #ddd, #333;
+@color-names: primary, secondary, success, warning, danger, info, light, dark;
+@attributes: color, background-color, border-color;
+@attrib-names: text, bg, b;
+
+.attrib (@i:1) when (@i <= length(@attributes)){
+	.values (@v:1) when (@v <= length(@colores)){
+		@class: extract(@attrib-names, @i);
+		@attrib: extract(@attributes, @i);
+		@color: extract(@color-names,@v);
+		.@{class}-@{color}{
+			@{attrib}: extract(@colores, @v);
+		}
+		.values (@v + 1);
+	} 
+	.values();	
+	.attrib(@i + 1);
+}
+.attrib();

@@ -1,4 +1,3 @@
-@import "intro.less";
 
 @funciones: lineal, cuadratica, trigonometrica, exponencial;
 .style(){
@@ -21,30 +20,58 @@
 	.animaciones;
 }
 
-@keyframes lineal{
-	.animation (@x:0px; @i:0%) when (@i <= 100%){
-		@{i}{
-			transform:
-				translate(
-					@x,
-					@x / 2
-				);
-		}
-		.animation(@x + 5; @i + 10);
+.key (@n:1) when (@n <= length(@funciones)){
+	@f: extract(@funciones, @n);
+	@keyframes @f{
+		.porcentajes(@i:0%; @x:-20px) when (@i <= 100%){
+			@{i}{
+				transform: 
+					if( @f = lineal, translate( @x * 4, @x), // y = x + b
+					if( @f = cuadratica, translate( @x + 400px, pow(@x, 2)/2 ), // y = ax^2+bx+c
+					if(	@f = trigonometrica, translate(@x * 20px + 600px, round(sin(@x) * 100px)),//y = sin(x)
+						translate(@x + 200px, round(pow(1.5px, @x))) //y = n^x
+						)));
+			} 
+			.porcentajes(@i + 10; @x + 4);
+		}	
+		.porcentajes;
 	}
-	.animation(5px);
+	.key(@n + 1);
 }
+.key;
 
-@keyframes cuadratica {
-	.animation (@x:0px; @i:0%) when (@i <= 100%){
-		@{i}{
-			transform:
-				translate(
-					@x + 100px,
-					pow(@x, 2)
-				);
+@vw: 576px, 768px, 992px, 1200px;
+@vname: sm, md, lg, xl;
+
+.media (@i:1) when (@i <= length(@vw)){
+	@media screen and (min-width: extract(@vw, @i)){
+		.responsive (@c:1, @n: 16) when (@c <= @n){
+			@vn: extract(@vname, @i);
+			.col-@{vn}-@{c}{
+				width: percentage( @c / @n );
+			}
+			.responsive(@c + 1);
 		}
-		.animation(@x + 3, @i + 10)
+		.responsive;
 	}
-	.animation(-15px);
+	.media(@i + 1);
+}
+.media;
+
+
+a[href^="http"]{
+	color:#248;
+	background-color: #ccc;
+}
+a[href$=".html"]{
+	color:#333;
+	background-color: #48f;
+}
+a[href*="whatsapp"]{
+	color:white;
+	background-color:limegreen;
+}
+a[href="https://facebook.com"]{
+	color:#ccc;
+	background-color: #248;
 }

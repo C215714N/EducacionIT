@@ -1,152 +1,3 @@
-body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-body #header {
-  /*flexbox*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  /*attributes*/
-  margin: 0;
-  border: 0;
-  padding: 0.5rem 1rem;
-  color: #ccc;
-  background-color: #248;
-}
-body #header nav {
-  background-color: #36c;
-}
-body main .header {
-  background-color: #36c;
-}
-@media screen and (max-width: 576px) {
-  body main section {
-    max-width: 540px;
-  }
-}
-@media screen and (max-width: 768px) {
-  body main section {
-    max-width: 720px;
-  }
-}
-@media screen and (max-width: 992px) {
-  body main section {
-    max-width: 992px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  body main section {
-    max-width: 1140px;
-  }
-}
-body #footer {
-  color: #ccc;
-  background-color: #248;
-}
-body #footer #contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: 1rem auto;
-  border: 0;
-  padding: 0;
-}
-body #footer #contact * {
-  width: 100%;
-}
-@media screen and (max-width: 576px) {
-  body #footer #contact {
-    max-width: 540px;
-  }
-}
-@media screen and (max-width: 768px) {
-  body #footer #contact {
-    max-width: 720px;
-  }
-}
-@media screen and (max-width: 992px) {
-  body #footer #contact {
-    max-width: 992px;
-  }
-}
-.col-1 {
-  width: 4.16666667%;
-}
-.col-2 {
-  width: 8.33333333%;
-}
-.col-3 {
-  width: 12.5%;
-}
-.col-4 {
-  width: 16.66666667%;
-}
-.col-5 {
-  width: 20.83333333%;
-}
-.col-6 {
-  width: 25%;
-}
-.col-7 {
-  width: 29.16666667%;
-}
-.col-8 {
-  width: 33.33333333%;
-}
-.col-9 {
-  width: 37.5%;
-}
-.col-10 {
-  width: 41.66666667%;
-}
-.col-11 {
-  width: 45.83333333%;
-}
-.col-12 {
-  width: 50%;
-}
-.col-13 {
-  width: 54.16666667%;
-}
-.col-14 {
-  width: 58.33333333%;
-}
-.col-15 {
-  width: 62.5%;
-}
-.col-16 {
-  width: 66.66666667%;
-}
-.col-17 {
-  width: 70.83333333%;
-}
-.col-18 {
-  width: 75%;
-}
-.col-19 {
-  width: 79.16666667%;
-}
-.col-20 {
-  width: 83.33333333%;
-}
-.col-21 {
-  width: 87.5%;
-}
-.col-22 {
-  width: 91.66666667%;
-}
-.col-23 {
-  width: 95.83333333%;
-}
-.col-24 {
-  width: 100%;
-}
 .animacion div {
   width: 50px;
   height: 50px;
@@ -176,71 +27,357 @@ body #footer #contact * {
 }
 @keyframes lineal {
   0% {
-    transform: translate(5px, 2.5px);
+    transform: translate(-80px, -20px);
   }
   10% {
-    transform: translate(10px, 5px);
+    transform: translate(-64px, -16px);
   }
   20% {
-    transform: translate(15px, 7.5px);
+    transform: translate(-48px, -12px);
   }
   30% {
-    transform: translate(20px, 10px);
+    transform: translate(-32px, -8px);
   }
   40% {
-    transform: translate(25px, 12.5px);
+    transform: translate(-16px, -4px);
   }
   50% {
-    transform: translate(30px, 15px);
+    transform: translate(0px, 0px);
   }
   60% {
-    transform: translate(35px, 17.5px);
+    transform: translate(16px, 4px);
   }
   70% {
-    transform: translate(40px, 20px);
+    transform: translate(32px, 8px);
   }
   80% {
-    transform: translate(45px, 22.5px);
+    transform: translate(48px, 12px);
   }
   90% {
-    transform: translate(50px, 25px);
+    transform: translate(64px, 16px);
   }
   100% {
-    transform: translate(55px, 27.5px);
+    transform: translate(80px, 20px);
   }
 }
 @keyframes cuadratica {
   0% {
-    transform: translate(85px, 225px);
+    transform: translate(380px, 200px);
   }
   10% {
-    transform: translate(88px, 144px);
+    transform: translate(384px, 128px);
   }
   20% {
-    transform: translate(91px, 81px);
+    transform: translate(388px, 72px);
   }
   30% {
-    transform: translate(94px, 36px);
+    transform: translate(392px, 32px);
   }
   40% {
-    transform: translate(97px, 9px);
+    transform: translate(396px, 8px);
   }
   50% {
-    transform: translate(100px, 0px);
+    transform: translate(400px, 0px);
   }
   60% {
-    transform: translate(103px, 9px);
+    transform: translate(404px, 8px);
   }
   70% {
-    transform: translate(106px, 36px);
+    transform: translate(408px, 32px);
   }
   80% {
-    transform: translate(109px, 81px);
+    transform: translate(412px, 72px);
   }
   90% {
-    transform: translate(112px, 144px);
+    transform: translate(416px, 128px);
   }
   100% {
-    transform: translate(115px, 225px);
+    transform: translate(420px, 200px);
   }
+}
+@keyframes trigonometrica {
+  0% {
+    transform: translate(200px, -91px);
+  }
+  10% {
+    transform: translate(280px, 29px);
+  }
+  20% {
+    transform: translate(360px, 54px);
+  }
+  30% {
+    transform: translate(440px, -99px);
+  }
+  40% {
+    transform: translate(520px, 76px);
+  }
+  50% {
+    transform: translate(600px, 0px);
+  }
+  60% {
+    transform: translate(680px, -76px);
+  }
+  70% {
+    transform: translate(760px, 99px);
+  }
+  80% {
+    transform: translate(840px, -54px);
+  }
+  90% {
+    transform: translate(920px, -29px);
+  }
+  100% {
+    transform: translate(1000px, 91px);
+  }
+}
+@keyframes exponencial {
+  0% {
+    transform: translate(180px, 0px);
+  }
+  10% {
+    transform: translate(184px, 0px);
+  }
+  20% {
+    transform: translate(188px, 0px);
+  }
+  30% {
+    transform: translate(192px, 0px);
+  }
+  40% {
+    transform: translate(196px, 0px);
+  }
+  50% {
+    transform: translate(200px, 1px);
+  }
+  60% {
+    transform: translate(204px, 5px);
+  }
+  70% {
+    transform: translate(208px, 26px);
+  }
+  80% {
+    transform: translate(212px, 130px);
+  }
+  90% {
+    transform: translate(216px, 657px);
+  }
+  100% {
+    transform: translate(220px, 3325px);
+  }
+}
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    width: 6.25%;
+  }
+  .col-sm-2 {
+    width: 12.5%;
+  }
+  .col-sm-3 {
+    width: 18.75%;
+  }
+  .col-sm-4 {
+    width: 25%;
+  }
+  .col-sm-5 {
+    width: 31.25%;
+  }
+  .col-sm-6 {
+    width: 37.5%;
+  }
+  .col-sm-7 {
+    width: 43.75%;
+  }
+  .col-sm-8 {
+    width: 50%;
+  }
+  .col-sm-9 {
+    width: 56.25%;
+  }
+  .col-sm-10 {
+    width: 62.5%;
+  }
+  .col-sm-11 {
+    width: 68.75%;
+  }
+  .col-sm-12 {
+    width: 75%;
+  }
+  .col-sm-13 {
+    width: 81.25%;
+  }
+  .col-sm-14 {
+    width: 87.5%;
+  }
+  .col-sm-15 {
+    width: 93.75%;
+  }
+  .col-sm-16 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 6.25%;
+  }
+  .col-md-2 {
+    width: 12.5%;
+  }
+  .col-md-3 {
+    width: 18.75%;
+  }
+  .col-md-4 {
+    width: 25%;
+  }
+  .col-md-5 {
+    width: 31.25%;
+  }
+  .col-md-6 {
+    width: 37.5%;
+  }
+  .col-md-7 {
+    width: 43.75%;
+  }
+  .col-md-8 {
+    width: 50%;
+  }
+  .col-md-9 {
+    width: 56.25%;
+  }
+  .col-md-10 {
+    width: 62.5%;
+  }
+  .col-md-11 {
+    width: 68.75%;
+  }
+  .col-md-12 {
+    width: 75%;
+  }
+  .col-md-13 {
+    width: 81.25%;
+  }
+  .col-md-14 {
+    width: 87.5%;
+  }
+  .col-md-15 {
+    width: 93.75%;
+  }
+  .col-md-16 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    width: 6.25%;
+  }
+  .col-lg-2 {
+    width: 12.5%;
+  }
+  .col-lg-3 {
+    width: 18.75%;
+  }
+  .col-lg-4 {
+    width: 25%;
+  }
+  .col-lg-5 {
+    width: 31.25%;
+  }
+  .col-lg-6 {
+    width: 37.5%;
+  }
+  .col-lg-7 {
+    width: 43.75%;
+  }
+  .col-lg-8 {
+    width: 50%;
+  }
+  .col-lg-9 {
+    width: 56.25%;
+  }
+  .col-lg-10 {
+    width: 62.5%;
+  }
+  .col-lg-11 {
+    width: 68.75%;
+  }
+  .col-lg-12 {
+    width: 75%;
+  }
+  .col-lg-13 {
+    width: 81.25%;
+  }
+  .col-lg-14 {
+    width: 87.5%;
+  }
+  .col-lg-15 {
+    width: 93.75%;
+  }
+  .col-lg-16 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 6.25%;
+  }
+  .col-xl-2 {
+    width: 12.5%;
+  }
+  .col-xl-3 {
+    width: 18.75%;
+  }
+  .col-xl-4 {
+    width: 25%;
+  }
+  .col-xl-5 {
+    width: 31.25%;
+  }
+  .col-xl-6 {
+    width: 37.5%;
+  }
+  .col-xl-7 {
+    width: 43.75%;
+  }
+  .col-xl-8 {
+    width: 50%;
+  }
+  .col-xl-9 {
+    width: 56.25%;
+  }
+  .col-xl-10 {
+    width: 62.5%;
+  }
+  .col-xl-11 {
+    width: 68.75%;
+  }
+  .col-xl-12 {
+    width: 75%;
+  }
+  .col-xl-13 {
+    width: 81.25%;
+  }
+  .col-xl-14 {
+    width: 87.5%;
+  }
+  .col-xl-15 {
+    width: 93.75%;
+  }
+  .col-xl-16 {
+    width: 100%;
+  }
+}
+a[href^="http"] {
+  color: #248;
+  background-color: #ccc;
+}
+a[href$=".html"] {
+  color: #333;
+  background-color: #48f;
+}
+a[href*="whatsapp"] {
+  color: white;
+  background-color: limegreen;
+}
+a[href="https://facebook.com"] {
+  color: #ccc;
+  background-color: #248;
 }
