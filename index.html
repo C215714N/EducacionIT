@@ -8,7 +8,7 @@
 	<title>Maquetado Avanzado</title>
 	<!--Styles CSS-->
 		<link rel="stylesheet" href="styles/icomoon.css">
-		<link rel="stylesheet" href="styles/intro.css">
+		<link rel="stylesheet" href="styles/main.css">
 </head>
 <body><!-- Cuerpo: Parte VISIBLE -->
 	<header id="header"><!--Cabecera: Introduccion-->
@@ -211,7 +211,7 @@
 				</header>
 				<p>
 
-					Una de las caracteristicas tomadas directamente de los programas de diseño son los modos de fusion, los cuales se aplican 
+					Una de las caracteristicas tomadas directamente de los programas de diseño son los modos de fusion, los cuales se aplican tomando de referencia una capa base y por encima realizando los efectos correspondientes al modo de fondo seleccionado.
 				</p>
 			</section>
 		</article>
@@ -281,22 +281,52 @@
 		</article>
 		<article>
 			<header class="header">
-				<h1>Clase 5</h1>
+				<h1>Animaciones CSS</h1>
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Introduccion a Keyframes</h1>
 				</header>
+
+				<p>
+				
+					Las animaciones toman su funcionamiento de programas como <em>Adobe Animate, antiguamente conocido Flash,</em> que permiten la creacion de peliculas implementando <strong>fotogramas clave (@keyframes) </strong> e insertandolos en una linea de tiempo. Al igual que sucede con las transformaciones, podemos modificar como sucede la animacion mediante el atributo <strong>animation-timing-function</strong> que adopta los mismos valores 	que el atributo <em>trasition</em>, pero la diferencia es que la animacion al ser una pelicula aplica esto de forma predeterminada.
+				</p>
+				<div class="example animation timing">
+					<div>ease</div>
+					<div>ease-in</div>
+					<div>ease-out</div>
+					<div>ease-in-out</div>
+					<div>linear</div>
+					<div>cubic-bezier (0,1,1,0)</div>
+				</div>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Rellenos de animacion</h1>
 				</header>
+				<p>
+					Si bien las animaciones normalmente suceden desde el <strong>FROM al TO</strong>, podemos cambiar la forma en que se da la misma, como si de una pelicula se tratara, ya podemos <em>invertir el orden de los fotogramas</em> y realizar una animacion en reversa ya que estariamos yendo del <strong>TO al FROM</strong>. Es necesario que para notar las diferencias entre estos modos, nuestra animacion cuente con al menos 2 iteraciones, las mismas las podemos especificar con el atributo <em>animation-iteration-count</em>
+				</p>
+				<div class="example animation direction">
+					<div>normal</div>
+					<div>reverse</div>
+					<div>alternate</div>
+					<div>alternate-reverse</div>
+				</div>
 			</section>
 			<section>
 				<header>
 					<h1>Tema 3</h1>
 				</header>
+				<div class="example timing load">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</section>
 		</article>
 	</main>
