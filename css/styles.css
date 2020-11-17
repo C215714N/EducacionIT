@@ -24,6 +24,12 @@
 		background-attachment: fixed;
 	}
 /*Encabezado y Pie*/
+	#header{
+		display: flex;
+		justify-content: space-between; /*horizontal*/
+		align-items: center; /*vertical*/
+		flex-wrap: wrap;
+	}
 	#header,
 	main .header,
 	#footer{
@@ -57,14 +63,16 @@
 	}
 /*Barra de Navegacion*/
 	nav{
+		width:100%;
+		max-width: 600px;
 		background-color: rgba(34,68,136,.3);
-		margin:16px -16px 0;
 	}
 	#menu{
 		display: none;
 	}
 	.menu{
 		list-style: none; /*top right bottom left */
+		margin:0;
 		padding: 0;
 		text-transform: uppercase;
 		text-align: center;
@@ -112,6 +120,24 @@
 	section ul span{
 		color:#248;
 		font-weight: bold;
+	}
+	article{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	article header{
+		width:100%;
+	}
+	article section{
+		overflow: auto;
+		height:300px;
+		width:100%;
+		max-width: 600px;
+		margin:.5rem;
+		border-radius: .5rem;
+		border:2px solid rgba(204,204,204,.5);
+		padding:.5rem;
 	}
 	/*atributo Float*/
 		p{
@@ -178,6 +204,47 @@
 		}
 		.tomato { 
 			background-color: tomato;	
+		}
+	/*pseudo*/
+		article:first-child{
+			background-color: #333;
+		}
+		section:first-of-type{
+			background-color: #ccc;
+		}
+		section:last-of-type{
+			background-color: #666;
+		}
+		article:last-child{
+			background-color: #ddd;
+		}
+		.pseudoclass li{
+			padding:.5rem;
+		}
+		.pseudoclass > :first-child{
+			border: 2px solid;
+		}
+		.pseudoclass > :first-of-type{
+			color:#124;
+			background-color: #ddd;
+		}
+		.pseudoclass > :last-child{
+			color:#333;
+			background-color: #48f;
+		}
+		.pseudoclass > :last-of-type{
+			border: 2px solid;
+		}
+		section :first-of-type::first-line{
+			color:#248;
+			font-weight: bold;
+			text-shadow: 0 0 10px #ddd;
+		}
+		article p:first-of-type::first-letter{
+			float: left;
+			font-size: 8rem;
+			line-height: 8rem;
+			margin-right: .5rem;
 		}
 /*Formulario de Contacto*/
 	#contact {
