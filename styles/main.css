@@ -1,0 +1,61 @@
+/*Content First*/
+	/*Reglas Generales*/
+		*{
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			margin:0;
+		}
+	/*Barra de Navegacion*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		nav, 
+		nav a{
+			color:#333;
+			text-decoration: none;
+			background-color: #dde; /* RRGGBB 0-255 | 00-ff  */
+		}
+		nav > a{
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+		nav a{
+			display: block;
+			padding:.5rem 1rem;
+		}
+		.menu{
+			overflow: hidden;
+			width: 100%;
+			height: 0;
+			list-style: none;
+			margin:0;
+			padding:0;
+		}
+		.menu a:hover{
+			background-color:#bbc; 
+		}
+		#menu{
+			width:2.5rem;
+			margin:.5rem;
+			outline: none;
+			border:2px solid #333;
+			font-size: 2rem;
+			line-height: 2rem;
+			text-align: center;
+			background-color: transparent;
+		}
+		#menu:hover{
+			color:#ddd;
+			background-color: #333;
+		}
+		.openMenu{
+			height: auto;
+		}
+/*Medium Devices 768px*/
+
+/*Large Devices 992px*/

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="	width=device-width, 
+					initial-scale=1,
+					maximum-scale=3">
+	<title>Maquetado Avanzado</title>
+	<link rel="icon" href="assets/icon/cr.png">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<nav>
+		<a href="#">Maquetado Avanzado</a>
+		<button id="menu">&equiv;</button>
+		<ul class="menu">
+			<li><a href="#">Inicio</a></li>
+			<li><a href="about.html">Acerca</a></li>
+			<li><a href="#contact">Contacto</a></li>
+			<li><a href="https://github.com/c215714n/educacionIT/tree/maquetado-mv-10hs" target="_blank">GitHub</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>html & css</p>
+		</div>
+		<ul class="slide">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<a href="#" id="prev"> < </a>
+		<a href="#" id="next"> > </a>
+	</header>
+	<main>
+		<section>
+			<header class="header">Nuevos elementos HTML</header>
+			<article>
+				<header>
+					<h1>Contenido Multimedia</h1>
+				</header>
+				<p>
+					En la actualidad los navegadores, en su mayoria, <strong>soportan la reproduccion nativa de audio y video</strong>. Esto se debe a que cuentan con un navegador integrado, aunque facilita la incorporacion de este tipo de contenido, no todos los formatos se pueden reproducir. En caso del <strong>elemento audio</strong> soporta <em>.mp3 - .wav - .ogg </em> y <strong>el elemento</strong> soporta <em>.mp4 - .webm - .ogv</em>.
+				</p>
+				<div class="example">
+					<audio src="assets/media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el ELEMENTO AUDIO. podes descargar el tema musical desde la siguiente direccion: 
+							<a href="assets/media/live-learn.mp3">
+								Live & Learn
+							</a>
+						</p>
+					</audio>
+					<video controls>
+						<source src="assets/media/by-the-way.ogv">
+						<source src="assets/media/cant-stop.webm">
+						<source src="assets/media/californication.mp4">
+					</video>
+				</div>
+				<div class="videoSlide">
+					<video poster="assets/img/poster-cant-stop.jpg" controls>
+						<source src="assets/media/cant-stop.webm">
+						<source src="assets/media/cant-stop.mp4">
+						<p>Lo sentimos, pero tu navegador NO ES COMPATIBLE con el ELEMENTO VIDEO. Podes decargar el contenido desde la siguiente direccion<a href="assets/media/cant-stop.mp4">Can't Stop</a></p>
+					</video>
+					<video poster="assets/img/poster-by-the-way.jpg" controls>
+						<source src="assets/media/by-the-way.ogv">
+						<source src="assets/media/by-the-way.mp4">
+						<p>Lo sentimos, pero tu navegador NO ES COMPATIBLE con el ELEMENTO VIDEO. Podes decargar el contenido desde la siguiente direccion<a href="assets/media/by-the-way.mp4">By the Way</a></p>
+					</video>
+					<video class="active" poster="assets/img/poster-californication.jpg" controls>
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/californication.mp4">
+						<p>Lo sentimos, pero tu navegador NO ES COMPATIBLE con el ELEMENTO VIDEO. Podes decargar el contenido desde la siguiente direccion<a href="assets/media/californication.mp4">Californication</a></p>
+					</video>
+					<button id="vidPrev"> < </button>
+					<button id="vidPlay"> PLAY </button>
+					<button id="vidNext"> > </button>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h1>Elementos Estadisticos</h1>
+				</header>
+			</article>
+			<article>
+				<header>
+					<h1>API's de Dibujo</h1>
+				</header>
+			</article>
+		</section>
+	</main>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
