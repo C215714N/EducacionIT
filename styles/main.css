@@ -54,8 +54,42 @@
 			background-color: #333;
 		}
 		.openMenu{
-			height: auto;
+			height: auto
 		}
+	/*Contenido*/
+		article{
+			padding:1rem;
+		}
+
+		/*elementos estadisticos*/
+			progress, meter{
+				width:100%;
+				max-width: 300px;
+				height: 2rem;
+			}
+			meter::-webkit-meter-optimum-value{
+				background-color: #3c6;
+			}
+			meter::-webkit-meter-suboptimum-value{
+				background-color: #fc3;
+			}
+			meter::-webkit-meter-even-less-good-value{
+				background-color: #c33;
+			}
+		/*API's de dibujo*/
+			.example figure{
+				max-width: 300px;
+				text-align: center;
+			}
+			.example figure img{
+				width:100%;
+			}
+			.example canvas,
+			.example svg{
+				width:300px;
+				height:300px;
+				border: 2px solid black;
+			}
 /*Medium Devices 768px*/
 
 /*Large Devices 992px*/

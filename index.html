@@ -44,7 +44,7 @@
 					<h1>Contenido Multimedia</h1>
 				</header>
 				<p>
-					En la actualidad los navegadores, en su mayoria, <strong>soportan la reproduccion nativa de audio y video</strong>. Esto se debe a que cuentan con un navegador integrado, aunque facilita la incorporacion de este tipo de contenido, no todos los formatos se pueden reproducir. En caso del <strong>elemento audio</strong> soporta <em>.mp3 - .wav - .ogg </em> y <strong>el elemento</strong> soporta <em>.mp4 - .webm - .ogv</em>.
+					En la actualidad los navegadores, en su mayoria, <strong>soportan la reproduccion nativa de audio y video</strong>. Esto se debe a que cuentan con un reproductor integrado que facilita la incorporacion de este tipo de contenido, pero no todos los formatos se pueden reproducir. En caso del <strong>elemento audio</strong> soporta <em>.mp3 - .wav - .ogg </em> y el <strong> elemento video</strong> soporta <em>.mp4 - .webm - .ogv</em>.
 				</p>
 				<div class="example">
 					<audio src="assets/media/live-learn.mp3" controls>
@@ -86,11 +86,104 @@
 				<header>
 					<h1>Elementos Estadisticos</h1>
 				</header>
+				<p>
+					HTML5 incorpora nuevas etiquetas para <strong> la representacion de valores estadisticos</strong>. Estan son <strong>&lt;progess></strong> que se utiliza para mostrar el avance de una tarea cuando esta aun no fue finalizada y <strong>&lt;meter></strong> que permite mostrar y comparar valores cuando una tarea ya fue finalizada, diferenciandolos gracias al atributo <em>optimum</em>, que los identifica mediante un codigo de color.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Elemento Progress</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								<div>sin value</div>
+							</li>
+							<li>
+								<progress 
+									value="20" 
+									max="100"></progress>
+								<div>value:20 ; max:100</div>
+							</li>
+							<li>
+								<progress 
+									id="pBar" 
+									min="0" 
+									max="100"></progress>
+								<input 
+									id="pInput" 
+									type="number"
+									min="0"
+									max="100" />
+								<div>valor Input (JavaScript)</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Elemento Meter</strong>
+						<ul>
+							<li>
+								<meter 
+									low="40"
+									high="70"
+									optimum="90" 
+									value="30" 
+									max="100"></meter>
+								<div> value* < low < high < optimum</div>
+							</li>
+							<li>
+								<meter 
+									low="40"
+									high="70"
+									optimum="90" 
+									value="60" 
+									max="100"></meter>
+								<div>low < value* < high < optimum</div>
+							</li>
+							<li>
+								<meter 
+									low="40"
+									high="70"
+									optimum="90" 
+									value="90" 
+									max="100"></meter>
+								<div>low < high < value* < optimum</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</article>
 			<article>
 				<header>
 					<h1>API's de Dibujo</h1>
 				</header>
+				<p>
+					Los navegadores desde sus inicios permiten la incorporacion de <strong>imagenes mapa de bits y graficos vectoriales</strong>, pero actualmente tambien podemos generar desde nuestro codigo imagenes de estos tipos. Mediante la etiqueta <strong>SVG</strong> podemos utilizar <em>XML</em> para crear graficos compuesto de lineas y curvas; asi como tambien utilizando la etiqueta <strong>CANVAS</strong> mediante la implementacion de <em>JAVASCRIPT</em> podemos generar graficos raster, compuestos por pixeles.
+				</p>
+				<div class="example">
+					<figure>
+						<img src="assets/icon/css.png" alt="Logo CSS - Mapa de Bits">
+						<figcaption>Logo CSS - Mapa de Bits</figcaption>
+					</figure>
+					<figure>
+						<img src="assets/icon/css.svg" alt="Logo CSS - grafico Vectorial">
+						<figcaption>Logo CSS - grafico Vectorial</figcaption>
+					</figure>
+				</div>
+				<div class="example">
+					<svg>
+						<rect 
+							x="50" y="50" 
+							width="100" height="100" 
+							fill="#248" stroke="#333" />
+						<circle 
+							r="50" cx="150" cy="150" 
+							fill="rgba(240,32,64,.5)" stroke=""/>
+						<polygon points="150 50 , 150 150, 250 100" 
+							fill="rgba(32,240,64,.5)" stroke=""/>
+						<text font-size="20" x="50" y="250" fill="transparent" stroke="black">Scalable Vector Graphics</text>
+					</svg>
+					<canvas id="canDraw" width="300" height="300">
+					</canvas>
+				</div>
 			</article>
 		</section>
 	</main>
