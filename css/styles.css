@@ -16,7 +16,7 @@
 				;
 			*/
 	}
-	html{ scroll-behavior: smooth; }
+	html{ scroll-behavior: smooth; transition: all 1s ease;}
 	body{ margin:0; }
 /*Encabezado y Pie*/
 	#header,
@@ -62,13 +62,14 @@
 		display: none;
 	}
 	.menu{
+		display: flex;
+		justify-content: center;
 		list-style: none;
 		margin:0;
 		padding:0;
 		text-align: center;
 	}
 	.menu li{
-		display: inline-block;
 		padding:8px;
 		/*
 			Block:
@@ -118,9 +119,6 @@
 	section{
 		padding: 8px 16px;/*top right bottom left*/
 	}
-	section{
-		background-color: #ccc;
-	}
 	li{
 		font-size: 1rem; 
 	}
@@ -136,14 +134,85 @@
 		color:#ddd;
 		background-color: #333;
 	}
+	article{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background-color: #ccc;
+	}
+	article .header{
+		width:100%;
+	}
+	article section{
+		width:100%;
+		max-width: 600px;
+		margin:1rem;
+	}
+	.overflow{
+		overflow: auto;
+		height: 320px;
+	}
+	/*Flexbox*/
+		.flex{
+			margin:1rem 0;/*top right bottom left*/
+			border:2px solid #333;
+			padding:1rem;
+			text-align: right;
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+		.flex div{
+			width:150px;
+			border:2px dashed;
+			padding:1rem;
+			color:#ccc;
+			background-color: #248;
+		}
+		.align{
+			height: 300px;
+			align-items: flex-start;
+		}
+		.self{
+			font-size: 2rem;
+			align-self: center;
+		}
+		.col{
+			flex-direction: column;
+			border-top: 4px dashed tomato;
+			border-left: 4px dashed limegreen;
+		}
+		.row-r{
+			flex-direction: row-reverse;
+			border-top: 4px dashed limegreen;
+			border-right: 4px dashed tomato;
+		}
+		.col-r{
+			flex-direction: column-reverse;
+			border-bottom: 4px dashed tomato;
+			border-left: 4px dashed limegreen;
+		}
+		.limegreen span,
+		.tomato span{
+			display: inline-block;
+			padding: .5rem;
+			border: 1px solid #333;
+		}
+		.limegreen span{background-color: limegreen;}
+		.tomato span{ background-color: tomato; }
 /*Formulario de Contacto*/
 	#contact{
+		display: flex;
+		flex-direction: column;
 		max-width: 720px;
 		margin:1rem auto; /*top right bottom left*/
 	}
+	#contact label{
+		height:0;
+	}
 	#contact input,
 	#contact textarea{
-		width: 100%;
 		margin-bottom: .5rem;
 		outline: none;
 		border:2px solid white;
@@ -160,8 +229,8 @@
 		box-shadow: 0 0 8px #ccc;
 	}
 	#contact button{
-		display: block;
-		margin: 0 0 1rem auto; /*top right bottom left*/
+		align-self: flex-end;
+		margin: 0 0 1rem; /*top right bottom left*/
 		outline: none;
 		border:2px solid #ddd;
 		padding:.5rem 1rem;

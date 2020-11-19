@@ -161,12 +161,19 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Propiedades de fondo</h1>
 				</header>
+				<ul>
+					<li><strong>Background-image:</strong> permite definir una imagen de fondo utilizando el protocolo <em>url()</em>, la direccion debe estar escrita solamente con <em>barras diagonales "/"</em> y se posiciona por encima del color de fondo</li>
+					<li><strong>Background-size: </strong> define el tamaño de la imagen de fondo utilizada, podemos utilizar valores en <em>px, %, rem</em> e incluso valores especiales hechos para las imagenes svg como <em>cover y contain</em>.</li>
+					<li><strong>Background-position</strong> define la posicion inicial de la imagen de fondo, y es a partir de donde se van a crear las diferentes copias en caso de ser necesario, la posicion predeterminada es <em>la esquina superior izquierda</em>.Si bien se pueden utilizar valores en <em>px, %, rem</em>, tambien podemos utilizar palabras reservadas como <em>top , bottom</em> para el eje vertical y <em>left, right</em> para el eje horizontal; por ultimo <em>center</em> que funciona para ambos</li>
+					<li><strong>Background-repeat: </strong> define como se va repetir la imagen de fondo, el valor predeterminado es <em>repeat</em>, pero podemos evitarlo o especificar sobre que eje se van a repetir las imagenes.</li>
+					<li><strong>Background-attachment:</strong> permite definir la imagen de fondo como fija, para generar un efecto de movimiento, tambien conocido como <em>efector parallax</em></li>
+				</ul>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Float & overflow</h1>
 				</header>
 				<p>
 					<img src="assets/img/jjba-starplatinum-02.jpg" alt=" Dibujo Star Platinum JJBA">
@@ -178,6 +185,110 @@
 
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, magnam. Consectetur ut vero architecto eius placeat, animi dignissimos et neque dolorem optio itaque tempore distinctio, mollitia praesentium a veniam quae quaerat quos explicabo deleniti? Incidunt architecto, odio quia. Cumque omnis doloribus cum ipsa quis esse, doloremque eligendi delectus minima odit architecto placeat tempora repudiandae rerum consequuntur porro itaque sapiente assumenda libero tenetur perferendis nostrum eos ratione incidunt. Ex aut, iusto, recusandae dolor nobis soluta blanditiis quas fugit, rerum odit autem nam magnam consequuntur sunt voluptatibus quibusdam provident repudiandae harum veniam, dolorem excepturi delectus saepe. Culpa exercitationem, provident, veniam eum assumenda, placeat accusantium dignissimos aliquid eius quia aliquam id perferendis! Tenetur consequuntur ducimus distinctio, sapiente pariatur nobis nostrum mollitia? Quas rerum distinctio, consequuntur repellendus tempore sit ea alias adipisci pariatur laboriosam corrupti eveniet sunt enim possimus ipsum ipsam voluptatem fuga. Eum exercitationem ipsam consectetur laborum cum tenetur. Reprehenderit ullam delectus debitis culpa, beatae id animi quaerat voluptates ex quisquam atque laboriosam assumenda consequuntur alias quo, tenetur fugit modi quibusdam natus doloremque saepe quas. Aut cumque, ab! Explicabo, suscipit sed corporis facilis eius nisi facere dignissimos nemo sequi magni quos? Nemo esse repellat, quas corporis suscipit expedita nisi rem at officiis quis!
 				</p>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Introduccion a Flexbox</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Distribucion de elementos (justify-content)</h1>
+				</header>
+				<ul>
+					<li><strong>flex-start: </strong>Define que todos los elementos se distribuyan desde el comienzo del flex (izquierda) hasta el final, es el valor predeterminado</li>
+					<li><strong>flex-end: </strong> Define que todos los elementos se distribuyan desde final del flex (derecha), hasta el comienzo del flex, respetando el orden de aparicion</li>
+					<li><strong>center: </strong>Distribuye los elementos de manera centrada en la columna (horizontal)</li>
+					<li><strong>space-around: </strong> Distribuye las etiquetas dentro del contenedor con la misma distancia de margen para cada una, pero las distancia entre etiquetas se suman. El espacio entre etiquetas es mayor al espacio en los extremos</li>
+					<li><strong>space-between: </strong> Distribuye de extremo a extremo las etiquetas, manteniendo la misma distancia para cada una, pero el primer y el ultimo elemento se encuentran pegados a los bordes.</li>
+					<li><strong>space-evenly: </strong> Distribuye de manera equitativa todas las etiquetas, sin sumar las distancias entre elementos. si bien es muy practico, no es compatible con todos los navegadores</li>
+				</ul>
+				<div class="flex">
+					<div>Item 1</div>
+					<div>Item 2</div>
+					<div>Item 3</div>
+					<div>Item 4</div>
+					<div>Item 5</div>
+					<div>Item 6</div>
+					<div>Item 7</div>
+					<div>Item 8</div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion de elementos (align-items)</h1>
+				</header>
+				<ul>
+					<li><strong>flex-start: </strong>Define que todos los elementos se organicen desde el comienzo del flex (arriba) hasta el final, a diferencia de <em>justify-content</em>, no existe valor predeterminado</li>
+					<li><strong>flex-end: </strong> Define que todos los elementos se organicen al final de la fila dentro del flex (abajo)</li>
+					<li><strong>center: </strong>organiza los elementos de manera centrada sobre la fila (vertical)</li>
+				</ul>
+				<div class="flex align">
+					<div>Item 1</div>
+					<div>Item 2</div>
+					<div>Item 3</div>
+					<div class="self">Item 4</div>
+					<div>Item 5</div>
+					<div>Item 6</div>
+					<div>Item 7</div>
+					<div class="self">Item 8</div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Orientacion de los elementos (flex-direction)</h1>
+				</header>
+				<ul>
+					<li><strong>row: </strong> es la direccion predeterminada de flexbox, distribuye los elementos en el eje horizontal y los organiza en el eje vertical.</li>
+					<li><strong>column: </strong> en este valor los elementos se distribuyen en columna, es decir que <em>justify-content</em> funciona sobe el eje vertical y <em>align-items</em> sobre el eje horizontal</li>
+					<li><strong>row-reverse: </strong> similar a row, la organizacion se mantiene en el eje vertical, pero el orden de la distribucion se invierte, los elementos se crean de derecha a izquierda.</li>
+					<li><strong>col-reverse: </strong> similar  a column, la distribucion se mantiene sobre el eje vertical, pero el orden de organizacion de invierte, los elementos se crea a abajo hacia arriba.</li>
+				</ul>
+				<div class="overflow">
+					<div class="flex align col">
+						<strong>Column</strong>
+						<div>Item 1</div>
+						<div>Item 2</div>
+						<div>Item 3</div>
+						<div class="self">Item 4</div>
+						<div>Item 5</div>
+						<div>Item 6</div>
+						<div>Item 7</div>
+						<div class="self">Item 8</div>
+					</div>
+					<div class="flex align row-r">
+						<strong>Row-Reverse</strong>
+						<div>Item 1</div>
+						<div>Item 2</div>
+						<div>Item 3</div>
+						<div class="self">Item 4</div>
+						<div>Item 5</div>
+						<div>Item 6</div>
+						<div>Item 7</div>
+						<div class="self">Item 8</div>
+					</div>
+					<div class="flex align col-r">
+						<strong>Column-Reverse</strong>
+						<div>Item 1</div>
+						<div>Item 2</div>
+						<div>Item 3</div>
+						<div class="self">Item 4</div>
+						<div>Item 5</div>
+						<div>Item 6</div>
+						<div>Item 7</div>
+						<div class="self">Item 8</div>
+					</div>
+				</div>
+				<ul>
+					<li class="limegreen">
+						<strong>Justify-Content: </strong>
+						<span></span> limegreen
+					</li>
+					<li class="tomato">
+						<strong>Align-Items: </strong>
+						<span></span> tomato
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
