@@ -291,6 +291,40 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h1>PseudoClass y PseudoElement</h1>
+			</header>
+			<ul>
+				<li>
+					<strong>Pseudoclass: </strong> Instancia o caracteristica de una etiqueta sobre la cual podemos trabajar para aplicar un estilo. Se caracterizan por llevar <em>dos puntos ":"</em> antes del nombre de la misma y usualmente se coloca pegado al elemento afectado.
+					<ul>
+						<li><em>:hover</em></li>
+						<li><em>:first-child</em></li>
+						<li><em>:last-child</em></li>
+						<li><em>:first-of-type</em></li>
+						<li><em>:last-of-type</em></li>
+						<hr>
+						<li><em>:link</em></li>
+						<li><em>:visited</em></li>
+						<li><em>:active</em></li>
+						<hr>
+						<li><em>:focus</em></li>
+						<li><em>:valid</em></li>
+						<li><em>:invalid</em></li>
+					</ul>
+				</li>
+				<li>
+					<strong>Pseudoelement: </strong> Parte o seccion dentro de una etiqueta que podemos utilizar para darle un estilo particular. Se caracterizan por llevar un <em>doble dos puntos "::"</em> antes del nombre, aunque se pueden utilizar con uno y tambien suelen colocarse pegadas al elemento en cuestion.
+					<ul>
+						<li><em>::before</em></li>
+						<li><em>::after</em></li>
+						<li><em>::first-line</em></li>
+						<li><em>::first-letter</em></li>
+					</ul>
+				</li>
+			</ul>
+		</article>
 	</main>
 	<footer id="footer">
 		<form action="js/contact.php" id="contact" method="POST">
@@ -301,6 +335,7 @@
 				id="contactName" 
 				name="contactName"
 				placeholder="Ingrese su Nombre *" 
+				pattern="[a-zA-Z]{2,50}"
 				required />
 			<label for="contactEmail">Correo</label>
 			<input 

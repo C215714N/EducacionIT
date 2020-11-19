@@ -201,6 +201,67 @@
 		}
 		.limegreen span{background-color: limegreen;}
 		.tomato span{ background-color: tomato; }
+	/*pseudoclass*/
+		article{
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		article:first-child{
+			color:#eee;
+			text-shadow: 1px 1px 2px #333;
+			background-image: url(../assets/img/header.jpg);
+		}
+		article:first-child section{
+			background-color: rgba(51,51,51,.8);
+		}
+		article:last-child{
+			color:#ccc;
+			text-shadow: 1px 1px 2px #333;
+			background-image: url(../assets/img/main.jpg);
+		}
+		article:last-child > ul{
+			list-style: none;
+			padding:2rem;
+			background-color: rgba(51,51,51,.8);
+		}
+		article:last-child li:first-child{
+			padding:.5rem;
+			border:2px solid;
+			color:#ccc;
+			background-color: #248;
+		}
+		article:last-child li:last-child{
+			padding: .5rem;
+			border:2px solid;
+			color:#333;
+			background-color: #ccc;
+		}
+		article section:first-of-type{
+			background-color: rgba(34,68,136,.5);
+		}
+		article section:last-of-type{
+			max-width: 1232px;
+			color:#333;
+			background-color: rgba(224,224,244,.5);
+		}
+		section p:first-line{
+			color:#48f;
+			text-shadow: 1px 1px 5px #eee;
+			font-weight: bold;
+		}
+		section p:first-of-type{
+			line-height: 1.5rem;
+		}
+		section p:first-of-type::first-letter{
+			font: bold 6rem times new roman; /*style weigth size family*/
+			line-height: 4rem;
+			float: left;
+			margin: 1rem;
+		}
+		section p:last-of-type{
+			font-style: italic;
+		}
 /*Formulario de Contacto*/
 	#contact{
 		display: flex;
@@ -227,6 +288,9 @@
 	#contact :focus{
 		border-color: rgba(34,68,136,.3); /*224488*/
 		box-shadow: 0 0 8px #ccc;
+	}
+	#contact :focus:valid{
+		border-color: limegreen;
 	}
 	#contact button{
 		align-self: flex-end;
