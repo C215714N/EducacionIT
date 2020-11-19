@@ -1,0 +1,37 @@
+Base de datos (SCHEMA)(
+	- Estructura: almacenamiento, organizacion de informacion,
+	- Almacena los datos en tablas,
+	- Tablas: compuestas de campos(columna) y registros(fila),
+	- Tipos de db(
+		'relacional'*,
+		'jerarquicas',
+		'transaccional',
+		'orientadas a objetos'
+		etc.
+	)
+);
+
+MySQL Workbench(
+	- Motor de Base de datos (desarrollado por IBM),
+	- Oracle adquiere los derechos (MySQL Workbench / Oracle SQL),
+	- Varios desarrolladores crean un proyecto paralelo (MariaDB)
+);
+
+SQL (Structured Query Language) (
+	DDL(Data Definition Language)(
+		CREATE - crear bd / tablas / usuarios
+		DROP - eliminar bd / tablas / usuarios
+		ALTER - modificar bd / tablas
+	),
+	DML(Data Manipulation Language)(
+		INSERT - agregar registros a una tabla
+		DELETE - eliminar registros de una tabla
+		UPDATE - actualizar registros de una tabla
+		SELECT - consulta los registros de una tabla
+	),
+	DCL(Data Control Language)(
+		GRANT - otorgar permisos sobre bd / tablas
+		REVOKE - quitar permisos sobre bd / tablas
+		FLUSH PRIVILEGES - recarga los permisos
+	)
+);
