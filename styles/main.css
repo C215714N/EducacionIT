@@ -9,6 +9,10 @@
 		}
 	/*Barra de Navegacion*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 9999;
+
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -56,6 +60,64 @@
 		.openMenu{
 			height: auto
 		}
+	/*Cabecera*/
+		#header{
+			position: relative;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			height:100vh; /*alto de la ventana*/
+			padding:1rem;
+			color:#dde;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+		}
+		.slide, .slide li{
+			position: absolute;
+			top: 0;
+			left:0;
+			z-index: -1;
+			width:100%;
+			height:100vh;
+			margin:0;
+			padding:0;
+		}
+		.slide li{
+			opacity: .3;
+			background-color: #248;
+			background-position: center;
+			background-size: cover;
+		}
+		.slide li:nth-child(1){background: url(../assets/img/osx-lion.png)}
+		.slide li:nth-child(2){background: url(../assets/img/osx-mavericks.png)}
+		.slide li:nth-child(3){background: url(../assets/img/osx-mojave-night.jpg)}
+		.slide li:nth-child(4){background: url(../assets/img/osx-mountain-lion.jpg)}
+		#header .active{
+			opacity: 1;
+		}
+		#header a{
+			position: absolute;
+			top:0;
+			line-height: 100vh;
+			height: 100vh;
+			padding:1rem;
+			font-size: 2rem;
+			color:#dde;
+			text-decoration: none;
+			opacity: .3;
+		}
+		#header a:hover{
+			opacity: .6;
+		}
+		#prev{
+			left:0;
+		}
+		#next{
+			right:0;
+		}
 	/*Contenido*/
 		article{
 			padding:1rem;
@@ -89,6 +151,57 @@
 				width:300px;
 				height:300px;
 				border: 2px solid black;
+			}
+		/*Background*/
+			.blend{
+				height: 50vh;
+				color:#dde;
+				background: 
+					url(../assets/img/osx-sierra.jpg) no-repeat top,
+					linear-gradient(165deg, tomato, cornflowerblue);
+				background-size:cover;
+				background-blend-mode: soft-light;
+			}
+			.gradient{
+				height: 50vh;
+				color:#dde;
+				background: 
+					url(../assets/img/osx-sierra.jpg) no-repeat 0 -50vh,
+					linear-gradient(
+						195deg,
+						hsla(220, 30%, 60%,.8),
+						hsla(220, 50%, 30%,.8),
+						hsla(220, 80%, 90%,.8)
+					);
+				background-size: cover;
+				background-blend-mode: soft-light;
+			}
+			.gradient .example div{
+				width:10rem;
+				border:2px solid #333;
+			}
+			.gradient .example div:nth-child(1){background-color: cornflowerblue}
+			.gradient .example div:nth-child(2){background-color: rgb(68,136,255)}
+			.gradient .example div:nth-child(3){background-color: rgb(68,136,255,.5)}
+			.gradient .example div:nth-child(4){background-color: #48f}
+			.gradient .example div:nth-child(5){background-color: hsl(200,50%,50%)}
+			.gradient .example div:nth-child(6){background-color: hsla(200,50%,50%,.5)}
+			/* 	color: 	rgb 	  	  hex 	hsl 
+				red 	255 0 0 	- f00 -	0 100% 50%
+				yellow	255 255 0	- ff0 - 60 100% 50%
+				green 	0 255 0 	- 0f0 - 120 100% 50%
+				cyan	0 255 255 	- 0ff - 180 100% 50%
+				blue 	0 0 255 	- 00f - 240 100% 50%
+				magenta 255 0 255	- f0f - 300 100% 50%
+
+				white 	255 255 255	- fff - 0 0% 100%
+				grey 	128 128 128 - 888 - 0 0% 50%
+				black 	0 0 0 		- 000 - 0 0% 0%
+			*/
+			.example{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
 			}
 /*Medium Devices 768px*/
 
