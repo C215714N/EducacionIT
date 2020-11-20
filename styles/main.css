@@ -1,5 +1,10 @@
 /*Content First*/
 	/*Reglas Generales*/
+		@import url(icomoon.css);
+		@font-face{
+			src: url(../fonts/spiderman.ttf); /*svg eot ttf otf*/
+			font-family: spidey;
+		}
 		*{
 			box-sizing: border-box;
 			font-family: sans-serif;
@@ -39,6 +44,7 @@
 			list-style: none;
 			margin:0;
 			padding:0;
+			font-size: 1.2rem;
 		}
 		.menu a:hover{
 			background-color:#bbc; 
@@ -74,6 +80,9 @@
 			color:#dde;
 			font-size: 1.5rem;
 			text-transform: uppercase;
+		}
+		#header h1{
+			font-family: spidey;
 		}
 		.slide, .slide li{
 			position: absolute;
@@ -153,32 +162,21 @@
 				border: 2px solid black;
 			}
 		/*Background*/
-			.blend{
-				height: 50vh;
-				color:#dde;
+		.blend{
+			background: linear-gradient(165deg, tomato, cornflowerblue);
+		}
+		.gradient{
 				background: 
-					url(../assets/img/osx-sierra.jpg) no-repeat top,
-					linear-gradient(165deg, tomato, cornflowerblue);
-				background-size:cover;
-				background-blend-mode: soft-light;
-			}
-			.gradient{
-				height: 50vh;
-				color:#dde;
-				background: 
-					url(../assets/img/osx-sierra.jpg) no-repeat 0 -50vh,
 					linear-gradient(
 						195deg,
 						hsla(220, 30%, 60%,.8),
 						hsla(220, 50%, 30%,.8),
 						hsla(220, 80%, 90%,.8)
-					);
-				background-size: cover;
-				background-blend-mode: soft-light;
-			}
+					)}
 			.gradient .example div{
-				width:10rem;
+				width:12rem;
 				border:2px solid #333;
+				padding:.5rem;
 			}
 			.gradient .example div:nth-child(1){background-color: cornflowerblue}
 			.gradient .example div:nth-child(2){background-color: rgb(68,136,255)}
@@ -203,6 +201,61 @@
 				flex-wrap: wrap;
 				justify-content: space-between;
 			}
+	/*Pie de Pagina*/
+		#footer{
+			padding:1rem;
+		}
+		#contact{
+			display: flex;
+			flex-direction: column;
+		}
+		#contact button{
+			align-self: flex-end;
+		}
 /*Medium Devices 768px*/
-
+	@media screen and (min-width: 768px){
+		#menu{
+		display: none;
+		}
+		.menu{
+			display: flex;
+			justify-content: flex-end;
+			height: auto;
+			width: 50%;	
+		}
+		.menu span{
+			display: none;
+		}
+	}
 /*Large Devices 992px*/
+	@media screen and (min-width: 992px){
+		/*Barra de Navegacion*/
+
+			.menu span{
+				display: inline-block;
+			}
+		/*Contenido Principal*/
+			.blend{
+				height: 50vh;
+				color:#dde;
+				background: 
+					url(../assets/img/osx-sierra.jpg) no-repeat top,
+					linear-gradient(165deg, tomato, cornflowerblue);
+				background-size:cover;
+				background-blend-mode: soft-light;
+			}
+			.gradient{
+				height: 50vh;
+				color:#dde;
+				background: 
+					url(../assets/img/osx-sierra.jpg) no-repeat 0 -50vh,
+					linear-gradient(
+						195deg,
+						hsla(220, 30%, 60%,.8),
+						hsla(220, 50%, 30%,.8),
+						hsla(220, 80%, 90%,.8)
+					);
+				background-size: cover;
+				background-blend-mode: soft-light;
+			}
+	}

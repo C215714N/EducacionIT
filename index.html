@@ -16,10 +16,10 @@
 		<a href="#">Maquetado Avanzado</a>
 		<button id="menu">&equiv;</button>
 		<ul class="menu">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="about.html">Acerca</a></li>
-			<li><a href="#contact">Contacto</a></li>
-			<li><a href="https://github.com/c215714n/educacionIT/tree/maquetado-mv-10hs" target="_blank">GitHub</a></li>
+			<li><a class="icon-home" href="#"> <span>Inicio</span></a></li>
+			<li><a class="icon-about" href="about.html"> <span>Acerca</span></a></li>
+			<li><a class="icon-contact" href="#contact"> <span>Contacto</span></a></li>
+			<li><a class="icon-github" href="https://github.com/c215714n/educacionIT/tree/maquetado-mv-10hs" target="_blank"> <span>GitHub</span></a></li>
 		</ul>
 	</nav>
 	<header id="header">
@@ -194,6 +194,7 @@
 				<p>
 					Al igual que en programas de diseño, CSS permite utilizar un atributo conocido como <strong>background-blend-mode</strong> que funciona tomando como referencia una imagen de fondo como base (inferior) y aplica un filtro utilizando los pixeles de la imagen de fondo de fusion (superior). Los mismos se clasifican segun como realizan su trabajo, en <em>aclarar, oscurecer y tono</em>
 				</p>
+
 			</article>
 			<article class="gradient">
 				<header>
@@ -203,17 +204,80 @@
 					Podemos implementar colores utilizando diferentes tipos de valores, por un lado tenemos los <strong>colores html</strong> que representan un total de <em>140 colores</em> como skyblue, luego tenemos los colores que utiliza el <strong>modelo rgb</strong> expresados en valores <em>decimales como rgb(68, 136, 255)</em> o <em>hexadecimales como #4488ff</em> y por ultimo CSS incorporo el <strong>modelo hsl</strong> que utiliza el <em>circulo cromatico</em> para definir el tono del color, utiliza la valores de porcetanje para definir la saturacion, asi como tambien la cantidad de luz del mismo.
 				</p>
 				<div class="example">
-					<div>Skyblue</div>
-					<div>rgb(68,136,255)</div>
-					<div>rgba(68,136,255,.5)</div>
-					<div>#4488ff</div>
-					<div>hsl(200, 50%, 50%)</div>
-					<div>hsla(200, 50%, 50%, .5)</div>
+					<div>color HTML: <br/> Skyblue</div>
+					<div>Decimal: <br/> rgb(68,136,255)</div>
+					<div>Decimal: <br/> rgba(68,136,255,.5)</div>
+					<div>Hexadecimal: <br/> #4488ff</div>
+					<div>Cromatico: <br/> hsl(200, 50%, 50%)</div>
+					<div>Cromatico: <br/> hsla(200, 50%, 50%, .5)</div>
 				</div>
 			</article>
 			<article></article>
 		</section>
 	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName"
+				type="text" 
+				maxlength="50" 
+				pattern="[a-z A-z ñÑ]{2,50}"
+				placeholder="Ingrese su Nombre" 
+				required />
+			<div class="validate">
+				Ingrese su Nombre sin guiones ni espacios, el mismo debe poseer entre 2 y 50 caracteres
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="validate">
+				Ingrese una direccion de correo valida, respetando la siguiente estructura "usuario@servidor"
+			</div>
+			<label for="contactTel">Telefono</label>
+				<input 
+					id="contactTel" 
+					name="contactTel" 
+					type="text"  
+					pattern="[\(]\d{2,5}[\)]\d{3,6}[\-]\d{3,6}" 
+					placeholder="Ingrese su Telefono" 
+					required />
+			<div class="validate">
+				Ingrese su numero poniendo la caracteristica entre parentesis y luego los digitos separados con guiones ej:(5411)1234-5678
+			</div>
+			<label id="contactAgeLbl" for="contactAge">Ingrese su Edad: <span></span></label>
+			<input
+				id="contactAge"
+				name="contactAge"
+				type="range" />
+			<div class="validate">
+				Ingrese su edad arrastando el control, debe ser mayor de 18 años para poder realizar la consulta
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea  
+				id="contactConsult" 
+				name="contactConsult" 
+				placeholder="Ingrese su Consulta" 
+				required ></textarea>
+			<button>Enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href=""> Cristian Racedo</a>
+			&amp; compañia
+		</p>
+	</footer>
 	<script src="scripts/main.js"></script>
 </body>
 </html>

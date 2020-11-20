@@ -84,3 +84,10 @@
 	//texto
 		ctx.font = "20px sans-serif";
 		ctx.strokeText("JavaScript Bitmap", 50, 250);
+/*Range input*/
+	document.querySelector('#contactAge').addEventListener(
+		'input', () => {
+			document.querySelector('#contactAgeLbl span'). innerHTML = document.querySelector('#contactAge').value
+			
+		}
+	);
