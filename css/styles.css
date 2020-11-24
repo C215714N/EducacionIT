@@ -287,6 +287,55 @@
 		.areas .aside{grid-area: aside;}
 		.areas .section{grid-area: section;}
 		.areas .article{grid-area: article;}
+	/*pseudoelementos after/before*/
+		main{
+			counter-reset: clase;
+		}
+		main .header h1::before{
+			counter-increment: clase;
+			content: 'Clase ' counter(clase) ': ';
+		}
+		main .header h1::after{
+			content: ' - maquetacion web';
+		}
+		article{
+			counter-reset: tema;
+		}
+		article section h1::before{
+			counter-increment: tema;
+			content: 'Tema ' counter(tema) ': ';
+		}
+		.pseudo p::before{
+			content: 'Lorem ipsum dolor sit amet consectetur adipisicing, elit. Et voluptatibus provident nam recusandae illo molestias dolorem numquam alias aperiam ab voluptatum neque earum repellat adipisci dignissimos praesentium, accusantium cum sit obcaecati dolores, similique architecto. Officiis dolorem minima accusamus fugit beatae laborum et. Porro, perferendis cumque animi corporis voluptatum adipisci, quidem?. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Et voluptatibus provident nam recusandae illo molestias dolorem numquam alias aperiam ab voluptatum neque earum repellat adipisci dignissimos praesentium, accusantium cum sit obcaecati dolores, similique architecto. Officiis dolorem minima accusamus fugit beatae laborum et. Porro, perferendis cumque animi corporis voluptatum adipisci, quidem?';
+		}
+		.pseudo ul, .pseudo li{
+			list-style:none;
+			padding:0;
+		}
+		.pseudo section > ul > li > ul > li:last-child{
+			border-bottom: 2px solid #ccc;
+		}
+		/*numero principal - hijo directo de la lista*/
+			.pseudo section > ul {counter-reset: primero;}
+			.pseudo section > ul > li{ counter-increment: primero;}
+		/*numero secundario - lista dentro de un li*/
+			.pseudo section li > ul { counter-reset: segundo; }
+			.pseudo section li > ul > li {counter-increment: segundo;}
+		/*numero terciario - lista dentro de un li dentro de otro li*/
+			.pseudo section li li > ul { counter-reset: tercero; }
+			.pseudo section li li > ul > li {counter-increment: tercero;}
+		/*aplicacion de los numeros*/
+		.pseudo li::before{
+			content: 
+				counter(primero) '.'
+				counter(segundo) '.'
+				counter(tercero) ' - ';
+			
+		}
+	/*atributos de listas*/
+		article li{
+			list-style: circle url(../assets/social/css-icon.png) outside;
+		}
 /*Formulario de Contacto*/
 	#contact {
 		display: flex;
