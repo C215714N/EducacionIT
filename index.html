@@ -316,6 +316,91 @@
 				</li>
 			</ul>
 		</article>
+		<article>
+			<header class="header">
+				<h1>Introduccion a CSS Grid</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Sistema de Grillas</h1>
+				</header>
+				<ul>
+					<li><strong>grid-template-columns: </strong> Permite definir la cantidad de columnas y su tamaño respectivamente, por defecto solamente se considera que existe 1 columna y se suele utilizar el valor <em>auto</em> para que el navegador determine el ancho de las mismas.</li>
+					<li><strong>grid-template-rows: </strong> Define el alto de las filas especificadas, indistintamente de la cantidad final de filas que posea nuestra grilla de css; <em>auto</em> es el valor predeterminado para cualquier fila no especificada.</li>
+					<li><strong>gap: </strong> Espaciado entre filas y columnas, respectivamente, tambien se pueden indicar estos valores por separado utilizando los atributos <em>grid-row-gap &amp; grid-column-gap</em></li>
+					<li><strong>grid-column:</strong> Indicador de columnas ocupadas por un elemento hijo, que encierra los atributos <em>grid-column-start &amp; grid-column-end</em> representadolos de la siguiente manera <em>start/end</em></li>
+					<li><strong>grid-row:</strong> Indicador de filas ocupadas por un elemento hijo, que encierra los atributos <em>grid-row-start &amp; grid-row-end</em> representadolos de la siguiente manera <em>start/end</em></li>
+				</ul>
+				<div class="grid">
+					<div> Celda 1</div>
+					<div> Celda 2</div>
+					<div> Celda 3</div>
+
+					<div class="span"> Celda 4</div>
+					<div class="span"> Celda 5</div>
+					<div> Celda 6</div>
+					
+					<div> Celda 7</div>
+					<div> Celda 8</div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion y Distribucion</h1>
+				</header>
+				<ul>
+					<li><strong>Justify-content:</strong> Permite distribuir la tablas dentro del contenedor utilizando el eje horizontal como referencia.
+						<ul>
+							<li><strong>flex-start: </strong> distribuye todos los elementos que se encuentren en la etiqueta al principio de la misma (Izquierda), es el valor predeterminado</li>
+							<li><strong>flex-end: </strong> distribuye todos los elementos que se encuentren en la etiqueta al final de la misma (Derecha) en orden</li>
+							<li><strong>center: </strong> distribuye hacia el centro de la etiqueta todos los elementos en su interior (horizontal)</li>
+							<li><strong>space-around: </strong> separa las etiquetas otorgando la misma distancia para cada una de ellas, pero entre etiquetas se suman las distancias que las separan (la distancia en el medio es mayor)</li>
+							<li><strong>space-between: </strong>Anexa la primera y ultima etiqueta a los extremos del flex y otorga la misma distancia de separacion a todas las etiquetas (en los extremos no hay distancia)</li>
+							<li><strong>space<span>-evenly</span>: </strong>Ajusta las distancias entre elementos para que cada etiqueta este distribuida de manera equitativa (no es compatible con todos los navegadores)</li>
+						</ul>
+					</li>
+					<li><strong>Align-content:</strong> Permite alinear la tabla dentro del contenedor utilizando el eje vertical como referencias
+					<ul>
+						<li><strong>flex-start: </strong> Organiza todos los elementos que se encuentren en la etiqueta al principio de la fila (Arriba). Si no aplicamos algun valor, las etiquetas ocupan todo el alto.
+						</li>
+						<li><strong>flex-end: </strong> Organiza todos los elementos que se encuentren en la etiqueta al final de la fila (Abajo)</li>
+						<li><strong>center: </strong> Organiza hacia el centro de la etiqueta todos los elementos en su interior (vertical)</li>
+						<li><strong>baseline:</strong>Organiza todos los elementos en base a los tamaños de la tipografia, indistintamente al tamaño de las etiquetas. El objetivo es que todos los texto se lean de corrido.</li>
+						<li><strong>alig-self: </strong> Atributo que se utiliza para reorganizar la posicion de un elemento hijo que necesitamos que se encuentre en otra posicion dentro de flexbox.</li>
+					</ul>
+					</li>
+				</ul>
+				<div class="grid align">
+					<div> Celda 1</div>
+					<div> Celda 2</div>
+					<div> Celda 3</div>
+
+					<div class="span"> Celda 4</div>
+					<div class="span"> Celda 5</div>
+					<div> Celda 6</div>
+					
+					<div> Celda 7</div>
+					<div> Celda 8</div>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Plantillas de areas</h1>
+				</header>
+				<div class="grid areas">
+					<div> header 1</div>
+					<div> info 2</div>
+					<div> info 3</div>
+
+					<div class="aside"> aside 4</div>
+					<div class="section"> section 5</div>
+					<div class="article"> article 6</div>
+					
+					<div> info 7</div>
+					<div> footer 8</div>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<div class="social">

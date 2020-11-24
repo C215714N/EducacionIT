@@ -133,7 +133,6 @@
 		overflow: auto;
 		height:300px;
 		width:100%;
-		max-width: 600px;
 		margin:.5rem;
 		border-radius: .5rem;
 		border:2px solid rgba(204,204,204,.5);
@@ -200,23 +199,23 @@
 			width:15px;
 		}
 		.limegreen{ 
-			background-color: limegreen 
+			background-color: limegreen;
 		}
 		.tomato { 
 			background-color: tomato;	
 		}
 	/*pseudo*/
 		article:first-child{
-			background-color: #333;
+			background-color: rgba(51,51,51,.8);
 		}
 		section:first-of-type{
-			background-color: #ccc;
+			background-color: rgba(136,136,136,.8);
 		}
 		section:last-of-type{
-			background-color: #666;
+			background-color: rgba(102,102,102,.8);
 		}
 		article:last-child{
-			background-color: #ddd;
+			background-color: rgba(213,213,213,.8);
 		}
 		.pseudoclass li{
 			padding:.5rem;
@@ -246,6 +245,48 @@
 			line-height: 8rem;
 			margin-right: .5rem;
 		}
+	/*css-grid*/
+		.grid{
+			display: grid;
+			grid-template-columns: auto auto auto; /*cantidad y tamaño de columnas*/
+			grid-template-rows: 50px 50px;/*tamaño de las filas especificadas*/
+			gap: 1rem;	
+			border:2px solid  #ccc;
+			padding:1rem;
+		}
+		.grid div{
+			border:2px solid #248;
+		}
+		.grid div:first-child{
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+		.grid div:last-child{
+			grid-column: 3/4;
+			grid-row-start: 2;
+			grid-row-end: 6;
+		}
+		.grid div.span{
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		.grid.align{
+			justify-content: center; /*horizontal*/
+			align-content: center; /*vertical*/
+		}
+		.areas{
+			grid-template-areas: 
+				"header header header"
+				"info-1 info-2 aside"
+				"section section aside"
+				"info-3 article article"
+				"footer footer footer";
+		}
+		.areas div:first-child{ grid-area: header;}
+		.areas div:last-child{grid-area: footer;}
+		.areas .aside{grid-area: aside;}
+		.areas .section{grid-area: section;}
+		.areas .article{grid-area: article;}
 /*Formulario de Contacto*/
 	#contact {
 		display: flex;
