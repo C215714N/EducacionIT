@@ -38,7 +38,9 @@
 	</header>
 	<main>
 		<section>
-			<header class="header">Nuevos elementos HTML</header>
+			<header class="header">
+				<h1>Nuevos elementos HTML</h1>
+			</header>
 			<article>
 				<header>
 					<h1>Contenido Multimedia</h1>
@@ -187,6 +189,9 @@
 			</article>
 		</section>
 		<section>
+			<header class="header">
+				<h1>Caracteristicas CSS</h1>
+			</header>
 			<article class="blend">
 				<header>
 					<h1>Modos de Fusion</h1>
@@ -194,7 +199,20 @@
 				<p>
 					Al igual que en programas de diseño, CSS permite utilizar un atributo conocido como <strong>background-blend-mode</strong> que funciona tomando como referencia una imagen de fondo como base (inferior) y aplica un filtro utilizando los pixeles de la imagen de fondo de fusion (superior). Los mismos se clasifican segun como realizan su trabajo, en <em>aclarar, oscurecer y tono</em>
 				</p>
-
+				<div class="example">
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+					<div>Modo</div>
+				</div>
 			</article>
 			<article class="gradient">
 				<header>
@@ -213,6 +231,56 @@
 				</div>
 			</article>
 			<article></article>
+		</section>
+		<section>
+			<header class="header">
+				<h1>Efectos Visuales CSS</h1>
+			</header>
+			<article class="transform">
+				<header>
+					<h1>Transformaciones 2d</h1>
+				</header>
+				<p>
+					Al igual que muchos programas de diseño, CSS permite modificar el aspecto de nuestras etiquetas en base a <strong>puntos de ajuste</strong>, si bien en su mayoria estas transformaciones suceden en el plano de 2 dimensiones, tambien podemos realizar modificaciones en 3 dimensiones, como se muestra mas adelante.
+				</p>
+				<div class="example">
+					<div>Translate(x,y)</div>
+					<div>Scale(x,y)</div>
+					<div>Rotate(deg)</div>
+					<div>Skew(x,y)</div>
+					<div>Transform: </div>
+				</div>
+			</article>
+			<article class="transform perspective">
+				<header>
+					<h1>Transformaciones 3d</h1>
+				</header>
+				<p>
+					Asi como se menciono anteriormente, podemos realizar transformaciones en 3 dimensiones, para ello es necesario definir un <em>origen de perspectiva</em> en el elemento padre de aquellas etiquetas donde querramos aplicar la misma. En comparacion, la forma de trabajar de las transformaciones es similar a <em>position:relative</em> en el caso de las 2 dimensiones y <em>position:absolute</em> en el caso de las transformaciones 3d.
+				</p>
+				<div class="example">
+					<div>rotateX(deg)</div>
+					<div>rotateY(deg)</div>
+					<div>rotateZ(deg)</div>
+					<div>rotateXY</div>
+					<div>rotateYZ</div>
+				</div>
+			</article>
+			<article class="transform transition">
+				<header>
+					<h1>Efectos de Transicion</h1>
+				</header>
+				<p>
+					Para mejorar el aspecto estetico de un elemento cuando realizamos un cambio de estado, por ejemplo <em>:hover o :focus</em> y nuestra etiqueta cambia su atributos, podemos implementar lo que se conoce como transicion, que implica <strong>suavizar el cambio de un punto "A" a un punto "B" generando los estadios intermedios utilizando una linea de tiempo.</strong> El mismo se puede dar de diferentes maneras, dando la sensacion de totalmente diferentes, utilizando el atributo <em>transition-timing-function</em>
+				</p>
+				<div class="example">
+					<div>ease</div>
+					<div>ease-in</div>
+					<div>ease-out</div>
+					<div>ease-in-out</div>
+					<div>linear</div>
+				</div>
+			</article>
 		</section>
 	</main>
 	<footer id="footer">
