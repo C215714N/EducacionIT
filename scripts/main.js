@@ -56,7 +56,7 @@
 							nextVideo = videoList[videoList.length - 1]
 						}
 						videoList[i].classList.remove('active');
-						videoList[i].pause;
+						videoList[i].pause();
 						videoList[i].currentTime = 0;
 						willPlay = true;
 						document.querySelector('#vidPlay').innerHTML = 'PLAY';
@@ -90,7 +90,7 @@
 							nextVideo = videoList[0]
 						}
 						videoList[i].classList.remove('active');
-						videoList[i].pause;
+						videoList[i].pause();
 						videoList[i].currentTime = 0;
 						willPlay = true;
 						document.querySelector('#vidPlay').innerHTML = 'PLAY';
@@ -122,10 +122,32 @@
 	//texto
 		ctx.font = "20px sans-serif";
 		ctx.strokeText("JavaScript Bitmap", 50, 250);
+/*Validacion Formulario*/
+	let listFields = document.querySelectorAll('#contact input, #contact textarea');
+
+	listFields.forEach( field => {
+		field.addEventListener(
+			'input', () => {
+					if(field.checkValidity()){
+						field.classList.add('is-valid');
+						field.classList.remove('is-invalid')
+					} if (field.value !== '' && !field.checkValidity()){
+						field.classList.remove('is-valid');
+						field.classList.add('is-invalid')
+					}
+				}
+			)
+	}	)
 /*Range input*/
 	document.querySelector('#contactAge').addEventListener(
 		'input', () => {
 			document.querySelector('#contactAgeLbl span'). innerHTML = document.querySelector('#contactAge').value
-			
+			if (document.querySelector('#contactAge').value > 18){
+				document.querySelector('#contactAge').classList.add('is-valid');
+				document.querySelector('#contactAge').classList.remove('is-invalid');
+			} else {
+				document.querySelector('#contactAge').classList.remove('is-valid');
+				document.querySelector('#contactAge').classList.add('is-invalid');
+			}
 		}
 	);

@@ -138,6 +138,11 @@
 		#prev{ left:0; }
 		#next{ right:0; }
 	/*Contenido*/
+		main,
+		article,
+		section{
+			margin:auto;
+		}
 		article{
 			padding:1rem;
 		}
@@ -146,6 +151,7 @@
 				max-width: 320px;
 			}
 			video{
+				transition:all 2s ease;
 				width:100%;
 				/*
 					aspect-ratio
@@ -156,19 +162,48 @@
 			.videoSlide{
 				overflow: hidden;
 				position: relative;
-				margin:0;
-				padding-top: 75%;
-				background-color: #248;
+				margin:1rem auto;
+				padding-top: 56.25%;
 			}
 			.videoSlide video{
-				display: none;
+				z-index: -1;
 				position: absolute;
 				top: 0;
-				left: 0;
+				left:0;
 				width:100%;
+				opacity: 0;
 			}
 			.videoSlide .active{
-				display: block;
+				opacity: 1;
+			}
+			.videoSlide button{
+				position: absolute;
+				top:0;
+				bottom: 0;
+				z-index: 999;
+
+				outline: none;
+				border:.2rem solid transparent;
+				padding:.5rem 1rem;
+				color:#ccc;
+				font-size: 2rem;
+				text-shadow: 2px 2px 5px #333;
+				background-color: transparent;
+				opacity:.4;
+			}
+			.videoSlide button:hover{
+				opacity: .6;
+			}
+			#vidPrev{left: 0}
+			#vidNext{right: 0}
+			#vidPlay{ 
+				top:calc(100% - 5rem);
+				bottom:1rem; 
+				left: 3rem;
+				line-height: 2rem;
+			}
+			#vidPlay:hover{
+				border:.2rem solid;
 			}
 		/*elementos estadisticos*/
 			progress, meter{
@@ -209,7 +244,7 @@
 					);
 			}
 			.blend .example div{
-				width:12rem;
+				width:11rem;
 				padding: .5rem;
 				line-height: 3rem;
 				background:
@@ -272,9 +307,14 @@
 				justify-content: space-evenly;
 			}
 		/*Transform*/
+			.transform .example{
+				overflow: hidden;
+				height: 150px;
+				align-items: center;
+			}
 			.transform .example div{
 				width:12rem;
-				margin:1rem;
+				margin:.5rem;
 				border: 2px solid #ccc;
 				padding:.5rem;
 				color:#ccc;
@@ -314,9 +354,6 @@
 				}
 			/*3d*/
 				.perspective .example{
-					border:1px solid #333;
-					height: 300px;
-					align-items: center;
 					perspective: 150px;
 					perspective-origin: center;
 				}
@@ -422,11 +459,17 @@
 				padding:.5rem;
 				background-color: #ccc;
 			}
-			#contact :focus:valid,
+			#contact .is-invalid{
+				border-color: tomato;
+			}
 			#contact .is-valid{
 				border-color: lightgreen;
 			}
-			#contact :focus:valid + .validate{
+			#contact .is-invalid:focus + .validate{
+				color: darkred;
+				background-color: tomato;
+			}
+			#contact .is-valid:focus + .validate{
 				color:darkgreen;
 				background-color: lightgreen;
 			}
@@ -446,7 +489,9 @@
 				display: none;
 			}
 		/*Contenido principal*/
-			
+			section{
+				max-width: 720px;
+			}
 		/*Formulario de Contacto*/
 			#contact{
 				max-width: 720px;
@@ -459,6 +504,9 @@
 				display: inline-block;
 			}
 		/*Contenido Principal*/
+			section{
+				max-width: 960px;
+			}
 			.blend{
 				height: 50vh;
 				color:#dde;
@@ -491,4 +539,11 @@
 					translate(0, -.8rem);
 				margin-bottom: .5rem;
 			}
+	}
+/*ExtraLarge Devices 1200px*/
+	@media screen and (min-width: 1200px){
+		/*Contenido*/
+			section{
+				max-width: 1140px;
+			}	
 	}
