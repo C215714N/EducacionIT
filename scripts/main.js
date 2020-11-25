@@ -44,8 +44,27 @@
 			}
 		);
 /*videoSlide*/
+	let videoList = document.querySelectorAll('.videoSlide video');
 	//PREV
-
+		document.querySelector('#vidPrev').addEventListener(
+			'click', () => {
+				for(i = 0 ; i < videoList.length; i++){
+					if(videoList[i].classList.contains('active')){
+						if(i > 0){
+							nextVideo = videoList[i - 1]
+						} else {
+							nextVideo = videoList[videoList.length - 1]
+						}
+						videoList[i].classList.remove('active');
+						videoList[i].pause;
+						videoList[i].currentTime = 0;
+						willPlay = true;
+						document.querySelector('#vidPlay').innerHTML = 'PLAY';
+					}
+				}
+				nextVideo.classList.add('active');
+			}
+		)
 	//PLAY
 		let willPlay = true;
 		document.querySelector('#vidPlay').addEventListener(
@@ -61,6 +80,25 @@
 			}
 		)
 	//NEXT
+		document.querySelector('#vidNext').addEventListener(
+			'click', () => {
+				for(i = 0 ; i < videoList.length; i++){
+					if(videoList[i].classList.contains('active')){
+						if(i < videoList.length - 1){
+							nextVideo = videoList[i + 1]
+						} else {
+							nextVideo = videoList[0]
+						}
+						videoList[i].classList.remove('active');
+						videoList[i].pause;
+						videoList[i].currentTime = 0;
+						willPlay = true;
+						document.querySelector('#vidPlay').innerHTML = 'PLAY';
+					}
+				}
+				nextVideo.classList.add('active');
+			}
+		)
 /*ProgressBar*/
 	document.querySelector('#pInput').addEventListener(
 		'input', () => document.querySelector('#pBar').value = document.querySelector('#pInput').value

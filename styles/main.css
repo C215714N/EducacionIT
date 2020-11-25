@@ -34,6 +34,8 @@
 			font-weight: bold;
 		}
 		nav a{
+			position: relative;
+			transition: all 1s ease-out;
 			display: block;
 			padding:.5rem 1rem;
 		}
@@ -47,8 +49,24 @@
 			font-size: 1.2rem;
 		}
 		.menu a:hover{
-			background-color:#bbc; 
+			background-color:#bbc;
 		}
+		/*Botones*/
+			.menu a::after{
+				content: '';
+				position: absolute;
+				bottom:0;
+				left: 0;
+				width:0;
+				height: 2px;
+				background-color: #333;
+				transition: all 1s ease-in;
+			}
+
+			.menu a:hover::after{
+				width:100%;
+			}
+
 		#menu{
 			width:2.5rem;
 			margin:.5rem;
@@ -123,7 +141,35 @@
 		article{
 			padding:1rem;
 		}
-
+		/*contenido multimedia*/
+			.example video{
+				max-width: 320px;
+			}
+			video{
+				width:100%;
+				/*
+					aspect-ratio
+					4:3 	ancho = 1.33*alto | alto = 0.75*ancho
+					16:9 	ancho = 1.78*alto | alto = 0.5625*ancho
+				*/
+			}
+			.videoSlide{
+				overflow: hidden;
+				position: relative;
+				margin:0;
+				padding-top: 75%;
+				background-color: #248;
+			}
+			.videoSlide video{
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width:100%;
+			}
+			.videoSlide .active{
+				display: block;
+			}
 		/*elementos estadisticos*/
 			progress, meter{
 				width:100%;
@@ -326,28 +372,85 @@
 	/*Pie de Pagina*/
 		#footer{
 			padding:1rem;
+			background-color: #dde;
 		}
-		#contact{
-			display: flex;
-			flex-direction: column;
-		}
-		#contact button{
-			align-self: flex-end;
-		}
+		/*Formulario de Contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+			}
+			#contact label{
+				position: relative;
+				margin-top: .5rem;
+			}
+			#contact input,
+			#contact textarea{
+				position: relative;
+				outline: none;
+				border:2px solid #ccc;
+				padding:.5rem 1rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				height: 5rem;
+				resize: none;
+			}
+			#contact button{
+				align-self: flex-end;
+				margin:.5rem 0;
+				border: 2px solid #333;
+				padding:.5rem 1rem;
+				color:#333;
+				background-color: transparent;
+				font: bold 1rem sans-serif;
+				text-transform: uppercase;
+			}
+			#contact button:hover{
+				color:#ccc;
+				background-color: #333;
+			}
+			#contact .validate{
+				position: relative;
+				transition: all 1s ease;
+				overflow: hidden;
+				height: 0;
+			}
+		/*Validacion*/
+			#contact :focus + .validate{
+				height: auto;
+				padding:.5rem;
+				background-color: #ccc;
+			}
+			#contact :focus:valid,
+			#contact .is-valid{
+				border-color: lightgreen;
+			}
+			#contact :focus:valid + .validate{
+				color:darkgreen;
+				background-color: lightgreen;
+			}
 /*Medium Devices 768px*/
 	@media screen and (min-width: 768px){
-		#menu{
-		display: none;
-		}
-		.menu{
-			display: flex;
-			justify-content: flex-end;
-			height: auto;
-			width: 50%;	
-		}
-		.menu span{
+		/*Barra de Navegacion*/
+			#menu{
 			display: none;
-		}
+			}
+			.menu{
+				display: flex;
+				justify-content: flex-end;
+				height: auto;
+				width: 50%;	
+			}
+			.menu span{
+				display: none;
+			}
+		/*Contenido principal*/
+			
+		/*Formulario de Contacto*/
+			#contact{
+				max-width: 720px;
+			}
 	}
 /*Large Devices 992px*/
 	@media screen and (min-width: 992px){
@@ -378,5 +481,14 @@
 					);
 				background-size: cover;
 				background-blend-mode: soft-light;
+			}
+		/*Formulario de Contacto*/
+			#contact input:focus,
+			#contact textarea:focus,
+			#contact :focus + .validate{
+				transform: 
+					scale(1.2)
+					translate(0, -.8rem);
+				margin-bottom: .5rem;
 			}
 	}
