@@ -48,6 +48,31 @@
 		.openMenu{
 			display: block;
 		}
+	/*Contenido Principal*/
+		/*Multimedia*/
+		/*Elementos estadisticos*/
+			.example ::-webkit-meter-optimum-value{
+				background-color: #284;
+			}
+			.example ::-webkit-meter-suboptimum-value{
+				background-color: #fa2;
+			}
+			.example ::-webkit-meter-even-less-good-value{
+				background-color: #C24;
+			}
+		/*Herramientas de dibujo*/
+			.example figure{
+				max-width: 300px;
+			}
+			.example img{
+				width: 100%;
+			}
+			svg,
+			canvas{
+				width:300px;
+				height:300px;
+				border: 2px solid #333;
+			}
 		/*Dispositivos medianos 768px*/
 	
 /*Dispositivos Grandes 992px*/

@@ -60,6 +60,96 @@
 					</video>
 				</div>
 			</article>
+			<article>
+				<header>
+					<h1>Elementos Estadisticos</h1>
+				</header>
+				<p>
+					HTML incorpora nuevos elementos a la hora de implementar valores estadisticos, por un lado tenemos el <strong>elemento progress</strong> que se utiliza cuando necesitamos indicar el avance de una tarea cuando esta aun no fue finalizada; por otro lado tenemos el <strong>elemento meter</strong> que se utiliza para comparar valores una vez haya sido finalizada la tarea.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Elemento Progress</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								sin value
+							</li>
+							<li>
+								<progress value="20" max="100"></progress>
+								value = 20 ; max = 100
+							</li>
+							<li>
+								<progress id="pBar" max="100"></progress>
+								<input id="pIn" type="number" min="0" max="100">
+								value = js
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Elemento Meter</strong>
+						<ul>
+							<li>
+								<meter 
+									value="30"
+									max="100" 
+									low="40"
+									high="70"
+									optimum="90"></meter>
+								value = 30 < low < high < optimum
+							</li>
+							<li>
+								<meter 
+									value="60"
+									max="100" 
+									low="40"
+									high="70"
+									optimum="90"></meter>
+								low < value = 60 < high < optimum
+							</li>
+							<li>
+								<meter 
+									value="90"
+									max="100" 
+									low="40"
+									high="70"
+									optimum="90"></meter>
+								low < high < value = 90 < optimum
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h1>Herramientas de Dibujo</h1>
+				</header>
+				<p>
+					Actualmente se incorporaron a los navegadores 2 elementos que permiten la implementaciond de graficos dentro de nuestra pagina web. El <strong>elemento SVG (scalable vector graphics)</strong> permite la creacion de graficos vectoriales mediante el uso del <em>lenguaje xml</em> y por otro lado, el <strong>Elemento Canvas</strong> permite la creacion de graficos raster (Mapa de bits) utilizando JS para los mismos.
+				</p>
+				<div class="example">
+					<figure>
+						<img src="assets/icon/css.png" alt="Logo CSS3 bitmap">
+						<figcaption>Logo CSS (Mapa de Bits)</figcaption>
+					</figure>
+					<figure>
+						<img src="assets/icon/css.svg" alt="Logo CSS3 vector">
+						<figcaption>Logo CSS (Grafico Vectorial)</figcaption>
+					</figure>
+				</div>
+				<div class="example">
+					<svg>
+						<rect 
+							x="50" y="50" 
+							width="100" height="100" 
+							fill="#248" />
+						<circle 
+							cx="150" cy="150" r="50" 
+							fill="rgba(192, 32, 64, .5)" />
+					</svg>
+					<canvas id="jsCanvas" width="300" height="300"></canvas>
+				</div>
+			</article>
 		</section>
 	</main>
 	<footer id="footer">
