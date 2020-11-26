@@ -310,15 +310,69 @@
 			grid-area: art;
 		}
 	/*after y before*/
+		main{ counter-reset: clase; }
 		main .header h1::before{
-			content: 'Clase : ';
+			counter-increment: clase;
+			content: 'Clase ' counter(clase) ': ';
 		}
+		main .header h1::after{	content: ' - html & css'; }
+		
+		main article{ counter-reset: tema; }
 		main h1::before{
-			content: 'Tema : ';
+			counter-increment: tema;
+			content: 'Tema ' counter(tema) ': ';
 		}
 		.pseudo p::after{
 			content: 
 				'Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Nesciunt impedit sed mollitia facere, suscipit sunt molestiae expedita culpa deserunt minima ipsa unde dolorum vitae tempora libero recusandae, repellendus ad distinctio provident necessitatibus. Atque recusandae sint, officia, voluptatem impedit accusamus deserunt blanditiis optio laudantium doloribus magni, illum soluta aut qui, praesentium. Officiis tempora error modi magni exercitationem necessitatibus aperiam, maiores molestias omnis quo unde reiciendis eius fugit sequi vero deleniti hic assumenda optio. Mollitia, ullam, vitae. Facere porro illo saepe expedita sapiente possimus aperiam. Dolor facere, vitae quis nobis corporis delectus veritatis pariatur molestias provident necessitatibus similique illo autem soluta praesentium.'
+		}
+		.pseudo ul{
+			margin:0;
+			padding:0;
+		}
+		.pseudo li{ 
+			list-style: none;
+			padding:.2rem 
+			1rem;
+		}
+			/*lista principal dentro del section*/
+			.pseudo section > ul{ counter-reset: primario }
+			.pseudo section > ul > li{ counter-increment: primario; }
+			/*lista dentro de un li*/
+			.pseudo section > ul > li > ul { counter-reset: secundario; }
+			.pseudo section > ul > li > ul > li { counter-increment: secundario; }
+			/*lista dentro de otra lista dentro de un li*/
+			.pseudo section li li > ul { counter-reset: terciario;}
+			.pseudo section li li > ul > li{ counter-increment: terciario;}
+			/* listra dentro de otra dentro de otra dentro de un  li*/
+			.pseudo section li li li > ul { counter-reset: cuarto }
+			.pseudo section li li li > ul > li { counter-increment: cuarto }
+			/*implementacion de los contadores*/
+			.pseudo li:before{
+				content: 
+					counter(primario) '.'
+					counter(secundario) '.'
+					counter(terciario) '.' 
+					counter(cuarto) ' - ';
+				font-weight: bold;
+				font-size: 1.2rem;
+			}
+			.pseudo p:last-of-type::before{
+				content:'';
+				width:300px;
+				height: 200px;
+				float: left;
+				margin: 0 .5rem .5rem 0;
+				border-radius: .5rem; /*tl tr br bl*/
+				border:.5rem solid #fff;
+				background-color: #666;
+				background-image: url(../assets/img/fender.png);
+				background-size: contain;
+				background-position: 0 -10px;
+			}
+	/*atributos de lista*/
+		main ul{
+			list-style: hiragana url(../assets/social/star.png) inside;
 		}
 /*Formulario de Contacto*/
 	#contact{
