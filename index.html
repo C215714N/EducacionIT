@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!-- Parte NO VISIBLE: Configuraciones -->
+	<meta charset="UTF-8">
+	<meta 
+		name = "viewport" 
+		content = "width=device-width, 
+					initial-scale=1,
+					maximum-scale=3" >
+	<title>Maquetado Avanzado</title>
+	<!--Styles CSS-->
+		<link rel="stylesheet" href="styles/main.css">
+</head>
+<body><!-- Parte VISIBLE: Contenido-->
+	<nav>
+		<a href="#">Maquetacion</a>
+		<button id="menu">&equiv;</button>
+		<ul class="menu">
+			<li><a href="#"><span>inicio</span></a></li>
+			<li><a href="about.html"><span>acerca</span></a></li>
+			<li><a href="#contact"><span>contacto</span></a></li>
+			<li><a href="https://github.com/C215714N/EducacionIT/tree/maquetado-miercoles-19hs" target="_blank"><span>GitHub</span></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>html | css | js</p>
+		</div>
+		<ul class="slide">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<a id="prevSlide" href="#"> < </a>
+		<a id="nextSlide" href="#"> > </a>
+	</header>
+	<main>
+		<section>
+			<header class="header">
+				<h1>Nuevos elementos HTML</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Contenido Multimedia</h1>
+				</header>
+				<p>
+					En las ultimas versiones de HTML se incorporo la posibilidad de reproducir de manera nativa contenido multimedia, sin necesidad de plugins o componentes de terceros. Los formatos compatibles son, en el caso del <strong>elemento audio</strong> <em>.mp3 - . wav - .ogg</em> y en el caso del <strong>elemento video</strong> <em>.mp4 - .webm - .ogv</em>. Tambien podemos ofrecer varias alternativas en caso que uno de los formatos no sea soportado por el reproductor web.
+				</p>
+				<div class="example">
+					<video poster="assets/img/poster-californication.jpg" controls>
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/californication.mp4">
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el ELEMENTO AUDIO. podes descargar el video desde el siguiente link: <a href="assets/media/californication.mp4">californication</a>
+						</p>
+					</video>
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer id="footer">
+		
+	</footer>
+	<!--Scripts JS-->	
+		<script src="scripts/main.js"></script>
+</body>
+</html>
