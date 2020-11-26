@@ -293,6 +293,159 @@
 		</article>
 		<article>
 			<header class="header">
+				<h1>Introduccion CSS-Grid</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Sistema de Grillas</h1>
+				</header>
+				<ul>
+					<li><strong>grid-template-columns: </strong> Permite definir el tamaño y la cantidad de columnas que tendra nuestro sistema de grillas, por defecto el contenido se acomoda en una unica columna. Tambien se suele utilizar el valor <em>auto</em> para que las celdas se adapten a su contenedor</li>
+					<li><strong>grid-template-rows: </strong> Permite definir el alto de las filas especificadas, por defecto las mismas poseen un <em>valor auto</em>, pero no determina la cantidad final de las mismas.</li>
+					<li><strong>grid-gap: </strong> permite definir el espaciado entre celdas, indicando primero las <em>filas</em></li> y luego las <em>columnas</em>. Este atributo tambien se puede utilizar por separado mediante <em>row-gap</em> y <em>column-gap</em> respectivamente.
+					<li><strong>grid-column:</strong> Indica las columnas ocupadas por la celda seleccionada, se expresa en forma de fraccion <em>start/end</em>; se compone de los atributos <em>grid-column-start</em> y <em>grid-column-end</em></li>
+					<li><strong>grid-row: </strong> Indica las filas ocupadas por la celda seleccionada, se expresa en forma de fraccion <em>start/end</em>; se compone de los atributos <em>grid-row-start</em> y <em>grid-row-end</em></li>
+				</ul>
+				<div class="grid">
+					<span>Celda 1</span>
+					<span>Celda 2</span>
+					<span>Celda 3</span>
+					<span>Celda 4</span>
+					<span>Celda 5</span>
+					<span>Celda 6</span>
+					<span>Celda 7</span>
+					<span>Celda 8</span>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Organizacion y Distribucion del Contenido</h1>
+				</header>
+				<ul>
+					<li>
+						<strong>Justify-content: </strong> Permite distribuir los elementos dentro de la etiqeuta contenedora sobre el eje horizontal, admite los mismos valores que flexbox.
+						<ul>
+							<li><strong>flex-start: </strong> distribuye el contenido al inicio del flex (izquierda)</li>
+							<li><strong>center: </strong>distribuye el contenido hacia el centro (horizontal)</li>
+							<li><strong>flex-end: </strong> distribuye el contenido al final del flex (derecha)</li>
+							<li><strong>space-around: </strong> Separa los elementos sumando las distancia entre etiquetas (mayor)</li>
+							<li><strong>space-between: </strong> Separa los elementos de extremo a extremo, manteniendo la misma distancia entre etiquetas. (primer y ultimo elemento sin margen)</li>
+							<li><strong>space-evenly: </strong> Distribuye equitativamente las etiquetas dentro del contenedor (no compatible con algunos navegadores)</li>
+							<li><strong>baseline: </strong> Acomoda las etiquetas en base al tamaño de la tipografia</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Align-content: </strong>Permite organizar los elementos dentro de la etiqeuta contenedora sobre el eje vertical, a diferencia de <em>align-items</em> que admite algunos valores, este atributo admite los mismos valores que justify-content.
+						<ul>
+							<li><strong>flex-start: </strong> distribuye el contenido al inicio del flex (arriba)</li>
+							<li><strong>center: </strong>distribuye el contenido hacia el centro (vertical)</li>
+							<li><strong>flex-end: </strong> distribuye el contenido al final del flex (abajo)</li>
+							<li><strong>space-around: </strong> Separa los elementos sumando las distancia entre etiquetas (mayor)</li>
+							<li><strong>space-between: </strong> Separa los elementos de extremo a extremo, manteniendo la misma distancia entre etiquetas.(primer y ultimo elemento sin margen)</li>
+							<li><strong>space-evenly: </strong> Distribuye equitativamente las etiquetas dentro del contenedor (no compatible con algunos los navegadores)</li>
+							<li><strong>baseline: </strong> Acomoda las etiquetas en base al tamaño de la tipografia</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="grid content">
+					<span>Celda 1</span>
+					<span>Celda 2</span>
+					<span>Celda 3</span>
+					<span>Celda 4</span>
+					<span>Celda 5</span>
+					<span>Celda 6</span>
+					<span>Celda 7</span>
+					<span>Celda 8</span>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>Plantilla de Areas</h1>
+				</header>
+				<ul>
+					<li><strong>grid-template-areas: </strong> Permite definir mediante un sistema de nombres separados por comillas, las areas abarcadas por las diferentes celdas de nuestro contenedor.</li>
+					<li><strong>grid-area:</strong> Asigna el nombre de area a la celda seleccionada, haciendo que ocupe la posicion espeficada, indistintamente de su ubicacion actual.</li>
+				</ul>
+				<div class="grid areas">
+					<span>Celda 1: footer</span>
+					<span>Celda 2: info</span>
+					<span class="span">Celda 3: span</span>
+					<span>Celda 4: info</span>
+					<span class="aside">Celda 5: aside</span>
+					<span>Celda 6: info</span>
+					<span>Celda 7: info</span>
+					<span>Celda 8: header</span>
+				</div>
+			</section>
+		</article>
+		<article class="pseudo">
+			<header class="header">
+				<h1></h1>
+			</header>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<p></p>
+				<p></p>
+			</section>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<ul>
+					<li>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li></li>
+				</ul>
+				<div>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</div>
+				<p></p>
+			</section>
+			<section>
+				<header>
+					<h1></h1>
+				</header>
+				<ul>
+					<li>Item
+						<ul>
+							<li>Subitem</li>
+							<li>Subitem</li>
+							<li>Subitem</li>
+							<li>Subitem</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>Subitem</li>
+							<li>Subitem</li>
+							<li>Subitem</li>
+							<li>Subitem</li>
+						</ul>
+					</li>
+					<li>Item
+						<ul>
+							<li>Subitem</li>
+							<li>Subitem</li>
+							<li>Subitem</li>
+							<li>Subitem</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
 				<h1>PseudoClass y PseudoElement</h1>
 			</header>
 			<ul>
