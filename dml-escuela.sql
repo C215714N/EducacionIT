@@ -1,6 +1,6 @@
+USE escuela;
 /*consulta de datos*/
 	SELECT * FROM alumnos;
-
 /* insercion de datos */
 	## completa
 		INSERT INTO alumnos 
@@ -39,3 +39,28 @@
         C2f| F	| F		C2f| F	 | V
         C2v| F	| V 	C2v| V	 | V
     */
+    
+## profesores
+	INSERT INTO profesores(correo, apellido, nombre, tipo_doc, num_doc)
+    VALUES 
+		('cristiandracedo@hotmail.com', 'racedo', 'cristian', 1, 12345678),
+        ('habia_una_vez@fantasia.com', 'gutierrez', 'luis', 2, 48123498),
+        ('erase_una_vez_en_mexico@balada.com', 'sans', 'alejandro', 1 ,8973912);
+SELECT * FROM profesores;
+
+	SELECT * FROM alumnos;
+	DELETE FROM alumnos WHERE id_alumno = 3; -- elimina los registros que cumplan la condicion
+	UPDATE alumnos SET correo = NULL WHERE id_alumno = 3; -- actualiza los registros en donde se cumpla la condicion
+	DELETE FROM profesores; -- elimina todos los registros (no reinicia los contadores)
+	TRUNCATE profesores; -- reinicia la tabla (elimina los registros)
+    
+/*Tabla Cursos*/
+	INSERT INTO cursos (duracion,nombre)
+    VALUES('12','introduccion base datos'),
+			('12', 'fundamentos web'),
+            ('36', 'fundamentos redes');
+
+/*Tabla clases*/
+	INSERT INTO clases (dia,horario, id_curso,id_profesor)
+		VALUES (4,3,1,1);
+SELECT * FROM cursos;
