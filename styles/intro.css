@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+nav {
+  background-color: #ccc;
+}
+nav a {
+  color: #248;
+  text-decoration: none;
+}
+nav #menu {
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid #d9d9d9;
+  color: #d9d9d9;
+  background-color: #808080;
+}
+nav #menu:hover {
+  padding: 0.5rem 1rem;
+  color: #808080;
+  background-color: #d9d9d9;
+}
+nav .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #a6a6a6;
+}
+footer {
+  color: #248;
+  background-color: #ccc;
+}
+footer #contact {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+}
+@media screen and (min-width: 768px) {
+  footer #contact {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer #contact {
+    max-width: 960px;
+  }
+}
+footer #contact input,
+footer #contact textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  resize: none;
+}
+footer #contact input + .validate,
+footer #contact textarea + .validate {
+  overflow: hidden;
+  height: 0;
+}
+footer #contact input:focus + .validate,
+footer #contact textarea:focus + .validate {
+  height: auto;
+  padding: 0.5rem;
+  background-color: #b3b3b3;
+}
+footer #contact button {
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid #d9d9d9;
+  color: #d9d9d9;
+  background-color: #808080;
+}
+footer #contact button:hover {
+  padding: 0.5rem 1rem;
+  color: #808080;
+  background-color: #d9d9d9;
+}

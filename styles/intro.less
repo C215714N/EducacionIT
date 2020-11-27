@@ -1,0 +1,103 @@
+// Variables
+	//colors
+		@color: #248;
+		@bg-color: #ccc;
+	//breakpoints
+		@sm:576px; @smw:540px;
+		@md:768px; @mdw:720px;
+		@lg:992px; @lgw:960px;
+		@xl:1200px;	@xlw:1140px;
+
+//Estilos compuestos: Los selectores se gereran automaticamente a partir de la anidacion;
+	*{
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
+	body{ .normalize; }
+	nav{
+		background-color: @bg-color;
+		a{
+			color:@color;
+			text-decoration: none;
+		}
+		#menu{
+			.button;
+			&:hover{
+				.button-press;
+			}
+		}
+		.menu{
+			.normalize;
+			background-color: darken(@bg-color, 15%);
+		}
+	}
+	footer{
+		color:@color;
+		background-color: @bg-color;
+		#contact{
+			.mediaQuery(@md);
+			.mediaQuery(@lg);
+			padding:1rem;
+			.flexbox(column; @fw:no-wrap);
+			input , textarea{
+				width:100%;
+				.normalize;
+				padding:.5rem 1rem;
+				resize: none;
+				// Selector elemento Padre
+				& + .validate{
+					overflow: hidden;
+					height: 0;		
+				}
+				&:focus + .validate{
+					height: auto;
+					padding:.5rem;
+					background-color:darken(@bg-color, 10%);
+				}
+			}
+			button{
+				.button;
+				&:hover{
+					.button-press;
+				}
+			}
+		}
+	}
+
+// Mixins: Estilos que se aplican a los selectores en donde se implementen;
+	.normalize(){
+		margin:0;
+		padding:0;
+		border:0;
+	}
+	.button(){
+		padding:.5rem 1rem;
+		border:.2rem solid lighten(@bg-color, 5%);;
+		color:lighten(@bg-color, 5%);
+		background-color: darken(@bg-color, 30%);
+	}
+	.button-press(){
+		padding:.5rem 1rem;
+		color: darken(@bg-color, 30%);
+		background-color: lighten(@bg-color, 5%)
+	}
+// Mixins Parametricos:;
+	.flexbox(@fd:row ; @fj:center ; @fa:flex-start ; @fw:wrap ; @d:flex){
+		display: @d;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+// Conditional Template
+	.mediaQuery (@vw){
+		@media screen and (min-width: @vw){
+			max-width: 
+				if( @vw = @sm , @smw,
+				if( @vw = @md , @mdw,
+				if( @vw = @lg , @lgw,
+					@xlw
+				)));
+		} 
+	}
+// Mixins Recursivos
