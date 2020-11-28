@@ -1,8 +1,18 @@
 ena
 conf te
+vl 10
+name ADMINISTRACION
+vl 20
+name COMUNICACION
+vl 30
+name FACTURACION
+
 in ra fa0/1-8
 sw acc vl 10
 in ra fa0/9-16
 sw acc vl 20
 in ra fa 0/17-24
 sw acc vl 30
+
+int ra gi0/1-2
+sw mo tr
