@@ -13,23 +13,49 @@
 <body>
 	<nav>
 		<a href="">Maquetado</a>
-		<button></button>
+		<button id="menu">&equiv;</button>
 		<ul class="menu">
-			<li><a href="#"><span>Inicio</span></a></li>
-			<li><a href="about.html"><span>Acerca</span></a></li>
-			<li><a href="#contacto"><span>Contacto</span></a></li>
-			<li><a href="https://github.com/c215714n/educacionit/tree/maquetado-CSS"><span>GitHub</span></a></li>
+			<li> 
+				<a 
+					class="icon-home" 
+					title="inicio" href="#"> 
+					<span> Inicio</span> 
+				</a>
+			</li>
+			<li> 
+				<a 
+					class="icon-about" 
+					title="acerca" 
+					href="about.html"> 
+					<span> Acerca</span>
+				</a>
+			</li>
+			<li>
+				<a 
+					class="icon-contact" 
+					title="contacto" 
+					href="#contacto"> 
+					<span> Contacto</span></a>
+			</li>
+			<li>
+				<a 
+					class="icon-github" 
+					title="github" 
+					href="https://github.com/c215714n/educacionit/tree/maquetado-CSS" 
+					target="_blank"> 
+					<span> GitHub</span>
+				</a>
+			</li>
 		</ul>
-		<a href="#"></a>
+		<a class="icon-prev" href="#"></a>
 	</nav>
 	<header id="header">
 		<div class="header">
 			<h1>Maquetado Avanzado</h1>
-			<p>HTML | CSS | JS</p>
+			<p> HTML | CSS | JS </p>
 		</div>
 		<ul class="slide">
 			<li class="active"></li>
-			<li></li>
 			<li></li>
 			<li></li>
 			<li></li>
@@ -45,41 +71,92 @@
 	<main>
 		<section id="elements">
 			<header class="header">
-				<h1>Clase 1</h1>
+				<h1>Nuevos Elementos HTML5</h1>
 			</header>
 			<article class="active">
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Contenido Multimedia</h1>
 				</header>
-				<p></p>
+				<p>
+					HTML5 introduce soporte integrado para el contenido multimedia gracias a los elementos <strong>&lt;audio> y &lt;video></strong>, se pueden especificar múltiples fuentes de archivos usando el elemento <em>&lt;source></em> con el fin de proporcionar vídeo o audio codificados en formatos diferentes para diferentes navegadores.
+				</p>
 				<div class="example">
-					<div>child 1</div>
-					<div>child 2</div>
-					<div>child 3</div>
-					<div>child 4</div>
-					<div>child 5</div>
-					<div>child 6</div>
+					<div class="colspan-md-2">
+						<video src="assets/media/californication.mp4">
+						</video>
+						<button id="vidPrev"> < </button>
+						<button id="vidPlay"> PLAY </button>
+						<button id="vidNext"> > </button>
+					</div>
+					<div>
+						<audio src="assets/media/wimo.mp3" controls></audio>
+					</div>
+					<div>
+						<audio src="assets/media/live-learn.mp3" controls></audio>
+					</div>
 				</div>
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Elementos Estadisticos</h1>
 				</header>
-				<p></p>
+				<p>
+					
+				</p>
 				<div class="example">
-					<div>child 1</div>
-					<div>child 2</div>
-					<div>child 3</div>
-					<div>child 4</div>
-					<div>child 5</div>
-					<div>child 6</div>
+					<div>
+						sin value
+						<progress></progress>
+					</div>
+					<div>
+						value:20;max:100
+						<progress value="20" max="100"></progress>
+					</div>
+					<div>
+						value:js
+						<progress max="100"></progress>
+						<input 
+							type="number" 
+							min="0" 
+							max="100" />
+					</div>
+					<div>
+						value:30&lt;low&lt;high
+						<meter value="30" 
+							low="40" 
+							high="70" 
+							optimum="90" 
+							max="100">
+						</meter>
+					</div>
+					<div>
+						low&lt;value:60&lt;high
+						<meter value="60" 
+							low="40" 
+							high="70" 
+							optimum="90" 
+							max="100">
+						</meter>
+					</div>
+					<div>
+						low&lt;high&lt;value:90
+						<meter value="90" 
+							low="40" 
+							high="70" 
+							optimum="90" 
+							max="100">
+						</meter>
+					</div>
 				</div>
 			</article>
 			<article>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Herramientas de Dibujo</h1>
 				</header>
-				<p></p>
+				<p>
+					 SVG se le conoce es un modelo de gráficos en modo retenido que persiste dentro de un modelo en memoria. 
+					 Canvas es un mapa de bits con una interfaz de programación de aplicaciones (API) para gráficos en modo inmediato para poder dibujar sobre él. Podemos pensar que el Canvas viene a ser lo mismo que el API GDI de Windows, donde por programa podemos dibujar gráficos en la ventana, y SVG vendría a ser lo que es el lenguaje HTML con elementos, estilos, eventos y programación basada en DOM. Canvas se orienta a procedimiento y SVG es declarativo. 
+				</p>
 				<div class="example">
 					<div>child 1</div>
 					<div>child 2</div>
@@ -90,13 +167,13 @@
 				</div>
 			</article>
 			<footer>
+				<button class="prev" href="#elements"> < </button>
 				<ul class="preview">
 					<li class="active">Contenido Multimedia</li>
 					<li>Elementos Estadisticos</li>
 					<li>Herramientas de Dibujo</li>
 				</ul>
-				<a class="prev" href="#elements"> < </a>
-				<a class="next" href="#elements"> > </a>
+				<button class="next" href="#elements"> > </button>
 			</footer>
 		</section>
 		<section id="colors">
@@ -105,35 +182,35 @@
 			</header>
 			<article class="active">
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Modelos de Color</h1>
 				</header>
 				<p></p>
 				<div class="example">
-					<div>child 1</div>
-					<div>child 2</div>
-					<div>child 3</div>
-					<div>child 4</div>
-					<div>child 5</div>
-					<div>child 6</div>
+					<div>color HTML: DarkCyan</div>
+					<div>Decimal:  RGB(0,136,136)</div>
+					<div>Decimal Alpha: RGBA(0,136,136,.5)</div>
+					<div>Hexadecimal: #008888</div>
+					<div>Cromatico: HSL(180,100%,30%)</div>
+					<div>Cromatico Alpha: HSLA(180,100%,30%,.5)</div>
 				</div>
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Gradientes de Fondo</h1>
 				</header>
 				<p></p>
 				<div class="example">
-					<div>child 1</div>
-					<div>child 2</div>
-					<div>child 3</div>
-					<div>child 4</div>
-					<div>child 5</div>
-					<div>child 6</div>
+					<div>linear-gradient (#ccc,#248)</div>
+					<div>liner-gradient (to right,#ccc,#248)</div>
+					<div>linear-gradient (15deg,#ccc,#248)</div>
+					<div>radial-gradient (#ccc,#248)</div>
+					<div>radial-gradient (circle,#ccc,#248)</div>
+					<div>radial-gradient (circle at top left,#ccc,#248)</div>
 				</div>
 			</article>
 			<article>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Modos de Fusión</h1>
 				</header>
 				<p></p>
 				<div class="example">
@@ -146,13 +223,13 @@
 				</div>
 			</article>
 			<footer>
+				<button class="prev" href="#colors"> < </button>
 				<ul class="preview">
 					<li class="active">Modelos de Color</li>
 					<li>Gradientes de fondo</li>
 					<li>Modos de Fusion</li>
 				</ul>
-				<a class="prev" href="#colors"> < </a>
-				<a class="next" href="#colors"> > </a>
+				<button class="next" href="#colors"> > </button>
 			</footer>
 		</section>
 		<section id="transform">
@@ -161,7 +238,21 @@
 			</header>
 			<article class="active">
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Transformaciones 2d</h1>
+				</header>
+				<p></p>
+				<div class="example">
+					<div>translate(x,y)</div>
+					<div>scale(x,y)</div>
+					<div>rotate(deg)</div>
+					<div>skew(x,y)</div>
+					<div>child 5</div>
+					<div>child 6</div>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h1>Transformaciones 3d</h1>
 				</header>
 				<p></p>
 				<div class="example">
@@ -175,21 +266,7 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
-				</header>
-				<p></p>
-				<div class="example">
-					<div>child 1</div>
-					<div>child 2</div>
-					<div>child 3</div>
-					<div>child 4</div>
-					<div>child 5</div>
-					<div>child 6</div>
-				</div>
-			</article>
-			<article>
-				<header>
-					<h1>Tema 3</h1>
+					<h1>Efectos de Transicion</h1>
 				</header>
 				<p></p>
 				<div class="example">
@@ -202,13 +279,13 @@
 				</div>
 			</article>
 			<footer>
+				<button class="prev" href="#transform"> < </button>
 				<ul class="preview">
 					<li class="active">Transformaciones 2d</li>
 					<li>Transformaciones 3d</li>
 					<li>Efectos de Transicion</li>
 				</ul>
-				<a class="prev" href="#transform"> < </a>
-				<a class="next" href="#transform"> > </a>
+				<button class="next" href="#transform"> > </button>
 			</footer>
 		</section>
 		<section id="less">
@@ -258,14 +335,13 @@
 				</div>
 			</article>
 			<footer>
+				<button class="prev"> < </button>
 				<ul class="preview">
 					<li class="active">Estilos Anidados</li>
 					<li>Mixins Parametricos</li>
 					<li>Mixins Recursivos</li>
 				</ul>
-				<a href=""></a>
-				<a href=""></a>
-				<a href=""></a>
+				<button class="next"> > </button>
 			</footer>
 		</section>
 		<section id="animation">
@@ -315,13 +391,13 @@
 				</div>
 			</article>
 			<footer>
+				<button class="prev" href="#animation"> < </button>
 				<ul class="preview">
 					<li class="active">Regla @keyframes</li>
 					<li>Linea de Tiempo</li>
 					<li>Funcion de Tiempo</li>
 				</ul>
-				<a class="prev" href="#animation"> < </a>
-				<a class="next" href="#animation"> > </a>
+				<button class="next" href="#animation"> > </button>
 			</footer>
 		</section>
 	</main>
