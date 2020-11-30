@@ -19,30 +19,38 @@
 			'assets/media/cant-stop.webm'
 		];	
 	//FUNCION RUTAS
-		function changePath (){
-			switch(type){
-				case 'prev':
-					if(i > 0){  }
-					else{  }
+		function changePath(type){
+			switch (type){
+				case 'prev': 
+					if (position > 0){ --position } 
+					else{ position = videoList.length - 1 }
+					videoItem.src = videoList[position];
 					break;
 				case 'next':
-					if(i < itemList.length - 1){  }
-					else{  }	
+					if (position < videoList.length - 1){ ++position}
+					else{position = 0}
+					videoItem.src = videoList[position];
 					break;
-				default: itemList[i];
+			}
+			if(videoItem.paused){
+				document.querySelector('#vidPlay').innerHTML = 'PAUSE';
+				videoItem.play();
+			}else{
+				document.querySelector('#vidPlay').innerHTML = 'PLAY';
+				videoItem.pause();
 			}
 		}
 	//BOTON ANTERIOR
 		document.querySelector('#vidPrev').addEventListener(
-			'click', () =>
+			'click', () => changePath('prev')
 		)
 		document.querySelector('#vidPlay').addEventListener(
-			'click', () => 
+			'click', () => changePath()
 		)
 		document.querySelector('#vidNext').addEventListener(
-			'click', () => 
+			'click', () => changePath('next')
 		)
-/*Cambio de Temas*/
+/* TEMAS */
 	//VARIABLES
 		let slideList = document.querySelectorAll('.slide li');
 		let sectionList = document.querySelectorAll('main section');
@@ -54,7 +62,7 @@
 					itemList[i].classList.remove('active');
 				switch (type){
 					case false:
-						if(i > 0){ nextItem = itemList[i - 1]; }
+						if(i > 0){ nextItem = itermList[i - 1]; }
 						else{ nextItem = itemList[itemList.length - 1];	}
 						break;
 					case true:
@@ -84,5 +92,20 @@
 				changeItem(footerList[i].querySelectorAll('li'), true)
 		}
 		)})
-	
-
+/* FORMULARIO */
+	document.querySelectorAll('#contact input, #contact textarea').forEach(
+		field => field.addEventListener(
+			'input', () => {
+				if (!field.checkValidity() && field.value != null){
+					field.classList.add('is-invalid');
+					field.classList.remove('is-valid');
+				} else if (field.checkValidity() && field.value != null) {
+					field.classList.remove('is-invalid');
+					field.classList.add('is-valid');
+				}
+				else{
+					field.classList.remove('is-invalid','is-valid');
+				}
+			}
+		)
+	)

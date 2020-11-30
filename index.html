@@ -401,6 +401,58 @@
 			</footer>
 		</section>
 	</main>
+	<footer id="footer">
+		<div class="social">
+			<a href="https://facebook.com" class="icon-facebook"></a>
+			<a href="https://twitter.com" class="icon-twitter"></a>
+			<a href="https://instagram.com" class="icon-instagram"></a>
+			<a href="https://whatsapp.com" class="icon-whatsapp"></a>
+		</div>
+		<form action="" id="contact" method="post">
+			<h2>Informacion de Contacto</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				name="contactName" 
+				type="text" 
+				pattern="[a-z A-Z]{2,50}" 
+				required>
+			<div class="valid">
+				Ingrese su nombre sin numeros, ni simbolos.
+				El mismo debe tener entre 2 y 50 caracteres.
+			</div>
+			<label for="">Telefono</label>
+			<input 
+				name="contactPhone" 
+				type="tel" 
+				pattern="[\(]\d{2,5}[\)]\d{4,6}[\-]\d{4,6}"
+				placeholder="(5411)5659-1548" 
+				required>
+			<div class="valid">
+				Ingrese entre parentesis el codigo de area,
+				separando con guiones cada 4 0 6 digitos.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				name="contactEmail" 
+				type="email" 
+				required>
+			<div class="valid">
+				Ingrese una direccion de correo valida respetando la estructura 'usuario@dominio'
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult"
+				minlength="10"
+				maxlength="200"
+				required></textarea>
+			<button>Realizar Consulta</button>
+		</form>
+		<p>
+			Todos los derechos reservados
+			<a href="#">Cristian Racedo</a>
+			&amp; Compañia
+		</p>
+	</footer>
 	<script src="scripts/main.js"></script>
 </body>
 </html>

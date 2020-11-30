@@ -149,6 +149,7 @@
 			height: 0;
 			opacity: 0;
 			width:100%;
+			background-color: lighten(@snd, 10%);
 			.normalize;
 			@media screen and (min-width: @md){
 				position: relative;
@@ -211,6 +212,7 @@
 		.flexbox(column;center);
 		height: 100vh;
 		position: relative;
+		text-align: center;
 		.slide{
 			list-style: none;
 			.normalize;
@@ -312,11 +314,32 @@
 						grid-template-columns: auto auto auto;	
 					}
 					div{
+						position: relative;
 						.normalize(@b:.2rem solid @fst; @p:.25rem);
 
 					}
+					button{
+						text-shadow: 2px 2px darken(@fst, 30%);
+						position: absolute;
+						#buttons.menu-button;
+						.normalize(.5rem; .5rem .2rem; none);
+						top:0;
+						bottom: 0;
+						opacity: .6;
+						&#vidPrev{
+							left:0;
+						}
+						&#vidPlay{
+							margin-bottom: 1rem;
+							top:calc(100% - 4rem);
+							left:2.5rem;
+						}
+						&#vidNext{
+							right: 0;
+						}
+					}
 					video{
-						height:56.25%;
+					height: 100%;
 					}
 					audio,
 					video,
@@ -401,10 +424,66 @@
 		color:darken(@snd, 50%);
 		background-color:lighten(@snd, 10%);
 		.normalize;
+		.social{
+			.normalize(1rem; auto);
+			.mediaQuery(@sm);
+			.flexbox(row; center; center);
+			text-align: center;
+			a{
+				.flexbox(row;center;center);
+				display: block;
+				width: 4rem;
+				height: 4rem;
+				color:darken(@fst, 10%);
+				text-decoration: none;
+				font-size: 2.5rem;
+				&:hover{
+					font-size: 4rem;
+				}
+			}
+		}
 		#contact{
-			.flexbox(column);
+			.normalize(1rem; auto);
+			.flexbox(column; @fa:flex-start);
 			.mediaQuery(@sm);
 			.mediaQuery(@md);
 			.mediaQuery(@lg);
+			input, textarea{
+				width: 100%;
+				outline: none;
+				resize: none;
+				.normalize(.5rem 1rem; 0; .2rem solid white);
+				& + .valid{
+					overflow: hidden;
+					height: 0;
+					.normalize;
+				}
+				&:focus + .valid{
+					width:100%;
+					height: auto;
+					.normalize(.5rem 1rem; 0 0 .5rem);
+				}
+			}
+			button{
+				align-self: flex-end;
+				#buttons.menu-button;
+				margin:.5rem 0;
+			}
+			.is-valid{
+				border-color: lightgreen;
+			}
+			.is-valid + .valid{
+				border-color: lightgreen;
+				color:darkgreen;
+				background-color: lightgreen;
+			}
+			.is-invalid{
+				border-color: tomato;
+			}
+			.is-invalid + .valid{				
+				border-color: tomato;
+				color:darkred;
+				background-color: tomato;
+			}
 		}
 	}

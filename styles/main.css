@@ -520,6 +520,7 @@ nav .menu {
   height: 0;
   opacity: 0;
   width: 100%;
+  background-color: #e6e6e6;
   margin: 0;
   border: 0;
   padding: 0;
@@ -602,6 +603,7 @@ nav > a:last-child:hover {
   align-items: center;
   height: 100vh;
   position: relative;
+  text-align: center;
 }
 #header .slide {
   list-style: none;
@@ -774,12 +776,43 @@ main section article .example {
   }
 }
 main section article .example div {
+  position: relative;
   margin: 0;
   border: 0.2rem solid #248;
   padding: 0.25rem;
 }
+main section article .example button {
+  text-shadow: 2px 2px #03070e;
+  position: absolute;
+  margin: 0.5rem;
+  border: 0.1rem solid #4d4d4d;
+  color: #4d4d4d;
+  background-color: transparent;
+  font: bold 1.5rem open-sans, sans-serif;
+  margin: 0.5rem 0.2rem;
+  border: none;
+  padding: 0.5rem;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+main section article .example button:hover {
+  color: #ccc;
+  background-color: #4d4d4d;
+}
+main section article .example button#vidPrev {
+  left: 0;
+}
+main section article .example button#vidPlay {
+  margin-bottom: 1rem;
+  top: calc(100% - 4rem);
+  left: 2.5rem;
+}
+main section article .example button#vidNext {
+  right: 0;
+}
 main section article .example video {
-  height: 56.25%;
+  height: 100%;
 }
 main section article .example audio,
 main section article .example video,
@@ -877,12 +910,47 @@ main section footer button:hover {
   border: 0;
   padding: 0;
 }
+#footer .social {
+  margin: auto;
+  border: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  #footer .social {
+    max-width: 540px;
+  }
+}
+#footer .social a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  color: #18305f;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+#footer .social a:hover {
+  font-size: 4rem;
+}
 #footer #contact {
+  margin: auto;
+  border: 0;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 @media screen and (min-width: 576px) {
   #footer #contact {
@@ -898,4 +966,58 @@ main section footer button:hover {
   #footer #contact {
     max-width: 720px;
   }
+}
+#footer #contact input,
+#footer #contact textarea {
+  width: 100%;
+  outline: none;
+  resize: none;
+  margin: 0;
+  border: 0.2rem solid white;
+  padding: 0.5rem 1rem;
+}
+#footer #contact input + .valid,
+#footer #contact textarea + .valid {
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  width: 100%;
+  height: auto;
+  margin: 0 0 0.5rem;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
+#footer #contact button {
+  align-self: flex-end;
+  margin: 0.5rem;
+  border: 0.1rem solid #4d4d4d;
+  color: #4d4d4d;
+  background-color: transparent;
+  font: bold 1.5rem open-sans, sans-serif;
+  margin: 0.5rem 0;
+}
+#footer #contact button:hover {
+  color: #ccc;
+  background-color: #4d4d4d;
+}
+#footer #contact .is-valid {
+  border-color: lightgreen;
+}
+#footer #contact .is-valid + .valid {
+  border-color: lightgreen;
+  color: darkgreen;
+  background-color: lightgreen;
+}
+#footer #contact .is-invalid {
+  border-color: tomato;
+}
+#footer #contact .is-invalid + .valid {
+  border-color: tomato;
+  color: darkred;
+  background-color: tomato;
 }
