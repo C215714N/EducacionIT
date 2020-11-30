@@ -9,6 +9,9 @@
 			initial-scale=1,
 			maximum-scale=3,">
 	<title>Maquetación Web</title>
+	<link rel="icon" href="assets/icon/cr.png">
+	<!-- STYLES -->
+		<link rel="stylesheet" href="css/styles.css">
 </head>
 <body><!-- Parte VISIBLE: contenido -->
 	<header id="header"><!-- CABECERA: Introduccion -->
@@ -17,19 +20,39 @@
 			<p>html &amp; css</p>
 		</div>
 		<nav><!-- NAVEGACION: indice -->
-			
+			<ul class="menu">
+				<li><a title="inicio" href="#">inicio</a></li>
+				<li><a title="acerca" href="about.html">acerca</a></li>
+				<li><a title="contacto" href="#contact">contacto</a></li>
+				<li><a title="github" href="https://github.com/c215714n/EducacionIT/tree/maquetacion-lx-14hs" target="_blank">github</a></li>
+			</ul>
 		</nav>
 	</header>
 	<main><!-- CONTENIDO PRINCIPAL: Nudo -->
 		<!--- section*2>(header.header>h1{Clase $})+article*3>header>h1{Tema $} -->
 		<section><!--SECCION: parte del contenido (depende del contexto)-->
 			<header class="header">
-				<h1>Clase 1</h1>
+				<h1>Introduccion a la maquetacion</h1>
 			</header>
 			<article><!--ARTICULO: contenido independiente-->
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Elementos semanticos</h1>
 				</header>
+				<ul class="example">
+					<li><strong>HEADER</strong> Es el contenido introductorio que contiene los titulos principales, a veces suele tener una galeria a modo de presentacion e incluso la navegacion
+						<ul>
+							<li><strong>NAV</strong> Es la navegacion principal y donde se encuentran solamente los links mas importantes de nuestro sitio.</li>
+						</ul>
+					</li>
+					<li><strong>MAIN</strong> Es el contenido principal donde colocamos la informacion relevante para el usuario, la mayoria de los elementos se encontraran dentro.
+						<ul>
+							<li><strong>SECTION</strong> Elemento que forma parte del contenido, depende del contexto y solamente funciona dentro de la pagina, ya que esta ligado al contenido de la mismo.</li>
+							<li><strong>ARTICLE</strong> Elemento independiente al contexto, funciona tanto dentro como fuera de la pagina y debe ser autoconclusivo.</li>
+							<li><strong>ASIDE</strong> Elemento lateral o contenido tangencial que guarda una relacion indirecta con sus elementos hermanos.</li>
+						</ul>
+					</li>
+					<li><strong>FOOTER</strong> Es el contenido de descenlace, podemos encontrar informacion del autor, datos y/o formularios de contacto, mapas del sitio e incluso links a las redes sociales.</li>
+				</ul>
 			</article>
 			<article>
 				<header>
@@ -72,5 +95,7 @@
 	<footer><!-- PIE: Descenlace-->
 		
 	</footer>
+	<!-- SCRIPTS -->
+		<script src="js/"></script>
 </body>
 </html>
