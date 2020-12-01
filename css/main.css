@@ -1,0 +1,56 @@
+/*Reglas generales*/
+	@import url(
+			'https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,300&family=Roboto+Slab:wght@800&display=swap'
+	);
+	*{
+		font-family: Raleway, calibri, segoe ui, sans-serif;
+		box-sizing: border-box;
+	}
+	body{margin:0;}
+/*navegacion*/
+	nav{
+		position: sticky;
+		top:0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #999;
+	}
+	nav a{
+		display: block;
+		padding: .5rem;
+		color:#ddd;
+		text-decoration: none;
+	}
+	nav > a:first-child{
+		font: bold 1.2rem sans-serif;
+	}
+	nav > a:last-child{
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		background-color: #ccc;
+		background-image: url(../assets/social/back.svg);
+		background-position: center;
+		background-size: 1rem;
+		background-repeat: no-repeat;
+		opacity: .3;
+	}
+	nav > a:last-child:hover{
+		opacity: .6;
+	}
+	#menu{
+		display: none;
+	}
+	.menu{
+		list-style: none;
+		margin: 0;
+		padding:0;
+		display: flex;
+	}
+	.menu a:hover{
+		background-color: #666;
+	}

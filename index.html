@@ -472,6 +472,14 @@
 				<header>
 					<h1></h1>
 				</header>
+				<ul>
+					<li><strong>static:</strong> valor predeterminado, no influye sobre los elementos que tengan otro tipo de posicion. las etiquetas con este atributo ocupan el espacio correspondiente al orden de su creacion.</li>
+					<li><strong>absolute:</strong> valor que toma de referencia al primer ancestro cuya posicion no sea <em>static</em>, el tamaño del elemento se vuelve igual al tamaño de su contenido y por defecto ocupa su posicion original y a la vez no ocupa espacio en el DOM. mediante el uso de los atributo <em>top - right - bottom - left</em> podemos indicar donde se ubicara con respecto a su elemento padre.</li>
+					<li><strong>relative: </strong> valor que toma como referente a la misma etiqueta, el espacio ocupado en el DOM se mantiene, por lo tanto si modificamos su posicion drasticamente quedara un hueco donde originalmente estaba dicho elemento.</li>
+					<li><strong>fixed: </strong> valor que utiliza las dimensiones del <em>viewport</em> para calcular donde ubicar el elemento. Similar a <em>absolute</em>, el espacio ocupado en el DOM no afecta a los demas elementos y de manera predeterminada si no cambiamos su ubicacion, esta sera la que tenia originalmente.</li>
+					<li><strong>sticky:</strong> valor similar a relative, ya que utiliza la misma etiqueta como referente y solamente cuando se cumple con alguno de los valores de <em>top - left -bottom - right</em>, esta cambia para parecerse a una posicion absoluta.</li>
+					<li><strong>z-index: </strong> atributo que permite a una etiqueta cambiar su indice de superposicion con respecto a otros elementos, el indice se asigna en el orden en el que son creadas las etiquetas.</li>
+				</ul>
 				<ul class="select">
 					<li>Item 1
 						<ul>
@@ -576,6 +584,18 @@
 					</li>
 				</ul>
 				<p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Cum dolorem voluptatem, facere nemo itaque deleniti consequatur, amet eum nobis dolores, placeat quisquam tempora deserunt, voluptas exercitationem ratione unde officiis magnam sunt quasi fuga ipsa modi illum. Pariatur nobis iste tenetur soluta magni, voluptatibus quo qui expedita enim sit, velit, ipsam. Nihil, alias veniam aperiam, ratione aliquam quis repellat nostrum distinctio iusto rerum itaque excepturi aut facilis culpa dolor nesciunt corporis! Quia corrupti quae itaque labore rem debitis voluptatum, temporibus ipsam impedit minus architecto dignissimos alias officia recusandae delectus. Tenetur dignissimos vitae laudantium tempore asperiores ratione! Quos architecto optio excepturi quam?</p>
+			</section>
+			<section>
+				<header>
+					<h1>Sprites</h1>
+				</header>
+				<img src="assets/social/social-media.png" alt="Social media sprite">
+				<div class="sprite">
+					<a class="facebook" href="https://facebook.com" target="_blank"></a>
+					<a class="twitter" href="https://twitter.com" target="_blank"></a>
+					<a class="linkedin" href="https://linkedin.com" target="_blank"></a>
+					<a class="youtube" href="https://youtube.com" target="_blank"></a>
+				</div>
 			</section>
 		</article>
 	</main>

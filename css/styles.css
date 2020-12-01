@@ -340,8 +340,6 @@
 		}
 	/*position*/
 		.select{
-			position: sticky;
-			top:0;
 			display: flex;
 			margin:0;
 			padding:0;
@@ -371,8 +369,6 @@
 		}
 
 		.display{
-			position: sticky;
-			top:0;
 			margin:0;
 			padding:0;
 		}
@@ -402,6 +398,39 @@
 		.display li:hover{
 			background-color: rgba(204,204,204,.5);
 		}
+	/*sprites*/
+		.sprite {
+			position: fixed;
+			right: .5rem;
+			bottom: calc(50% - 80px);
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+		.sprite a{
+			margin-bottom: .5rem;
+			border:1px solid #333;
+			width: calc(32px);
+			height: calc(32px);
+			background-size: calc(32px * 11);
+			background-color: #ccc;
+			background-image: url(../assets/social/social-media.png);
+		}
+		/*iconos*/
+			.facebook{background-position: calc(32px * 0) calc(32px * 0)}
+			.twitter{ background-position: calc(32px * -8) calc(32px * 0) }/*x y*/
+			.linkedin{background-position: calc(32px * -4) calc(32px * 0)}
+			.youtube{background-position: calc(32px * -10) calc(32px * 0)}
+		/*hover*/
+			.facebook:hover{background-position: calc(32px * 0) calc(32px * -2)}
+			.twitter:hover{ background-position: calc(32px * -8) calc(32px * -2) }/*x y*/
+			.linkedin:hover{background-position: calc(32px * -4) calc(32px * -2)}
+			.youtube:hover{background-position: calc(32px * -10) calc(32px * -2)}
+		/*active*/
+			.facebook:active{background-position: calc(32px * 0) calc(32px * -1)}
+			.twitter:active{ background-position: calc(32px * -8) calc(32px * -1)}
+			.linkedin:active{background-position: calc(32px * -4) calc(32px * -1)}
+			.youtube:active{background-position: calc(32px * -10) calc(32px * -1)}
 /*Formulario de Contacto*/
 	#contact {
 		display: flex;
