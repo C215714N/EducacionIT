@@ -130,13 +130,15 @@
 		width:100%;
 	}
 	article section{
-		overflow: auto;
-		height:300px;
 		width:100%;
 		margin:.5rem;
 		border-radius: .5rem;
 		border:2px solid rgba(204,204,204,.5);
 		padding:.5rem;
+	}
+	.overflow{
+		overflow: auto;
+		height: 300px;
 	}
 	/*atributo Float*/
 		p{
@@ -335,6 +337,70 @@
 	/*atributos de listas*/
 		article li{
 			list-style: circle url(../assets/social/css-icon.png) outside;
+		}
+	/*position*/
+		.select{
+			position: sticky;
+			top:0;
+			display: flex;
+			margin:0;
+			padding:0;
+		}
+		.select li{
+			position: relative;
+			list-style: none;
+			padding:.2rem .5rem;
+		}
+		.select li:hover > ul{
+			display: block;
+			z-index: 999;
+		}
+		.select li ul{
+			display: none;
+			margin:0;
+			padding:0;
+			background-color: #248;
+			position: absolute;
+			top:100%;
+			left:0;
+		}
+		.select li li ul{
+			top:0;
+			left:100%;
+			background-color: #24A;
+		}
+
+		.display{
+			position: sticky;
+			top:0;
+			margin:0;
+			padding:0;
+		}
+		.display li{
+			position: relative;
+			list-style: none;
+		}
+		.display a{
+			padding:.5rem 1rem;
+		}
+		.display li ul{
+			padding: 0;
+			display: none;
+		}
+		.display li:hover > ul{
+			display: block;
+			margin:0;
+			padding: 0;
+		}
+		.display li li:hover > ul{
+			display: flex;
+			position: absolute;
+			top: 0;
+			left: 6rem;
+		}
+		.select li:hover,
+		.display li:hover{
+			background-color: rgba(204,204,204,.5);
 		}
 /*Formulario de Contacto*/
 	#contact {

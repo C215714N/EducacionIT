@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<style>
+		.position{
+			position: relative;
+			max-width: 900px;
+			border:2px solid #333;
+		}
+		.position div{
+			margin:.5rem;
+			border:2px dashed #ccc;
+			padding:1rem;
+		}
+		.static{
+			position:static;/*valor predeterminado - no utilizable para el posicionamiento de elementos*/
+		}
+		.absolute{
+			position: absolute; /*posicion que toma de referencia al ancestro mas proximo que no tenga una posicion estatica - relativo a su contenedor */
+			top:0;
+			right:0;
+			background-color: #999;
+		}
+		.position:hover .absolute{
+			top:50%;
+			bottom: 0;
+			left: 50%;				
+		}
+		.relative{
+			position: relative; /* posicion que toma de referencia al mismo elemento donde se esta aplicando - respeta la posicion original*/
+		}
+		.position:hover .relative{
+			top:.5rem;
+			left: .5rem;
+			background-color: #ccc;
+			box-shadow: -.5rem -.5rem #333;
+		}
+		.fixed{
+			position: fixed; /* posicion que toma de referencia al viewport (ventana del navegador) - el tamaño del elemento depende de su contenido*/
+			bottom:1rem;
+			right:1rem;
+		}
+		.position:hover .fixed{
+			bottom: 5rem;
+		}
+		.sticky{
+			position: sticky;
+			top: 0;
+			background-color: #666;
+			z-index: 100;
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div class="sticky"> sticky </div>
+		<div class="absolute"> absolute</div>
+		<div class="relative"> relative</div>
+		<div class="fixed"> fixed</div>
+		<div> position: 5</div>
+	</div>
+	<div class="position">
+		<div> Child 1</div>
+		<div class="sticky"> Child 2</div>
+		<div> Child 3</div>
+		<div> Child 4</div>
+		<div> Child 5</div>
+	</div>
+	<div class="position">
+		<div> Child 1</div>
+		<div> Child 2</div>
+		<div> Child 3</div>
+		<div> Child 4</div>
+		<div> Child 5</div>
+	</div>
+	<div class="position">
+		<div> Child 1</div>
+		<div class="fixed"> Child 2</div>
+		<div> Child 3</div>
+		<div class="sticky"> Child 4</div>
+		<div> Child 5</div>
+	</div>
+</body>
+</html>
