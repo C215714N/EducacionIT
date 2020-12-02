@@ -24,11 +24,23 @@
 		padding:16px;
 		color: #ddd; /*RRGGBB => hex(00 - ff) = dec(0 - 255) */
 		background-color: #333;
+		font-size: 18px;
+		background-image: url(../assets/img/osx-mojave-night.jpg);
+		background-position: top center; /*x y*/
+		background-repeat: no-repeat;
+		background-size: cover; /*x y*/
+		background-attachment: fixed;
+	}
+	main .header h1{
+		line-height: 200px;
+	}
+	#footer{
+		background-position: center;
 	}
 	.header h1,
 	.header p{
 		margin:0;
-		line-height: 20px;
+		line-height: 24px;
 	}
 	.header h1{
 		text-transform: capitalize;
@@ -72,4 +84,29 @@
 		background-color: rgba(206,206,206,.3);
 	}
 /*Contenido Principal*/
+	main{
+		max-width:1140px;
+		margin: auto;
+		padding:16px;/*top right bottom left*/
+	}
+	.example{
+		list-style: none;
+		margin-left: 48px;
+		border-left: 2px solid #333;/*width style color*/
+		padding: 16px;
+		background-color: #ddd;
+	}
 /*Formulario*/
+	#contact{
+		max-width: 720px;
+		margin: auto;
+	}
+	#contact input,
+	#contact textarea{
+		width:100%;
+		padding:8px 16px;
+	}
+	#contact button{
+		display:block;
+		margin-left: auto;
+	}
