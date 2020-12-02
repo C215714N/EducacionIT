@@ -28,7 +28,7 @@ nav #menu {
   padding: 0.5rem 1rem;
   border: 0.2rem solid #d9d9d9;
   color: #d9d9d9;
-  background-color: #808080;
+  background-color: transparent;
 }
 nav #menu:hover {
   padding: 0.5rem 1rem;
@@ -92,7 +92,7 @@ nav .openMenu {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -1;
 }
@@ -105,7 +105,7 @@ nav .openMenu {
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -141,14 +141,33 @@ nav .openMenu {
   opacity: 1;
 }
 main {
-  display: grid;
+  display: block;
+  padding: 0.5rem;
+  grid-template-columns: auto auto auto;
   grid-template-areas: 'aside section-a section-a' 'aside section-b section-b';
   gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+  }
 }
 @media screen and (min-width: 768px) {
   main section {
     max-width: 720px;
   }
+}
+main section .videoSlide video {
+  display: none;
+}
+main section .videoSlide .active {
+  display: block;
+}
+main section #vidPlay {
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid #d9d9d9;
+  color: #d9d9d9;
+  background-color: transparent;
 }
 main section:first-child {
   grid-area: aside;
@@ -202,7 +221,7 @@ footer #contact button {
   padding: 0.5rem 1rem;
   border: 0.2rem solid #d9d9d9;
   color: #d9d9d9;
-  background-color: #808080;
+  background-color: transparent;
 }
 footer #contact button:hover {
   padding: 0.5rem 1rem;

@@ -3,9 +3,9 @@
 		@color: #248;
 		@bg-color: #ccc;
 	//breakpoints
-		@sm:576px; @smw:540px;
-		@md:768px; @mdw:720px;
-		@lg:992px; @lgw:960px;
+		@sm:576px; 	@smw:540px;
+		@md:768px; 	@mdw:720px;
+		@lg:992px; 	@lgw:960px;
 		@xl:1200px;	@xlw:1140px;
 	//columns
 		@col: 24;
@@ -22,7 +22,13 @@
 			'osx-mountain-lion.jpg'
 			'osx-sierra.jpg'
 			'osx-snow-leopard.png';
-
+		@social: 
+			'facebook',
+			'instagram'
+			'linkedin',
+			'twitter',
+			'whatsapp'
+			'youtube';
 // Reglas generales
 	@import url(icomoon.css);
 //Estilos compuestos: Los selectores se gereran automaticamente a partir de la anidacion;
@@ -92,7 +98,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width:100vw;
+			width:100%;
 			height: 100vh;
 			z-index: -1;
 			li{
@@ -102,7 +108,7 @@
 				top: 0;
 				left: 0;
 				z-index: -1;
-				width:100vw;
+				width:100%;
 				height: 100vh;
 				background-position: center;
 				background-size: cover;
@@ -122,13 +128,29 @@
 		}
 	}
 	main{
-		display: grid;
-		grid-template-areas: 
-			'aside section-a section-a'
-			'aside section-b section-b';
-		gap:1rem;
+		display: block;
+		padding:.5rem;
+		@media screen and (min-width: @md){
+			display: grid;
+		}
+			grid-template-columns: auto auto auto;
+			grid-template-areas: 
+				'aside section-a section-a'
+				'aside section-b section-b';
+			gap:1rem;
 		section{
 			.mediaQuery(@md);
+			.videoSlide{
+				video{
+					display: none;
+				}
+				.active{
+					display: block;
+				}
+			}
+			#vidPlay{
+				.button;
+			}
 			&:first-child{
 				grid-area: aside;
 			}
@@ -180,7 +202,7 @@
 		padding:.5rem 1rem;
 		border:.2rem solid lighten(@bg-color, 5%);;
 		color:lighten(@bg-color, 5%);
-		background-color: darken(@bg-color, 30%);
+		background-color: transparent;
 	}
 	.button-press(){
 		padding:.5rem 1rem;
