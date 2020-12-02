@@ -163,6 +163,16 @@ main section .videoSlide video {
 main section .videoSlide .active {
   display: block;
 }
+main section svg,
+main section canvas,
+main section figure {
+  max-width: 300px;
+}
+main section svg img,
+main section canvas img,
+main section figure img {
+  width: 100%;
+}
 main section #vidPlay {
   padding: 0.5rem 1rem;
   border: 0.2rem solid #d9d9d9;

@@ -405,6 +405,122 @@
 			.transition .example div:nth-child(5){
 				transition-timing-function: linear; /*constante*/
 			}
+		/*animation*/
+			.animation{
+				display: block;
+			}
+			.animation div{
+				width:10rem;
+				line-height: 2rem;
+				margin:.5rem;
+				border: 2px solid #333;
+				color:#ddd;
+				text-shadow: 1px 1px 2px #333;
+				background-color: hsl(0, 0%, 50%);
+				text-align: center;
+
+				animation-name: moveIt;
+				animation-duration: 3s;
+				animation-delay: 1s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: 2;
+			}
+			/*animation-timing-function*/
+				.timing div:nth-child(2){ animation-timing-function: ease-in;}
+				.timing div:nth-child(3){ animation-timing-function: ease-out; }
+				.timing div:nth-child(4){ animation-timing-function: ease-in-out; }
+				.timing div:nth-child(5){ animation-timing-function: linear; }
+				.timing div:nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0);}
+			/*animation-direction*/
+				.direction div:nth-child(2){ animation-direction: reverse; }
+				.direction div:nth-child(3){ animation-direction: alternate; }
+				.direction div:nth-child(4){ animation-direction: alternate-reverse; }
+			/*animacion de carga*/
+				.loading div{
+					width:4rem;
+					height: 4rem;
+					border: .4rem solid;
+					border-color: #ccc #36f #248 #124; /*top right bottom left*/
+					border-radius: 50%;
+					background-color: transparent;
+
+					animation-name: loading;
+					animation-duration: 2s;
+					animation-fill-mode: forwards;
+				}
+				.stops{
+					overflow: hidden;
+					display: block;
+					height: 300px;
+					margin: 1rem 0;
+					border:2px solid #333;
+					padding:1rem;
+				}
+				.stops div{
+					width:10rem;
+					height: 5rem;
+					margin: .5rem;
+					animation: stops 10s linear;
+					animation-iteration-count: infinite;
+					animation-fill-mode: forwards;
+				}
+				.stops div:last-child{
+					animation-direction: alternate;
+				}
+			/*keyframes*/
+				@keyframes moveIt {
+					from {
+						border-color:hsl(120, 50%, 30%);
+						background-color: hsl(0, 50%, 70%);
+						transform: 
+							translate(0)
+							skew(-15deg);
+					}	
+					to{
+						border-color: hsl(0, 50%,30%);
+						background-color: hsl(120, 50%,70%);
+						transform:
+							translate(500%)
+							skew(15deg);
+					}
+				}
+				@keyframes loading {
+					to{
+						transform: rotate(810deg);
+					}
+				}
+				@keyframes stops{
+					0%{
+						transform: 
+							translate(0)
+							skew(-15deg);
+						background-color: gold;
+					}
+					25%{
+						transform: 
+							translate(400%)
+							skew(0, 15deg);
+						background-color: tomato;
+					}
+					50%{
+						transform: 
+							translate(400%, 200%)
+							skew(15deg, 0);
+						background-color: limegreen
+					}
+					75%{
+						transform: 
+							translate(0, 200%)
+							skew(0, -15deg);
+						background-color: skyblue;
+					}
+					100%{
+						transform: 
+							translate(0)
+							skew(0);
+						background-color: gold;
+					}
+				}
 	/*Pie de Pagina*/
 		#footer{
 			padding:1rem;
