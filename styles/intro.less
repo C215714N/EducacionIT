@@ -259,3 +259,39 @@
 		.crisTrap(md;@md);
 		.crisTrap(lg;@lg);
 		.crisTrap(xl;@xl);
+
+//Animaciones con less
+	.transition .example{
+		div{
+			width:10rem;
+			line-height: 3rem;
+			background-color: @color;
+			margin:.5rem;
+			padding:.5rem;
+			border:2px solid @bg-color;
+			.animaciones (@i:1) when (@i <= length(@funciones)){
+				&:nth-child(@{i}){	
+					animation: extract(@funciones, @i) 5s linear;
+					animation-delay: 2s * @i;
+				}
+				@keyframes extract(@funciones, @i){
+					.lineTime(@x:-20px; @i:0%) when (@i <= 100%){
+							@{i}{
+								width:@x;
+							}
+						.lineTime(@x + 5; @i + 5);
+					}
+					.lineTime;
+				}
+				.animaciones (@i + 1);
+			}
+			.animaciones;
+		}
+	}
+
+@funciones: lineal, cuadratica, trigonometrica, exponencial, radical;
+
+// x + b 
+// ax^2 + bx + c
+// sin(x)
+// 1.2^x
