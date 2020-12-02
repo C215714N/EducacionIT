@@ -7,7 +7,7 @@
 		content="
 			width=device-width, 
 			initial-scale=1,
-			maximum-scale=3,">
+			maximum-scale=3">
 	<title>Maquetación Web</title>
 	<link rel="icon" href="assets/icon/cr.png">
 	<!-- STYLES -->
@@ -56,8 +56,31 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Jerarquia de Selectores CSS</h1>
 				</header>
+				<ul class="example">
+					<li>
+						<strong>Tag Selector: </strong> es aquel que apunta a un tipo de etiqueta, si bien se pueden combinar es el menos especifico y por lo tanto al ser muy general con respecto a los demas, es el que posee menor prioridad ya que no permite distinguir entre las etiquetas que seleccionamos.
+						<ul>
+							<li><span>header</span>{color:darkred}</li>
+							<li><span>header h1</span>{color:tomato}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Class Selector: </strong> es aquel que apunta a las clases aplicadas sobre los elementos y se diferencia por la implementacion de un <em>punto (.)</em> antes del nombre de la clase. Especificamente permite seleccionar un grupo de etiquetas, incluso pudiento aclarar que tipo de etiqueta es a la que apuntamos.
+						<ul>
+							<li><span>.header</span>{color:darkgreen}</li>
+							<li><span>.header h1</span>{color:limegreen}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Id Selector: </strong> es aquel que apunta al Id de un elemento en particular, se diferencia por la implementacion de un <em>numeral (#)</em>. Es el selector con mayor prioridad porque se considera muy especifico con respecto a los demas, la razon de esto es que no deberian existir mas de una etiqueta con el mismo Id.
+						<ul>
+							<li><span>#header</span>{color:darkblue}</li>
+							<li><span>#header h1</span>{color:skyblue}</li>
+						</ul>
+					</li>
+				</ul>
 			</article>
 			<article>
 				<header>
@@ -92,8 +115,7 @@
 			</article>
 		</section>
 		</main>
-	<footer><!-- PIE: Descenlace-->
-		
+	<footer id="footer"><!-- PIE: Descenlace-->
 	</footer>
 	<!-- SCRIPTS -->
 		<script src="js/"></script>
