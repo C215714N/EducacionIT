@@ -9,6 +9,9 @@
 		}
 	/*Navegacion*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 9999;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -16,13 +19,44 @@
 			background-color: #ccc;
 		}
 		nav a{
+			display: block;
 			padding:.5rem;
 			color:#333;
 			text-decoration: none;
+			/*
+				BLOCK:
+					generan saltos de linea (no comparten espacio),
+					ocupan todo el ancho de su contedor,
+					se les puede dar tamaño (ancho/alto),
+					funcionan como contenedores;
+				INLINE:
+					comparte espacio con otras etiquetas (linea-bloque),
+					ocupan el ancho de su contenido (ancho),
+					no se les puede dar tamaño (automatico),
+					funcionan como contenido;
+				INLINE-BLOCK:
+					comparten espacio con otras etiquetas (linea-bloque),
+					ocupan el tamaño de su contenido(ancho/alto),
+					se les puede dar tamaño (ancho/alto/automatico),
+					funcionan como contenido;
+			*/
 		}
 		nav > a{
 			font-weight: bold;
 			font-size: 1.2rem;
+		}
+		nav > a:last-child{
+			position: fixed;
+			bottom:.5rem;
+			right: .5rem;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background-color: #ccc;
+			opacity: .3;
+		}
+		nav > a:last-child:hover{
+			opacity: .6;
 		}
 		#menu{
 			margin:.5rem;
@@ -45,9 +79,123 @@
 			padding:0;
 			text-align: center;
 		}
+		.menu a:hover{
+			color:#ccc;
+			background-color: #333;
+		}
 		.openMenu{
 			display: block;
 		}
+	/*Cabecera*/
+		#header{
+			position: relative;
+			padding:1rem;
+			height: 100vh;
+			max-height: 600px;
+		}
+		/*slide*/
+			.slide{
+				list-style: none;
+				margin:0;
+				padding:0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom:0;
+				left: 0;
+				z-index: -1;
+			}
+			.slide li{
+				position: absolute;
+				top:0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				opacity: 0;
+				background-size: cover;
+				background-position: center;
+				background-blend-mode: screen;
+			}
+			.slide .active{
+				opacity: 1;
+			}
+			/*
+				HTML		hex		rgb			hsl(hue, saturation, lightness)
+				red 		#F00	255,0,0		0,100%,50%
+				yellow		#FF0	255,255,0	60,100%,50%
+				green 		#0F0	0,255,0		120,100%,50%
+				cyan		#0FF	0,255,255	180,100%,50%
+				blue 		#00F	0,0,255		240,100%,50%
+				magenta 	#F0F	255,0,255	300,100%,50%
+				blanco		#FFF	255,255,255	0, 0%, 100%
+				negro		#000	0,0,0		0, 0%, 0%
+			*/
+			.slide li:nth-child(1){
+				background-image:
+					linear-gradient(	
+							hsl(200, 50%, 80%),
+							hsl(200, 50%, 20%)
+						),
+					url(../assets/img/osx-mavericks.png);
+			}
+			.slide li:nth-child(2){
+				background-image:
+					linear-gradient(to right, 
+							hsl(120, 30%, 80%),
+							hsl(180, 80%, 20%)
+						),
+					url(../assets/img/osx-sierra.jpg);
+					
+			}
+			.slide li:nth-child(3){
+				background-image: 
+					linear-gradient(60deg, 
+							hsl(0, 60%, 30%),
+							hsl(0, 30%, 60%)
+						),
+					url(../assets/img/osx-mojave-night.jpg);
+			}
+			.slide li:nth-child(4){
+				background-image:
+					radial-gradient(
+							hsl(300, 30%, 40%),
+							hsl(300, 30%, 60%)
+						),
+					url(../assets/img/osx-lion.png);
+					
+			}
+			.slide li:nth-child(5){
+				background-image:
+					radial-gradient(
+						hsl(60,60%,80%),
+						hsl(60,30%,50%)
+						),
+					url(../assets/img/osx-leopard.png);
+					
+			}
+
+		/*controles*/
+			#header a{
+				position: absolute;
+				top:0;
+				bottom: 0;
+				padding:1rem;
+				color:#ddd;
+				line-height: 100vh;
+				text-decoration: none;
+				text-shadow: 0 0 .25rem #333;
+				font-size: 3rem;
+				opacity: .4;
+			}
+			#header a:hover{
+				opacity: .8;
+			}
+			#prevSlide{
+				left: 0;
+			}
+			#nextSlide{
+				right: 0;
+			}
 	/*Contenido Principal*/
 		/*Multimedia*/
 		/*Elementos estadisticos*/

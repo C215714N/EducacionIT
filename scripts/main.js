@@ -28,3 +28,34 @@
 		ctx.fillStyle = "rgba(192, 32, 64, .5)";
 		ctx.arc(150,150, 50, 0, 2*Math.PI);
 		ctx.fill();
+/*Galeria Slide*/
+	prev = document.querySelector('#prevSlide');
+	next = document.querySelector('#nextSlide');
+	itemList = document.querySelectorAll('#header .slide li');
+
+	prev.addEventListener( 'click', () => {
+		for(i = 0 ; i < itemList.length ; i++){
+			if(itemList[i].classList.contains('active')){
+				itemList[i].classList.remove('active');
+				if(i > 0){
+					prevItem = itemList[i - 1]
+				} else {
+					prevItem = itemList[ itemList.length - 1 ]
+				}
+			}
+		}
+		prevItem.classList.add('active');
+	})
+	next.addEventListener( 'click', () => {
+		for(i = 0; i < itemList.length; i++){
+			if(itemList[i].classList.contains('active')){
+				itemList[i].classList.remove('active');
+				if(i < itemList.length - 1){
+					nextItem = itemList[i + 1]
+				} else {
+					nextItem = itemList[0];
+				}
+			}
+		}
+		nextItem.classList.add('active');
+	})
