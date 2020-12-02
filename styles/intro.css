@@ -617,345 +617,415 @@ footer #contact button:hover {
 .transition .example div:nth-child(1) {
   animation: lineal 5s linear;
   animation-delay: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 @keyframes lineal {
   0% {
-    width: -20px;
+    transform: translate(-200px, -10px);
   }
   5% {
-    width: -15px;
+    transform: translate(-180px, -9px);
   }
   10% {
-    width: -10px;
+    transform: translate(-160px, -8px);
   }
   15% {
-    width: -5px;
+    transform: translate(-140px, -7px);
   }
   20% {
-    width: 0px;
+    transform: translate(-120px, -6px);
   }
   25% {
-    width: 5px;
+    transform: translate(-100px, -5px);
   }
   30% {
-    width: 10px;
+    transform: translate(-80px, -4px);
   }
   35% {
-    width: 15px;
+    transform: translate(-60px, -3px);
   }
   40% {
-    width: 20px;
+    transform: translate(-40px, -2px);
   }
   45% {
-    width: 25px;
+    transform: translate(-20px, -1px);
   }
   50% {
-    width: 30px;
+    transform: translate(0px, 0px);
   }
   55% {
-    width: 35px;
+    transform: translate(20px, 1px);
   }
   60% {
-    width: 40px;
+    transform: translate(40px, 2px);
   }
   65% {
-    width: 45px;
+    transform: translate(60px, 3px);
   }
   70% {
-    width: 50px;
+    transform: translate(80px, 4px);
   }
   75% {
-    width: 55px;
+    transform: translate(100px, 5px);
   }
   80% {
-    width: 60px;
+    transform: translate(120px, 6px);
   }
   85% {
-    width: 65px;
+    transform: translate(140px, 7px);
   }
   90% {
-    width: 70px;
+    transform: translate(160px, 8px);
   }
   95% {
-    width: 75px;
+    transform: translate(180px, 9px);
   }
   100% {
-    width: 80px;
+    transform: translate(200px, 10px);
   }
 }
 .transition .example div:nth-child(2) {
   animation: cuadratica 5s linear;
   animation-delay: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 @keyframes cuadratica {
   0% {
-    width: -20px;
+    transform: translate(-200px, 400px);
   }
   5% {
-    width: -15px;
+    transform: translate(-180px, 324px);
   }
   10% {
-    width: -10px;
+    transform: translate(-160px, 256px);
   }
   15% {
-    width: -5px;
+    transform: translate(-140px, 196px);
   }
   20% {
-    width: 0px;
+    transform: translate(-120px, 144px);
   }
   25% {
-    width: 5px;
+    transform: translate(-100px, 100px);
   }
   30% {
-    width: 10px;
+    transform: translate(-80px, 64px);
   }
   35% {
-    width: 15px;
+    transform: translate(-60px, 36px);
   }
   40% {
-    width: 20px;
+    transform: translate(-40px, 16px);
   }
   45% {
-    width: 25px;
+    transform: translate(-20px, 4px);
   }
   50% {
-    width: 30px;
+    transform: translate(0px, 0px);
   }
   55% {
-    width: 35px;
+    transform: translate(20px, 4px);
   }
   60% {
-    width: 40px;
+    transform: translate(40px, 16px);
   }
   65% {
-    width: 45px;
+    transform: translate(60px, 36px);
   }
   70% {
-    width: 50px;
+    transform: translate(80px, 64px);
   }
   75% {
-    width: 55px;
+    transform: translate(100px, 100px);
   }
   80% {
-    width: 60px;
+    transform: translate(120px, 144px);
   }
   85% {
-    width: 65px;
+    transform: translate(140px, 196px);
   }
   90% {
-    width: 70px;
+    transform: translate(160px, 256px);
   }
   95% {
-    width: 75px;
+    transform: translate(180px, 324px);
   }
   100% {
-    width: 80px;
+    transform: translate(200px, 400px);
   }
 }
 .transition .example div:nth-child(3) {
   animation: trigonometrica 5s linear;
   animation-delay: 6s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 @keyframes trigonometrica {
   0% {
-    width: -20px;
+    transform: translate(-200px, -182.58905015px);
   }
   5% {
-    width: -15px;
+    transform: translate(-180px, 150.19744935px);
   }
   10% {
-    width: -10px;
+    transform: translate(-160px, 57.58066333px);
   }
   15% {
-    width: -5px;
+    transform: translate(-140px, -198.12147114px);
   }
   20% {
-    width: 0px;
+    transform: translate(-120px, 107.3145836px);
   }
   25% {
-    width: 5px;
+    transform: translate(-100px, 108.80422218px);
   }
   30% {
-    width: 10px;
+    transform: translate(-80px, -197.87164932px);
   }
   35% {
-    width: 15px;
+    transform: translate(-60px, 55.88309964px);
   }
   40% {
-    width: 20px;
+    transform: translate(-40px, 151.36049906px);
   }
   45% {
-    width: 25px;
+    transform: translate(-20px, -181.85948537px);
   }
   50% {
-    width: 30px;
+    transform: translate(0px, 0px);
   }
   55% {
-    width: 35px;
+    transform: translate(20px, 181.85948537px);
   }
   60% {
-    width: 40px;
+    transform: translate(40px, -151.36049906px);
   }
   65% {
-    width: 45px;
+    transform: translate(60px, -55.88309964px);
   }
   70% {
-    width: 50px;
+    transform: translate(80px, 197.87164932px);
   }
   75% {
-    width: 55px;
+    transform: translate(100px, -108.80422218px);
   }
   80% {
-    width: 60px;
+    transform: translate(120px, -107.3145836px);
   }
   85% {
-    width: 65px;
+    transform: translate(140px, 198.12147114px);
   }
   90% {
-    width: 70px;
+    transform: translate(160px, -57.58066333px);
   }
   95% {
-    width: 75px;
+    transform: translate(180px, -150.19744935px);
   }
   100% {
-    width: 80px;
+    transform: translate(200px, 182.58905015px);
   }
 }
 .transition .example div:nth-child(4) {
   animation: exponencial 5s linear;
   animation-delay: 8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 @keyframes exponencial {
   0% {
-    width: -20px;
+    transform: translate(-200px, 0.02608405px);
   }
   5% {
-    width: -15px;
+    transform: translate(-180px, 0.03756104px);
   }
   10% {
-    width: -10px;
+    transform: translate(-160px, 0.05408789px);
   }
   15% {
-    width: -5px;
+    transform: translate(-140px, 0.07788657px);
   }
   20% {
-    width: 0px;
+    transform: translate(-120px, 0.11215665px);
   }
   25% {
-    width: 5px;
+    transform: translate(-100px, 0.16150558px);
   }
   30% {
-    width: 10px;
+    transform: translate(-80px, 0.23256804px);
   }
   35% {
-    width: 15px;
+    transform: translate(-60px, 0.33489798px);
   }
   40% {
-    width: 20px;
+    transform: translate(-40px, 0.48225309px);
   }
   45% {
-    width: 25px;
+    transform: translate(-20px, 0.69444444px);
   }
   50% {
-    width: 30px;
+    transform: translate(0px, 1px);
   }
   55% {
-    width: 35px;
+    transform: translate(20px, 1.44px);
   }
   60% {
-    width: 40px;
+    transform: translate(40px, 2.0736px);
   }
   65% {
-    width: 45px;
+    transform: translate(60px, 2.985984px);
   }
   70% {
-    width: 50px;
+    transform: translate(80px, 4.29981696px);
   }
   75% {
-    width: 55px;
+    transform: translate(100px, 6.19173642px);
   }
   80% {
-    width: 60px;
+    transform: translate(120px, 8.91610045px);
   }
   85% {
-    width: 65px;
+    transform: translate(140px, 12.83918465px);
   }
   90% {
-    width: 70px;
+    transform: translate(160px, 18.48842589px);
   }
   95% {
-    width: 75px;
+    transform: translate(180px, 26.62333328px);
   }
   100% {
-    width: 80px;
+    transform: translate(200px, 38.33759992px);
   }
 }
 .transition .example div:nth-child(5) {
   animation: radical 5s linear;
   animation-delay: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 @keyframes radical {
   0% {
-    width: -20px;
+    transform: translate(-200px, 0px);
   }
   5% {
-    width: -15px;
+    transform: translate(-180px, 1.41421356px);
   }
   10% {
-    width: -10px;
+    transform: translate(-160px, 2px);
   }
   15% {
-    width: -5px;
+    transform: translate(-140px, 2.44948974px);
   }
   20% {
-    width: 0px;
+    transform: translate(-120px, 2.82842712px);
   }
   25% {
-    width: 5px;
+    transform: translate(-100px, 3.16227766px);
   }
   30% {
-    width: 10px;
+    transform: translate(-80px, 3.46410162px);
   }
   35% {
-    width: 15px;
+    transform: translate(-60px, 3.74165739px);
   }
   40% {
-    width: 20px;
+    transform: translate(-40px, 4px);
   }
   45% {
-    width: 25px;
+    transform: translate(-20px, 4.24264069px);
   }
   50% {
-    width: 30px;
+    transform: translate(0px, 4.47213595px);
   }
   55% {
-    width: 35px;
+    transform: translate(20px, 4.69041576px);
   }
   60% {
-    width: 40px;
+    transform: translate(40px, 4.89897949px);
   }
   65% {
-    width: 45px;
+    transform: translate(60px, 5.09901951px);
   }
   70% {
-    width: 50px;
+    transform: translate(80px, 5.29150262px);
   }
   75% {
-    width: 55px;
+    transform: translate(100px, 5.47722558px);
   }
   80% {
-    width: 60px;
+    transform: translate(120px, 5.65685425px);
   }
   85% {
-    width: 65px;
+    transform: translate(140px, 5.83095189px);
   }
   90% {
-    width: 70px;
+    transform: translate(160px, 6px);
   }
   95% {
-    width: 75px;
+    transform: translate(180px, 6.164414px);
   }
   100% {
-    width: 80px;
+    transform: translate(200px, 6.32455532px);
   }
+}
+.transform .example div {
+  width: 3rem;
+  line-height: 3rem;
+  box-shadow: 0 0 2px #333;
+  border-radius: 50%;
+}
+.transform .example div:hover {
+  box-shadow: 90px 0px 2px hsla(0, 50%, 50%, 0.5), -68.37191216px 58.52590561px 2px hsla(15, 50%, 50%, 0.5), 13.88263049px -88.92284617px 2px hsla(30, 50%, 50%, 0.5), 47.27897899px 76.58131721px 2px hsla(45, 50%, 50%, 0.5), -85.71716824px -27.4329559px 2px hsla(60, 50%, 50%, 0.5), 82.95761428px -34.90034719px 2px hsla(75, 50%, 50%, 0.5), -40.32662545px 80.45969972px 2px hsla(90, 50%, 50%, 0.5), -21.68631443px -87.34817552px 2px hsla(105, 50%, 50%, 0.5), 73.27628735px 52.25500658px 2px hsla(120, 50%, 50%, 0.5), -89.64790516px 7.95318175px 2px hsla(135, 50%, 50%, 0.5), 62.93257258px -64.33887867px 2px hsla(150, 50%, 50%, 0.5), -5.97032427px 89.80175515px 2px hsla(165, 50%, 50%, 0.5), -53.86140622px -72.10373722px 2px hsla(180, 50%, 50%, 0.5), 87.80604281px 19.75092012px 2px hsla(195, 50%, 50%, 0.5), -79.54897259px 42.09466665px 2px hsla(210, 50%, 50%, 0.5), 33.0587431px -83.70853902px 2px hsla(225, 50%, 50%, 0.5), 29.3203175px 85.09006394px 2px hsla(240, 50%, 50%, 0.5), -77.6073247px -45.57524714px 2px hsla(255, 50%, 50%, 0.5), 88.59437556px -15.84413518px 2px hsla(270, 50%, 50%, 0.5), -57.00082781px 69.64844312px 2px hsla(285, 50%, 50%, 0.5), -1.98869574px -89.97802559px 2px hsla(300, 50%, 50%, 0.5), 60.02240404px 67.06199381px 2px hsla(315, 50%, 50%, 0.5), -89.20789396px -11.91434663px 2px hsla(330, 50%, 50%, 0.5), 75.51791351px -48.95962356px 2px hsla(345, 50%, 50%, 0.5), -25.53219823px 86.30241511px 2px hsla(0, 50%, 50%, 0.5);
+}
+/*empieza con*/
+a[href^="https:"] {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #333;
+}
+/*termina en*/
+a[href$=".html"]:hover {
+  color: #ccc;
+  background-color: #333;
+}
+/*contiene*/
+a[href*="facebook"] {
+  background-color: #248;
+}
+a[href*="twitter"] {
+  background-color: skyblue;
+}
+a[href*="instagram"] {
+  background-color: #a36;
+}
+a[href*="api"] {
+  background-color: limegreen;
+}
+/*exactamente igual*/
+input[type="checkbox"]:first-child {
+  display: none;
+}
+input[type="checkbox"]:checked ~ * {
+  color: #ccc !important;
+  background-color: #333 !important;
+}
+input[type="checkbox"]:checked + .check span {
+  transform: translate(100%);
+}
+.check {
+  display: block;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: #ccc;
+}
+.check span {
+  display: block;
+  border-radius: 50%;
+  background-color: green;
+  width: 1.5rem;
+  height: 1.5rem;
 }

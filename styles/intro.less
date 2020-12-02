@@ -235,11 +235,11 @@
 		} 
 	}
 // Mixins Recursivos
-	.grid (@n ; @i: 1) when (@i <= @n) {
+	.grid (@c ; @i: 1) when (@i <= @c) {
 		.col-@{i}{
-			width: percentage(@i / @n);
+			width: percentage(@i / @c);
 		}
-		.grid(@n ; @i + 1);
+		.grid(@c ; @i + 1);
 	}
 	.grid(@col);
 
@@ -273,25 +273,99 @@
 				&:nth-child(@{i}){	
 					animation: extract(@funciones, @i) 5s linear;
 					animation-delay: 2s * @i;
-				}
-				@keyframes extract(@funciones, @i){
-					.lineTime(@x:-20px; @i:0%) when (@i <= 100%){
-							@{i}{
-								width:@x;
+					animation-direction: alternate;
+					animation-iteration-count: infinite;
+					@keyframes extract(@funciones, @i){
+						.lineTime(@f; @x:-20px; @i:0%) when (@i <= 100%){
+						@{i}{
+							transform:
+								if(@f = lineal, translate(@x * 10px, @x / 2px ),
+								if(@f = cuadratica, translate(@x * 10px, pow(@x, 2) ),
+								if(@f = trigonometrica, translate(@x * 10px, sin(@x)* 200px ),
+								if(@f = exponencial, translate(@x * 10px, pow(1.2px, @x) ),
+									translate(@x * 10px, sqrt(@x + 20px);
+								)))));
 							}
-						.lineTime(@x + 5; @i + 5);
+						.lineTime(@f; @x + 2; @i + 5);
+						}
+						.lineTime(extract(@funciones,@i));
 					}
-					.lineTime;
 				}
 				.animaciones (@i + 1);
 			}
 			.animaciones;
 		}
 	}
-
+//mas efectos
+	.transform .example{
+		div{
+			width:3rem;
+			line-height: 3rem;	
+			box-shadow: 0 0 2px #333;
+			border-radius: 50%;
+			&:hover{
+				.colorize (@i:0) when (@i <= 360px){
+					box-shadow+: cos(@i) * 90px sin(@i) * 90px 2px hsla(@i, 50%, 50%, .5);
+					.colorize(@i + 15);
+				}
+				.colorize;
+			}
+		}
+	}	
+// selectores
+	/*empieza con*/
+	a[href^="https:"]{
+		display: block;
+		width:2rem;
+		height: 2rem;
+		border: 2px solid #333;
+	}
+	/*termina en*/
+	a[href$=".html"]:hover{
+		color:#ccc;
+		background-color: #333;
+	}
+	/*contiene*/
+	a[href*="facebook"]{
+		background-color: #248;
+	}
+	a[href*="twitter"]{
+		background-color: skyblue;
+	}
+	a[href*="instagram"]{
+		background-color: #a36;
+	}
+	a[href*="api"]{
+		background-color: limegreen;
+	}
+	/*exactamente igual*/
+		input[type="checkbox"]:first-child{
+			display: none;
+		}
+		input[type="checkbox"]:checked {
+			& ~ *{
+			color:#ccc !important;
+			background-color: #333 !important;
+			}
+			+ .check span{
+				transform: translate(100%);
+			}
+		}
+		.check{
+			display: block;
+			border:2px solid #333;
+			border-radius: 1rem;
+			width:3rem;
+			height: 1.5rem;
+			background-color:#ccc;	
+		 	span{
+		 		display: block;
+		 		border-radius:50%;
+		 		background-color: green;
+		 		width:1.5rem;
+		 		height: 1.5rem;
+		 	}
+		}
+		
+	
 @funciones: lineal, cuadratica, trigonometrica, exponencial, radical;
-
-// x + b 
-// ax^2 + bx + c
-// sin(x)
-// 1.2^x
