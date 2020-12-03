@@ -113,6 +113,42 @@
 	.instagram{ background-image: url(../assets/social/instagram.svg) }
 	.whatsapp{ background-image: url(../assets/social/whatsapp.svg) }
 	.twitter{ background-image: url(../assets/social/twitter.svg) }
+
+	#sprite{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 999;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#sprite a{
+		opacity: .5;
+		width: calc(32px);
+		height: calc(32px);
+		margin:.5rem;
+		border-radius: .2rem;
+		background-color: #ddd;
+		background-image: url(../assets/social/social-media.png);
+		background-size: calc(32px * 11);
+	}
+	/*:link :visited */
+	#sprite .twitter{background-position: calc(32px * -8) calc(32px * 0)}
+	#sprite .linkedin{background-position: calc(32px * -4) calc(32px * 0)}
+	#sprite .youtube{background-position: calc(32px * -10) calc(32px * 0)}
+	/* :hover */
+	#sprite .facebook:hover{background-position: calc(32px * 0) calc(32px * -2)}
+	#sprite .twitter:hover{background-position: calc(32px * -8) calc(32px * -2)}
+	#sprite .linkedin:hover{background-position: calc(32px * -4) calc(32px * -2)}
+	#sprite .youtube:hover{background-position: calc(32px * -10) calc(32px * -2)}
+	/*:active*/
+	#sprite .facebook:active{background-position: calc(32px * 0) calc(32px * -1)}
+	#sprite .twitter:active{background-position: calc(32px * -8) calc(32px * -1)}
+	#sprite .linkedin:active{background-position: calc(32px * -4) calc(32px * -1)}
+	#sprite .youtube:active{background-position: calc(32px * -10) calc(32px * -1)}
 /*Contenido Principal*/
 	article,
 	section{
