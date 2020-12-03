@@ -75,7 +75,7 @@
             UNIQUE KEY(dia, horario, aula),
             UNIQUE KEY(dia, horario, id_profesor, id_curso),
             FOREIGN KEY (id_curso) REFERENCES cursos(id_curso), -- clave foranea (permite vincular campos pk)
-			FOREIGN KEY (id_profesor) REFERENCES profesores(id_profesor)
+			FOREIGN KEY (id_profesor) REFERENCES profesores(id_profesor) -- campo local REFERENCES tabla(campo pk)
         )
 	## clases_detalle
 		
