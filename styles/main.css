@@ -1,5 +1,6 @@
 /*Content First*/	
 	/*Reglas Generales*/
+		@import url(icomoon.css);
 		*{
 			box-sizing: border-box;
 			font-family: sans-serif;
@@ -221,7 +222,60 @@
 				height:300px;
 				border: 2px solid #333;
 			}
-		/*Dispositivos medianos 768px*/
+	/*Pie de pagina*/
+		#footer{
+			padding:1rem;
+			color:#333;
+			background-color: #999;
+		}
+		/*formulario*/
+			#contact{
+				max-width: 540px;
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+			}
+			#contact label{
+				margin-top: .5rem;
+			}
+			#contact input,
+			#contact textarea{
+				outline: none;
+				border:2px solid white;
+				padding:.5rem 1rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				resize: none;
+				height: 6rem;
+			}
+			#contact button{
+				align-self: flex-end;
+				cursor: pointer;
+				margin: .2rem 0;
+				border: 2px solid #333;
+				padding: .5rem 1rem;
+				color: #333;
+				background-color: transparent;
+				font: bold 1.2rem sans-serif;
+				text-transform: uppercase;
+			}
+			#contact button:hover{
+				color:#999;
+				background-color: #333;
+			}
+		/*social*/
+		.social{
+			display: flex;
+			justify-content: center;
+		}
+		.social a{
+			font-size: 3rem;
+			margin:.5rem;
+			color:#333;
+			text-decoration: none;
+		}
+/*Dispositivos medianos 768px*/
 	
 /*Dispositivos Grandes 992px*/
 	

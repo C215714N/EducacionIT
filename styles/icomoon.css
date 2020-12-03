@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ya36dl');
+  src:  url('../fonts/icomoon.eot?ya36dl#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ya36dl') format('truetype'),
+    url('../fonts/icomoon.woff?ya36dl') format('woff'),
+    url('../fonts/icomoon.svg?ya36dl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e902";
+}
+.icon-about:before {
+  content: "\e904";
+}
+.icon-gallery:before {
+  content: "\e90e";
+}
+.icon-contact:before {
+  content: "\e944";
+}
+.icon-map:before {
+  content: "\e948";
+}
+.icon-back:before {
+  content: "\e967";
+}
+.icon-bubbles:before {
+  content: "\e96c";
+}
+.icon-invalid:before {
+  content: "\ea0f";
+}
+.icon-valid:before {
+  content: "\ea10";
+}
+.icon-play:before {
+  content: "\ea1c";
+}
+.icon-pause:before {
+  content: "\ea1d";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-html:before {
+  content: "\eae4";
+}
+.icon-css:before {
+  content: "\eae6";
+}
+.icon-git:before {
+  content: "\eae7";
+}

@@ -16,10 +16,10 @@
 		<a href="#">Maquetacion</a>
 		<button id="menu">&equiv;</button>
 		<ul class="menu">
-			<li><a href="#"><span>inicio</span></a></li>
-			<li><a href="about.html"><span>acerca</span></a></li>
-			<li><a href="#contact"><span>contacto</span></a></li>
-			<li><a href="https://github.com/C215714N/EducacionIT/tree/maquetado-miercoles-19hs" target="_blank"><span>GitHub</span></a></li>
+			<li><a class="icon-home" href="#"><span> inicio</span></a></li>
+			<li><a class="icon-about" href="about.html"><span> acerca</span></a></li>
+			<li><a class="icon-contact" href="#contact"><span> contacto</span></a></li>
+			<li><a class="icon-github" href="https://github.com/C215714N/EducacionIT/tree/maquetado-miercoles-19hs" target="_blank"><span> GitHub</span></a></li>
 		</ul>
 		<a href="#"></a>
 	</nav>
@@ -151,9 +151,113 @@
 				</div>
 			</article>
 		</section>
+		<section>
+			<header class="header">
+				<h1>Nuevas caracteristicas CSS</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Modelos de Color</h1>
+				</header>
+				<p></p>
+				<div class="example">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h1>Gradientes de Fondo</h1>
+				</header>
+				<p></p>
+				<div class="example">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h1>Modos de Fusion</h1>
+				</header>
+				<p></p>
+				<div class="example">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</article>
+		</section>
 	</main>
 	<footer id="footer">
-		
+		<form action="" id="contact">
+			<h2>Formulario de Contacto</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				type="text" 
+				name="contactName" 
+				placeholder="ingrese su Nombre(*)" 
+				pattern="[a-z A-Z]{2,50}" 
+				required />
+			<div class="valid">
+				
+			</div>
+			<label for="contactPhone">Teléfono</label>
+			<datalist id="telefonos">
+				<option value="(5411)"></option>
+				<option value="(3811)"></option>
+				<option value="(02224)"></option>
+				<option value="(02945)"></option>
+			</datalist>
+			<input 
+				type="tel" 
+				name="contactPhone" 
+				placeholder="ingrese su Telefono(*)" 
+				pattern="[\(]\d{2,5}[\)]\d{4,6}[\-]\d{4,6}"
+				list="telefonos" 
+				required />
+			<div class="valid">
+				
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				type="email" 
+				name="contactEmail" 
+				placeholder="ingrese su Correo(*)" 
+				required />
+			<div class="valid">
+				
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="ingrese su consulta" 
+				required ></textarea>
+			<button>Enviar</button>
+			<div>
+				Todos los campos con asterisco (*) son obligatorios
+			</div>
+		</form>
+		<div class="social">
+			<a class="icon-facebook" href="https://facebook.com" target="_blank"></a>
+			<a class="icon-twitter" href="https://twitter.com" target="_blank"></a>
+			<a class="icon-instagram" href="https://instagram.com" target="_blank"></a>
+			<a class="icon-whatsapp" href="https://api.whatsapp.com" target="_blank"></a>
+		</div>
+		<p>
+			Todos los derechos reservados
+			<a href=""> Cristian Racedo </a>
+			&amp; compañia
+		</p>
 	</footer>
 	<!--Scripts JS-->	
 		<script src="scripts/main.js"></script>
