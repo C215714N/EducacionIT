@@ -114,7 +114,6 @@
 	.whatsapp{ background-image: url(../assets/social/whatsapp.svg) }
 	.twitter{ background-image: url(../assets/social/twitter.svg) }
 /*Contenido Principal*/
-
 	article,
 	section{
 		padding: 8px 16px;/*top right bottom left*/
@@ -376,6 +375,77 @@
 	/*atributos de lista*/
 		main ul{
 			list-style: hiragana url(../assets/social/star.png) inside;
+		}
+	/*Position*/
+		main .menu{
+			background-color: #248;
+		}
+		main .menu ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+		}
+		main .menu a{
+			color:#ccc;
+			text-decoration: none;
+		}
+		.show{
+			justify-content: flex-start;
+		}
+		.show a{
+			font-family: century gothic, sans-serif;
+		}
+		.show li{ position: relative; }
+		.show li ul{
+			display: none;
+		}
+		.show li > ul{
+			position: absolute;
+			top:100%;
+			left: 0;
+			z-index: 999;
+			width:10rem;
+			background-color: #248;
+		}
+		.show li li > ul{
+			top:0;
+			left: 100%;
+		}
+		.show li:hover > ul{
+			display: block;
+		}
+		main .display{
+			text-align: left;
+			flex-direction: column;
+			background-color: #284;
+		}
+		.display a{
+			display: block;
+			padding: .5rem 1rem;
+		}
+		.display li{
+			position: relative;
+			padding:0;
+		}
+		.display li:hover{
+			background-color: rgba(36, 204, 96, .5);
+		}
+		.display li > ul{
+			display: none;
+			margin:0;
+			padding:0;
+		}
+		.display li:hover > ul{
+			display: block;
+		}
+		.display li li > ul{
+			position: absolute;
+			top:0;
+			left: 10rem;
+			right: 0;
+		}
+		.display li li:hover > ul{
+			display: flex;
 		}
 /*Formulario de Contacto*/
 	#contact{
