@@ -1,0 +1,65 @@
+/*Content First*/
+	/*Reglas Generales*/	
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,100&display=swap'
+		);
+		*{
+			font-family: Raleway, calibri, segoe ui, sans-serif;
+			box-sizing: border-box;
+			outline: none;
+		}
+		body{
+			margin: 0;
+		}
+	/*Navegacion*/
+		nav, 
+		.menu{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			list-style: none;
+			margin:0;
+			padding:0;
+			background-color: #333;
+		}
+		#menu{
+			display: none;
+			margin:.5rem;
+			border:2px solid #ccc;
+			padding:0 .5rem;
+			color:#ccc;
+			background-color: transparent;
+			font-size: 1.5rem;
+		}
+		#menu:hover{
+			color:#333;
+			background-color: #ccc;
+		}
+		nav a{
+			display: block;
+			color:#ccc;
+			text-decoration: none;
+			padding:.5rem;
+		}
+		nav > a:last-child{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			width: 2rem;
+			height: 2rem;
+			padding:.5rem;
+			border-radius: 50%;
+			color:#333;
+			background-color: #ccc;
+			text-align: center;
+			opacity: .3;
+		}
+		nav > a:last-child:hover{
+			opacity: .7;
+		}
+		.menu a:hover{
+			background-color: rgba(204,204,204,.5);
+		}
+		.brand{
+			font: bold 1.2rem sans-serif;
+		}
