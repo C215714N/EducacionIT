@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+	<style>
+		.position{
+			position:relative;
+			max-width: 960px;
+			margin:1rem;
+			border:2px solid #333;
+			padding:.5rem;
+			height: 400px;
+		}
+		.position div{
+			margin:.5rem;
+			border:2px dashed #999;
+			padding:.5rem;
+			background-color: #ddd;
+			/*
+				static: valor predeterminado de posicion, establece la ubicacion de la etiqueta a partir de su creacion. No sirve como referente de otros elementos que tengan otro tipo de posicion (no modificable).
+			*/
+		}
+		.position:hover .absolute{
+			left:50%;
+			box-shadow: -.5rem .5rem #666;
+		}
+		.absolute{
+			position: absolute;
+			top:0;
+			right:0;
+			/*
+				absolute: valor que toma como referencia al ancestro mas proximo cuya posicion no sea "static". Si no definimos la misma, su posicion va a ser igual a la que hubiera tenido dentro del DOM. La diferencia es que no afecta a los demas elementos y tecnicamente estaria flotando dentro del contenedor, ocupando el espacio de su contenido;
+			*/
+		}
+		.position:hover .relative{
+			top:.5rem;
+			left: .5rem;
+			box-shadow: -.5rem -.5rem #666; /*x y blur color*/
+		}
+		.relative{
+			position: relative;
+			/*
+				relative: valor similar a static, pero a diferencia del primero, se utiliza como referente para las demas etiquetas. Los elementos con este tipo de posicion ocupan su espacio original y se toman como referentes a si mismos. Cuando desplazamos una etiqueta utilizando los atributos "top/right/bottom/left" es espacio original que ocupaba se mantiene intacto y no afecta a los demas elementos;
+			*/
+		}
+		.position:hover .fixed{
+			bottom:3rem;
+			box-shadow: -1.5rem 1.5rem #666;
+		}
+		.fixed{
+			position: fixed;
+			bottom:0;
+			right:0;
+			/*
+				fixed: valor similar a absolute, al igual que el anterior, si no especificamos la posicion que debe ocupar nuestro elemento. La misma sera la que hubiese ocupado originalmente en el DOM y los elementos se reubicaran el base al espacio restante. La ubicacion de nuestra etiqueta se vuelve fija con respecto al viewport, ignorando cualquier otro tipo de ancestro;
+			*/
+		}
+		.sticky{
+			position:sticky;
+			top:0;
+			/*
+				sticky: similar a static y relative, mantiene la posicion y caracteristicas del elemento dentro del DOM, pero al darle atributos de posicion (siempre y cuando se cumplan) cambia su representacion de manera tal que sea igual a un elemento con posicion fixed o absolute, pero a diferencia de estos, mantiene su aspecto;
+			*/
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div class="">static</div>
+		<div class="absolute">absolute</div>
+		<div class="relative">relative</div>
+		<div class="fixed">fixed</div>
+		<div class="sticky">sticky</div>
+	</div>
+	<div class="position">
+		<div class="sticky">sticky</div>
+		<div class="">static</div>
+		<div class="relative">relative</div>
+		<div class="absolute">absolute</div>
+		<div class="fixed">fixed</div>
+	</div>
+	<div class="position">
+		<div class="fixed">fixed</div>
+		<div class="">static</div>
+		<div class="absolute">absolute</div>
+		<div class="sticky">sticky</div>
+		<div class="relative">relative</div>
+	</div>
+</body>
+</html>

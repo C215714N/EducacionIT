@@ -114,7 +114,7 @@
 	.whatsapp{ background-image: url(../assets/social/whatsapp.svg) }
 	.twitter{ background-image: url(../assets/social/twitter.svg) }
 /*Contenido Principal*/
-	main,
+
 	article,
 	section{
 		padding: 8px 16px;/*top right bottom left*/
@@ -141,7 +141,10 @@
 		background-color: #ccc;
 	}
 	article .header{
-		width:100%;
+		position: sticky;
+		top: 0;
+		width: calc(100% + 4rem);
+		margin: -.5rem -2rem;
 	}
 	article section{
 		width:100%;
@@ -359,9 +362,9 @@
 			}
 			.pseudo p:last-of-type::before{
 				content:'';
+				float: left;
 				width:300px;
 				height: 200px;
-				float: left;
 				margin: 0 .5rem .5rem 0;
 				border-radius: .5rem; /*tl tr br bl*/
 				border:.5rem solid #fff;
