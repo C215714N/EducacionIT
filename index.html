@@ -21,7 +21,7 @@
 			<li><a class="icon-contact" href="#contact"><span> contacto</span></a></li>
 			<li><a class="icon-github" href="https://github.com/C215714N/EducacionIT/tree/maquetado-miercoles-19hs" target="_blank"><span> GitHub</span></a></li>
 		</ul>
-		<a href="#"></a>
+		<a class="icon-back" href="#"></a>
 	</nav>
 	<header id="header">
 		<div class="header">
@@ -159,39 +159,57 @@
 				<header>
 					<h1>Modelos de Color</h1>
 				</header>
-				<p></p>
-				<div class="example">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+				<p>
+					CSS permite la representacion de diferentes modelos de color, contemplando diferentes alternativas. Por un lado encontramos los <strong>colores HTML</strong> que poseen nombres definidos y un total de <em>140 variantes</em>; luego los colores que utilizan la <strong> sintesis adhitiva</strong> empleando los canales de color rgb, los mismos se pueden utilizar con dos variantes <em>decimal y hexadecimal</em> donde solamente cambia la forma de representacion. Por ultimo, se incorporo el modelo que utiliza el <strong>circulo cromatico</strong> alterando los valores de <em>tono, saturacion y brillo.</em>
+				</p>
+				<div class="example colors">
+					<div>html color: midnightblue;</div>
+					<div>rgb decimal: rgb(25,33,104);</div>
+					<div>rgb decimal alpha: rgb(25,33,104,.5);</div>
+					<div>rgb hexadecimal: #192168;</div>
+					<div>cromatico: hsl(240,60%,25%);</div>
+					<div>cromatico alpha: hsl(240,60%,25%,.5);</div>
 				</div>
 			</article>
 			<article>
 				<header>
 					<h1>Gradientes de Fondo</h1>
 				</header>
-				<p></p>
-				<div class="example">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+				<p>
+					Otra de las caracteristicas incorporadas es la implementacion de gradientes, los mismos se consideran como <strong>imagenes de fondo</strong> y no como colores. La forma de implementarlos es indicando <em> tipo(direccion, color-a, color-b) </em>pudiendo aplicar cualquier cantidad de valores de color e incluso las paradas de los mismos.
+				</p>
+				<div class="example gradients">
+					<div>linear-gradient()</div>
+					<div>linear-gradient(to right)</div>
+					<div>linear-gradient(-45deg)</div>
+					<div>radial-gradient()</div>
+					<div>radial-gradient(circle)</div>
+					<div>radial-gradient(circle at top right)</div>
 				</div>
 			</article>
 			<article>
 				<header>
 					<h1>Modos de Fusion</h1>
 				</header>
-				<p></p>
-				<div class="example">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+				<p>
+					Al igual que otros programas de diseño como <em>Adobe Photoshop</em>, CSS permite la utilizacion de <strong>modos de fusion</strong> que consisten en la alteracion de los pixeles entre <em>una capa inferior(base) y una capa superior(fusion)</em>, utilizando las imagenes de fondo de una etiqueta para aplicar efectos que en otras circunstancias requeririan de la edicion de imagenes.
+				</p>
+				<div class="example blend">
+					<div>multiply</div>
+					<div>lighten</div>
+					<div>soft-light</div>
+					<div>hard-light</div>
+					<div>luminosity</div>
+					<div>darken</div>
+					<div>color</div>
+					<div>color-burn</div>
+					<div>color-dodge</div>
+					<div>difference</div>
+					<div>overlay</div>
+					<div>saturation</div>
+					<div>screen</div>
+					<div>exclusion</div>
+					<div>normal</div>
 				</div>
 			</article>
 		</section>

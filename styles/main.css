@@ -51,8 +51,10 @@
 			bottom:.5rem;
 			right: .5rem;
 			width: 3rem;
-			height: 3rem;
 			border-radius: 50%;
+			line-height: 2rem;
+			text-align: center;
+			font-size: 2rem;
 			background-color: #ccc;
 			opacity: .3;
 		}
@@ -66,7 +68,6 @@
 			padding:0 .5rem;
 			font-size: 2rem;
 			color:#333;
-			background-color: transparent;
 		}
 		#menu:hover{
 			color:#ccc;
@@ -198,7 +199,21 @@
 				right: 0;
 			}
 	/*Contenido Principal*/
-		/*Multimedia*/
+		.example{
+			list-style: none;
+			margin:.5rem .5rem 1rem 3rem;
+			border-left: .2rem solid #333;
+			padding:1rem;
+			background-color: #eee;
+		}
+		.example div{
+			margin:.5rem;
+			padding:.5rem 1rem;
+			color:#ddd;
+			font-weight: bold;
+			text-shadow: 2px 2px 4px #333;
+		}
+		/*Contenido Multimedia*/
 		/*Elementos estadisticos*/
 			.example ::-webkit-meter-optimum-value{
 				background-color: #284;
@@ -222,6 +237,48 @@
 				height:300px;
 				border: 2px solid #333;
 			}
+		/*Modelos de color*/
+			.colors div:nth-child(1){ background-color: midnightblue; }
+			.colors div:nth-child(2){ background-color:rgb(25, 33, 104);   }
+			.colors div:nth-child(3){ background-color: rgba(25, 33, 104, .5); }
+			.colors div:nth-child(4){ background-color:#192168; }
+			.colors div:nth-child(5){ background-color: hsl(240, 60%, 25%); }
+			.colors div:nth-child(6){ background-color: hsla(240, 60%, 25%, .5); }
+		/*Gradientes de color*/
+			.gradients div:nth-child(1){ background: linear-gradient(#ccc ,#248); }
+			.gradients div:nth-child(2){ background: linear-gradient(to right, #ccc ,#248); }
+			.gradients div:nth-child(3){ background: linear-gradient(-45deg, #ccc ,#248); }
+			.gradients div:nth-child(4){ background: radial-gradient(#ccc ,#248); }
+			.gradients div:nth-child(5){ background: radial-gradient(circle,#ccc ,#248); }
+			.gradients div:nth-child(6){ background: radial-gradient(circle at top right, #ccc ,#248); }
+		/*Modos de Fusion*/
+			.blend{
+				overflow: auto;
+				max-height: 300px;
+			}
+			.blend div{
+				height: 4rem;
+				background: 
+					url(../assets/img/fender.png),
+					linear-gradient(to right, white, red, green, blue, black);
+				background-size: contain;
+					
+			}
+			.blend div:nth-child(1){background-blend-mode: multiply;}
+			.blend div:nth-child(2){background-blend-mode: lighten;}
+			.blend div:nth-child(3){background-blend-mode: soft-light;}
+			.blend div:nth-child(4){background-blend-mode: hard-light;}
+			.blend div:nth-child(5){background-blend-mode: luminosity;}
+			.blend div:nth-child(6){background-blend-mode: darken;}
+			.blend div:nth-child(7){background-blend-mode: color;}
+			.blend div:nth-child(8){background-blend-mode: color-burn;}
+			.blend div:nth-child(9){background-blend-mode: color-dodge;}
+			.blend div:nth-child(10){background-blend-mode: difference;}
+			.blend div:nth-child(11){background-blend-mode: overlay;}
+			.blend div:nth-child(12){background-blend-mode: saturation;}
+			.blend div:nth-child(13){background-blend-mode: screen;}
+			.blend div:nth-child(14){background-blend-mode: exclusion;}
+			.blend div:nth-child(15){background-blend-mode: normal;}
 	/*Pie de pagina*/
 		#footer{
 			padding:1rem;
