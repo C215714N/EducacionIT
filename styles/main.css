@@ -201,6 +201,8 @@
 			}
 	/*Contenido Principal*/
 		.example{
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 			list-style: none;
 			margin:.5rem .5rem 1rem 3rem;
 			border-left: .2rem solid #333;
@@ -236,7 +238,6 @@
 			canvas{
 				width:300px;
 				height:300px;
-				border: 2px solid #333;
 			}
 		/*Modelos de color*/
 			.colors div:nth-child(1){ background-color: midnightblue; }
@@ -280,6 +281,84 @@
 			.blend div:nth-child(13){background-blend-mode: screen;}
 			.blend div:nth-child(14){background-blend-mode: exclusion;}
 			.blend div:nth-child(15){background-blend-mode: normal;}
+		/*Transformaciones*/
+			.transform div{
+				width:200px;
+				background-color: #248;
+			}
+			/*Desplazar - translate (distancia) */
+				.transform div:nth-child(1){
+					transform:
+						translateX(50%) /* eje X */
+						translateY(40px)/* eje Y */
+						translate(25%, -2rem); /* (x,y) */
+				}
+			/*Redimensionar - scale(unidades)*/
+				.transform div:nth-child(2){
+					transform: 
+						scaleX(.8)
+						scaleY(.8)
+						scale(1.5);
+					transform-origin: bottom left;
+				}
+			/*rotacion - rotate(grados)*/
+				.transform div:nth-child(3){
+					transform: 
+						rotate(-10deg); /*sentido horario*/
+					transform-origin: center; /*x y*/
+				}
+			/*sesgar - skew(grados)*/
+				.transform div:nth-child(4){
+					transform: 
+						skewX(-15deg) /*sentido antihorario*/
+						skewY(-15deg)
+				}
+			/*transformaciones multiples*/
+				.transform div:nth-child(5){
+					transform: 
+						scale(1.2)
+						translate(2rem, -.5rem)
+						skew(-15deg)
+				}
+				.transform:hover div{
+					transform: translate(2rem);
+				}
+			/*perspective*/
+				.perspective{
+					perspective: 600px;
+					perspective-origin: center;
+				}
+				.perspective div{
+					width:20rem;
+					background-color: #248;
+				}
+				.perspective div:nth-child(1){
+					transform: 
+						rotateX(30deg);
+				}
+				.perspective div:nth-child(2){
+					transform: 
+						rotateY(30deg);
+				}
+				.perspective div:nth-child(3){
+					transform: 
+						rotateZ(15deg);
+				}
+				.perspective div:nth-child(4){
+					transform: 
+						rotateX(30deg)
+						rotateY(30deg);
+				}
+				.perspective:hover div{
+					transform: 
+						rotateY(60deg);
+				}
+		/*Transition*/
+			.transform:hover div{
+				transition-property: transform;
+				transition-duration: 2s;
+				transition-delay: 1s;
+			}
 	/*Pie de pagina*/
 		#footer{
 			padding:1rem;
