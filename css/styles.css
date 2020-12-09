@@ -96,6 +96,17 @@
 		padding: 16px;
 		background-color: #ddd;
 	}
+	/*float y overflow*/
+		.float p{
+			overflow: hidden;
+			padding:.5rem;
+			background-color:rgba(51,51,51,.5);
+		}
+		.float img{
+			float: left;
+			margin-right:.5rem;
+			max-width: 400px;
+		}
 /*Formulario*/
 	#contact{
 		min-width: 100px;
@@ -144,3 +155,23 @@
 		background-color: #ccc;
 	}
 /*Redes Sociales*/
+	.social{
+		max-width: 360px;
+		margin: 1rem auto;
+		padding:.5rem;
+		text-align: center;
+	}
+	.social a{
+		display: inline-block;
+		width:4rem;
+		height:4rem;
+		background-position: center;
+		background-size: 2.5rem;
+		background-repeat: no-repeat;
+	}
+	.social a:hover{
+		background-size: 4rem;
+	}
+	.facebook{ background-image: url(../assets/icon/facebook.svg) }
+	.instagram{ background-image: url(../assets/icon/instagram.svg) }
+	.whatsapp{ background-image: url(../assets/icon/whatsapp.svg) }
