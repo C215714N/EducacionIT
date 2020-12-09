@@ -3,7 +3,7 @@
 		'https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,400;1,200&family=Texturina:ital,wght@0,400;0,800;1,400&display=swap'
 	);
 	*{
-		box-sizing: content-box;
+		box-sizing: border-box;
 			/*
 				content-box:
 					final-width = width + padding + border;
@@ -98,15 +98,49 @@
 	}
 /*Formulario*/
 	#contact{
+		min-width: 100px;
 		max-width: 720px;
 		margin: auto;
 	}
 	#contact input,
 	#contact textarea{
+		outline: none;
 		width:100%;
-		padding:8px 16px;
+		padding:.5rem 1rem;
+	}
+	#contact textarea{
+		resize: none;
+		height: 6rem;
+			/*
+				Unidades Absolutas: Son aquellas que siempre representan el mismo valor independientemente del contexto en el que se encuentren.
+					Distancia: cm - mm - in(2.54cm) - pc (impresion)
+					Tipograficas: pt (1/72in);
+					hibrida: px (puntos en pantalla) depende de la resolucion
+						celulares (alta densidad de pixeles) 3px => 1px;
+
+				Unidades Relativas: Son aquellas que dependen de su contendor o referente para establecer el tamaño del elemento actual.
+					Distancia: % del padre, unidades tipograficas convertidas;
+					Tipograficas: 
+						em (ancho de "M") defecto 1em = 16px; *
+						ex (alto de la "x") defecto 1ex = 16px;
+						ch (alto de "0") defecto 1ch = 16px;
+					hibrida: rem (Root em) ancho de "M" del HTML, 
+			*/
 	}
 	#contact button{
+		cursor: pointer;
 		display:block;
 		margin-left: auto;
+		outline: none;
+		border:2px solid #ccc;
+		padding:.5rem 1rem;
+		color:#ccc;
+		background-color: transparent;
+		text-transform: uppercase;
+		font-weight: bold;
 	}
+	#contact button:hover{
+		color: #124;
+		background-color: #ccc;
+	}
+/*Redes Sociales*/

@@ -84,8 +84,47 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Atributos Generales</h1>
 				</header>
+				<ul class="example">
+					<li>
+						<strong>Box-Sizing:</strong>
+						<ul>
+							<li>
+								content-box:
+								final-width = width + padding + border | content-width = width;
+							</li>
+							<li>
+								border-box:
+								final-width = width | content-width = width - padding - border;
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Display:</strong>
+						<ul>
+							<li>
+								BLOCK: 
+									ocupa todo su contenedor, 
+									genera salto de linea (no comparte espacio),
+									se les puede definir tamaño (contenedores);
+							</li>
+							<li>
+								INLINE:
+									ocupa en ancho de su contenido,
+									comparte espacio con otras etiquetas,
+									su tamaño es automatico - ancho (contenido);
+							</li>
+							<li>	
+								INLINE-BLOCK:
+									ocupa el espacio de su contenido,
+									comparte espacios,
+									se les puede definir tamaño - ancho/alto (contenido);
+							</li>
+						</ul>
+					</li>
+					<li></li>
+				</ul>
 			</article>
 			<footer>
 				<address>
@@ -131,16 +170,14 @@
 		 	<label for="contactConsult">Consulta</label>
 		 	<textarea 
 		 		name="contactConsult" 
-		 		cols="30" 
-		 		rows="10" 
 		 		required></textarea>
 		 	<button>Enviar</button>
 		 	<div>Todos los campos con asterisco (*) son obligatorios</div>
 		 </form> 
 		 <div class="social">
-		 	<a href="https://.com" target="_blank">1</a>
-		 	<a href="https://.com" target="_blank">2</a>
-		 	<a href="https://.com" target="_blank">3</a>
+		 	<a class="facebook" href="https://facebook.com" target="_blank">1</a>
+		 	<a class="instagram" href="https://instagram.com" target="_blank">2</a>
+		 	<a class="whatsapp" href="https://api.whatsapp.com " target="_blank">3</a>
 		 </div>
 		 <p>
 		 	&copy; Todos los derechos reservados
