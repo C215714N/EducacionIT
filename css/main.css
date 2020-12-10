@@ -1,4 +1,5 @@
 /*Content First*/
+/* CONSTANTES */
 	/*Reglas Generales*/	
 		@import url(
 			'https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,100&display=swap'
@@ -63,3 +64,116 @@
 		.brand{
 			font: bold 1.2rem sans-serif;
 		}
+	/*Cabecera*/
+		#header{
+			position: relative;
+			height: 600px;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding:1rem;
+			color:#ccc;
+			text-shadow: 0 1px .2rem #333;
+		}
+		#header .header{
+			font-size: 2rem;
+			text-align: center;
+		}
+		.header h1,
+		.header p{
+			margin:0;
+			text-shadow: 2px 2px 2px #333;
+		}
+		/*galeria*/
+			.slide,
+			.slide li{
+				position: absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height: 100%;
+				margin:0;
+				padding:0;
+				list-style: none;
+				z-index: -1;
+			}
+			.slide li{
+				font-size: 10rem;
+				opacity: 0;
+				background-size: cover;
+				background-position: center;
+			}
+			.slide li:first-child{
+				background-image: url(../assets/img/header.jpg);
+			}
+			.slide li:nth-child(2){
+				background-image: url(../assets/img/background.jpg);
+			}
+			.slide li:nth-last-child(2){
+				background-image: url(../assets/img/main.jpg);
+			}
+			.slide li:last-child{
+				background-image: url(../assets/img/footer.jpg);
+			}
+			.slide .active{
+				opacity: 1;
+			}
+		/*controles*/
+			#header a{
+				position: absolute;
+				top:0;
+				bottom:0;
+				padding:1rem;
+				font: bold 3rem Raleway, sans-serif;
+				line-height: 600px;
+				text-decoration: none;
+				color: #ccc;
+				opacity: .3
+			}
+			#header a:hover{
+				opacity: .8;
+			}
+			#header .prev{
+				left:0;
+			}
+			#header .next{
+				right: 0;
+			}
+	/*Contenido Principal*/
+		main article::before{
+			content:
+				'Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Enim quos blanditiis, magni vero fugit nemo recusandae consequatur ut beatae omnis maiores voluptatem iusto incidunt itaque sit iste neque! Fugit reiciendis veritatis voluptates quae sed suscipit autem ipsam doloremque quidem eos, enim nobis ratione ab, commodi, mollitia, obcaecati nisi odit earum possimus excepturi. Recusandae animi, et laborum esse repudiandae, eaque natus saepe, corrupti quas quis optio praesentium quibusdam, quidem! Veritatis quos quod magni voluptas quis, natus nam! Voluptatibus tempora officia temporibus placeat unde, velit facilis culpa, nesciunt alias id repudiandae. Quae error commodi itaque consequuntur veniam, expedita, et est totam nihil.';
+		}
+/* VARIABLES */
+	@media screen and (max-width: 768px){
+		/*Navegacion*/
+			nav{
+				flex-wrap: wrap;
+				text-align: center;
+			}
+			#menu{
+				display: block;
+			}
+			.menu{
+				display: none;
+				width:100%;
+			}
+			.open{
+				display: block;
+			}
+		/*Cabecera*/
+			#header .header{
+				font-size: 1.2rem;
+			}
+	}
+
+/*
+	BREAKPOINTS
+		xs	< 576px		smartwatch / mobile
+		sm 	>= 576px	mobile (landscape) / smartphone
+		md 	>= 768px	smartphone (lanscape) / tablets (portrait)
+		lg 	>= 992px	tablets (landscape) / desktop (netbook)
+		xl	>= 1200px 	desktop (pc / notebook) / smartTv
+*/
