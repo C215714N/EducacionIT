@@ -10,6 +10,11 @@
 	<title>Maquetacion</title>
 	<link rel="icon" href="assets/img/cr.png">
 	<link rel="stylesheet" href="css/main.css">
+	<link 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+		rel="stylesheet" 
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+		crossorigin="anonymous">
 </head>
 <body>
 	<nav>
@@ -23,7 +28,7 @@
 		</ul>
 		<a href="#"> ^ </a>
 	</nav>
-	<header id="header">
+	<header id="header" class="jumbotron">
 		<div class="header">
 			<h1>Maquetacion Web</h1>
 			<p> html | css | js </p>
@@ -57,8 +62,44 @@
 			<aside></aside>
 		</section>
 	</main>
+	<div class="row container m-auto bg-dark rounded p-3">
+			<p class="col-md-6 col-lg-4 text-primary">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Unde cupiditate, est. Ratione laboriosam quo, natus minima fuga optio quibusdam veniam a voluptates inventore consequuntur dolores nemo, rem nesciunt perspiciatis sint dolorem. Delectus eveniet aliquam, magnam, aliquid in inventore fugiat harum nobis dolorem explicabo natus ea cupiditate tempore obcaecati unde rerum.</p>
+			<p class="col-md-6 col-lg-4 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ad, fugiat. Veritatis pariatur, cum quasi maiores laborum natus suscipit itaque tempore iure aperiam corrupti perferendis. Ex eaque fuga consectetur necessitatibus similique odio aut eos, molestias sunt consequuntur doloribus quod, quidem beatae eveniet quibusdam illo voluptates modi magnam vero itaque, iure!</p>
+			<p class="col-lg-4 text-success">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, deleniti dolorem tempore aliquid inventore eaque dolor modi tenetur laboriosam obcaecati tempora impedit cumque sunt molestias molestiae soluta atque iure quae quasi ex perferendis magni necessitatibus quam minus qui! Voluptatum, molestiae pariatur. Debitis sit ut laboriosam, dolore hic deleniti enim ullam.</p>
+			<div class="col-lg-8 text-danger">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dolorum, reprehenderit, similique. Laborum maxime ratione illum cumque voluptatum autem neque, totam eligendi non tempore architecto necessitatibus, vel deserunt officia asperiores animi dolor tempora, veritatis eaque nam cum fugiat eius repudiandae! Exercitationem, error cum nostrum adipisci sit non quis, sapiente quos sint!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minus magnam veniam fugit, deleniti sunt molestiae, tempora? Quia, vel consequatur tempora! Obcaecati ad dignissimos voluptas perspiciatis, delectus architecto id expedita voluptatum molestias consectetur officia. Labore quasi a fuga beatae ipsa ut ipsam ipsum. Ipsam qui asperiores voluptatum tempora. Cumque, voluptas!</p>
+			</div>
+			<p class="col-lg-4 text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur nulla vitae nobis a sequi nam cupiditate provident, voluptatum voluptatem pariatur voluptate ad illum molestiae ex minima ea odit laborum ipsa sit eligendi repellat minus ratione quidem placeat. Dolorum, nemo provident quisquam quos deserunt minima sunt sed consectetur vero a.
+				<button class="btn btn-outline-primary">primary</button>
+				<button class="btn btn-outline-secondary">secondary</button>
+				<button class="btn btn-outline-success">success</button>
+				<button class="btn btn-outline-danger">danger</button>
+				<button class="btn btn-outline-warning">warning</button>
+				<button class="btn btn-outline-info">info</button>
+			</p>
+		</div>
 	<footer id="footer">
-		<form action="" id="contact"></form>
+		<form action="" id="contact">
+			<label for="contactName">Nombre: </label>
+			<input 
+				class="form-control" 
+				type="text" 
+				pattern="[a-z A-Z]{2,50}"
+				placeholder="Ingrese su Nombre (*)" 
+				name="contactName">
+			<label for="contactEmail">Correo: </label>
+			<input 
+				class="form-control" 
+				type="email" 
+				placeholder="Ingrese su Correo (*)" 
+				name="contactEmail">
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				class="form-control" 
+				placeholder="Ingrese su Consulta (*)" name="contactConsult"></textarea>
+			<button>Enviar</button>
+		</form>
 		<div class="social">
 			<a class="facebook" href=""></a>
 			<a class="instagram" href=""></a>
@@ -71,5 +112,9 @@
 			&amp; Compañia</p>
 	</footer>
 	<script src="js/scripts.js"></script>
+	<script 
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+		crossorigin="anonymous"></script>
 </body>
 </html>

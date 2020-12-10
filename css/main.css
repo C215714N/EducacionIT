@@ -15,6 +15,8 @@
 	/*Navegacion*/
 		nav, 
 		.menu{
+			position: sticky;
+			top:0;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -142,11 +144,99 @@
 				right: 0;
 			}
 	/*Contenido Principal*/
+		main{
+			max-width: 1200px;
+			counter-reset: section;
+			display: grid;
+			grid-template-areas: 
+				"section aside"
+				"article aside";
+			gap:.5rem;
+			margin: auto;
+			padding:.5rem;
+		}
+		section{
+			display: flex;
+			flex-wrap: wrap;
+			background-color: #ccc;
+		}
+		section:before{
+			counter-increment: section;
+			content: 'Titulo ' counter(section);
+			display: block;
+			width:100%;
+		}
+		section:last-child{
+			grid-area: aside;
+			max-width: 280px;
+		}
+		article{
+			padding:.5rem;
+			width:33.3%;
+			min-width: 280px;
+		}
 		main article::before{
 			content:
 				'Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Enim quos blanditiis, magni vero fugit nemo recusandae consequatur ut beatae omnis maiores voluptatem iusto incidunt itaque sit iste neque! Fugit reiciendis veritatis voluptates quae sed suscipit autem ipsam doloremque quidem eos, enim nobis ratione ab, commodi, mollitia, obcaecati nisi odit earum possimus excepturi. Recusandae animi, et laborum esse repudiandae, eaque natus saepe, corrupti quas quis optio praesentium quibusdam, quidem! Veritatis quos quod magni voluptas quis, natus nam! Voluptatibus tempora officia temporibus placeat unde, velit facilis culpa, nesciunt alias id repudiandae. Quae error commodi itaque consequuntur veniam, expedita, et est totam nihil.';
 		}
+	/*Pie de Pagina*/
+		#footer{
+			padding:1rem;
+			color:#ccc;
+			background-color: #333;
+		}
+		/*Formulario*/
+		#contact{
+			display: flex;
+			flex-direction: column;
+			max-width: 720px;
+			margin: auto;
+		}
+		#contact label{
+			margin-top: .5rem;
+			overflow: hidden;
+		}
+		#contact input,
+		#contact textarea{
+			border:2px solid white;
+			padding: .5rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			resize: none;
+			height: 6rem;
+		}
+		#contact button{
+			cursor: pointer;
+			align-self: flex-end;
+			margin-top: .5rem;
+			border:2px solid #ccc;
+			padding:.5rem 1rem;
+			color:#ccc;
+			background-color: transparent;
+			text-transform: uppercase;
+		}
+		#contact button:hover{
+			color:#333;
+			background-color: #ccc
+		}
+		#contact :focus{
+			box-shadow: 0 0 .5rem white;
+		}
 /* VARIABLES */
+	@media screen and (max-width: 992px){
+		/*Contenido Principal*/
+			main, section, section:last-child, article{
+				display: block;
+				width:100%;
+				max-width: 720px;
+			}
+			section{
+				border-top: 2px solid #333;
+				margin:1rem auto;
+				padding:1rem .5rem;
+			}
+	}
 	@media screen and (max-width: 768px){
 		/*Navegacion*/
 			nav{
@@ -161,19 +251,42 @@
 				width:100%;
 			}
 			.open{
-				display: block;
+				display: block !important;
 			}
 		/*Cabecera*/
 			#header .header{
 				font-size: 1.2rem;
 			}
+		/*Formulario de Contacto*/
+			#contact label{
+				height: 0;
+			}
 	}
-
+	@media screen and (max-width: 576px) and (orientation: landscape){
+		/*Cabecera*/
+			#header{
+				height: 300px;
+			}
+			#header a{
+				line-height: 300px;
+			}
+	} 
 /*
 	BREAKPOINTS
-		xs	< 576px		smartwatch / mobile
-		sm 	>= 576px	mobile (landscape) / smartphone
-		md 	>= 768px	smartphone (lanscape) / tablets (portrait)
-		lg 	>= 992px	tablets (landscape) / desktop (netbook)
-		xl	>= 1200px 	desktop (pc / notebook) / smartTv
+		xs	< 576px	 1rem	 smartwatch / mobile
+		sm 	>= 576px 540px	 mobile (landscape) / smartphone
+		md 	>= 768px 720px	 smartphone (lanscape) / tablets (portrait)
+		lg 	>= 992px 960px	 tablets (landscape) / desktop (netbook)
+		xl	>= 1200px 1140px desktop (pc / notebook) / smartTv
+*/
+
+/*
+	ORIENTATION
+		portrait  width < height (320 x 640) = (300 x 301)
+		landscape width > height (640 x 320) = (301 x 300)
+*/
+/*
+	ASPECT-RATIO
+		16/9	width = 1.78(height) x height = 0.5625(width)
+		4/3		width = 1.33(height) x height = 0.75(width)
 */
