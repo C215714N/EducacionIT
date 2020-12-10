@@ -80,12 +80,32 @@
 			width:100%;
 			margin:0;
 			padding:0;
-			text-align: center;
+		}
+		.menu a{
+			position: relative;
+			padding-left: 40%;
+			transition:all .5s ease-in;
 		}
 		.menu a:hover{
 			color:#ccc;
 			background-color: #333;
+			transform: scale(1.1);
 		}
+		.menu a::after{
+			content:'';
+			position:absolute;
+			bottom: 0;
+			left:0;
+			width:0;
+			height: .2rem;
+			background-color: #333;
+			transition: all 1.2s ease-out;
+		}
+		.menu a:hover::after{
+			background-color: #ccc;
+			width:100%;
+		}
+
 		.openMenu{
 			display: block;
 		}
@@ -117,7 +137,8 @@
 				opacity: 0;
 				background-size: cover;
 				background-position: center;
-				background-blend-mode: screen;
+				background-blend-mode: saturation;
+				transition: all 1.5s ease-out;
 			}
 			.slide .active{
 				opacity: 1;
@@ -203,6 +224,7 @@
 		.example{
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			overflow: hidden;
 			list-style: none;
 			margin:.5rem .5rem 1rem 3rem;
 			border-left: .2rem solid #333;
@@ -381,6 +403,7 @@
 				border:2px solid white;
 				padding:.5rem 1rem;
 				font-size: 1rem;
+				transition: all 1.5s ease-in;
 			}
 			#contact textarea{
 				resize: none;
@@ -401,18 +424,100 @@
 				color:#999;
 				background-color: #333;
 			}
+			#contact .valid{
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+				transition: all 1.5s ease-in;
+			}
+			#contact :focus + .valid{
+				height: auto;
+				opacity: .9;
+				padding:.5rem;
+			}
+		/*Validacion*/
+			#contact :focus:valid{ border-color: lightgreen; }
+			#contact :valid + .valid{
+				color:darkgreen;
+				background-color: lightgreen;
+			}
+			#contact :focus:invalid{ border-color: tomato; }
+			#contact :invalid + .valid{
+				color: darkred;
+				background-color: tomato;
+			}
+			#contact:invalid button{
+				color:#ccc;
+				background-color: darkred;
+			}
 		/*social*/
 		.social{
 			display: flex;
 			justify-content: center;
 		}
 		.social a{
-			font-size: 3rem;
-			margin:.5rem;
+			font-size: 2rem;
+			margin:.5rem 1rem;
+			border-radius: .5rem;
+			padding:.2rem;
 			color:#333;
 			text-decoration: none;
+			transition: all 1s ease;
 		}
-/*Dispositivos medianos 768px*/
-	
-/*Dispositivos Grandes 992px*/
-	
+		.social a:hover{
+			transform: 
+				scale(1.5)
+				rotate(720deg);
+		}
+		.social .icon-facebook:active{ color:#248; }
+		.social .icon-twitter:active{ color:skyblue; }
+		.social .icon-instagram:active{ color:purple; }
+		.social .icon-whatsapp:active{ color:limegreen; }
+
+		.social a:active{
+			text-shadow: 0 0 5px white;
+			background-color: hsla(0, 0%, 100%, .5);
+		}
+/*Dispositivos medianos (Tablets)*/
+	@media screen and (min-width: 540px){
+		/*navegacion*/
+			nav{
+				flex-wrap:nowrap;
+			}
+			#menu{
+				display: none;
+			}
+			.menu{
+				display: flex;
+				justify-content: flex-end;
+			}
+			.menu a{
+				font-size: 1.2rem;
+				padding:.5rem;
+			}
+			.menu span{
+				display: none;
+			}
+	}
+/*Dispositivos Grandes (Desktop)*/
+	@media screen and (min-width: 992px){
+		/*Navegacion*/
+			.menu span{
+				display: inline-block;
+				padding:.5rem;
+			}
+		/*Formulario de Contacto*/
+			#contact :not(button):focus,
+			#contact :focus + .valid{
+				transform: 
+					scale(1.2)
+					translateY(-1rem);
+			}
+	}
+/*Dispositivos ExtraGrandes (Desktop SmartTV)*/
+	@media screen and (min-width: 1200px){
+		/*Formulario de Contacto*/
+			#contact{
+				max-width: 960px;
+			}
+	}
