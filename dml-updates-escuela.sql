@@ -1,6 +1,9 @@
-select * from clases;
-select * from clases_detalle;
-select * from alumnos;
+SELECT * FROM cursos;
+SELECT * FROM clases;
+SELECT * FROM clases_detalle;
+SELECT * FROM alumnos;
+SELECT * FROM facturacion;
+SELECT * FROM facturacion_detalle;
 
 SELECT COUNT(apellido) 
 FROM alumnos;
@@ -11,6 +14,22 @@ VALUES
     (2,6), 
     (2,8), 
     (2,20);
+
+INSERT INTO facturacion_detalle(id_factura, id_curso)
+VALUES 
+	(1,1), (1,3), (1,5),
+    (2,1), (2,2), (2,8), (2,5),
+    (3,7), (3,2), (3,3),
+    (4,8), (4,1),
+    (5,3), (5,4), (5,6);
+    
+INSERT INTO facturacion(factura, id_alumno, tipo)
+VALUES 
+	(2,3,2), 
+    (2,4,2), 
+    (2,6,2), 
+    (2,8,2), 
+    (2,20,2);
 
 INSERT INTO cursos(nombre, duracion)
 	VALUES 
@@ -46,3 +65,50 @@ SELECT * FROM cursos;
 				WHEN duracion = '48' THEN '48:00'
 					ELSE '15:00'
 			END;
+	/* actualizcion por consulta */
+		UPDATE facturacion_detalle
+		SET monto = (
+			SELECT monto 
+			FROM cursos
+			WHERE id_curso = facturacion_detalle.id_curso
+		)
+		WHERE id_factura > 5;
+/* Consulta con agrupacion de datos */
+SELECT 
+	id_factura, 
+    GROUP_CONCAT(id_detalle) AS detalles, 
+    SUM(monto) AS total 
+	FROM facturacion_detalle
+	GROUP BY id_factura -- agrupa los valores segun el criterio
+	ORDER BY id_factura DESC -- organiza los resultados segun los parametros
+	LIMIT 100 -- restringe la cantidad de resultados a mostrar
+	OFFSET 0; -- muestra los resultados a partir de la posicion indicada
+    
+SELECT * FROM facturacion;
+
+UPDATE facturacion
+	SET total = (
+		SELECT SUM(monto) AS total
+        FROM facturacion_detalle
+        WHERE id_factura = facturacion.id_factura
+    );
+    
+SELECT 
+	id_factura,
+    id_alumno,
+    factura,
+    total,
+    '21%' AS iva,
+    (total * 0.4) AS porcentaje_iva,
+    (total * 0.4 + total) AS total_iva
+FROM facturacion
+	HAVING total_iva >= 12000;
+    
+SELECT MAX(total) AS TOTAL
+FROM facturacion;
+
+SELECT CONCAT(apellido, ' ' , nombre) AS profesores
+FROM profesores
+WHERE nombre LIKE '%l%'
+HAVING profesores LIKE '%s';
+    
