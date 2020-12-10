@@ -58,4 +58,4 @@
 			}
 		}
 		nextItem.classList.add('active');
-	})
+	});

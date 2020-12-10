@@ -24,6 +24,7 @@
 			padding:.5rem;
 			color:#333;
 			text-decoration: none;
+			transition: all 1s ease;
 			/*
 				BLOCK:
 					generan saltos de linea (no comparten espacio),
@@ -60,6 +61,8 @@
 		}
 		nav > a:last-child:hover{
 			opacity: .6;
+			transform: 
+				rotate(90deg);
 		}
 		#menu{
 			margin:.5rem;
@@ -221,6 +224,9 @@
 				right: 0;
 			}
 	/*Contenido Principal*/
+		main{
+			padding:.5rem 1rem;
+		}
 		.example{
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -239,6 +245,10 @@
 			text-shadow: 2px 2px 4px #333;
 		}
 		/*Contenido Multimedia*/
+			.example audio,
+			.example video{
+				width:100%;
+			}
 		/*Elementos estadisticos*/
 			.example ::-webkit-meter-optimum-value{
 				background-color: #284;
@@ -467,7 +477,7 @@
 		.social a:hover{
 			transform: 
 				scale(1.5)
-				rotate(720deg);
+				rotate(360deg);
 		}
 		.social .icon-facebook:active{ color:#248; }
 		.social .icon-twitter:active{ color:skyblue; }
@@ -475,7 +485,7 @@
 		.social .icon-whatsapp:active{ color:limegreen; }
 
 		.social a:active{
-			text-shadow: 0 0 5px white;
+			text-shadow: 0 0 10px white;
 			background-color: hsla(0, 0%, 100%, .5);
 		}
 /*Dispositivos medianos (Tablets)*/
@@ -516,6 +526,11 @@
 	}
 /*Dispositivos ExtraGrandes (Desktop SmartTV)*/
 	@media screen and (min-width: 1200px){
+		/*Contenido Principal*/
+			main{
+				max-width: 1140px;
+				margin: auto;
+			}
 		/*Formulario de Contacto*/
 			#contact{
 				max-width: 960px;
