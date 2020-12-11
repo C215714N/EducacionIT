@@ -56,10 +56,21 @@ SELECT * FROM profesores;
     
 /*Tabla Cursos*/
 	INSERT INTO cursos (duracion,nombre)
-    VALUES('12','introduccion base datos'),
-			('12', 'fundamentos web'),
-            ('36', 'fundamentos redes');
-
+    VALUES('12:00','introduccion base datos'),
+			('12:00', 'fundamentos web'),
+            ('36:00', 'fundamentos redes');
+	
+    UPDATE cursos -- tabla
+		SET duracion = '12:00' -- valor actualizado
+        WHERE duracion = '12'; -- condicion: valor original
+    
+    UPDATE cursos
+		SET duracion =
+			CASE
+				WHEN duracion = '12' then '12:00'
+                WHEN duracion = '36' then '36:00'
+                ELSE '24:00'
+            END;
 /*Tabla clases*/
 	INSERT INTO clases (dia,horario, id_curso,id_profesor)
 		VALUES (4,3,1,1);
