@@ -107,6 +107,59 @@
 			margin-right:.5rem;
 			max-width: 400px;
 		}
+	/*flexbox*/
+		.flexbox{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			margin-top: 1rem;
+		}
+		.flexbox div,
+		.flexbox span{
+			width: 150px;
+			border:2px dashed #999;
+			padding:.5rem;
+			color:#ccc;
+			background-color: #333;
+		}
+		.align{
+			height: 300px;
+			align-items: baseline;
+		}
+		.align span{
+			font-size: 1.2rem;
+			align-self: flex-end;
+		}
+		.col{
+			flex-direction: column;
+			border-left: .4rem dashed limegreen;
+			border-top: .4rem dashed tomato;
+		}
+		.row-r{
+			flex-direction: row-reverse;
+			border-top: .4rem dashed limegreen;
+			border-right: .4rem dashed tomato;
+		}
+		.col-r{
+			flex-direction: column-reverse;
+			border-left: .4rem dashed limegreen;
+			border-bottom: .4rem dashed tomato;
+		}
+		.overflow{
+			overflow: auto;
+			height: 20rem;
+		}
+		.referencias span{
+			display: inline-block;
+			border:2px solid black;
+			padding:.5rem;
+		}
+		.tomato{
+			background-color: tomato;
+		}
+		.limegreen{
+			background-color: limegreen;
+		}
 /*Formulario*/
 	#contact{
 		min-width: 100px;

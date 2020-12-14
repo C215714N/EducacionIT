@@ -135,7 +135,7 @@
 		</section>
 		<section>
 			<header class="header">
-				<h1>Clase 2</h1>
+				<h1>Herramientas de Organizacion</h1>
 			</header>
 			<article class="float">
 				<header>
@@ -157,8 +157,91 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Flexbox</h1>
 				</header>
+				<p>
+					Es una herrienta que permite indicar a un contenedor, la forma en la que se van a distribuir y organizar sus elementos. A diferencia de los valores vistos anteriormente, que corresponden al atributo <strong>display</strong> y modifican la forma en la que se representa el elemento seleccionado, <strong>FLEXBOX</strong> actua sobre la etiqueta padre y afecta a las etiquetas que sean <em>hijos directos</em>
+				</p>
+				<h2>Justify-Content</h2>
+				<div class="example flexbox">
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<span>item 5</span>
+					<span>item 6</span>
+					<span>item 7</span>
+				</div>
+				<ul>
+					<li><strong>Flex-Start:</strong> Es valor predeterminado y permite distribuir los elementos al principio del <em>flex</em>(izquierda)</li>
+					<li><strong>Flex-End:</strong> Permite distribuir los elementos en orden hacia el final del <em>flex</em>(derecha)</li>
+					<li><strong>Center:</strong> Alinea todos los elementos hacia el centro del <em>flex</em>(horizontal)</li>
+					<li><strong>Space-Around:</strong> Calcula la distancia que debe tener cada elemento y la aplica al <em>flex</em> las distancias entre los elementos que se encuentran en medio es mayor debido a que estas se suman.</li>
+					<li><strong>Space-Between:</strong> Separa de extremo a extremo los elementos dentro del <em>flex</em> y la distancia resultante es equitativa entre cada etiqueta, el primer y ultimo elemento estan en el limite de la caja contenido.</li>
+					<li><strong>Space-Evenly:</strong> Calcula exactamente la misma distancia de separacion para cada etiqueta, quedante distribuido de manera precisa, pero no es compatible con todos los navegadores.</li>
+				</ul>
+				<hr />
+				<h2>Alig-Items</h2>
+				<div class="example flexbox align">
+					<div>item 1</div>
+					<div>item 2</div>
+					<div>item 3</div>
+					<div>item 4</div>
+					<span>item 5</span>
+					<span>item 6</span>
+					<span>item 7</span>
+				</div>
+				<ul>
+					<li><strong>Flex-Start:</strong> A diferencia de <em>justify-content</em>, no hay valor predeterminado y este permite organizar los elementos al principio del <em>flex</em>(arriba)</li>
+					<li><strong>Flex-End:</strong> Organiza los elementos dentro del <em>flex</em> hacia el final del mismo, es necesario que el contenedor posea un alto definido.</li>
+					<li><strong>Center:</strong> Organiza los elementos hacia el centro de la fila(verticalmente)</li>
+					<li><strong>Baseline:</strong> Acomoda las etiquetas independientemente de su tamaño, de manera tal que el texto quede alineado para mejor legibilidad</li>
+					<li><strong>Align-Self(*):</strong> Atributo que permite a la etiqueta seleccionada dentro del <em>flex</em> cambiar su alineacion con respecto a los demas elementos.</li>
+				</ul>
+				<hr />
+				<h2>Flex-Direction</h2>
+				<ul class="referencias">
+					<li>
+						<span class="limegreen"></span> 
+						<strong> Align-Items</strong>
+					</li>
+					<li>
+						<span class="tomato"></span> 
+						<strong> Justify-Content</strong>
+					</li>
+				</ul>
+				<div class="overflow">
+					<div class="example flexbox align col">
+						<strong>Column</strong>
+						<div>item 1</div>
+						<div>item 2</div>
+						<div>item 3</div>
+						<div>item 4</div>
+						<span>item 5</span>
+						<span>item 6</span>
+						<span>item 7</span>
+					</div>
+					<div class="example flexbox align row-r">
+						<strong>Row-Reverse</strong>
+						<div>item 1</div>
+						<div>item 2</div>
+						<div>item 3</div>
+						<div>item 4</div>
+						<span>item 5</span>
+						<span>item 6</span>
+						<span>item 7</span>
+					</div>
+					<div class="example flexbox align col-r">
+						<strong>Column-Reverse</strong>
+						<div>item 1</div>
+						<div>item 2</div>
+						<div>item 3</div>
+						<div>item 4</div>
+						<span>item 5</span>
+						<span>item 6</span>
+						<span>item 7</span>
+					</div>
+				</div>
 			</article>
 			<article>
 				<header>
