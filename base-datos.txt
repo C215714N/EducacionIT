@@ -1,0 +1,37 @@
+BASE DE DATOS(
+	- Estructura diseñada para almacenar datos
+	- Conjunto de tabla que permite organizar datos
+	- Se componen de Campos(Columnas) y Registros(Filas)
+	MODELOS(
+		RELACIONAL *
+		Jerarquicas
+		Transaccional
+		Orientada a Objetos
+		etc...
+	)
+)
+
+MySQL Workbench (MOTOR)(
+	Desarrollado por IBM (Freeware)
+	Adquirido por Oracle (MySQL / Oracle SQL)
+	Comunidad desarrolla MariaDB
+)
+
+Lenguaje SQL (STRUCTURED QUERY LANGUAGE)(
+	DDL(DATA DEFINITION LANGUAGE)(
+		CREATE	crear bd / tablas / usuarios
+		DROP	eliminar bd / tablas / usuarios
+		MODIFY	editar tablas
+	)
+	DML(DATA MANIPULATION LANGUAGE)(
+		INSERT	insertar registros
+		DELETE	eliminar registros
+		UPDATE	modificar registros
+		SELECT	buscar registros
+	)
+	DCL(DATA CONTROL LANGUAGE)(
+		GRANT	otorgar permisos bd / tablas
+		REVOKE	quitar permisos bd / tablas
+		FLUSH PRIVILEGES	actulizar permisos
+	)
+)
