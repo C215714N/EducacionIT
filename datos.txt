@@ -1,0 +1,18 @@
+TIPOS DE DATOS
+	NUMERO	=> INT(entero) - FLOAT / DECIMAL (n,d) => 123
+	TEXTO	=> CHAR(n°) / VARCHAR(n°) => 'Abc!#123'
+	FECHA => DATE / DATETIME / TIME => '2020-12-14,12:16'
+	BLOB => Respeta Mayus. Minusc. (BLOB)
+	BINARIO => BOOLEAN(true / false) => 1 / 0
+	
+CLAUSULAS
+	AUTO_INCREMENT => Numeracion Automatica (PK)
+	UNSIGNED => Numero Positivo
+	DEFAULT => Establece el valor Predeterminado
+	NOT NULL => impide que no haya valor (vacio)
+
+RESTRICCIONES
+	PRIMARY KEY => clave principal (Campo relacional)
+	UNIQUE KEY => clave unica (campo local)
+	FOREIGN KEY => clave foranea (campo relacional)
+
