@@ -1,71 +1,243 @@
-/*Reglas generales*/
-	@import url(
-			'https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,300&family=Roboto+Slab:wght@800&display=swap'
-	);
-	*{
-		font-family: Raleway, calibri, segoe ui, sans-serif;
-		box-sizing: border-box;
+/* CONSTANTES */
+/* Mobile First | Content First */
+	/*Reglas generales*/
+		@import url(
+				'https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,400;0,700;1,300&family=Roboto+Slab:wght@800&display=swap'
+		);
+		*{
+			font-family: Raleway, calibri, segoe ui, sans-serif;
+			box-sizing: border-box;
+		}
+		body{margin:0;}
+	/*navegacion*/
+		nav{
+			position: sticky;
+			top:0;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+			background-color: #999;
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color:#ddd;
+			text-decoration: none;
+		}
+		nav > a:first-child{
+			font: bold 1.2rem sans-serif;
+		}
+		nav > a:last-child{
+			position: fixed;
+			bottom: 1rem;
+			right: 1rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			background-color: #ccc;
+			background-image: url(../assets/social/back.svg);
+			background-position: center;
+			background-size: 1rem;
+			background-repeat: no-repeat;
+			opacity: .3;
+		}
+		nav > a:last-child:hover{
+			opacity: .6;
+		}
+		#menu{
+			outline: none;
+			border:.2rem solid #ddd;
+			margin:.2rem;
+			padding:0 .5rem;
+			color:#ddd;
+			background-color: transparent;
+			font: bold 1.5rem sans-serif;
+		}
+		.menu{
+			display: none;
+			width:100%;
+			list-style: none;
+			margin: 0;
+			padding:0;
+		}
+		.menu a:hover{
+			background-color: #666;
+		}
+		.open{
+			display: block !important;
+			position:absolute;
+			top:100%;
+			background-color: rgba(51,51,51,.5);
+		}
+	/*cabecera*/
+		#header{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 300px;
+			padding:1rem;
+			color:#ccc;
+			text-shadow: 2px 2px 4px #333, -2px -2px 8px #333;
+			background-color: #333;
+			background-image: url(../assets/img/header.jpg);
+			background-size: cover;
+			background-position: center top;
+			font-size: 1.2rem;
+		}
+		.header h1,
+		.header p{
+			margin:0;
+		}
+	/*contenido principal*/
+		main{
+			margin: auto;
+			padding:1rem;
+		}
+		aside{
+			display: none;
+		}
+	/*pie de pagina*/
+		#footer{
+			padding:1rem;
+			background-color: #999;
+		}
+		/*formulario de contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				margin:auto;
+			}
+			#contact label,
+			#contact .validate{
+				display: none;
+			}
+			#contact input,
+			#contact textarea{
+				margin:.2rem 0 .1rem;
+				outline: none;
+				border:2px solid white;
+				border-radius: .2rem;
+				padding:.25rem .5rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				height: 6rem;
+				resize: none;
+			}
+			#contact button{
+				align-self: flex-end;
+				border-radius: .2rem;
+				border: 2px solid #ccc;
+				padding:.2rem .5rem;
+				color:#ccc;
+				background-color: transparent;
+				text-transform: uppercase;
+				font:bold 1rem sans-serif;
+			}
+			#contact button:hover{
+				color:#999;
+				background-color: #ccc;
+			}
+			#contact :focus{
+				box-shadow: 0 0 .4rem #fff;
+			}
+			#contact :focus + .validate{
+				display: block;
+				padding:.5rem;
+			}
+	/*
+		BREAKPOINTS
+			tipo 	ancho 		dispositivos
+			xs		< 576px		relojes - celulares
+			sm 		>=576px 	celulares (landscape) - smartphone
+			md 		>=768px		smartphone (landscape) - tablets
+			lg 		>=992px 	tablets (landscape) - desktop (netbook)
+			xl 		>=1200px 	desktop (notebook) 
+			xxl 	>=1400px 	4k resolution
+	*/
+/* VARIABLES */
+/* Dispositivos pequeños */
+	@media screen and (min-width: 576px){
+		/*contenido principal*/
+			main{
+				max-width: 540px;
+			}
+		/*formulario de contacto*/
+			#contact{
+				max-width: 540px;
+			}
 	}
-	body{margin:0;}
-/*navegacion*/
-	nav{
-		position: sticky;
-		top:0;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		align-items: center;
-		background-color: #999;
+/*Dispositivos medianos (tablets)*/
+	@media screen and (min-width: 768px){
+		/*navegacion*/
+			#menu{
+				display: none;
+			}
+			.open, 
+			.menu{
+				display: flex;
+				width:auto;
+			}
+		/*contenido principal*/
+			main{
+				max-width: 720px;
+			}
+		/*formulario de contacto*/
+			#contact{
+				max-width: 720px;
+			}
+			#contact label{
+				display: block;
+				margin-top: .5rem;
+			}
 	}
-	nav a{
-		display: block;
-		padding: .5rem;
-		color:#ddd;
-		text-decoration: none;
+/*Dispositivos grandes (computadoras)*/
+	@media screen and (min-width: 992px){
+		/*cabecera*/
+			#header{
+				min-height: 600px;
+			}
+		/*contenido principal*/
+			main{
+				display: grid;
+				grid-template-columns: auto 30%;
+				grid-template-areas: 
+					"seccion-a aside" 
+					"seccion-b aside"
+					"seccion-c aside";
+				gap: 1rem; 
+				max-width: 960px;
+			}
+			section{
+				display: flex;
+				background-color: #999;
+			}
+			article{
+				padding:.2rem .5rem;
+			}
+			aside{
+				display: block;
+				grid-area: aside;
+				background-color: #ccc;
+			}
 	}
-	nav > a:first-child{
-		font: bold 1.2rem sans-serif;
+/*Dispositivos extra grandes (hd)*/
+	@media screen and (min-width: 1200px){
+		/*contenido principal*/
+			main{
+				max-width: 1140px;
+			}
 	}
-	nav > a:last-child{
-		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
-		width: 2rem;
-		height: 2rem;
-		border-radius: 50%;
-		background-color: #ccc;
-		background-image: url(../assets/social/back.svg);
-		background-position: center;
-		background-size: 1rem;
-		background-repeat: no-repeat;
-		opacity: .3;
-	}
-	nav > a:last-child:hover{
-		opacity: .6;
-	}
-	#menu{
-		outline: none;
-		border:.2rem solid #ddd;
-		margin:.2rem;
-		padding:0 .5rem;
-		color:#ddd;
-		background-color: transparent;
-		font: bold 1.5rem sans-serif;
-	}
-	.menu{
-		display: none;
-		width:100%;
-		list-style: none;
-		margin: 0;
-		padding:0;
-	}
-	.menu a:hover{
-		background-color: #666;
-	}
-/*cabecera*/
-	#header{
-		min-height: 300px;
-		padding:1rem;
-		background-color: #333;
 
+/*Orientacion*/
+	@media screen and (min-width: 992px) and (orientation:portrait){
+		main{
+			grid-template-columns: auto;
+			grid-template-areas: 
+			"seccion-a""seccion-b""seccion-c"
+		}
+		aside{
+			display: none;
+		}
 	}
