@@ -148,13 +148,13 @@
 			}
 	/*
 		BREAKPOINTS
-			tipo 	ancho 		dispositivos
-			xs		< 576px		relojes - celulares
-			sm 		>=576px 	celulares (landscape) - smartphone
-			md 		>=768px		smartphone (landscape) - tablets
-			lg 		>=992px 	tablets (landscape) - desktop (netbook)
-			xl 		>=1200px 	desktop (notebook) 
-			xxl 	>=1400px 	4k resolution
+			tipo 	screen 		max-w	dispositivos
+			xs		< 576px		100%	relojes - celulares
+			sm 		>=576px 	540px	celulares (landscape) - smartphone
+			md 		>=768px		720px	smartphone (landscape) - tablets
+			lg 		>=992px	 	960px	tablets (landscape) - desktop (netbook)
+			xl 		>=1200px 	1140px	desktop (notebook) 
+			xxl 	>=1400px	1320px	4k resolution
 	*/
 /* VARIABLES */
 /* Dispositivos pequeños */
