@@ -13,6 +13,7 @@
 		top:0;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		align-items: center;
 		background-color: #999;
 	}
@@ -43,14 +44,28 @@
 		opacity: .6;
 	}
 	#menu{
-		display: none;
+		outline: none;
+		border:.2rem solid #ddd;
+		margin:.2rem;
+		padding:0 .5rem;
+		color:#ddd;
+		background-color: transparent;
+		font: bold 1.5rem sans-serif;
 	}
 	.menu{
+		display: none;
+		width:100%;
 		list-style: none;
 		margin: 0;
 		padding:0;
-		display: flex;
 	}
 	.menu a:hover{
 		background-color: #666;
+	}
+/*cabecera*/
+	#header{
+		min-height: 300px;
+		padding:1rem;
+		background-color: #333;
+
 	}
