@@ -147,7 +147,7 @@
 		}
 		.overflow{
 			overflow: auto;
-			height: 20rem;
+			height: 19rem;
 		}
 		.referencias span{
 			display: inline-block;
@@ -160,51 +160,61 @@
 		.limegreen{
 			background-color: limegreen;
 		}
+	/*aplicando flexbox*/
+		.flex{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin:1rem auto;
+		}
+		.flex header{
+			width:100%;
+			text-align: center;
+			color:#ccc;
+			background-color: #333;
+		}
+		.flex > div{
+			display: flex;
+			flex-direction: column;
+			width:100%;
+			max-width: 540px;
+			margin:.25rem;
+			border:2px solid #333;
+			padding:1rem;
+			background-color: #ccc;
+			text-align: center;
+		}
 /*Formulario*/
 	#contact{
-		min-width: 100px;
-		max-width: 720px;
-		margin: auto;
+		display: flex;
+		flex-direction: column;
+		margin:1rem auto;
+		max-width: 540px;
 	}
 	#contact input,
 	#contact textarea{
 		outline: none;
-		width:100%;
+		border:2px solid white;
 		padding:.5rem 1rem;
+		font-size: 1rem;
 	}
 	#contact textarea{
-		resize: none;
 		height: 6rem;
-			/*
-				Unidades Absolutas: Son aquellas que siempre representan el mismo valor independientemente del contexto en el que se encuentren.
-					Distancia: cm - mm - in(2.54cm) - pc (impresion)
-					Tipograficas: pt (1/72in);
-					hibrida: px (puntos en pantalla) depende de la resolucion
-						celulares (alta densidad de pixeles) 3px => 1px;
-
-				Unidades Relativas: Son aquellas que dependen de su contendor o referente para establecer el tamaño del elemento actual.
-					Distancia: % del padre, unidades tipograficas convertidas;
-					Tipograficas: 
-						em (ancho de "M") defecto 1em = 16px; *
-						ex (alto de la "x") defecto 1ex = 16px;
-						ch (alto de "0") defecto 1ch = 16px;
-					hibrida: rem (Root em) ancho de "M" del HTML, 
-			*/
+		resize: none;
 	}
 	#contact button{
+		align-self: flex-end;
 		cursor: pointer;
-		display:block;
-		margin-left: auto;
-		outline: none;
+		margin:.2rem 0;
 		border:2px solid #ccc;
 		padding:.5rem 1rem;
 		color:#ccc;
 		background-color: transparent;
 		text-transform: uppercase;
-		font-weight: bold;
+		font:bold 1rem Raleway, sans-serif;
 	}
 	#contact button:hover{
-		color: #124;
+		color:#124;
 		background-color: #ccc;
 	}
 /*Redes Sociales*/
