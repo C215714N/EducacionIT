@@ -176,14 +176,96 @@
 		.flex > div{
 			display: flex;
 			flex-direction: column;
-			width:100%;
-			max-width: 540px;
+			width:30%;
+			min-width: 300px;
 			margin:.25rem;
 			border:2px solid #333;
 			padding:1rem;
 			background-color: #ccc;
 			text-align: center;
 		}
+	/*pseudo*/
+		.pseudo ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			background-color: rgba(51,51,51,.5);
+		}
+		.pseudo li{
+			color:#ccc;
+			padding:.5rem;
+		}
+		.pseudo li:first-child{
+			background-color: rgba(51,51,51,.5);
+		}
+		.pseudo li:last-child{
+			background-color: rgba(204,204,204,.5);
+		}
+		.pseudo li:hover{
+			color:#999;
+		}
+		.pseudo a:link{
+			color:#ccc;
+		}
+		.pseudo a:visited{
+			color:skyblue;
+		}
+		.pseudo a:active{
+			background-color: #333;
+		}
+		.imagen{
+			display: inline-block;
+			width:150px;
+			height: 200px;
+			margin:.2rem;
+			padding:0;
+			border:2px solid #333;
+			background-image: url(../assets/img/jjba-echoes-act2-01.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			}
+		/* Estados del elemento <a> */
+			.imagen:hover{
+				background-image: url(../assets/img/jjba-echoes-act2-02.jpg);
+			}
+			.imagen:active{
+				background-image: url(../assets/img/jjba-echoes-act2-03.jpg)
+			}
+		/* Primer elemento de su tipo <a> */
+			.imagen:first-of-type{
+				background-image: url(../assets/img/jjba-echoes-act1-01.jpg)
+			}
+			.imagen:first-of-type:hover{
+				background-image: url(../assets/img/jjba-echoes-act1-02.jpg)
+			}
+			.imagen:first-of-type:active{
+				background-image: url(../assets/img/jjba-echoes-act1-03.jpg)
+			}
+		/* Ultimo elemento de su tipo <a> */
+			.imagen:last-of-type{
+				background-image: url(../assets/img/jjba-echoes-act3-01.jpg)
+			}
+			.imagen:last-of-type:hover{
+				background-image: url(../assets/img/jjba-echoes-act3-02.jpg)
+			}
+			.imagen:last-of-type:active{
+				background-image: url(../assets/img/jjba-echoes-act3-03.jpg)
+			}
+		.pseudo p{
+			padding:1rem;
+		}
+		/* PseudoElementos - parte de un contenido */
+			.pseudo p:first-line{
+				color:navy;
+				font-weight: bold;
+			}
+			.pseudo p:first-of-type::first-letter{
+				float: left;
+				display: block;
+				margin-right: .5rem;
+				font: 4rem times new roman, sans-serif;
+			}
 /*Formulario*/
 	#contact{
 		display: flex;
