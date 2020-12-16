@@ -222,7 +222,7 @@
 					<h1>Transformaciones 2d</h1>
 				</header>
 				<p>
-					CSS permite editar etiquetas
+					CSS permite editar etiquetas de manera similar a varios programas de diseño utilizando <em>puntos de ajuste (nodos)</em> a modo de referencia para alterar el aspecto de las mismas asi como tambien su contenido. En el caso de las <strong>transformaciones 2d</strong> el elemento funciona como su propio referente y utiliza normalmente los ejes <em>x | y</em> para realizar las modificaciones, que dependiendo del tipo, debemos implementar alguna de las siguientes medidas <em>rem, px, deg</em>
 				</p>
 				<div class="example transform">
 					<div>Translate(x,y)</div>
@@ -236,7 +236,9 @@
 				<header>
 					<h1>Transformaciones 3d</h1>
 				</header>
-				<p>Inserte punto de fuga</p>
+				<p>
+					Si queremos realizar una <em>perspectiva</em> vamos a requerir de un <strong>punto de fuga</strong> al que apunten las etiquetas de forma imaginaria, asi como tambien una distancia definida mediante el atributo <strong>perspective</strong> que indica a cuanto nos encontramos del elemento en cuestion, y los debemos indicar en el elemento padre de la etiqueta que querramos modificar. Para este tipo de <strong>transformacion 3d</strong> vamos a alterar el estado con respecto a los ejes <em>x | y | z</em>
+				</p>
 				<div class="example transform perspective">
 					<div>RotateX(deg)</div>
 					<div>RotateY(deg)</div>
