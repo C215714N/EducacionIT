@@ -184,7 +184,7 @@
 			background-color: #ccc;
 			text-align: center;
 		}
-	/*pseudo*/
+	/* pseudoClases - Estado o caracteristica de un elemento*/
 		.pseudo ul{
 			list-style: none;
 			margin:0;
@@ -255,17 +255,54 @@
 		.pseudo p{
 			padding:1rem;
 		}
-		/* PseudoElementos - parte de un contenido */
+	/* pseudoElementos - Partes o Elementos de un contenido */
 			.pseudo p:first-line{
 				color:navy;
 				font-weight: bold;
 			}
 			.pseudo p:first-of-type::first-letter{
 				float: left;
-				display: block;
 				margin-right: .5rem;
 				font: 4rem times new roman, sans-serif;
 			}
+		/* after & before - elementos de linea*/
+			.pseudo p::before{
+				content:'BEFORE Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab soluta deleniti, quasi, consequatur ipsum necessitatibus suscipit. Omnis laudantium nam ex nostrum ipsa et suscipit autem aspernatur, modi odio sit aliquam? BEFORE';
+				color:whitesmoke;
+			}
+			.pseudo p::after{
+				content: 'AFTER ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quo mollitia ad nobis illum, reprehenderit incidunt veritatis quas laboriosam perferendis tempore sequi temporibus distinctio nemo aut accusamus, deleniti, autem similique. AFTER';
+				background-color: lightgrey;
+			}
+			/* Contadores */
+				main{
+					counter-reset: clase;
+				}
+				main .header h1::before{
+					counter-increment: clase;
+					content: 'Clase ' counter(clase) ' - ';
+				}
+				section{
+					counter-reset: tema;
+				}
+				section h1::before{
+					counter-increment: tema;
+					content: 'Tema ' counter(tema) ' - ';
+				}
+				/*Tabla de contenidos*/
+					.indice li,
+					.indice li:first-child,
+					.indice li:last-child{
+						padding: .2rem 0;
+						background-color: #333;
+					}
+					.indice li:before{
+						content:
+						counter(primero)'.'
+						counter(segundo)'.'
+						counter(tercero)'.'
+						counter(cuarto)' - ';			
+					}
 /*Formulario*/
 	#contact{
 		display: flex;
