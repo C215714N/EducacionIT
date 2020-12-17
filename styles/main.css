@@ -516,6 +516,27 @@
 				display: inline-block;
 				padding:.5rem;
 			}
+		/*Contenido Principal*/
+			section{
+				display: grid;
+				grid-template-columns: 25% auto;
+				grid-template-areas: 
+					"header article-a"
+					"header article-b"
+					"header article-c";
+				gap:1rem;
+			}
+			section > .header{
+				grid-area: header;
+				padding:.5rem;
+				text-align: center;
+				color:#ccc;
+				background-color: #333;
+				background-image: url(../assets/img/osx-mojave-night.jpg);
+				background-position: center;
+				background-size: cover;
+				background-attachment: fixed;
+			}
 		/*Formulario de Contacto*/
 			#contact :not(button):focus,
 			#contact :focus + .valid{

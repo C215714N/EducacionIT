@@ -1,0 +1,134 @@
+//Variables
+	//colores
+	@primary: #248;
+	@secondary: #cccc;
+	//media queries
+	@sm: 576px;
+	@md: 768px;
+	@lg: 992px;
+	@xl: 1200px;
+
+//Anidacion de estilos
+nav{
+	color:@primary;
+	background-color: @secondary;
+	#menu{
+		.button;
+	}
+	a{
+		color: @primary + 256;
+	}
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		a{
+			position: relative;
+			color:lighten(@primary,10%);
+			&:hover{
+				top:.2rem;
+			}
+			&:active{
+				color:darken(@primary, 20%);
+			}
+		}
+	}
+}
+#header{
+	.normalize(1rem);
+}
+main{
+	.normalize(1rem, .5rem auto);
+	.maxQuery(@md);
+	.maxQuery(@lg);
+	.maxQuery(@xl);
+	.header{
+		background-color:@secondary;
+		.normalize(@b:2px solid darken(@secondary,30%));
+		.shadows;
+	}
+}
+#footer{
+	#contact{
+		
+		input,
+		textarea{
+			.rounded;
+		}
+		button{
+			.rounded;
+			.button;
+		}
+	}
+	.normalize(1rem);
+}
+
+//MIXINS 
+	//standard - estilos que se interpolan
+		.button(){
+			border:2px solid @primary;
+			padding:.5rem;
+			font-size: 1rem;
+			background-color:@secondary;
+			color:@primary;
+			&:hover{
+				color:@secondary;
+				background-color:@primary;
+			}
+		}
+	//parametricos - reciben valores
+		.normalize(@p:0; @m:0; @b:0){
+			margin:@m;
+			border:@b;
+			padding:@p;
+		}
+		.rounded(@r:.2rem){
+			border-radius: @r;
+		}
+	//condicionales - retornan un valor en base a una condicion
+		.maxQuery(@vw){
+			@media screen and (min-width: @vw){
+				max-width: 
+					if( @vw = @sm, 540px, 
+					if( @vw = @md, 720px, 
+					if( @vw = @lg, 960px,
+						1140px
+					)));
+			}
+		}
+	//recursivos - repetir un ciclo siempre y cuando se cumpla una condicion
+		.shadows(@i:1) when (@i <= 5){
+			box-shadow+: 
+				0px * @i //eje x
+				5px * @i //eje y
+				2px * @i //blur
+				lighten(@primary, 5% * @i)// color
+				; //ubicacion 
+			.shadows(@i + 1);
+		}
+		// sistema de grillas
+			.grid(@i:1) when (@i <= @col){
+				.col-@{i}{
+					width: percentage( @i / @col );
+				}
+				.grid(@i + 1);
+			}
+			.grid;
+		//cant columnas
+			@col:24;
+			//responsive
+				.CriSys(@vw; @vn){
+					@media screen and (min-width: @vw){
+						.grid(@i:1) when (@i <= @col){
+							.col-@{vn}-@{i}{
+								width:percentage(@i / @col);
+							}
+							.grid(@i + 1);
+						}
+						.grid;
+					}
+				}
+				.CriSys(@sm; sm);
+				.CriSys(@md; md);
+				.CriSys(@lg; lg);
+				.CriSys(@xl; xl);
