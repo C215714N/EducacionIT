@@ -82,3 +82,7 @@
 		C1F	| F	| F		C1F	| F	| V
 		C1V	| F	| V		C1V	| V	| V
     */
+-- proveedores
+	SELECT id_proveedor, razon_social
+    FROM proveedores
+    WHERE razon_social LIKE '_a%'; -- % cualquier cantidad de caracteres
