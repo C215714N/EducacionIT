@@ -71,7 +71,7 @@
 	-- productos "samsung"
 		SELECT * FROM productos
         WHERE id_proveedor = 2;
-	-- productos "tecnologia" && "samsung"
+	-- productos "tecnologia" o "samsung"
 		SELECT * FROM productos
         WHERE
 			id_proveedor = 2 OR
@@ -86,3 +86,40 @@
 	SELECT id_proveedor, razon_social
     FROM proveedores
     WHERE razon_social LIKE '_a%'; -- % cualquier cantidad de caracteres
+    
+-- Clientes
+	/*ORDENANDO RESULTADOS*/
+		SELECT num_doc, apellido, nombre -- orden de campos
+		FROM clientes -- tabla de origen
+        ORDER BY apellido, num_doc; -- orden de registros ASCENDENTE (default)
+	
+    /*LIMITANDO RESULTADOS*/
+		SELECT num_doc, apellido, nombre 
+		FROM clientes
+		LIMIT 3 -- limita la cantidad de resultados
+		OFFSET 3; -- trae los resultados posteriores a dicha cantidad
+
+-- proveedores
+	/*CAMPOS GENERADOS*/
+		SELECT
+			razon_social,
+            cuil,
+            'proveedor' AS tipo, -- alias
+            LEFT(cuil,2) AS indice, -- 2 caracteres de Izq a Der
+            RIGHT(cuil,1) AS verif, -- ultimo caracter de Der a Izq
+            SUBSTRING(cuil,4,8) AS documento -- 8 caracteres a partir del 4°
+		FROM proveedores
+        ORDER BY documento DESC;
+
+-- clientes
+	SELECT 
+		CONCAT('Sr/sra.', apellido, " ", nombre) AS cliente,
+        CONCAT('n°: ', num_doc) AS id, -- concatena campos
+		CURDATE() AS fecha,
+        CURTIME() AS hora,
+		CURRENT_USER() AS usuario
+    FROM clientes;
+    /*
+		number: 1 + 1 = 2
+        string: "1" + "1" = "11"
+    */
