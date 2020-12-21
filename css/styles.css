@@ -300,6 +300,17 @@
 						padding: .2rem 0;
 						background-color: #333;
 					}
+					/* parametros */
+						.indice { counter-reset: primero; }
+						.indice li { counter-increment: primero; }
+						.indice li ul { counter-reset: segundo }
+						.indice li ul li { counter-increment: segundo }
+						.indice li li ul { counter-reset: tercero }
+						.indice li li li { counter-increment: tercero }
+						.indice li li li ul { counter-reset: cuarto }
+						.indice li li li li { counter-increment: cuarto }
+
+					/* aplicacion */
 					.indice li:before{
 						content:
 						counter(primero)'.'
@@ -307,6 +318,67 @@
 						counter(tercero)'.'
 						counter(cuarto)' - ';			
 					}
+	/*CSS Grid*/
+		.grid{
+			display: grid;
+			grid-template-columns: auto auto auto; /*columnas tamaño | cantidad */
+			grid-template-rows: auto; /*alto de filas*/
+			gap: 1rem; /*filas columnas*/
+		}
+		.grid div,
+		.grid span{
+			border:2px dotted #333;
+			padding:.5rem;
+			background-color: #999;
+		}
+		.grid span:first-of-type{
+			grid-column: 1 / 4; /*start | end */
+			grid-row-start: 1;
+		}
+		.grid span:last-of-type{
+			grid-row: 3 / 5;
+		}
+		.content{
+			height: 300px;
+			justify-content: center;
+			align-content: center;
+		}
+		.areas{
+			grid-template-areas: 
+				'header header header'
+				'long-a long-a aside'
+				'long-b long-b aside'
+				'sec-a 	sec-b  aside'
+				'sec-c 	sec-d  aside'
+				'footer footer footer'
+		}
+		.areas div:first-child{ grid-area: header; }
+		.areas div:last-child{ grid-area: footer; }
+		.areas span:first-of-type{ grid-area: aside; }
+		.areas span + div { grid-area: long-a; }
+		.areas span + div + div{ grid-area: long-b; }
+		section{
+			display: grid;
+			grid-template-columns: auto 30%;
+			grid-template-areas: 
+				'section 	header'
+				'article 	header'
+				'aside 		header';
+			gap:1rem;
+		}
+		section .header{
+			grid-area: header;
+		}
+		section .header h1{
+			line-height: 2rem;
+		}
+		section .header::before,
+		section .header::after{
+			content:'';
+			height: 5px;
+			display: block;
+			background: linear-gradient(to right, #999, #eee); 
+		}
 /*Formulario*/
 	#contact{
 		display: flex;

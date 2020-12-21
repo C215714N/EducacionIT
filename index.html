@@ -312,7 +312,12 @@
 						<li>subtema
 							<ul>
 								<li>subsubtema</li>
-								<li>subsubtema</li>
+								<li>subsubtema
+									<ul>
+										<li>Scorpion</li>
+										<li>Sub-Zero</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 						<li>subtema
@@ -395,8 +400,105 @@
 		</section>
 		<section>
 			<header class="header">
-				<h1></h1>
+				<h1>CSS Grid</h1>
 			</header>
+			<article>
+				<header>
+					<h1>Sistema de Grilla</h1>
+				</header>
+				<div class="example grid">
+					<div> Celda 1</div>
+					<div> Celda 2</div>
+					<div> Celda 3</div>
+					<div> Celda 4</div>
+					<div> Celda 5</div>
+					<div> Celda 6</div>
+					<span> Celda 7</span>
+					<span> Celda 8</span>
+					<div> Celda 9</div>
+				</div>
+				<ul>
+					<li>
+						<strong>Grid-Template-Columns: </strong>
+						Define el ancho de las columnas de nuestra grilla, asi como tambien la <em>cantidad de las mismas mediante la repeticion de valores</em>, por defecto al aplicar css-grid se utiliza una unica columna.
+					</li>
+					<li>
+						<strong>Grid-Template-Rows: </strong> 
+						Define el alto de las filas especificadas, a diferencia de <em>grid-template-columns</em> donde cada valor representa una columna, aqui simplemente definimos el tamaño pero no la cantidad, por defecto este es <em>auto</em>.
+					</li>
+					<li>
+						<strong>Gap: </strong> 
+						Separacion entre filas y columnas respectivamente, independiente al margin de los elementos internos y posee dos versiones individuales del atributo <em>row-gap</em> y <em>column-gap</em>
+					</li>
+					<li>
+						<strong>Grid-Column: </strong>
+						Atajo que permite indicar a un elemento hijo su posicion, simplicando los atributo <em>grid-column-start</em> / <em>grid-column-end</em> tomando en cuenta que cada linea imaginaria a la izquierda representa el comienzo de las mismas.
+					</li>
+					<li>
+						<strong>Grid-Row: </strong>
+						Atajo que permite indicar a un elemento hijo su posicion, simplicando los atributo <em>grid-row-start</em> / <em>grid-row-end</em> tomando en cuenta que cada linea imaginaria desde arriba representa el comienzo de las mismas.
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h1>Organizacion y Distribucion</h1>
+				</header>
+				<div class="example grid content">
+					<div>Celda 1</div>
+					<div>Celda 2</div>
+					<div>Celda 3</div>
+					<div>Celda 4</div>
+					<div>Celda 5</div>
+					<div>Celda 6</div>
+					<div>Celda 7</div>
+					<div>Celda 8</div>
+					<div>Celda 9</div>
+				</div>
+				<ul>
+					<li>
+						<strong>Justify-Content: </strong>
+						Indica como se van a distribuir las celdas dentro del contenedor de forma horizontal, toma exactamente los mismos valores que <em>flexbox</em> y no posee valor predeterminado.
+						<ul>
+							<li>Flex-Start: Izquierda</li>
+							<li>Flex-End: Derecha</li>
+							<li>Center: Centro Horizontal</li>
+							<li>Space-Around: Espacio entre elementos</li>
+							<li>Space-Between: Espacio extremo a extremo</li>
+							<li>Space-Evenly: Espacio equitativo</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Alig-Content: </strong>
+						Indica como se van a organizar las celdas dentro del contenedor de forma vertical y a diferencia de <em>align-items</em>, tambien admite los valores de justify-content.
+						<ul>
+							<li>Flex-Start: Arriba</li>
+							<li>Flex-End: Abajo</li>
+							<li>Center: Centro Vertical</li>
+							<li>Space-Around: Espacio entre elementos</li>
+							<li>Space-Between: Espacio extremo a extremo</li>
+							<li>Space-Evenly: Espacio equitativo</li>
+							<li>Baseline: En base a la tipografia</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h1>Plantilla de areas</h1>
+				</header>
+				<div class="example grid areas">
+					<div>1: HEADER </div>
+					<div>2: SECTION</div>
+					<div>3: SECTION</div>
+					<div>4: SECTION</div>
+					<span>5: ASIDE </span>
+					<div>6: LONG </div>
+					<div>7: LONG </div>
+					<div>8: SECTION</div>
+					<div>9: FOOTER </div>
+				</div>
+			</article>
 		</section>
 		<section>
 			<header class="header">
