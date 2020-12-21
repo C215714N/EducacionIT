@@ -290,6 +290,10 @@
 					content: 'Tema ' counter(tema) ' - ';
 				}
 				/*Tabla de contenidos*/
+					ul.indice{
+						padding:1rem;
+						background-color: #333;
+					}
 					.indice li,
 					.indice li:first-child,
 					.indice li:last-child{
