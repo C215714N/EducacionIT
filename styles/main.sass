@@ -1,0 +1,95 @@
+$day_color: #248
+$day_bg: #eee
+$night_color: #ccc
+$night_bg: #333
+$special_color: #33c9ca
+
+=mode($color: $day_color, $bg-color:$day_bg, $p:1rem)
+	padding: $p
+	color:$color
+	background-color: $bg-color
+
+*
+	box-sizing: border-box
+	font-family: century gothic, sans-serif
+	text-decoration: none
+#mode
+	display: none
+body
+	margin:0
+// daymode
+nav
+	+mode
+	border-top: .2rem solid $day_color
+	.menu
+		+mode($day_bg, $day_color)
+		list-style: none
+		li
+			a
+				color:$day_bg
+			&:first-child
+				label:after
+					content:' Diurno'
+header	
+	+mode
+	text-align: center
+	h1
+		margin: auto
+		padding: .2rem 1rem
+		max-width: 720px
+		span
+			color: $special_color
+	form
+		display: flex
+		flex-direction: column
+		max-width: 720px
+		margin: auto
+		padding: .2rem 3rem
+		input
+			outline: none
+			border-radius: 1rem
+			border: 2px solid $day_color
+			padding: .5rem
+	p
+		padding: .2rem 3rem
+		strong
+			display: block
+main
+	+mode($bg-color: darken($day_bg, 10%))
+	#trending
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+		grid-gap: 1rem
+		h1
+			grid-column: 1 / 4
+		p
+			grid-column: 1 / 4
+	
+		section
+			position: relative
+			overflow: hidden
+			video
+footer
+	+mode($night_bg)
+	border-bottom: .2rem solid $day_color
+
+// nightmode
+#mode[type="checkbox"]:checked
+	& ~ nav
+		+mode($night_color, $night_bg)
+		border-top: .2rem solid $night_color
+		.menu
+			+mode($bg-color: darken($night_bg, 20%))
+			li
+				&:first-child
+					label:after
+						content:' Nocturno'
+	& ~ header
+		+mode($night_color, $night_bg)
+		input
+			border-color: $night_color
+	& ~ main
+		+mode($night_color, darken($night_bg, 10%))
+	& ~ footer
+		+mode($night_color,$night_bg)
+		border-bottom: .2rem solid $night_color

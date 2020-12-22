@@ -1,0 +1,171 @@
+/*Content First*/
+	:root{
+		--border: .2rem solid;
+		--text: #248;
+		--color: #fefefe;
+		--bg-color: #ccc;
+	}
+	*{
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
+	body{ margin:0; }
+	.day{ border-color:var(--text); }
+	.night{ border-color: var(--bg-color); }
+	.day:not(nav),
+	.night:not(nav){
+		padding:1rem;
+	}
+	a, 
+	button{
+		position: relative;
+		display: inline-block;
+		margin:.2rem;
+		padding:.2rem;
+		color: var(--text);
+		text-decoration: none;
+		background-image: var(--img);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+/*nav*/
+	nav{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding:1rem 0;
+		text-align: center;
+		background-color: var(--color);
+	}
+	nav > a:first-child{
+		width:4rem;
+		height: 2rem;
+		--img: url(../assets/icons/logo-mobile.svg); 
+	}
+	#mode:checked ~ nav > a:first-child{
+		--img: url(../assets/icons/logo-mobile-noc.svg);
+	}
+	/*mode*/
+		#mode{ display: none; }
+		#mode:not(:checked) + nav label:after{ content:' Diurno'; }
+		#mode:not(:checked) ~ .day{
+			--text: #248;
+			--color: #fefefe;
+			--bg-color: #ccc;
+		}
+		#mode:checked + nav label:after{ content:' Nocturno'; }
+		#mode:checked ~ .night{
+			--text: #fefefe;
+			--color: #666;
+			--bg-color: #333;
+		}
+	/*menu*/
+		#menu{
+			display: block;
+			width:1rem;
+			height: 1rem;
+			outline: none;
+			border:none;
+			margin:.5rem;
+			padding:0;
+			--img: url(../assets/icons/burger.svg);
+			background-color: transparent;
+		}
+		.menu{
+			width:100%;
+			height: 0;
+			list-style: none;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.menu a{
+			padding:1rem 0;
+		}
+		.menu a::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left:20%;
+			right: 20%;
+			height: 1px;
+			background-color: var(--text);
+		}
+		.open{
+			position: absolute;
+			top:100%;
+			left:0;
+			right: 0;
+			height: 100vh;
+			color:var(--color);
+			background-color: var(--text);
+			opacity: .8;
+		}
+		.open a{ color:var(--color); }
+		.open a:after{ background-color: var(--color); }
+		#mode:checked ~ .open{
+			background-color: #000 !important;
+			opacity: 1;
+		}
+		#mode:checked ~ .open a{
+			color:var(--text);
+			background-color: var(--bg-color);
+		}
+
+/*header*/
+	#header{
+		color: var(--text);
+		background-color: var(--color);
+	}
+	#header span{
+		color: #33c9ca;
+	}
+	#header input{
+		outline: none;
+		border-radius: 1rem;
+		padding:.25rem 1rem;
+	}
+	strong{
+		display: block;
+	}
+/*main*/
+	main{
+		color: var(--text);
+		background-color: var(--bg-color);
+	}
+/*footer*/
+	#footer{
+		color:var(--text);
+		background-color: var(--color);
+		border-bottom: var(--border) var(--text)
+	}
+	.social{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	.social p{
+		width:100%;
+	}
+	.social a{
+		width:2rem;
+		height: 2rem;
+		margin:.5rem;
+	}
+	/*day mode*/
+		.facebook{ --img: url(../assets/icons/icon_facebook.svg); }
+		.twitter{ --img: url(../assets/icons/icon_twitter.svg); }
+		.instagram{ --img: url(../assets/icons/icon_instagram.svg); }
+	/*social hover*/
+		.facebook:hover{ --img: url(../assets/icons/icon_facebook_hover.svg); }
+		.twitter:hover{ --img: url(../assets/icons/icon_twitter_hover.svg); }
+		.instagram:hover{ --img: url(../assets/icons/icon_instagram-hover.svg); }
+	/*night mode*/
+		#mode:checked ~ .facebook{ --img: url(../assets/icons/icon_facebook_noc.svg); }
+		#mode:checked ~ .twitter{ --img: url(../assets/icons/icon_twitter_noc.svg); }
+		#mode:checked ~ .instagram{ --img: url(../assets/icons/icon_instagram_noc.svg); }

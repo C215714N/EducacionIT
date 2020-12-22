@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: century gothic, sans-serif;
+  text-decoration: none;
+}
+
+#mode {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  padding: 1rem;
+  color: #248;
+  background-color: #eee;
+  border-top: 0.2rem solid #248;
+}
+nav .menu {
+  padding: 1rem;
+  color: #eee;
+  background-color: #248;
+  list-style: none;
+}
+nav .menu li a {
+  color: #eee;
+}
+nav .menu li:first-child label:after {
+  content: " Diurno";
+}
+
+header {
+  padding: 1rem;
+  color: #248;
+  background-color: #eee;
+  text-align: center;
+}
+header h1 {
+  margin: auto;
+  padding: 0.2rem 1rem;
+  max-width: 720px;
+}
+header h1 span {
+  color: #33c9ca;
+}
+header form {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  margin: auto;
+  padding: 0.2rem 3rem;
+}
+header form input {
+  outline: none;
+  border-radius: 1rem;
+  border: 2px solid #248;
+  padding: 0.5rem;
+}
+header p {
+  padding: 0.2rem 3rem;
+}
+header p strong {
+  display: block;
+}
+
+main {
+  padding: 1rem;
+  color: #248;
+  background-color: #d5d5d5;
+}
+main #trending {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+main #trending h1 {
+  grid-column: 1/4;
+}
+main #trending p {
+  grid-column: 1/4;
+}
+main #trending section {
+  position: relative;
+  overflow: hidden;
+}
+footer {
+  padding: 1rem;
+  color: #333;
+  background-color: #eee;
+  border-bottom: 0.2rem solid #248;
+}
+
+#mode[type=checkbox]:checked ~ nav {
+  padding: 1rem;
+  color: #ccc;
+  background-color: #333;
+  border-top: 0.2rem solid #ccc;
+}
+#mode[type=checkbox]:checked ~ nav .menu {
+  padding: 1rem;
+  color: #248;
+  background-color: black;
+}
+#mode[type=checkbox]:checked ~ nav .menu li:first-child label:after {
+  content: " Nocturno";
+}
+#mode[type=checkbox]:checked ~ header {
+  padding: 1rem;
+  color: #ccc;
+  background-color: #333;
+}
+#mode[type=checkbox]:checked ~ header input {
+  border-color: #ccc;
+}
+#mode[type=checkbox]:checked ~ main {
+  padding: 1rem;
+  color: #ccc;
+  background-color: #1a1a1a;
+}
+#mode[type=checkbox]:checked ~ footer {
+  padding: 1rem;
+  color: #ccc;
+  background-color: #333;
+  border-bottom: 0.2rem solid #ccc;
+}
+
+/*# sourceMappingURL=styles.css.map */
