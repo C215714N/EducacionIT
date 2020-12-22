@@ -9,7 +9,7 @@ icons = 'assets/icons'
 			} else {
 				btnMenu.style.backgroundImage = `url(${icons}/burger.svg)`;
 	}	}	)
-//Gif Populares
+//Elementos Populares
 	trendingArea = document.querySelector('#trending')
 	url = 'https://api.giphy.com/v1/gifs/trending?api_key=LanYkWCgNLIRDm6XZOZWnYH9yZHOProA&limit=3&rating=g'
 	window.addEventListener( 'load', () => {	
@@ -17,8 +17,7 @@ icons = 'assets/icons'
 			.then( giphy => { giphy.data.forEach( item => { trendingArea.innerHTML +=  
 				`<article>
 					<video autoplay muted loop
-						key="${item.id}"
-						src="${item.images.downsized_small.mp4}" 
+						src="${item.images.original.mp4}" 
 						alt="${item.title}">
 					</video>
 				</article>`
@@ -39,9 +38,22 @@ icons = 'assets/icons'
 					gifsArea.innerHTML +=  
 					`<article>
 						<video autoplay muted loop
-							key="${item.id}"
 							src="${item.images.downsized_small.mp4}" 
 							alt="${item.title}">
 						</video>
 					</article>`
 	}	)	}	)	)	}	)
+//Sugerencias de Busqueda
+	sugArea = document.querySelector('#search input')
+	dataList = document.querySelector('#suggestion')
+	inputSearch.addEventListener(
+		'input', () => {
+			url = `https://api.giphy.com/v1/tags/related/${inputSearch.value}?api_key=LanYkWCgNLIRDm6XZOZWnYH9yZHOProA&lang=es`
+			fetch(url).then( resultado => resultado.json()
+				.then( giphy => { giphy.data.forEach( item => {
+					if (inputSearch.value != null){
+						dataList.innerHTML +=  
+						`<option value="${item.name}">${item.name}</option>`
+					}
+	}	)	}	)	)	}	)
+	

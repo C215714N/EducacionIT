@@ -67,12 +67,14 @@ header
 		max-width: 720px
 		margin: auto
 		padding: .2rem 3rem
-		input
+		input, #suggestion
+			display: block
 			outline: none
 			margin: 0
 			border-radius: 1rem
 			border: 2px solid $day_color
 			padding: .5rem
+			width: 100%
 		button
 			position: absolute
 			bottom: .75rem
@@ -139,7 +141,7 @@ footer
 						content:' Nocturno'
 	& ~ header
 		+mode($night_color, $night_bg)
-		input
+		input, #suggestion
 			border-color: $night_color
 	& ~ main
 		+mode($night_color, $night_bg, 0)
