@@ -1,3 +1,4 @@
+/*content first*/
 * {
   box-sizing: border-box;
   font-family: century gothic, sans-serif;
@@ -12,20 +13,52 @@ body {
   margin: 0;
 }
 
+/*daymode*/
 nav {
   padding: 1rem;
   color: #248;
   background-color: #eee;
   border-top: 0.2rem solid #248;
 }
+@media screen and (min-width: 720px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav #menu {
+    display: none;
+  }
+}
 nav .menu {
   padding: 1rem;
   color: #eee;
   background-color: #248;
+  margin: 0;
   list-style: none;
+  text-align: center;
+}
+@media screen and (min-width: 720px) {
+  nav .menu {
+    display: flex;
+  }
 }
 nav .menu li a {
+  display: inline-block;
   color: #eee;
+  padding: 0.5rem;
+}
+nav .menu li a::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  margin: auto;
+  background-color: #ccc;
+}
+@media screen and (min-width: 720px) {
+  nav .menu li a::after {
+    display: none;
+  }
 }
 nav .menu li:first-child label:after {
   content: " Diurno";
@@ -48,15 +81,27 @@ header h1 span {
 header form {
   display: flex;
   flex-direction: column;
+  position: relative;
   max-width: 720px;
   margin: auto;
   padding: 0.2rem 3rem;
 }
 header form input {
   outline: none;
+  margin: 0;
   border-radius: 1rem;
   border: 2px solid #248;
   padding: 0.5rem;
+}
+header form button {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 4rem;
+  margin: 0;
+  outline: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
 }
 header p {
   padding: 0.2rem 3rem;
@@ -66,32 +111,68 @@ header p strong {
 }
 
 main {
+  padding: 0;
+  color: #248;
+  background-color: #eee;
+}
+main #results {
+  overflow: hidden;
+  padding: 1rem;
+  color: #248;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+main #results h2 {
+  grid-column: span 1fr;
+  text-align: center;
+}
+main #trending {
   padding: 1rem;
   color: #248;
   background-color: #d5d5d5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-main #trending {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1rem;
-}
-main #trending h1 {
-  grid-column: 1/4;
-}
+main #trending h1,
 main #trending p {
-  grid-column: 1/4;
+  width: 100%;
+  width: 100%;
 }
-main #trending section {
-  position: relative;
+main article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  height: 200px;
+  text-align: center;
 }
+main video {
+  height: 100%;
+  max-height: 200px;
+  background-color: #eee;
+}
+
 footer {
   padding: 1rem;
   color: #333;
   background-color: #eee;
   border-bottom: 0.2rem solid #248;
 }
+@media screen and (min-width: 720px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer address {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
+/*nightmode*/
 #mode[type=checkbox]:checked ~ nav {
   padding: 1rem;
   color: #ccc;
@@ -115,6 +196,16 @@ footer {
   border-color: #ccc;
 }
 #mode[type=checkbox]:checked ~ main {
+  padding: 0;
+  color: #ccc;
+  background-color: #333;
+}
+#mode[type=checkbox]:checked ~ main section {
+  padding: 1rem;
+  color: #ccc;
+  background-color: #333;
+}
+#mode[type=checkbox]:checked ~ main #trending {
   padding: 1rem;
   color: #ccc;
   background-color: #1a1a1a;

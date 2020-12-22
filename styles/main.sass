@@ -1,14 +1,15 @@
+//colors
 $day_color: #248
 $day_bg: #eee
 $night_color: #ccc
 $night_bg: #333
 $special_color: #33c9ca
-
+//mode mixins
 =mode($color: $day_color, $bg-color:$day_bg, $p:1rem)
 	padding: $p
 	color:$color
 	background-color: $bg-color
-
+/*content first*/
 *
 	box-sizing: border-box
 	font-family: century gothic, sans-serif
@@ -17,16 +18,36 @@ $special_color: #33c9ca
 	display: none
 body
 	margin:0
-// daymode
+/*daymode*/
 nav
 	+mode
 	border-top: .2rem solid $day_color
+	@media screen and (min-width: 720px)
+		display: flex
+		justify-content: space-between
+		#menu
+			display: none
 	.menu
 		+mode($day_bg, $day_color)
+		margin: 0
 		list-style: none
+		text-align: center
+		@media screen and (min-width: 720px)
+			display: flex
 		li
 			a
+				display: inline-block
 				color:$day_bg
+				padding: .5rem
+				&::after
+					content: ''
+					display: block
+					width: 60%
+					height: 1px
+					margin: auto
+					background-color: $night_color
+					@media screen and (min-width: 720px)
+						display: none
 			&:first-child
 				label:after
 					content:' Diurno'
@@ -42,38 +63,70 @@ header
 	form
 		display: flex
 		flex-direction: column
+		position: relative
 		max-width: 720px
 		margin: auto
 		padding: .2rem 3rem
 		input
 			outline: none
+			margin: 0
 			border-radius: 1rem
 			border: 2px solid $day_color
 			padding: .5rem
+		button
+			position: absolute
+			bottom: .75rem
+			right: 4rem
+			margin: 0
+			outline: none
+			border: 0
+			padding: 0
+			background-color: transparent
 	p
 		padding: .2rem 3rem
 		strong
 			display: block
 main
-	+mode($bg-color: darken($day_bg, 10%))
-	#trending
+	+mode($p: 0)
+	#results
+		overflow: hidden
+		+mode
 		display: grid
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
-		grid-gap: 1rem
-		h1
-			grid-column: 1 / 4
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+		gap: 1rem
+		h2
+			grid-column: span 1fr
+			text-align: center
+	#trending
+		+mode($bg-color: darken($day_bg, 10%))
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		h1, 
 		p
-			grid-column: 1 / 4
-	
-		section
-			position: relative
-			overflow: hidden
-			video
+			width: 100%
+			width: 100%
+	article
+		display: flex
+		justify-content: center
+		align-items: center
+		overflow: hidden
+		height: 200px
+		text-align: center
+	video
+		height: 100%
+		max-height: 200px
+		background-color: $day_bg
 footer
 	+mode($night_bg)
 	border-bottom: .2rem solid $day_color
-
-// nightmode
+	@media screen and (min-width: 720px)
+		display: flex
+		justify-content: space-between
+		address
+			display: flex
+			justify-content: space-between
+/*nightmode*/
 #mode[type="checkbox"]:checked
 	& ~ nav
 		+mode($night_color, $night_bg)
@@ -89,7 +142,11 @@ footer
 		input
 			border-color: $night_color
 	& ~ main
-		+mode($night_color, darken($night_bg, 10%))
+		+mode($night_color, $night_bg, 0)
+		section
+			+mode($night_color, $night_bg)
+		#trending
+			+mode($night_color, darken($night_bg, 10%))
 	& ~ footer
 		+mode($night_color,$night_bg)
 		border-bottom: .2rem solid $night_color
