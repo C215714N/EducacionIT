@@ -357,6 +357,7 @@
 		.areas span:first-of-type{ grid-area: aside; }
 		.areas span + div { grid-area: long-a; }
 		.areas span + div + div{ grid-area: long-b; }
+	/* Panificacion del diseño */
 		section{
 			display: grid;
 			grid-template-columns: auto 30%;

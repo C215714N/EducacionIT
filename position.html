@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.position{
+			position:relative;
+			max-width: 900px;
+			height: 600px;
+			border:.2rem solid #333;
+			padding:1rem;
+		}
+		.position div{
+			border:.2rem dashed #eee;
+			padding:1rem;
+			background-color: #ccc;
+		}
+		.absolute{
+			/* 	
+				El elemento toma de referencia al ancestro mas proximo cuyo atributo de position NO sea STATIC | en caso de no existir se toma de referencia al body
+				El elemento ya no forma parte del FLOW del documento y se consideran Bloque, por defecto ocupa su posicion original y 3n caso de cambiarla, se ubica dentro del contenedor.
+			*/
+			position:absolute;
+			top: 0;
+			right:0;
+			z-index: 1;
+		}
+		.position:hover .absolute{
+			bottom:0;
+		}
+		.position:hover .relative{
+			/*
+				El elemento se toma como referente a si mismo, sin importar que solamente existan ancestros con position STATIC, en este los atributos TOP RIGHT BOTTOM y LEFT tecnicamente funcionarian de manera inversa, asi como pasa con position ABSOLUTE cuando modificamos la posicion de la etiqueta, esta no afecta al FLOW del documento.
+			*/
+			position:relative;
+			top: .5rem;
+			left: .5rem;
+			box-shadow: -.5rem -.5rem #333
+		}
+		.fixed{
+			/*
+				El elemento toma como referente al VIEWPORT (ventana del navegador), al igual que absolute por defecto ocupa su posicion original, pero a diferencia de este cuando establecemos los valores de posicion, siempre permanece anclado en la ventana indistintamente de la posicion respecto al scroll de la pagina.
+			*/
+			position:fixed;
+			bottom:1rem;
+			right:1rem;
+		}
+		.position:hover .fixed{
+			bottom: 5rem;
+			box-shadow: 0 .5rem 4px #333;
+		}
+		.sticky{
+			/*
+				El elemento es su propio referente y permanece en su posicion original similar a relative; pero a diferencia de este, cuando definimos valores como TOP BOTTOM RIGHT LEFT, al cumplirse la condicion con respecto al VIEWPORT, se muestra como un elemento con position ABSOLUTE.
+			*/
+			position:sticky;
+			top: 0;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div class="sticky">Sticky </div>
+		<div>Static</div>
+		<div class="absolute">Absolute</div>
+		<div class="relative">Relative </div>
+		<div class="fixed">Fixed </div>
+	</div>
+	<div class="position">
+		<div>Position </div>
+		<div>Static</div>
+		<div class="absolute">Absolute</div>
+		<div class="relative">Relative </div>
+		<div class="fixed">Fixed </div>
+	</div>
+</body>
+</html>
