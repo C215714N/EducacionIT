@@ -418,6 +418,33 @@
 			left: 100%;
 			background-color: #248;
 		}
+	/*sprites*/
+		.sprite{
+			--icon-size: 48px;
+		}
+		.sprite a{
+			display: inline-block;
+			width: calc(var(--icon-size) * 1);
+			height: calc(var(--icon-size) * 1);
+			border: 2px solid #333;
+			background-color: #eee;
+			background-size: calc(var(--icon-size) * 11);
+			background-image: url(../assets/icon/social-media.png);
+		}
+		/*estado base*/
+			.tw{background-position: calc(var(--icon-size) * -8) calc(var(--icon-size) * 0)}
+			.in{background-position: calc(var(--icon-size) * -4) calc(var(--icon-size) * 0)}
+			.yt{background-position: calc(var(--icon-size) * -10) calc(var(--icon-size) * 0)}
+		/*estado HOVER*/
+			.fb:hover{background-position: calc(var(--icon-size) * 0) calc(var(--icon-size) * -2)}
+			.tw:hover{background-position: calc(var(--icon-size) * -8) calc(var(--icon-size) * -2)}
+			.in:hover{background-position: calc(var(--icon-size) * -4) calc(var(--icon-size) * -2)}
+			.yt:hover{background-position: calc(var(--icon-size) * -10) calc(var(--icon-size) * -2)}
+		/*estado ACTIVE*/
+			.fb:active{background-position: calc(var(--icon-size) * 0) calc(var(--icon-size) * -1)}
+			.tw:active{background-position: calc(var(--icon-size) * -8) calc(var(--icon-size) * -1)}
+			.in:active{background-position: calc(var(--icon-size) * -4) calc(var(--icon-size) * -1)}
+			.yt:active{background-position: calc(var(--icon-size) * -10) calc(var(--icon-size) * -1)}
 /*Formulario*/
 	#contact{
 		display: flex;
