@@ -19,21 +19,26 @@
 		</button>
 		<ul class="menu">
 			<li><a href="#"><label for="mode">Modo </label></a></li>
-			<li><a href="#">Favoritos</a></li>
-			<li><a href="#">Mis GIFOS</a></li>
-			<li><a href="#"> + </a></li>
+			<li><a href="#favoritos">Favoritos</a></li>
+			<li><a href="#gifos">Mis GIFOS</a></li>
+			<li><a href="#subir"> + </a></li>
 		</ul>
 	</nav>
 	<header id="header" class="day night">
 		<h1>Inspírate, busca, guarda, y crea los mejores 
 			<span> GIFOS </span>
 		</h1>
+		<img src="assets/icons/ilustra_header.svg" alt="ilustra_header">
 		<form id="search">
-			<img src="assets/icons/ilustra_header.svg" alt="ilustra_header">
-			<input type="search" list="suggestion">
-			<datalist id="suggestion">
-				
-			</datalist>
+			<input 
+				type="search" 
+				list="suggestion" 
+				value=""
+				minlength="2"
+				maxlength="50" 
+				required>
+			<select id="suggestion" multiple>
+			</select>
 			<button></button>
 		</form>
 		<p>
@@ -43,6 +48,11 @@
 	</header>
 	<main class="day night">
 		<section id="results">
+		</section>
+		<section id="pagination">
+			<button class="prev"></button>
+			<span></span>
+			<button class="next"></button>
 		</section>
 		<section id="trending">
 			<h1>Trending GIFOS</h1>
@@ -59,7 +69,7 @@
 			<a href="https://instagram.com" target="_blank"></a>
 		</div>
 		<address>
-			&copy;<a href="#">GIFOS 2020</a>
+			&copy;<a href="#">GIFOS 2020 </a>
 			All Rights Reserved.
 		</address>
 	</footer>

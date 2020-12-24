@@ -1,80 +1,162 @@
 //colors
-$day_color: #248
-$day_bg: #eee
+$day_color: #572ee5
+$day_bg: #fefefe
 $night_color: #ccc
 $night_bg: #333
 $special_color: #33c9ca
+$smartphone: 576px
+$tablet: 720px
+$desktop: 992px
 //mode mixins
 =mode($color: $day_color, $bg-color:$day_bg, $p:1rem)
 	padding: $p
-	color:$color
+	color: $color
 	background-color: $bg-color
 /*content first*/
 *
 	box-sizing: border-box
 	font-family: century gothic, sans-serif
 	text-decoration: none
+	transition: all .5s ease-in
 #mode
 	display: none
 body
 	margin:0
 /*daymode*/
 nav
-	+mode
+	position: sticky
+	top: 0
+	z-index: 5
+	+mode($p: 1rem 0 0)
 	border-top: .2rem solid $day_color
-	@media screen and (min-width: 720px)
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	@media screen and (min-width: $tablet)
 		display: flex
+		padding: .2rem 1rem
 		justify-content: space-between
 		#menu
 			display: none
 	.menu
-		+mode($day_bg, $day_color)
+		overflow: hidden
+		display: none
+		width: 100%
+		height: 0
 		margin: 0
+		+mode($day_bg, $day_color)
 		list-style: none
 		text-align: center
-		@media screen and (min-width: 720px)
+		@media screen and (min-width: $tablet)
+			position: static
 			display: flex
+			width: auto
+			padding: 0
+			background-color: transparent			
 		li
+			@media screen and (min-width: $tablet)
+				border-bottom: .2rem solid transparent
+				&:not(:last-child):hover
+					border-bottom: .2rem solid $special_color
 			a
 				display: inline-block
 				color:$day_bg
-				padding: .5rem
+				padding: .5rem 1rem
+				font-weight: bold
+				@media screen and (min-width: $tablet)
+					color: $day_color
 				&::after
 					content: ''
 					display: block
 					width: 60%
 					height: 1px
 					margin: auto
+					margin-top: 1rem
 					background-color: $night_color
-					@media screen and (min-width: 720px)
+					@media screen and (min-width: $tablet)
 						display: none
 			&:first-child
-				label:after
-					content:' Diurno'
-header	
+				label
+					cursor: pointer
+					&:after
+						content:' Diurno'
+#header	
 	+mode
 	text-align: center
 	h1
 		margin: auto
-		padding: .2rem 1rem
-		max-width: 720px
+		padding: .2rem 3rem
+		max-width: $smartphone
 		span
 			color: $special_color
+	img 
+		display: block 
+		margin: auto
+		max-width: $smartphone
 	form
 		display: flex
 		flex-direction: column
 		position: relative
-		max-width: 720px
+		max-width: $smartphone
 		margin: auto
-		padding: .2rem 3rem
-		input, #suggestion
-			display: block
+		padding: 0 3rem
+		::-webkit-scrollbar
+			width:1rem
+		input
 			outline: none
 			margin: 0
-			border-radius: 1rem
+			border-radius: 1rem 1rem 0 0
 			border: 2px solid $day_color
-			padding: .5rem
+			border-bottom: none
 			width: 100%
+			&:invalid
+				padding: 0 1rem
+			&:valid
+				padding: .5rem 1rem
+				#suggestion:hover
+					overflow: auto
+					height: auto
+					padding: 0 .5rem .5rem
+			&:focus,
+			&:valid
+				border-radius: 1rem 1rem 0 0 
+				border-bottom: 0 solid transparent
+				padding: .5rem 1rem
+				& + #suggestion
+					overflow: auto
+					height: auto
+					padding: 0 .5rem .5rem
+					&:before
+						width: 90%
+						height: 2px
+						background-color: $day_color
+		#suggestion
+			overflow: hidden
+			height: 0
+			outline: none
+			border: 2px solid $day_color
+			border-top: none
+			border-radius: 0 0 1rem 1rem
+			padding: .5rem
+			option
+				padding: .3rem
+			&:before
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				margin: auto
+			&:focus
+				overflow: auto
+				height: auto
+				border-color: $day_color
+				border-top: 0 solid transparent
+				padding: 0 .5rem .5rem
+				background-color: lighten($day_bg, 30%)
+				&:before
+					width: 90%
+					height: 2px
+					background-color: $day_color
 		button
 			position: absolute
 			bottom: .75rem
@@ -90,39 +172,64 @@ header
 			display: block
 main
 	+mode($p: 0)
+	section
+		text-align: center
+		+mode
 	#results
 		overflow: hidden
-		+mode
 		display: grid
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
 		gap: 1rem
-		h2
-			grid-column: span 1fr
-			text-align: center
 	#trending
 		+mode($bg-color: darken($day_bg, 10%))
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
+		text-align: center
 		h1, 
 		p
-			width: 100%
-			width: 100%
+			width: 100%	
 	article
+		position: relative
 		display: flex
 		justify-content: center
 		align-items: center
 		overflow: hidden
-		height: 200px
-		text-align: center
+		margin: .5rem
+		.hidden
+			+mode($day_bg, lighten($day_color, 10%))
+			padding-bottom:1rem
+			display: grid
+			justify-content: flex-start
+			align-content: flex-end
+			position: absolute
+			top: -100%
+			bottom: 100%
+			left: 0
+			right: 0
+			opacity: .8
+			.social
+				position: absolute
+				top: .5rem
+				right: .5rem
+			p
+				margin: 0
+				padding: .2rem
+				text-align: left
+		&:hover
+			.hidden
+				bottom: 0
+				top: 0
+				
 	video
+		width: 100%
 		height: 100%
 		max-height: 200px
-		background-color: $day_bg
-footer
+		background-color: lighten($night_bg, 30%)
+#footer
 	+mode($night_bg)
 	border-bottom: .2rem solid $day_color
-	@media screen and (min-width: 720px)
+	@media screen and (min-width: $tablet)
 		display: flex
 		justify-content: space-between
 		address
@@ -131,11 +238,19 @@ footer
 /*nightmode*/
 #mode[type="checkbox"]:checked
 	& ~ nav
-		+mode($night_color, $night_bg)
-		border-top: .2rem solid $night_color
+		+mode($night_color, $night_bg, $p:1rem 0 0)
+		border-top: .2rem solid darken($night_bg, 20%)
+		@media screen and (min-width: $tablet)
+			padding: .2rem 1rem
 		.menu
 			+mode($bg-color: darken($night_bg, 20%))
+			@media screen and (min-width: $tablet)
+				display: flex
+				padding: 0
+				background-color: transparent
 			li
+				a
+					color: $night_color
 				&:first-child
 					label:after
 						content:' Nocturno'
@@ -143,6 +258,8 @@ footer
 		+mode($night_color, $night_bg)
 		input, #suggestion
 			border-color: $night_color
+		#suggestion:before
+			background-color: $night_color
 	& ~ main
 		+mode($night_color, $night_bg, 0)
 		section
@@ -151,4 +268,4 @@ footer
 			+mode($night_color, darken($night_bg, 10%))
 	& ~ footer
 		+mode($night_color,$night_bg)
-		border-bottom: .2rem solid $night_color
+		border-bottom: .2rem solid darken($night_bg, 20%)
