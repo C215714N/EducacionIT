@@ -11,8 +11,7 @@
 		height:100px;
 		margin:1rem;
 		padding:1rem;
-		color:#ccc;
-		background-color: #333;
+		color:@secondary;
 		.divAnimado(@n:1) when (@n <= length(@animaciones)){
 			@animacion: extract(@animaciones, @n);
 			&:nth-child(@{n}){
