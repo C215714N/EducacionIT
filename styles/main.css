@@ -399,12 +399,16 @@
 				transition-delay: 1s;
 			}
 		/*Animations*/
+			.animation:hover div{
+				animation-play-state: running;
+			}
 			.animation div{
 				background-color: #333;
 				animation-name: success;
-				animation-duration: 5s;
-				animation-delay: 2s;
-				animation-iteration-count: 2;
+				animation-duration: 3s;
+				animation-delay: .6s;
+				animation-iteration-count: infinite;
+				animation-play-state: paused;
 			}
 			@keyframes success{
 				from{
@@ -468,10 +472,7 @@
 				}
 			}
 			.timestops div{
-				animation-name: rainbow;
-				animation-duration: 5s;
-				animation-delay: 1s;
-				animation-iteration-count: infinite;
+				animation: rainbow 5s ease .5s infinite; /*name duration timing delay iCount*/
 			}
 	/*Pie de pagina*/
 		#footer{

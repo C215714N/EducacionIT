@@ -1,0 +1,47 @@
+@import 'less.less';
+@import url(main.css);
+
+@animaciones: lineal, cuadratica, trigonometrica, exponencial, radical;
+
+.lessanimate{
+	display: block;
+	padding: 1rem;
+	div{
+		width:100px;
+		height:100px;
+		margin:1rem;
+		padding:1rem;
+		color:#ccc;
+		background-color: #333;
+		.divAnimado(@n:1) when (@n <= length(@animaciones)){
+			@animacion: extract(@animaciones, @n);
+			&:nth-child(@{n}){
+				background-color: hsl(@n * 30, 50%, 50%);
+				animation: @animacion 3s ease 2s * @n infinite;
+				animation-direction: alternate; 
+			}
+			@keyframes @animacion{
+				.keyAnimacion(@x: -25px, @i:0%) when (@i <= 100%){
+					@{i}{
+						transform:
+							if(@animacion = lineal, 
+								translate(@x * 10px + 200px, @x * 10px + 200px),
+							if(@animacion = cuadratica,
+								translate(@x * 10px + 200px, pow(@x,2)),
+							if(@animacion = trigonometrica,
+								translate(@x * 10px + 200px, sin(@x) * 100px),
+							if(@animacion = exponencial,
+								translate(@x * 10px + 200px, pow(1.2px, @x)),
+								translate(@x * 10px + 200px, sqrt(@x + 25px))
+							)	)	)	)
+						;
+					}
+					.keyAnimacion(@x + 5, @i + 5); 
+				}
+				.keyAnimacion;
+			}
+			.divAnimado(@n + 1);
+		}
+		.divAnimado;
+	}
+}

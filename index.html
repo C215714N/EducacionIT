@@ -247,6 +247,56 @@
 				</div>
 			</article>
 		</section>
+		<section>
+			<header class="header">
+				<h1>Animaciones CSS</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Linea de tiempo (@keyframes)</h1>
+				</header>
+				<p>
+					Una animacion es una pelicula en la cual definimos el estado inicial y final de un elemento, a diferencia de las transiciones, se reproducen de manera automatica y no necesitan de eventos para su ejecucion. Por defecto existen 2 estados <strong>from y to</strong> donde el primero indica como debe verse al comienzo y el otro como debe visualizarse al final. Tambien podemos utilizar los mismos valores que el atributo transition mediante <em>animation-timing-function</em>
+				</p>
+				<div class="example animation timing">
+					<div> ease </div>
+					<div> ease-in </div>
+					<div> ease-out </div>
+					<div> ease-in-out </div>
+					<div> linear </div>
+					<div> cubic-bezier(x1,y1,x2,y2) </div>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h1>Direccion de la Pelicula (fill-mode)</h1>
+				</header>
+				<p>
+					Al igual que un video, <strong>las animaciones pueden ser reproducidas en reversa o de modo normal</strong>, tambien existen variantes en caso que utilicemos en el atributo <em>animation-iteration-count</em> un valor mayor a 1, como <strong>alternate y alternate-reverse</strong> donde se alterna del <strong>from al to y viceversa</strong>. Por ultimo si este valor es 1, podemos utilizar el atributo <em>animation-fill-mode</em> donde <strong>backwards</strong> indica que el elemento se vea igual que al comienzo de la animacion y <strong>forwards</strong> mantiene el estilo del elemento al final de la misma.
+				</p>
+				<div class="example animation direction">
+					<div> normal </div>
+					<div> reverse </div>
+					<div> alternate </div>
+					<div> alternate-reverse </div>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h1>Fotogramas Clave (timestops)</h1>
+				</header>
+				<p>
+					La regla @keyframes nos permite definir la cantidad de cambios que recibira la etiqueta afectada a la hora de realizar nuestra animacion. Debemos indicarlos mediante <em>porcentajes</em> y obligatoriamente para que la animacion funcione correctamente debemos indicar los estados <strong>0%{...} y 100%{...}</strong>
+				</p>
+				<div class="example timestops">
+					<div> 0% </div>
+					<div> 25% </div>
+					<div> 50% </div>
+					<div> 75% </div>
+					<div> 100% </div>
+				</div>
+			</article>
+		</section>
 	</main>
 	<footer id="footer">
 		<form action="" id="contact">

@@ -1,3 +1,4 @@
+@import url(main.css);
 nav {
   color: #248;
   background-color: #cccc;
@@ -450,5 +451,367 @@ main .header {
   }
   .col-xl-24 {
     width: 100%;
+  }
+}
+.lessanimate {
+  display: block;
+  padding: 1rem;
+}
+.lessanimate div {
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  padding: 1rem;
+  color: #ccc;
+  background-color: #333;
+}
+.lessanimate div:nth-child(1) {
+  background-color: hsl(30, 50%, 50%);
+  animation: lineal 3s ease 2s infinite;
+  animation-direction: alternate;
+}
+@keyframes lineal {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  5% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(50px, 50px);
+  }
+  15% {
+    transform: translate(100px, 100px);
+  }
+  20% {
+    transform: translate(150px, 150px);
+  }
+  25% {
+    transform: translate(200px, 200px);
+  }
+  30% {
+    transform: translate(250px, 250px);
+  }
+  35% {
+    transform: translate(300px, 300px);
+  }
+  40% {
+    transform: translate(350px, 350px);
+  }
+  45% {
+    transform: translate(400px, 400px);
+  }
+  50% {
+    transform: translate(450px, 450px);
+  }
+  55% {
+    transform: translate(500px, 500px);
+  }
+  60% {
+    transform: translate(550px, 550px);
+  }
+  65% {
+    transform: translate(600px, 600px);
+  }
+  70% {
+    transform: translate(650px, 650px);
+  }
+  75% {
+    transform: translate(700px, 700px);
+  }
+  80% {
+    transform: translate(750px, 750px);
+  }
+  85% {
+    transform: translate(800px, 800px);
+  }
+  90% {
+    transform: translate(850px, 850px);
+  }
+  95% {
+    transform: translate(900px, 900px);
+  }
+  100% {
+    transform: translate(950px, 950px);
+  }
+}
+.lessanimate div:nth-child(2) {
+  background-color: hsl(60, 50%, 50%);
+  animation: cuadratica 3s ease 4s infinite;
+  animation-direction: alternate;
+}
+@keyframes cuadratica {
+  0% {
+    transform: translate(-50px, 625px);
+  }
+  5% {
+    transform: translate(0px, 400px);
+  }
+  10% {
+    transform: translate(50px, 225px);
+  }
+  15% {
+    transform: translate(100px, 100px);
+  }
+  20% {
+    transform: translate(150px, 25px);
+  }
+  25% {
+    transform: translate(200px, 0px);
+  }
+  30% {
+    transform: translate(250px, 25px);
+  }
+  35% {
+    transform: translate(300px, 100px);
+  }
+  40% {
+    transform: translate(350px, 225px);
+  }
+  45% {
+    transform: translate(400px, 400px);
+  }
+  50% {
+    transform: translate(450px, 625px);
+  }
+  55% {
+    transform: translate(500px, 900px);
+  }
+  60% {
+    transform: translate(550px, 1225px);
+  }
+  65% {
+    transform: translate(600px, 1600px);
+  }
+  70% {
+    transform: translate(650px, 2025px);
+  }
+  75% {
+    transform: translate(700px, 2500px);
+  }
+  80% {
+    transform: translate(750px, 3025px);
+  }
+  85% {
+    transform: translate(800px, 3600px);
+  }
+  90% {
+    transform: translate(850px, 4225px);
+  }
+  95% {
+    transform: translate(900px, 4900px);
+  }
+  100% {
+    transform: translate(950px, 5625px);
+  }
+}
+.lessanimate div:nth-child(3) {
+  background-color: hsl(90, 50%, 50%);
+  animation: trigonometrica 3s ease 6s infinite;
+  animation-direction: alternate;
+}
+@keyframes trigonometrica {
+  0% {
+    transform: translate(-50px, 13.23517501px);
+  }
+  5% {
+    transform: translate(0px, -91.29452507px);
+  }
+  10% {
+    transform: translate(50px, -65.02878402px);
+  }
+  15% {
+    transform: translate(100px, 54.40211109px);
+  }
+  20% {
+    transform: translate(150px, 95.89242747px);
+  }
+  25% {
+    transform: translate(200px, 0px);
+  }
+  30% {
+    transform: translate(250px, -95.89242747px);
+  }
+  35% {
+    transform: translate(300px, -54.40211109px);
+  }
+  40% {
+    transform: translate(350px, 65.02878402px);
+  }
+  45% {
+    transform: translate(400px, 91.29452507px);
+  }
+  50% {
+    transform: translate(450px, -13.23517501px);
+  }
+  55% {
+    transform: translate(500px, -98.80316241px);
+  }
+  60% {
+    transform: translate(550px, -42.81826695px);
+  }
+  65% {
+    transform: translate(600px, 74.51131605px);
+  }
+  70% {
+    transform: translate(650px, 85.09035245px);
+  }
+  75% {
+    transform: translate(700px, -26.23748537px);
+  }
+  80% {
+    transform: translate(750px, -99.97551734px);
+  }
+  85% {
+    transform: translate(800px, -30.48106211px);
+  }
+  90% {
+    transform: translate(850px, 82.68286795px);
+  }
+  95% {
+    transform: translate(900px, 77.38906816px);
+  }
+  100% {
+    transform: translate(950px, -38.77816354px);
+  }
+}
+.lessanimate div:nth-child(4) {
+  background-color: hsl(120, 50%, 50%);
+  animation: exponencial 3s ease 8s infinite;
+  animation-direction: alternate;
+}
+@keyframes exponencial {
+  0% {
+    transform: translate(-50px, 0.0104826px);
+  }
+  5% {
+    transform: translate(0px, 0.02608405px);
+  }
+  10% {
+    transform: translate(50px, 0.06490547px);
+  }
+  15% {
+    transform: translate(100px, 0.16150558px);
+  }
+  20% {
+    transform: translate(150px, 0.40187757px);
+  }
+  25% {
+    transform: translate(200px, 1px);
+  }
+  30% {
+    transform: translate(250px, 2.48832px);
+  }
+  35% {
+    transform: translate(300px, 6.19173642px);
+  }
+  40% {
+    transform: translate(350px, 15.40702157px);
+  }
+  45% {
+    transform: translate(400px, 38.33759992px);
+  }
+  50% {
+    transform: translate(450px, 95.39621664px);
+  }
+  55% {
+    transform: translate(500px, 237.3763138px);
+  }
+  60% {
+    transform: translate(550px, 590.66822915px);
+  }
+  65% {
+    transform: translate(600px, 1469.77156797px);
+  }
+  70% {
+    transform: translate(650px, 3657.26198801px);
+  }
+  75% {
+    transform: translate(700px, 9100.43815px);
+  }
+  80% {
+    transform: translate(750px, 22644.80225741px);
+  }
+  85% {
+    transform: translate(800px, 56347.51435317px);
+  }
+  90% {
+    transform: translate(850px, 140210.64691527px);
+  }
+  95% {
+    transform: translate(900px, 348888.95693221px);
+  }
+  100% {
+    transform: translate(950px, 868147.36931355px);
+  }
+}
+.lessanimate div:nth-child(5) {
+  background-color: hsl(150, 50%, 50%);
+  animation: radical 3s ease 10s infinite;
+  animation-direction: alternate;
+}
+@keyframes radical {
+  0% {
+    transform: translate(-50px, 0px);
+  }
+  5% {
+    transform: translate(0px, 2.23606798px);
+  }
+  10% {
+    transform: translate(50px, 3.16227766px);
+  }
+  15% {
+    transform: translate(100px, 3.87298335px);
+  }
+  20% {
+    transform: translate(150px, 4.47213595px);
+  }
+  25% {
+    transform: translate(200px, 5px);
+  }
+  30% {
+    transform: translate(250px, 5.47722558px);
+  }
+  35% {
+    transform: translate(300px, 5.91607978px);
+  }
+  40% {
+    transform: translate(350px, 6.32455532px);
+  }
+  45% {
+    transform: translate(400px, 6.70820393px);
+  }
+  50% {
+    transform: translate(450px, 7.07106781px);
+  }
+  55% {
+    transform: translate(500px, 7.41619849px);
+  }
+  60% {
+    transform: translate(550px, 7.74596669px);
+  }
+  65% {
+    transform: translate(600px, 8.06225775px);
+  }
+  70% {
+    transform: translate(650px, 8.36660027px);
+  }
+  75% {
+    transform: translate(700px, 8.66025404px);
+  }
+  80% {
+    transform: translate(750px, 8.94427191px);
+  }
+  85% {
+    transform: translate(800px, 9.21954446px);
+  }
+  90% {
+    transform: translate(850px, 9.48683298px);
+  }
+  95% {
+    transform: translate(900px, 9.74679434px);
+  }
+  100% {
+    transform: translate(950px, 10px);
   }
 }
