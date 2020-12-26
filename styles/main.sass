@@ -48,6 +48,7 @@ nav
 		list-style: none
 		text-align: center
 		@media screen and (min-width: $tablet)
+			height: auto
 			position: static
 			display: flex
 			width: auto
@@ -175,6 +176,10 @@ main
 	section
 		text-align: center
 		+mode
+	#createGif
+		display: none
+		&:target
+			display: block
 	#results
 		overflow: hidden
 		display: grid

@@ -51,6 +51,7 @@ nav .menu {
 }
 @media screen and (min-width: 720px) {
   nav .menu {
+    height: auto;
     position: static;
     display: flex;
     width: auto;
@@ -221,6 +222,12 @@ main section {
   padding: 1rem;
   color: #572ee5;
   background-color: #fefefe;
+}
+main #createGif {
+  display: none;
+}
+main #createGif:target {
+  display: block;
 }
 main #results {
   overflow: hidden;
