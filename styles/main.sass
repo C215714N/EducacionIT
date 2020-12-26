@@ -1,113 +1,160 @@
 //colors
-$day_color: #572ee5
-$day_bg: #fefefe
-$night_color: #ccc
-$night_bg: #333
+$color: #572ee5
+$bg_color: #fefefe
 $special_color: #33c9ca
-$smartphone: 576px
-$tablet: 720px
-$desktop: 992px
+//media screen
+$sm: 576px
+$md: 720px
+$lg: 992px
+$xl: 1140px
+//images
+$icon: "../assets/icons/"
+$camera: url($icon+"bg_camera.svg"), url($icon+"bg_light.svg")
+//social media
+$icons: logo, search, link, fav, trash, max, download, facebook, instagram, twitter
 //mode mixins
-=mode($color: $day_color, $bg-color:$day_bg, $p:1rem)
-	padding: $p
+=mode($color: $color, $bg_color:$bg_color)
 	color: $color
-	background-color: $bg-color
+	background-color: $bg_color
+=normalize($m:0, $b:0, $p: 1rem)
+	margin: $m
+	border: $b
+	padding: $p
+/*Icons*/
+.icon
+	display: inline-block
+	width: 1.5rem
+	height: 1.5rem
+	margin: .5rem
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+@each $ico in $icons
+	.#{$ico}
+		background-image: url($icon+"icon_"+$ico+".svg")
+	.#{$ico}:hover,
+	#mode:checked ~ * .#{$ico}:hover
+		background-image: url($icon+"icon_"+$ico+"_hover.svg")
+	#mode:checked ~ * .#{$ico}
+		background-image: url($icon+"icon_"+$ico+"_noc.svg")
 /*content first*/
 *
 	box-sizing: border-box
 	font-family: century gothic, sans-serif
+	outline: none
 	text-decoration: none
 	transition: all .5s ease-in
 #mode
 	display: none
 body
 	margin:0
-/*daymode*/
+.special
+	color: $special_color
+.button
+	+normalize(.5rem, 2px solid $color, .5rem 1rem)
+/*navegacion*/
 nav
+	+mode
+	+normalize($p: .5rem 0)
 	position: sticky
 	top: 0
 	z-index: 5
-	+mode($p: 1rem 0 0)
-	border-top: .2rem solid $day_color
+	border-top: .2rem solid $color
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	@media screen and (min-width: $tablet)
+	align-items: center
+	@media screen and (min-width: $md)
 		display: flex
-		padding: .2rem 1rem
 		justify-content: space-between
+		padding: .2rem 1rem
 		#menu
 			display: none
+	@media screen and (min-width: $xl)
+		justify-content: space-around
 	.menu
+		+normalize
 		overflow: hidden
 		display: none
+		position: fixed
+		top: 3.5rem
 		width: 100%
-		height: 0
-		margin: 0
-		+mode($day_bg, $day_color)
+		height: 100vh
+		+mode($bg_color, $color)
 		list-style: none
 		text-align: center
-		@media screen and (min-width: $tablet)
+		@media screen and (min-width: $md)
+			+normalize($p:0)
 			height: auto
 			position: static
 			display: flex
 			width: auto
-			padding: 0
 			background-color: transparent			
 		li
-			@media screen and (min-width: $tablet)
+			@media screen and (min-width: $md)
 				border-bottom: .2rem solid transparent
 				&:not(:last-child):hover
 					border-bottom: .2rem solid $special_color
 			a
+				+normalize($p: .5rem 1rem)
 				display: inline-block
-				color:$day_bg
-				padding: .5rem 1rem
+				color:$bg_color
 				font-weight: bold
-				@media screen and (min-width: $tablet)
-					color: $day_color
+				@media screen and (min-width: $md)
+					color: $color
 				&::after
+					+normalize(auto, none, 0)
 					content: ''
 					display: block
 					width: 60%
 					height: 1px
-					margin: auto
 					margin-top: 1rem
-					background-color: $night_color
-					@media screen and (min-width: $tablet)
+					background-color: $color
+					@media screen and (min-width: $md)
 						display: none
 			&:first-child
 				label
 					cursor: pointer
 					&:after
 						content:' Diurno'
+			&:last-child
+				a
+					display: none
+					@media screen and (min-width: $md)
+						display: block
+	.open
+		display: block
+		opacity: .8
+		@media screen and (min-width: $md)
+			display: flex
+			padding: 0
+			background-color: transparent
+/*cabecera*/
 #header	
 	+mode
+	+normalize($p: 0)
 	text-align: center
 	h1
-		margin: auto
-		padding: .2rem 3rem
-		max-width: $smartphone
-		span
-			color: $special_color
+		+normalize(auto, none, .2rem 3rem)
+		max-width: $sm
 	img 
-		display: block 
-		margin: auto
-		max-width: $smartphone
+		+normalize(auto, none, 0 1rem)
+		display: block
+		width: 100%
+		max-width: $sm * 3/4
 	form
+		+normalize(auto, none, 0 1rem)
 		display: flex
 		flex-direction: column
 		position: relative
-		max-width: $smartphone
-		margin: auto
-		padding: 0 3rem
+		max-width: $sm
 		::-webkit-scrollbar
-			width:1rem
+			width: 0
+			height: 0
 		input
+			+normalize(0, 2px solid $color, .5rem)
 			outline: none
-			margin: 0
 			border-radius: 1rem 1rem 0 0
-			border: 2px solid $day_color
 			border-bottom: none
 			width: 100%
 			&:invalid
@@ -120,26 +167,26 @@ nav
 					padding: 0 .5rem .5rem
 			&:focus,
 			&:valid
-				border-radius: 1rem 1rem 0 0 
-				border-bottom: 0 solid transparent
-				padding: .5rem 1rem
+				+normalize(0, 2px solid $color, .5rem 1rem)
+				border-radius: 1rem 1rem 0 0
+				border-bottom: none
 				& + #suggestion
 					overflow: auto
 					height: auto
 					padding: 0 .5rem .5rem
 					&:before
 						width: 90%
-						height: 2px
-						background-color: $day_color
+						height: 1px
+						background-color: darken($bg_color, 20%)
 		#suggestion
+			+normalize(0, 2px solid $color, .5rem)
 			overflow: hidden
 			height: 0
 			outline: none
-			border: 2px solid $day_color
 			border-top: none
 			border-radius: 0 0 1rem 1rem
-			padding: .5rem
 			option
+				color: darken($bg_color, 20%)
 				padding: .3rem
 			&:before
 				content: ''
@@ -150,60 +197,188 @@ nav
 			&:focus
 				overflow: auto
 				height: auto
-				border-color: $day_color
+				border-color: $color
 				border-top: 0 solid transparent
 				padding: 0 .5rem .5rem
-				background-color: lighten($day_bg, 30%)
+				+mode($color, lighten($bg_color, 30%)) 
 				&:before
 					width: 90%
-					height: 2px
-					background-color: $day_color
+					height: 1px
+					background-color: $color
+			option
+				+normalize($p: .2rem)
+				&:focus
+					background-color: transparent
 		button
+			+normalize($p: 0)
 			position: absolute
-			bottom: .75rem
-			right: 4rem
-			margin: 0
+			z-index: 1
+			top: .2rem
+			bottom: 0
+			right: 1.25rem
+			width: 1.5rem
+			height: 1.5rem
 			outline: none
-			border: 0
-			padding: 0
-			background-color: transparent
+			border-radius: 1rem
+			background-image: url($icon+"icon_search.svg")
+			background-size: contain
 	p
-		padding: .2rem 3rem
+		+normalize($p: 1rem 3rem)
 		strong
 			display: block
+/*contenido principal*/
 main
-	+mode($p: 0)
+	+mode
+	+normalize($p: 0)
+	/*secciones de pagina*/
 	section
-		text-align: center
 		+mode
+		+normalize
+		text-align: center
+		&:target ~ section
+			display: none
+	section:last-child
+		+mode($bg_color: darken($bg_color, 10%))
+	.title
+		+normalize
+		font-size: 2rem
+	/*creacion gif*/
 	#createGif
 		display: none
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		.camera
+			position: absolute
+			left: -50%
+			width: 10rem
+			height: 10rem
+			background-image: $camera
+			background-repeat: no-repeat
+		/*area de grabacion*/
+		article
+			+normalize(auto, 1px solid $color, 1.5rem)
+			overflow: visible
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100vw
+			height: 100vh
+			max-width: 540px
+			max-height: 360px
+			video, img
+				position: absolute
+				top: 15%
+				right: 20%
+				width: 60%
+				height: 70%
+				opacity: 0
+				background-color: transparent
+				&:before, &:after
+					content: ''
+					position: absolute
+					display: block
+					width: 2rem
+					height: 2rem
+					border: 2px solid $special_color
+					background-color: $special_color
 		&:target
+			display: flex
+		div:last-child
+			width: 720px
+		/*area de proceso*/
+		.menu
+			+normalize(auto, none, 0)
+			position: relative
+			list-style: none
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			border-bottom: .3rem solid $color
+			li
+				border: 1px solid $color
+			li, a
+				+mode
+				+normalize(.5rem, none, .25rem .6rem)
+				display: block
+				border-radius: 50%
+				font: 1rem sans-serif
+			.active
+				+mode($bg_color,$color)
+				+normalize($p: .25rem .6rem)
+		button
+			cursor: pointer
+			+mode($color,$bg_color)
+			+normalize(1rem, 1px solid $color, .5rem)
+			border-radius: 1rem
+			width: 6rem
+			text-align: center
+			line-height: 1rem
+		.show
 			display: block
+			opacity: 1
+	/*area de resultados*/
 	#results
 		overflow: hidden
 		display: grid
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
-		gap: 1rem
-	#trending
-		+mode($bg-color: darken($day_bg, 10%))
-		display: flex
-		flex-wrap: wrap
+		grid-template-columns: repeat(auto-fill, minmax(200px, 2fr))
 		justify-content: center
-		text-align: center
-		h1, 
-		p
-			width: 100%	
+		gap: .5rem
+		padding: 1rem
+	/*area de paginacion*/
+	#pagination
+		img
+			margin: 5rem auto 1rem
+		.special
+			margin: 0 auto 5rem
+		ul
+			+normalize($p:.5rem)
+			list-style: none
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			li
+				+normalize($p: .5rem)
+				max-width: 150px
+			strong
+				display: block
+		.button
+			cursor: pointer
+			+mode
+			+normalize(1rem, 1px solid $color, .5rem 1rem)
+			outline: none
+			border-radius: 1rem
+			background-color: transparent
+			&:hover
+				+mode($bg_color, $color)
+	/*gifs populares*/
+	#trending
+		overflow: auto
+		max-height: 250px
+		display: grid
+		grid-template-columns: repeat(3, 250px)
+		justify-content: flex-start
+		align-content: center
+		@media screen and (min-width: $md)
+			justify-content: center
+		&::-webkit-scrollbar
+			width: 0
+	/*elementos independiente*/
 	article
+		overflow: hidden
 		position: relative
 		display: flex
 		justify-content: center
 		align-items: center
-		overflow: hidden
+		max-width: 300px
+		max-height: 200px
 		margin: .5rem
+		background-color: darken($bg_color, 100%)
 		.hidden
-			+mode($day_bg, lighten($day_color, 10%))
-			padding-bottom:1rem
+			+mode($bg_color, rgba(87, 46, 229, .5))
+			+normalize($p: .5rem)
 			display: grid
 			justify-content: flex-start
 			align-content: flex-end
@@ -212,65 +387,81 @@ main
 			bottom: 100%
 			left: 0
 			right: 0
-			opacity: .8
 			.social
 				position: absolute
 				top: .5rem
 				right: .5rem
 			p
-				margin: 0
-				padding: .2rem
+				+normalize(0, none, .2rem)
 				text-align: left
 		&:hover
 			.hidden
 				bottom: 0
-				top: 0
-				
-	video
-		width: 100%
+				top: 0		
+	video, img
 		height: 100%
-		max-height: 200px
-		background-color: lighten($night_bg, 30%)
+		background-color: lighten($bg_color, 15%)
+/*pie de pagina*/
 #footer
-	+mode($night_bg)
-	border-bottom: .2rem solid $day_color
-	@media screen and (min-width: $tablet)
+	+mode(darken($color, 50%), $bg_color)
+	+normalize
+	border-bottom: .2rem solid $color
+	text-align: center
+	a
+		font-weight: bold
+	/*redes sociales*/
+	.social
+		margin: 3rem auto
+		@media screen and (min-width: $md)
+			display: flex
+			align-items: center
+			margin: 0
+	@media screen and (min-width: $md)
 		display: flex
 		justify-content: space-between
-		address
-			display: flex
-			justify-content: space-between
+		align-items: center
 /*nightmode*/
-#mode[type="checkbox"]:checked
+#mode:checked
+	$color: #ccc
+	$bg_color: #333
+	& ~ * .night
+		fill: $bg_color
 	& ~ nav
-		+mode($night_color, $night_bg, $p:1rem 0 0)
-		border-top: .2rem solid darken($night_bg, 20%)
-		@media screen and (min-width: $tablet)
+		+mode($color, $bg_color)
+		border-top: .2rem solid darken($bg_color, 20%)
+		@media screen and (min-width: $md)
 			padding: .2rem 1rem
 		.menu
-			+mode($bg-color: darken($night_bg, 20%))
-			@media screen and (min-width: $tablet)
+			+mode($bg_color: darken($bg_color, 20%))
+			@media screen and (min-width: $md)
 				display: flex
-				padding: 0
 				background-color: transparent
 			li
 				a
-					color: $night_color
+					color: $color
 				&:first-child
 					label:after
 						content:' Nocturno'
-	& ~ header
-		+mode($night_color, $night_bg)
+	& ~ #header
+		+mode($color, $bg_color)
 		input, #suggestion
-			border-color: $night_color
+			border-color: $color
 		#suggestion:before
-			background-color: $night_color
+			background-color: $color
 	& ~ main
-		+mode($night_color, $night_bg, 0)
+		+mode($color, $bg_color)
 		section
-			+mode($night_color, $night_bg)
-		#trending
-			+mode($night_color, darken($night_bg, 10%))
-	& ~ footer
-		+mode($night_color,$night_bg)
-		border-bottom: .2rem solid darken($night_bg, 20%)
+			+mode($color, $bg_color)
+			.button		
+				+mode($color, $bg_color)	
+				+normalize(1rem, 1px solid $color, .5rem 1rem)
+				&:hover
+					+mode($bg_color, $color)
+		section:last-child
+			+mode($color, $bg_color: darken($bg_color, 10%))
+	& ~ #footer
+		+mode($color, $bg_color)
+		border-bottom: .2rem solid darken($bg_color, 20%)
+		a[href="#"]
+			+mode($color, transparent)
+			font-weight: bold

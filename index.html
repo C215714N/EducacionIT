@@ -12,82 +12,78 @@
 </head>
 <body>
 	<input id="mode" type="checkbox" />
-	<nav class="day night">
-		<a href="#"></a>
+	<nav>
+		<a class="icon logo" href="#"></a>
 		<button id="menu">
 			&equiv;
 		</button>
 		<ul class="menu">
-			<li><a href="#"><label for="mode">Modo </label></a></li>
+			<li><a><label for="mode">Modo </label></a></li>
 			<li><a href="#favoritos">Favoritos</a></li>
-			<li><a href="#gifos">Mis GIFOS</a></li>
+			<li><a href="#mis_gifos">Mis GIFOS</a></li>
 			<li><a href="#createGif"> + </a></li>
 		</ul>
 	</nav>
-	<header id="header" class="day night">
+	<header id="header" >
 		<h1>Inspírate, busca, guarda, y crea los mejores 
-			<span> GIFOS </span>
+			<span class="special"> GIFOS </span>
 		</h1>
 		<img src="assets/icons/ilustra_header.svg" alt="ilustra_header">
 		<form id="search">
 			<input 
 				type="search" 
 				list="suggestion" 
-				value=""
 				minlength="2"
 				maxlength="50" 
 				required>
 			<select id="suggestion" multiple>
 			</select>
-			<button></button>
+			<button type="submit"></button>
 		</form>
 		<p>
 			<strong>Trending: </strong>
 			Reactions, Entertainment, Sports, Stickers, Artist
 		</p>
 	</header>
-	<main class="day night">
-		<section id="createGif">
-			<div>
-				<img src="assets/icons/element_cinta1.svg" alt="">
-				<img src="assets/icons/element_cinta2.svg" alt="">
-				<img src="assets/icons/element-camara.svg" alt="">
-				<img src="assets/icons/element-luz-camara.svg" alt="">
+	<main>
+		<section>
+			<h1 class="title"></h1>
+			<div id="results">
 			</div>
-			<article class="">
-				<video></video>
+			<form id="pagination">
+			</form>
+		</section>
+				<section id="createGif">
+			<article>
+				<div class="camera">
+				</div>
+				<video class="show"></video>
 				<img />
 			</article>
 			<div>
 				<ul class="menu">
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#"> repetir captura </a></li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<a href="#createGif"> repetir captura </a>
+					<div class="tape"></div>
 				</ul>
+				<button>Crear</button>
 			</div>
-			<button>Crear</button>
 		</section>
-		<section id="results">
-		</section>
-		<section id="pagination">
-			<button class="prev"></button>
-			<span></span>
-			<button class="next"></button>
-		</section>
-		<section id="trending">
+		<section>
 			<h1>Trending GIFOS</h1>
-			<p>
-				Mira los ultimos GIFOS de nuestra comunidad.
-			</p>
+			<p>	Mira los ultimos GIFOS de nuestra comunidad. </p>
+			<div id="trending">
+			</div>
 		</section>
 	</main>
-	<footer id="footer" class="day night">
+	<footer id="footer" >
 		<div class="social">
 			<p>Compartir en:</p>
-			<a href="https://facebook.com" target="_blank"></a>
-			<a href="https://twitter.com" target="_blank"></a>
-			<a href="https://instagram.com" target="_blank"></a>
+			<a class="icon facebook" href="https://facebook.com" target="_blank"></a>
+			<a class="icon twitter" href="https://twitter.com" target="_blank"></a>
+			<a class="icon instagram" href="https://instagram.com" target="_blank"></a>
 		</div>
 		<address>
 			&copy;<a href="#">GIFOS 2020 </a>
