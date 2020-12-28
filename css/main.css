@@ -14,6 +14,7 @@
 			align-items: center;
 			flex-wrap: wrap;
 			background-color: #eee; /*rgb */
+			z-index: 9;
 		}
 		nav a{
 			display: block;
@@ -51,7 +52,61 @@
 			display: block;
 		}
 	/*Cabecera*/
-
+		#header{
+			position: relative;
+			height: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding:1rem;
+			font-size: 1.2rem;
+		}
+		.header h1,
+		.header p{
+			margin:0;
+		}
+		/*Galeria*/
+			.slide{
+				list-style: none;
+				margin:0;
+				padding:0;
+			}
+			.slide,
+			.slide li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+			.slide li{ 
+				background-color: #999; 
+				opacity: 0;
+			}
+			.slide li:first-child{ background-color: #eee }
+			.slide li:nth-child(2){ background-color: #ccc }
+			.slide li:last-child{ background-color: #666 }
+			.slide .active{
+				opacity: 1;
+			}
+		/*Controles*/
+			#header a{
+				position: absolute;
+				padding:1rem;
+				top: 0;
+				bottom: 0;
+				color:#eee;
+				line-height: 300px;
+				font-size: 3rem;
+				text-decoration: none;
+				opacity: .3;
+			}
+			#header a:hover{
+				opacity: .6;
+			}
+			.prev{left:0;}
+			.next{right:0;}
 /*
 	BreakPoints
 	width 		name 	devices
