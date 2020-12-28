@@ -27,6 +27,7 @@
 					(43567281,'Gomez','Ezequiel'),
 					(9751234,'Lopez','Pablo'),
 					(12357402,'Gimenez','Lucia');
+
 	/*CONSULTA DE DATOS*/
 		SELECT * -- todos los campos
 		FROM clientes; -- tabla de origen
@@ -123,3 +124,29 @@
 		number: 1 + 1 = 2
         string: "1" + "1" = "11"
     */
+    
+-- facturacion
+	DESCRIBE facturacion;
+    INSERT INTO facturacion(tipo, medio, fecha, vendedor, id_cliente)
+	VALUES 	( 2, 3, CURRENT_DATE(), CURRENT_USER(), 7 ),
+			( 2, 1, CURRENT_DATE(), CURRENT_USER(), 2 ),
+            ( 2, 2, CURRENT_DATE(), CURRENT_USER(), 5 ),
+            ( 2, 7, CURRENT_DATE(), CURRENT_USER(), 4 ),
+            ( 2, 3, CURRENT_DATE(), CURRENT_USER(), 1 ),
+            ( 2, 3, CURRENT_DATE(), CURRENT_USER(), 6 );
+	SELECT * FROM facturacion;
+    
+-- facturacion detalle
+	DESCRIBE facturacion_detalle;
+	INSERT INTO facturacion_detalle(id_factura, id_producto, cantidad)
+    VALUES	(1, 4, 2),
+			(1, 12, 1),
+            (1, 13, 5),
+            (1, 6, 3),
+            (2, 2, 1),
+            (2, 10, 2),
+            (3, 8, 1),
+            (3, 7, 6);
+            
+	SELECT * FROM facturacion;
+    SELECT * FROM facturacion_detalle;

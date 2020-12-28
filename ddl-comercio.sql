@@ -53,3 +53,27 @@
         UNIQUE KEY(modelo, categoria, id_proveedor),
         FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor)
     );
+    -- facturacion
+    CREATE TABLE facturacion(
+		id_factura INT AUTO_INCREMENT,
+        id_cliente INT,
+        tipo ENUM('debe', 'haber'),
+        medio ENUM('efectivo','debito','credito','cheque','deposito','transferencia', 'virtual'),
+        monto DECIMAL,
+        fecha DATE,
+        vendedor VARCHAR(50),
+        PRIMARY KEY(id_factura),
+        UNIQUE KEY(id_cliente, tipo, medio, monto, fecha),
+        FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente) -- id_cliente PK @ tabla clientes
+    );
+    CREATE TABLE facturacion_detalle(
+		id_detalle INT AUTO_INCREMENT,
+        id_factura INT,
+        id_producto INT,
+        cantidad INT,
+        precio DECIMAL,
+        PRIMARY KEY(id_detalle),
+        UNIQUE KEY(id_factura, id_producto),
+        FOREIGN KEY(id_factura) REFERENCES facturacion(id_factura), -- id_factura PK @ tabla facturacion
+        FOREIGN KEY(id_producto) REFERENCES productos(id_producto) -- id_producto PK @ tabla productos
+    )
