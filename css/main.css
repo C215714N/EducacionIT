@@ -1,0 +1,76 @@
+/*Content First*/
+	/*Reglas generales*/
+		*{
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{ margin: 0; }
+	/*Navegacion*/
+		nav{
+			position:sticky;
+			top:0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background-color: #eee; /*rgb */
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #333;
+			text-decoration: none;
+		}
+		nav > a:first-child{
+			font: bold 1.2rem sans-serif; /*style weight size family*/
+		}
+		nav button{
+			cursor: pointer;
+			margin:.5rem;
+			font-size: 2rem;
+			outline: none;
+			border: .2rem solid #333;
+			padding: .1rem .6rem;
+			text-align: center;
+			color: #333;
+			background-color: transparent;
+		}
+		.menu{
+			display: none;
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding:0;
+			text-align: center;
+		}
+		.menu a:hover{
+			color:#eee;
+			background-color: rgba(51,51,51,.5)
+		}
+		.open{
+			display: block;
+		}
+	/*Cabecera*/
+
+/*
+	BreakPoints
+	width 		name 	devices
+	<576px 		xs 		smartwatch | cellphones
+	>=576px 	sm 		cellphones | smartphones
+	>=768px		md 		smartphones (landscape) | tablets
+	>=992px 	lg 		tablets (landscape) | desktop
+	>=1200px 	xl 		desktop | HD screen
+	>=1400px	xxl 	HD screen 
+*/
+/* Medium Devices | Tablets */
+	@media screen and (min-width: 768px){
+		/*Navegacion*/
+			nav button{
+				display: none;
+			}
+			.menu{
+				display: block;
+				width: auto;
+				display: flex;
+			}
+	}
