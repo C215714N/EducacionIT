@@ -25,7 +25,7 @@
 		nav > a:first-child{
 			font: bold 1.2rem sans-serif; /*style weight size family*/
 		}
-		nav button{
+		.button{
 			cursor: pointer;
 			margin:.5rem;
 			font-size: 2rem;
@@ -35,6 +35,10 @@
 			text-align: center;
 			color: #333;
 			background-color: transparent;
+		}
+		.button:hover{
+			color:#ccc;
+			background-color: #333;
 		}
 		.menu{
 			display: none;
@@ -54,12 +58,17 @@
 	/*Cabecera*/
 		#header{
 			position: relative;
-			height: 300px;
+			height: 600px;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			justify-content: center;align-items: center;
+			color:#ccc;
+			text-shadow: 
+				-.1rem -.1rem .1rem #333, 
+				.2rem .2rem .2rem #333;
 			padding:1rem;
-			font-size: 1.2rem;
+			font-size: .8rem;
+			text-align: center;
+			text-transform: uppercase;
 		}
 		.header h1,
 		.header p{
@@ -81,12 +90,14 @@
 				z-index: -1;
 			}
 			.slide li{ 
-				background-color: #999; 
+				background-image: url(../assets/img/osx-lion.png);
+				background-size: cover;
+				background-position: center; 
 				opacity: 0;
 			}
-			.slide li:first-child{ background-color: #eee }
-			.slide li:nth-child(2){ background-color: #ccc }
-			.slide li:last-child{ background-color: #666 }
+			.slide li:first-child{ background-image: url(../assets/img/osx-mavericks.png) }
+			.slide li:nth-child(2){ background-image: url(../assets/img/osx-mojave-night.jpg) }
+			.slide li:last-child{ background-image: url(../assets/img/osx-sierra.jpg) }
 			.slide .active{
 				opacity: 1;
 			}
@@ -97,7 +108,7 @@
 				top: 0;
 				bottom: 0;
 				color:#eee;
-				line-height: 300px;
+				line-height: 550px;
 				font-size: 3rem;
 				text-decoration: none;
 				opacity: .3;
@@ -107,6 +118,39 @@
 			}
 			.prev{left:0;}
 			.next{right:0;}
+	/*Pie de Pagina*/
+		#footer{
+			padding:1rem;
+			background-color: #ccc;
+		}
+		/*Formulario Contacto*/
+			#contact{
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+			}
+			#contact label{
+				display: none;
+			}
+			#contact input,
+			#contact textarea{
+				margin: 0 0 .5rem ;
+				outline: none;
+				border: 2px solid white;
+				padding:.5rem 1rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				resize: none;
+				height: 6rem;
+			}
+			#contact .button{
+				align-self: flex-end;
+				margin:.2rem 0;
+				font: bold 1rem sans-serif;
+				text-transform: uppercase;
+
+			}
 /*
 	BreakPoints
 	width 		name 	devices
@@ -119,6 +163,10 @@
 */
 /* Medium Devices | Tablets */
 	@media screen and (min-width: 768px){
+		/*Cabecera*/
+			#header{
+				font-size: 1.2rem;
+			}
 		/*Navegacion*/
 			nav button{
 				display: none;
@@ -128,4 +176,34 @@
 				width: auto;
 				display: flex;
 			}
+		/*Formulario Contacto*/
+			#contact{
+				max-width: 720px;
+			}
+			#contact label{
+				display: block;
+			}
 	}
+/* Large Devices | Desktop */
+	@media screen and (min-width: 992px){
+		/*Cabecera*/
+			#header{
+				font-size: 1.5rem;
+			}
+		/*Formulario Contacto*/
+			#contact{
+				display: grid;
+				grid-template-areas: 
+					"labelName	labelEmail"
+					"inputName	inputEmail"
+					"labelText	labelText"
+					"textarea 	textarea"
+					" .			button"
+					" message	message";
+				gap: .2rem 1rem;
+			}
+			#contactName{ grid-area: inputName }
+			#contactEmail{ grid-area: inputEmail }
+			#contactConsult{ grid-area: textarea }
+			#contact .button{ grid-area: button }
+			#contact div:last-child { grid-area: message }

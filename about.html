@@ -13,7 +13,7 @@
 <body>
 	<nav>
 		<a href="">Maquetación</a>
-		<button> &equiv; </button>
+		<button class="button"> &equiv; </button>
 		<ul class="menu">
 			<li><a href="index.html">Inicio</a></li>
 			<li><a href="#">Acerca</a></li>
@@ -27,10 +27,10 @@
 			<p>html | css | js</p>
 		</div>
 		<ul class="slide">
-			<li class="active">1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</ul>
 		<a class="prev" href="#"> < </a>
 		<a class="next" href="#"> > </a>
@@ -39,7 +39,36 @@
 	
 	</main>
 	<footer id="footer">
-		
+		<form action="" id="contact">
+			<label for="contactName">Nombre</label>
+			<input 
+				name="contactName" 
+				id="contactName"
+				type="text" 
+				minlength="2"
+				maxlength="50" 
+				placeholder="Ingrese su Nombre" 
+				required 
+			/>
+			<label for="contactEmail">Correo</label>
+			<input 
+				name="contactEmail" 
+				id="contactEmail"
+				type="text" 
+				placeholder="Ingrese su Correo" 
+				required
+			/>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult"
+				id="contactConsult" 
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button class="button">Enviar</button>
+			<div>Todos los campos con asterisco (*) son obligatorios</div>
+		</form>
 	</footer>
 	<script src="js/scripts.js"></script>
 </body>
