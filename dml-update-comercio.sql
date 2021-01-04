@@ -5,12 +5,12 @@ SELECT * FROM productos;
 		SET cantidad = 2000; -- valor nuevo
 	-- Actualizacion Especifica (Algunos registros)
 		UPDATE productos
-        SET precio = 500
-        WHERE categoria = 3;
+        SET precio = 500 -- valor nuevo
+        WHERE categoria = 3; -- condicion
 	-- Actualizacion Resctrictiva
 		UPDATE productos
-		SET precio = 60000
-        WHERE categoria = 1 AND id_proveedor = 2;
+		SET precio = 60000 -- valor nuevo
+        WHERE categoria = 1 AND id_proveedor = 2; -- condiciones excluyentes
 	-- Actualizacion Grupal / Condicional
 		-- dni cliente segun numeracion
         UPDATE clientes
@@ -38,10 +38,10 @@ SELECT * FROM productos;
     -- ACTUALIZACION DINAMICA
 		UPDATE facturacion_detalle AS fd
         SET precio = (
-			SELECT precio 
-            FROM productos AS p
-            WHERE p.id_producto = fd.id_producto
-        );
+			SELECT precio -- campo de referencia
+            FROM productos AS p -- tabla de referencia
+            WHERE p.id_producto = fd.id_producto -- condicion por registro
+        ); -- IMPORTANTE: las subconsulta DEBE RETORNAR un UNICO VALOR
 
 	-- obtencion de totales x producto
 		SELECT 
@@ -49,7 +49,7 @@ SELECT * FROM productos;
             id_producto,
             cantidad,
             precio,
-            (cantidad * precio) AS total
+            (cantidad * precio) AS total -- columna calculada
 		FROM facturacion_detalle
         HAVING total >= 2000 -- clausula para campos calculados
         ORDER BY id_factura, id_producto;
@@ -69,8 +69,8 @@ SELECT * FROM productos;
     
     UPDATE facturacion AS f
 		SET monto = (
-			SELECT SUM(precio * cantidad) 
-			FROM facturacion_detalle AS fd
-			WHERE fd.id_factura = f.id_factura
+			SELECT SUM(precio * cantidad) -- columna calculada (campo de referencia)
+			FROM facturacion_detalle AS fd -- tabla de referencia
+			WHERE fd.id_factura = f.id_factura -- condicion por registro
 		);
 	SELECT * FROM facturacion;

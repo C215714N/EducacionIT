@@ -45,7 +45,7 @@
                 ('23-25000046-4','LILIANA');
 	/*CONSULTA DE DATOS*/
 		SELECT * FROM proveedores;
-	
+        
 ## productos
 	/*INSERCION DE DATOS*/
 		INSERT INTO productos(modelo, categoria, id_proveedor)
@@ -86,7 +86,7 @@
 -- proveedores
 	SELECT id_proveedor, razon_social
     FROM proveedores
-    WHERE razon_social LIKE '_a%'; -- % cualquier cantidad de caracteres
+    WHERE razon_social LIKE '_a%'; -- % cualquier cantidad de caracteres || _ un caracter cualquiera
     
 -- Clientes
 	/*ORDENANDO RESULTADOS*/
@@ -116,15 +116,15 @@
 	SELECT 
 		CONCAT('Sr/sra.', apellido, " ", nombre) AS cliente,
         CONCAT('n°: ', num_doc) AS id, -- concatena campos
-		CURDATE() AS fecha,
-        CURTIME() AS hora,
-		CURRENT_USER() AS usuario
+		CURDATE() AS fecha, -- fecha actual
+        CURTIME() AS hora, -- hora actual
+		CURRENT_USER() AS usuario -- obtiene el usuario actual
     FROM clientes;
     /*
 		number: 1 + 1 = 2
         string: "1" + "1" = "11"
     */
-    
+
 -- facturacion
 	DESCRIBE facturacion;
     INSERT INTO facturacion(tipo, medio, fecha, vendedor, id_cliente)
