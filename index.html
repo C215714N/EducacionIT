@@ -14,7 +14,7 @@
 	<input id="mode" type="checkbox" />
 	<nav>
 		<a class="icon logo" href="#"></a>
-		<button id="menu">
+		<button id="menu" class="icon">
 			&equiv;
 		</button>
 		<ul class="menu">
@@ -31,14 +31,18 @@
 		<img src="assets/icons/ilustra_header.svg" alt="ilustra_header">
 		<form id="search">
 			<input 
+				id="textField"
+				name="textField" 
 				type="search" 
 				list="suggestion" 
-				minlength="2"
+				minlength="1"
 				maxlength="50" 
+				autocomplete="off" 
 				required>
+			<label for="textField">Buscar GIFOS y mas</label>
 			<select id="suggestion" multiple>
 			</select>
-			<button type="submit"></button>
+			<button class="icon search"></button>
 		</form>
 		<p>
 			<strong>Trending: </strong>
@@ -65,10 +69,10 @@
 					<li>1</li>
 					<li>2</li>
 					<li>3</li>
-					<a href="#createGif"> repetir captura </a>
+					<a href="#createGif"></a>
 					<div class="tape"></div>
 				</ul>
-				<button>Crear</button>
+				<button class="button">Crear</button>
 			</div>
 		</section>
 		<section>

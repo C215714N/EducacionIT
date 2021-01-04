@@ -1,9 +1,30 @@
+/*content first*/
+* {
+  box-sizing: border-box;
+  font-family: century gothic, sans-serif;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+
+#mode {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
 /*Icons*/
 .icon {
   display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: 0;
   width: 1.5rem;
   height: 1.5rem;
   margin: 0.5rem;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -139,23 +160,6 @@
   background-image: url("../assets/icons/icon_twitter_noc.svg");
 }
 
-/*content first*/
-* {
-  box-sizing: border-box;
-  font-family: century gothic, sans-serif;
-  outline: none;
-  text-decoration: none;
-  transition: all 0.5s ease-in;
-}
-
-#mode {
-  display: none;
-}
-
-body {
-  margin: 0;
-}
-
 .special {
   color: #33c9ca;
 }
@@ -182,7 +186,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav {
     display: flex;
     justify-content: space-between;
@@ -197,6 +201,19 @@ nav {
     justify-content: space-around;
   }
 }
+nav .icon {
+  margin: 0 0.5rem;
+  border: 0;
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+nav #menu {
+  color: #572ee5;
+  background-color: #fefefe;
+  line-height: 1.5rem;
+  font-size: 2rem;
+}
 nav .menu {
   margin: 0;
   border: 0;
@@ -204,7 +221,7 @@ nav .menu {
   overflow: hidden;
   display: none;
   position: fixed;
-  top: 3.5rem;
+  top: 4.2rem;
   width: 100%;
   height: 100vh;
   color: #fefefe;
@@ -212,7 +229,7 @@ nav .menu {
   list-style: none;
   text-align: center;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav .menu {
     margin: 0;
     border: 0;
@@ -224,7 +241,7 @@ nav .menu {
     background-color: transparent;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav .menu li {
     border-bottom: 0.2rem solid transparent;
   }
@@ -240,7 +257,7 @@ nav .menu li a {
   color: #fefefe;
   font-weight: bold;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav .menu li a {
     color: #572ee5;
   }
@@ -254,9 +271,9 @@ nav .menu li a::after {
   width: 60%;
   height: 1px;
   margin-top: 1rem;
-  background-color: #572ee5;
+  background-color: #fefefe;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav .menu li a::after {
     display: none;
   }
@@ -270,7 +287,7 @@ nav .menu li:first-child label:after {
 nav .menu li:last-child a {
   display: none;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav .menu li:last-child a {
     display: block;
   }
@@ -279,7 +296,7 @@ nav .open {
   display: block;
   opacity: 0.8;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   nav .open {
     display: flex;
     padding: 0;
@@ -318,6 +335,8 @@ nav .open {
   flex-direction: column;
   position: relative;
   max-width: 576px;
+  /*campo de busqueda*/
+  /*campo de sugerencias*/
 }
 #header form ::-webkit-scrollbar {
   width: 0;
@@ -335,30 +354,37 @@ nav .open {
 #header form input:invalid {
   padding: 0 1rem;
 }
-#header form input:valid {
-  padding: 0.5rem 1rem;
+#header form input:invalid ~ #suggestion option {
+  display: none;
 }
-#header form input:valid #suggestion:hover {
-  overflow: auto;
-  height: auto;
-  padding: 0 0.5rem 0.5rem;
+#header form input:invalid ~ label {
+  display: block;
 }
 #header form input:focus, #header form input:valid {
   margin: 0;
   border: 2px solid #572ee5;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.25rem 0.5rem 3rem;
   border-radius: 1rem 1rem 0 0;
   border-bottom: none;
 }
-#header form input:focus + #suggestion, #header form input:valid + #suggestion {
+#header form input:focus ~ #suggestion, #header form input:valid ~ #suggestion {
   overflow: auto;
   height: auto;
   padding: 0 0.5rem 0.5rem;
 }
-#header form input:focus + #suggestion:before, #header form input:valid + #suggestion:before {
+#header form input:focus ~ #suggestion:before, #header form input:valid ~ #suggestion:before {
   width: 90%;
   height: 1px;
   background-color: #cbcbcb;
+}
+#header form input:focus ~ button, #header form input:valid ~ button {
+  right: calc(100% - 4rem);
+}
+#header form ::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../assets/icons/close.svg") no-repeat center;
 }
 #header form #suggestion {
   margin: 0;
@@ -372,14 +398,20 @@ nav .open {
 }
 #header form #suggestion option {
   color: #cbcbcb;
-  padding: 0.3rem;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+  padding: 0.2rem 2.5rem;
+  border-radius: 0.25rem;
 }
 #header form #suggestion:before {
+  margin: 0.2rem auto;
+  border: none;
+  padding: 0;
   content: "";
   display: block;
   width: 0;
   height: 0;
-  margin: auto;
 }
 #header form #suggestion:focus {
   overflow: auto;
@@ -395,29 +427,23 @@ nav .open {
   height: 1px;
   background-color: #572ee5;
 }
-#header form #suggestion option {
-  margin: 0;
-  border: 0;
-  padding: 0.2rem;
-}
-#header form #suggestion option:focus {
+#header form #suggestion:focus:focus {
   background-color: transparent;
 }
 #header form button {
-  margin: 0;
-  border: 0;
-  padding: 0;
   position: absolute;
   z-index: 1;
-  top: 0.2rem;
-  bottom: 0;
-  right: 1.25rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  right: 1rem;
   outline: none;
   border-radius: 1rem;
-  background-image: url("../assets/icons/icon_search.svg");
-  background-size: contain;
+}
+#header form label {
+  color: #cbcbcb;
+  background-color: transparent;
+  position: absolute;
+  display: none;
+  top: 0.5rem;
+  left: 5rem;
 }
 #header p {
   margin: 0;
@@ -463,6 +489,9 @@ main .title {
   padding: 1rem;
   font-size: 2rem;
 }
+main .title:empty ~ #pagination {
+  display: none;
+}
 main #createGif {
   display: none;
   flex-direction: column;
@@ -474,16 +503,16 @@ main #createGif {
 }
 main #createGif .camera {
   position: absolute;
-  left: -50%;
-  width: 10rem;
+  left: -40%;
+  width: 12.75rem;
   height: 10rem;
-  background-image: url("../assets/icons/bg_camera.svg"), url("../assets/icons/bg_light.svg");
-  background-repeat: no-repeat;
+  background: url("../assets/icons/bg_camera.svg") no-repeat left center, url("../assets/icons/bg_light.svg") no-repeat right center;
 }
 main #createGif article {
   margin: auto;
   border: 1px solid #572ee5;
   padding: 1.5rem;
+  background-color: transparent;
   overflow: visible;
   position: relative;
   display: flex;
@@ -526,28 +555,27 @@ main #createGif .menu {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   border-bottom: 0.3rem solid #572ee5;
 }
 main #createGif .menu li {
-  border: 1px solid #572ee5;
-}
-main #createGif .menu li, main #createGif .menu a {
   color: #572ee5;
-  background-color: #fefefe;
+  background-color: transparent;
   margin: 0.5rem;
-  border: none;
+  border: 1px solid #572ee5;
   padding: 0.25rem 0.6rem;
   display: block;
   border-radius: 50%;
   font: 1rem sans-serif;
 }
+main #createGif .menu a {
+  position: absolute;
+  right: 12.5%;
+}
 main #createGif .menu .active {
   color: #fefefe;
   background-color: #572ee5;
-  margin: 0;
-  border: 0;
-  padding: 0.25rem 0.6rem;
 }
 main #createGif button {
   cursor: pointer;
@@ -620,7 +648,7 @@ main #trending {
   justify-content: flex-start;
   align-content: center;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   main #trending {
     justify-content: center;
   }
@@ -691,22 +719,33 @@ main video, main img {
 #footer .social {
   margin: 3rem auto;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   #footer .social {
     display: flex;
     align-items: center;
     margin: 0;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   #footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
+@media screen and (min-width: 1140px) {
+  #footer {
+    justify-content: space-around;
+  }
+}
 
-/*nightmode*/
+/*modo nocturno*/
+#mode:checked {
+  /*navegacion*/
+  /*cabecera*/
+  /*contenido principal*/
+  /*pie de pagina*/
+}
 #mode:checked ~ * .night {
   fill: #333;
 }
@@ -715,18 +754,16 @@ main video, main img {
   background-color: #333;
   border-top: 0.2rem solid black;
 }
-@media screen and (min-width: 720px) {
-  #mode:checked ~ nav {
-    padding: 0.2rem 1rem;
-  }
+#mode:checked ~ nav #menu {
+  color: #ccc;
+  background-color: #333;
 }
 #mode:checked ~ nav .menu {
   color: #572ee5;
   background-color: black;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   #mode:checked ~ nav .menu {
-    display: flex;
     background-color: transparent;
   }
 }
@@ -740,15 +777,26 @@ main video, main img {
   color: #ccc;
   background-color: #333;
 }
-#mode:checked ~ #header input, #mode:checked ~ #header #suggestion {
+#mode:checked ~ #header input,
+#mode:checked ~ #header #suggestion {
+  color: #ccc;
+  background-color: transparent;
   border-color: #ccc;
 }
 #mode:checked ~ #header #suggestion:before {
   background-color: #ccc;
 }
+#mode:checked ~ #header option {
+  color: #999999;
+  background-color: transparent;
+}
+#mode:checked ~ #header ::-webkit-search-cancel-button {
+  background: url("../assets/icons/close_noc.svg") no-repeat center;
+}
 #mode:checked ~ main {
   color: #ccc;
   background-color: #333;
+  /*secciones de la pagina*/
 }
 #mode:checked ~ main section {
   color: #ccc;
@@ -769,6 +817,21 @@ main video, main img {
   color: #ccc;
   background-color: #1a1a1a;
 }
+#mode:checked ~ main #createGif article {
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+}
+#mode:checked ~ main #createGif .menu {
+  border-bottom: 0.3rem solid #ccc;
+}
+#mode:checked ~ main #createGif .menu li {
+  color: #ccc;
+  background-color: transparent;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.6rem;
+}
 #mode:checked ~ #footer {
   color: #ccc;
   background-color: #333;
@@ -779,5 +842,7 @@ main video, main img {
   background-color: transparent;
   font-weight: bold;
 }
+
+/*Autor: Cristian Racedo*/
 
 /*# sourceMappingURL=styles.css.map */

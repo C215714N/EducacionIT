@@ -4,12 +4,12 @@ $bg_color: #fefefe
 $special_color: #33c9ca
 //media screen
 $sm: 576px
-$md: 720px
+$md: 768px
 $lg: 992px
 $xl: 1140px
 //images
 $icon: "../assets/icons/"
-$camera: url($icon+"bg_camera.svg"), url($icon+"bg_light.svg")
+$camera: url($icon+"bg_camera.svg") no-repeat left center, url($icon+"bg_light.svg") no-repeat right center 
 //social media
 $icons: logo, search, link, fav, trash, max, download, facebook, instagram, twitter
 //mode mixins
@@ -20,23 +20,6 @@ $icons: logo, search, link, fav, trash, max, download, facebook, instagram, twit
 	margin: $m
 	border: $b
 	padding: $p
-/*Icons*/
-.icon
-	display: inline-block
-	width: 1.5rem
-	height: 1.5rem
-	margin: .5rem
-	background-repeat: no-repeat
-	background-position: center
-	background-size: contain
-@each $ico in $icons
-	.#{$ico}
-		background-image: url($icon+"icon_"+$ico+".svg")
-	.#{$ico}:hover,
-	#mode:checked ~ * .#{$ico}:hover
-		background-image: url($icon+"icon_"+$ico+"_hover.svg")
-	#mode:checked ~ * .#{$ico}
-		background-image: url($icon+"icon_"+$ico+"_noc.svg")
 /*content first*/
 *
 	box-sizing: border-box
@@ -48,10 +31,34 @@ $icons: logo, search, link, fav, trash, max, download, facebook, instagram, twit
 	display: none
 body
 	margin:0
+/*Icons*/
+.icon
+	display: inline-block
+	+normalize(0,0,0)
+	width: 1.5rem
+	height: 1.5rem
+	margin: .5rem
+	background-color: transparent
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+@each $ico in $icons
+	.#{$ico}
+		background-image: url($icon+"icon_"+$ico+".svg")
+	.#{$ico}:hover,
+	#mode:checked ~ * .#{$ico}:hover
+		background-image: url($icon+"icon_"+$ico+"_hover.svg")
+	#mode:checked ~ * .#{$ico}
+		background-image: url($icon+"icon_"+$ico+"_noc.svg")
 .special
 	color: $special_color
 .button
 	+normalize(.5rem, 2px solid $color, .5rem 1rem)
+/*webkit*/
+::-webkit-scrollbar
+	+mode($bg_color)
+	-webkit-appearance: none
+	border-radius: .5rem
 /*navegacion*/
 nav
 	+mode
@@ -72,12 +79,20 @@ nav
 			display: none
 	@media screen and (min-width: $xl)
 		justify-content: space-around
+	.icon
+		+normalize(0 .5rem)
+		width: 3rem
+		height: 3rem
+	#menu
+		+mode
+		line-height: 1.5rem
+		font-size: 2rem
 	.menu
 		+normalize
 		overflow: hidden
 		display: none
 		position: fixed
-		top: 3.5rem
+		top: 4.2rem
 		width: 100%
 		height: 100vh
 		+mode($bg_color, $color)
@@ -109,7 +124,7 @@ nav
 					width: 60%
 					height: 1px
 					margin-top: 1rem
-					background-color: $color
+					background-color: $bg_color
 					@media screen and (min-width: $md)
 						display: none
 			&:first-child
@@ -148,9 +163,7 @@ nav
 		flex-direction: column
 		position: relative
 		max-width: $sm
-		::-webkit-scrollbar
-			width: 0
-			height: 0
+		/*campo de busqueda*/
 		input
 			+normalize(0, 2px solid $color, .5rem)
 			outline: none
@@ -159,18 +172,16 @@ nav
 			width: 100%
 			&:invalid
 				padding: 0 1rem
-			&:valid
-				padding: .5rem 1rem
-				#suggestion:hover
-					overflow: auto
-					height: auto
-					padding: 0 .5rem .5rem
+				& ~ #suggestion option
+					display: none
+				& ~ label
+					display: block
 			&:focus,
 			&:valid
-				+normalize(0, 2px solid $color, .5rem 1rem)
+				+normalize(0, 2px solid $color, .5rem .25rem .5rem 3rem)
 				border-radius: 1rem 1rem 0 0
 				border-bottom: none
-				& + #suggestion
+				& ~ #suggestion
 					overflow: auto
 					height: auto
 					padding: 0 .5rem .5rem
@@ -178,6 +189,14 @@ nav
 						width: 90%
 						height: 1px
 						background-color: darken($bg_color, 20%)
+				& ~ button
+					right: calc(100% - 4rem)
+		::-webkit-search-cancel-button
+			-webkit-appearance: none
+			width: 1.5rem
+			height: 1.5rem
+			background: url($icon+"close.svg") no-repeat center
+		/*campo de sugerencias*/
 		#suggestion
 			+normalize(0, 2px solid $color, .5rem)
 			overflow: hidden
@@ -186,14 +205,16 @@ nav
 			border-top: none
 			border-radius: 0 0 1rem 1rem
 			option
-				color: darken($bg_color, 20%)
-				padding: .3rem
+				+mode(darken($bg_color, 20%), transparent)
+				+normalize($p: .2rem 2.5rem)
+				border-radius: .25rem
+				background:url($icon+"icon_search.svg") no-repeat left
 			&:before
+				+normalize(.2rem auto, none, 0)
 				content: ''
 				display: block
 				width: 0
 				height: 0
-				margin: auto
 			&:focus
 				overflow: auto
 				height: auto
@@ -205,23 +226,20 @@ nav
 					width: 90%
 					height: 1px
 					background-color: $color
-			option
-				+normalize($p: .2rem)
 				&:focus
 					background-color: transparent
 		button
-			+normalize($p: 0)
 			position: absolute
 			z-index: 1
-			top: .2rem
-			bottom: 0
-			right: 1.25rem
-			width: 1.5rem
-			height: 1.5rem
+			right: 1rem
 			outline: none
 			border-radius: 1rem
-			background-image: url($icon+"icon_search.svg")
-			background-size: contain
+		label
+			+mode(darken($bg_color, 20%), transparent)
+			position: absolute
+			display: none
+			top: .5rem
+			left: 5rem
 	p
 		+normalize($p: 1rem 3rem)
 		strong
@@ -242,6 +260,8 @@ main
 	.title
 		+normalize
 		font-size: 2rem
+		&:empty ~ #pagination
+			display: none
 	/*creacion gif*/
 	#createGif
 		display: none
@@ -251,14 +271,14 @@ main
 		flex-wrap: wrap
 		.camera
 			position: absolute
-			left: -50%
-			width: 10rem
+			left: -40%
+			width: 12.75rem
 			height: 10rem
-			background-image: $camera
-			background-repeat: no-repeat
+			background: $camera
 		/*area de grabacion*/
 		article
 			+normalize(auto, 1px solid $color, 1.5rem)
+			background-color: transparent
 			overflow: visible
 			position: relative
 			display: flex
@@ -295,19 +315,20 @@ main
 			list-style: none
 			display: flex
 			justify-content: center
+			align-items: center
 			flex-wrap: wrap
 			border-bottom: .3rem solid $color
 			li
-				border: 1px solid $color
-			li, a
-				+mode
-				+normalize(.5rem, none, .25rem .6rem)
+				+mode($color, transparent)
+				+normalize(.5rem, 1px solid $color, .25rem .6rem)
 				display: block
 				border-radius: 50%
 				font: 1rem sans-serif
+			a
+				position: absolute
+				right: 12.5%
 			.active
 				+mode($bg_color,$color)
-				+normalize($p: .25rem .6rem)
 		button
 			cursor: pointer
 			+mode($color,$bg_color)
@@ -420,21 +441,23 @@ main
 		display: flex
 		justify-content: space-between
 		align-items: center
-/*nightmode*/
+	@media screen and (min-width: $xl)
+		justify-content: space-around
+/*modo nocturno*/
 #mode:checked
 	$color: #ccc
 	$bg_color: #333
 	& ~ * .night
 		fill: $bg_color
+	/*navegacion*/
 	& ~ nav
 		+mode($color, $bg_color)
 		border-top: .2rem solid darken($bg_color, 20%)
-		@media screen and (min-width: $md)
-			padding: .2rem 1rem
+		#menu
+			+mode($color, $bg_color)
 		.menu
 			+mode($bg_color: darken($bg_color, 20%))
 			@media screen and (min-width: $md)
-				display: flex
 				background-color: transparent
 			li
 				a
@@ -442,14 +465,23 @@ main
 				&:first-child
 					label:after
 						content:' Nocturno'
+	/*cabecera*/
 	& ~ #header
 		+mode($color, $bg_color)
-		input, #suggestion
+		input, 
+		#suggestion
+			+mode($color, transparent)
 			border-color: $color
 		#suggestion:before
 			background-color: $color
+		option
+			+mode(darken($color, 20%), transparent)
+		::-webkit-search-cancel-button
+			background: url($icon+"close_noc.svg") no-repeat center
+	/*contenido principal*/
 	& ~ main
 		+mode($color, $bg_color)
+		/*secciones de la pagina*/
 		section
 			+mode($color, $bg_color)
 			.button		
@@ -459,9 +491,19 @@ main
 					+mode($bg_color, $color)
 		section:last-child
 			+mode($color, $bg_color: darken($bg_color, 10%))
+		#createGif
+			article
+				+normalize(auto, 1px solid $color, 1.5rem)
+			.menu
+				border-bottom: .3rem solid $color
+				li
+					+mode($color, transparent)
+					+normalize(.5rem, 1px solid $color, .25rem .6rem)
+	/*pie de pagina*/
 	& ~ #footer
 		+mode($color, $bg_color)
 		border-bottom: .2rem solid darken($bg_color, 20%)
 		a[href="#"]
 			+mode($color, transparent)
 			font-weight: bold
+/*Autor: Cristian Racedo*/

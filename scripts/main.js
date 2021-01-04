@@ -31,7 +31,7 @@
 		const gifBtn 	= document.querySelector('#createGif button');
 		const gifMedia 	= document.querySelector('#createGif article video');
 		const gifView	= document.querySelector('#createGif article img');
-		const recAgain	= document.querySelector('#createGif a') 
+		const recAgain	= document.querySelector('#createGif .menu a') 
 /* Funciones y Metodos*/
 	//	Menu hamburguesa
 		menuBtn.addEventListener( 'click', () => { 
@@ -51,6 +51,7 @@
 		}	)	)	}
 	//	Definicion Cookies
 		function setCookie(cname, cvalue, extday){
+			sameSite = lax;
 			document.cookie += `${cname} = ${cvalue} ; ${extday} ; path = ${cvalue}` 
 		}
 	//	Gifs Mas Populares
@@ -60,7 +61,7 @@
 		}	)
 	//	Creacion de Gifs
 		recAgain.addEventListener( 'click', () => {
-			phase = 0;
+			phase = 1;
 			setPhase(false);
 		}	)
 		gifBtn.addEventListener( 'click', () => {
