@@ -26,8 +26,11 @@
 			VALUES 	(38373783,'Merlo','Ayelen'),
 					(43567281,'Gomez','Ezequiel'),
 					(9751234,'Lopez','Pablo'),
-					(12357402,'Gimenez','Lucia');
-
+					(12357402,'Gimenez','Lucia'),
+                    (383712783,'Jimenez','Rodrigo'),
+					(43565181,'Iglesias','Julio'),
+					(97251234,'Sabina','Joaquin'),
+					(121357402,'Banderas','Antonio');
 	/*CONSULTA DE DATOS*/
 		SELECT * -- todos los campos
 		FROM clientes; -- tabla de origen
@@ -134,7 +137,14 @@
             ( 2, 7, CURRENT_DATE(), CURRENT_USER(), 4 ),
             ( 2, 3, CURRENT_DATE(), CURRENT_USER(), 1 ),
             ( 2, 3, CURRENT_DATE(), CURRENT_USER(), 6 );
-	SELECT * FROM facturacion;
+	
+    INSERT INTO facturacion(tipo, medio, fecha)
+	VALUES 	(2, 1, CURRENT_DATE()),
+			(2, 2, CURRENT_DATE()),
+            (2, 3, CURRENT_DATE()),
+            (2, 5, CURRENT_DATE());
+	
+    SELECT * FROM facturacion;
     
 -- facturacion detalle
 	DESCRIBE facturacion_detalle;
