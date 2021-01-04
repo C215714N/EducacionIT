@@ -27,12 +27,12 @@ SELECT * FROM productos;
         UPDATE productos 
         SET precio = 
 			CASE
-				WHEN categoria LIKE '%tecnologia%' AND modelo NOT LIKE '%impresora%' THEN 75000
+				WHEN categoria LIKE '%tecnologia%' AND modelo NOT LIKE '%impresora%' THEN 95000
                 WHEN categoria LIKE '%hogar%' AND 
-					( modelo NOT LIKE '%tostadora%' OR modelo NOT LIKE '%ventilador%' ) THEN 60000
-                WHEN categoria LIKE '%higiene%' THEN 500
-                WHEN categoria LIKE '%alimentos%' THEN 300
-                ELSE 20000
+					( modelo NOT LIKE '%tostadora%' OR modelo NOT LIKE '%ventilador%' ) THEN 70000
+                WHEN categoria LIKE '%higiene%' THEN 1000
+                WHEN categoria LIKE '%alimentos%' THEN 500
+                ELSE 30000
             END;
             
     -- ACTUALIZACION DINAMICA
@@ -41,7 +41,8 @@ SELECT * FROM productos;
 			SELECT precio -- campo de referencia
             FROM productos AS p -- tabla de referencia
             WHERE p.id_producto = fd.id_producto -- condicion por registro
-        ); -- IMPORTANTE: las subconsulta DEBE RETORNAR un UNICO VALOR
+        ) -- IMPORTANTE: las subconsulta DEBE RETORNAR un UNICO VALOR
+         WHERE fd.precio IS NULL; -- restriccion para impedir la actualizacion de toda la tabla
 
 	-- obtencion de totales x producto
 		SELECT 
@@ -72,5 +73,14 @@ SELECT * FROM productos;
 			SELECT SUM(precio * cantidad) -- columna calculada (campo de referencia)
 			FROM facturacion_detalle AS fd -- tabla de referencia
 			WHERE fd.id_factura = f.id_factura -- condicion por registro
-		);
-	SELECT * FROM facturacion;
+		) -- IMPORTANTE: la subconsulta SIEMPRE debe retornar un UNICO VALOR
+		WHERE monto IS NULL; -- restriccion para actualizar registros vacios
+	
+    UPDATE facturacion
+		SET id_cliente = FLOOR(RAND()*(10 - 9 + 1) + 4)
+        WHERE id_cliente IS NULL 
+			OR id_cliente = "";
+        
+    SELECT * FROM facturacion;
+    SELECT * FROM productos;
+    SELECT * FROM clientes;

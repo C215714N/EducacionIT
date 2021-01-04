@@ -76,4 +76,15 @@
         UNIQUE KEY(id_factura, id_producto),
         FOREIGN KEY(id_factura) REFERENCES facturacion(id_factura), -- id_factura PK @ tabla facturacion
         FOREIGN KEY(id_producto) REFERENCES productos(id_producto) -- id_producto PK @ tabla productos
-    )
+    );
+    
+    DROP TABLE IF EXISTS facturacion_temp;
+    CREATE TABLE facturacion_temp(
+		id_factura VARCHAR(10)
+    );
+    ALTER TABLE facturacion_temp
+		ADD monto DECIMAL,
+        MODIFY id_factura INT AUTO_INCREMENT PRIMARY KEY,
+        DROP COLUMN id_factura,
+        ADD CONSTRAINT UNIQUE KEY(id_factura);
+    
