@@ -4,14 +4,16 @@
 	<meta charset="UTF-8">
 	<meta 
 		name="viewport" 
-		content="width=device-width,
-				 initial-scale=1,
-				 maximum-scale=3">
+		content="
+			width=device-width,
+			initial-scale=1,
+			maximum-scale=3"
+	/>
 	<title>Gifos</title>
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-	<input id="mode" type="checkbox" />
+	<input id="mode" type="checkbox"/>
 	<nav>
 		<a class="icon logo" href="#"></a>
 		<button id="menu" class="icon">
@@ -21,7 +23,7 @@
 			<li><a><label for="mode">Modo </label></a></li>
 			<li><a href="#favoritos">Favoritos</a></li>
 			<li><a href="#mis_gifos">Mis GIFOS</a></li>
-			<li><a href="#createGif"> + </a></li>
+			<li><a href="#crear_gifo"> + </a></li>
 		</ul>
 	</nav>
 	<header id="header" >
@@ -50,14 +52,14 @@
 		</p>
 	</header>
 	<main>
-		<section>
+		<section id="search">
 			<h1 class="title"></h1>
 			<div id="results">
 			</div>
 			<form id="pagination">
 			</form>
 		</section>
-				<section id="createGif">
+		<section id="crear_gifo">
 			<article>
 				<div class="camera">
 				</div>
@@ -69,17 +71,26 @@
 					<li>1</li>
 					<li>2</li>
 					<li>3</li>
-					<a href="#createGif"></a>
+					<a href="#crear_gifo"></a>
 					<div class="tape"></div>
 				</ul>
 				<button class="button">Crear</button>
 			</div>
 		</section>
-		<section>
+		<section id="favoritos">
+			<h1>
+				<img src="assets/icons/section_favs.svg">
+				Favoritos
+			</h1>
+			<div>
+			</div>
+			<div class="noItems">
+			</div>
+		</section>
+		<section id="#">
 			<h1>Trending GIFOS</h1>
 			<p>	Mira los ultimos GIFOS de nuestra comunidad. </p>
-			<div id="trending">
-			</div>
+			<div id="trending"></div>
 		</section>
 	</main>
 	<footer id="footer" >

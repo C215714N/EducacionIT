@@ -1,3 +1,11 @@
+.no_results {
+  margin: 5rem auto 1rem;
+}
+
+.notFound {
+  margin: 0 auto 5rem;
+}
+
 /*content first*/
 * {
   box-sizing: border-box;
@@ -18,12 +26,12 @@ body {
 /*Icons*/
 .icon {
   display: inline-block;
-  margin: 0;
+  margin: 0.5rem;
   border: 0;
   padding: 0;
+  border-radius: 0.25rem;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0.5rem;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -108,6 +116,19 @@ body {
   background-image: url("../assets/icons/icon_max_noc.svg");
 }
 
+.close {
+  background-image: url("../assets/icons/icon_close.svg");
+}
+
+.close:hover,
+#mode:checked ~ * .close:hover {
+  background-image: url("../assets/icons/icon_close_hover.svg");
+}
+
+#mode:checked ~ * .close {
+  background-image: url("../assets/icons/icon_close_noc.svg");
+}
+
 .download {
   background-image: url("../assets/icons/icon_download.svg");
 }
@@ -170,6 +191,23 @@ body {
   padding: 0.5rem 1rem;
 }
 
+/*webkit*/
+::-webkit-scrollbar,
+.scroller {
+  -webkit-appearance: none;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb,
+.scroller {
+  -webkit-appearance: none;
+  margin: 0.5rem auto;
+  border: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: radial-gradient(ellipse at bottom right, #cbcbcb, #fefefe);
+}
+
 /*navegacion*/
 nav {
   color: #572ee5;
@@ -179,7 +217,7 @@ nav {
   padding: 0.5rem 0;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 2;
   border-top: 0.2rem solid #572ee5;
   display: flex;
   flex-wrap: wrap;
@@ -338,10 +376,6 @@ nav .open {
   /*campo de busqueda*/
   /*campo de sugerencias*/
 }
-#header form ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
 #header form input {
   margin: 0;
   border: 2px solid #572ee5;
@@ -384,7 +418,7 @@ nav .open {
   -webkit-appearance: none;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("../assets/icons/close.svg") no-repeat center;
+  background: url("../assets/icons/icon_close.svg") no-repeat center;
 }
 #header form #suggestion {
   margin: 0;
@@ -403,6 +437,7 @@ nav .open {
   border: 0;
   padding: 0.2rem 2.5rem;
   border-radius: 0.25rem;
+  background: url("../assets/icons/icon_search.svg") no-repeat left;
 }
 #header form #suggestion:before {
   margin: 0.2rem auto;
@@ -443,7 +478,13 @@ nav .open {
   position: absolute;
   display: none;
   top: 0.5rem;
-  left: 5rem;
+  left: 4rem;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 576px) {
+  #header form label {
+    font-size: 1rem;
+  }
 }
 #header p {
   margin: 0;
@@ -465,21 +506,27 @@ main {
   /*creacion gif*/
   /*area de resultados*/
   /*area de paginacion*/
+  /*area de favoritos*/
   /*gifs populares*/
-  /*elementos independiente*/
+  /*elementos independientes*/
+  /*localStorage*/
 }
 main section {
+  max-width: 1140px;
+  display: none;
   color: #572ee5;
   background-color: #fefefe;
-  margin: 0;
+  margin: auto;
   border: 0;
   padding: 1rem;
   text-align: center;
+  height: auto;
 }
-main section:target ~ section {
-  display: none;
+main section:target {
+  display: block;
 }
 main section:last-child {
+  display: block;
   color: #572ee5;
   background-color: #e5e5e5;
 }
@@ -492,7 +539,10 @@ main .title {
 main .title:empty ~ #pagination {
   display: none;
 }
-main #createGif {
+main #search {
+  display: block;
+}
+main #crear_gifo {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -501,14 +551,14 @@ main #createGif {
   /*area de grabacion*/
   /*area de proceso*/
 }
-main #createGif .camera {
+main #crear_gifo .camera {
   position: absolute;
   left: -40%;
   width: 12.75rem;
   height: 10rem;
   background: url("../assets/icons/bg_camera.svg") no-repeat left center, url("../assets/icons/bg_light.svg") no-repeat right center;
 }
-main #createGif article {
+main #crear_gifo article {
   margin: auto;
   border: 1px solid #572ee5;
   padding: 1.5rem;
@@ -523,7 +573,7 @@ main #createGif article {
   max-width: 540px;
   max-height: 360px;
 }
-main #createGif article video, main #createGif article img {
+main #crear_gifo article video, main #crear_gifo article img {
   position: absolute;
   top: 15%;
   right: 20%;
@@ -532,7 +582,7 @@ main #createGif article video, main #createGif article img {
   opacity: 0;
   background-color: transparent;
 }
-main #createGif article video:before, main #createGif article video:after, main #createGif article img:before, main #createGif article img:after {
+main #crear_gifo article video:before, main #crear_gifo article video:after, main #crear_gifo article img:before, main #crear_gifo article img:after {
   content: "";
   position: absolute;
   display: block;
@@ -541,13 +591,13 @@ main #createGif article video:before, main #createGif article video:after, main 
   border: 2px solid #33c9ca;
   background-color: #33c9ca;
 }
-main #createGif:target {
+main #crear_gifo:target {
   display: flex;
 }
-main #createGif div:last-child {
+main #crear_gifo div:last-child {
   width: 720px;
 }
-main #createGif .menu {
+main #crear_gifo .menu {
   margin: auto;
   border: none;
   padding: 0;
@@ -559,7 +609,7 @@ main #createGif .menu {
   flex-wrap: wrap;
   border-bottom: 0.3rem solid #572ee5;
 }
-main #createGif .menu li {
+main #crear_gifo .menu li {
   color: #572ee5;
   background-color: transparent;
   margin: 0.5rem;
@@ -569,15 +619,15 @@ main #createGif .menu li {
   border-radius: 50%;
   font: 1rem sans-serif;
 }
-main #createGif .menu a {
+main #crear_gifo .menu a {
   position: absolute;
   right: 12.5%;
 }
-main #createGif .menu .active {
+main #crear_gifo .menu .active {
   color: #fefefe;
   background-color: #572ee5;
 }
-main #createGif button {
+main #crear_gifo button {
   cursor: pointer;
   color: #572ee5;
   background-color: #fefefe;
@@ -589,7 +639,7 @@ main #createGif button {
   text-align: center;
   line-height: 1rem;
 }
-main #createGif .show {
+main #crear_gifo .show {
   display: block;
   opacity: 1;
 }
@@ -600,12 +650,6 @@ main #results {
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem;
-}
-main #pagination img {
-  margin: 5rem auto 1rem;
-}
-main #pagination .special {
-  margin: 0 auto 5rem;
 }
 main #pagination ul {
   margin: 0;
@@ -640,6 +684,14 @@ main #pagination .button:hover {
   color: #fefefe;
   background-color: #572ee5;
 }
+main #favoritos > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+main #favoritos .noItems {
+  display: block;
+}
 main #trending {
   overflow: auto;
   max-height: 250px;
@@ -653,10 +705,7 @@ main #trending {
     justify-content: center;
   }
 }
-main #trending::-webkit-scrollbar {
-  width: 0;
-}
-main article {
+main article:not(.active) {
   overflow: hidden;
   position: relative;
   display: flex;
@@ -667,7 +716,7 @@ main article {
   margin: 0.5rem;
   background-color: black;
 }
-main article .hidden {
+main article:not(.active) .hidden {
   color: #fefefe;
   background-color: rgba(87, 46, 229, 0.5);
   margin: 0;
@@ -682,27 +731,85 @@ main article .hidden {
   left: 0;
   right: 0;
 }
-main article .hidden .social {
+main article:not(.active) .hidden .social {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
 }
-main article .hidden p {
+main article:not(.active) .hidden p {
   margin: 0;
   border: none;
   padding: 0.2rem;
   text-align: left;
 }
-main article:hover .hidden {
+main article:not(.active):hover .hidden {
   bottom: 0;
   top: 0;
 }
+main article:not(.active):hover a {
+  margin: 0.25rem;
+  border: 0;
+  padding: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+main article.active {
+  color: #572ee5;
+  background-color: #fefefe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main article.active img {
+  margin: 4.2rem auto 0.5rem;
+  border: 0;
+  padding: 0;
+  max-width: 480px;
+  max-height: 360px;
+  position: relative;
+}
+main article.active .hidden {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+  text-align: left;
+}
+main article.active .hidden a {
+  width: 2rem;
+  height: 2rem;
+}
+main article.active .hidden .close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+main button {
+  top: 0;
+  bottom: 0;
+}
+main .prev {
+  left: 1rem;
+}
+main .next {
+  right: 1rem;
+}
 main video, main img {
   height: 100%;
-  background-color: white;
+}
+main .fav.active {
+  background: url("../assets/icons/icon_fav_active.svg") no-repeat center, radial-gradient(#fefefe, #cbcbcb) !important;
+  background-size: 1.25rem !important;
 }
 
-/*pie de pagina*/
 #footer {
   color: #060212;
   background-color: #fefefe;
@@ -749,6 +856,9 @@ main video, main img {
 #mode:checked ~ * .night {
   fill: #333;
 }
+#mode:checked ~ * ::-webkit-scrollbar-thumb {
+  background: radial-gradient(ellipse at bottom right, black, #333);
+}
 #mode:checked ~ nav {
   color: #ccc;
   background-color: #333;
@@ -791,7 +901,7 @@ main video, main img {
   background-color: transparent;
 }
 #mode:checked ~ #header ::-webkit-search-cancel-button {
-  background: url("../assets/icons/close_noc.svg") no-repeat center;
+  background: url("../assets/icons/icon_close_noc.svg") no-repeat center;
 }
 #mode:checked ~ main {
   color: #ccc;
@@ -817,15 +927,21 @@ main video, main img {
   color: #ccc;
   background-color: #1a1a1a;
 }
-#mode:checked ~ main #createGif article {
+#mode:checked ~ main #crear_gifo article {
+  color: #ccc;
+  background-color: #333;
   margin: auto;
   border: 1px solid #ccc;
   padding: 1.5rem;
 }
-#mode:checked ~ main #createGif .menu {
+#mode:checked ~ main article.active {
+  color: #ccc;
+  background-color: #333;
+}
+#mode:checked ~ main article.active .menu {
   border-bottom: 0.3rem solid #ccc;
 }
-#mode:checked ~ main #createGif .menu li {
+#mode:checked ~ main article.active .menu li {
   color: #ccc;
   background-color: transparent;
   margin: 0.5rem;
