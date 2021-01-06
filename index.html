@@ -7,6 +7,8 @@
 				initial-scale=1,
 				maximum-scale=3">
 	<title>Maquetado Avanzado</title>
+	<link rel="icon" href="assets/icon/css.svg">
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body><!-- Parte VISIBLE: contenido -->
 	<nav><!-- Navegacion: Links mas Importantes -->
@@ -35,13 +37,12 @@
 		<a href="#">&lt;</a>
 		<a href="#">&gt;</a>
 	</header>
-	<!-- Contenido Principal: nudo -->
-	<main>
-		<section>
+	<main><!-- Contenido Principal: nudo -->
+		<section><!-- Seccion: Contenido que depende del contexto -->
 			<header class="header">
 				<h1>Nuevos Elementos HTML</h1>
 			</header>
-			<article>
+			<article><!-- Articulo: Contenido Independiente al contexto -->
 				<header>
 					<h1>Contenido Multimedia</h1>
 				</header>
@@ -77,18 +78,95 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Elementos Estadisticos</h1>
 				</header>
-				<p></p>
+				<p>
+					Dependiendo de los valores que querramos representar visualmente, <strong>HTML</strong> nos ofrece 2 elementos. por un lado la etiqueta <strong>&lt;PROGRESS></strong> que se utiliza para mostrar el avance de una tarea cuando esta aun no fue finalizada, y por el otro, el elemento <strong>&lt;METER></strong> desarrollado para comparar los valores finales de una actividad cuando esta fue finalizada.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Progress</strong>
+						<ul>
+							<li>
+								<progress></progress> value="undefined"
+							</li>
+							<li>
+								<progress value="20" max="100"></progress> value="20" max="100"
+							</li>
+							<li id="jsPbar">
+								<progress min="0" max="100"></progress>
+								<input type="number" min="0" max="100">
+								value="javascript"
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Meter</strong>
+						<ul>
+							<li>
+								<meter 
+									value="30" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+									value* < low < high < optimum
+							</li>
+							<li>
+								<meter 
+									value="60" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+									low < value* < high < optimum
+							</li>
+							<li>
+								<meter 
+									value="90" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+									low < high < value* < optimum
+							</li>
+						</ul>
+					</li>
+				</ul>
 				<footer>
 					<address>Para mas informacion, consultar</address>
 					<a href=""></a><a href=""></a></footer>
 			</article>
 			<article>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>API's de Dibujo</h1>
 				</header>
-				<p></p>
+				<p>
+					Una de las ultimas herramientas que incorpora HTML, son las de dibujo, dividiendose en 2 grupos. Por un lado se encuentra <strong>&lt;SVG></strong> que permite la creacion de <em>graficos vectoriales (conjuntos de lineas y curvas calculados matematicamente)</em> mediante la implementacion de <strong>XML</strong>; y por el otro <strong>&lt;CANVAS></strong> permite la realizacion de <em>graficos mapa de bits (grilla que combina canales de color para la representacion de elementos con pixeles)</em> mediante la implementacion de <strong>JS</strong>.
+				</p>
+				<div class="example">
+					<figure>
+						<img src="assets/icon/css.png" alt="Logo CSS BitMap">
+						<figcaption>Logo CSS BitMap</figcaption>
+					</figure>
+					<figure>
+						<img src="assets/icon/css.svg" alt="Logo CSS Vector">
+						<figcaption>Logo CSS Vector</figcaption>
+					</figure>
+				</div>
+				<svg style="border:1px solid #333; width:200px; height:200px;">
+					<rect 
+						x="50" y="50" 
+						width="100" height="100" 
+						fill="darkslateblue" />
+					<rect 
+						x="137.5" y="37.5" 
+						width="25" height="25" 
+						fill="rgba(234, 68, 136, .5)"/>
+					<circle 
+						r="30" cx="50" cy="150" fill="#2488"/>
+				</svg>
+				<canvas id="jsCanvas" width="200" height="200"></canvas>
 				<footer>
 					<address>Para mas informacion, consultar</address>
 					<a href=""></a><a href=""></a></footer>
@@ -255,5 +333,6 @@
 			&amp; Compañia
 		</p>
 	</footer>
+	<script src="scripts/main.js"></script>
 </body>
 </html>
