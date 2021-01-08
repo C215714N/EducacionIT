@@ -1,21 +1,214 @@
 /*Content First*/
+	/*Reglas Generales*/
+		@import url(icomoon.css);
+		:root{
+			--primary: #248;
+			--dark: #333;
+			--light: #eee;
+			--sm: 576px;
+			--md: 768px;
+			--lg: 992px;
+			--xl: 1200px;
+		}
+		*{
+			box-sizing: border-box;
+			outline: none;
+			font-family: sans-serif;
+		}
+		body{ margin: 0; }
 	/*navegacion*/
+		nav{
+			position: sticky;
+			top: 0;
+			z-index: 3;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			background-color: var(--dark);
+		}
+		nav a{
+			display: block;
+			color: var(--light);
+			text-decoration: none;
+			padding: .5rem;
+		}
+		nav > a{ font: bold 1.5rem sans-serif; }
+		nav > a:last-child{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			width: 2.5rem;
+			padding: 0;
+			text-align: center;
+			line-height: 2.5rem;
+			border-radius: 1.5rem;
+			color: var(--primary);
+			background-color: var(--light);
+			opacity: .6;
+		}
+		nav > a:last-child:hover{
+			color: var(--dark);
+		}
+		#menu{
+			line-height: 2rem;
+			font-size: 2rem;
+		}
+		.button{
+			margin: .5rem;
+			border: .15rem solid var(--light);
+			padding: .2rem .6rem;
+			color: var(--light);
+			background-color: transparent;
+		}
+		.button:hover{
+			color: var(--dark);
+			background-color: var(--light)
+		}
+		.menu{
+			list-style: none;
+			overflow: hidden;
+			width: 100%;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 1.5rem;
+		}
+		.menu a{ 
+			padding-left: 40%; 
+		}
+		.menu span{ font-size: 1.2rem; }
+		.menu a:hover{ background-color: var(--primary) }
+		.menu.active{ height: auto; }
 	/*cabecera*/
+		#header{
+			position: relative;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			color:var(--light);
+		}
+		.header h1,
+		.header p{
+			margin: 0;
+			line-height: 1.5rem;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		/*Galeria*/
+			#header button,
+			.slide,
+			.slide li{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+			.slide li{ opacity: 0 }
+			.slide,
+			.slide li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				left: 0;
+				right: 0;
+				z-index: -1;
+				background-position: center;
+				background-size: cover;
+			}
+			.slide li:nth-child(1){ 
+				background-color: hsl(160, 50%, 50%); 
+				background-image: url(../assets/img/osx-mountain-lion.jpg);
+				background-blend-mode: difference;
+			}
+			.slide li:nth-child(2){ 
+				background-color: hsl(260, 50%, 50%); 
+				background-image: url(../assets/img/osx-sierra.jpg);
+				background-blend-mode: soft-light;
+				} /* hex 00: min | ff: max */ 
+			.slide li:nth-child(3){ 
+				background-color: hsl(30, 50%, 50%); 
+				background-image: url(../assets/img/osx-mojave-night.jpg);
+				background-blend-mode: hard-light;
+				} /* dec 0: min | 255: max */
+			.slide li:nth-child(4){ 
+				background-color: hsl(220, 50%, 50%); 
+				background-image: url(../assets/img/osx-mavericks.png);
+				background-blend-mode: screen;
+			}
+				/*
+					color 	rbg				hex		hsl
+					red 	(255,0,0)		#f00	(0,100%,50%)
+					yellow	(255,255,0)		#ff0	(60,100%,50%)
+					green 	(0,255,0)		#0f0	(120,100%,50%)
+					cyan	(0,255,255)		#0ff	(180,100%,50%)
+					blue 	(0,0,255)		#00f	(240,100%,50%)
+					magenta	(255,0,255)		#f0f	(300,100%,50%)
+					black	(0,0,0)			#000	(360,0%,0%)
+					grey	(128,128,128)	#888	(360,0%,50%)
+					white 	(255,255,255)	#fff	(360,100%,100%)
+				*/
+			.slide li.active{ opacity: 1; }
+		/*controles*/
+			#header button{
+				cursor: pointer;
+				border: none;
+				padding: 1rem;
+				color: var(--light);
+				background-color: transparent;
+				font-size: 1.5rem;
+				opacity: .3;
+			}
+			#header button:hover{
+				opacity: .6;
+			}
+			#header .icon-prev{
+				left: 0;
+			}
+			#header .icon-next{
+				right: 0;
+			}
 	/*contenido principal*/
 		/*ejemplos*/
-			.example figure{
-				border: 1px solid #333;
-				padding: 1rem;
-				max-width: 200px;
-				text-align: center;
-			}
-			.example figure img{
-				width: 100%;
-			}
+			/*Contenido Multimedia*/
+				audio, video{
+					width: 100%;
+					max-width: 480px;
+				}
+			/*Elementos Estadisticos*/
+			/*API dibujos*/
+				canvas, svg{
+					width: 200px;
+					height: 200px;
+					border: 1px solid var(--dark);
+				}
+				.example figure{
+					border: 1px solid var(--dark);
+					padding: 1rem;
+					max-width: 200px;
+					text-align: center;
+				}
+				.example figure img{
+					width: 100%;
+				}
 /*Small*/
-
+	@media screen and (min-width: 576px){
+		#menu{
+			display: none;
+		}
+		.menu{
+			display: flex;
+			width: auto;
+			height: auto;
+		}
+		.menu a{ padding: .5rem 1rem; }
+		.menu span{ display: none; }
+	}
 /*medium*/
-
-/*Large*/
-
-/*Extra Large*/
+	@media screen and (min-width: 768px){
+		.menu a{ padding: .5rem; }
+		.menu span{
+			display: inline-block;
+		}
+	}

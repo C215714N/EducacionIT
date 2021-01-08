@@ -13,15 +13,16 @@
 <body><!-- Parte VISIBLE: contenido -->
 	<nav><!-- Navegacion: Links mas Importantes -->
 		<a href="#">CSS</a>
-		<button id="menu">&equiv;</button>
+		<button id="menu" class="button">&equiv;</button>
 		<ul class="menu">
-			<li><a href="#">inicio</a></li>
-			<li><a href="about.html">acerca</a></li>
-			<li><a href="#contact">contacto</a></li>
+			<li><a class="icon-home" href="#" title="inicio"> <span>inicio</span></a></li>
+			<li><a class="icon-about" href="about.html" title="acerca"> <span>acerca</span></a></li>
+			<li><a class="icon-contact" href="#contact" title="contacto"> <span>contacto</span></a></li>
 			<li>
-				<a href="https://github.com/c215714n/EducacionIT/tree/maquetado-xv-10hs" target="_blank">gitHub</a>
+				<a class="icon-github" href="https://github.com/c215714n/EducacionIT/tree/maquetado-xv-10hs" target="_blank" title="gitHub"> <span>gitHub</span></a>
 			</li>
 		</ul>
+		<a class="icon-back" href="#"></a>
 	</nav>
 	<header id="header"><!-- Cabecera: Introduccion -->
 		<div class="header">
@@ -29,13 +30,13 @@
 			<p>html | css | js</p>
 		</div>
 		<ul class="slide">
-			<li></li>
+			<li class="active"></li>
 			<li></li>
 			<li></li>
 			<li></li>
 		</ul>
-		<a href="#">&lt;</a>
-		<a href="#">&gt;</a>
+		<button class="icon-prev" href="#"></button>
+		<button class="icon-next" href="#"></button>
 	</header>
 	<main><!-- Contenido Principal: nudo -->
 		<section><!-- Seccion: Contenido que depende del contexto -->
@@ -71,8 +72,8 @@
 					<address>
 						Para mas informacion, consultar el
 						<a href="https://alumni.education">Alumni</a>.
-						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
-						o revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+						<br /> Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br /> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
 					</address>
 				</footer>
 			</article>
@@ -134,8 +135,14 @@
 					</li>
 				</ul>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
 			</article>
 			<article>
 				<header>
@@ -154,7 +161,7 @@
 						<figcaption>Logo CSS Vector</figcaption>
 					</figure>
 				</div>
-				<svg style="border:1px solid #333; width:200px; height:200px;">
+				<svg>
 					<rect 
 						x="50" y="50" 
 						width="100" height="100" 
@@ -168,13 +175,18 @@
 				</svg>
 				<canvas id="jsCanvas" width="200" height="200"></canvas>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 		</section>
 		<section>
 			<header class="header">
-				<h1>Clase 2</h1>
+				<h1>Aspectos Visuales CSS</h1>
 			</header>
 			<article>
 				<header>
@@ -182,8 +194,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -191,8 +208,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -200,8 +222,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 		</section>
 		<section>
@@ -214,8 +241,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -223,8 +255,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -232,8 +269,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 		</section>
 		<section>
@@ -246,8 +288,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -255,8 +302,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -264,8 +316,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 		</section>
 		<section>
@@ -278,8 +335,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -287,8 +349,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 			<article>
 				<header>
@@ -296,8 +363,13 @@
 				</header>
 				<p></p>
 				<footer>
-					<address>Para mas informacion, consultar</address>
-					<a href=""></a><a href=""></a></footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
 			</article>
 		</section>
 	</main>
@@ -319,7 +391,7 @@
 				type="text" 
 			/>
 			<div></div>
-			<button>Enviar</button>
+			<button class="button">Enviar</button>
 		</form>
 		<div class="social">
 			<a href="https://.com" target="_blank"></a>
