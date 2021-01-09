@@ -21,6 +21,7 @@
 
 body {
   margin: 0;
+  min-width: 250px;
 }
 
 /*Icons*/
@@ -249,6 +250,9 @@ nav .icon {
 nav #menu {
   color: #572ee5;
   background-color: #fefefe;
+  margin: 0;
+  border: 0;
+  padding: 0;
   line-height: 1.5rem;
   font-size: 2rem;
 }
@@ -287,6 +291,12 @@ nav .menu {
     border-bottom: 0.2rem solid #33c9ca;
   }
 }
+@media screen and (min-width: 768px) {
+  nav .menu li.active a {
+    color: #cbcbcb;
+    background-color: #fefefe;
+  }
+}
 nav .menu li a {
   margin: 0;
   border: 0;
@@ -323,12 +333,23 @@ nav .menu li:first-child label:after {
   content: " Diurno";
 }
 nav .menu li:last-child a {
+  margin: 0;
+  border: 0;
+  padding: 0.25rem;
   display: none;
+  border-radius: 50%;
+  width: 2.25rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   nav .menu li:last-child a {
     display: block;
   }
+}
+nav .menu li:last-child.active a {
+  color: #fefefe;
+  background-color: #cbcbcb;
 }
 nav .open {
   display: block;
@@ -366,6 +387,8 @@ nav .open {
   max-width: 432px;
 }
 #header form {
+  position: sticky;
+  top: 0;
   margin: auto;
   border: none;
   padding: 0 1rem;
@@ -513,7 +536,6 @@ main {
 }
 main section {
   max-width: 1140px;
-  display: none;
   color: #572ee5;
   background-color: #fefefe;
   margin: auto;
@@ -521,6 +543,9 @@ main section {
   padding: 1rem;
   text-align: center;
   height: auto;
+}
+main section:not(target) {
+  display: none;
 }
 main section:target {
   display: block;
@@ -543,13 +568,22 @@ main #search {
   display: block;
 }
 main #crear_gifo {
-  display: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   /*area de grabacion*/
   /*area de proceso*/
+}
+@media screen and (min-width: 992px) {
+  main #crear_gifo {
+    height: auto;
+  }
 }
 main #crear_gifo .camera {
   position: absolute;
@@ -684,12 +718,12 @@ main #pagination .button:hover {
   color: #fefefe;
   background-color: #572ee5;
 }
-main #favoritos > div {
+main #favoritos > div, main #mis_gifos > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.5rem;
 }
-main #favoritos .noItems {
+main #favoritos .noItems, main #mis_gifos .noItems {
   display: block;
 }
 main #trending {
@@ -792,7 +826,8 @@ main article.active .hidden .close {
   top: 1rem;
   right: 1rem;
 }
-main button {
+main button.changeItem {
+  position: absolute;
   top: 0;
   bottom: 0;
 }
@@ -915,9 +950,7 @@ main .fav.active {
 #mode:checked ~ main section .button {
   color: #ccc;
   background-color: #333;
-  margin: 1rem;
   border: 1px solid #ccc;
-  padding: 0.5rem 1rem;
 }
 #mode:checked ~ main section .button:hover {
   color: #333;

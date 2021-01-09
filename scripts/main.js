@@ -4,13 +4,16 @@
 		const tagsURL	= 'https://api.giphy.com/v1/tags/related/'
 		const trendURL 	= 'https://api.giphy.com/v1/gifs/trending';
 		const uploadURL = 'https://upload.giphy.com/v1/gifs';
+		const idURL		= 'https://api.giphy.com/v1/gifs/'
 		const apiKey 	= 'LanYkWCgNLIRDm6XZOZWnYH9yZHOProA';
+		/*"MezpAnehs4rFn0KD7u"*/
 	// 	Parametros
 		let url, limit  = 3, offset = 0;
 		let total, pages, msg = 'favs';
 		let m = 0, s = 0;
 		let phase, nextItem;
 		let likeHit, downHit, openHit;
+		let gifLoad = [], totalFavs = []
 /*	Areas de Eventos	*/
 	//	Barra de Navegacion
 		const menuBtn	= document.querySelector('#menu');
@@ -33,12 +36,14 @@
 		const recAgain	= document.querySelector('#crear_gifo .menu a');
 	//	Seccion de Favoritos
 		const favArea 	= document.querySelector('#favoritos div');
-		const noFavs 	= document.querySelector('#favoritos .noItems')
+		const noFavs 	= document.querySelector('#favoritos .noItems');
+	//	Seccion mis Gifos
+		const myGifs	= document.querySelector('#mis_gifos div')
+		const noGifs	= document.querySelector('#mis_gifos .noItems')
 /*	Funciones y Metodos	*/
 	//	Consulta API Giphy
 		async function fetchAPI(url, editArea, buildArea, type = true) { 
-			await fetch(url)
-				.then( resultado => resultado.json()
+			await fetch(url).then( response => response.json()
 				.then( async giphy => { 
 					giphy.pagination ? total = giphy.pagination.total_count : null;
 					giphy.data.forEach( item => editArea.innerHTML += buildArea(item, type) )
@@ -69,7 +74,7 @@
 					</p>
 					<div class="social">
 						<a class="icon fav ${ !type ? 'active' : ''}"></a>
-						<a href="${ item.img ? item.img : item.images.fixed_height_downsampled.webp }" class="icon download" target="_blank" download></a>
+						<a href="${ item.img ? item.img : item.url }" class="icon download" target="_blank" download></a>
 						<a class="icon max"></a>
 					</div>
 				</div>`
@@ -205,18 +210,31 @@
 		}	)
 	// 	Elementos Favoritos
 		const favLoad = () =>{
-			if( localStorage.length == 0 ){
-				noResults(noFavs, 'favs');
-			} else {
-				favArea.innerHTML = ``;
-				for ( i = 0; i < localStorage.length; i++ ){  
-		  			favGif = localStorage.key(i);
-		  			item = JSON.parse(localStorage.getItem(favGif));
-		 			favArea.innerHTML += showGifs(item, false);
-		 			
-				}		
-			} 
-		}
+			if( localStorage.length > 0 ){
+				favArea.innerHTML = ``; 
+				myGifs.innerHTML = ``;
+			for ( i = 0; i < localStorage.length; i++ ){  
+		  		id = localStorage.key(i);
+		  		item = JSON.parse(localStorage.getItem(id));
+		  		if (id.includes('api_gifo')) {
+		  			gifLoad.push(id.slice(8)) 
+		  		} else {
+		  			totalFavs.push(id);   
+		  		}	
+				gifLoad.length == 0 ? 
+					noResults(noGifs, 'gifs') : 
+					myGifsLoad();
+				totalFavs.length == 0 ? 
+					noResults(noFavs, 'favs') : 
+			  		favArea.innerHTML += showGifs(item, false);
+		 		gif = document.getElementById(id);
+		 		gif ? gif.querySelector('.fav').classList.add('active') : null;
+		}	}	}
+		const myGifsLoad = () => {
+			gifLoad.forEach( (item, i) => {
+				url = `${idURL}${gifLoad[i]}?api_key=${apiKey}`
+				fetch(url, myGifs, showGifs, true);
+		}	)	}
 		//	Agregar Item
 			const addToFav = () => {
 				window.localStorage.setItem( id , JSON.stringify( {
@@ -225,6 +243,18 @@
 					'username': item.title, 
 					'title': item.alt
 			}	)	)	} 
+		//		
+			const addToGif = (id) => {
+				url = `${idURL}${id}?api_key=${apiKey}`
+				fetch(url).then( response => response.json()
+				.then( async giphy => giphy.data.forEach( item =>
+				window.localStorage.setItem(`api_gifo${item.id}`, 
+					JSON.stringify(
+						{'id': item.id,
+						'img': item.images.fixed_height_downsampled.webp ,
+						'username': item.username,
+						'title': item.title
+			}	)	)	)	)	)	}
 		//	Remover Item
 			const removeFav = () => { 
 				window.localStorage.removeItem( id ) 
@@ -242,12 +272,12 @@
 		dataList.addEventListener(
 			'click', () => {
 				textField.value = dataList.value 
-				textField.focus()
+				frmSearch.querySelector('button').click()
+				textField.focus();
 		}	)
 	//	Resultados Busqueda
 		frmSearch.addEventListener( 'submit', (e) => {
 			e.preventDefault();
-			
 			limit = 12;
 			offset = 0;
 			termino = textField.value;
@@ -300,7 +330,7 @@
 				type: "gif",
 				frameRate: 1,
 				quality: 10,
-				width: 360,
+				width: 480,
 				hidden: 240
 			});
 			await videoRecorder.startRecording();
@@ -334,7 +364,7 @@
 		//	Iniciando Carga
 			console.log("***comenzando subida***");
 			const formData = new FormData();
-			formData.append("file", gifSrc, "myGif.gif");
+			formData.append("file", gifSrc, "api_Gifo.gif");
 				const params = {
 					method: "POST",
 					body: formData,
@@ -344,20 +374,13 @@
 			const data = await fetchURL(`${uploadURL}?api_key=${apiKey}`, params);
 			console.log(await data);
 			console.log("***subida exitosa***");
-			return await data;
+			addToGif(data.data.id)
 		}
 	//	Consulta API Giphy - UserId
-		async function fetchURL(url, params = null) {
-			try {
-				const fetchData = await fetch(url, params);
-				const response = await fetchData.json();
-				return response;
-			} catch (error) {
-				if (error.name !== "AbortError") {
-					console.log("Error al obtener resultados");
-				}
-				return error;
-			};
+		const fetchURL = async(url, params = null) => {
+			const fetchData = await fetch(url, params);
+			const response = await fetchData.json();
+			return response		
 		};
 /* 	Acciones del Usuario */
 	//	Elementos Utilizables
@@ -375,19 +398,13 @@
 		}
 	//	Botones de Accion
 		const userActions = () => {
-		//	Like Button
-			likeButtons();
-			openButtons();
-		//	Download Button
-			// downHit.forEach( (down , i) => down.addEventListener( "click", () => {
-			// 	item = document.querySelectorAll('img.result')[i].src
-			// 	a = document.createElement('a');
-			// 	a.download = true;
-			// 	a.target = '_blank';
-			// 	a.href= item;
-			// 	a.click();
-			// }	)	)
-		//	Open Button
+			likeButtons()
+			favButtons()
+			openButtons()
+		}
+		const totalItems = (param, i) => { 
+			id = document.querySelectorAll('article.'+param)[i].id;
+			item = document.querySelectorAll('img.'+param)[i];
 		}
 		const likeButtons = () => {
 			likeHit.forEach( ( like , i ) => like.addEventListener( 'click', () => { 
@@ -398,6 +415,11 @@
 				noFavs.innerHTML = ``;
 				favLoad();
 		}	)	)	}
+		const favButtons = () => {
+			favHit.forEach( (fav, i) => fav.addEventListener( 'click', () => {
+				totalItems('favorite', i);
+			}	)	)
+		}
 		const openButtons = () => {
 			openHit.forEach( ( open, i ) => open.addEventListener('click', () => {	
 				totalItems('result', i);
@@ -405,7 +427,3 @@
 				open.classList.toggle('close')
 				document.getElementById(id).classList.toggle('active');
 		}	)	)	}
-		const totalItems = (param, i) => { 
-			id = document.querySelectorAll('article.'+param)[i].id;
-			item = document.querySelectorAll('img.'+param)[i];
-		}

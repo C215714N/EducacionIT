@@ -35,6 +35,7 @@ $icons: logo, search, link, fav, trash, max, close, download, facebook, instagra
 	display: none
 body
 	margin:0
+	min-width: 250px
 /*Icons*/
 .icon
 	display: inline-block
@@ -95,6 +96,7 @@ nav
 		height: 3rem
 	#menu
 		+mode
+		+normalize($p:0)
 		line-height: 1.5rem
 		font-size: 2rem
 	.menu
@@ -120,6 +122,9 @@ nav
 				border-bottom: .2rem solid transparent
 				&:not(:last-child):hover
 					border-bottom: .2rem solid $special_color
+			&.active a
+				@media screen and (min-width: $md)
+					+mode(darken($bg_color, 20%), $bg_color)
 			a
 				+normalize($p: .5rem 1rem)
 				display: inline-block
@@ -144,9 +149,17 @@ nav
 						content:' Diurno'
 			&:last-child
 				a
+					+normalize($p: .25rem)
 					display: none
-					@media screen and (min-width: $md)
+					border-radius: 50%
+					width: 2.25rem
+					font-size: 1.5rem
+					text-align: center
+					@media screen and (min-width: $lg)
 						display: block
+				&.active
+					a
+						+mode($bg_color,darken($bg_color, 20%))
 	.open
 		display: block
 		opacity: .8
@@ -168,6 +181,8 @@ nav
 		width: 100%
 		max-width: $sm * 3/4
 	form
+		position: sticky
+		top: 0
 		+normalize(auto, none, 0 1rem)
 		display: flex
 		flex-direction: column
@@ -264,11 +279,12 @@ main
 	/*secciones de pagina*/
 	section
 		max-width: $xl
-		display: none
 		+mode
 		+normalize($m: auto)
 		text-align: center
 		height: auto
+		&:not(target)
+			display: none
 		&:target
 			display: block
 	section:last-child
@@ -283,11 +299,15 @@ main
 		display: block
 	/*creacion gif*/
 	#crear_gifo
-		display: none
+		+normalize($p:0)
+		overflow: hidden
+		height: 0
 		flex-direction: column
 		justify-content: center
 		align-items: center
 		flex-wrap: wrap
+		@media screen and (min-width: $lg)
+			height: auto
 		.camera
 			position: absolute
 			left: -40%
@@ -390,7 +410,7 @@ main
 			&:hover
 				+mode($bg_color, $color)
 	/*area de favoritos*/
-	#favoritos
+	#favoritos, #mis_gifos
 		& > div
 			display: grid
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
@@ -475,8 +495,8 @@ main
 				position: fixed
 				top: 1rem
 				right: 1rem
-	button
-		position:absolute
+	button.changeItem
+		position: absolute
 		top: 0
 		bottom: 0
 	.prev
@@ -554,8 +574,8 @@ main
 		section
 			+mode($color, $bg_color)
 			.button		
-				+mode($color, $bg_color)	
-				+normalize(1rem, 1px solid $color, .5rem 1rem)
+				+mode($color, $bg_color)
+				border: 1px solid $color
 				&:hover
 					+mode($bg_color, $color)
 		section:last-child
