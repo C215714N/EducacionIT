@@ -6,14 +6,13 @@
 		const uploadURL = 'https://upload.giphy.com/v1/gifs';
 		const idURL		= 'https://api.giphy.com/v1/gifs/'
 		const apiKey 	= 'LanYkWCgNLIRDm6XZOZWnYH9yZHOProA';
-		/*"MezpAnehs4rFn0KD7u"*/
 	// 	Parametros
 		let url, limit  = 3, offset = 0;
 		let total, pages, msg = 'favs';
 		let m = 0, s = 0;
 		let phase, nextItem;
-		let likeHit, downHit, openHit;
-		let gifLoad = [], totalFavs = []
+		let likeHit = [], openHit = [];
+		let totalGifs = [], totalFavs = []
 /*	Areas de Eventos	*/
 	//	Barra de Navegacion
 		const menuBtn	= document.querySelector('#menu');
@@ -42,23 +41,25 @@
 		const noGifs	= document.querySelector('#mis_gifos .noItems')
 /*	Funciones y Metodos	*/
 	//	Consulta API Giphy
-		async function fetchAPI(url, editArea, buildArea, type = true) { 
-			await fetch(url).then( response => response.json()
+		async function fetchAPI(url, editArea, buildArea, type = 'result') { 
+			fetch(url).then( response => response.json()
 				.then( async giphy => { 
 					giphy.pagination ? total = giphy.pagination.total_count : null;
 					giphy.data.forEach( item => editArea.innerHTML += buildArea(item, type) )
 					showPages(url, total);
+					loadStorage();
 					getItems();
-					favLoad();
 		}	)	)	};
 	//	Constructores
 		//	Resultados de Busqueda
 			const showGifs = (item, type) => (
-				`<article 
-					id="${type ? item.id : 'fav_'+ item.id}" 
-					class="${ type ? 'result' : 'favorite'}">
-					<img class="${ type ? 'result' : 'favorite'}" 
-						src="${ type ? item.images.fixed_height_downsampled.webp : item.img }" 
+				`<article id="${type == 'result' ? item.id : type + item.id}" 
+					class="${type == 'fav_' ? 'favorite' : type == 'gif_' ? 'mygifo' : 'result'}">
+					<img class="${type == 'fav_' ? 'favorite' : type == 'gif_' ? 'mygifo' : 'result'}" 
+						src="${ type == 'result' ? 
+							item.images.fixed_height_downsampled.webp : 
+							item.img 
+						}" 
 						alt="${ item.title }"
 						title="${ item.username }"
 					ismap />
@@ -73,8 +74,11 @@
 						<strong>${item.title ? item.title : 'untitled'}</strong>
 					</p>
 					<div class="social">
-						<a class="icon fav ${ !type ? 'active' : ''}"></a>
-						<a href="${ item.img ? item.img : item.url }" class="icon download" target="_blank" download></a>
+						<a href="${type == 'result' ? '#'+item.id : '#' + type + item.id}" "
+							class="icon fav ${ type == 'fav_' ? 'active' : '' }"></a>
+						<a href="${item.img ? item.img : item.images.fixed_height.url}" 
+							class="icon download" target="_blank" download>
+						</a>
 						<a class="icon max"></a>
 					</div>
 				</div>`
@@ -83,18 +87,14 @@
 				if (url.includes('search') && total >= 1) { 
 					pageArea.innerHTML =
 						`<ul>
-							<li>
-								<strong>Resultados</strong> 
-								${total}
-								</li>
+							<li><strong>Resultados</strong>${total}</li>
 							<li>
 								<strong>Paginas</strong> 
-								${ ( actual = (offset / 12) + 1 ) <= (pages = Math.ceil(total / 12)) ? actual : pages } 
-								/ ${ pages }
+								${ ( actual = (offset / 12) + 1 ) <= (pages = Math.ceil(total / 12)) ?actual : pages } / ${ pages }
 							</li>
 						</ul>
 						<button class="button">
-							${ offset + limit <= total ? `VER MAS...`: `NO HAY MAS RESULTADOS` }
+							${ offset + limit <= total ? "VER MAS...": "NO HAY MAS RESULTADOS" }
 						</button>`
 				} else if (url.includes('search')){
 					noResults(pageArea, 'results');
@@ -107,7 +107,6 @@
 				</option>`
 			);	
 			const noResults = (editArea, icon) =>{
-				let msg;
 				switch(icon){
 					case 'favs': 
 						msg = `"¡guarda tu primer Gifo en favoritos <br/> para que se muestre aqui!"`; 
@@ -199,65 +198,53 @@
 					for(li = 1 ; li < menuItem.length; li++){
 						li === i ? menuItem[li].classList.toggle('active') : menuItem[li].classList.remove('active');
 			}	}	)	)
-	//	Definicion Cookies
-		var setCookie = function(item){
-			document.cookie = `${item.id} = ${item.images.fixed_height_downsampled.webp}; Max-Age=2600000; Secure`; 
-		};
 	//	Elementos Populares
 		window.addEventListener( 'load', () => { 
 			url = `${trendURL}?api_key=${apiKey}&limit=${limit}&rating=g`;
 			fetchAPI(url, trendArea, showGifs);
 		}	)
 	// 	Elementos Favoritos
-		const favLoad = () =>{
-			if( localStorage.length > 0 ){
-				favArea.innerHTML = ``; 
-				myGifs.innerHTML = ``;
-			for ( i = 0; i < localStorage.length; i++ ){  
-		  		id = localStorage.key(i);
-		  		item = JSON.parse(localStorage.getItem(id));
-		  		if (id.includes('api_gifo')) {
-		  			gifLoad.push(id.slice(8)) 
-		  		} else {
-		  			totalFavs.push(id);   
-		  		}	
-				gifLoad.length == 0 ? 
-					noResults(noGifs, 'gifs') : 
-					myGifsLoad();
-				totalFavs.length == 0 ? 
-					noResults(noFavs, 'favs') : 
-			  		favArea.innerHTML += showGifs(item, false);
-		 		gif = document.getElementById(id);
-		 		gif ? gif.querySelector('.fav').classList.add('active') : null;
-		}	}	}
-		const myGifsLoad = () => {
-			gifLoad.forEach( (item, i) => {
-				url = `${idURL}${gifLoad[i]}?api_key=${apiKey}`
-				fetch(url, myGifs, showGifs, true);
-		}	)	}
+		const loadStorage = () =>{
+			favArea.innerHTML = ``; 
+			myGifs.innerHTML = ``;
+			if(localStorage.length != 0){
+				totalGifs = [];
+				totalFavs = [];
+				for ( i = 0; i < localStorage.length; i++ ){  
+			  		id = localStorage.key(i);
+			  		item = JSON.parse(localStorage.getItem(id));
+			  		if (item.gif) {
+			  			totalGifs.push(id);
+			  		}
+			  		if (item.fav){
+			  			totalFavs.push(id);
+				  		favArea.innerHTML += showGifs(item, 'fav_');
+				  		favRef = document.getElementById(id);
+					  	favRef ? favRef.querySelector('.fav').classList.toggle('active') : null;
+			}	}	} 	
+			totalGifs.length == 0 ? noResults(noGifs, 'gifs') : noGifs.innerHTML = ``;
+			totalFavs.length == 0 ? noResults(noFavs, 'favs') : noFavs.innerHTML = ``;
+			}
 		//	Agregar Item
-			const addToFav = () => {
+			const addStorage = (id, item, fav, gif) => {
+				id.includes('fav_') || id.includes('gif_') ? id = id.slice(4) : null;
 				window.localStorage.setItem( id , JSON.stringify( {
 					'id' : id,
 					'img': item.src, 
 					'username': item.title, 
-					'title': item.alt
+					'title': item.alt,
+					'fav': fav, 
+					'gif': gif
 			}	)	)	} 
-		//		
-			const addToGif = (id) => {
-				url = `${idURL}${id}?api_key=${apiKey}`
-				fetch(url).then( response => response.json()
-				.then( async giphy => giphy.data.forEach( item =>
-				window.localStorage.setItem(`api_gifo${item.id}`, 
-					JSON.stringify(
-						{'id': item.id,
-						'img': item.images.fixed_height_downsampled.webp ,
-						'username': item.username,
-						'title': item.title
-			}	)	)	)	)	)	}
+		//	Revisar Item
+			const getStorage = () => {
+				item = JSON.parse(window.localStorage.getItem(id));
+				(item.fav && item.gif) ? remStorage(id) : addStorage(false, item.gif);
+			}
 		//	Remover Item
-			const removeFav = () => { 
-				window.localStorage.removeItem( id ) 
+			const remStorage = (id) => {
+				window.localStorage.removeItem( id );
+				document.getElementById(id).querySelector('.fav').classList.toggle('active');
 			}
 	//	Elementos del Usuario
 	//	Sugerencias de Busqueda 
@@ -374,8 +361,10 @@
 			const data = await fetchURL(`${uploadURL}?api_key=${apiKey}`, params);
 			console.log(await data);
 			console.log("***subida exitosa***");
-			addToGif(data.data.id)
-		}
+			id = data.data.id;
+			item = data.data;
+			addStorage(id, item, false, true);
+			}
 	//	Consulta API Giphy - UserId
 		const fetchURL = async(url, params = null) => {
 			const fetchData = await fetch(url, params);
@@ -385,45 +374,29 @@
 /* 	Acciones del Usuario */
 	//	Elementos Utilizables
 		const getItems = () => {
-			//	Resultados
-			likeHit	= document.querySelectorAll('.result .fav');
-			downHit = document.querySelectorAll('.result .download');
-			openHit = document.querySelectorAll('.result .max');
-			//	Favoritos
-			favHit 	= document.querySelectorAll('.favorite .fav');
-			favOpen	= document.querySelectorAll('.favorite .max')
-			//	Mis Gifos
-
-			userActions();
+			// 	Mapeo y Funcionalidad
+				likeHit = document.querySelectorAll('.fav');
+				openHit = document.querySelectorAll('.max');
+				userActions();
 		}
 	//	Botones de Accion
 		const userActions = () => {
-			likeButtons()
-			favButtons()
-			openButtons()
-		}
-		const totalItems = (param, i) => { 
-			id = document.querySelectorAll('article.'+param)[i].id;
-			item = document.querySelectorAll('img.'+param)[i];
-		}
-		const likeButtons = () => {
-			likeHit.forEach( ( like , i ) => like.addEventListener( 'click', () => { 
-				totalItems('result', i);
-				like.classList.toggle('active');
-				like.classList.contains('active') ? addToFav() : removeFav();
-				favArea.innerHTML = ``;
-				noFavs.innerHTML = ``;
-				favLoad();
-		}	)	)	}
-		const favButtons = () => {
-			favHit.forEach( (fav, i) => fav.addEventListener( 'click', () => {
-				totalItems('favorite', i);
+			likeHit.forEach( (like , i) => like.addEventListener( 'click', (e) => { 
+				e.preventDefault();
+				totalItems(like);
+				cont.id.includes('fav_') ? remStorage(cont.id.slice(4)) : 
+					localStorage.getItem(cont.id) ? remStorage(cont.id) : addStorage(cont.id, item, true);
+				loadStorage();
+			}	)	)	
+			openHit.forEach( ( open, i ) => open.addEventListener('click', (e) => {	
+				e.preventDefault();	
+				totalItems(open);
+				cont.classList.toggle('active');
+				open.classList.toggle('max');
+				open.classList.toggle('close');
 			}	)	)
 		}
-		const openButtons = () => {
-			openHit.forEach( ( open, i ) => open.addEventListener('click', () => {	
-				totalItems('result', i);
-				open.classList.toggle('max');
-				open.classList.toggle('close')
-				document.getElementById(id).classList.toggle('active');
-		}	)	)	}
+		const totalItems = (param) => { 
+			cont = param.parentNode.parentNode.parentNode
+			item = param.parentNode.parentNode.parentNode.querySelector('img');
+		}

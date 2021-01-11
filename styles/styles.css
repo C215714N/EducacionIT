@@ -21,7 +21,6 @@
 
 body {
   margin: 0;
-  min-width: 250px;
 }
 
 /*Icons*/
@@ -535,14 +534,31 @@ main {
   /*localStorage*/
 }
 main section {
-  max-width: 1140px;
+  position: relative;
   color: #572ee5;
   background-color: #fefefe;
   margin: auto;
-  border: 0;
-  padding: 1rem;
-  text-align: center;
+  border: none;
+  padding: 3rem 1rem 1rem;
+  max-width: 992px;
   height: auto;
+  text-align: center;
+}
+main section > .button {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+main section > .button.prev {
+  left: 0;
+}
+main section > .button.next {
+  right: 0;
+}
+main section h1 {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5rem;
 }
 main section:not(target) {
   display: none;
@@ -568,7 +584,7 @@ main #search {
   display: block;
 }
 main #crear_gifo {
-  margin: 0;
+  margin: auto;
   border: 0;
   padding: 0;
   overflow: hidden;
@@ -592,6 +608,15 @@ main #crear_gifo .camera {
   height: 10rem;
   background: url("../assets/icons/bg_camera.svg") no-repeat left center, url("../assets/icons/bg_light.svg") no-repeat right center;
 }
+main #crear_gifo .tape {
+  position: absolute;
+  bottom: -10%;
+  right: -30%;
+  width: 5rem;
+  height: 5rem;
+  background: url("../assets/icons/bg_tape.svg") no-repeat right center;
+  background-size: contain;
+}
 main #crear_gifo article {
   margin: auto;
   border: 1px solid #572ee5;
@@ -602,10 +627,9 @@ main #crear_gifo article {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   max-width: 540px;
-  max-height: 360px;
+  min-height: 360px;
 }
 main #crear_gifo article video, main #crear_gifo article img {
   position: absolute;
@@ -718,13 +742,20 @@ main #pagination .button:hover {
   color: #fefefe;
   background-color: #572ee5;
 }
-main #favoritos > div, main #mis_gifos > div {
+main #favoritos > div,
+main #mis_gifos > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.5rem;
 }
-main #favoritos .noItems, main #mis_gifos .noItems {
+main #favoritos .noItems,
+main #mis_gifos .noItems {
   display: block;
+}
+main #favoritos:target #search,
+main #mis_gifos:target #search {
+  height: 0;
+  overflow: hidden;
 }
 main #trending {
   overflow: auto;
@@ -805,6 +836,8 @@ main article.active img {
   margin: 4.2rem auto 0.5rem;
   border: 0;
   padding: 0;
+  width: 100%;
+  height: auto;
   max-width: 480px;
   max-height: 360px;
   position: relative;
@@ -977,9 +1010,10 @@ main .fav.active {
 #mode:checked ~ main article.active .menu li {
   color: #ccc;
   background-color: transparent;
-  margin: 0.5rem;
-  border: 1px solid #ccc;
-  padding: 0.25rem 0.6rem;
+}
+#mode:checked ~ main article.active .menu .active {
+  color: #333;
+  background-color: color;
 }
 #mode:checked ~ #footer {
   color: #ccc;

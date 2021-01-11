@@ -10,6 +10,7 @@ $xl: 1140px
 //images
 $icon: "../assets/icons/"
 $camera: url($icon+"bg_camera.svg") no-repeat left center, url($icon+"bg_light.svg") no-repeat right center 
+$tape: url($icon+"bg_tape.svg") no-repeat right center
 //social media
 $icons: logo, search, link, fav, trash, max, close, download, facebook, instagram, twitter
 //mode mixins
@@ -35,7 +36,6 @@ $icons: logo, search, link, fav, trash, max, close, download, facebook, instagra
 	display: none
 body
 	margin:0
-	min-width: 250px
 /*Icons*/
 .icon
 	display: inline-block
@@ -278,11 +278,24 @@ main
 	+normalize($p: 0)
 	/*secciones de pagina*/
 	section
-		max-width: $xl
+		position: relative
 		+mode
-		+normalize($m: auto)
-		text-align: center
+		+normalize(auto, none, 3rem 1rem 1rem)
+		max-width: $lg
 		height: auto
+		text-align: center
+		& >	.button
+			position: fixed
+			top: 0
+			bottom: 0
+			&.prev
+				left: 0
+			&.next
+				right: 0
+		h1
+			display: flex
+			flex-direction: column
+			line-height: 2.5rem
 		&:not(target)
 			display: none
 		&:target
@@ -299,7 +312,7 @@ main
 		display: block
 	/*creacion gif*/
 	#crear_gifo
-		+normalize($p:0)
+		+normalize(auto, 0, 0)
 		overflow: hidden
 		height: 0
 		flex-direction: column
@@ -314,6 +327,14 @@ main
 			width: 12.75rem
 			height: 10rem
 			background: $camera
+		.tape
+			position: absolute
+			bottom: -10%
+			right: -30%	
+			width: 5rem
+			height: 5rem
+			background: $tape
+			background-size: contain
 		/*area de grabacion*/
 		article
 			+normalize(auto, 1px solid $color, 1.5rem)
@@ -323,10 +344,9 @@ main
 			display: flex
 			justify-content: center
 			align-items: center
-			width: 100vw
-			height: 100vh
+			width: 100%
 			max-width: 540px
-			max-height: 360px
+			min-height: 360px
 			video, img
 				position: absolute
 				top: 15%
@@ -410,13 +430,17 @@ main
 			&:hover
 				+mode($bg_color, $color)
 	/*area de favoritos*/
-	#favoritos, #mis_gifos
+	#favoritos, 
+	#mis_gifos
 		& > div
 			display: grid
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
 			gap: .5rem
 		.noItems
 			display: block
+		&:target #search
+			height: 0
+			overflow: hidden
 	/*gifs populares*/
 	#trending
 		overflow: auto
@@ -478,6 +502,8 @@ main
 		align-items: center
 		img
 			+normalize(4.2rem auto .5rem, 0, 0)
+			width: 100%
+			height: auto
 			max-width: 480px
 			max-height: 360px
 			position: relative
@@ -590,7 +616,8 @@ main
 				border-bottom: .3rem solid $color
 				li
 					+mode($color, transparent)
-					+normalize(.5rem, 1px solid $color, .25rem .6rem)
+				.active
+					+mode($bg_color, color)
 	/*pie de pagina*/
 	& ~ #footer
 		+mode($color, $bg_color)
