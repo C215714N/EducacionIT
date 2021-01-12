@@ -11,9 +11,9 @@ $xl: 1140px
 $icon: "../assets/icons/"
 $camera: url($icon+"bg_camera.svg") no-repeat left center, url($icon+"bg_light.svg") no-repeat right center 
 $tape: url($icon+"bg_tape.svg") no-repeat right center
-//social media
+//iconos
 $icons: logo, search, link, fav, trash, max, close, download, facebook, instagram, twitter
-//mode mixins
+//mixins
 =mode($color: $color, $bg_color:$bg_color)
 	color: $color
 	background-color: $bg_color
@@ -30,6 +30,7 @@ $icons: logo, search, link, fav, trash, max, close, download, facebook, instagra
 	box-sizing: border-box
 	font-family: century gothic, sans-serif
 	outline: none
+	background-color: transparent
 	text-decoration: none
 	transition: all .5s ease-in
 #mode
@@ -43,7 +44,6 @@ body
 	border-radius: .25rem
 	width: 1.5rem
 	height: 1.5rem
-	background-color: transparent
 	background-repeat: no-repeat
 	background-position: center
 	background-size: contain
@@ -58,7 +58,11 @@ body
 .special
 	color: $special_color
 .button
-	+normalize(.5rem, 2px solid $color, .5rem 1rem)
+	cursor: pointer
+	+mode($color, transparent)
+	+normalize(.5rem, .1rem solid $color, .5rem .75rem)
+	&:hover
+		+mode($bg_color, $color)
 /*webkit*/
 ::-webkit-scrollbar,
 .scroller
@@ -70,13 +74,13 @@ body
 	+normalize(.5rem auto)
 	border-radius: 1rem
 	background: radial-gradient( ellipse at bottom right, darken($bg_color, 20%), $bg_color)
-/*navegacion*/
+/*barra de navegacion*/
 nav
 	+mode
 	+normalize($p: .5rem 0)
 	position: sticky
 	top: 0
-	z-index: 2
+	z-index: 3
 	border-top: .2rem solid $color
 	display: flex
 	flex-wrap: wrap
@@ -99,6 +103,7 @@ nav
 		+normalize($p:0)
 		line-height: 1.5rem
 		font-size: 2rem
+	/*menu principal*/
 	.menu
 		+normalize
 		overflow: hidden
@@ -116,22 +121,22 @@ nav
 			position: static
 			display: flex
 			width: auto
-			background-color: transparent			
+			background-color: transparent
 		li
 			@media screen and (min-width: $md)
 				border-bottom: .2rem solid transparent
 				&:not(:last-child):hover
-					border-bottom: .2rem solid $special_color
+					border-color: $special_color
 			&.active a
 				@media screen and (min-width: $md)
-					+mode(darken($bg_color, 20%), $bg_color)
+					+mode(darken($bg_color, 20%), transparent)
 			a
 				+normalize($p: .5rem 1rem)
 				display: inline-block
 				color:$bg_color
 				font-weight: bold
 				@media screen and (min-width: $md)
-					color: $color
+					+mode($color, transparent)
 				&::after
 					+normalize(auto, none, 0)
 					content: ''
@@ -142,11 +147,14 @@ nav
 					background-color: $bg_color
 					@media screen and (min-width: $md)
 						display: none
+			/*modo diurno / nocturno */
 			&:first-child
 				label
 					cursor: pointer
+					background-color: transparent
 					&:after
 						content:' Diurno'
+			/*crear gifo*/
 			&:last-child
 				a
 					+normalize($p: .25rem)
@@ -155,18 +163,21 @@ nav
 					width: 2.25rem
 					font-size: 1.5rem
 					text-align: center
-					@media screen and (min-width: $lg)
+					@media screen and (min-width: $md)
 						display: block
+						&:hover
+							+mode($bg_color, $color)
 				&.active
 					a
 						+mode($bg_color,darken($bg_color, 20%))
+	/*menu desplegable*/
 	.open
 		display: block
 		opacity: .8
 		@media screen and (min-width: $md)
 			display: flex
 			padding: 0
-			background-color: transparent
+			
 /*cabecera*/
 #header	
 	+mode
@@ -180,6 +191,7 @@ nav
 		display: block
 		width: 100%
 		max-width: $sm * 3/4
+	/*formulario de busqueda*/
 	form
 		position: sticky
 		top: 0
@@ -201,6 +213,7 @@ nav
 					display: none
 				& ~ label
 					display: block
+			/*visualizacion de sugerencias*/
 			&:focus,
 			&:valid
 				+normalize(0, 2px solid $color, .5rem .25rem .5rem 3rem)
@@ -216,6 +229,7 @@ nav
 						background-color: darken($bg_color, 20%)
 				& ~ button
 					right: calc(100% - 4rem)
+		/*estilos del campo*/
 		::-webkit-search-cancel-button
 			-webkit-appearance: none
 			width: 1.5rem
@@ -251,8 +265,7 @@ nav
 					width: 90%
 					height: 1px
 					background-color: $color
-				&:focus
-					background-color: transparent
+		/*boton buscar*/	
 		button
 			position: absolute
 			z-index: 1
@@ -280,18 +293,12 @@ main
 	section
 		position: relative
 		+mode
-		+normalize(auto, none, 3rem 1rem 1rem)
+		+normalize
 		max-width: $lg
 		height: auto
 		text-align: center
-		& >	.button
-			position: fixed
-			top: 0
-			bottom: 0
-			&.prev
-				left: 0
-			&.next
-				right: 0
+		@media screen and (min-width: $md)
+			+normalize(auto, none, 3rem 3rem 1rem)
 		h1
 			display: flex
 			flex-direction: column
@@ -300,73 +307,107 @@ main
 			display: none
 		&:target
 			display: block
+	/*elementos populares*/
 	section:last-child
 		display: block
 		+mode($bg_color: darken($bg_color, 10%))
+		/*navegacion y vistas*/
+		.button
+			display: none
+			position: absolute
+			top: calc(65% - 1rem)
+			border-radius: .25rem
+			font-size: 1rem
+			line-height: 1.5rem
+			text-align: center
+			@media screen and (min-width: $md)
+				display: block
+			&.prev
+				left: 0
+				@media screen and (min-width: $lg)
+					left: 4rem
+			&.next
+				right: 0
+				@media screen and (min-width: $lg)
+					right: 4rem
+		button.selected
+			position: fixed
+			top: calc(50% - 1rem)
+			z-index: 2
 	.title
 		+normalize
 		font-size: 2rem
 		&:empty ~ #pagination
 			display: none
+	/*resultados de busqueda*/
 	#search
 		display: block
 	/*creacion gif*/
 	#crear_gifo
-		+normalize(auto, 0, 0)
 		overflow: hidden
-		height: 0
+		+normalize(auto, 0, 0)
 		flex-direction: column
 		justify-content: center
 		align-items: center
 		flex-wrap: wrap
-		@media screen and (min-width: $lg)
+		height: 0
+		@media screen and (min-width: $md)
 			height: auto
-		.camera
-			position: absolute
-			left: -40%
-			width: 12.75rem
-			height: 10rem
-			background: $camera
-		.tape
-			position: absolute
-			bottom: -10%
-			right: -30%	
-			width: 5rem
-			height: 5rem
-			background: $tape
-			background-size: contain
+			.camera
+				position: absolute
+				left: -30%
+				width: 20vw
+				min-width: 4rem
+				max-width: 12rem
+				height: 8rem
+				background: $camera
+				background-size: 70%, 45%
+				@media screen and (min-width: $lg)
+					left: -35%
+			.tape
+				position: absolute
+				bottom: -10%
+				right: -22.5%
+				min-width: 2rem
+				max-width: 4rem
+				height: 4rem
+				background: $tape
+				background-size: contain
+				z-index: -2
+				@media screen and (min-width: $lg)
+					right: -20%
 		/*area de grabacion*/
 		article
+			+mode($color, transparent)
 			+normalize(auto, 1px solid $color, 1.5rem)
-			background-color: transparent
 			overflow: visible
 			position: relative
 			display: flex
 			justify-content: center
 			align-items: center
-			width: 100%
+			width: 60%
 			max-width: 540px
-			min-height: 360px
+			min-height: 320px
 			video, img
 				position: absolute
 				top: 15%
+				bottom: 15%
+				left: 20%
 				right: 20%
 				width: 60%
 				height: 70%
 				opacity: 0
-				background-color: transparent
-				&:before, &:after
-					content: ''
-					position: absolute
-					display: block
-					width: 2rem
-					height: 2rem
-					border: 2px solid $special_color
-					background-color: $special_color
+			.message
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%				
 		&:target
 			display: flex
 		div:last-child
-			width: 720px
+			width: 62.5%
+			max-width: 720px
 		/*area de proceso*/
 		.menu
 			+normalize(auto, none, 0)
@@ -385,7 +426,7 @@ main
 				font: 1rem sans-serif
 			a
 				position: absolute
-				right: 12.5%
+				right: 2.5%
 			.active
 				+mode($bg_color,$color)
 		button
@@ -421,14 +462,7 @@ main
 			strong
 				display: block
 		.button
-			cursor: pointer
-			+mode
-			+normalize(1rem, 1px solid $color, .5rem 1rem)
-			outline: none
 			border-radius: 1rem
-			background-color: transparent
-			&:hover
-				+mode($bg_color, $color)
 	/*area de favoritos*/
 	#favoritos, 
 	#mis_gifos
@@ -443,14 +477,15 @@ main
 			overflow: hidden
 	/*gifs populares*/
 	#trending
-		overflow: auto
-		max-height: 250px
-		display: grid
-		grid-template-columns: repeat(3, 250px)
-		justify-content: flex-start
-		align-content: center
-		@media screen and (min-width: $md)
-			justify-content: center
+		& > div
+			overflow: auto
+			max-height: 250px
+			display: grid
+			grid-template-columns: repeat(3, 250px)
+			justify-content: flex-start
+			align-content: center
+			@media screen and (min-width: $lg)
+				justify-content: center
 	/*elementos independientes*/
 	article:not(.active)
 		overflow: hidden
@@ -477,10 +512,28 @@ main
 				position: absolute
 				top: .5rem
 				right: .5rem
+				a
+					position: relative
+					z-index: 2
+				.max
+					position: absolute
+					right: -1rem
+					top: -1rem
+					width: 400px
+					height: 400px
+					opacity: 0
+					z-index: 1
+					@media screen and (min-width: $md)
+						position: static
+						width: auto
+						height: auto
+						opacity: 1
 			p
+				max-width: 60%
 				+normalize(0, none, .2rem)
 				text-align: left
-		&:hover
+		&:hover,
+		&.selected
 			.hidden
 				bottom: 0
 				top: 0	
@@ -501,34 +554,24 @@ main
 		justify-content: center
 		align-items: center
 		img
+			position: relative
 			+normalize(4.2rem auto .5rem, 0, 0)
-			width: 100%
-			height: auto
+			width: auto
+			height: 100%
 			max-width: 480px
 			max-height: 360px
-			position: relative
 		.hidden
+			+normalize(.5rem, none, .5rem)
 			position: static
 			display: flex
 			justify-content: space-between
 			width: 100%
 			max-width: 480px
 			text-align: left
-			a
-				width: 2rem
-				height: 2rem
 			.close
 				position: fixed
 				top: 1rem
 				right: 1rem
-	button.changeItem
-		position: absolute
-		top: 0
-		bottom: 0
-	.prev
-		left: 1rem
-	.next
-		right: 1rem
 	video, img
 		height: 100%
 	/*localStorage*/
@@ -573,13 +616,17 @@ main
 		.menu
 			+mode($bg_color: darken($bg_color, 20%))
 			@media screen and (min-width: $md)
-				background-color: transparent
-			li
+				+mode($color, transparent)
 				a
-					color: $color
+					+mode($color, transparent)
 				&:first-child
 					label:after
 						content:' Nocturno'
+				&:last-child a:hover,
+				.active:last-child a
+					+mode(lighten($bg_color, 20%), transparent)
+				.active a
+					+mode(darken($color, 25%), transparent)
 	/*cabecera*/
 	& ~ #header
 		+mode($color, $bg_color)
@@ -601,7 +648,7 @@ main
 			+mode($color, $bg_color)
 			.button		
 				+mode($color, $bg_color)
-				border: 1px solid $color
+				border: .1rem solid $color
 				&:hover
 					+mode($bg_color, $color)
 		section:last-child
@@ -610,6 +657,14 @@ main
 			article
 				+mode($color, $bg_color)
 				+normalize(auto, 1px solid $color, 1.5rem)
+			.menu 
+				border-color: $color
+				li
+					+mode($color, $bg_color)
+					border-color: $color
+				.active
+					+mode($bg_color, $color)
+
 		article.active
 			+mode($color, $bg_color)
 			.menu

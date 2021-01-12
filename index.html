@@ -7,19 +7,16 @@
 		content="
 			width=device-width,
 			initial-scale=1,
-			maximum-scale=3"
-	/>
+			maximum-scale=3" />
 	<title>Gifos</title>
 	<link rel="icon" href="assets/icons/icon_logo.svg">
-	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 	<input id="mode" type="checkbox"/>
 	<nav>
 		<a class="icon logo" href="#"></a>
-		<button id="menu" class="icon">
-			&equiv;
-		</button>
+		<button id="menu" class="icon">&equiv;</button>
 		<ul class="menu">
 			<li><a><label for="mode">Modo </label></a></li>
 			<li><a href="#favoritos">Favoritos</a></li>
@@ -61,22 +58,17 @@
 			</form>
 		</section>
 		<section id="favoritos">
-			<h1>
-				<img src="assets/icons/section_favs.svg">
-				Favoritos
-			</h1>
-			<div>
-			</div>
-			<div class="noItems">
-			</div>
+			<h1><img src="assets/icons/section_favs.svg">Favoritos</h1>
+			<div></div>
+			<div class="noItems"></div>
 		</section>
 		<section id="crear_gifo">
+			<h1 data-title="Crear Gifo"> </h1>
 			<article>
-				<div class="camera">
-				</div>
+				<div class="camera"></div>
 				<video class="show"></video>
-				<img />
-				<div class="message"></div>
+				<img/><div class="message">
+				</div>
 			</article>
 			<div>
 				<ul class="menu">
@@ -84,23 +76,22 @@
 					<li>2</li>
 					<li>3</li>
 					<a href="#crear_gifo"></a>
-				<div class="tape"></div>
+					<div class="tape"></div>
 				</ul>
 				<button class="button">Crear</button>
 			</div>
 		</section>
 		<section id="mis_gifos">
-			<h1>
-				<img src="assets/icons/section_gifs.svg">
-				Mis Gifos
-			</h1>
+			<h1><img src="assets/icons/section_gifs.svg">Mis Gifos</h1>
 			<div></div>
 			<div class="noItems"></div>
 		</section>
-		<section>
+		<section id="trending">
 			<h1>Trending GIFOS</h1>
-			<p>	Mira los ultimos GIFOS de nuestra comunidad. </p>
-			<div id="trending"></div>
+			<p>Mira los ultimos GIFOS de nuestra comunidad.</p>
+			<div></div>
+			<button class="button prev"> < </button>
+			<button class="button next"> > </button>
 		</section>
 	</main>
 	<footer id="footer" >
