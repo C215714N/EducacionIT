@@ -170,13 +170,59 @@
 				right: 0;
 			}
 	/*contenido principal*/
+		main{
+			padding: 1rem;
+		}
 		/*ejemplos*/
+			.example{
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1rem;
+				list-style: none;
+				margin-left: 1.5rem;
+				border-left: .2rem solid var(--primary);
+				padding: 1rem;
+				background-color: var(--light);
+			}
+			.example > div{
+				padding: .5rem;
+				border: .2rem solid var(--primary);
+				background-color: var(--light)
+			}
 			/*Contenido Multimedia*/
 				audio, video{
 					width: 100%;
 					max-width: 480px;
 				}
 			/*Elementos Estadisticos*/
+				progress, 
+				meter{
+					width: 100%;
+					max-width: 480px;
+					height: 2rem;
+					margin: 1rem auto -.5rem;
+				}
+				::-webkit-meter-optimum-value{
+					background: /*valor por encima de HIGH*/
+						linear-gradient(
+							hsl(120, 60%, 70%),
+							hsl(150, 60%, 40%)
+						);
+				}
+				::-webkit-meter-suboptimum-value{
+					background: /*valor entre LOW y HIGH*/
+						linear-gradient(
+							hsl(60, 80%, 70%),
+							hsl(40, 80%, 40%)
+						);
+				}
+				::-webkit-meter-even-less-good-value{
+					background: /*valor menor a LOW*/
+						linear-gradient(
+							hsl(0, 70%, 70%),
+							hsl(30, 70%, 40%)
+						);
+				}
 			/*API dibujos*/
 				canvas, svg{
 					width: 200px;
@@ -191,6 +237,79 @@
 				}
 				.example figure img{
 					width: 100%;
+				}
+			/*Modelos de Color*/
+			/*Gradientes de Fondo*/
+			/*Modos de Fusion de Fondo*/
+			/*Transformaciones 2d*/
+				/* Translate => desplazar (distancia) */
+					.transform2d div:nth-child(1){
+						transform:
+							translateX(0) 		/* eje - X + */
+							translateY(0)		/* eje - Y + */
+							translate(2rem, .5rem)	/* x, y */
+						;
+					}
+				/* Scale => redimensionar (unidades) */
+					.transform2d div:nth-child(2){
+						transform: 
+							scaleX(1.5) /* eje X < 1 < X */
+							scaleY(1.5) /* eje Y < 1 < Y */
+							scale(.7) /* ambos ejes || x , y*/
+						;
+					}
+				/* Rotate => rotacion (grados)*/
+					.transform2d div:nth-child(3){
+						transform: 
+							rotate(-5deg); /* - antihorario Angulo horario + */
+						transform-origin: center; /*x y*/
+					}
+				/* Skew => sesgar (grados)*/
+					.transform2d div:nth-child(4){
+						transform:
+							skewX(15deg) /* - horario X antihorario + */
+							skewY(15deg) /* - horario Y antihorario + */
+							skew(15deg, -20deg) /*x, y*/
+						;
+					}
+				/*Aplicacion de Transformaciones*/
+					.transform2d:hover div{
+						transform: translate(0);
+					}
+			/*Transformaciones 3d*/
+				.transform3d{
+					perspective: 300px;
+					perspective-origin: right center;
+				}
+				.transform3d div:nth-child(1){
+					transform: 
+						rotateX(60deg)
+					;
+				}
+				.transform3d div:nth-child(2){
+					transform: 
+						rotateY(60deg)
+					;
+				}
+				.transform3d div:nth-child(3){
+					transform: 
+						rotateZ(15deg)
+					;
+				}
+				.transform3d div:nth-child(4){
+					transform:
+						rotateX(5deg)
+						rotateY(15deg)
+						rotateZ(-15deg)
+					;
+				}
+				.transform3d:hover div{
+					transform:
+						rotateX(15deg)
+						rotateY(60deg)
+						rotateZ(0)
+						translate(3rem)
+					;
 				}
 /*Small*/
 	@media screen and (min-width: 576px){

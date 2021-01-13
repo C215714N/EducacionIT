@@ -197,10 +197,10 @@
 					Existen varias formas de representar los colores en la web, desde las mas sensillas como <strong>HTML Colors</strong> donde se asocia un nombre a un valor como <em>darkslateblue</em>; el <strong>Modelo RGB</strong> que utiliza la sintesis aditiva mezclando los canales de luz rojo, verde y azul, del cual se pueden implementar 2 variantes, <em>decimal (75, 60, 140)</em> o <em>hexadecimal #4B3C8C</em>. Por ultimo, se incorpora el <strong>Modelo HSL</strong> que hace uso del circulo cromatico para la seleccion del tono y luego mediante la manipulacion de saturacion y luz obtenemos el valor deseado como <em>(250, 40%, 40%)</em>
 				</p>
 				<div class="example">
-					<div>color: darkslateblue</div>
-					<div>color: rgb(75, 60, 140)</div>
-					<div>color: #4B3C8C</div>
-					<div>color: hsl(250, 40%, 40%)</div>
+					<div>darkslateblue</div>
+					<div>rgb(75, 60, 140)</div>
+					<div>#4B3C8C</div>
+					<div>hsl(250, 40%, 40%)</div>
 				</div>
 				<footer>
 					<address>
@@ -247,13 +247,21 @@
 		</section>
 		<section>
 			<header class="header">
-				<h1>Clase 3</h1>
+				<h1>Efectos Visuales de Etiquetas</h1>
 			</header>
 			<article>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Transformaciones 2d</h1>
 				</header>
-				<p></p>
+				<p>
+					CSS permite la aplicacion de alteraciones en el aspecto de las etiquetas, mediante lo que se conoce como transformaciones. Las mismas utilizan como referencia a la etiqueta donde se aplican y permiten, entre otras cosas, rotar, escalar o redimensionar las mismas junto a su contenido.
+				</p>
+				<div class="example transform2d">
+					<div>translate(dX,dY)</div>
+					<div>scale (uX, uX)</div>
+					<div>rotate (deg)</div>
+					<div>skew(degX, degY)</div>
+				</div>
 				<footer>
 					<address>
 						Para mas informacion, consultar el
@@ -265,9 +273,17 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Transformacion 3d</h1>
 				</header>
-				<p></p>
+				<p>
+					
+				</p>
+				<div class="example transform3d">
+					<div>rotateX(deg)</div>
+					<div>rotateY(deg)</div>
+					<div>rotateZ(deg)</div>
+					<div>perspective</div>
+				</div>
 				<footer>
 					<address>
 						Para mas informacion, consultar el
