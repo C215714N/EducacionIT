@@ -16,7 +16,13 @@
 		<button id="menu" class="button">&equiv;</button>
 		<ul class="menu">
 			<li><a class="icon-home" href="#" title="inicio"> <span>inicio</span></a></li>
-			<li><a class="icon-about" href="about.html" title="acerca"> <span>acerca</span></a></li>
+			<li><a class="icon-about" href="about.html" title="acerca"> <span>acerca</span></a>
+				<ul>
+					<li><a href="">productos</a></li>
+					<li><a href="">servicio</a></li>
+					<li><a href="">extras</a></li>
+				</ul>
+			</li>
 			<li><a class="icon-contact" href="#contact" title="contacto"> <span>contacto</span></a></li>
 			<li>
 				<a class="icon-github" href="https://github.com/c215714n/EducacionIT/tree/maquetado-xv-10hs" target="_blank" title="gitHub"> <span>gitHub</span></a>
@@ -406,21 +412,50 @@
 	<footer id="footer"><!--Pie: Informacion de contacto -->
 		<form id="contact" action="" method="POST">
 			<h2>Contactanos</h2>
-			<label for=""></label>
+			<label for="contactName">Nombre</label>
 			<input 
+				id="contactName" 
 				type="text" 
+				maxlength="50"
+				pattern="[a-z A-Z]{2,50}"
+				placeholder="Ingrese su Nombre"
+				required 
 			/>
-			<div></div>
-			<label for=""></label>
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos.
+				El mismo debe contener entre 2 y 50 caracteres
+			</div>
+			<label for="contactEmail">Correo</label>
 			<input 
-				type="text" 
+				id="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo"
+				required 
 			/>
-			<div></div>
-			<label for=""></label>
+			<div class="validate">
+				Ingrese una direccion de correo valida,
+				respetando la estructura usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
 			<input 
-				type="text" 
+				id="contactPhone" 
+				type="tel"
+				pattern="[\(]\d{2,5}[\)]\d{3,6}[\-]\d{3,6}"
+				placeholder="Ingrese su Telefono (11)1234-5678" 
+				required 
 			/>
-			<div></div>
+			<div class="validate">
+				Ingrese su telefono colocando la caracteristica entre 
+				parentesis "()" y luego separando con guiones 
+				cada 4 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				minlength="10"
+				maxlength="200"
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
 			<button class="button">Enviar</button>
 		</form>
 		<div class="social">
