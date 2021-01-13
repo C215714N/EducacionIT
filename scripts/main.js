@@ -14,7 +14,7 @@
 	prev.addEventListener('click', () => changeItem( itemList, false ) )
 	next.addEventListener('click', () => changeItem( itemList, true ) )
 
-	function changeItem (itemList, type){
+	const changeItem  = (itemList, type) =>{
 		for(i = 0; i < itemList.length ; i++){
 			if(itemList[i].classList.contains('active')){
 				itemList[i].classList.remove('active');
