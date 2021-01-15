@@ -1,8 +1,19 @@
 // Variables
-	@primary: #248;
-	@light: #eee;
-	@dark: #333;
-	@grey: @light - @dark;
+	//colores
+		@primary: #248;
+		@light: #eee;
+		@dark: #333;
+	//devices
+		@sm: 576px;		@smw: 540px;
+		@md: 768px;		@mdw: 720px;
+		@lg: 992px;		@lgw: 960px;
+		@xl: 1200px;	@xlw: 1140px;
+/*Reglas Generales*/
+	@import url('icomoon.css');
+	*{
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
 //Anidacion de Estilos
 	body{
 		.normalize;
@@ -10,24 +21,58 @@
 	/*Navegacion*/
 		nav{
 			background-color: @dark;
+			.flexbox(flex; space-between; center; wrap);
 			a{
-				color: @grey;
+				color: @light;
 				text-decoration: none;
 			}
 			#menu{
-
+				.button;
+				font-size: 1.5rem;
+				@media screen and (min-width: @md){
+					display: none
+				}
 			}
 			.menu{
+				width: 100%;
+				height: 0;
+				overflow: hidden;
+				.normalize;
+				@media screen and (min-width: @md){
+					.flexbox();
+					width: auto;
+					height: auto;
+					overflow: visible;
+				}
 				ul{
-					.normalize;
+					display: none;
 				}
 				a{
 					display: block;
 					font: bold 1rem sans-serif;
+					padding: .5rem;
+					padding-left: 40%;
 					&:hover{
 						background-color: lighten( @dark, 10%);
 					}
+					@media screen and (min-width: @md){
+						font-size: 1.5rem;
+						padding: .5rem;
+						span{
+							display: none;
+						}
+					}
+					@media screen and (min-width: @lg){
+						font-size: 1rem;
+						padding: .5rem 1rem;
+						span{
+							display: inline-block;
+						}
+					}
 				}
+			}
+			.active{
+				height: auto;
 			}
 			.icon-back{
 				position:fixed;
@@ -38,10 +83,80 @@
 				background-color: @dark;
 			}
 		}
-
-//MIXINS (estilos que se utilizan como atributos)
-	.normalize{
-		margin: 0;
-		padding: 0;
-		border: 0;
+	main{
+		section{
+			.max-width(@lg);
+			.max-width(@xl);
+		}
 	}
+	#footer{
+		#contact{
+			.flexbox(column);
+			.max-width(@sm);
+			.max-width(@md);
+			button{
+				.button;
+			}
+		}
+	}
+//	MIXINS (estilos que se utilizan como atributos)
+	.button(){
+		.normalize(.25rem .5rem; .5rem; .2rem solid @light);
+		outline: none;
+		border-radius: .5rem;
+		color: @light;
+		background-color: transparent;
+		&:hover{
+			color: @dark;
+			background-color: @light;
+		}
+	}
+//	MIXINS PARAMETRICOS (conjuntos de estilos que se pueden editar)
+	.normalize(@p: 0; @m: 0; @b: none){
+		list-style: none;
+		margin: @m;
+		padding: @p;
+		border: @b;
+	}
+	.flexbox( @fd:row; @fj:none; @fa:none; @fw:wrap; @f:flex ){
+		display: @f; 
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+	.max-width(@vw){
+		@media screen and (min-width:@vw){
+			max-width: 
+				if( @vw = @sm, @smw,
+				if( @vw = @md, @mdw,
+				if( @vw = @lg, @lgw,
+					@xlw
+				)	)	);
+		} 
+	}
+// MIXINS RECURSIVOS
+	@col: 24;
+	.grid (@i: 1) when(@i <= @col){
+		.col-@{i}{
+			width: percentage( (@i / @col) );
+		}
+		.grid(@i + 1);
+	}
+	.grid;
+
+	.crisTrap(@vw, @vn){
+		@media screen and (min-width: @vw){
+			.grid(@i: 1) when (@i <= @col){
+				.col-@{vn}-@{i}{
+					width: percentage( (@i / @col));
+				}
+				.grid(@i + 1);
+			}
+			.grid;
+		}
+	} 
+	.crisTrap(@sm; sm);
+	.crisTrap(@md; md);
+	.crisTrap(@lg; lg);
+	.crisTrap(@xl; xl);
