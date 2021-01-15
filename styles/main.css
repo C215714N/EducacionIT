@@ -216,6 +216,9 @@
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 				gap: 1rem;
+				justify-content: center;
+				align-items: center;
+				min-height: 200px;
 				list-style: none;
 				margin-left: 1.5rem;
 				border-left: .2rem solid var(--primary);
@@ -225,7 +228,8 @@
 			.example > div{
 				padding: .5rem;
 				border: .2rem solid var(--primary);
-				background-color: var(--light)
+				color: var(--light);
+				background-color: var(--primary)
 			}
 			/*Contenido Multimedia*/
 				audio, video{
@@ -235,10 +239,11 @@
 			/*Elementos Estadisticos*/
 				progress, 
 				meter{
+					display: block;
 					width: 100%;
 					max-width: 480px;
 					height: 2rem;
-					margin: 1rem auto -.5rem;
+					margin: 1rem 0 -.5rem;
 				}
 				::-webkit-meter-optimum-value{
 					background: /*valor por encima de HIGH*/
@@ -277,6 +282,11 @@
 					width: 100%;
 				}
 			/*Modelos de Color*/
+				.colors div{ color: var(--light); }
+				.colors div:nth-child(1){ background-color: darkslateblue; }
+				.colors div:nth-child(2){ background-color: rgb(75, 60, 140); }
+				.colors div:nth-child(3){ background-color: #4B3C8C; }
+				.colors div:nth-child(4){ background-color: hsl(250, 40%, 40%); }
 			/*Gradientes de Fondo*/
 			/*Modos de Fusion de Fondo*/
 			/*Transformaciones 2d*/
