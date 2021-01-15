@@ -1,0 +1,47 @@
+// Variables
+	@primary: #248;
+	@light: #eee;
+	@dark: #333;
+	@grey: @light - @dark;
+//Anidacion de Estilos
+	body{
+		.normalize;
+	}
+	/*Navegacion*/
+		nav{
+			background-color: @dark;
+			a{
+				color: @grey;
+				text-decoration: none;
+			}
+			#menu{
+
+			}
+			.menu{
+				ul{
+					.normalize;
+				}
+				a{
+					display: block;
+					font: bold 1rem sans-serif;
+					&:hover{
+						background-color: lighten( @dark, 10%);
+					}
+				}
+			}
+			.icon-back{
+				position:fixed;
+				bottom: 1rem;
+				right: 1rem;
+				width: 2rem;
+				height: 2rem;
+				background-color: @dark;
+			}
+		}
+
+//MIXINS (estilos que se utilizan como atributos)
+	.normalize{
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}

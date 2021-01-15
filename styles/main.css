@@ -210,6 +210,16 @@
 		main{
 			padding: 1rem;
 		}
+		section{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+			gap: 1rem;
+			padding: 1rem;
+		}
+		section:nth-child(even){
+			color: var(--light);
+			background-color: var(--dark);
+		}
 		/*ejemplos*/
 			.example{
 				overflow: hidden;
@@ -395,6 +405,11 @@
 				margin: .2rem 0 0;
 				border: .2rem solid transparent;
 				padding: .5rem 1rem;
+				resize: none;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				height: 6rem;
 			}
 			#contact button{
 				margin: .2rem 0;
@@ -451,6 +466,11 @@
 				color: var(--light);
 				background-color: var(--dark);
 			}
+		/*formulario*/
+			#contact{
+				margin: auto;
+				max-width: 540px;
+			}
 	}
 /*medium*/
 	@media screen and (min-width: 768px){
@@ -458,4 +478,34 @@
 		.menu span{
 			display: inline-block;
 		}
+		/*formulario*/
+			#contact{
+				max-width: 720px;
+			}
+	}
+/*extra large*/
+	@media screen and (min-width: 1200px){
+		section .header{
+			grid-column: span 2;
+		}
+		#contact{
+			display: grid;
+			grid-template-areas: 
+				'. .'
+				'name name'
+				'vname vname'
+				'email phone'
+				'vmail vphone'
+				'con con'
+				'vcon vcon';
+			gap: .5rem;
+		}
+		#contactName{ grid-area: name; }
+		#contactName + .validate{ grid-area: vname; }
+		#contactEmail{ grid-area: email; }
+		#contactEmail + .validate{ grid-area: vmail; }
+		#contactPhone{ grid-area: phone; }
+		#contactPhone + .validate{ grid-area: vphone; }
+		#contactConsult{ grid-area: con; }
+		#contactConsult + .validate{ grid-area: vcon; }
 	}

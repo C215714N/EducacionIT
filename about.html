@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!-- Parte NO VISIBLE: configuraciones -->
+	<meta charset="UTF-8">
+	<meta name ="viewport" 
+		content="width=device-width,
+				initial-scale=1,
+				maximum-scale=3">
+	<title>Maquetado Avanzado</title>
+	<link rel="icon" href="assets/icon/css.svg">
+	<link rel="stylesheet" href="styles/less.css">
+</head>
+<body><!-- Parte VISIBLE: contenido -->
+	<nav><!-- Navegacion: Links mas Importantes -->
+		<a href="#">CSS</a>
+		<button id="menu" class="button">&equiv;</button>
+		<ul class="menu">
+			<li><a class="icon-home" href="index.html" title="inicio"> <span>inicio</span></a></li>
+			<li><a class="icon-about" href="#" title="acerca"> <span>acerca</span></a>
+				<ul>
+					<li><a href="">productos</a></li>
+					<li><a href="">servicio</a></li>
+					<li><a href="">extras</a></li>
+				</ul>
+			</li>
+			<li><a class="icon-contact" href="#contact" title="contacto"> <span>contacto</span></a></li>
+			<li>
+				<a class="icon-github" href="https://github.com/c215714n/EducacionIT/tree/maquetado-xv-10hs" target="_blank" title="gitHub"> <span>gitHub</span></a>
+			</li>
+		</ul>
+		<a class="icon-back" href="#"></a>
+	</nav>
+	<header id="header"><!-- Cabecera: Introduccion -->
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>html | css | js</p>
+		</div>
+		<ul class="slide">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="icon-prev" href="#"></button>
+		<button class="icon-next" href="#"></button>
+	</header>
+	<main><!-- Contenido Principal: nudo -->
+		<section><!-- Seccion: Contenido que depende del contexto -->
+			<header class="header">
+				<h1>Nuevos Elementos HTML</h1>
+			</header>
+			<article><!-- Articulo: Contenido Independiente al contexto -->
+				<header>
+					<h1>Contenido Multimedia</h1>
+				</header>
+				<p>
+					A diferencia de otras versiones, actualmente <strong>HTML5</strong> permite <em>reproducir contenido multimedia de forma nativa</em>
+					sin necesidad de <em>plugins de terceros</em> como <strong>Flash</strong>. Las etiquetas que intervienen son <strong>&lt;AUDIO> y &lt;VIDEO></strong> que admiten los formatos <em>.mp3 - .wav - .ogg y .mp4 - .webm - .ogv</em> respectivamente; y en caso que el navegador no cuente con una API integrada, podemos generar algun mensaje de compatibilidad.
+				</p>
+				<div class="example">
+					<audio controls>
+						<source src="assets/media/by-the-way.ogv" >
+						<source src="assets/media/cant-stop.webm" >
+						<source src="assets/media/californication.mp4" >
+						<p>
+							Lo sentimos, pero tu NAVEGADOR NO es COMPATIBLE con el elemento AUDIO. Podes descargar el contenido desde el siguiente <a href="assets/media/live-learn.mp3">link</a>
+						</p>
+					</audio>
+					<video poster="assets/img/poster-cant-stop.jpg" controls>
+						<source src="assets/media/cant-stop.webm" >
+						<source src="assets/media/cant-stop.mp4" >
+						<p>
+							Lo sentimos, pero tu NAVEGADOR NO es COMPATIBLE con el elemento VIDEO. Podes descargar el contenido desde el siguiente <a href="assets/media/cant-stop.mp4">link</a>
+						</p>
+					</video>
+				</div>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br /> Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br /> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h1>Elementos Estadisticos</h1>
+				</header>
+				<p>
+					Dependiendo de los valores que querramos representar visualmente, <strong>HTML</strong> nos ofrece 2 elementos. por un lado la etiqueta <strong>&lt;PROGRESS></strong> que se utiliza para mostrar el avance de una tarea cuando esta aun no fue finalizada, y por el otro, el elemento <strong>&lt;METER></strong> desarrollado para comparar los valores finales de una actividad cuando esta fue finalizada.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Progress</strong>
+						<ul>
+							<li>
+								<progress></progress> value="undefined"
+							</li>
+							<li>
+								<progress value="20" max="100"></progress> value="20" max="100"
+							</li>
+							<li id="jsPbar">
+								<progress min="0" max="100"></progress>
+								<input type="number" min="0" max="100">
+								value="javascript"
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Meter</strong>
+						<ul>
+							<li>
+								<meter 
+									value="30" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+									value* < low < high < optimum
+							</li>
+							<li>
+								<meter 
+									value="60" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+									low < value* < high < optimum
+							</li>
+							<li>
+								<meter 
+									value="90" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>
+									low < high < value* < optimum
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h1>API's de Dibujo</h1>
+				</header>
+				<p>
+					Una de las ultimas herramientas que incorpora HTML, son las de dibujo, dividiendose en 2 grupos. Por un lado se encuentra <strong>&lt;SVG></strong> que permite la creacion de <em>graficos vectoriales (conjuntos de lineas y curvas calculados matematicamente)</em> mediante la implementacion de <strong>XML</strong>; y por el otro <strong>&lt;CANVAS></strong> permite la realizacion de <em>graficos mapa de bits (grilla que combina canales de color para la representacion de elementos con pixeles)</em> mediante la implementacion de <strong>JS</strong>.
+				</p>
+				<div class="example">
+					<figure>
+						<img src="assets/icon/css.png" alt="Logo CSS BitMap">
+						<figcaption>Logo CSS BitMap</figcaption>
+					</figure>
+					<figure>
+						<img src="assets/icon/css.svg" alt="Logo CSS Vector">
+						<figcaption>Logo CSS Vector</figcaption>
+					</figure>
+				</div>
+				<svg>
+					<rect 
+						x="50" y="50" 
+						width="100" height="100" 
+						fill="darkslateblue" />
+					<rect 
+						x="137.5" y="37.5" 
+						width="25" height="25" 
+						fill="rgba(234, 68, 136, .5)"/>
+					<circle 
+						r="30" cx="50" cy="150" fill="#2488"/>
+				</svg>
+				<canvas id="jsCanvas" width="200" height="200"></canvas>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h1>Aspectos Visuales CSS</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Modelos de Color</h1>
+				</header>
+				<p>
+					Existen varias formas de representar los colores en la web, desde las mas sensillas como <strong>HTML Colors</strong> donde se asocia un nombre a un valor como <em>darkslateblue</em>; el <strong>Modelo RGB</strong> que utiliza la sintesis aditiva mezclando los canales de luz rojo, verde y azul, del cual se pueden implementar 2 variantes, <em>decimal (75, 60, 140)</em> o <em>hexadecimal #4B3C8C</em>. Por ultimo, se incorpora el <strong>Modelo HSL</strong> que hace uso del circulo cromatico para la seleccion del tono y luego mediante la manipulacion de saturacion y luz obtenemos el valor deseado como <em>(250, 40%, 40%)</em>
+				</p>
+				<div class="example colors">
+					<div>darkslateblue</div>
+					<div>rgb(75, 60, 140)</div>
+					<div>#4B3C8C</div>
+					<div>hsl(250, 40%, 40%)</div>
+				</div>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h1>Gradientes de Fondo</h1>
+				</header>
+				<p>
+					Una caracteristica importante es la generacion de degradados de color, aunque debemos tener en cuenta que la combinacion de colores como tal sera considerada una imagen. Para poder aplicarlos debemos utilizar el valor <strong>linear-gradient(...) o radial-radient(...)</strong> colocando el <em>tipo/direccion</em> y luego los valores de color separados con <em>coma(,)</em>. 
+				</p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h1>Modos de Fusion</h1>
+				</header>
+				<p>
+					Al igual que varios programas de diseño, CSS admite la manipulacion de imagenes mediante la superposicion de pixeles mediante lo que se conoce como <strong>background-blend-mode</strong>, donde se utilizan al menos 2 imagenes de fondo, sirviendo la primera como <em>capa base</em> para determinar el aspecto inicial y la que se encuentra por encima como <em>capa de fusion</em>, la cual aplica efectos en base al modo seleccionado. 
+				</p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h1>Efectos Visuales de Etiquetas</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Transformaciones 2d</h1>
+				</header>
+				<p>
+					CSS permite la aplicacion de alteraciones en el aspecto de las etiquetas, mediante lo que se conoce como transformaciones. Las mismas utilizan como referencia a la etiqueta donde se aplican y permiten, entre otras cosas, rotar, escalar o redimensionar las mismas junto a su contenido.
+				</p>
+				<div class="example transform2d">
+					<div>translate(dX,dY)</div>
+					<div>scale (uX, uX)</div>
+					<div>rotate (deg)</div>
+					<div>skew(degX, degY)</div>
+				</div>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h1>Transformacion 3d</h1>
+				</header>
+				<p>
+					Si queremos realizar una perspectiva vamos a requerir de un punto de fuga al que apunten las etiquetas, asi como tambien una distancia definida mediante el <strong>atributo perspective</strong>, y los debemos indicar en el <em>elemento padre de la etiqueta</em> que querramos modificar. Para este tipo de transformacion 3d vamos a alterar el estado con respecto a los ejes x | y | z
+				</p>
+				<div class="example transform3d">
+					<div>rotateX(deg)</div>
+					<div>rotateY(deg)</div>
+					<div>rotateZ(deg)</div>
+					<div>perspective</div>
+				</div>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h1>Clase 4</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h1>Clase 5</h1>
+			</header>
+			<article>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+			<article>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address></footer>
+			</article>
+		</section>
+	</main>
+	<footer id="footer"><!--Pie: Informacion de contacto -->
+		<form id="contact" action="" method="POST">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				type="text" 
+				maxlength="50"
+				pattern="[a-z A-Z]{2,50}"
+				placeholder="Ingrese su Nombre"
+				required 
+			/>
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos.
+				El mismo debe contener entre 2 y 50 caracteres
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				type="email" 
+				placeholder="Ingrese su Correo"
+				required 
+			/>
+			<div class="validate">
+				Ingrese una direccion de correo valida,
+				respetando la estructura usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone" 
+				type="tel"
+				pattern="[\(]\d{2,5}[\)]\d{3,6}[\-]\d{3,6}"
+				placeholder="Ingrese su Telefono (11)1234-5678" 
+				required 
+			/>
+			<div class="validate">
+				Ingrese su telefono colocando la caracteristica entre 
+				parentesis "()" y luego separando con guiones 
+				cada 4 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				minlength="10"
+				maxlength="200"
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button class="button">Enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
