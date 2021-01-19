@@ -344,7 +344,7 @@ nav .menu li:first-child label {
   background-color: transparent;
 }
 nav .menu li:first-child label:after {
-  content: " Diurno";
+  content: " Nocturno";
 }
 nav .menu li:last-child a {
   margin: 0;
@@ -545,7 +545,6 @@ main {
   padding: 0;
   /*secciones de pagina*/
   /*elementos populares*/
-  /*resultados de busqueda*/
   /*creacion gif*/
   /*area de resultados*/
   /*area de paginacion*/
@@ -580,7 +579,7 @@ main section h1 {
 main section:not(target) {
   display: none;
 }
-main section:target {
+main section:target, main section:first-child, main section:last-child {
   display: block;
 }
 main section:last-child {
@@ -633,9 +632,6 @@ main .title {
 main .title:empty ~ #pagination {
   display: none;
 }
-main #search {
-  display: block;
-}
 main #crear_gifo {
   overflow: hidden;
   margin: auto;
@@ -658,7 +654,7 @@ main #crear_gifo {
     left: -30%;
     width: 20vw;
     min-width: 4rem;
-    max-width: 12rem;
+    max-width: 10rem;
     height: 8rem;
     background: url("../assets/icons/bg_camera.svg") no-repeat left center, url("../assets/icons/bg_light.svg") no-repeat right center;
     background-size: 70%, 45%;
@@ -679,7 +675,6 @@ main #crear_gifo {
     height: 4rem;
     background: url("../assets/icons/bg_tape.svg") no-repeat right center;
     background-size: contain;
-    z-index: -2;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
@@ -702,22 +697,56 @@ main #crear_gifo article {
   max-width: 540px;
   min-height: 320px;
 }
-main #crear_gifo article video, main #crear_gifo article img {
+main #crear_gifo article img,
+main #crear_gifo article video,
+main #crear_gifo article .message {
   position: absolute;
-  top: 15%;
-  bottom: 15%;
-  left: 20%;
-  right: 20%;
-  width: 60%;
-  height: 70%;
+  top: 10%;
+  bottom: 10%;
+  left: 15%;
+  right: 15%;
+  width: 70% !important;
+  height: 80%;
   opacity: 0;
 }
 main #crear_gifo article .message {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  color: #572ee5;
+  background-color: #fefefe;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  opacity: 1;
+}
+main #crear_gifo article .message h1 {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  display: inline-block;
+}
+main #crear_gifo article .message p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+main #crear_gifo article .message .loader::before {
+  content: url("../assets/icons/loader.svg");
+  animation: load 1s ease;
+}
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+main #crear_gifo article .message .check::before {
+  content: url("../assets/icons/check.svg");
+}
+main #crear_gifo article .message.active {
+  color: #fefefe;
+  background-color: #572ee5;
+  opacity: 0.8;
 }
 main #crear_gifo:target {
   display: flex;
@@ -751,6 +780,7 @@ main #crear_gifo .menu li {
 main #crear_gifo .menu a {
   position: absolute;
   right: 2.5%;
+  z-index: 1;
 }
 main #crear_gifo .menu .active {
   color: #fefefe;
@@ -769,10 +799,11 @@ main #crear_gifo button {
   line-height: 1rem;
 }
 main #crear_gifo .show {
-  display: block;
+  display: grid;
   opacity: 1;
+  z-index: 2;
 }
-main #results {
+main #results > div {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
@@ -854,6 +885,7 @@ main article:not(.active) .hidden {
   bottom: 100%;
   left: 0;
   right: 0;
+  width: 100%;
 }
 main article:not(.active) .hidden .social {
   position: absolute;
@@ -882,7 +914,6 @@ main article:not(.active) .hidden .social .max {
   }
 }
 main article:not(.active) .hidden p {
-  max-width: 60%;
   margin: 0;
   border: none;
   padding: 0.2rem;
@@ -939,7 +970,8 @@ main article.active .hidden .close {
   top: 1rem;
   right: 1rem;
 }
-main video, main img {
+main video,
+main img {
   height: 100%;
 }
 main .fav.active {
@@ -1009,6 +1041,9 @@ main .fav.active {
   color: #572ee5;
   background-color: black;
 }
+#mode:checked ~ nav .menu :first-child label:after {
+  content: " Diurno";
+}
 @media screen and (min-width: 768px) {
   #mode:checked ~ nav .menu {
     color: #ccc;
@@ -1017,9 +1052,6 @@ main .fav.active {
   #mode:checked ~ nav .menu a {
     color: #ccc;
     background-color: transparent;
-  }
-  #mode:checked ~ nav .menu:first-child label:after {
-    content: " Nocturno";
   }
   #mode:checked ~ nav .menu:last-child a:hover,
 #mode:checked ~ nav .menu .active:last-child a {
@@ -1079,6 +1111,11 @@ main .fav.active {
   margin: auto;
   border: 1px solid #ccc;
   padding: 1.5rem;
+}
+#mode:checked ~ main #crear_gifo article .hidden {
+  top: 0;
+  bottom: 0;
+  width: 100% !important;
 }
 #mode:checked ~ main #crear_gifo .menu {
   border-color: #ccc;
