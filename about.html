@@ -366,13 +366,47 @@
 		</section>
 		<section>
 			<header class="header">
-				<h1>Clase 5</h1>
+				<h1>Animaciones CSS</h1>
 			</header>
 			<article>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Fotogramas en funcion del tiempo</h1>
 				</header>
-				<p></p>
+				<p>
+					Las animaciones en css funcionan de manera similar a como lo hacen programas como <em>Adobe Flash/Animate</em>, mediante puntos de cambio (fotogramas clave) que indican al navegador como debe lucir nuestro elemento para luego rellenar los espacios con transiciones.
+					Las animaciones basicas cuentas con dos estados <strong>from{...} y to{...}</strong> y tambien se les puede asignar un <strong>timing-function</strong> al igual que las transiciones.
+				</p>
+				<div class="example animation timing">
+					<div>ease</div>
+					<div>ease-in</div>
+					<div>ease-out</div>
+					<div>ease-in-out</div>
+					<div>linear</div>
+					<div>cubic-bezier(x1,y1,x2,y2)</div>
+				</div>
+				<footer>
+					<address>
+						Para mas informacion, consultar el
+						<a href="https://alumni.education">Alumni</a>.
+						<br />
+						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
+						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h1>Direccion de la pelicula</h1>
+				</header>
+				<p>
+					Al igual que un video, la animacion puede ser reproducida en dos sentidos, <strong>normal o reversa</strong>, en el caso que hayamos especificado un <em>animation-timing-function</em> mayor a uno tambien podemos elegir entre 2 valores mas que son <strong>alternate y alternate-reverse</strong>. Estos valores indican cual fotograma sera el inicial y cual el final, en el caso de los ultimos se alterna <strong>del from{...} al to{...} y luego al from{...} nuevamente</strong> y viceversa.
+				</p>
+				<div class="example animation direction">
+					<div>normal</div>
+					<div>reverse</div>
+					<div>alternate</div>
+					<div>alternate-reverse</div>
+				</div>
 				<footer>
 					<address>
 						Para mas informacion, consultar el
@@ -384,23 +418,16 @@
 			</article>
 			<article>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Estados de la pelicula</h1>
 				</header>
-				<p></p>
-				<footer>
-					<address>
-						Para mas informacion, consultar el
-						<a href="https://alumni.education">Alumni</a>.
-						<br />
-						Enviar un correo a <a href="">Cristiandracedo@hotmail.com</a>
-						<br> Tambien puedes revisar el repositorio de <a href="https://github.com/C215714N/EducacionIT/tree/maquetado-xv-10hs">gitHub</a>
-					</address></footer>
-			</article>
-			<article>
-				<header>
-					<h1>Tema 3</h1>
-				</header>
-				<p></p>
+				<p>
+					
+				</p>
+				<div class="example fillmode">
+					<div> normal </div>
+					<div> backwards </div>
+					<div> forwards </div>
+				</div>
 				<footer>
 					<address>
 						Para mas informacion, consultar el

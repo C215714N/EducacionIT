@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container{
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			max-width: 300px;
+			min-height: 300px;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all 1s ease;
+			background-color: grey;
+		}
+		.container p{
+			transform: translate(300px);
+			transition: all 1s ease;
+		}
+		.container:hover{
+			background-color: darkslateblue;
+		}
+		.container:hover p{
+			transform: 
+				translate(0)
+				scale(1.2)
+				;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>Estas pasando el mouse por encima</p>
+	</div>
+</body>
+</html>
