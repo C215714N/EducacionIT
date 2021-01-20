@@ -6,12 +6,17 @@
 }
 body {
   list-style: none;
-  margin: 0;
-  padding: 0;
   border: none;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  padding: 0;
 }
 /*Navegacion*/
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   background-color: #333;
   display: flex;
   flex-direction: flex;
@@ -27,16 +32,28 @@ nav #menu {
   list-style: none;
   margin: 0.5rem;
   padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+  outline: 0;
   border: 0.2rem solid #eee;
+  padding: 0.5rem;
   outline: none;
   border-radius: 0.5rem;
   color: #eee;
   background-color: transparent;
+  display: block;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  background-color: blue;
+  box-shadow: 0 0 black;
   font-size: 1.5rem;
 }
 nav #menu:hover {
   color: #333;
   background-color: #eee;
+}
+nav #menu:hover {
+  box-shadow: 0px 30px 0.25rem hsl(0, 50%, 50%), -29.64094872px 4.6275435px 0.25rem hsl(30, 50%, 50%), -9.14431863px -28.57238941px 0.25rem hsl(60, 50%, 50%), 26.81989991px -13.44220848px 0.25rem hsl(90, 50%, 50%), 17.41833553px 24.42542912px 0.25rem hsl(120, 50%, 50%), -21.44629289px 20.97752419px 0.25rem hsl(150, 50%, 50%), -24.03457907px -17.95380207px 0.25rem hsl(180, 50%, 50%), 14.03155555px -26.5163242px 0.25rem hsl(210, 50%, 50%), 28.36335465px 9.77343917px 0.25rem hsl(240, 50%, 50%), -5.28137839px 29.53145852px 0.25rem hsl(270, 50%, 50%), -29.9926752px -0.66289858px 0.25rem hsl(300, 50%, 50%), -3.97144888px -29.73596465px 0.25rem hsl(330, 50%, 50%), 28.7674717px -8.51073274px 0.25rem hsl(0, 50%, 50%);
 }
 @media screen and (min-width: 768px) {
   nav #menu {
@@ -48,9 +65,11 @@ nav .menu {
   height: 0;
   overflow: hidden;
   list-style: none;
-  margin: 0;
-  padding: 0;
   border: none;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   nav .menu {
@@ -136,15 +155,27 @@ nav .icon-back {
   list-style: none;
   margin: 0.5rem;
   padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+  outline: 0;
   border: 0.2rem solid #eee;
+  padding: 0.5rem;
   outline: none;
   border-radius: 0.5rem;
   color: #eee;
   background-color: transparent;
+  display: block;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  background-color: blue;
+  box-shadow: 0 0 black;
 }
 #footer #contact button:hover {
   color: #333;
   background-color: #eee;
+}
+#footer #contact button:hover {
+  box-shadow: 0px 30px 0.25rem hsl(0, 50%, 50%), -29.64094872px 4.6275435px 0.25rem hsl(30, 50%, 50%), -9.14431863px -28.57238941px 0.25rem hsl(60, 50%, 50%), 26.81989991px -13.44220848px 0.25rem hsl(90, 50%, 50%), 17.41833553px 24.42542912px 0.25rem hsl(120, 50%, 50%), -21.44629289px 20.97752419px 0.25rem hsl(150, 50%, 50%), -24.03457907px -17.95380207px 0.25rem hsl(180, 50%, 50%), 14.03155555px -26.5163242px 0.25rem hsl(210, 50%, 50%), 28.36335465px 9.77343917px 0.25rem hsl(240, 50%, 50%), -5.28137839px 29.53145852px 0.25rem hsl(270, 50%, 50%), -29.9926752px -0.66289858px 0.25rem hsl(300, 50%, 50%), -3.97144888px -29.73596465px 0.25rem hsl(330, 50%, 50%), 28.7674717px -8.51073274px 0.25rem hsl(0, 50%, 50%);
 }
 .col-1 {
   width: 4.16666667%;
@@ -514,6 +545,482 @@ nav .icon-back {
     width: 100%;
   }
 }
-/*variables*/
-/*animaciones*/
-/*elementos afectados*/
+/*mixins*/
+/*cabecera*/
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  border: none;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  position: relative;
+  height: 100vw;
+  max-height: 600px;
+}
+#header .slide {
+  list-style: none;
+  border: none;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#header .slide li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  z-index: -1;
+  /*mixins nth-child*/
+}
+#header .slide li:nth-child(1) {
+  background-image: url("../assets/img/osx-high-sierra.jpg");
+}
+#header .slide li:nth-child(2) {
+  background-image: url("../assets/img/osx-mojave.jpg");
+}
+#header .slide li:nth-child(3) {
+  background-image: url("../assets/img/osx-leopard.png");
+}
+#header .slide li:nth-child(4) {
+  background-image: url("../assets/img/osx-mountain-lion.jpg");
+}
+#header .slide li:nth-child(5) {
+  background-image: url("../assets/img/osx-lion.png");
+}
+#header .slide li:nth-child(6) {
+  background-image: url("../assets/img/osx-sierra.jpg");
+}
+#header .slide li:nth-child(7) {
+  background-image: url("../assets/img/osx-mavericks.png");
+}
+#header .slide li:nth-child(8) {
+  background-image: url("../assets/img/osx-snow-leopard.png");
+}
+#header .slide li:nth-child(9) {
+  background-image: url("../assets/img/osx-mojave-night.jpg");
+}
+#header .slide li.active {
+  opacity: 1;
+}
+#header button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  list-style: none;
+  border: none;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #ccc;
+  background-color: transparent;
+}
+#header button.icon-prev {
+  left: 0;
+}
+#header button.icon-next {
+  right: 0;
+}
+.example {
+  margin: 1rem 2rem;
+  outline: 0;
+  border-left: 0.2rem solid #248;
+  padding: 1rem;
+}
+.example > div {
+  list-style: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  outline: 0;
+  border: 0.2rem solid whitesmoke;
+  padding: 1rem;
+  color: #ccc;
+  background-color: darkslateblue;
+  max-width: 250px;
+  animation-direction: alternate;
+  /*mixins nth-child*/
+}
+.example > div:nth-child(1) {
+  animation: lineal 5s linear 3s infinite;
+}
+@keyframes lineal {
+  0% {
+    transform: translate(-180px, 0px);
+  }
+  5% {
+    transform: translate(-130px, 50px);
+  }
+  10% {
+    transform: translate(-80px, 100px);
+  }
+  15% {
+    transform: translate(-30px, 150px);
+  }
+  20% {
+    transform: translate(20px, 200px);
+  }
+  25% {
+    transform: translate(70px, 250px);
+  }
+  30% {
+    transform: translate(120px, 300px);
+  }
+  35% {
+    transform: translate(170px, 350px);
+  }
+  40% {
+    transform: translate(220px, 400px);
+  }
+  45% {
+    transform: translate(270px, 450px);
+  }
+  50% {
+    transform: translate(320px, 500px);
+  }
+  55% {
+    transform: translate(370px, 550px);
+  }
+  60% {
+    transform: translate(420px, 600px);
+  }
+  65% {
+    transform: translate(470px, 650px);
+  }
+  70% {
+    transform: translate(520px, 700px);
+  }
+  75% {
+    transform: translate(570px, 750px);
+  }
+  80% {
+    transform: translate(620px, 800px);
+  }
+  85% {
+    transform: translate(670px, 850px);
+  }
+  90% {
+    transform: translate(720px, 900px);
+  }
+  95% {
+    transform: translate(770px, 950px);
+  }
+  100% {
+    transform: translate(820px, 1000px);
+  }
+}
+.example > div:nth-child(2) {
+  animation: cuadratica 5s linear 6s infinite;
+}
+@keyframes cuadratica {
+  0% {
+    transform: translate(-180px, 400px);
+  }
+  5% {
+    transform: translate(-130px, 225px);
+  }
+  10% {
+    transform: translate(-80px, 100px);
+  }
+  15% {
+    transform: translate(-30px, 25px);
+  }
+  20% {
+    transform: translate(20px, 0px);
+  }
+  25% {
+    transform: translate(70px, 25px);
+  }
+  30% {
+    transform: translate(120px, 100px);
+  }
+  35% {
+    transform: translate(170px, 225px);
+  }
+  40% {
+    transform: translate(220px, 400px);
+  }
+  45% {
+    transform: translate(270px, 625px);
+  }
+  50% {
+    transform: translate(320px, 900px);
+  }
+  55% {
+    transform: translate(370px, 1225px);
+  }
+  60% {
+    transform: translate(420px, 1600px);
+  }
+  65% {
+    transform: translate(470px, 2025px);
+  }
+  70% {
+    transform: translate(520px, 2500px);
+  }
+  75% {
+    transform: translate(570px, 3025px);
+  }
+  80% {
+    transform: translate(620px, 3600px);
+  }
+  85% {
+    transform: translate(670px, 4225px);
+  }
+  90% {
+    transform: translate(720px, 4900px);
+  }
+  95% {
+    transform: translate(770px, 5625px);
+  }
+  100% {
+    transform: translate(820px, 6400px);
+  }
+}
+.example > div:nth-child(3) {
+  animation: trigonometrica 5s linear 9s infinite;
+}
+@keyframes trigonometrica {
+  0% {
+    transform: translate(-180px, -182.58905015px);
+  }
+  5% {
+    transform: translate(-130px, -130.05756803px);
+  }
+  10% {
+    transform: translate(-80px, 108.80422218px);
+  }
+  15% {
+    transform: translate(-30px, 191.78485493px);
+  }
+  20% {
+    transform: translate(20px, 0px);
+  }
+  25% {
+    transform: translate(70px, -191.78485493px);
+  }
+  30% {
+    transform: translate(120px, -108.80422218px);
+  }
+  35% {
+    transform: translate(170px, 130.05756803px);
+  }
+  40% {
+    transform: translate(220px, 182.58905015px);
+  }
+  45% {
+    transform: translate(270px, -26.47035002px);
+  }
+  50% {
+    transform: translate(320px, -197.60632482px);
+  }
+  55% {
+    transform: translate(370px, -85.6365339px);
+  }
+  60% {
+    transform: translate(420px, 149.0226321px);
+  }
+  65% {
+    transform: translate(470px, 170.18070491px);
+  }
+  70% {
+    transform: translate(520px, -52.47497074px);
+  }
+  75% {
+    transform: translate(570px, -199.95103467px);
+  }
+  80% {
+    transform: translate(620px, -60.96212422px);
+  }
+  85% {
+    transform: translate(670px, 165.3657359px);
+  }
+  90% {
+    transform: translate(720px, 154.77813631px);
+  }
+  95% {
+    transform: translate(770px, -77.55632708px);
+  }
+  100% {
+    transform: translate(820px, -198.77773078px);
+  }
+}
+.example > div:nth-child(4) {
+  animation: exponencial 5s linear 12s infinite;
+}
+@keyframes exponencial {
+  0% {
+    transform: translate(-180px, 0.02608405px);
+  }
+  5% {
+    transform: translate(-130px, 0.06490547px);
+  }
+  10% {
+    transform: translate(-80px, 0.16150558px);
+  }
+  15% {
+    transform: translate(-30px, 0.40187757px);
+  }
+  20% {
+    transform: translate(20px, 1px);
+  }
+  25% {
+    transform: translate(70px, 2.48832px);
+  }
+  30% {
+    transform: translate(120px, 6.19173642px);
+  }
+  35% {
+    transform: translate(170px, 15.40702157px);
+  }
+  40% {
+    transform: translate(220px, 38.33759992px);
+  }
+  45% {
+    transform: translate(270px, 95.39621664px);
+  }
+  50% {
+    transform: translate(320px, 237.3763138px);
+  }
+  55% {
+    transform: translate(370px, 590.66822915px);
+  }
+  60% {
+    transform: translate(420px, 1469.77156797px);
+  }
+  65% {
+    transform: translate(470px, 3657.26198801px);
+  }
+  70% {
+    transform: translate(520px, 9100.43815px);
+  }
+  75% {
+    transform: translate(570px, 22644.80225741px);
+  }
+  80% {
+    transform: translate(620px, 56347.51435317px);
+  }
+  85% {
+    transform: translate(670px, 140210.64691527px);
+  }
+  90% {
+    transform: translate(720px, 348888.95693221px);
+  }
+  95% {
+    transform: translate(770px, 868147.36931355px);
+  }
+  100% {
+    transform: translate(820px, 2160228.4620103px);
+  }
+}
+.example > div:nth-child(5) {
+  animation: radical 5s linear 15s infinite;
+}
+@keyframes radical {
+  0% {
+    transform: translate(-20px, 2.23606798px);
+  }
+  5% {
+    transform: translate(-15px, 3.16227766px);
+  }
+  10% {
+    transform: translate(-10px, 3.87298335px);
+  }
+  15% {
+    transform: translate(-5px, 4.47213595px);
+  }
+  20% {
+    transform: translate(0px, 5px);
+  }
+  25% {
+    transform: translate(5px, 5.47722558px);
+  }
+  30% {
+    transform: translate(10px, 5.91607978px);
+  }
+  35% {
+    transform: translate(15px, 6.32455532px);
+  }
+  40% {
+    transform: translate(20px, 6.70820393px);
+  }
+  45% {
+    transform: translate(25px, 7.07106781px);
+  }
+  50% {
+    transform: translate(30px, 7.41619849px);
+  }
+  55% {
+    transform: translate(35px, 7.74596669px);
+  }
+  60% {
+    transform: translate(40px, 8.06225775px);
+  }
+  65% {
+    transform: translate(45px, 8.36660027px);
+  }
+  70% {
+    transform: translate(50px, 8.66025404px);
+  }
+  75% {
+    transform: translate(55px, 8.94427191px);
+  }
+  80% {
+    transform: translate(60px, 9.21954446px);
+  }
+  85% {
+    transform: translate(65px, 9.48683298px);
+  }
+  90% {
+    transform: translate(70px, 9.74679434px);
+  }
+  95% {
+    transform: translate(75px, 10px);
+  }
+  100% {
+    transform: translate(80px, 10.24695077px);
+  }
+}
+/*selectores avanzados*/
+a[href="index.html"]:hover {
+  background-color: darkslateblue;
+}
+a[href^="http"]:hover {
+  color: skyblue;
+  transform: translate(0, 0.5rem);
+}
+a[href$="html"]:hover {
+  color: limegreen;
+  transform: translate(0, -0.5rem);
+}
+a[href*="con"]:hover {
+  color: #248;
+  background-color: lightgrey;
+}
+.button {
+  display: block;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  background-color: blue;
+  box-shadow: 0 0 black;
+}
+.button:hover {
+  box-shadow: 0px 30px 0.25rem hsl(0, 50%, 50%), -29.64094872px 4.6275435px 0.25rem hsl(30, 50%, 50%), -9.14431863px -28.57238941px 0.25rem hsl(60, 50%, 50%), 26.81989991px -13.44220848px 0.25rem hsl(90, 50%, 50%), 17.41833553px 24.42542912px 0.25rem hsl(120, 50%, 50%), -21.44629289px 20.97752419px 0.25rem hsl(150, 50%, 50%), -24.03457907px -17.95380207px 0.25rem hsl(180, 50%, 50%), 14.03155555px -26.5163242px 0.25rem hsl(210, 50%, 50%), 28.36335465px 9.77343917px 0.25rem hsl(240, 50%, 50%), -5.28137839px 29.53145852px 0.25rem hsl(270, 50%, 50%), -29.9926752px -0.66289858px 0.25rem hsl(300, 50%, 50%), -3.97144888px -29.73596465px 0.25rem hsl(330, 50%, 50%), 28.7674717px -8.51073274px 0.25rem hsl(0, 50%, 50%);
+}
