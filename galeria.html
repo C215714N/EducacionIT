@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;html> &amp; css</p>
+		<div id="nav">
+			<ul>
+				<li><!-- Ruta Relativa/Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta Ancla/Marcador -->
+					<a href="#">Galeria</a>
+				</li>
+				<li><!-- Ruta Ancla/Marcador -->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li><!-- Ruta Absoluta / Externa -->
+					<a href="https://github.com/c215714n/EducacionIT/tree/html-j-15hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios</strong> porque estos seran interpretados como el <em>conjunto %20</em> y por ende una imagen cuyo nombre es <em>"foto 01.jpg"</em> sera interpretado como <em>"foto%2001.jpg"</em> impiendo que el navegador encuentre el archivo. Una solucion a este inconveniente es el <strong>uso de guiones (-_)</strong> que si lo aplicamos al ejemplo daria como resultado <em>"foto-01.jpg"</em> que si seria encontrado por el navegador.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> que hagan referencia a la funcion que cumple el archivo dentro de la pagina, debido a que esto facilita el trabajo del desarrollador. Es por esto que debemos evitar nombres genericos como <em>"foto-01.jpg"</em>, asi como tambien nombres automatizados, tales como <em>"2021-01-21-1619100.jpg"</em> y en su lugar utilizar alguno como <em>"banner.jpg"</em> o <em>"perritos_jugando.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar minusculas en los nombres de los archivos</strong>, debido a que los servidores basados en UNIX son <em>caseSensitive</em>, es decir que distinguen entre mayusculas y minusculas, y por lo tanto esto reduce el margen de error. Por lo tanto, no es lo mismo <em>"banner.jpg", "Banner.jpg","BANNER.jpg"</em>.
+			</li>
+		</ul>
+		<div class="example">
+			<h2>Implementacion de Imagenes</h2>
+			<img style="width:300px;" 
+				src="img/jjba-crazydiamond-01.jpg" 
+				alt="Dibujo Crazy Diamond (lapiz)" />
+			<img style="width: 300px;" 
+				src="img/jjba-crazydiamond-02.jpg" 
+				alt="Dibujo Crazy Diamond (tinta)" />
+			<img style="width:300px;" 
+				src="img/jjba-crazydiamond-03.jpg" 
+				alt="Dibujo Crazy Diamond (lapices)" />
+			<img style="width: 300px;" 
+				src="img/jjba-crazydiamond-04.jpg" 
+				alt="Dibujo Crazy Diamond (color)" />
+		</div>
+	</div>
+	<div id="footer">
+		
+	</div>
+</body>
+</html>
