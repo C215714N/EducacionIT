@@ -26,13 +26,14 @@ body {
 
 /*Icons*/
 .icon {
+  cursor: pointer;
   display: inline-block;
-  margin: 0.5rem;
+  margin: 0.25rem;
   border: 0;
   padding: 0;
   border-radius: 0.25rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -189,7 +190,7 @@ body {
   cursor: pointer;
   color: #572ee5;
   background-color: transparent;
-  margin: 0.5rem;
+  margin: 0.25rem;
   border: 0.1rem solid #572ee5;
   padding: 0.5rem 0.75rem;
 }
@@ -508,10 +509,12 @@ nav .open {
 }
 #header form button {
   position: absolute;
+  top: 0.2rem;
+  right: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   z-index: 1;
-  right: 1rem;
   outline: none;
-  border-radius: 1rem;
 }
 #header form label {
   color: #cbcbcb;
@@ -621,7 +624,7 @@ main section:last-child .button.next {
 main section:last-child button.selected {
   position: fixed;
   top: calc(50% - 1rem);
-  z-index: 2;
+  z-index: 3;
 }
 main .title {
   margin: 0;
@@ -690,9 +693,6 @@ main #crear_gifo article {
   padding: 1.5rem;
   overflow: visible;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 60%;
   max-width: 540px;
   min-height: 320px;
@@ -733,7 +733,8 @@ main #crear_gifo article .message p {
 }
 main #crear_gifo article .message .loader::before {
   content: url("../assets/icons/loader.svg");
-  animation: load 1s ease;
+  display: block;
+  animation: load 2.5s linear infinite;
 }
 @keyframes load {
   to {
@@ -747,6 +748,21 @@ main #crear_gifo article .message.active {
   color: #fefefe;
   background-color: #572ee5;
   opacity: 0.8;
+}
+main #crear_gifo article .message .hidden {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+main #crear_gifo article .message .hidden .social {
+  text-align: right;
+}
+main #crear_gifo article .message .hidden .social .icon {
+  margin: 0.25rem;
+  border: 0;
+  padding: 0;
+  border-radius: 0.25rem;
+  width: 2rem;
 }
 main #crear_gifo:target {
   display: flex;
@@ -884,34 +900,39 @@ main article:not(.active) .hidden {
   top: -100%;
   bottom: 100%;
   left: 0;
-  right: 0;
   width: 100%;
 }
 main article:not(.active) .hidden .social {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+  z-index: 1;
+}
+main article:not(.active) .hidden .social .max {
+  margin: 0;
+  position: absolute;
+  right: -2rem;
+  top: -1rem;
+  width: 300px;
+  height: 250px;
+  opacity: 0;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  main article:not(.active) .hidden .social .max {
+    position: static;
+    margin: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+  }
 }
 main article:not(.active) .hidden .social a {
   position: relative;
   z-index: 2;
 }
-main article:not(.active) .hidden .social .max {
-  position: absolute;
-  right: -1rem;
-  top: -1rem;
-  width: 400px;
-  height: 400px;
-  opacity: 0;
-  z-index: 1;
-}
-@media screen and (min-width: 768px) {
-  main article:not(.active) .hidden .social .max {
-    position: static;
-    width: auto;
-    height: auto;
-    opacity: 1;
-  }
+main article:not(.active) .hidden .social a.max {
+  z-index: -1;
 }
 main article:not(.active) .hidden p {
   margin: 0;
@@ -922,13 +943,6 @@ main article:not(.active) .hidden p {
 main article:not(.active):hover .hidden, main article:not(.active).selected .hidden {
   bottom: 0;
   top: 0;
-}
-main article:not(.active):hover a, main article:not(.active).selected a {
-  margin: 0.25rem;
-  border: 0;
-  padding: 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
 }
 main article.active {
   color: #572ee5;
@@ -949,8 +963,7 @@ main article.active img {
   margin: 4.2rem auto 0.5rem;
   border: 0;
   padding: 0;
-  width: auto;
-  height: 100%;
+  padding: 0.5rem;
   max-width: 480px;
   max-height: 360px;
 }
@@ -1111,11 +1124,6 @@ main .fav.active {
   margin: auto;
   border: 1px solid #ccc;
   padding: 1.5rem;
-}
-#mode:checked ~ main #crear_gifo article .hidden {
-  top: 0;
-  bottom: 0;
-  width: 100% !important;
 }
 #mode:checked ~ main #crear_gifo .menu {
   border-color: #ccc;

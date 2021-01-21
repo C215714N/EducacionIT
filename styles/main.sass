@@ -39,11 +39,12 @@ body
 	margin:0
 /*Icons*/
 .icon
+	cursor: pointer
 	display: inline-block
-	+normalize(.5rem,0,0)
+	+normalize(.25rem,0,0)
 	border-radius: .25rem
-	width: 1.5rem
-	height: 1.5rem
+	width: 2rem
+	height: 2rem
 	background-repeat: no-repeat
 	background-position: center
 	background-size: contain
@@ -60,7 +61,7 @@ body
 .button
 	cursor: pointer
 	+mode($color, transparent)
-	+normalize(.5rem, .1rem solid $color, .5rem .75rem)
+	+normalize(.25rem, .1rem solid $color, .5rem .75rem)
 	&:hover
 		+mode($bg_color, $color)
 /*webkit*/
@@ -268,10 +269,12 @@ nav
 		/*boton buscar*/	
 		button
 			position: absolute
+			top: .2rem
+			right: 1.25rem
+			width: 1.5rem
+			height: 1.5rem
 			z-index: 1
-			right: 1rem
 			outline: none
-			border-radius: 1rem
 		label
 			+mode(darken($bg_color, 20%), transparent)
 			position: absolute
@@ -335,7 +338,7 @@ main
 		button.selected
 			position: fixed
 			top: calc(50% - 1rem)
-			z-index: 2
+			z-index: 3
 	.title
 		+normalize
 		font-size: 2rem
@@ -380,9 +383,6 @@ main
 			+normalize(auto, 1px solid $color, 1.5rem)
 			overflow: visible
 			position: relative
-			display: flex
-			justify-content: center
-			align-items: center
 			width: 60%
 			max-width: 540px
 			min-height: 320px
@@ -413,7 +413,8 @@ main
 					font-size: .9rem
 				.loader::before
 					content: url($icon+'loader.svg')
-					animation: load 1s ease
+					display: block
+					animation: load 2.5s linear infinite
 					@keyframes load
 						to
 							transform: rotate(360deg)
@@ -421,10 +422,20 @@ main
 					content: url($icon+'check.svg')
 				&.active
 					+mode($bg_color, $color)
-					opacity: .8	
+					opacity: .8
+				.hidden
+					top: 0
+					bottom: 0
+					width: 100%
+					.social
+						text-align: right
+						.icon
+							+normalize(.25rem, 0, 0)
+							border-radius: .25rem
+							width: 2rem
 		&:target
 			display: flex
-		div:last-child
+		& div:last-child
 			width: 62.5%
 			max-width: 720px
 		/*area de proceso*/
@@ -527,28 +538,32 @@ main
 			top: -100%
 			bottom: 100%
 			left: 0
-			right: 0
 			width: 100%
 			.social
 				position: absolute
 				top: .5rem
 				right: .5rem
+				z-index: 1 
+				.max
+					margin: 0
+					position: absolute
+					right: -2rem
+					top: -1rem
+					width: 300px
+					height: 250px
+					opacity: 0
+					z-index: -1
+					@media screen and (min-width: $md)
+						position: static
+						margin: .25rem
+						width: 2rem
+						height: 2rem
+						opacity: 1
 				a
 					position: relative
 					z-index: 2
-				.max
-					position: absolute
-					right: -1rem
-					top: -1rem
-					width: 400px
-					height: 400px
-					opacity: 0
-					z-index: 1
-					@media screen and (min-width: $md)
-						position: static
-						width: auto
-						height: auto
-						opacity: 1
+					&.max
+						z-index: -1
 			p
 				+normalize(0, none, .2rem)
 				text-align: left
@@ -557,10 +572,6 @@ main
 			.hidden
 				bottom: 0
 				top: 0	
-			a
-				+normalize(.25rem)
-				width: 1.5rem
-				height: 1.5rem
 	article.active
 		+mode
 		position: fixed
@@ -576,8 +587,7 @@ main
 		img
 			position: relative
 			+normalize(4.2rem auto .5rem, 0, 0)
-			width: auto
-			height: 100%
+			padding: .5rem
 			max-width: 480px
 			max-height: 360px
 		.hidden
@@ -678,10 +688,6 @@ main
 			article
 				+mode($color, $bg_color)
 				+normalize(auto, 1px solid $color, 1.5rem)
-				.hidden
-					top: 0
-					bottom: 0
-					width: 100% !important
 			.menu 
 				border-color: $color
 				li
