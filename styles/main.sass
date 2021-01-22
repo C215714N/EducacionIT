@@ -11,7 +11,6 @@ $xl: 1140px
 $icon: "../assets/icons/"
 $camera: url($icon+"bg_camera.svg") no-repeat left center, url($icon+"bg_light.svg") no-repeat right center 
 $tape: url($icon+"bg_tape.svg") no-repeat right center
-//iconos
 $icons: logo, search, link, fav, trash, max, close, download, facebook, instagram, twitter
 //mixins
 =mode($color: $color, $bg_color:$bg_color)
@@ -21,10 +20,19 @@ $icons: logo, search, link, fav, trash, max, close, download, facebook, instagra
 	margin: $m
 	border: $b
 	padding: $p
-.no_results
-	margin: 5rem auto 1rem
-.notFound
-	margin: 0 auto 5rem
+=flexbox($fd: row, $fj: space-between, $fa: center, $fw: wrap, $f: flex)
+	display: $f
+	flex-direction: $fd
+	justify-content: $fj
+	align-items: $fa
+	flex-wrap: $fw
+=position($p: absolute, $z: 1, $t:unset, $l:unset, $b:unset, $r:unset)
+	position:$p
+	top:$t
+	left:$l
+	bottom:$b
+	right:$r
+	z-index: $z
 /*content first*/
 *
 	box-sizing: border-box
@@ -37,7 +45,6 @@ $icons: logo, search, link, fav, trash, max, close, download, facebook, instagra
 	display: none
 body
 	margin:0
-/*Icons*/
 .icon
 	cursor: pointer
 	display: inline-block
@@ -51,8 +58,7 @@ body
 @each $ico in $icons
 	.#{$ico}
 		background-image: url($icon+"icon_"+$ico+".svg")
-	.#{$ico}:hover,
-	#mode:checked ~ * .#{$ico}:hover
+	.#{$ico}:hover, #mode:checked ~ * .#{$ico}:hover
 		background-image: url($icon+"icon_"+$ico+"_hover.svg")
 	#mode:checked ~ * .#{$ico}
 		background-image: url($icon+"icon_"+$ico+"_noc.svg")
@@ -64,13 +70,15 @@ body
 	+normalize(.25rem, .1rem solid $color, .5rem .75rem)
 	&:hover
 		+mode($bg_color, $color)
-/*webkit*/
+.no_results
+	margin: 5rem auto 1rem
+.notFound
+	margin: 0 auto 5rem
 ::-webkit-scrollbar,
 .scroller
 	-webkit-appearance: none
 	border-radius: .5rem
-::-webkit-scrollbar-thumb,
-.scroller
+::-webkit-scrollbar-thumb
 	-webkit-appearance: none
 	+normalize(.5rem auto)
 	border-radius: 1rem
@@ -79,17 +87,10 @@ body
 nav
 	+mode
 	+normalize($p: .5rem 0)
-	position: sticky
-	top: 0
-	z-index: 3
+	+flexbox
+	+position(sticky, 3, 0)
 	border-top: .2rem solid $color
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-	align-items: center
 	@media screen and (min-width: $md)
-		display: flex
-		justify-content: space-between
 		padding: .2rem 1rem
 		#menu
 			display: none
@@ -106,22 +107,21 @@ nav
 		font-size: 2rem
 	/*menu principal*/
 	.menu
+		+mode($bg_color, $color)
 		+normalize
+		+position(fixed, $t:4.2rem)
 		overflow: hidden
 		display: none
-		position: fixed
-		top: 4.2rem
 		width: 100%
 		height: 100vh
-		+mode($bg_color, $color)
 		list-style: none
 		text-align: center
 		@media screen and (min-width: $md)
 			+normalize($p:0)
-			height: auto
 			position: static
 			display: flex
 			width: auto
+			height: auto
 			background-color: transparent
 		li
 			@media screen and (min-width: $md)
@@ -139,12 +139,11 @@ nav
 				@media screen and (min-width: $md)
 					+mode($color, transparent)
 				&::after
-					+normalize(auto, none, 0)
+					+normalize(1rem 0 0, none, 0)
 					content: ''
 					display: block
 					width: 60%
 					height: 1px
-					margin-top: 1rem
 					background-color: $bg_color
 					@media screen and (min-width: $md)
 						display: none
@@ -168,9 +167,8 @@ nav
 						display: block
 						&:hover
 							+mode($bg_color, $color)
-				&.active
-					a
-						+mode($bg_color,darken($bg_color, 20%))
+				&.active a
+					+mode($bg_color,darken($bg_color, 20%))
 	/*menu desplegable*/
 	.open
 		display: block
@@ -194,20 +192,15 @@ nav
 		max-width: $sm * 3/4
 	/*formulario de busqueda*/
 	form
-		position: sticky
-		top: 0
 		+normalize(auto, none, 0 1rem)
-		display: flex
-		flex-direction: column
+		+flexbox(column, unset, unset)
 		position: relative
 		max-width: $sm
 		/*campo de busqueda*/
 		input
 			+normalize(0, 2px solid $color, .5rem)
-			outline: none
 			border-radius: 1rem 1rem 0 0
 			border-bottom: none
-			width: 100%
 			&:invalid
 				padding: 0 1rem
 				& ~ #suggestion option
@@ -241,7 +234,6 @@ nav
 			+normalize(0, 2px solid $color, .5rem)
 			overflow: hidden
 			height: 0
-			outline: none
 			border-top: none
 			border-radius: 0 0 1rem 1rem
 			option
@@ -268,19 +260,13 @@ nav
 					background-color: $color
 		/*boton buscar*/	
 		button
-			position: absolute
-			top: .2rem
-			right: 1.25rem
+			+position($t: .2rem, $r: 1.25rem)
 			width: 1.5rem
 			height: 1.5rem
-			z-index: 1
-			outline: none
 		label
 			+mode(darken($bg_color, 20%), transparent)
-			position: absolute
+			+position($t: .5rem, $l: 4rem)
 			display: none
-			top: .5rem
-			left: 4rem
 			font-size: .8rem
 			@media screen and (min-width: $sm)
 				font-size: 1rem
@@ -294,17 +280,16 @@ main
 	+normalize($p: 0)
 	/*secciones de pagina*/
 	section
-		position: relative
 		+mode
 		+normalize
+		position: relative
 		max-width: $lg
 		height: auto
 		text-align: center
 		@media screen and (min-width: $md)
 			+normalize(auto, none, 3rem 3rem 1rem)
 		h1
-			display: flex
-			flex-direction: column
+			+flexbox(column, unset, unset)
 			line-height: 2.5rem
 		&:not(target)
 			display: none
@@ -319,26 +304,22 @@ main
 		/*navegacion y vistas*/
 		.button
 			display: none
-			position: absolute
-			top: calc(65% - 1rem)
 			border-radius: .25rem
-			font-size: 1rem
 			line-height: 1.5rem
 			text-align: center
+			font-size: 1rem
 			@media screen and (min-width: $md)
 				display: block
 			&.prev
-				left: 0
+				+position($t: calc(65% - 1rem), $l: 0)
 				@media screen and (min-width: $lg)
 					left: 4rem
 			&.next
-				right: 0
+				+position($t: calc(65% - 1rem), $r: 0)
 				@media screen and (min-width: $lg)
 					right: 4rem
 		button.selected
-			position: fixed
-			top: calc(50% - 1rem)
-			z-index: 3
+			+position(fixed, 3, calc(50% - 1rem))
 	.title
 		+normalize
 		font-size: 2rem
@@ -348,16 +329,12 @@ main
 	#crear_gifo
 		overflow: hidden
 		+normalize(auto, 0, 0)
-		flex-direction: column
-		justify-content: center
-		align-items: center
-		flex-wrap: wrap
+		+flexbox(column, center)
 		height: 0
 		@media screen and (min-width: $md)
 			height: auto
 			.camera
-				position: absolute
-				left: -30%
+				+position($l: -30%)
 				width: 20vw
 				min-width: 4rem
 				max-width: 10rem
@@ -367,9 +344,7 @@ main
 				@media screen and (min-width: $lg)
 					left: -35%
 			.tape
-				position: absolute
-				bottom: -10%
-				right: -22.5%
+				+position($b: -10%, $r: -22.5%)
 				min-width: 2rem
 				max-width: 4rem
 				height: 4rem
@@ -389,11 +364,7 @@ main
 			img,
 			video, 
 			.message
-				position: absolute
-				top: 10%
-				bottom: 10%
-				left: 15%
-				right: 15%
+				+position(absolute, 2, 10%, 15%, 10%, 15%)
 				width: 70% !important
 				height: 80%
 				opacity: 0
@@ -402,7 +373,6 @@ main
 				display: grid
 				justify-content: center
 				align-content: center
-				opacity: 1
 				h1
 					+normalize
 					font-size: 1.5rem
@@ -422,17 +392,16 @@ main
 					content: url($icon+'check.svg')
 				&.active
 					+mode($bg_color, $color)
-					opacity: .8
+					opacity: .75 !important
 				.hidden
-					top: 0
-					bottom: 0
-					width: 100%
+					+position($t: 0, $b: 0)
+					width: 100% !important
 					.social
 						text-align: right
 						.icon
 							+normalize(.25rem, 0, 0)
-							border-radius: .25rem
 							width: 2rem
+							border-radius: .25rem
 		&:target
 			display: flex
 		& div:last-child
@@ -441,23 +410,17 @@ main
 		/*area de proceso*/
 		.menu
 			+normalize(auto, none, 0)
+			+flexbox($fj:center)
 			position: relative
 			list-style: none
-			display: flex
-			justify-content: center
-			align-items: center
-			flex-wrap: wrap
 			border-bottom: .3rem solid $color
 			li
 				+mode($color, transparent)
 				+normalize(.5rem, 1px solid $color, .25rem .6rem)
-				display: block
 				border-radius: 50%
 				font: 1rem sans-serif
 			a
-				position: absolute
-				right: 2.5%
-				z-index: 1
+				+position($r: 2.5%)
 			.active
 				+mode($bg_color,$color)
 		button
@@ -470,7 +433,7 @@ main
 			line-height: 1rem
 		.show
 			display: grid
-			opacity: 1
+			opacity: 1 !important
 			z-index: 2
 	/*area de resultados*/
 	#results > div
@@ -484,10 +447,8 @@ main
 	#pagination
 		ul
 			+normalize($p:.5rem)
+			+flexbox($fj:center)
 			list-style: none
-			display: flex
-			flex-wrap: wrap
-			justify-content: center
 			li
 				+normalize($p: .5rem)
 				max-width: 150px
@@ -519,11 +480,9 @@ main
 			justify-content: center
 	/*elementos independientes*/
 	article:not(.active)
+		+flexbox($fj: center)
 		overflow: hidden
 		position: relative
-		display: flex
-		justify-content: center
-		align-items: center
 		max-width: 300px
 		max-height: 200px
 		margin: .5rem
@@ -531,28 +490,19 @@ main
 		.hidden
 			+mode($bg_color, rgba(87, 46, 229, .5))
 			+normalize($p: .5rem)
+			+position($t: -100%, $l:0, $b: 100%)
 			display: grid
 			justify-content: flex-start
 			align-content: flex-end
-			position: absolute
-			top: -100%
-			bottom: 100%
-			left: 0
 			width: 100%
 			.social
-				position: absolute
-				top: .5rem
-				right: .5rem
-				z-index: 1 
+				+position($t:.5rem, $r:.5rem)
 				.max
 					margin: 0
-					position: absolute
-					right: -2rem
-					top: -1rem
+					+position($z: -1, $t: -1rem, $r: -2rem)
 					width: 300px
 					height: 250px
 					opacity: 0
-					z-index: -1
 					@media screen and (min-width: $md)
 						position: static
 						margin: .25rem
@@ -560,8 +510,7 @@ main
 						height: 2rem
 						opacity: 1
 				a
-					position: relative
-					z-index: 2
+					+position(relative, 2)
 					&.max
 						z-index: -1
 			p
@@ -570,38 +519,27 @@ main
 		&:hover,
 		&.selected
 			.hidden
-				bottom: 0
-				top: 0	
+				+position($t:0, $b: 0)
 	article.active
 		+mode
-		position: fixed
-		top: 0
-		left: 0
-		z-index: 3
+		+flexbox(column, center)
+		+position(fixed, 3, 0, 0)
 		width: 100vw
 		height: 100vh
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
 		img
+			+normalize(4.2rem auto .5rem, 0, .5rem)
 			position: relative
-			+normalize(4.2rem auto .5rem, 0, 0)
-			padding: .5rem
 			max-width: 480px
 			max-height: 360px
 		.hidden
 			+normalize(.5rem, none, .5rem)
+			+flexbox
 			position: static
-			display: flex
-			justify-content: space-between
 			width: 100%
 			max-width: 480px
 			text-align: left
 			.close
-				position: fixed
-				top: 1rem
-				right: 1rem
+				+position(fixed, $t:1rem, $r:1rem)
 	video, 
 	img
 		height: 100%
@@ -609,33 +547,28 @@ main
 	.fav.active
 		background: url($icon+"icon_fav_active.svg") no-repeat center, radial-gradient($bg_color, darken($bg_color, 20%)) !important
 		background-size: 1.25rem !important
-
 #footer
 	+mode(darken($color, 50%), $bg_color)
 	+normalize
 	border-bottom: .2rem solid $color
 	text-align: center
 	a
+		+mode(darken($color, 20%), transparent)
 		font-weight: bold
 	/*redes sociales*/
 	.social
 		margin: 3rem auto
 		@media screen and (min-width: $md)
-			display: flex
-			align-items: center
+			+flexbox
 			margin: 0
 	@media screen and (min-width: $md)
-		display: flex
-		justify-content: space-between
-		align-items: center
+		+flexbox
 	@media screen and (min-width: $xl)
 		justify-content: space-around
 /*modo nocturno*/
 #mode:checked
 	$color: #ccc
 	$bg_color: #333
-	& ~ * .night
-		fill: $bg_color
 	& ~ * ::-webkit-scrollbar-thumb
 		background: radial-gradient( ellipse at bottom right, darken($bg_color, 20%), $bg_color)	
 	/*navegacion*/
@@ -688,6 +621,8 @@ main
 			article
 				+mode($color, $bg_color)
 				+normalize(auto, 1px solid $color, 1.5rem)
+				.message:not(.active)
+					+mode($color, $bg_color)
 			.menu 
 				border-color: $color
 				li

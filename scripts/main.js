@@ -15,9 +15,9 @@
 		let totalGifs = [], totalFavs = []
 /*	Areas de Eventos	*/
 	//	Elementos de Navegacion
-		const menuBtn	= document.querySelector('#menu')
-		const menuList	= document.querySelector('.menu')
-		const menuItem	= document.querySelectorAll('.menu li')
+		const menuBtn	= document.querySelector('nav #menu')
+		const menuList	= document.querySelector('nav .menu')
+		const menuItem	= document.querySelectorAll('nav li')
 		const modeItem	= document.querySelector('#mode')
 		const modeLabel	= document.querySelector('label[for="mode"]')
 		const prevItem	= document.querySelector('section:last-child > .prev')
@@ -163,8 +163,7 @@
 						showPhase(2)
 						gifBtn.innerHTML = 'Grabar'
 						startGif()
-						gifMedia.classList.add('show')
-						gifView.classList.remove('show')
+						gifMedia.classList.add('show');	gifView.classList.remove('show')
 						break
 					case 2:
 						timeStart()
@@ -175,17 +174,15 @@
 						timeStop()
 						gifBtn.innerHTML = 'Subir'
 						stopGif()
-						gifMedia.classList.toggle('show') 
-						gifView.classList.toggle('show') 
+						gifMedia.classList.toggle('show'); gifView.classList.toggle('show') 
 						break;
 					case 4:
 						uploadGif()
-						recMsg.classList.toggle('show')
 						gifBtn.innerHTML = 'Comenzar'
+						recMsg.classList.toggle('show')
 					break;
 					default:
-						phase = 1
-						type = false
+						phase = 1; type = false
 					break;
 				}
 			//	Asignacion de Clases
@@ -230,8 +227,7 @@
 				if(localStorage.length != 0){
 					totalGifs = [];	totalFavs = []
 					for ( i = 0; i < localStorage.length; i++ ){  
-				  		id = localStorage.key(i)
-				  		item = JSON.parse(localStorage.getItem(id))
+				  		id = localStorage.key(i); item = JSON.parse(localStorage.getItem(id))
 				  		if (id.includes('gif_')) {
 				  			totalGifs.push(id); gifArea.innerHTML += showGifs(item, 'gif_')
 				  		}
@@ -241,10 +237,8 @@
 				totalGifs.length == 0 ? noResults(noGifs, 'gifs') : noGifs.innerHTML = ``
 				totalFavs.length == 0 ? noResults(noFavs, 'favs') : noFavs.innerHTML = ``
 				for (i = 0; i < totalFavs.length ; i ++){
-					try{ 
-						isFav = totalFavs[i].slice(4)
-						document.getElementById(isFav) ? document.getElementById(isFav).querySelector('.fav').classList.add('active'): null 
-					} catch(error){	console.log(error) } 
+					isFav = totalFavs[i].slice(4)
+					document.getElementById(isFav) ? document.getElementById(isFav).querySelector('.fav').classList.add('active'): null 
 				}	userActions()
 			}
 		//	Agregar Item
@@ -257,10 +251,8 @@
 		//	Remover Item
 			const remStorage = (id) => {
 				window.localStorage.removeItem( id )
-				try{
-					notFav = id.slice(4)
-					document.getElementById(notFav) ? document.getElementById(notFav).querySelector('.fav').classList.remove('active') : null
-				} catch(error){ console.log(error) } 
+				notFav = id.slice(4)
+				document.getElementById(notFav) ? document.getElementById(notFav).querySelector('.fav').classList.remove('active') : null
 				loadStorage()
 			}
 	/*	FORMULARIO	*/
@@ -299,73 +291,89 @@
 			}	)
 		// 	Consultar Webcam
 			const startGif = async() => {
-				const stream = await navigator.mediaDevices.getUserMedia({
+				try{
+					const stream = await navigator.mediaDevices.getUserMedia({
 					audio: false, video: { max: 480 }
-				}	)
-				gifMedia.srcObject = stream;
-				await gifMedia.play()
-				recMsg.classList.toggle('show')
+					}	)
+					gifMedia.srcObject = stream;
+					await gifMedia.play()
+					recMsg.classList.toggle('show')
+				} catch(error){
+					alert('El dispositivo no esta listo \n error:' + error)
+				}
 			}
 		//	Comenzar Grabacion
 			const recGif = async() => {
-				const stream = gifMedia.srcObject;
-				videoRecorder = new RecordRTCPromisesHandler(stream, {
-					type: "video",
-					mimeType: "video/webm; codecs=vp8",
-					disableLogs: true,
-					videoBitsPerSecond: 128000,
-					frameRate: 30,
-					quality: 10,
-					width: 480,
-					hidden: 240
-				})
-				gifRecorder = new RecordRTCPromisesHandler(stream, {
-					disableLogs: true,
-					type: "gif",
-					frameRate: 1,
-					quality: 10,
-					width: 480,
-					hidden: 240
-				})
-				await videoRecorder.startRecording()
-				await gifRecorder.startRecording()
-				videoRecorder.stream = stream;
+				try{
+					const stream = gifMedia.srcObject;
+					videoRecorder = new RecordRTCPromisesHandler(stream, {
+						type: "video",
+						mimeType: "video/webm; codecs=vp8",
+						disableLogs: true,
+						videoBitsPerSecond: 128000,
+						frameRate: 30,
+						quality: 10,
+						width: 480,
+						hidden: 240
+					}	)
+					gifRecorder = new RecordRTCPromisesHandler(stream, {
+						disableLogs: true,
+						type: "gif",
+						frameRate: 1,
+						quality: 10,
+						width: 480,
+						hidden: 240
+					}	)
+					await videoRecorder.startRecording()
+					await gifRecorder.startRecording()
+					videoRecorder.stream = stream;
+				}catch(error){
+					alert('El dispositivo no esta listo \n error:' + error)
+				}
 			}
 		// 	Detener Grabacion
 			const stopGif = async() => {
-			//	Carga de contenido
-				await videoRecorder.stopRecording()
-				await gifRecorder.stopRecording()
-				const videoBlob = await videoRecorder.getBlob()
-				const gifBlob = await gifRecorder.getBlob()
-			// 	Formato de Salida
-				gifMedia.src = URL.createObjectURL(videoBlob)
-				videoRecorder.stream.getTracks().forEach(t => t.stop())
-				gifMedia.srcObject = null;
-			// 	Reiniciar Parametros
-				await videoRecorder.reset(); await videoRecorder.destroy()
-				await gifRecorder.reset(); await gifRecorder.destroy()
-			//	Limpieza de contenido
-				gifSrc = await gifBlob;
-				gifView.src = URL.createObjectURL(await gifBlob)
-				gifRecorder = null;	videoRecorder = null
+				try{
+					//	Carga de contenido
+					await videoRecorder.stopRecording()
+					await gifRecorder.stopRecording()
+					const videoBlob = await videoRecorder.getBlob()
+					const gifBlob = await gifRecorder.getBlob()
+					// 	Formato de Salida
+						gifMedia.src = URL.createObjectURL(videoBlob)
+						videoRecorder.stream.getTracks().forEach(t => t.stop())
+						gifMedia.srcObject = null;
+					// 	Reiniciar Parametros
+						await videoRecorder.reset(); await videoRecorder.destroy()
+						await gifRecorder.reset(); await gifRecorder.destroy()
+					//	Limpieza de contenido
+						gifSrc = await gifBlob;
+						gifView.src = URL.createObjectURL(await gifBlob)
+						gifRecorder = null;	videoRecorder = null
+					} catch(error){
+						alert('El dispositivo no esta listo \n error:' + error)
+					}
 			}
 		//	Subir Grabacion
 			const uploadGif = async() => {
-			//	Iniciando Carga
-				showPhase(3)
-				const formData = new FormData()
-				formData.append("file", gifSrc, "api_Gifo.gif")
-					const params = { method: "POST", body: formData, json: true }
-			// 	Consulta URL Subida
-				const response = await fetchURL(`${uploadURL}?api_key=${apiKey}`, params)	
-				showPhase(4)
-				id = response.data.id; item = response.data
-				addStorage(id, 'gif_', true)
-				recMsg.id = id;
-				gifMedia.classList.toggle('show')
-				gifView.classList.toggle('show')
+				try{
+				//	Iniciando Carga
+					showPhase(3)
+					const formData = new FormData()
+					formData.append("file", gifSrc, "api_Gifo.gif")
+						const params = { method: "POST", body: formData, json: true }
+				// 	Consulta URL Subida
+					const response = await fetchURL(`${uploadURL}?api_key=${apiKey}`, params)	
+					showPhase(4)
+					id = response.data.id; item = response.data
+					addStorage(id, 'gif_', true)
+					recMsg.id = id;
+					gifMedia.classList.toggle('show')
+					gifView.classList.toggle('show')
+				}catch(error){
+					alert('El dispositivo no esta listo \n error:' + error) 
 				}
+			}
 		//	Consulta API - Gif-Id
 			const fetchURL = async(url, params = null) => {
 				const fetchData = await fetch(url, params)
