@@ -18,7 +18,7 @@
 		<a class="icon logo" href="#"></a>
 		<button id="menu" class="icon">&equiv;</button>
 		<ul class="menu">
-			<li><a><label for="mode">Modo </label></a></li>
+			<li><label for="mode">Modo </label></li>
 			<li><a href="#favoritos">Favoritos</a></li>
 			<li><a href="#mis_gifos">Mis GIFOS</a></li>
 			<li><a href="#crear_gifo"> + </a></li>
@@ -33,8 +33,7 @@
 			<input 
 				id="textField"
 				name="textField" 
-				type="search" 
-				list="suggestion" 
+				type="search"
 				minlength="1"
 				maxlength="50" 
 				autocomplete="off" 
@@ -51,47 +50,64 @@
 	</header>
 	<main>
 		<section id="results">
-			<h1 class="title"></h1>
+			<header>
+				<h2 class="title">Realiza una Busqueda</h2>
+			</header>
 			<div>
 			</div>
 			<form id="pagination">
 			</form>
 		</section>
 		<section id="favoritos">
-			<h1><img src="assets/icons/section_favs.svg">Favoritos</h1>
+			<header>
+				<h2>
+					<img src="assets/icons/section_favs.svg" alt="Favoritos"> Favoritos
+				</h2>
+			</header>
 			<div></div>
 			<div class="noItems"></div>
 		</section>
 		<section id="crear_gifo">
-			<h1 data-title="Crear Gifo"> </h1>
+			<header>
+				<h2>Crear Gifo</h2>
+			</header>
 			<article>
 				<div class="camera"></div>
-				<video class="show"></video>
-				<img />
+				<h2>Crear Gifo</h2>
+				<video class="show" src="assets/"></video>
+				<img src="assets/" alt="mygif" />
 				<div class="message show result"></div>
 			</article>
 			<div>
-				<ul class="menu">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
+				<div class="menu">
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>
 					<a href="#crear_gifo"></a>
 					<div class="tape"></div>
-				</ul>
+				</div>
 				<button class="button">Crear</button>
 			</div>
 		</section>
 		<section id="mis_gifos">
-			<h1><img src="assets/icons/section_gifs.svg">Mis Gifos</h1>
+			<header>
+				<h2>
+					<img src="assets/icons/section_gifs.svg" alt="Mis Gifos"> Mis Gifos
+				</h2>
+			</header>
 			<div></div>
 			<div class="noItems"></div>
 		</section>
 		<section id="trending">
-			<h1>Trending GIFOS</h1>
-			<p>Mira los ultimos GIFOS de nuestra comunidad.</p>
+			<header>
+				<h2>Trending GIFOS</h2>
+				<p>Mira los ultimos GIFOS de nuestra comunidad.</p>
+			</header>
 			<div></div>
-			<button class="button prev"> < </button>
-			<button class="button next"> > </button>
+			<button class="button prev"> &lt; </button>
+			<button class="button next"> &gt; </button>
 		</section>
 	</main>
 	<footer id="footer" >

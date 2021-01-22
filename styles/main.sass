@@ -74,12 +74,9 @@ body
 	margin: 5rem auto 1rem
 .notFound
 	margin: 0 auto 5rem
-::-webkit-scrollbar,
-.scroller
-	-webkit-appearance: none
+::-webkit-scrollbar
 	border-radius: .5rem
 ::-webkit-scrollbar-thumb
-	-webkit-appearance: none
 	+normalize(.5rem auto)
 	border-radius: 1rem
 	background: radial-gradient( ellipse at bottom right, darken($bg_color, 20%), $bg_color)
@@ -150,6 +147,10 @@ nav
 			/*modo diurno / nocturno */
 			&:first-child
 				label
+					display: inline-block
+					+mode
+					+normalize($p: .5rem 1rem)
+					font-weight: bold
 					cursor: pointer
 					background-color: transparent
 					&:after
@@ -326,11 +327,13 @@ main
 		&:empty ~ #pagination
 			display: none
 	/*creacion gif*/
-	#crear_gifo
+	#crear_gifo:target
 		overflow: hidden
 		+normalize(auto, 0, 0)
 		+flexbox(column, center)
 		height: 0
+		header
+			+mode($bg_color, transparent)
 		@media screen and (min-width: $md)
 			height: auto
 			.camera
@@ -409,18 +412,22 @@ main
 			max-width: 720px
 		/*area de proceso*/
 		.menu
-			+normalize(auto, none, 0)
 			+flexbox($fj:center)
 			position: relative
-			list-style: none
 			border-bottom: .3rem solid $color
+			ul
+				+flexbox($fj:center)
+				+normalize(auto, none, 0)
+				list-style: none
 			li
 				+mode($color, transparent)
 				+normalize(.5rem, 1px solid $color, .25rem .6rem)
 				border-radius: 50%
 				font: 1rem sans-serif
 			a
-				+position($r: 2.5%)
+				+position($z: 2, $r: 3%)
+				@media screen and (min-width:$lg)
+					right: 6%
 			.active
 				+mode($bg_color,$color)
 		button
@@ -580,8 +587,10 @@ main
 		.menu
 			+mode($bg_color: darken($bg_color, 20%))
 			:first-child
-				label:after
-					content:' Diurno'
+				label
+					+mode($color, transparent)
+					&:after
+						content:' Diurno'
 			@media screen and (min-width: $md)
 				+mode($color, transparent)
 				a
@@ -618,6 +627,8 @@ main
 		section:last-child
 			+mode($color, $bg_color: darken($bg_color, 10%))
 		#crear_gifo
+			header
+				+mode($bg_color, transparent)
 			article
 				+mode($color, $bg_color)
 				+normalize(auto, 1px solid $color, 1.5rem)
@@ -637,7 +648,7 @@ main
 				li
 					+mode($color, transparent)
 				.active
-					+mode($bg_color, color)
+					+mode($bg_color, $color)
 	/*pie de pagina*/
 	& ~ #footer
 		+mode($color, $bg_color)

@@ -187,14 +187,11 @@ body {
   margin: 0 auto 5rem;
 }
 
-::-webkit-scrollbar,
-.scroller {
-  -webkit-appearance: none;
+::-webkit-scrollbar {
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  -webkit-appearance: none;
   margin: 0.5rem auto;
   border: 0;
   padding: 1rem;
@@ -332,6 +329,13 @@ nav .menu li a::after {
   }
 }
 nav .menu li:first-child label {
+  display: inline-block;
+  color: #572ee5;
+  background-color: #fefefe;
+  margin: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
   cursor: pointer;
   background-color: transparent;
 }
@@ -642,7 +646,7 @@ main .title {
 main .title:empty ~ #pagination {
   display: none;
 }
-main #crear_gifo {
+main #crear_gifo:target {
   overflow: hidden;
   margin: auto;
   border: 0;
@@ -656,11 +660,15 @@ main #crear_gifo {
   /*area de grabacion*/
   /*area de proceso*/
 }
+main #crear_gifo:target header {
+  color: #fefefe;
+  background-color: transparent;
+}
 @media screen and (min-width: 768px) {
-  main #crear_gifo {
+  main #crear_gifo:target {
     height: auto;
   }
-  main #crear_gifo .camera {
+  main #crear_gifo:target .camera {
     position: absolute;
     top: unset;
     left: -30%;
@@ -676,12 +684,12 @@ main #crear_gifo {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
-  main #crear_gifo .camera {
+  main #crear_gifo:target .camera {
     left: -35%;
   }
 }
 @media screen and (min-width: 768px) {
-  main #crear_gifo .tape {
+  main #crear_gifo:target .tape {
     position: absolute;
     top: unset;
     left: unset;
@@ -696,11 +704,11 @@ main #crear_gifo {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
-  main #crear_gifo .tape {
+  main #crear_gifo:target .tape {
     right: -20%;
   }
 }
-main #crear_gifo article {
+main #crear_gifo:target article {
   color: #572ee5;
   background-color: transparent;
   margin: auto;
@@ -712,9 +720,9 @@ main #crear_gifo article {
   max-width: 540px;
   min-height: 320px;
 }
-main #crear_gifo article img,
-main #crear_gifo article video,
-main #crear_gifo article .message {
+main #crear_gifo:target article img,
+main #crear_gifo:target article video,
+main #crear_gifo:target article .message {
   position: absolute;
   top: 10%;
   left: 15%;
@@ -725,14 +733,14 @@ main #crear_gifo article .message {
   height: 80%;
   opacity: 0;
 }
-main #crear_gifo article .message {
+main #crear_gifo:target article .message {
   color: #572ee5;
   background-color: #fefefe;
   display: grid;
   justify-content: center;
   align-content: center;
 }
-main #crear_gifo article .message h1 {
+main #crear_gifo:target article .message h1 {
   margin: 0;
   border: 0;
   padding: 1rem;
@@ -740,13 +748,13 @@ main #crear_gifo article .message h1 {
   line-height: 1.5rem;
   display: inline-block;
 }
-main #crear_gifo article .message p {
+main #crear_gifo:target article .message p {
   margin: 0;
   border: 0;
   padding: 0;
   font-size: 0.9rem;
 }
-main #crear_gifo article .message .loader::before {
+main #crear_gifo:target article .message .loader::before {
   content: url("../assets/icons/loader.svg");
   display: block;
   animation: load 2.5s linear infinite;
@@ -756,15 +764,15 @@ main #crear_gifo article .message .loader::before {
     transform: rotate(360deg);
   }
 }
-main #crear_gifo article .message .check::before {
+main #crear_gifo:target article .message .check::before {
   content: url("../assets/icons/check.svg");
 }
-main #crear_gifo article .message.active {
+main #crear_gifo:target article .message.active {
   color: #fefefe;
   background-color: #572ee5;
   opacity: 0.75 !important;
 }
-main #crear_gifo article .message .hidden {
+main #crear_gifo:target article .message .hidden {
   position: absolute;
   top: 0;
   left: unset;
@@ -773,37 +781,44 @@ main #crear_gifo article .message .hidden {
   z-index: 1;
   width: 100% !important;
 }
-main #crear_gifo article .message .hidden .social {
+main #crear_gifo:target article .message .hidden .social {
   text-align: right;
 }
-main #crear_gifo article .message .hidden .social .icon {
+main #crear_gifo:target article .message .hidden .social .icon {
   margin: 0.25rem;
   border: 0;
   padding: 0;
   width: 2rem;
   border-radius: 0.25rem;
 }
-main #crear_gifo:target {
+main #crear_gifo:target:target {
   display: flex;
 }
-main #crear_gifo div:last-child {
+main #crear_gifo:target div:last-child {
   width: 62.5%;
   max-width: 720px;
 }
-main #crear_gifo .menu {
-  margin: auto;
-  border: none;
-  padding: 0;
+main #crear_gifo:target .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  list-style: none;
   border-bottom: 0.3rem solid #572ee5;
 }
-main #crear_gifo .menu li {
+main #crear_gifo:target .menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  border: none;
+  padding: 0;
+  list-style: none;
+}
+main #crear_gifo:target .menu li {
   color: #572ee5;
   background-color: transparent;
   margin: 0.5rem;
@@ -812,19 +827,24 @@ main #crear_gifo .menu li {
   border-radius: 50%;
   font: 1rem sans-serif;
 }
-main #crear_gifo .menu a {
+main #crear_gifo:target .menu a {
   position: absolute;
   top: unset;
   left: unset;
   bottom: unset;
-  right: 2.5%;
-  z-index: 1;
+  right: 3%;
+  z-index: 2;
 }
-main #crear_gifo .menu .active {
+@media screen and (min-width: 992px) {
+  main #crear_gifo:target .menu a {
+    right: 6%;
+  }
+}
+main #crear_gifo:target .menu .active {
   color: #fefefe;
   background-color: #572ee5;
 }
-main #crear_gifo button {
+main #crear_gifo:target button {
   cursor: pointer;
   color: #572ee5;
   background-color: #fefefe;
@@ -836,7 +856,7 @@ main #crear_gifo button {
   text-align: center;
   line-height: 1rem;
 }
-main #crear_gifo .show {
+main #crear_gifo:target .show {
   display: grid;
   opacity: 1 !important;
   z-index: 2;
@@ -1106,6 +1126,10 @@ main .fav.active {
   color: #572ee5;
   background-color: black;
 }
+#mode:checked ~ nav .menu :first-child label {
+  color: #ccc;
+  background-color: transparent;
+}
 #mode:checked ~ nav .menu :first-child label:after {
   content: " Diurno";
 }
@@ -1170,6 +1194,10 @@ main .fav.active {
   color: #ccc;
   background-color: #1a1a1a;
 }
+#mode:checked ~ main #crear_gifo header {
+  color: #333;
+  background-color: transparent;
+}
 #mode:checked ~ main #crear_gifo article {
   color: #ccc;
   background-color: #333;
@@ -1206,7 +1234,7 @@ main .fav.active {
 }
 #mode:checked ~ main article.active .menu .active {
   color: #333;
-  background-color: color;
+  background-color: #ccc;
 }
 #mode:checked ~ #footer {
   color: #ccc;
