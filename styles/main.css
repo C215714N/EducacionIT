@@ -1,0 +1,57 @@
+/*Content First*/	
+	/* Reglas Generales*/
+		*{
+			box-sizing: border-box; /*final width = width | content-width: width - padding - border*/
+			font-family: Roboto, Open Sans, Century Gothic, sans-serif;
+		}
+		body{ margin: 0; }
+	/*Navegacion*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background-color: #448;
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		#menu{
+			outline: none;
+			margin: .5rem;
+			border: .2rem solid #eee;
+			padding: .2rem .7rem;
+			color: #eee;
+			background-color: transparent;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		#menu:hover{
+			color:#448;
+			background-color: #eee;
+		}
+		.menu{
+			overflow: hidden;
+			height: 0;
+			list-style: none;
+			width:100%;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		.menu a:hover{
+			background-color: #3336;
+		}
+		.menu.active{
+			height: auto;
+		}
+/*small devices*/
+
+/*medium devices*/
+
+/*large devices*/
+
+/*extra large*/
