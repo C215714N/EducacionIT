@@ -616,6 +616,15 @@ main section:last-child .button.prev {
     left: 4rem;
   }
 }
+main section:last-child .button.prev.selected {
+  position: fixed;
+  top: calc(50% - 1rem);
+  left: unset;
+  bottom: unset;
+  right: unset;
+  z-index: 3;
+  left: 4rem;
+}
 main section:last-child .button.next {
   position: absolute;
   top: calc(65% - 1rem);
@@ -629,13 +638,14 @@ main section:last-child .button.next {
     right: 4rem;
   }
 }
-main section:last-child button.selected {
+main section:last-child .button.next.selected {
   position: fixed;
   top: calc(50% - 1rem);
   left: unset;
   bottom: unset;
   right: unset;
   z-index: 3;
+  right: 4rem;
 }
 main .title {
   margin: 0;

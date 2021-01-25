@@ -315,12 +315,16 @@ main
 				+position($t: calc(65% - 1rem), $l: 0)
 				@media screen and (min-width: $lg)
 					left: 4rem
+				&.selected
+					+position(fixed, 3, calc(50% - 1rem))
+					left:4rem
 			&.next
 				+position($t: calc(65% - 1rem), $r: 0)
 				@media screen and (min-width: $lg)
 					right: 4rem
-		button.selected
-			+position(fixed, 3, calc(50% - 1rem))
+				&.selected
+					+position(fixed, 3, calc(50% - 1rem))
+					right:4rem
 	.title
 		+normalize
 		font-size: 2rem

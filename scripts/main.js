@@ -27,8 +27,8 @@
 		const textField = document.querySelector('#search input')
 		const dataList 	= document.querySelector('#suggestion')
 	//	Area de Resultados
-		const titleArea = document.querySelector('section h1')
-		const gifsArea 	= document.querySelector('#results div')
+		const titleArea = document.querySelector('section .title')
+		const hitsArea 	= document.querySelector('#results div')
 		const pageArea 	= document.querySelector('#pagination')
 		const trendArea = document.querySelector('#trending div')
 	//	Seccion de Grabacion
@@ -269,17 +269,17 @@
 			}	)
 		//	Resultados Busqueda
 			frmSearch.addEventListener( 'submit', (e) => {
-				e.preventDefault();	gifsArea.innerHTML = ``
+				e.preventDefault();	hitsArea.innerHTML = ``
 				limit = 12;	offset = 0;	termino = textField.value
 				url = `${searchURL}?api_key=${apiKey}&q=${termino}&limit=${limit}&offset=${offset}&rating=g&lang=es`
 				titleArea.innerHTML = termino
-				fetchAPI(url, gifsArea, showGifs)
+				fetchAPI(url, hitsArea, showGifs)
 			}	)
 		//	Cargar Paginas
 			pageArea.onsubmit = (e) => {
 				e.preventDefault();	offset += 12
 				url = `${searchURL}?api_key=${apiKey}&q=${termino}&limit=${limit}&offset=${offset}&rating=g&lang=es`
-				fetchAPI(url, gifsArea, showGifs)
+				fetchAPI(url, hitsArea, showGifs)
 			}
 	/*	CREAR GIFS	*/
 		// 	Proceso de Grabacion
