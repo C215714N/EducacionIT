@@ -1,0 +1,145 @@
+/*Reglas Generales*/
+	body{
+		margin: 0;
+		font-family: segoe ui, century gothic, sans-serif;
+	}
+/*Navegacion*/
+	nav{
+		background-color: darkslateblue;
+		text-align: center;
+	}
+	.menu{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.menu a{
+		color: #ccc; /*RRGGBB*/
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 4px 8px;/*top right bottom left*/
+	}
+	.menu li:hover{
+		background-color: rgba(51,51,51,.5);
+	}
+/*Cabecera*/
+	#header{
+		padding: 72px 16px;
+		text-align: center;
+		background-image: url('img/osx-sierra.jpg');
+		background-size: cover;
+	}
+	#header h1, #header p{
+		color: #eee;
+		text-shadow: 0 0 8px #333; /*x y blur color*/
+		margin: 0;
+	}
+/*Principal*/
+	main{ padding: 16px; }
+	main .header{
+		border-radius: 16px 16px 0 0;/*tl tr br bl*/
+		padding: 8px;
+		color: #eee;
+		background-color: darkslateblue;
+	}
+	.header h1{ margin: 0; }
+	main h1{ border-bottom: 2px solid darkslateblue; }
+	article{
+		margin: 48px auto; /*top right (vertical horizontal)*/
+		max-width: 1140px;
+	}
+	.example{
+		overflow: auto;
+		list-style: none;
+		margin: 8px;
+		margin-left: 20px;
+		border-left: 2px solid darkslateblue;/*width style color*/
+		padding: 8px 16px;
+		background-color: #eee;
+	}
+	/*Tablas HTML*/
+		table{
+			display: inline-table;
+		}
+		table caption{
+			margin-top: 20px;
+			border-radius: 8px 8px 0 0; /*lt rt rb lb*/
+		}
+		th, td{
+			width: 100px;
+		}
+		.classic, 
+		.classic caption,
+		.classic td{
+			border: 2px solid darkslateblue;
+			border-collapse: collapse;
+		}
+		.modern,
+		.modern caption,
+		.modern tr,
+		.modern td{
+			color: #eee;
+			background-color: rgba(68, 68, 136, .5);
+		}
+		.modern thead,
+		.modern tfoot{
+			background-color: #248;
+		}
+	/*Contenido Multimedia*/
+		/* 
+			Aspect-Ratio
+			4:3		alto = 75%(ancho)		| ancho = 1.33(alto)
+			16:9	alto = 56.25%(ancho)	| ancho = 1.78(alto)
+		*/
+		audio,
+		video,
+		iframe{
+			width: 100%;
+			max-width: 480px;
+			outline: none;
+			border: none;
+			border-radius: 16px;
+		}
+		iframe{
+			display: block;
+			margin:auto;
+			min-height: 270px;
+		}
+/*Pie de Pagina*/
+	#footer{
+		padding: 16px;
+		color:#eee;
+		background-color: darkslateblue;
+	}
+	#contacto{
+		max-width: 540px;
+		margin: auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		display: block;
+		width: 100%;
+		border: 0;
+		padding: 0;
+		line-height: 24px;
+	}
+	#contacto textarea{
+		height: 72px;
+		resize: none;
+	}
+	#contacto button{
+		display: block;
+		margin: 4px 0;
+		margin-left: auto;
+		border: 2px solid #eee;
+		padding: 8px 16px;
+		color: #eee;
+		background-color: transparent;
+		font-weight: bold
+	}
+	#contacto button:hover{
+		color: darkslateblue;
+		background-color: #eee;
+	}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			margin: 0;
+			font-family: century gothic, sans-serif;
+		}
+		/* Selector Multiple (,) */
+		header, footer{
+			padding: 24px;
+			color: #ccc;
+			background-color: #124;
+		}
+		/* Selector especifico (padre hijo) */
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+		/* Selector de Clase (.class) */
+		.example{
+			margin: 16px;
+			padding: 16px;
+			color: #ccc;
+			background-color: #248;
+		}
+		div.example{
+			text-align: center;
+		}
+		.example ul{
+			text-align: left;
+		}
+		main{
+			padding: 16px;
+		}
+		main p{
+			overflow: hidden;
+			padding: 16px;
+		}
+		p img{
+			width: 200px;
+			float: left;
+			margin-right: 16px;
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p> &lt;HTML> &amp; {CSS}</p>
+		<nav id="nav">
+			<ul>
+				<li><!-- Ruta relativa / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta ancla / Marcador -->
+					<a href="#">Galeria</a><!-- Comienzo -->		
+				</li>
+				<li><!-- Ruta ancla / marcador -->
+					<a href="contacto.html">Contacto</a>
+				</li>
+				<li><!-- Ruta absoluta / Externa -->
+					<a href="https://github.com/c215714n/EducacionIT/tree/html-x-19hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios </strong> ya que los mismos seran traducidos por el navegador como <em>el separador %20</em>, es decir que si tenemos un archivo con el nombre <em>"foto 01.jpg"</em> este sera interpretado como <em>"foto%2001.jpg"</em> determinando que el mismo no pudo ser encontrado. Se recomienda utilizar <strong> separadores de tipo guion (-_)</strong> ya que estos son interpretados sin problemas por el navegador.
+			</li>
+			<li>
+				<strong>Utilizar nombres que hagan referencia al uso o implementacion del archivo </strong>, debido a que facilita su aplicacion por parte del desarrollador. Evitar nombres genericos como <em>"foto_01.jpg"</em>, nombres automatizados como <em>"2021-01-13-2009100.jpg</em>" ya que en demasia resultan complejos. Por eso es aconsejable utilizar nombres como <em>"perritos_jugando.jpg"</em>.
+			</li>
+			<li>
+				<strong>Escribir los nombres en minusculas </strong> debido a que los servidores basan su sistema operativo en UNIX y este es <em>CaseSensitive, es decir, distingue entre mayusculas y minusculas</em>. Por lo tanto nombres como <em>"perritos_jugando.jpg", "Perritos_Jugando.jpg" y "PERRITOS_JUGANDO.jpg"</em> se consideran archivos diferentes.
+			</li>
+		</ul>
+		<div class="example">
+			<img style="width: 300px;" 
+				src="img/jjba-silverchariot-01.jpg" 
+				alt="Dibujo Silver Chariot" />
+			<img style="width: 300px;"
+				src="img/jjba-silverchariot-02.jpg" 
+				alt="Dibujo Silver Chariot" />
+			<img style="width: 300px;"
+				src="img/jjba-silverchariot-04.jpg" 
+				alt="Dibujo Silver Chariot" />
+		</div>
+		<h2>Organizacion de Elementos</h2>
+		<p>
+			<img  
+				src="img/usm-scorpion-01.jpg" 
+				alt="Dibujo Ultimate Scorpion" />
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sed consequuntur repudiandae minima similique deserunt magni error. Aliquam praesentium eaque assumenda dolorem dolores, ullam voluptatum, reiciendis consequatur, iusto animi ea.
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, totam? Deserunt eum in voluptate laboriosam obcaecati, eius id, tempora alias harum quasi ullam delectus at illum minima vitae veniam nesciunt.
+
+			Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Dolor numquam accusamus repellendus ratione omnis optio sit, quisquam error enim tenetur molestias delectus similique tempore corrupti facilis reprehenderit ab ullam architecto!
+		</p>
+		<p>
+			<img
+				src="img/usm-scorpion-02.jpg" 
+				alt="Dibujo Ultimate Scorpion" />
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sed consequuntur repudiandae minima similique deserunt magni error. Aliquam praesentium eaque assumenda dolorem dolores, ullam voluptatum, reiciendis consequatur, iusto animi ea.
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, totam? Deserunt eum in voluptate laboriosam obcaecati, eius id, tempora alias harum quasi ullam delectus at illum minima vitae veniam nesciunt.
+
+			Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Dolor numquam accusamus repellendus ratione omnis optio sit, quisquam error enim tenetur molestias delectus similique tempore corrupti facilis reprehenderit ab ullam architecto!
+		</p>
+		<p>
+			<img 
+				src="img/usm-scorpion-03.jpg" 
+				alt="Dibujo Ultimate Scorpion" />
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sed consequuntur repudiandae minima similique deserunt magni error. Aliquam praesentium eaque assumenda dolorem dolores, ullam voluptatum, reiciendis consequatur, iusto animi ea.
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, totam? Deserunt eum in voluptate laboriosam obcaecati, eius id, tempora alias harum quasi ullam delectus at illum minima vitae veniam nesciunt.
+
+			Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Dolor numquam accusamus repellendus ratione omnis optio sit, quisquam error enim tenetur molestias delectus similique tempore corrupti facilis reprehenderit ab ullam architecto!
+		</p>
+		<div class="example">
+			<h2>Elementos Semanticos</h2>
+			<ul>
+				<li>
+					<strong>HEADER: </strong>
+					Cabecera de Pagina, se utiliza para colocar la informacion de la empresa a modo de introduccion y por ende debe contener el titulo principal.
+					<ul>
+						<li>
+							<strong>NAV: </strong>
+							Navegacion de pagina, se utiliza para mostrar los links mas importantes de la pagina y suele estar en la cabecera o la parte superior de la pagina.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>MAIN: </strong>
+					Contenido Principal, se utiliza para colocar la informacion que es relevante para el usuario, basicamente la mayoria del contenido de la pagina.
+					<ul>
+						<li>
+							<strong>ARTICLE: </strong>
+							Contenido independiente que funciona tanto dentro como fuera de nuestra pagina, ya que posee una estructura autoconclusiva.
+						</li>
+						<li>
+							<strong>SECTION: </strong>
+							Contenido que depende del contexto de la pagina y solamente funciona dentro de la misma, suele hacer referencia a otro contenido con el que se relaciona.
+						</li>
+						<li>
+							<strong>ASIDE</strong>
+							Contenido lateral o tangencial que funciona como un hilo conductor de tematicas, no guarda relacion directa con el contenido pero si presenta alguna tematica en comun.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>FOOTER: </strong>
+					Pie de pagina, se utiliza para colocar la informacion complementaria al sitio, como mapas o redes sociales, asi como tambien la informacion o formulario de contacto ademas del copyright e informacion del autor.
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos Reservados | Cristian Racedo &amp; Compañia
+		</p>
+	</footer>
+</body>
+</html>

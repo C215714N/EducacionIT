@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/dices.png">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+			<li><a href="#contacto">Contacto</a></li>
+			<li>
+				<a href="https://github.com/c215714n/EducacionIT/tree/html-x-19hs" target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>HTML &amp; CSS</h1>
+		<p>Fundamentos Web</p>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<section>
+				<h1>¿Para que sirven?</h1>
+				<p>
+					Son herramientas que se utilizan para el <strong>intercambio de datos entre un cliente y un servidor (interaccion real)</strong>, existen diferentes tipos de formularios, y se pueden clasificar segun su objetivo. Estan aquellos cuya funcion es <em>obtener datos de un servidor</em> y luego estan aquellos cuya mision es <em>enviar y guardar datos a un servidor</em>
+				</p>
+				<ul class="example">
+					<li>Buscadores - Consulta Query(GET)</li>
+					<li>Inscripcion - Registro(POST)</li>
+					<li>Acceso - Inicio Sesion(POST)</li>
+					<li>Contacto - Consulta Web(POST)</li>
+				</ul>
+			</section>
+			<section>
+				<h1>¿Como funcionan?</h1>
+				<p>
+					Para utilizarlos, es necesario colocar el contenido que queremos enviar/recibir dentro de una etiqueta <strong>&lt;FORM></strong>, en la misma debemos especificar 2 atributos <em>action="..." y method="..."</em>que indican que debe hacerse con la informacion al enviarse, y como se debe llevar a cambo el proceso.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>ACTION: </strong> Antiguamente se utilizaba el valor <em>mailto:usuario@servidor</em>, pero debido a que necesitamos que el cliente cuente con una aplicacion  de correo, hoy en se utiliza algun <em>script en lenguaje de servidor como PHP.</em>
+					</li>
+					<li>
+						<strong>METHOD: </strong> Existen 2 valores posibles para este atributo, por un lado <em>GET</em> prioriza la respuesta del servidor, es <em>menos seguro/rapido</em> y la informacion enviada es visible desde la barra de direcciones. <em>POST</em> por el contrario, es <em>mas seguro/lento</em> debido a que encripta los datos antes de enviarlos, prioriza el envio del cliente y la respuesta puede no ser inmediata.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h1>¿Cuales son sus componentes?</h1>
+				<p>
+					Los formularios se componen de 2 tipos de elementos, por un lado las <strong>etiquetas(LABEL)</strong> que funcionan como rotulos que indican que datos debemos ingresar o seleccionar; y por el otro estan los <strong>campos(INPUT | TEXTAREA | SELECT)</strong> que funcionan como areas en las que el usuario puede ingresar o seleccionar datos, cabe destacar que a cada elemento le corresponde un tipo de dato.
+				</p>
+				<ul class="example">
+					<li>
+						<input type="text"/> Campo de Texto (Aa123!#)
+					</li>
+					<li>
+						<input type="number"/> Campo Numerico (123456)
+					</li>
+					<li>
+						<input type="email"> Campo de e-mail (*@*)
+					</li>
+					<li>
+						<input type="password"> Campo Contraseña(****)
+					</li>
+					<li>
+						<input type="date"> Campo fecha(dd/mm/aaaa)
+					</li>
+					<li>
+						Campo opción Única 
+						<input type="radio" name="accept" value="true">si |
+						<input type="radio" name="accept" value="false">no
+					</li>
+					<li>
+						Campo opción Multiple
+						<input type="checkbox" name="hobbie" value="art"> Arte |
+						<input type="checkbox" name="hobbie" value="music"> Música |
+						<input type="checkbox" name="hobbie" value="sport"> Deportes 
+					</li>
+					<li>
+						Campo Multilinea
+						<textarea></textarea>
+					</li>
+					<li>
+						Lista Desplegable
+						<select>
+							<option value="html">HyperText Markup Language</option>
+							<option value="css">Cascading Styles Sheets</option>
+							<option value="js">JavaScript</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset"/>
+						<input type="submit"/>
+						<button>default action</button>
+					</li>
+				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Tablas HTML</h1>
+			</header>
+			<section>
+				<h1>¿Cuando utilizarlas?</h1>
+				<p>
+					Las tablas son elementos que permiten <strong>organizar la informacion de manera tabular</strong> y deben ser utilizadas cuando necesitamos que los datos representados en pantalla siempre respeten determinada estructura. Es importante tener en cuenta que <em>NO debemos utilizar las tablas para diseñar la pagina</em> como se solia hacer antes de la llegada de CSS.
+				</p>
+				<div class="example">
+					<table class="classic"> <!-- Tabla (Contenedor)-->
+						<caption>Estructura Clasica</caption>
+						<tr><!-- Fila (Table Row)-->
+							<td>Celda 1 Fila 1</td><!--Celda (Table Division)-->
+							<td>Celda 2 Fila 1</td>
+							<td>Celda 3 Fila 1</td>
+						</tr>
+						<tr>
+							<td>C1 F2</td>
+							<td>C2 F2</td>
+							<td>C3 F3</td>
+						</tr>
+					</table>
+					<table class="modern">
+						<caption>clientes</caption>
+						<tr>
+							<td>Nombre</td>
+							<td>Apellido</td>
+							<td>Documento</td>
+							<td>Direccion</td>
+						</tr>
+						<tr>
+							<td>Cristian</td>
+							<td>Racedo</td>
+							<td>35353535</td>
+							<td>su casa 91</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<h1>¿Por qué utilizar tablas semanticas?</h1>
+				<p>
+					Con el surgimiento de HTML5, la w3c incorporo nuevas etiquetas para utilizar dentro de las tablas. Estas funcionan como <strong>separadores de contenido</strong> que facilitan a los motores de busqueda identificar las partes de las mismas y reemplazan en la mayoria de los casos a los clasicos &lt;tr>.
+				</p>
+				<ul>
+					<li>
+						<strong>tHEAD: </strong>Representa la cabecera de tabla y se utiliza para contener los titulos, a su vez en lugar de utilizar la etiqueta &lt;td> debemos implementar <strong>&lt;th></strong> para los mismos.
+					</li>
+					<li>
+						<strong>tBODY: </strong> Representa el cuerpo y donde se coloca la informacion a representar, dependiendo del tipo de tablas, podemos implementar titulos si trabajamos con una tabla de <em>referencias cruzadas</em>; en esta seccion de la tabla todavia se siguen implementando las etiquetas &lt;tr> y &lt;td>.
+					</li>
+					<li>
+						<strong>tFOOT: </strong> Representa al pie de tabla, el cual contiene la informacion complementaria al tBody. Es opcional y se utiliza para representar <em>totales, promedio, o cualquier valor que haga referencia al contenido</em>, tambien puede poseer celdas de titulo.
+					</li>
+				</ul>
+				<div class="example">
+					<table class="modern">
+						<caption>Rutina semanal</caption>
+						<thead>
+							<th>Hs/dia</th>
+							<th>Lu</th>
+							<th>Ma</th>
+							<th>Mi</th>
+							<th>Ju</th>
+							<th>Vi</th>
+						</thead>
+						<tbody>
+							<tr>
+								<th>M</th>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>T</th>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<th>N</th>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th>Total</th>
+							<td>2</td>
+							<td>2</td>
+							<td>3</td>
+							<td>2</td>
+							<td>2</td>
+						</tfoot>
+					</table>
+					<table class="modern">
+						<caption>Ventas</caption>
+						<thead>
+							<th>Articulo</th>
+							<th>Precio</th>
+							<th>Cant.</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Teclado</td>
+								<td>800</td>
+								<td>2</td>
+								<td>1600</td>
+							</tr>
+							<tr>
+								<td>Monitor</td>
+								<td>5600</td>
+								<td>3</td>
+								<td>16800</td>
+							</tr>
+							<tr>
+								<td>gabinete</td>
+								<td>3500</td>
+								<td>1</td>
+								<td>3500</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<section>
+				<h1>¿Que es el contenido Embebido?</h1>
+				<p>
+					Existe una etiqueta que se suele utilizar mucho cuando necesitamos incorporar a nuestra pagina web <em>un mapa, un video, una presentacion o cualquier archivo externo</em> que se pueda incorporar dentro de HTML, y es <strong>iframe (marco flotante)</strong> que funciona de manera asincronica, es decir, que los tiempos de carga de la misma NO afectan a nuestra pagina y es una manera de compartir contenido mediante la web.
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/t3fHXfD1WjI" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<h1>¿Existen los Sonidos en la web?</h1>
+				<p>
+					Uno de los elementos incorporados en HTML5 es la etiqueta <strong>&lt;AUDIO></strong> que permite la reproduccion nativa de este tipo de contenido, sin necesidad de la descarga de algun plugin o reproductor externo. Los formatos admitidos por la API de reproduccion son <em>.mp3 - .wav - .ogg</em>, aunque tambien admite formatos de video como los que mencionan <a href="#video">mas adelante</a>, debido a que este elemento, solamente toma la pista de audio.
+				</p>
+				<div class="example">
+					<audio src="media/swim.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento AUDIO. No te preocupes, podes descargar la pista desde el siguiente 
+							<a href="media/swim.mp3" target="_blank"> link.</a>
+						</p>
+					</audio>
+					<audio src="media/californication.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento AUDIO. No te preocupes, podes descargar la pista desde el siguiente 
+							<a href="media/californication.mp4" target="_blank"> link.</a>
+						</p>
+					</audio>
+				</div>
+			</section>
+			<section>
+				<h1>¿Videos sin necesidad de Plugins?</h1>
+				<p>
+					Como se menciono <a href="#audio">anteriormente</a>, hoy en dia es posible reproducir contenido multimedia, sin utilizar herramientas de terceros, tal y como sucedia antes con <strong>YouTube</strong> y el discontinuado <em>FlashPlayer</em>. Los formatos admitidos son <em>.mp4 - .webm - . ogv</em>, asi como tambien, los formatos de audio. En este ultimo caso, el reproductor cambiara a su version de audio.
+				</p>
+				<div class="example">
+					<video src="media/cant-stop.webm" controls>
+						Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento VIDEO. No te preocupes, podes descargar el archivo desde el siguiente 
+							<a href="media/cant-stop.webm" target="_blank"> link.</a>
+					</video>
+					<video src="media/by-the-way.ogv" controls>
+						Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento VIDEO. No te preocupes, podes descargar el archivo desde el siguiente 
+							<a href="media/by-the-way.ogv" target="_blank"> link.</a>
+					</video>
+				</div>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contacto" action="" method="POST">
+			<h2>Informacion de Contacto</h2>
+			<label for="nombre">Nombre: </label>
+			<input 
+				id="nombre" 
+				name="nombre" 
+				type="text"
+				maxlength="50"
+				pattern="[A-Z a-z]{2,50}"
+				title="Ingrese su nombre completo sin numeros, ni simbolos. Este debe contar con al menos 2 caracteres" 
+				required 
+			/>
+			<label for="correo">Correo: </label>
+			<input 
+				id="correo"
+				name="correo" 
+				type="email"
+				required
+			/>
+			<label for="consulta">Consulta: </label>
+			<textarea 
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				required
+			></textarea>
+			<button>ENVIAR</button>
+		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1239.6453908968974!2d-58.37681018829631!3d-34.602501051839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses!2sar!4v1611792903880!5m2!1ses!2sar" 
+			aria-hidden="false">
+		</iframe>
+		<p>
+			&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia
+		</p>
+	</footer>
+</body>
+</html>
