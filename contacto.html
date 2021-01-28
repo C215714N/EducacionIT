@@ -3,13 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/fender.png">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<nav>
 		<ul class="menu">
 			<li><a href="index.html">Inicio</a></li>
 			<li><a href="galeria.html">Galeria</a></li>
-			<li><a href="#">Contacto</a></li>
+			<li><a href="#contacto">Contacto</a></li>
 			<li>
 				<a href="https://github.com/c215714N/EducacionIT/tree/html-j-15hs" target="_blank">GitHub</a>
 			</li>
@@ -106,8 +108,31 @@
 			</section>
 		</article>
 	</main>
-	<footer>
-		
+	<footer id="footer">
+		<form id="contacto" action="contacto.php" method="POST">
+			<label for="nombre">Nombre</label>
+			<input 
+				id="nombre"
+				name="nombre" 
+				maxlength="50" 
+				type="text" 
+				required />
+			<label for="correo">Correo</label>
+			<input 
+				id="correo"
+				name="correo" 
+				type="email" 
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea  
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required 
+			></textarea>
+			<button>ENVIAR</button>
+		</form>
 	</footer>
 </body>
 </html>

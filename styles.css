@@ -1,0 +1,103 @@
+/*Reglas Generales*/
+	body{
+		margin: 0;
+		font-family: segoe ui, helvetica, century gothic, sans-serif;
+	}
+/*Navegacion*/
+	nav{
+		background-color: #448;
+		text-align: center;
+	}
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px; /*top right bottom left*/
+	}
+	.menu li:hover{
+		background-color: rgba(51,51,51,.5)/*rgb*/
+	}
+/*Cabecera*/
+	#header{
+		padding: 144px 16px;
+		text-align: center;
+		color: #eee;
+		text-shadow: 0 0 5px #333;
+		background-image: url(img/osx-mojave-night.jpg);
+		background-size: cover;
+	}
+	#header h1, 
+	#header p{
+		margin: 0;
+		line-height: 20px;
+	}
+/*Cuerpo Principal*/
+	main{
+		margin: auto;
+		padding: 16px;
+		max-width: 1140px;
+	}
+	.header{
+		border-radius: 16px 16px 0 0; /*tl tr br bl*/
+		padding: 8px;
+		color:#eee;
+		background-color: #448;
+		text-align: center;
+	}
+	main h1{
+		margin: 4px;
+		border-bottom: 2px solid #448;
+	}
+
+	/*Ejemplos*/
+		.example{
+			list-style: none;
+			margin: 16px;
+			margin-left: 48px;
+			border-left: 2px solid #448;
+			padding: 16px 32px;
+			background-color: #eee
+		}
+/*Pie de Pagina*/
+	#footer{
+		padding: 16px;
+		color: #eee;
+		background-color: #448;
+	}
+	/*Formulario*/
+		#contacto{
+			max-width: 540px;
+			margin: auto;
+		}
+		#contacto input,
+		#contacto textarea{
+			width: 95%;
+			display: block;
+			outline: none;
+			padding: 8px;
+			font-size: 16px;
+		}
+		#contacto textarea{
+			resize: none;
+			height: 80px;
+		}
+		#contacto button{
+			display: block;
+			margin: 8px;
+			margin-left: auto;
+			border: 2px solid #eee;
+			padding: 8px 16px;
+			color: #eee;
+			background-color: transparent;
+		}
+		#contacto button:hover{
+			color:#448;
+			background-color: #eee;
+		}
