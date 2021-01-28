@@ -9,7 +9,7 @@
 		<strong> Consulta: </strong> $consulta
 	";	
 	
-	email(
+	mail(
 		"CristianDRacedo@hotmail.com",
 		$tipo,	
 		$mensaje,
@@ -22,4 +22,3 @@
 	header(
 		"location: https://hotmail.com"
 	);
-?>

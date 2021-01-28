@@ -4,7 +4,7 @@
 	a{
 		margin: 0;
 		padding: 0;
-		color: #012;
+		color: #124;
 		text-decoration: none;
 		font-family: century gothic, segoe ui, sans-serif;
 	}
@@ -15,8 +15,8 @@
 	#header, 
 	#footer{
 		padding: 20px 0 0 0;
-		color: lightgrey;
-		background-color: #012;
+		color: #ccd;
+		background-color: #124;
 		text-align: center;
 	}
 	h1{
@@ -41,7 +41,7 @@
 		overflow: hidden;
 		margin:10px 0;
 		padding: 5px 15px 0;
-		background-color: lightgrey;
+		background-color: #ccd;
 	}
 	.menu{
 		float: left;
@@ -49,23 +49,18 @@
 	}
 	.menu li{
 		display: inline-block;
-		padding: 0 10px;
-		margin: 0;
-		line-height: 50px;
+		padding: 10px;
+		border-radius: 10px 10px 0 0;
+		line-height: 30px;
 	}	
 	.menu li:hover, 
 	.active{
-		background-color: white;
-		border-radius: 10px 10px 0 0;
 		opacity: 1;
+		background-color: white;
 	}
 /*Redes Sociales*/
-	nav .social-media{
-		float: right;
-		margin-top: -2.5px;
-	}
 	.social-media{
-		background-color: lightgrey;
+		background-color: #ccd;
 		text-align: center;
 		height: 50px;
 	}
@@ -95,14 +90,14 @@
 	.index h2{
 		margin: 5px 0;
 		padding: 0 20px;
-		color: #eee;
-		background-color: #012;
+		color: #dedede;
+		background-color: #124;
 	}
 	.index li{
 		padding: 0 25px;
 	}
 	.index li:hover{
-		background-color: lightgrey;
+		background-color: #ccd;
 	}
 /*Menu Principal*/
 	article .index-back{
@@ -166,8 +161,8 @@
 	section h2, 
 	main .subtitle{
 		padding: 5px;
-		color: lightgrey;
-		background-color: #012;
+		color: #ccd;
+		background-color: #124;
 		text-align: left;
 	}
 	article h1{
@@ -192,10 +187,10 @@
 	.article{
 		display: inline-block;
 		width: 365px;
-		margin: 4px auto;
+		margin: 4px;
 		border-radius: 10px;
 		padding: 10px;		
-		background-color: #eee;
+		background-color: #dde;
 		text-align: justify;
 	}
 	.article:hover{
@@ -217,7 +212,7 @@
 	.article audio{
 		border-radius: 32px;
 	}
-	hr{ border: 1px solid #eee; }
+	hr{ border: 1px solid #dedede; }
 /*Formulario de Contacto*/
 	#contacto{
 		text-align: left;
@@ -257,14 +252,14 @@
 		border: 2px solid #ccc;
 		border-radius: 0 0 8px 8px;
 		padding: 5px;
-		color: #012;
-		background-color: lightgrey;
+		color: #124;
+		background-color: #ccd;
 		font-weight: bold;	
 		font-size: 16px;	
 		font-family: century gothic, segoe ui, sans-serif;
 	}
 	#contacto button:hover{
 		color:#ccc;
-		background-color:#012;
+		background-color:#124;
 	}
 /*Autor: Cristian Racedo*/

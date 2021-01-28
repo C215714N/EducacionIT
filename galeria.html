@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos HTML5</title>
-	<link rel="icon" href="assets/img/cr.png">
+	<link rel="icon" href="assets/icon/cr.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,33 +15,7 @@
 				Fundamentos HTML
 			</p>
 		</div>
-		<nav>
-			<div class="social-media">
-				<a 	href="https://www.facebook.com/RacedoCristian" 
-					target="_blank">
-					<img src="assets/img/facebook.png" alt="Facebook"/>
-				</a>
-				<a 	href="https://twitter.com/Racedo_Cristian" 
-					target="_blank">
-					<img src="assets/img/twitter.png" alt="Twitter"/>
-				</a>
-				<a 	href="https://instagram.com" 
-					target="_blank">
-					<img src="assets/img/instagram.png" alt="Instagram"/>
-				</a>
-				<a 	href="https://www.linkedin.com/in/racedocristian/" 
-					target="_blank">
-					<img src="assets/img/linkedin.png" alt="LinkdeIn"/>
-				</a>
-				<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
-					target="_blank">
-					<img src="assets/img/youtube.png" alt="YouTube"/>
-				</a>
-				<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
-					target="_blank">
-					<img src="assets/img/whatsapp.png" alt="Whatsapp"/>
-				</a>
-			</div>	
+		<nav>	
 			<ul class="menu">
 				<li><a href="index.html">Inicio</a></li>
 				<li class="active"><a href="#">Galeria</a></li>				
@@ -60,7 +34,7 @@
 		<article id="imagenes">
 			<header>
 				<a href="#">
-					<img class="index-back" src="assets/img/back.png" alt="volver"/>
+					<img class="index-back" src="assets/icon/back.png" alt="volver"/>
 				</a>
 				<h1>Formato de Imagen</h1>
 			</header>
@@ -76,26 +50,29 @@
 				<p>
 
 				</p>
-				<a href="#" class="article"> 
+				<a href="https://www.iso.org/committee/45316.html" target="_blank" class="article"> 
 					<h2>¿Que es JPG?</h2>
 					<p>
 						<strong>Joint Photographic Expert Group </strong> 
-						es el formato de imagen más común, utilizado por las cámaras fotográficas digitales y otros dispositivos de captura de imagen.
-					</p>				
+						es el formato de imagen más común, está especialmente pensado para la compresión de imágenes digitales y fotográficas. No pesan demasiado y es compatible con la mayoría de programas y plataformas. soporta <em>CMYK y RGB, escalas de grises</em> y es capaz de guardar información de más de 16 millones de colores diferentes.
+					</p>
+					<img src="assets/img/high-sierra.jpg" alt="Imagen Formato JPG">				
 				</a>
-				<a href="#" class="article">
+				<a href="https://tools.ietf.org/html/rfc2083" target="_blank" class="article">
 					<h2>¿Que es PNG?</h2>
 					<p>
 						<strong>Portable Network Graphics </strong> 
-
+						es un formato de compresion sin perdidas que, a diferencia de JPG que siempre tendrá un fondo de color sólido, soporta transparencias. Es ideal para imágenes sin fondo que contengan texto y logotipos, permitiendo mantener una calidad muy alta. No admite <em>CMYK</em> por lo que no es útil para impresión digital.
 					</p>
+					<img src="assets/img/smoke.png" alt="Imagen Formato PNG">
 				</a>
-				<a href="#" class="article">
+				<a href="https://www.w3.org/Graphics/GIF/spec-gif87.txt" target="_blank" class="article">
 					<h2>¿Que es GIF?</h2>
 					<p>
 						<strong>Graphics Interchange Format </strong> 
-
+						es un formato cuya principal característica es que soporta animaciones, transparencias y paletas de 256 colores, no suele distorsionar la imagen pero sí difumina un poco los colores. Su uso consiste en el movimiento de uno o varios fotogramas alrededor de 3-5 segundos de duración y que se repite de manera infinita.
 					</p>
+					<img src="assets/img/love.gif" alt="Imagen Formato GIF">
 				</a>
 			</section>
 			<hr/>
@@ -117,16 +94,16 @@
 						<strong>Scalable Vector Graphics </strong>
 					</p>				
 				</a>
+				<a href="https://www.oracle.com/java/" target="_blank" class="article">
+					<h2>¿Que es SWF?</h2>
+					<p>
+						<strong>Small Web Format </strong>
+					</p>
+				</a>
 				<a href="https://www.php.net/" target="_blank" class="article">
 					<h2>¿Que es VML?</h2>
 					<p>
 						<strong>Vector Markup Language </strong> 
-					</p>
-				</a>
-				<a href="https://www.oracle.com/java/" target="_blank" class="article">
-					<h2>¿Que es PDF?</h2>
-					<p>
-						<strong>Portable Document Format </strong>
 					</p>
 				</a>
 			</section>
@@ -166,7 +143,7 @@
 		<article id="multimedia">
 			<header>
 				<a href="#">
-					<img class="index-back" src="assets/img/back.png" alt="volver">
+					<img class="index-back" src="assets/icon/back.png" alt="volver">
 				</a>
 				<h1>Contenido Multimedia</h1>
 			</header>
@@ -180,7 +157,8 @@
 					</p>
 				</header>
 				<p>
-					
+					El elemento audio incrusta este tipo de recursos en un documento. Aunque es muy fácil de utilizar, este elemento puede ser muy adaptable, poderoso y compatible con la mayoría de los navegadores.
+					Cualquier forma permite llenar el elemento con contenido alternativo, de modo que los navegadores que no lo soporten tengan algo que mostrar. Esto resulta muy útil para autores que necesiten desarrollen sitios compatibles con navegadores antiguos, ya que pueden proveer alternativas en reproductores de audio Flash o un mensaje que informe al usuario acerca del problema de soporte y posibles formas de resolverlo. Si el navegador soporta al elemento audio, el contenido alternativo será simplemente desestimado.
 				</p>
 				<a href="https://tools.ietf.org/html/rfc5334" target="_blank" class="article">
 					<h2>¿Que es OGG?</h2>
@@ -283,7 +261,7 @@
 		<article id="tablas">
 			<header>
 				<a href="#">
-					<img class="index-back" src="assets/img/back.png" alt="volver">
+					<img class="index-back" src="assets/icon/back.png" alt="volver">
 				</a>
 				<h1>Lenguaje de Marcas de Hipertexto</h1>
 			</header>
@@ -402,7 +380,7 @@
 			</section>
 		</article>
 		<a class="link" href="#">
-			<img class="index-back" src="assets/img/upload.png" alt="volver"/>
+			<img class="index-back" src="assets/icon/upload.png" alt="volver"/>
 		</a>
 	</main>
 	<footer id="footer">
@@ -446,27 +424,27 @@
 		<div class="social-media">
 			<a 	href="https://www.facebook.com/RacedoCristian" 
 				target="_blank">
-				<img src="assets/img/facebook.png" alt="Facebook"/>
+				<img src="assets/icon/facebook.png" alt="Facebook"/>
 			</a>
 			<a 	href="https://twitter.com/Racedo_Cristian" 
 				target="_blank">
-				<img src="assets/img/twitter.png" alt="Twitter"/>
+				<img src="assets/icon/twitter.png" alt="Twitter"/>
 			</a>
 			<a 	href="https://instagram.com" 
 				target="_blank">
-				<img src="assets/img/instagram.png" alt="Instagram"/>
+				<img src="assets/icon/instagram.png" alt="Instagram"/>
 			</a>
 			<a 	href="https://www.linkedin.com/in/racedocristian/" 
 				target="_blank">
-				<img src="assets/img/linkedin.png" alt="LinkdeIn"/>
+				<img src="assets/icon/linkedin.png" alt="LinkdeIn"/>
 			</a>
 			<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 				target="_blank">
-				<img src="assets/img/youtube.png" alt="YouTube"/>
+				<img src="assets/icon/youtube.png" alt="YouTube"/>
 			</a>
 			<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 				target="_blank">
-				<img src="assets/img/whatsapp.png" alt="Whatsapp"/>
+				<img src="assets/icon/whatsapp.png" alt="Whatsapp"/>
 			</a>
 		</div>
 		<iframe 
