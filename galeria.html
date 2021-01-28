@@ -3,12 +3,69 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			margin: 0;
+			font-family: segoe ui, helvetica, sans-serif;
+		}
+		main{
+			padding: 16px;
+		}
+		/* Selectores Multiples (,)*/
+		header, footer{
+			padding: 16px;
+			color: #eee; /* rrggbb => dec(0 - 255) hex(00 - ff) */
+			background-color: #248;
+		}
+		/* Selectores Especificos (padre hijo) */
+		nav ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background-color: #36c;
+		}
+		nav a{
+			color:#ddd;
+			text-decoration: none;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/* Selector :pseudo-clases (:)*/
+		nav li:hover{
+			background-color: rgba(51,51,51,.5);
+		}
+		/* Selector .clases (.) */
+		.example{
+			padding: 20px;
+			color:#124;
+			background-color: #ccc;
+		}
+		div.example{
+			text-align: center;
+		}
+		.example p{
+			overflow: hidden;
+			text-align: left;
+		}
+		.example p img{
+			width: 200px;
+			float: left;
+			margin-right: 8px;
+		}
+		/* Selector de #Id (#)*/
+		#footer a{
+			color:#eee;
+		}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;html> &amp; css</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta Relativa/Interna -->
 					<a href="index.html">Inicio</a>
@@ -23,11 +80,11 @@
 					<a href="https://github.com/c215714n/EducacionIT/tree/html-j-15hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
-		<ul>
+		<ul class="example">
 			<li>
 				<strong>Evitar el uso de espacios</strong> porque estos seran interpretados como el <em>conjunto %20</em> y por ende una imagen cuyo nombre es <em>"foto 01.jpg"</em> sera interpretado como <em>"foto%2001.jpg"</em> impiendo que el navegador encuentre el archivo. Una solucion a este inconveniente es el <strong>uso de guiones (-_)</strong> que si lo aplicamos al ejemplo daria como resultado <em>"foto-01.jpg"</em> que si seria encontrado por el navegador.
 			</li>
@@ -53,9 +110,62 @@
 				src="img/jjba-crazydiamond-04.jpg" 
 				alt="Dibujo Crazy Diamond (color)" />
 		</div>
-	</div>
-	<div id="footer">
-		
-	</div>
+		<div class="example">
+			<p>
+				<img src="img/usm-scorpion-01.jpg" alt="Dibujo Ultimate Spiderman - Scorpion">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur cum dolore deserunt ipsam temporibus officia vel numquam nemo assumenda mollitia! Harum deserunt deleniti saepe aliquam, natus odit in iure ad. 
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore culpa accusantium obcaecati excepturi dolores porro modi tenetur nulla vitae quam, dolorem, nostrum cumque nisi temporibus! Doloremque doloribus similique quam voluptate!
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsam, labore! Ex repellendus eveniet omnis deserunt ratione porro, necessitatibus esse, quis reprehenderit inventore dolor quibusdam sed perferendis distinctio optio harum.
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Tenetur ullam qui, tempora veniam fugit atque, neque quod facilis ad quo tempore cupiditate molestiae dolore nisi, ea, sed molestias quos quam!
+			</p>
+			<p>
+				<img src="img/usm-scorpion-02.jpg" alt="Dibujo Ultimate Spiderman - Scorpion">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur cum dolore deserunt ipsam temporibus officia vel numquam nemo assumenda mollitia! Harum deserunt deleniti saepe aliquam, natus odit in iure ad. 
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore culpa accusantium obcaecati excepturi dolores porro modi tenetur nulla vitae quam, dolorem, nostrum cumque nisi temporibus! Doloremque doloribus similique quam voluptate!
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsam, labore! Ex repellendus eveniet omnis deserunt ratione porro, necessitatibus esse, quis reprehenderit inventore dolor quibusdam sed perferendis distinctio optio harum.
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Tenetur ullam qui, tempora veniam fugit atque, neque quod facilis ad quo tempore cupiditate molestiae dolore nisi, ea, sed molestias quos quam!
+			</p>
+			<p>
+				<img src="img/usm-scorpion-03.jpg" alt="Dibujo Ultimate Spiderman - Scorpion">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur cum dolore deserunt ipsam temporibus officia vel numquam nemo assumenda mollitia! Harum deserunt deleniti saepe aliquam, natus odit in iure ad. 
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore culpa accusantium obcaecati excepturi dolores porro modi tenetur nulla vitae quam, dolorem, nostrum cumque nisi temporibus! Doloremque doloribus similique quam voluptate!
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsam, labore! Ex repellendus eveniet omnis deserunt ratione porro, necessitatibus esse, quis reprehenderit inventore dolor quibusdam sed perferendis distinctio optio harum.
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Tenetur ullam qui, tempora veniam fugit atque, neque quod facilis ad quo tempore cupiditate molestiae dolore nisi, ea, sed molestias quos quam!
+			</p>
+		</div>
+		<h2>Elementos Semanticos</h2>
+		<ul>
+			<li>
+				<strong>HEADER: </strong> Contenido introductorio, que representa al sitio, posee el H1 con el nombre la empresa o persona respresentada y responde a la pregunta <em>¿quienes somos?</em>
+				<ul>
+					<li><strong>NAV: </strong> Navegacion de la pagina, posee los links mas importantes del sitio y funciona como un indice. Solamente deben encontrase aqui los links principales</li>
+				</ul>
+			</li>
+			<li>
+				<strong>MAIN: </strong> Contenido Principal, representa la informacion que suele buscar el usuario/visitantes, posee la mayor cantidad de contenido y responde a la pregunta <em>¿que podemos ofrecerte?</em>
+				<ul>
+					<li>
+						<strong>ARTICLE: </strong> Contenido independiente, se utiliza para indicar que nuestro contenido funciona tanto dentro como fuera de la pagina, independientemente del contexto.
+					</li>
+					<li>
+						<strong>SECTION: </strong> Contenido contextualizado, se utiliza para establecer una relacion entre la etiqueta actual y algun contenido de la pagina, sin el cual no se entenderia la totalidad de la informacion. Es decir que depende del contexto.
+					</li>
+					<li>
+						<strong>ASIDE: </strong> Contenido Tangencial o informacion lateral, se utiliza cuando el contenido de la etiqueta guarda una relacion indirecta con sus elementos hermanos. Normalmente se suele implementar como barra de sugerencias o publicidad.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>FOOTER: </strong> Contenido final, suele poseer informacion o un formulario de contacto, mapa del sitio y enlaces a las redes sociales, tambien contiene informacion del autor y copyright. Responde a la pregunta <em>¿que mas podes hacer?</em>
+			</li>
+		</ul>
+	</main>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			| <a href="#"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
 </body>
 </html>
