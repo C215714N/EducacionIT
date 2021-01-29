@@ -10,6 +10,30 @@
 	imageList	= document.querySelectorAll('#header li')
 	spanList	= document.querySelectorAll('#header span')
 	// Eventos 
-		prev.onclick = () => changeItem()
-		next.onclick = () => changeItem()
+		prev.onclick = () => {
+			changeItem(imageList, false)
+			changeItem(spanList,false)
+		}
+		next.onclick = () => {
+			changeItem(imageList, true) 
+			changeItem(spanList,true)
+		}
 	// Obtener el elemento activo y cambiar
+		const changeItem = (itemList, type) => {
+			for(i = 0 ; i < itemList.length; i++){
+				if(itemList[i].classList.contains('active')){
+					itemList[i].classList.remove('active')
+					switch(type){
+						case true:
+							i < itemList.length - 1 ? 
+								nextItem = itemList[i + 1] : 
+								nextItem = itemList[0]
+						break;
+						case false:
+							i > 0 ?
+							nextItem = itemList[i - 1] :
+							nextItem = itemList[itemList.length - 1]
+						break;
+			}	}	} 
+			nextItem.classList.add('active')
+		}

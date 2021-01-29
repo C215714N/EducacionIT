@@ -64,7 +64,11 @@
 					<li>Unidades Flexibles</li>
 				</ul>
 			</article>
-			<article>
+			<article class="responsive">
+				<video src="assets/media/by-the-way.mp4" autoplay muted loop>
+					Lo sentimos, pero tu navegador no es compatible con el elemento video. Podes descargar el contenido desde el siguiente <a href="assets/media/by-the-way.mp4">LINK</a>
+				</video>
+				<button> PLAY </button>
 			</article>
 			<article></article>
 		</section>
@@ -78,30 +82,36 @@
 		</div>
 		<form action="" id="contact">
 			<h2>Formulario de contacto</h2>
-			<label for=""></label>
+			<label for="contactName">Nombre (*)</label>
 			<input 
 				type="text" 
-				id="contact" 
-				name="contact" 
-				placeholder="Ingrese su " 
+				id="contactName" 
+				name="contactName" 
+				placeholder="Ingrese su Nombre (*)" 
 				required />
-			<div class="valid"></div>
-			<label for=""></label>
+			<div class="valid">
+				Ingrese un nombre valido, sin numeros, ni simbolos.
+			</div>
+			<label for="contactEmail">Correo(*)</label>
 			<input 
-				type="text" 
-				id="contact" 
-				name="contact" 
-				placeholder="Ingrese su " 
+				type="email" 
+				id="contactEmail" 
+				name="contactEmail" 
+				placeholder="Ingrese su Correo (*)" 
 				required />
-			<div class="valid"></div>
-			<label for=""></label>
+			<div class="valid">
+				Ingrese una direccion de correo valida, respetando la estructura "usuario@servidor".
+			</div>
+			<label for="Phone">Telefono (*)</label>
 			<input 
-				type="text" 
-				id="contact" 
-				name="contact" 
-				placeholder="Ingrese su " 
+				type="tel" 
+				id="contactPhone" 
+				name="contactPhone" 
+				placeholder="Ingrese su Telefono (*)" 
 				required />
-			<div class="valid"></div>
+			<div class="valid">
+				Ingrese un numero de telefono valido con la caracteristica al comienzo
+			</div>
 			<label for="contactConsult">Consulta (*)</label>
 			<textarea 
 				id="contactConsult"
