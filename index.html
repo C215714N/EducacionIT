@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos HTML5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="assets/icon/cr.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
@@ -20,28 +21,28 @@
 				<li class="active"><a href="#">Inicio</a></li>
 				<li><a href="galeria.html">Galeria</a></li>				
 				<li><a href="#contacto">Contacto</a></li>				
-				<li><a href="https://github.com/C215714N/EducacionIT/tree/fundamentos-HTML" target="_blank">Repositorio</a></li>			
+				<li><a href="https://github.com/C215714N/EducacionIT/tree/fundamentos-HTML" target="_blank">Repositorio</a></li>	
 			</ul>	
 		</nav>
 	</header>
 	<main>
-		<ul class="index">
-			<h2>Tabla de Contenidos</h2>
-			<li><a href="#desarrolladores">Tipos de Desarrolladores</a></li>
-			<li><a href="#requerimientos">Requerimientos de un Sitio Web</a></li>
-			<li><a href="#html">Lenguaje de Marcas de Hipertexto</a></li>
-			<li><a href="#css">Hojas de Estilo en Cascada</a></li>
-		</ul>
+		<dl class="index">
+			<dt>Tabla de Contenidos</dt>
+			<dd><a href="#desarrolladores">Tipos de Desarrolladores</a></dd>
+			<dd><a href="#requerimientos">Requerimientos de un Sitio Web</a></dd>
+			<dd><a href="#html">Lenguaje de Marcas de Hipertexto</a></dd>
+			<dd><a href="#css">Hojas de Estilo en Cascada</a></dd>
+		</dl>
 		<article id="desarrolladores">
 			<header>
 				<a href="#">
 					<img class="index-back" src="assets/icon/back.png" alt="volver"/>
 				</a>
-				<h1>Tipos de Desarrolladores</h1>
+				<h2>Tipos de Desarrolladores</h2>
 			</header>
 			<section>
 				<header>
-					<h1>Front-End:</h1>
+					<h2>Front-End:</h2>
 					<p class="subtitle">
 						Desarrollo del lado del cliente 
 						<br>
@@ -53,21 +54,21 @@
 					Es una de las dos mitades en las que se divide la estructura de cualquier página web. Es lo que debe mostrar la identidad corporativa de una compañía dentro de Internet, la parte que puede atraer o alejar al consumidor cuando este accede a la página. De ahí que sea tan importante y requiera de tanto esfuerzo.
 				</p>
 				<a href="#html" class="article"> 
-					<h2>¿Que es HTML?</h2>
+					<h3>¿Que es HTML?</h3>
 					<p>
 						<strong>Hyper Text Markup Language </strong> 
 						corresponde a Lenguaje de Marcado de Hipertexto y se utiliza para el desarrollo de la Estructura de las paginas web mediante el uso de Etiquetas.
 					</p>				
 				</a>
 				<a href="#css" class="article">
-					<h2>¿Que es CSS?</h2>
+					<h3>¿Que es CSS?</h3>
 					<p>
 						<strong>Cascading Styles Sheets </strong> 
 						significa Hojas de Estilo en Cascada, son las que permiten definir el Estilo visual de un sitio web mediante el uso selectores y reglas previamente definidas.
 					</p>
 				</a>
 				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="article">
-					<h2>¿Que es JavaScript?</h2>
+					<h3>¿Que es JavaScript?</h3>
 					<p>
 						<strong>Js </strong> 
 						como se suele abreviar, es un lenguaje de Programación Orientada a Objetos y se utiliza para darle funcionalidad a los elementos dentro de nuestra pagina web.
@@ -77,7 +78,7 @@
 			<hr/>
 			<section>
 				<header>
-					<h1>Back-End:</h1>
+					<h2>Back-End:</h2>
 					<p class="subtitle">
 						Desarrollo del lado del servidor 
 						<br>
@@ -90,21 +91,21 @@
 					Un desarrollador Back end debe tener amplios conocimientos de lenguajes: frameworks y los tipos de base de datos. No siendo necesario conocer todos los lenguajes pero sí entender y saber trabajar con algunos de ellos.
 				</p>
 				<a href="https://www.ibm.com/ar-es/cloud/databases" target="_blank" class="article">
-					<h2>¿Que es SQL?</h2>
+					<h3>¿Que es SQL?</h3>
 					<p>
 						<strong>Structured Query Language </strong> 
 						es utilizado para obtener información de una Base de Datos con comandos que permiten seleccionar, insertar, actualizar los datos, etc.
 					</p>				
 				</a>
 				<a href="https://www.php.net/" target="_blank" class="article">
-					<h2>¿Que es PHP?</h2>
+					<h3>¿Que es PHP?</h3>
 					<p>
 						<strong>Hypertext PreProcessor </strong> 
 						es un lenguaje utilizado para el desarrollo de paginas web dinámicas, el código se ejecuta en el servidor y luego se incrusta dentro del código HTML.
 					</p>
 				</a>
 				<a href="https://www.oracle.com/java/" target="_blank" class="article">
-					<h2>¿Que es JAVA?</h2>
+					<h3>¿Que es JAVA?</h3>
 					<p>
 						Lenguaje de programación independiente de las plataformas y 
 						<strong> orientado a objetos </strong>, 
@@ -115,7 +116,7 @@
 			<hr/>
 			<section>
 				<header>
-					<h1>Full-Stack:</h1>
+					<h2>Full-Stack:</h2>
 					<p class="subtitle">
 						Proceso de Desarrollo
 						<br>
@@ -128,19 +129,19 @@
 					además de manejar diferentes sistemas operativos y lenguajes de programación. Es una pieza fundamental en los departamentos de desarrollo de cualquier empresa. Conoce cómo se diseña la aplicación web basándose en principios del diseño UX/UI y además, sabe programarla.
 				</p>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es un VCS?</h2>
+					<h3>¿Que es un VCS?</h3>
 					<p>
 						Un Sistema de Control de Versiones consiste en la gestión de cambios en los elementos de un producto o configuración del mismo, de forma manual o mediante una herramienta. Una versión, revisión o edición, es el estado en el que se encuentra en un momento dado de su desarrollo o modificación.
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es una Biblioteca?</h2>
+					<h3>¿Que es una Biblioteca?</h3>
 					<p>
 						Conjunto de implementaciones codificadas, que ofrecen una interfaz definida para una funcion determinada. Una biblioteca no suele ser utilizada de forma autónoma; su finalidad es la de ser utilizada por otros programas, independientes, de forma simultánea; aunque pueden requerir de otras para funcionar
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es un Framework?</h2>
+					<h3>¿Que es un Framework?</h3>
 					<p>
 						Es una estructura conceptual y tecnológica de asistencia definida, generalmente, con artefactos o módulos concretos de software. Puede incluir soporte para ciertos programas, bibliotecas, y un lenguaje interpretado, para ayudar a desarrollar y, de esta manera, unir los diferentes componentes de un proyecto.
 					</p>
@@ -152,11 +153,11 @@
 				<a href="#">
 					<img class="index-back" src="assets/icon/back.png" alt="volver">
 				</a>
-				<h1>Requerimientos de un Sitio Web</h1>
+				<h2>Requerimientos de un Sitio Web</h2>
 			</header>
 			<section>
 				<header>
-					<h1>Dominio</h1>
+					<h2>Dominio</h2>
 					<p class="subtitle">
 						Sistema de Nombres 
 						<br>
@@ -168,14 +169,14 @@
 					Los servidores DNS son los encargados resolver estas direcciones y asociarlas con los nombres de Dominio registrados, de esta manera podemos acceder a <strong>nic.ar</strong> ingresando el nombre en el navegador sin necesidad de ingresar la direccion IP:<strong> 200.108.145.10</strong> en la barra de direcciones.
 				</p>
 					<a href="https://www.iana.org/domains" target="_blank" class="article">
-						<h2>¿Que es TLD?</h2>
+						<h3>¿Que es TLD?</h3>
 						<p>
 							Dominio de Nivel Superior es la categoría más alta resuelta por los DNS oficiales de Internet, administrados por la 
 							<strong> Internet Corporation for Assigned Names and Numbers (ICANN)</strong>
 						</p>
 					</a>
 					<a href="https://www.icann.org/resources/pages/gtld-2012-02-25-en" target="_blank" class="article"> 
-						<h2>¿Que es gTLD?</h2>
+						<h3>¿Que es gTLD?</h3>
 						<p>
 							Un Dominio de Nivel Superior Generico posee tres letras o mas, como 
 							<strong> .com </strong>. 
@@ -183,7 +184,7 @@
 						</p>
 					</a>
 					<a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank" class="article">
-						<h2>¿Que es ccTLD?</h2>
+						<h3>¿Que es ccTLD?</h3>
 						<p>
 							El Dominio de Nivel Superior Geografico es usado por un país o un territorio dependiente. Implementa los códigos de país de 2 letras asignados por la 
 							<strong> ISO 3166-1 </strong>, 
@@ -194,7 +195,7 @@
 			<hr/>
 			<section>
 				<header>
-					<h1>Hosting</h1>
+					<h2>Hosting</h2>
 					<p class="subtitle">
 						Almacenamiento Web 
 						<br>
@@ -206,14 +207,14 @@
 					<em> "hospedaje o alojamiento en hoteles o habitaciones" </em> donde uno ocupa un lugar específico, en este caso la analogía alojamiento web o alojamiento de páginas web, se refiere al lugar que ocupa una página web, sitio web, sistema, correo electrónico, archivos, en Internet o más específicamente en un servidor, que por lo general hospeda varias aplicaciones o páginas web.
 				</p>
 				<a href="https://tools.ietf.org/html/rfc6101" target="_blank" class="article">
-					<h2>¿Que es SSL?</h2>
+					<h3>¿Que es SSL?</h3>
 					<p>
 						La tecnología <strong> Capa de Socket Segura </strong> 
 						utiliza algoritmos de cifrado, codifica los datos que se transmiten e impide que agentes externos los lean al enviarlos a través de la conexión.
 					</p>				
 				</a>
 				<a href="https://tools.ietf.org/html/rfc821" target="_blank" class="article">
-					<h2>¿Que es SMTP?</h2>
+					<h3>¿Que es SMTP?</h3>
 					<p>
 						Un servidor SMTP permite el envio de correo corporativo con el 
 						<strong> Protocolo de Transferencia Simple de Correo </strong>. 
@@ -221,7 +222,7 @@
 					</p>
 				</a>
 				<a href="https://tools.ietf.org/html/rfc959" target="_blank" class="article">
-					<h2>¿Que es FTP?</h2>
+					<h3>¿Que es FTP?</h3>
 					<p>
 						Un cliente FTP es un programa que emplea el 
 						<strong> Protocolo de Transferencia de Archivos </strong> 
@@ -235,11 +236,11 @@
 				<a href="#">
 					<img class="index-back" src="assets/icon/back.png" alt="volver">
 				</a>
-				<h1>Lenguaje de Marcas de Hipertexto</h1>
+				<h2>Lenguaje de Marcas de Hipertexto</h2>
 			</header>
 			<section>
 				<header>
-					<h1>Standard</h1>
+					<h2>Standard</h2>
 					<p class="subtitle">
 						Organizaciones involucradas
 						<br>
@@ -252,21 +253,21 @@
 					no se incrusta directamente en el código de la página, sino que se hace referencia a la ubicación del mismo mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web, <strong>interprete del código</strong>, la tarea de unir todos los elementos y visualizar la página final.
 				</p>
 				<a href="https://www.iso.org/standard/16387.html" target="_blank" class="article"> 
-					<h2>¿Que es SGML?</h2>
+					<h3>¿Que es SGML?</h3>
 					<p>
 						<strong>Standard Generalized Markup Language </strong> 
 						es una norma ISO derivada de <em>GML de IBM</em>, corresponde a Lenguaje de Señalización General Normalizado. Este permite que la estructura del documento pueda ser definida en base a la relación lógica de sus partes.
 					</p>				
 				</a>
 				<a href="https://www.w3.org/" target="_blank" class="article">
-					<h2>¿Que es la W3C?</h2>
+					<h3>¿Que es la W3C?</h3>
 					<p>
 						<strong>World Wide Web Consortium </strong>, es un consorcio internacional fundado en 1994 y dirigido por Tim Berners-Lee, 
 						<em> el creador original del URL </em>, genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a largo plazo.
 					</p>
 				</a>
 				<a href="https://whatwg.org/" target="_blank" class="article">
-					<h2>¿Que es la WHATWG?</h2>
+					<h3>¿Que es la WHATWG?</h3>
 					<p>
 						La comunidad de <strong> Web Hypertext Application Technology Working Group </strong>
 						compusesta de personas y empresas que se interesan en la evolución de HTML y las tecnologías conexas. Fue fundado por integrantes de 
@@ -277,7 +278,7 @@
 			<hr/>
 			<section>
 				<header>
-					<h1>Elementos</h1>
+					<h2>Elementos</h2>
 					<p class="subtitle">
 						Tipos de Marcado HTML 
 						<br>
@@ -290,7 +291,7 @@
 					Tambien sirve para referirse al contenido del tipo de <strong>MIME text/html</strong> o todavía más ampliamente como un término genérico, ya sea en <em>forma descendida de <strong>XML</strong> como XHTML 1.0 o posterior</em>, o en <em>forma descendida directamente de <strong>SGML</strong> como HTML 4.0 o anterior</em>.
 				</p>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Estructural?</h2>
+					<h3>¿Que es Estructural?</h3>
 					<p> 
 						<strong>El marcado estructural </strong>
 						describe el propósito del texto, no define cómo se verá el elemento, pero la mayoría de los navegadores web han estandarizado el formato de los elementos. La etiqueta
@@ -298,7 +299,7 @@
 					</p>				
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Presentacional?</h2>
+					<h3>¿Que es Presentacional?</h3>
 					<p> 
 						<strong>El Marcado presentacional </strong>
 						describe cual es la apariencia del texto, sin importar su funcion. La mayoria de este fue desechada desde la versión 4.01, en favor de la implementacion de CSS. 
@@ -307,7 +308,7 @@
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Hipertextual?</h2>
+					<h3>¿Que es Hipertextual?</h3>
 					<p> 
 						<strong>El marcado hipertextual </strong>
 						se utiliza para enlazar partes del documento con otros documentos o con otras partes del mismo. Es necesario utilizar la etiqueta ancla <strong>&lt;a&gt;</strong>...<strong>&lt;/a&gt;</strong> con el atributo <strong>href</strong>, que establecerá la dirección <em>URL</em> a la que apunta el enlace.
@@ -317,7 +318,7 @@
 			<hr/>
 			<section>
 				<header>
-					<h1>Atributos</h1>
+					<h2>Atributos</h2>
 					<p class="subtitle">
 						Tipos de los Elementos
 						<br>
@@ -329,21 +330,21 @@
 					Cada elemento HTML pertenece a cero, uno o varios modelos de contenido. Un modelo establece las reglas que el contenido del elemento debe cumplir en un documento HTML-conformant.
 				</p>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Block?</h2>
+					<h3>¿Que es Block?</h3>
 					<p> 
 						Son elementos que <strong>ocupan todo el espacio de su contenedor</strong>, 
 						cada vez que se presenta uno se hace un <em>salto de linea</em> de manera predeterminada, siendo estos representados en <em>lineas independientes</em>.
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es inline?</h2>
+					<h3>¿Que es inline?</h3>
 					<p>
 						Son elementos cuyo <strong> contenido se muestra en una misma linea</strong>, 
 						de modo que si colocamos dos o más de estos, sin implementar algun salto de linea, estos se veran presentados de <em>manera consecutiva</em>.
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Inline-Block?</h2>
+					<h3>¿Que es Inline-Block?</h3>
 					<p> 
 						Son aquellos elementos de <strong> comportamiento intermedio</strong>, 
 						fluyen con el texto y demás elementos como si fueran elementos <em>inline</em> y además respetan el ancho, el alto y los márgenes verticales.
@@ -356,11 +357,11 @@
 				<a href="#">
 					<img class="index-back" src="assets/icon/back.png" alt="volver">
 				</a>
-				<h1>Hojas de Estilo en Cascada</h1>
+				<h2>Hojas de Estilo en Cascada</h2>
 			</header>			
 			<section>
 				<header>
-					<h1>Estilos CSS</h1>
+					<h2>Estilos CSS</h2>
 					<p class="subtitle">
 						Tipos de Implementación
 						<br>(Inline - Internal - External)
@@ -371,7 +372,7 @@
 					Con CSS, se puede controlar el color, la fuente, el tamaño del texto, el espacio entre los elementos, cómo se colocan y distribuyen los elementos, qué imágenes de fondo o colores de fondo se utilizarán, diferentes pantallas para diferentes dispositivos y tamaños de pantalla, y muchas otras cosas más.
 				</p>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Inline CSS?</h2>
+					<h3>¿Que es Inline CSS?</h3>
 					<p>
 						Se utiliza CSS en línea para aplicar estilo a un único elemento HTML mediante el atributo
 						<strong> &lt;body style="..."&gt; </strong> 
@@ -379,7 +380,7 @@
 					</p>				
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Internal CSS?</h2>
+					<h3>¿Que es Internal CSS?</h3>
 					<p>
 						Se usa un CSS interno para definir un estilo para una sola página HTML.
 						Se define en la seccion
@@ -389,7 +390,7 @@
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es External CSS?</h2>
+					<h3>¿Que es External CSS?</h3>
 					<p>
 						Las Hojas de Estilo Externa se usan para definir el estilo de multiples páginas HTML.
 						En la seccion <strong>&lt;head&gt;</strong> de cada página se agrega 
@@ -400,7 +401,7 @@
 			<hr/>
 			<section>
 				<header>
-					<h1>Selectores</h1>
+					<h2>Selectores</h2>
 					<p class="subtitle">
 						Escala Jerarquica
  						<br> (Tag - Class - Id)
@@ -415,14 +416,14 @@
 					<strong> elemento del DOM</strong>, el selector de ID y de clase, el de atributo, el de pseudoclase y el de pseudoelemento.
 				</p>
 				<a href="https://google.com/search?=" class="article"> 
-					<h2>¿Que es Tag selector?</h2>
+					<h3>¿Que es Tag selector?</h3>
 					<p> 
 						Un selector de etiqueta permite indicar a cual de los elementos se les debe aplicar un estilo determinado mediante el nombre del mismo.
 						<strong> p{...} </strong> selecciona a todos los parrafos.
 					</p>				
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Class selector?</h2>
+					<h3>¿Que es Class selector?</h3>
 					<p> 
 						Para seleccionar elementos con una clase específica, debe escribirse un
 						<em> carácter de punto </em>
@@ -432,7 +433,7 @@
 					</p>
 				</a>
 				<a href="https://google.com/search?=" class="article">
-					<h2>¿Que es Id selector?</h2>
+					<h3>¿Que es Id selector?</h3>
 					<p>
 						Para seleccionar un elemento con Id debe escribirse un
 						<em> carácter hash </em>
@@ -468,8 +469,9 @@
 				placeholder="Correo: cristiandracedo@hotmail.com" 
 				multiple required
 			/>
+			<label for="tipo">Tipo</label>
 			<select id="tipo" name="tipo" required>
-				<option disabled selected>Practical Web Development</option>
+				<option value="" hidden>Practical Web Development</option>
 				<option value="fewd">FrontEnd Web Development</option>
 				<option value="bewd">BackEnd Web Development</option>
 				<option value="fswd">FullStack Web Development</option>
@@ -512,8 +514,7 @@
 			</a>
 		</div>
 		<iframe 
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar" 
-			allowfullscreen="" 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar"
 			aria-hidden="false">
 		</iframe>
 		<p>

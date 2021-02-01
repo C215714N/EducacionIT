@@ -1,32 +1,26 @@
 /*Formato General*/
-	body,
-	.menu,
-	a{
+	*{ font-family: "century gothic", "segoe ui", sans-serif; }
+	body, .menu, a{
 		margin: 0;
 		padding: 0;
 		color: #124;
 		text-decoration: none;
-		font-family: century gothic, segoe ui, sans-serif;
 	}
-	.subtitle{
-		margin:-5px 0 0;
+	h1, h2, h3{
+		margin:0;
+		padding:0;
 	}
+	main p{text-align: left;}
+	.subtitle{ margin:-5px 0 0; }
+	hr{ border: 1px solid #dedede; }
 /*Encabezado y Pie de Pagina*/
-	#header, 
-	#footer{
+	#header, #footer{
 		padding: 20px 0 0 0;
 		color: #ccd;
 		background-color: #124;
 		text-align: center;
 	}
-	h1{
-		margin:0;
-		padding:0;
-	}
-	#footer, 
-	#footer p{
-		padding: 5px 0;
-	}
+	#footer, #footer p{ padding: 5px 0; }
 	#footer iframe{
 		border:none;
 		width: 100%;
@@ -36,16 +30,13 @@
 		color:#ccc;
 		font-weight: bold;
 	}
-/*Barra Navegacion*/
+/*Barra de Navegacion*/
 	nav{
 		overflow: hidden;
-		margin:10px 0;
-		padding: 5px 15px 0;
+		max-height: 50px;
+		margin: 10px 0;
+		padding: 5px 10px 0;
 		background-color: #ccd;
-	}
-	.menu{
-		float: left;
-		list-style: none;
 	}
 	.menu li{
 		display: inline-block;
@@ -53,16 +44,16 @@
 		border-radius: 10px 10px 0 0;
 		line-height: 30px;
 	}	
-	.menu li:hover, 
-	.active{
+	.menu li:hover, .active{
 		opacity: 1;
 		background-color: white;
 	}
 /*Redes Sociales*/
 	.social-media{
+		overflow: hidden;
+		max-height: 50px;
 		background-color: #ccd;
 		text-align: center;
-		height: 50px;
 	}
 	.social-media img{
 		height: 20px;
@@ -78,7 +69,7 @@
 /*Tabla de Contenidos*/
 	.index{
 		list-style: none;
-		width: 380px;
+		max-width: 380px;
 		margin: 0 auto 2.5%;
 		border: 0;
 		border-radius: 15px;
@@ -87,18 +78,16 @@
 		padding: 12.5px;
 		text-align: left;
 	}
-	.index h2{
-		margin: 5px 0;
-		padding: 0 20px;
+	.index dt{
+		margin: 5px -20px;
+		padding: 5px 20px;
 		color: #dedede;
 		background-color: #124;
+		font-weight: bold;
+		font-size: 24px;
 	}
-	.index li{
-		padding: 0 25px;
-	}
-	.index li:hover{
-		background-color: #ccd;
-	}
+	.index dd{ margin: 0; padding: 0 25px; }
+	.index dd:hover{ background-color: #ccd; }
 /*Menu Principal*/
 	article .index-back{
 		float: right;
@@ -107,8 +96,7 @@
 		padding: 10px;
 		opacity: .25;
 	}
-	article .index-back:hover,
-	.link:hover{
+	article .index-back:hover, .link:hover{
 		width:50px;
 		height:50px;
 		padding: 0;
@@ -142,51 +130,35 @@
 		overflow: hidden;
 		margin: 8px auto;
 		border-radius: 15px;
-		padding: 0 0 10px;
+		padding: 0 0 20px;
 		box-shadow: 0 0 20px grey;
 		opacity: .95;
 	}
-	main article:target{
-		display: block;
-	}
-	main header{
-		padding: 5px 0;
-	}
-	main,
-	article,
-	section{
-		padding: 8px auto;
-	}
-	section h1, 
+	main article:target{ display: block; }
+	main header{ padding: 5px 0; }
+	main article, main section{ padding: 8px 0; }
+/*Secciones de Contenido*/
 	section h2, 
+	section h3, 
 	main .subtitle{
 		padding: 5px;
 		color: #ccd;
 		background-color: #124;
 		text-align: left;
 	}
-	article h1{
-		padding: 10px 2.5% 0;
-	}
-	main section{
-		padding: 10px auto;
-	}
-	section h1, 
-	section .subtitle{
-		padding-left: 10px;
-	}
+	article h2{	padding: 10px 2.5% 0; }
+	main section{ padding: 10px 0; }
+	section h2, section .subtitle{ padding-left: 10px; }
 	section > p{
 		width: 95%;
 		margin: 12px auto;
 		text-align: justify;
 	}
-	article > header{
-		padding-left:90px;
-	}
-/*Secciones de Definicion*/
+	article > header{ padding-left:90px; }
+/*Articulos de Definicion*/
 	.article{
 		display: inline-block;
-		width: 365px;
+		max-width: 365px;
 		margin: 4px;
 		border-radius: 10px;
 		padding: 10px;		
@@ -197,57 +169,43 @@
 		opacity: 1;
 		box-shadow: 0 0 16px grey inset;
 	}
-	.article p{
-		margin-top:8px;
-	}
-	.article audio,
-	.article img,
-	.article video,
-	.article iframe{
+	.article audio, .article img, .article video, .article iframe{
 		width:100%;
 		outline: none;
 		border-radius: 5px;
 		box-shadow: 0px 0px 5px grey;
 	}
-	.article audio{
-		border-radius: 32px;
-	}
-	hr{ border: 1px solid #dedede; }
+	.article audio{ border-radius: 32px; }
+	.article p{	margin-top:8px; }
 /*Formulario de Contacto*/
 	#contacto{
+		width: 90%;
 		text-align: left;
-		width: 420px;
+		max-width: 420px;
+		padding: 4px;
 		margin: auto;
 		padding: 20px 0 5px;
 	}
-	#contacto label,
-	#contacto input,
-	#contacto textarea,
-	#contacto select{
-		width: 400px;
-		margin: 5px auto;
+	#contacto label, #contacto input, #contacto textarea, #contacto select{
+		width: calc(100% - 20px);
+		margin: 5px 0;
 		outline: none;
 		border: 0;
 		border-radius: 8px;
 		padding: 10px;
 		resize: none;
 		font-weight: bold;	
-		font-size: 16px;	
-		font-family: century gothic, segoe ui, sans-serif;
+		font-size: 16px;
 	}
-	#contacto label{
-		display: none;
-	}
-	#contacto select{
-		width:420px;
-	}
+	#contacto label{ display: none; }
+	#contacto select{ width: calc(100%); }
 	#contacto textarea{
 		height: 80px;
 		margin-bottom: 0;
 		border-radius: 8px 8px 0 0;
 	}
 	#contacto button{
-		width: 420px;
+		width: 100%;
 		margin: -5px auto 10px;
 		border: 2px solid #ccc;
 		border-radius: 0 0 8px 8px;
@@ -255,8 +213,7 @@
 		color: #124;
 		background-color: #ccd;
 		font-weight: bold;	
-		font-size: 16px;	
-		font-family: century gothic, segoe ui, sans-serif;
+		font-size: 16px;
 	}
 	#contacto button:hover{
 		color:#ccc;

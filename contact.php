@@ -9,7 +9,7 @@
 		<strong> Consulta: </strong> $consulta
 	";	
 	
-	mail(
+	/*mail(
 		"CristianDRacedo@hotmail.com",
 		$tipo,	
 		$mensaje,
@@ -17,8 +17,10 @@
 		\n Reply-To: $email
 		\n Content-Type: text/html;
 		\n charset=utf-8"
-	);
+	);*/
+
+	echo($mensaje);
 	
 	header(
-		"location: https://hotmail.com"
+		"location: https://c215714n.github.io/EducacionIT"
 	);
