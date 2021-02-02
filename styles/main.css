@@ -204,7 +204,7 @@ nav {
   color: #572ee5;
   background-color: #fefefe;
   margin: 0;
-  border: 0;
+  border-top: 0.2rem solid #572ee5;
   padding: 0.5rem 0;
   display: flex;
   flex-direction: row;
@@ -217,7 +217,6 @@ nav {
   bottom: unset;
   right: unset;
   z-index: 3;
-  border-top: 0.2rem solid #572ee5;
   /*menu principal*/
   /*menu desplegable*/
 }
@@ -282,6 +281,10 @@ nav .menu {
   }
 }
 nav .menu li {
+  margin: 0;
+  border: 0;
+  padding: 0.5rem 0;
+  position: relative;
   /*modo diurno / nocturno */
   /*crear gifo*/
 }
@@ -313,49 +316,54 @@ nav .menu li a {
     background-color: transparent;
   }
 }
-nav .menu li a::after {
-  margin: 1rem 0 0;
-  border: none;
-  padding: 0;
-  content: "";
-  display: block;
-  width: 60%;
-  height: 1px;
-  background-color: #fefefe;
-}
-@media screen and (min-width: 768px) {
-  nav .menu li a::after {
-    display: none;
-  }
-}
 nav .menu li:first-child label {
   display: inline-block;
-  color: #572ee5;
-  background-color: #fefefe;
+  color: #fefefe;
+  background-color: transparent;
   margin: 0;
   border: 0;
   padding: 0.5rem 1rem;
   font-weight: bold;
   cursor: pointer;
-  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  nav .menu li:first-child label {
+    color: #572ee5;
+    background-color: transparent;
+  }
 }
 nav .menu li:first-child label:after {
   content: " Nocturno";
+}
+nav .menu li label::before,
+nav .menu li a::after {
+  content: "";
+  position: absolute;
+  top: unset;
+  left: calc(50% - 20px);
+  bottom: 0;
+  right: unset;
+  z-index: 1;
+  width: 40px;
+  height: 1px;
+  background-color: #fefefe;
+}
+@media screen and (min-width: 768px) {
+  nav .menu li label::before,
+nav .menu li a::after {
+    display: none;
+  }
 }
 nav .menu li:last-child a {
   margin: 0;
   border: 0;
   padding: 0.25rem;
-  display: none;
   border-radius: 50%;
   width: 2.25rem;
   font-size: 1.5rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  nav .menu li:last-child a {
-    display: block;
-  }
   nav .menu li:last-child a:hover {
     color: #fefefe;
     background-color: #572ee5;
@@ -1036,8 +1044,13 @@ main article.active img {
   border: 0;
   padding: 0.5rem;
   position: relative;
+  width: 90%;
+  height: auto;
   max-width: 480px;
   max-height: 360px;
+}
+main article.active p {
+  width: 60%;
 }
 main article.active .hidden {
   margin: 0.5rem;
@@ -1049,7 +1062,7 @@ main article.active .hidden {
   align-items: center;
   flex-wrap: wrap;
   position: static;
-  width: 100%;
+  width: 90%;
   max-width: 480px;
   text-align: left;
 }
@@ -1074,9 +1087,8 @@ main .fav.active {
   color: #060212;
   background-color: #fefefe;
   margin: 0;
-  border: 0;
-  padding: 1rem;
   border-bottom: 0.2rem solid #572ee5;
+  padding: 1rem;
   text-align: center;
   /*redes sociales*/
 }
@@ -1087,6 +1099,8 @@ main .fav.active {
 }
 #footer .social {
   margin: 3rem auto;
+  border: 0;
+  padding: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   #footer .social {

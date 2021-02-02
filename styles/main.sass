@@ -16,10 +16,10 @@ $icons: logo, search, link, fav, trash, max, close, download, facebook, instagra
 =mode($color: $color, $bg_color:$bg_color)
 	color: $color
 	background-color: $bg_color
-=normalize($m:0, $b:0, $p: 1rem)
-	margin: $m
-	border: $b
-	padding: $p
+=normalize($m:0, $b:0, $p: 1rem, $ba: border, $ma: margin, $pa: padding)
+	#{$ma}: $m
+	#{$ba}: $b
+	#{$pa}: $p
 =flexbox($fd: row, $fj: space-between, $fa: center, $fw: wrap, $f: flex)
 	display: $f
 	flex-direction: $fd
@@ -83,10 +83,9 @@ body
 /*barra de navegacion*/
 nav
 	+mode
-	+normalize($p: .5rem 0)
+	+normalize(0, .2rem solid $color, .5rem 0, border-top)
 	+flexbox
 	+position(sticky, 3, 0)
-	border-top: .2rem solid $color
 	@media screen and (min-width: $md)
 		padding: .2rem 1rem
 		#menu
@@ -121,6 +120,8 @@ nav
 			height: auto
 			background-color: transparent
 		li
+			+normalize($p: .5rem 0)
+			position: relative
 			@media screen and (min-width: $md)
 				border-bottom: .2rem solid transparent
 				&:not(:last-child):hover
@@ -135,37 +136,36 @@ nav
 				font-weight: bold
 				@media screen and (min-width: $md)
 					+mode($color, transparent)
-				&::after
-					+normalize(1rem 0 0, none, 0)
-					content: ''
-					display: block
-					width: 60%
-					height: 1px
-					background-color: $bg_color
-					@media screen and (min-width: $md)
-						display: none
 			/*modo diurno / nocturno */
 			&:first-child
 				label
 					display: inline-block
-					+mode
+					+mode($bg_color, transparent)
 					+normalize($p: .5rem 1rem)
 					font-weight: bold
 					cursor: pointer
-					background-color: transparent
+					@media screen and (min-width: $md)
+						+mode($color, transparent)
 					&:after
 						content:' Nocturno'
+			label::before, 
+			a::after
+				content: ''
+				+position($b: 0, $l: calc(50% - 20px))
+				width: 40px
+				height: 1px
+				background-color: $bg_color
+				@media screen and (min-width: $md)
+					display: none
 			/*crear gifo*/
 			&:last-child
 				a
 					+normalize($p: .25rem)
-					display: none
 					border-radius: 50%
 					width: 2.25rem
 					font-size: 1.5rem
 					text-align: center
 					@media screen and (min-width: $md)
-						display: block
 						&:hover
 							+mode($bg_color, $color)
 				&.active a
@@ -540,13 +540,17 @@ main
 		img
 			+normalize(4.2rem auto .5rem, 0, .5rem)
 			position: relative
+			width: 90%
+			height: auto
 			max-width: 480px
 			max-height: 360px
+		p
+			width: 60%
 		.hidden
 			+normalize(.5rem, none, .5rem)
 			+flexbox
 			position: static
-			width: 100%
+			width: 90%
 			max-width: 480px
 			text-align: left
 			.close
@@ -560,15 +564,14 @@ main
 		background-size: 1.25rem !important
 #footer
 	+mode(darken($color, 50%), $bg_color)
-	+normalize
-	border-bottom: .2rem solid $color
+	+normalize(0, .2rem solid $color, 1rem, border-bottom)
 	text-align: center
 	a
 		+mode(darken($color, 20%), transparent)
 		font-weight: bold
 	/*redes sociales*/
 	.social
-		margin: 3rem auto
+		+normalize(3rem auto, 0, .5rem)
 		@media screen and (min-width: $md)
 			+flexbox
 			margin: 0

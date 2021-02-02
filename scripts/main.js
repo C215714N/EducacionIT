@@ -45,6 +45,9 @@
 		const gifArea	= document.querySelector('#mis_gifos div')
 		const noGifs	= document.querySelector('#mis_gifos .noItems')
 /*	Funciones y Metodos	*/
+		const setCookie = () =>{
+			
+		}
 	//	Consulta API Giphy
 		const fetchAPI = (url, editArea, buildArea, type = 'result') => { 
 			fetch(url).then( response => response.json()
@@ -119,7 +122,6 @@
 				clock(); recTime = setInterval( clock , 999 )
 			}
 			const clock = () => {
-			    var mAux, sAux;
 			    s++; if(s > 59){ m++; s=0 }
 			    s < 10 ? sAux = "0" + s : sAux = s
 			    m < 10 ? mAux = "0" + m : mAux = m
