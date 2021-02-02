@@ -53,6 +53,8 @@
         UNIQUE KEY(codigo),
         FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor) -- relacion clave externa (campo_local) tabla_ext(campo_ext)
 	);
-    
+    ALTER TABLE productos
+		MODIFY codigo VARCHAR(20) NOT NULL;
+        
     SHOW TABLES; 
     DESCRIBE clientes;

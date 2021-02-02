@@ -1,5 +1,5 @@
 USE store;
-/*CARGA DE DATOS*/
+/*CARGA DE DATOS - CLIENTES*/
 	## carga completa
 	INSERT INTO clientes
     values (
@@ -14,12 +14,10 @@ USE store;
         "abel.racedo@gmail.com",	-- email
         "su casa 93, Temperley"		-- direccion
         );
-        
 	## carga selectiva
 	INSERT INTO clientes(apellido, nombre, fecha_nac, tipo_doc, num_doc) -- elegimos los campos
 		VALUES('Racedo', 'Cristian', '1991-04-18', 1, 35335335); -- valores
 	SELECT * FROM clientes;
-    
     ## carga multiple
 	INSERT INTO clientes(apellido, nombre, sexo, tipo_doc, num_doc)
 		VALUES 
@@ -28,5 +26,59 @@ USE store;
             ("Perez","Perla", 2, 1, 19191919),
             ("Diaz","Diana", 1, 2, 38383838),
             ("Gimenez","Gerardo", 1, 5, 35353535);
-            
 	SELECT * FROM clientes;
+/* CARGA DE DATOS - PROVEEDORES */
+	INSERT INTO proveedores (proveedor, cuil)
+		VALUES
+			("HP","30-54203455-2"),
+			("ASUS","20-07605519-0"),
+			("COMFORT","30-71129323-6"),
+			("SAMSUNG","3068412579-2"),
+			("MOTOROLA","30-71124798-6"),
+			("CANON","30-52030624-9"),
+			("COCA COLA","30-51757696-0"),
+			("CRIOLLITA","30-50927711-3");
+	SELECT * FROM proveedores;
+    
+/*CARGA DE DATOS - PRODUCTOS*/
+	INSERT INTO productos(articulo, codigo, categoria, valoracion, id_proveedor)
+		VALUES 
+			("aire acond.","0011", 2, 2, 4),
+			("gaseosa", "0012",4, 3, 7),
+			("colchon","0013", 2, 3, 6),
+			("televisor", "0014",1, 4, 4),
+			("impresora","0015", 1, 5, 4),
+			("impresora", "0016",1, 2, 5),
+			("heladera","0017", 2, 3, 2),
+			("microondas", "0018",2, 3, 5);
+	SELECT * FROM productos;
+    TRUNCATE productos;
+
+/* CONSULTAS DE DATOS */
+	## productos con valoracion 3 ordenados por nombre, solo 5 a partir  del producto 5 (6-10)
+	SELECT * FROM productos
+		WHERE valoracion = 3
+        ORDER BY articulo DESC -- orden de la consulta default(ASC)
+        LIMIT 5 -- limite de resultados X para mostrar
+        OFFSET 5; -- a partir de la posicion X en adelante
+
+	## producto con mas de 3 estrellas
+    SELECT id_producto, articulo, codigo, categoria, valoracion
+    FROM productos
+    WHERE valoracion > 3
+    ORDER BY valoracion DESC;
+
+	## proveedores que empiecen con la letra C
+	SELECT proveedor, cuil
+    FROM proveedores
+    WHERE proveedor LIKE "C%"; -- %: cualquier cantidad de caracteres
+
+	## Clientes cuyo apellido termina con Z y cuya segunda letra sea o
+    SELECT apellido, nombre, tipo_doc, num_doc
+    FROM clientes
+    WHERE apellido LIKE "%z" AND nombre LIKE "_o%"; -- _: un caracter
+
+
+
+
+
