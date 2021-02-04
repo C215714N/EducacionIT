@@ -1,0 +1,81 @@
+/*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kurale&family=Raleway+Dots&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap'
+	);
+
+	@font-face{
+		src: url(../assets/fonts/Starjedi.ttf);
+		font-family: "star wars";
+	}
+
+	*{
+		font-family: Roboto, "Segoe ui", sans-serif;
+		box-sizing: border-box;
+		/*
+			content-box:
+				final-width = width + padding + border
+				content-width = width;
+			border-box:
+				final-width = width
+				content-width = width - padding - border;
+		*/
+	}
+	body{
+		margin: 0;
+	}
+/*Navegacion*/
+	nav{
+		background-color: #448;
+		/*
+			html colors: grey;
+			decimal: rbg(128,128,128); min="0" max="255"
+			hexadecimal: #888; min="0" max="FF" 
+			cromatico: hsl(0, 0, 50%); tono/saturacion/luz
+		*/
+	}
+	nav ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	nav li{
+		display: inline-block;
+		/*
+			Bloque:
+				ocupan todo el espacio del contenedor
+				generan un salto de linea
+				se les puede dar tamaño (ancho | alto)
+				funcionan como contenedores
+			;
+			Linea:
+				ocupan una porcion de la linea
+				comparten espacio con otras etiquetas
+				no se les puede dar tamaño (automatico)
+				funcionan como contenido
+			;
+			Linea-Bloque:
+				ocupan una porcion del contenedor
+				comparten espacio con otros elementos
+				se les puede dar tamaño (ancho | alto)
+				funcionan como contenido (huerfanas)
+			;
+		*/
+	}
+	nav a{
+		display:block;
+		color:#eee;
+		text-decoration: none;
+		padding: 8px 16px; /*relleno interno*/
+		margin: 0 10px; /*distancia externa*/
+		/*MARGIN/PADDING/ top right bottom left*/
+	}
+	/* :pseudo-class = estado o caracteristica de un elemento */
+	nav a:hover{
+		background-color: rgba(51,51,51,.5);
+	}
+
+/*Cabecera*/
+	#header h1{
+		font: italic bold 3rem "star wars", sans-serif;
+	}
