@@ -36,6 +36,8 @@
 		PRIMARY KEY(id_proveedor),
         UNIQUE KEY(cuil)
     );
+    ALTER TABLE proveedores	
+		ADD email VARCHAR(100) AFTER contacto;
     
     ## PRODUCTOS
     DROP TABLE IF EXISTS productos;
@@ -55,6 +57,26 @@
 	);
     ALTER TABLE productos
 		MODIFY codigo VARCHAR(20) NOT NULL;
-        
+	
+    ## FACTURACION (clientes => Compras)
+	CREATE TABLE facturacion(
+		id_factura INT AUTO_INCREMENT,
+        id_cliente INT,
+        tipo ENUM ("debe", "haber"),
+        tipo_pago ENUM(
+			"efectivo",
+			"debito",
+            "credito",
+            "virtual"
+        ),
+        monto INT,
+        impuesto DECIMAL(5,4), 
+        fecha DATE DEFAULT(CURRENT_DATE()),
+        PRIMARY KEY(id_factura),
+        FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente)
+    );
+    ## FACTURACION DETALLE (productos => compras)
+    
+    
     SHOW TABLES; 
     DESCRIBE clientes;
