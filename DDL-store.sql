@@ -71,12 +71,22 @@
         ),
         monto INT,
         impuesto DECIMAL(5,4), 
-        fecha DATE DEFAULT(CURRENT_DATE()),
+        fecha DATE DEFAULT (CURRENT_DATE()),
         PRIMARY KEY(id_factura),
         FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente)
     );
     ## FACTURACION DETALLE (productos => compras)
-    
+	CREATE TABLE facturacion_detalle(
+		id_detalle INT AUTO_INCREMENT,
+        id_factura INT,
+        id_producto INT,
+        cantidad INT,
+		precio INT,
+        PRIMARY KEY(id_detalle),
+        UNIQUE KEY(id_factura, id_producto),
+        FOREIGN KEY(id_factura) REFERENCES facturacion(id_factura),
+        FOREIGN KEY(id_producto) REFERENCES productos(id_producto)
+    );
     
     SHOW TABLES; 
     DESCRIBE clientes;

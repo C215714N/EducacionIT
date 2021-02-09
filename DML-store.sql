@@ -53,6 +53,24 @@ USE store;
 			("microondas", "0018",2, 3, 5);
 	SELECT * FROM productos;
     TRUNCATE productos;
+/*CARGA DE DATOS - FACTURACION*/
+	INSERT INTO facturacion (id_cliente, tipo, tipo_pago)
+    VALUES 
+		(1,2,3),
+        (4,2,4),
+        (2,2,2),
+        (5,2,1),
+        (6,2,3),
+        (5,2,3);
+/*CARGA DE DATOS - FACTURACION DETALLE*/
+    INSERT INTO facturacion_detalle(id_factura, id_producto, cantidad)
+	VALUES
+		(1, 1, 3), (1, 2, 2), (1, 5, 1), (1, 6, 4),	(1, 10, 2),	-- factura 1
+        (2, 20, 12), (2, 19, 2), (2, 9, 1), 					-- factura 2
+        (3, 8, 2), (3, 6, 2), (3, 3, 1), (3, 2, 1),				-- factura 3
+		(4, 4, 6),												-- factura 4
+		(5, 5, 2), (5, 3, 1); 									-- factura 5
+	SELECT * FROM facturacion_detalle;
 
 /* CONSULTAS DE DATOS */
 	## productos con valoracion 3 ordenados por nombre, solo 5 a partir del producto 5 (6-10)

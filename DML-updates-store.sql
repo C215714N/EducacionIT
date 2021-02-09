@@ -66,4 +66,77 @@ USE store;
         UPDATE proveedores
 			SET email = "info@coca_cola.com"
 		WHERE proveedor LIKE "%COCA%";
-        
+	/*
+		UNO = UNO
+        UNO = VARIOS
+        VARIOS = VARIOS
+    */
+	
+	## actualizacion dinamica por consulta
+	UPDATE facturacion_detalle AS fd -- alias tabla a actualizar
+		SET precio = ( -- valor por consulta
+			SELECT precio FROM productos AS p -- alias de tabla consultada
+            WHERE p.id_producto = fd.id_producto -- condicion de consulta
+        )
+	WHERE precio IS NULL; -- condicion actualizacion
+
+/*CONSULTAS CALCULADAS*/
+	## Totales por producto
+    SELECT 
+		id_factura,
+        id_producto,
+        cantidad,
+		precio,
+        cantidad * precio AS total
+    FROM facturacion_detalle;
+    
+    ## Estadisticas de ventas
+    SELECT
+		"EducacionIT" AS empresa,
+        COUNT(id_factura) AS ventas, -- cuenta los registros de la columna
+        SUM(precio * cantidad) AS total, -- suma los registros de la columna
+        ROUND(AVG(precio * cantidad), 2) AS promedio -- redondea el promedio de la columna
+	FROM facturacion_detalle;
+	
+    ## total por factura
+	SELECT 
+		id_factura,
+        COUNT(cantidad) AS codigos,
+        SUM(precio * cantidad) AS total
+	FROM facturacion_detalle
+    GROUP BY id_factura; -- restringe el rango de las funciones
+	
+	## actualizacion de totales
+	UPDATE facturacion AS f
+		SET monto = (
+			SELECT SUM(precio * cantidad) AS total
+			FROM facturacion_detalle AS fd
+            WHERE fd.id_factura = f.id_factura -- condicion
+        ),
+        impuesto = 
+		CASE
+			WHEN monto < 2500 THEN 0.0525
+            WHEN monto < 25000 THEN 0.105
+            WHEN monto < 250000 THEN 0.21
+            ELSE 0.325
+		END
+	WHERE monto IS NULL;
+	SELECT * FROM facturacion;
+
+	## impuestos segun valor
+	SELECT 
+		id_factura,
+        tipo,
+        tipo_pago,
+        monto,
+		CONCAT(ROUND(impuesto * 100, 1), "%") AS iva,
+        ROUND(monto * impuesto, 2) AS impuesto,
+        monto + ROUND(monto * impuesto, 2) AS total
+    FROM facturacion;
+    
+	SELECT 
+		tipo_pago, -- campo de tabla
+		COUNT(tipo_pago) AS cantidad -- campo calculado CONTAR
+		FROM facturacion -- tabla de origen
+		GROUP BY tipo, tipo_pago -- agrupacion de datos
+		HAVING cantidad > 1; -- clausula para campos calculados
