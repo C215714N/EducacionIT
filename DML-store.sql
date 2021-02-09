@@ -55,7 +55,7 @@ USE store;
     TRUNCATE productos;
 
 /* CONSULTAS DE DATOS */
-	## productos con valoracion 3 ordenados por nombre, solo 5 a partir  del producto 5 (6-10)
+	## productos con valoracion 3 ordenados por nombre, solo 5 a partir del producto 5 (6-10)
 	SELECT * FROM productos
 		WHERE valoracion = 3
         ORDER BY articulo DESC -- orden de la consulta default(ASC)
@@ -63,20 +63,20 @@ USE store;
         OFFSET 5; -- a partir de la posicion X en adelante
 
 	## producto con mas de 3 estrellas
-    SELECT id_producto, articulo, codigo, categoria, valoracion
-    FROM productos
-    WHERE valoracion > 3
-    ORDER BY valoracion DESC;
+    SELECT id_producto, articulo, codigo, categoria, valoracion -- campos seleccionados
+    FROM productos -- tabla consultada
+    WHERE valoracion > 3 -- condicion
+    ORDER BY valoracion DESC; -- organizacion
 
 	## proveedores que empiecen con la letra C
 	SELECT proveedor, cuil
     FROM proveedores
-    WHERE proveedor LIKE "C%"; -- %: cualquier cantidad de caracteres
+    WHERE proveedor LIKE "C%"; -- "%": cualquier cantidad de caracteres
 
 	## Clientes cuyo apellido termina con Z y cuya segunda letra sea o
     SELECT apellido, nombre, tipo_doc, num_doc
     FROM clientes
-    WHERE apellido LIKE "%z" AND nombre LIKE "_o%"; -- _: un caracter
+    WHERE apellido LIKE "%z" AND nombre LIKE "_o%"; -- "_": un caracter
 
 
 

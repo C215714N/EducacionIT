@@ -21,9 +21,9 @@
     );
 	-- modificar tablas
 	ALTER TABLE clientes
-		ADD observaciones varchar(200),
-		DROP tel,
-		MODIFY sexo ENUM("m","f","o");
+		ADD observaciones varchar(200), -- agrega un campo a la tabla
+		DROP observaciones, -- elimina un campo de la tabla
+		MODIFY sexo ENUM("m","f","o"); -- cambia un tipo de campo si es posible
 	
     ## PROVEEDORES
 	CREATE TABLE proveedores(
@@ -51,7 +51,7 @@
         id_proveedor INT NOT NULL,
         PRIMARY KEY(id_producto),
         UNIQUE KEY(codigo),
-        FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor) -- relacion clave externa (campo_local) tabla_ext(campo_ext)
+        FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor) -- relacion externa (campo_local) tabla_ext(campo_ext)
 	);
     ALTER TABLE productos
 		MODIFY codigo VARCHAR(20) NOT NULL;
