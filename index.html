@@ -26,9 +26,9 @@
 		<p>html | css | js</p>
 	</header>
 	<main><!-- Principal: Contenido (nudo) -->
-		<section>
+		<section class="mojave-day">
 			<header class="header">
-				<h2>Nuevos Elementos HTML5</h2>
+				<h2>Caracteristicas</h2>
 			</header>
 			<article>
 				<h3>Estructura Semantica</h3>
@@ -55,36 +55,105 @@
 						<li><strong>FOOTER</strong></li>
 					</ul>
 				</div>
+				<h3> Tipos de etiquetas</h3>
+				<ul>
+					<li><strong>Bloque: </strong>
+						ocupan todo el espacio del contenedor,
+						generan un salto de linea,
+						se les puede dar tamaño (ancho | alto) y
+						funcionan como contenedores</li>
+					<li><strong>Linea: </strong>
+						ocupan una porcion de la linea,
+						comparten espacio con otras etiquetas,
+						no se les puede dar tamaño (automatico) y
+						funcionan como contenido
+					</li>
+					<li><strong>Linea-Bloque: </strong>
+						ocupan una porcion del contenedor, 
+						comparten espacio con otros elementos, 
+						se les puede dar tamaño (ancho | alto) y
+						funcionan como contenido (huerfanas)
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>Jerarquia Selectores</h3>
-					<p>
-					</p>
-					<div class="example">
+				<p>
+				</p>
+				<div class="example">
+					<ul>
+						<li>
+							<strong>Tag Selector</strong>
 							<ul>
-								<li>
-									<strong>Tag Selector</strong>
-									<ul>
-										<li>header{...}</li>
-										<li>header h1{...}</li>
-									</ul>
-								</li>
-								<li>
-									<strong>Class Selector</strong>
-									<ul>
-										<li>.header{...}</li>
-										<li>.header h1{...}</li>
-									</ul>
-								</li>
-								<li>
-									<strong>Id Selector</strong>
-									<ul>
-										<li>#header{...}</li>
-										<li>#header h1{...}</li>
-									</ul>
-								</li>
+								<li>header{...}</li>
+								<li>header h1{...}</li>
 							</ul>
-					</div>
+						</li>
+						<li>
+							<strong>Class Selector</strong>
+							<ul>
+								<li>.header{...}</li>
+								<li>.header h1{...}</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Id Selector</strong>
+							<ul>
+								<li>#header{...}</li>
+								<li>#header h1{...}</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<h3>Colores</h3>
+				<ul>
+				<li>html colors: grey;</li>
+				<li>decimal: rbg(128,128,128); min="0" max="255"</li>
+				<li>hexadecimal: #888; min="0" max="FF" </li>
+				<li>cromatico: hsl(0, 0, 50%); tono/saturacion/luz</li>
+				</ul>	
+			</article>
+		</section>
+		<section class="mojave-night">
+			<header class="header">
+				<h2>Personalizacion</h2>
+			</header>
+			<article>
+				<h3>Propiedades de Fondo</h3>
+				<p>
+					Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Fuga libero laboriosam et esse sit est ducimus, voluptatem dicta nostrum voluptates consectetur incidunt sequi, doloremque, eaque error excepturi. Exercitationem doloribus sequi vel itaque, nisi eius tenetur enim, quasi possimus autem numquam consequuntur voluptates veniam laboriosam, magni totam beatae, odit magnam a? Inventore ducimus nesciunt id sint fugit soluta, deleniti odit corrupti earum aspernatur obcaecati esse quos provident, fugiat doloremque quis? Quo ex aliquid deserunt dignissimos, non amet quam temporibus earum saepe officia quaerat provident debitis omnis ullam tempora illum consequatur odio illo id nemo ipsa. Facilis dicta tempora incidunt voluptas soluta!
+				</p>
+				<div class="example">
+					<ul>
+						<li>
+							<strong>Background-image:</strong> permite aplicar una imagen de fondo utilizando el <em>protocolo URL</em> para indicar la ruta de la misma. Los formatos soportados son <em>.jpg - .png - .svg - .gif</em>
+						</li>
+						<li>
+							<strong>Background-size:</strong> permite definir el tamaño del fondo con respecto a la etiqueta contenedora, se puede indicar mediante <em>medidas: horizontal y vertical</em> o utilizando <em>palabras clave: cover</em> para abarcar toda la etiqueta y <em>contain</em> para que entre dentro de la misma.
+						</li>
+						<li>
+							<strong>Background-position:</strong> permite indicar la posicion inicial de la primer imagen de fondo (en caso que se repita), al igual que el atributo anterior se indica mediante <em>medidas: para ejeX y ejeY</em> o utilizando 
+							<em>palabras clave: left y right</em> para el eje X, <em>top y bottom</em> para el el eje y, o <em>center</em> para ambos.
+						</li>
+						<li>
+							<strong>Background-attachment:</strong> define como sera el comportamiento del fondo con respecto a la pagina, este recibe los valores <em>normal y fixed</em> cuyo caracteristica el posicionarse con respecto a la ventana.
+						</li>
+						<li>
+							<strong>Background-repeat:</strong> define como se repetira la imagen de fondo, en caso que sea necesario, el <em>valor predeterminado es repeat</em> pero podemos seleccionar entre <em>repeat-x, repeat-y o no-repeat.</em>
+						</li>
+					</ul>
+				</div>
+				<h3>Gradientes de fondo</h3>
+				<p>
+
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reprehenderit, dolorem aspernatur dolor velit libero quod, nam commodi ratione! Hic consectetur omnis quos obcaecati, voluptas nam adipisci suscipit optio sint provident sequi. Aspernatur ducimus, non dignissimos a ipsam iusto quisquam modi voluptates quasi, explicabo, cumque vel quidem quos vero numquam aliquid amet adipisci labore, voluptatum aperiam impedit nesciunt beatae. Quos, repudiandae eos. Illo perspiciatis voluptas, incidunt consectetur possimus officia, dolor deserunt beatae vel dicta nulla facere eveniet quasi unde quam quibusdam sequi aperiam sit, enim ratione autem exercitationem similique. Corporis dolorem qui, quo veritatis, vitae cum aut impedit hic laudantium?
+				</p>
+				<div class="example gradients">
+					<div class="linear"> linear-gradient(#448, #36f)</div>
+					<div class="to_right">linear-gradient(to rigth, #448, #36f)</div>
+					<div class="ellipse">radial-gradient(ellipse, #ee3, #c31)</div>
+					<div class="circle">radial-gradient(circle at top left, #ee3, #c31)</div>
+				</div>
 			</article>
 		</section>
 	</main>
