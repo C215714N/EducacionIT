@@ -35,29 +35,62 @@
 					<li>
 						<a  class="dropdown-item" 
 							href="https://alumni.education" 
-							target="_blank">
-							Alumni
+							target="_blank"> Alumni
 						</a>
 					</li>
 					<li>
 						<a  class="dropdown-item" 
 							href="https://getbootstrap.com" 
-							target="_blank">
-							Bootstrap
+							target="_blank"> Bootstrap
 						</a>
 					</li>
 					<li>
 						<a  class="dropdown-item" 
 							href="https://github.com/c215714n/EducacionIT/tree/responsive-j-19hs" 
-							target="_blank">
-							GitHub
+							target="_blank"> GitHub
 						</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
-
+	<header 
+		id="slideControl" 
+		data-bs-ride="carousel" 
+		class="container m-auto carousel slide position-relative">
+		<div>
+			<h1>Responsive</h1>
+			<p>Bootstrap | html | css | js</p>
+		</div>
+		<ul class="list-unstyled | carousel-inner ">
+			<li class="carousel-item active" data-bs-interval="5000">
+				<img class="d-block w-100" src="assets/img/osx-mojave.jpg" alt="osx mojave">
+			</li>
+			<li class="carousel-item" data-bs-interval="5000">
+				<img class="d-block w-100" src="assets/img/osx-sierra.jpg" alt="osx sierra">
+			</li>
+			<li class="carousel-item" data-bs-interval="5000">
+				<img class="d-block w-100" src="assets/img/osx-high-sierra.jpg" alt="high-sierra">
+			</li>
+			<li class="carousel-item" data-bs-interval="5000">
+				<img class="d-block w-100" src="assets/img/osx-mojave-night.jpg" alt="mojave-night">
+			</li>
+		</ul>
+		<button
+			class="btn carousel-control-prev" 
+			data-bs-target="#slideControl"
+			data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+			<span class="visually-hidden">Anterior</span>
+		</button>
+		<button
+			class="btn carousel-control-next" 
+			data-bs-target="#slideControl"
+			data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+			<span class="visually-hidden">Siguiente</span>
+		</button>
+	</header>
 	<script src="scripts/bootstrap.js"></script>
 </body>
 </html>
