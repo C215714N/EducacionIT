@@ -28,13 +28,12 @@
 		background-color: #448;
 	}
 	nav ul{
-		list-style: none;
+		display: flex;
+		justify-content: center;
 		margin: 0;
 		padding: 0;
 		text-align: center;
-	}
-	nav li{
-		display: inline-block;
+		list-style: none;
 	}
 	nav a{
 		display:block;
@@ -51,6 +50,9 @@
 
 /*Cabecera*/
 	#header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		min-height: 600px;
 		text-align: center;
 		padding: 1rem;
@@ -86,6 +88,7 @@
 	}
 	.mojave-day{ background-image: url('../assets/img/osx-mojave.jpg'); }
 	.mojave-night{ background-image: url('../assets/img/osx-mojave-night.jpg'); }
+	.sierra{ background-image: url('../assets/img/osx-sierra.jpg'); }
 	
 	main .header,
 	main article{
@@ -101,6 +104,10 @@
 		color: #448;
 		background-color: rgba(240,240,240, .7);
 		box-shadow: -.5rem .5rem .5rem #333;/* -x+  -y+ blur color tipo*/
+	}
+	.limit{
+		overflow: auto;
+		max-height: 500px;
 	}
 	/*Gradients*/
 		.gradients div{
@@ -126,4 +133,93 @@
 		.gradients .circle{
 			background: 
 				radial-gradient(circle 200px at top left, #ee3,#c31);
+		}
+	/*Flexbox*/
+		.flexbox{
+			display: flex;/*se aplica al contenedor*/
+			justify-content: center; /*distribuiye los hijos directos*/
+			flex-wrap: wrap;
+		}
+		.flexbox div,
+		.flexbox span{
+			min-width: 10rem;
+			margin: .5rem;
+			padding: 1rem;
+			color: #eee;
+			background-color: #448;
+		}
+
+		.align{
+			margin: 1rem 0;
+			border: 2px solid #333;
+			min-height: 320px;
+			max-height: 480px;
+			align-items: center; /*organiza los hijos directos*/
+		}
+		.align div{
+			font-size: 3rem;
+		}
+		.self{
+			align-self: flex-start;
+		}
+		/*Direccion flexbox*/
+			.col{
+				flex-direction: column;
+				border-left: .2rem dashed limegreen;
+				border-top: .2rem dashed tomato;
+			}
+			.row-r{
+				flex-direction: row-reverse;
+				border-top: .2rem dashed limegreen;
+				border-right: .2rem dashed tomato;
+			}
+			.col-r{
+				flex-direction: column-reverse;
+				border-left: .2rem dashed limegreen;
+				border-bottom: .2rem dashed tomato;
+			}
+/*Pie de Pagina*/
+	#footer{
+		padding: 1rem;
+		background-image: url('../assets/img/osx-lion.png');
+		background-position: center;
+		background-size: cover;
+	}
+	/*Formulario contacto*/
+		#contact{
+			max-width: 540px;
+			display: flex;
+			flex-direction: column;
+			margin: .5rem auto;
+		}
+		#contact input,
+		#contact textarea{
+			outline: none;
+			border: .2rem solid transparent;
+			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			resize: none;
+			height: 6rem;
+		}
+		#contact input:focus,
+		#contact textarea:focus{
+			box-shadow: 0 0 .5rem #eee;
+		}
+
+		#contact button{
+			align-self: flex-end;
+			margin: .2rem 0;
+			border: .2rem solid #eee;
+			padding: .5rem 1rem;
+			color: #eee;
+			background-color: transparent;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 1rem; 
+		}
+		#contact button:hover{
+			color: #248;
+			background-color: #eee;
 		}
