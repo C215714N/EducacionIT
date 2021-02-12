@@ -138,7 +138,41 @@
 			</article>
 		</section>
 	</main>
-	footer
+	<footer class="container">
+		<form class="m-auto p-3 | col-md-10 col-lg-8 col-xl-6 | was-validated" id="contact" novalidate>
+			<div class="form-group">
+				<label for="contactName" class="visually-hidden">Nombre</label>
+				<input 
+					id="contactName" 
+					class="form-control" 
+					type="text" 
+					pattern="[a-z A-Z]{3,50}"
+					placeholder="Ingrese su nombre" 
+					maxlength="50" 
+					required />
+				<div class="invalid-feedback">
+					Ingrese su nombre sin numeros, ni simbolos
+				</div> 
+				<div class="valid-feedback">
+					El nombre ingresado es correcto
+				</div>
+			</div>
+			<label for="contactEmail" class="visually-hidden">Correo</label>
+			<input 
+				id="contactEmail" 
+				class="form-control" 
+				type="email" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="valid-feedback">
+				El correo parece valido
+			</div>
+			<div class="invalid-feedback">
+				Ingrese su correo, respetando la estructura usuario@servidor
+			</div>
+			<button class="btn btn-outline-success">Enviar</button>
+		</form>
+	</footer>
 	<script src="scripts/bootstrap.js"></script>
 </body>
 </html>
