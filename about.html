@@ -10,6 +10,14 @@
 			maximum-scale=3">
 	<title>Bootstrap</title>
 	<link rel="stylesheet" href="styles/bootstrap.css">
+	<style>
+		.header{
+			z-index: 3;
+			text-shadow: 
+				-.1rem .1rem 1px #333,
+				0 0 .2rem #eee;
+		}
+	</style>
 </head>
 <body>
 	<nav class="container-fluid | navbar navbar-expand-md sticky-top | navbar-dark bg-dark bg-gradient">
@@ -57,23 +65,23 @@
 	<header 
 		id="slideControl" 
 		data-bs-ride="carousel" 
-		class="container m-auto carousel slide position-relative">
-		<div>
-			<h1>Responsive</h1>
-			<p>Bootstrap | html | css | js</p>
+		class="carousel slide position-relative">
+		<div class="header | text-light text-center | position-absolute top-50 start-50 translate-middle">
+			<h1 class="display-1">Responsive</h1>
+			<p class="h3">Bootstrap | html | css | js</p>
 		</div>
 		<ul class="list-unstyled | carousel-inner ">
-			<li class="carousel-item active" data-bs-interval="5000">
+			<li class="carousel-item active" data-bs-interval="3000">
 				<img class="d-block w-100" src="assets/img/osx-mojave.jpg" alt="osx mojave">
 			</li>
-			<li class="carousel-item" data-bs-interval="5000">
+			<li class="carousel-item" data-bs-interval="3000">
 				<img class="d-block w-100" src="assets/img/osx-sierra.jpg" alt="osx sierra">
 			</li>
-			<li class="carousel-item" data-bs-interval="5000">
-				<img class="d-block w-100" src="assets/img/osx-high-sierra.jpg" alt="high-sierra">
+			<li class="carousel-item" data-bs-interval="3000">
+				<img class="d-block w-100" src="assets/img/osx-high-sierra.jpg" alt="osx high-sierra">
 			</li>
-			<li class="carousel-item" data-bs-interval="5000">
-				<img class="d-block w-100" src="assets/img/osx-mojave-night.jpg" alt="mojave-night">
+			<li class="carousel-item" data-bs-interval="3000">
+				<img class="d-block w-100" src="assets/img/osx-mojave-night.jpg" alt="osx mojave-night">
 			</li>
 		</ul>
 		<button
@@ -91,6 +99,46 @@
 			<span class="visually-hidden">Siguiente</span>
 		</button>
 	</header>
+	<main class="container">
+		<section class="row justify-content-md-around">
+			<article class="card | my-3 col-md-5 | col-lg m-1">
+				<header class="card-header">
+					<h3>Fluid/Liquid Web Design</h3>
+				</header>
+				<p class="card-body">
+					Diseño que utiliza maximos y minimos, cuyos elementos, al igual que los liquidos, se adaptan a sus contenedores. El problema principal de este diseño radica en los espacios generados en pantallas grandes y problemas para conetener elementos en pantallas pequeñas.
+				</p>
+				<footer class="card-footer">
+					<address>
+						<strong>autor:</strong> Cristian Racedo
+					</address>
+				</footer>
+			</article>
+			<article class="card | my-3 col-md-5 | col-lg m-1">
+				<header class="card-header">
+					<h3>Adaptive Web Design</h3>
+				</header>
+				<p class="card-body">
+					Diseño que implica, generar contenido para cada tamaño de pantalla (general), permitiendo compatibilidad con multiples dispositivos. El problema de este diseño radica en la duplicidad de contenido debido a que se realiza un diseño particular para cada tamaño de pantalla.
+				</p>
+				<footer class="card-footer">
+					<strong>autor:</strong> Cristian Racedo
+				</footer>
+			</article>
+			<article class="card | my-3 col-md-10 | col-lg m-1">
+				<header class="card-header">
+					<h3>Responsive Web Design</h3>
+				</header>
+				<p class="card-body">
+					Diseño que utiliza los breakpoints para definir el aspecto de nuestro sitio segun el tamaño de la ventana del navegador. Uno de los inconvenientes de este tipo de diseño radica en la mala planificacion del sitio o la falta de esta. Debemos tener en cuenta que una de las premisas de este diseño es el mobile first.
+				</p>
+				<footer class="card-footer">						
+					<strong>autor:</strong> Cristian Racedo
+				</footer>
+			</article>
+		</section>
+	</main>
+	footer
 	<script src="scripts/bootstrap.js"></script>
 </body>
 </html>
