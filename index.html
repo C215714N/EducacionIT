@@ -5,16 +5,67 @@
 	<title>Mi Primera Página Web</title>
 </head>
 <body> <!-- parte VISIBLE: contenido, imagenes y texto -->
+	<!-- Encabezados (Heading) -->
 	<h1>Titulo mas importante - Empresa</h1>
 	<h2>Titulo nivel 2 - Productos</h2>
 	<h3>Titulo nivel 3 - Categorias</h3>
 	<h4>Titulo n4 - Populares</h4>
 	<h5>Titulo n5 - Mas dificil de Implementar</h5>
 	<h6>Titulo n6 - Jamas lo van a usar en su vida</h6>
-
+	<!-- Parrafos (Paragraph)-->
 	<p>mi primera página web </p>
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, repellat aspernatur velit! Ipsam est, dolore ullam laborum doloremque consequatur ducimus. Sint dicta ea quos debitis? Ullam voluptate nihil blanditiis, dicta?
 	</p>
-</body>
+	<!-- Listas Ordenadas (Ordered List)-->
+	<ol>
+		<li>Introduccion HTML y CSS</li> <!-- Elemento de Lista (List Item) -->
+		<li>Imagenes e Hipervinculos</li>
+		<li>Formularios y un poco de PHP</li>
+		<li>Tablas, iFrame y contenido Multimedia</li>
+	</ol>
+	<!-- Listas Desordenadas (Unordered List) -->
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+
+	<h2>Tipos de Estructuras</h2>
+	<p>
+		<strong>Etiquetas de Bloque: </strong> <!-- Contenido Destacado -->
+		Son aquellas que ocupan todo el espacio de su contenedor, 
+		generan un salto de linea, 
+		se les puede definir tamaño (ancho y alto) y
+		<em> funcionan como contenedores.</em> <!-- Contenido enfatizado -->
+		<br /> <!-- Salto de linea (Break) | etiqueta huerfana -->
+		
+		<strong>Etiquetas de Linea: </strong> <!-- Importante -->
+		Son aquellas que ocupan una porcion del contenedor
+		no generan salto de linea y comparten espacio con otros elementos,
+		no se les puede definir tamaño (automatico) y
+		<em> funcionan como contenido.</em> <!-- Connotación -->
+	</p>
+	<p>
+		las <strong>rosas </strong> 
+		son <strong>rojas </strong>
+		y las <em>violetas azules</em>
+	</p>
+	<h2>Elementos presentacionales</h2>
+	<p>
+		Son elementos que no poseen carga semantica (funcion dentro del contexto) y se representan con 2 etiquetas <strong>DIV (capa)</strong> que se utiliza para agrupar varios elementos y facilitar la aplicacion del estilo; y la otra es <strong>SPAN (expandir)</strong> que es de linea y se utiliza para dar estilo a un elemento dentro de una etiqueta.
+	</p>
+	<div style="color: whitesmoke; background-color: darkslateblue; width: 300px; padding: 50px;">
+		<h2>titulo</h2>
+		<p>
+			<span style="color: gold; font-size: 48px;">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit. Saepe et minus nam deserunt rem, eius animi pariatur voluptates iusto laboriosam, accusamus velit, illo a voluptas aliquam non! Perspiciatis, voluptas temporibus?
+		</p>
+		<ul>
+			<li>margin</li>
+			<li>border</li>
+			<li>padding</li>
+			<li>content</li>
+		</ul>
+	</div>
+	</body>
 </html>
