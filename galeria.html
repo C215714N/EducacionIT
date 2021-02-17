@@ -38,6 +38,52 @@
 				<strong>Implementar unicamente minusculas en los nombres</strong> para reducir el margen de error a la hora de utilizar archivos, esto se debe a que los servidor (basados en UNIX) son <em>caseSensitive.</em> Los archivos nombrados <em>"background.jpg" - "Background.jpg" - "BACKGROUND.jpg"</em> se consideran tres elementos diferentes.
 			</li>
 		</ul>
+		<div class="example">
+			<!-- 
+				src(source) = ruta de la imagen 
+				alt = texto alternativo (si no se carga la imagen)
+			-->
+			<img src="img/jjba-kingcrimson-01.jpg" alt="Dibujo King Crimson" />
+			<img src="img/jjba-kingcrimson-02.jpg" alt="Dibujo King Crimson" />
+			<img src="img/jjba-kingcrimson-03.jpg" alt="Dibujo King Crimson" />
+			<img src="img/jjba-kingcrimson-04.jpg" alt="Dibujo King Crimson" />
+		</div>
+		<p>
+			Las imagenes son <strong>etiquetas de linea-bloque</strong>, es decir que comparten espacio con otras etiquetas de linea y linea-bloque, se consideran <em>elementos de contenido</em> y por ende se tratan como texto. Si bien se les puede dar tamaño (ancho y alto), no se pueden aplicar en su totalidad atributos automaticos como margin para centrar el elemento, sino que se debe hacer desde su contenedor.
+		</p>
+		<div class="example">
+			<p style="background-color: lightgreen; overflow: hidden;">
+				<img style="width:200px; float:left;" src="img/usm-scorpion-01.jpg" alt="Dibujo Ultimate Scorpion" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ut consequuntur officia, in commodi, cumque neque. Unde incidunt accusantium nisi illum magni ab facere, labore delectus consectetur porro doloribus ratione optio.
+
+				Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Voluptatem sapiente veniam saepe animi, nam quibusdam rerum nesciunt reiciendis qui, est consequatur quisquam doloribus corrupti soluta aliquam aspernatur debitis dolorum. Quia!
+
+				Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Maiores, natus nam! Omnis enim odit natus esse, assumenda vero, facilis totam suscipit quam quod, sint pariatur earum eveniet sit reiciendis atque.	
+			</p>
+			<p>
+				<img style="width:200px;" src="img/usm-scorpion-02.jpg" alt="Dibujo Ultimate Scorpion" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ut consequuntur officia, in commodi, cumque neque. Unde incidunt accusantium nisi illum magni ab facere, labore delectus consectetur porro doloribus ratione optio.
+
+				Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Voluptatem sapiente veniam saepe animi, nam quibusdam rerum nesciunt reiciendis qui, est consequatur quisquam doloribus corrupti soluta aliquam aspernatur debitis dolorum. Quia!
+
+				Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Maiores, natus nam! Omnis enim odit natus esse, assumenda vero, facilis totam suscipit quam quod, sint pariatur earum eveniet sit reiciendis atque.	
+			</p>
+			<p>
+				<img style="width:200px;" src="img/usm-scorpion-03.jpg" alt="Dibujo Ultimate Scorpion" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ut consequuntur officia, in commodi, cumque neque. Unde incidunt accusantium nisi illum magni ab facere, labore delectus consectetur porro doloribus ratione optio.
+
+				Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Voluptatem sapiente veniam saepe animi, nam quibusdam rerum nesciunt reiciendis qui, est consequatur quisquam doloribus corrupti soluta aliquam aspernatur debitis dolorum. Quia!
+
+				Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Maiores, natus nam! Omnis enim odit natus esse, assumenda vero, facilis totam suscipit quam quod, sint pariatur earum eveniet sit reiciendis atque.	
+			</p>
+			<h2>Estructura semantica</h2>
+			<ul>
+				
+			</ul>
+		</div>
 	</div>
 	<div id="footer">
 		
