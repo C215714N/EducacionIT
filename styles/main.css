@@ -47,7 +47,6 @@
 	nav a:hover{
 		background-color: rgba(51,51,51,.5);
 	}
-
 /*Cabecera*/
 	#header{
 		display: flex;
@@ -178,8 +177,61 @@
 				border-left: .2rem dashed limegreen;
 				border-bottom: .2rem dashed tomato;
 			}
+	/*suggestions*/
+		.suggestions{
+			display: flex;
+			justify-content: center;
+		}
+		.suggestions p{
+			overflow: hidden;
+			max-width: 360px;
+			margin: .5rem;
+			border-radius: 8px;
+			padding: 1rem;
+			background-color: #eee;
+			box-shadow: -2px 2px .2rem #333;
+			cursor: pointer;
+		}
+		.suggestions p:hover{
+			box-shadow: 
+				0 0 .5rem #999 inset,
+				-2px 2px .2rem #333;
+		}
+		.suggestions img{
+			float: left;
+			margin-right: 1rem;
+			width: 120px;
+			height: 120px;
+			background-color: blue;
+		}
+	/*sidebar*/
+		.sidebar{
+			overflow: hidden;
+			max-width: 720px;
+			margin: auto;
+		}
+		.sidebar ul{
+			list-style: none;
+			float: right;
+			width: 200px;
+			margin: .5rem;
+			margin-left: 1rem;
+			border-left: 2px solid #333;
+			padding: 0 1rem;
+		}
+		.sidebar li{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 150px;
+			height: 150px;
+			margin: .5rem auto; /*top right bottom left*/
+			border: 2px solid #000;
+			padding: 1rem;
+		}
 /*Pie de Pagina*/
 	#footer{
+		clear: both;
 		padding: 1rem;
 		background-image: url('../assets/img/osx-lion.png');
 		background-position: center;
