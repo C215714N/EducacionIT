@@ -3,12 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos HTML</title>
+	<style>
+		/* selectores generales */
+		body{
+			margin: 0;
+			font-family: calibri, segoe ui, sans-serif;
+		}
+		/* selectores multiples (,) */
+		header, footer{
+			padding:20px;
+			color: #eee; /*RGB - hex 00=min FF=max*/
+			background-color: #248;
+		}
+		/* selectores especificos (padre hijo) */
+		nav ul{
+			list-style: none;
+			margin:0;
+			padding: 0;
+			background-color: #36c;
+			text-align: center;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+
+		/*selector de Class (.class)*/
+		.example{
+			background-color: #ccc;
+		}
+		.example img{
+			width:300px;
+		}
+		.example p{
+			overflow: hidden;
+		}
+		.example p img{
+			float: left;
+		}
+		/*selector de Id (#id)*/
+		#nav a{
+			font-weight: bold;
+			font-size: 20px;
+		}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p> &lt;HTML> &amp; {CSS}</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!--Ruta Relativa | Interna -->
 					<a href="index.html" title="inicio">inicio</a>
@@ -23,9 +71,9 @@
 					<a href="https://github.com/C215714N/EducacionIT/tree/html-xv-14hs" title="github" target="_blank">gitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de nomenclatura</h2>
 		<ul>
 			<li>
@@ -81,12 +129,39 @@
 			</p>
 			<h2>Estructura semantica</h2>
 			<ul>
-				
+				<li>
+					<strong>HEADER: </strong> Representa la cabecera de nuestra pagina, donde se deben colocar el titulo mas importante y el contenido introductorio. Suele llevar la navegacion en su interior asi como tambien alguna galeria.
+					<ul>
+						<li>
+							<strong>NAV: </strong> Navegacion de la pagina, se utiliza para colocar los links mas importantes de la pagina y asi formar el menu principal.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>MAIN: </strong> Representa el contenido Principal, elemento mas importante dentro de nuestra pagina y donde se colocara la informacion buscada por el usuario.
+					<ul>
+						<li>
+							<strong>ARTICLE: </strong> Es un elemento independiente dentro de la pagina, posee su propia estructura, es autoconclusivo y se puede utilizar tanto dentro como fuera de la pagina.
+						</li>
+						<li>
+							<strong>SECTION: </strong> Es un elemento contextualizado que solamente funciona dentro de la pagina, y se relaciona directamente con algun otro elemento de la misma, sin el cual su contenido no se comprenderia en su totalidad
+						</li>
+						<li>
+							<strong>ASIDE: </strong> Es un elemento tangencial, es decir que no guarda relacion directa con sus hermanos, pero se relaciona mediante una tematica en comun. Normalmente se utiliza para las sugerencias o publicidad.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>FOOTER: </strong> Representa el pie de pagina, donde se coloca informacion complementaria al sitio como copyright, autor del sitio, redes sociales e informacion/formulario de contacto.
+					Aunque tambien se suele colocar un mapa del sitio.
+				</li>
 			</ul>
 		</div>
-	</div>
-	<div id="footer">
-		
-	</div>
+	</main>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia
+		</p>
+	</footer>
 </body>
 </html>
