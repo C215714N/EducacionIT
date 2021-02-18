@@ -229,6 +229,59 @@
 			border: 2px solid #000;
 			padding: 1rem;
 		}
+	/* wireframe */
+		.wire *{
+			margin:.25rem;
+			border: 1px solid black;
+			padding:.25rem;
+			color: #eee;
+			background-color: #3339;
+		}
+		.wire .content{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.wire ul{
+			display: flex;
+			list-style: none;
+		}
+		.content span{
+			width: 100%;
+		}
+		.content > div:nth-child(2){
+			width: calc(75% - .5rem);
+		}
+		.content > div:nth-child(3){
+			width: calc(25% - .5rem);
+		}
+	/*border-radius*/
+		.border div{
+			border: 2px solid #333;
+			padding: 1rem;
+			margin: 1rem;
+		}
+		.border div:first-child{
+			border-radius: 1rem; /*topleft topright bottomright bottomleft*/
+		}
+		.border div:nth-child(2){
+			border-radius: 1rem 0; /*topleft topright bottomright bottomleft*/
+		}
+		.border div:nth-child(3){
+			border-radius: 1rem 1rem 0 0; /*topleft topright bottomright bottomleft*/
+		}
+		.border div:nth-child(4){
+			border-radius: 0 1rem 1rem 0; /*topleft topright bottomright bottomleft*/
+		}
+		.border div:nth-child(5){
+			border-radius: 10px / 20px; /*x / y */
+		}
+		.border div:nth-child(6){
+			border-radius: 100px / 10px; /* x / y*/
+		}
+		.border div:last-child{
+			border-radius: 100px  200px 50px 1000px/ 10px 300px 50px 200px; /* x / y*/
+		}
+
 /*Pie de Pagina*/
 	#footer{
 		clear: both;
@@ -275,3 +328,52 @@
 			color: #248;
 			background-color: #eee;
 		}
+	/* Redes sociales */
+		.social{
+			display: flex;
+			justify-content: space-around;
+			width: 100%;
+			max-width: 320px;
+			margin: auto;
+			border-radius: 2.5rem;
+			background-color: #eeea;
+		}
+		.social a{
+			border-radius: 50%;
+			width: 5rem;
+			height: 5rem;
+			background-position: center;
+			background-size: 2rem;
+			background-repeat: no-repeat;
+		}
+		/*iconos*/
+			.facebook{ background-image: url(../assets/icon/facebook.svg) }
+			.instagram{ background-image: url(../assets/icon/instagram.svg) }
+			.twitter{ background-image: url(../assets/icon/twitter.svg) }
+			.github{ background-image: url(../assets/icon/linkedin.svg) }
+		/*:Hover*/
+			.social a:hover{
+				background-size: 3rem;
+				box-shadow: 0 0 1rem #eee inset;
+			}
+		/*:Active*/
+			.social .facebook:active{ 
+				box-shadow: 
+					0 0 .5rem #35a inset,
+					0 0 .2rem #fff;
+			}
+			.social .instagram:active{ 
+				box-shadow: 
+					0 0 .5rem #e46 inset,
+					0 0 .2rem #fff;
+			}
+			.social .twitter:active{ 
+				box-shadow: 
+					0 0 .5rem skyblue inset,
+					0 0 .2rem #fff;
+			 }
+			.social .github:active{ 
+				box-shadow: 
+					0 0 .5rem #333 inset,
+					0 0 .2rem #fff;
+			}
