@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+			<li><a href="#contacto">Contacto</a></li>
+			<li>
+				<a href="https://github.com/c215714n/EducacionIT/tree/html-xv-14hs" target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p>html &amp; css</p>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h2>Formularios HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Para qué sirven?</h3>
+				</header>
+				<p>
+					
+					Son herramientas que se utilizan para el <strong>intercambio de datos entre cliente y servidor </strong>, para poder utilizarlos debemos colocar dentro de la pagina la etiqueta contenedora <strong>&lt;FORM&gt;</strong> y dentro los elementos que <em>se describiran mas adelante.</em> Nos referimos a una interaccion real debido a que otros comportamientos como el <em>:hover</em> son preparados y la respuesta es siempre la misma, en cambios con los formularios, segun el tipo, la respuesta varia en funcion de los datos.
+				</p>
+				<ul class="example">
+					<li>Buscador - Consulta Query</li>
+					<li>Inscripcion - Registro</li>
+					<li>Inicio sesion - Acceso</li>
+					<li>Contacto - Consulta Web</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Como Funcionan?</h3>
+				</header>
+				<p>
+					
+					La etiqueta mencionada anteriormente debe poseer al menos <em>2 atributos</em>, por un lado, se encuentra <strong>action="..."</strong> que permite indicar al navegador que hacer una vez completado el formulario. Antiguamente se utilizaba el valor <em>mailto:usuario@servidor</em> pero dependemos que el cliente posea una aplicacion de correos, por esta razon hoy en dia se utiliza un <em>script en lenguaje de servidor (PHP)</em> para que este ultimo resuelva que hacer con los datos enviados a traves del formulario. Por otro lado, se encuentra el atributo <strong>method</strong> que indica de que manera se van a procesar los datos y como se realizara el envio.
+				</p>
+				<ul class="example">
+					<li><strong>GET: </strong> Metodo que se utiliza para obtener informacion de un servidor, es menos seguro ya que los datos son accesibles desde la barra de direcciones, pero mas rapido debido a que prioriza la respuesta del servidor.</li>
+					<li><strong>POST: </strong> Metodo que se utiliza para enviar datos a un servidor, es mas seguro debido a que encripta los datos, pero es mas lento ya que prioriza los datos del usuarios y la proteccion de los mismos.</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Cuales son sus componentes?</h3>
+				</header>
+				<p>
+					
+					Los formularios estan compuestos por <em>2 elementos diferentes</em>, por un lado tenemos las <strong>Etiquetas (LABEL) </strong> que cumplen la funcion de rotulos para guiar al usuario a la hora de completar/seleccionar los datos y tambien facilicitan la accesibilidad. Por el otro encontramos a los <strong>Campo (INPUT, SELECT, TEXTAREA)</strong> que representan las areas donde el usuario puede ingresar/seleccionar los datos, estos elementos poseen <em>2 atributos escenciales</em> que son <strong>type="..."</strong> para determinar el tipo de dato que se debe ingresar/seleccionar y <strong>value="..."</strong> que se refiere al dato propiamente dicho.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto(Aa!#123) </label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo de Numero (1234) </label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo email (user@dom) </label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo Contraseña (****) </label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo Opcion Unica</label> | 
+						<input name="accept" value="true" type="radio"> si |
+						<input name="accept" value="false" type="radio"> no 
+					</li>
+					<li>
+						<label>Campo Opcion Multiple</label> | 
+						<input name="hobbie" value="art" type="checkbox"> arte |
+						<input name="hobbie" value="music" type="checkbox"> musica |
+						<input name="hobbie" value="sport" type="checkbox"> deporte
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Campo Lista Desplegable</label>
+						<select>
+							<option value="html">html</option>
+							<option value="css">css</option>
+							<option value="js">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="submit" />
+						<input type="reset" />
+						<button> Enviar </button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>
