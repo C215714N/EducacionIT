@@ -3,12 +3,67 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+			body{
+				margin: 0;
+				font-family: calibri, segoe ui, sans-serif;
+			}
+		/* Selectores Multiples (,) */
+			header, footer{
+				padding: 16px;
+				color: #eee; /* RRGGBB  00 => min | FF => max */
+				background-color: #248;
+				text-align: center;
+			}
+		/* Selectores especificos (padre hijo)*/
+			nav a{
+				color: #ccc;
+				text-decoration: none;
+			}
+			nav ul{
+				list-style: none;
+				margin: 0;
+				padding:0;
+				background-color: #124;
+			}
+			nav li{
+				display: inline-block;
+				padding: 8px;
+			}
+		/* Selector Pseudoclase (:pseudo) */
+			nav li:hover{
+				background-color: #36c;
+			}
+		/* Selector de Clase (.class)*/
+			.example{
+				padding: 32px;
+				text-align: center;
+				background-color: #ccc;
+			}
+			.example p{
+				padding: 16px;
+				text-align: left;
+				color: #eee;
+				background-color: #333;
+				overflow: hidden;
+			}
+			.example p img{
+				float: left;
+				margin-right: 16px;
+			}
+		/* Selector de Id (#id)*/
+			#header h1, #header p{
+				margin: 2px;
+				line-height: 16px;
+			}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;html> &amp; {css}</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta interna / Relativa -->
 					<a href="index.html">Inicio</a>
@@ -24,9 +79,9 @@
 					<a href="https://github.com/C215714N/EducacionIT/tree/html-xv-10hs/" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul>
 			<li>
@@ -39,16 +94,79 @@
 				<strong>Escribir los nombres solamente en minusculas</strong> debido a que los servidores utilizan sistemas basados en <em>UNIX</em> son <strong>caseSensitive</strong> y por lo tanto nombres como <em>"background.jpg", "Background.jpg" y "BACKGROUND.jpg"</em> representan 3 elementos diferentes. Otra razon para implementar esta practica es la <strong>reduccion del margen de error.</strong>
 			</li>
 		</ul>
-		<div class="example" style="text-align: center;">
+		<div class="example">
 			<img style="height: 100px;" src="img/fender.png" alt="Fender Stratocaster" />
 			<img style="height: 100px;" src="img/css.svg" alt="Logo css3">
 		</div>
-	</div>
-	<div id="footer">
+		<h2>Estructura Semantica</h2>
+		<ul>
+			<li>
+				<strong>HEADER: </strong> Representa la cabecera de pagina o contenido introductorio, es donde se coloca el titulo principal y en ocasiones tambien una galeria de imagenes al igual que el menu principal.
+				<ul>
+					<li>
+						<strong>NAV: </strong> Representa los links mas importantes de la pagina y solamente debe contener aquellos que sean realmente relevantes.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>MAIN: </strong> Representa el contenido principal de la pagina o nudo, en definitiva la informacion solicitada por el usuario, este a la vez puede estar segmentado en varias partes segun la cantidad de elementos.
+				<ul>
+					<li>
+						<strong>ARTICLE: </strong> Contenido Independiente que funciona tanto dentro como fuera de la pagina, debido a que posee su propia estructura y es autoconclusivo.
+					</li>
+					<li>
+						<strong>SECTION: </strong> Contenido contextualizado que solamente funciona dentro de la pagina, ya que se relaciona con otros elementos de la misma y depende de ellos.
+					</li>
+					<li>
+						<strong>ASIDE: </strong> Contenido tangencial que se relaciona indirectamente con sus hermanos debido a una tematica, se utiliza para publicidad, recomendaciones o sugerencias dentro de la pagina.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>FOOTER: </strong> Representa el pie de pagina o la informacion complementaria a la pagina, se suele colocar informacion/formulario de contacto, redes sociales y los datos de copyright. En ocasiones tambien se utiliza un mapa del sitio.
+			</li>
+		</ul>
+		<div class="example">
+			<h2>Organizacion de Elementos</h2>
+			<p>
+				<img style="width:200px;" src="img/jjba-starplatinum-01.jpg" alt="Dibujo Sar Platinum">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident tenetur sint, quam porro, repellat quos explicabo molestias aperiam. Temporibus ipsa est debitis nemo ad tempore quibusdam placeat quidem. Aperiam.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Magni libero doloribus neque iste, natus fugiat, voluptas deleniti impedit dignissimos quam consectetur. Vel commodi quis, veritatis dolorem labore reprehenderit explicabo error.
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore in laborum dolores enim vitae necessitatibus officia repudiandae non consequatur illo, magni distinctio aspernatur voluptatibus architecto, nisi atque blanditiis provident.
+			</p>
+			<p>
+				<img style="width:200px;" src="img/jjba-starplatinum-02.jpg" alt="Dibujo Sar Platinum">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident tenetur sint, quam porro, repellat quos explicabo molestias aperiam. Temporibus ipsa est debitis nemo ad tempore quibusdam placeat quidem. Aperiam.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Magni libero doloribus neque iste, natus fugiat, voluptas deleniti impedit dignissimos quam consectetur. Vel commodi quis, veritatis dolorem labore reprehenderit explicabo error.
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore in laborum dolores enim vitae necessitatibus officia repudiandae non consequatur illo, magni distinctio aspernatur voluptatibus architecto, nisi atque blanditiis provident.
+			</p>
+			<p>
+				<img style="width:200px;" src="img/jjba-starplatinum-03.jpg" alt="Dibujo Sar Platinum">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident tenetur sint, quam porro, repellat quos explicabo molestias aperiam. Temporibus ipsa est debitis nemo ad tempore quibusdam placeat quidem. Aperiam.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Magni libero doloribus neque iste, natus fugiat, voluptas deleniti impedit dignissimos quam consectetur. Vel commodi quis, veritatis dolorem labore reprehenderit explicabo error.
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore in laborum dolores enim vitae necessitatibus officia repudiandae non consequatur illo, magni distinctio aspernatur voluptatibus architecto, nisi atque blanditiis provident.
+			</p>
+			<p>
+				<img style="width:200px;" src="img/jjba-starplatinum-04.jpg" alt="Dibujo Sar Platinum">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident tenetur sint, quam porro, repellat quos explicabo molestias aperiam. Temporibus ipsa est debitis nemo ad tempore quibusdam placeat quidem. Aperiam.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Magni libero doloribus neque iste, natus fugiat, voluptas deleniti impedit dignissimos quam consectetur. Vel commodi quis, veritatis dolorem labore reprehenderit explicabo error.
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore in laborum dolores enim vitae necessitatibus officia repudiandae non consequatur illo, magni distinctio aspernatur voluptatibus architecto, nisi atque blanditiis provident.
+			</p>
+		</div>
+	</main>
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados | 
 			Cristian Racedo &amp; Compañia
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
