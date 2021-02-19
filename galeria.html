@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;html> &amp; {css}</p>
+		<div id="nav">
+			<ul>
+				<li><!-- Ruta interna / Relativa -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta ancla / Marcador (#Id) -->
+					<a href="#">Galeria</a><!-- Refresh -->
+				</li>
+				<li>
+					<!-- Ruta ancla / Marcador (#Id)-->
+					<a href="#footer">Contacto</a><!-- id="footer"-->
+				</li>
+				<li><!-- Ruta externa / Absoluta -->
+					<a href="https://github.com/C215714N/EducacionIT/tree/html-xv-10hs/" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios</strong> debido a que este caracter es interpretado por el navegador como <em>el conjunto %20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> sera interpretado como <em>"foto%2001.jpg</em> impiendo al navegador encontrar dicho elemento. Es aconsejable <strong>reemplazar el espacio por un guion (-_)</strong> dando como resultado un nombre como <em>"foto_01.jpg"</em> que si puede ser encontrado por el navegador.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como <em>background.jpg</em> para facilitar el trabajo del desarrollador a la hora de implementar dichos archivos. Se deben evitar <em>nombres genericos como "foto_01.jpg"</em> asi como tambien <em>nombres automatizados como "2021-02-19-1108100.jpg"</em>, ya que al momento de utilizar dichos elementos, en demasia, se dificulta la seleccion de los mismos.
+			</li>
+			<li>
+				<strong>Escribir los nombres solamente en minusculas</strong> debido a que los servidores utilizan sistemas basados en <em>UNIX</em> son <strong>caseSensitive</strong> y por lo tanto nombres como <em>"background.jpg", "Background.jpg" y "BACKGROUND.jpg"</em> representan 3 elementos diferentes. Otra razon para implementar esta practica es la <strong>reduccion del margen de error.</strong>
+			</li>
+		</ul>
+		<div class="example" style="text-align: center;">
+			<img style="height: 100px;" src="img/fender.png" alt="Fender Stratocaster" />
+			<img style="height: 100px;" src="img/css.svg" alt="Logo css3">
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			&copy; Todos los derechos reservados | 
+			Cristian Racedo &amp; Compañia
+		</p>
+	</div>
+</body>
+</html>
