@@ -1,5 +1,6 @@
 /* Importaciones */
-const userRoutes = require('./src/userRoutes')
+const userRoutes = require('./src/routes/user')
+const productRoutes = require('./src/routes/product')
 
 /* Consts */
 const express = require('express'); // Para poder establecer la comunicación.
@@ -28,3 +29,4 @@ delilah.listen(port, () => {
 /* Ejecutar el comando "node server" o "npm start" para ejecutar el servidor local*/
 
 delilah.use('/users', userRoutes)
+delilah.use('/products', productRoutes)

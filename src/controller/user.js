@@ -1,3 +1,4 @@
+const { response } = require('express');
 const User = require('../model/user')
 
 exports.findAll = function(req, res) {
@@ -23,4 +24,23 @@ exports.delete = function(req, res) {
         })
     })
 
+}
+
+exports.create = function (req, res) {
+    const newUser = new User (req.body)
+    if (req.body.constructor == Object && Object.keys(req.body) == 0) {
+        res.status(400).send({
+            error:true,
+            message:'Todos los campos son obligatorios.'
+        })
+    } else {
+        User.create(newUser, function(err, user) {
+        err ? res.send(err) : res.json({
+            error:false,
+            message:'Usuario agregado con éxito.',
+            data:user
+        })
+        }
+        )
+    }
 }

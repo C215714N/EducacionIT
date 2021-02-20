@@ -48,4 +48,36 @@ User.delete = function(id, result) {
     })
 }
 
+User.create = function(newUser, result) {
+    dbCon.query('INSERT INTO Users SET ?',
+    newUser,
+    function(err, res) {
+        if (err) {
+            result(err, null) 
+        } else {
+            result(null, res)
+        }
+    })
+}
+
+User.update = function(id, user, result) {
+    dbCon.query('UPDATE Users SET user = ?, name = ?, phone = ?, email = ?, address = ?, pass = ?, admin = ? WHERE id_user = ?',
+    [
+    user.user,
+    user.name,
+    user.phone,
+    user.email,
+    user.address,
+    user.pass,
+    user.admin,
+    id
+    ],
+    function(err, res) {
+        if (err) {
+            result(err, null) 
+        } else {
+            result(null, res)
+        }
+})
+}
 module.exports = User
