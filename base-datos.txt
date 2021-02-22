@@ -1,0 +1,37 @@
+BASE DATOS (SQL)(
+	- Estructura de almacenamiento de datos
+	- Compuestas por tablas
+	- Poseen campos(columnas), registros(filas) y datos(celdas).
+	Tipos de Bases Datos(
+		RELACIONAL *,
+		JERARQUICAS ,
+		TRANSACCIONAL ,
+		ORIENTADA A OBJETOS ,
+		etc...
+	)
+);
+
+Motor de Base Datos (MySQL Workbench)(
+	- Herramienta para la manipulacion de datos
+	- Originalmente desarrollado por IBM
+	- Adquirido por ORACLE ( mysql / oracle sql )
+	- La comunidad desarrolla el proyecto MariaDB
+);
+
+SQL (Structured Query Language)(
+	DDL (Data Definition Language)
+		CREATE	crear base-datos / tablas / usuarios
+		DROP	eliminar base-datos / tablas / usuarios
+		ALTER	modificar base-datos / tablas
+	
+	DML	(Data Manipulation Language)
+		INSERT	insertar registros
+		DELETE	eliminar registros
+		UPDATE	modificar registros 
+		SELECT	consultar registros
+	
+	DCL	(Data Control Language)
+		GRANT	otorgar permisos
+		REVOKE	quitar permisos
+		FLUSH PRIVILEGES recargar permisos
+);
