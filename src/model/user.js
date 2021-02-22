@@ -23,8 +23,8 @@ User.findAll = function(result) {
 }
 
 User.findById = function(id, result) {
-    dbCon.query('SELECT * FROM Users WHERE id_user = ?',
-    [id],
+    dbCon.query('SELECT * FROM Users WHERE id_user = ? or user = ? or email LIKE ?',
+    [id, id, "%"+id+"%"],
     function(err, res) {
         if (err) {
             console.log('Error: ', err);
