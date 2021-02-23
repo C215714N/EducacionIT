@@ -141,3 +141,22 @@ USE store;
 		FROM facturacion -- tabla de origen
 		GROUP BY tipo, tipo_pago -- agrupacion de datos
 		HAVING cantidad > 1; -- clausula para campos calculados
+
+	SELECT 
+		proveedor,
+		cuil,
+		LEFT(cuil, 2) AS tipo, -- extrae un n° caracteres de izq. a der. 
+		SUBSTRING(cuil, 4, 8) AS doc, -- extrae a partir de posicion x la cant. indicada de caracteres
+		RIGHT(cuil, 1) AS val, -- extrae un n° caracteres de der. a izq.
+		LOCATE("-", cuil) AS guion_1, -- devuelve la posicion del caracter buscado
+		LOCATE("-", cuil, LOCATE("-", cuil) + 1) AS guion_2, -- posicion del caracter buscado a partir de la posicion x
+		LENGTH(cuil) AS car -- largo de una cadena de texto
+	FROM proveedores;
+
+	SELECT *  FROM clientes;
+	SELECT
+		LEFT(email, LOCATE("@", email) - 1) AS usuario, -- extrae de izq. a der. del correo una cant. de caracteres igual a la posicion del arroba - 1 para no incluirlo
+		RIGHT(email, LENGTH(email) - LOCATE("@", email) ) AS servidor -- extrae de der. a izq. del correo una cant. de caracteres igual a la diferencia entre el Largo de nuestro texto y la posicion del arroba (para obtener la cantidad de caracteres)
+	FROM clientes
+	WHERE email LIKE "%@gmail%" -- condicion sobre campos existentes
+	HAVING usuario LIKE "%ez%"; -- condicion sobre campos calculados
