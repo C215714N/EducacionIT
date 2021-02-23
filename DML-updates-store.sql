@@ -134,6 +134,7 @@ USE store;
         monto + ROUND(monto * impuesto, 2) AS total
     FROM facturacion;
     
+    /*facturas agrupadas por tipo de pago*/
 	SELECT 
 		tipo_pago, -- campo de tabla
 		COUNT(tipo_pago) AS cantidad -- campo calculado CONTAR
