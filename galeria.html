@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p> &lt;html&gt; &amp; {css} </p>
+		<div id="nav">
+			<ul>
+				<li><!-- Ruta Interna / Relativa -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador (#Id) -->
+					<a href="#">Galeria</a><!-- refresh -->
+				</li>
+				<li><!-- Ruta Ancla / Marcador (#Id) -->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li><!-- Ruta Externa / Absoluta -->
+					<a href="https://github.com/C215714N/EducacionIT/tree/html-mv-19hs/" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios</strong> porque el navegador interpreta estos caracteres como <em>el conjunto %20</em>. Por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> interpretara el nombre <em>"foto%2001.jpg"</em> y no lo encontrara, por estas razones es preferible <strong>Utilizar guiones (-_) en los nombres</strong> como por ejemplo <em>"foto_01.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> para facilitar el trabajo de los desarrolladores a la hora de utilizar los archivos. Evitar <strong>nombres genericos</strong> como <em>"foto_01.jpg"</em>, asi como tambien <strong>nombres automatizados</strong> como <em>"2021-02-23-2009100.jpg"</em> ya que en demasia complican la seleccion de elementos.
+			</li>
+			<li>
+				<strong>Implementar solamente minusculas</strong> en los nombres de los archivos <em>para reducir el margen de error</em>, debido a que los servidor de hosting al estar basados en UNIX son <em>caseSensitive</em> y por lo tanto nombres como <em>"background.jpg","Background.jpg","BACKGROUND.jpg"</em> se consideran 3 archivos diferentes.
+			</li>
+		</ul>
+		<div class="example" style="text-align: center;">
+			<h2>Elemento Imagen</h2>
+			<img style="width: 300px;" src="img/jjba-starplatinum-01.jpg" alt="Dibujo JJBA the World"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-02.jpg" alt="Dibujo JJBA the World"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-03.jpg" alt="Dibujo JJBA the World"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-04.jpg" alt="Dibujo JJBA the World"/>
+		</div>
+	</div>
+	<div id="footer">
+		
+	</div>
+</body>
+</html>
