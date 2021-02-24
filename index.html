@@ -26,7 +26,7 @@
 		<p>html | css | js</p>
 	</header>
 	<main><!-- Principal: Contenido (nudo) -->
-		<section class="mojave-day">
+		<section>
 			<header class="header">
 				<h2>Caracteristicas</h2>
 			</header>
@@ -116,7 +116,7 @@
 				</ul>	
 			</article>
 		</section>
-		<section class="mojave-night">
+		<section>
 			<header class="header">
 				<h2>Personalizacion</h2>
 			</header>
@@ -159,7 +159,7 @@
 				</div>
 			</article>
 		</section>
-		<section class="sierra">
+		<section>
 			<header class="header">
 				<h2>Introduccion a Flexbox</h2>
 			</header>
@@ -359,6 +359,94 @@
 					<div>border-example</div>
 					<div>border-example</div>
 				</div>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Layouts modernos (CSS Grid)</h2>
+			</header>
+			<article>
+				<h3>Creando un sistema de grillas</h3>
+				<p>
+					
+					Lorem, ipsum dolor sit, amet consectetur adipisicing elit. In suscipit perferendis, aspernatur, sint quia fuga labore ea officia debitis harum error quis tempore accusamus magni rem maiores repudiandae, itaque recusandae, est illum laboriosam voluptas quo a. Porro laudantium, laboriosam optio ipsam ab nulla voluptatum unde minima sapiente perspiciatis modi, quae eos, veniam ratione atque beatae architecto consectetur quo. Alias dolor cum accusantium quisquam numquam fuga, quasi voluptatem magnam iste veniam accusamus, ullam, dolore ex ut molestiae odio fugit velit consequatur aspernatur illo excepturi reprehenderit. Corrupti voluptas itaque tempore nesciunt quos, alias, nihil ad officia, quasi qui quidem illo laborum vel?
+				</p>
+				<div class="example grid">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<ul>
+					<li>
+						<strong>grid-template-columns: </strong> Atributo que permite definir la cantidad de columnas mediante la aplicacion de sus tamaños, es decir que en lugar de escribir directamente el numero 3, escribimos tres medidas separadas por espacios.
+					</li>
+					<li>
+						<strong>grid-template-rows: </strong> Atributo que permite definir el alto de las filas indicadas ordinalmente, por defecto este valor es automatico y solamente se afectara al numero de fila correspondiente.</li>
+					<li>
+						<strong>gap: </strong> Calle o separacion que se puede aplicar tanto a las filas como a las columnas respectivamente, este atributo es un atajo (shorthand) de otros dos, que son <em>column-gap</em> y <em>row-gap</em>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Organizacion y distribucion</h3>
+				<p>
+
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ab officiis explicabo dignissimos, iusto excepturi autem aut voluptatem qui voluptatibus eaque dolore doloremque, sunt rerum repellendus nulla adipisci, animi minima cupiditate quisquam, reprehenderit tenetur maxime quae veniam inventore. Eum soluta quis autem! Ullam facere eius, praesentium esse exercitationem laborum voluptate aliquam amet enim maiores. Assumenda harum, eos ullam recusandae quam, rerum vel dolor, voluptate cum eveniet exercitationem quisquam pariatur. Asperiores itaque eius magnam ab quibusdam, ratione exercitationem quod odio cum fugit reiciendis reprehenderit libero quas natus, optio eaque amet veritatis quisquam corrupti et, quos nostrum non cupiditate. Error, libero consequatur!
+				</p>
+				<div class="example grid dist">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<ul>
+					<li>
+						<strong>justify-content: </strong> Distribucion horizontal de las columnas dentro de css-grid, recibe los mismos valores que su homologo de flexbox <em>(flex-start; center; flex-end; space-around; space-between; space-evenly)</em> y al aplicar el tamaño de las mismas se ajusta automaticamente.
+					</li>
+					<li>
+						<strong>align-content: </strong> Organizacion vertical de las filas dentro de css-grid, a diferencia de su equivalente de flexbox, este recibe los mismos valores que el atributo anterior <em>justify-content.</em>
+					</li>
+					<li>
+						<strong>grid-column: </strong> permite indicar la posicion de una celda con respecto a las columnas escribiendo el numero de inicio / numero de fin, es un atajo (shorthand) a los atributos <em>grid-column-start y grid-column-end</em>
+					</li>
+					<li>
+						<strong>grid-row: </strong> permite indicar la posicion de una celda con respecto a las filas escribiendo el numero de inicio / numero de fin, es un atajo (shorthand) a los atributos <em>grid-row-start y grid-row-end</em>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Plantillas de areas</h3>
+				<p>
+					
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Eaque quae consequatur earum totam, quod delectus eveniet, vel doloremque quo sed dignissimos, repudiandae quia, ratione laborum maiores illo natus asperiores? Ipsa temporibus eaque consectetur earum, iusto. Vel delectus veritatis tenetur dolores cum voluptas quos repudiandae maxime? Obcaecati id laboriosam blanditiis mollitia similique velit iste tempora nostrum, repudiandae ipsa itaque perspiciatis earum eligendi voluptatem aliquid nihil, hic est, qui sit. Vero obcaecati placeat sapiente numquam hic excepturi, praesentium nisi dolores incidunt ipsam cupiditate amet aut alias adipisci labore repellat qui, deserunt id totam officia deleniti quas ratione, iste tempora. Illum necessitatibus, provident?
+				</p>
+				<div class="example grid area">
+					<div>area 1</div>
+					<div>area 2</div>
+					<div>area 3</div>
+					<div class="aside">area 4</div>
+					<div>area 5</div>
+					<div>area 6</div>
+					<div class="section">area 7</div>
+					<div>area 8</div>
+				</div>
+				<ul>
+					<li>
+						<strong>grid-template-areas: </strong> Permite la creacion de una plantilla indicando mediante nombres los espacios que ocupara cada celda dentro de la fila separado con espacios ("header header header") y entre comillas por cada una de las mismas.
+					</li>
+					<li>
+						<strong>grid-area: </strong> Asigna alguna de las areas definidas dentrod de la plantilla, facilitando la aplicacion de las composiciones (layout) realizadas.
+					</li>
+				</ul>
 			</article>
 		</section>
 	</main>

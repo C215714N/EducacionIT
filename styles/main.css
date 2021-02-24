@@ -80,15 +80,20 @@
 		font-variant: small-caps;
 	}
 /*Contenido Principal*/
-	section{
+	main {
+		text-shadow: 0 0 4px #eee;
+	}
+	main > section{
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
 	}
-	.mojave-day{ background-image: url('../assets/img/osx-mojave.jpg'); }
-	.mojave-night{ background-image: url('../assets/img/osx-mojave-night.jpg'); }
-	.sierra{ background-image: url('../assets/img/osx-sierra.jpg'); }
-	
+	main > section:nth-child(even){ 
+		background-image: url('../assets/img/osx-mojave.jpg'); 
+	}
+	main > section:nth-child(odd){ 
+		background-image: url('../assets/img/osx-mojave-night.jpg'); 
+	}
 	main .header,
 	main article{
 		padding: 1rem;
@@ -281,7 +286,46 @@
 		.border div:last-child{
 			border-radius: 100px  200px 50px 1000px/ 10px 300px 50px 200px; /* x / y*/
 		}
-
+	/*css grid*/
+		.grid{
+			display: grid;
+			grid-template-columns: auto auto auto; /*cantidad y tamaño de col*/
+			grid-template-rows: auto; /*alto de las filas*/
+			gap: .5rem; /*row col*/
+		}
+		.grid div,
+		.grid span {
+			border: 2px solid #448;
+			padding: .5rem 1rem;
+		}
+		.dist{
+			min-height: 300px;
+			justify-content: space-evenly;
+			align-content: space-evenly;
+		}
+		/* pseudoclases*/
+		.dist :first-child{ 	grid-row: 1 / 4; } 
+		.dist :last-of-type{ 	grid-column: span 2; }
+		.dist :last-child { 	grid-column: 1 / 4;}
+		.dist span:nth-last-child(2){ grid-column: span 3; }
+		.dist span:first-of-type{
+			grid-column: span 2;
+			grid-row: span 2;
+		}		
+		
+		.area{
+			grid-template-areas: 
+				"header		header 		header"
+				"art-1		art-2 		aside"
+				"art-3		art-4		aside"
+				"section 	section 	aside"
+				"footer 	footer 		footer"
+			;
+		}
+		.area div:first-child{ grid-area: header; }
+		.area div:last-child{ grid-area: footer; }
+		.aside{ grid-area: aside; }
+		.section{ grid-area: section; }
 /*Pie de Pagina*/
 	#footer{
 		clear: both;
