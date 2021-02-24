@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+			<li><a href="#contacto">Contacto</a></li>
+			<li><a href="https://github.com/c215714n/EducacionIT/tree/html-xv-10hs" target="_blank">GitHub</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p> HTML &amp; CSS</p>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h2>Formularios HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Para que sirven?</h3>
+				</header>
+				<p>
+					Son elementos que permiten una <strong>interaccion real (intercambio de datos) entre cliente/servidor</strong> debido a que permiten realizar peticiones al servidor y este ultimo envia una respuesta que varia dependiento del tipo de formulario completado. Para poder implementarlos es necesario utilizar la etiqueta <strong>&lt;FORM&gt;</strong>, que debe contener todos <em>los elementos se veran a continuacion. </em>
+				</p>
+				<ul class="example">
+					<li>Busqueda - Consulta Query</li>
+					<li>Inscripcion - Registro</li>
+					<li>Acceso - Inicio Sesion</li>
+					<li>Contacto - Consulta Web</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Como funcionan?</h3>
+				</header>
+				<p>
+					A la <em> etiqueta mencionada anteriormente </em> debemos colocarle por lo menos <em>2 atributos</em> necesarios para su funcionamiento. Por un lado se encuentra <strong>action="..."</strong> que permite definir que sucedera con los datos al realizar el envio del formulario, antiguamente se utilizaba el valor <em>mailto:correo</em> pero en la actualidad se implementa un <em>script en lenguaje de servidor (ej: PHP)</em> para garantizar la recepcion del mensaje. 
+					Por otro lado esta el atributo <strong>method="..."</strong> que indica como se realizara el envio y requiere de un valor, que puede ser <em>GET</em> en caso que la respuesta del servidor sea prioritaria o <em>POST</em> en caso que los datos del usuario sean lo mas relevante.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong> 
+						Metodo menos seguro ya que los datos son accesibles desde la barra de navegacion, pero es mas rapido debido a que realiza el envio en texto plano.
+					</li>
+					<li>
+						<strong>POST: </strong>
+						Metodo mas seguro ya que encripta los datos que se envian y los mismos no estan visibles, pero es mas lento debido a que debe encriptar y desencriptar los datos.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Que elementos los componen?</h3>
+				</header>
+				<p> 
+					Dentro de los mismos utilizaremos <em>2 tipos de elementos </em>, por un lado estan <strong>las etiquetas (LABEL) </strong> que funcionan como rotulos que indican al usuario que tipo de datos debe ingresar/seleccionar y ademas facilitan la accesibilidad. Por el otro lado estan <strong>los campos (INPUT / TEXTAREA / SELECT)</strong> que permiten al usuario seleccionar/completar con datos el formulario y los cuales contendran dicha informacion, estos elementos cuentan con <em>2 atributos</em> <strong>type="..."</strong> que indica el tipo de dato utilizado y <strong>value="..."</strong> que es el dato en si mismo.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo email (usr@domain)</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo de contraseña (***)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo fecha (yyyy-mm-dd)</label>
+						<input type="date" />
+					</li>
+					<li>
+						<label>Opcion Unica</label>
+						| SI <input name="accept" type="radio" value="1"/> 
+						| NO <input name="accept" type="radio" value="0"/>
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						| arte <input name="hobbie" type="checkbox" value="art"/>
+						| musica <input name="hobbie" type="checkbox" value="music"/>
+						| deporte <input name="hobbie" type="checkbox" value="sport"/>
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option value="html">html</option>
+							<option value="css">css</option>
+							<option value="js">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset" />
+						<input type="submit" />
+						<button> ENVIAR </button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<div class="social">
+			<a href="">Facebook</a>
+			<a href="">Intagram</a>
+			<a href="">Twitter</a>
+		</div>
+		<form action="" method="POST">
+			<h2>Contactanos</h2>
+			
+		</form>
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
+</body>
+</html>
