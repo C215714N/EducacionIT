@@ -1,0 +1,106 @@
+/* Reglas generales */
+	body{
+		margin:0;
+		font-family: calibri, segoe ui, sans-serif;
+	}
+/* Navegacion */
+	.menu{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 20px;
+		background-color: #248;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px 12px; /* top right bottom left */
+	}
+	.menu li:hover{
+		background-color: #36c;
+	}
+/* Cabecera */
+	#header{
+		padding: 240px 16px;
+		background-color: #ccc;
+		text-align: center;
+	}
+	#header h1{
+		margin: 0;
+		font-size: 48px;
+		line-height: 36px;
+	}
+	#header p{
+		margin: 0;
+		font-size: 32px;
+	}
+/* Contenido Principal */
+	main{
+		padding: 24px;
+	}
+	.header{
+		border-radius: 16px 16px 0 0; /*tl tr br bl*/
+		padding: 2px 16px;
+		color: #ccc;
+		background-color: #248;
+	}
+	main header{
+		color: #248;
+		border-bottom: 2px solid #248; /*width style color*/
+	}
+	h2, 
+	h3{
+		margin: 4px 0;
+	}
+	/*Ejemplos*/
+		.example{
+			list-style: none;
+			margin: 16px;
+			margin-left: 48px;
+			border-left: 4px solid #248;
+			padding: 24px;
+			background-color: #eee;
+		}
+/* Pie de Pagina */
+	#footer{
+		padding: 16px;
+		color: #eee;
+		background-color: #248;
+	}
+	#footer a{
+		color: #ccc;
+		text-decoration: none;
+	}
+	/* Contacto */
+		#contacto {
+			margin: auto;
+			max-width: 540px;
+		}
+		#contacto input,
+		#contacto textarea{
+			width: calc(100% - 16px);
+			outline: none;
+			border: 0;
+			padding: 4px 8px;
+		}
+		#contacto textarea{
+			resize: none;
+			height: 80px;
+		}
+		#contacto button{
+			display: block;
+			margin-left: auto;
+			border: 2px solid #eee;
+			padding: 8px 16px;
+			color: #eee;
+			background-color: transparent;
+			font-weight: bold;
+		}
+		#contacto button:hover{
+			color: #248;
+			background-color: #eee;
+		}
