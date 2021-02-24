@@ -1,0 +1,93 @@
+/*Reglas generales*/
+	body{
+		margin: 0;
+		font-family: calibri, segoe ui, sans-serif;
+	}
+/*Barra de navegacion*/
+	.menu{
+		list-style: none;
+		margin:0;
+		padding: 0;
+		text-align: center;
+		background-color: #448;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 4px;
+	}
+	.menu li:hover{
+		background-color: #66c
+	}
+/*Cabecera y Pie de pagina*/
+	#header, #footer{
+		padding: 24px;
+		color:#eee;
+		background-color: #333;
+		background-image: url('img/osx-lion.png');
+		background-size: cover;
+		background-position: center;
+		text-shadow: -2px 2px 2px #333 ;/* -x+ -y+ blur color*/
+		/*				hex		00 => min (0); FF => max (255);
+			rojo		FF0000	0 1 2 3 4 5 6 7 8 9 A B C D E F
+			amarillo	FF0000
+			verde		00FF00
+			cian 		00FFFF
+			azul		0000FF
+			magenta 	FF00FF
+		*/
+	}
+/*Contenido Principal*/
+	main{
+		padding: 24px;
+	}
+	.header{
+		padding: 8px 16px;/*top right bottom left*/
+		border-radius: 16px 16px 0 0 ;/* topleft topright bottomright bottomleft*/
+		color: #eee; 
+		background-color: #448;
+	}
+	header{
+		border-bottom: 2px solid #448; /* width style color */
+		color: #448;
+	}
+	h1, h2, h3{
+		margin: 2px 0;
+	}
+	/* Ejemplos */
+		.example{
+			list-style: none;
+			margin: 16px;
+			margin-left: 48px;
+			border-left: 4px solid #448;
+			padding: 16px;
+			background-color: #eee;
+		}
+/*Formulario de contacto*/
+	#contacto{
+		max-width: 480px;
+		margin: auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		width: calc(100% - 16px);
+		outline: none;
+		border: none;
+		padding: 8px;
+	}
+	#contacto button{
+		display: block;
+		margin-left: auto;
+		border: 2px solid #eee; /*width style color*/
+		padding: 8px 16px; /*top right bottom left*/
+		color: #eee;
+		background-color: transparent;
+		font-weight: bold;
+	}
+	#contacto button:hover{
+		color: #248;
+		background-color: #eee;
+	}
