@@ -3,12 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			margin: 0;
+			font-family: calibri, 'segoe ui', sans-serif;
+		}
+		/* Selectores Multiples (,) */
+		header, footer{
+			padding: 16px;
+			color: #eee; /*RRGGBB => 00:min; FF:max; 16.777.216 */
+			background-color: #448; 
+			text-align: center;
+		}
+		/* Selectores especificos (padre hijo) */
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+		nav ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background-color: #224;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/* Selector PseudoClase (:pseudo) */
+		nav li:hover{
+			/*al pasar el mouse*/
+			background-color: rgba(204, 204, 204, .3); /*0:min; 255:max;*/
+		}
+		/* Selector de Clase (.class)*/
+		.example {
+			padding: 16px;
+			margin: 8px;
+			text-align: center;
+			background-color: #ccc;
+		}
+		.example p{
+			overflow: hidden;
+			text-align: left;
+		}
+		.example p img{
+			float: left;
+			margin-right: 16px;
+		}
+		/* Selector de Id (#id)*/
+		#footer a{
+			color: #eee;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p> &lt;html&gt; &amp; {css} </p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta Interna / Relativa -->
 					<a href="index.html">Inicio</a>
@@ -23,9 +79,9 @@
 					<a href="https://github.com/C215714N/EducacionIT/tree/html-mv-19hs/" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul>
 			<li>
@@ -40,14 +96,75 @@
 		</ul>
 		<div class="example" style="text-align: center;">
 			<h2>Elemento Imagen</h2>
-			<img style="width: 300px;" src="img/jjba-starplatinum-01.jpg" alt="Dibujo JJBA the World"/>
-			<img style="width: 300px;" src="img/jjba-starplatinum-02.jpg" alt="Dibujo JJBA the World"/>
-			<img style="width: 300px;" src="img/jjba-starplatinum-03.jpg" alt="Dibujo JJBA the World"/>
-			<img style="width: 300px;" src="img/jjba-starplatinum-04.jpg" alt="Dibujo JJBA the World"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-01.jpg" alt="Dibujo JJBA Star Platinum"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-02.jpg" alt="Dibujo JJBA Star Platinum"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-03.jpg" alt="Dibujo JJBA Star Platinum"/>
+			<img style="width: 300px;" src="img/jjba-starplatinum-04.jpg" alt="Dibujo JJBA Star Platinum"/>
 		</div>
-	</div>
-	<div id="footer">
-		
-	</div>
+		<h2>Estructura Semantica</h2>
+		<ul>
+			<li>
+				<strong>HEADER: </strong> Representa el contenido introductorio o cabecera de pagina, debe contener el titulo principal y en ocasiones tambien suele poseer alguna galeria de imagenes o incluso la navegacion principal del sitio. <em>¿Quienes somos?</em>
+				<ul>
+					<li>
+						<strong>NAV: </strong> Representa la navegacion principal y debe poseer solamente los links mas importantes, tambien debe ser los mas simple posible para una mejor experiencia de usuario. <em>¿Donde puede ir el usuario?</em>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>MAIN: </strong> Representa el nudo o contenido principal, la informacion que es de suma relevancia para el usuario. Dependiendo de la cantidad de contenido de la pagina, se puede dividir el segmentos mas pequeños. <em>¿Que busca el usuario?</em>
+				<ul>
+					<li>
+						<strong>ARTICLE: </strong> Contenido independiente que funciona tanto dentro como fuera de la pagina, se caracteriza por poseer una estructura propia y ser autoconclusivo.
+					</li>
+					<li>
+						<strong>SECTION: </strong> Contenido contextualizado que solamente funciona en relacion a otros elementos y no se comprenderia en su totalidad fuera del sitio.
+					</li>
+					<li>
+						<strong>ASIDE: </strong> Contenido tangencial que guarda una relacion indirecta con sus hermanos, normalmente se lo utiliza para sugerencia o insercion de publicidad.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>FOOTER: </strong> Representa el descenlace o contenido complementario al cuerpo principal, suele colocarse en su interior la informacion/formulario de contacto, un mapa del sitio e incluso el copyright y redes sociales. <em>¿Quien es el autor?</em>
+			</li>
+		</ul>
+		<div class="example">
+			<p>
+				<img style="width: 200px;" src="img/jjba-theworld-01.jpg" alt=" Dibujo JJBA the World" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus inventore tenetur, repellat autem explicabo omnis recusandae cum ipsum laudantium cumque perferendis corrupti veniam, quam, atque aliquid natus est a.
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Delectus vitae voluptas laborum! Maiores, officia, iure necessitatibus tenetur suscipit sint deleniti mollitia, perspiciatis dolor laborum nisi unde, fuga esse sunt ut.
+
+				Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Officia reprehenderit praesentium exercitationem earum, magni saepe atque ullam delectus possimus tempora, quidem iusto velit repudiandae, animi odio iure, autem? Voluptate, corporis.
+			</p>
+			<p>
+				<img style="width: 200px;" src="img/jjba-theworld-02.jpg" alt=" Dibujo JJBA the World" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus inventore tenetur, repellat autem explicabo omnis recusandae cum ipsum laudantium cumque perferendis corrupti veniam, quam, atque aliquid natus est a.
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Delectus vitae voluptas laborum! Maiores, officia, iure necessitatibus tenetur suscipit sint deleniti mollitia, perspiciatis dolor laborum nisi unde, fuga esse sunt ut.
+
+				Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Officia reprehenderit praesentium exercitationem earum, magni saepe atque ullam delectus possimus tempora, quidem iusto velit repudiandae, animi odio iure, autem? Voluptate, corporis.
+			</p>
+			<p>
+				<img style="width: 200px;" src="img/jjba-theworld-03.jpg" alt=" Dibujo JJBA the World" />
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus inventore tenetur, repellat autem explicabo omnis recusandae cum ipsum laudantium cumque perferendis corrupti veniam, quam, atque aliquid natus est a.
+
+				Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Delectus vitae voluptas laborum! Maiores, officia, iure necessitatibus tenetur suscipit sint deleniti mollitia, perspiciatis dolor laborum nisi unde, fuga esse sunt ut.
+
+				Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Officia reprehenderit praesentium exercitationem earum, magni saepe atque ullam delectus possimus tempora, quidem iusto velit repudiandae, animi odio iure, autem? Voluptate, corporis.
+			</p>
+		</div>
+	</main>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
 </body>
 </html>
