@@ -110,6 +110,119 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Cuando utilizarlas?</h3>
+				</header>
+				<p>
+					Son elementos que permiten <strong>organizar la informacion de manera tabular</strong> y se utilizan cuando los datos representados en pantalla <em>deben respetar cierta estructura visual</em>. Al igual que en cualquie ambito las mismas se componen de <em>filas y columnas</em>, pero a diferencia de cualquier otra area, en HTML se crean respetando la estructura de cajas utilizando la etiqueta <strong>&lt;TABLE&gt;</strong> con los elementos que se definiran a continuacion.
+				</p>
+				<div class="example">
+					<table class="classic"><!-- contenedor principal -->
+						<caption>Elementos de tablas</caption>
+						<tr><!-- fila de tabla (contenedor) -->
+							<td>Celda 1 fila 1</td> <!-- Celda (contenido)-->
+							<td>Celda 2 fila 1</td>
+							<td>Celda 3 fila 1</td>
+						</tr>
+						<tr>
+							<td>C1F2</td>
+							<td>C2F2</td>
+							<td>C3F2</td>
+						</tr>
+					</table>
+					<table class="classic">
+						<caption>TaTeTi</caption>
+						<tr>
+							<td>X</td>
+							<td>O</td>
+							<td>O</td>	
+						</tr>
+						<tr>
+							<td>O</td>
+							<td>X</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>X</td>
+							<td>O</td>
+							<td>X</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Como estan compuestas?</h3>
+				</header>
+				<p>
+					Como se menciono anteriormente, las tablas estan compuesta por <em>celdas (&lt;td&gt;), filas (&lt;tr&gt;) y columnas</em> pero al diseñarlas no podemos utilizar todos estos elementos y a diferencia de las otras etiquetas de bloque, las tablas se adaptan a su contenido. Para facilitar la implementacion de por parte de <strong>los motores de busqueda</strong> la <em>W3c elaboro una estructura semantica para dichos elementos.</em>
+				</p>
+				<ul>
+					<li><strong>THEAD: </strong> Cabecera de tabla, donde deben colocarse los titulos y en lugar de usar celdas comunes se utilizan <strong>celdas de encabezado (&lt;TH&gt;)</strong></li>
+					<li><strong>TBODY: </strong> Cuerpo de tabla y unica parte de la estructura semantica que mantiene la estructura clasica utilizando filas (&lt;tr&gt;) y celdas (&lt;td&gt;), aunque tambien en ciertas ocasiones se pueden usar celdas de encabezado (&lt;th&gt;)</li>
+					<li><strong>TFOOT: </strong> Pie de tabla o informacion complementaria al cuerpo, se utiliza para colocar un detalle como el total o el promedio de los valores expuesto en el cuerpo de tabla, este elemento es opcional.</li>
+				</ul>
+				<div class="example">
+					<table class="modern">
+						<caption>Ventas</caption>
+						<thead>
+							<th>articulo</th>
+							<th>cant.</th>
+							<th>precio</th>
+							<th>total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>teclado</td>
+								<td>2</td>
+								<td>3500</td>
+								<td>7000</td>
+							</tr>
+							<tr>
+								<td>monitor</td>
+								<td>3</td>
+								<td>8900</td>
+								<td>26700</td>
+							</tr>
+							<tr>
+								<td>gabinete</td>
+								<td>1</td>
+								<td>5600</td>
+								<td>5600</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>39300</td>
+						</tfoot>
+					</table>
+					<table class="modern">
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Tipo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<div class="social">
