@@ -42,4 +42,8 @@
         valoracion INT,
         PRIMARY KEY (id_producto)
     );
+    
+SHOW DATABASES;
+SHOW TABLES;
+DESCRIBE productos;
 	
