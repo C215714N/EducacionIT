@@ -303,11 +303,10 @@
 			justify-content: space-evenly;
 			align-content: space-evenly;
 		}
-		/* pseudoclases*/
-		.dist :first-child{ 	grid-row: 1 / 4; } 
-		.dist :last-of-type{ 	grid-column: span 2; }
-		.dist :last-child { 	grid-column: 1 / 4;}
-		.dist span:nth-last-child(2){ grid-column: span 3; }
+		.dist :first-child	{ grid-row: 1 / 4; 		} 
+		.dist :last-of-type	{ grid-column: span 2; 	}
+		.dist :last-child 	{ grid-column: 1 / 4;	}
+		.dist :nth-last-child(2){ grid-column: span 3; }
 		.dist span:first-of-type{
 			grid-column: span 2;
 			grid-row: span 2;
@@ -326,6 +325,68 @@
 		.area div:last-child{ grid-area: footer; }
 		.aside{ grid-area: aside; }
 		.section{ grid-area: section; }
+
+		.template{
+			display: grid;
+			grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
+			gap: .5rem;
+		}
+		.template div{
+			background-color: #448;
+		}
+		.template div:before{
+			content: 'imagen';
+		}
+	/*PseudoElementos*/
+		.pseudo h2:after{ content: "PseudoElementos"; }
+		.pseudo h3:after{ content: "::before & ::after"; }
+		.pseudo p:before{
+			
+			content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quibusdam ratione optio saepe soluta, provident doloribus cupiditate dolor. Et dolor animi voluptatum? Numquam laudantium, et esse ea odio, eveniet accusamus corporis! Voluptatum tempore officia sed accusamus ducimus atque nobis nihil ea sit illo amet, quas possimus autem earum minima dolores, dolor. Nulla exercitationem ea aspernatur totam sapiente aut doloribus, optio, dolore odit accusantium, sit doloremque repellat velit, reprehenderit iure quibusdam nostrum dolorem magnam? Quam ipsum eum sequi consectetur pariatur blanditiis quibusdam. Vel accusamus nihil hic, cum laboriosam repellat est alias nulla? Nemo doloremque, ipsa molestias? Voluptatem corrupti hic quaerat ratione.';
+		}
+		main p:first-of-type::first-letter{
+			margin-right: .5rem;
+			font-size: 4rem;
+			line-height: 3rem;
+			float: left;
+		}
+		main p::first-line{
+			color: #224;
+			font-weight: bold;
+		}
+	/* Contadores */
+		main{ counter-reset: clase; }
+		main h2:before{
+			counter-increment: clase;
+			content: "Clase " counter(clase) ": "
+		}
+		main > section{ counter-reset: tema; }
+		main h3:before{
+			counter-increment: tema;
+			content: "Tema " counter(tema) " - "
+		}
+		/*Tabla de contenidos*/
+		.content ul{ padding: 0; }
+		.content li{ list-style: none; }
+		/*contadores*/
+			.content > ul { counter-reset: primario; }
+			.content > ul ul{ counter-reset: secundario }
+			.content > ul ul ul{ counter-reset: terciario }
+			.content > ul ul ul ul{ counter-reset: cuarto }
+		/*incrementos*/	
+			.content > ul > li{ counter-increment: primario }
+			.content > ul > li li{ counter-increment: secundario }
+			.content > ul > li li li{ counter-increment: terciario }
+			.content > ul > li li li li{ counter-increment: cuarto }
+		/* aplicacion global */
+			.content li:before{
+				content: 
+					counter(primario) "."
+					counter(secundario) "."
+					counter(terciario) "."
+					counter(cuarto) " -- "
+				;
+			}
 /*Pie de Pagina*/
 	#footer{
 		clear: both;
