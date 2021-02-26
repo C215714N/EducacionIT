@@ -116,6 +116,107 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Cuando utilizarlas?</h3>
+				</header>
+				<p>
+					Son elementos que permiten <strong>organizar la informacion de manera tabular</strong>, deben utilizarse cuando sea necesario <em>respetar una estructura de elementos (datos) que debe mantener su organizacion.</em> A diferencia de las demas etiquetas de bloque, las tablas <strong>se adaptan al tamaño de su contenido</strong> y se crean <em>respetando el modelo de cajas (contenedor y contenido)</em>, si bien posee columnas, filas y celdas, debemos crear la <em>tabla &lt;TABLE&gt;, luego las filas &lt;TR&gt; y por ultimo las celdas &lt;TD&gt;, aunque esto aplica solamente para la estructura clasica y no la estructura semantica detallada mas adelante.</em>
+				</p>
+				<div class="example">
+					<table class="classic">
+						<caption>Alumnos</caption>
+						<tr><!-- Table Row -->
+							<td>Nombre</td><!-- Table Division -->
+							<td>Apellido</td>
+							<td>Edad</td>
+						</tr>
+						<tr>
+							<td>Cristian</td>
+							<td>Racedo</td>
+							<td>30</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Elementos semanticos?</h3>
+				</header>
+				<p>
+					Como se menciono anteriormente, las tablas se crean respetando el modelo de cajas, pero no por esto quiere decir que no sean semanticas. Para poder definir la funcion que cumple cada parte de la misma, la w3c elaboro 3 elementos estructurales para facilitar el <em>analisis de las tablas por parte de los motores de busqueda</em>, los mismos en la mayoria de los casos reemplazan a las filas <em>&lt;tr&gt;</em> a excepcion del cuerpo que mantiene dicha estrucuta.
+				</p>
+				<ul>
+					<li>
+						<strong>THEAD: </strong> Cabecera de tabla que contiene los encabezados y las celdas en su interior deben ser de titulo <em>&lt;th&gt; (table heading)</em> Debido a que indica los datos que van a ser representados
+					</li>
+					<li>
+						<strong>TBODY: </strong> Cuerpo de tabla que contiene los datos y unica parte que mantiene la estructura clasica de tabla, aunque segun el tipo de tabla, por ejemplo referencias cruzadas, tambien puede poseer encabezados <em>&lt;th&gt;</em>
+					</li>
+					<li>
+						<strong>TFOOT: </strong> Pie de tabla que contiene el detalle o datos complementarios al cuerpo como <em>totales, promedios, etc.</em>. Es opcional y puede poseer tanto celdas de contenido <em>&lt;td&gt;</em> como encabezados <em>&lt;th&gt;</em>
+					</li>
+				</ul>
+				<div class="example">
+					<table class="modern">
+						<caption>Ventas</caption>
+						<thead>
+							<th>Producto</th>
+							<th>Precio</th>
+							<th>Cant</th>
+							<th>Total</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Monitor Led 21'</td>
+								<td>8500</td>
+								<td>3</td>
+								<td>25500</td>
+							</tr>
+							<tr>
+								<td>Teclado Redragon</td>
+								<td>3200</td>
+								<td>2</td>
+								<td>6400</td>
+							</tr>
+							<tr>
+								<td>Gabinete Tower</td>
+								<td>2500</td>
+								<td>1</td>
+								<td>2500</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>34400</td>
+						</tfoot>
+					</table>
+					<table class="modern">
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Tipo</th>
+							<th>Lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<div class="social">
