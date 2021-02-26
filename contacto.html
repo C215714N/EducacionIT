@@ -21,14 +21,15 @@
 	</header>
 	<main>
 		<article>
-			<header>
-				<h1>Formularios HTML</h1>
+			<header class="header">
+				<h2>Formularios HTML</h2>
 			</header>
 			<section>
 				<header>
-					<h1>¿Para que se utilizan?</h1>
+					<h3>¿Para que se utilizan?</h3>
 				</header>
 				<p>
+					
 					Son herramientas que permiten una <strong>interaccion real entre cliente y servidor (intercambio de datos)</strong> y se utilizan cuando se necesita <em>obtener, enviar, actualizar o eliminar</em> datos de un servidor. Para implementarlos dentro de una pagina es necesario utilizar la etiqueta <strong>&lt;FORM&gt;</strong> ademas de <em>algunos atributos y elementos que se mencionan mas adelante.</em>
 				</p>
 				<ul class="example">
@@ -36,6 +37,22 @@
 					<li>Inscripcion - Registro</li>
 					<li>Acceso - Inicio Sesion</li>
 					<li>Contacto - Consulta Web</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Como funcionan?</h3>
+				</header>
+				<p>
+					El <em>elemento anterior</em> debe contar con al menos <em>2 atributos</em>, por un lado, se encuentra el <strong>action="..."</strong> que define que sucedera con los datos una vez realizado el envio y en la actualidad se utiliza como valor de este un <em>script en lenguaje de servidor (ej: php)</em>. Por el otro, se encuentra el <em>method="..."</em> que indica como se van a manipular los y cual es la prioridad en el proceso.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong> Metodo menos seguro debido a que los datos siempre estan accesibles desde la barra de direcciones, pero de respuesta mucho mas rapida ya que prioriza los datos provistos por parte del servidor.
+					</li>
+					<li>
+						<strong>POST: </strong> Metodo mas seguro debido a que protege los datos que se envian al servidor, pero de respuesta mas lenta y no necesariamente inmediata debido al proceso de <em>encriptacion desencriptacion</em>
+					</li>
 				</ul>
 			</section>
 		</article>
