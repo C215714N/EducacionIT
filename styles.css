@@ -27,7 +27,11 @@
 	#header{
 		padding: 240px 16px;
 		background-color: #ccc;
+		background-image: url('img/osx-mojave-night.jpg');
+		background-size: cover; /*cubre la etiqueta*/
+		background-position: center; /*origen de la imagen*/
 		text-align: center;
+		text-shadow: 0 0 8px #eee;
 	}
 	#header h1{
 		margin: 0;
@@ -68,6 +72,9 @@
 			background-color: #eee;
 		}
 	/*Tablas*/
+		table{
+			margin:auto;
+		}
 		.classic, 
 		.classic caption,
 		.classic td{
@@ -77,8 +84,7 @@
 		.modern,
 		.modern caption, 
 		.modern tr, 
-		.modern td{ 
-			margin: auto;
+		.modern td{
 			color: #eee;
 			background-color: rgba(34, 68, 136, .5);
 		}
@@ -94,6 +100,29 @@
 			border-radius: 8px 8px 0 0;
 			border-bottom: none;
 		}
+	/* Contenido Multimedia */
+		/*
+			Aspect-ratio: relacion de aspecto;
+			l:h 	largo	altura
+			4:3		1.33	75%
+			16:9	1.78	56.25%
+			16:10	1.66	62.5%
+		*/
+		iframe,
+		audio,
+		video{
+			margin: 8px;
+			outline: none;
+			border: none;
+			border-radius: 16px;
+			height: 240px;
+			width: 320px;
+			box-shadow: 0 0 16px #333;
+		}
+		audio{
+			height: 50px;
+		}
+
 /* Pie de Pagina */
 	#footer{
 		padding: 16px;

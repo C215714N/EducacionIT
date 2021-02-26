@@ -217,6 +217,83 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<section id="iframe">
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					En la actualidad se puede incorporar contenido de otros sitios web en nuestra pagina, mediante lo que se conoce como <em>compartido/embebido</em>, normalmente utilizando una etiqueta llamada <strong>iframe (Marco flotante)</strong> que permite la carga asincronica de contenido dentro de una ventana en la pagina. Originalmente este tipo de etiquetas se implemento para utilizar tanto para <a href="#audio">listas de reproduccion externas</a> asi como tambien <a href="#video">comparticion de videos</a>, sin necesidad de tenerlos en el sitio o gestionar su accesibilidad.
+				</p>
+				<div class="example">
+					<iframe 
+					    src="https://www.youtube.com/embed/4v9CfE90Sts" 
+					    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					    allowfullscreen>
+					</iframe>
+					<iframe 
+					src="https://www.youtube.com/embed/uUueCDfJShg"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+					</iframe>
+					<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d493.8515646278206!2d-58.37595106807537!3d-34.60251820295006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1614352725453!5m2!1ses-419!2sar" 
+					loading="lazy">
+					</iframe>
+					<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0181079377824!2d-58.3763705708039!3d-34.60232989489748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc41153a23%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1614352889229!5m2!1ses-419!2sar" 
+					loading="lazy">
+					</iframe>
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h3>¿Sonidos en la web?</h3>
+				</header>
+				<p>
+					Como se menciona en el <a href="#iframe">tema anterior</a>, para poder cargar contenido multimedia era mucho mas practico utilizar dicha etiqueta para <em>evitar la instalacion de complementos o plugins de terceros</em>. Actualmente los navegadores incorporan una API de reproduccion y utilizando la etiqueta <strong>&lt;AUDIO&gt;</strong> podemos implementar sonidos ademas de un reproductor, pero en este ultimo caso es necesario indicar el atributos <em>controls</em> para que se visualice en pantalla. Entre los formatos soportados estan <strong>.mp3 - .wav - .ogg</strong>, pero tambien soporta los formatos del <a href="#video">elemento video.</a>
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO. Podes descargar en contenido desde el siguiente
+							<a href="media/live-learn.mp3" download> link</a>
+						</p>
+					</audio>
+					<audio src="media/by-the-way.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO. Podes descargar en contenido desde el siguiente
+							<a href="media/by-the-way.mp4" download> link</a>
+						</p>
+					</audio>
+				</div>
+			</section>
+			<section id="video">
+				<header>
+					<h3>¿Multimedia sin Plugins?</h3>
+				</header>
+				<p>
+					A diferencia del elemento <a href="#iframe">iframe</a> que permite la carga asincronica, el <strong>elemento video</strong> se carga en el buffer de memoria con la pagina, pero no necesitamos instalar nada mas. Los formatos compatibles son <strong>.mp4 - .webm - .ogv</strong>, y al igual que el <a href="#audio"> elemento anterior </a> soporta los formatos de audio, cambiando su aspecto visual al utilizar dichos formatos. Aparte posee otros atributos que funcionan en conjunto como <em>autoplay, muted, loop</em>
+				</p>
+				<div class="example">
+					<video src="media/by-the-way.ogv" autoplay muted loop>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento VIDEO. Podes descargar en contenido desde el siguiente
+							<a href="media/by-the-way.ogv" download> link</a>
+						</p>
+					</video>
+					<video src="media/cant-stop.webm" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con el elemento VIDEO. Podes descargar en contenido desde el siguiente
+							<a href="media/cant-stop.webm" download> link</a>
+						</p>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<div class="social">
