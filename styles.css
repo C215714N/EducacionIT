@@ -42,6 +42,8 @@
 	}
 /*Contenido Principal*/
 	main{
+		margin:auto;
+		max-width: 1200px;
 		padding: 24px;
 	}
 	.header{
@@ -100,6 +102,25 @@
 			margin: auto;
 		}
 	/* CONTENIDO MULTIMEDIA */
+		/*
+			aspect-ratio - relacion de aspecto
+			l:h 	ancho 	altura 	
+			4:3		1.33	75%
+			16:9	1.78	56.2%
+			16:10	1.6		62.5%
+		*/
+		iframe,
+		audio,
+		video{
+			width: 100%;
+			max-width: 540px;
+			border: none;		
+			border-radius: 16px;
+			box-shadow: 0 0 8px #333;
+		}
+		audio{
+			height: 50px;
+		}
 /*Formulario de contacto*/
 	#contacto{
 		max-width: 480px;

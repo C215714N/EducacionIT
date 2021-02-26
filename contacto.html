@@ -255,11 +255,54 @@
 				<header>
 					<h3>¿Sonidos en la web?</h3>
 				</header>
+				<p>
+					En la actualidad los navegadores incorporan una API para reproducir este tipo de contenido mediante la etiqueta <strong>&lt;audio&gt;</strong> sin necesidad de elementos externos como se menciono en <a href="#iframe"> el tema anterior</a>. Los formatos soportados son <strong>.mp3 - .wav - .ogg </strong> aunque tambien soporta los formatos de <em>video que se detallan en el <a href="#video">siguiente apartado</a></em>. Un detalle a tener en cuenta es que si queremos visualizar un reproductor en pantalla es obligatorio usar el atributo <em>controls.</em>
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes decargar el contenido desde el siguiente 
+							<a href="media/live-learn.mp3" download> link</a>
+							<br />
+							Tambien podes descargar el siguiente navegador para acceder al contenido 
+							<a href="https://www.google.com/intl/es-419/chrome/">Google Chrome</a>
+						</p>
+					</audio>
+					<audio src="media/californication.ogv" controls>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes decargar el contenido desde el siguiente 
+							<a href="media/californication.ogv" download> link</a>
+						</p>
+					</audio>
+				</div>
 			</section>
 			<section id="video">
 				<header>
 					<h3>¿Multimedia sin plugins?</h3>
 				</header>
+				<p>
+					A diferencia del <a href="#iframe">primer elemento</a>, el contenido de la etiqueta <strong>&lt;video&gt;</strong> se carga en el buffer de memoria conjuntamente con la pagina. Admite los formatos <strong>.mp4 - .webm - .ogv</strong>, asi como tambien los <a href="#audio">formatos de sonido</a> pero cambiando su aspecto de reproductor. Este elemento puede utilizar conjuntamente varios atributos como <em>autoplay muted loop</em>
+				</p>
+				<div class="example">
+					<video src="media/cant-stop.webm" controls>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes decargar el contenido desde el siguiente 
+							<a href="media/cant-stop.webm" download> link</a>
+							<br />
+							Tambien podes descargar el siguiente navegador para acceder al contenido 
+							<a href="https://www.google.com/intl/es-419/chrome/">Google Chrome</a>
+						</p>
+					</video>
+					<video src="media/by-the-way.mp4" autoplay muted loop>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes decargar el contenido desde el siguiente 
+							<a href="media/by-the-way.mp4" download> link</a>
+							<br />
+							Tambien podes descargar el siguiente navegador para acceder al contenido 
+							<a href="https://www.google.com/intl/es-419/chrome/">Google Chrome</a>
+						</p>
+					</video>
+				</div>
 			</section>
 		</article>
 	</main>
