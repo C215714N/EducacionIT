@@ -125,9 +125,9 @@
 					<table class="classic"><!-- contenedor principal -->
 						<caption>Elementos de tablas</caption>
 						<tr><!-- fila de tabla (contenedor) -->
-							<td>Celda 1 fila 1</td> <!-- Celda (contenido)-->
-							<td>Celda 2 fila 1</td>
-							<td>Celda 3 fila 1</td>
+							<td class="size">Celda 1 fila 1</td> <!-- Celda (contenido)-->
+							<td class="size">Celda 2 fila 1</td>
+							<td class="size">Celda 3 fila 1</td>
 						</tr>
 						<tr>
 							<td>C1F2</td>
@@ -138,9 +138,9 @@
 					<table class="classic">
 						<caption>TaTeTi</caption>
 						<tr>
-							<td>X</td>
-							<td>O</td>
-							<td>O</td>	
+							<td class="half">X</td>
+							<td class="half">O</td>
+							<td class="half">O</td>	
 						</tr>
 						<tr>
 							<td>O</td>
@@ -171,10 +171,10 @@
 					<table class="modern">
 						<caption>Ventas</caption>
 						<thead>
-							<th>articulo</th>
-							<th>cant.</th>
-							<th>precio</th>
-							<th>total</th>
+							<th class="double">articulo</th>
+							<th class="half">cant.</th>
+							<th class="size">precio</th>
+							<th class="size">total</th>
 						</thead>
 						<tbody>
 							<tr>
@@ -204,8 +204,8 @@
 					<table class="modern">
 						<caption>Desarrolladores</caption>
 						<thead>
-							<th>Tipo</th>
-							<th>Lenguaje</th>
+							<th class="size">Tipo</th>
+							<th class="size">Lenguaje</th>
 						</thead>
 						<tbody>
 							<tr>
@@ -221,6 +221,45 @@
 						</tbody>
 					</table>
 				</div>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<section id="iframe">
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					Antiguamente para colocar <em>contenido compartido / embebido</em> se utilizaba la etiqueta <strong>&lt;iframe&gt; (marco flotante)</strong> que permite la carga asincronica de contenido a diferencia de los elementos <a href="#audio">audio</a> y <a href="#video">video</a> que se mencionaran mas adelante. Otra razon por la que se implementaba este elemento fue la necesidad de herramientas de terceros para la reproduccion de contenido multimedia, y debido a esto era mas facil traer dicho contenido desde una web externa.
+				</p>
+				<div class="example">
+					<iframe 
+					src="https://www.youtube.com/embed/aKg41p76-F4" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+					</iframe>
+					<iframe 
+					src="https://www.youtube.com/embed/zJBzHQawsjs" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+					</iframe>	
+					<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1952.708657217621!2d-58.3769705960014!3d-34.60286124280781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1614362464345!5m2!1ses-419!2sar" 
+					loading="lazy">
+					</iframe>		
+				</div>
+			</section>
+			<section id="audio">
+				<header>
+					<h3>¿Sonidos en la web?</h3>
+				</header>
+			</section>
+			<section id="video">
+				<header>
+					<h3>¿Multimedia sin plugins?</h3>
+				</header>
 			</section>
 		</article>
 	</main>
