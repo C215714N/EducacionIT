@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/css.svg">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<nav>
@@ -121,14 +123,28 @@
 			<a href="https://instagram.com" target="_blank" title="Instagram">I</a>
 			<a href="https://api.whatsapp.com/" target="_blank" title="Whatsapp">W</a>
 		</div>
-		<form id="contacto" action="..." method="POST">
+		<form id="contacto" action="contacto.php" method="POST">
 			<h2>Contactanos</h2>
-			<label for="nombre">Nombre</label>
+			<label for="nombre">Nombre </label>
 			<input 
 				id="nombre"
 				name="nombre" 
 				type="text" 
 				required />
+			<label for="email">Correo </label>
+			<input 
+				id="email"
+				name="email" 
+				type="email" 
+				required />
+			<label for="consulta">Consulta </label>
+			<textarea 
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				required ></textarea>
+			<button> ENVIAR </button>
 		</form>
 		<p>
 			&copy; Todos los derechos reservados |
