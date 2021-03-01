@@ -7,8 +7,8 @@
 	proveedores (id, nombre, cuil, direccion, datos)
     productos (id, nombre, codigo, precio, stock)
 	clientes (id, nombre, tipo, doc, sexo, datos)
-    ingreso (proveedor => productos)
-    ventas (productos => clientes)
+    carga_productos (proveedor => productos)
+    facturacion (productos => clientes)
 */
 
 -- proveedores
@@ -42,7 +42,23 @@
         valoracion INT,
         PRIMARY KEY (id_producto)
     );
-    
+-- ingreso_productos
+	CREATE TABLE ingreso_productos(
+		id_ingreso INT AUTO_INCREMENT,
+        id_producto INT NOT NULL, -- no debe tener otras clausulas a excepcion de NOT NULL
+        cantidad INT UNSIGNED NOT NULL,
+        precio DECIMAL(10,2),
+        id_proveedor INT NOT NULL,
+        fecha DATE DEFAULT (CURRENT_DATE()),
+        hora TIME DEFAULT (CURRENT_TIME()), 
+        usuario BLOB DEFAULT (CURRENT_USER()),
+        PRIMARY KEY (id_ingreso),
+        UNIQUE KEY (id_producto, id_proveedor, fecha),
+        FOREIGN KEY(id_producto) REFERENCES productos(id_producto), -- campo relacional compara el valor con la tabla.campo referenciado
+        FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor) -- evita la implementacion de valores inexistentes      
+    );
+
+
 SHOW DATABASES;
 SHOW TABLES;
 DESCRIBE productos;

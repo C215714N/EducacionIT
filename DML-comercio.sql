@@ -20,6 +20,7 @@ USE comercio_lj_11;
         ("notebook elitebook 8470p", 15000, 65730.00), -- 2
         ("pendrive 32gb", 9000, 600), -- 3
         ("carry disk 2.5 usb3.0", 1200, 1059.99); -- 4
+        
 /* Consulta de registros */
 	-- general
     SELECT * FROM clientes;
