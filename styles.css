@@ -6,7 +6,23 @@
 
 /* Navegacion */
 	.menu{
+		list-style: none;
+		margin: 0; /*default top:16px right:0*/
+		padding: 0; /*default-left: 40px*/
 		background-color: #448; /*rrggbb*/
+		text-align: center;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px 12px;/*top right bottom left*/
+	}
+	.menu li:hover{
+		background-color: #66c;
 	}
 /* Cabecera */
 
