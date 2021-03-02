@@ -3,7 +3,9 @@
 		margin: 0;
 		font-family: calibri, 'segoe ui', sans-serif;
 	}
-
+	h1,h2,h3{
+		margin: 4px 0;
+	}
 /* Navegacion */
 	.menu{
 		list-style: none;
@@ -25,7 +27,34 @@
 		background-color: #66c;
 	}
 /* Cabecera */
-
+	#header{
+		padding:10% 16px;
+		background-color: #ccc;
+		text-align: center;
+	}
 /* Contenido Principal */
-
+	main{
+		max-width: 992px;/* ancho maximo default: 100% */
+		margin: 16px auto;
+		padding: 0 16px;
+	}
+	.header{
+		border-radius: 16px 16px 0 0; /*tl tr br bl*/
+		padding: 8px;
+		color: #eee;
+		background-color: #448;
+	}
+	main header{
+		color: #448;
+		border-bottom: 2px solid; /*width style color*/
+	}
+	/*Estilos Ejemplos*/
+		.example{
+			list-style: none;
+			margin: 8px;
+			margin-left: 32px;
+			border-left: 4px solid #448;
+			padding: 16px;
+			background-color: #eee;
+		}
 /* Pie de Pagina */
