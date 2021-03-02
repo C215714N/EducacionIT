@@ -116,6 +116,93 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class=>
+				<h2>Tablas HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Por que utilizarlas?</h3>
+				</header>
+				<p>
+					
+					Son elementos que permiten <strong>organizar la informacion de manera tabular </strong> y por lo tanto es necesario utilizarlas porque respetan la legibilidad de los datos, ya que a diferencia de otros elementos de bloque, estas <em>se adaptan a su contenido</em> y nunca cambian su aspecto principal. A diferencia de cualquier otro ambito, en HTML las tablas se crean respetando el <strong>modelo de cajas</strong>, es decir, mediante <em>etiquetas contenedoras y etiquetas de contenido.</em>
+				</p>
+				<div class="example">
+					<table class="classic"><!-- contenedor de tabla -->
+						<caption>Usuario</caption>
+						<tr><!-- fila de tabla (contenedor) -->
+							<td>username</td><!-- celda (contenido) -->
+							<td>password</td>
+							<td>email</td>
+						</tr>
+						<tr><!-- fila de tabla (Table Row)-->
+							<td>c215714n</td><!-- celda (Table Division) -->
+							<td>root</td>
+							<td>cdr@hotmail.com</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Poseen Estructura semantica?</h3>
+				</header>
+				<p>
+					
+				</p>
+				<ul>
+					<li><strong>THEAD: </strong> Cabecera de tabla que contiene los encabezados representados con la etiqueta <em>th (table Heading)</em>, su funcion es definir/representar los campos de la tabla.</li>
+					<li><strong>TBODY: </strong> Cuerpo de tabla que contiene los datos representados, es la unica parte de la estructura semantica que mantiene el formato clasico, aunque tambien puede poseer titulos en caso de trabajar con <em>tablas de referencias cruzadas</em></li>
+					<li><strong>TFOOT: </strong> Pie de tabla que contiene datos complementarios al cuerpo de la misma como <em>totales, promedios, etc.</em>, tambien puede poseer encabezados y es opcional.</li>
+				</ul>
+				<div class="example">
+					<table class="modern" border="1">
+						<caption>Usuarios</caption>
+						<thead>
+							<th>username</th>
+							<th>password</th>
+							<th>email</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>c215714n</td>
+								<td>root</td>
+								<td>cdr@hotmail.com</td>
+							</tr>
+							<tr>
+								<td>d4M14n</td>
+								<td>admin</td>
+								<td>cdr@gmail.com</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="2">Total</th>
+							<td>2</td>
+						</tfoot>
+					</table>
+					<table class="modern">
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>tipo</th>
+							<th>lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<div class="social">
