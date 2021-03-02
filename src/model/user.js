@@ -37,8 +37,8 @@ User.findById = function(id, result) {
 }
 
 User.delete = function(id, result) {
-    dbCon.query('DELETE FROM Users WHERE id_user = ?',
-    [id],
+    dbCon.query('DELETE FROM Users WHERE id_user = ? OR user_name = ?',
+    [id, id],
     function(err, res) {
         if (err) {
             result(null, err) 
