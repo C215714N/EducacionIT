@@ -351,7 +351,7 @@
 			color: #224;
 			font-weight: bold;
 		}
-	/* Contadores */
+	/*Contadores*/
 		main{ counter-reset: clase; }
 		main h2:before{
 			counter-increment: clase;
@@ -384,6 +384,40 @@
 					counter(cuarto) " -- "
 				;
 			}
+	/*Menu desplegable*/
+		.menu{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			color: #eee;
+			background-color: #248;
+		}
+		.menu li{
+			position: relative;
+			list-style: none;
+			padding:.5rem;
+		}
+		.menu ul{
+			display: none;
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			background-color: #36c;
+		}
+		.menu li:hover{
+			background-color: #ccc8;
+		}
+		.menu li:hover > ul{
+			display: block;
+		}
+		.menu li > ul{
+			top: 100%;
+			left: 0;
+		}
+		.menu li li > ul{
+			top:0;
+			left: 100%;
+		}
 /*Pie de Pagina*/
 	#footer{
 		clear: both;
