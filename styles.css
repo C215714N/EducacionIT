@@ -31,6 +31,10 @@
 		padding:10% 16px;
 		background-color: #ccc;
 		text-align: center;
+		background-image: url('img/osx-lion.png');
+		background-size: cover;
+		background-position: center;
+		text-shadow: 0 0 4px #eee;
 	}
 /* Contenido Principal */
 	main{
@@ -83,7 +87,29 @@
 			padding: 4px 8px;
 		}
 	/*Contenido Multimedia*/
-	
+		/*
+			aspect-ratio = relacion de aspecto
+			l / h 	ancho 		alto
+			16/10	1.60(alto)	62.5%(ancho)
+			16/9	1.78(alto)	56.25%(ancho)
+			4/3		1.33(alto)	75%(ancho)
+		*/
+		iframe,
+		video,
+		audio{
+			outline: none;
+			border: none;
+			border-radius: 16px;
+			box-shadow: 0 0 8px #333; /* -x+ -y+ blur color*/
+		}
+		video{
+			width: 100%;
+			max-width: 540px;
+		}
+		iframe{
+			width: 320px;
+			height: 240px;
+		}
 /* Pie de Pagina */
 	#footer{
 		padding: 16px;
