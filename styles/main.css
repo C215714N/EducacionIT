@@ -2,12 +2,10 @@
 	@import url(
 		'https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kurale&family=Raleway+Dots&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap'
 	);
-
 	@font-face{
 		src: url(../assets/fonts/Starjedi.ttf);
 		font-family: "star wars";
 	}
-
 	*{
 		font-family: Roboto, "Segoe ui", sans-serif;
 		box-sizing: border-box;
@@ -99,7 +97,6 @@
 		padding: 1rem;
 		background-color: rgba(240, 240, 240, .3);
 	}
-
 	.example{
 		margin: 0 1rem; /*top right bottom left*/
 		margin-left: 3rem;
@@ -278,7 +275,7 @@
 			border-radius: 0 1rem 1rem 0; /*topleft topright bottomright bottomleft*/
 		}
 		.border div:nth-child(5){
-			border-radius: 10px / 20px; /*x / y */
+			border-radius: 10px / 20px; /* x / y */
 		}
 		.border div:nth-child(6){
 			border-radius: 100px / 10px; /* x / y*/

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.position{
+			position: relative;
+			max-width: 720px;
+			margin: 1rem;
+			border: 2px solid #333;
+			padding: .5rem;
+			background-color: grey;
+		}
+		/* STATIC: (valor predeterminado) no sirve como referente, el elemento ocupa el lugar que le corresponde en el espacio */
+		.position div{
+			position: static;
+			margin: .5rem;
+			padding: .5rem;
+			background-color: #ccc;
+		}
+		/* ABSOLUTE: la etiqueta toma como referente al primer ancestro que no sea static, si no existe se utiliza al body y cuando se aplica este tipo de posicion, se coloca por fuera del flow del documento*/
+		.position div:first-child{
+			position:absolute;
+			background-color: #aad;
+			z-index: 2;
+		}
+		.position:first-child div:first-child{
+			top: 0;
+			right: 0;
+		}
+		.position:last-child div:first-child{
+			bottom: 0;
+			left: 0;
+		}
+		/*RELATIVE: la etiqueta se toma como referente a si misma, todavia ocupa lugar en el flow del documento y los demas elementos no se ven afectados por el cambio de posicion*/
+		.position div:nth-child(2){
+			position: relative;
+			background-color:#c56;
+			z-index: 1;
+		}
+		.position:first-child div:nth-child(2){
+			left: -120px;
+		}
+		.position:nth-child(2) div:nth-child(2){
+			top: 1rem;
+			left: 5rem;
+		}
+		/*FIXED: la etiqueta toma como referente al viewport y se mantiene por fuera del flow del documento, es ideal para generar botones o controles flotantes ya que siempre se encuentran en dicha posicion*/
+		.position div:nth-child(3){
+			position:fixed;
+			background-color: #6c9;
+			right: 0;
+		}
+		/*STICKY: la etiqueta toma como referente al primer ancestro no static, pero a la vez cuando se cumple determinada condicion se sale del flow del documento, dependiendo donde se encuentre*/
+		.position div:nth-child(4){
+			position:sticky;
+			background-color: #c60;
+			top:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div>Position Absolute</div>
+		<div>Position Relative</div>
+		<div>Position Fixed</div>
+		<div>Position Sticky</div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+	</div>
+	<div class="position">
+		<div>Position Absolute</div>
+		<div>Position Relative</div>
+		<div>Position Fixed</div>
+		<div>Position Sticky</div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+	</div>
+	<div class="position">
+		<div>Position Absolute</div>
+		<div>Position Relative</div>
+		<div>Position Fixed</div>
+		<div>Position Sticky</div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+		<div>Position </div>
+	</div>
+</body>
+</html>
