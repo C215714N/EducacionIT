@@ -40,8 +40,28 @@ USE comercio_lj_11;
         (3,	6000,	450,	4),
         (4,	1200,	800,	5),
         (3,	3000,	420,	3);
+	INSERT INTO clientes (apellido, nombre, num_doc)
+	VALUES
+		('Sanchez','Roberto',20542054),
+		('Miguel','Luis', 25114173),
+		('Sabina','Joaquin',13132071),
+		('Funes','Romi Ramiro',17234281);
 	-- ingreso por consulta
-    
+	INSERT INTO facturacion(id_cliente, tipo, tipo_pago)
+    VALUES
+		((SELECT id_cliente FROM clientes WHERE tipo_doc = 1 AND num_doc = '35353535'),2,2),
+        ((SELECT id_cliente FROM clientes WHERE apellido = "sanchez"),2,1),
+		((SELECT id_cliente FROM clientes WHERE nombre LIKE "Romi%"),2,3),
+		((SELECT id_cliente FROM clientes WHERE sexo = 1 AND apellido LIKE "%do"),2,5),
+        ((SELECT id_cliente FROM clientes WHERE num_doc = 13132071),2,2),
+		((SELECT id_cliente FROM clientes WHERE apellido = "Miguel" AND num_doc = 25114173),1,1);
+	
+    INSERT INTO facturacion_detalle(id_factura, id_producto)
+	VALUES
+		(1,1),
+        (1,2),
+        (1,3),
+        (1,4);
 /* ---------------------------------------
 		Consulta de registros 
 ---------------------------------------- */
@@ -50,6 +70,8 @@ USE comercio_lj_11;
     SELECT * FROM proveedores;
     SELECT * FROM productos;
     SELECT * FROM ingreso_productos;
+    SELECT * FROM facturacion;
+    SELECT * FROM facturacion_detalle;
     -- campos especificos
     SELECT producto, precio  -- campos seleccionados
 		FROM productos 		 -- tabla consultada
