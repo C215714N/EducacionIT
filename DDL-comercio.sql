@@ -57,7 +57,30 @@
         FOREIGN KEY(id_producto) REFERENCES productos(id_producto), -- campo relacional compara el valor con la tabla.campo referenciado
         FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor) -- evita la implementacion de valores inexistentes      
     );
-
+-- facturacion (clientes => venta)
+	CREATE TABLE facturacion(
+		id_factura INT AUTO_INCREMENT,
+        id_cliente INT NOT NULL,
+        tipo ENUM('debe', 'haber'),
+        tipo_pago ENUM('debito','credito','efectivo','bancario','virtual'),
+        monto DECIMAL(12,2),
+        impuesto DECIMAL(4,3),
+        fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY(id_factura),
+        FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente)
+    );
+    -- facturacion_detalle (productos => factura)
+	CREATE TABLE facturacion_detalle(
+		id_detalle INT AUTO_INCREMENT,
+        id_factura INT NOT NULL,
+        id_producto INT NOT NULL,
+        cantidad INT UNSIGNED DEFAULT 1,
+        precio DECIMAL(10,2),
+        PRIMARY KEY(id_detalle),
+        UNIQUE KEY(id_factura, id_producto),
+        FOREIGN KEY(id_factura) REFERENCES facturacion(id_factura),
+        FOREIGN KEY(id_producto) REFERENCES productos(id_producto)
+    );
 
 SHOW DATABASES;
 SHOW TABLES;
