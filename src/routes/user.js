@@ -8,5 +8,5 @@ userRouter.get( '/', authToken , userController.findAll )
 userRouter.get( '/:id', authToken , userController.findById )
 userRouter.delete( '/:id', authToken, userController.delete )
 userRouter.post( '/', authToken, userController.create )
-// userRouter.put('/:id', userController.update)
+userRouter.put('/:id', authToken, userController.update)
 module.exports = userRouter

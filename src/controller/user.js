@@ -26,7 +26,7 @@ exports.delete = function(req, res) {
 
 }
 
-exports.create = function (req, res) {
+exports.create = function(req, res) {
     const newUser = new User (req.body)
     if (req.body.constructor == Object && Object.keys(req.body) == 0) {
         res.status(400).send({
@@ -42,5 +42,18 @@ exports.create = function (req, res) {
         })
         }
         )
+    }
+}
+
+exports.update = function(req, res) {
+    if(req.body.constructor == Object && Object.keys(req.body).length == 0){
+        res.status(400).send({
+            Error: true,
+            Mensaje: 'Debes completar todos los campos.'
+        })
+    } else {
+        User.update(req.params.id, new User(req.body), (err, user) => {
+            err ? res.send(err) : res.json({Mensaje: "Los datos fueron actualizados."})
+        })
     }
 }
