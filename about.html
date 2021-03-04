@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Maquetacion Web</title>
+	<!--Mockup CSS-->
+	<link rel="stylesheet" href="styles/mockup.css">
 </head>
 <body>
-	
+	<nav>
+		<a href="#">CSS</a><!--Brand-->
+		<button class="button">&equiv;</button><!--Hamburger-->
+		<ul class="menu"><!--Main nav-->
+			<li><a href="index.html" title="Inicio"><span>Inicio</span></a></li>
+			<li><a href="#" title="Acerca"><span>Acerca</span></a></li>
+			<li><a href="gallery.html" title="Galeria"><span>Galeria</span></a></li>
+			<li><a href="#contact" title="Contacto"><span>Contacto</span></a></li>
+		</ul>
+		<a href="#">^</a><!--Back-->
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Maquetacion Web</h1>
+			<p>html | css | js</p>
+		</div>
+		<video src="assets/media/cant-stop.webm" muted loop controls>
+			<p>
+				Lo sentimos, pero tu navegador NO ES COMPATIBLE con el elemento VIDEO. No te preocupes, podes descargar el contenido desde el siguiente <a href="assets/media/cant-stop.webm" download>link</a>
+			</p>
+		</video>
+	</header>
+	<main>
+		<header class="header">
+			<h2>Backgrounds</h2>
+			<div class="slide">
+				<span class="active">1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+			</div>
+		</header>
+		<ul class="slide">
+			<li class="active">
+				1
+			</li>
+			<li>
+				2
+			</li>
+			<li>
+				3
+			</li>
+			<li>
+				4
+			</li>
+		</ul>
+		<button class="prev">&lt;</button>
+		<button class="next">&gt;</button>
+	</main>
+	<!-- Main JS -->
+	<script src="scripts/main.js"></script>
 </body>
 </html>

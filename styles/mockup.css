@@ -1,0 +1,118 @@
+/* Mobile First - Content First */
+	/* Reglas Generales */
+		* {
+			box-sizing: border-box;
+			outline: none;
+			font-family: sans-serif;
+		}
+		body{
+			margin: 0;
+		}
+	/* Navegacion */
+		nav{
+			position: sticky;
+			top: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: 
+				linear-gradient(
+					#454545,
+					#333
+				);
+			z-index: 3;
+		}
+		nav a{
+			display: block;
+			color: #eee;
+			padding: .5rem;
+			text-decoration: none;
+			font-size: 1.2rem;
+		}
+		nav > a{
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		nav > a:last-child{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			width: 2.5rem;
+			border-radius: 50%;
+			padding: 0;
+			line-height: 2.5rem;
+			text-align: center;
+			background-color: #3338;
+			opacity: .4;
+		}
+		nav > a:last-child:hover{
+			opacity: .7;
+		}
+		.menu{
+			overflow:hidden;
+			height: 0;
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.menu a:hover{
+			background-color: #acd8;
+		}
+		.button{
+			cursor: pointer;
+			margin: .5rem;
+			border: 2px solid #eee;
+			border-radius: .4rem;
+			padding: .4rem .8rem;
+			color: #eee;
+			background-color: transparent;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		.button:hover{
+			color: #333;
+			background-color: #eee;
+		}
+		.menu.active{
+			height: auto;
+		}
+	/* Cabecera */
+		#header{
+			overflow: hidden;
+			max-height: 720px;
+			position: relative;
+			padding: 75% 1rem 0;
+			color: #eee;
+			text-shadow: 
+				0 0 .2rem #333,
+				-2px 2px 2px #333;
+		}
+		#header video{
+			/*aspect-ratio 16:10 16:9 4:3*/
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		#header .header{
+			position: absolute;
+			width: 70%;
+			height: 70%;
+			top:15%;
+			left: 15%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			z-index: 1;
+		}
+	/* Contenido Principal */
+/* Small Devices - smartphones */
+
+/* Medium Devices - smartphones(landscape) tablets */
+
+/* Large Devices - tablets(landscape) desktop */
+
+/* Extra Large - desktop smart-tv */
