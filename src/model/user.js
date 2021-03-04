@@ -1,4 +1,4 @@
-let dbCon = require('../dbCon');
+let dbConn = require('../dbConn');
 
 let User = function(user) {
     this.name = user.name
@@ -11,7 +11,7 @@ let User = function(user) {
 }
 
 User.findAll = function(result) {
-    dbCon.query('SELECT * FROM Users', function(err, res){
+    dbConn.query('SELECT * FROM Users', function(err, res){
         if (err) {
             console.log('Error.', err)
             result(null, err)
@@ -23,7 +23,7 @@ User.findAll = function(result) {
 }
 
 User.findById = function(id, result) {
-    dbCon.query('SELECT * FROM Users WHERE id_user = ? or user = ? or email LIKE ?',
+    dbConn.query('SELECT * FROM Users WHERE id_user = ? or user = ? or email LIKE ?',
     [id, id, "%"+id+"%"],
     function(err, res) {
         if (err) {
@@ -37,7 +37,7 @@ User.findById = function(id, result) {
 }
 
 User.delete = function(id, result) {
-    dbCon.query('DELETE FROM Users WHERE id_user = ? OR user_name = ?',
+    dbConn.query('DELETE FROM Users WHERE id_user = ? OR user_name = ?',
     [id, id],
     function(err, res) {
         if (err) {
@@ -49,7 +49,7 @@ User.delete = function(id, result) {
 }
 
 User.create = function(newUser, result) {
-    dbCon.query('INSERT INTO Users SET ?',
+    dbConn.query('INSERT INTO Users SET ?',
     newUser,
     function(err, res) {
         if (err) {
@@ -61,7 +61,7 @@ User.create = function(newUser, result) {
 }
 
 User.update = function(id, user, result) {
-    dbCon.query('UPDATE Users SET user = ?, name = ?, phone = ?, email = ?, address = ?, pass = ?, admin = ? WHERE id_user = ?',
+    dbConn.query('UPDATE Users SET user = ?, name = ?, phone = ?, email = ?, address = ?, pass = ?, admin = ? WHERE id_user = ?',
     [
     user.user,
     user.name,
