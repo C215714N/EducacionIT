@@ -1,6 +1,7 @@
 /* Importaciones */
 const userRoutes = require('./src/routes/user')
 const productRoutes = require('./src/routes/product')
+const {logIn} = require('./src/middleware/authentication')
 
 /* Consts */
 const express = require('express'); // Para poder establecer la comunicación.
@@ -30,3 +31,4 @@ delilah.listen(port, () => {
 
 delilah.use('/users', userRoutes)
 delilah.use('/products', productRoutes)
+delilah.use('/login', logIn)
