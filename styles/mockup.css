@@ -81,9 +81,8 @@
 	/* Cabecera */
 		#header{
 			overflow: hidden;
-			max-height: 720px;
 			position: relative;
-			padding: 75% 1rem 0;
+			padding: 56.25% 1rem 0;
 			color: #eee;
 			text-shadow: 
 				0 0 .2rem #333,
@@ -92,7 +91,7 @@
 		#header video{
 			/*aspect-ratio 16:10 16:9 4:3*/
 			position: absolute;
-			top: 0;
+			top: -10%;
 			left: 0;
 			width: 100%;
 		}
