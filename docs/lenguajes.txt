@@ -1,0 +1,17 @@
+w3c(world wide web consortium) = define estandar
+whatwg (web hypertext application technology working group) [mozilla, apple] = buenas practicas
+------------------------------------------
+HTML(HyperText Markup Language){
+	Lenguaje de Marcado de HiperTexto (ESTRUCTURA)
+
+	Utiliza etiquetas para definir la funcionalidad de cada elemento, asi como su relacion con el contexto.
+		EJ: <p> Soy un parrafo </p>
+		el ORDEN de los factores ALTERA el producto
+}
+CSS(Cascading Styles Sheets){
+	Hojas de Estilo en Cascada (DISEÑO GRAFICO)
+	
+	Utiliza selectores y reglas para definir el aspecto que tendran los elementos de la pagina.
+		EJ: p{ color: blue; }
+		el ORDEN de los factores NO ALTERA el producto.
+}
