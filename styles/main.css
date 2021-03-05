@@ -1,0 +1,42 @@
+/* Reglas Generales */
+	* {
+		box-sizing: border-box;
+		font-family: sans-serif;
+		/*
+			content-box:
+				content-width: width;
+				final-width: width + padding + border;
+			border-box:
+				content-width: width - padding - border;
+				final-width: width;
+		*/
+	}
+	body{
+		margin: 0;
+	}
+/*Navegacion*/
+	nav ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		background-color: #248;
+		text-align: center;
+	}
+	nav a{
+		color: #eee;
+		text-decoration: none;
+	}
+	nav li{
+		display: inline-block;
+		padding: 8px 16px; /*top right bottom left*/
+	}
+	nav li:hover{
+		font-weight: bolder;
+		background-color: #36c;
+	}
+
+/*Cabecera*/
+
+/*Contenido Principal*/
+
+/*Footer*/
