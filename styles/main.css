@@ -1,0 +1,60 @@
+/*Reglas Generales*/
+	@font-face{
+		src: url('../assets/fonts/Starjedi.ttf');
+		font-family: 'star wars';
+	}
+	*{
+		box-sizing:border-box;
+		font-family: segoe ui, sans-serif;
+		/*
+			content-box:
+				content-width = width;
+				final-width = width + padding + border
+				;
+			border-box:
+				final-width = width;
+				content-width = width - padding - border
+			;
+		*/
+	}
+	body{
+		margin: 0;
+	}
+/*Navegacion*/
+	.menu{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		background-color: #eee; /*RRGGBB (hex 00:min; FF:max;)*/
+	}
+	.menu li{
+		display: inline-block;
+		padding: 4px 8px; /*top right bottom left*/
+		/*
+			inline;
+			inline-block;
+			block;
+		*/
+	}
+	.menu li:hover{
+		background-color: #ccc;
+	}
+	.menu a{
+		color:#333;
+		text-decoration: none;
+	}
+/*Cabecera*/
+	#header{
+		padding: 1rem; /*por defecto: 16px*/
+		text-align: center;
+	}
+	h1{
+		margin: 0;
+		font-family: 'star wars';
+		line-height: 1rem;
+		letter-spacing: 2px;
+	}
+/*Contenido*/
+
+/*Pie de Pagina*/
