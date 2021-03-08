@@ -27,10 +27,14 @@ USE comercio_lj_11;
 	-- carga multiple (productos)
     INSERT INTO productos(producto, cantidad, precio)
     VALUES 
-		("impresora smartank 510", 5000, 25599.99), -- 1
-        ("notebook elitebook 8470p", 15000, 65730.00), -- 2
-        ("pendrive 32gb", 9000, 600), -- 3
-        ("carry disk 2.5 usb3.0", 1200, 1059.99); -- 4
+		("cafe la virginia 500g", 12000, 299.99),
+        ("cafetera dolce gusto", 9000, 15730.00),
+        ("microondas 20l", 27000, 35600), 
+        ("aire acond. split 3500f", 21200, 45300.99),
+        ("taladro percutor B&D", 2300, 20500),
+        ("shampoo pantene 1l", 9999, 520),
+        ("vim lavandina en gel", 14500, 350),
+        ("sopa instantanea maruchan 500ml", 55000, 300);
 	-- Carga multiple ingreso_productos
     INSERT INTO ingreso_productos(id_producto, cantidad, precio, id_proveedor)
     VALUES

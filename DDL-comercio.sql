@@ -42,6 +42,9 @@
         valoracion INT,
         PRIMARY KEY (id_producto)
     );
+    ALTER TABLE productos -- modificamos la tabla productos
+		ADD categoria ENUM('tecnologia', 'hogar', 'alimentos', 'higiene') AFTER producto, -- agregamos el campo categoria despues de producto
+        DROP valoracion; -- eliminamos el campo valoracion
 -- ingreso_productos
 	CREATE TABLE ingreso_productos(
 		id_ingreso INT AUTO_INCREMENT,
@@ -57,6 +60,7 @@
         FOREIGN KEY(id_producto) REFERENCES productos(id_producto), -- campo relacional compara el valor con la tabla.campo referenciado
         FOREIGN KEY(id_proveedor) REFERENCES proveedores(id_proveedor) -- evita la implementacion de valores inexistentes      
     );
+    
 -- facturacion (clientes => venta)
 	CREATE TABLE facturacion(
 		id_factura INT AUTO_INCREMENT,

@@ -19,3 +19,44 @@
         )
 		WHERE precio IS NULL;
 	SELECT * FROM facturacion_detalle;
+    
+	SELECT
+		id_factura,
+        id_producto,
+        cantidad,
+        precio,
+        cantidad * precio AS total
+	FROM facturacion_detalle;
+    
+    UPDATE facturacion_detalle
+    SET cantidad =
+		CASE
+			WHEN precio <= 1000  THEN 5 -- valor A
+            WHEN precio <= 5000  THEN 3 -- valor B si A es falso
+            WHEN precio <= 25000 THEN 4 -- valor C si AB es falso
+            WHEN precio <= 50000 THEN 2 -- valor D si ABC es falso
+            ELSE 1 -- valor F si ninguna condicion se cumple
+        END
+	WHERE cantidad IN(NULL, '', 0);
+    
+    SELECT * FROM productos;
+    UPDATE productos
+	SET categoria =
+		CASE
+			WHEN (
+				producto LIKE '%tala%' 
+                OR producto LIKE '%microo%' 
+                OR producto LIKE '%aire%' 
+                OR producto LIKE '%cafe%')
+                AND precio >= 1000 THEN 2 -- hogar
+            WHEN
+				producto LIKE '%cafe%' 
+                OR producto LIKE '%sopa%' THEN 3 -- alimentos
+            WHEN 
+				producto LIKE '%lavan%' 
+				OR producto LIKE '%shamp%' THEN 4 -- higiene
+			ELSE 1 -- tecnologia
+        END
+        WHERE id_producto >= 1000;
+        
+    
