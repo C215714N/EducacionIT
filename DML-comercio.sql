@@ -108,3 +108,13 @@ USE comercio_lj_11;
     SELECT * 
 		FROM productos
         WHERE precio BETWEEN 10000 AND 100000; -- todos los valores intermedios
+
+/*DETALLE DE LA FACTURACION*/
+SELECT  * FROM facturacion_detalle;
+INSERT INTO facturacion_detalle(id_factura, id_producto, cantidad)
+VALUES
+	(2,11,4),(2,10,5),(2,5,2),(2,3,2), -- factura 1
+    (3,7,1),(3,10,2), -- factura 2
+    (4,8,1),(4,12,6),(4,6,2), -- factura 3
+    (5,7,1),(5,4,4),(5,8,2),(5,1,1), -- factura 4
+    (6,3,2),(6,6,1); -- factura 5

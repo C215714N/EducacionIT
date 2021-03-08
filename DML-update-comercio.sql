@@ -59,4 +59,29 @@
         END
         WHERE id_producto >= 1000;
         
+/* Estadisticas de Ventas */
+	SELECT 
+		MAX(id_factura) AS ultima_fac, -- obtiene el valor mas alto de los id_factura
+		COUNT(id_producto) AS articulos, -- cuenta los registros
+		SUM(cantidad) AS vendidos, -- suma las cantidades vendidas
+		SUM(cantidad * precio) AS total -- suma los totales calculados
+	FROM facturacion_detalle;
+
+	SELECT
+		id_factura,
+        SUM(cantidad) AS articulos,
+        SUM(cantidad * precio) AS total
+	FROM facturacion_detalle
+    GROUP BY id_factura
+    ORDER BY id_factura, total
+    LIMIT 10
+    OFFSET 0;
     
+    SELECT * FROM facturacion ;
+	UPDATE facturacion AS f
+    SET monto = (
+		SELECT SUM(cantidad * precio) AS total
+        FROM facturacion_detalle AS fd
+        WHERE fd.id_factura = f.id_factura
+    )
+    WHERE monto IS NULL;
