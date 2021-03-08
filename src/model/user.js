@@ -23,8 +23,8 @@ let dbConn = require('../middleware/dbConn');
         [ user, pass ], (err, res) => (err) ? result(err, null) : result(null, res)
     )   }
     User.find   = (id, result) => {
-        dbConn.query('SELECT * FROM Users WHERE id_user = ? OR user = ? OR email LIKE ?', 
-        [ id, id, "%"+id+"%" ], (err, res) => (err) ? result(err, null) : result(null, res)
+        dbConn.query('SELECT * FROM Users WHERE id_user = ? OR user = ?', 
+        [ id, id ], (err, res) => (err) ? result(err, null) : result(null, res)
     )   }
     User.update = (id, user, result) => {
         dbConn.query('UPDATE Users SET ? WHERE id_user = ?', 

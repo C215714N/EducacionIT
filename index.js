@@ -3,15 +3,17 @@
     const delilah = express()
     const port = process.env.PORT || 5000
 
-    const userRoutes = require('./src/routes/user')
-    const productRoutes = require('./src/routes/product')
-    const { login } = require('./src/middleware/authentication')
+    const user = require('./src/routes/user')
+    const product = require('./src/routes/product')
+    const { login, signup } = require('./src/middleware/authentication')
 
     delilah.use( bodyParser.urlencoded( {extended : true} ) )
     delilah.use( bodyParser.json() )
     delilah.get('/', (req, res) => { res.send('La conexión funciona correctamente.') } )
     delilah.listen( port, () => { console.log(`El puerto utilizado es: ${port}`) } );
 
-    delilah.use('/login', login)
-    delilah.use('/users', userRoutes)
-    delilah.use('/products', productRoutes)
+    
+    delilah.use(  '/signup',  signup   )
+    delilah.use(  '/login',    login   )
+    delilah.use(  '/users',    user    )
+    delilah.use(  '/products', product )

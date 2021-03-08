@@ -3,41 +3,61 @@ const secret = 'hola123';
 
 const User = require('../model/user')
 
-/* Token creation. */
-    exports.login = async function(req, res){
-        User.login( req.body.user, req.body.pass, function (err, userToken) {
-            ( userToken[0][0].id_user ) ? 
-                jwt.sign( { userToken } , secret, {expiresIn: '1h'}, 
-                    (err, token) =>  { res.json( token )
+/*  JWT User SignUp Creation  */
+    exports.signup = function(req, res) {
+        const userToken = new User(req.body)
+        User.create( userToken, (err, user) => { 
+            ( err ) ? res.send(err) : jwt.sign( {userToken}, secret,{expiresIn: '1h'}, (err, token) => { res.json( token ) }   
+        )   }   
+    )   }
+/*  JWT Token LogIn Generate  */
+    exports.login = function(req, res){
+        User.login( req.body.user, req.body.pass,(err, userToken) => {
+            ( userToken[0] ) ? 
+                jwt.sign( { userToken }, secret, {expiresIn: '1h'}, 
+                    (err, token) =>  { res.json( token ); console.log(userToken)
             }   ) : res.status(404).send({
                 error: 404,
                 message: "Usuario y/o contraseña incorrectos"
             }   )
     }   )   }  
-
-// Autenticación del token.
+/*  JWT Validation Access */
     exports.authToken = (req, res, next) => {
         const bearer = req.headers['authorization'] // Bearer Token. La cabecera de la solicitud.
         if(typeof bearer !== 'undefined') { // Verifica si existe el token.
             const token = bearer.split(' ')[1] // Extrae sólo el token de la const bearer.
-            const decoded = jwt.verify(token, secret)
-            req.token = token
-            req.decoded = decoded
-            next()
+            const decoded = jwt.verify(token, secret);
+            req.token   = token;
+            req.decoded = decoded;
+            (   decoded.userToken[0].admin == true || 
+                decoded.userToken[0].id_user == req.params.id || 
+                decoded.userToken[0].user == req.params.id ) ? 
+                next() : res.json(   {
+                    error:403,
+                    message: "Acceso Restringido, administradores y dueños solamente"
+                }   )
         } else {
             res.json(   {
                 error: 403, 
                 message: "Acceso No autorizado, debes iniciar sesion"
-            }   )  // Si no existe el token, envia el estado de prohibido.
+            }   ) 
     }   }
 // Verify Permissions
-/* exports.isAdmin = function(req, res, next){
-    const decoded = jwt.verify(req.headers['authorization'] , secret)
-    const Validate = dbConn.query('SELECT admin FROM users WHERE (user = ? OR email = ?) AND pass = ?',
-        [decoded.user, decoded.user, decoded.pass], (err, user) => console.log(user))
-        next()
-    Validate ? next() : res.json({
-        error: true,
-        message: 'Acceso restringido, solo personal autorizado'
-    }   )
-} */
+    exports.adminAuth = (req, res, next) => {
+        const bearer = req.headers['authorization']
+        if(typeof bearer !== 'undefined') { 
+            const token = bearer.split(' ')[1];
+            const decoded = jwt.verify(token, secret);
+            req.token = token;
+            req.decoded = decoded;
+            ( decoded.userToken[0].admin == true ) ?
+                next() : res.json(   {
+                    error:403,
+                    message: "Acceso Restringido, administradores solamente"
+                }   )
+        } else {
+            res.json(   {
+                error: 403, 
+                message: "Acceso No autorizado, debes iniciar sesion"
+            }   ) 
+    }   }
