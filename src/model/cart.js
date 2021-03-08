@@ -7,7 +7,7 @@ let dbConn = require('../middleware/dbConn');
     }
 /* MySQL Cart Methods (query, params, callback) */
     Cart.create = function(newCart, result) {
-        dbConn.query('INSERT INTO Carts SET ?',
+        dbConn.query('INSERT INTO Cart SET ?',
         newCart, (err, res) => err ? result(err, null) : result(null, res)
     )   }
     Cart.list = function(result) {
@@ -18,12 +18,12 @@ let dbConn = require('../middleware/dbConn');
         dbConn.query('SELECT * FROM Cart WHERE id_user = ?',
         id, (err, res) => err ? result(err, null) : result(null, res)
     )   }
-    Cart.update = function(id, result) {
-        dbConn.query('UPDATE Cart WHERE id_cart = ?',
-        id, (err, res) => err ? result(null, err) : result(null, res)
+    Cart.update = function(id, product, result) {
+        dbConn.query('UPDATE Cart SET ? WHERE id_user = ? AND id_product = ?',
+        [product, id, product.id_product], (err, res) => err ? result(null, err) : result(null, res)
     )   }
-    Cart.delete = function(id, result) {
-        dbConn.query('DELETE FROM Carts WHERE id_cart = ?',
-        id, (err, res) => err ? result(null, err) : result(null, res)
+    Cart.delete = function(id, product, result) {
+        dbConn.query('DELETE FROM Cart WHERE id_user = ? AND id_product = ?',
+        [id, product], (err, res) => err ? result(null, err) : result(null, res)
     )   }
 module.exports = Cart
