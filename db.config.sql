@@ -79,7 +79,22 @@ DML (manipulación de datos: filas): insert (into), delete, update [set] y selec
 DCL (control de datos: users de la base de datos): grant, revoke, flush privileges.
 TCL (transacción de datos): describe, show, use, entre otros...
 */
-
+INSERT INTO states (detail)
+    VALUES
+      ('NUEVO'),
+      ('CONFIRMADO'),
+      ('PREPARANDO'),
+      ('ENVIADO'),
+      ('CANCELADO'),
+      ('ENTREGADO');
+  -- metodos de pago
+  INSERT INTO pay_method(detail)
+    VALUES 
+      ('EFECTIVO'),
+      ('CREDITO'),
+      ('DEBITO'),
+      ('TRANSF.B'),
+      ('VIRTUAL');
 INSERT INTO Users(user, email, pass, admin)
 VALUES
 	("freddi_mercury", "freddimercury@gmail.com", "queen", false),
