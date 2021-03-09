@@ -1,7 +1,7 @@
 const Product = require('../model/product');
 /*  NodeJS Product Handler Methods */
     exports.create = function(req, res) {
-        const newProduct = new Product(req.body)
+        const newProduct = new Product(req.body);
         (req.body.constructor == Object && Object.keys(req.body).length == 0) ?
             res.status(400).send( {
                 error: true,
@@ -23,7 +23,7 @@ const Product = require('../model/product');
             res.status(400).send( {
                 error: true,
                 message: 'Debes completar todos los campos.'
-            }   ) : Product.update(req.body, (err, product) => err ? res.send(err) : res.json( {
+            }   ) : Product.update(req.params.id, req.body, (err, product) => err ? res.send(err) : res.json( {
                 error : false,
                 message : 'Producto actualizado exitosamente.',
                 product : product

@@ -6,23 +6,23 @@ let dbConn = require('../middleware/dbConn');
         this.quantity   =   cart.quantity
     }
 /* MySQL Cart Methods (query, params, callback) */
-    Cart.create = function(newCart, result) {
-        dbConn.query('INSERT INTO Cart SET ?',
+    Cart.create = (newCart, result) => {
+        dbConn.query(`INSERT INTO Cart SET ?, price = (SELECT price FROM products WHERE id_product = ${newCart.id_product})`,
         newCart, (err, res) => err ? result(err, null) : result(null, res)
     )   }
-    Cart.list = function(result) {
+    Cart.list = (result) => {
         dbConn.query('SELECT * FROM Cart', 
         (err, res) => (err) ? result(null, err) : result(null, res)
     )   }
-    Cart.find = function(id, result) {
+    Cart.find = (id, result) => {
         dbConn.query('SELECT * FROM Cart WHERE id_user = ?',
         id, (err, res) => err ? result(err, null) : result(null, res)
     )   }
-    Cart.update = function(id, product, result) {
-        dbConn.query('UPDATE Cart SET ? WHERE id_user = ? AND id_product = ?',
+    Cart.update = (id, product, result) => {
+        dbConn.query(`UPDATE Cart SET ?, price = (SELECT price FROM products WHERE id_product = ${product.id_product}) WHERE id_user = ? AND id_product = ?`,
         [product, id, product.id_product], (err, res) => err ? result(null, err) : result(null, res)
     )   }
-    Cart.delete = function(id, product, result) {
+    Cart.delete = (id, product, result) => {
         dbConn.query('DELETE FROM Cart WHERE id_user = ? AND id_product = ?',
         [id, product], (err, res) => err ? result(null, err) : result(null, res)
     )   }

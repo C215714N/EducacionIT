@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const userController = require('../controller/user')
-const { authToken, adminAuth } = require('../middleware/authentication')
+const { authToken, adminAuth } = require('../middleware/auth')
 /* User Routes */
     router.post   (  '/',     authToken,  userController.create  )
     router.get    (  '/',     adminAuth,  userController.list    )

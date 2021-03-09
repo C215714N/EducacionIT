@@ -1,7 +1,7 @@
 const User = require('../model/user')
 /*  NodeJS User Handler Methods   */
     exports.create = function(req, res) {
-        const newUser = new User(req.body)
+        const newUser = new User(req.body);
         (req.body.constructor == Object && Object.keys(req.body) == 0) ?
             res.status(400).send(   {
                 error:true,
@@ -23,7 +23,7 @@ const User = require('../model/user')
             res.status(400).send(   {
                 error: true,
                 message: 'Debes completar todos los campos.'
-            }   ) : User.update(req.params.id, new User(req.body), (err, user) => (err) ? res.sen(err): res.json( {   
+            }   ) : User.update(req.params.id, new User(req.body), (err, user) => (err) ? res.send(err): res.json( {   
                 message: "Los datos fueron actualizados.",
                 user: user   
             }  )

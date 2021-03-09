@@ -1,6 +1,6 @@
 let dbConn = require('../middleware/dbConn');
 /*  User Model Constructor */
-    let User    = function(user) {
+    let User = function(user) {
         this.name = user.name
         this.user = user.user
         this.email = user.email
@@ -14,15 +14,15 @@ let dbConn = require('../middleware/dbConn');
         dbConn.query('INSERT INTO Users SET ?', 
         newUser, (err, res) => (err) ? result(err, null) : result(null, res)
     )   }
-    User.list   = (result) => {
+    User.list = (result) => {
         dbConn.query('SELECT * FROM Users', 
         (err, res)=> (err) ? result(null, err) : result(null, res)
     )   }
-    User.login  = (user, pass, result) => {
+    User.login = (user, pass, result) => {
         dbConn.query('SELECT * FROM users WHERE user = ? AND pass = ?',
         [ user, pass ], (err, res) => (err) ? result(err, null) : result(null, res)
     )   }
-    User.find   = (id, result) => {
+    User.find = (id, result) => {
         dbConn.query('SELECT * FROM Users WHERE id_user = ? OR user = ?', 
         [ id, id ], (err, res) => (err) ? result(err, null) : result(null, res)
     )   }
