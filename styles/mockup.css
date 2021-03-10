@@ -1,5 +1,6 @@
 /* Mobile First - Content First */
 	/* Reglas Generales */
+		@import url('icomoon.css');
 		* {
 			box-sizing: border-box;
 			outline: none;
@@ -57,7 +58,11 @@
 			margin: 0;
 			padding: 0;
 		}
-		.menu a:hover{
+		.menu a{
+			max-width: 8rem;
+			margin: auto;
+		}
+		.menu li:hover{
 			background-color: #acd8;
 		}
 		.button{
@@ -107,7 +112,108 @@
 			text-align: center;
 			z-index: 1;
 		}
+		.header h1,
+		.header h2,
+		.header p{
+			margin: 0;
+			font-size: calc(3vmax + .6rem); /* 1920 x 1080 */ 
+			/*	viewport:
+					vw => ancho del viewport;
+					vh => alto del viewport;
+					vmin => medida mas pequeña del viewport
+					vmax => medida mas grande del viewport
+			*/
+		}
+
 	/* Contenido Principal */
+		main{
+			height: 100vh;
+			max-height: 720px;
+			position: relative;
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .5rem #333;
+		}
+		/*Galeria Slide*/
+			ul.slide{
+				list-style: none;
+				margin:0;
+				padding:0;
+				z-index: -1;
+			}
+			ul.slide,
+			.slide li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.slide li{
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+			}
+			.slide li:nth-child(1){
+				background-image: url('../assets/img/osx-mavericks.png');
+			}
+			.slide li:nth-child(2){
+				background-image: url('../assets/img/osx-mojave-night.jpg');
+			}
+			.slide li:nth-child(3){
+				background-image: url('../assets/img/osx-sierra.jpg');
+			}
+			.slide li:nth-child(4){
+				background-image: url('../assets/img/osx-mountain-lion.jpg');
+			}
+			.slide li.active{
+				opacity: 1;
+			}
+		/*Controles Slide*/
+			main .header {
+				padding-top: 10vh;
+				text-align: center;
+				opacity: .8;
+			}
+			.header .slide{
+				display: flex;
+				justify-content: space-around;
+				max-width: 8rem;
+				margin: .5rem auto;
+			}
+			.slide span{
+				width: 1rem;
+				height: 1rem;
+				border-radius: 1rem;
+				background-color: #eee;
+				box-shadow: 
+					0 0 .5px #333,
+					0 2px 2px #333;
+			}
+			.slide span.active{
+				width: 3rem;
+			}
+			main > button{
+				cursor:pointer;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				border: 0;
+				padding: .5rem;
+				font-size: 2.5rem;
+				color: #eee;
+				background-color: transparent;
+				opacity: .3;
+			}
+			main > button:hover{
+				opacity: .7;
+			}
+			main .icon-prev{
+				left: 0;
+			}
+			main .icon-next{
+				right: 0;
+			}
 /* Small Devices - smartphones */
 
 /* Medium Devices - smartphones(landscape) tablets */
