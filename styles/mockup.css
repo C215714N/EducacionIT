@@ -1,5 +1,5 @@
 /* Mobile First - Content First */
-	/* Reglas Generales */
+	/* general rules */
 		@import url('icomoon.css');
 		* {
 			box-sizing: border-box;
@@ -9,7 +9,7 @@
 		body{
 			margin: 0;
 		}
-	/* Navegacion */
+	/* navigation bar */
 		nav{
 			position: sticky;
 			top: 0;
@@ -83,7 +83,7 @@
 		.menu.active{
 			height: auto;
 		}
-	/* Cabecera */
+	/* headings */
 		#header{
 			overflow: hidden;
 			position: relative;
@@ -124,8 +124,7 @@
 					vmax => medida mas grande del viewport
 			*/
 		}
-
-	/* Contenido Principal */
+	/* main content */
 		main{
 			height: 100vh;
 			max-height: 720px;
@@ -214,10 +213,71 @@
 			main .icon-next{
 				right: 0;
 			}
+	/* gallery*/
+		section{
+			margin: auto;
+		}
+		.gallery{
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: .5rem;
+			margin: auto;
+			padding: .5rem;
+			text-align: center;
+		}
+		.gallery img{
+			width: 100%;
+			border-radius: .5rem;
+			border: 1rem solid #333;
+		}
 /* Small Devices - smartphones */
-
+	@media screen and (min-width: 576px){
+		/*navigation bar*/
+			.menu{
+				display: flex;
+				width: auto;
+				height: auto;
+			}
+			.menu a{
+				font-size: 2rem;
+			}
+			.menu span,
+			nav .button{
+				display: none;
+			}
+		/*content*/
+			section{
+				max-width: 540px;
+			}
+	}
 /* Medium Devices - smartphones(landscape) tablets */
-
+	@media screen and (min-width: 768px){
+		/*content*/
+			section{
+				max-width: 720px;
+			}
+	}
 /* Large Devices - tablets(landscape) desktop */
-
+	@media screen and (min-width: 992px){
+		/*navigation bar*/
+			.menu a{
+				display: flex;
+				align-items: center;
+			}
+			.menu span{
+				display: block;
+				padding-left: .5rem;
+				font-size: 1rem;
+			}
+		/*content*/
+			section{
+				max-width: 960px;
+			}
+	}
 /* Extra Large - desktop smart-tv */
+	@media screen and (min-width: 1200px){
+		/*content*/
+			section{
+				max-width: 1200px;
+			}
+	}
