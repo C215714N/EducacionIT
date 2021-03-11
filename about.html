@@ -6,6 +6,8 @@
 	<title>Maquetacion Web</title>
 	<!--Mockup CSS-->
 	<link rel="stylesheet" href="styles/mockup.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
 </head>
 <body>
 	<nav>
@@ -76,17 +78,38 @@
 			<img src="assets/img/jjba-d4c-04.jpg" alt="D4C">
 		</div>
 	</section>
+	<section>
+		<header class="header">
+			<h2>Introduccion a Bootstrap</h2>
+		</header>
+		<ul class="list-unstyled row">
+			<li class="col m-1 border p-2 bg-primary"><strong>Primary</strong></li>
+			<li class="col m-1 border p-2 bg-secondary"><strong>Secondary</strong></li>
+			<li class="col m-1 border p-2 bg-success"><strong>Success</strong></li>
+			<li class="col m-1 border p-2 bg-danger"><strong>Danger</strong></li>
+			<li class="col m-1 border p-2 bg-warning"><strong>Warning</strong></li>
+			<li class="col m-1 border p-2 bg-info"><strong>Info</strong></li>
+			<li class="col m-1 border p-2 bg-light"><strong>Light</strong></li>
+			<li class="col m-1 border p-2 bg-dark"><strong>Dark</strong></li>
+		</ul>
+		<div class="row">
+			<p class="col-md-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolores quae quod, doloremque modi mollitia voluptatum tenetur error, sed maxime consequatur? Nobis at voluptatibus adipisci et velit obcaecati necessitatibus explicabo.</p>
+			<p class="col-lg-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro facilis modi amet facere corporis aliquam, commodi cumque suscipit dolores deserunt rerum architecto et quas fugit iste soluta officiis ea consequatur.</p>
+			<p class="col-md-6 col-lg-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, maiores dolorem voluptate impedit earum! Ipsam, quod quo nisi tempora. Omnis neque totam quos expedita, hic voluptatum aliquam laboriosam exercitationem quia!</p>
+		</div>
+	</section>
 	<footer id="footer">
 		<div class="social">
 			<a href="https://facebook.com" class="icon-facebook" target="_blank"></a>
-			<a href="https://instagram.com" class="icon-instragram" target="_blank"></a>
+			<a href="https://instagram.com" class="icon-instagram" target="_blank"></a>
 			<a href="https://api.whatsapp.com" class="icon-whatsapp" target="_blank"></a>
 			<a href="https://twitter.com" class="icon-twitter" target="_blank"></a>
 			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-x-19hs" class="icon-github" target="_blank"></a>
 		</div>
 		<form action="" id="contact">
+			<h2>Contactanos</h2>
 			<label for="contactName">Nombre</label>
-			<input 
+			<input class="form-control" 
 				id="contactName" 
 				name="contactName" 
 				type="text" 
@@ -96,7 +119,7 @@
 				Ingrese un nombre valido, entre 2 y 50 caracteres.
 			</div>
 			<label for="contactEmail">Correo</label>
-			<input 
+			<input class="form-control" 
 				id="contactEmail" 
 				name="contactEmail" 
 				type="text" 
@@ -113,11 +136,13 @@
 				minlength="10" 
 				maxlength="200" 
 				required></textarea>
-			<button class="button">enviar</button>
+			<button class="btn btn-outline-light mt-1">enviar</button>
 		</form>
 		<p>&copy; Todos los derechos reservados<a href="">Cristian Racedo</a>&amp; Compañia</p>
 	</footer>
 	<!-- Main JS -->
 	<script src="scripts/main.js"></script>
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
