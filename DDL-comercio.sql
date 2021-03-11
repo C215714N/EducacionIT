@@ -22,6 +22,10 @@
 		PRIMARY KEY(id_proveedor), -- campo relacional
 		UNIQUE KEY(cuil) -- restriccion local (nn-nnnnnnnn-n)
 	);
+    /* ALTER TABLE proveedores
+		CHANGE direccion address VARCHAR(100),
+		DROP COLUMN direccion,
+		ADD direccion VARCHAR(150) AFTER correo; */
 -- clientes
 	CREATE TABLE clientes (
 		id_cliente INT AUTO_INCREMENT,
