@@ -23,7 +23,6 @@ USE comercio_lj_11;
         ('30-70834210-2',"MOTOROLA"),
         ('27-27854149-0',"CANNON"),
         ('30-71473138-2',"LENOVO");
-        
 	-- carga multiple (productos)
     INSERT INTO productos(producto, cantidad, precio)
     VALUES 
@@ -54,6 +53,12 @@ USE comercio_lj_11;
 		('Miguel','Luis', 25114173),
 		('Sabina','Joaquin',13132071),
 		('Funes','Romi Ramiro',17234281);
+	INSERT INTO clientes (apellido, nombre, num_doc)
+    VALUES
+		('Miguel','Amanda',21542054),
+		('del Barrio','Maria', 23114173),
+		('Gardel','Carlos',33132071),
+		('Rada','Ruben',37234281);
 	-- ingreso por consulta
 	INSERT INTO facturacion(id_cliente, tipo, tipo_pago)
     VALUES

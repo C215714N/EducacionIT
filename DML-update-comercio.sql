@@ -1,9 +1,9 @@
 /* -----------------------------------
 	Actualizacion y eliminacion
 -------------------------------------- */ 
-	TRUNCATE clientes;				-- reiniciar la tabla (AUTO_INCREMENT)
-	DELETE FROM clientes; 			-- elimina todos los registros
-	UPDATE clientes SET sexo = 1; 	-- actualiza todos los registros
+## TRUNCATE clientes;				-- reiniciar la tabla (AUTO_INCREMENT)
+## DELETE FROM clientes; 			-- elimina todos los registros
+## UPDATE clientes SET sexo = 1; 	-- actualiza todos los registros
 
 	-- actualizacion general y dinamica
 	UPDATE proveedores	-- tabla a actualizar
@@ -73,15 +73,33 @@
         SUM(cantidad * precio) AS total
 	FROM facturacion_detalle
     GROUP BY id_factura
-    ORDER BY id_factura, total
+    HAVING total BETWEEN 50000 AND 100000 -- condicion para campos que no existen en la tabla
+    ORDER BY total DESC
     LIMIT 10
     OFFSET 0;
-    
+    -- actualizacion multiple por consulta y casos
     SELECT * FROM facturacion ;
 	UPDATE facturacion AS f
     SET monto = (
 		SELECT SUM(cantidad * precio) AS total
-        FROM facturacion_detalle AS fd
-        WHERE fd.id_factura = f.id_factura
-    )
-    WHERE monto IS NULL;
+		FROM facturacion_detalle AS fd
+		WHERE fd.id_factura = f.id_factura
+	), impuesto = 
+		CASE
+			WHEN monto <= 5000 THEN 0.105
+            WHEN monto <= 30000 THEN 0.21
+            WHEN monto <= 90000 THEN 0.315
+            ELSE 0.42
+		END
+	WHERE monto OR impuesto IS NULL;
+    -- facturacion final + impuesto con totales mayores a 100000
+    SELECT
+		id_factura,
+        id_cliente, 
+        monto,
+        CONCAT(ROUND(impuesto * 100, 1), '%') AS iva,
+        ROUND(monto * impuesto) AS impuesto,
+        ROUND(monto + impuesto * monto, 2) AS total
+	FROM facturacion
+    HAVING total >= 100000 AND
+		impuesto >= 20000;
