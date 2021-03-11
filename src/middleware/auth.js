@@ -40,7 +40,7 @@ let log = []
                 error: 403, 
                 message: "Acceso No autorizado, debes iniciar sesion"
             }   ) 
-        }   }
+    }   }
     exports.adminAuth = (req, res, next) => {
         const bearer = req.headers['authorization']
         if(typeof bearer !== 'undefined') { 

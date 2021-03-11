@@ -1,6 +1,6 @@
+DROP DATABASE delilah;
 CREATE DATABASE IF NOT EXISTS Delilah;
 USE Delilah;
-
 /* Data Definition Language */
     CREATE TABLE IF NOT EXISTS Users (
         id_user INT AUTO_INCREMENT,
@@ -84,9 +84,12 @@ USE Delilah;
 	-- Registro Usuarios
     INSERT INTO Users(user, name, email, pass, admin)
 	VALUES
+		("c215714n", "Cristian Racedo", "cristiandracedo@gmail.com", "vtodyosm", true),
 		("freddi_mercury", "Farrokh Bulsara", "freddimercury@gmail.com", "queen", false),
-		("jonathan_kim","Jonathan Kim", "jonathankim@gmail.com", "jonathan", false),
-		("c215714n","Cristian Racedo", "cristiandracedo@gmail.com", "vtodyosm", true);
+		("jonathan_kim", "Jonathan Kim", "jonathankim@gmail.com", "jonathan", false),
+		("anthony", "Anthony Kiedis", "ak@rhcp.com", "cantstop", true),
+		("nirvana", "Kurt Cobain", "c_kobain@nirvana", "comeasyouare", false),
+		("drummer", "dave grohl", "dave@nirvana.com", "bestofyou", true);
 	-- Registro de Productos
     INSERT INTO products(detail, name, stock, price, img) 
 	VALUES
@@ -120,12 +123,12 @@ USE Delilah;
 		SET price = ( SELECT price FROM products AS p WHERE p.id_product = c.id_product ) 
         WHERE price IS NULL;
 	-- Actualizacion de Detalles
-	INSERT INTO orders_detail(id_product,cantidad, price) 
+	INSERT INTO orders_detail(id_product, quantity, price) 
     SELECT id_product, quantity, price FROM cart;
     -- Creacion de Ordenes de Compra
     INSERT INTO orders(id_user,id_state, id_method, price)
     SELECT id_user, 1, 1, SUM(quantity * price) FROM cart
-    WHERE cart.id_user = 1;
+    WHERE cart.id_user = 5;
     SELECT * FROM orders;
 /*DML - Consulta de Datos Ingresados */		
 	SELECT * FROM users;
@@ -136,7 +139,9 @@ USE Delilah;
     
     INSERT INTO orders_detail(id_product, quantity, price) 
     SELECT id_product, quantity, price 
-    FROM cart where id_user = 1; 
+    FROM cart where id_user = @i;
     INSERT INTO orders(id_user, price) 
     VALUES (1, (SELECT SUM(quantity * price) 
     FROM cart WHERE id_user = 1));
+    
+SELECT * FROM orders, cart, orders_detail WHERE orders.id_user = cart.id_user;    

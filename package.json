@@ -1,5 +1,5 @@
 {
-  "name": "Delilah Resto",
+  "name": "delilah",
   "version": "1.1.0",
   "main": "index.js",
   "repository": {
@@ -13,13 +13,15 @@
   "keywords": [],
   "author": "Jonathan Kim",
   "license": "ISC",
-  "description": "",
+  "description": "Delilah Resto API REST",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
-    "swagger": "^0.7.5"
+    "swagger": "^0.7.5",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
