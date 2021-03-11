@@ -79,9 +79,61 @@
 			</li>
 		</ul>
 	</section>
+	<section>
+		<h2>Jerarquia selectores</h2>
+		<p>
+			La prioridad de aplicacion de reglas de CSS radica en el nivel de especificidad de las mismas, es por esto que decimos que existe una jeraquia para los selectores. Mientras mas especifico sea un selector, menos posibilidades de sobreescribirlo habra. Aunque debemos tener en cuenta que ante igualdad de condiciones, la prioridad la tendra el conjunto de reglas que se encuentre despues en nuestro CSS.
+		</p>
+		<ul class="example">
+			<li>
+				<strong>Selector de Etiqueta</strong>
+				<ul>
+					<li><span>header</span>{...}</li>
+					<li><span>header</span> h1{...}</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Selector de Clase</strong>
+				<ul>
+					<li><span class="span">.header</span>{...}</li>
+					<li><span class="span">.header</span> h1{...}</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Selector de Id</strong>
+				<ul>
+					<li><span id="span">#header</span>{...}</li>
+					<li><span id="span">#header</span> h1{...}</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
 	<footer id="footer">
 		<form action="" id="contact">
-			
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName"
+				type="text" 
+				placeholder="Ingrese su Nombre" 
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				placeholder="Ingrese su Telefono" 
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required ></textarea>
+			<button>enviar</button>
 		</form>
 		<p class="copy">
 			
@@ -94,7 +146,6 @@
 		[...] atributos
 		(...) separar en terminos
 	-->
-	<!--  -->
 	<script src="scripts/main.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@
 	}
 	nav a{
 		color: #eee;
+		font-weight: bolder;
 		text-decoration: none;
 	}
 	nav li{
@@ -31,12 +32,60 @@
 		padding: 8px 16px; /*top right bottom left*/
 	}
 	nav li:hover{
-		font-weight: bolder;
 		background-color: #36c;
 	}
-
 /*Cabecera*/
-
+	#header{
+		padding: 15% 1rem; /*top right bottom left*/
+		text-align: center;
+		color: #eee;
+		text-shadow: 
+			0 0 .2rem #333,
+			-2px 2px 2px #333; /* -x+ -y+ blur color*/
+		/*atributos de fondo*/
+		background-color: #333;
+		background-image: url('../assets/img/osx-mountain-lion.jpg');
+		background-size: cover; /* width height */
+		background-position: center; /* x y */
+		background-attachment: fixed;
+	}
 /*Contenido Principal*/
+	main,
+	section,
+	article{
+		padding: 1rem;
+		/*
+			medidas absolutas: siempre miden lo mismo indistitamente del tamaño de la pantalla o medio de reproduccion
+				distancia: 	mm, cm, in, pc;
+				tipografia: pt;
+				hibrida: 	px (depende de la resolucion);
+			;
+			medidas relativas: dependen de su contexto para tomar una referencia y calcular su tamaño en base a esta (contenedor)
+				distancia:	%;
+				tipografia:	em(ancho M), ex(alto x), ch(alto 0), %;
+				hibrida:	rem(ancho M root:[html]);
+			;
+		*/
+	}
+	/*Ejemplos*/
+		.example{
+			list-style: none;
+			margin: 1rem;
+			margin-left: 3rem;
+			border-left: 2px solid #248; /*rrggbb*/
+			padding: 1rem;
+			background-color: #eee;
+		}
+	/*Jerarquia de selectores*/
+		ul span{
+			color: tomato;
+			font-weight: bold;
+		}
+		ul .span{
+			color: limegreen;
+		}
+		ul #span{
+			color: skyblue;
+		}
 
 /*Footer*/
