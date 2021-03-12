@@ -108,6 +108,98 @@
 			</li>
 		</ul>
 	</section>
+	<section>
+		<h2>FlexBox</h2>
+		<p>
+			Es un modelo de diseño de caja flexible, que permite adaptar un contenido en base al tamaño de su contenedor dentro de la ventana del navegador. Si bien utiliza 2 ejes <strong>(principal y secundario)</strong>, es unidimensional, y estos se pueden orientar a gusto del desarrollador. Para utilizarlo debemos definir el atributo <em>display: flex</em> en el contedor, cuyos elementos que sean hijos directos, querramos organizar y distribuir.
+		</p>
+		<h3>Justify-content</h3>
+		<p>Atributo que permite distribuir el contenido en base al eje principal de flexbox, por defecto aplica el valor <em>flex-start</em> y dispone todos los elementos al comienzo del flex.</p>
+		<ul>
+			<li><strong>flex-start: </strong> acomoda los elementos al principio del flex (horizontal-izquierda)</li>
+			<li><strong>flex-end: </strong> acomoda los elementos ordenadamente al final del flex (horizontal-derecha)</li>
+			<li><strong>center: </strong> distribuye los elementos hacia el centro de la etiqueta contenedora</li>
+			<li><strong>space-around: </strong> calcula el mismo margen para todas los elementos dando como resultado una distancia mayor en el centro, ya que se suman las distancias</li>
+			<li><strong>space-between: </strong> separa las etiquetas de extremo a extremo, dando margenes equitativos, excepto por el primer y el ultimo elemento</li>
+			<li><strong>space-evenly: </strong> valor no compatible con todos los navegadores que dota a las etiquetas de una distancia equitativa en todo sentido.</li>
+		</ul>
+		<div class="example flexbox">
+			<div>div 1</div>
+			<div>div 2</div>
+			<div>div 3</div>
+			<div>div 4</div>
+			<span>span 1</span>
+			<span>span 2</span>
+			<span>span 3</span>
+			<span>span 4</span>
+		</div>
+		<h3>Align-items</h3>
+		<p>Atributo que permite organizar los elementos en base al eje secundario de flexbox, a diferencia de <em>justify content</em> <strong>no posee valor predeterminado</strong> debido a que no se aplica</p>
+		<ul>
+			<li><strong>flex-start: </strong> acomoda los elementos al principio del flex (vertical-superior)</li>
+			<li><strong>flex-end: </strong> acomoda los elementos ordenadamente al final del flex (vertical-inferior)</li>
+			<li><strong>center: </strong> distribuye los elementos hacia el centro de la etiqueta contenedora</li>
+			<li><strong>baseline: </strong> alinea las etiquetas en base al tamaño de la tipografia para que esta sea legible entre elementos</li>
+			<li><strong>align-self: </strong> atributo que se aplica a una etiqueta contenido y permite definir su propia orientacion dentro de flex</li>
+		</ul>
+		<div class="example flexbox align">
+			<div>div 1</div>
+			<div>div 2</div>
+			<div>div 3</div>
+			<div>div 4</div>
+			<span>span 1</span>
+			<span>span 2</span>
+			<span>span 3</span>
+			<span>span 4</span>
+		</div>
+		<h3>Flex-direction</h3>
+		<p>Atributo que permite definir la direccion de los ejes principal y secundario dentro de flexbox, debemos tener en cuenta que al cambiar la misma, la distribucion y organizacion de elementos tambien cambia.</p>
+		<ul>
+			<li><strong>row</strong></li>
+			<li><strong>column</strong></li>
+			<li><strong>row-reverse</strong></li>
+			<li><strong>column-reverse</strong></li>
+		</ul>
+		<div class="example overflow">
+			<div class="flexbox align col">
+				<strong>Column</strong>
+				<div>div 1</div>
+				<div>div 2</div>
+				<div>div 3</div>
+				<div>div 4</div>
+				<span>span 1</span>
+				<span>span 2</span>
+				<span>span 3</span>
+				<span>span 4</span>
+			</div>
+			<div class="flexbox align row-r">
+				<strong>Row-Reverse</strong>
+				<div>div 1</div>
+				<div>div 2</div>
+				<div>div 3</div>
+				<div>div 4</div>
+				<span>span 1</span>
+				<span>span 2</span>
+				<span>span 3</span>
+				<span>span 4</span>
+			</div>
+			<div class="flexbox align col-r">
+				<strong>Column-Reverse</strong>
+				<div>div 1</div>
+				<div>div 2</div>
+				<div>div 3</div>
+				<div>div 4</div>
+				<span>span 1</span>
+				<span>span 2</span>
+				<span>span 3</span>
+				<span>span 4</span>
+			</div>
+		</div>
+		<ul>
+			<li><span class="green"></span><strong>Justify-content</strong></li>
+			<li><span class="red"></span><strong>Align-items</strong></li>
+		</ul>
+	</section>
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
