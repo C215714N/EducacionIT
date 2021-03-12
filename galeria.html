@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p> &lt;html> & {css}</p>
+		<div id="nav">
+			<ul>
+				<li><!-- Ruta Relativa / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta ancla / Marcador -->
+					<a href="#">Galeria</a>
+				</li>
+				<li><!-- Ruta ancla / Marcador (#Id)-->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li><!-- Ruta absoluta / Externa -->
+					<a href="https://github.com/c215714n/EducacionIT/tree/html-v-19hs" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul class="example">
+			<li>
+				<strong>Evitar el uso de espacios </strong> debido a que este caracter sera reemplazado por el <em>conjunto %20</em>, esto quiere decir que si nuestro archivo se llama <em>"foto 01.jpg"</em> el navegador interpretara <em>"foto%2001.jpg"</em> y por lo tanto no encontrara dicho archivo. Para evitar estos inconvenientes, es preferible <strong>utilizar guiones (-_) en los nombres</strong> como por ejemplo <em>"foto_01.jpg".</em>
+			</li>
+			<li>
+				<strong>Utilizar nombres sencillos y descriptivos </strong> como por ejemplo <em>"background.jpg"</em> o <em>"perritos_jugando"</em> para facilitar su implementacion. <strong>Evitar nombres genericos o automatizados </strong> como <em>"foto_01.jpg"</em> o <em>"2021-12-03-2004100.jpg"</em>
+			</li>
+			<li>
+				<strong>Nombrar los archivos solamente con minusculas </strong> para reducir el margen de error, esto se debe a que los servidores de Hosting son <em>caseSensitive</em> y por lo tanto <em>"background.jpg" - "Background.jpg" - "BACKGROUND.jpg"</em> se consideran 3 archivos diferentes.
+			</li>
+		</ul>
+		<h2>Utilizando Imagenes (linea-bloque)</h2>
+		<div class="example">
+			<img style="width: 300px;" src="img/jjba-killerqueen-01.jpg" alt="JJBA Killer Queen"/>
+
+			<img style="width: 300px;" src="img/jjba-killerqueen-02.jpg" alt="JJBA Killer Queen"/>
+
+			<img style="width: 300px;" src="img/jjba-killerqueen-03.jpg" alt="JJBA Killer Queen"/>
+
+			<img style="width: 300px;" src="img/jjba-killerqueen-04.jpg" alt="JJBA Killer Queen"/>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</div>
+</body>
+</html>
