@@ -26,8 +26,13 @@
 		<p>html | css | js</p>
 	</header>
 	<section>
-		<h2>Estructura Semántica</h2>
-		<p></p>
+		<header class="header">
+			<h2>Estructura Semántica</h2>
+		</header>
+		<p>
+			
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem labore blanditiis non, ipsam aliquid eum quidem et expedita maiores fuga, distinctio eligendi minus in autem! Voluptas accusamus in asperiores cupiditate nostrum iusto eligendi eveniet repudiandae, corporis id fugiat quasi dicta. Quis odio similique vel eveniet, sequi illo repudiandae rem obcaecati neque minus culpa numquam tempora repellat dolore a voluptatibus exercitationem maiores fugiat possimus iste dicta distinctio pariatur. Commodi incidunt, quibusdam reiciendis nobis enim animi, natus harum deserunt dignissimos numquam rerum architecto ducimus beatae doloremque vel suscipit consequuntur, rem praesentium dolor blanditiis dolorum nisi exercitationem. Eos dolor temporibus eius soluta voluptatem?
+		</p>
 		<ul class="example">
 			<li>
 				<strong>HEADER: </strong>
@@ -61,6 +66,86 @@
 				<em> Responde a la pregunta ¿COMO ENCONTRARNOS?</em>
 			</li>
 		</ul>
+	</section>
+	<section>
+		<header class="header">
+			<h2>Jerarquia Selectores</h2>
+		</header>
+		<p>
+			
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, id sit tempora fugiat corrupti nemo. Nobis rerum officia assumenda voluptates cupiditate pariatur dicta excepturi facere maiores alias exercitationem, atque voluptatum deserunt quas nihil. Numquam voluptatum maiores animi distinctio aliquam, nihil laborum facere ipsum hic voluptas, tempore! Eos, accusamus eum eveniet, facere ipsum veniam quisquam est dolorum quasi reprehenderit autem non illo quam voluptate libero laboriosam. Excepturi quidem placeat, velit itaque illum aperiam maiores enim mollitia blanditiis ratione magnam nemo perspiciatis? Dolorem soluta ab voluptatem libero repellat, ratione. Et expedita tempora esse nesciunt fugiat rerum dolorem dolores reprehenderit doloribus, tenetur nisi!
+		</p>
+		<ul class="example">
+			<li>
+				<strong>Etiqueta</strong>
+				<ul>
+					<li><span>header</span>{...}</li>
+					<li><span>header</span> h1{...}</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Clase</strong>
+				<ul>
+					<li><span class="span">.header</span>{...}</li>
+					<li><span class="another span">.header</span> h1{...}</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Id</strong>
+				<ul>
+					<li><span id="span">#header</span>{...}</li>
+					<li><span id="span">#header</span> h1{...}</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<header class="header">
+			<h2>Caracteristicas Elementos</h2>
+		</header>
+		<p>
+			
+			Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Laudantium unde aspernatur, magnam molestiae quae sit recusandae quaerat reiciendis modi quis! Incidunt laboriosam culpa vero, quidem, impedit veniam, a fugiat quibusdam quod quisquam possimus, ratione dolorum eaque. Itaque optio excepturi dignissimos alias, perspiciatis officia illo magnam suscipit laudantium delectus saepe animi. Rerum eum voluptate tempora autem consequuntur enim ut facilis illo repudiandae, doloremque voluptates. Delectus libero voluptate porro! Minus dolor officia illo aspernatur asperiores ut eligendi debitis odio, a dicta reiciendis doloribus consequuntur at illum suscipit nobis ipsam nihil atque laboriosam totam nostrum minima explicabo non eveniet libero. Commodi possimus, tempora!
+		</p>
+		<article>
+			<header>
+				<h3>Atributos Generales</h3>
+			</header>
+			<ul>
+				<li>
+					<strong>MARGIN: </strong>
+					Distancia que separa un elemento de otro, no suma tamaño y siempre se aplica el mayor.
+				</li>
+				<li>
+					<strong>BORDER: </strong>
+					Linea que rodea la etiqueta, por defecto su valor es cero y su tamaño pesa para la medida final.
+				</li>
+				<li>
+					<strong>PADDING: </strong>
+					Espacio de relleno que existe entre el borde y contenido, al igual que el borde su tamaño pesa.
+				</li>
+				<li>
+					<strong>CONTENT: </strong>
+					Elementos o texto que se encuentran dentro de la etiqueta y al cual se le define un tamaño (ancho y alto)
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<strong>content-box (predeterminado):</strong>
+					<ul>
+						<li>content-width = width</li>
+						<li>final-width = width + padding + border</li>
+					</ul>
+				</li>
+				<li>
+					<strong>border-box (selector *{}):</strong>
+					<ul>
+						<li>final-width = width</li>
+						<li>content-width = width - padding - border</li>
+					</ul>
+				</li>
+			</ul>
+		</article>
 	</section>
 	<script src="scripts/main.js"></script>
 </body>

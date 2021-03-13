@@ -46,8 +46,10 @@
 	}
 /*Cabecera*/
 	#header{
-		padding: 1rem; /*por defecto: 16px*/
+		padding: 20% 1rem; /*top right bottom left*/
 		text-align: center;
+		color: #eee;
+		background-color: #333;
 	}
 	h1{
 		margin: 0;
@@ -56,5 +58,16 @@
 		letter-spacing: 2px;
 	}
 /*Contenido*/
-
+	.example li #span{
+		color: skyblue;
+	}
+	.example li .span{
+		color: limegreen;
+	}
+	.example li span{
+		color: tomato;
+	}
+	li{
+		font-size: 1.2rem; /*root em (M en HTML)*/
+	}
 /*Pie de Pagina*/
