@@ -20,6 +20,10 @@
 	body{
 		margin: 0;
 	}
+	header{
+		text-shadow: -2px 2px 2px #333,
+			0 0 .2rem #333;/* x y blur color*/
+	}
 /*Navegacion*/
 	.menu{
 		list-style: none;
@@ -53,7 +57,7 @@
 		background-image: 
 			url('../assets/icon/css.svg'),
 			url('../assets/img/osx-mojave-night.jpg');
-		background-position: center 5rem, center;/* x y */
+		background-position: center 1.2rem, center;/* x y */
 		background-repeat: no-repeat;
 		background-size: 15%, cover; /* width height */
 		background-attachment: scroll, fixed;
@@ -65,7 +69,25 @@
 		letter-spacing: 2px;
 	}
 /*Contenido*/
-
+	section{
+		padding: 1rem;
+	}
+	section .header{
+		border-radius: .5rem .5rem 0 0; /* tl tr br bl */
+		padding: .5rem;
+		color: #eee;
+		background-color: #448;
+	}
+	section header h2,
+	section header h3{
+		margin: 0;
+	}
+	section header{
+		border-bottom: 2px solid;
+		color:#448;
+		text-shadow: 0 0 .2rem #eee, 
+			-2px 2px 5px #333;
+	}
 	/* Ejemplos*/
 		.example{
 			list-style: none;
@@ -92,4 +114,72 @@
 			li{
 				font-size: 1.2rem; /*root em (M en HTML)*/
 			}
+		/*Flexbox*/
+			.flex{
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+				margin: 1rem;
+				border: 2px solid #333;
+				background-color: #eee;
+			}
+			.flex div,
+			.flex span{
+				border: 2px solid #ccc;
+				padding: 1rem;
+				color: #eee;
+				background-color: #448;
+			}
+			.align{
+				align-items: baseline;
+				min-height: 300px;
+			}
+			.align span{
+				font-size: 3rem;
+				align-self: flex-end;
+			}
+			.col{
+				flex-direction: column;
+				border-left: .2rem dashed limegreen;
+				border-top: .2rem dashed tomato;
+			}
+			.row-r{
+				flex-direction: row-reverse;
+				border-top: .2rem dashed limegreen;
+				border-right: .2rem dashed tomato;
+			}
+			.col-r{
+				flex-direction: column-reverse;
+				border-left: .2rem dashed limegreen;
+				border-bottom: .2rem dashed tomato;
+			}
+			.overflow{
+				max-height: 300px;
+				overflow: auto;
+			}
+			.sample span{
+				display: inline-block;
+				width: 2rem;
+				height: 2rem;
+			}
+			.justify-axis{
+				background-color: limegreen;
+			}
+			.align-axis{
+				background-color: tomato;
+			}
 /*Pie de Pagina*/
+	#footer{
+		color: #eee;
+		padding: 1rem;
+		background-color: #448;
+	}
+	#contact{
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 540px;
+	}
+	#contact button{
+		align-self: flex-end;
+	}

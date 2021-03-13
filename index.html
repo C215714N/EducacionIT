@@ -172,6 +172,119 @@
 			</ul>
 		</article>
 	</section>
+	<section>
+		<header class="header">
+			<h2>Introduccion a Flexbox</h2>
+		</header>
+		<article>
+			<header>
+				<h3>Justify-Content:</h3>
+			</header>
+			<ul class="example">
+				<li><strong>Flex-start: </strong> distribuye los elementos al comienzo del flex, valor predeterminado (horizontal izq)</li>
+				<li><strong>Flex-end: </strong> distribuye los elementos en orden al final del flex (horizontal der)</li>
+				<li><strong>Center: </strong> distribuye los elementos hacia el centro del eje principal (horizontal)</li>
+				<li><strong>Space-around: </strong> distribuye el contenido de la etiqueta dejando espacio en los extremos, pero la distancia entre etiquetas es igual a la sumatoria de los margenes calculados.</li>
+				<li><strong>Space-between: </strong> distribuye el contenido de la etiqueta hacia los bordes de la misma, quedando la misma distancia entre cada etiqueta, a excepcion del primer y ultimo elemento.</li>
+				<li><strong>Space-evenly: </strong> distribuye el contenido de la etiqueta de forma equitativo, de manera que todas las etiquetas tienen el mismo espacio de separacion (no es compatible con todos los navegadores)</li>
+			</ul>
+			<div class="flex">
+				<div>Block 1</div>
+				<div>Block 2</div>
+				<div>Block 3</div>
+				<div>Block 4</div>
+				<span>Line 1</span>
+				<span>Line 2</span>
+				<span>Line 3</span>
+				<span>Line 4</span>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Align-Items:</h3>
+			</header>
+			<ul class="example">
+				<li><strong>Flex-Start: </strong> Organiza los elementos al principio del flex (vertical, sup), a diferencia de <em>justify-content</em> este atributo no posee valor predeterminado</li>
+				<li><strong>Flex-End: </strong> Organiza los elementos al final del flex (vertical, inf)</li>
+				<li><strong>Center: </strong> Organiza los elementos hacia el centro de la fila (vertical)</li>
+				<li><strong>Baseline: </strong> Organiza los elementos dentro del flex, de manera tal que su contenido sea legible ya que prioriza la linea</li>
+				<li><strong>Align-self: </strong> Atributo que se utiliza en un elemento dentro del flex y permite cambiar su orientacion con respecto a flexbox</li>
+			</ul>
+			<div class="flex align">
+				<div>Block 1</div>
+				<div>Block 2</div>
+				<div>Block 3</div>
+				<div>Block 4</div>
+				<span>Line 1</span>
+				<span>Line 2</span>
+				<span>Line 3</span>
+				<span>Line 4</span>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Flex-Direction: </h3>
+			</header>
+			<ul class="example">
+				<li><strong>Row: </strong> valor prederminado</li>
+				<li><strong>Column: </strong> Eje principal es vertical</li>
+				<li><strong>Row-Reverse: </strong> Invierte el eje principal horizontal.</li>
+				<li><strong>Column-Reverse: </strong> Invierte el eje principal vertical.</li>
+			</ul>
+			<div class="overflow">
+				<div class="flex align col">
+				<strong>Column</strong>
+				<div>Block 1</div>
+				<div>Block 2</div>
+				<div>Block 3</div>
+				<div>Block 4</div>
+				<span>Line 1</span>
+				<span>Line 2</span>
+				<span>Line 3</span>
+				<span>Line 4</span>
+			</div>
+			<div class="flex align row-r">
+				<strong>Row-Reverse</strong>
+				<div>Block 1</div>
+				<div>Block 2</div>
+				<div>Block 3</div>
+				<div>Block 4</div>
+				<span>Line 1</span>
+				<span>Line 2</span>
+				<span>Line 3</span>
+				<span>Line 4</span>
+			</div>
+			<div class="flex align col-r">
+				<strong>Column-Reverse</strong>
+				<div>Block 1</div>
+				<div>Block 2</div>
+				<div>Block 3</div>
+				<div>Block 4</div>
+				<span>Line 1</span>
+				<span>Line 2</span>
+				<span>Line 3</span>
+				<span>Line 4</span>
+			</div>
+			</div>
+			<ul class="sample">
+				<li><span class="justify-axis"></span> Justify-content</li>
+				<li><span class="align-axis"></span> Align-items</li>
+			</ul>
+		</article>
+	</section>
+	<footer id="footer">
+		<form id="contact" action="">
+			<label for="">Campo</label>
+			<input type="text">
+			<label for="">Campo</label>
+			<input type="text">
+			<label for="">Campo</label>
+			<input type="text">
+			<label for="">Consulta</label>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<button>Enviar</button>
+		</form>
+	</footer>
 	<script src="scripts/main.js"></script>
 </body>
 </html>
