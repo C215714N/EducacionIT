@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p> &lt;html> & {css}</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta Relativa / Interna -->
 					<a href="index.html">Inicio</a>
@@ -23,9 +24,9 @@
 					<a href="https://github.com/c215714n/EducacionIT/tree/html-v-19hs" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul class="example">
 			<li>
@@ -48,13 +49,65 @@
 
 			<img style="width: 300px;" src="img/jjba-killerqueen-04.jpg" alt="JJBA Killer Queen"/>
 		</div>
-	</div>
-	<div id="footer">
+		<h2>Estructura Semántica</h2>
+		<ul>
+			<li>
+				<strong>HEADER: </strong>
+				Cabecera de pagina, se utiliza a modo de introduccion y contiene los titulos, aunque tambien suele poseer en su interior alguna galeria a modo de muestra e incluso la navegacion.
+			</li>
+			<li>
+				<strong>NAV: </strong>
+				navegacion principal, debe poseer los links mas importantes y solamente debe aparecer una sola vez.
+			</li>
+			<li>
+				<strong>MAIN: </strong>
+				Contenido principal, esta seccion corresponde a la informacion mas relevante dentro de la pagina actual.
+			</li>
+			<li>
+				<strong>ARTICLE: </strong>
+				Contenido independiente, un articulo funciona tanto dentro como fuera del sitio debido a que posee una estructura autoconclusiva.
+			</li>
+			<li>
+				<strong>SECTION: </strong>
+				Contenido contextualizado, una section forma parte de un todo y por lo tanto solamente funciona dentro de la pagina y no se interpretaria en su totalidad fuera de esta.
+			</li>
+			<li>
+				<strong>ASIDE: </strong>
+				Contenido Tangencial, un lateral es aquel contenido que se relaciona indirectamente con sus elementos, hermanos.
+			</li>
+			<li>
+				<strong>FOOTER: </strong>
+				Pie de pagina, es un complemento del contenido principal y suele colocarse en su interior informacion del autor/copyright , datos o formularios de contacto, redes sociales, e incluso un mapa del sitio.
+			</li>
+		</ul>
+		<h2>Alineacion Texto Imagen</h2>
+		<p>
+			<img style="width: 200px;" src="img/poster-californication.jpg" alt="Poster Califonication">
+
+			Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Debitis expedita incidunt, repellat non blanditiis iusto mollitia et quia, amet quidem voluptas minus veniam dolorum harum facilis nesciunt eligendi quos. Ex.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, unde quia ad non culpa modi tempore provident hic eius in harum mollitia esse omnis necessitatibus suscipit, repellat odit quae, explicabo.
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officiis ad repellat quam? Tempora, nulla, sunt? Quisquam explicabo blanditiis voluptatem? Voluptatum obcaecati quam sequi ipsam perspiciatis corrupti tenetur amet perferendis.
+		</p>
+		<p>
+			<img style="width: 200px;" src="img/poster-by-the-way.jpg" alt="Poster Califonication">
+
+			Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Debitis expedita incidunt, repellat non blanditiis iusto mollitia et quia, amet quidem voluptas minus veniam dolorum harum facilis nesciunt eligendi quos. Ex.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, unde quia ad non culpa modi tempore provident hic eius in harum mollitia esse omnis necessitatibus suscipit, repellat odit quae, explicabo.
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officiis ad repellat quam? Tempora, nulla, sunt? Quisquam explicabo blanditiis voluptatem? Voluptatum obcaecati quam sequi ipsam perspiciatis corrupti tenetur amet perferendis.
+		</p>
+		<p>
+			<img style="width: 200px;" src="img/poster-cant-stop.jpg" alt="Poster Califonication">
+			Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Debitis expedita incidunt, repellat non blanditiis iusto mollitia et quia, amet quidem voluptas minus veniam dolorum harum facilis nesciunt eligendi quos. Ex.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, unde quia ad non culpa modi tempore provident hic eius in harum mollitia esse omnis necessitatibus suscipit, repellat odit quae, explicabo.
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officiis ad repellat quam? Tempora, nulla, sunt? Quisquam explicabo blanditiis voluptatem? Voluptatum obcaecati quam sequi ipsam perspiciatis corrupti tenetur amet perferendis.
+		</p>
+	</main>	
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados
 			<a href="#"> Cristian Racedo </a>
 			&amp; Compañia.
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
