@@ -49,7 +49,14 @@
 		padding: 20% 1rem; /*top right bottom left*/
 		text-align: center;
 		color: #eee;
-		background-color: #333;
+		background-color: #448;
+		background-image: 
+			url('../assets/icon/css.svg'),
+			url('../assets/img/osx-mojave-night.jpg');
+		background-position: center 5rem, center;/* x y */
+		background-repeat: no-repeat;
+		background-size: 15%, cover; /* width height */
+		background-attachment: scroll, fixed;
 	}
 	h1{
 		margin: 0;
@@ -58,16 +65,31 @@
 		letter-spacing: 2px;
 	}
 /*Contenido*/
-	.example li #span{
-		color: skyblue;
-	}
-	.example li .span{
-		color: limegreen;
-	}
-	.example li span{
-		color: tomato;
-	}
-	li{
-		font-size: 1.2rem; /*root em (M en HTML)*/
-	}
+
+	/* Ejemplos*/
+		.example{
+			list-style: none;
+			margin: 1rem; /*top right bottom left*/
+			margin-left: 3rem;
+			border-left: .2rem solid #448; /* width style color */
+			padding: 1rem;
+			background-color: #eee;
+		}
+		.example li{
+			padding: .25rem;
+		}
+		/* Jerarquias */
+			.example li #span{
+				color: skyblue;
+			}
+			.example li .span{
+				color: limegreen;
+			}
+			.example li span{
+				color: tomato;
+			}
+		/* Medidas */
+			li{
+				font-size: 1.2rem; /*root em (M en HTML)*/
+			}
 /*Pie de Pagina*/
