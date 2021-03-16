@@ -38,11 +38,62 @@
 				<strong>Implementar solamente minusculas en los nombres </strong> debido a que los servidores son <em>caseSensitive</em> y diferencian nombres como <em>"background.jpg" - "Background.jpg" - "BACKGROUND.jpg"</em>, ya que en los sistemas basados en <strong>UNIX</strong> pueden existir archivos con el mismo nombre pero diferente escritura. Con esta practica <strong>reducimos el margen de error.</strong>
 			</li>
 		</ul>
-		<div class="example">
+		<div class="example" style="text-align: center;">
+			<h2>Organizando Imagenes (Linea-Bloque)</h2>
 			<img style="width:300px;" 
 				src="img/jjba-thefool-01.jpg" 
 				alt="JJBA the Fool" />
+			<img style="width:300px;" 
+				src="img/jjba-thefool-02.jpg" 
+				alt="JJBA the Fool" />
+			<img style="width:300px;" 
+				src="img/jjba-thefool-03.jpg" 
+				alt="JJBA the Fool" />
+			<img style="width:300px;" 
+				src="img/jjba-thefool-04.jpg" 
+				alt="JJBA the Fool" />
 		</div>
+		<h2>Estructura Semantica</h2>
+		<ul class="example">
+			<li>
+				<strong>HEADER: </strong>
+				Cabecera de pagina o contenido introductorio, contiene los titulos principales, asi como tambien ocasionalmente alguna galeria a modo de presentacion e incluso la navegacion.
+			</li>
+			<li>
+				<strong>NAV: </strong>
+				Navegacion principal, debe contener los links mas importantes del sitio y ningun elemento externo a este deberia encontrarse aqui.
+			</li>
+			<li>
+				<strong>MAIN: </strong>
+				Contenido principal, representa la informacion mas importante dentro del cuerpo de la pagina con relacion al contenido. Este a la vez puede estar segmentado en partes.
+			</li>
+			<li>
+				<strong>ARTICLE: </strong>
+				Contenido independiente o articulo, es un elemento que funciona tanto dentro como fuera de la pagina debido a que posee su propia estructura y es autoconclusivo.
+			</li>
+			<li>
+				<strong>SECTION: </strong>
+				Contenido contextualizado o seccion, es un elemento que depende de otros dentro de la pagina para su total comprension y por lo tanto, no funciona fuera de esta.
+			</li>
+			<li>
+				<strong>ASIDE: </strong>
+				Contenido lateral o tangencial, es un elemento que se relaciona indirectamente con sus hermanos y se suele implementar para sugerencias o publicidad.
+			</li>
+			<li>
+				<strong>FOOTER: </strong>
+				Pie de pagina o contenido final, contiene la informacion de copyright, informacion/formulario de contacto, redes sociales e incluso puede presentar un mapa del sitio.
+			</li>
+		</ul>
+		<h2>Trabajando texto e imagenes</h2>
+		<p>
+			<img src="img/poster-californication.jpg" alt="Portada Californication 1999" />
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum. Incidunt eligendi voluptatibus sapiente officiis, veritatis laboriosam natus vitae, eius! Exercitationem aperiam, consequuntur perferendis voluptatem dolorem at voluptate, quisquam maiores?
+
+			Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Libero ipsa, nobis dolor eaque pariatur corrupti in nesciunt aliquam. Nam placeat, mollitia dolor fugiat aspernatur quibusdam beatae, quod esse. Voluptatum, architecto.
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam praesentium repellat nobis nostrum dolorem laborum error, amet, itaque deleniti enim cupiditate perspiciatis odit impedit maxime quibusdam vel suscipit voluptatem qui.
+		</p>
 	</div>
 	<div id="footer">
 		<p>
