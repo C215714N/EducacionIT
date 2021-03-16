@@ -3,12 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* selectores generales */
+		body{
+			margin: 0;
+			font-family: segoe ui, calibri, sans-serif;
+		}
+		/* selectores multiples (,)*/
+		header, footer{
+			padding: 16px;
+			color: #eee; /*rrggbb 00:min; FF:max;*/
+			background-color: #248;
+			text-align: center;
+		}
+		/* selectores especificos (padre hijo) */
+		nav ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			background-color: #36c;
+		}
+		nav a{
+			color: #eee;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/*:pseudoclass*/
+		nav li:hover{
+			background-color: rgba(51,51,51,.5); /*0:min; 255:max;*/
+		}
+		/* selector de clase (.class)*/
+		.example{
+			list-style: none;
+			margin: 8px;
+			padding: 16px;
+			background-color: #ccc;
+		}
+		/* selector de Id (#id) */
+		#footer a{
+			color: #eee;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		/*organizacion texto e imagenes*/
+		p{
+			overflow: hidden;
+			padding: 16px;
+		}
+		p img{
+			float: left;
+			margin-right: 16px;
+		}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p> &lt;html> &amp; {css} </p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta Interna / Relativa -->
 					<a href="index.html">inicio</a>
@@ -23,9 +79,9 @@
 					<a href="https://github.com/c215714n/EducacionIT/tree/html-m-10hs" target="_blank">github</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul>
 			<li>
@@ -112,13 +168,13 @@
 
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam praesentium repellat nobis nostrum dolorem laborum error, amet, itaque deleniti enim cupiditate perspiciatis odit impedit maxime quibusdam vel suscipit voluptatem qui.
 		</p>
-	</div>
-	<div id="footer">
+	</main>
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados |
 			<a href="#"> Cristian Racedo </a>
 			&amp; Compañia.
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
