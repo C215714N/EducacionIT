@@ -13,23 +13,39 @@
 				<li><!-- Ruta Interna / Relativa -->
 					<a href="index.html">inicio</a>
 				</li>
-				<li><!
-					<a href="">galeria</a>
+				<li><!-- Ruta Ancla / Marcador -->
+					<a href="#">galeria</a>
 				</li>
-				<li>
-					<a href="">contacto</a>
+				<li><!-- Ruta Ancla / Marcador (#Id) -->
+					<a href="#footer">contacto</a>
 				</li>
-				<li>
-					<a href="">github</a>
+				<li><!-- Ruta Externa / Absoluta -->
+					<a href="https://github.com/c215714n/EducacionIT/tree/html-m-10hs" target="_blank">github</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios </strong> ya que dicho caracter sera reemplazado por el <em>conjunto %20</em> impidiendo al navegador encontrar el mismo, por ejemplo si tenemos un archivo <em>"foto 01.jpg"</em> se interpretado como <em>"foto%2001.jpg"</em>. <strong>Se recomienda utilizar guiones (-_)</strong> dando como resultado nombres como <em>"foto_01.jpg"</em> o <em>"foto-01.jpg"</em>.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> o <em>"perrito_jugando.jpg"</em> para facilitar la implementacion por parte del desarrollador. <strong>Evitar nombres genericos o automatizados</strong> como <em>"foto_01.jpg"</em> o <em>"2021-16-03-11175600.jpg"</em> ya que implica la revision de los mismos.
+			</li>
+			<li>
+				<strong>Implementar solamente minusculas en los nombres </strong> debido a que los servidores son <em>caseSensitive</em> y diferencian nombres como <em>"background.jpg" - "Background.jpg" - "BACKGROUND.jpg"</em>, ya que en los sistemas basados en <strong>UNIX</strong> pueden existir archivos con el mismo nombre pero diferente escritura. Con esta practica <strong>reducimos el margen de error.</strong>
+			</li>
+		</ul>
 		
 	</div>
 	<div id="footer">
-		
+		<p>
+			&copy; Todos los derechos reservados |
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
 	</div>
 </body>
 </html>
