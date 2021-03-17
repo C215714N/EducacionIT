@@ -78,17 +78,62 @@
 				<strong>METER</strong>
 				<ul>
 					<li>
-						<meter></meter>
+						<meter 
+							max="100" 
+							value="30"
+							low="40"
+							high="70"
+							optimum="90">
+						</meter>
+						value * < low < high
 					</li>
 					<li>
-						<meter></meter>
+						<meter 
+							max="100" 
+							value="60"
+							low="40"
+							high="70"
+							optimum="90">
+						</meter>
+						low < value * < high
 					</li>
 					<li>
-						<meter></meter>
+						<meter 
+							max="100" 
+							value="90"
+							low="40"
+							high="70"
+							optimum="90">
+						</meter>
+						low < high < value *
 					</li>
 				</ul>
 			</li>
 		</ul>
+		<h3> Herramientas de Dibujo </h3>
+		<p>
+			Existen 2 tipos de graficos que se pueden representar dentro de nuestro HTML, por un lado estan las <strong>imagenes vectoriales</strong> representadas con la etiqueta <strong>SVG(scalable vector graphics)</strong>, que funcionan generando lineas y curvas calculadas matematicamente utilizando el <em>lenguaje XML</em>. Por el otro estan las <strong>imagenes raster (mapa de bits)</strong> que se pueden generar con la etiqueta <strong>CANVAS</strong> que utiliza el <em>lenguaje JS</em> para representar los elementos dentro de la pagina.
+		</p>
+		<div class="example">
+			<figure>
+				<img src="assets/icon/css.svg" alt="Logo CSS3 Vector">
+				<figcaption>Logo CSS3 Vector</figcaption>
+			</figure>
+			<figure>
+				<img src="assets/icon/css.png" alt="Logo CSS3 Bitmap">
+				<figcaption>Logo CSS3 Bitmap</figcaption>
+			</figure>
+		</div>
+		<svg>
+			<rect x="20" y="20" 
+				width="150" height="150" 
+				fill="#248" />
+			<circle r="75" cx="170" cy="170" fill="hsla(0, 50%, 60%, .5)"/>
+			<polygon points="290 90, 290 290, 90 290" fill="rgba(0, 200, 50, .5)" />
+		</svg>
+		<canvas>
+			
+		</canvas>
 	</section>
 	<!-- scripts -->
 	<script src="scripts/main.js"></script>
