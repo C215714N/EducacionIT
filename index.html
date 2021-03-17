@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3" >
+	<title>Maquetado Avanzado</title>
+	<link rel="icon" href="assets/icon/css.svg">
+	<!-- styles -->
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<nav>
+		<a href="#" class="brand">Maquetado</a>
+		<button class="button">
+			&equiv;
+		</button>
+		<ul class="menu">
+			<li><a href="#">inicio</a></li>
+			<li><a href="about.html">acerca</a></li>
+			<li><a href="gallery.html">galeria</a></li>
+			<li><a href="#contact">contacto</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>html | css | sass | less | js</p>
+			<div class="slide">
+				<span class="active"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<ul class="slide">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="prev"> &lt; </button>
+		<button class="next"> &gt; </button>
+	</header>
+	<section>
+		<header class="header">
+			<h2>Caracteristicas html5</h2>
+		</header>
+		<h3>Elementos Estadisticos</h3>
+		<p>
+			
+			HTML5 incorpora elementos que permiten definir el valor de una tarea; ya sea durante su realizacion, por ejemplo: el tramo de un recorrido, como es el caso del elemento <strong>&lt;progress></strong> o si esta ya fue finalizada y debe compararse con otras, por ejemplo: una votacion, como es el caso del elementos <strong>&lt;meter></strong>.
+		</p>
+		<ul class="example">
+			<li>
+				<strong>PROGRESS</strong>
+				<ul>
+					<li>
+						<progress></progress>
+						min="0" sin value max="1"
+					</li>
+					<li>
+						<progress value="30" max="100"></progress>
+						value = "30" max="100"
+					</li>
+					<li id="jsProgress">
+						<progress max="100"></progress>
+						<input type="number" min="0" max="100"/>
+						value="js"
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>METER</strong>
+				<ul>
+					<li>
+						<meter></meter>
+					</li>
+					<li>
+						<meter></meter>
+					</li>
+					<li>
+						<meter></meter>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- scripts -->
+	<script src="scripts/main.js"></script>
+</body>
+</html>
