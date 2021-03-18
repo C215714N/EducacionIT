@@ -54,6 +54,8 @@
 	main,
 	section,
 	article{
+		max-width: 992px;
+		margin: auto;
 		padding: 1rem;
 		/*
 			medidas absolutas: siempre miden lo mismo indistitamente del tamaño de la pantalla o medio de reproduccion
@@ -67,6 +69,26 @@
 				hibrida:	rem(ancho M root:[html]);
 			;
 		*/
+	}	
+	section{
+		margin: 1rem auto;
+		border-radius: 1rem;
+		box-shadow: 0 0 .5rem #333 inset;
+	}
+	section h2{
+		margin: -1rem -1rem 1rem;/* top right bottom */
+		border-radius: 1rem 1rem 0 0; /*topleft topright bottomright bottomleft*/
+		padding: .5rem 1rem; /*top right bottom left*/
+		color: #eee;
+		background-color: #248;
+		background-image: linear-gradient(#36c, #248);
+		text-shadow: 
+			-2px 2px 2px #333,/*sombra delantera*/
+			0 0 .5rem #eee; /* -x+ -y+ blur color*/
+	}
+	section h3{
+		color: #248;
+		border-bottom: .2rem solid;
 	}
 	/*Ejemplos*/
 		.example{
@@ -142,6 +164,89 @@
 		.overflow{
 			overflow: auto;
 			max-height: 320px;
+		}
+	/*Gradientes de fondo*/
+		.gradient div{
+			padding: .5rem;
+			border-radius: .25rem;
+			margin: .5rem;
+			color:#eee;
+			text-shadow: -2px 2px 2px #333;
+		}
+		.gradient :first-child{
+			background: linear-gradient(
+				skyblue, 
+				navy
+			);
+		}
+		.gradient :nth-child(2){
+			background: radial-gradient(
+				lightgreen,
+				darkgreen
+			)
+		}
+		.gradient :nth-child(3){
+			background: radial-gradient(
+				circle at top right,
+				pink,
+				darkslateblue
+			);
+		}
+
+		.gradient :last-child{
+			background: linear-gradient(
+				15deg, 
+				tomato 40%, 
+				gold 70%, 
+				orange 100%
+			);
+		}
+	/*Modos de fusion*/
+		.blend{
+			overflow: auto;
+			max-height: 300px;
+		}
+		.blend div{
+			min-height: 300px;
+			padding: 1rem;
+			color: #eee;
+			font-size: 1.5rem;
+			text-shadow: 2px 2px 2px #333;
+			background: 
+				linear-gradient(darkslateblue, tomato),
+				url(../assets/img/osx-sierra.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.blend div:nth-child(1){
+			background-blend-mode: multiply;
+		}
+		.blend div:nth-child(2){
+			background-blend-mode: hard-light;
+		}
+		.blend div:nth-child(3){
+			background-blend-mode: soft-light;
+		}
+		.blend div:nth-child(4){
+			background-blend-mode: lighten;
+		}
+		.blend div:nth-child(5){
+			background-blend-mode: difference;
+		}
+		.blend div:nth-child(6){
+			background-blend-mode: darken;
+		}
+		.blend div:nth-child(7){
+			background-blend-mode: saturation;
+		}
+		.blend div:nth-child(8){
+			background-blend-mode: luminosity;
+		}
+		.blend div:nth-child(9){
+			background-blend-mode: color-burn;
+		}
+		.blend div:nth-child(10){
+			background-blend-mode: color-dodge;
 		}
 /*Footer*/
 	#footer{

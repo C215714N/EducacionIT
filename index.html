@@ -200,6 +200,38 @@
 			<li><span class="red"></span><strong>Align-items</strong></li>
 		</ul>
 	</section>
+	<section>
+		<h2>Aspectos Visuales CSS</h2>
+		<p>
+			CSS3 incorpora varias caracteristicas que nos permiten modificar los aspectos de nuestro sitio, al igual que algun programa de diseño como por ejemplo <em>Adobe Photoshop o Illustrator.</em>
+		</p>
+		<h3>Gradientes de Fondo</h3>
+		<p>
+			Se implementan utilizando el atributo <strong>background-image</strong> debido a que la combinacion de colores se considera un grafico <em>mapa de bits</em>. Podemos indicar el tipo de gradiente <strong>linear o radial</strong>, asi como la direccion del mismo mediante nombres como <strong>top right bottom left</strong> o valores como <strong>%, px, rem</strong>, ademas de los colores que este fuera a utilizar, en cualquier formato identificable <strong>rgb, hsl, hexadecimal y html color.</strong>
+		</p>
+		<div class="example gradient">
+			<div>linear-gradient(skyblue, navy)</div>
+			<div>radial-gradient(lightgreen, darkgreen)</div>
+			<div>radial-gradient(circle at top right, pink, darkslateblue)</div>
+			<div>linear-gradient(15deg, tamato, gold, orange)</div>
+		</div>
+		<h3>Modos de fusion</h3>
+		<p>
+			CSS3 permite combinar los pixeles de las imagenes de fondo para lograr un efecto visual con las mismas, estos modos se dividen en 3 categorias, <em>aclarar</em> que prioriza los tonos cercanos al blanco, <em>oscurecer</em> que prioriza los tonos cercanos al negro y <em>diferencia</em> que evalua los colores de cada pixel para calcular un nuevo valor resultante. Para realizar dichas evaluaciones debemos tener en cuenta que existe una <strong>capa base</strong> que sirve como referente y una <strong>capa de fusion</strong> que aplica los cambios sobre la anterior.
+		</p>
+		<div class="example blend">
+			<div>multiply</div>
+			<div>hard-light</div>
+			<div>soft-light</div>
+			<div>lighten</div>
+			<div>difference</div>
+			<div>darken</div>
+			<div>saturation</div>
+			<div>luminosity</div>
+			<div>color-burn</div>
+			<div>color-dodge</div>
+		</div>
+	</section>
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
