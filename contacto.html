@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html" title="inicio">inicio</a></li>
+			<li><a href="galeria.html" title="galeria">galeria</a></li>
+			<li><a href="#contacto" title="contacto">contacto</a></li>
+			<li><a href="https://github.com/c215714n/EducacionIT/tree/html-v-19hs" target="_blank" title="github">github</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p> html | css | js </p>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h2>Formularios HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Cual es su función?</h3>
+				</header>
+				<p>
+					Son herramientas que permiten una <strong>interaccion real (intercambio de datos) entre el cliente y el servidor </strong> y permiten al usuario enviar una peticion directamente desde la pagina, que segun su tipo puede o no ser respondida inmediatamente. Para poder utilizarlos debemos utilizar la etiqueta <strong>&lt;form></strong> y solamente se procesara para esta peticion los datos que se encuentren dentro de la misma; tambien tenemos que especificar determinados <em>atributos que se mencionan mas adelante </em>, asi como tambien los elementos en su interior.
+				</p>
+				<ul class="example">
+					<li> Buscador - Consulta Query </li>
+					<li> Inscripcion - Registro </li>
+					<li> Acceso - Inicio Sesion </li>
+					<li> Contacto - Consulta Web </li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Como funcionan?</h3>
+				</header>
+				<p>
+					A la etiqueta mencionada anteriormente debemos colocarle por los menos <em>2 atributos</em>; por un lado tenemos el atributo <strong>action="..."</strong> que indica cual es la accion que debe realizarse al momento de enviar el formulario, actualmente se utiliza un <em> script en lenguaje de servidor (ej: PHP) </em> para garantizar el correcto procesamiento de la peticion. Por el otro, encontramos al atributo <strong>method="..."</strong> que indica como debe realizarse el envio de los datos mediante HTTP y cual es la prioridad de los mismos.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong>
+						Metodo menos seguro debido a que la informacion permanece visible en la barra de direcciones, pero mas rapido ya que prioriza la respuesta del servidor ante todo.
+					</li>
+					<li>
+						<strong>POST: </strong>
+						Metodo mas seguro ya que encripta los datos enviados por el usuario, pero al realizar este proceso es mucho mas lento que el anterior.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Que elementos los componen?</h3>
+				</header>
+				<p>
+					Dentro de los mismos encontramos <em>2 elementos diferentes</em>, por un lado estan las <strong>Etiquetas(LABEL)</strong> que funcionan a modo de rotulo, indicando al usuario que datos debe ingresar/seleccionar dentro del formulario, tambien facilita la accesibilidad. Por el otro lado estan los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que representan las areas de la pagina donde el usuario puede ingresar/seleccionar los datos que van a ser enviados, estos poseen <em>2 atributos fundamentales</em> que son <strong>type="..."</strong> que indica el tipo dato a ingresar y <strong>value="..."</strong> que representa el dato ingresado/seleccionado.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text">
+					</li>
+					<li>
+						<label>Campo Numerico (-12345e)</label>
+						<input type="number">
+					</li>
+					<li>
+						<label>Campo email (user@server)</label>
+						<input type="email">
+					</li>
+					<li>
+						<label>Campo Contraseña (****)</label>
+						<input type="password">
+					</li>
+					<li>
+						<label>Campo de Fecha (yyyy-mm-dd)</label>
+						<input type="date">
+					</li>
+					<li>
+						<label>Opcion Unica </label>
+						| si <input name="accept" type="radio" value="1">
+						| no <input name="accept" type="radio" value="0">
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						| arte <input name="hobbies" type="checkbox" value="art">
+						| musica <input name="hobbies" type="checkbox" value="music">
+						| deporte <input name="hobbies" type="checkbox" value="sport">
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option value="html">html</option>
+							<option value="css">css</option>
+							<option value="js">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset">
+						<input type="submit">
+						<button> ENVIAR </button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+</body>
+</html>
