@@ -248,6 +248,55 @@
 		.blend div:nth-child(10){
 			background-blend-mode: color-dodge;
 		}
+	/*Bordes y Sombreado*/
+		.border{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.border div{
+			max-width: 10rem;
+			margin: .5rem;
+			border: 2px solid #248;
+			padding: 1rem;
+			color: #eee;
+			text-shadow: -1px 1px 2px #333;
+			box-shadow: -.5rem .5rem .5rem #448;
+			background-image: url(../assets/img/poster-californication.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		/*ejemplos bordes*/
+			.border :nth-child(1){
+				border-radius: .5rem;
+			}
+			.border :nth-child(2){
+				border-radius: 1rem 0;
+			}
+			.border :nth-child(3){
+				border-radius: 0 1rem 0 0;
+			}
+			.border :nth-child(4){
+				border-radius: 1rem 1rem 0 0;
+			}
+			.border :nth-child(5){
+				border-radius: 0 1rem 1rem 0;
+			}
+			.border :nth-child(6){
+				border-radius: 3rem / .5rem; /* x / y */
+			}
+			.border :nth-child(7){
+				border-radius: 1rem / 5rem; /* x / y */
+			}
+			.border :nth-child(8){
+				border-radius: 5rem .5rem 50% 5px / 5rem 1rem;
+			}
+			.border :nth-child(9){
+				border-radius: 5rem .5rem 50% 5px / 5rem 1rem 10px 5px;
+			}
+			.border :nth-child(10){
+				border-radius: 1rem 3rem 5px 50% / 3rem 1rem 50% 5px
+			}
 /*Footer*/
 	#footer{
 		padding: 1rem;
@@ -268,11 +317,14 @@
 			display: flex;
 			flex-direction: column;
 		}
+		#contact label{
+			margin-top: .5rem;
+		}
 		#contact input,
 		#contact textarea{
 			outline: none;
 			border-radius: .2rem;
-			border: 2px solid transparent;
+			border: .2rem solid transparent;
 			padding: .5rem 1rem;
 			font-size: 1rem;
 		}
@@ -291,7 +343,43 @@
 			background-color: transparent;
 			font-weight: bold;
 		}
+		#contact :focus{
+			box-shadow: 0 0 .5rem #eee;
+		}
 		#contact button:hover{
 			color: #248;
 			background-color: #eee;
+		}
+		/*validacion*/
+		#contact :valid{
+			border-color: lightgreen;
+		}
+	/*Redes sociales*/
+		.social{
+			max-width: 540px;
+			display: flex;
+			justify-content: center;
+			margin: 1rem auto;
+		}
+		.social a{
+			width: 5rem;
+			height: 5rem;
+			border-radius: .5rem;
+			background-size: 3rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.facebook{ background-image: url(../assets/icon/facebook.svg); }
+		.instagram{ background-image: url(../assets/icon/instagram.svg); }
+		.whatsapp{ background-image: url(../assets/icon/whatsapp.svg); }
+		.github{ background-image: url(../assets/icon/linkedin.svg); }
+		/*al pasar el mouse por encima*/
+		.social a:hover{
+			background-size: 4rem;
+		}
+		/*al presionar con el mouse*/
+		.social a:active{
+			background-color: #eeee;
+			box-shadow: 0 0 .5rem #eee;
 		}
