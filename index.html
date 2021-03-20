@@ -273,15 +273,33 @@
 		</article>
 	</section>
 	<footer id="footer">
-		<form id="contact" action="">
-			<label for="">Campo</label>
-			<input type="text">
-			<label for="">Campo</label>
-			<input type="text">
-			<label for="">Campo</label>
-			<input type="text">
-			<label for="">Consulta</label>
-			<textarea name="" id="" cols="30" rows="10"></textarea>
+		<form id="contact" action="" method="POST">
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName" 
+				type="text" 
+				placeholder="Ingrese su Nombre" 
+				required />
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email"
+				placeholder="Ingrese su Correo" 
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				placeholder="Ingrese su Telefono" />
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult"
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
 			<button>Enviar</button>
 		</form>
 	</footer>
