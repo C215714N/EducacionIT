@@ -84,6 +84,7 @@
 		padding: .5rem;
 		color: #eee;
 		background-color: #448;
+		background: linear-gradient(#66c, #224);
 	}
 	section header h2,
 	section header h3{
@@ -121,7 +122,7 @@
 			li{
 				font-size: 1.2rem; /*root em (M en HTML)*/
 			}
-		/*Flexbox*/
+		/* Flexbox */
 			.flex{
 				display: flex;
 				justify-content: space-around;
@@ -175,6 +176,106 @@
 			.align-axis{
 				background-color: tomato;
 			}
+		/* Gradientes */
+			.gradient div{
+				margin: .5rem;
+				padding: 1rem;
+				color: #eee;
+				text-shadow: 
+					-2px 2px 2px #333,
+					0 0 .5rem #333; /*-x+ -y+ blur color*/
+				background-color: #448;
+			}
+			/*
+				pseudoclase:
+					:first-child - primer etiqueta de un contenedor;
+					:last-child - ultima etiqueta de un contenedor;
+					:nth-child(n°); - etiqueta n° del contenedor
+			*/
+			.gradient :first-child{
+				background-image: linear-gradient(lightblue, navy);
+			}
+			.gradient :nth-child(2){
+				background-image: linear-gradient(
+					45deg,
+					green 10%,
+					orange 30%,
+					blue 50%,
+					red 70%,
+					purple 90%
+				);
+			}
+			.gradient :nth-child(3){
+				background: linear-gradient(to right, red, gold);
+			}
+			.gradient :nth-child(4){
+				background: radial-gradient(lightgreen, darkgreen);
+			}
+			.gradient :nth-child(5){
+				background: radial-gradient(circle 300px, skyblue, darkblue, black);
+			}
+			.gradient :last-child{
+				background: radial-gradient(
+					circle 100px at top right, 
+					yellow, 
+					orange, 
+					tomato);
+			}
+		/* Modos de fusion */
+			.blend{
+				max-height: 300px;
+				overflow: auto;
+			}
+			.blend div{
+				min-height: 300px;
+				color: #eee;
+				text-shadow: 0 0 .2rem #333;
+				background-image: 
+					url(../assets/img/osx-mojave.jpg),
+					linear-gradient(45deg, tomato, darkslateblue);
+				background-size: cover;
+				background-position: center;
+				font: bold 1.5rem sans-serif;
+			}
+			.blend :nth-child(1){background-blend-mode: multiply }
+			.blend :nth-child(2){background-blend-mode: lighten }
+			.blend :nth-child(3){background-blend-mode: darken }
+			.blend :nth-child(4){background-blend-mode: saturation}
+			.blend :nth-child(5){background-blend-mode: difference}
+			.blend :nth-child(6){background-blend-mode: soft-light;}
+			.blend :nth-child(7){background-blend-mode: hard-light;}
+			.blend :nth-child(8){background-blend-mode: color-burn;}
+			.blend :nth-child(9){background-blend-mode: color-dodge;}
+			.blend :nth-child(10){background-blend-mode: luminosity;}
+		/* Border Radius*/
+			.border{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.border div{
+				margin: 1rem;
+				border: 2px solid #448;
+				padding: 1rem;
+				color: #eee;
+				text-shadow: -2px 2px 2px #333, 0 0 .5rem #333;
+				background-image: url(../assets/img/poster-californication.jpg);
+				background-position: center;
+				background-attachment: fixed;
+				background-size: 1fr;
+			}
+			.border :nth-child(1){ border-radius: .5rem }
+			.border :nth-child(2){ border-radius:  1rem 1rem 0 0}
+			.border :nth-child(3){ border-radius:  0 8px 8px 0}
+			.border :nth-child(4){ border-radius: 1rem 0}
+			.border :nth-child(5){ border-radius: 50% 0 1rem }
+			.border :nth-child(6){ border-radius: 5rem / 5px }
+			.border :nth-child(7){ border-radius: 1rem / 5rem}
+			.border :nth-child(8){ border-radius:  50% }
+			.border :nth-child(9){ border-radius: 50% 1rem / 2rem } /*x / y*/
+			.border :nth-child(10){ border-radius: 1rem 0 .5rem 2rem / 5px 50% 1rem }
+			.border :nth-child(11){ border-radius: 1rem 5rem 3rem 5px / .2rem .1rem .5rem 1rem }
+			.border :nth-child(12){ border-radius: 2rem 0 .5rem 1rem / 50% 5rem 3rem 5px }
 /*Pie de Pagina*/
 	#footer{
 		color: #eee;
