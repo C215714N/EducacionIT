@@ -279,28 +279,49 @@
 				id="contactName"
 				name="contactName" 
 				type="text" 
-				placeholder="Ingrese su Nombre" 
+				maxlength="50" 
+				pattern="[A-Z a-z]{3,50}"
+				title="Ingrese su nombre sin numeros ni simbolos. Este debe poseer entre 3 y 50 caracteres" 
+				placeholder="Nombre (*): John Doe" 
 				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos. 
+				Este debe poseer entre 3 y 50 caracteres.
+			</div>
 			<label for="contactEmail">Correo</label>
 			<input 
 				id="contactEmail"
 				name="contactEmail" 
 				type="email"
-				placeholder="Ingrese su Correo" 
+				minlength="8" 
+				placeholder="Correo (*): usuario@servidor" 
 				required />
+			<div class="validate">
+				Ingrese un correo valido respetando la estructura 
+				usuario@servidor
+			</div>
 			<label for="contactPhone">Telefono</label>
 			<input 
 				id="contactPhone"
 				name="contactPhone" 
 				type="tel" 
-				placeholder="Ingrese su Telefono" />
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}" 
+				placeholder="Telefono: (5411)2345-6789" />
+			<div class="validate">
+				Ingrese la caracteristica entre parentesis ej:(5411) separando con guion cada 3 o 6 digitos.
+			</div>
 			<label for="contactConsult">Consulta</label>
 			<textarea 
 				id="contactConsult" 
 				name="contactConsult"
-				placeholder="Ingrese su Consulta" 
+				minlength="10"
+				maxlength="200" 
+				placeholder="Consulta (*): Buenas tardes, necesito un presupuesto" 
 				required></textarea>
 			<button>Enviar</button>
+			<div>
+				Todos los campos con asterisco <span>(*)</span> son obligatorios.
+			</div>
 		</form>
 	</footer>
 	<script src="scripts/main.js"></script>
