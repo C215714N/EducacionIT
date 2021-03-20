@@ -1,4 +1,7 @@
 /*Reglas Generales*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;1,300;1,500&display=swap'
+	);
 	@font-face{
 		src: url('../assets/fonts/Starjedi.ttf');
 		font-family: 'star wars';
@@ -67,6 +70,10 @@
 		font-family: 'star wars';
 		line-height: 1rem;
 		letter-spacing: 2px;
+	}
+	#header p{
+		margin: .5rem;
+		font: bold 2rem Raleway, calibri, sans-serif;
 	}
 /*Contenido*/
 	section{
@@ -180,10 +187,63 @@
 		flex-direction: column;
 		margin: auto;
 	}
+	#contact label{
+		margin-top: .5rem;
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
 	#contact input,
+	#contact textarea,
+	#contact .validate{
+		outline: none;
+		border: .2rem solid transparent;
+		padding: .5rem 1rem;
+		font-size: 1rem;
+	}
 	#contact textarea{
-		
+		resize: none;
+		height: 6rem;
+	}
+	#contact .validate{
+		display: none;
+		background-color: rgba(51,51,51,.5);
+		font-weight: bold;
 	}
 	#contact button{
+		cursor: pointer;
 		align-self: flex-end;
+		margin: .25rem 0;
+		outline: none;
+		border: .2rem solid #eee;
+		padding: .5rem 1rem;
+		font: bold 1rem Raleway, calibri, sans-serif;
+		text-transform: uppercase;
+		color: #eee;
+		background-color: transparent;
 	}
+	#contact button:hover{
+		color: #448;
+		background-color: #eee;
+	}
+	/*Validacion*/
+		/*
+			pseudoclases: instancias o caracteristicas de una etiqueta
+				:hover - el mouse se encuentra sobre el elemento;
+				:valid - el control cumple los requisitos para el envio;
+				:invalid - el control no cumple los requisitos para el envio;
+				:focus - el puntero se encuentra sobre el elemento;
+				:not(element) - todas las etiquetas que no sean la seleccionada;
+		*/
+		#contact :valid:not(button){
+			border-color: lightgreen;
+		}
+		#contact :focus{
+			box-shadow: 0 0 .5rem #eee; /*x y blur color*/
+		}
+		#contact :focus + .validate{
+			display: block;
+		}
+		#contact :focus:valid + .validate{
+			color: darkgreen;
+			background-color: lightgreen;
+		}
