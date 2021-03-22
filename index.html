@@ -124,16 +124,66 @@
 				<figcaption>Logo CSS3 Bitmap</figcaption>
 			</figure>
 		</div>
-		<svg>
-			<rect x="20" y="20" 
+		<svg><!-- SVG Snippets -->
+			<rect 
+				x="20" y="20" 
 				width="150" height="150" 
 				fill="#248" />
-			<circle r="75" cx="170" cy="170" fill="hsla(0, 50%, 60%, .5)"/>
-			<polygon points="290 90, 290 290, 90 290" fill="rgba(0, 200, 50, .5)" />
+			<circle 
+				r="75" cx="170" cy="170" 
+				fill="hsla(0, 50%, 60%, .5)"/>
+			<polygon 
+				points="
+					280 90, 
+					280 280, 
+					90 280" 
+				fill="rgba(0, 200, 50, .5)" />
+			<text
+				x="20" y="280" fill="transparent"
+				stroke="#333" stroke-width="1" font-size="1.2rem">
+				XML Scalable Vector Graphics
+			</text>
 		</svg>
-		<canvas>
-			
-		</canvas>
+		<canvas id="canvas" width="300" height="300"></canvas>
+		<h3>Contenido multimedia</h3>
+		<p>
+			En la actualidad podemos utilizar este tipo de contenido <em>sin necesidad de instalar algun plugin o complemento en el navegador</em> como solia pasar en el caso de <strong>flashPlayer</strong>. Esto se puede realizar gracias a las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos de sonido <em>.mp3 - .wav - .ogg</em> y de pelicula <em>.mp4 - .webm - ogv</em> y gracia al atributo <strong>controls</strong> no es necesario utilizar otro lenguaje como <em>JS</em> para manipularlos.
+		</p>
+		<div class="example">
+			<audio src="assets/media/live-learn.mp3" controls>
+				<p>
+					Lo sentimos pero tu navegador no es compatible con el elemento AUDIO. Podes descargar el contenido desde el siguiente 
+					<a href="assets/media/live-learn.mp3" download> link </a>
+				</p>
+			</audio>
+			<audio controls>
+				<source src="assets/media/by-the-way.ogv">
+				<source src="assets/media/by-the-way.mp4">
+				<p>
+					Lo sentimos pero tu navegador no es compatible con el elemento AUDIO. Podes descargar el contenido desde el siguiente 
+					<a href="assets/media/by-the-way.mp4" download> link </a>
+				</p>
+			</audio>
+			<video poster="assets/img/poster-californication.jpg" controls>
+				<source src="assets/media/californication.ogv">
+				<source src="assets/media/californication.mp4">
+				<p>
+					Lo sentimos pero tu navegador no es compatible con el elemento AUDIO. Podes descargar el contenido desde el siguiente 
+					<a href="assets/media/californication.mp4" download> link </a>
+				</p>
+			</video>
+		</div>
+		<div id="video">
+			<video autoplay muted loop>
+				<source src="assets/media/cant-stop.webm">
+				<source src="assets/media/cant-stop.mp4">
+				<p>
+					Lo sentimos pero tu navegador no es compatible con el elemento AUDIO. Podes descargar el contenido desde el siguiente 
+					<a href="assets/media/cant-stop.mp4" download> link </a>
+				</p>
+			</video>
+			<button>PAUSE</button>
+		</div>
 	</section>
 	<!-- scripts -->
 	<script src="scripts/main.js"></script>
