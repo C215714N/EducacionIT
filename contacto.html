@@ -43,7 +43,7 @@
 				</header>
 				<p>
 					
-					A la etiqueta anterior, debemos colocarlos por lo menos <em>2 atributos</em>; por un lado se encuentra <strong>action="..."</strong> que indica lo que debe suceder al momento de enviar el formulario, hoy en dia se suele utilizar un <em>script en lenguaje de servidor(ej: php)</em> para garantizar la correcta manipulacion de los datos. por otro lado esta el atributo <strong>method="..."</strong> que define como se realizara el envio de los datos y cual es prioritario (cliente / servidor) segun <em> los valores GET y POST</em>.
+					A la etiqueta anterior, debemos colocarlos por lo menos <em>2 atributos</em>; por un lado se encuentra <strong>action="..."</strong> que indica lo que debe suceder al momento de enviar el formulario, hoy en dia se suele utilizar un <em>script en lenguaje de servidor (ej: php)</em> para garantizar la correcta manipulacion de los datos. por otro lado esta el atributo <strong>method="..."</strong> que define como se realizara el envio de los datos y cual es prioritario (cliente / servidor) segun <em> los valores GET y POST</em>.
 				</p>
 				<ul class="example">
 					<li>
@@ -54,10 +54,71 @@
 					</li>
 				</ul>
 			</section>
+			<section>
+				<header>
+					<h3>¿Que elementos poseen?</h3>
+				</header>
+				<p>
+					Los formularios estan poseen <em>2 tipos de elementos</em>, por un lado estan las <strong>Etiquetas (LABEL)</strong> que funcionan a modo de rotulos que indican al usuario de datos debe ingresar/seleccionar dentro del formulario y ademas facilitan la accesibilidad; por otro lado estan los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> cuya funcion es permitir al usuario el ingreso/seleccion de datos, poseen <em>2 atributos fundamentales</em> que son <strong>type="..."</strong> para indicar el tipo de dato a ingresar y <strong>value="..."</strong> que representa el dato ingresado.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo email (usr@domain)</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo Contraseña (****)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo Fecha (yyyy-mm-dd)</label>
+						<input type="date" />
+					</li>
+					<li>
+						<label>Opción Unica</label>
+						| si <input name="accept" type="radio" value="1" />
+						| no <input name="accept" type="radio" value="0" />
+					</li>
+					<li>
+						<label>Opción Multiple</label>
+						| arte <input name="hobbie" type="checkbox" value="art" />
+						| musica <input name="hobbie" type="checkbox" value="music" />
+						| deportes <input name="hobbie" type="checkbox" value="sport" />
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option value="html">html</option>
+							<option value="css">css</option>
+							<option value="js">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset" /> <!-- limpia los campos -->
+						<input type="submit" /><!-- ejecuta el action -->
+						<button> ENVIAR </button> <!-- ejecuta el action -->
+					</li>
+				</ul>
+			</section>
 		</article>
 	</main>
 	<footer id="footer">
-		<!-- Inserte Formulario <aqui> -->
+		<form action="contacto.php" method="POST">
+			
+			<button> ENVIAR </button>
+		</form>
 		<p>
 			&copy; Todos los derechos reservados
 			<a href="#"> Cristian Racedo </a>
