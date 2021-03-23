@@ -1,0 +1,26 @@
+/* Reglas generales */
+	body{
+		margin:0;
+		font-family: segoe ui, calibri, sans-serif;
+	}
+
+/*formulario de contacto*/
+	#contacto{
+		max-width:540px;
+		margin: auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		width: calc(100% - 32px);
+		outline: none;
+		padding: 8px 16px; /* top right bottom left*/
+		font-size: 16px;
+	}
+	#contacto textarea{
+		resize: none;
+		height: 80px;
+	}
+	#contacto button{
+		display: block;
+		margin-left: auto;
+	}

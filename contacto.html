@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos</title>
+	<link rel="icon" href="img/css.svg">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<nav>
@@ -115,9 +117,33 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form action="contacto.php" method="POST">
-			
+		<form id="contacto" action="contacto.php" method="POST">
+			<label for="nombre">Nombre</label>
+			<input
+				id="nombre"
+				name="nombre" 
+				type="text"
+				minlength="3"
+				maxlength="50"
+				required />
+			<label for="email">Correo</label>
+			<input 
+				id="email"
+				name="email" 
+				type="email"
+				minlength="8" 
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required></textarea>
 			<button> ENVIAR </button>
+			<p>
+				Todos los campos son obligatorios
+			</p>
 		</form>
 		<p>
 			&copy; Todos los derechos reservados
