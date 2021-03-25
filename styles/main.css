@@ -263,7 +263,8 @@
 			text-shadow: -1px 1px 2px #333;
 			box-shadow: -.5rem .5rem .5rem #448;
 			background-image: url(../assets/img/poster-californication.jpg);
-			background-size: cover;
+			background-size: 1fr;
+			background-position: center;
 			background-attachment: fixed;
 		}
 		/*ejemplos bordes*/
@@ -297,6 +298,51 @@
 			.border :nth-child(10){
 				border-radius: 1rem 3rem 5px 50% / 3rem 1rem 50% 5px
 			}
+		/*css grid*/
+			.grid{
+				display: grid;
+				grid-template-columns: auto auto auto; /* width */
+				gap: .5rem; /*row-gap column-gap*/
+			}
+			.grid div,
+			.grid span{
+				border: .2rem solid #ccc;
+				padding: .5rem;
+				color:#eee;
+				text-shadow: 0 0 .2rem #ccc;
+				background-color: #333;
+			}
+			.grid :first-child{
+				grid-column: span 3;
+			}
+			.grid :last-child{
+				grid-row: 2 / 5; /* start / end */
+			}
+			.grid span:first-of-type{
+				grid-column: 2 / 4;
+				grid-row: 3;
+			}
+			.grid :nth-last-child(2){
+				grid-column: span 3;
+			}
+			.justify{
+				min-height: 500px;
+				justify-content: flex-end;
+				align-content: space-around;
+			}			
+			.template{
+				grid-template-areas: 
+					'nav 	nav 	nav'
+					'aside 	header 	header'
+					'aside	main 	main'
+					'aside 	section	article'
+					'footer footer 	footer';
+			}
+			.template div:first-child{grid-area: header}
+			.template div:nth-child(2){grid-area: nav}
+			.template div:nth-child(3){grid-area: main}
+			.template div:nth-last-child(2){grid-area: aside}
+			.template div:last-child{grid-area: footer}
 /*Footer*/
 	#footer{
 		padding: 1rem;

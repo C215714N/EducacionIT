@@ -248,6 +248,66 @@
 			<div>Border-radius: 1rem 3rem 5px 50% / 3rem 1rem 50% 5px </div>
 		</div>
 	</section>
+	<section>
+		<h2>CSS Grid</h2>
+		<p>
+			Al igual que flexbox, es un modelo de diseño, que facilita la aplicacion de layout complejos de la manera mas sensilla posible. A diferencia de este, trabaja bidimensionalmente y permite que nuestro contenido se disponga en forma de columnas y filas, incluso podemos configurar la separacion entre celdas.
+		</p>
+		<h3>Implementacion de un sistema de Grid</h3>
+		<ul>
+			<li><strong>grid-template-columns: </strong> permite crear indirectamente la cantidad de columnas que poseera nuestra grilla, por defecto es una y para crear mas solamente debemos especificar sus tamaños.</li>
+			<li><strong>grid-template-rows: </strong> indicar el tamaño que poseera la fila seleccionada, por defecto es <em>auto</em>.</li>
+			<li><strong>grid-column: </strong> indica en una celda de contenido cuantas columnas debe ocupar, se pueden usar valores como <em>span N°</em> o <em>P.Inicial / P.Final</em> para expandir la celda.</li>
+			<li><strong>grid-row</strong> indica en una celda de contenido cuantas filas debe ocupar la misma, admite los mismos valores que el atributo anterior, y en caso de mover una celda basta con poner solamente el numero de posicion.</li>
+			<li><strong>gap: </strong> separacion entre filas y columnas respectivamente, shorthand de los atributo column-gap y row-gap.</li>
+		</ul>
+		<div class="example grid">
+			<div>div 1</div>
+			<div>div 2</div>
+			<div>div 3</div>
+			<div>div 4</div>
+			<span>span 1</span>
+			<span>span 2</span>
+			<span>span 3</span>
+			<span>span 4</span>
+		</div>
+		<h3>Justify-content y Align-content</h3>
+		<ul>
+			<li><strong>flex-start: </strong> distribuye y organiza la grilla al principio del flex (justify: izquierda y align: arriba)</li>
+			<li><strong>center: </strong> distribuye y organiza la grilla hacia el centro del flex (justify: horizontal y align: vertical)</li>
+			<li><strong>flex-end: </strong>distribuye y organiza la grilla al final del flex (justify: derecha y align: abajo)</li>
+			<li><strong>space-around:</strong> separa las celdas manteniendo una mayor distancia en el medio (no tocan los bordes)</li>
+			<li><strong>space-between: </strong> separa las celdas entre extremos manteniendo una distancia equitativa (excepto la primer y ultima fila/columna)</li>
+			<li><strong>space-evenly: </strong> separa equitativamente las celdas, manteniendo siempre la misma distancia (al igual que flexbox, este valor no es compatible con todos los navegadores)</li>
+		</ul>
+		<div class="example grid justify">
+			<div>div 1</div>
+			<div>div 2</div>
+			<div>div 3</div>
+			<div>div 4</div>
+			<span>span 1</span>
+			<span>span 2</span>
+			<span>span 3</span>
+			<span>span 4</span>
+		</div>
+		<h3>Diseño con plantilla de Areas</h3>
+		<p>
+			para facilitar el diseño, css-grid permite la asignacion de nombres de area a las diferentes etiquetas de la grilla, facilitando la implementacion de los layouts definidos en una plantilla.
+		</p>
+		<ul>
+			<li><strong>grid-template-areas: </strong> Define visualmente cual sera el layout del contenedor con display grid, asignando nombres de areas a las celdas de las diferentes filas</li>
+			<li><strong>grid-area: </strong> Asigna a la celda un Area, el nombre de la misma debe escribirse sin comillas, ya que funciona igual que las variables en los lenguajes de programacion.</li>
+		</ul>
+		<div class="example grid template">
+			<div> header </div>
+			<div> nav </div>
+			<div> main </div>
+			<div> section </div>
+			<div> article </div>
+			<div> aside </div>
+			<div> footer </div>
+		</div>
+	</section>
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
