@@ -343,6 +343,22 @@
 			.template div:nth-child(3){grid-area: main}
 			.template div:nth-last-child(2){grid-area: aside}
 			.template div:last-child{grid-area: footer}
+		/*
+			:pseudoclass instancia, estado o caracteristica de una etiqueta;
+			::pseudoelement parte o elemento dentro de una etiqueta;
+		*/
+		section h2::before{
+			content: 'Capitulo - ';
+		}
+		section h3::before{
+			content: 'Tema - ';
+		}
+		.pseudo h2::after{
+			content: 'PseudoElementos'
+		}
+		.pseudo h3::after{
+			content: '::before & ::after';
+		}
 /*Footer*/
 	#footer{
 		padding: 1rem;
