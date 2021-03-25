@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetacion Web</title>
+	<link rel="icon" href="assets/icon/css.svg">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<nav>
+		<a href="#" title="Maquetacion CSS"></a>
+		<ul class="menu">
+			<li><a href="#" title="Inicio"><span>inicio</span></a></li>
+			<li><a href="about.html" title="Acerca"><span>acerca</span></a></li>
+			<li><a href="gallery.html" title="Galeria"><span>galeria</span></a></li>
+			<li><a href="#contact" title="Contacto"><span>contacto</span></a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Fundamentos Web</h1>
+			<p>html | css | js</p>
+		</div>
+	</header>
+	<main>
+		
+	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName"  
+				type="text"
+				maxlength="50"
+				pattern="[a-z A-Z]{3,50}"
+				placeholder="Ingrese su Nombre" 
+				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos, debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail"
+				type="email"  
+				minlength="8" 
+				placeholder="Ingrese su Correo" 
+				required />
+			<div class="validate">
+				Ingrese un correo valido, respetando la estructura usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				pattern="[0-9]{6,20}"
+				placeholder="Ingrese su Telefono" 
+				required />
+			<div class="validate">
+				Ingrese su numero de telefono solamente con numeros y sin espacios.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required></textarea>
+			<button class="button"> enviar </button>
+			<div class="validate">
+				Todos los campos son obligatorios
+			</div>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" class="facebook" target="_blank"></a>
+			<a href="https://instagram.com" class="instagram" target="_blank"></a>
+			<a href="https://whatsapp.com" class="whatsapp" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-j-10" class="github" target="_blank"></a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; compañia.
+		</p>
+	</footer>
+	<!-- scripts -->
+	<script src="scripts/main.js"></script>
+</body>
+</html>

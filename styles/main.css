@@ -1,0 +1,67 @@
+/*Content First*/
+	/*General Rules*/
+		*{
+			box-sizing: border;
+			font-family: Raleway, segoe ui, calibri, sans-serif;
+		}
+		body{
+			margin: 0;
+		}
+	/*Navigation*/
+		nav{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			background: linear-gradient(#88f, #448);
+		}
+		nav a{
+			display: block;
+			padding: .5rem 1rem;
+			color: #eee;
+			text-shadow: 0 0 .2rem #333; /* -x+ -y+ blur color*/
+			text-decoration: none;
+			text-transform: capitalize;
+			line-height: 2rem;
+		}
+		nav > a{
+			width: 2rem;
+			height: 2rem;
+			background-image: url('../assets/icon/css.svg');
+			background-repeat: no-repeat;
+			background-size: 2rem;
+			background-position: center;
+		}
+		.menu{
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu a:hover{
+			background-color: rgba(51, 51, 51, .5);
+		}
+	/*Header*/
+		#header{
+			height: 90vmin;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			background: linear-gradient(45deg, #eee, #333);
+		}
+		.header{
+			text-align: center;
+		}
+		.header *{
+			margin: 0;
+		}
+		.header h1{
+			font-size: calc(2vw + 1.5rem)
+		}
+		.header p{
+			font-size: calc(2vw + .8rem)
+		}
+	/*Main Content*/
+	
+	/*Footer*/
