@@ -1,0 +1,36 @@
+/*Reglas generales*/
+	/*tipografia importada Google Fonts*/
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,100;1,200&display=swap'
+		);
+	/*fuente de fantasia del proyecto*/
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: starwars;
+		}
+	*{
+		box-sizing: border-box;
+		font-family: raleway, century gothic, sans-serif;
+	}
+	body{
+		margin: 0;
+	}
+/*Navegacion*/
+	.menu{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		background-color: #448;
+		text-align: center;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 16px;
+	}
+	.menu li:hover{
+		background-color: rgba(51, 51, 51, .5);
+	}

@@ -8,6 +8,8 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Maquetación Web</title>
+	<link rel="icon" href="assets/icon/css.svg">
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 	<nav><!-- Navegacion: Links mas importantes-->
@@ -24,11 +26,11 @@
 	</header>
 	<section>
 		<header class="header">
-			<h1>Elementos de una pagina Web</h1>
+			<h2>Elementos de una pagina Web</h2>
 		</header>
 		<article>
 			<header>
-				<h1>Estructura Semantica</h1>
+				<h3>Estructura Semantica</h3>
 			</header>
 			<p>
 				Modelo implementado en HTML que permite definir la <em>jerarquia y funcionalidad</em> de cada parte de nuestra pagina, surge como una <strong>solucion al uso excesivo de DIVs</strong>, debido a que no existian elementos apropiados para el facilitar el posicionamiento.
@@ -59,6 +61,26 @@
 				<li><strong>padding: </strong> relleno de una etiqueta, podria considerarse sangria y al igual que el borde suma tamaño</li>
 				<li><strong>content: </strong> elemento que se encuentran dentro de la etiqueta, se puede definir su tamaño.</li>
 			</ul>
+			<div class="example">
+				<pre>
+					header{
+						width: 350px;
+						border: 5px solid #333;
+						padding: 40px;
+					}
+				</pre>
+				<h4>Box-sizing</h4>
+				<li>
+					<strong>CONTENT-BOX:</strong>
+					final-width = width + padding + border (440px) <br/>
+					content-width = width (350px)
+				</li>
+				<li>
+					<strong>BORDER-BOX:</strong>
+					final-width = width (350) <br/>
+					content-width = width - padding - border (260px)
+				</li>
+			</div>
 		</article>
 	</section>
 	<footer id="footer">
