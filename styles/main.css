@@ -343,6 +343,17 @@
 			.template div:nth-child(3){grid-area: main}
 			.template div:nth-last-child(2){grid-area: aside}
 			.template div:last-child{grid-area: footer}
+		/*content gallery*/
+			.gallery{
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: .5rem;
+			}
+			.gallery img{
+				width: 100%;
+				border-radius: .25rem;
+				border: .5rem solid #333;
+			}
 		/*
 			:pseudoclass instancia, estado o caracteristica de una etiqueta;
 			::pseudoelement parte o elemento dentro de una etiqueta;
@@ -413,6 +424,17 @@
 					counter(terciario) 	'.'
 					counter(cuarto) 	' - '
 				}
+		/*pseudoelements*/
+			section > p:first-of-type::first-letter{
+				float: left;
+				margin-right: .2rem;
+				font-size: 3rem;
+				line-height: 2rem;
+			}
+			section p:last-of-type::first-line{
+				font-weight: bold;
+				color: #248;
+			}
 /*Footer*/
 	#footer{
 		padding: 1rem;
