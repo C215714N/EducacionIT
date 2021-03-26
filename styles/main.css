@@ -347,18 +347,72 @@
 			:pseudoclass instancia, estado o caracteristica de una etiqueta;
 			::pseudoelement parte o elemento dentro de una etiqueta;
 		*/
-		section h2::before{
-			content: 'Capitulo - ';
+		body{
+			counter-reset: capitulo;
+		}
+		section h2::before,
+		article h2::before{
+			counter-increment: capitulo;
+			content: 'Capitulo ' counter(capitulo) ' - ';
+		}
+		section h2,
+		article h2{
+			counter-reset: tema;
 		}
 		section h3::before{
-			content: 'Tema - ';
+			counter-increment: tema;
+			content: 'Tema ' counter(tema) ' - ';
 		}
 		.pseudo h2::after{
 			content: 'PseudoElementos'
 		}
-		.pseudo h3::after{
+		.pseudo h3:first-of-type::after{
 			content: '::before & ::after';
 		}
+		.pseudo h3:last-of-type::after{
+			content: 'Tablas de contenido'
+		}
+		.pseudo p:before{
+			content: 'Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Numquam ipsum laudantium id, reiciendis qui tenetur cumque vitae nemo atque laboriosam explicabo, porro distinctio iste suscipit tempora autem ex, consequatur? Velit nesciunt cum, soluta quisquam, voluptate sunt aliquam obcaecati officia aliquid nisi ut, provident sequi quae nobis hic quo perspiciatis, quibusdam! Sit asperiores rem a sint, saepe ullam debitis ex, labore velit excepturi id eveniet optio, ducimus odio amet mollitia totam modi error eos impedit eaque molestiae reiciendis. Cupiditate placeat vero iste nihil id consectetur numquam modi cumque ad dolore in quo vitae debitis, aperiam aliquid accusamus non. Commodi, vitae, explicabo.'
+		}
+		.content ul{
+			padding: 0;
+		}
+		.content li{
+			list-style: none;
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+		/*contadores*/
+			.content{ counter-reset: primario }
+			.content ul{ counter-reset: secundario }
+			.content ul ul { counter-reset: terciario }
+			.content ul ul ul { counter-reset: cuarto }
+		/*incrementos*/
+			.content li{ 
+				counter-increment: primario;
+				color: #222; 
+			}
+			.content ul li { 
+				counter-increment: secundario;
+				color: #444; 
+			}
+			.content ul ul li { 
+				counter-increment: terciario;
+				color: #666; 
+			}
+			.content ul ul ul li { 
+				counter-increment: cuarto;
+				color: #888; 
+			}
+		/*aparicion*/
+			.content li::before{
+				content: 
+					counter(primario) 	'.'
+					counter(secundario) '.'
+					counter(terciario) 	'.'
+					counter(cuarto) 	' - '
+				}
 /*Footer*/
 	#footer{
 		padding: 1rem;
