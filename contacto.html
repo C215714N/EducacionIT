@@ -147,6 +147,71 @@
 					</table>
 				</div>
 			</section>
+			<section>
+				<header>
+					<h3>¿Poseen estructura semantica?</h3>
+				</header>
+				<p>
+					Efectivamente, con la aparicion de HTML5 se incorporaron nuevos elementos que <em>facilitan a los motores de busqueda</em> el analisis e indexado del contenido de las tablas. En su mayoria estos nuevos elementos reemplazan a las filas <strong>&lt;tr></strong> y a las celdas <strong>&lt;td></strong>
+				</p>
+				<ul>
+					<li>
+						<strong>THEAD</strong> Cabecera de tabla que se utiliza para la representacion de los titulos, en su interior deben colocarse <em>celdas de titulo &lt;TH></em>
+					</li>
+					<li>
+						<strong>TBODY</strong> Cuerpo de tabla, representa el contenido principal, es la unica parte que mantiene la estructura clasica y en ciertas ocasiones podemos utilizar celdas de titulo, por ejemplo: <em>tablas de referencia cruzada</em>
+					</li>
+					<li>
+						<strong>TFOOT</strong> Pie de tabla, parte opcional de las tablas que se utiliza a modo de detalle, ya sea para mostrar <em>totales, promedios, etc.</em> y por ende es complementaria al cuerpo.
+					</li>
+				</ul>
+				<div class="example">
+					<table class="modern">
+						<caption>usuarios</caption>
+						<thead>
+							<th>Nombre</th>
+							<th>Correo</th>
+							<th>Contraseña</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>cristian</td>
+								<td>cristiandracedo@hotmail.com</td>
+								<td>root</td>
+							</tr>
+							<tr>
+								<td>c215714n</td>
+								<td>cristiandracedo@gmail.com</td>
+								<td>root</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="2">total</th>
+							<td>2</td>
+						</tfoot>
+					</table>
+
+					<table class="modern extra">
+						<caption>desarrolladores</caption>
+						<thead>
+							<th>tipo</th>
+							<th>lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
 		</article>
 	</main>
 	<footer id="footer">

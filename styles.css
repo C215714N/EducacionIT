@@ -53,6 +53,7 @@
 	}
 	/*ejemplos*/
 		.example{
+			overflow: auto;
 			list-style: none;
 			margin: 16px;
 			margin-left: 48px;
@@ -60,6 +61,34 @@
 			padding: 16px;
 			background-color: #eee;
 		}
+		/*Tablas*/
+			.classic,
+			.classic caption,
+			.classic td{
+				border: 2px solid #448 ; /*width style color*/
+				border-collapse: collapse;
+			}
+			.classic caption{
+				border-bottom: none;
+			}
+			.modern,
+			.modern caption,
+			.modern tr,
+			.modern td{
+				color: #eee;
+				background-color: rgba(68, 68, 136, .5);
+			}
+			th, td{
+				width: 150px;
+				padding:4px 8px;/*top right bottom left*/
+			}
+			.extra thead,
+			.extra tfoot{
+				background-color: #88f;
+			}
+			table{
+				margin: 16px auto;
+			}
 /*pie de pagina*/
 	#footer{
 		padding: 16px;
