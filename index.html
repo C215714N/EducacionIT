@@ -1,24 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetación Web</title>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li><a href="">Link 1</a></li>
-			<li><a href="">Link 2</a></li>
-			<li><a href="">Link 3</a></li>
-			<li><a href="">Link 4</a></li>
+	<nav><!-- Navegacion: Links mas importantes-->
+		<ul class="menu">
+			<li><a href="#" title="Inicio">inicio</a></li>
+			<li><a href="about.html" title="Acerca">acerca</a></li>
+			<li><a href="gallery.html" title="Galeria">galeria</a></li>
+			<li><a href="#contact" title="Contacto">contacto</a></li>
 		</ul>
 	</nav>
+	<header id="header">
+		<h1>Maquetacion Web</h1>
+		<p>html | css | js</p>
+	</header>
+	<section>
+		<header class="header">
+			<h1>Elementos de una pagina Web</h1>
+		</header>
+		<article>
+			<header>
+				<h1>Estructura Semantica</h1>
+			</header>
+			<p>
+				Modelo implementado en HTML que permite definir la <em>jerarquia y funcionalidad</em> de cada parte de nuestra pagina, surge como una <strong>solucion al uso excesivo de DIVs</strong>, debido a que no existian elementos apropiados para el facilitar el posicionamiento.
+			</p>
+		</article>
+
+	</section>
+	<footer id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
 	<!-- emmet
 		header>h1	elemento hijo
 		h1+p		elemento hermano
 		{link} 		contenido textual
 		[href="#"] 	atributos y valores -->
-		}
 </body>
 </html>
