@@ -91,6 +91,14 @@
 			table{
 				margin: 16px auto;
 			}
+		/*multimedia*/
+			video,
+			audio,
+			iframe{
+				width: 100%;
+				max-width: 600px;
+				border: none;
+			}
 /*pie de pagina*/
 	#footer{
 		padding: 16px;
