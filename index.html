@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Primer pagina realizada en HTML5"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Cisco </title>
+	<link rel="shortcut icon" href="favicon.ico" >
+	<link rel="icon" type="image/gif" href="animated_favicon1.gif" > <!-- Segun entendi no se utilizan mas iconos animados, esto deberia sacarlo, no?? -->
+	<style> 
+		/* Por lo que estoy viendo es una buena practica sacar toda la parte de style del HTML y volcarlo a un archivo .css. Eso lo voy a hacer en breve. */
+            a:link{color: black;}
+            a:visited{color: purple;}
+            a:hover{color: cyan; text-decoration: none;}
+            table, th, td{border: 2px solid green; border-collapse: collapse; padding: 5px;}
+            th{text-align: center;}
+            ul{margin: none;}
+            body{background-color: #F5F5DC; padding-top: 10px;}
+            nav{float: left; width: 150px; height: 1500px; border: 1 px solid black; background-color: #B2CACF; overflow: scroll;}
+            #A1{background-color: #B9B4C7; width: 170px;}
+            #A2{background-color: #C76846; font-weight: bold;}
+            #A3{background-color: red;}
+            #A4{background-color: orange;}
+            #A5{background-color: #CCB759; width: 230px;}                            <-- Entiendo que el uso de IDs de la forma q los estoy usando es incorrecta, no??
+            #A6{background-color: #CCB759; width: 650px;}                                  yo asigne ciertos valores y los utilice para volcarlos a los campos de la tabla.
+            #S1{margin-left: 160px;}                                                                              Los IDs esta en la tabla mas abajo, recorte mucho la info
+            #SD1{background-color: lightblue;}
+            #SD2{background-color: #90D640; font-size: 14px;}
+            #RTN{font-size: 12px;}
+</style>
+</head>
+<body>
+<!-- Seccion: Indice -->
+	<nav>
+    	<img src="Cisco Logo.png" title="Cisco" alt="Logo marca Cisco" style="width: 130px; height: 85px; padding-top: 5px;">
+	<ul style="text-align: left; font-weigth: bold;">
+	<!-- SubSeccion: Navegacion paginas de la web -->
+         <li><a href="inicio.html">Inicio</a></li>
+         <li><a href="routing.html">Routing</a></li>
+         <li><a href="switching.html">Switching</a></li>
+         <li><a href="tshoot.html">TShoot</a></li>
+	</ul><br>
+	<!-- SubSeccion: Navegacion por la pagina actual -->
+		<ul>
+	        <li><a href="#VLANS">VLANS</a></li>
+		</ul>
+	</nav>
+	<section id="S1">
+	<!-- Seccion: Vlans -->
+	<table>
+		<tr>
+		<th colspan="3" id="A4"><a id="VLANS"> Comandos Cisco - VLANS </a></th>
+		</tr>
+		<tr id="A3">
+		  	<td id="A2">Modo</td>
+		  	<td id="A2">Comando</td>
+		  	<td id="A2">Descripcion</td>
+		</tr>
+		<tr>
+		   	<td id="A1">Sw(config)#</td>
+		   	<td id="A5">Vlan (vlan-ID)</td>
+		   	<td id="A6">Permite crear una VLAN (rango normal 1 - 1005 | rango extendido 1006 - 4094).</td>
+		</tr>
+		<tr>
+		   <td id="A1">Sw(config-vlan)#</td>
+		   <td id="A5">Name (nombre)</td>
+		   <td id="A6">Asigna un nombre a una VLAN.</td>
+		</tr>
+		<tr>
+		   <td id="A1">Sw(config-vlan)#</td>
+		   <td id="A5">State (Estado | Suspended)</td>
+		   <td id="A6">Suspende una VLAN, todo puerto en esta VLAN descartara trafico.</td>
+		</tr>
+		<tr>
+		   <td id="A1">sw#</td>
+		   <td id="A5">Show vlan id (vlan-ID)</td>
+		   <td id="A6">Permite ver informacion de una VLAN en particular.</td>
+		</tr>
+		<tr>
+		   <td id="A1">Sw#</td>
+		   <td id="A5">Show vlan | brief</td>
+		   <td id="A6">Permite ver la base de datos de VLANs y la asignacion de puertos.</td>
+		</tr>
+	</table>
+	<P id="RTN"><a href="#"> Volver </a></P>
+</section>
+</body>
+</html>

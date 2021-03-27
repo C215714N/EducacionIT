@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cisco</title>
+	<link rel="icon"
+		href="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg">
+		<!--En lugar de Utilizar Iconos animados es mejor utilizar imagenes estaticas, especialmente logos en formato svg debido a que estos ultimos no se pixelan -->
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<nav>
+		<a class="icon logo" href="#"></a>
+		<ul class="menu">
+			<li><a href="index.html">inicio</a></li>
+			<li><a href="routing.html">routing</a></li>
+			<li><a class="active" href="#">switching</a></li>
+			<li><a href="tshoot.html">tshoot</a></li>
+		</ul>
+		<ul class="menu tab">
+			<li><a href="#vlan">VLANs</a></li>
+			<li><a href="#ssh">SSH</a></li>
+			<li><a href="#vtp">VTP</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Cisco CCNA - Switching</h1>
+		<p>	
+			Las redes modernas continúan evolucionando para adaptarse a la manera cambiante en que las organizaciones realizan sus actividades diarias. Ahora los usuarios esperan tener acceso instantáneo a los recursos de una compañía, en cualquier momento y en cualquier lugar. Estos recursos incluyen no solo datos tradicionales, sino también de video y de voz. También hay una necesidad creciente de tecnologías de colaboración que permitan el intercambio de recursos en tiempo real entre varias personas en sitios remotos como si estuvieran en la misma ubicación física.
+		</p>
+	</header>
+	<main>
+		<section id="vlan">
+			<header class="header">
+				<h2>Virtual Local Area Network</h2>
+			</header>
+			<table class="data">
+				<caption>Comandos Cisco - VLAN</caption>
+				<thead>
+					<th>Modo</th>
+					<th>Comando</th>
+					<th>Descripcion</th>
+				</thead>
+				<tbody>
+					<tr>
+					   	<td>sw(config)#</td>
+					   	<td>vlan [vlan-id]</td>
+					   	<td>crea una VLAN (rango normal 1 - 1005 | rango extendido 1006 - 4094).</td>
+					</tr>
+					<tr>
+					   <td>sw(config-vlan)#</td>
+					   <td>name [vlan]</td>
+					   <td>asigna un nombre a una VLAN.</td>
+					</tr>
+					<tr>
+					   <td>sw(config-vlan)#</td>
+					   <td>state [active | suspended]</td>
+					   <td>cambia el estado, todo puerto suspendido en esta VLAN descartara trafico.</td>
+					</tr>
+					<tr>
+					   <td>sw#</td>
+					   <td>show vlan [vlan-id]</td>
+					   <td>muestra informacion de una VLAN en particular.</td>
+					</tr>
+					<tr>
+						<td>sw(config)#</td>
+						<td>interface [vlan-id]</td>
+						<td>ingresa al modo de configuracion de SVI</td>
+					</tr>
+					<tr>
+						<td>sw(config-if)#</td>
+						<td>ip address [ip] [subnet]</td>
+						<td>asigna un direccion y mascara a la interfaz para el acceso remoto</td>
+					</tr>
+					<tr>
+						<td>sw(config-if)#</td>
+						<td>no shutdown</td>
+						<td>habilita la SVI para administracion</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="icon back" href="#">volver</a>
+		</section>
+		<section id="ssh">
+			<header class="header">
+				<h2>Secure SHell</h2>
+			</header>
+			<table class="data">
+				<caption>Comandos Cisco - SSH</caption>
+				<thead>
+					<th>Modo</th>
+					<th>Comando</th>
+					<th>Descripcion</th>
+				</thead>
+				<tbody>
+					<tr>
+					   	<td>sw(config)#</td>
+					   	<td>hostname [name]</td>
+					   	<td>configuracion de un nombre de host</td>
+					</tr>
+					<tr>
+					   <td>sw(config)#</td>
+					   <td>ip domain-name [domain]</td>
+					   <td>define un nombre de dominio</td>
+					</tr>
+					<tr>
+					   <td>sw(config)#</td>
+					   <td>crypto key generate rsa modulus [360 - 2048]</td>
+					   <td>genera el par de claves indicando la cantidad de bits</td>
+					</tr>
+					<tr>
+					   <td>sw(config)#</td>
+					   <td>username [user] privilege [0 | 15] secret [pass]</td>
+					   <td>crea usuario con permisos y contraseña encriptada</td>
+					</tr>
+					<tr>
+						<td>sw(config)#</td>
+						<td>line vty [range]</td>
+						<td>ingresa a la configuracion de las lineas virtuales (0 15)</td>
+					</tr>
+					<tr>
+						<td>sw(config-line)#</td>
+						<td>transport input [ssh | telnet]</td>
+						<td>habilita el acceso remoto mediante la conexion seleccionado</td>
+					</tr>
+					<tr>
+						<td>sw(config-line)#</td>
+						<td>login local</td>
+						<td>habilita el inicio de sesion con db local</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="icon back" href="#">volver</a>
+		</section>
+		<section id="vtp">
+			<header class="header">
+				<h2>Virtual Trunking Protocol</h2>
+			</header>
+			<table class="data">
+				<caption>Comandos Cisco - VTP</caption>
+				<thead>
+					<th>Modo</th>
+					<th>Comando</th>
+					<th>Descripcion</th>
+				</thead>
+				<tbody>
+					<tr>
+					   	<td>sw(config)#</td>
+					   	<td>interface [if n°]</td>
+					   	<td>accede al submodo de configuracion de interfaz (fa0/1 | gi0/1)</td>
+					</tr>
+					<tr>
+					   <td>sw(config-if)#</td>
+					   <td>switchport mode [access | trunk]</td>
+					   <td>define el modo de enlace para la interfaz</td> 
+					</tr>
+					<tr>
+					   <td>sw(config-if)#</td>
+					   <td>switchport access [vlan-id]</td>
+					   <td>asocia una vlan a la interfaz en modo acceso</td>
+					</tr>
+					<tr>
+					   <td>sw(config-if)#</td>
+					   <td>switchport trunk allowed [range]</td>
+					   <td>restringe las vlan permitidas en el enlace troncal</td>
+					</tr>
+					<tr>
+						<td>sw(config-if)#</td>
+						<td>switchport port-security</td>
+						<td>habilita la seguridad de puertos en la interfaz</td>
+					</tr>
+					<tr>
+						<td>sw(config-if)#</td>
+						<td>switchport port-security mac-address [a.a.a.a | sticky]</td>
+						<td>agrega una mac address a la interfaz de forma estatica o dinamica</td>
+					</tr>
+					<tr>
+						<td>sw(config-if)#</td>
+						<td>switchport port-security violation [protect | restrict | shutdown]</td>
+						<td>define la operacion a realizar cuando se hayan violado las restricciones de seguridad</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="icon back" href="#">volver</a>
+		</section>
+	</main>
+</body>
+</html>
