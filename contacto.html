@@ -213,6 +213,75 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					Antiguamente si queriamos incorporar contenido multimedia dentro de nuestra pagina, debiamos contar con elementos externos (plugins, complementos) ya que los navegadores no contaban con APIs incorporadas para la reproduccion de este tipo de contenido. En caso de utilizar <strong>contenido externo</strong> podiamos implementar la etiqueta <em>&lt;iframe></em> que permite la insercion de contenido de manera asincrona.
+				</p>
+				<div class="example">
+					<iframe 	
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.4755404357852!2d-58.37613664287156!3d-34.60249787536768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1616804439775!5m2!1ses-419!2sar" 
+						loading="lazy">
+					</iframe>
+					<iframe 	
+						src="https://www.youtube.com/embed/mIokMpLB14A" 
+						title="Yu-Gi-Oh! Duel Links" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						title="Carvel John Frusciante"  
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Sonidos en la web?</h3>
+				</header>
+				<p>
+					formatos soportados <em>.mp3 - .wav - .ogg</em>
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes descargar el material desde el siguiente 
+							<a href="media/live-learn.mp3" download> link</a>
+						</p>
+					</audio>
+					<audio src="media/californication.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes descargar el material desde el siguiente 
+							<a href="media/californication.mp4" download> link</a>
+						</p>
+					</audio>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Multimedia sin plugins?</h3>
+				</header>
+				<p>
+					formatos soportados <em>.mp4 - .webm - .ogv</em>
+				</p>
+				<div class="example">
+					<video src="media/californication.mp4" autoplay muted>
+						<p>
+							Lo sentimos, pero tu navegador No es compatible con el elemento AUDIO. Podes descargar el material desde el siguiente 
+							<a href="media/californication.mp4" download> link</a>
+						</p>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">
