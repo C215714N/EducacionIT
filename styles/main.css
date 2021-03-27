@@ -323,6 +323,82 @@
 			.template :nth-child(3){ grid-area: main }
 			.template :nth-last-child(2){ grid-area: aside }
 			.template :last-child{ grid-area: footer }
+		/*
+			pseudoelementos: partes u otros elementos dentro de una etiquetas;
+				::before - contenido antes del contenido principal
+				::after  - contenido despues del contenido principal
+				::first-line - primera linea de un contenido
+				::first-letter - primera letra de un contenido
+		*/
+		.pseudo h2::after{
+			content: 'Pseudo Elementos CSS';
+		}
+		.pseudo p::after{
+			content: 
+				'Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Commodi similique soluta debitis, maiores unde ipsum, nisi, ullam dicta deserunt ex atque modi in, quos labore! Dolorum officiis deleniti, itaque qui cumque, recusandae quasi architecto ratione sunt non omnis et nemo dignissimos possimus doloribus laborum quisquam reprehenderit, aspernatur. Assumenda officia dolorem necessitatibus facilis corrupti id eaque, incidunt cupiditate autem fugit a corporis quam in nisi ipsam dolores. Neque aspernatur dolores natus modi iure tempore reiciendis possimus inventore odit vitae nam eius, quisquam sed totam eveniet veniam velit ipsam aliquam libero ex officiis. Aperiam iusto aliquam placeat harum sequi aut voluptatem quos.'
+		}
+		.pseudo p:first-of-type::first-letter{
+			font-size: 5rem;
+			margin-right: .5rem;
+			line-height: 3rem;
+			float:left;
+		}
+		.pseudo p:last-of-type::first-line{
+			background-color: gold;
+		}
+		.pseudo .img::before{
+			content: url(../assets/icon/css.svg);
+			display: block;
+			float: right;
+			width: 100%;
+			max-width: 200px;
+		}
+		.pseudo article:first-of-type h3::after{
+			content:'Agregando contenido con CSS';
+		}
+		.pseudo article:last-of-type h3::after{
+			content:'Tablas de contenido';
+		}
+		/* contadores */
+		body{
+			counter-reset: capitulo;
+		}
+		h2::before{
+			counter-increment: capitulo;
+			content: 'Capitulo ' counter(capitulo) ': ';
+		}
+		section{
+			counter-reset: tema;
+		}
+		h3::before{
+			counter-increment: tema;
+			content: 'Tema' counter(tema) ': '
+		}
+		/* tablas de contenido */
+		.content ul{
+			padding: 0;
+		}
+		.content li{
+			list-style: none;
+		}
+		/*contadores*/
+			.content{ counter-reset: primario; }
+			.content ul { counter-reset: secundario }
+			.content > li ul { counter-reset: terciario }
+			.content > li li ul { counter-reset: cuarto }
+		/*incremento*/
+			.content li { counter-increment: primario }
+			.content ul li { counter-increment: secundario }
+			.content ul ul li {counter-increment: terciario}
+			.content ul ul ul li {counter-increment: cuarto}
+		/*aplicacion*/
+			.content li::before{
+				content: 
+					counter(primario) '.'
+					counter(secundario) '.'
+					counter(terciario) '.'
+					counter(cuarto)' - '
+			}
 /*Pie de Pagina*/
 	#footer{
 		color: #eee;
