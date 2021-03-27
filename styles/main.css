@@ -77,6 +77,8 @@
 	}
 /*Contenido*/
 	section{
+		max-width: 960px;
+		margin: auto;
 		padding: 1rem;
 	}
 	section .header{
@@ -276,6 +278,19 @@
 			.border :nth-child(10){ border-radius: 1rem 0 .5rem 2rem / 5px 50% 1rem }
 			.border :nth-child(11){ border-radius: 1rem 5rem 3rem 5px / .2rem .1rem .5rem 1rem }
 			.border :nth-child(12){ border-radius: 2rem 0 .5rem 1rem / 50% 5rem 3rem 5px }
+		/* css grid */
+			.grid{
+				display: grid;
+				grid-template-columns: auto auto auto;
+				gap: 1rem .5rem;
+			}
+			.grid div,
+			.grid span{
+				border: .2rem solid #66c;
+				padding: .5rem;
+				color: #eee;
+				background-color: #333;
+			}
 /*Pie de Pagina*/
 	#footer{
 		color: #eee;
