@@ -343,11 +343,11 @@
 				<h3>Implementacion de un Sistema de Grillas</h3>
 			</header>
 			<ul class="example">
-				<li><strong>grid-template-columns</strong></li>
-				<li><strong>grid-template-rows</strong></li>
-				<li><strong>gap</strong></li>
-				<li><strong>grid-column</strong></li>
-				<li><strong>grid-row</strong></li>
+				<li><strong>grid-template-columns</strong> permite definir la cantidad de columnas indirectamente, colocando los tamaños de las mismas. Por defecto siempre hay 1 sola</li>
+				<li><strong>grid-template-rows</strong> permite definir el tamaño de las filas especificadas, su valor predeterminado es auto</li>
+				<li><strong>gap</strong> separacion entre filas y columnas y es un <em>shorthand</em> de los atributos <em>row-gap y column-gap</em> respectivamente</li>
+				<li><strong>grid-column</strong> permite indicar el tamaño de la celda a las columnas, asi como tambien la posicion de la misma.</li>
+				<li><strong>grid-row</strong> permite indicar el tamaño de la celda con respecto a las filas, asi como tambien su posicion.</li>
 			</ul>
 			<div class="grid">
 				<div>Block 1</div>
@@ -358,6 +358,20 @@
 				<span>Line 2</span>
 				<span>Line 3</span>
 				<span>Line 4</span>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Creando Plantillas de Areas</h3>
+			</header>
+			<div class="grid template">
+				<div>header</div>
+				<div>nav</div>
+				<div>main</div>
+				<div>section</div>
+				<div>article</div>
+				<div>aside</div>
+				<div>footer</div>
 			</div>
 		</article>
 	</section>

@@ -283,6 +283,11 @@
 				display: grid;
 				grid-template-columns: auto auto auto;
 				gap: 1rem .5rem;
+				/* justify-content: space-between; /* horizontal */
+				/* align-content: space-between; /* vertical */
+				min-height: 450px;
+				border: 2px solid #448;
+				padding: .5rem;
 			}
 			.grid div,
 			.grid span{
@@ -291,6 +296,33 @@
 				color: #eee;
 				background-color: #333;
 			}
+			.grid :first-child{
+				grid-column: span 3; /*expande =>*/
+			}
+			.grid :last-child{
+				grid-column: 3;
+				grid-row: 2 / 5 /* start / end */
+			}
+			.grid span:first-of-type{
+				grid-column: 1 / 3;
+				grid-row: 2;
+			}
+			.grid :nth-last-child(2){
+				grid-column: span 3;
+			}
+			.template{
+				grid-template-areas: 
+					'nav 	nav 	nav'
+					'header	header 	header'
+					'aside	main 	main'
+					'aside 	section article'
+					'footer footer	footer';
+			}
+			.template :first-child{ grid-area: header }
+			.template :nth-child(2){ grid-area: nav }
+			.template :nth-child(3){ grid-area: main }
+			.template :nth-last-child(2){ grid-area: aside }
+			.template :last-child{ grid-area: footer }
 /*Pie de Pagina*/
 	#footer{
 		color: #eee;
