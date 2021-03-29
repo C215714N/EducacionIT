@@ -1,0 +1,68 @@
+// Variables
+	//colores
+	@pri: #448;
+	@snd: #eee;
+	//mediaQueries
+	@sm: 576px;
+	@md: 768px;
+	@lg: 992px;
+	@xl: 120px;
+	//icons
+	@icon: '../assets/icon';
+	@bg: '../assets/img';
+
+//Anidacion de estilos
+body{
+	.normalize;
+}
+nav{
+	background-color: @pri;
+	.flexbox(@fj:space-between);
+	a{
+		display: block;
+		color:@snd;
+		text-decoration: none;
+	}
+	.menu{
+		width: 100%;
+		.normalize;
+		a{
+			padding: .5rem;
+			&:hover{
+				background-color: lighten(@pri, 10%);
+			}
+		}
+	}
+}
+#header{
+	background-image: url('@{bg}/osx-sierra.jpg');
+}
+#footer{
+	#contact{
+		.flexbox(column);
+		button{
+			align-self: flex-end;
+		}
+	}
+}
+// Mixins: Estilos que se anidan como reglas;
+	.normalize(){
+		margin: 0;
+		border: none;
+		padding: 0;
+		list-style: none;
+	}
+// Mixins parametricos: estilos que utilizan parametros similar a las funciones JS;
+	.flexbox(
+		@fdir: row;
+		@fj: center;
+		@fa: unset;
+		@fw: wrap;
+		@d: flex;
+	){
+		display: @d;
+		flex-direction: @fdir;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}

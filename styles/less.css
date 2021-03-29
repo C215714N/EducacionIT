@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  border: none;
+  padding: 0;
+  list-style: none;
+}
+nav {
+  background-color: #448;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: unset;
+  flex-wrap: wrap;
+}
+nav a {
+  display: block;
+  color: #eee;
+  text-decoration: none;
+}
+nav .menu {
+  width: 100%;
+  margin: 0;
+  border: none;
+  padding: 0;
+  list-style: none;
+}
+nav .menu a {
+  padding: 0.5rem;
+}
+nav .menu a:hover {
+  background-color: #5555aa;
+}
+#header {
+  background-image: url('../assets/img/osx-sierra.jpg');
+}
+#footer #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  flex-wrap: wrap;
+}
+#footer #contact button {
+  align-self: flex-end;
+}
