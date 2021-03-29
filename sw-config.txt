@@ -1,0 +1,35 @@
+Switch>enable
+
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+
+Switch(config)#hostname SW-PISO-02
+SW-PISO-02(config)#enable secret cisco
+SW-PISO-02(config)#username c215714n password root
+SW-PISO-02(config)#username invited password 1234
+SW-PISO-02(config)#line console 0
+SW-PISO-02(config-line)#login local
+SW-PISO-02(config-line)#exit
+------------------------------------------------------------------------------
+SW-PISO-02(config)#line vty 0 15
+SW-PISO-02(config-line)#login local
+SW-PISO-02(config-line)#exit
+SW-PISO-02(config)#banner motd #Acceso restringido. Solo personal autorizado#
+------------------------------------------------------------------------------
+SW-PISO-02(config)#interface vlan1
+SW-PISO-02(config-if)#ip address 192.168.0.20 255.255.255.0
+SW-PISO-02(config-if)#no shutdown
+
+SW-PISO-02(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+
+SW-PISO-02(config-if)#end
+SW-PISO-02#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW-PISO-02#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
