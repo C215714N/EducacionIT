@@ -10,6 +10,11 @@
 	//icons
 	@icon: '../assets/icon';
 	@bg: '../assets/img';
+	@slides: 
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave-night.jpg',
+		'osx-sierra.jpg';
 
 //Anidacion de estilos
 body{
@@ -26,6 +31,10 @@ nav{
 	.menu{
 		width: 100%;
 		.normalize;
+		@media screen and (min-width: @md){
+			width: auto;
+			.flexbox;
+		}
 		a{
 			padding: .5rem;
 			&:hover{
@@ -35,7 +44,23 @@ nav{
 	}
 }
 #header{
-	background-image: url('@{bg}/osx-sierra.jpg');
+	padding: .5rem;
+	position:relative;
+	min-height: 95vh;
+	.slide{
+		.normalize;
+		.p-slide;
+		li{
+			.p-slide;
+			.bg-slide;
+			background-position: center;
+			background-size: cover;
+			opacity: 0;
+			&.active{
+				opacity: 1;
+			}
+		}
+	}
 }
 #footer{
 	#contact{
@@ -52,6 +77,14 @@ nav{
 		padding: 0;
 		list-style: none;
 	}
+	.p-slide{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
 // Mixins parametricos: estilos que utilizan parametros similar a las funciones JS;
 	.flexbox(
 		@fdir: row;
@@ -65,4 +98,12 @@ nav{
 		justify-content: @fj;
 		align-items: @fa;
 		flex-wrap: @fw;
+	}
+// Mixins recursivos: estilos que se aplican en un ciclo mientras se cumpla una condicion;
+	.bg-slide(@i: 1) when (@i <= 4){
+		@li: extract(@slides, @i);
+		&:nth-child(@{i}){
+			background-image: url('@{bg}/@{li}');
+		}
+		.bg-slide(@i + 1);
 	}
