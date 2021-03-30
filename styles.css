@@ -60,12 +60,38 @@
 	}
 	/*ejemplos*/
 		.example{
+			overflow: auto;
 			list-style: none;
 			margin: 16px;
 			margin-left: 48px;
 			border-left: 4px solid #448;
 			padding: 16px;
 			background-color: #eee;
+		}
+		table{
+			margin: 8px auto;
+		}
+		.classic,
+		.classic caption,
+		.classic td{
+			border: 2px solid #448;
+			border-collapse: collapse;
+		}
+		.classic caption{
+			border-bottom: none;
+		}
+		.modern,
+		.modern caption,
+		.modern tr,
+		.modern td{
+			color: #eee;
+			background-color: rgba(68,68,136, .5);
+		}
+		caption, th, td{
+			padding: 4px;
+		}
+		th, td{
+			width:120px;
 		}
 /*pie de pagina*/
 	#footer{

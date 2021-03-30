@@ -123,6 +123,93 @@
 				<header>
 					<h3>¿Cuando utilizarlas?</h3>
 				</header>
+				<p>
+					Son elementos que permiten organizar la informacion de manera tabular y deben utilizarse cuando <strong>los datos que queremos representar en pantalla deben respetar cierta estructura.</strong> Al igual que en cualquier otro ambito poseen <em>filas, columnas y celdas</em>, pero la manera de crearlas es mediante el <strong>modelo de cajas</strong>, es decir, utilizando <em>etiquetas contenedoras y etiquetas de contenido.</em>
+				</p>
+				<div class="example">
+					<table class="classic">
+						<caption>usuarios</caption>
+						<tr><!--fila (Table Row)-->
+							<td>nombre</td><!--celda (Table Division)-->
+							<td>usuario</td>
+							<td>contraseña</td>
+						</tr>
+						<tr>
+							<td>Cristian Racedo</td>
+							<td>c215714n</td>
+							<td>root</td>
+						</tr>
+						<tr>
+							<td>Julio Cesar</td>
+							<td>romulus</td>
+							<td>remo</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Poseen estructura semantica?</h3>
+				</header>
+				<p>
+					A partir del nuevo estandar HTML5, <strong>las tablas deben tener definida una estructura semantica</strong> para facilitar a los motores de busqueda el indexado y analisis de las mismas. Una caracteristica a destacar es que las nuevas etiquetas introducidas, reemplazan a las filas y celdas en la mayoria de los casos; las mismas se colocan dentro de la  etiqueta contenedora de la tabla <strong>&lt;table></strong> respetando cierto orden.
+				</p>
+				<ul>
+					<li>
+						<strong>THEAD</strong> Cabecera de tabla, se utiliza para la definicion de los titulos y en su interior <em>posee celdas de titulo (TH)</em>
+					</li>
+					<li>
+						<strong>TBODY</strong> Cuerpo de tabla, es la unica parte que mantiene la estructura clasica y en ciertas situaciones tambien puede poseer titulos.
+					</li>
+					<li>
+						<strong>TFOOT</strong> Pie de tabla, complementario al contenido principal, suele poseer totales, promedios u otros valores estadisticos.
+					</li>
+				</ul>
+				<div class="example">
+					<table class="modern">
+						<caption>usuarios</caption>
+						<thead>
+							<th>nombre</th>
+							<th>usuario</th>
+							<th>contraseña</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cristian Racedo</td>
+								<td>c215714n</td>
+								<td>root</td>
+							</tr>
+							<tr>
+								<td>Julio Cesar</td>
+								<td>romulus</td>
+								<td>remo</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th>Total</th>
+							<td colspan="2">2</td>
+						</tfoot>
+					</table>
+					<table class="modern">
+						<caption>desarrolladores</caption>
+						<thead>
+							<th>tipo</th>
+							<th>lenguaje</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</section>
 		</article>
 	</main>
