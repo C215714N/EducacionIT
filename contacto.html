@@ -212,6 +212,75 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					Antiguamente si necesitabamos incorporar este tipo de contenido, era necesaria la instalacion de complementos o plugins de terceros, aunque podiamos utilizar etiquetas como <strong>&lt;iframe</strong> para incorporar material externo de manera asincrona a nuestro sitio. Hoy se utiliza para aprovechar una caracteristica de la web que se conoce como <em>contenido embebido o compartido </em>, mientras que para el contenido multimedia es mas comun utilizar <em>las etiquetas que se veran mas adelante.</em>
+				</p>
+				<iframe  
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0673188826645!2d-58.376683794179655!3d-34.602459189077685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1617117563557!5m2!1ses-419!2sar"
+					loading="lazy">
+				</iframe>
+				<iframe 
+					src="https://www.youtube.com/embed/zJBzHQawsjs" 
+					title="Carvel - John Frusciante"  
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+				<iframe 
+					src="https://www.youtube.com/embed/ihjWt4OBXuQ" 
+					title="Te lo resumo - saga Phantasm"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+			</section>
+			<section>
+				<header>
+					<h3>¿Sonidos en la web?</h3>
+				</header>
+				<p>
+					Como se menciono anteriormente, hoy en dia ya no es necesario contar con herramientas de terceros para la reproduccion de contenido multimedia; con la etiqueta <strong>&lt;audio></strong> podemos utilizar la API de reproduccion incorporada al navegador que es compatible con los formatos <em>.mp3 - .wav - .ogg</em>, aunque tambien soporta formatos de pelicula como los que se mencionan mas adelante.
+				</p>
+				<audio src="media/live-learn.mp3" controls>
+					<p>
+						Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el material desde el siguiente 
+						<a href="media/live-learn.mp3" target="_blank"> link </a>
+					</p>
+				</audio>
+				<audio src="media/californication.mp4" controls>
+					<p>
+						Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el material desde el siguiente 
+						<a href="media/californication.mp4" target="_blank"> link </a>
+					</p>
+				</audio>
+			</section>
+			<section>
+				<header>
+					<h3>¿Video sin Plugins?</h3>
+				</header>
+				<p>
+					Como se menciono, esta etiqueta surge para solventar el inconveniente de reproduccion de contenido multimedia, la etiqueta para esto es <strong>&lt;video></strong>	y admite los formatos <em>.mp4 - .webm - .ogv</em>. A diferencia de la etiqueta anterior, no es necesario utilizar el atributo <em>controls</em> e incluso se pueden utilizar atributos como <em>autoplay y muted</em> que deben estar juntos para funcionar.
+				</p>
+				<video src="media/by-the-way.mp4" autoplay muted>
+					<p>
+						Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el material desde el siguiente 
+						<a href="media/by-the-way.mp4" target="_blank"> link </a>
+					</p>
+				</video>
+				<video src="media/cant-stop.webm" controls>
+					<p>
+						Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el material desde el siguiente 
+						<a href="media/cant-stop.webm" target="_blank"> link </a>
+					</p>
+				</video>
+			</section>
+		</article>	
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">

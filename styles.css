@@ -68,6 +68,7 @@
 			padding: 16px;
 			background-color: #eee;
 		}
+		/*tablas*/
 		table{
 			margin: 8px auto;
 		}
@@ -92,6 +93,14 @@
 		}
 		th, td{
 			width:120px;
+		}
+		/*multimedia*/
+		iframe,
+		video{
+			border: 0;
+			border-radius: 8px;
+			max-width:380px;
+			min-height: 240px;
 		}
 /*pie de pagina*/
 	#footer{
