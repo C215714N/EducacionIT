@@ -3,24 +3,115 @@
 		margin:0;
 		font-family: segoe ui, calibri, sans-serif;
 	}
-
+	h1, h2,	h3{
+		margin: 2px;
+	}
+/*navegacion*/
+	.menu{
+		list-style: none;
+		margin:0;
+		padding:0;
+		background-color: #448;
+		text-align: center;
+	}
+	.menu a{
+		color:#eee;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px;
+	}
+	.menu li:hover{
+		background-color: rgba(51, 51, 51, .5);
+	}
+/*cabecera*/
+	#header{
+		padding: 20% 16px;
+		color: #eee;
+		background-color: #ccc;
+		background-image: url('img/osx-sierra.jpg');
+		background-size: cover;
+		text-align: center;
+		text-shadow: 
+			0 0 4px #333,
+			-2px 2px 2px #333;/*x y blur color*/
+	}
+	#header h1,
+	#header p{
+		margin: 0;
+	}
+/*contenido principal*/
+	main{
+		max-width: 960px;
+		margin: auto;
+		padding: 16px;
+	}
+	main .header{
+		border-radius: 8px 8px 0 0; /*top-l t-right bottom-r b-left*/
+		padding: 4px;
+		color: #eee;
+		background-color: #448;
+	}
+	main header{
+		color: #448;
+		border-bottom: 2px solid #448;
+	}
+	/*ejemplos*/
+		.example{
+			list-style: none;
+			margin: 16px;
+			margin-left: 48px;
+			border-left: 4px solid #448;
+			padding: 16px;
+			background-color: #eee;
+		}
+/*pie de pagina*/
+	#footer{
+		padding: 16px;
+		color: #eee;
+		background-color: #448;
+		text-align: center;
+	}
+	#footer a{
+		color: #eee;
+		text-decoration: none;
+		font-weight: bolder;
+	}
 /*formulario de contacto*/
 	#contacto{
 		max-width:540px;
 		margin: auto;
+		text-align: left;
 	}
 	#contacto input,
 	#contacto textarea{
 		width: calc(100% - 32px);
 		outline: none;
+		border: none;
 		padding: 8px 16px; /* top right bottom left*/
 		font-size: 16px;
+		font-family: segoe ui, calibri, sans-serif;
 	}
 	#contacto textarea{
 		resize: none;
 		height: 80px;
 	}
+	#contacto input:focus,
+	#contacto textarea:focus{
+		box-shadow: 0 0 8px #eee;
+	}
 	#contacto button{
 		display: block;
 		margin-left: auto;
+		border: 2px solid #eee;
+		padding: 8px 16px;
+		color: #eee;
+		background-color: transparent;
+		font-weight: bold;
+	}
+	#contacto button:hover{
+		color: #448;
+		background-color: #eee;
 	}

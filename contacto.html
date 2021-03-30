@@ -115,14 +115,26 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Cuando utilizarlas?</h3>
+				</header>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">
+			<h2>Contactanos</h2>
 			<label for="nombre">Nombre</label>
 			<input
 				id="nombre"
 				name="nombre" 
 				type="text"
+				placeholder="Nombre: Cristian Racedo"
 				minlength="3"
 				maxlength="50"
 				required />
@@ -131,12 +143,14 @@
 				id="email"
 				name="email" 
 				type="email"
+				placeholder="Correo: CristianDRacedo@hotmail.com" 
 				minlength="8" 
 				required />
 			<label for="consulta">Consulta</label>
 			<textarea 
 				id="consulta" 
 				name="consulta"
+				placeholder="Consulta: Capacitacion y Presupuesto" 
 				minlength="10"
 				maxlength="200"
 				required></textarea>
