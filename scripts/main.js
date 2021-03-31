@@ -3,7 +3,6 @@
 	ProBar = document.querySelector('#jsProgress progress')
 
 	ProIn.addEventListener(	'input', () => ProBar.value = ProIn.value )
-
 /* Canvas */
 	ctx = document.querySelector('#canvas').getContext('2d')
 	// Rectangulo

@@ -1,0 +1,94 @@
+//variables
+	//colores
+	$pri: #448;
+	$snd: #eee;	
+	//mediaQueries
+	$sm: 576px;
+	$md: 768px;
+	$lg: 992px;
+	$xl: 120px;
+	//icons
+	$icon: '../assets/icon';
+	$bg: '../assets/img';
+	$social:
+		'facebook',
+		'instagram',
+		'twitter',
+		'github',
+		'linkedin',
+		'whatsapp',
+		'youtube';
+	$slides: 
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave-night.jpg',
+		'osx-sierra.jpg';
+	$width: 2rem;
+	$height: 2rem;
+// mixins
+	@mixin normalize{
+		list-style: none;
+		margin: 0;
+		border: none;
+		padding: 0;
+	}
+	@mixin flexbox(
+		$fdir: row,
+		$fj: center,
+		$fa: unset,
+		$fw: wrap,
+		$d: flex
+	){
+		display: $d;
+		flex-direction: $fdir;
+		justify-content: $fj;
+		align-items: $fa;
+		flex-wrap: $fw;
+	}
+
+//procemientos
+	@each $ico in $social{
+		.#{$ico}{
+			background-image: url($icon+"/"+$ico+".svg");
+		}
+	}
+	$cols: 24;
+	$sizes: 'sm', 'md', 'lg', 'xl';
+	@each $size in $sizes{
+		@media screen and (min-width: 300px){
+			@for $i from 1 to $cols + 1{
+				.col-#{$size}-#{$i}{
+					width:percentage($i / $cols);
+				}	
+			}	
+		}	
+	}
+
+//estilos anidados
+	body{
+		@include normalize;
+	}
+
+	nav{
+		background-color: $pri;
+		@include flexbox($fj: space-between);
+	}
+	#footer{
+		$width: 3rem;
+		$height: 3rem;
+		.social{
+			margin: auto;
+			border: 2px solid $pri;
+			min-height: $width;
+			@include flexbox;
+			a{
+				width: $width;
+				height: $height;
+			}
+		}
+		#contact{
+			@include flexbox(column);
+			margin: auto;
+		}
+	}
+
