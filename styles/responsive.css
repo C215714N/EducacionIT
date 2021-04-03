@@ -1,0 +1,85 @@
+/*Content First*/
+	/*general rules*/
+		/*imports*/
+			@import url(
+
+				'https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;1,300;1,500&display=swap'
+			);
+			@font-face{
+				src: url('../assets/fonts/Starjedi.ttf');
+				font-family: 'star wars';
+			}
+		/*styles*/
+			*{
+				box-sizing: border-box;
+				font-family: Raleway, 'century gothic', sans-serif;
+			}
+			body{
+				margin: 0;
+			}
+			.button{
+				cursor: pointer;
+				margin: .5rem;
+				outline: none;
+				border: .15rem solid #eee;
+				border-radius: .25rem;
+				color: #eee;
+				background-color: transparent;
+				font: bold 1.2rem Raleway, 'century gothic', sans-serif;
+			}
+			.button:hover{
+				color: #448;
+				background-color: #eee;
+			}
+	/*navigation*/
+		nav{
+			position: sticky;
+			top:0;
+			z-index: 3;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: linear-gradient(#66c, #448);
+		}
+		.logo{
+			font-size: 1.2rem;
+			text-transform: uppercase;
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+		.menu{
+			width: 100%;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+		}
+		.menu a:hover{
+			background-color: rgba(51,51,51,.5);
+		}
+		nav .active{
+			height: auto;
+		}
+	/*header*/
+		/*heading*/
+			#header{
+				position: relative;
+				height: 100vh; /*altura del viewport*/
+				padding: 1rem;
+				text-align: center;
+				background-color: #333;
+			}
+		/*slide*/
+		/*slide controls*/
+	/*content*/
+	/*footer*/
+		/*contact form*/
+		/*social media*/
