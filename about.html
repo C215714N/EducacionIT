@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetacion Web</title>
+	<link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+	<nav>
+		<a href="#" class="logo">CSS</a>
+		<button class="button">&equiv;</button>
+		<ul class="menu">
+			<li><a href="index.html">inicio</a></li>
+			<li><a href="#">acerca</a></li>
+			<li><a href="gallery.html">galeria</a></li>
+			<li><a href="#contact">contacto</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Maquetacion Web</h1>
+			<p>html | css | js</p>
+		</div>
+		<ul class="slide">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="prev">&lt;</button>
+		<button class="next">&gt;</button>
+	</header>
+	<main>
+		<h2>Contenido Simulado</h2>
+		<p>
+
+			Lorem ipsum dolor sit amet consectetur adipisicing, elit. Doloribus vero tempora amet voluptas, sint natus asperiores nostrum placeat, nobis pariatur inventore quod eius repellendus dolores libero autem unde mollitia at modi illo optio? Labore voluptatum iure incidunt? Dicta laudantium obcaecati aliquid culpa perspiciatis nobis perferendis sapiente repellendus possimus, voluptatem aperiam esse provident adipisci, voluptatibus sint voluptas repellat minima dolorum magnam, fugit at, doloremque earum eum? Sint nemo odit sed fugit voluptas nam cum odio aliquid earum sit hic autem animi ad neque obcaecati voluptates quidem aperiam unde error excepturi enim, consectetur. Delectus eaque accusantium deleniti nemo. Recusandae culpa illum dolorem praesentium adipisci obcaecati repellat, dolorum repudiandae reprehenderit voluptatum nihil corporis iusto, deleniti laboriosam quaerat perspiciatis possimus nobis fugiat molestiae! Sint inventore nobis deserunt officia ipsum aut nisi similique deleniti quos ad repellat tempora excepturi eaque dignissimos, libero. Iusto asperiores assumenda odit, voluptatum facilis consequuntur hic voluptas minus modi. Id, omnis? Error minima a repellat reiciendis, ratione provident magni, ipsa facilis modi laboriosam soluta nesciunt. Debitis blanditiis maxime, ipsum, inventore, ullam consectetur quibusdam nobis at sunt hic odio sit cum! Sequi laborum doloremque fugiat quaerat, sint id facilis quo inventore pariatur quod tenetur consequatur nobis saepe vitae reiciendis ab, et nostrum.
+		</p>
+	</main>
+		<footer id="footer">
+		<form id="contact" action="" method="POST">
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName" 
+				type="text" 
+				maxlength="50" 
+				pattern="[A-Z a-z]{3,50}"
+				title="Ingrese su nombre sin numeros ni simbolos. Este debe poseer entre 3 y 50 caracteres" 
+				placeholder="Nombre (*): John Doe" 
+				required />
+			<div class="validate">
+				Ingrese su nombre sin numeros ni simbolos. 
+				Este debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email"
+				minlength="8" 
+				placeholder="Correo (*): usuario@servidor" 
+				required />
+			<div class="validate">
+				Ingrese un correo valido respetando la estructura 
+				usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}" 
+				placeholder="Telefono: (5411)2345-6789" />
+			<div class="validate">
+				Ingrese la caracteristica entre parentesis ej:(5411) separando con guion cada 3 o 6 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Consulta (*): Buenas tardes, necesito un presupuesto" 
+				required></textarea>
+			<button>Enviar</button>
+			<div>
+				Todos los campos con asterisco <span>(*)</span> son obligatorios.
+			</div>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" class="facebook" target="_blank">social</a>
+			<a href="https://instagram.com" class="instagram" target="_blank">social</a>
+			<a href="https://twitter.com" class="twitter" target="_blank">social</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-s-10hs" class="github" target="_blank">social</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+</body>
+</html>
