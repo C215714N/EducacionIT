@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+	<style>
+		.position{
+			max-width: 960px;
+			min-height: 600px;
+			margin: 1rem;
+			border: .2rem solid #333;
+			padding: .5rem;
+			position: relative;
+		}
+		.position:hover .relative{
+			background-color: #aad;
+		}
+		.position:hover .absolute{
+			background-color: #daa;
+		}
+		.position:hover .fixed{
+			background-color: #ada;
+			z-index: 0;
+		}
+		.position:hover .sticky{
+			background-color: #dad;
+		}
+		.position div{
+			margin: .5rem;
+			padding: .25rem;
+			background-color: #ccc;
+		}
+		/* POSITION:
+				static (default): no sirve como referente
+				relative: referente de si mismo
+				absolute: ancestro no estatic es referente
+				fixed: viewport es referente
+				sticky: referente en base a una condicion
+		*/
+		.relative{
+			/* el elemento se toma como referete a si mismo para calcular su posicion , pero mantiene su lugar original dentro del flow*/
+			position: relative;
+			top:-1rem;
+			right:-1rem;
+			border: 1px solid #aad;
+			box-shadow: -1rem 1rem .2rem #333;
+		}
+		.absolute{
+			/* el elemento toma como referencia al primer ancestro que no sea static, permanece fuera del flow y su tamaño se adapta a su contenido*/
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: 2px solid #daa;
+			z-index: 2;
+		}
+		.fixed{
+			/*el elemento toma como referencia a la ventana del navegador, permanece fuera del flow y al igual que absolute se adapta a su contenido*/
+			position: fixed;
+			border: 2px solid #ada;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+		}
+		.sticky{
+			/*el elemento ocupa su posicion original hasta cumplir con los atributos relacionados con position y a partir de ahi se mantiene fuera del flow*/
+			position: sticky;
+			top: 0;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div class="sticky">Position sticky</div>
+		<div class="absolute">Position absolute</div>
+		<div class="fixed">Position fixed</div>
+		<div class="relative">Position relative</div>
+		<div>Position ...</div>
+	</div>
+	<div class="position">
+		<div class="fixed">Position fixed</div>
+		<div class="relative">Position relative</div>
+		<div class="sticky">Position sticky</div>
+		<div class="absolute">Position absolute</div>
+		<div>Position ...</div>
+	</div>
+	<div class="position">
+		<div class="absolute">Position absolute</div>
+		<div class="sticky">Position sticky</div>
+		<div class="relative">Position relative</div>
+		<div>Position ...</div>
+		<div class="fixed">Position fixed</div>
+	</div>
+	<div class="position">
+		<div class="relative">Position relative</div>
+		<div>Position ...</div>
+		<div class="fixed">Position fixed</div>
+		<div class="sticky">Position sticky</div>
+		<div class="absolute">Position absolute</div>
+	</div>
+</body>
+</html>

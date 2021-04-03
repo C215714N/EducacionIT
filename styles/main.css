@@ -28,6 +28,10 @@
 			0 0 .2rem #333;/* x y blur color*/
 	}
 /*Navegacion*/
+	nav{
+		position: sticky;
+		top: 0;
+	}
 	.menu{
 		list-style: none;
 		margin: 0;
@@ -384,13 +388,13 @@
 		/*contadores*/
 			.content{ counter-reset: primario; }
 			.content ul { counter-reset: secundario }
-			.content > li ul { counter-reset: terciario }
-			.content > li li ul { counter-reset: cuarto }
+			.content li ul { counter-reset: terciario }
+			.content li li ul { counter-reset: cuarto }
 		/*incremento*/
-			.content li { counter-increment: primario }
-			.content ul li { counter-increment: secundario }
-			.content ul ul li {counter-increment: terciario}
-			.content ul ul ul li {counter-increment: cuarto}
+			.content li { counter-increment: primario; color:#222; }
+			.content ul li { counter-increment: secundario; color: #444; }
+			.content ul ul li {counter-increment: terciario; color:#666;}
+			.content ul ul ul li {counter-increment: cuarto; color:#888;}
 		/*aplicacion*/
 			.content li::before{
 				content: 
