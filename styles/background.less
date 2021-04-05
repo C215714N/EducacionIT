@@ -46,19 +46,10 @@
 	#header{
 		.normalize(@p:1rem);
 		.flexbox(column);
-		h1, 
-		p{
-			.normalize;
-		}
-		button{
-			.normalize(@p: 1.5rem);
-		}
-		.prev{
-			.position(@t:0; @b:0; @l:0);
-		}
-		.next{
-			.position(@t:0; @r:0; @b:0);
-		}
+		h1, p{ .normalize }
+		button{ .normalize(@p: 1.5rem) }
+		.prev{ .position(@t:0; @b:0; @l:0) }
+		.next{ .position(@t:0; @r:0; @b:0) }
 	}
 	.slide{
 		.normalize;

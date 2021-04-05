@@ -185,6 +185,66 @@
 			<button>PAUSE</button>
 		</div>
 	</section>
+	<footer id="footer">
+		<div id="contact">
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName" 
+				type="text"  
+				maxlength="50" 
+				placeholder="Nombre: Cristian Racedo" 
+				pattern="[A-Z a-z]{3,50}" 
+				required />
+			<div class="valid">
+				Ingrese su Nombre unicamente con letras,
+				 el mismo debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail"
+				type="email"  
+				minlength="8" 
+				placeholder="Correo: cristiandracedo@hotmail.com" 
+				required />
+			<div class="valid">
+				Ingrese un correo valido que respete 
+				 la estructura usuario@servidor.
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				placeholder="Telefono: (5411)4244-2342" 
+				pattern="[\(]\d{2,5}[\)]\d{3,6}[\-]\d{3,6}"
+				required>
+			<div class="valid">
+				Ingrese su telefono colocando la caracteristica
+				entre parentesis y separando con guion cada 3 o 6 digitos
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10"
+				maxlength="200"
+				placeholder="Consulta: Buenas, estoy interesado en un presupuesto" 
+				required
+			></textarea>
+			<button class="button">ENVIAR</button>
+			<div>Todos los campos son obligatorios</div>
+		</div>
+		<div class="social">
+			<a href="https://facebook.com" class="facebook" target="_blank"></a>
+			<a href="https://instagram.com" class="instagram" target="_blank"></a>
+			<a href="https://twitter.com" class="twitter" target="_blank"></a>
+			<a href="https://whatsapp.com" class="whatsapp" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/maquetado-lx-14" class="github" target="_blank"></a>
+		</div>
+		<p class="copy">&copy; Todos los derechos reservados<a href="#"> Cristian Racedo </a>&amp; Compañia</p>
+	</footer>
 	<!-- scripts -->
 	<script src="scripts/main.js"></script>
 </body>

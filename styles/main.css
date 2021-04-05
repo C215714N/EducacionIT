@@ -27,6 +27,9 @@
 		}
 	/* Navigation */
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 3;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -106,6 +109,10 @@
 			width: 100%;
 		}
 	/* Footer */
+		#footer{
+			padding: 1rem;
+			background: linear-gradient(#66c, #448);
+		}
 /* Small Devices */
 
 /* Medium Devices */

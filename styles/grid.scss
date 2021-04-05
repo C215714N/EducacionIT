@@ -1,0 +1,66 @@
+// variables
+	$sm: 576px;
+	$md: 768px;
+	$lg: 992px;
+	$xl: 1200px;
+@mixin normalize(){
+	
+}
+@mixin flexbox($fd: column, $fj:center, $fa: unset, $fw:wrap, $f:flex){
+	display: $f;
+	flex-direction: $fd;
+	justify-content: $fj;
+	align-items: $fa;
+	flex-wrap: $fw;
+}
+// aplicacion
+	#contact{
+		@include flexbox;
+		max-width: 540px;
+		margin: auto;
+		label{
+			height: 0;
+			margin-top: .5rem;
+			overflow: hidden;
+			@media screen and (min-width: $md){
+				height: auto;
+			}
+		}
+		input,
+		textarea{
+			outline: none;
+			border: .2rem solid transparent;
+			padding: .25rem .5rem;
+			transition: all .5s ease;
+			&:focus{
+				transform: scale(1.1);
+				& + .valid{
+					transform: scale(1.1);
+					height: auto;
+					border-color: #ccc;
+					box-shadow: 0 0 .5rem #eee;
+					padding: .5rem;
+					background-color: #ccc;
+					font-weight: bold;
+				}
+				&:valid{
+					border-color: lightgreen;
+					& + .valid{
+						border-color: lightgreen;
+						color: darkgreen;
+						background-color: lightgreen;
+					}
+				}
+			}
+		}
+		.valid{
+			overflow: hidden;
+			height: 0;
+			border: 0;
+			padding: 0;
+			transition: all .5s ease;
+		}
+		.button{
+			margin: .2rem 0;
+		}
+	}
