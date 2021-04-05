@@ -15,15 +15,16 @@
 			margin: .5rem;
 			outline: none;
 			border-radius: .2rem;
-			border: .2rem solid #333;
+			border: .2rem solid #eee;
 			padding:.5rem .8rem;
-			color: #333;
+			color: #eee;
 			background-color: transparent;
 			font: bold 1.2rem sans-serif;
+			transition: all .5s ease-in;
 		}
 		.button:hover{
-			color: #ccc;
-			background-color: #333
+			color: #448;
+			background-color: #eee
 		}
 	/* Navigation */
 		nav{
@@ -34,13 +35,13 @@
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
-			background-color: #ccc;
+			background: linear-gradient(#66c, #448);
 		}
 		nav a{
 			display: block;
 			padding: .25rem .5rem;
 			text-align: center;
-			color: #333;
+			color: #eee;
 			text-decoration: none;
 		}
 		.menu{
@@ -65,6 +66,24 @@
 			text-shadow: 0 0 .5rem #333;
 			text-align: center;
 			font-size: calc(2vw + .8rem);
+		}
+		.header .slide{
+			display: flex;
+			justify-content: space-between;
+			max-width: 10rem;
+			margin: auto;
+			padding: 1rem;
+		}
+		.slide span{
+			width: 1rem;
+			height: 1rem;
+			background-color: #ccc;
+			border-radius: .5rem;
+			transition: all .5s ease-in;
+			box-shadow: 0 0 .5rem #333;
+		}
+		.slide span.active{
+			width: 3rem;
 		}
 		.slide, 
 		.slide li{
@@ -111,6 +130,7 @@
 	/* Footer */
 		#footer{
 			padding: 1rem;
+			color: #eee;
 			background: linear-gradient(#66c, #448);
 		}
 /* Small Devices */
