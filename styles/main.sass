@@ -1,0 +1,26 @@
+//variables
+$pri: #448
+//mixins
+=flexbox ($fdir: row, $fj: center, $fa: unset, $fw: wrap, $d: flex)
+	display: $d
+	flex-direction: $fdir
+	justify-content: $fj
+	align-items: $fa
+	flex-wrap: $fw
+
+=cssgrid
+	grid-template-columns: repeat(autofit, minmax(200px, 1fr))
+=colors
+	color: $pri
+=normalize
+	margin: 0
+
+nav
+	+flexbox
+	.menu
+		+normalize
+main
+
+#footer
+	#contact
+		+flexbox
