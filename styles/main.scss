@@ -6,7 +6,8 @@
 	$sm: 576px;
 	$md: 768px;
 	$lg: 992px;
-	$xl: 120px;
+	$xl: 1200px;
+	$cols: 24;
 	//icons
 	$icon: '../assets/icon';
 	$bg: '../assets/img';
@@ -52,36 +53,54 @@
 			background-image: url($icon+"/"+$ico+".svg");
 		}
 	}
-	$cols: 24;
-	$sizes: 'sm', 'md', 'lg', 'xl';
-	@each $size in $sizes{
-		@media screen and (min-width: 300px){
-			@for $i from 1 to $cols + 1{
-				.col-#{$size}-#{$i}{
-					width:percentage($i / $cols);
-				}	
-			}	
-		}	
-	}
+	@mixin media ($vw, $vn){
+		@media screen and (min-width: $vw){
+			@for $i from 1 through $cols{
+				.col-#{$vn}-#{$i}{
+					width: percentage($i / $cols);
+	}	}	}	}
+	@include media($sm, sm);
+	@include media($md, md);
+	@include media($lg, lg);
+	@include media($xl, xl);
 
 //estilos anidados
 	body{
 		@include normalize;
 	}
-
+	img, video{
+		width: 100%;
+		max-width: 540px;
+	}
+	svg, canvas{
+		width: 300px;
+		height: 300px;
+	}
 	nav{
 		background-color: $pri;
 		@include flexbox($fj: space-between);
+		button{
+			@media screen and (min-width: $md){
+				display: none;
+			}
+		}
+		.menu{
+			@include normalize;
+			width:100%;
+			@media screen and(min-width: $md){
+				width: auto;
+			}
+		}
 	}
 	#footer{
 		$width: 3rem;
 		$height: 3rem;
 		.social{
 			margin: auto;
-			border: 2px solid $pri;
 			min-height: $width;
 			@include flexbox;
 			a{
+				margin: .2rem;
 				width: $width;
 				height: $height;
 			}
@@ -91,4 +110,3 @@
 			margin: auto;
 		}
 	}
-

@@ -26,7 +26,7 @@
   background-image: url("../assets/icon/youtube.svg");
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 576px) {
   .col-sm-1 {
     width: 4.1666666667%;
   }
@@ -123,7 +123,7 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 768px) {
   .col-md-1 {
     width: 4.1666666667%;
   }
@@ -220,7 +220,7 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 992px) {
   .col-lg-1 {
     width: 4.1666666667%;
   }
@@ -317,7 +317,7 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 1200px) {
   .col-xl-1 {
     width: 4.1666666667%;
   }
@@ -421,6 +421,16 @@ body {
   padding: 0;
 }
 
+img, video {
+  width: 100%;
+  max-width: 540px;
+}
+
+svg, canvas {
+  width: 300px;
+  height: 300px;
+}
+
 nav {
   background-color: #448;
   display: flex;
@@ -432,7 +442,6 @@ nav {
 
 #footer .social {
   margin: auto;
-  border: 2px solid #448;
   min-height: 3rem;
   display: flex;
   flex-direction: row;
@@ -441,6 +450,7 @@ nav {
   flex-wrap: wrap;
 }
 #footer .social a {
+  margin: 0.2rem;
   width: 3rem;
   height: 3rem;
 }

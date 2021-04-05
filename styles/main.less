@@ -6,7 +6,7 @@
 		@sm: 576px;
 		@md: 768px;
 		@lg: 992px;
-		@xl: 120px;
+		@xl: 1200px;
 	//icons
 		@icon: '../assets/icon';
 		@bg: '../assets/img';
@@ -19,6 +19,10 @@
 //Anidacion de estilos
 body{
 	.normalize;
+}
+img, video{
+	width: 100%;
+	max-width: 540px;
 }
 nav{
 	background-color: @pri;
@@ -64,6 +68,7 @@ nav{
 }
 #footer{
 	#contact{
+		margin: auto;
 		.flexbox(column);
 		button{
 			align-self: flex-end;
@@ -107,3 +112,19 @@ nav{
 		}
 		.bg-slide(@i + 1);
 	}
+	@cols: 24;
+	.mediaQueries (@vw, @vn) {
+		@media screen and (min-width: @vw){
+			.grid(@i: 1) when (@i <= @cols){
+				.col-@{vn}-@{i}{
+					width: percentage((@i / @cols));
+				}
+				.grid(@i + 1);
+			}	
+			.grid;
+		}	
+	}
+	.mediaQueries (@sm, sm);
+	.mediaQueries (@md, md);
+	.mediaQueries (@lg, lg);
+	.mediaQueries (@xl, xl);
