@@ -1,0 +1,70 @@
+// variables
+	@route:'../assets/img/';
+	@img:
+		'osx-high-sierra.jpg',
+		'osx-leopard.png',
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave.jpg',
+		'osx-mojave-night.jpg',
+		'osx-mountain-lion.jpg',
+		'osx-sierra.jpg',
+		'osx-snow-leopard.png';
+// mixin parametrico attrib normalize
+	.normalize(@m:0; @p:0; @b:none; @o: none; @ba:border; @ma:margin; @pa:padding; @oa: outline){
+		@{ma}:@m;
+		@{oa}:@o;
+		@{ba}:@b;
+		@{pa}:@p;
+	}
+// mixin parametrico flexbox
+	.flexbox (@fd:row; @fj:center; @fa:unset; @fw: wrap; @f:flex){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+// mixin parametrico position
+	.position(@p:absolute; @t:unset; @r:unset; @b:unset; @l:unset; @z:1){
+		position: 	@p;
+		top: 		@t;
+		right: 		@r;
+		bottom: 	@b;
+		left: 		@l;
+		z-index: 	@z;
+	}
+// mixin recursivo backgrounds
+	.bg-slides(@i:1) when(@i <= length(@img)){
+		@bg: extract(@img, @i);
+		&:nth-child(@{i}){
+			background-image: url('@{route}@{bg}')
+		}
+		.bg-slides(@i + 1);
+	}
+// implementacion del mixin
+	#header{
+		.normalize(@p:1rem);
+		.flexbox(column);
+		h1, 
+		p{
+			.normalize;
+		}
+		button{
+			.normalize(@p: 1.5rem);
+		}
+		.prev{
+			.position(@t:0; @b:0; @l:0);
+		}
+		.next{
+			.position(@t:0; @r:0; @b:0);
+		}
+	}
+	.slide{
+		.normalize;
+		.position(@t:0, @l: 0, @z: -1);
+		li{
+			.position(@t:0, @l: 0, @z: -1);
+			.bg-slides;
+		}
+	}

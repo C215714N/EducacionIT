@@ -1,0 +1,87 @@
+#header {
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  flex-wrap: wrap;
+}
+#header h1,
+#header p {
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+#header button {
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 1.5rem;
+}
+#header .prev {
+  position: absolute;
+  top: 0;
+  right: unset;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+#header .next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: unset;
+  z-index: 1;
+}
+.slide {
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: unset;
+  bottom: unset;
+  left: 0;
+  z-index: -1;
+}
+.slide li {
+  position: absolute;
+  top: 0;
+  right: unset;
+  bottom: unset;
+  left: 0;
+  z-index: -1;
+}
+.slide li:nth-child(1) {
+  background-image: url('../assets/img/osx-high-sierra.jpg');
+}
+.slide li:nth-child(2) {
+  background-image: url('../assets/img/osx-leopard.png');
+}
+.slide li:nth-child(3) {
+  background-image: url('../assets/img/osx-lion.png');
+}
+.slide li:nth-child(4) {
+  background-image: url('../assets/img/osx-mavericks.png');
+}
+.slide li:nth-child(5) {
+  background-image: url('../assets/img/osx-mojave.jpg');
+}
+.slide li:nth-child(6) {
+  background-image: url('../assets/img/osx-mojave-night.jpg');
+}
+.slide li:nth-child(7) {
+  background-image: url('../assets/img/osx-mountain-lion.jpg');
+}
+.slide li:nth-child(8) {
+  background-image: url('../assets/img/osx-sierra.jpg');
+}
+.slide li:nth-child(9) {
+  background-image: url('../assets/img/osx-snow-leopard.png');
+}
