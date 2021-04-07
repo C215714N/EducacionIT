@@ -66,8 +66,14 @@
 			opacity: .6;
 			transition: all .5s ease-out;
 			&:hover{
-				transform: scale(1.2);
-				opacity: .9;
+				transform: 
+					scale(1.25)
+					rotate(720deg);
+				opacity: .8;
+			&:active{
+				opacity: 1;
+				box-shadow: 0 0 .5rem #eee;
+			}
 	}	}	}
 // implememntacion mixins formulario
 	#contact{
