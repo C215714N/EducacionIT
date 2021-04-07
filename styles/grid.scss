@@ -80,8 +80,7 @@
 			overflow: hidden;
 			@media screen and (min-width: $md){
 				height: auto;
-			}
-		}
+		}	}
 		input,
 		textarea{
 			@include normalize($b:.2rem solid transparent, $p: .25rem .5rem);
@@ -102,10 +101,7 @@
 						border-color: lightgreen;
 						color: darkgreen;
 						background-color: lightgreen;
-					}
-				}
-			}
-		}
+		}	}	}	}
 		.valid{
 			@include normalize;
 			overflow: hidden;

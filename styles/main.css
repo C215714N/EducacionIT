@@ -10,6 +10,9 @@
 		body{
 			margin: 0;
 		}
+		.brand{
+			font: italic bolder 1.2rem Raleway, 'segoe ui', sans-serif; /* style weight size family */
+		}
 		.button{
 			cursor: pointer;
 			margin: .5rem;
@@ -38,11 +41,13 @@
 			background: linear-gradient(#66c, #448);
 		}
 		nav a{
+			position: relative;
 			display: block;
-			padding: .25rem .5rem;
+			padding: .5rem 1rem;
 			text-align: center;
 			color: #eee;
 			text-decoration: none;
+			transition: all .5s ease-in;
 		}
 		.menu{
 			width: 100%;
@@ -54,6 +59,22 @@
 		.menu a:hover{
 			color: #eee;
 			background-color: rgba(51,51,51,.5);
+			transform: scale(1.2);
+		}
+		.menu a::after{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: .2rem;
+			height: .1rem;
+			background-color: #448;
+			transition: all .5s ease-out;
+		}
+		.menu a:hover::after{
+			width: 100%;
+			background-color: #eee;
 		}
 		.menu.active{
 			display: block;
@@ -91,6 +112,10 @@
 			height: 100%;
 			background-size: cover;
 			background-position: center;
+			transition: all .75s ease;
+		}
+		.slide li.active{
+			opacity: 1;
 		}
 		#header button{
 			color: white;
@@ -140,7 +165,8 @@
 		nav .button{
 			display: none;
 		}
-		.menu{
+		.menu,
+		.menu.active{
 			width: auto;
 			display: flex;
 		}
