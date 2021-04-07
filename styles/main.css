@@ -100,8 +100,8 @@
 			height: 1rem;
 			background-color: #ccc;
 			border-radius: .5rem;
-			transition: all .5s ease-in;
 			box-shadow: 0 0 .5rem #333;
+			transition: all .75s ease-in;
 		}
 		.slide span.active{
 			width: 3rem;
@@ -112,7 +112,7 @@
 			height: 100%;
 			background-size: cover;
 			background-position: center;
-			transition: all .75s ease;
+			transition: all 1s ease;
 		}
 		.slide li.active{
 			opacity: 1;
