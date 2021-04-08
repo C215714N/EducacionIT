@@ -191,6 +191,116 @@
 				position: sticky;
 				top: 0;
 			}
+		/*select menu*/
+			body :not(nav) .menu{
+				background-color: #448;
+				position: relative;
+				z-index: 1;
+			}
+			.menu a{
+				display: inline-block;
+				padding: .5rem;
+				color: #eee;
+				text-decoration: none;
+			}
+			.menu ul{
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				background-color: #55A
+			}
+			.menu ul ul{
+				top: 0;
+				left: 100%;
+				background-color: #66c
+			}
+			.menu li{
+				position: relative;
+			}
+			.menu li:hover > ul{
+				display: block;
+			}
+		.deploy{
+			display: flex;
+			background-color: #ccc;
+			margin: 0;
+			padding: 0;
+		}
+		.deploy li{
+			position: relative;
+			list-style: none;
+			padding: .5rem;
+		}
+		.deploy li:hover{
+			background-color: #333;
+		}
+		.deploy ul{
+			min-width: 8rem;
+			display: none;
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 100%;
+			left: 0;
+			background-color: #ccc;
+		}
+		.deploy ul ul{
+			left: 100%;
+			top: 0;
+		}
+		.deploy li:hover > ul{
+			display: block;
+		}
+	/*
+	pseudo-class: instancia o caracteristica de una etiqueta
+		:hover => pasar el mouse por encima;
+		:focus => selecionar el elemento;
+		:valid => si el control es valido;
+		:invalid => si el control no es valido;
+		:not(el) => mientras que el elemento no sea tal;
+		:first-child => primer hijo de un elemento
+		:last-child => ultimo hijo de un elemento
+		:first-of-type => primera etiqueta de su tipo en un contenedor;
+		:last-of-type => ultima etiqueta de su tipo en un contenedor;
+		*/
+	/*
+	pseudo-elementos: partes de una etiqueta que podemos utilizar
+		::before => el contenido antes del contenido (no seleccionable);
+		::after => el contenido despues del contenido (no seleccionable);
+		::first-leter => primera letra de un contenido;
+		::first-line => primera linea de un contenido;
+	*/
+		.pseudo h2::after{
+			content: 'Pseudo elementos';
+		}
+		.pseudo p:first-of-type::first-letter{
+			float: left;
+			margin: 0 1rem;
+			font-size: 4rem;
+			line-height: 3rem;
+		}
+		.pseudo p:last-of-type::first-line{
+			background-color: gold;
+		}
+		.pseudo p::after{
+			content: 
+				'Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Ex vero sequi placeat molestias illo voluptas aliquid laborum omnis exercitationem error, tempore est in doloribus repellendus ipsa labore consequuntur aperiam culpa odio amet sunt excepturi eius commodi voluptatem id. Molestiae esse, inventore a eaque, voluptatum nemo quae enim labore sit tempora fugit dolor illum unde odit optio quasi minima, quibusdam eius explicabo dignissimos consectetur dolore libero. Rerum dolorem dicta, repellendus at aspernatur velit natus optio quas autem in omnis possimus iusto ea culpa, incidunt distinctio ratione et labore vel sunt quae eaque laboriosam laborum magni. Nisi maiores delectus, voluptatum soluta aspernatur?';
+		}
+		/*counters*/
+		main { counter-reset: capitulo }
+		section  { counter-reset: tema }
+		main h2::before{
+			counter-increment: capitulo;
+			content: 'Capitulo ' counter(capitulo) ' - ';
+		}
+		main h3::before{
+			counter-increment: tema;
+			content: 'Tema ' counter(tema) ' - ';
+		}
 	/*Footer*/
 		#footer{
 			padding: 1rem; /* ancho de M en la raiz <html> */
