@@ -56,6 +56,7 @@
 				<div>article</div>
 				<div>footer</div>
 			</div>
+			<h3>Galeria de imagenes</h3>
 			<div class="example gallery">
 				<img src="assets/img/jjba-theworld-01.jpg" alt="JJBA The World">
 				<img src="assets/img/jjba-theworld-02.jpg" alt="JJBA The World">
@@ -66,7 +67,35 @@
 				<img src="assets/img/jjba-starplatinum-03.jpg" alt="JJBA Star Platinum">
 				<img src="assets/img/jjba-starplatinum-04.jpg" alt="JJBA Star Platinum">
 			</div>
-		</section>	
+		</section>
+		<section>
+			<header class="header">
+				<h2>Position</h2>
+			</header>
+			<ul>
+				<li>
+					<strong>static</strong> es el valor predeterminado y no sirve como referente para calcular la posicion, el elemento sigue formando parte del flujo del documento y su posicion corresponde al orden en el que fue creado.
+				</li>
+				<li>
+					<strong>relative</strong> el elemento con esta posicion es su propio referente y cuando modificamos su valor se desplaza dentro del flujo del documento, pero mantiene su espacio original en el dom.
+				</li>
+				<li>
+					<strong>absolute</strong> el elemento queda fuera del flujo del documento y se posiciona con respecto al ancestro mas proximo cuyo atributo position no sea static. En caso de no existir, el ancestro referente es el body.
+				</li>
+				<li>
+					<strong>fixed</strong> al igual que el caso anterior, el elemento queda por fuera del flujo del documento, pero toma como referente al viewport, es decir, la ventana del navegador. Es ideal para botones o elementos flotantes.
+				</li>
+				<li>
+					<strong>sticky</strong> el elemento permanece dentro del flujo del documento hasta que se cumple la condicion definida por los atributos de position, ya que al ocurrir esto automaticamente se mantiene fuera del mismo. 
+				</li>
+			</ul>
+			<div class="example position">
+				<div>relative</div>
+				<div>absolute</div>
+				<div>fixed</div>
+				<div>sticky</div>
+			</div>
+		</section>
 	</main>
 	<footer id="footer">
 		<form action="" id="contact">
@@ -81,7 +110,7 @@
 				placeholder="Ingrese su Nombre" 
 				required />
 			<div class="validate">
-				Ingrese su nombre sin numeros ni simbolos, debe poseer entre 3 y 50 caracteres.
+				Ingrese solamente letras, entre 3 y 50 caracteres.
 			</div>
 			<label for="contactEmail">Correo</label>
 			<input 
@@ -103,7 +132,7 @@
 				placeholder="Ingrese su Telefono" 
 				required />
 			<div class="validate">
-				Ingrese su numero de telefono solamente con numeros y sin espacios.
+				Ingrese su telefono unicamente con numeros y sin espacios.
 			</div>
 			<label for="contactConsult">Consulta</label>
 			<textarea 
