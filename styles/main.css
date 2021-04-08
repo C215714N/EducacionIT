@@ -15,6 +15,11 @@
 		margin: 0;
 	}
 /*Navegacion*/
+	nav{
+		position: sticky;
+		top: 0;
+		z-index: 2;
+	}
 	nav ul{
 		list-style: none;
 		margin: 0;
@@ -435,6 +440,82 @@
 				font-weight: bold;
 				color: #248;
 			}
+	/*Position*/
+		.position{
+			position: relative;
+			min-height: 300px;
+		}
+		.position div{
+			max-height: 2.5rem;
+			border: .2rem solid #333;
+			padding: .5rem;
+			background-color: #ccc;
+		}
+		.position :first-child{
+			position: static;
+		}
+		.position :nth-child(2){
+			position: sticky;
+			top: 2.5rem;
+			z-index: 1;
+		}
+		.position:hover :nth-child(3){
+			position: relative;
+			bottom: .5rem;
+			left: .5rem;
+			box-shadow: -.5rem .5rem .1rem #333;
+		}
+		.position:hover :nth-last-child(2){
+			position: fixed;
+			right: 50%;
+			top: 50%;
+		}
+		.position:hover :last-child{
+			margin: 2rem;
+			position: absolute;
+			bottom: .5rem;
+			right: .5rem;
+		}
+	/*menu desplegable*/
+		.menu{ 
+			display: flex;
+			background: linear-gradient(#66c, #448); 
+		}
+		.menu, .menu ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu a{
+			display: block;
+			padding: .5rem 1rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		.menu li{
+			position: relative;
+		}
+		.menu li li{
+			min-width: 8rem;
+		}
+		.menu ul{
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: linear-gradient(to right,#66c, #448);
+		}
+		.menu ul ul{
+			top: 0;
+			left: 100%;
+		}
+		.menu li:hover{
+			background-color: rgba(51,51,51,.5) /* #333 */
+		}
+		.menu li:hover > ul{
+			display: block;
+		}
+
 /*Footer*/
 	#footer{
 		padding: 1rem;
