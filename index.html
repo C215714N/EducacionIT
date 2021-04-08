@@ -329,7 +329,6 @@
 		<h3></h3>
 		<p></p>
 		<h3></h3>
-		<h3></h3>
 		<ul class="content">
 			<li>Capitulo Principal
 				<ul>
@@ -540,7 +539,42 @@
 				</ul>
 			</li>
 		</ul>
-
+	</section>
+	<section>
+		<h2>Position</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, exercitationem harum voluptate consequuntur quae sequi neque necessitatibus ipsam eius quod molestiae. Maiores consectetur corrupti minus! Exercitationem possimus labore, fugit iusto aliquam aliquid accusamus sapiente cum, nulla repellat odit totam voluptatem excepturi aspernatur, eos! Nostrum quae sequi debitis alias exercitationem quia corrupti sunt sint distinctio cumque, beatae earum repellendus dicta fuga dolor neque! Soluta debitis, doloremque exercitationem, impedit possimus nulla nostrum assumenda repudiandae illo unde eligendi culpa vitae. Vero similique harum, rerum neque nihil suscipit sunt est fugiat nobis minus odit omnis? Harum, repellendus soluta numquam. Doloremque tempora cumque quo porro.
+		</p>
+		<h3>Tipos de posicionamiento</h3>
+		<ul>
+			<li>
+				<strong>Static: </strong>
+				Es el valor predeterminado, donde el posicionamiento dentro de la pagina no se ve afectado, tampoco afecta al flujo de documento y los elementos con este tipo de posicion ocupan su propio lugar en la pagina.
+			</li>
+			<li>
+				<strong>Relative: </strong>
+				Es un tipo de posicion que le permite a la etiqueta utilizarse como su propio referente para cambiar su ubicacion dentro de la pagina, mantiene el espacio de su posicion original y no modifica el flujo de documento.
+			</li>
+			<li>
+				<strong>Absolute: </strong>
+				Es un tipo de posicion que toma como referente al ancestro proximo cuya posicion no sea static, de no existir se usa el body, la etiqueta adopta el tamaño de su contenido y se mantiene fuera del flujo del documento.
+			</li>
+			<li>
+				<strong>Fixed: </strong>
+				Al igual que el caso anterior, un elemento con este tipo de posicion permace fuera del flujo del documento, pero a diferencia de Absolute, la etiqueta toma como referente al viewport, es ideal para elementos flotantes.
+			</li>
+			<li>
+				<strong>Sticky: </strong>
+				En este caso la etiqueta permanece dentro del flujo del documento hasta cumplir determinada condicion relacionada con los atributos de position, para luego se mantiene fuera del mismo.
+			</li>
+		</ul>
+		<div class="example position">
+			<div>Position Static</div>
+			<div>Position Sticky</div>
+			<div>Position Relative</div>
+			<div>Position Fixed</div>
+			<div>Position Absolute</div>
+		</div>
 	</section>
 	<footer id="footer">
 		<form action="" id="contact">
