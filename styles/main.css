@@ -552,6 +552,7 @@
 			height: 6.5rem;
 		}
 		#contact button{
+			position: relative;
 			align-self: flex-end;
 			cursor: pointer;
 			margin-top: .2rem;
@@ -568,6 +569,9 @@
 		#contact button:hover{
 			color: #248;
 			background-color: #eee;
+			top: .25rem;
+			left: .25rem;
+			box-shadow: -.25rem -.25rem #66c;
 		}
 		/*validacion*/
 		#contact :valid{

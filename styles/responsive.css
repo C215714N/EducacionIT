@@ -1,0 +1,114 @@
+/*content first*/
+	/*import*/
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;900&family=RocknRoll+One&display=swap'
+		);
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
+	/*general rules*/
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, 'century gothic', sans-serif;
+		}
+		:root{
+			--pri: #448;
+			--light: #eee;
+			--dark: #333;
+			--hover: rgba(51,51,51,.5);
+			--gradient: linear-gradient(#86c, #224);
+		}
+		body{ margin: 0 }
+		.button{
+			cursor: pointer;
+			margin: .5rem;
+			outline: none;
+			border-radius: .5rem;
+			border: .2rem solid var(--light);
+			padding: .25rem .6rem;
+			color: var(--light);
+			background-color: transparent;
+			font: bold 1.2rem sans-serif;
+		}
+		.button:hover{
+			color: var(--pri);
+			background-color: var(--light)
+		}
+	/*navigation*/
+		nav{
+			position: sticky;
+			top: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: var(--gradient);
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: var(--light);
+			text-decoration: none;
+		}
+		nav > a:last-child{
+			position: fixed;
+			bottom: 1rem;
+			right: 1rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			background-color: var(--dark);
+			text-align: center;
+			opacity: .3;
+		}
+		nav > a:last-child:hover{
+			opacity: .6;
+		}
+		.brand{
+			font: bolder 1.2rem Raleway, sans-serif; /*style weight size family*/
+			text-transform: uppercase;
+		}
+		.menu{
+			display: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.menu.active{
+			display: block;
+		}
+		.menu a:hover{
+			background-color: var(--hover);
+		}
+	/*header*/
+		#header{
+			min-height: 200px;
+			height: 100vh; /* vh: alto del viewport; vw: ancho del viewport; */
+			max-height: 600px;
+			padding: 1rem;
+			color: var(--light);
+			background-color: var(--dark)
+		}
+		#header h1, 
+		#header p{
+			margin: 0;
+		}
+		#header h1{
+			font-family: 'star wars';
+			letter-spacing: .1rem;
+			font-size: calc(5vw + .8rem);
+		}
+		#header p{
+			font-size: calc(3vw + .8rem);
+		}
+	/*footer*/
+
+	/*contact form*/
+
+	/* social media*/
+
+/*medium devices (768px) */
+
+/*large devices (992px) */

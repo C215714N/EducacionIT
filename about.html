@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetacion</title>
+	<link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+	<nav>
+		<a href="#" class="brand">CSS</a>
+		<button class="button">&equiv;</button>
+		<ul class="menu">
+			<li><a href="index.html" title="Inicio"><span>inicio</span></a></li>
+			<li><a href="#" title="Acerca"><span>acerca</span></a></li>
+			<li><a href="gallery.html" title="Galeria"><span>galeria</span></a></li>
+			<li><a href="#contact" title="Contacto"><span>contacto</span></a></li>
+		</ul>
+		<a href="#">^</a>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<h1>Maquetacion Web</h1>
+			<p>html | css | js</p>
+		</div>
+		<ul class="slide">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="prev">&lt;</button>
+		<button class="next">&gt;</button>
+	</header>
+	<main>
+		<!-- Inserte contenido Aqui -->
+	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName"
+				type="text" 
+				placeholder="Ingrese su Nombre" 
+				pattern="[a-z A-Z ñÑ]{2,50}"
+				required />
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				placeholder="Ingrese su Telefono" 
+				pattern="[0-9]{6,20}"
+				required />
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10"
+				maxlength="200" 
+				placeholder="Ingrese su Consulta" 
+				required ></textarea>
+			<button>enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" class="facebook" target="_blank"></a>
+			<a href="https://instagram.com" class="instagram" target="_blank"></a>
+			<a href="https://whatsapp.com" class="whatsapp" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-j-19hs" class="github" target="_blank"></a>
+		</div>
+		<p class="copy">
+			&copy; Todos los derechos reservados | 
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
