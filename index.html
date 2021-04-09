@@ -26,7 +26,7 @@
 	</header>
 	<section>
 		<header class="header">
-			<h2>Elementos de una pagina Web</h2>
+			<h2>Elementos de una paginá Web</h2>
 		</header>
 		<article>
 			<header>
@@ -81,6 +81,42 @@
 					content-width = width - padding - border (260px)
 				</li>
 			</div>
+		</article>
+	</section>
+	<section>
+		<header class="header">
+			<h2>Estilización de la página</h2>
+		</header>
+		<article>
+			<header>
+				<h3>Jerarquia de Selectores</h3>
+			</header>
+			<p>
+				En css podemos indicar a que elementos les corresponde el conjunto de reglas que queremos aplicar, estos se dividen de manera jerarquia segun su importancia. Por defecto las etiquetas son las de menor jerarquia debido a que son selectores generales y los elementos que mayor peso tiene en las reglas son aquellos que se consideran unicos como los Id, ya que solamente puede correspoder uno por elemento.
+			</p>
+			<ul class="example">
+				<li>
+					<strong>Tag Selector</strong>
+					<ul>
+						<li><span>header</span>{...}</li>
+						<li><span>header</span> h1{...}</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Class Selector </strong>
+					<ul>
+						<li><span class="span">.header</span>{...}</li>
+						<li><span class="span">.header</span> h1{...}</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Id Selector</strong>
+					<ul>
+						<li><span id="span-1">#header</span>{...}</li>
+						<li><span id="span-2">#header</span> h1{...}</li>
+					</ul>
+				</li>
+			</ul>
 		</article>
 	</section>
 	<footer id="footer">
