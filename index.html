@@ -118,8 +118,128 @@
 				</li>
 			</ul>
 		</article>
+		<article>
+			<h3>Modelos de color</h3>
+			<p>
+				Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Itaque tenetur exercitationem, ea dignissimos quas, nisi dolorem quaerat earum, neque laudantium veritatis! Quo quae, alias. Ut at laudantium, in quis maiores beatae dolorem aperiam veritatis dignissimos tempore consequatur officia doloremque fugiat ipsa, temporibus excepturi, nobis sint quae pariatur consectetur amet deleniti.
+			</p>
+		</article>
+	</section>
+	<section>
+		<header class="header">
+			<h2>Introduccion a Flexbox</h2>
+		</header>
+		<article>
+			<h3>Atributo Justify-content</h3>
+			<p>
+				Es un modelo flexible de representacion de objetos dentro de la pagina, que permite la implementacion de un eje principal para la distribucion de los elementos y un eje secundario para la organizacion de los mismos. Una vez aplicado, todos los elementos que sean hijos directos, se consideraran bloques, facilitando la aplicacion de estilos
+			</p>
+			<ul class="example">
+				<li><strong>flex-start:</strong> es el valor predeterminado, el cual dispone las etiquetas dentro del contenedor al principio del eje principal (por defecto: izquierda)</li>
+				<li><strong>flex-end:</strong> este valor dispone los elementos del contenedor hacia el final del flex, manteniendo el orden de las etiquetas (por defecto: derecha)</li>
+				<li><strong>center:</strong> este valor centra las etiquetas dentro de flexbox en base al eje principal (por defecto: horizontal)</li>
+				<li><strong>space-around:</strong> separa las etiquetas aplicando la misma distancia para cada una, dichos valores se suman y como resultado la distancia de entre los border es menor a la que existe entre las etiquetas.</li>
+				<li><strong>space-between:</strong> separa las etiquetas de extremo a extremo, quedando la primera y la ultima pegada a los bordes, pero la distancia que existe entre el resto es equitativa.</li>
+				<li><strong>space-evenly:</strong> valor que no es compatible con todos los navegadores, pero que distribuye equitativamente todas las etiquetas dentro del contenedor</li>
+			</ul>
+			<div class="flex">
+				<div>div 1</div>
+				<div>div 2</div>
+				<div>div 3</div>
+				<div>div 4</div>
+				<span>span 5</span>
+				<span>span 6</span>
+				<span>span 7</span>
+				<span>span 8</span>
+			</div>
+		</article>
+		<article>
+			<h3>Atributo Align-items</h3>
+			<p>
+				En el eje principal podemos distribur los elementos a gusto, dentro de flexbox. Pero en el eje secundario podemos afectar la organizacion espacial de los mismos, por defecto este valor no esta definido y por lo tanto todas las etiquetas dentro del flex van a poseer la misma altura, debido a que se adaptan al contenedor.
+			</p>
+			<ul class="example">
+				<li><strong>flex-start:</strong> valor que dispone las etiquetas dentro del contenedor al principio del eje secundario (por defecto: arriba)</li>
+				<li><strong>flex-end:</strong> este valor dispone los elementos del contenedor hacia el final del flex, manteniendo el orden de las etiquetas (por defecto: abajo)</li>
+				<li><strong>center:</strong> este valor centra las etiquetas dentro de flexbox en base al eje principal (por defecto: vertical)</li>
+				<li><strong>baseline:</strong> permite la organizacion dentro del eje secundario tomando en cuenta los tamaños de la tipografia en los diferentes elementos, para mantener la legibilidad</li>
+				<li><strong>align-self:</strong> atributo que se define en una etiqueta que se encuentre dentro de flexbox y que permite alterar su organizacion con respecto al resto.</li>
+			</ul>
+			<div class="flex align">
+				<div>div 1</div>
+				<div>div 2</div>
+				<div>div 3</div>
+				<div>div 4</div>
+				<span>span 5</span>
+				<span>span 6</span>
+				<span>span 7</span>
+				<span>span 8</span>
+			</div>
+		</article>
+		<article>
+			<h3>Atributo flex-direction</h3>
+			<p>
+				Como se menciona anteriormente, flexbox posee un eje principal y un eje secundario en lugar de llamarlos x y, esto se debe a que el funcionamiento de este modelo es unidimensional y la distribucion y organizacion de los contenidos se realiza en base a esto. Por lo tanto, podemos cambiar la orientacion de dichos y modificar la forma en la que se representan las etiquetas
+			</p>
+			<ul class="example">
+				<li><strong>row</strong> es el valor predeterminado de orientacion de ejes y funciona generando los contenido de izquierda a derecha (eje principal), de arriba hacia abajo (eje secundario)</li>
+				<li><strong>column</strong> este valor genera los contenido en formato de columna, es decir, de arriba hacia abajo ( eje principal) y luego de izquierda a derecha (eje secundario) si existe un tamaño limite</li>
+				<li><strong>row-reverse</strong> a diferencia del primero, en este caso se invierte la orientacion del eje principal, es decir que los elementos se crean de derecha a izquierda, alterando el orden de visualizacion.</li>
+				<li><strong>column-reverse</strong> en este caso, se invierte la orientacion del eje principal, generando los contenido de abajo hacia arriba, pero manteniendo el eje secundario intacto</li>
+			</ul>
+			<div class="container">
+				<div class="flex align col">
+					<strong> column </strong>
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 5</span>
+					<span>span 6</span>
+					<span>span 7</span>
+					<span>span 8</span>
+				</div>
+				<div class="flex align row-r">
+					<strong> row-reverse </strong>
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 5</span>
+					<span>span 6</span>
+					<span>span 7</span>
+					<span>span 8</span>
+				</div>
+				<div class="flex align col-r">
+					<strong> column-reverse </strong>
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 5</span>
+					<span>span 6</span>
+					<span>span 7</span>
+					<span>span 8</span>
+				</div>
+			</div>
+			<ul class="ref">
+				<li><span class="justify"></span> Justify-content</li>
+				<li><span class="align-items"></span> Align-items</li>
+			</ul>
+		</article>
 	</section>
 	<footer id="footer">
+		<form action="" id="contact">
+			<label for="">Campo 1</label>
+			<input type="text">
+			<label for="">Campo 2</label>
+			<input type="text">
+			<label for="">Campo 3</label>
+			<input type="text">
+			<label for="">Campo 4</label>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<button>Enviar</button>
+		</form>
 		<p>
 			&copy; Todos los derechos reservados
 			<a href="#"> Cristian Racedo </a>

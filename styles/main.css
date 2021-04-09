@@ -87,23 +87,85 @@
 			background-color: #ccc;
 		}
 		/* jerarquias de selectores */
-			span{
+			.example span{
 				padding: .25rem;
 				color: darkred;
 				background-color: tomato;
 			}
-			#span-1, 
-			#span-2{
+			.example #span-1, 
+			.example #span-2{
 				color: navy;
 				background-color: skyblue;
 			}
-			.another{
+			.example .another{
 				color: #eee;
 				background-color: #333;
 			}
-			.span{
+			.example .span{
 				color: darkgreen;
 				background-color: lightgreen;
 			}
+		/* flexbox */
+			.flex{
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				margin: 1rem;
+				border: .3rem solid #333;
+			}
+			.flex div,
+			.flex span{
+				margin: .5rem;
+				border: .2rem dashed #224;
+				padding: .5rem 1rem;
+				color:#224;
+				background-color: #ccc
+			}
+			.align{
+				min-height: 300px;
+				align-items: flex-start ;
+			}
+			.align div{
+				font-size: 3rem;
+			}
+			.align span{
+				align-self: flex-end;
+			}
+			.col{
+				flex-direction: column;
+				border-left: .3rem dashed limegreen;
+				border-top: .3rem dashed tomato;
+			}
+			.row-r{
+				flex-direction: row-reverse;
+				border-top: .3rem dashed limegreen;
+				border-right: .3rem dashed tomato;
+			}
+			.col-r{
+				flex-direction: column-reverse;
+				border-left: .3rem dashed limegreen;
+				border-bottom: .3rem dashed tomato;
+			}
+			.container{
+				overflow: auto;
+				max-height: 360px;
+			}
+			.ref span{
+				display: inline-block;
+				width: 2rem;
+				height: 2rem;
+			}
+			.justify{ background-color: limegreen }
+			.align-items{	background-color: tomato }
 /*Pie de pagina*/
 	/*formulario de contacto*/
+		#contact{
+			max-width: 540px;
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+		}
+		#contact input,
+		#contact textarea{
+			padding: .5rem 1rem;
+		}
