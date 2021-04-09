@@ -35,7 +35,7 @@
 			<p>
 				Modelo implementado en HTML que permite definir la <em>jerarquia y funcionalidad</em> de cada parte de nuestra pagina, surge como una <strong>solucion al uso excesivo de DIVs</strong>, debido a que no existian elementos apropiados para el facilitar el posicionamiento.
 			</p>
-			<ul>
+			<ul class="example">
 				<li><strong>HEADER</strong> cabecera de pagina, contiene los titulos principales y siempre debe estar al comienzo.</li>
 				<li><strong>NAV</strong> navegacion de pagina, contiene los links mas importantes y puede estar dentro de la cabecera</li>
 				<li><strong>MAIN</strong> contenido principal de toda la pagina, destacado para el SEO</li>
@@ -55,13 +55,13 @@
 				<strong>Etiquetas de linea,</strong> son aquellas que comparten espacio con otros elementos, su tamaño es automatico y <em>funcionan como contenido.</em> Por ultimo, se encuentran las
 				<strong>Etiquetas de linea-bloque</strong> que toman caracteristicas de las anteriores ya que se les puede dar tamaño, comparten espacio con otros elementos,<em> pero se las trata como contenido(texto)</em>.
 			</p>
-			<ul>
+			<ul class="example">
 				<li><strong>margin: </strong> distancia que existe entre etiquetas, no suma tamaño y siempre aplica el mayor.</li>
 				<li><strong>border: </strong> linea que rodea la etiqueta, suma tamaño y por defecto su valor es 0.</li>
 				<li><strong>padding: </strong> relleno de una etiqueta, podria considerarse sangria y al igual que el borde suma tamaño</li>
 				<li><strong>content: </strong> elemento que se encuentran dentro de la etiqueta, se puede definir su tamaño.</li>
 			</ul>
-			<div class="example">
+			<div>
 				<pre>
 					header{
 						width: 350px;
@@ -106,14 +106,14 @@
 					<strong>Class Selector </strong>
 					<ul>
 						<li><span class="span">.header</span>{...}</li>
-						<li><span class="span">.header</span> h1{...}</li>
+						<li><span class="another span">.header</span> h1{...}</li>
 					</ul>
 				</li>
 				<li>
 					<strong>Id Selector</strong>
 					<ul>
-						<li><span id="span-1">#header</span>{...}</li>
-						<li><span id="span-2">#header</span> h1{...}</li>
+						<li><span id="span-1" class="span">#header</span>{...}</li>
+						<li><span id="span-2" class="span">#header</span> h1{...}</li>
 					</ul>
 				</li>
 			</ul>

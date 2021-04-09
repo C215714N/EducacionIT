@@ -12,7 +12,10 @@
 		box-sizing: border-box;
 		font-family: raleway, century gothic, sans-serif;
 	}
-	body{
+	body, 
+	h1, 
+	h2, 
+	h3{
 		margin: 0;
 	}
 /*Navegacion*/
@@ -34,3 +37,73 @@
 	.menu li:hover{
 		background-color: rgba(51, 51, 51, .5);
 	}
+/*cabeceras*/
+	#header{
+		padding: 22% 1rem 18%;/*top right bottom left*/
+		color: #eee; /*rrggbb = #eeeeee = rgb(238, 238, 238) */ 
+		text-align: center;
+		text-shadow: 
+			-2px 2px 2px #333,
+			0 0 .2rem #333;/* -x+ -y+ blur color */
+		background-color: #66c;
+		background-image: 
+			url('../assets/icon/css.svg'),
+			url('../assets/img/osx-mojave-night.jpg');
+		background-size: 20%, cover; /* width height || keywords */
+		background-position: 50% 5% , center; /*x y || keywords*/
+		background-repeat: no-repeat;
+		background-attachment: scroll, fixed;
+	}
+	.header{
+		margin: -.5rem -.5rem .5rem; /*top right bottom left*/
+		border-radius: .5rem .5rem 0 0; /*tl tr br bl*/
+		padding: .5rem;
+		color: #eee;
+		text-shadow: 
+			-2px 2px 2px #333,
+			0 0 .2rem #333;/* -x+ -y+ blur color */
+		background-image: linear-gradient(#66c, #224);
+	}
+	section header{
+		color: #224;
+		border-bottom: .2rem solid #224;
+	}
+/*contenido*/
+	section{
+		max-width: 960px;
+		margin: 1rem auto;
+		border-radius: .5rem;
+		padding: .5rem;
+		box-shadow: 0 0 .5rem #333;
+	}
+	/*examples*/
+		.example{
+			margin: 1rem; /* rem => ancho de "M" en la raiz (html) */
+			margin-left: 3rem;
+			border-left: .2rem solid #448; /* width style color */
+			padding: 1.5rem;
+			list-style: none;
+			line-height: 1.5rem;
+			background-color: #ccc;
+		}
+		/* jerarquias de selectores */
+			span{
+				padding: .25rem;
+				color: darkred;
+				background-color: tomato;
+			}
+			#span-1, 
+			#span-2{
+				color: navy;
+				background-color: skyblue;
+			}
+			.another{
+				color: #eee;
+				background-color: #333;
+			}
+			.span{
+				color: darkgreen;
+				background-color: lightgreen;
+			}
+/*Pie de pagina*/
+	/*formulario de contacto*/
