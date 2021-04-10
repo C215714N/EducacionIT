@@ -13,12 +13,17 @@
 <body>
 	<nav>
 		<a href="#" class="logo">CSS</a>
+		<form id="search">
+			<label for="inputSearch">Buscar</label>
+			<input type="search" id="inputSearch" name="inputSearch">
+			<button class="button">Buscar</button>
+		</form>
 		<button class="button">&equiv;</button>
 		<ul class="menu">
-			<li><a href="index.html" title="inicio">inicio</a></li>
-			<li><a href="#" title="acerca">acerca</a></li>
-			<li><a href="gallery.html" title="galeria">galeria</a></li>
-			<li><a href="#contact" title="contacto">contacto</a></li>
+			<li><a class="icon-home" href="index.html" title="inicio"><span>inicio</span></a></li>
+			<li><a class="icon-about" href="#" title="acerca"><span>acerca</span></a></li>
+			<li><a class="icon-gallery" href="gallery.html" title="galeria"><span>galeria</span></a></li>
+			<li><a class="icon-contact" href="#contact" title="contacto"><span>contacto</span></a></li>
 		</ul>
 	</nav>
 	<header id="header">
@@ -44,6 +49,7 @@
 	</main>
 		<footer id="footer">
 		<form id="contact" action="" method="POST">
+			<h2>Contactanos</h2>
 			<label for="contactName">Nombre</label>
 			<input 
 				id="contactName"
@@ -88,16 +94,16 @@
 				maxlength="200" 
 				placeholder="Consulta (*): Buenas tardes, necesito un presupuesto" 
 				required></textarea>
-			<button>Enviar</button>
+			<button class="button">Enviar</button>
 			<div>
 				Todos los campos con asterisco <span>(*)</span> son obligatorios.
 			</div>
 		</form>
 		<div class="social">
-			<a href="https://facebook.com" class="facebook" target="_blank">social</a>
-			<a href="https://instagram.com" class="instagram" target="_blank">social</a>
-			<a href="https://twitter.com" class="twitter" target="_blank">social</a>
-			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-s-10hs" class="github" target="_blank">social</a>
+			<a href="https://facebook.com" class="icon-facebook" target="_blank"></a>
+			<a href="https://instagram.com" class="icon-instagram" target="_blank"></a>
+			<a href="https://twitter.com" class="icon-twitter" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-s-10hs" class="icon-github" target="_blank"></a>
 		</div>
 		<p>
 			&copy; Todos los derechos reservados

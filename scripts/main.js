@@ -1,4 +1,4 @@
- const navBtn =	document.querySelector('nav .button');
+ const navBtn =	document.querySelector('nav > .button');
  const navMenu = document.querySelector('nav .menu');
 
  navBtn.onclick = () => { 

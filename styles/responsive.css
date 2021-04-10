@@ -1,8 +1,8 @@
 /*Content First*/
 	/*general rules*/
 		/*imports*/
+			@import url('icomoon.css');
 			@import url(
-
 				'https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;700&family=Raleway+Dots&family=Raleway:ital,wght@0,400;1,300;1,500&display=swap'
 			);
 			@font-face{
@@ -14,7 +14,7 @@
 				box-sizing: border-box;
 				font-family: Raleway, 'century gothic', sans-serif;
 			}
-			body{
+			body, h1, h2, h3{
 				margin: 0;
 			}
 			.button{
@@ -53,6 +53,7 @@
 			text-decoration: none;
 			font-weight: bold;
 			text-transform: capitalize;
+			font-size: 1.2rem;
 		}
 		.menu{
 			width: 100%;
@@ -65,8 +66,34 @@
 		.menu a:hover{
 			background-color: rgba(51,51,51,.5);
 		}
+		.menu span{
+			padding: .5rem;
+		}
 		nav .active{
 			height: auto;
+		}
+	/*search form*/
+		#search{
+			display: flex;
+			padding: .25rem;
+		}
+		#search label{
+			overflow: hidden;
+			width: 0;
+		}
+		#search input,
+		#search button{
+			outline: none;
+			border: .1rem solid #eee;
+			padding: .2rem .5rem
+		}
+		#search input{
+			border-color: white;
+			border-radius: .5rem 0 0 .5rem;
+		}
+		#search button{
+			margin: 0;
+			border-radius: 0 .5rem .5rem 0;
 		}
 	/*header*/
 		/*heading*/
@@ -79,7 +106,140 @@
 			}
 		/*slide*/
 		/*slide controls*/
+
 	/*content*/
 	/*footer*/
+		#footer{
+			padding: 1rem;
+			color: #eee;
+			background: linear-gradient(#66c, #224);
+		}
 		/*contact form*/
+			#contact{
+				max-width: 540px;
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+			}
+			#contact label{
+				overflow: hidden;
+				height: 0; 
+				margin-top: .5rem;
+			}
+			#contact input,
+			#contact textarea{
+				outline: none;
+				border-radius: .5rem;
+				border: .2rem solid transparent;
+				padding: .25rem .5rem;
+				font-size: 1rem;
+			}
+			#contact textarea{
+				resize: none;
+				min-height: 5rem;
+			}
+			#contact .validate{
+				display: none;
+				border-radius: 0 0 .5rem .5rem;
+				padding: .5rem;
+				background-color: #333;
+				font-weight: bolder;
+			}
+			#contact .button{
+				margin: .2rem 0;
+				align-self: flex-end;
+			}
+			/*validation*/
+				#contact input:focus{
+					border-color:#333;
+					box-shadow: 0 1rem #333
+				}
+				#contact :focus + .validate {
+					display: block;
+				}
+				#contact :focus:valid:not(button){
+					border-color: lightgreen;
+					box-shadow: 0 1rem lightgreen;
+				}
+				#contact :focus:valid + .validate{
+					color: darkgreen;
+					background-color: lightgreen;
+				}
 		/*social media*/
+			.social{
+				max-width: 540px;
+				min-height: 5rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: auto;
+			}
+			.social a{
+				margin: .25rem;
+				color: #eee;
+				text-decoration: none;
+				font-size: 2rem;
+			}
+			.social a:hover{
+				font-size: 4rem;
+				text-shadow: 0 0 .5rem;
+			}
+/*Small Devices*/
+	@media screen and (min-width: 576px){
+		/*navigation*/
+			nav > .button{
+				display: none;
+			}
+			.menu{
+				display: flex;
+				width: auto;
+				height: auto;
+			}
+			.menu span{
+				display: none;
+			}
+	}
+/*Medium Devices*/
+	@media screen and (min-width: 768px){
+		/*navigation*/
+			.menu span{
+				display: inline-block;
+			}
+		/*contact form*/
+			#contact label{
+				height: auto;
+			}
+	}
+/*Large Devices*/
+	@media screen and (min-width: 992px){
+		#contact{
+			display: grid;
+			grid-template-areas: 
+				'title 		title'
+				'lblname	lblphone'
+				'cmdname	cmdphone'
+				'valname	valphone'
+				'lblmail	lblmail'
+				'cmdmail	cmdmail'
+				'valmail	valmail'
+				'lblcon		lblcon'
+				'cmdcon		cmdcon'
+				'button		button'
+				'msg		msg';
+			gap: 0 .5rem;
+		}
+		#contact h2{ grid-area: title }
+		#contact label[for="contactName"] {grid-area: lblname}
+		#contact label[for="contactPhone"] {grid-area: lblphone}
+		#contact label[for="contactEmail"] {grid-area: lblmail}
+		#contact label[for="contactConsult"] {grid-area: lblcon}
+		#contactName { grid-area: cmdname }
+		#contactPhone { grid-area: cmdphone }
+		#contactEmail { grid-area: cmdmail }
+		#contactConsult { grid-area: cmdcon }
+		#contactName + .validate{ grid-area: valname }
+		#contactPhone + .validate { grid-area: valphone }
+		#contactEmail + .validate { grid-area: valmail }
+		#contact .button { grid-area: button }
+		#contact div:last-child{ grid-area: msg }
+	}
