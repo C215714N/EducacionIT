@@ -6,7 +6,9 @@
 		:root{
 			--fst: #448;
 			--snd: #eee;
+			--dark: #333;
 			--gradient: linear-gradient(#66c, #448);
+			--shadow: 0 0 .5rem #333;
 		}
 		*{
 			box-sizing: border-box;
@@ -90,14 +92,34 @@
 			display: block;
 		}
 	/* Header */
+		/* animation */
 		#header{
+			overflow: hidden;
 			position: relative;
 			height: 100vh;
 			color: var(--snd);
-			text-shadow: 0 0 .5rem #333;
+			text-shadow: var(--shadow);
 			text-align: center;
 			font-size: calc(2vw + .8rem);
+			animation-name: opacity;
+			animation-duration: 2s;
+			animation-timing-function: ease-out;
+			animation-delay: .5s;
+			animation-fill-mode: backwards;
 		}
+		#header .header{
+			animation: scale 3s ease-out .5s;
+			animation-fill-mode: backwards;
+		}
+		@keyframes opacity{
+			from{ opacity: 0 }
+			to{	opacity: 1	}
+		}
+		@keyframes scale{
+			from{ transform: scale(50); }
+			to{ transform: scale(1); }
+		}
+		/* gallery */
 		.header .slide{
 			display: flex;
 			justify-content: space-between;
@@ -152,8 +174,54 @@
 			color: var(--fst);
 			border-bottom: .2rem solid var(--fst);	
 		}
-	/*examples*/
+	/*background video*/
+		#video{
+			position: relative;
+			padding-bottom: 75%;
+			overflow: hidden;
+			/*
+				aspect	=>	calc width 	 | calc height
+				16:10 	=>	1.6(height)	 | 62.5 (width)
+				16:9 	=>	1.78(height) | 56.25% (width)
+				4:3		=>	1.33(height) | 75% (width)
+			*/
+		}
+		#video video{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		#video .button{
+			position:absolute;
+			bottom: 0;
+			right: 0;
+			transition: all 1s ease 1s;
+			text-shadow: var(--shadow);
+			box-shadow: var(--shadow);
+		}
+		#video:hover .button{
+			bottom: 80%;
+		}
+		#video:hover .description{
+			bottom: 0
+		}
+		.description{
+			position: absolute;
+			bottom: -200%;
+			margin: 0;
+			padding: 1rem;
+			background-color: #ccc8;
+			transition: all .5s ease 1s; /*property duration timing-function delay*/
+		}
+		.description strong{
+			font-size: 1.5rem;
+		}
+	/* examples */
 		.example{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: .5rem;
 			list-style: none;
 			margin: 1rem;
 			margin-left: 3rem;
@@ -161,6 +229,7 @@
 			border-left: .25rem solid #333;
 			background-color: var(--snd);
 		}
+		.example *{ transition: all 1s ease-in }
 		.example figure{
 			margin: .5rem;
 			min-width: 100px;
@@ -170,13 +239,57 @@
 		.example figure img{
 			width: 100%;
 		}
-		svg, canvas{
+		svg, 
+		canvas{
+			display: none;
 			height: 300px;
 			width: 300px;
 			border: 2px solid #333;
 		}
+		progress,
+		meter,
+		audio,
 		video{
 			width: 100%;
+		}
+	/* transform */
+		.transform div{
+			margin: .25rem;
+			border: .2rem dashed var(--snd);
+			padding: .5rem;
+			color: var(--snd);
+			background-color: var(--dark);
+			perspective: 3px;
+
+		}
+		.transform :nth-child(1){transform: scale(1.2);}
+		.transform :nth-child(2){transform: translate(5rem, .5rem);}
+		.transform :nth-child(3){transform: rotate(15deg);}
+		.transform :nth-child(4){transform: skew(-15deg);}
+		.transform :nth-child(5){transform: rotateY(15deg) rotateZ(30deg);}
+		.transform:hover div{
+			transform: 
+				rotateX(10deg)
+				rotateY(45deg);
+		}
+	/*animation*/
+		.animation div{
+			animation: colors 10s linear;
+			animation-fill-mode: backwards;
+			animation-iteration-count: 5;
+			animation-direction: alternate;
+		}
+		.animation :nth-child(1){ animation-direction: normal }
+		.animation :nth-child(2){ animation-direction: reverse }
+		.animation :nth-child(3){ animation-direction: alternate }
+		.animation :nth-child(1){ animation-direction: alternate-reverse; }
+		
+		@keyframes colors {
+			0%{ background-color: hsl(0, 50%, 50%) }
+			25%{ background-color: hsl(72deg, 50%, 50%) }
+			50%{ background-color: hsl(144, 50%, 50%) }
+			75%{ background-color: hsl(216, 50%, 50%) }
+			100%{ background-color: hsl(288, 50%, 50%) }
 		}
 	/* Footer */
 		#footer{
@@ -185,7 +298,12 @@
 			background: var(--gradient);
 		}
 /* Small Devices */
-
+	@media screen and (min-width: 576px){
+		svg, 
+		canvas{
+			display: inline-block;
+		}
+	}
 /* Medium Devices */
 	@media screen and (min-width: 768px){
 	/*navigation*/

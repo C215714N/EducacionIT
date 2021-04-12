@@ -89,16 +89,17 @@
 		}	}
 		input,
 		textarea{
-			@include normalize($b:.2rem solid transparent, $p: .25rem .5rem);
+			@include normalize(.25rem, .25rem .5rem, .2rem solid transparent, $ma:border-radius );
 			transition: all .5s ease;
+			font-size: 1rem;
 			&:focus{
+				border-color: #333;
 				transform: scale(1.1);
 				& + .valid{
-					@include normalize($p:.5rem, $b:#ccc, $ba:border-color);
+					@include normalize( 0 0 .25rem .25rem, .5rem, #ccc, $ba:border-color, $ma:border-radius );
 					transform: scale(1.1);
 					height: auto;
-					box-shadow: 0 0 .5rem #eee;
-					background-color: #ccc;
+					background-color: #333;
 					font-weight: bold;
 				}
 				&:valid{

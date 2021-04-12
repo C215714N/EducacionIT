@@ -342,26 +342,27 @@
 }
 #contact input,
 #contact textarea {
-  margin: 0;
+  border-radius: 0.25rem;
   outline: none;
   border: 0.2rem solid transparent;
   padding: 0.25rem 0.5rem;
   transition: all 0.5s ease;
+  font-size: 1rem;
 }
 #contact input:focus,
 #contact textarea:focus {
+  border-color: #333;
   transform: scale(1.1);
 }
 #contact input:focus + .valid,
 #contact textarea:focus + .valid {
-  margin: 0;
+  border-radius: 0 0 0.25rem 0.25rem;
   outline: none;
   border-color: #ccc;
   padding: 0.5rem;
   transform: scale(1.1);
   height: auto;
-  box-shadow: 0 0 0.5rem #eee;
-  background-color: #ccc;
+  background-color: #333;
   font-weight: bold;
 }
 #contact input:focus:valid,
