@@ -37,7 +37,7 @@
 				<p>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo vel est similique placeat eveniet, quasi quas voluptas possimus quaerat illo laudantium at fugit eius nesciunt nobis numquam, ut earum fuga.
 				</p>
-				<ul>
+				<ul class="example">
 					<li>
 						<strong>HEADER:</strong>
 						Contenido introductorio, contiene los titulos, tambien puede contener la navegacion e incluso una galeria a modo de presentacion.
@@ -78,7 +78,7 @@
 					<strong>Etiquetas de Linea</strong>
 					<strong>Etiquetas de LineaBloque</strong>
 				</p>
-				<ul>
+				<ul class="example">
 					<li>
 						<strong>MARGIN:</strong>
 						Distancia que separa a los elementos dentro de la pagina, no suma tamaño y siempre se aplica el mas grande.
@@ -94,6 +94,52 @@
 					<li>
 						<strong>CONTENT:</strong>
 						Elementos que se encuentran dentro de la etiqueta a los cuales se les puede asignar tamaño.
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Aspectos visuales con CSS</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Jerarquia de Selectores</h3>
+				</header>
+				<ul class="example prior">
+					<li>
+						<strong>Tag Selector</strong>
+						<ul>
+							<li><span>header</span>{...}</li>
+							<li><span>header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>.Class Selector</strong>
+						<ul>
+							<li><span class="span">.header</span>{...}</li>
+							<li><span class="another span">.header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>#Id Selector</strong>
+						<ul>
+							<li><span id="span" class="span">#header</span>{...}</li>
+							<li><span id="Span" class="span">#header</span> h1{...}</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h3>Unidades de Medida</h3>
+				</header>
+				<ul class="example">
+					<li>
+						<strong>Unidades Absolutas: </strong> Son aquellas que indistinatemente del medio en el que se vea la pagina, representan siempre lo mismo. Existen las medidas de <em>distancia:</em> mm, cm, in, pc; <em>tipograficas: </em> pt; y las <em>hibridas: </em>px (dependen de las resolucion de pantalla)
+					</li>
+					<li>
+						<strong>Unidades Relativas: </strong> Son aquellas que dependen del contexto y en base a este establecen su medida. Existen las medidas de <em>referencia:</em> % del contenedor; <em>tipograficas: </em>em, ex, ch; % de la fuente del elemento contenedor y las <em>hibridas:</em> rem (tamaño de la fuente en la raiz HTML).
 					</li>
 				</ul>
 			</article>

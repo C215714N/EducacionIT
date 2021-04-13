@@ -3,7 +3,10 @@
 		box-sizing: border-box;
 		font-family: Raleway, 'century gothic', sans-serif;
 	}
-	body{
+	body, 
+	h1, 
+	h2, 
+	h3{
 		margin:0;
 	}
 /*navegacion*/
@@ -26,7 +29,27 @@
 	#header{
 		padding: 20% 1rem; /*top right bottom left */
 		text-align: center;
-		background-color: #ccc;
+		color: #eee;
+		text-shadow: 0 0 .5rem #333;/*-x+ -y+ blur color*/
+		background-color: #333;
+		background-image:
+			url('../assets/icon/css.svg'), 
+			linear-gradient( #36c8, #1248),
+			/*colores rrggbbaa 
+			hex= min(00 => 0) 
+			avg(88 => 136) 
+			max(ff => 255)*/
+			url('../assets/img/osx-sierra.jpg');
+		background-position: 
+			center 1rem,
+			center,
+			center;/*keywords || x y*/
+		background-size: 
+			18%,
+			cover,
+			cover;/*keywords || width height*/
+		background-repeat: 
+			no-repeat;
 		/*
 			border-box:
 				final-width: width;
@@ -40,7 +63,34 @@
 			;
 		*/
 	}
-
 /*contenido principal*/
-
+	/*ejemplos*/
+		.example{
+			margin: 1rem;
+			margin-left: 3rem;
+			border-left: .2rem solid #248;
+			padding: .5rem;
+			list-style: none;
+			background-color: #eee;
+		}
+		/*jerarquia*/
+			.prior #span,
+			.prior #Span{
+				color: navy;
+				background-color: skyblue;
+			}
+			.prior .span{
+				display: inline-block;
+				color: darkgreen;
+				background-color: lightgreen;
+			}
+			.prior span{
+				padding: .25rem;
+				color: darkred;
+				background-color: tomato;
+			}
+			.prior .another{
+				color: #eee;
+				background-color: #333;
+			}
 /*pie de pagina*/
