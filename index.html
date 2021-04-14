@@ -144,10 +144,130 @@
 				</ul>
 			</article>
 		</section>
+		<section>
+			<header class="header">
+				<h2>Introduccion a Flexbox</h2>
+			</header>
+			<p>
+				Es un modelo de caja flexible, se utiliza para organizar y distribuir de manera simple el contenido de la etiqueta donde se aplique, si bien utiliza 2 ejes <em> (principal y secundario)</em> se lo considera un modelo unidireccional. Una vez aplicado, todas las etiquetas afectadas por flexbox (hijos directos) se consideraran de Bloque y se adaptan al tamaño de su contenedor.
+			</p>
+			<article>
+				<header>
+					<h3>Atributo Justify-content</h3>
+				</header>
+				<ul class="example">
+					<li><strong>flex-start:</strong>distribuye el contenido de la etiqueta al inicio del flex (por defecto: izquierda). Es el valor predeterminado</li>
+					<li><strong>center: </strong>distribuye el contenido de la etiqueta al centro del flex (por defecto: eje horizontal)</li>
+					<li><strong>flex-end: </strong>distribuye el contenido de la etiqueta al final del flex (por defecto: derecha)</li>
+					<li><strong>space-around: </strong> separa las etiquetas, aplicando la misma distancia para cada una, teniendo en centa que la misma se suma</li>
+					<li><strong>space-between: </strong>separa aplicando una distancia equitativa, teniendo en cuenta que la primer y ultima etiqueta quedaran en los extremos</li>
+					<li><strong>space-evenly: </strong>separa de manera equitativa todas las etiqueta dentro del contenedor, pero lamentablemente no es compatible con todos los navegadores</li>
+				</ul>
+				<div class="flex">
+					<div>Div 1</div>
+					<div>Div 2</div>
+					<div>Div 3</div>
+					<div>Div 4</div>
+					<span>Span 1</span>
+					<span>Span 2</span>
+					<span>Span 3</span>
+					<span>Span 4</span>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h3>Atributo Align-items</h3>
+				</header>
+				<ul class="example">
+					<li><strong>flex-start:</strong>organiza el contenido de la etiqueta al inicio del flex (por defecto: arriba).</li>
+					<li><strong>center: </strong>organiza el contenido de la etiqueta al centro del flex (por defecto: eje vertical)</li>
+					<li><strong>flex-end: </strong>organiza el contenido de la etiqueta al final del flex (por defecto: abajo)</li>
+					<li><strong>baseline: </strong>organiza las etiquetas de manera tal que su contenido sea legible independientemente de su tamaño.</li>
+					<li><strong>align-self: </strong> atributo que permite a una etiqueta dentro del flex definir su propia alineacion dentro del contenedor</li>
+				</ul>
+				<div class="flex align">
+					<div>Div 1</div>
+					<div>Div 2</div>
+					<div>Div 3</div>
+					<div>Div 4</div>
+					<span>Span 1</span>
+					<span>Span 2</span>
+					<span>Span 3</span>
+					<span>Span 4</span>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h3>Flex-direction</h3>
+				</header>
+				<ul class="example">
+					<li><strong>row: </strong> valor predeterminado, que indica que los elementos dentro del flex se crearan de izquierda a derecha y luego de arriba hacia abajo.</li>
+					<li><strong>column: </strong> indica que los elementos se crearan de arriba hacia abajo y luego de izquierda a derecha, en caso que el contenedor posea un tamaño limite.</li>
+					<li><strong>row-reverse: </strong> invierte el orden del eje horizontal (principal), creando el contenido de derecha a izquierda y luego de arriba hacia abajo</li>
+					<li><strong>column-reverse: </strong> invierte el orden del eje vertical (principal), creando el contenido de abajo hacia arriba y luego de izquierda a derecha, siempre y cuando el contenedor posea un tamaño limite.</li>
+				</ul>
+				<div class="container">
+					<div class="flex align col">
+						<strong>Column</strong>
+						<div>Div 1</div>
+						<div>Div 2</div>
+						<div>Div 3</div>
+						<div>Div 4</div>
+						<span>Span 1</span>
+						<span>Span 2</span>
+						<span>Span 3</span>
+						<span>Span 4</span>
+					</div>
+					<div class="flex align row-r">
+						<strong>Row-Reverse</strong>
+						<div>Div 1</div>
+						<div>Div 2</div>
+						<div>Div 3</div>
+						<div>Div 4</div>
+						<span>Span 1</span>
+						<span>Span 2</span>
+						<span>Span 3</span>
+						<span>Span 4</span>
+					</div>
+					<div class="flex align col-r">
+						<strong>Column-Reverse</strong>
+						<div>Div 1</div>
+						<div>Div 2</div>
+						<div>Div 3</div>
+						<div>Div 4</div>
+						<span>Span 1</span>
+						<span>Span 2</span>
+						<span>Span 3</span>
+						<span>Span 4</span>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<span class="jc"></span> 
+						<strong>Justify-content</strong>
+						<em>Main Axis (eje principal)</em>
+					</li>
+					<li>
+						<span class="ai"></span> 
+						<strong>Align-items</strong>
+						<em>Secondary Axis (eje secundario)</em>
+					</li>
+				</ul>
+			</article>
+		</section>
 	</main>
 	<footer id="footer"><!-- Pie de Pagina: desenlace -->
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
+			<label for="">campo</label>
+			<input type="text">
+			<label for="">campo</label>
+			<input type="text">
+			<label for="">campo</label>
+			<input type="text">
+			<label for="">campo</label>
+			<textarea></textarea>
+			<button>Enviar</button>
 		</form>
 		<div class="social">
 			<a href="https://.com" class="" target="_blank"></a>
