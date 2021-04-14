@@ -60,3 +60,45 @@
 			opacity: 0;
 		}
 	}
+// animaciones con less
+	@functions: lineal, cuadratica, trigonometrica, exponencial, limite;
+	.dir{ 
+		min-height: 100vh;
+		div{
+			width: 3rem;
+			height: 3rem;
+			color: var(--snd);
+			background-color: var(--fst);
+			.childs;
+	}	}
+
+	/* mixins recursivo nth-childs*/
+		.childs(@n: 1; @max:@functions) when(@n <= length(@max)){
+			&:nth-child(@{n}){
+				@f: extract(@max, @n);
+				animation: @f 5s linear @n * 2s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: backwards;
+			} .childs(@n + 1);
+		}
+	/* mixins recursivo keyframes */
+		.keyFrames (@n:1) when (@n <= length(@functions)){
+			@f: extract(@functions, @n);
+			@keyframes @f{
+			.animate(@x:-20px; @i: 0%) when (@i <= 100%){
+				@{i}{
+					transform:
+						if( @f = lineal, 
+							translate(@x + 20px, ( @x / 2px)),
+						if(	@f = cuadratica,
+							translate(@x + 20px, (pow(@x, 2px))),
+						if( @f = trigonometrica,
+							translate(@x + 20px, (sin(@x) * 50px)),
+						if( @f = exponencial,
+							translate(@x + 20px, pow(1.2px, @x)),
+							translate(@x + 20px, (1 /(@x + 20.1px)))	
+						)	)	)	);
+				}	.animate(@x + 5; @i + 5);
+			}	.animate;
+		}	.keyFrames(@n + 1);
+	}	.keyFrames;

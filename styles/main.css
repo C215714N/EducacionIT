@@ -1,5 +1,6 @@
 /* Content First */
 	/* imports */
+		@import url('icomoon.css');
 		@import url('grid.css');
 		@import url('background.css');
 	/* General Rules */
@@ -16,6 +17,7 @@
 		}
 		body{
 			margin: 0;
+			overflow-x: hidden;
 		}
 		h1, 
 		h2, 
@@ -56,7 +58,6 @@
 			position: relative;
 			display: block;
 			padding: .5rem 1rem;
-			text-align: center;
 			color: var(--snd);
 			text-decoration: none;
 			transition: all .5s ease-in;
@@ -68,10 +69,26 @@
 			padding: 0;
 			list-style: none;
 		}
+		.menu a{
+			display: flex;
+			align-items: center;
+			padding-left: 10vw;
+			font-size: 1.5rem
+		}
+		.menu span{
+			padding: .5rem;
+			font-size: 1rem;
+		}
 		.menu a:hover{
 			color: var(--snd);
 			background-color: rgba(51,51,51,.5);
 			transform: scale(1.2);
+		}
+		.menu a:hover::before{
+			animation: jump .5s ease-in;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			transform-origin: bottom center
 		}
 		.menu a::after{
 			content: '';
@@ -82,7 +99,7 @@
 			width: .2rem;
 			height: .1rem;
 			background-color: #448;
-			transition: all .5s ease-out;
+			transition: all 1s ease-out;
 		}
 		.menu a:hover::after{
 			width: 100%;
@@ -90,6 +107,25 @@
 		}
 		.menu.active{
 			display: block;
+		}
+		@keyframes jump{
+			0%{
+				transform: 
+					translateY(-.5rem)
+					rotate(0);
+			}
+			25%{
+				transform: 
+					rotate(30deg);
+			}
+			75%{
+				transform: 
+					rotate(-30deg);
+			}
+			100%{
+				transform: 
+					rotate(0);
+			}
 		}
 	/* Header */
 		/* animation */
@@ -144,6 +180,7 @@
 			height: 100%;
 			background-size: cover;
 			background-position: center;
+			background-attachment: fixed;
 			transition: all 1s ease;
 		}
 		.slide li.active{
@@ -162,6 +199,7 @@
 		main,
 		section,
 		article{
+			padding: .5rem;
 			margin: .5rem auto;
 		}
 		body :not(#header) .header{
@@ -174,7 +212,7 @@
 			color: var(--fst);
 			border-bottom: .2rem solid var(--fst);	
 		}
-	/*background video*/
+	/* Background video*/
 		#video{
 			position: relative;
 			padding-bottom: 75%;
@@ -217,11 +255,12 @@
 		.description strong{
 			font-size: 1.5rem;
 		}
-	/* examples */
+	/* Examples */
 		.example{
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			gap: .5rem;
+			overflow: hidden;
 			list-style: none;
 			margin: 1rem;
 			margin-left: 3rem;
@@ -252,7 +291,7 @@
 		video{
 			width: 100%;
 		}
-	/* transform */
+	/* Transform */
 		.transform div{
 			margin: .25rem;
 			border: .2rem dashed var(--snd);
@@ -260,7 +299,7 @@
 			color: var(--snd);
 			background-color: var(--dark);
 			perspective: 3px;
-
+			perspective-origin: bottom right;
 		}
 		.transform :nth-child(1){transform: scale(1.2);}
 		.transform :nth-child(2){transform: translate(5rem, .5rem);}
@@ -272,24 +311,57 @@
 				rotateX(10deg)
 				rotateY(45deg);
 		}
-	/*animation*/
+	/* Animation */
 		.animation div{
+			padding: .5rem;
 			animation: colors 10s linear;
 			animation-fill-mode: backwards;
-			animation-iteration-count: 5;
+			animation-iteration-count: infinite;
 			animation-direction: alternate;
 		}
 		.animation :nth-child(1){ animation-direction: normal }
 		.animation :nth-child(2){ animation-direction: reverse }
 		.animation :nth-child(3){ animation-direction: alternate }
 		.animation :nth-child(1){ animation-direction: alternate-reverse; }
-		
+
 		@keyframes colors {
 			0%{ background-color: hsl(0, 50%, 50%) }
-			25%{ background-color: hsl(72deg, 50%, 50%) }
+			25%{ background-color: hsl(72, 50%, 50%) }
 			50%{ background-color: hsl(144, 50%, 50%) }
 			75%{ background-color: hsl(216, 50%, 50%) }
 			100%{ background-color: hsl(288, 50%, 50%) }
+		}
+		.dir{
+			background:
+				linear-gradient(
+					hsl(0, 50%, 50%),
+					hsl(30, 50%, 50%),
+					hsl(60, 50%, 50%),
+					hsl(90, 50%, 50%),
+					hsl(120, 50%, 50%),
+					hsl(150, 50%, 50%),
+					hsl(180, 50%, 50%),
+					hsl(210, 50%, 50%),
+					hsl(240, 50%, 50%),
+					hsl(270, 50%, 50%),
+					hsl(300, 50%, 50%),
+					hsl(330, 50%, 50%),
+					hsl(360, 50%, 50%)
+				);
+			background-size: auto 1300%;
+			background-position: 0 -100%;
+			animation: moveit 60s linear .5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes moveit{
+			0%{ background-position:0  -100%; }
+			8.33%{ background-position:0  -200% }
+			16.66%{background-position:0  -300%}
+			25%{background-position:0  -400%}
+			50%{background-position:0 -500%} 
+			75%{background-position:0  -600%}
+			100%{background-position:0  -700%}
 		}
 	/* Footer */
 		#footer{
@@ -297,6 +369,7 @@
 			color: var(--snd);
 			background: var(--gradient);
 		}
+
 /* Small Devices */
 	@media screen and (min-width: 576px){
 		svg, 
@@ -315,6 +388,12 @@
 			width: auto;
 			display: flex;
 		}
+		.menu a{
+			padding: .5rem 1rem;
+		}
+		.menu span{
+			display: none;
+		}
 	/*content*/
 		main,
 		section,
@@ -323,6 +402,13 @@
 		}
 	}
 /* Large Devices */
+	@media screen and (min-width: 992px){
+	/* Navigation */	
+		.menu span{
+			display: block;
+		}
+	}
+/* ExtraLarge Devices */
 	@media screen and (min-width: 1200px){
 	/*content*/
 		main,

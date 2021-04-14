@@ -313,8 +313,9 @@
   transition: all 0.5s ease-out;
 }
 .social a:hover {
-  transform: scale(1.25) rotate(720deg);
   opacity: 0.8;
+  animation: jump 1s ease-out;
+  animation-iteration-count: infinite;
 }
 .social a:hover:active {
   opacity: 1;

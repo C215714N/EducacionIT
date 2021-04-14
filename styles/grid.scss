@@ -66,10 +66,9 @@
 			opacity: .6;
 			transition: all .5s ease-out;
 			&:hover{
-				transform: 
-					scale(1.25)
-					rotate(720deg);
 				opacity: .8;
+				animation: jump 1s ease-out;
+				animation-iteration-count: infinite;
 			&:active{
 				opacity: 1;
 				box-shadow: 0 0 .5rem #eee;
