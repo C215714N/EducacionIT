@@ -45,6 +45,7 @@
 			align-items: center;
 			flex-wrap: wrap;
 			background: var(--gradient);
+			z-index: 3;
 		}
 		nav a{
 			display: block;
@@ -91,34 +92,138 @@
 			padding: .5rem;
 		}
 	/*header*/
-		#header{
-			min-height: 200px;
-			height: 100vh; /* vh: alto del viewport; vw: ancho del viewport; */
-			max-height: 600px;
+		/* heading */
+			#header{
+				position: relative;
+				min-height: 200px;
+				height: 100vh; /* vh: alto del viewport; vw: ancho del viewport; */
+				max-height: 600px;
+				display: grid;
+				justify-content: center;
+				align-content: center;
+				text-align: center;
+				padding: 1rem;
+				color: var(--light);
+			}
+			#header h1, 
+			#header p{
+				margin: 0;
+				text-shadow: 0 0 .5rem var(--dark);
+			}
+			#header h1{
+				font-family: 'star wars';
+				letter-spacing: .1rem;
+				font-size: calc(3vw + .8rem);
+			}
+			#header p{
+				font-size: calc(1.5vw + .8rem);
+			}
+		/* gallery */
+			.slide,
+			.slide li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				z-index: -1;
+			}
+			.slide li{
+				background-position: center;
+				background-size: cover;
+				background-attachment: fixed;
+				opacity: 0;
+			}
+			.slide li:nth-child(1){background-image: url('../assets/img/osx-mavericks.png')}
+			.slide li:nth-child(2){background-image: url('../assets/img/osx-mojave-night.jpg')}
+			.slide li:nth-child(3){background-image: url('../assets/img/osx-sierra.jpg')}
+			.slide li:nth-child(4){background-image: url('../assets/img/osx-lion.png')}
+			.slide li.active{ opacity: 1 }
+		/* gallery controls */
+			#header button{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				outline: none;
+				border: none;
+				color: var(--light);
+				background-color: transparent;
+				font-size: calc(2vw + .8rem);
+				opacity: .3;
+			}
+			#header button:hover{ opacity: .7 }
+			#header .icon-prev{ left: .5rem }
+			#header .icon-next{ right: .5rem }
+	/*footer*/
+		#footer{
 			padding: 1rem;
 			color: var(--light);
-			background-color: var(--dark)
+			background: var(--gradient);
 		}
-		#header h1, 
-		#header p{
-			margin: 0;
+		#contact{
+			display: flex;
+			flex-direction: column;
+			margin: auto;
 		}
-		#header h1{
-			font-family: 'star wars';
-			letter-spacing: .1rem;
-			font-size: calc(5vw + .8rem);
+		#contact label{
+			height: 0;
+			margin-top: .5rem;
+			overflow: hidden;
 		}
-		#header p{
-			font-size: calc(3vw + .8rem);
+		#contact input,
+		#contact textarea{
+			outline: none;
+			border: .2rem solid transparent;
+			border-radius: .25rem;
+			padding: .5rem 1rem;
+			font-size: 1rem;
 		}
-	/*footer*/
-
-	/*contact form*/
-
+		#contact textarea{
+			resize: none;
+			min-height: 5rem;
+		}
+		#contact .button{
+			margin: .2rem 0;
+		}
+	/* validation */
+		#contact :focus{
+			box-shadow: 0 0 .5rem var(--light);
+		}
+		#contact :focus:valid:not(.button){
+			border-color: limegreen;
+		}
 	/* social media*/
-
+		.social{
+			display: flex;
+			justify-content: center;
+		}
+		.social a{
+			margin: .5rem;
+			padding: .5rem;
+			color: var(--light);
+			text-decoration: none;
+			font-size: calc(2vw + .8rem);
+		}	
+		.social .icon-facebook:hover{color: #248}
+		.social .icon-instagram:hover{color: magenta}
+		.social .icon-whatsapp:hover{color: limegreen}
+		.social .icon-twitter:hover{color: skyblue }
+		.social .icon-github:hover{color:var(--dark)}
+		.social a:hover{
+			border-radius: .5rem;
+			background-color: rgba(240,240,240,.7);
+			text-shadow: 0 0 .5rem var(--light);
+			box-shadow: 0 0 .5rem var(--light);
+		}
+		.social a:active{ background-color: var(--light) }
 /* small devices - smartphones*/
-
+	@media screen and (min-width: 576px){
+		#contact{
+			max-width: 540px;
+		}
+	}
 /* medium devices - tablets */
 	@media screen and (min-width: 768px){
 	/*navigation*/
@@ -136,6 +241,10 @@
 			padding: .5rem 1rem;
 			font-size: 1.5rem;
 		}
+	/* footer */
+		#contact label{
+			height: auto;
+		}
 	}
 /* large devices - netbooks (small desktop)*/
 	@media screen and (min-width: 992px){
@@ -147,5 +256,27 @@
 			display: block;
 			font-size: 1.2rem;
 		}
+	/* footer */
+		#contact{
+			max-width: 720px;
+		}
 	}
 /* extra large devices - hd devices */
+	@media screen and (min-width: 1200px){
+		#contact{
+			display: grid;
+			grid-template-areas: 
+				'heading heading'
+				'lblname lblphone'
+				'cmdname cmdphone'
+				'lbltext lbltext'
+				'cmdtext cmdtext'
+				'btnsend btnsend';
+			gap: 0 .5rem;
+		}
+		#contact h2{ grid-area: heading }
+		#contactName{ grid-area: cmdname }
+		#contactPhone{ grid-area: cmdphone }
+		#contactConsult{ grid-area: cmdtext }
+		#contact .button{ grid-area: btnsend }
+	}
