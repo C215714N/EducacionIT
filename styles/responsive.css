@@ -20,7 +20,10 @@
 			--hover: rgba(51,51,51,.5);
 			--gradient: linear-gradient(#86c, #224);
 		}
-		body{ margin: 0 }
+		body{ 
+			margin: 0;
+			counter-reset: seccion; 
+		}
 		.button{
 			cursor: pointer;
 			margin: .5rem;
@@ -156,6 +159,33 @@
 			#header button:hover{ opacity: .7 }
 			#header .icon-prev{ left: .5rem }
 			#header .icon-next{ right: .5rem }
+	/*content*/
+		section{
+			counter-reset: articulo;
+		}
+		section h2::before{
+			counter-increment: seccion;
+			content: 'Seccion ' counter(seccion);
+		}
+		section h3::before{
+			counter-increment: articulo;
+			content: 'Articulo ' counter(articulo);
+		}
+		section p::after{
+			content: 
+				'Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Veniam, autem eligendi atque quas fugit tenetur totam possimus obcaecati facilis quibusdam culpa consequuntur sunt tempora quam exercitationem! Odio quae sequi impedit esse soluta ea ipsam distinctio illum ipsum vel, atque maxime dignissimos natus alias veritatis exercitationem sapiente laudantium voluptates praesentium cupiditate odit corporis explicabo deleniti itaque? Id commodi dicta repudiandae, fugit, soluta exercitationem maiores libero sed delectus, officiis consequuntur, adipisci similique odit doloribus maxime? Suscipit in quisquam cum rerum ducimus corrupti sed culpa, voluptatem excepturi totam asperiores tenetur aspernatur non consectetur dicta similique voluptates eaque quod sit? Veritatis, minima impedit sunt.';
+		}
+	/*examples*/
+		.example{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: .5rem;
+		}
+		.example img{
+			width: 100%;
+			border: .5rem solid var(--dark);
+			border-radius: .5rem;
+		}
 	/*footer*/
 		#footer{
 			padding: 1rem;
