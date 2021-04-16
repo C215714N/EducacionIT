@@ -123,8 +123,28 @@
 				<h3>Modelos de color</h3>
 			</header>
 			<p>
-				Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Itaque tenetur exercitationem, ea dignissimos quas, nisi dolorem quaerat earum, neque laudantium veritatis! Quo quae, alias. Ut at laudantium, in quis maiores beatae dolorem aperiam veritatis dignissimos tempore consequatur officia doloremque fugiat ipsa, temporibus excepturi, nobis sint quae pariatur consectetur amet deleniti.
+				CSS permite la integracion de diferentes esquemas de color, por un lado estan los <strong>colores HTML</strong> que se representan mediante un nombre y existen 140 valores como darkslateblue; por otro lado existe el modelo RGB o sintesis adhitiva, que utiliza los canales de color, en este caso hay 2 variantes, la <strong>decimal</strong> como rgb(68,68,136) y la <strong>hexadecimal</strong> como #444488. Por ultimo tambien encontramos el modelo Luz tono saturacion que se representa como hsl(245, 40%, 40%)
 			</p>
+			<div class="example colors">
+				<div> Modelo HTML - <span>darkslateblue</span></div>
+				<div> Modelo RGB - <span>rgb(68,68,136)</span></div>
+				<div> Modelo HEX - <span>#444488</span></div>
+				<div> Modelo HSL - <span>hsl(245, 40%, 40%) </span></div>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Gradientes de Color</h3>
+			</header>
+			<p>
+				
+			</p>
+			<div class="example colors gradients">
+				<div>linear-gradient(color-a, color-b)</div>
+				<div>linear-gradient(dir, color-a, color-b)</div>
+				<div>radial-gradient(color-a, color-b)</div>
+				<div>radial-gradient(type, color-a, color-b)</div>
+			</div>
 		</article>
 	</section>
 	<section>
@@ -238,15 +258,53 @@
 	</section>
 	<footer id="footer">
 		<form action="" id="contact">
-			<label for="">Campo 1</label>
-			<input type="text">
-			<label for="">Campo 2</label>
-			<input type="text">
-			<label for="">Campo 3</label>
-			<input type="text">
-			<label for="">Campo 4</label>
-			<textarea name="" id="" cols="30" rows="10"></textarea>
-			<button>Enviar</button>
+			<label for="contactName">Nombre</label>
+			<input
+				id="contactName"
+				name="contactName" 
+				type="text" 
+				minlength="3"
+				maxlength="50"
+				pattern="[A-Z a-z ñÑ]{3,50}"
+				placeholder="Nombre: Cristian Racedo"
+				required />
+			<div class="validate">
+				Ingrese su nombre solamente con letras y espacios,
+				 entre 3 y 50 caracteres
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail"
+				type="email"  
+				minlength="8" 
+				placeholder="Correo: cristiandracedo@hotmail.com" 
+				required />
+			<div class="validate">
+				Ingrese su correo respetando la estructura
+				 usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input
+				id="contactPhone"
+				name="contactPhone"
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}" 
+				placeholder="Telefono: (011)0303-4567"
+				type="tel" /> <!-- (5411)2345-6789-->
+			<div class="validate">
+				Ingre su telefono, colocando la caracteristica 
+				 entre parentesis y los numeros separados cada 3 o 6 digitos
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Consulta: Buenas tardes, quisiera un presupuesto" 
+				required
+			></textarea>
+			<button>enviar</button>
 		</form>
 		<p>
 			&copy; Todos los derechos reservados

@@ -105,6 +105,73 @@
 				color: darkgreen;
 				background-color: lightgreen;
 			}
+		/* colores */
+			.colors div{
+				margin: .5rem;
+				border: .2rem solid #eee;
+				padding: .5rem;
+				color: #eee;
+			}
+			.colors span{
+				color: #ccc;
+				font-weight: lighter;
+				background-color: transparent;
+			}
+			.colors div:first-child{
+				background-color: darkslateblue;
+			}
+			.colors div:nth-child(2){
+				background-color: rgb(68,68,136);
+			}
+			.colors div:nth-last-child(2){
+				background-color: #448;
+			}
+			.colors div:last-child{
+				background-color: hsl(245, 40%, 40%)
+			}
+			/* html		rgb 		hex 	hsl
+					red 	255,0,0		#F00	0, 100%, 50%
+					yellow 	255,255,0 	#FF0 	60, 100%, 50%
+					green 	0,255,0 	#0F0 	120, 100%, 50%
+					cyan 	0,255,255 	#0FF 	180, 100%, 50%
+					blue 	0,0,255 	#00F 	240, 100%, 50%
+					magenta 255,0,255 	#F0F 	300, 100%, 50%
+					white 	255,255,255 #FFF	0, 0, 100%
+					black 	0,0,0 		#000	0, 0, 0
+					grey	128,128,128 #808080 0, 0, 50%
+				*/	
+		/* gradientes */
+			.gradients div{
+				margin: 1rem auto;
+				border: none;
+				text-shadow: 
+					-.1rem .1rem .1rem #333,
+					0 0 .5rem #333;/* -x+ -y+ blur color*/
+				box-shadow: -.5rem .5rem .25rem #333;
+			}
+			.gradients :first-child{
+				background: linear-gradient(#fc0, #0cf);
+			}
+			.gradients :nth-child(2){
+				background: linear-gradient(
+					45deg,
+					hsl(0, 50%, 50%), 
+					hsl(120, 50%, 50%),
+					hsl(240, 50%, 50%)
+				); /* tono, saturacion, luminosidad */
+			}
+			.gradients :nth-last-child(2){
+				background: radial-gradient( 
+					ellipse at center left,
+					rgb(30, 120, 180), 
+					rgb(30, 40, 120));
+			}
+			.gradients :last-child{
+				background: radial-gradient(
+					circle at top right, 
+					gold, tomato
+				);
+			}
 		/* flexbox */
 			.flex{
 				display: flex;
