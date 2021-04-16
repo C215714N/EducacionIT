@@ -146,6 +146,25 @@
 				<div>radial-gradient(type, color-a, color-b)</div>
 			</div>
 		</article>
+		<article>
+			<header>
+				<h3>Atributos de Borde</h3>
+			</header>
+			<div class="example borders blend">
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+				<div>Border: </div>
+			</div>
+		</article>
 	</section>
 	<section>
 		<header class="header">
@@ -258,6 +277,7 @@
 	</section>
 	<footer id="footer">
 		<form action="" id="contact">
+			<h2>Contactanos</h2>
 			<label for="contactName">Nombre (*)</label>
 			<input
 				id="contactName"
@@ -288,9 +308,11 @@
 			<input
 				id="contactPhone"
 				name="contactPhone"
+				minlength="8"
 				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}" 
 				placeholder="Telefono: (011)0303-4567"
-				type="tel" /> <!-- (5411)2345-6789-->
+				type="tel" 
+				required /> <!-- (5411)2345-6789-->
 			<div class="validate">
 				Ingre su telefono, colocando la caracteristica 
 				 entre parentesis y los numeros separados cada 3 o 6 digitos

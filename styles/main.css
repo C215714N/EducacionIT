@@ -172,6 +172,55 @@
 					gold, tomato
 				);
 			}
+		/*borders*/
+			.borders{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			.borders div{
+				min-width: 10rem;
+				margin: .5rem;
+				border: .2rem solid #333;
+				padding: 1rem;
+				line-height: 5rem;
+				color: #eee;
+				text-shadow: 
+					-.1rem .1rem .1rem #333, 
+					0 0 .5rem #333;
+				box-shadow: 0 0 .5rem #333, 0 -.5rem .2rem rgba(51, 51, 51, .8) inset;
+				background-image: 
+					url('../assets/img/poster-californication.jpg'),
+					linear-gradient(red, blue);
+				background-position: center;
+				background-attachment: fixed;
+				background-size: 90%;
+			}
+			.borders div:nth-child(1){border-radius: 1rem}
+			.borders div:nth-child(2){border-radius: 1rem 0}
+			.borders div:nth-child(3){border-radius: 1rem 1rem 0 0}
+			.borders div:nth-child(4){border-radius: 0 1rem 1rem 0}
+			.borders div:nth-child(5){border-radius: 50%}
+			.borders div:nth-child(6){border-radius: 50% 0 1rem 2px}
+			.borders div:nth-child(7){border-radius: 3rem / .5rem }
+			.borders div:nth-child(8){border-radius: .5rem / 3rem}
+			.borders div:nth-child(9){border-radius: 1rem 10rem / 5rem .25rem}
+			.borders div:nth-child(10){border-radius: 50% 1rem .5rem 25px / 5rem 1rem}
+			.borders div:nth-child(11){border-radius: 15rem 10px / .5rem 1rem 2rem 4rem}
+			.borders div:nth-child(12){border-radius: .5rem 1rem 2rem 4rem / 4rem 2rem 1rem .5rem}
+		/* modos de fusion */
+			.blend div:nth-child(1){background-blend-mode: multiply}
+			.blend div:nth-child(2){background-blend-mode: lighten }
+			.blend div:nth-child(3){background-blend-mode: darken }
+			.blend div:nth-child(4){background-blend-mode: difference }
+			.blend div:nth-child(5){background-blend-mode: color-burn }
+			.blend div:nth-child(6){background-blend-mode: color-dodge }
+			.blend div:nth-child(7){background-blend-mode: soft-light}
+			.blend div:nth-child(8){background-blend-mode: hard-light}
+			.blend div:nth-child(9){background-blend-mode: saturation}
+			.blend div:nth-child(10){background-blend-mode: luminosity}
+			.blend div:nth-child(11){background-blend-mode: overlay}
+			.blend div:nth-child(12){background-blend-mode: exclusion}
 		/* flexbox */
 			.flex{
 				display: flex;
@@ -226,6 +275,23 @@
 			.justify{ background-color: limegreen }
 			.align-items{	background-color: tomato }
 /*Pie de pagina*/
+	#footer{
+		padding: 1rem;
+		color:#eee;
+		background-color: #448;
+		background: linear-gradient(#66c, #224);
+	}
+	#footer a{
+		color: #eee;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	#footer > p{
+		border-top: .1rem solid #eee ;
+		border-bottom: .1rem solid #eee;
+		padding: .5rem;
+		text-align: center;
+	}
 	/*formulario de contacto*/
 		#contact{
 			max-width: 540px;
@@ -233,7 +299,52 @@
 			flex-direction: column;
 			margin: auto;
 		}
+		#contact label{
+			margin-top: .5rem;
+		}
 		#contact input,
 		#contact textarea{
+			outline: none;
+			border: .2rem solid transparent;
 			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			resize: none;
+			min-height: 6rem;
+		}
+		#contact .validate{
+			display: none;
+			padding: .5rem;
+			background-color: #333;
+		}
+		#contact button{
+			align-self: flex-end;
+			cursor: pointer;
+			margin: .2rem 0;
+			border: .1rem solid #eee;
+			border-radius: .25rem;
+			padding: .5rem 1rem; /*top right bottom left*/
+			color: #eee;
+			background-color: transparent;
+			font-size: 1rem;
+			text-transform: uppercase;
+		}
+		#contact button:hover{
+			color: #448;
+			background-color: #eee;
+		}
+	/* validacion */
+		#contact :focus{
+			box-shadow: 0 -.1rem .5rem #eee;
+		}
+		#contact :focus + .validate{
+			display: block;
+		}
+		#contact :focus:valid{
+			border-color: lightgreen;
+		}
+		#contact :focus:valid + .validate{
+			color: darkgreen;
+			background-color: lightgreen;
 		}
