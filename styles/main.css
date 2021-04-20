@@ -162,6 +162,53 @@
 		flex-direction: column;
 		margin: auto;
 	}
-	#contact button{
-		align-self: flex-end;
+	#contact label{
+		margin-top: .5rem;
 	}
+	#contact input,
+	#contact textarea{
+		outline: none;
+		border: .2rem solid transparent; /* width style color */
+		padding: .5rem 1rem;
+		font-size: 1rem;
+	}
+	#contact textarea{
+		min-height: 6rem;
+		resize: none;
+	}
+	#contact .valid{
+		display: none;
+		padding: .5rem;
+		background-color: #333;
+		font-weight: bold;
+	}
+	#contact button{
+		cursor: pointer;
+		align-self: flex-end;
+		margin: .25rem 0;
+		border-radius: .25rem;
+		border: .2rem solid #eee;
+		padding: .5rem 1rem;
+		color: #eee;
+		background-color: transparent;
+		font: bold 1rem sans-serif; /*style weigth size family*/
+		text-transform: uppercase;
+	}
+	#contact button:hover{
+		color: #248;
+		background-color: #eee;
+	}
+	/*validacion*/
+		#contact :focus{
+			box-shadow: 0 -.1rem .5rem #eee; /*x y blur spread color*/
+		}
+		#contact :focus + .valid{
+			display: block;
+		}
+		#contact :focus:valid:not(button){
+			border-color: lightgreen;
+		}
+		#contact :focus:valid + .valid{
+			color: darkgreen;
+			background-color: lightgreen;
+		}

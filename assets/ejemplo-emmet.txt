@@ -1,0 +1,32 @@
+Reglas de Emmet
+	padre>hijo => header>h1 { 
+		<header>
+			<h1></h1>
+		</header>
+	}
+	hermano+hermano => h1+p{
+		<h1></h1>
+		<p></p>
+	}
+	elemento[atributos="valores"] => a[href="#"] {
+		<a href="#"></a>
+	}
+	elemento{contenido} => p{Texto}{
+		<p>Texto</p>
+	}
+	combinado => (header>h1+p)+nav>ul>li>a*4{Link}{
+		<header>
+			<h1></h1>
+			<p></p>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="">Link</a>
+					<a href="">Link</a>
+					<a href="">Link</a>
+					<a href="">Link</a>
+				</li>
+			</ul>
+		</nav>
+	}

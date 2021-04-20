@@ -257,16 +257,53 @@
 		</section>
 	</main>
 	<footer id="footer"><!-- Pie de Pagina: desenlace -->
-		<form action="" id="contact">
+		<form action="" id="contact" method="POST">
 			<h2>Contactanos</h2>
-			<label for="">campo</label>
-			<input type="text">
-			<label for="">campo</label>
-			<input type="text">
-			<label for="">campo</label>
-			<input type="text">
-			<label for="">campo</label>
-			<textarea></textarea>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName" 
+				type="text"
+				maxlength="50" 
+				pattern="[A-Z a-z]{3,50}"
+				title="Ingrese solamente letras, entre 3 y 50 caracteres" 
+				placeholder="Nombre: Cristian Racedo" 
+				required />
+			<div class="valid">
+				Ingrese su nombre solamente con letras y espacios. 
+				El mismo debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email" 
+				minlength="8"
+				placeholder="Correo: Cristiandracedo@hotmail.com" 
+				required />
+			<div class="valid">
+				Ingrese un correo valido respetando la estructura
+				usuario@servidor, con un minimo de 8 caracteres
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel" 
+				pattern="[\(]\d{2,5}[\)]\d{3,6}[\-]\d{3,6}" 
+				title="Ingrese un numero como se muestra a continuacion (011)2345-6789"
+				placeholder="Telefono: (5411)0303-456" 
+				required />
+			<div class="valid">
+				Ingrese su telefono colocando la caracteristica entre parentesis y separando con guion cada 3 o 6 digitos.
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult"  
+				name="contactConsult"
+				minlength="10"
+				maxlength="200" 
+				required></textarea>
 			<button>Enviar</button>
 		</form>
 		<div class="social">
@@ -281,39 +318,6 @@
 			&amp; Compañia.
 		</p>
 	</footer>
-	<!-- Reglas de Emmet
-		padre>hijo => header>h1 { 
-			<header>
-				<h1></h1>
-			</header>
-		}
-		hermano+hermano => h1+p{
-			<h1></h1>
-			<p></p>
-		}
-		elemento[atributos="valores"] => a[href="#"] {
-			<a href="#"></a>
-		}
-		elemento{contenido} => p{Texto}{
-			<p>Texto</p>
-		}
-		combinado => (header>h1+p)+nav>ul>li>a*4{Link}{
-			<header>
-				<h1></h1>
-				<p></p>
-			</header>
-			<nav>
-				<ul>
-					<li>
-						<a href="">Link</a>
-						<a href="">Link</a>
-						<a href="">Link</a>
-						<a href="">Link</a>
-					</li>
-				</ul>
-			</nav>
-		}
-	-->
 	<!-- scripts -->
 	<script src="scripts/main.js"></script>
 </body>
