@@ -200,15 +200,15 @@
 	}
 	/*validacion*/
 		#contact :focus{
-			box-shadow: 0 -.1rem .5rem #eee; /*x y blur spread color*/
+			box-shadow: 0 -.1rem .5rem #eee; /*-x+ -y+ blur spread color*/
 		}
 		#contact :focus + .valid{
 			display: block;
 		}
-		#contact :focus:valid:not(button){
+		#contact :not(button):focus:valid{
 			border-color: lightgreen;
 		}
-		#contact :focus:valid + .valid{
+		#contact :valid + .valid{
 			color: darkgreen;
 			background-color: lightgreen;
 		}
