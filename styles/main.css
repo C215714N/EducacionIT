@@ -64,6 +64,11 @@
 		*/
 	}
 /*contenido principal*/
+	main{
+		max-width: 1140px;
+		margin: auto;
+		padding: 1rem;
+	}
 	/*ejemplos*/
 		.example{
 			margin: 1rem;
@@ -150,6 +155,63 @@
 			.ai{
 				background-color: tomato;
 			}
+		/*float*/
+		 	.float{
+		 		display: flex;
+		 		justify-content: center;
+		 		flex-wrap: wrap;
+		 	}
+			.float p{
+				width: 30%;
+				min-width: 320px;
+				overflow: hidden;
+				margin: .5rem;
+				padding: .5rem 1rem;
+				box-shadow: 0 0 .5rem;
+			}
+			.float img{
+				float: right;
+				width: 50%;
+				max-width: 320px;
+				margin-right: .5rem;
+			}
+		/*border*/
+			.border {
+				max-width: 720px;
+				margin: auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.border div{
+				margin: .5rem;
+				border: .2rem dashed #333;
+				padding: 1rem;
+				line-height: 5rem;
+				max-width: 15rem;
+				color: #eee;
+				background-color: #448;
+				background-image: url('../assets/img/poster-californication.jpg');
+				background-position: center;
+				background-size: cover;
+				background-attachment: fixed;
+				text-shadow: 
+					.1rem .1rem .1rem #333, 
+					0 0 .5rem #333;
+				box-shadow: 0 .5rem .2rem #633c inset;
+			}
+			.border :nth-child(1){ border-radius: 1rem }
+			.border :nth-child(2){ border-radius: 1rem 0 }
+			.border :nth-child(3){ border-radius: 1rem 1rem 0 0 }
+			.border :nth-child(4){ border-radius: 1rem 0 0 1rem }
+			.border :nth-child(5){ border-radius: 1rem / 15rem } /*x / y*/
+			.border :nth-child(6){ border-radius: 15rem / 1rem }
+			.border :nth-child(7){ border-radius: 10rem 0 / 10px 50%}
+			.border :nth-child(8){ border-radius: 50% 20px .2rem 20rem / 25% 1rem }
+			.border :nth-child(9){ border-radius: 50% 0 .5rem 2rem}
+			.border :nth-child(10){ border-radius: 50% 0 .5rem 2rem / 50% }
+			.border :nth-child(11){ border-radius:  50% 0 .5rem 2rem / 10px 50%}
+			.border :nth-child(12){ border-radius: 10rem 50% 20px 1rem / 1rem 20px 50% 10rem}
 /*pie de pagina*/
 	#footer{
 		padding: 1rem;
