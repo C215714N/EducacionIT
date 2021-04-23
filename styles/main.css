@@ -377,6 +377,39 @@
 				content: 
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, aut eveniet non atque suscipit facere, doloremque perferendis molestias necessitatibus nisi, deleniti, vero sit ratione quam. Nisi animi id nemo rem dolore asperiores soluta modi voluptatum, culpa sunt suscipit voluptate incidunt, qui, debitis commodi in et possimus non ut impedit nobis nostrum? Explicabo in beatae sequi debitis? Incidunt quae quisquam nemo perferendis reiciendis nesciunt nihil quo ipsa non esse dolore, dicta eligendi repellat ipsam sed ab! Quia nostrum, delectus iste, eveniet laborum et suscipit corporis fugit earum quisquam temporibus beatae aut iure assumenda ipsum, ut natus minus dolores alias. Quisquam, quam!'
 			}
+	/*table of contents*/
+		/* estilos */
+			.table-content,
+			.table-content ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				line-height: 1.5rem;
+				font-weight: bold;
+			}
+			.table-content{ margin: 1rem }
+			.table-content li{ color: #333 }
+			.table-content li li{ color: #666 }
+			.table-content li li li{ color: #999 }
+			.table-content li li li li{ color: #ccc }
+		/* reinicios */
+			.table-content{ counter-reset: primario }
+			.table-content ul{ counter-reset: secundario }
+			.table-content ul ul { counter-reset: terciario }
+			.table-content ul ul ul{ counter-increment: cuarto }
+		/* incrementos */
+			.table-content li{ counter-increment: primario }
+			.table-content li li{ counter-increment: secundario }
+			.table-content li li li{ counter-increment: terciario }
+			.table-content li li li li{ counter-increment: cuarto }
+		/* aplicacion */
+			.table-content li:before{
+				content: 
+					counter(primario) '.'
+					counter(secundario) '.'
+					counter(terciario) '.'
+					counter(cuarto) ' - '
+			}
 	/*social media*/
 		.social,
 		.social a{
