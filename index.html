@@ -275,6 +275,95 @@
 			</ul>
 		</article>
 	</section>
+	<section>
+		<header class="header">
+			<h2>Introduccion a CSS-Grid</h2>
+		</header>
+		<article>
+			<header>
+				<h3>Implementacion del Sistema de Grillas</h3>
+			</header>
+			<p>
+				Es un modelo de grillas multidimensional que nos permite organizar y distribuir los elementos dentro de un contenedor, pero a diferencia de Flexbox, CSS-Grid tiene sus ejes definidos, es decir, que la orientacion vertical y horizontal no se modifica. Pero aun asi podemos alterar el orden, la ubicacion y apariencia de los elementos que sean hijos directos.
+			</p>
+			<ul class="example">
+				<li>
+					<strong>grid-template-columns: </strong> Permite definir la cantidad de columnas que tendra nuestro sistema de grillas, a traves de sus tamaños, por defecto solo hay una.
+				</li>
+				<li>
+					<strong>grid-template-rows: </strong> Permite definir el tamaño de las filas indicadas, pero a diferencia de grid-template-columns, no podemos afectar la cantidad, por defecto es auto.
+				</li>
+				<li>
+					<strong>gap: </strong> separacion o calles entre etiquetas dentro de CSS-grid, funciona como shorthand de <em>row-gap y column-gap</em> para las filas y columnas respectivamente.
+				</li>
+				<li>
+					<strong>grid-column:</strong> Permite definir la ubicacion con respecto a las columnas, ademas del tamaño/cantidad de celdas que ocupara el elemento seleccionado dentro de CSS-grid
+				</li>
+				<li>
+					<strong>grid-row:</strong> Permite definir la ubicacion con respecto a las filas, ademas del tamaño/cantidad de celdas que ocupara el elemento seleccionado dentro de CSS-grid
+				</li>
+			</ul>
+			<div class="grid">
+				<div>Div 1</div>
+				<div>Div 2</div>
+				<div>Div 3</div>
+				<div>Div 4</div>
+				<span>Span 1</span>
+				<span>Span 2</span>
+				<span>Span 3</span>
+				<span>Span 4</span>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Organizacion y Distribucion de Contenido</h3>
+			</header>
+			<p>
+				Al igual que flexbox, CSS-Grid nos permite acomodar los elementos dentro del contenedor, pero a diferencia de este, no se modifica la ubicacion dentro de los elementos de la tabla. Cabe destacar que este modelo divide el contenedor principal en partes mas pequeñas consideradas celdas, que funcionan como etiquetas.
+			</p>
+			<ul class="example">
+				<li><strong>flex-start:</strong> Coloca la tabla al principio del flex, izquierda para justify-content y arriba para Align-content.</li>
+				<li><strong>flex-end:</strong> Coloca la tabla de al final del flex, derecha para justify-content y abajo para Align-content.</li>
+				<li><strong>center:</strong> Dispone la tabla de al centro del flex, horizontal para justify-content y vertical para Align-content.</li>
+				<li><strong>space-around:</strong> separa las celdas aplicando la misma distancia para cada una, dichos valores se suman y como resultado la distancia de entre los bordes es menor a la que existe entre las calles.</li>
+				<li><strong>space-between:</strong> separa las celdas de extremo a extremo, quedando la primera y la ultima pegada a los bordes, pero el tamaño de las calles es equitativo.</li>
+				<li><strong>space-evenly:</strong> valor que no es compatible con todos los navegadores, pero que distribuye equitativamente todas las celdas dentro del contenedor.</li>
+			</ul>
+			<div class="grid content">
+				<div>Div 1</div>
+				<div>Div 2</div>
+				<div>Div 3</div>
+				<div>Div 4</div>
+				<span>Span 1</span>
+				<span>Span 2</span>
+				<span>Span 3</span>
+				<span>Span 4</span>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Plantilla de Areas</h3>
+			</header>
+			<p>
+				CSS-grid permite de manera sensilla definir nombres que luego seran asignados a los elementos que sean hijos directos dentro de un contenedor, organizando las celdas entre filas y columnas independientemente de su posicion original respecto al HTML.
+			</p>
+			<ul class="example">
+				<li><strong>grid-template-areas: </strong> Permite definir una platilla, utilizando nombres a modo de variables y luego indicando por filas, entre comillas, el lugar que ocupa cada celda.</li>
+				<li><strong>grid-area: </strong> Asigna el area especificada al elemento seleccionado, respetando la plantilla del contenedor.</li>
+			</ul>
+			<div class="template">
+				<div>header</div>
+				<div>nav</div>
+				<div>article</div>
+				<div>article</div>
+				<div>main</div>
+				<span>aside</span>
+				<span>section</span>
+				<span>section</span>
+				<span>footer</span>
+			</div>
+		</article>
+	</section>
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
