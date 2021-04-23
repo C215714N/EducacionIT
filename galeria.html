@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;html> &amp; {css}</p>
+		<div id="nav">
+			<ul>
+				<li><!-- Ruta Relativa / Interna -->
+					<a href="index.html">inicio</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador (#id) -->
+					<a href="#">galeria</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador(#id) -->
+					<a href="#footer">contacto</a>
+				</li>
+				<li> <!-- Ruta Absoluta / Externa -->
+					<a href="https://github.com/c215714n/EducacionIT/tree/html-v-19" target="_blank">github</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios</strong> debido a que este caracter sera reemplazado por el <em>Conjunto %20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> el navegador interpretara <em>"foto%20.jpg"</em>, no pudiendo encontrar el archivo. Para evitar este problema, simplemente debemos <strong>Utilizar guiones (_-)</strong>, dando como resultado un nombre como <em>"foto_01.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como por ejemplo <em>"background.jpg"</em> o <em>"perritos_saltando.jpg"</em>, ya que facilitan el trabajo del desarrollador. Evitar nombres genericos como <em>"foto_01.jpg"</em>, asi como tambien nombres automatizados como <em>"2021-0423-201154100.jpg"</em>, especialmente si trabajamos con una gran cantidad de archivos.
+			</li>
+			<li>
+				<strong>Nombrar los archivos solamente con minusculas </strong>para reducir el margen de error, debido a que los servidores suelen estar basados en <em>UNIX</em> y son <em>caseSensitive</em>, es decir, distinguen entre mayusculas y minusculas. Por lo tanto, no serian lo mismo los nombres <em>"background.jpg", "Background.jpg", "BACKGROUND.jpg"</em>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</div>
+</body>
+</html>
