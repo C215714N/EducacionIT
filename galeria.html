@@ -3,6 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			font-family: segoe ui, calibri, sans-serif;
+			margin: 0;
+		}
+		main{
+			padding: 16px;
+		}
+		/* Selectores Multiples ( , ) */
+		header, footer{
+			padding: 20px;
+			color: #eee; /* rrggbb min:00 || max: FF(255)*/
+			background-color: #448;
+			text-align: center;
+		}
+		/* Selectores Especificos (padre hijo)*/
+		nav a{
+			color: #eee;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		nav ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			background-color: #66c;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/* pseudoclass: instancia o caracteristica de un elemento */
+		nav li:hover{
+			background-color: rgba(51, 51, 51, .5);
+		}
+		/* Selector de clase (.class) */		
+		.example{
+			margin: 10px;
+			padding: 10px;
+			text-align: center;
+			background-color: #ddd;
+		}
+		.example img{
+			width: 50%;
+			max-width: 300px;
+		}
+		.example p{
+			overflow: hidden;
+			padding: 10px;
+			background-color: #ccc;
+			text-align: left;
+		}
+		p img{
+			float: left;
+			margin-right: 10px;
+		}
+		/* Selector de Id (#id) */
+		#footer a{
+			color: #fff;
+		}
+	</style>
 </head>
 <body>
 	<header id="header">
