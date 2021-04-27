@@ -212,6 +212,51 @@
 			.border :nth-child(10){ border-radius: 50% 0 .5rem 2rem / 50% }
 			.border :nth-child(11){ border-radius:  50% 0 .5rem 2rem / 10px 50%}
 			.border :nth-child(12){ border-radius: 10rem 50% 20px 1rem / 1rem 20px 50% 10rem}
+	/*css-grid*/
+		.grid, 
+		.areas{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			gap: .5rem;
+			margin: 1rem;
+			border: .1rem solid #333;
+			padding: .5rem;
+		}
+		.grid div,
+		.grid span,
+		.areas div{
+			border: .2rem solid #ccc;
+			padding: 1rem;
+			color: #eee;
+			background: linear-gradient(#66c, #224);
+		}
+		.grid div:first-child{ grid-column: span 3 }
+		.grid div:last-of-type{ grid-row: span 3 }
+		.grid span:last-child{ grid-row: 3 / 6 }
+		.grid span:first-of-type{
+			grid-row: 5;
+			grid-column: 2 / span 2;
+		}
+		.content{
+			min-height: 480px;
+			justify-content: center;
+			align-content: center;
+		}
+		.areas{
+			grid-template-areas: 
+				'nav 	nav 	nav'
+				'header header  header'
+				'aside 	main 	main'
+				'aside 	section . '
+				'aside 	section . '
+				'footer footer  footer';
+		}
+		.areas :first-child{ grid-area: header }
+		.areas :nth-child(2){ grid-area: nav }
+		.areas :nth-child(3){ grid-area: main }
+		.areas :nth-last-child(3){ grid-area: section }
+		.areas :nth-last-child(2){ grid-area: aside }
+		.areas :last-child{ grid-area: footer }
 /*pie de pagina*/
 	#footer{
 		padding: 1rem;

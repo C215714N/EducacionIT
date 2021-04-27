@@ -159,7 +159,7 @@
 					<li><strong>flex-start:</strong>distribuye el contenido de la etiqueta al inicio del flex (por defecto: izquierda). Es el valor predeterminado</li>
 					<li><strong>center: </strong>distribuye el contenido de la etiqueta al centro del flex (por defecto: eje horizontal)</li>
 					<li><strong>flex-end: </strong>distribuye el contenido de la etiqueta al final del flex (por defecto: derecha)</li>
-					<li><strong>space-around: </strong> separa las etiquetas, aplicando la misma distancia para cada una, teniendo en centa que la misma se suma</li>
+					<li><strong>space-around: </strong> separa las etiquetas, aplicando la misma distancia para cada una, teniendo en cuenta que la misma se suma</li>
 					<li><strong>space-between: </strong>separa aplicando una distancia equitativa, teniendo en cuenta que la primer y ultima etiqueta quedaran en los extremos</li>
 					<li><strong>space-evenly: </strong>separa de manera equitativa todas las etiqueta dentro del contenedor, pero lamentablemente no es compatible con todos los navegadores</li>
 				</ul>
@@ -295,6 +295,82 @@
 					<div>Border-Radius</div>
 					<div>Border-Radius</div>
 					<div>Border-Radius</div>
+				</div>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Introduccion a CSS-Grid</h2>
+			</header>
+			<p>
+				Es un modelo que permite la creacion de un sistema de grillas, a diferencia de flexbox es multidimensional y trabaja con filas y columnas. El objetivo de Css-grid es poder realizar un layout complejo con unos pocos ajustes y control total del contenido de la etiqueta donde se aplique.
+			</p>
+			<article>
+				<header>
+					<h3>Sistema de grillas</h3>
+				</header>
+				<ul class="example">
+					<li><strong>grid-template-columns: </strong> Permite definir indirectamente la cantidad de columnas que tendra nuestro sistema de grillas, debido a que solamente especificamos los tamaños de las mismas.</li>
+					<li><strong>grid-template-rows:</strong> Permite definir el tamaño de las filas especificadas; a diferencia del atributo anterior, no define la cantidad. Su valor predeterminado es auto.</li>
+					<li><strong>gap: </strong> Calles o separacion entre filas y columnas, este atributo es el shorthand de row-gap y column-gap respectivamente.</li>
+					<li><strong>grid-column:</strong> Permite indicar al elemento hijo dentro del sistema de grillas cuantas columnas y cuales ocupara. Esto se hace indicando el inicio / fin o expansion de la misma mediante span.</li>
+					<li><strong>grid-row: </strong> Permite indicar al elemento hijo dentro del sistema de grillas cuantas filas y cuales ocupara. Esto se hace indicando el inicio / fin o expansion de la misma mediante span.</li>
+				</ul>
+				<div class="grid">
+					<div>Div 1</div>
+					<div>Div 2</div>
+					<div>Div 3</div>
+					<div>Div 4</div>
+					<span>Span 1</span>
+					<span>Span 2</span>
+					<span>Span 3</span>
+					<span>Span 4</span>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h3>Distribucion y Organizacion de la grilla</h3>
+				</header>
+								<ul class="example">
+					<li><strong>flex-start:</strong>distribuye la grilla al inicio del flex <em>(justify-content: izquierda || align-content: arriba)</em></li>
+					<li><strong>center: </strong>distribuye la grilla  centro del flex (justify-content: horizontal || align-content: vertical)</li>
+					<li><strong>flex-end: </strong>distribuye la grilla al final del flex (justify-content: derecha || align-content: abajo)</li>
+					<li><strong>space-around: </strong> separa las celdas aplicando la misma distancia para cada una, teniendo en cuenta esta se suma entre las separaciones.</li>
+					<li><strong>space-between: </strong>separa aplicando una distancia equitativa, teniendo en cuenta que la primer y ultima celda quedaran en los extremos</li>
+					<li><strong>space-evenly: </strong>separa de manera equitativa todas las celdas dentro del contenedor, pero lamentablemente no es compatible con todos los navegadores</li>
+				</ul>
+				<div class="grid content">
+					<div>Div 1</div>
+					<div>Div 2</div>
+					<div>Div 3</div>
+					<div>Div 4</div>
+					<span>Span 1</span>
+					<span>Span 2</span>
+					<span>Span 3</span>
+					<span>Span 4</span>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h3>Platilla de areas</h3>
+				</header>
+				<ul class="example">
+					<li>
+						<strong>grid-template-areas: </strong> Permite crear una plantilla, como modelo base para la organizacion de las celdas dentro del sistema de grillas, se describen por fila y se les asigna un nombre.
+					</li>
+					<li>
+						<strong>grid-area: </strong> Asigna una de las areas especificadas en la plantilla previamente diseñada con el atributo grid-template-areas.
+					</li>
+				</ul>
+				<div class="areas">
+					<div>HEADER</div>
+					<div>NAV</div>
+					<div>MAIN</div>
+					<div>ARTICLE</div>
+					<div>ARTICLE</div>
+					<div>SECTION</div>
+					<div>ASIDE</div>
+					<div>FOOTER</div>
 				</div>
 			</article>
 		</section>
