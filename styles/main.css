@@ -257,6 +257,90 @@
 		.areas :nth-last-child(3){ grid-area: section }
 		.areas :nth-last-child(2){ grid-area: aside }
 		.areas :last-child{ grid-area: footer }
+	/*
+		:pseudoclass = palabra clave que hace referencia a una instancia o caracteristica de un elemento.
+			:hover (pasar el mouse por encima - flotar)
+			:link (hipervinculo sin visitar)
+			:visited (hipervinculo visitado)
+			:active (elemento siendo seleccionado)
+			:focus (elemento seleccionado)
+			:first-child (primer hijo dentro de un contenedor)
+			:last-child (ultimo hijo dentro de un contenedor)
+			:first-of-type (primer elemento de su tipo)
+			:last-of-type (ultimo elemento de su tipo)
+		
+		::pseudoelement = palabra clave que hace referencia a una parte del contenido de un elemento u otro tipo de elemento dentro de una etiqueta.
+			::first-letter (primera letra de un contenido)
+			::first-line (primera linea de un contenido)
+			::before (contenido antes del contenido)
+			::after (contenido despues del contenido)
+	*/
+	main { counter-reset: capitulo }
+	main h2::before{
+		counter-increment: capitulo;
+		content: 'Capitulo ' counter(capitulo) ': ';
+	}
+	main > section{ counter-reset: tema }
+	main h3::before{
+		counter-increment: tema;
+		content: 'Tema ' counter(tema) ': ';
+	}
+	.pseudo h2::after{
+		content: 'Pseudo-Elementos'
+	}
+	.pseudo p::after{
+		content: 
+			'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam molestias doloremque harum eos veniam debitis, excepturi esse minima! At, quas consequatur voluptatibus deleniti. Dolores, in tenetur. Qui praesentium accusamus atque sequi cumque quisquam illo recusandae dolorum incidunt maxime sed at sint natus, ipsum reiciendis officiis nobis, dolore itaque eos quas aperiam corrupti minus dignissimos omnis velit. Exercitationem mollitia error cupiditate iusto magnam culpa hic doloremque natus repellendus est nostrum tenetur, neque recusandae qui quidem quod quam sequi labore voluptatum maxime repellat perspiciatis ex id nesciunt. Nulla, nam ex provident dolores magnam culpa facere dignissimos praesentium quod veritatis! Ad, nisi, libero?';
+	}
+	.pseudo p:first-of-type::before{
+		content: url('../assets/icon/css.svg');
+		width: 300px;
+		float: right;
+	}
+	.pseudo article{ 
+		margin: .5rem;
+		padding: 1rem;
+		box-shadow: 0 0 .5rem #ccc;
+		clear: both; 
+	}
+	.pseudo p:last-of-type::first-line{ background-color: gold }
+	.pseudo p:first-of-type::first-letter{
+		float: left;
+		margin-right: .5rem;
+		line-height: 4rem;
+		font-size: 5rem;
+	}
+	/* Tabla de contenidos */
+		/*diseño*/
+			.index,
+			.index ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				font-weight: bold;
+			}
+			.index li{ color: #222 }
+			.index li li{ color: #444 }
+			.index li li li{ color: #666 }
+			.index li li li li{ color: #888 }
+		/*contadores*/
+			.index{ counter-reset: primario }
+			.index ul{ counter-reset: secundario }
+			.index ul ul{ counter-reset: terciario }
+			.index ul ul ul{ counter-reset: cuarto }
+		/*incrementos*/
+			.index li{ counter-increment: primario }
+			.index li li{ counter-increment: secundario }
+			.index li li li{ counter-increment: terciario }
+			.index li li li li{ counter-increment: cuarto }
+		/*aplicacion*/
+			.index li:before{
+				content: 
+					counter(primario) 	'.'
+					counter(secundario) '.'
+					counter(terciario) 	'.'
+					counter(cuarto)		' - ';
+			}
 /*pie de pagina*/
 	#footer{
 		padding: 1rem;
