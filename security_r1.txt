@@ -1,0 +1,127 @@
+!
+version 15.1
+service timestamps log datetime msec
+service timestamps debug datetime msec
+service password-encryption
+!
+hostname R1
+!
+!
+!
+enable secret 5 $1$mERr$5jbOD5lHVUWxAAsNOD6eO/
+enable password 7 08314D5D1A
+!
+!
+!
+!
+!
+aaa new-model
+!
+aaa authentication login local_auth local 
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+username c215714n++ password 7 08345F4B1B
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524NWQ0-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name cisco.com
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 172.20.0.193 255.255.255.192
+ duplex auto
+ speed auto
+ ipv6 address FE80::C0:1 link-local
+ ipv6 address 2001:ACAD:AB14:C0::1/64
+ ipv6 enable
+!
+interface GigabitEthernet0/1
+ ip address 172.20.0.129 255.255.255.192
+ duplex auto
+ speed auto
+ ipv6 address FE80::80:1 link-local
+ ipv6 address 2001:ACAD:AB14:80::1/64
+!
+interface Serial0/0/0
+ ip address 10.0.0.1 255.255.255.252
+ ipv6 address FE80::A:1 link-local
+ ipv6 address 2001:ACAD:A::1/126
+ clock rate 2000000
+!
+interface Serial0/0/1
+ ip address 209.128.255.2 255.255.255.252
+ ip access-group autosec_firewall_acl in
+ clock rate 2000000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 172.20.1.0 255.255.255.224 10.0.0.2 
+ip route 172.20.0.0 255.255.255.128 10.0.0.2 
+ip route 172.20.1.32 255.255.255.224 10.0.0.2 
+ip route 0.0.0.0 0.0.0.0 209.128.255.1 
+!
+ip flow-export version 9
+!
+ipv6 route 2001:ACAD:AB14:100::/64 2001:ACAD:A::2
+ipv6 route 2001:ACAD:AB14::/64 2001:ACAD:A::2
+!
+access-list 100 permit udp any any eq bootpc
+ip access-list extended autosec_firewall_acl
+ permit udp any any eq bootpc
+ deny ip any any
+!
+no cdp run
+!
+banner motd Acceso restringido. Solo personal autorizado
+!
+!
+!
+!
+!
+logging trap debugging
+line con 0
+ transport output telnet
+ exec-timeout 5 0
+ login authentication local_auth
+!
+line aux 0
+!
+line vty 0 4
+ login authentication local_auth
+ transport input telnet
+!
+!
+!
+end
+
