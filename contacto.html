@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html" title="inicio">inicio</a></li>
+			<li><a href="galeria.html" title="galeria">galeria</a></li>
+			<li><a href="#contacto" title="contacto">contacto</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p>html | css | js</p>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h2>Formularios HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Para que sirven?</h3>
+				</header>
+				<p>
+					Son herramientas que sirven para intercambiar datos entre <strong>cliente / servidor</strong>, permiten una interaccion real entre el usuario y el sitio. Segun el tipo de formulario, lo que suceda con los datos dependera del servidor al momento de recibirlos y por ende la respuesta al envio no siempre sera la misma. Para implementarlos debemos colocar la etiqueta <em>&lt;form></em>con determinados atributos, y en su interior, etiquetas que se mencionan mas adelante, segun lo que deba colocar el usuario.
+				</p>
+				<ul class="example">
+					<li>Buscadores - Consulta Query</li>
+					<li>Inscripcion - Registro</li>
+					<li>Acceso - Inicio de Sesion</li>
+					<li>Contacto - Consulta Web</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Como funcionan?</h3>
+				</header>
+				<p>
+					La etiqueta mencionada anteriormente posee al menos <em>2 atributos</em> que debemos especificar. Por un lado, tenemos el <strong>action="..."</strong> que determina que sucedera con los datos una vez que se haya enviado el formulario, normalmente se coloca en su interior un <em>script en lenguaje de servidor(ej: php)</em> para que este resuelva que hacer con los datos. Por otro lado encontramos el atributo <strong>method="..."</strong> que indica cual es el tipo de prioridad y como se debe realizar el envio de los datos.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong> Se utiliza para obtener datos del servidor y por lo tanto la prioridad radica en la respuesta del mismo. La comunicacion se realiza en texto plano y por ende es mucho mas rapida, pero menos segura.
+					</li>
+					<li>
+						<strong>POST: </strong> Se utiliza para el envio de datos desde el cliente y por lo tanto la prioridad radica en el envio. La comunicacion se encripta y por lo tanto se lo considera un metodo mas seguro, pero mucho mas lento.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>¿Que elementos los componen?</h3>
+				</header>
+				<p>
+					Dentro de un formulario encontraremos <em>2 tipos de elementos</em>, las <strong>etiquetas(LABEL)</strong> que funcionan a modo de rotulos, identificando que datos debe ingresar / seleccionar el usuario y facilitan la accesibilidad; por otro lado los <strong>Campos(INPUT / TEXTAREA / SELECT)</strong> permiten al usuario en ingreso / seleccion de los datos, teniendo en cuenta que poseen <em>2 atributos necesarios</em> que son <strong>type="..."</strong> para indicar el tipo de dato a completar y <strong>value="..."</strong> que representa el valor ingresado/seleccionado que va a ser enviado.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text" />
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number" />
+					</li>
+					<li>
+						<label>Campo Correo (user@dom)</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo Contraseña (*****)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo Fecha (yyyy-mm-dd)</label>
+						<input type="date" />
+					</li>
+					<li>
+						<label>Opcion Unica</label>
+						<input type="radio" name="accept" value="1" /> si |
+						<input type="radio" name="accept" value="0" /> no
+					</li>
+					<li>
+						<label>Opcion Multiple</label>
+						<input type="checkbox" name="hobbie" value="art"> arte |
+						<input type="checkbox" name="hobbie" value="music"> musica |
+						<input type="checkbox" name="hobbie" value="sport"> deporte
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista Desplegable</label>
+						<select>
+							<option value="html">html</option>
+							<option value="css">css</option>
+							<option value="js">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset" />
+						<input type="submit" />
+						<button>ENVIAR</button>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form action="contacto.php" method="POST">
+			
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">Fb</a>
+			<a href="https://instagram.com" target="_blank">Ig</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/html-v-19" target="_blank">GitHub</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
+</body>
+</html>
