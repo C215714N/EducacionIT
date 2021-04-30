@@ -1,0 +1,72 @@
+/* Content First - Mobile First */
+	/* general rules */
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,100;1,200&display=swap'
+		);
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, sans-serif;
+		}
+		body, h1, h2, h3{ margin: 0 }
+	/* navigation */
+		nav{
+			position: sticky;
+			top: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background-color: #448;
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		nav > a:last-child{
+			position: fixed;
+			bottom: 1rem;
+			right: 1rem;
+			width: 2.5rem;
+			line-height: 2.5rem;
+			border-radius: 50%;
+			padding: 0;
+			text-align: center;
+			background-color: #333;
+			opacity: .3;
+		}
+		nav > a:hover:last-child{ opacity: .7 }
+		.button{
+			cursor: pointer;
+			margin: .5rem;
+			border-radius: .2rem;
+			border: .1rem solid #eee;
+			color: #eee;
+			background-color: transparent;
+			font-size: 1.2rem;
+		}
+		.button:hover{
+			color: #448;
+			background-color: #eee;
+		}
+		.menu{
+			display: none;
+			width: 100%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu a:hover{ background-color: rgba(51,51,51,.5) }
+		nav .active{ display: block }
+	/* header */
+	/* main content */
+	/* footer*/
+/* Small Devices - Smartphones*/
+
+/* Medium Devices - Tablets*/
+
+/* Large Devices - Desktop*/
+
+/* ExtraLarge Devices - HD Desktop*/
