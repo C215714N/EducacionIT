@@ -7,11 +7,14 @@
 			box-sizing: border-box;
 			font-family: Raleway, sans-serif;
 		}
-		body, h1, h2, h3{ margin: 0 }
+		body, h1, h2, h3, .header p{ margin: 0 }
+		.opacity{ opacity: .3 }
+		.opacity:hover{ opacity: .7 }
 	/* navigation */
 		nav{
 			position: sticky;
 			top: 0;
+			z-index: 1;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -34,10 +37,8 @@
 			border-radius: 50%;
 			padding: 0;
 			text-align: center;
-			background-color: #333;
-			opacity: .3;
+			background-color: #333
 		}
-		nav > a:hover:last-child{ opacity: .7 }
 		.button{
 			cursor: pointer;
 			margin: .5rem;
@@ -61,6 +62,54 @@
 		.menu a:hover{ background-color: rgba(51,51,51,.5) }
 		nav .active{ display: block }
 	/* header */
+		#header{
+			position: relative;
+			height: 100vh; /* viewport height - flexible */
+			min-height: 300px;
+			max-height: 600px;
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			text-align: center;
+			color: #eee;
+			text-shadow: 0 0 .5rem #333, -.1rem .1rem .1rem #333;
+			font-size: calc(2vw + .4rem);
+		}
+		#header button{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			outline: none;
+			border:none;
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .5rem #333;
+			background-color: transparent;
+			font-size: calc(2vw + .8rem);
+		}
+		#header .icon-prev{ left: 0 }
+		#header .icon-next{ right: 0 }
+		#header h1{ text-transform: uppercase; }
+		.slide{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.slide,
+		.slide li{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+		.slide li{ opacity: 0 }
+		.slide .active{ opacity: 1 }
+		.slide li:nth-child(1){background: linear-gradient(#3c6,#124)}
+		.slide li:nth-child(2){background: linear-gradient(#36c,#142)}
+		.slide li:nth-child(3){background: linear-gradient(#c63,#212)}
+		.slide li:nth-child(4){background: linear-gradient(#c6c,#421)}
 	/* main content */
 	/* footer*/
 /* Small Devices - Smartphones*/
