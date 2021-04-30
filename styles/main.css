@@ -19,6 +19,11 @@
 		margin: 0;
 	}
 /*Navegacion*/
+	nav{
+		position: sticky;
+		top: 0;
+		z-index: 2;
+	}
 	.menu{
 		list-style: none;
 		margin: 0;
@@ -377,38 +382,91 @@
 				content: 
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, aut eveniet non atque suscipit facere, doloremque perferendis molestias necessitatibus nisi, deleniti, vero sit ratione quam. Nisi animi id nemo rem dolore asperiores soluta modi voluptatum, culpa sunt suscipit voluptate incidunt, qui, debitis commodi in et possimus non ut impedit nobis nostrum? Explicabo in beatae sequi debitis? Incidunt quae quisquam nemo perferendis reiciendis nesciunt nihil quo ipsa non esse dolore, dicta eligendi repellat ipsam sed ab! Quia nostrum, delectus iste, eveniet laborum et suscipit corporis fugit earum quisquam temporibus beatae aut iure assumenda ipsum, ut natus minus dolores alias. Quisquam, quam!'
 			}
-	/*table of contents*/
-		/* estilos */
-			.table-content,
-			.table-content ul{
+		/*table of contents*/
+			/* estilos */
+				.table-content,
+				.table-content ul{
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					line-height: 1.5rem;
+					font-weight: bold;
+				}
+				.table-content{ margin: 1rem }
+				.table-content li{ color: #333 }
+				.table-content li li{ color: #666 }
+				.table-content li li li{ color: #999 }
+				.table-content li li li li{ color: #ccc }
+			/* reinicios */
+				.table-content{ counter-reset: primario }
+				.table-content ul{ counter-reset: secundario }
+				.table-content ul ul { counter-reset: terciario }
+				.table-content ul ul ul{ counter-increment: cuarto }
+			/* incrementos */
+				.table-content li{ counter-increment: primario }
+				.table-content li li{ counter-increment: secundario }
+				.table-content li li li{ counter-increment: terciario }
+				.table-content li li li li{ counter-increment: cuarto }
+			/* aplicacion */
+				.table-content li:before{
+					content: 
+						counter(primario) '.'
+						counter(secundario) '.'
+						counter(terciario) '.'
+						counter(cuarto) ' - '
+				}
+			/* position */
+				.position,
+				.position div{
+					margin: 1rem;
+					border: .1rem solid #448;
+					padding: 1rem;
+					background-color: rgba(204,204,204,.5);
+					position: relative;
+				}
+				.position div:nth-child(2){
+					position: relative;
+					top: .5rem;
+					left: .5rem;
+					box-shadow: -.5rem -.5rem #333;
+				}
+				.position div:nth-child(3){
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					z-index: 1;
+				}
+				.position div:nth-child(4){
+					position: fixed;
+					right: 0;
+					top: calc(50% - 2.75rem);
+					bottom: calc(50% - 2.75rem);
+				}
+				.position div:nth-child(5){
+					position: sticky;
+					bottom: 0;
+				}
+		/* Menu */
+			.menu li{
+				position: relative;
+			}
+			.menu ul{
+				position:absolute;
+				top: 100%;
+				left: 0;
+
+				display: none;
 				margin: 0;
 				padding: 0;
-				list-style: none;
-				line-height: 1.5rem;
-				font-weight: bold;
+				background-color: #448;
+				text-align: left;
 			}
-			.table-content{ margin: 1rem }
-			.table-content li{ color: #333 }
-			.table-content li li{ color: #666 }
-			.table-content li li li{ color: #999 }
-			.table-content li li li li{ color: #ccc }
-		/* reinicios */
-			.table-content{ counter-reset: primario }
-			.table-content ul{ counter-reset: secundario }
-			.table-content ul ul { counter-reset: terciario }
-			.table-content ul ul ul{ counter-increment: cuarto }
-		/* incrementos */
-			.table-content li{ counter-increment: primario }
-			.table-content li li{ counter-increment: secundario }
-			.table-content li li li{ counter-increment: terciario }
-			.table-content li li li li{ counter-increment: cuarto }
-		/* aplicacion */
-			.table-content li:before{
-				content: 
-					counter(primario) '.'
-					counter(secundario) '.'
-					counter(terciario) '.'
-					counter(cuarto) ' - '
+			.menu ul ul{
+				top: 0;
+				left: 100%;
+			}
+			.menu li:hover > ul{
+				display: block;
 			}
 	/*social media*/
 		.social,
