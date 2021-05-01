@@ -112,12 +112,38 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form action="contacto.php" method="POST">
-			
+		<form id="contacto" action="contacto.php" method="POST">
+			<label for="nombre">Nombre</label>
+			<input 
+				id="nombre" 
+				name="nombre"
+				type="text" 
+				minlength="3" 
+				maxlength="50" 
+				placeholder="Cristian Racedo" 
+				required />
+			<label for="email">Correo</label>
+			<input 
+				id="email"
+				name="email" 
+				type="email" 
+				minlength="8" 
+				placeholder="cristiandracedo@hotmail.com" 
+				required />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Buenos dias, necesito un presupuesto" 
+				required
+			></textarea>
+			<button>ENVIAR</button>
 		</form>
 		<div class="social">
-			<a href="https://facebook.com" target="_blank">Fb</a>
-			<a href="https://instagram.com" target="_blank">Ig</a>
+			<a href="https://facebook.com" target="_blank">Facebook</a>
+			<a href="https://instagram.com" target="_blank">Instagram</a>
 			<a href="https://github.com/c215714n/EducacionIT/tree/html-v-19" target="_blank">GitHub</a>
 		</div>
 		<p>
