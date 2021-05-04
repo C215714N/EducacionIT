@@ -15,10 +15,10 @@
 <body>
 	<nav><!-- Navegacion: Links mas importantes -->
 		<ul class="menu">
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-			<li><a href="#">Link 4</a></li>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="about.html">Acerca</a></li>
+			<li><a href="gallery.html">Galeria</a></li>
+			<li><a href="#contact">Contacto</a></li>
 		</ul>
 	</nav>
 	<header id="header"><!-- Cabecera: Introduccion -->
@@ -378,7 +378,6 @@
 			<header class="header">
 				<h2></h2>
 			</header>
-			<p></p>
 			<article>
 				<header>
 					<h3></h3>
@@ -470,6 +469,144 @@
 									<li>Subtema</li>
 									<li>Subtema</li>
 									<li>Subtema</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Flujo del Documento</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Tipos de posicion</h3>
+				</header>
+				<p>
+					Position es un atributo que permite alterar la ubicacion de una etiqueta dentro del flujo de documento, e incluso quitarlo del mismo. Es esta ocasion se describiran los distintos tipos de posicion y que toman como referente a la hora de calcular su ubicacion.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Position Static</strong> Es el valor predeterminado, la etiqueta no puede cambiar su ubicacion dentro del flow y tampoco sirve como referente.
+					</li>
+					<li>
+						<strong>Position Relative</strong> Permite al elemento cambiar su ubicacion dentro del flow, pero manteniendo su posicion original. La etiqueta se utiliza a si misma como referente.
+					</li>
+					<li>
+						<strong>Position Absolute</strong> Quita al elemento del flow y al aplicarlo el tamaño de la etiqueta se adapta al de su contenido. Utiliza como referente al primer ancestro cuya posicion no sea static.
+					</li>
+					<li>
+						<strong>Position Fixed</strong> Quita al elemento del flow, pero a diferencia de position absolute utiliza como referente al viewport anclando el elemento a la ventana del navegador.
+					</li>
+					<li>
+						<strong>Position Sticky</strong> Mantiene al elemento dentro del flow, hasta que se cumple determinada condicion relacionada con los atributos que modifican la ubicacion del elemento.
+					</li>
+				</ul>
+				<div class="position">
+					<div>Position Static</div>
+					<div>Position Relative</div>
+					<div>Position Absolute</div>
+					<div>Position Fixed</div>
+					<div>Position Sticky</div>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h3>Atributos de posicion</h3>
+				</header>
+				<ul class="example">
+					<li><strong>top</strong> desplaza al elemento desde la parte superior del referente.</li>
+					<li><strong>left</strong> desplaza al elemento desde la parte izquierda del referente.</li>
+					<li><strong>right</strong> desplaza al elemento desde la parte derecha del referente.</li>
+					<li><strong>bottom</strong> desplaza al elemento desde la parte inferior del referente.</li>
+					<li><strong>z-index</strong> determina el orden de superposicion entre elementos.</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a href="">Link 1</a>
+						<ul>
+							<li>
+								<a href="">Menu 1</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Menu 2</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Menu 3</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Link 2</a>
+						<ul>
+							<li>
+								<a href="">Menu 1</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Menu 2</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Menu 3</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Link 3</a>
+						<ul>
+							<li>
+								<a href="">Menu 1</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Menu 2</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Menu 3</a>
+								<ul>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
+									<li><a href="">Option</a></li>
 								</ul>
 							</li>
 						</ul>
