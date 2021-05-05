@@ -1,0 +1,69 @@
+/* Content First - Mobile First */
+	/*General Rules*/
+		@import url( 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,100&display=swap');
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, Century Gothic, sans-serif;
+		}
+		body, h1, h2, h3{ margin: 0 }
+	/*Navigation*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background-image: linear-gradient( 
+				hsl(210, 30%, 60%),
+				hsl(260, 30%, 70%) 
+			); /*hue (color), saturation(intensidad), luminosity(brillo)*/
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		.button{
+			cursor: pointer;
+			margin: .5rem;
+			border: .1rem solid #eee;
+			border-radius: .25rem;
+			color: #eee;
+			background-color: transparent;
+			font-size: 1.25rem;
+		}
+		.button:hover{
+			color: hsl(210, 30%, 60%);
+			background-color: #eee;
+		}
+		.menu{
+			display: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.menu a:hover{
+			background-color: #3338;
+		}
+		.icon-back{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			width: 2.5rem;
+			padding: 0;
+			border-radius: 50%;
+			line-height: 2.5rem;
+			text-align: center;
+			background-color: #333;
+			opacity: .3;
+		}
+		.icon-back:hover{ opacity: .7 }
+		nav .active{ display: block }
+/* Small Devices - Smartphones */
+
+/* Medium Devices - Tablets */
+
+/* Large Devices - Desktop */
+
+/* ExtraLarge Devices - HD Desktop */
