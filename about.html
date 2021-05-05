@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetacion Web</title>
+	<link rel="icon" href="assets/icon/css.svg">
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+	<!--Navigation-->
+	<nav>
+		<a class="logo" href="#">CSS</a>
+		<button class="button">&equiv;</button>
+		<ul class="menu">
+			<li><a href="index.html" title="Inicio"><span>Inicio</span></a></li>
+			<li><a href="#" title="Acerca"><span>Acerca</span></a></li>
+			<li><a href="gallery.html" title="Galeria"><span>Galeria</span></a></li>
+			<li><a href="#contact" title="Contacto"><span>Contacto</span></a></li>
+		</ul>
+		<a href="#" class="icon-back">^</a>
+	</nav>
+	<!-- Header -->
+	<header id="header">
+		<div class="header">
+			<h1>Maquetacion Web</h1>
+			<p>html | css | js</p>
+		</div>
+		<ul class="slide">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="icon-prev">&lt;</button>
+		<button class="icon-next">&gt;</button>
+	</header>
+	<!-- Content -->
+	<main>
+		<!-- Inserte contenido aqui -->
+	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input
+				id="contact" 
+				name="contact" 
+				type="text" 
+				placeholder="Cristian Racedo" 
+				minlength="3" 
+				maxlength="50" 
+				required />
+			<div class="valid">
+				Ingrese un nombre que posea entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail"></label>
+			<input
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email"
+				placeholder="CristianDRacedo@hotmail.com" 
+				minlength="8" 
+				required />
+			<div class="valid">
+				Ingrese un correo valido con la estructura usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input
+				id="contactPhone" 
+				name="contactPhone"
+				type="tel" 
+				placeholder="(5411)2345-6789"
+				maxlength="30" 
+				required />
+			<div class="valid">
+				Ingrese su numero respetando el formato (5411)1234-5678
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea
+				id="contactConsult" 
+				name="contactConsult" 
+				placeholder="Buenas, quisiera un presupuesto"
+				minlength="10" 
+				maxlength="200" 
+				required ></textarea>
+			<button class="button">Enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" class="facebook" target="_blank">1</a>
+			<a href="https://instagram.com" class="instagram" target="_blank">2</a>
+			<a href="https://twitter.com" class="twitter" target="_blank">3</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-m-19" class="github" target="_blank">4</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a class="logo" href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
+	<!-- Scripts -->
+	<script src="scripts/main.js"></script>
+</body>
+</html>
