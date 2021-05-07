@@ -9,6 +9,9 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Maquetacion Web</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
@@ -18,7 +21,7 @@
 		<ul class="menu">
 			<li><a class="icon-home" href="index.html" title="Inicio"><span>Inicio</span></a></li>
 			<li><a class="icon-about" href="#" title="Acerca"><span>Acerca</span></a></li>
-			<li><a class="icon-gallery" href="gallery.html" title="Galeria"><span>Galeria</span></a></li>
+			<li><a class="icon-gallery" href="#gallery" title="Galeria"><span>Galeria</span></a></li>
 			<li><a class="icon-contact" href="#contact" title="Contacto"><span>Contacto</span></a></li>
 		</ul>
 		<a class="opacity icon-back" href="#"></a>
@@ -37,8 +40,124 @@
 		<button class="opacity icon-prev" title="anterior"></button>
 		<button class="opacity icon-next" title="siguiente"></button>
 	</header>
-	<main>
-		<!-- Inserte contenido aquí -->
+	<main class="container">
+		<section id="gallery">
+			<h2>Galeria de Imagenes</h2>
+			<div class="gallery">
+				<img src="assets/img/jjba-starplatinum-01.jpg" alt="JJBA Star Platinum">
+				<img src="assets/img/jjba-starplatinum-02.jpg" alt="JJBA Star Platinum">
+				<img src="assets/img/jjba-starplatinum-03.jpg" alt="JJBA Star Platinum">
+				<img src="assets/img/jjba-starplatinum-04.jpg" alt="JJBA Star Platinum">
+				<img src="assets/img/jjba-silverchariot-01.jpg" alt="JJBA Silver Chariot">
+				<img src="assets/img/jjba-silverchariot-02.jpg" alt="JJBA Silver Chariot">
+				<img src="assets/img/jjba-silverchariot-03.jpg" alt="JJBA Silver Chariot">
+				<img src="assets/img/jjba-silverchariot-04.jpg" alt="JJBA Silver Chariot">
+				<img src="assets/img/jjba-thefool-01.jpg" alt="JJBA the Fool">
+				<img src="assets/img/jjba-thefool-02.jpg" alt="JJBA the Fool">
+				<img src="assets/img/jjba-thefool-03.jpg" alt="JJBA the Fool">
+				<img src="assets/img/jjba-thefool-04.jpg" alt="JJBA the Fool">
+			</div>
+		</section>
+		<section>
+			<h2>Breakpoints</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Tamaño</th>
+						<th>Maximo</th>
+						<th>Dispositivos</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> XS </td>
+						<td> <576px </td>
+						<td> - </td>
+						<td> celulares smartwatch </td>
+					</tr> 
+					<tr>
+						<td> SM </td>
+						<td> >=576px <678px </td>
+						<td> 540px </td>
+						<td> smartphones(portrait) </td>
+					</tr>
+					<tr>
+						<td> MD </td>
+						<td> >=768px <992px </td>
+						<td> 720px </td>
+						<td> tablets(portrait), smartphones(landscape) </td>
+					</tr>
+					<tr>
+						<td> LG </td>
+						<td> >=992px <1200px </td>
+						<td> 960px </td>
+						<td> desktop, tablets(landscape)</td>
+					</tr>
+					<tr>
+						<td> XL </td>
+						<td> >=1200px <1400px </td>
+						<td> 1140px </td>
+						<td> HD Desktop </td>
+					</tr>
+					<tr>
+						<td> XXL </td>
+						<td> >=1400px</td>
+						<td> 1320px </td>
+						<td> HD Desktop, SmartTV </td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Colores</h2>
+			<div class="row">
+				<ul class="list-unstyled col-md">
+					<li class="text-primary">text-@{color} <span class="bg-primary">primary</span></li>
+					<li class="text-secondary">text-@{color} <span class="bg-secondary">secondary</span></li>
+					<li class="text-light bg-dark">text-@{color} <span class="bg-light">light</span></li>
+					<li class="text-dark">text-@{color} <span class="bg-dark">dark</span></li>
+					<li class="text-warning">text-@{color} <span class="bg-warning">warning</span></li>
+					<li class="text-danger">text-@{color} <span class="bg-danger">danger</span></li>
+					<li class="text-success">text-@{color} <span class="bg-success">success</span></li>
+					<li class="text-info">text-@{color} <span class="bg-info">info</span></li>
+				</ul>
+				<ul class="list-unstyled col-md">
+					<li class="btn btn-primary">primary</li>
+					<li class="btn btn-secondary">secondary</li>
+					<li class="btn btn-light">light</li>
+					<li class="btn btn-dark">dark</li>
+					<li class="btn btn-warning">warning</li>
+					<li class="btn btn-danger">danger</li>
+					<li class="btn btn-success">success</li>
+					<li class="btn btn-info">info</li>
+				</ul>
+				<ul class="list-unstyled col-md">
+					<li class="btn btn-outline-primary">primary</li>
+					<li class="btn btn-outline-secondary">secondary</li>
+					<li class="btn btn-outline-light">light</li>
+					<li class="btn btn-outline-dark">dark</li>
+					<li class="btn btn-outline-warning">warning</li>
+					<li class="btn btn-outline-danger">danger</li>
+					<li class="btn btn-outline-success">success</li>
+					<li class="btn btn-outline-info">info</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>Sistema de Grillas (Bootstrap)</h2>
+			<p class="m-3">
+				Bootstrap utiliza un sistema de grillas basado en porcentajes y utilizando <strong>flexbox</strong> donde el contenedor con clase row se divide en <em>12 columnas</em> y cada columna representa un porcentaje del contenedor, siendo los valores de las clases <strong>col-1, col-3, col-4, col-6, col-12</strong> <em>8.33%, 25%, 33.3%, 50%, 100%</em>
+			</p>
+			<div class="row">
+				<p class="lorem | col-lg-6"></p>
+				<p class="lorem | col-lg-6"></p>
+				<p class="lorem | col-md-6 col-lg-4"></p>
+				<p class="lorem | col-md-4"></p>
+				<p class="lorem | col-md-4"></p>
+				<p class="lorem | col"></p>
+			</div>
+		</section>
 	</main>
 	<footer id="footer">
 		<form action="" id="contact">
@@ -102,6 +221,9 @@
 		</div>
 		<p class="copy">&copy; Todos los derechos reservados<a href=""> Cristian Racedo</a> &amp; Compañia</p>
 	</footer>
+	<!-- Main JS -->
 	<script src="scripts/main.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
 </html>

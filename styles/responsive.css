@@ -116,6 +116,21 @@
 		.slide li:nth-child(3){background: linear-gradient(#c63,#212)}
 		.slide li:nth-child(4){background: linear-gradient(#c6c,#421)}
 	/* main content */
+		.gallery{
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			padding: .5rem;
+			gap: .5rem;
+		}
+		.gallery img{
+			width: 100%;
+			border-radius: .25rem;
+			border: 1rem solid #333;
+		}
+		.lorem::after{
+			content: 
+				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid qui quod illo sequi officiis dicta vel. Laudantium, sunt doloremque. Rem, suscipit. Ad dolore fuga iusto sequi ullam earum! At in, harum autem, perspiciatis delectus omnis, placeat quas ex ipsa obcaecati nihil voluptate iste dolorem veniam quaerat, libero mollitia exercitationem. Maxime quaerat provident, ab laudantium beatae consequuntur amet earum sunt natus dolor quae, doloremque nulla? Asperiores saepe doloribus, sunt odio nulla necessitatibus. Soluta recusandae, tempore unde a rem laudantium, odio iste molestias ab vel quae dolores magnam totam perferendis dolor minus adipisci laboriosam consectetur, consequuntur? Animi illum officia fugiat maxime.'
+		}
 	/* footer*/
 		#footer{
 			padding: 1rem;
@@ -134,8 +149,10 @@
 		}
 		#contact label::after{
 			content: ' *';
-			color: gold;
+			color: tomato;
+			font-size: 1.2rem;
 		}
+		#contact span{ color: tomato }
 		#contact .valid{
 			display: none;
 			padding: .5rem;
