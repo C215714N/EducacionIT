@@ -120,11 +120,13 @@
 		#footer a{ color: #eee }
 		#contact{
 			display: grid;
+			margin: auto;
 		}
 		#contact label{
 			height: 0;
 			overflow: hidden;
 			margin-top: .5rem;
+			font-weight: bold;
 		}
 		#contact label::after{
 			content: ' *';
@@ -143,6 +145,7 @@
 			outline: none;
 			border: .15rem solid transparent;
 			padding: .5rem;
+			font-size: 1rem;
 		}
 		#contact textarea{
 			resize: none;
@@ -157,13 +160,78 @@
 	/* validation */
 		#contact :focus + .valid{ display: block; }
 		#contact :focus:not(.button):valid{ border-color: lightgreen }
-		#contact :focus:valid + .valid{ background: lightgreen }
+		#contact :focus:valid + .valid{ 
+			color: darkgreen;
+			background: lightgreen 
+		}
 		#contact :focus:not(.button, :placeholder-shown):invalid{ border-color: tomato}
-		#contact :focus:not(.button, :placeholder-shown):invalid + .valid{ background: tomato}
+		#contact :focus:not(.button, :placeholder-shown):invalid + .valid{
+			color: darkred;
+			background: tomato
+		}
 /* Small Devices - Smartphones*/
-
+	@media screen and (min-width: 576px) {
+	/*footer*/
+		#contact{ max-width: 540px }
+	}
 /* Medium Devices - Tablets*/
-
+	@media screen and (min-width: 768px){
+	/*navigation*/
+		nav .button{display: none}
+		nav .active, 
+		nav .menu{
+			width: auto;
+			display: flex;
+		}
+	/*footer*/
+		#contact{ max-width: 720px }
+	}
 /* Large Devices - Desktop*/
-
+	@media screen and (min-width: 992px){
+	/*navigation*/
+		nav{ justify-content: space-around }
+	/*footer*/
+		#contact label{ height: auto }
+	}
 /* ExtraLarge Devices - HD Desktop*/
+	@media screen and (min-width: 1200px){
+		#contact{
+			grid-template-columns: 50% 50%;
+			gap: 0 .5rem;
+			grid-template-areas: 
+				'title		title'
+				'lblName	lblPhone'
+				'inName		inPhone'
+				'vldName 	vldPhone'
+				'lblEmail	lblEmail'
+				'inEmail	inEmail'
+				'vldEmail	vldEmail'
+				'lblCon		lblCon'
+				'txtCon 	txtCon'
+				'vldCon 	vldCon'
+				'button		button'
+				'msg 		msg'
+		}
+
+		label[for="contactName"]{ grid-area: lblName }
+		label[for="contactEmail"]{ grid-area: lblEmail }
+		label[for="contactPhone"]{ grid-area: lblPhone }
+		label[for="contactConsult"]{ grid-area: lblCon }
+
+		#contactName{ grid-area: inName }
+		#contactEmail{ grid-area: inEmail }
+		#contactPhone{ grid-area: inPhone }
+		#contactConsult{ grid-area: txtCon }
+
+		#contactName + .valid{ grid-area: vldName }
+		#contactEmail + .valid{ grid-area: vldEmail }
+		#contactPhone + .valid{ grid-area: vldPhone }
+		#contactConsult + .valid{ grid-area: vldCon }
+
+		#contact .button{ grid-area: button }
+		#contact :last-child{ grid-area: msg }
+	}
+/* Printable */
+	@media print {
+
+	}
