@@ -1,5 +1,5 @@
 /*reglas generales*/
-	body{
+	body, h1, h2, h3{
 		margin: 0;
 		font-family: segoe ui, sans-serif;
 	}
@@ -29,8 +29,23 @@
 		background-color: #ccc;
 	}
 /*contenido principal*/
+	main{
+		max-width: 960px;
+		margin: 8px auto;
+		padding: 16px;
+	}
+	section{
+		margin: 20px 0;
+		border-radius: 8px;
+		padding: 16px;
+		box-shadow: 0 0 8px #ccc;
+	}
+	main header{
+		border-bottom: 2px solid #ccc;
+	}
 	/*ejemplos*/
 		.example{
+			overflow: auto;
 			list-style: none;
 			margin: 16px;
 			margin-left: 48px;
@@ -39,6 +54,26 @@
 			line-height: 24px;
 			background-color: #eee;
 		}
+	/*tablas*/
+		table{ margin: 8px auto } /*top right bottom left*/
+		.classic,
+		.classic caption,
+		.classic td{
+			border: 2px solid #448;
+			border-collapse: collapse;
+		}
+		.classic caption{ border-bottom: none }
+		.modern,
+		.modern caption,
+		.modern tr,
+		.modern td{
+			border-collapse: collapse;
+			color:#eee;
+			text-shadow: -1.5px 1.5px 2px #333;/*-x+ -y+ blur color*/
+			background-color: rgba(68, 68, 136, .5);
+		}
+		caption{ border-radius: 8px 8px 0 0}/*tl tr br bl*/
+		caption, th, td{ padding: 8px 16px }/*top right bottom left*/
 /*pie de pagina*/
 	#footer{
 		padding: 16px;

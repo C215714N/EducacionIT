@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
-	<link rel="icon" href="img/html.png">
+	<link rel="icon" href="img/css.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -111,6 +111,117 @@
 					</li>
 				</ul>
 			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Cuando utilizarlas?</h3>
+				</header>
+				<p>
+					Son elementos que permite organizar la informacion de manera tabular, y se deben utilizar cuando necesitamos mostrar datos en pantalla de manera correlativa y respetando cierta estructura. Las mismas se crean respetando el modelo de cajas, donde se utiliza etiquetas como contenedores, por ejemplo: <em>&lt;table> y &lt;tr></em> y etiquetas como contenido, por ejemplo: <em>&lt;td></em>.
+				</p>
+				<div class="example">
+					<table class="classic"><!-- Contenedor de la tabla -->
+						<caption>Lista de Usuarios</caption>
+						<tr><!-- Fila de tabla (TABLE ROW) -->
+							<td>Nombre</td><!-- Celda de tabla (TABLE DIVISION)-->
+							<td>Apellido</td>
+							<td>Correo</td>
+						</tr>
+						<tr>
+							<td>Cristian</td>
+							<td>Racedo</td>
+							<td>CristianDRacedo@hotmail.com</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Poseen carga semantica?</h3>
+				</header>
+				<p>
+					Con la aparicion de HTML5, las tablas tuvieron un lavado de cara, debido a que se les agregaron nuevos elementos que permiten definir la funcion que cumple cada parte dentro de la misma. Estos complementan a los mencionados anteriormente.
+				</p>
+				<ul>
+					<li>
+						<strong>THEAD: </strong> Cabecera de tabla, encargada de contener los titulos de la misma, que se identifican con la etiqueta <em>&lt;th></em>
+					</li>
+					<li>
+						<strong>TBODY: </strong> Cuerpo de tabla, contiene la informacion de la misma, aqui se mantiene la estructura clasica, aunque tambien puede poseer titulos, por ejemplo: <em>tabla de referencias cruzadas</em>
+					</li>
+					<li>
+						<strong>TFOOT: </strong> Pie de tabla, parte opcional que muestra informacion complemetaria a los datos representados en la tabla, por ejemplo: <em>totales, promedios, max, min, etc.</em>
+					</li>
+				</ul>
+				<div class="example">
+					<table class="modern">
+						<thead>
+							<caption>Lista de Usuarios</caption>
+							<tr>
+								<th>Nombre</th>
+								<th>Apellido</th>
+								<th>Correo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cristian</td>
+								<td>Racedo</td>
+								<td>cristiandracedo@hotmail.com</td>
+							</tr>
+							<tr>
+								<td>Juan</td>
+								<td>Perez</td>
+								<td>jp@gmail.com</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<td colspan="2">2</td>
+							</tr>
+						</tfoot>
+					</table>
+					<table class="modern classic">
+						<caption>Desarrollo Web</caption>
+						<thead>
+							<tr>
+								<th>Tipo</th>
+								<th>Lenguaje</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+							<tr>
+								<td rowspan="3">BackEnd</td>
+								<td>sql</td>
+							</tr>
+							<tr>
+								<td>php</td>
+							</tr>
+							<tr>
+								<td>java</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
+		<article>
+			
 		</article>
 	</main>
 	<footer id="footer">
