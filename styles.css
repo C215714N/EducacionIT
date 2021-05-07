@@ -40,9 +40,13 @@
 		padding: 16px;
 		box-shadow: 0 0 8px #ccc;
 	}
-	main header{
-		border-bottom: 2px solid #ccc;
+	main .header{ 
+		color: #eee;
+		text-shadow: 
+			0 0 8px #333, 
+			-2px 2px 2px #333; /* -x+ -y+ blur color*/
 	}
+	main header{ border-bottom: 2px solid #ccc }
 	/*ejemplos*/
 		.example{
 			overflow: auto;
