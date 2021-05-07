@@ -43,6 +43,56 @@
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				minlength="3" 
+				maxlength="50" 
+				placeholder="Nombre(*): Cristian Racedo" 
+				required />
+			<div class="valid">
+				Ingrese su nombre y apellido, el mismo debe poseer entre 2 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email" 
+				minlength="8" 
+				placeholder="Correo (*): CristianDRacedo@hotmail.com" 
+				required />
+			<div class="valid">
+				Ingrese un correo valido respetando el formato usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				minlength="6" 
+				maxlength="30" 
+				placeholder="Telefono (*): (5411)2345-6789" 
+				required />
+			<div class="valid">
+				Ingrese su numero respetando el formato (5411)2345-6789
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta (*):Buenas, necesito un presupuesto" 
+				required 
+			></textarea>
+			<button class="button">Enviar</button>
+			<p>
+				Todos los campos con asterisco
+				<span>(*)</span>
+				son obligatorios.
+			</p>
 		</form>
 		<div class="social">
 			<a href="https://facebook.com" class="icon-facebook" target="_blank"></a>

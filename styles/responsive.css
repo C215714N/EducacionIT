@@ -19,7 +19,7 @@
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
-			background-color: #448;
+			background: #448 linear-gradient(#66c, #224); /*color image position repeat*/
 		}
 		nav a{
 			display: block;
@@ -112,6 +112,54 @@
 		.slide li:nth-child(4){background: linear-gradient(#c6c,#421)}
 	/* main content */
 	/* footer*/
+		#footer{
+			padding: 1rem;
+			color: #eee;
+			background: #448 linear-gradient(#66c, #224); 
+		}
+		#footer a{ color: #eee }
+		#contact{
+			display: grid;
+		}
+		#contact label{
+			height: 0;
+			overflow: hidden;
+			margin-top: .5rem;
+		}
+		#contact label::after{
+			content: ' *';
+			color: gold;
+		}
+		#contact .valid{
+			display: none;
+			padding: .5rem;
+			color:#eee;
+			background-color: #333;
+			font-weight: bold;
+		}
+		#contact input,
+		#contact textarea{
+			width: 100%;
+			outline: none;
+			border: .15rem solid transparent;
+			padding: .5rem;
+		}
+		#contact textarea{
+			resize: none;
+			min-height: 8rem;
+		}
+		#contact .button{
+			display: block;
+			margin: .2rem 0;
+			padding: .5rem;
+			margin-left: auto;
+		}
+	/* validation */
+		#contact :focus + .valid{ display: block; }
+		#contact :focus:not(.button):valid{ border-color: lightgreen }
+		#contact :focus:valid + .valid{ background: lightgreen }
+		#contact :focus:not(.button, :placeholder-shown):invalid{ border-color: tomato}
+		#contact :focus:not(.button, :placeholder-shown):invalid + .valid{ background: tomato}
 /* Small Devices - Smartphones*/
 
 /* Medium Devices - Tablets*/
