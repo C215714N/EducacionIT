@@ -1,5 +1,6 @@
 /* Content First - Mobile First */
 	/* general rules */
+		@import url('icomoon.css');
 		@import url(
 			'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,100;1,200&display=swap'
 		);
@@ -22,7 +23,8 @@
 			background: #448 linear-gradient(#66c, #224); /*color image position repeat*/
 		}
 		nav a{
-			display: block;
+			display: flex;
+			align-items: center;
 			padding: .5rem;
 			color: #eee;
 			text-decoration: none;
@@ -59,6 +61,8 @@
 			margin: 0;
 			padding: 0;
 		}
+		.menu a{ font-size: 1.2rem }
+		.menu span{ padding: .5rem }
 		.menu a:hover{ background-color: rgba(51,51,51,.5) }
 		nav .active{ display: block }
 	/* header */
@@ -117,7 +121,6 @@
 			color: #eee;
 			background: #448 linear-gradient(#66c, #224); 
 		}
-		#footer a{ color: #eee }
 		#contact{
 			display: grid;
 			margin: auto;
@@ -169,32 +172,55 @@
 			color: darkred;
 			background: tomato
 		}
+	/*social media*/
+		.social{
+			text-align: center;
+			font-size: calc(2vw + .8rem);
+		}
+		.social a{ 
+			display: inline-block;
+			border-radius: .5rem;
+			padding: .5rem;
+			text-decoration: none;
+			background-color:#eee8;
+		}
+		.social a:hover{background-color: #eee}
+		.icon-facebook{ color: #248 }
+		.icon-instagram{ color: violet }
+		.icon-twitter{ color: skyblue }
+		.icon-github{ color: #333 }
 /* Small Devices - Smartphones*/
-	@media screen and (min-width: 576px) {
-	/*footer*/
-		#contact{ max-width: 540px }
-	}
-/* Medium Devices - Tablets*/
-	@media screen and (min-width: 768px){
+	@media screen and (min-width: 576px) {	
 	/*navigation*/
-		nav .button{display: none}
+		nav .button, 
+		.menu span{
+			display: none
+		}
 		nav .active, 
 		nav .menu{
 			width: auto;
 			display: flex;
 		}
 	/*footer*/
+		#contact{ max-width: 540px }
+	}
+/* Medium Devices - Tablets*/
+	@media screen and (min-width: 768px){
+	/*navigation*/
+		.menu span{ display: block }
+	/*footer*/
 		#contact{ max-width: 720px }
 	}
 /* Large Devices - Desktop*/
 	@media screen and (min-width: 992px){
-	/*navigation*/
-		nav{ justify-content: space-around }
 	/*footer*/
 		#contact label{ height: auto }
 	}
 /* ExtraLarge Devices - HD Desktop*/
 	@media screen and (min-width: 1200px){
+	/*navigation*/
+		nav{ justify-content: space-around }
+	/*footer*/
 		#contact{
 			grid-template-columns: 50% 50%;
 			gap: 0 .5rem;
