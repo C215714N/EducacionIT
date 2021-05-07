@@ -35,10 +35,11 @@
 			bottom: 1rem;
 			right: 1rem;
 			width: 2.5rem;
-			line-height: 2.5rem;
+			height: 2.5rem;
 			border-radius: 50%;
-			padding: 0;
-			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			background-color: #333
 		}
 		.button{
@@ -185,9 +186,9 @@
 			background-color:#eee8;
 		}
 		.social a:hover{background-color: #eee}
-		.icon-facebook{ color: #248 }
-		.icon-instagram{ color: violet }
-		.icon-twitter{ color: skyblue }
+		.icon-facebook{ color: #3b5999 }
+		.icon-instagram{ color: #e4405f }
+		.icon-twitter{ color: #55acee }
 		.icon-github{ color: #333 }
 /* Small Devices - Smartphones*/
 	@media screen and (min-width: 576px) {	
