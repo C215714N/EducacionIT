@@ -27,6 +27,11 @@
 		padding: 20% 10px; /*top right bottom left*/
 		text-align: center;
 		background-color: #ccc;
+		background-image: url('img/osx-mojave-night.jpg');
+		background-position: center;
+		background-size: cover;
+		color: #eee;
+		text-shadow: 0 0 8px #333;
 	}
 /*contenido principal*/
 	main{
@@ -35,6 +40,7 @@
 		padding: 16px;
 	}
 	section{
+		background-color: #fefefe;
 		margin: 20px 0;
 		border-radius: 8px;
 		padding: 16px;
@@ -78,6 +84,20 @@
 		}
 		caption{ border-radius: 8px 8px 0 0}/*tl tr br bl*/
 		caption, th, td{ padding: 8px 16px }/*top right bottom left*/
+	/*contenido multimedia*/
+		iframe{
+			margin: 4px;
+			border-radius: 8px;
+			border: none;
+			width: 100%;
+			max-width: 420px;
+			min-height: 240px;
+		}
+		video{
+			width: 100%;
+			border-radius: 4px;
+			box-shadow: 0 0 8px #333;
+		}
 /*pie de pagina*/
 	#footer{
 		padding: 16px;

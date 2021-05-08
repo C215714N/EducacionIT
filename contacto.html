@@ -229,24 +229,97 @@
 					<h3>¿Contenido embebido?</h3>
 				</header>
 				<p>
-					
+					Se denomina asi a todo elemento que se incluye en una pagina web, que no pertenece a la misma debido a que corresponde a otro sitio o simplemente no pertenece al universo html. La etiqueta mas representativa de esta categoria es <strong>&lt;iframe> (marco flotante)</strong> que permite insertar contenido de manera asincronica y su finalidad es compartir contenido.
 				</p>
+				<div class="example">
+					<iframe
+						src="https://www.youtube.com/embed/6M6samPEMpM" 
+						title="Backstreet Boys - Everybody" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/-iWX-cYFpeg" 
+						title="Te lo resumo - Bruce Lee"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.1834399064032!2d-58.3763585033816!3d-34.60245045870181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1620432712541!5m2!1ses-419!2sar" 
+						loading="lazy">
+					</iframe>
+				</div>
 			</section>
 			<section>
 				<header>
 					<h3>¿Sonidos en la web?</h3>
 				</header>
 				<p>
-					
+					Los navegadores actuales incorporan una API de reproduccion de contenido multimedia, en el caso de los sonidos podemos utilizar la etiqueta <strong>&lt;audio></strong> que es compatible con los formatos <em>.mp3 - .wav - .ogg</em>, aunque tambien puede reproducir los formatos del <em>elemento video</em> que se menciona mas adelante. Hay que tener en cuenta que para que se visualice el resproductor de audio debemos colocar el atributo <em>controls</em>
 				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente
+							 <a href="media/live-learn.mp3">link</a> 	
+						</p>
+					</audio>
+					<audio src="media/californication.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente
+							 <a href="media/live-learn.mp3">link</a> 	
+						</p>
+					</audio>
+				</div>
 			</section>
 			<section>
 				<header>
 					<h3>¿Multimedia sin plugins?</h3>
 				</header>
 				<p>
-					
+					Al igual que el elemento anterior, el navegador permite la reproduccion de contenido multimedia con la etiqueta <strong>&lt;video></strong> que es compatible con los formatos <em>.mp4 - .webm - .ogv </em>, ademas permite la utilizacion de otros atributos como <em>controls autoplay muted</em> y en caso de los ultimos, deben estar juntos para funcionar correctamente.
 				</p>
+				<div class="example">
+					<video src="media/by-the-way.mp4" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente
+							 <a href="media/by-the-way.mp4">link</a> 	
+						</p>
+					</video>
+					<video src="media/cant-stop.webm" autoplay muted loop>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente
+							 <a href="media/cant-stop.webm">link</a> 	
+						</p>
+					</video>
+				</div>
+				<table class="modern">
+					<caption>multimedia resolution</caption>
+					<thead>
+						<tr>
+							<th>aspect-ratio</th>
+							<th>width proportion</th>
+							<th>height proportion</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>4/3</td>
+							<td>1.33(height)</td>
+							<td>75%(width)</td>
+						</tr>
+						<tr>
+							<td>16/9</td>
+							<td>1.78(heigth)</td>
+							<td>56.25%(width)</td>
+						</tr>
+						<tr>
+							<td>16/10</td>
+							<td>1.6(height)</td>
+							<td>62.5%(width)</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 		</article>
 	</main>
