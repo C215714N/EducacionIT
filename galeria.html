@@ -3,13 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* selectores generales */
+		body{
+			margin: 0;
+			font-family: 'segoe ui', sans-serif;
+		}
+		/* selector multiple ( , )*/
+		header, footer{
+			padding: 20px;
+			color:#eee; /*rrggbb*/
+			background-color: #248;
+		}
+		/* selectores especificos (padre hijo)*/
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+		nav ul{
+			list-style: none;
+			margin: 0;
+			padding:0;
+			text-align: center;
+			background-color: #124;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/*selector de clase (.class)*/
+		.example{
+			padding: 8px;
+			text-align: center;
+			background-color: #ccc;
+		}
+		/*selector de Id (#Id)*/
+		#footer a{
+			color:#eee;
+		}
+	</style>
 </head>
 <body>
 	<!-- Division (Capa): Etiqueta Presentacional de bloque -->
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p> &lt;html> | css</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta Relativa / Interna -->
 					<a href="index.html">inicio</a>
@@ -24,9 +63,9 @@
 					<a href="https://github.com/c215714n/EducacionIT/tree/html-x-15" target="_blank">github</a>
 				</li>
 			</ul>
-		</div>
-	</div>	
-	<div id="main">
+		</nav>
+	</header>	
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul>
 			<li>
@@ -57,13 +96,13 @@
 			<li><strong>ASIDE: </strong> Contenido Tangencial que se relaciona indirectamente con sus hermanos, se utiliza para publicidad o sugerencias de contenido.</li>
 			<li><strong>FOOTER: </strong> Pie de pagina o contenido de despedida, contiene informacion/formularios de contacto, asi como tambien las redes sociales, informacion de copyright e incluso un mapa del sitio.</li>
 		</ul>
-	</div>
-	<div id="footer">
+	</main>
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados
 			<a href=""> Cristian Racedo </a>
 			&amp; Compañia.
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
