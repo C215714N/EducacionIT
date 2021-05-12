@@ -1,11 +1,19 @@
 /* Content First - Mobile First */
 	/*General Rules*/
+		@import url('icomoon.css');
 		@import url( 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,100&display=swap');
 		*{
 			box-sizing: border-box;
 			font-family: Raleway, Century Gothic, sans-serif;
 		}
+		@font-face{
+			src: url('../assets/fonts/Starjedi.ttf');
+			font-family: 'star wars';
+		}
 		body, h1, h2, h3{ margin: 0 }
+		.opacity{ opacity: .3 }
+		.opacity:hover{ opacity: .7 }
+		h1{ font-family: 'star wars'; letter-spacing: 4px; }
 	/*Navigation*/
 		nav{
 			position: sticky;
@@ -53,6 +61,7 @@
 		.menu a:hover{
 			background-color: #3338;
 		}
+		.menu span{ padding: .5rem }
 		.icon-back{
 			position: fixed;
 			bottom: .5rem;
@@ -63,9 +72,7 @@
 			line-height: 2.5rem;
 			text-align: center;
 			background-color: #333;
-			opacity: .3;
 		}
-		.icon-back:hover{ opacity: .7 }
 		nav .active{ display: block }
 	/*Header*/
 		#header{
@@ -101,6 +108,7 @@
 		.slide li:nth-child(2){ background-image: linear-gradient(#c36,#448) }
 		.slide li:nth-child(3){ background-image: linear-gradient(#284,#cc3) }
 		.slide li:nth-child(4){ background-image: linear-gradient(#8a3,#3cc) }
+		.slide li:nth-child(5){ background-image: linear-gradient(#244,#3cc) }
 		#header button{
 			position: absolute;
 			top: 0;
@@ -110,13 +118,179 @@
 			padding: .5rem;
 			color: #eee;
 			background-color: transparent;
+			font-size: calc(2vw + .5rem)
 		}
 		#header .icon-prev{ left: 0 }
 		#header .icon-next{ right: 0 }
+	/*Main Content*/
+		section{
+			margin: 1rem auto;
+			padding: 1rem;
+		}
+		section h2:before{
+			content: 'Capitulo -'
+		}
+		section h3:before{ 
+			content: 'Tema - '
+		}
+		section p:after{
+			content: 
+				"Lorem ipsum dolor sit amet consectetur adipisicing, elit. Iste exercitationem provident eveniet perferendis ratione delectus? In ut, nemo repellat vero corrupti aliquid nesciunt asperiores hic ducimus ab eveniet modi nobis atque vel sint nihil quos necessitatibus accusantium delectus deleniti, quae. Corrupti ratione nam animi, vel illum voluptatem tenetur impedit magni atque nostrum cupiditate maxime, cumque perspiciatis tempora temporibus ea, dolorum maiores consequuntur harum, saepe quaerat voluptatibus! Eveniet sit, tenetur perferendis illo eligendi, ab natus possimus quasi! Itaque, ab, voluptate voluptates accusantium modi dolorum nemo esse harum nam nesciunt. Excepturi, aperiam architecto praesentium, voluptatem sed laboriosam iste minima deserunt quis alias!;"
+		}
+	/*Footer*/
+		#footer{
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .5rem #333;
+			background: 
+				hsl(210, 30%, 60%) 
+				linear-gradient( 
+					hsl(210, 30%, 60%),
+					hsl(260, 30%, 70%) 
+			);
+		}
+		#contact{
+			display: grid;
+			margin: 1rem auto;
+		}
+		#contact label{
+			margin-top: .5rem;
+			height: 0;
+			overflow: hidden;
+		}
+		#contact label::after{
+			content: ' *';
+			color: tomato;
+			font-family: sans-serif;
+		}
+		#contact input,
+		#contact textarea{
+			outline: none;
+			border: .15rem solid transparent;
+			padding: .5rem;
+		}
+		#contact textarea{
+			resize: none;
+			min-height: 6rem;
+		}
+		#contact .button{
+			margin: .2rem 0;
+			margin-left: auto;
+		}
+		#contact .valid{
+			display: none;
+			padding: .5rem;
+			background-color: #333;
+		}
+	/*validation*/
+		#contact :focus + .valid{ display: block; }
+	/*social media*/
+		.social{ text-align: center }
+		.social a{
+			display: inline-block;
+			margin: .5rem;
+			border-radius: .25rem;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+			font-size: calc(2vw + 1rem);
+		}
+		.social a:hover{ background-color: #eee }
+		.social a:active{ box-shadow: 0 0 .5rem #eee }
+		.social .icon-facebook:hover{ color: #3b5999 }
+		.social .icon-instagram:hover{ color: #e4405f }
+		.social .icon-twitter:hover{ color: #55acee }
+		.social .icon-github:hover{ color: #131418; }
 /* Small Devices - Smartphones */
-
+	@media screen and (min-width: 576px){
+	/*navigation*/
+		nav .button, 
+		.menu span{ 
+			display: none 
+		}
+		.menu, 
+		.menu.active{
+			width: auto;
+			display: flex;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+	/*content*/
+		section{ 
+			max-width: 540px;
+			box-shadow: 0 0 .5rem #ccc;
+		}
+	/*footer*/
+		#contact{
+			max-width: 540px;
+		}
+	}
 /* Medium Devices - Tablets */
-
+	@media screen and (min-width: 768px){
+		.menu span{ 
+			display: inline-block;
+			font-size: 1rem;
+		}
+	/*content*/
+		section{ max-width: 720px }
+	/*footer*/
+		#contact{
+			max-width: 720px;
+		}
+	}
 /* Large Devices - Desktop */
-
+	@media screen and (min-width: 992px){
+	/*content*/
+		section{ max-width: 960px }
+	/*footer*/
+		#contact label{
+			height: auto;
+		}
+	}
 /* ExtraLarge Devices - HD Desktop */
+	@media screen and (min-width: 1200px){
+	/*navigation*/
+		nav{
+			justify-content: space-around;
+		}
+	/*content*/
+		section{ max-width: 1140px }
+	/*footer*/
+		#contact{
+			grid-template-columns: 50% 50%;
+			gap: 0 .5rem;
+			grid-template-areas: 
+				'title		title'
+				'lblName 	lblPhone'
+				'cmdName 	cmdPhone'
+				'vldName 	vldPhone'
+				'lblEmail 	lblEmail'
+				'cmdEmail 	cmdEmail'
+				'vldEmail 	vldEmail'
+				'lblCon		lblCon'
+				'cmdCon 	cmdCon'
+				'vldCon 	vldCon'
+				'. 			button'
+		}
+		/*label*/
+		#contact h2{ grid-area: title }
+		label[for="contactName"]{ grid-area: lblName }
+		label[for="contactEmail"]{ grid-area: lblEmail }
+		label[for="contactPhone"]{ grid-area: lblPhone }
+		label[for="contactConsult"]{ grid-area: lblCon }
+		/*formControls*/
+		#contactName{ grid-area: cmdName }
+		#contactEmail{ grid-area: cmdEmail }
+		#contactPhone{ grid-area: cmdPhone }
+		#contactConsult{ grid-area: cmdCon }
+		#contact .button{ grid-area: button }
+		/*valid*/
+		#contactName + .valid{ grid-area: vldName }
+		#contactEmail + .valid{ grid-area: vldEmail }
+		#contactPhone + .valid{ grid-area: vldPhone }
+		#contactConsult + .valid{ grid-area: vldCon }
+	}
+/* Print Design */
+	@media print{
+
+	}

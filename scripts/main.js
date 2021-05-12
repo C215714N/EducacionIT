@@ -14,6 +14,7 @@
 
 	prev.onclick = () => changeItem(slideLst, false)
 	next.onclick = () => changeItem(slideLst, true)
+	window.setInterval( () => next.click(), 30000 )
 
 	const changeItem = (itemList, type) => {
 		for(i = 0; i < itemList.length ; i++){

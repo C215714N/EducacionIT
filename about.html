@@ -19,12 +19,12 @@
 		<a class="logo" href="#">CSS</a>
 		<button class="button">&equiv;</button>
 		<ul class="menu">
-			<li><a href="index.html" title="Inicio"><span>Inicio</span></a></li>
-			<li><a href="#" title="Acerca"><span>Acerca</span></a></li>
-			<li><a href="gallery.html" title="Galeria"><span>Galeria</span></a></li>
-			<li><a href="#contact" title="Contacto"><span>Contacto</span></a></li>
+			<li><a class="icon-home" href="index.html" title="Inicio"><span>Inicio</span></a></li>
+			<li><a class="icon-about" href="#" title="Acerca"><span>Acerca</span></a></li>
+			<li><a class="icon-gallery" href="gallery.html" title="Galeria"><span>Galeria</span></a></li>
+			<li><a class="icon-contact" href="#contact" title="Contacto"><span>Contacto</span></a></li>
 		</ul>
-		<a href="#" class="icon-back">^</a>
+		<a href="#" class="opacity icon-back"></a>
 	</nav>
 	<!-- Header -->
 	<header id="header">
@@ -37,35 +37,81 @@
 			<li></li>
 			<li></li>
 			<li></li>
+			<li></li>
 		</ul>
-		<button class="icon-prev">&lt;</button>
-		<button class="icon-next">&gt;</button>
+		<button class="opacity icon-prev"></button>
+		<button class="opacity icon-next"></button>
 	</header>
 	<!-- Content -->
 	<main>
 		<!-- Inserte contenido aqui -->
+		<section>
+			<h2></h2>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+		</section>
+		<section>
+			<h2></h2>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+		</section>
+		<section>
+			<h2></h2>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+			<article>
+				<h3></h3>
+				<p></p>
+			</article>
+		</section>
 	</main>
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
 			<label for="contactName">Nombre</label>
 			<input
-				id="contact" 
-				name="contact" 
+				id="contactName" 
+				name="contactName" 
 				type="text" 
-				placeholder="Cristian Racedo" 
+				placeholder="Nombre (*): Cristian Racedo" 
 				minlength="3" 
 				maxlength="50" 
 				required />
 			<div class="valid">
 				Ingrese un nombre que posea entre 3 y 50 caracteres.
 			</div>
-			<label for="contactEmail"></label>
+			<label for="contactEmail">Correo</label>
 			<input
 				id="contactEmail" 
 				name="contactEmail" 
 				type="email"
-				placeholder="CristianDRacedo@hotmail.com" 
+				placeholder="Correo (*): CristianDRacedo@hotmail.com" 
 				minlength="8" 
 				required />
 			<div class="valid">
@@ -76,7 +122,7 @@
 				id="contactPhone" 
 				name="contactPhone"
 				type="tel" 
-				placeholder="(5411)2345-6789"
+				placeholder="Telefono (*): (5411)2345-6789"
 				maxlength="30" 
 				required />
 			<div class="valid">
@@ -86,17 +132,17 @@
 			<textarea
 				id="contactConsult" 
 				name="contactConsult" 
-				placeholder="Buenas, quisiera un presupuesto"
+				placeholder="Consulta (*): Buenas, quisiera un presupuesto"
 				minlength="10" 
 				maxlength="200" 
 				required ></textarea>
 			<button class="button">Enviar</button>
 		</form>
 		<div class="social">
-			<a href="https://facebook.com" class="facebook" target="_blank">1</a>
-			<a href="https://instagram.com" class="instagram" target="_blank">2</a>
-			<a href="https://twitter.com" class="twitter" target="_blank">3</a>
-			<a href="https://github.com/c215714n/EducacionIT/tree/maquetacion-m-19" class="github" target="_blank">4</a>
+			<a class="icon-facebook" href="https://facebook.com" class="facebook" target="_blank"></a>
+			<a class="icon-instagram" href="https://instagram.com" class="instagram" target="_blank"></a>
+			<a class="icon-twitter" href="https://twitter.com" class="twitter" target="_blank"></a>
+			<a class="icon-github" href="https://github.com/c215714n/EducacionIT/tree/maquetacion-m-19" class="github" target="_blank"></a>
 		</div>
 		<p>
 			&copy; Todos los derechos reservados
