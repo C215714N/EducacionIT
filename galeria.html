@@ -30,14 +30,32 @@
 		<h2>Reglas de Nomenclatura</h2>
 		<ul>
 			<li>
-				<strong>Evitar el uso de espacios</strong>
+				<strong>Evitar el uso de espacios</strong> porque este caracter sera reemplazado por el <em>conjunto %20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> sera interpretado como <em>"foto%20.jpg"</em> no pudiendo encontrarlo. La solucion es <strong>utilizar guiones (-_)</strong> en los nombres como por ejemplo <em>"foto_01.jpg"</em>
 			</li>
 			<li>
-				<strong>Utilizar nombres descriptivos</strong>
+				<strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> para facilitar el trabajo del desarrollador a la hora de utilizar los archivos. <strong>Evitar nombres genericos</strong> como <em>"foto_01.jpg"</em>, asi como tambien <strong>evitar nombres automatizados</strong> como <em>"2021-05-12-170156100.jpg"</em> que en demasia dificultan su implementacion.
 			</li>
 			<li>
-				<strong>Implementar solamente minusculas</strong>
+				<strong>Implementar solamente minusculas</strong> debido a que los servidores son <em>caseSensitive (distinguen entre mayusculas y minusculas)</em> y por lo tanto no son lo mismo los nombres <em>"background.jpg" - "Background.jpg" - "BACKGROUND.jpg"</em>
 			</li>
+		</ul>
+		<div class="example">
+			<h2>Implementación de Imágenes</h2>
+			<!-- Linea-Bloque -->
+			<img style="width:250px;" src="img/jjba-thefool-01.jpg" alt="JJBA the Fool" />
+			<img style="width:250px;" src="img/jjba-thefool-02.jpg" alt="JJBA the Fool" />
+			<img style="width:250px;" src="img/jjba-thefool-03.jpg" alt="JJBA the Fool" />
+			<img style="width:250px;" src="img/jjba-thefool-04.jpg" alt="JJBA the Fool" />
+		</div>
+		<h2>Estructura semantica</h2>
+		<ul>
+			<li><strong>HEADER: </strong> Cabecera de pagina o contenido introductorio, posee los titulos principales y tambien puede poseer una navegacion o galeria.</li>
+			<li><strong>NAV: </strong> Navegacion principal, debe poseer los links mas importantes para su correcto indexado.</li>
+			<li><strong>MAIN: </strong> Contenido Principal de la pagina, el mas importante en relacion a su contexto, puede estar subdivido en varias partes.</li>
+			<li><strong>SECTION: </strong> Contenido contextualizado ya que depende de su contexto y no funciona fuera del sitio.</li>
+			<li><strong>ARTICLE: </strong> Contenido Independiente que puede funcionar tanto dentro como fuera del sitio debido a que posee su propia estructura.</li>
+			<li><strong>ASIDE: </strong> Contenido Tangencial que se relaciona indirectamente con sus hermanos, se utiliza para publicidad o sugerencias de contenido.</li>
+			<li><strong>FOOTER: </strong> Pie de pagina o contenido de despedida, contiene informacion/formularios de contacto, asi como tambien las redes sociales, informacion de copyright e incluso un mapa del sitio.</li>
 		</ul>
 	</div>
 	<div id="footer">
