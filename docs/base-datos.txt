@@ -1,0 +1,41 @@
+Base Datos(
+	- Estructura: Organizar || Almacenar Datos
+	- Composicion( 
+		conjunto de tablas,
+		campos(columnas) - tipos de datos,
+		registros(filas) - relacion entre datos
+	)
+	- tipos(
+		relacional (*),
+		jerarquicas,
+		transaccional,
+		orientada a objetos,
+		etc.
+	)
+
+);
+
+MySQL WorkBench (Motor DB)(
+	- SQL => desarrollado por IBM,
+	- Oracle adquiere los derechos (Oracle SQL || MySQL)
+	- Desarrolladores comienzan un proyecto (MariaDB)
+);
+
+SQL(Structured Query Language)(
+	DDL(Data Definition Language)(
+		CREATE: crear db | tablas | usuarios
+		DROP:	elimina db | tablas | usuarios
+		ALTER: 	modifica tablas
+	),
+	DML(Data Manipulation Language)(
+		INSERT: agrega registros a una tabla
+		DELETE: elimina registros de una tabla
+		UPDATE: actualiza registros de una tabla
+		SELECT: consulta los registro de una tabla
+	),
+	DCL(Data Control Language)(
+		GRANT:	otorga permisos 
+		REVOKE: quita permisos
+		FLUSH PRIVILEGES: actualiza los permisos
+	)
+);
