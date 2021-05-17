@@ -1,0 +1,32 @@
+/* Content First - Mobile First */
+	/* General Rules */
+		*{
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body, 
+		h1, 
+		h2, 
+		h3, 
+		.menu, 
+		.title{
+			margin:0;
+		}
+	/* Navigation */
+		.button{
+			margin: .5rem;
+			border: .1rem solid #448;
+			background-color: transparent;
+			color: #448;
+		}
+		.button:hover{
+			color: #eee;
+			background-color: #448;
+		}
+/* Small Devices - Smartphones */
+
+/* Medium Devices - Tablets */
+
+/* Large Devices - Small Desktop */
+
+/* ExtraLarge Devices - HD Desktop */
