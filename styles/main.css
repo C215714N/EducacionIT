@@ -19,57 +19,59 @@
 		.opacity{ opacity: .3 }
 		.opacity:hover{ opacity: .7 }
 	/* Navigation */
-		nav{
-			position: sticky;
-			top: 0;
-			z-index: 2;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			flex-wrap: wrap;
-			background: var(--fst) var(--grad);
-		}
-		nav a{
-			display: block;
-			color: var(--snd);
-			padding: .5rem;
-			text-decoration: none;
-		}
-		nav .logo{ 
-			font-weight: bolder;
-			text-transform: uppercase;
-		}
-		nav .icon-back{
-			position: fixed;
-			bottom: .5rem;
-			right: .5rem;
-			border-radius: 50%;
-			background-color: var(--dark);
-		}
-		/*button*/
-		.button{
-			margin: .5rem;
-			outline: none;
-			border-radius: .2rem;
-			border: .1rem solid var(--snd);
-			color: var(--snd);
-			background-color: transparent;
-		}
-		.button:hover{
-			color: var(--fst);
-			background-color: var(--snd);
-		}
-		/*menu*/
-		.menu{
-			width: 100%;
-			height: 0;
-			padding: 0;
-			list-style: none;
-			overflow: hidden;
-		}
-		.menu span{ padding: .5rem; }
-		.menu a:hover{ background-color: var(--hvr)}
-		.menu.active{ height: auto }
+		/*Nav Bar*/
+			nav{
+				position: sticky;
+				top: 0;
+				z-index: 2;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				background: var(--fst) var(--grad);
+			}
+			nav a{
+				display: block;
+				color: var(--snd);
+				padding: .5rem;
+				text-decoration: none;
+			}
+		/*Nav Links*/
+			nav .logo{ 
+				font-weight: bolder;
+				text-transform: uppercase;
+			}
+			nav .icon-back{
+				position: fixed;
+				bottom: .5rem;
+				right: .5rem;
+				border-radius: 50%;
+				background-color: var(--dark);
+			}
+		/*Menu Button*/
+			.button{
+				margin: .5rem;
+				outline: none;
+				border-radius: .2rem;
+				border: .1rem solid var(--snd);
+				color: var(--snd);
+				background-color: transparent;
+			}
+			.button:hover{
+				color: var(--fst);
+				background-color: var(--snd);
+			}
+		/*Menu List*/
+			.menu{
+				width: 100%;
+				height: 0;
+				padding: 0;
+				list-style: none;
+				overflow: hidden;
+			}
+			.menu span{ padding: .5rem; }
+			.menu a:hover{ background-color: var(--hvr)}
+			.menu.active{ height: auto }
 /* Small Devices - Smartphones */
 
 /* Medium Devices - Tablets */
