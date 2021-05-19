@@ -47,6 +47,19 @@
 				text-align: center;
 				background-color: #336;
 			}
+			#contacto{
+				max-width: 540px;
+				margin: auto;
+				text-align: left;
+			}
+			#contacto input,
+			#contacto textarea{
+				width: 100%;
+			}
+			#contacto textarea{
+				resize: none;
+				height: 90px;
+			}
 	</style>
 </head>
 <body>
@@ -69,15 +82,67 @@
 			<header class="header">
 				<h1>Formularios HTML</h1>
 			</header>
+			<p>
+				Son herramientas que permiten el intercambio de datos entre <strong>cliente y servidor</strong>. La etiqueta que permite su implementacion es <em>&lt;form> </em> y solamente se tendra en cuenta para el envio de datos lo que se encuentre dentro de la misma. Cabe destacar que es necesario especifar algunos atributos para definir como se deben manipular los datos y que se debe hacer con los mismos.
+			</p>
 			<section>
 				<header>
 					<h1>¿Como funcionan?</h1>
 				</header>
+				<p>
+					La etiqueta mencionada anteriormente posee <em>2 atributos</em> necesarios para la manipulacion de datos, por un lado se encuentra <strong>action="..."</strong> que indica al navegador cual es la operacion a realizar cuando el usuario presiona el boton enviar, en la actualidad se utilizan <em>scripts en lenguaje de servidor (ej: php)</em> para que este ultimo resuelva que hacer; por otro lado esta <strong>method="..."</strong> que recibe al menos <em>2 valores</em> segun la prioridad que deba darse a los datos y su respuesta respectivamente.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong> se utiliza cuando la prioridad radica en la respuesta del servidor, es menos seguro debido a que los datos se visualizan el la barra de direcciones, pero es mucho mas rapido debido a que los datos se envian en texto plano y debido a esto su uso es mas acotado.
+						<ul>
+							<li>Buscadores - consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST: </strong> se utiliza cuando la prioridad radica en los datos propiciados por el cliente, es mas seguro debido a que encripta los datos antes de realizar el envio y soporta el envio de archivos, pero es mas lento. Este metodo es el preferido para el envio para los diferentes tipos de formularios.
+						<ul>
+							<li>Inscripcion - Registro</li>
+							<li>Acceso - Inicio sesion</li>
+							<li>Consulta Web - Contacto</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
 	<!-- Pie de Pagina Principal-->
 	<footer id="footer">
+		<!-- Formulario de contacto -->
+			<form id="contacto" action="contacto.php" method="POST">
+				<h2>Contactanos</h2>
+				<label for="nombre">Nombre </label>
+				<input 
+					id="nombre" 
+					name="nombre"
+					minlength="3" 
+					maxlength="50" 
+					placeholder="Cristian Racedo" 
+					type="text" 
+					required />
+				<label for="email">Correo</label>
+				<input 
+					id="email"
+					name="email"
+					minlength="8" 
+					placeholder="cristiandracedo@hotmail.com" 
+					type="email" 
+					required />
+				<label for="consulta">Consulta</label>
+				<textarea
+					id="consulta" 
+					name="consulta"
+					minlength="10"
+					maxlength="200" 
+					required></textarea>
+				<button>ENVIAR</button>
+			</form>
+		<!-- Redes sociales -->
 		<div class="social">
 			<a href="https://facebook.com" target="_blank">Facebook</a>
 			<a href="https://instagram.com" target="_blank">Instagram</a>
