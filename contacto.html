@@ -3,7 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
-
+	<style>
+		/* Reglas Generales */
+			body, 
+			h1, 
+			h2, 
+			h3, 
+			.title, 
+			.menu{ 
+				margin: 0;
+				font-family: 'segoe ui', calibri, sans-serif;
+			}
+		/* Barra de navegacion */
+			.menu{
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				background-color: #448; /*rrggbb*/
+			}
+			.menu a{
+				color: #eee;
+				text-decoration: none;
+			}
+			.menu li{
+				padding: 8px;
+				display: inline-block;
+			}
+			.menu li:hover{
+				background-color: rgba(51,51,51,.5);
+			}
+		/* Cabecera Principal */
+			#header{
+				padding: 20% 20px; /* top right bottom left */
+				text-align: center;
+				background-color: #ccc;
+			}
+		/* Contenido Principal */
+		
+		/* Pie de Pagina Principal */
+			#footer{
+				padding: 16px;
+				color: #eee;
+				text-align: center;
+				background-color: #336;
+			}
+	</style>
 </head>
 <body>
 	<!-- Barra de navegacion -->
@@ -33,7 +77,7 @@
 		</article>
 	</main>
 	<!-- Pie de Pagina Principal-->
-	<footer>
+	<footer id="footer">
 		<div class="social">
 			<a href="https://facebook.com" target="_blank">Facebook</a>
 			<a href="https://instagram.com" target="_blank">Instagram</a>
