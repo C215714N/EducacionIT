@@ -25,12 +25,11 @@
         ("Coca 2l retornable", 1 ),
 		("Pantene 200ml", 2),
 		("Iphone 10", 4 );
-
+	
 ## Consulta de Datos
 	SELECT * FROM users;
     SELECT * FROM categories;
     SELECT * FROM products;
-	SELECT concat('usuario: ', user_name, ' - contraseña: ', user_pass) AS datos FROM users;
     
 ## Actualizacion 
 	UPDATE users SET user_pass = "root" 	-- valor asignado

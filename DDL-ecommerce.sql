@@ -19,6 +19,18 @@
 		UNIQUE KEY(user_name), -- Clave Unica (campo local)
 		UNIQUE KEY(user_email)
    );
+   CREATE TABLE users_data(
+	data_id INT AUTO_INCREMENT,
+    lastname VARCHAR(50),
+    firstname VARCHAR(50),
+    doctype ENUM('DNI','DNI ext.','PASS','LC','LE','CI', 'DU'),
+    docnum VARCHAR(20),
+    birth_date DATE,
+    user INT,
+    PRIMARY KEY(data_id),
+    UNIQUE KEY(doctype, docnum),
+    FOREIGN KEY(user) REFERENCES users(user_id)
+   );
 	CREATE TABLE categories(
 		category_id INT AUTO_INCREMENT,
 		description VARCHAR(50),
