@@ -1,0 +1,16 @@
+DDL Data definition Language
+
+CREATE	
+	DATABASE	db_name;                         	-- crea la base de datos
+	TABLE		table_name(column datatype);    	-- crea la tabla y sus campos
+	USER		user_name IDENTIFIED BY password;	-- crea un usuario y contraseña (root)
+
+DROP
+	DATABASE	db_name;	-- elimina la base de datos		
+	TABLE 		table_name; -- elimina la tabla (si no esta vinculada con otra)
+	USER 		user_name;	-- elimina un usuario (root)
+
+ALTER TABLE
+	ADD COLUMN		column_name datatype; -- agrega una columna a la tabla
+	DROP COLUMN 	column_name			  -- elimina una columna de la tabla
+	MODIFY COLUMN 	column_name datatype; -- modifica una columna de la tabla
