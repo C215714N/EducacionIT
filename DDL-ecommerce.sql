@@ -31,5 +31,5 @@
 		-- category ENUM("alimentos", "higiene", "hogar", "tecnologia"),
 		category INT, -- campo relacional
 		PRIMARY KEY(product_id),
-		FOREIGN KEY (category) REFERENCES categories(category_id) -- clave foranea - Tabla(primary_key)
-	); 
+		FOREIGN KEY(category) REFERENCES categories(category_id) -- clave foranea - Tabla(primary_key)
+	);
