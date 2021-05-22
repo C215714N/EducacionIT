@@ -3,12 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fudamentos Web</title>
+	<style>
+		/* selectores generales */
+		body{
+			margin: 0;
+			font-family: segoe ui, calibri, sans-serif;
+		}
+		/* selectores multiples (,)*/
+		header, footer{
+			padding: 16px;
+			color: #eee;/*rrggbb min:00 max:ff*/
+			background-color: #448;
+		}
+		/* selectores especificos (padre hijo)*/
+		nav ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/* pseudoclase: instancia o caracteristica de una etiqueta*/
+		nav li:hover{
+			background-color: #66c;
+		}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>&lt;html> y {css}</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Ruta Relativa / Interna -->
 					<a href="index.html">Inicio</a>
@@ -23,9 +55,9 @@
 					<a href="https://github.com/c215714n/EducacionIT/tree/html-s-10" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
-	<div id="main">
+		</nav>
+	</header>
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul class="example">
 			<li>
@@ -55,13 +87,13 @@
 			<li><strong>ASIDE: </strong> Contenido tangencial, que se relaciona indirectamente con sus hermanos, se suele utilizar para publicidad o sugerencias.</li>
 			<li><strong>FOOTER: </strong> Contenido final o pie de pagina, posee la informacion/formulario de contacto, redes sociales, a veces un mapa del sitio e informacion de copyright:</li>
 		</ul>
-	</div>
-	<div id="footer">
+	</main>
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados
 			<a href="#"> Cristian Racedo </a>
 			&amp; Compañia.
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
