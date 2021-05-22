@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fudamentos Web</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>&lt;html> y {css}</p>
+		<div id="nav">
+			<ul>
+				<li><!-- Ruta Relativa / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador (#Id) -->
+					<a href="#">Galeria</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador (#id) -->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li>
+					<a href="https://github.com/c215714n/EducacionIT/tree/html-s-10" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul class="example">
+			<li>
+				<strong>Evitar el uso de espacios </strong> 
+				por que el navegar reemplaza este caracter por el <em>conjunto %20</em>, es decir que si nuestro archivo se llama <em>"foto 01.jpg"</em> el navegador lo interpretara como <em>"foto%2001.jpg"</em> no pudiendo reconocer el mismo. Para resolver esto se aconseja <strong>utilizar guiones (-_)</strong> dando como resultado un nombre como <em>"foto_01.jpg".</em>
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos </strong> como <em>"background.jpg" o "perritos_jugando.jpg"</em> ya que facilita al desarrollador la aplicacion de los archivos. Evitar nombres genericos como <em>"foto_01.jpg"</em> o automatizados como <em>"2021-05-22-112840100.jpg"</em> ya que en demasia dificultan su utilizacion.
+			</li>
+			<li>
+				<strong>Implementar minusculas en los nombres</strong> debido a que los servidores suelen estar basados en <em>UNIX</em> y son <strong>caseSensitive</strong>, por lo tanto identifica como diferentes los siguientes nombres <em>"background.jpg" - "Background.jpg" - "BACKGROUND.jpg"</em>; ademas esto reduce el margen de error.
+			</li>
+		</ul>
+		<div class="gallery">
+			<img style="width: 300px;" src="img/jjba-thefool-01.jpg" alt="Dibujo JJBA the Fool"/>
+			<img style="width: 300px;" src="img/jjba-thefool-02.jpg" alt="Dibujo JJBA the Fool"/>
+			<img style="width: 300px;" src="img/jjba-thefool-03.jpg" alt="Dibujo JJBA the Fool"/>
+			<img style="width: 300px;" src="img/jjba-thefool-04.jpg" alt="Dibujo JJBA the Fool"/>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="#"> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</div>
+</body>
+</html>
