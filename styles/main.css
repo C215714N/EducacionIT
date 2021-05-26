@@ -1,6 +1,6 @@
 /*Content First - Mobile First*/
 	/*General Rules*/
-		@import url();
+		@import url('icomoon.css');
 		*{
 			box-sizing: border-box;
 			font-family: Raleway, segoe ui, sans-serif;
@@ -13,7 +13,9 @@
 			--hover: rgba(51, 51, 51, .5);
 			--gradient: linear-gradient(var(--snd), var(--fst));
 		}
-		body, h1, h2, h3, .menu, .title{ margin: 0 }
+		body, h1, h2, h3, .menu, .title, .slide{ margin: 0 }
+		.opacity{ opacity: .3 }
+		.opacity:hover{ opacity: .7 }
 	/*Navigation*/
 		nav{
 			position: sticky;
@@ -39,6 +41,7 @@
 			position: fixed;
 			bottom: .5rem;
 			right: .5rem;
+			border-radius: 1rem;
 			background: var(--dark);
 		}
 		.button{
@@ -62,13 +65,74 @@
 		.menu a:hover{
 			background-color: var(--hover);
 		}
+		.menu span{ padding: .5rem }
 		.menu.active{
 			height: auto;
 		}
+	/*Heading*/
+		#header{
+			position: relative;
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			height: 100vh;/*viewport height*/
+			min-height: 300px;
+			max-height: 600px;
+			font-size: calc(2vw + .8rem); /*viewport width*/
+		}
+		.slide, 
+		.slide li{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+		}
+		#header button{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			border: none;
+			padding: .5rem;
+			background: transparent;
+			font-size: calc(2vw + 1rem);
+		}
+		#header .icon-prev{ left: 0 }
+		#header .icon-next{ right: 0 }
+	/*Main Content*/
+		
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets */
-
+	@media screen and (min-width: 768px){
+	/*Navigation*/
+		nav .button,
+		.menu span{
+			display: none;
+		}
+		.menu{
+			display: flex;
+			width: auto;
+			height: auto;
+		}
+		.menu a{
+			display: flex;
+			align-items: center;
+			padding: .5rem;
+			font-size: 1.5rem;
+		}
+	}
 /*Large Devices - Desktop*/
-
+	@media screen and (min-width:  992px){
+	/*Navigation*/
+		.menu span{ 
+			display: block; 
+			font-size: 1rem;
+		}
+	}
 /*Extra Large Devices - Desktop HD*/
+	@media screen and (min-width: 1200px){
+	/*Navigation*/
+		nav{ justify-content: space-around }
+	}
