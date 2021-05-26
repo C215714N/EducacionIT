@@ -1,0 +1,74 @@
+/*Content First - Mobile First*/
+	/*General Rules*/
+		@import url();
+		*{
+			box-sizing: border-box;
+			font-family: Raleway, segoe ui, sans-serif;
+		}
+		:root{
+			--fst: #248;
+			--snd: #36c;
+			--light: #eee;
+			--dark: #333;
+			--hover: rgba(51, 51, 51, .5);
+			--gradient: linear-gradient(var(--snd), var(--fst));
+		}
+		body, h1, h2, h3, .menu, .title{ margin: 0 }
+	/*Navigation*/
+		nav{
+			position: sticky;
+			top: 0;
+			z-index: 2;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: var(--fst) var(--gradient) /*color image*/
+		}
+		nav a{
+			display: block;
+			padding: .25rem;
+			color: var(--light);
+			text-decoration: none;
+		}
+		.logo{
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
+		nav .icon-back{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			background: var(--dark);
+		}
+		.button{
+			margin: .5rem; /*root em (ancho M) => 16px*/
+			padding: .2rem .5rem;
+			border: .1rem solid var(--light);
+			color: var(--light);
+			background: transparent;
+		}
+		.button:hover{
+			color: var(--fst);
+			background: var(--light);
+		}
+		.menu{
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			padding: 0;
+			list-style: none;
+		}
+		.menu a:hover{
+			background-color: var(--hover);
+		}
+		.menu.active{
+			height: auto;
+		}
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets */
+
+/*Large Devices - Desktop*/
+
+/*Extra Large Devices - Desktop HD*/
