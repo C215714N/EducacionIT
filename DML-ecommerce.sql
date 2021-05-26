@@ -38,14 +38,7 @@
     WHERE user_id = 8;
     UPDATE products SET category = 3
     WHERE description LIKE '%Aire%Samsung%'; -- % cualquier cant. caracteres || _ 1 caracter
-    /*
-		=		 exactamente igual
-        >  || >= mayor || mayor o igual
-        <  || <= menor || menor o igual
-        != || <> no es igual || distinto
-        LIKE como similar
-    */
-    
+
 ## Eliminacion de registros
     DELETE FROM users; -- elimina todos los registros
     TRUNCATE users; -- elimina registros y reinicia los contadores
