@@ -109,6 +109,59 @@
 					</li>
 				</ul>
 			</section>
+			<section>
+				<header class="header">
+					<h3>¿Como estan compuestos?</h3>
+				</header>
+				<p>
+					Dentro de los formularios podemos encontrar <em>2 tipos de elementos</em>, por un lado tenemos las <strong>Etiquetas (LABEL)</strong> que indican al usuario que dato debe seleccionar/ingresar y facilitan la accesibilidad; y por otro estan los <strong>campos (INPUT/TEXTAREA/SELECT)</strong> donde el usuario debe realizar las acciones propiamente dichas. Los campos poseen <em>2 atributos</em> que, aunque no siempre estan presentes, son <strong>type="..."</strong> indicando el tipo de dato que se debe ingresar (ej: texto/numero) y <strong>value="..."</strong> que representa el valor del control, haya sido ingresado por el usuario o este de manera predeterminada.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto</label>
+						<input type="text">
+					</li>
+					<li>
+						<label>Campo Numerico</label>
+						<input type="number">
+					</li>
+					<li>
+						<label>Campo Correo</label>
+						<input type="email">
+					</li>
+					<li>
+						<label>Campo Contraseña</label>
+						<input type="password">
+					</li>
+					<li>
+						<label>Campo de Fecha</label>
+						<input type="date">
+					</li>
+					<li>
+						<label>Opcion Unica </label>
+						| si <input type="radio" name="accept" value="true">
+						| no <input type="radio" name="accept" value="false">
+					</li>
+					<li>
+						<label>Opcion Multiple </label>
+						| arte <input type="checkbox" name="hobbie" value="0">
+						| musica <input type="checkbox" name="hobbie" value="1">
+						| deporte <input type="checkbox" name="hobbie" value="2">
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Lista de Opciones</label>
+						<select>
+							<option value="html">html</option>
+							<option value="css">css</option>
+							<option value="js">js</option>
+						</select>
+					</li>
+				</ul>
+			</section>
 		</article>
 	</main>
 	<!-- Pie de Pagina Principal-->
