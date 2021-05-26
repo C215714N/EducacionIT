@@ -122,7 +122,7 @@
 					La etiqueta mencionada anteriormente contiene 3 partes, la cabecera de tabla, el cuerpo de tabla y el pie de tabla (opcional) y la vez cada una de estas partes posee filas y celdas.
 				</p>
 				<div class="example">
-					<table border="1">
+					<table class="modern">
 						<caption>Lista de Usuarios</caption>
 						<!--THEAD: Cabecera-->
 						<thead>
@@ -153,6 +153,85 @@
 							</tr>
 						</tfoot>
 					</table>
+					<table class="classic">
+						<caption>Desarrolladores</caption>
+						<thead>
+							<tr>
+								<th>Tipo</th>
+								<th>Lenguaje</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<p>
+				
+			</p>
+			<section>
+				<header>
+					<h3>¿contenido embebido?</h3>
+				</header>
+				<div class="example">
+					<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.7158669056107!2d-58.37607500016438!3d-34.6027203438759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc41153a23%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1622061725402!5m2!1ses-419!2sar"
+					loading="lazy">
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						title="John Frusciante - Carvel" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/qrZ9f0cL86E" 
+						title="Spider-Man Original vs Remake" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/uUueCDfJShg" 
+						title="Nosferatu 1922"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Multimedia sin Plugins?</h3>
+				</header>
+				<p>
+					formatos de audio <em>.mp3 - .wav - .ogg </em>
+					formatos de video <em>.mp4 - .webm - .ogv </em>
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="media/live-learn.mp3">link</a>
+						</p>
+					</audio>
+					<video src="media/californication.ogv" controls autoplay muted loop>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="media/californication.ogv">link</a>
+						</p>
+					</video>
 				</div>
 			</section>
 		</article>

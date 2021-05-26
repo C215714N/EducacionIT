@@ -59,6 +59,39 @@
 				background-color: #eee;
 				line-height: 24px;
 				list-style: none;
+				overflow: auto;
+			}
+		/*Tablas*/
+			.classic,
+			.classic caption,
+			.classic td,
+			.classic th{
+				border: 2px solid #448;
+				border-collapse: collapse;
+			}
+			.classic caption{
+				border-bottom: none;
+			}
+			.modern, 
+			.modern caption,
+			.modern tr,
+			.modern td{
+				color: #eee;
+				background-color: rgba(68, 68, 136, .5);
+			}
+			th,
+			td,
+			caption{
+				padding: 8px;
+			}
+			caption{
+				margin-top: 20px;
+				border-radius: 8px 8px 0 0;/*tl tr br bl*/
+			}
+			audio, video{
+				display: block;
+				width: 100%;
+				margin: 20px 0;
 			}
 		/* Pie de Pagina Principal */
 			#footer{
