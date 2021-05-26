@@ -1,0 +1,82 @@
+	/* Reglas Generales */
+			body, 
+			h1, 
+			h2, 
+			h3, 
+			.title, 
+			.menu{ 
+				margin: 0;
+				font-family: 'segoe ui', calibri, sans-serif;
+			}
+		/* Barra de navegacion */
+			.menu{
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				background-color: #448; /*rrggbb*/
+			}
+			.menu a{
+				color: #eee;
+				text-decoration: none;
+			}
+			.menu li{
+				padding: 8px;
+				display: inline-block;
+			}
+			.menu li:hover{
+				background-color: rgba(51,51,51,.5);
+			}
+		/* Cabecera Principal */
+			#header{
+				padding: 20% 20px; /* top right bottom left */
+				text-align: center;
+				background-color: #ccc;
+			}
+		/* Contenido Principal */
+			main{
+				max-width: 960px;
+				margin: auto;
+				padding: 20px;
+			}
+			article{
+				margin: 16px;
+				border-radius: 4px;
+				padding: 16px;
+				box-shadow: 0 0 8px #ccc;/* -x+ -y+ blur color*/
+			}
+			main .header{
+				color: #333;
+				border-bottom: 2px solid #ccc;
+			}
+			main header{
+				color: #448;
+			}
+			.example{
+				margin: 16px;
+				margin-left: 48px;
+				border-left: 4px solid #448;/*width style color*/
+				padding: 20px;
+				background-color: #eee;
+				line-height: 24px;
+				list-style: none;
+			}
+		/* Pie de Pagina Principal */
+			#footer{
+				padding: 16px;
+				color: #eee;
+				text-align: center;
+				background-color: #336;
+			}
+			#contacto{
+				max-width: 540px;
+				margin: auto;
+				text-align: left;
+			}
+			#contacto input,
+			#contacto textarea{
+				width: 100%;
+			}
+			#contacto textarea{
+				resize: none;
+				height: 90px;
+			}

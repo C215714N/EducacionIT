@@ -3,64 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
-	<style>
-		/* Reglas Generales */
-			body, 
-			h1, 
-			h2, 
-			h3, 
-			.title, 
-			.menu{ 
-				margin: 0;
-				font-family: 'segoe ui', calibri, sans-serif;
-			}
-		/* Barra de navegacion */
-			.menu{
-				padding: 0;
-				list-style: none;
-				text-align: center;
-				background-color: #448; /*rrggbb*/
-			}
-			.menu a{
-				color: #eee;
-				text-decoration: none;
-			}
-			.menu li{
-				padding: 8px;
-				display: inline-block;
-			}
-			.menu li:hover{
-				background-color: rgba(51,51,51,.5);
-			}
-		/* Cabecera Principal */
-			#header{
-				padding: 20% 20px; /* top right bottom left */
-				text-align: center;
-				background-color: #ccc;
-			}
-		/* Contenido Principal */
-		
-		/* Pie de Pagina Principal */
-			#footer{
-				padding: 16px;
-				color: #eee;
-				text-align: center;
-				background-color: #336;
-			}
-			#contacto{
-				max-width: 540px;
-				margin: auto;
-				text-align: left;
-			}
-			#contacto input,
-			#contacto textarea{
-				width: 100%;
-			}
-			#contacto textarea{
-				resize: none;
-				height: 90px;
-			}
-	</style>
+	<link rel="icon" href="img/css.svg">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<!-- Barra de navegacion -->
@@ -110,7 +54,7 @@
 				</ul>
 			</section>
 			<section>
-				<header class="header">
+				<header>
 					<h3>¿Como estan compuestos?</h3>
 				</header>
 				<p>
@@ -161,6 +105,55 @@
 						</select>
 					</li>
 				</ul>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<p>
+				Son herramientas que se utilizan para <strong>organizar la informacion de manera tabular</strong> y deben ser implementadas cuando los datos se corresponden con determinada estructura. Para crear las mismas se utiliza la etiqueta <em>&lt;table></em> respetando el modelo de cajas, es decir, utilizando etiquetas como contenedores y otras como contenido.
+			</p>
+			<section>
+				<header>
+					<h3>¿Cual es su estructura?</h3>
+				</header>
+				<p>
+					La etiqueta mencionada anteriormente contiene 3 partes, la cabecera de tabla, el cuerpo de tabla y el pie de tabla (opcional) y la vez cada una de estas partes posee filas y celdas.
+				</p>
+				<div class="example">
+					<table border="1">
+						<caption>Lista de Usuarios</caption>
+						<!--THEAD: Cabecera-->
+						<thead>
+							<tr><!--TR(table row): FILA-->
+								<th>Usuario</th><!--TH(Table Heading): Celda E.-->
+								<th>Correo</th>
+								<th>Contraseña</th>
+							</tr>
+						</thead>
+						<!--TBODY: Cuerpo-->
+						<tbody>
+							<tr>
+								<td>Cristian</td><!--TD(Table Division): Celda -->
+								<td>cdr@hotmail.com</td>
+								<td>root</td>
+							</tr>
+							<tr>
+								<td>c215714n</td>
+								<td>cristiandracedo@gmail.com</td>
+								<td>pass</td>
+							</tr>
+						</tbody>
+						<!--TFOOT: Pie-->
+						<tfoot>
+							<tr>
+								<th colspan="2">Total</th>
+								<td>2</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 			</section>
 		</article>
 	</main>
