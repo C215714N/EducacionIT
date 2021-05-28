@@ -19,7 +19,8 @@
 		UNIQUE KEY(user_name), -- Clave Unica (campo local)
 		UNIQUE KEY(user_email)
    );
-   CREATE TABLE users_data(
+	DROP TABLE IF EXISTS users_data;
+    CREATE TABLE users_data(
 	data_id INT AUTO_INCREMENT,
     lastname VARCHAR(50),
     firstname VARCHAR(50),
@@ -31,12 +32,14 @@
     UNIQUE KEY(doctype, docnum),
     FOREIGN KEY(user) REFERENCES users(user_id)
    );
-	CREATE TABLE categories(
+	DROP TABLE IF EXISTS categories;
+    CREATE TABLE categories(
 		category_id INT AUTO_INCREMENT,
 		description VARCHAR(50),
 		PRIMARY KEY(category_id),
 		UNIQUE KEY(description)
 	);
+    DROP TABLE IF EXISTS products;
 	CREATE TABLE products (
 		product_id INT AUTO_INCREMENT,
 		description VARCHAR(200) NOT NULL,
@@ -45,3 +48,19 @@
 		PRIMARY KEY(product_id),
 		FOREIGN KEY(category) REFERENCES categories(category_id) -- clave foranea - Tabla(primary_key)
 	);
+    DROP TABLE IF EXISTS posts;
+    CREATE TABLE posts(
+		post_id INT AUTO_INCREMENT,
+        user INT,
+        product INT,
+        price FLOAT(8,2) NOT NULL, 
+        quantity INT NOT NULL,
+        post_description VARCHAR(1000),
+        post_date DATE,
+        PRIMARY KEY (post_id),
+        UNIQUE KEY(user, product),
+        FOREIGN KEY (user) REFERENCES users(user_id),
+        FOREIGN KEY (product) REFERENCES products(product_id)
+	);
+    
+    

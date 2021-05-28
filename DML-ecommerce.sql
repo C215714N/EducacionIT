@@ -37,7 +37,7 @@
     UPDATE users SET user_pass = 'pass'
     WHERE user_id = 8;
     UPDATE products SET category = 3
-    WHERE description LIKE '%Aire%Samsung%'; -- % cualquier cant. caracteres || _ 1 caracter
+    WHERE description LIKE '%Aire%Samsung%'; -- % cualquier cant. caracteres || _ 1 caracter "_a%"
 
 ## Eliminacion de registros
     DELETE FROM users; -- elimina todos los registros
