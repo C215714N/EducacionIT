@@ -62,5 +62,17 @@
         FOREIGN KEY (user) REFERENCES users(user_id),
         FOREIGN KEY (product) REFERENCES products(product_id)
 	);
+    DROP TABLE IF EXISTS sales;
+    CREATE TABLE sales(
+		sale_id INT AUTO_INCREMENT,
+        client INT,
+        post INT,
+        price FLOAT(8,2),
+        quantity INT,
+        sale_date DATE,  
+        PRIMARY KEY (sale_id),
+        FOREIGN KEY (client) REFERENCES users(user_id),
+        FOREIGN KEY (post) REFERENCES posts(post_id)
+    );
     
     
