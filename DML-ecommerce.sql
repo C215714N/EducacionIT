@@ -40,7 +40,7 @@
 	## publicaciones
 	INSERT INTO posts(user, product, price, quantity, post_date)
 	VALUES (1, 7, 58999.99, 5, current_date());
-    ##venta
+    ##ventas
     INSERT INTO sales(client, post, price, quantity, sale_date)
     VALUES (10, 2, (SELECT price FROM posts WHERE post_id = 2), 1, current_date());
     
@@ -50,7 +50,11 @@
     SELECT * FROM categories;
     SELECT * FROM products;
     SELECT * FROM posts;
-    SELECT client, post, ROUND(price * quantity, 2) AS total FROM sales;
+    SELECT 
+		client, 
+        post, 
+        ROUND(price * quantity) AS total 
+	FROM sales;
     
 ## Actualizacion 
 	UPDATE users SET user_pass = "root" 	-- valor asignado
