@@ -34,6 +34,36 @@
 		nav li:hover{
 			background-color: #66c;
 		}
+		/*selector de clase (.class)*/
+		.example{
+			padding: 32px;
+			background-color: #eee;
+		}
+		.example p{
+			overflow: hidden;
+			margin: 24px;
+			padding: 16px;
+			color: #eee;
+			background-color: #333;
+		}
+		.example img{
+			float: left;
+			margin-right: 16px;
+			width: 200px;
+		}
+		.example .right{
+			float: right;
+		}
+		/*selector de Id (#id)*/
+		#footer a{
+			color: #ccc;
+			font-weight: bold;
+		}
+		#header h1, 
+		#header p{
+			margin: 0;	
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -78,7 +108,7 @@
 			<img style="width: 300px;" src="img/jjba-thefool-04.jpg" alt="Dibujo JJBA the Fool"/>
 		</div>
 		<h2>Estructura Semantica</h2>
-		<ul>
+		<ul class="example">
 			<li><strong>HEADER: </strong> Cabecera de pagina o contenido introductorio, posee los titulos principales, a veces una galeria a modo de presentacion e incluso la navegacion.</li>
 			<li><strong>NAV: </strong> Navegacion principal, debe poseer solamente los links mas importantes del sitio.</li>
 			<li><strong>MAIN: </strong> Contenido principal de pagina, aquel que es relevante para el usuario y puede estar divido en varias partes.</li>
@@ -87,6 +117,35 @@
 			<li><strong>ASIDE: </strong> Contenido tangencial, que se relaciona indirectamente con sus hermanos, se suele utilizar para publicidad o sugerencias.</li>
 			<li><strong>FOOTER: </strong> Contenido final o pie de pagina, posee la informacion/formulario de contacto, redes sociales, a veces un mapa del sitio e informacion de copyright:</li>
 		</ul>
+		<div class="example">
+			<p>
+				<img class="right" src="img/poster-californication.jpg" alt="Poster Californication - RHCP"/>
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, provident. Reprehenderit est deleniti nulla. Facilis libero, consequuntur est nemo ea odit quisquam accusantium, provident similique modi molestiae laboriosam, mollitia harum!
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia ipsa, similique quasi hic amet, perspiciatis nesciunt laboriosam expedita magni officiis et repudiandae, laudantium fuga nisi? Facere minima, nam qui.
+
+				Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Tempora placeat corporis delectus reprehenderit nulla, quos expedita magni! Eius voluptates ipsum officia aut odio, perspiciatis minima ea consequuntur rerum similique, omnis.
+			</p>
+			<p>
+				<img src="img/poster-by-the-way.jpg" alt="Poster By the Way - RHCP">
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, provident. Reprehenderit est deleniti nulla. Facilis libero, consequuntur est nemo ea odit quisquam accusantium, provident similique modi molestiae laboriosam, mollitia harum!
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia ipsa, similique quasi hic amet, perspiciatis nesciunt laboriosam expedita magni officiis et repudiandae, laudantium fuga nisi? Facere minima, nam qui.
+
+				Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Tempora placeat corporis delectus reprehenderit nulla, quos expedita magni! Eius voluptates ipsum officia aut odio, perspiciatis minima ea consequuntur rerum similique, omnis.
+			</p>
+			<p>
+				<img src="img/poster-cant-stop.jpg" alt="Poster Greatests Hits - RHCP">
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, provident. Reprehenderit est deleniti nulla. Facilis libero, consequuntur est nemo ea odit quisquam accusantium, provident similique modi molestiae laboriosam, mollitia harum!
+
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia ipsa, similique quasi hic amet, perspiciatis nesciunt laboriosam expedita magni officiis et repudiandae, laudantium fuga nisi? Facere minima, nam qui.
+
+				Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Tempora placeat corporis delectus reprehenderit nulla, quos expedita magni! Eius voluptates ipsum officia aut odio, perspiciatis minima ea consequuntur rerum similique, omnis.
+			</p>
+		</div>
 	</main>
 	<footer id="footer">
 		<p>
