@@ -119,7 +119,7 @@
 					<h3>¿Cual es su estructura?</h3>
 				</header>
 				<p>
-					La etiqueta mencionada anteriormente contiene 3 partes, la cabecera de tabla, el cuerpo de tabla y el pie de tabla (opcional) y la vez cada una de estas partes posee filas y celdas.
+					La etiqueta mencionada anteriormente contiene 3 partes fundamentales, la cabecera de tabla <strong>&lt;thead></strong>, el cuerpo de tabla <strong>&lt;tbody></strong> y el pie de tabla <strong>&lt;tfoot></strong>(opcional). Cada una de estas partes estan divididas en filas <em>&lt;tr> (Table Row)</em> y celdas <em>&lt;td> (Table Division)</em>, pero a diferencia de cualquier otra representacion de tablas, las columnas, si bien existen, no son representadas mediante una etiqueta.
 				</p>
 				<div class="example">
 					<table class="modern">
@@ -182,12 +182,15 @@
 				<h2>Contenido Multimedia</h2>
 			</header>
 			<p>
-				
+				Desde que existen los sitios web y los medios audiovisuales se ha intentado incorporar estos ultimos en las paginas propiamente mencionadas; y con el paso del tiempo se ha logrado hacer de manera tal que ya no sea necesario instalar ningun plugin o herramientas de terceros para que nuestro sitio pueda reproducir dicho material sin problemas de compatibilidad.
 			</p>
 			<section>
 				<header>
 					<h3>¿contenido embebido?</h3>
 				</header>
+				<p>
+					Se conoce como <strong>embed</strong> al contenido incorporado a nuestra pagina desde otro sitio o que directamente no pertenece al universo html. Es una categoria web para identificar el contenido que fue compartido desde otra web y suele implementarse utilizando la etiqueta <em>&lt;iframe></em> que permite la carga asincronica de contenido, para no afectar los tiempos de carga de nuestra pagina.
+				</p>
 				<div class="example">
 					<iframe 
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.7158669056107!2d-58.37607500016438!3d-34.6027203438759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc41153a23%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1622061725402!5m2!1ses-419!2sar"
@@ -218,8 +221,7 @@
 					<h3>¿Multimedia sin Plugins?</h3>
 				</header>
 				<p>
-					formatos de audio <em>.mp3 - .wav - .ogg </em>
-					formatos de video <em>.mp4 - .webm - .ogv </em>
+					En la actualidad los navegadores incorporan API's de reproduccion de contenido a las que podemos acceder gracias a las etiquetas <strong>&lt;audio> y &lt;video></strong> soportando los formatos de audio <em>.mp3 - .wav - .ogg </em> y los formatos de video <em>.mp4 - .webm - .ogv</em>; Cabe destacar que los reproductores seran visibles si utilizamos el atributo <em>controls</em> y podemos reproducir el material de manera indefinida utilizando <em>autoplay loop</em>
 				</p>
 				<div class="example">
 					<audio src="media/live-learn.mp3" controls>
@@ -264,6 +266,7 @@
 					name="consulta"
 					minlength="10"
 					maxlength="200" 
+					placeholder="Buenas, necesito un presupuesto"
 					required></textarea>
 				<button>ENVIAR</button>
 			</form>

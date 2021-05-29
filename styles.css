@@ -100,6 +100,10 @@
 				text-align: center;
 				background-color: #336;
 			}
+			#footer a{
+				color: #eee;
+				font-weight: bold;
+			}
 			#contacto{
 				max-width: 540px;
 				margin: auto;
@@ -107,9 +111,24 @@
 			}
 			#contacto input,
 			#contacto textarea{
-				width: 100%;
+				width: calc(100% - 16px);
+				padding: 8px;
 			}
 			#contacto textarea{
 				resize: none;
 				height: 90px;
+			}
+			#contacto button{
+				display: block;
+				margin: 0;
+				margin-left: auto;
+				border: 2px solid #eee;
+				padding: 8px 16px;
+				color: #eee;
+				background-color: transparent;
+				font-weight: bold;
+			}
+			#contacto button:hover{
+				color: #448;
+				background-color: #eee;
 			}
