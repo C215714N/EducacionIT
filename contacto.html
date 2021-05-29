@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/css.svg">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<!-- Navegacion principal -->
@@ -25,6 +27,7 @@
 				<h2>Formularios HTML</h2>
 			</header>
 			<p>
+				
 				Son herramientas que permiten el <strong>intercambio de datos entre cliente y servidor</strong>, para implementarlos debemos utilizar la etiqueta <em>&lt;form></em> y solamente se tendra en cuenta para el envio, los datos que se encuentren dentro de la misma. Cabe destacar que es necesario especifar algunos atributos para definir como se deben manipular los datos y que se debe hacer con los mismos.
 			</p>
 			<section>
@@ -32,6 +35,7 @@
 					<h3>¿Como funcionan?</h3>
 				</header>
 				<p>
+					
 					La etiqueta mencionada anteriormente posee <em>2 atributos</em> necesarios para la manipulacion de datos, por un lado se encuentra <strong>action="..."</strong> que indica al navegador cual es la operacion a realizar cuando el usuario presiona el boton enviar, en la actualidad se utilizan <em>scripts en lenguaje de servidor (ej: php)</em> para que este ultimo resuelva que hacer; por otro lado esta <strong>method="..."</strong> que recibe al menos <em>2 valores</em> segun la prioridad que deba darse a los datos y su respuesta respectivamente.
 				</p>
 				<ul class="example">
@@ -55,7 +59,7 @@
 	</main>
 	<!-- Pie de pagina -->
 	<footer id="footer">
-		<form action="contacto.php" method="POST">
+		<form id="contacto" action="contacto.php" method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Nombre Completo</label>
 			<input 
