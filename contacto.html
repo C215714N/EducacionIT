@@ -32,10 +32,75 @@
 					<h3>¿Como funcionan?</h3>
 				</header>
 				<p>
-					La etiqueta mencionada anteriormente posee <em>2 atributos</em> necesarios para la manipulacion de datos, por un lado se encuentra <strong>action="..."</strong> que indica al navegador cual es la operacion a realizar cuando el usuario presiona el boton enviar, en la actualidad se utilizan <em>scripts en lenguaje de servidor (ej: php)</em> para que este ultimo resuelva que hacer; por otro lado esta <strong>method="..."</strong> que recibe al menos 2 valores segun la prioridad que deba darse a los datos y su respuesta respectivamente.
+					La etiqueta mencionada anteriormente posee <em>2 atributos</em> necesarios para la manipulacion de datos, por un lado se encuentra <strong>action="..."</strong> que indica al navegador cual es la operacion a realizar cuando el usuario presiona el boton enviar, en la actualidad se utilizan <em>scripts en lenguaje de servidor (ej: php)</em> para que este ultimo resuelva que hacer; por otro lado esta <strong>method="..."</strong> que recibe al menos <em>2 valores</em> segun la prioridad que deba darse a los datos y su respuesta respectivamente.
 				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong> Metodo que se utiliza para obtener informacion del servidor, la prioridad radica en la respuesta de este ultimo y debido a esto es bastante rapido, pero menos seguro debido a que los datos se envian en texto plano y siempre estan visibles en la barra de direcciones.
+						<ul>
+							<li>Buscadores - Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST: </strong> Metodo que se utiliza para enviar informacion al servidor de manera segura, ya que la prioridad radica en el cliente. Se encriptan los datos para la comunicacion, pero es mas lento debido a esto.
+						<ul>
+							<li>Inscripcion - Registro</li>
+							<li>Acceso - Inicio Sesion</li>
+							<li>Consulta Web - Contacto</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
+	<!-- Pie de pagina -->
+	<footer id="footer">
+		<form action="contacto.php" method="POST">
+			<h2>Contactanos</h2>
+			<label for="nombre">Nombre Completo</label>
+			<input 
+				id="nombre" 
+				name="nombre" 
+				type="text"
+				minlength="3"
+				maxlength="50" 
+				placeholder="Cristian Racedo"
+				required />
+			<label for="email">Correo Electronico</label>
+			<input 
+				id="email"
+				name="email" 
+				type="email"
+				minlength="8"
+				placeholder="CristianDRacedo@hotmail.com" 
+				required />
+			<label for="tipo">Tipo de Consulta</label>
+			<select id="tipo" name="tipo">
+				<option value="frontend">FrontEnd Development</option>
+				<option value="backend">BackEnd Development</option>
+				<option value="fullstack">FullStack Development</option>
+			</select>
+			<label for="consulta">Consulta a Realizar</label>
+			<textarea 
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Buenas, necesito un presupuesto"
+				required></textarea>
+			<button>ENVIAR</button>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">Facebook</a>
+			<a href="https://instagram.com" target="_blank">Instagram</a>
+			<a href="https://twitter.com" target="_blank">Twitter</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/html-s-10" target="_blank">GitHub</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> cristiandracedo@hotmail.com </a>
+			&amp; Compañia.
+		</p>
+	</footer>
 </body>
 </html>
