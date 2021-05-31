@@ -1,0 +1,39 @@
+section {
+  margin: auto;
+  padding: 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem 0 #448;
+}
+section article {
+  padding: 0.5rem;
+}
+section article .example {
+  margin: 0;
+  outline: none;
+  border: 0;
+  padding: 0;
+  list-style: none;
+}
+section article .example ::-webkit-meter-optimum-value {
+  background: linear-gradient(45deg, lightgreen, darkgreen);
+}
+section article .example ::-webkit-meter-suboptimum-value {
+  background: linear-gradient(45deg, gold, orange);
+}
+section article .example ::-webkit-meter-even-less-good-value {
+  background: linear-gradient(45deg, tomato, darkred);
+}
+#footer #contact {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  flex-wrap: wrap;
+}

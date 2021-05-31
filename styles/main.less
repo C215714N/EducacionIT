@@ -1,0 +1,100 @@
+// Variables
+	@fst: #448;
+	@snd: #36c;
+	@sm: 576px;
+	@md: 768px;
+	@lg: 992px;
+	@xl: 1200px;
+// Nesting
+	#header{
+		.header{
+
+		}
+		.slide{
+			li{
+
+			}
+		}
+	}
+	section{
+		margin: auto;
+		padding:1rem;
+		.rounded;
+		.box-shadow(@blur: .5rem);
+		article{
+			padding:.5rem;
+			.example{
+				.unstyled;
+				::-webkit-meter-optimum-value{
+					.gradient(lightgreen, darkgreen);
+				}
+				::-webkit-meter-suboptimum-value{
+					.gradient(gold, orange);
+				}
+				::-webkit-meter-even-less-good-value{
+					.gradient(tomato, darkred);
+				}
+			}
+		}
+	}
+	#footer{
+		#contact{
+			.normalize(1rem auto; .5rem; none);
+			.flexbox(column);
+		}
+	}
+// Mixin (Estilos anidables)
+	.rounded(){
+		-webkit-border-radius: .5rem;
+		-moz-border-radius: .5rem;
+		-ms-border-radius: .5rem;
+		-o-border-radius: .5rem;
+		border-radius: .5rem;
+	}
+	.unstyled(){
+		margin: 0;
+		outline: none;
+		border: 0;
+		padding: 0;
+		list-style: none;
+	}
+ // Mixin parametricos (Estilos que reciben parametros)
+	.normalize(@m; @p; @b){
+		margin: @m;
+		padding: @p;
+		border: @b;
+	}
+	.box-shadow(
+		@x:0; 
+		@y: 0;
+		@blur: 0; 
+		@spread: 0; 
+		@color: @fst;
+		){
+		box-shadow: 
+			@x 
+			@y
+			@blur
+			@spread
+			@color
+	}
+	.gradient(@color-a; @color-b; @deg: 45deg){
+		background: linear-gradient(
+			@deg,
+			@color-a, 
+			@color-b
+		);
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: unset;
+		@fw: wrap;
+		@d: flex;
+		){
+		display: @d;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}

@@ -75,7 +75,35 @@
 						</li>
 						<li>
 							<strong>METER</strong>
-
+							<ul>
+								<li>
+									<meter 
+										value="30" 
+										low="40"
+										high="70"
+										optimum="90" 
+										max="100"></meter>
+									<strong>value</strong> &lt; low &lt; high &lt; optimum
+								</li>
+								<li>
+									<meter 
+										value="60" 
+										low="40"
+										high="70"
+										optimum="90" 
+										max="100"></meter>
+									low &lt; <strong>value</strong> &lt; high &lt; optimum
+								</li>
+								<li>
+									<meter 
+										value="90" 
+										low="40"
+										high="70"
+										optimum="90" 
+										max="100"></meter>
+									low &lt; high &lt; <strong>value</strong> &lt; optimum
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
