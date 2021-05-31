@@ -53,6 +53,61 @@
 			<p>
 				Con el nuevo estandar se incorporaron 2 formas de trabajar con valores estadisticos, gracias a las etiquetas <strong>&lt;progress></strong> que define el valor de una tarea cuando esta aun no fue finalizada, <em>ej: el estado de la cursada</em>; y <strong>&lt;meter></strong> que se utiliza para la comparacion de valores cuando una tarea fue finalizada, <em>ej: el resultado de un examen</em>.
 			</p>
+			<ul class="example">
+				<li>
+					<strong>PROGRESS</strong>
+					<ul>
+						<li>
+							<progress></progress>
+							sin value definido
+						</li>
+						<li>
+							<progress value="35" max="100"></progress>
+							value = 35; max = 100
+						</li>
+						<li class="progress">
+							<progress max="100"></progress>
+							<input type="number" min="0" max="100"/>
+							value = javaScript
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>METER</strong>
+					<ul>
+						<li>
+							<meter 
+								max="100"
+								low="40"
+								high="70"
+								optimum="90" 
+								value="30">
+							</meter>
+							<strong>value</strong> < low < high < optimum
+						</li>
+						<li>
+							<meter 
+								max="100"
+								low="40"
+								high="70"
+								optimum="90" 
+								value="60">
+							</meter>
+							low < <strong>value</strong> < high < optimum
+						</li>
+						<li>
+							<meter 
+								max="100"
+								low="40"
+								high="70"
+								optimum="90" 
+								value="90">
+							</meter>
+							low < high < <strong>value</strong> < optimum
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</article>
 	</section>
 <!-- Footer -->
