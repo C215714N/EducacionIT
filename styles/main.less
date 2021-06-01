@@ -1,0 +1,78 @@
+// Variables
+	@fst: #448;
+	@snd: #36c;
+	@sm: 576px;
+	@md: 768px;
+	@lg: 992px;
+	@xl: 1200px;
+
+// Nesting
+	// navigation
+		nav{
+		}
+	// headings
+	#header{
+		.header{
+
+		}
+		.slide{
+			.normalize;
+		}
+	}
+	// main content
+	section{
+		.normalize(1rem; .5rem);
+		.rouded;
+		.boxshadow;
+		@media screen and (min-width: @sm){ margin: 1rem auto; max-width: 540px }
+		@media screen and (min-width: @md){ max-width: 720px }
+		@media screen and (min-width: @lg){ max-width: 960px }
+		
+		article{
+			.example{
+				.normalize(.5rem 1rem .5rem 3rem; 1rem);
+				border-left: .25rem solid @fst;
+			}
+		}
+	}
+	// footer
+	#footer{
+		.social{
+			a{
+				.normalize(.5rem; 1rem);
+				background-color: lighten(@snd, 20%);
+				.rouded;
+			}
+		}
+	}
+
+// Mixin (Estilos que se anidan a otros)
+	.rouded(){
+		-webkit-border-radius: .25rem;
+		-moz-border-radius: .25rem;
+		-ms-border-radius: .25rem;
+		-o-border-radius: .25rem;
+		border-radius: .25rem
+	}
+// Mixin parametrico (Estilos que reciben valores)
+	.normalize (@m:0; @p:0; @b:none){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+	.boxshadow(@x:0; @y:0; @blur:.5rem; @spread:0; @color:@fst){
+		box-shadow: @x @y @blur @spread @color;
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: unset;
+		@fw: wrap;
+		@d: flex
+		){
+		display: @d;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}

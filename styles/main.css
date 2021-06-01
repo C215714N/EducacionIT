@@ -1,5 +1,7 @@
 /* Content First - Mobile First */
 	/* General Rules */
+		@import url('less.css');
+		@import url('sass.css');
 		@import url('icomoon.css');
 		*{
 			box-sizing: border-box;
@@ -72,10 +74,21 @@
 			.menu span{ padding: .5rem; }
 			.menu a:hover{ background-color: var(--hvr)}
 			.menu.active{ height: auto }
+	/* Main Content */
+
 /* Small Devices - Smartphones */
+	@media screen and (min-width:  576px){
 
+	}
 /* Medium Devices - Tablets */
-
+	@media screen and (min-width:  768px){
+		
+	}
 /* Large Devices - Small Desktop */
-
+	@media screen and (min-width:  992px){
+		
+	}
 /* ExtraLarge Devices - HD Desktop */
+	@media screen and (min-width:  1200px){
+		
+	}

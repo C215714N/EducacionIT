@@ -1,0 +1,49 @@
+#header .slide {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+section {
+  margin: 1rem;
+  border: none;
+  padding: 0.5rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem 0 #448;
+}
+@media screen and (min-width: 576px) {
+  section {
+    margin: 1rem auto;
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    max-width: 960px;
+  }
+}
+section article .example {
+  margin: 0.5rem 1rem 0.5rem 3rem;
+  border: none;
+  padding: 1rem;
+  border-left: 0.25rem solid #448;
+}
+#footer .social a {
+  margin: 0.5rem;
+  border: none;
+  padding: 1rem;
+  background-color: #85a3e0;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
