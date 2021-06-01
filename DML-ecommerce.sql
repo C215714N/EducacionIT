@@ -78,6 +78,17 @@
     LIMIT 100 -- cantidad a mostrar
     OFFSET 0; -- a partir del registro
     
+    /* pasos de la consulta
+		1 SELECT campos
+        2 FROM tabla
+        3 WHERE condicion 		(opcional)
+        4 GROUP BY campos 		(opcional)
+        5 HAVING campos ALIAS 	(opcional)
+        6 ORDER campos ASC/DESC	(opcional)
+        7 LIMIT cantidad 		(opcional)
+        8 OFFSET desfase 		(opcional)
+    */
+    
 ## Actualizacion 
 	UPDATE users SET user_pass = "root" 	-- valor asignado
     WHERE user_name = "cristian_racedo"; 	-- clausula restrictiva
