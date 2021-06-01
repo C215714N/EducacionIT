@@ -40,6 +40,14 @@
 	## publicaciones
 	INSERT INTO posts(user, product, price, quantity, post_date)
 	VALUES (1, 7, 58999.99, 5, current_date());
+    INSERT INTO posts(user, product, price, quantity, post_date)
+	VALUES 
+		(7,	7,	0, 10,	current_date()),
+		(10,9,	0, 5, 	'2021-05-22'),
+		(8,	10,	0, 15, 	'2021-05-18'),
+		(8,	7,	0, 8, 	current_date()),
+		(9,	10,	0, 13, 	'2021-05-25'),
+		(7, 9,	0, 7, 	current_date());
     ##ventas
     INSERT INTO sales(client, post, price, quantity, sale_date)
     VALUES (10, 2, (SELECT price FROM posts WHERE post_id = 2), 1, current_date());
@@ -53,18 +61,45 @@
     SELECT 
 		client, 
         post, 
-        ROUND(price * quantity) AS total 
+        ROUND(price * quantity, 2) AS total 
 	FROM sales;
+    
+    SELECT 
+		product,
+        COUNT(product) AS posts,
+        SUM(price * quantity) AS total,
+        ROUND(AVG(price * quantity), 2) AS promedio,
+        SUM(quantity) AS productos
+	FROM posts
+    WHERE post_id BETWEEN 3 AND 10 -- campo filtrado (existe en la tabla)
+	GROUP BY product -- valor de agrupacion para las funciones
+    HAVING total >= 50000 -- campo calculado (no existe en la tabla)
+    ORDER BY total DESC -- orden de resultados
+    LIMIT 100 -- cantidad a mostrar
+    OFFSET 0; -- a partir del registro
     
 ## Actualizacion 
 	UPDATE users SET user_pass = "root" 	-- valor asignado
     WHERE user_name = "cristian_racedo"; 	-- clausula restrictiva
+    
     UPDATE users SET user_pass = 'pass'
     WHERE user_id = 8;
+    
     UPDATE products SET category = 3
     WHERE description LIKE '%Aire%Samsung%'; -- % cualquier cant. caracteres || _ 1 caracter "_a%"
-	UPDATE sales SET quantity = 2 WHERE sale_id = 1;
-    UPDATE posts SET quantity = (quantity - 2) WHERE post_id = 2;
+	
+    UPDATE sales SET quantity = 2 WHERE sale_id = 1;
+    UPDATE posts SET quantity = quantity - 2 WHERE post_id = 2;
+
+	-- actualizacion por casos (multiple)
+	UPDATE posts SET price =
+		CASE
+			WHEN product = 7 THEN 58999.99 -- valor si "a" se cumple
+            WHEN product = 9 THEN 100.50 -- valor si "b" se cumple pero "a" no.
+            WHEN product = 10 THEN 318.99 -- valor si "c" se cumple pero "ab" no
+            ELSE 35599.99 -- valor si "abc" no se cumple
+        END
+	WHERE price IN(NULL,0);
 ## Eliminacion de registros
     DELETE FROM users; -- elimina todos los registros
     TRUNCATE users; -- elimina registros y reinicia los contadores
