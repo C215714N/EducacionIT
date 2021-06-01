@@ -1,7 +1,65 @@
+#header {
+  position: relative;
+  height: 100vh;
+  min-height: 300px;
+  max-height: 600px;
+}
 #header .slide {
   margin: 0;
   border: none;
   padding: 0;
+}
+#header .slide li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+}
+#header .slide li:nth-child(1) {
+  background-image: url('../assets/img/osx-high-sierra.jpg');
+}
+#header .slide li:nth-child(2) {
+  background-image: url('../assets/img/osx-leopard.png');
+}
+#header .slide li:nth-child(3) {
+  background-image: url('../assets/img/osx-lion.png');
+}
+#header .slide li:nth-child(4) {
+  background-image: url('../assets/img/osx-mavericks.png');
+}
+#header .slide li:nth-child(5) {
+  background-image: url('../assets/img/osx-mojave-night.jpg');
+}
+#header .slide li:nth-child(6) {
+  background-image: url('../assets/img/osx-mojave.jpg');
+}
+#header .slide li:nth-child(7) {
+  background-image: url('../assets/img/osx-mountain-lion.jpg');
+}
+#header .slide li:nth-child(8) {
+  background-image: url('../assets/img/osx-sierra.jpg');
+}
+#header .slide li:nth-child(9) {
+  background-image: url('../assets/img/osx-snow-leopard.png');
+}
+#header .slide .active {
+  opacity: 1;
+}
+#header button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+#header button.icon-prev {
+  left: 0;
+}
+#header button.icon-next {
+  right: 0;
 }
 section {
   margin: 1rem;
@@ -36,6 +94,17 @@ section article .example {
   padding: 1rem;
   border-left: 0.25rem solid #448;
 }
+#footer .social {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: unset;
+  flex-wrap: wrap;
+  margin: auto;
+  border: 0.2rem solid #36c;
+  padding: 0;
+}
 #footer .social a {
   margin: 0.5rem;
   border: none;
@@ -46,4 +115,77 @@ section article .example {
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
   border-radius: 0.25rem;
+}
+/*sistema de grillas*/
+.col-1 {
+  width: 4.16666667%;
+}
+.col-2 {
+  width: 8.33333333%;
+}
+.col-3 {
+  width: 12.5%;
+}
+.col-4 {
+  width: 16.66666667%;
+}
+.col-5 {
+  width: 20.83333333%;
+}
+.col-6 {
+  width: 25%;
+}
+.col-7 {
+  width: 29.16666667%;
+}
+.col-8 {
+  width: 33.33333333%;
+}
+.col-9 {
+  width: 37.5%;
+}
+.col-10 {
+  width: 41.66666667%;
+}
+.col-11 {
+  width: 45.83333333%;
+}
+.col-12 {
+  width: 50%;
+}
+.col-13 {
+  width: 54.16666667%;
+}
+.col-14 {
+  width: 58.33333333%;
+}
+.col-15 {
+  width: 62.5%;
+}
+.col-16 {
+  width: 66.66666667%;
+}
+.col-17 {
+  width: 70.83333333%;
+}
+.col-18 {
+  width: 75%;
+}
+.col-19 {
+  width: 79.16666667%;
+}
+.col-20 {
+  width: 83.33333333%;
+}
+.col-21 {
+  width: 87.5%;
+}
+.col-22 {
+  width: 91.66666667%;
+}
+.col-23 {
+  width: 95.83333333%;
+}
+.col-24 {
+  width: 100%;
 }

@@ -5,18 +5,57 @@
 	@md: 768px;
 	@lg: 992px;
 	@xl: 1200px;
-
+	@col: 24;
+	@bg: '../assets/img';
+	@images: 
+		'osx-high-sierra.jpg',
+		'osx-leopard.png',
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave-night.jpg',
+		'osx-mojave.jpg',
+		'osx-mountain-lion.jpg',
+		'osx-sierra.jpg',
+		'osx-snow-leopard.png';
 // Nesting
 	// navigation
 		nav{
 		}
 	// headings
 	#header{
+		position:relative;
+		height: 100vh;
+		min-height: 300px;
+		max-height: 600px;
 		.header{
 
 		}
 		.slide{
 			.normalize;
+			li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+				.bg(@images);
+			}
+			.active{ opacity: 1 }
+		}
+		button{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			&.icon-prev{
+				left: 0;
+			}
+			&.icon-next{
+				right: 0;
+			}
 		}
 	}
 	// main content
@@ -32,12 +71,16 @@
 			.example{
 				.normalize(.5rem 1rem .5rem 3rem; 1rem);
 				border-left: .25rem solid @fst;
+				list-style: none;
 			}
 		}
 	}
 	// footer
 	#footer{
 		.social{
+			.col-12;
+			.flexbox;
+			.normalize(auto; @b: .2rem solid @snd);
 			a{
 				.normalize(.5rem; 1rem);
 				background-color: lighten(@snd, 20%);
@@ -76,3 +119,22 @@
 		align-items: @fa;
 		flex-wrap: @fw;
 	}
+// Mixins recursivos (Estilos que se repiten en base a una condicion)
+	//background images
+	.bg(@images; @i: 1) when(@i <= length(@images) ){ 
+		@img: extract(@images, @i);
+		&:nth-child(@{i}){ 
+			background-image: url('@{bg}/@{img}') 
+		}
+		.bg(@images; @i + 1);
+	}
+	//sistema de grillas
+	.grid(@i: 1) when (@i <= @col){
+		.col-@{i}{
+			width: percentage( (@i/@col) );
+		}
+		.grid(@i + 1);
+	}
+	// ejecucion mixin recursivo
+	/*sistema de grillas*/
+	.grid;
