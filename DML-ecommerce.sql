@@ -77,7 +77,6 @@
     ORDER BY total DESC -- orden de resultados
     LIMIT 100 -- cantidad a mostrar
     OFFSET 0; -- a partir del registro
-    
     /* pasos de la consulta
 		1 SELECT campos
         2 FROM tabla
@@ -88,7 +87,41 @@
         7 LIMIT cantidad 		(opcional)
         8 OFFSET desfase 		(opcional)
     */
-    
+    -- POSTS cuyos USUARIOS hayan publicado PRODUCTOS
+    -- INNER JOIN: trae los registros donde exista coincidencia
+    SELECT 
+		user,
+        user_name,
+		product,
+		description,
+        price,
+        quantity
+	FROM posts
+    JOIN products ON products.product_id = posts.product
+    JOIN users ON users.user_id = posts.user;
+    -- PRODUCTOS y USUARIOS con los POSTS si fueron publicados
+    -- LEFT JOIN: trae los registros de la primer tabla y adjunta la segunda (aunque no exista coincidencia - "NULL")
+    SELECT
+		product_id,
+        description,
+        category,
+        user_name,
+        post_id
+	FROM products
+    LEFT JOIN posts ON posts.product = products.product_id
+    LEFT JOIN users ON users.user_id = posts.user;
+    -- USUARIOS con sus DATOS y PRODUCTOS aunque no existan en POSTS
+    -- RIGHT JOIN: trae los registros de la primer tabla y muestra todos los de la segunda (aunque no existe coincidencia - "NULL")
+    SELECT 
+		user_name,
+        firstname,
+        lastname,
+        description,
+        post_id
+    FROM users
+    RIGHT JOIN users_data ON users_data.user = users.user_id
+    RIGHT JOIN posts ON posts.user = users.user_id
+    RIGHT JOIN products ON products.product_id = posts.product;
 ## Actualizacion 
 	UPDATE users SET user_pass = "root" 	-- valor asignado
     WHERE user_name = "cristian_racedo"; 	-- clausula restrictiva
