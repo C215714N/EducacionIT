@@ -9,21 +9,44 @@
 		'twitter',
 		'whatsapp',
 		'youtube';
+	$attribs:
+		text color,
+		bg background-color,
+		border border-color;
 	$colors: 
-		primary,
-		secondary,
-		light,
-		dark,
-		info,
-		warning,
-		danger,
-		success;
-// Loops
+		primary 	#448,
+		secondary 	#ccc,
+		light 		#eee,
+		dark 		#333,
+		info 		#36c,
+		warning 	#db2,
+		danger 		#c33,
+		success 	#3c6;
+	$media:
+		sm 576px,
+		md 768px,
+		lg 992px,
+		xl 1200px;
+	$cols: 24;
+// Loops 
+	//each
 	@each $ico in $social{
 		.#{$ico}{
 			background-image: url("#{$icons}/#{$ico}.svg");
-		}
-	}
+	}	}
+	// nested each
+	@each $prop, $attr in $attribs{
+		@each $cname, $cval in $colors{
+			.#{$prop}-#{$cname}{
+				#{$attr}: $cval;
+	}	}	}
+	//each for (i = 1; i <= cols; i ++)
+	@each $vn, $vw in $media{
+		@media screen and (min-width: $vw){
+			@for $i from 1 through $cols{
+				.col-#{$vn}-#{$i}{
+					width: percentage( $i / $cols );
+	}	}	}	}
 //Mixins
 @mixin normalize(
 	$m:0, $p:0, $b:none, $o:none, 
@@ -51,32 +74,62 @@
 		&:active{ opacity: .8 }
 	}
 //Nesting
+	#header{
+		@extend .text-light;
+		text-shadow: 0 0 .5rem #333;
+		text-align: center;
+		button{
+			@extend .text-light;
+		}
+		span{
+			display: inline-block;
+			border-radius: 1rem;
+			width: 1rem;
+			height: 1rem;
+			@extend .bg-light;
+			&.active{ width: 3rem}
+		}
+		.slide li{  
+			opacity: 0; 
+			&.active{ opacity: 1 }
+		}
+
+	}
 	main a.back{ @extend %icon; }
 	.social{
 		display: flex;
+		max-width: 540px;
+		@include normalize(.5rem auto, .5rem);
 		a{ @extend %icon; }
 	}
 	#contact{
 		@include normalize(1rem auto, .5rem);
+		@media screen and (min-width: 576px){ max-width: 540px }
+		@media screen and (min-width: 768px){ max-width: 720px }
 		input, 
 		textarea{
 			@include normalize(0, .5rem 1rem, .1rem solid transparent);
 			&:focus{ 
-				border-color: #333;
-				&:valid{ 
-					border-color: lightgreen;
-					& + .valid{ background-color: darkgreen }
-				}
-				&:not(:placeholder-shown):invalid{ 
-					border-color: tomato;
-					& + .valid{ background-color: darkred }
-				}
+				@extend .border-dark;
+				&:valid{ @extend .border-success;
+					& + .valid{ @extend .bg-success;} }
+				&:not(:placeholder-shown):invalid{ @extend .border-danger;
+					& + .valid{ @extend .bg-danger; } }
 				& + .valid{	display: block }
 		}	}
 		.valid{ 
 			@include normalize($p: .5rem);
+			@extend .text-light;
+			@extend .bg-dark;
 			display: none;
-			color: #eee;
-			background-color: #333;
 		}
-	}
+		.button{
+			align-self: flex-end;
+			@include normalize(.2rem 0, .5rem 1rem, .1rem solid);
+			@extend .border-dark;
+			@extend .text-dark;
+			text-transform: uppercase;
+			&:hover{
+				@extend .text-light;
+				@extend .bg-dark;
+	}	}	}
