@@ -1,0 +1,82 @@
+//Variables
+	$icons: '../assets/icon';
+	$social:
+		'css',
+		'facebook',
+		'github',
+		'instagram',
+		'linkedin',
+		'twitter',
+		'whatsapp',
+		'youtube';
+	$colors: 
+		primary,
+		secondary,
+		light,
+		dark,
+		info,
+		warning,
+		danger,
+		success;
+// Loops
+	@each $ico in $social{
+		.#{$ico}{
+			background-image: url("#{$icons}/#{$ico}.svg");
+		}
+	}
+//Mixins
+@mixin normalize(
+	$m:0, $p:0, $b:none, $o:none, 
+	$ba: border, $ma: margin, $pa: padding, $oa: outline
+	){
+	#{$ma}: $m;
+	#{$oa}: $o;
+	#{$ba}: $b;
+	#{$pa}: $p;
+}
+@mixin background($bs: cover, $bp: center, $ba: scroll, $br: no-repeat){
+	background-size: $bs;
+	background-position: $bp;
+	background-attachment: $ba;
+	background-repeat: $br;
+}
+/*Hidden Style*/
+	%icon{
+		display: inline-block;
+		width: 5rem;
+		height: 5rem;
+		opacity: .5;
+		@include background(2.5rem);
+		&:hover{ background-size: 4rem }
+		&:active{ opacity: .8 }
+	}
+//Nesting
+	main a.back{ @extend %icon; }
+	.social{
+		display: flex;
+		a{ @extend %icon; }
+	}
+	#contact{
+		@include normalize(1rem auto, .5rem);
+		input, 
+		textarea{
+			@include normalize(0, .5rem 1rem, .1rem solid transparent);
+			&:focus{ 
+				border-color: #333;
+				&:valid{ 
+					border-color: lightgreen;
+					& + .valid{ background-color: darkgreen }
+				}
+				&:not(:placeholder-shown):invalid{ 
+					border-color: tomato;
+					& + .valid{ background-color: darkred }
+				}
+				& + .valid{	display: block }
+		}	}
+		.valid{ 
+			@include normalize($p: .5rem);
+			display: none;
+			color: #eee;
+			background-color: #333;
+		}
+	}
