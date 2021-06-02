@@ -4,7 +4,7 @@
 	<title>Fundamentos Web</title>
 	<meta charset="UTF-8">
 </head>
-<body>
+<body style="font-family: century gothic, segoe ui, sans-serif;">
 	<!-- Encabezado Principal (Heading 1) -->
 	<h1>Fundamentos Web</h1>
 	<p>Mi primera página web</p>
@@ -45,7 +45,7 @@
 	<p>
 		Son caracteristicas de las etiquetas que podemos manipular asignandoles un valor, dentro de algunos ya establecidos dentro del lenguaje. Entre todos los atributos que podemos encontrar, podemos destarcar 4 principales. 
 	</p>
-	<ul>
+	<ul style="color: whitesmoke; background-color: darkslateblue; max-width: 300px; padding: 50px;">
 		<li>
 			<strong>margin: </strong> distancia o espacio que existe entre una etiqueta y otra, siempre aplica el mas grande y no suma tamaño.
 		</li>
@@ -55,9 +55,22 @@
 		<li>
 			<strong>padding: </strong> relleno o espacio que existe entre el borde y el contenido de una etiqueta, tambien suma tamaño.
 		</li>
-		<li>
+		<li style="color: gold;">
 			<strong>content: </strong> elementos (texto o etiquetas) que se encuentran dentro de las etiquetas, se les puede asignar tamaño (ancho y alto).
 		</li>
 	</ul>
+	<!-- Elementos presentacionales -->
+	<div style="background-color: #ccc; color: #124; padding: 16px;"><!-- Bloque de contenido - Capa (Division) -->
+		<h2>Reglas de Nomenclatura</h2>
+		<p>
+			<!-- Etiqueta de linea (Expandir) -->
+			<span style="font-size: 32px;">C</span>uando armamos un proyecto, debemos tener en cuenta algunas reglas escenciales. Ya que al momento de subir los archivos a un servidor, este no funciona igual que en los sistemas hogareños (ej: Windows) y por lo tanto lo que puede funcionar en nuestra computadora, quizas no funcione en nuestro Hosting.
+		</p>
+		<ul>
+			<li>evitar el uso de espacios en los nombres al igual que cualquier caracter que no forme parte del ingles</li>
+			<li>utilizar nombres descriptivos que faciliten la aplicacion o implementacion de los archivos</li>
+			<li>utilizar solamente minusculas en los nombres para reducir el margen de errores, ya que los servidores son caseSensitive</li>
+		</ul>
+	</div>
 </body>
 </html>
