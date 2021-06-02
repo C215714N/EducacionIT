@@ -135,8 +135,74 @@
 		</section>
 	</main>
 	<!--Footer-->
-
+	<footer id="footer">
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre </label>
+			<input 
+				id="contactName" 
+				name="contactName"
+				type="text" 
+				maxlength="50"
+				pattern="[a-z A-Z ñÑ]{3,50}"
+				placeholder="Nombre(*): Cristian Racedo" 
+				required />
+			<div class="valid">
+				Ingrese su nombre solamente con letras. 
+				Este debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Correo </label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email" 
+				minlength="8" 
+				placeholder="Correo(*): CristianDRacedo@hotmail.com" 
+				required />
+			<div class="valid">
+				Ingrese una direccion de correo valida.
+				Esta debe respetar el formato usuario@servidor.
+			</div>
+			<label for="contactPhone">Telefono </label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}"
+				placeholder="Telefono(*): (11)2345-6789" 
+				required/>
+			<div class="valid">
+				Ingrese su numero respetando el siguiente formato 
+				(11)2345-6789
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult"  
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto" 
+				required></textarea>
+			<button class="button"> enviar </button>
+			<div>
+				Todos los campos con <span>(*)</span> son obligatorios
+			</div>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com/" class="facebook" target="_blank"></a>
+			<a href="https://instagram.com/" class="instagram" target="_blank"></a>
+			<a href="https://twitter.com/" class="twitter" target="_blank"></a>
+			<a href="https://linkedin.com/" class="linkedin" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/mav-lx-10" class="github" target="_blank"></a>
+		</div>
+		<p class="copy">
+			&copy; Todos los derechos reservados 
+			<a href="#">Cristian Racedo</a>
+			&amp; Compañia.
+		</p>
+	</footer>
 	<!--Scripts JS-->
 	<script src="scripts/main.js"></script>
+
 </body>
 </html>
