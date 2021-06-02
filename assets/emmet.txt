@@ -1,0 +1,26 @@
+EMMET:
+	padre>hijo 
+	header>h1
+	<header>
+		<h1></h1>
+	</header>
+
+	el+hermano
+	p+p
+	<p></p>
+	<p></p>
+	
+	(padre>hijo)+hermano
+	(header>h1)+nav
+	<header>
+		<h1></h1>
+	</header>
+	<nav></nav>
+
+	el[attrib="val"]
+	href[target="_blank"]
+	<href target="_blank"></href>
+
+	el{content}
+	h1{Emmet}
+	<h1>Emmet</h1>
