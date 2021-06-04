@@ -51,6 +51,12 @@
     ##ventas
     INSERT INTO sales(client, post, price, quantity, sale_date)
     VALUES (10, 2, (SELECT price FROM posts WHERE post_id = 2), 1, current_date());
+    INSERT INTO sales(post, client, quantity, sale_date)
+    VALUES 
+		(5,1,1,'2021-06-02'),
+		(6,1,3,'2021-05-25'),
+		(2,1,2,'2021-05-30'),
+		(7,1,1,'2021-05-16');
     
 ## Consulta de Datos
 	SELECT * FROM users;
@@ -88,7 +94,7 @@
         8 OFFSET desfase 		(opcional)
     */
     -- POSTS cuyos USUARIOS hayan publicado PRODUCTOS
-    -- INNER JOIN: trae los registros donde exista coincidencia
+    ## INNER JOIN: trae los registros donde exista coincidencia
     SELECT 
 		user,
         user_name,
@@ -100,7 +106,7 @@
     JOIN products ON products.product_id = posts.product
     JOIN users ON users.user_id = posts.user;
     -- PRODUCTOS y USUARIOS con los POSTS si fueron publicados
-    -- LEFT JOIN: trae los registros de la primer tabla y adjunta la segunda (aunque no exista coincidencia - "NULL")
+    ## LEFT JOIN: trae los registros de la primer tabla y adjunta la segunda (aunque no exista coincidencia - "NULL")
     SELECT
 		product_id,
         description,
@@ -111,7 +117,7 @@
     LEFT JOIN posts ON posts.product = products.product_id
     LEFT JOIN users ON users.user_id = posts.user;
     -- USUARIOS con sus DATOS y PRODUCTOS aunque no existan en POSTS
-    -- RIGHT JOIN: trae los registros de la primer tabla y muestra todos los de la segunda (aunque no existe coincidencia - "NULL")
+    ## RIGHT JOIN: trae los registros de la primer tabla y muestra todos los de la segunda (aunque no existe coincidencia - "NULL")
     SELECT 
 		user_name,
         firstname,
@@ -122,6 +128,8 @@
     RIGHT JOIN users_data ON users_data.user = users.user_id
     RIGHT JOIN posts ON posts.user = users.user_id
     RIGHT JOIN products ON products.product_id = posts.product;
+    
+    SELECT * FROM sales;
 ## Actualizacion 
 	UPDATE users SET user_pass = "root" 	-- valor asignado
     WHERE user_name = "cristian_racedo"; 	-- clausula restrictiva
@@ -134,7 +142,12 @@
 	
     UPDATE sales SET quantity = 2 WHERE sale_id = 1;
     UPDATE posts SET quantity = quantity - 2 WHERE post_id = 2;
-
+    -- actializacion dinamica
+    UPDATE sales AS s SET price = (	
+		SELECT po.price FROM posts AS p -- consultamos la tabla
+        WHERE p.post_id = s.post -- reestriccion segun el valor del registro
+	) WHERE s.price IS NULL; -- condicion para la actualizacion
+	SELECT * FROM sales;
 	-- actualizacion por casos (multiple)
 	UPDATE posts SET price =
 		CASE
