@@ -31,7 +31,56 @@
 		background-color: #ccc;
 	}
 /*Contenido Principal*/
-
+	main{
+		max-width: 960px;
+		margin: 8px auto;
+		padding: 8px;
+	}
+	article{
+		margin: 16px 0;
+		padding: 16px;
+		border-radius: 4px;
+		box-shadow: 0 0 8px #999;/* -x+ -y+ blur color */
+	}
+	.header{
+		border-bottom: 1px solid #ccc;
+	}
+	/*Ejemplos*/
+	.example{
+		margin: 8px;
+		margin-left: 48px;
+		border-left: 2px solid #448;
+		padding: 16px;
+		list-style: none;
+		background-color: #eee;
+	}
+	.classic, 
+	.classic caption,
+	.classic th,
+	.classic td{
+		border: 2px solid #448;
+		border-collapse: collapse;
+	}
+	.classic caption{
+		border-bottom: none;
+	}
+	.modern,
+	.modern caption,
+	.modern tr,
+	.modern td{
+		color: #eee;
+		background-color: rgba(68, 68, 136, .5);
+	}
+	caption{
+		border-radius: 8px 8px 0 0; 
+		/*topleft topright bottomright bottomleft*/
+	}
+	th,td{
+		width: 100px;
+	}
+	th, td, caption{
+		padding: 8px;
+	}
 /*Pie de Pagina*/
 	#footer{
 		padding: 16px;

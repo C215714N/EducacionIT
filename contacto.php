@@ -22,5 +22,5 @@
 		"From: $nombre <$email>"
 	);
 	// Redireccionamiento
-	header("redirect: http://misitio.com");
+	header("redirect: http://misitio.com/contacto.html");
 ?>

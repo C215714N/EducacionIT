@@ -56,6 +56,52 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<p>
+				Son herramientas que permiten organizar la informacion de manera tabular y se deben implementar cuando los datos que se representan en pantalla requieren de cierta estructura. Para utilizarlas simplemente colocamos la etiqueta <em>&lt;table></em>, pero a diferencia de otros ambitos donde se utilizan tablas, en html se deben crear siguiendo el <strong>modelo de cajas</strong> utilizando etiquetas que funcionan como contenedores y otras que funcionan como elementos de contenido.
+			</p>
+			<section>
+				<header>
+					<h3>¿Cual es su estructura?</h3>
+				</header>
+				<p>
+					A la etiqueta mencionada anteriormente se la divide en <em>3 partes</em>, la <strong>cabecera (THEAD)</strong> donde colocamos los titulos de la tabla, el <strong>cuerpo (TBODY)</strong> donde colocamos los datos de interes para el usuario, y el <strong>pie (TFOOT)</strong> que es opcional y donde colocamos datos complementarios a la tabla, como totales, estadisticas, etc. A la vez, debemos indicar cuando empieza una fila con la etiqueta <em>&lt;tr> (TABLE ROW)</em> y dentro de cada fila cuantas celdas va a contener con las etiquetas <em>&lt;td>(TABLE DIVISION) &lt;th>(TABLE HEADING)</em> para contenido y titulos respectivamente.
+				</p>
+				<div class="example">
+					<table class="modern">
+						<caption>Lista de usuarios</caption>
+						<thead>
+							<tr>
+								<th>Usuario</th>
+								<th>Correo</th>
+								<th>Contraseña</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cristian</td>
+								<td>cdr@hotmail.com</td>
+								<td>root</td>
+							</tr>
+							<tr>
+								<td>C215714N</td>
+								<td>cdr@gmail.com</td>
+								<td>root</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th colspan="2">Total</th>
+								<td>2</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<!-- Pie de pagina -->
 	<footer id="footer">
