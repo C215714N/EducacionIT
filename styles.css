@@ -29,6 +29,11 @@
 		padding: 20% 16px;
 		text-align: center;
 		background-color: #ccc;
+		background-image: url('img/osx-sierra.jpg');
+		background-position: center;
+		background-size: cover;
+		color: #eee;
+		text-shadow: 0 0 4px #333;
 	}
 /*Contenido Principal*/
 	main{
@@ -81,6 +86,16 @@
 	th, td, caption{
 		padding: 8px;
 	}
+	.example video,
+	.example iframe{
+		width: 100%;
+		border-radius: 8px;
+		border: none;
+		box-shadow: 0 0 8px #333;
+	}
+	iframe{
+		min-height: 240px;
+	}
 /*Pie de Pagina*/
 	#footer{
 		padding: 16px;
@@ -127,4 +142,20 @@
 		#contacto button:hover{
 			color: #448;
 			background-color: #eee;
+		}
+	/*Redes sociales*/
+		.social{
+			padding: 16px 0;
+			text-align: center;
+		}
+		.social iframe{
+			display: block;
+			width: 100%;
+			max-width: 540px;
+			margin: auto;
+			border-radius: 4px;
+			border: none;
+		}
+		.social a:hover{
+			text-shadow: 0 0 4px #eee;
 		}
