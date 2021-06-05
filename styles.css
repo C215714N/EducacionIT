@@ -50,11 +50,32 @@
 		#contacto input,
 		#contacto select,
 		#contacto textarea{
-			width: 100%;
-			padding: 0;
+			width: calc(100% - 32px);
+			outline: none;
+			border-radius: 4px;
 			border: none;
+			padding: 8px 16px;/*top right bottom left*/
+			font-family: 'segoe ui', calibri, sans-serif;
+			font-size: 16px;
+		}
+		#contacto select{
+			width: 100%;
+		}
+		#contacto textarea{
+			resize: none;
+			min-height: 80px;
 		}
 		#contacto button{
 			display: block;
 			margin-left: auto;
+			border-radius: 4px;
+			border: 2px solid #eee;/*width style color*/
+			padding: 8px 16px;
+			color: #eee;
+			background-color: transparent;
+			font-weight: bold;
+		}
+		#contacto button:hover{
+			color: #448;
+			background-color: #eee;
 		}
