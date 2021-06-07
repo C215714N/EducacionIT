@@ -8,6 +8,19 @@
 	pIn = document.querySelector('.progress input')
 
 	pIn.addEventListener('input', () => pBar.value = pIn.value)
+/* Video Play */
+	videoBtn = document.querySelector('.bg-video .button')
+	videoBg = document.querySelector('.bg-video video')
+
+	videoBtn.onclick = () => { 
+		if(videoBg.paused){
+			videoBtn.innerHTML = 'PAUSE' 
+			videoBg.play()
+		} else {
+			videoBtn.innerHTML = 'PLAY' 
+			videoBg.pause() 	
+		}
+	}
 /*Images Gallery*/
 	slideLst = document.querySelectorAll('#header li')
 	spanLst = document.querySelectorAll('#header span')

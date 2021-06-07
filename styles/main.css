@@ -140,24 +140,96 @@
 		#header .icon-prev:hover{ transform: translate(2vw) }	
 		#header .icon-next:hover{ transform: translate(-2vw) }
 	/*Main Content*/
-		.example{
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-			gap: .5rem;
-		}
-		.example progress,
-		.example meter,
-		.example input{
-			width: 100%;
-			min-height: 2rem;
-		}
+		main .header{ border-bottom: .1rem solid var(--hover) }
+		/*Examples*/
+			.example{
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: .5rem;
+			}
+			.example progress,
+			.example meter,
+			.example input{
+				width: 100%;
+				min-height: 2rem;
+			}
+			/*Grid Layout*/
+			.grid{
+				margin: .5rem;
+				border: .2rem solid var(--fst);
+				padding: 1rem;
+				display: grid;
+				grid-template-columns: auto auto auto;
+				gap: .5rem;
+			}
+			.grid div{
+				border: .1rem solid var(--fst);
+				padding: 1rem;
+			}
+			.grid div:first-child{ grid-row: span 3 }
+			.grid div:last-child{ grid-column: span 3 }
+			.grid div:nth-child(5){ grid-column: span 2 }
+			.grid div:nth-child(3){
+				grid-column: 1 / 4;
+				grid-row: 1;
+			}
+		/*background Video*/
+			.bg-video{ 
+				position: relative;
+				padding-top: 56.25%;
+				/* 
+					Aspect-ratio	width 			height
+					4:3 			1.33(height)	75%(width)
+					16:9			1.78(height)	56.25%(width)
+				 */
+				color: var(--light);
+				background-color: var(--hover);
+				text-shadow: 
+					0 0 .5rem var(--dark),
+					-.1rem .1rem .2rem var(--dark);
+				overflow: hidden;
+				}
+			.bg-video h2,
+			.bg-video p,
+			.bg-video video,
+			.bg-video .button{
+				position: absolute;
+			}
+			.bg-video h2,
+			.bg-video video{
+				top: 0;
+				left: 0;
+			}
+			.bg-video video{
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+			.bg-video .button{
+				bottom: .5rem;
+				left: .5rem;
+			}
+			.bg-video .button:hover{
+				color: var(--light);
+				background-color: transparent;
+				transform: translate(.25rem, -.25rem);
+				box-shadow: -.25rem .25rem var(--light);
+			}
+			.bg-video p{
+				bottom: -100vh;
+				left: 0;
+				transition: all 3s ease 1s;
+			}
+			.bg-video:hover p{
+				bottom: 0;
+				margin: 0;
+				padding: .5rem;
+				background-color: var(--hover);
+			}
+
 	/*Footer*/
-		#footer #contact{
-			display: grid;
-		}
-		#footer #contact label{
-			display: none;
-		}
+		#footer #contact{ display: grid }
+		#footer #contact label{ display: none }
 		#contact input,
 		#contact textarea,
 		#contact .valid{
@@ -204,7 +276,7 @@
 		}	
 	/*Footer*/
 		#footer #contact{
-			grid-template-columns: 50% 50%;
+			grid-template-columns: 50% 50%; /*cant. tamaños => columnas*/
 			grid-template-areas: 
 				'heading	heading'
 				'lblName	lblPhone'
@@ -238,31 +310,7 @@
 		
 		#contact h2{ grid-area: heading; }
 		#contact .button{grid-area: button;}
-		#contact div:last-child{ grid-area: msg; }
-
-		.grid{
-			border: .2rem solid var(--fst);
-			display: grid;
-			grid-template-columns: auto auto auto;
-			gap: .5rem;
-		}
-		.grid div{
-			border: .1rem solid var(--fst);
-			padding: 1rem;
-		}
-		.grid div:first-child{
-			grid-row: span 3;
-		}
-		.grid div:last-child{
-			grid-column: span 3;
-		}
-		.grid div:nth-child(3){
-			grid-column: 1 / 4;
-			grid-row: 1;
-		}
-		.grid div:nth-child(5){
-			grid-column: span 2;
-		}
+		#contact div:last-child{ grid-area: msg; }v
 
 	}
 /*Extra Large Devices - Desktop HD*/
