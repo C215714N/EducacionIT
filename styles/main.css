@@ -82,13 +82,32 @@
 	}
 /* Medium Devices - Tablets */
 	@media screen and (min-width:  768px){
-		
+	/*Navigation*/
+		nav .button,
+		.menu span{
+			display: none;
+		}
+		.menu{
+			display: flex;
+			width: auto;
+			height: auto;
+		}
+		.menu a{
+			display: flex;
+			align-items: center;
+			font-size: 1.5rem;
+		}
 	}
 /* Large Devices - Small Desktop */
 	@media screen and (min-width:  992px){
-		
+	/*Navigation*/
+		.menu span{
+			display: block;
+			font-size: 1rem;
+		}
 	}
 /* ExtraLarge Devices - HD Desktop */
 	@media screen and (min-width:  1200px){
-		
+	/*Navigation*/
+		nav{ justify-content: space-around }
 	}
