@@ -112,7 +112,58 @@
 	</section>
 <!-- Footer -->
 	<footer id="footer">
-		<form action="" id="contact"></form>
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Nombre</label>
+			<input  
+				id="contactName" 
+				name="contactName"
+				type="text" 
+				pattern="[A-Z a-z ñÑ]{3,50}"
+				placeholder="Nombre(*): Cristian Racedo"  
+				maxlength="50" 
+				required />
+			<div class="valid">
+				Ingrese su nombre completo sin numeros ni simbolos, 
+				el mismo debe poseer entre 3 y 50 caracteres
+			</div>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail"
+				type="email"  
+				placeholder="Correo(*): CristianDRacedo@hotmail.com"
+				minlength="8" 
+				required />
+			<div class="valid">
+				Ingrese una direccion de correo valida 
+				respetando el formato usuario@servidor
+			</div>
+			<label for="contactPhone">Telefono</label>
+			<input 
+				type="tel" 
+				id="contactPhone" 
+				name="contactPhone" 
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}"
+				placeholder="Telefono(*): (5411)2345-6789" 
+				required />
+			<div class="valid">
+				Ingrese su numero respetando el formato (5411)2345-6789
+				separando con guion cada 3/6 digitos
+			</div>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto" required
+			></textarea>
+			<button class="button">Enviar</button>
+			<div>
+				todos los campos con asterisco (*) son obligatorios
+			</div>
+		</form>
 		<div class="social">
 			<a href="https://facebook.com" class="icon-facebook" target="_blank"></a>
 			<a href="https://instagram.com" class="icon-instagram" target="_blank"></a>

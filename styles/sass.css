@@ -1,0 +1,57 @@
+/*Nesting*/
+section .header {
+  margin: 0.5rem 0;
+  outline: none;
+  border-bottom: 0.1rem solid #9998;
+  padding: 0;
+}
+
+#footer {
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+#footer #contact {
+  margin: 0.5rem auto;
+  display: grid;
+  border: none;
+  padding: 0;
+}
+#footer #contact input,
+#footer #contact textarea {
+  margin: 0;
+  outline: none;
+  border: 0.1rem solid #999;
+  padding: 0.5rem 1rem;
+}
+#footer #contact input:focus:valid,
+#footer #contact textarea:focus:valid {
+  border-color: #3c6;
+}
+#footer #contact input:focus:valid + .valid,
+#footer #contact textarea:focus:valid + .valid {
+  background-color: #3c6;
+}
+#footer #contact input:focus:not(:placeholder-shown):invalid,
+#footer #contact textarea:focus:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+#footer #contact input:focus:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:focus:not(:placeholder-shown):invalid + .valid {
+  background-color: #c33;
+}
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  max-height: 300px;
+  padding: 0.5rem;
+  text-shadow: 0 0 0.5rem #333;
+  color: #eee;
+  background-color: #333;
+}
+#footer #contact .valid {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=sass.css.map */

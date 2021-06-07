@@ -1,0 +1,47 @@
+//Variables
+
+//Mixins
+	@mixin normalize(
+		$m:0, $p:0, $b:none, $o:none,
+		$ba: border, $ma: margin, $pa: padding, $oa: outline
+	){
+		#{$ma}: $m;
+		#{$oa}: $o;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+
+/*Nesting*/
+	section{
+		.header{
+			@include normalize(.5rem 0, $b: .1rem solid #9998, $ba: border-bottom);
+		}	
+	}
+	#footer{
+		@include normalize($p: 1rem);
+		#contact{
+			@include normalize(.5rem auto, $o: grid, $oa: display);
+			input,
+			textarea{
+				@include normalize($p: .5rem 1rem, $b: .1rem solid #999);
+				&:focus{
+					&:valid{
+						border-color: #3c6;
+						& + .valid{ background-color: #3c6 }
+					}
+					&:not(:placeholder-shown):invalid{
+						border-color: #c33;
+						& + .valid{ background-color: #c33 }
+					}
+					& + .valid{
+						max-height: 300px;
+						padding: .5rem;
+						text-shadow: 0 0 .5rem #333;
+						color: #eee;
+						background-color: #333;
+			}	}	}
+			.valid{
+				max-height: 0;
+				overflow: hidden;
+	}	}	}
+
