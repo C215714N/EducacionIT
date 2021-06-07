@@ -38,7 +38,8 @@
   color: #ccc;
 }
 
-.text-light, #contact .button:hover, #contact .valid, #header button, #header {
+.text-light, #contact .button:hover, #contact input:focus + .valid,
+#contact textarea:focus + .valid, #header button, #header {
   color: #eee;
 }
 
@@ -74,7 +75,8 @@
   background-color: #eee;
 }
 
-.bg-dark, #contact .button:hover, #contact .valid {
+.bg-dark, #contact .button:hover, #contact input:focus + .valid,
+#contact textarea:focus + .valid {
   background-color: #333;
 }
 
@@ -537,6 +539,12 @@
   opacity: 0.8;
 }
 
+#contact input:focus + .valid,
+#contact textarea:focus + .valid, #contact input:focus,
+#contact textarea:focus {
+  transform: scale(1.1);
+}
+
 #header {
   text-shadow: 0 0 0.5rem #333;
   text-align: center;
@@ -590,14 +598,15 @@
 }
 #contact input:focus + .valid,
 #contact textarea:focus + .valid {
-  display: block;
-}
-#contact .valid {
   margin: 0;
   outline: none;
   border: none;
   padding: 0.5rem;
-  display: none;
+  max-height: 300px;
+}
+#contact .valid {
+  max-height: 0;
+  overflow: hidden;
 }
 #contact .button {
   align-self: flex-end;

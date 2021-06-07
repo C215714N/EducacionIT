@@ -73,6 +73,9 @@
 		&:hover{ background-size: 4rem }
 		&:active{ opacity: .8 }
 	}
+	%scale{
+		transform: scale(1.1);
+	}
 //Nesting
 	#header{
 		@extend .text-light;
@@ -92,9 +95,7 @@
 		.slide li{  
 			opacity: 0; 
 			&.active{ opacity: 1 }
-		}
-
-	}
+	}	}
 	main a.back{ @extend %icon; }
 	.social{
 		display: flex;
@@ -110,18 +111,23 @@
 		textarea{
 			@include normalize(0, .5rem 1rem, .1rem solid transparent);
 			&:focus{ 
+				@extend %scale;
 				@extend .border-dark;
 				&:valid{ @extend .border-success;
 					& + .valid{ @extend .bg-success;} }
 				&:not(:placeholder-shown):invalid{ @extend .border-danger;
 					& + .valid{ @extend .bg-danger; } }
-				& + .valid{	display: block }
+				& + .valid{	
+					@include normalize($p: .5rem); 
+					@extend .text-light;
+					@extend .bg-dark;
+					@extend %scale;
+					max-height: 300px;
+				}
 		}	}
 		.valid{ 
-			@include normalize($p: .5rem);
-			@extend .text-light;
-			@extend .bg-dark;
-			display: none;
+			max-height: 0; 
+			overflow: hidden;
 		}
 		.button{
 			align-self: flex-end;

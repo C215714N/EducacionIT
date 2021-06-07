@@ -54,17 +54,13 @@
 				iframe,
 				video{
 					width: 100%;
-				}
-			}
-		}
-	}
+	}	}	}	}
 	#footer{
 		#contact{
 			.normalize(1rem auto; .5rem; none);
 			.flexbox(column);
 			.col-20;
-		}
-	}
+	}	}
 // Mixin (Estilos anidables)
 	.rounded(){
 		-webkit-border-radius: .25rem;
@@ -93,19 +89,10 @@
 		@spread: 0; 
 		@color: @fst;
 		){
-		box-shadow: 
-			@x 
-			@y
-			@blur
-			@spread
-			@color
+		box-shadow: @x @y @blur	@spread	@color;
 	}
 	.gradient(@color-a; @color-b; @deg: 45deg){
-		background: linear-gradient(
-			@deg,
-			@color-a, 
-			@color-b
-		);
+		background: linear-gradient(@deg, @color-a, @color-b);
 	}
 	.flexbox(
 		@fd: row;
@@ -148,7 +135,6 @@
 				}	.resgrid(@i + 1);
 			}	.resgrid;
 	}	}
-	/*error: haber colocado length(@col) ya que @col es numero y no array */
 	.cristrap(sm; @sm);
 	.cristrap(md; @md);
 	.cristrap(lg; @lg);

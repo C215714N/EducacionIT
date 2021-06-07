@@ -31,9 +31,13 @@
 		}
 		nav a{
 			display: block;
+			position: relative;
 			padding: .25rem;
 			color: var(--light);
 			text-decoration: none;
+			transition-property: all;
+			transition-duration: .2s;
+			transition-timing-function: ease-out;
 		}
 		.logo{
 			font-weight: bolder;
@@ -43,8 +47,14 @@
 			position: fixed;
 			bottom: .5rem;
 			right: .5rem;
+			font-size: 1.2rem;
 			border-radius: 1rem;
 			background: var(--dark);
+		}
+		nav .icon-back:hover{
+			transform: 
+				scale(1.2)
+				rotate(90deg);
 		}
 		.button{
 			margin: .5rem; /*root em (ancho M) => 16px*/
@@ -52,6 +62,7 @@
 			border: .1rem solid var(--light);
 			color: var(--light);
 			background: transparent;
+			transition: all .3s ease-in;
 		}
 		.button:hover{
 			color: var(--fst);
@@ -59,17 +70,35 @@
 		}
 		.menu{
 			width: 100%;
-			height: 0;
+			max-height: 0;
 			overflow: hidden;
 			padding: 0;
 			list-style: none;
+			transition: all 1s ease;
 		}
 		.menu a:hover{
+			padding-left: calc(20vw);
 			background-color: var(--hover);
+			transform:	scale(1.2); 
+		}
+		.menu a::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: .25rem;
+			height: .25rem;
+			opacity: 0;
+			background: var(--gradient);
+			transition: all .5s ease;
+		}
+		.menu a:hover::after{
+			width: 100%;
+			opacity: 1;
 		}
 		.menu span{ padding: .5rem }
 		.menu.active{
-			height: auto;
+			max-height: 600px;
 		}
 	/*Heading*/
 		#header{
@@ -82,6 +111,7 @@
 			max-height: 600px;
 			font-size: calc(2vw + .8rem); /*viewport width*/
 		}
+		#header span{ transition: all .5s ease-in-out }
 		.slide, 
 		.slide li{
 			position: absolute;
@@ -90,6 +120,7 @@
 			z-index: -1;
 			width: 100%;
 			height: 100%;
+			transition: all 1s ease-out;
 		}
 		#header button{
 			position: absolute;
@@ -99,11 +130,41 @@
 			padding: .5rem;
 			background: transparent;
 			font-size: calc(2vw + 1rem);
+			transition: all .5s ease-in;
+		}
+		#header button:hover{
+			transform: scale(1.2);
 		}
 		#header .icon-prev{ left: 0 }
-		#header .icon-next{ right: 0 }
+		#header .icon-next{ right: 0 }			
+		#header .icon-prev:hover{ transform: translate(2vw) }	
+		#header .icon-next:hover{ transform: translate(-2vw) }
 	/*Main Content*/
-		
+		.example{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: .5rem;
+		}
+		.example progress,
+		.example meter,
+		.example input{
+			width: 100%;
+			min-height: 2rem;
+		}
+	/*Footer*/
+		#footer #contact{
+			display: grid;
+		}
+		#footer #contact label{
+			display: none;
+		}
+		#contact input,
+		#contact textarea,
+		#contact .valid{
+			transition: all .5s ease; /*property duration timing-function delay*/
+		}
+		.social a{ transition: all .5s ease-out }
+		.social a:hover{ transform: rotate(360deg) }
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets */
@@ -116,13 +177,22 @@
 		.menu{
 			display: flex;
 			width: auto;
-			height: auto;
+			max-height: 600px;
+			overflow: visible;
 		}
 		.menu a{
 			display: flex;
 			align-items: center;
+			margin: 0 .5rem;
 			padding: .5rem;
 			font-size: 1.5rem;
+		}
+		.menu a:hover{
+			padding: .5rem;
+		}
+
+		#footer #contact label{
+			display: block;
 		}
 	}
 /*Large Devices - Desktop*/
@@ -131,10 +201,73 @@
 		.menu span{ 
 			display: block; 
 			font-size: 1rem;
+		}	
+	/*Footer*/
+		#footer #contact{
+			grid-template-columns: 50% 50%;
+			grid-template-areas: 
+				'heading	heading'
+				'lblName	lblPhone'
+				'cmdName 	cmdPhone'
+				'vldName 	vldPhone'
+				'lblEmail 	lblEmail'
+				'cmdEmail 	cmdEmail'
+				'vldEmail 	vldEmail'
+				'lblCon 	lblCon'
+				'cmdCon		cmdCon'
+				'vldCon		vldCon'
+				'.  		button'
+				'msg		msg';
+			gap: 0 .5rem;
 		}
+
+		label[for="contactName"]{ grid-area: lblName; }
+		label[for="contactEmail"]{ grid-area: lblEmail; }
+		label[for="contactPhone"]{ grid-area: lblPhone; }
+		label[for="contactConsult"]{ grid-area: lblCon; }
+		
+		#contactName{ grid-area: cmdName; }
+		#contactEmail{ grid-area: cmdEmail; }
+		#contactPhone{ grid-area: cmdPhone; }
+		#contactConsult{ grid-area: cmdCon; }
+		
+		#contactName + .valid{ grid-area: vldName; }
+		#contactEmail + .valid{ grid-area: vldEmail; }
+		#contactPhone + .valid{ grid-area: vldPhone; }
+		#contactConsult + .valid{ grid-area: vldCon; }
+		
+		#contact h2{ grid-area: heading; }
+		#contact .button{grid-area: button;}
+		#contact div:last-child{ grid-area: msg; }
+
+		.grid{
+			border: .2rem solid var(--fst);
+			display: grid;
+			grid-template-columns: auto auto auto;
+			gap: .5rem;
+		}
+		.grid div{
+			border: .1rem solid var(--fst);
+			padding: 1rem;
+		}
+		.grid div:first-child{
+			grid-row: span 3;
+		}
+		.grid div:last-child{
+			grid-column: span 3;
+		}
+		.grid div:nth-child(3){
+			grid-column: 1 / 4;
+			grid-row: 1;
+		}
+		.grid div:nth-child(5){
+			grid-column: span 2;
+		}
+
 	}
 /*Extra Large Devices - Desktop HD*/
 	@media screen and (min-width: 1200px){
 	/*Navigation*/
 		nav{ justify-content: space-around }
+
 	}
