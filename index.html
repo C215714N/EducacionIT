@@ -59,60 +59,58 @@
 				<p>
 					El nuevo estandar introduce la posibilidad de utilizar elementos estadisticos, con las etiquetas <strong>&lt;progress></strong> para definir el estado de una tarea cuando esta aun no fue finalizada <em>ej: el avance durante la capacitación</em> y <strong>&lt;meter></strong> para indicar los valores finales de una tarea finalizada <em>ej: el resultado de un examen</em>.
 				</p>
-				<div class="example">
-					<ul>
-						<li>
-							<strong>PROGRESS</strong>
-							<ul>
-								<li>
-									<progress></progress>
-									sin value
-								</li>
-								<li>
-									<progress value="20" max="100"></progress>
-									value = 20; max = 100
-								</li>
-								<li class="progress">
-									<progress max="100"></progress>
-									<input type="number" max="100" />
-									value = javascript
-								</li>
-							</ul>
-						</li>
-						<li>
-							<strong>METER</strong>
-							<ul>
-								<li>
-									<meter 
-										value="30" 
-										low="40"
-										high="70"
-										optimum="90" 
-										max="100"></meter>
-									<strong>value</strong> &lt; low &lt; high &lt; optimum
-								</li>
-								<li>
-									<meter 
-										value="60" 
-										low="40"
-										high="70"
-										optimum="90" 
-										max="100"></meter>
-									low &lt; <strong>value</strong> &lt; high &lt; optimum
-								</li>
-								<li>
-									<meter 
-										value="90" 
-										low="40"
-										high="70"
-										optimum="90" 
-										max="100"></meter>
-									low &lt; high &lt; <strong>value</strong> &lt; optimum
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+				<ul class="example">
+					<li>
+						<strong>PROGRESS</strong>
+						<ul class="unstyled">
+							<li>
+								<progress></progress>
+								sin value
+							</li>
+							<li>
+								<progress value="20" max="100"></progress>
+								value = 20; max = 100
+							</li>
+							<li class="progress">
+								<progress max="100"></progress>
+								<input type="number" max="100" />
+								value = javascript
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>METER</strong>
+						<ul class="unstyled">
+							<li>
+								<meter 
+									value="30" 
+									low="40"
+									high="70"
+									optimum="90" 
+									max="100"></meter>
+								<strong>value</strong> &lt; low &lt; high &lt; optimum
+							</li>
+							<li>
+								<meter 
+									value="60" 
+									low="40"
+									high="70"
+									optimum="90" 
+									max="100"></meter>
+								low &lt; <strong>value</strong> &lt; high &lt; optimum
+							</li>
+							<li>
+								<meter 
+									value="90" 
+									low="40"
+									high="70"
+									optimum="90" 
+									max="100"></meter>
+								low &lt; high &lt; <strong>value</strong> &lt; optimum
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</article>
 			<article>
 				<header>
@@ -173,20 +171,25 @@
 						<li class="bg-danger">Texto color danger</li>
 						<li class="bg-success">Texto color success</li>
 					</ul>
-					<ul>
-						<li class="border-primary">Texto color primary</li>
-						<li class="border-secondary">Texto color secondary</li>
-						<li class="border-light">Texto color light</li>
-						<li class="border-dark">Texto color dark</li>
-						<li class="border-info">Texto color info</li>
-						<li class="border-warning">Texto color warning</li>
-						<li class="border-danger">Texto color danger</li>
-						<li class="border-success">Texto color success</li>
-					</ul>
 				</div>
 			</article>
 		</section>
+		<section class="grid">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+		</section>
 	</main>
+	<article>
+		<header class="header">
+			
+		</header>
+	</article>
 	<!--Footer-->
 	<footer id="footer">
 		<form action="" id="contact">

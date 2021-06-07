@@ -17,10 +17,10 @@
 	window.setInterval(() => next.click(), 15000)
 	prev.onclick = () => {
 		changeItem(slideLst, false); 
-		changeItem(spanLst, false)}
+		changeItem(spanLst, false)	}
 	next.onclick = () => {
 		changeItem(slideLst, true); 
-		changeItem(spanLst, true)}
+		changeItem(spanLst, true)	}
 
 	const changeItem = (itemList, type) => {
 		for (i = 0; i < itemList.length; i++){
