@@ -1,5 +1,64 @@
 //Variables
-
+	$icon: '../assets/icon';
+	$social:
+		'css',
+		'facebook',
+		'github',
+		'instagram',
+		'linkedin',
+		'twitter',
+		'whatsapp',
+		'youtube';
+	$attribs:
+		text color,
+		bg background-color,
+		border border-color;
+	$colors:
+		primary #448,
+		secondary #88e,
+		light #eee,
+		dark #333,
+		info #36c,
+		warning #f93,
+		danger #c33,
+		success #3c6;
+	$queries:
+		sm 576px,
+		md 768px,
+		lg 992px,
+		xl 1200px;
+	$cols: 24;
+// Loops each
+	@each $ico in $social{
+		.#{$ico}{
+			background-image: url('#{$icon}/#{$ico}.svg');
+	}	}
+	@each $prop, $attr in $attribs{
+		@each $cn, $cv in $colors{
+			.#{$prop}-#{$cn}{
+				#{$attr}:$cv;
+	}	}	}
+	// each ( (vn, vw) => media )
+	@each $vn, $vw in $queries{
+		@media screen and (min-width: $vw){
+			// for (i = 1; i <= cols; i++)
+			@for $i from 1 through $cols{
+				.col-#{$vn}-#{$i}{
+					width: percentage( $i / $cols );
+	}	}	}	}
+// Hidden Style
+	%icon{
+		width: 5rem;
+		height: 5rem;
+		background-size: 2.5rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		opacity: .5;
+		&:hover{
+			background-size: 4rem; 
+			opacity: .9;
+	}	}
 //Mixins
 	@mixin normalize(
 		$m:0, $p:0, $b:none, $o:none,
@@ -16,32 +75,56 @@
 		.header{
 			@include normalize(.5rem 0, $b: .1rem solid #9998, $ba: border-bottom);
 		}	
+		.example{ list-style: none;}
 	}
 	#footer{
 		@include normalize($p: 1rem);
 		#contact{
 			@include normalize(.5rem auto, $o: grid, $oa: display);
+			@extend .col-sm-20, .col-md-18, .col-lg-12;
+			textarea{
+				resize: none;
+				min-height: 8rem;
+			}
 			input,
 			textarea{
 				@include normalize($p: .5rem 1rem, $b: .1rem solid #999);
 				&:focus{
 					&:valid{
-						border-color: #3c6;
-						& + .valid{ background-color: #3c6 }
+						@extend .border-success;
+						& + .valid{ @extend .bg-success; }
 					}
 					&:not(:placeholder-shown):invalid{
-						border-color: #c33;
-						& + .valid{ background-color: #c33 }
+						@extend .border-danger;
+						& + .valid{ @extend .bg-danger; }
 					}
 					& + .valid{
 						max-height: 300px;
 						padding: .5rem;
 						text-shadow: 0 0 .5rem #333;
-						color: #eee;
-						background-color: #333;
+						@extend .text-light, .bg-dark;
 			}	}	}
+			.button{
+				@include normalize(auto, .5rem 1rem, .1rem solid, $ma: margin-left);
+				@extend 
+					.text-dark, 
+					.bg-light, 
+					.border-dark;
+				&:hover{
+					@extend 
+						.text-light,
+						.bg-dark;
+					}
+			}
 			.valid{
 				max-height: 0;
 				overflow: hidden;
-	}	}	}
+		}	}
+		.social{
+			@include normalize(auto);
+			a{
+				@extend %icon;
+			}
+		}
+	}
 

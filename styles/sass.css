@@ -1,9 +1,548 @@
+.css {
+  background-image: url("../assets/icon/css.svg");
+}
+
+.facebook {
+  background-image: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  background-image: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  background-image: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  background-image: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  background-image: url("../assets/icon/twitter.svg");
+}
+
+.whatsapp {
+  background-image: url("../assets/icon/whatsapp.svg");
+}
+
+.youtube {
+  background-image: url("../assets/icon/youtube.svg");
+}
+
+.text-primary {
+  color: #448;
+}
+
+.text-secondary {
+  color: #88e;
+}
+
+.text-light, #footer #contact .button:hover, #footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  color: #eee;
+}
+
+.text-dark, #footer #contact .button {
+  color: #333;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.text-warning {
+  color: #f93;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.bg-primary {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #88e;
+}
+
+.bg-light, #footer #contact .button {
+  background-color: #eee;
+}
+
+.bg-dark, #footer #contact .button:hover, #footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  background-color: #333;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.bg-warning {
+  background-color: #f93;
+}
+
+.bg-danger, #footer #contact input:focus:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:focus:not(:placeholder-shown):invalid + .valid {
+  background-color: #c33;
+}
+
+.bg-success, #footer #contact input:focus:valid + .valid,
+#footer #contact textarea:focus:valid + .valid {
+  background-color: #3c6;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #88e;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark, #footer #contact .button {
+  border-color: #333;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+.border-warning {
+  border-color: #f93;
+}
+
+.border-danger, #footer #contact input:focus:not(:placeholder-shown):invalid,
+#footer #contact textarea:focus:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-success, #footer #contact input:focus:valid,
+#footer #contact textarea:focus:valid {
+  border-color: #3c6;
+}
+
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-sm-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-sm-3 {
+    width: 12.5%;
+  }
+
+  .col-sm-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-sm-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-sm-6 {
+    width: 25%;
+  }
+
+  .col-sm-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-sm-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-sm-9 {
+    width: 37.5%;
+  }
+
+  .col-sm-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-sm-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-sm-12 {
+    width: 50%;
+  }
+
+  .col-sm-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-sm-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-sm-15 {
+    width: 62.5%;
+  }
+
+  .col-sm-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-sm-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-sm-18 {
+    width: 75%;
+  }
+
+  .col-sm-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-sm-20, #footer #contact {
+    width: 83.3333333333%;
+  }
+
+  .col-sm-21 {
+    width: 87.5%;
+  }
+
+  .col-sm-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-sm-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-sm-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-md-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-md-3 {
+    width: 12.5%;
+  }
+
+  .col-md-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-md-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-md-6 {
+    width: 25%;
+  }
+
+  .col-md-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-md-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-md-9 {
+    width: 37.5%;
+  }
+
+  .col-md-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-md-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-md-12 {
+    width: 50%;
+  }
+
+  .col-md-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-md-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-md-15 {
+    width: 62.5%;
+  }
+
+  .col-md-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-md-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-md-18, #footer #contact {
+    width: 75%;
+  }
+
+  .col-md-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-md-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-md-21 {
+    width: 87.5%;
+  }
+
+  .col-md-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-md-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-md-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-lg-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-lg-3 {
+    width: 12.5%;
+  }
+
+  .col-lg-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-lg-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-lg-6 {
+    width: 25%;
+  }
+
+  .col-lg-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-lg-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-lg-9 {
+    width: 37.5%;
+  }
+
+  .col-lg-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-lg-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-lg-12, #footer #contact {
+    width: 50%;
+  }
+
+  .col-lg-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-lg-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-lg-15 {
+    width: 62.5%;
+  }
+
+  .col-lg-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-lg-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-lg-18 {
+    width: 75%;
+  }
+
+  .col-lg-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-lg-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-lg-21 {
+    width: 87.5%;
+  }
+
+  .col-lg-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-lg-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-lg-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-xl-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-xl-3 {
+    width: 12.5%;
+  }
+
+  .col-xl-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-xl-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-xl-6 {
+    width: 25%;
+  }
+
+  .col-xl-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-xl-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-xl-9 {
+    width: 37.5%;
+  }
+
+  .col-xl-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-xl-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-xl-12 {
+    width: 50%;
+  }
+
+  .col-xl-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-xl-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-xl-15 {
+    width: 62.5%;
+  }
+
+  .col-xl-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-xl-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-xl-18 {
+    width: 75%;
+  }
+
+  .col-xl-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-xl-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-xl-21 {
+    width: 87.5%;
+  }
+
+  .col-xl-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-xl-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-xl-24 {
+    width: 100%;
+  }
+}
+#footer .social a {
+  width: 5rem;
+  height: 5rem;
+  background-size: 2.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 0.5;
+}
+#footer .social a:hover {
+  background-size: 4rem;
+  opacity: 0.9;
+}
+
 /*Nesting*/
 section .header {
   margin: 0.5rem 0;
   outline: none;
   border-bottom: 0.1rem solid #9998;
   padding: 0;
+}
+section .example {
+  list-style: none;
 }
 
 #footer {
@@ -18,6 +557,10 @@ section .header {
   border: none;
   padding: 0;
 }
+#footer #contact textarea {
+  resize: none;
+  min-height: 8rem;
+}
 #footer #contact input,
 #footer #contact textarea {
   margin: 0;
@@ -25,33 +568,27 @@ section .header {
   border: 0.1rem solid #999;
   padding: 0.5rem 1rem;
 }
-#footer #contact input:focus:valid,
-#footer #contact textarea:focus:valid {
-  border-color: #3c6;
-}
-#footer #contact input:focus:valid + .valid,
-#footer #contact textarea:focus:valid + .valid {
-  background-color: #3c6;
-}
-#footer #contact input:focus:not(:placeholder-shown):invalid,
-#footer #contact textarea:focus:not(:placeholder-shown):invalid {
-  border-color: #c33;
-}
-#footer #contact input:focus:not(:placeholder-shown):invalid + .valid,
-#footer #contact textarea:focus:not(:placeholder-shown):invalid + .valid {
-  background-color: #c33;
-}
 #footer #contact input:focus + .valid,
 #footer #contact textarea:focus + .valid {
   max-height: 300px;
   padding: 0.5rem;
   text-shadow: 0 0 0.5rem #333;
-  color: #eee;
-  background-color: #333;
+}
+#footer #contact .button {
+  margin-left: auto;
+  outline: none;
+  border: 0.1rem solid;
+  padding: 0.5rem 1rem;
 }
 #footer #contact .valid {
   max-height: 0;
   overflow: hidden;
+}
+#footer .social {
+  margin: auto;
+  outline: none;
+  border: none;
+  padding: 0;
 }
 
 /*# sourceMappingURL=sass.css.map */
