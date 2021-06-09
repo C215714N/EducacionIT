@@ -7,13 +7,37 @@
 			box-sizing: border-box;
 			font-family: Raleway, segoe ui, sans-serif;
 		}
-		:root{
+		#mode{
+			display: none;
+		}
+		:root,
+		#mode ~ nav,
+		#mode ~ main,
+		#mode ~ section,
+		#mode ~ article,
+		#mode ~ footer{
 			--fst: #248;
 			--snd: #36c;
 			--light: #eee;
 			--dark: #333;
 			--hover: rgba(51, 51, 51, .5);
 			--gradient: linear-gradient(var(--snd), var(--fst));
+		}
+		#mode:checked ~ nav,
+		#mode:checked ~ main,
+		#mode:checked ~ section,
+		#mode:checked ~ article,
+		#mode:checked ~ footer{
+			--fst: #012;
+			--snd: #8cf;
+			--hover: rgba(204, 204, 204, .5);
+			--gradient: linear-gradient(var(--snd), var(--fst));
+		}
+		#mode:checked ~ * label[for="mode"]:after{
+			content: ' Nocturno';
+		}
+		#mode:not(:checked) ~ * label[for="mode"]:after{
+			content: ' Diurno';
 		}
 		body, h1, h2, h3, .menu, .title, .slide{ margin: 0 }
 		.opacity{ opacity: .3 }
@@ -310,9 +334,7 @@
 				animation-iteration-count: infinite;
 			}
 			@keyframes loading{
-				to{
-					transform: rotate(720deg);
-				}
+				to{	transform: rotate(720deg); }
 			}
 	/*Footer*/
 		#footer #contact{ display: grid }

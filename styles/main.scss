@@ -1,3 +1,4 @@
+@use 'sass:math';
 //Variables
 	$icons: '../assets/icon';
 	$social:
@@ -139,3 +140,46 @@
 				@extend .text-light;
 				@extend .bg-dark;
 	}	}	}
+
+$animations:
+	lineal,
+	cuadratica,
+	trigonometrica,
+	exponencial,
+	radical;
+@each $name in $animations{
+	@keyframes #{$name} {
+		$i: 0;
+		$x: -20;
+		$function: $i;
+		@while $i <= 100{
+			@if $name == lineal{
+				$function: math.div($x, 2);
+			} @else if $name == cuadratica {
+				$function: math.pow($x, 2);
+			} @else if $name == trigonometrica {
+				$function: math.cos($x) * 100;
+			} @else if $name == exponencial {
+				$function: math.pow(1.2, $x);
+			} @else{
+				$function: math.round( math.div(1, $x + 1));
+			}
+			#{$i}%{
+				transform:
+					translate($i+px , $function+px);
+			}	
+			$i: $i + 5;
+			$x: $x + 5;
+}	}	}
+
+#mode:not(:checked){
+	--ligth:#eee;
+	--dark:#333;
+}
+#mode:checked{
+	& + nav,
+	& + main,
+	& + footer{
+	--ligth:#333;
+	--dark:#eee;
+}	}
