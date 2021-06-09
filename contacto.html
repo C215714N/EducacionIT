@@ -22,20 +22,28 @@
 				<h2>Formularios HTML</h2>
 			</header>
 			<p>
-
+				Son herramientas que se utilizan para <strong>intercambio de datos entre Cliente y Servidor</strong>, permitiendo al usuario ingresar o seleccionar los mismos antes de realizar el envio. Para implementarlos debemos colocar la etiqueta <em>&lt;form></em> y dentro de esta los elementos que se contemplaran para el envio, ademas se deben especificar algunos atributos relacionados con la manipulacion de los datos.
 			</p>
 			<section>
 				<header>
 					<h3>¿Como funcionan?</h3>
 				</header>
 				<p>
-					
+					A la etiqueta mencionada anteriormente deberemos especificarle <em>2 atributos</em>, por un lado esta el <strong>action="..."</strong> que define que hacer con los datos una vez realizado el envio y se suele utilizar un <em>script en lenguaje de servidor(e.g:php)</em> para que este resuelva que hacer con los mismos. Por otro lado esta el <strong>method="..."</strong> el cual indica como se llevara a cabo el envio y quien tiene la prioridad al momento de realizarlo.
 				</p>
 			</section>
 		</article>
 	</main>
 	<footer>
-		
+		<form id="contacto" action="contacto.php" method="POST">
+			<h2>Contactanos</h2>
+			<label for="nombre">Ingrese su Nombre</label>
+			<input 
+				id="nombre" 
+				name="nombre" 
+				type="text"
+				placeholder="Nombre: Cristian Racedo" />
+		</form>
 	</footer>
 </body>
 </html>
