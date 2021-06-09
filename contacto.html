@@ -3,6 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*Reglas generales*/
+		body{
+			margin: 0;
+			font-family: 'segoe ui', calibri, sans-serif;
+		}
+		/*Barra de Navegacion*/
+		.menu{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+			background-color: #448;
+		}
+		.menu a{
+			color: #eee;
+			text-decoration: none;
+		}
+		.menu li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/*Cabecera principal*/
+		#header{
+			padding: 20% 16px;
+			text-align: center;
+			background-color: #ccc;
+		}
+		/*Pie de pagina*/
+		footer{
+			padding: 16px;
+			color: #eee;
+			background-color: #448;
+		}
+		#contacto{
+			max-width: 540px;
+			margin: auto;
+		}
+		#contacto input,
+		#contacto textarea{
+			width: 100%;
+		}
+	</style>
 </head>
 <body>
 	<nav>
@@ -42,7 +85,21 @@
 				id="nombre" 
 				name="nombre" 
 				type="text"
-				placeholder="Nombre: Cristian Racedo" />
+				placeholder="Nombre: Cristian Racedo" 
+				required />
+			<label for="email">Ingrese su Correo</label>
+			<input 
+				id="email" 
+				name="email" 
+				type="email"
+				placeholder="Correo: cristiandracedo@hotmail.com" 
+				required />
+			<label for="consulta">Ingrese su Consulta</label>
+			<textarea  
+				id="consulta"
+				name="consulta"
+				placeholder="Consulta: Buenas, necesito un presupuesto"></textarea>
+			<button> ENVIAR </button>
 		</form>
 	</footer>
 </body>
