@@ -22,6 +22,13 @@
 		@keyframes sizeChange {
 			from{ transform: scale(25) rotate(540deg) }
 		}
+		@keyframes iconJump{
+			from{ transform: rotate(-30deg) }
+			to{ transform: rotate(30deg) }
+		}
+		@keyframes glow{
+			to{ text-shadow: 0 0 .5rem var(--light) }
+		}
 	/*Navigation*/
 		nav{
 			position: sticky;
@@ -85,6 +92,17 @@
 			background-color: var(--hover);
 			transform:	scale(1.2); 
 		}
+		.menu a:hover span{
+			animation: glow 1s ease;
+			animation-direction: alternate-reverse;
+			animation-iteration-count: infinite;
+		}
+		.menu a:hover::before{
+			animation: iconJump .25s ease;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			transform-origin: bottom center;
+		}
 		.menu a::after{
 			content: '';
 			position: absolute;
@@ -101,9 +119,7 @@
 			opacity: 1;
 		}
 		.menu span{ padding: .5rem }
-		.menu.active{
-			max-height: 600px;
-		}
+		.menu.active{ max-height: 600px }
 	/*Heading*/
 		#header{
 			position: relative;
@@ -119,8 +135,8 @@
 		#header .header{
 			animation-name: sizeChange;
 			animation-duration: 3s;
-			animation-delay: .5s;
 			animation-timing-function: ease-out;
+			animation-delay: .5s;
 			animation-fill-mode: backwards;
 		}
 		#header span{ transition: all .5s ease-in-out }
@@ -151,14 +167,17 @@
 		#header .icon-next{ right: 0 }			
 		#header .icon-prev:hover{ transform: translate(2vw) }	
 		#header .icon-next:hover{ transform: translate(-2vw) }
-		
 	/*Main Content*/
 		main .header{ border-bottom: .1rem solid var(--hover) }
 		/*Examples*/
-			.example{
+			section article .example{
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 				gap: .5rem;
+				border-left: .2rem solid var(--fst);
+				padding: 1rem;
+				background-color: var(--light);
+				list-style: none;
 			}
 			.example progress,
 			.example meter,
@@ -166,7 +185,7 @@
 				width: 100%;
 				min-height: 2rem;
 			}
-			/*Grid Layout*/
+		/*Grid Layout*/
 			.grid{
 				margin: .5rem;
 				border: .2rem solid var(--fst);
@@ -239,6 +258,42 @@
 				padding: .5rem;
 				background-color: var(--hover);
 			}
+		/*Animations*/
+			/*timing function*/
+			@keyframes moveIt {
+				0%{
+					transform: skew(15deg);
+					background-color: hsl(0, 50%, 50%);
+				}
+				25%{
+					transform: translate(300px, 0) skew(0, -15deg);
+					background-color: hsl(90, 50%,50%);
+				}
+				50%{
+					transform: translate(300px, 150px) skew(-15deg, 0);
+					background-color: hsl(180, 50%, 50%);
+				}
+				75%{
+					transform: translate(0, 150px) skew(0, 15deg);
+					background-color: hsl(270, 50%,50%);
+				}
+				100%{
+					transform: translate(0,0);
+					background-color: hsl(0, 50%, 50%);
+				}
+			}
+			.animation div{
+				border: .2rem dashed var(--snd);
+				padding: 1rem;
+				animation: moveIt 5s;
+				animation-iteration-count: 3;
+			}
+			.timing div:nth-child(1){ animation-timing-function: ease; }
+			.timing div:nth-child(2){ animation-timing-function: ease-in; }
+			.timing div:nth-child(3){ animation-timing-function: ease-out; }
+			.timing div:nth-child(4){ animation-timing-function: ease-in-out; }
+			.timing div:nth-child(5){ animation-timing-function: linear; }
+			.timing div:nth-child(6){ animation-timing-function: cubic-bezier(0, 1, 1, 0); }
 	/*Footer*/
 		#footer #contact{ display: grid }
 		#footer #contact label{ display: none }
