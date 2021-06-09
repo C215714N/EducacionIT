@@ -294,6 +294,26 @@
 			.timing div:nth-child(4){ animation-timing-function: ease-in-out; }
 			.timing div:nth-child(5){ animation-timing-function: linear; }
 			.timing div:nth-child(6){ animation-timing-function: cubic-bezier(0, 1, 1, 0); }
+
+			.direction div:nth-child(1){ animation-direction: normal; }
+			.direction div:nth-child(2){ animation-direction: reverse; }
+			.direction div:nth-child(3){ animation-direction: alternate; }
+			.direction div:nth-child(4){ animation-direction: alternate-reverse; }
+
+			.loading div{
+				border: .5rem solid;
+				width: 5rem;
+				height: 5rem;
+				border-radius: 50%;
+				border-color: transparent skyblue slateblue navy;
+				animation: loading 2s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes loading{
+				to{
+					transform: rotate(720deg);
+				}
+			}
 	/*Footer*/
 		#footer #contact{ display: grid }
 		#footer #contact label{ display: none }
