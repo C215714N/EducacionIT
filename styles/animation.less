@@ -1,0 +1,74 @@
+@functions:
+	lineal,
+	cuadratica,
+	trigonometrica,
+	exponencial;
+
+.lessanimation{
+	padding: 1rem;
+	min-height: 100vh;
+	div{
+		// mixin recursivo
+		.animations (@i: 1) when (@i <= length(@functions)){
+			@fn: extract(@functions, @i);
+			&:nth-child(@{i}){ 
+				animation-name: @fn;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				animation-delay: @i * 2s;
+			}
+			.animations (@i + 1);
+		}
+		.animations;
+		max-width: 3rem;
+		min-height: 3rem;
+		margin: .5rem;
+		border-radius: 1rem;
+		padding: .5rem;
+		color: var(--light);
+		background-color: var(--fst);
+}	}
+// animaciones
+.functions (@n:1) when (@n <= length(@functions)){
+	@fn: extract(@functions, @n);
+	@keyframes @fn { .animationkeys(@fn) }
+	.functions (@n + 1);
+}
+.functions;
+// fotogramas
+.animationkeys(@fn; @i: 0%; @x: -20px) when (@i <= 100%){
+	@{i}{
+		transform:
+			if(@fn = lineal, 
+				translate(@x + 50px, @x + 10px), 
+			if(@fn = cuadratica, 
+				translate(@x + 50px, pow(@x, 2)), 
+			if(@fn = trigonometrica, 
+				translate((@x + 50px) * 3, round((cos(@x) * 100px),2)),
+			if(@fn = exponencial, 
+				translate(@x + 50px, pow(1.5px, @x)),
+			if(@x <= 0px, 
+				translate(@x + 50px, (1/( @x + 21px))),
+				translate(@x + 50px, ( 1 / @x))
+			)	)	)	)	);
+	}
+	.animationkeys(@fn; @i + 2; @x + 5);
+}
+
+.rainbow (@i:0) when (@i <= 360){
+	box-shadow+: 
+		sin(@i) * 5rem 
+		cos(@i) * 5rem 
+		.2rem 
+		hsl(@i, 50%, 50%);
+	.rainbow(@i + 30);
+}
+
+#footer .social a:active{
+	border-radius: 50%;
+	.rainbow;
+}
+
+a[href*="#"]:hover{ color: #36c; } /* contiene */
+a[href^="https"]:hover{ background-color: #3c6; } /* empieza con */
+a[href~="html"]:hover{ color: #c33; } /* termina con */

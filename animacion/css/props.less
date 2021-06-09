@@ -1,0 +1,316 @@
+@colors: 
+	primary, #07F, 
+	secondary, #677,
+	info, #1AB, 
+	success, #3A5, 
+	warning, #FC1, 
+	danger, #D45, 
+	light, #EEF, 
+	dark, #334;
+@queries:
+	sm, 576px,
+	md, 768px,
+	lg, 992px,
+	xl, 1200px;
+
+.media (@n:1, @queries:@queries) when (@n <= length(@queries)){
+	@vn: extract(@queries, @n);
+	@media screen and (min-width: extract(@queries, @n + 1)){
+		.clases(@i:1, @colors:@colors) when (@i <= length(@colors)){
+			@color: extract(@colors, @i);
+			.text-@{vn}-@{color}{
+				color:extract(@colors, @i + 1);
+			}
+			.bg-@{vn}-@{color}{
+				background-color: extract(@colors, @i + 1);
+			}
+			.outline-@{vn}-@{color}{
+				border-color: extract(@colors, @i + 1);
+			}
+			.clases(@i + 2);
+		}
+		.clases;
+		.grid (@c:1, @cols:24) when (@c <= @cols){
+			.col-@{vn}-@{c}{
+				width:percentage(@c / @cols);
+			}
+			.grid (@c + 1);
+		}
+		.grid;
+	}
+	.media(@n + 2);
+}
+.media;
+body{
+	overflow: hidden;
+	margin:0;
+	animation: sea 5s linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	.bubbles{
+		animation: bubbles-background 21s linear;
+		animation-direction: alternate-reverse;
+		animation-iteration-count: infinite;
+		display: flex;
+		margin:auto;
+		min-width: 300px;
+		height: 100vh;
+		min-height: 300px;
+		align-items: flex-end;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		div{
+			width:50px;
+			height:50px;
+			border-radius: 50%;
+			background: radial-gradient(
+				circle farthest-corner at 1rem 1rem, 
+				lightblue, 
+				white,
+				skyblue);
+		}
+		.repeat (@i:1) when (@i <= 10){
+			:nth-child(@{i}){
+				animation: bubbles 
+				if(	@i < 5, 
+						@i * 2.5s, 
+						@i / 1.2s
+				) ease-in-out;
+				animation-iteration-count: infinite;
+			}
+			.repeat(@i + 1);
+		}
+		.repeat;
+	}
+	.fish{
+		position: fixed;
+		z-index: -1;
+		top:50%;
+		left:10%;
+		width:120px;
+		height: 100px;
+		border-radius:100% 60% 60% 100%;
+		border: 3px solid #C48;
+		box-shadow: -3px 0 1rem #936;
+		animation: fish 10s linear;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		&:hover{
+			box-shadow+: 0 0px 20px white;
+			cursor: pointer;
+		}
+		.eyes{
+			position:absolute;
+			left: 65px;
+			width:20px;
+			height: 20px;
+			border: 5px solid white;
+			border-radius: 50%;
+			background-color: black;
+			box-shadow: 0 0 10px blue inset, 2px 2px 2px white inset;
+			&:nth-child(even){
+				top: 10px;
+			}
+			&:nth-child(odd){
+				bottom: 10px;
+			}
+		}
+		.base{
+			position:absolute;
+			top:0;
+			right:-15px;
+			width:30px;
+			height:100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			.tentacles{
+				display: flex;	
+				position:relative;
+				background: radial-gradient(
+					circle farthest-corner at 10% 10%,
+						#C48,
+						#936
+					);
+				width: 20px;
+				height:20px;
+				border-radius: 50%;
+				.hijos (@i:1, @total:4) when (@i <= @total){
+					&:nth-child(@{i}){
+					transform: 
+						if(@i < 3,
+							rotateX(0deg),
+							rotateX(180deg)
+						);
+				}
+					.hijos(@i + 1);
+				}
+				.hijos;
+				div{
+					position:absolute;
+					background-color: #936;
+					border-radius: 50%;
+					border: 1px solid #c48;
+					.ventosas(@i:1) when (@i<=6){
+						&:nth-child(@{i}){
+							left: @i * 10px;
+							width:20px - @i * 2;
+							height:20px - @i * 2;
+							background: radial-gradient(
+								circle farthest-corner at $width * .1 $width *.1,
+								#C48,
+								#936
+							);
+							box-shadow: 0 5px + @i *1.5  #936;
+							animation:tentacle 5s linear;
+							animation-delay: 5s - @i;
+							animation-iteration-count: infinite;
+							animation-direction: if(mod(@i,2)=0, alternate, alternate-reverse);
+						}
+						.ventosas(@i + 1);
+					}			
+					.ventosas;
+				}
+			}
+		}
+	}
+	.container{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index: -10;
+		perspective-origin: top center;
+		perspective: 100px;
+		.seaplant{	
+			background-color: limegreen;
+			box-shadow: -5px -2px 5px darkgreen;
+			width:10px;
+			height: 90px;
+			transform-origin: bottom center;
+			.hojas(@i:1, @total:6) when (@i <= @total){
+				&:nth-child(@{i}){
+					left:35px * @i;
+					transform: 
+						if(@i <= 3,
+							rotate(@i * -15deg),
+							rotate(@i * 15deg)
+						);
+				}
+				.hojas(@i + 1);
+			}
+		.hojas;
+		}
+	}
+}
+@keyframes fish{
+	.fish (@i:0%) when (@i <= 100%){
+		@{i}{
+		top: 
+			if(@i=0% or @i=100%,
+				50%,
+				if(@i <= 25% ,
+					20%,
+					if(@i <= 50%,
+						80%,
+						10%
+					)
+				)
+			);
+		left: 
+			if(@i = 0% or @i = 100%,
+				10%,
+				if(@i <= 25% ,
+					40%,
+					if(@i <= 50%,
+						80%,
+						60%
+					)
+				)
+			);
+		transform:
+			if(@i <= 50%,
+				if(mod(@i , 2) = 0,
+					scale(.5)
+					rotate(-15deg),
+					scale(1.5)
+					rotate(135deg)
+				),
+				if(mod(@i , 2) = 0,
+					scale(1.5)
+					rotate(15deg),
+					scale(.5)
+					rotate(135deg)
+				)
+			);
+		background: radial-gradient(
+			if(@i <= 50%, 
+				circle farthest-corner at 100% 50%, 
+				circle farthest-corner at 0% 50%
+			),
+			#936 ,
+			#624 ,
+			#C48 ,
+		);
+		}
+		.fish(@i + 25);
+	}
+	.fish;
+}
+@keyframes tentacle{
+	.tentacle (@n, @i:0%) when (@i <= 100%){
+		@{i}{
+			transform: translateY( sin(@n) * 30%);	
+		}
+		.tentacle(@n + 2, @i + 5);
+	}
+	.tentacle(0px);
+}
+@keyframes bubbles {
+	.bubbles (@n; @i:0%) when (@i <= 100%){
+		@{i}{
+			transform:
+				translate(
+					sin(@n) * 50px,
+					@n * -15px
+				)
+				scale((cos(@n) / 2 ) + 1);
+
+		}
+		.bubbles(@n + 1; @i + 1);
+		}	
+	.bubbles(@n:0);
+}
+@keyframes bubbles-background{
+	.bb (@i:0%) when (@i <= 100%){
+		@{i}{
+			width:
+				if( @i <= 25%,
+					50vw + @i, 
+					if( @i <= 50%,
+						50vw - @i / 1.25,
+						if( @i <= 75%,
+							50vw + @i / 2.5,
+							50vw - @i / 4
+						)
+					)
+				);
+		}
+		.bb(@i + 10);
+	}
+	.bb;
+}
+@keyframes sea{
+	.sea(@color; @i:0%) when (@i <= 100%){
+		@{i}{
+		background: linear-gradient(
+			135deg + @i , 
+			lighten(@color, 35%), 
+			darken(@color, 35%)
+		);
+	}
+	.sea(@color, @i + 2);
+	}
+	.sea(#248);
+}

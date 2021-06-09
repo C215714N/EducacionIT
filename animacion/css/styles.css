@@ -1,0 +1,111 @@
+body{
+	font-family: 'century gothic', roboto, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+#header, nav, article, section, #footer, .socialNet, #contacto{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	justify-content: space-between;
+}
+
+.menu, section, footer, #contacto{
+	flex-direction: column;
+}
+
+header, footer{
+	text-align: center;
+	color: white;
+	background-color:#356;
+}
+
+#header h1, #header p, section{
+	margin:2px;
+	border: 2px solid #356;
+	border-radius: 15px;
+	padding:0;
+}
+
+section{
+	width: 30%;
+	min-width: 320px;
+	margin: 10px auto;
+}
+
+section header{
+	border-radius: 10px 10px 0 0;
+}
+
+section footer{
+	border-radius: 0 0 10px 10px;
+}
+
+section>p{
+	padding:10px;
+}
+
+nav, nav .menu{
+	margin: 0 auto;
+	border: 0;
+	padding: 0;
+	min-width: 320px;
+}
+
+.menu li, .menu a{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;	
+	color:white;
+	background-color: black;
+}
+
+#contacto{
+	width: 100%;
+	max-width: 600px;
+	margin: 5px auto;
+}
+
+input{
+	width: 100%;
+	min-width: 240px;
+}
+
+@media (max-width: 576px){
+	*{
+		box-sizing: border-box;
+	}
+
+	body,header,nav,.menu li,main,article,section,footer,#contacto{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		}
+	#menu{
+		display:block;
+		border:none;
+		outline: none;
+		width: 100%;
+		text-align: left;
+
+	}
+
+	.menu{
+		display: none;
+		text-align: left;
+		padding: 0 10px;
+		width: 100%;
+	}
+
+	#menu:focus + .menu,.menu li:focus-within,.menu li:hover{
+		display:block;
+		text-align:left;
+	}
+}
+
+
