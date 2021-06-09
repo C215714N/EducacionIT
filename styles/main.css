@@ -18,6 +18,10 @@
 		body, h1, h2, h3, .menu, .title, .slide{ margin: 0 }
 		.opacity{ opacity: .3 }
 		.opacity:hover{ opacity: .7 }
+	/*Animations*/
+		@keyframes sizeChange {
+			from{ transform: scale(25) rotate(540deg) }
+		}
 	/*Navigation*/
 		nav{
 			position: sticky;
@@ -110,6 +114,14 @@
 			min-height: 300px;
 			max-height: 600px;
 			font-size: calc(2vw + .8rem); /*viewport width*/
+			overflow: hidden;
+		}
+		#header .header{
+			animation-name: sizeChange;
+			animation-duration: 3s;
+			animation-delay: .5s;
+			animation-timing-function: ease-out;
+			animation-fill-mode: backwards;
 		}
 		#header span{ transition: all .5s ease-in-out }
 		.slide, 
@@ -139,6 +151,7 @@
 		#header .icon-next{ right: 0 }			
 		#header .icon-prev:hover{ transform: translate(2vw) }	
 		#header .icon-next:hover{ transform: translate(-2vw) }
+		
 	/*Main Content*/
 		main .header{ border-bottom: .1rem solid var(--hover) }
 		/*Examples*/
@@ -226,7 +239,6 @@
 				padding: .5rem;
 				background-color: var(--hover);
 			}
-
 	/*Footer*/
 		#footer #contact{ display: grid }
 		#footer #contact label{ display: none }
