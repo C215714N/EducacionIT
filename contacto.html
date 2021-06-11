@@ -74,6 +74,24 @@
 				<p>
 					A la etiqueta mencionada anteriormente deberemos especificarle <em>2 atributos</em>, por un lado esta el <strong>action="..."</strong> que define que hacer con los datos una vez realizado el envio y se suele utilizar un <em>script en lenguaje de servidor(e.g:php)</em> para que este resuelva que hacer con los mismos. Por otro lado esta el <strong>method="..."</strong> el cual indica como se llevara a cabo el envio y quien tiene la prioridad al momento de realizarlo.
 				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong>
+						Metodo rapido cuya prioridad radica en la respuesta del servidor, los datos enviados suelen figurar en la barra de direcciones y la comunicacion es en texto plano, por lo tanto no es seguro.
+						<ul>
+							<li>Buscadores <em>Consulta Query</em></li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST: </strong>
+						Metodo seguro cuya prioridad radica en el cliente que realiza la peticion, los datos se encriptan antes de realizar el envio para proteger la informacion, por esta razon es mas lento.
+						<ul>
+							<li>Inscripcion <em>Registro</em></li>
+							<li>Inicio sesion <em>Acceso</em></li>
+							<li>Contacto <em>Consulta Web</em></li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
