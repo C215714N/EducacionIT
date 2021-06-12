@@ -53,6 +53,52 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<p>
+				Son herramientas que permiten <strong>organizar la informacion de manera tabular</strong> y deben utilizarse cuando los datos requieren ser presentados de determinada forma. A diferencia de otros ambitos, en html las tablas se crean respetando el <em>modelo de cajas</em>, es decir, que existen etiquetas que funcionan como contenedores y otras que funcionan como contenido.
+			</p>
+			<section>
+				<header>
+					<h3>¿Cual es su estructura?</h3>
+				</header>
+				<p>
+					Para insertar una tabla debemos colocar la etiqueta <strong>&lt;table></strong>, para crear las filas utilizamos <strong>&lt;tr> (Table Row)</strong>; tambien utilizamos <strong>&lt;td> (Table Division) y &lt;th> (Table Heading)</strong> para las celdas de contenido y titulo respectivamente. Ademas contamos con una estructura semantica, que permite definir que parte de la tabla estamos visualizando como <strong>THEAD </strong> que representa la cabecera, <strong>TBODY</strong> que representa el cuerpo y <strong>TFOOT</strong> que representa el pie de tabla, este ultimo es opcional.
+				</p>
+				<div class="example">
+					<table class="modern">
+						<caption>Lista de Usuarios</caption>
+						<thead>
+							<tr>
+								<th>Usuario</th>
+								<th>Nombre</th>
+								<th>Correo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>c215714n</td>
+								<td>Cristian Racedo</td>
+								<td>cristiandracedo@hotmail.com</td>
+							</tr>
+							<tr>
+								<td>d477714n</td>
+								<td>cristian damian</td>
+								<td>cristiandracedo@gmail.com</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<td colspan="2">2</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer>
 		<form id="contacto" action="contacto.php" method="POST">

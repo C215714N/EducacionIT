@@ -19,12 +19,56 @@
 		display: inline-block;
 		padding: 8px;
 	}
+	.menu li:hover{
+		background-color: rgba(51, 51, 51, .5);
+	}
 /*Cabecera principal*/
 	#header{
 		padding: 20% 16px;
 		text-align: center;
 		background-color: #ccc;
 	}
+/* Contenido Principal */
+	main{
+		max-width: 960px;
+		margin: 16px auto;
+		padding: 1rem; /* root EM(ancho de M) => 16px */
+	}
+	.example{
+		margin: 1rem;
+		margin-left: 2rem;
+		border-left: .25rem solid #448;/* width style color */
+		padding: 1rem;
+		line-height: 1.5rem;
+		background-color: #eee;
+		list-style: none;
+	}
+	/*Tablas HTML*/
+		caption,
+		th,
+		td{
+			padding: .5rem;
+		}
+		.classic,
+		.classic caption,
+		.classic th,
+		.classic td{
+			border: .2rem solid #448;
+			border-collapse: collapse;
+		}
+		.classic caption{ 
+			border-bottom: none;
+		}
+		.modern,
+		.modern caption,
+		.modern tr,
+		.modern td{
+			color: #eee;
+			background-color: rgba(68, 68, 136, .5);
+		}
+		caption{
+			border-radius: .5rem .5rem 0 0; /*tl tr br bl*/
+		}
 /*Pie de pagina*/
 	footer{
 		padding: 16px;
