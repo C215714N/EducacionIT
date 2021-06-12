@@ -1,0 +1,41 @@
+/*Reglas generales*/
+	body{
+		margin: 0;
+		font-family: 'segoe ui', calibri, sans-serif;
+	}
+/*Barra de Navegacion*/
+	.menu{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		background-color: #448;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px;
+	}
+/*Cabecera principal*/
+	#header{
+		padding: 20% 16px;
+		text-align: center;
+		background-color: #ccc;
+	}
+/*Pie de pagina*/
+	footer{
+		padding: 16px;
+		color: #eee;
+		background-color: #448;
+	}
+	#contacto{
+		max-width: 540px;
+		margin: auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		width: 100%;
+	}
