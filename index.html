@@ -40,6 +40,69 @@
 		<button class="icon-prev"></button>
 		<button class="icon-next"></button>
 	</header>
+	<!--Main: contenido principal-->
+	<!--Footer: contenido complementario-->
+	<footer id="footer">
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				minlength="3" 
+				maxlength="50" 
+				placeholder="Ingrese su Nombre(*): Cristian Racedo" 
+				required />
+			<div class="valid">
+				Ingrese su nombre completo solamente con letras. 
+				El mismo debe poseer entre 3 y 50 caracteres
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email" 
+				minlength="8" 
+				placeholder="Ingrese su Correo(*): cristiandracedo@hotmail.com" 
+				required/>
+			<div class="valid">
+				Ingrese una direccion de correo valida,
+				respetando la siguiente estructura usuario@servidor
+			</div>
+			<label for="contact"></label>
+			<input 
+				id="contact" 
+				name="contact" 
+				type="tel" 
+				minlength="3" 
+				placeholder="Ingrese su Telefono(*): (5411)2345-6789" 
+				required />
+			<div class="valid">
+				Ingrese su numero respetando el formato (5411)2345-6789,
+				puede utilizar un guion cada 3 o 6 digitos.
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Ingrese su consulta(*): Buenas, necesito un presupuesto"required ></textarea>
+			<button class="button">Enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://.com" class="" target="_blank"></a>
+			<a href="https://.com" class="" target="_blank"></a>
+			<a href="https://.com" class="" target="_blank"></a>
+			<a href="https://.com" class="" target="_blank"></a>
+		</div>
+		<p class="copy">
+			&copy; Todos los derechos reservados 
+			<a href=""> Cristian Racedo </a>
+			&amp; Compañia.
+		</p>
+	</footer>
 	<!--Scripts JS-->
 	<script src="scripts/main.js"></script>
 	<!-- EMMET
