@@ -8,6 +8,7 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Maquetado Avanzado</title>
+	<link rel="icon" href="assets/icon/css.svg">
 	<!--Styles CSS-->
 	<link rel="stylesheet" href="styles/main.css">
 </head>
@@ -41,6 +42,117 @@
 		<button class="icon-next"></button>
 	</header>
 	<!--Main: contenido principal-->
+	<main>
+		<section>
+			<header class="header">
+				<h2>Elementos HTML5</h2>
+			</header>
+			<p>
+				Con el nuevo estandar se incorporaron varias etiquetas que hacen incapie en la semantica y el analisis de contenido, asi como tambien, aquellas que facilitan la implementacion de contenido multimedia sin necesidad de instalar plugins o herramientas de terceros, debido a las modificaciones que presentan los navegadores actuales.
+			</p>
+			<article>
+				<header>
+					<h3>Estadisticas</h3>
+				</header>
+				<p>
+					Entre las nuevas caracteristicas de html5, se incorporan los elementos estadisticos gracias a las etiquetas <strong>&lt;progress></strong> que se debe utilizar cuando necesitamos indicar el valor de una tarea cuando esta aun no fue finalizada o se desconoce su resultado final <em>(e.g: avance de la capacitacion)</em>; y <strong>&lt;meter></strong> que se debe utilizar para la comparacion de valores cuando una tarea fue finalizada y por lo tanto, estos son definitivos <em>(e.g: resultado de un examen)</em>
+				</p>
+				<ul class="example">
+					<li>
+						<strong>PROGRESS</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								sin value definido
+							</li>
+							<li>
+								<progress value="20" max="100"></progress>
+								value = 20; max = 100
+							</li>
+							<li class="progress">
+								<progress max="100"></progress>
+								<input type="number" min="0" max="100" />
+								value = JavaScript
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>METER</strong>
+						<ul>
+							<li>
+								<meter 
+									max="100" 
+									low="40" 
+									high="70" 
+									optimum="90" 
+									value="30">
+								</meter>
+								<strong>value</strong> < low < high < optimum
+							</li>
+							<li>
+								<meter 
+									max="100" 
+									low="40" 
+									high="70" 
+									optimum="90" 
+									value="60">
+								</meter>
+								low < <strong>value</strong> < high < optimum
+							</li>
+							<li>
+								<meter 
+									max="100" 
+									low="40" 
+									high="70" 
+									optimum="90" 
+									value="90">
+								</meter>
+								low < high < <strong>value</strong> < optimum
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h3>Multimedia</h3>
+				</header>
+				<p>
+					Actualmente se incorporaron elementos capaces de reproducir contenido multimedia gracias a las etiquetas <strong>&lt;audio></strong> y <strong>&lt;video></strong> que son compatibles con los formatos <em>.mp3 - .wav - .ogg</em> y <em>.mp4 - .webm - .ogv</em> respectivamente. Esto es posible debido a que los navegadores actuales cuentan con una API de reproduccion, e incluso podemos habilitarlos con los atributos <em>controls</em> o <em>autoplay muted loop</em> si queremos que los videos se reproduzcan al cargar la pagina.
+				</p>
+				<div class="example">
+					<audio controls>
+						<source src="assets/media/live-learn.mp3">
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/live-learn.mp4">link</a>
+						</p>	
+					</audio>
+					<video controls>
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/californication.mp4">
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/californication.mp4">link</a>
+						</p>
+					</video>
+					<video autoplay muted loop>
+						<source src="assets/media/cant-stop.webm">
+						<source src="assets/media/cant-stop.mp4">
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/cant-stop.mp4">link</a>
+						</p>
+					</video>
+				</div>
+			</article>
+			<footer>
+				<address>
+					para mas informacion consultar la plataforma 
+					<a href="https://alumni.education">Alumni</a>
+					o enviar un mail a 
+					<a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
+			</footer>
+		</section>
+	</main>
 	<!--Footer: contenido complementario-->
 	<footer id="footer">
 		<form action="" id="contact">
