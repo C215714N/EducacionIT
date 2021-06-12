@@ -8,6 +8,13 @@
 			box-sizing: border-box;
 			font-family: 'Raleway', calibri, segoe ui, sans-serif;
 		}
+		:root{
+			--fst: #448;
+			--snd: #36c;
+			--light: #eee;
+			--dark: #333;
+			--hover: rgba(51, 51, 51, .5);
+		}
 		body,
 		h1,
 		h2,
@@ -16,6 +23,41 @@
 		.copy{
 			margin: 0;
 		}
+		.opacity{ opacity: .3 }
+		.opacity:hover{ opacity: .7 }
+	/*Navigation*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: 
+				var(--fst)
+				linear-gradient( var(--snd), var(--fst) );
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: var(--light);
+			text-decoration: none;
+		}
+		nav .icon-back{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			border-radius: 2rem;
+			background-color: var(--dark);
+		}
+		.menu{
+			width: 100%;
+			max-height: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.menu a:hover{ background-color: var(--hover) }
+		.menu span{ padding: .5rem }
+		.menu.active{ max-height: 600px }
+
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
