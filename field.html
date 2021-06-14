@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		main{
+			min-height: 100vh;
+			position: relative;
+		}
+		div{
+			position: absolute;
+			height: 3rem;
+			width: 2rem;
+			border-radius: .5rem;
+			color: #eee;
+			background: #333;
+		}
+
+	/* landscape */
+		@media screen and (orientation: landscape){
+			main{
+				background:  linear-gradient(
+					to right,
+					darkgreen 20%,
+					green 50%,
+					lightgreen 80%,
+					limegreen
+				);
+			}
+			div:nth-child(1){
+				left: 10%;
+				top: calc(50% - 1rem);
+			}
+			div:nth-child(2){
+				left: calc(50% - 1.5rem);
+				top: .5rem;
+			}
+			div:nth-child(3){
+				left: calc(75% - 1.5rem);
+				bottom: calc(25% - 1rem);
+			}
+		}
+	/* portrait */
+		@media screen and (orientation: portrait){
+			main{
+				background:  linear-gradient(
+					darkgreen 20%,
+					green 50%,
+					lightgreen 80%,
+					limegreen
+				);
+			}
+			div:nth-child(1){
+				top: 10%;
+				left: calc(50% - 1rem);
+			}
+			div:nth-child(2){
+				top: calc(50% - 1.5rem);
+				right: .5rem;
+			}
+			div:nth-child(3){
+				top: calc(75% - 1.5rem);
+				left: calc(25% - 1rem);
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		
+	</header>
+	<main>
+		<div>
+			<strong>1</strong><img src="" alt="">
+			<p></p>
+		</div>
+		<div>
+			<strong>2</strong><img src="" alt="">
+			<p></p>
+		</div>
+		<div>
+			<strong>3</strong><img src="" alt="">
+			<p></p>
+		</div>
+		<div>
+			<strong>4</strong><img src="" alt="">
+			<p></p>
+		</div>
+		<div>
+			<strong>5</strong><img src="" alt="">
+			<p></p>
+		</div>
+	</main>
+</body>
+</html>
