@@ -3,6 +3,10 @@
 		@import url('less.css');
 		@import url('sass.css');
 		@import url('icomoon.css');
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
 		*{
 			box-sizing: border-box;
 			font-family: sans-serif;
@@ -66,14 +70,54 @@
 		/*Menu List*/
 			.menu{
 				width: 100%;
-				height: 0;
+				max-height: 0;
 				padding: 0;
 				list-style: none;
 				overflow: hidden;
+				transition: all 1s ease-in;
 			}
 			.menu span{ padding: .5rem; }
 			.menu a:hover{ background-color: var(--hvr)}
-			.menu.active{ height: auto }
+			.menu.active{ max-height: 600px }
+	/* Headings */
+		#header{
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			color: var(--snd);
+			font-size: calc(2vw + .5rem);/* viewport width */
+			text-align: center;
+			text-shadow: 0 0 .5rem var(--dark);
+		}
+		#header h1{ font-family: 'star wars', sans-serif; }
+		#header button{
+			outline: none;
+			border: none;
+			background-color: transparent;
+			color: var(--snd);
+			font-size: calc(2vw + 1rem);
+		}
+		#header .slide li{
+			transition-property: opacity;
+			transition-duration: 1s;
+			transition-timing-function: ease-out;
+		}
+		.header .slide span{
+			display: inline-block;
+			width: 1rem;
+			height: 1rem;
+			border-radius: .5rem;
+			margin: .25rem;
+			background: var(--snd);
+			box-shadow: 0 0 .5rem var(--dark);
+			/*transition*/
+				transition-property: width;
+				transition-duration: 1s;
+				transition-timing-function: ease;
+		}
+		.header .slide .active{
+			width: 3rem;
+		}
 	/* Main Content */
 		.example video,
 		.example progress,
