@@ -69,13 +69,10 @@
 		#{$ba}: $b;
 		#{$pa}: $p;
 	}
-
 /*Nesting*/
 	section{
-		.header{
-			@include normalize(.5rem 0, $b: .1rem solid #9998, $ba: border-bottom);
-		}	
-		.example{ list-style: none;}
+		.header{ @include normalize(.5rem 0, $b: .1rem solid #9998, $ba: border-bottom); }	
+		.example{ list-style: none; }
 	}
 	#footer{
 		@include normalize($p: 1rem);
@@ -92,12 +89,10 @@
 				&:focus{
 					&:valid{
 						@extend .border-success;
-						& + .valid{ @extend .bg-success; }
-					}
+						& + .valid{ @extend .bg-success; } }
 					&:not(:placeholder-shown):invalid{
 						@extend .border-danger;
-						& + .valid{ @extend .bg-danger; }
-					}
+						& + .valid{ @extend .bg-danger;  } }
 					& + .valid{
 						max-height: 300px;
 						padding: .5rem;
@@ -114,17 +109,13 @@
 					@extend 
 						.text-light,
 						.bg-dark;
-					}
-			}
+				}	}
 			.valid{
 				max-height: 0;
 				overflow: hidden;
 		}	}
 		.social{
 			@include normalize(auto);
-			a{
-				@extend %icon;
-			}
-		}
-	}
+			a {	@extend %icon; }
+	}	}
 

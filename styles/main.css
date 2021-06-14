@@ -75,7 +75,11 @@
 			.menu a:hover{ background-color: var(--hvr)}
 			.menu.active{ height: auto }
 	/* Main Content */
-
+		.example video,
+		.example progress,
+		.example meter{
+			width: 100%;
+		}
 /* Small Devices - Smartphones */
 	@media screen and (min-width:  576px){
 

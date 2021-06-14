@@ -110,9 +110,49 @@
 			</ul>
 		</article>
 		<article>
-			<header class="header">
-				<h2>Preprocesadores</h2>
+			<header>
+				<h3>Contenido Multimedia</h3>
 			</header>
+			<p>
+				Los navegadores actuales poseen api's reproduccion de este tipo de contenido y podemos acceder a estas gracias a las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3 - .wav - .ogg</em> y <em>.mp4 - .webm - .ogv</em> respectivamente. Ademas podemos reproducir de manera automatica el contenido gracias a atributos como <em>autoplay muted loop</em>
+			</p>
+			<div class="example">
+				<video controls poster="assets/img/poster-californication.jpg">
+					<source src="assets/media/californication.ogv">
+					<source src="assets/media/californication.mp4">
+					<p>
+						Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/californication.mp4">link</a>
+					</p>
+				</video>
+				<video autoplay muted loop>
+					<source src="assets/media/by-the-way.ogv">
+					<source src="assets/media/by-the-way.mp4">
+					<p>
+						Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/by-the-way.mp4">link</a>
+					</p>
+				</video>
+			</div>
+		</article>
+	</section>
+	<section>
+		<header class="header">
+			<h2>Preprocesadores CSS</h2>
+		</header>
+		<article>
+			<header>
+				<h3>LESS</h3>
+			</header>
+			<p>
+				Preprocesador que utiliza <strong>javascript</strong> como herramienta de compilacion para crear hojas de estilo. Su principal ventaja es la asincronicidad del lenguaje que permite al usuario llamar a los estilos sin importar el orden de aparicion en las lineas de codigo, para compilarlo debemos utilizar el comando <em>lessc input.less output.css</em>
+			</p>
+		</article>
+		<article>
+			<header>
+				<h3>SASS</h3>
+			</header>
+			<p>
+				Preprocesador que utiliza <strong>ruby</strong> como herramienta de compilacion, y ademas brinda la opcion de observar los archivos que utilizamos mediante el comando <em>sass --watch input.scss output.css</em>. Esta biblioteca actualmente es utilizada por el equipo de desarrollo de <em>Bootstrap</em> y cuenta con metodos parecidos a los de cualquier lenguaje de programacion.
+			</p>
 			<div class="example">
 				<ul>
 					<li class="text-primary">primary</li>
