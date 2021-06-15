@@ -47,6 +47,9 @@
 					width: percentage( $i / $cols );
 	}	}	}	}
 // Hidden Style
+	%transition{
+		transition: all .5s ease;
+	}
 	%icon{
 		width: 5rem;
 		height: 5rem;
@@ -58,6 +61,7 @@
 		&:hover{
 			background-size: 4rem; 
 			opacity: .9;
+			transform: rotate(360deg);
 	}	}
 //Mixins
 	@mixin normalize(
@@ -70,6 +74,34 @@
 		#{$pa}: $p;
 	}
 /*Nesting*/
+	.menu a{
+		position: relative;
+		@extend %transition;
+		&::after{
+			@extend %transition;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: .25rem;
+			height: .25rem;
+			background-color: var(--snd);
+			opacity: 0;
+		}
+		&:hover{
+			padding-left: 20vw;
+			transform: 
+				scale(1.2);
+			&::after{
+				width: 100%;
+				opacity: 1;
+				box-shadow: 0 0 .5rem var(--dark);
+			}
+			@media screen and (min-width: 768px){
+				padding: .5rem;
+			}
+		}
+	}
 	section{
 		.header{ @include normalize(.5rem 0, $b: .1rem solid #9998, $ba: border-bottom); }	
 		.example{ list-style: none; }
@@ -79,6 +111,52 @@
 		#contact{
 			@include normalize(.5rem auto, $o: grid, $oa: display);
 			@extend .col-sm-20, .col-md-18, .col-lg-12;
+			label{ 
+				@include normalize(.5rem, $ma: margin-top, $o: 0, $oa: max-height); 
+				&::after{
+					content: ' (*)';
+					@extend .text-danger;
+				}
+			}
+			@media screen and (min-width: 768px){
+				label{ max-height: 100px }
+			}
+			@media screen and (min-width: 1200px){
+				grid-template-columns: 50% 50%;
+				grid-template-areas: 
+					'heading 	heading'
+					'lblName 	lblPhone'
+					'cmdName 	cmdPhone'
+					'vldName 	vldPhone'
+					'lblEmail 	lblEmail'
+					'cmdEmail 	cmdEmail'
+					'vldEmail 	vldEmail'
+					'lblCon 	lblCon'
+					'cmdCon 	cmdCon'
+					'.  		button'
+					'msg 		msg';
+				gap: 0 .5rem;
+
+				h2{grid-area: heading }
+				
+				label[for="contactName"]{ grid-area: lblName}
+				label[for="contactEmail"]{ grid-area: lblEmail}
+				label[for="contactPhone"]{ grid-area: lblPhone}
+				label[for="contactConsult"]{ grid-area: lblCon}
+				
+				#contactName{ grid-area: cmdName}
+				#contactEmail{ grid-area: cmdEmail}
+				#contactPhone{ grid-area: cmdPhone}
+				#contactConsult{ grid-area: cmdCon}
+				
+				#contactName + .valid{ grid-area: vldName}
+				#contactEmail + .valid{ grid-area: vldEmail}
+				#contactPhone + .valid{ grid-area: vldPhone}
+				#contactConsult + .valid{ grid-area: vldCon}
+				
+				.button{ grid-area: button}
+				div:last-child{ grid-area: msg}
+			}
 			textarea{
 				resize: none;
 				min-height: 8rem;
@@ -86,7 +164,9 @@
 			input,
 			textarea{
 				@include normalize($p: .5rem 1rem, $b: .1rem solid #999);
+				@extend %transition;
 				&:focus{
+					transform: scale(1.1);
 					&:valid{
 						@extend .border-success;
 						& + .valid{ @extend .bg-success; } }
@@ -97,6 +177,7 @@
 						max-height: 300px;
 						padding: .5rem;
 						text-shadow: 0 0 .5rem #333;
+						transform: scale(1.1);
 						@extend .text-light, .bg-dark;
 			}	}	}
 			.button{
@@ -104,18 +185,21 @@
 				@extend 
 					.text-dark, 
 					.bg-light, 
-					.border-dark;
+					.border-dark,
+					%transition;
 				&:hover{
 					@extend 
 						.text-light,
 						.bg-dark;
 				}	}
 			.valid{
+				@extend %transition;
 				max-height: 0;
 				overflow: hidden;
+
 		}	}
 		.social{
 			@include normalize(auto);
-			a {	@extend %icon; }
+			a {	@extend %icon, %transition; }
 	}	}
 

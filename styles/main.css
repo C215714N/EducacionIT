@@ -119,10 +119,20 @@
 			width: 3rem;
 		}
 	/* Main Content */
+		.example{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: .5rem;
+		}
 		.example video,
+		.example img,
 		.example progress,
 		.example meter{
 			width: 100%;
+		}
+		.example img{
+			border-radius: .5rem;
+			border: .5rem solid var(--dark);
 		}
 /* Small Devices - Smartphones */
 	@media screen and (min-width:  576px){
@@ -138,7 +148,8 @@
 		.menu{
 			display: flex;
 			width: auto;
-			height: auto;
+			max-height: 600px;
+			overflow: visible;
 		}
 		.menu a{
 			display: flex;

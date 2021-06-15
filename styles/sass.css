@@ -55,7 +55,7 @@
   color: #f93;
 }
 
-.text-danger {
+.text-danger, #footer #contact label::after {
   color: #c33;
 }
 
@@ -520,6 +520,11 @@
     width: 100%;
   }
 }
+#footer .social a, #footer #contact .valid, #footer #contact .button, #footer #contact input,
+#footer #contact textarea, .menu a::after, .menu a {
+  transition: all 0.5s ease;
+}
+
 #footer .social a {
   width: 5rem;
   height: 5rem;
@@ -532,9 +537,38 @@
 #footer .social a:hover {
   background-size: 4rem;
   opacity: 0.9;
+  transform: rotate(360deg);
 }
 
 /*Nesting*/
+.menu a {
+  position: relative;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: var(--snd);
+  opacity: 0;
+}
+.menu a:hover {
+  padding-left: 20vw;
+  transform: scale(1.2);
+}
+.menu a:hover::after {
+  width: 100%;
+  opacity: 1;
+  box-shadow: 0 0 0.5rem var(--dark);
+}
+@media screen and (min-width: 768px) {
+  .menu a:hover {
+    padding: 0.5rem;
+  }
+}
+
 section .header {
   margin: 0.5rem 0;
   outline: none;
@@ -557,6 +591,72 @@ section .example {
   border: none;
   padding: 0;
 }
+#footer #contact label {
+  margin-top: 0.5rem;
+  max-height: 0;
+  border: none;
+  padding: 0;
+}
+#footer #contact label::after {
+  content: " (*)";
+}
+@media screen and (min-width: 768px) {
+  #footer #contact label {
+    max-height: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #footer #contact {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "heading 	heading" "lblName 	lblPhone" "cmdName 	cmdPhone" "vldName 	vldPhone" "lblEmail 	lblEmail" "cmdEmail 	cmdEmail" "vldEmail 	vldEmail" "lblCon 	lblCon" "cmdCon 	cmdCon" ".  		button" "msg 		msg";
+    gap: 0 0.5rem;
+  }
+  #footer #contact h2 {
+    grid-area: heading;
+  }
+  #footer #contact label[for=contactName] {
+    grid-area: lblName;
+  }
+  #footer #contact label[for=contactEmail] {
+    grid-area: lblEmail;
+  }
+  #footer #contact label[for=contactPhone] {
+    grid-area: lblPhone;
+  }
+  #footer #contact label[for=contactConsult] {
+    grid-area: lblCon;
+  }
+  #footer #contact #contactName {
+    grid-area: cmdName;
+  }
+  #footer #contact #contactEmail {
+    grid-area: cmdEmail;
+  }
+  #footer #contact #contactPhone {
+    grid-area: cmdPhone;
+  }
+  #footer #contact #contactConsult {
+    grid-area: cmdCon;
+  }
+  #footer #contact #contactName + .valid {
+    grid-area: vldName;
+  }
+  #footer #contact #contactEmail + .valid {
+    grid-area: vldEmail;
+  }
+  #footer #contact #contactPhone + .valid {
+    grid-area: vldPhone;
+  }
+  #footer #contact #contactConsult + .valid {
+    grid-area: vldCon;
+  }
+  #footer #contact .button {
+    grid-area: button;
+  }
+  #footer #contact div:last-child {
+    grid-area: msg;
+  }
+}
 #footer #contact textarea {
   resize: none;
   min-height: 8rem;
@@ -568,11 +668,16 @@ section .example {
   border: 0.1rem solid #999;
   padding: 0.5rem 1rem;
 }
+#footer #contact input:focus,
+#footer #contact textarea:focus {
+  transform: scale(1.1);
+}
 #footer #contact input:focus + .valid,
 #footer #contact textarea:focus + .valid {
   max-height: 300px;
   padding: 0.5rem;
   text-shadow: 0 0 0.5rem #333;
+  transform: scale(1.1);
 }
 #footer #contact .button {
   margin-left: auto;
