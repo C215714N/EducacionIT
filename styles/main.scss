@@ -27,6 +27,7 @@
 		md 768px,
 		lg 992px,
 		xl 1200px;
+	$form: Name, Email, Phone, Consult;
 	$cols: 24;
 // Loops each
 	@each $ico in $social{
@@ -136,24 +137,12 @@
 					'.  		button'
 					'msg 		msg';
 				gap: 0 .5rem;
-
 				h2{grid-area: heading }
-				
-				label[for="contactName"]{ grid-area: lblName}
-				label[for="contactEmail"]{ grid-area: lblEmail}
-				label[for="contactPhone"]{ grid-area: lblPhone}
-				label[for="contactConsult"]{ grid-area: lblCon}
-				
-				#contactName{ grid-area: cmdName}
-				#contactEmail{ grid-area: cmdEmail}
-				#contactPhone{ grid-area: cmdPhone}
-				#contactConsult{ grid-area: cmdCon}
-				
-				#contactName + .valid{ grid-area: vldName}
-				#contactEmail + .valid{ grid-area: vldEmail}
-				#contactPhone + .valid{ grid-area: vldPhone}
-				#contactConsult + .valid{ grid-area: vldCon}
-				
+				@each $sel in $form{
+					label[for="contact#{$sel}"]{ grid-area: lbl+$sel }
+					#contact#{$sel}{ grid-area: cmd+$sel;
+					& + .valid { grid-area: vld+$sel;
+				}	}	}
 				.button{ grid-area: button}
 				div:last-child{ grid-area: msg}
 			}

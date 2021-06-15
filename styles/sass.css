@@ -617,38 +617,38 @@ section .example {
   #footer #contact label[for=contactName] {
     grid-area: lblName;
   }
-  #footer #contact label[for=contactEmail] {
-    grid-area: lblEmail;
-  }
-  #footer #contact label[for=contactPhone] {
-    grid-area: lblPhone;
-  }
-  #footer #contact label[for=contactConsult] {
-    grid-area: lblCon;
-  }
   #footer #contact #contactName {
     grid-area: cmdName;
-  }
-  #footer #contact #contactEmail {
-    grid-area: cmdEmail;
-  }
-  #footer #contact #contactPhone {
-    grid-area: cmdPhone;
-  }
-  #footer #contact #contactConsult {
-    grid-area: cmdCon;
   }
   #footer #contact #contactName + .valid {
     grid-area: vldName;
   }
+  #footer #contact label[for=contactEmail] {
+    grid-area: lblEmail;
+  }
+  #footer #contact #contactEmail {
+    grid-area: cmdEmail;
+  }
   #footer #contact #contactEmail + .valid {
     grid-area: vldEmail;
+  }
+  #footer #contact label[for=contactPhone] {
+    grid-area: lblPhone;
+  }
+  #footer #contact #contactPhone {
+    grid-area: cmdPhone;
   }
   #footer #contact #contactPhone + .valid {
     grid-area: vldPhone;
   }
+  #footer #contact label[for=contactConsult] {
+    grid-area: lblConsult;
+  }
+  #footer #contact #contactConsult {
+    grid-area: cmdConsult;
+  }
   #footer #contact #contactConsult + .valid {
-    grid-area: vldCon;
+    grid-area: vldConsult;
   }
   #footer #contact .button {
     grid-area: button;
