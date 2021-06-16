@@ -119,9 +119,43 @@
 					</table>
 				</div>
 			</section>
+			<footer>
+				<address>
+					para mas informacion consultar el 
+					<a href=""> Alumni </a> o
+					enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
+			</footer>
+		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Peliculas sin plugins?</h3>
+				</header>
+				<p>
+					Los navegadores actuales incorporan API's de reproduccion de contenido, gracias a las etiquetas <strong>&lt;audio></strong> y <strong>&lt;video></strong> y son compatibles con los formatos <em>.mp3 - .wav - .ogg</em> y <em>.mp4 - .webm - .ogv</em> respectivamente.
+				</p>
+				<div class="example">
+					<video src="media/californication.ogv" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+							<a href="media/californication.mp4">link</a>
+						</p>
+					</video>
+					<video src="media/cant-stop.webm" autoplay muted loop>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+							<a href="media/cant-stop.mp4">link</a>
+						</p>
+					</video>
+				</div>
+			</section>
 		</article>
 	</main>
-	<footer>
+	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Ingrese su Nombre</label>
@@ -145,6 +179,11 @@
 				placeholder="Consulta: Buenas, necesito un presupuesto"></textarea>
 			<button> ENVIAR </button>
 		</form>
+		<!-- Mapa Google Maps -->
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0523024268637!2d-58.37516029950716!3d-34.60283892265677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1623802632120!5m2!1ses-419!2sar" 
+			loading="lazy">
+		</iframe>
 	</footer>
 </body>
 </html>
