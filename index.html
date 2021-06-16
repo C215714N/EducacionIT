@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
 </head>
-<body>
+<body style="font-family: century gothic, segoe ui, sans-serif;">
 	<!-- Encabezado Principal (Heading 1) -->
 	<h1>Fundamentos Web</h1>
 	<p>mi primera página web</p>
@@ -13,21 +13,45 @@
 	<!-- Lista sin ordenar (Unordered List) -->
 	<ul>
 		<li>
-			Etiquetas de Bloque: 
+			<!-- Contenido destacado (Importante) -->
+			<strong>Etiquetas de Bloque: </strong>
 			<br/><!-- Salto de Linea (Break)-->
 			Ocupan todo el espacio de su contenedor,
 			generan salto de linea,
 			Se les puede definir tamaño y
-			funcionan como contenedores.
+			<!-- Contenido enfatizado (Connotaicion)-->
+			<em> funcionan como contenedores.</em>
 		</li>
 		<li>
-			Etiquetas de Linea: 
+			<strong>Etiquetas de Linea: </strong>
 			<br/> <!-- Etiqueta huerfana (sin cierre)-->
 			Ocupan una porcion de su contenedor,
 			comparten espacio con otros elementos de su tipo,
 			no se les puede definir tamaño (auto) y
-			funcionan como contenido.
+			<em> funcionan como contenido.</em>
 		</li>
 	</ul>
+	<!-- Capa (Division) | de Bloque -->
+	<div style="color: whitesmoke; background-color: darkslateblue; max-width: 300px; padding:50px;">
+		<h2>Caracteristicas principales</h2>
+		<p>
+			<!-- Expandir | de Linea -->
+			<span style="color:gold; font-size: 32px;">L</span>as etiquetas poseen diferentes <strong>atributos</strong>, estos representan ciertos aspectos de las mismas que podemos modificar. Para hacer cambios en los mismos debemos colocarlo dentro de la etiqueta de apertura seguido de un igual y su <em>respectivo valor</em>, todas las etiquetas poseen los siguientes atributos:
+		</p>
+		<ul>
+			<li>
+				<strong>Margin: </strong> Es la distancia que separa una etiqueta de otra, no suma tamaño y siempre aplica el mas grande.
+			</li>
+			<li>
+				<strong>Border: </strong> Es la linea que rodea a cada etiqueta, por defecto es cero y suma tamaño para la etiqueta.
+			</li>
+			<li>
+				<strong>Padding: </strong> Relleno o espacio que existe entre el borde y el contenido de la etiqueta, al igual que el borde suma tamaño.
+			</li>
+			<li>
+				<strong>Content: </strong> Elementos que se encuentran dentro de las etiquetas, estos se suelen adaptar a su contenedor, pero les podemos definir un tamaño limite (<em>width y height</em>)
+			</li>
+		</ul>
+	</div>
 </body>
 </html>
