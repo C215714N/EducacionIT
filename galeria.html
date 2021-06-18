@@ -3,6 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			font-family: calibri, 'segoe ui', sans-serif;
+		}
+		/* Selectores Multiples ( , ) */
+		body, h1, h2, h3{
+			margin: 0;
+		}
+		/* Selectores especificos (padre hijo) */
+		ul a{
+			text-decoration: none;
+		}
+		/* Selectores de Clase (.class) */
+		.example{
+			padding: 24px;
+			background-color: #ccc;/*RRGGBB decimal min=0; max=255 || HEX min=00; max=ff*/
+		}
+		/* Selectores de Id (#id) */
+		#header, #footer{
+			padding: 16px;
+			color: #eee;
+			background-color: #648;
+		}
+		/* Combinando estilos */
+		#nav ul{
+			list-style: none;
+			padding: 0;
+			background-color: #324;
+			text-align: center;
+		}
+		#nav a{
+			color: #eee;
+			font-weight: bold;
+		}
+		#nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/* Pseudoclase: Instancia o caracteristica de un elemento */
+		#nav li:hover{
+			background-color: rgba(136,136,136,.5);
+		}
+	</style>
 </head>
 <body>
 	<!--Introduccion-->
@@ -80,7 +124,9 @@
 	<!--Desenlace-->
 	<div id="footer">
 		<p>
-			Soy el contacto.
+			&copy; Todos los derechos reservados 
+			<a href="#">Cristian Racedo </a>
+			&amp; Compañia.
 		</p>
 	</div>
 </body>
