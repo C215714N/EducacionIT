@@ -29,7 +29,18 @@
 	</div>
 	<!--Nudo-->
 	<div id="main">
-		
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>No utiliza espacios en los nombres de los archivos</strong> porque este caracter se intepreta como el <em>conjunto %20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> el navegador buscara <em>"foto%2001.jpg"</em>, no pudiendo encontrar el mismo. Se aconseja utilizar <strong>guiones (-_)</strong> dando como resultado un nombre como <em>"foto_01.jpg"</em>.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> para facilitar la implementacion de los archivos. Evitar nombres genericos como <em>"foto_01.jpg"</em> o nombres automatizados como <em>"2021-06-18-143200100.jpg"</em>.
+			</li>
+			<li>
+				<strong>Utilizar solamente minusculas</strong> debido a que los servidores de hosting son <em>caseSensitive</em> y distinguen entre mayusculas y minusculas, de esta manera reducimos el margen de error a la hora de cargar nuestros archivos.
+			</li>
+		</ul>
 	</div>
 	<!--Desenlace-->
 	<div id="footer">
