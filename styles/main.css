@@ -1,8 +1,8 @@
 /*Content First - Mobile First*/
 	/*Imports*/
 		@import url('icomoon.css');
-		/*@import url('less.css');
-		@import url('sass.css');*/
+		@import url('less.css');
+		/*@import url('sass.css');*/
 	/*General Rules*/
 		*{
 			box-sizing: border-box;
@@ -75,7 +75,6 @@
 		.menu a:hover{ background-color: var(--hover) }
 		.menu span{ padding: .5rem }
 		.menu.active{ max-height: 600px }
-
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 

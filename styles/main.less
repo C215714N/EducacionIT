@@ -1,0 +1,35 @@
+// Variables
+    // Colores
+        @fst: var(--fst);
+        @snd: var(--snd);
+        @dark: #333;
+        @light: #eee;
+    // Media Queries
+        @sm: 576px;
+        @md: 768px;
+        @lg: 992px;
+        @xl: 1200px;
+
+// Styles Nesting
+    #header{
+        display: grid;
+        height: 100vh; /* Viewport Height: Alto Ventana*/
+        min-height: 300px;
+        max-height: 600px;
+        justify-content: center;
+        align-content: center;
+        .header{
+            font-size: calc(2vw + .5rem); /*Viewport Width: Ancho Ventana*/
+            text-align: center;
+            h1, p{ margin: 0 }
+        }
+        .slide{
+            li{
+                
+            }
+        }
+        button{
+
+        }
+    }
+// Mixins: Estilos combinables;

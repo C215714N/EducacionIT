@@ -1,0 +1,18 @@
+#header {
+  display: grid;
+  height: 100vh;
+  /* Viewport Height: Alto Ventana*/
+  min-height: 300px;
+  max-height: 600px;
+  justify-content: center;
+  align-content: center;
+}
+#header .header {
+  font-size: calc(2vw + 0.5rem);
+  /*Viewport Width: Ancho Ventana*/
+  text-align: center;
+}
+#header .header h1,
+#header .header p {
+  margin: 0;
+}
