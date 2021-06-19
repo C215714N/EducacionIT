@@ -1,4 +1,4 @@
-// Variables
+// Variables Globales
     // Colores
         @fst: var(--fst);
         @snd: var(--snd);
@@ -9,27 +9,130 @@
         @md: 768px;
         @lg: 992px;
         @xl: 1200px;
+    // Medidas
+        @rad: .25rem;
+        @col: 24;
+    // Backgrounds
+        @bg_path: '../assets/img';
+        @backgrounds: 
+            'osx-high-sierra.jpg',
+            'osx-leopard.png',
+            'osx-lion.png',
+            'osx-mavericks.png',
+            'osx-mojave-night.jpg',
+            'osx-mojave.jpg',
+            'osx-mountain-lion.jpg',
+            'osx-sierra.jpg',
+            'osx-snow-leopard.png';
 
 // Styles Nesting
-    #header{
-        display: grid;
-        height: 100vh; /* Viewport Height: Alto Ventana*/
-        min-height: 300px;
-        max-height: 600px;
-        justify-content: center;
-        align-content: center;
-        .header{
-            font-size: calc(2vw + .5rem); /*Viewport Width: Ancho Ventana*/
-            text-align: center;
-            h1, p{ margin: 0 }
-        }
-        .slide{
-            li{
-                
+    /*Main Header*/
+        #header{
+            position:relative;
+            display: grid;
+            height: 100vh; /* Viewport Height: Alto Ventana*/
+            min-height: 300px;
+            max-height: 600px;
+            justify-content: center;
+            align-content: center;
+            color: @light;
+            text-shadow: 0 0 @rad * 2 @dark ;
+            .header{
+                font-size: calc(2vw + .5rem); /*Viewport Width: Ancho Ventana*/
+                text-align: center;
+                h1, p{ margin: 0 }
+            }
+            .slide{
+                .unstyled; // aplicacion del Mixin
+                .normalize;
+                li{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background-size: cover;
+                    background-position: center;
+                    opacity: 0;
+                    .bg;
+                    &.active{ opacity: 1; }
+                }
+            }
+            button{
+                .unstyled;
+                .normalize(@p: .5rem);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                color: @light;
+                font-size: calc(2vw + .8rem);
+                &.icon-prev{ left: 0; }
+                &.icon-next{ right: 0; }
             }
         }
-        button{
+    /*Main Content*/
+        main{
+            section{
+                .rounded;
+                article{
 
+        }   }   }
+    /*Main Footer*/
+        #footer{
+            #contact{
+                .flexbox(column);
+            }
+            .social{
+                .flexbox;
+                a{
+                    .unstyled;
+                    .rounded;
+                    .normalize(.5rem; .5rem);
+                    font-size: calc(1vw + 1rem);
+                    &:hover{ background-color: darken(@light, 10%); }
+            }   }
+            .copy{
+
+            }
         }
+// Mixins: Estilos que se aplican dentro de los selectores;
+    .unstyled (){ 
+        list-style: none;
+        text-decoration: none;
+        background-color: transparent;
     }
-// Mixins: Estilos combinables;
+    .rounded (){
+        border-radius: @rad;
+        -webkit-border-radius: @rad;
+        -moz-border-radius: @rad;
+        -ms-border-radius: @rad;
+        -o-border-radius: @rad;
+    }
+// Mixins Parametricos: Estilos que reciben valores para su aplicacion;
+    .normalize (@m:0; @p:0; @b:none){
+        margin: @m;
+        border: @b;
+        padding: @p;
+    }
+    .flexbox (
+        @fd: row;
+        @fj: center;
+        @fa: unset;
+        @fw: flex-wrap;
+        @f: flex
+    ){
+        display: @f;
+        flex-direction: @fd;
+        justify-content: @fj;
+        align-items: @fa;
+        flex-wrap: @fw;
+    }
+// Mixins Recursivos: Estilos que repiten en base a una condicion;
+    .bg(@i: 1) when (@i <= length(@backgrounds)){
+        @bg: extract(@backgrounds, @i);
+        &:nth-child(@{i}){
+            background-image: url('@{bg_path}/@{bg}');
+        }
+        .bg(@i + 1);
+    }
