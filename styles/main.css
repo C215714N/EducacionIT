@@ -6,7 +6,7 @@
 	/*General Rules*/
 		*{
 			box-sizing: border-box;
-			font-family: 'Raleway', calibri, segoe ui, sans-serif;
+			font-family: var(--font);
 		}
 		:root{
 			--fst: #448;
@@ -14,6 +14,7 @@
 			--light: #eee;
 			--dark: #333;
 			--hover: rgba(51, 51, 51, .5);
+			--font: 'Raleway', 'calibri', 'segoe ui', sans-serif;
 		}
 		body,
 		h1,
@@ -25,6 +26,22 @@
 		}
 		.opacity{ opacity: .3 }
 		.opacity:hover{ opacity: .7 }
+		.logo{
+			font: bold 1.2rem var(--font);
+			text-transform: uppercase;
+		}
+		.button{
+			margin: .5rem;
+			outline: none;
+			border-radius: .25rem;
+			border: .1rem solid var(--light);
+			color: var(--light);
+			background-color: transparent;
+		}
+		.button:hover{
+			color: var(--snd);
+			background-color: var(--light);
+		}
 	/*Navigation*/
 		nav{
 			display: flex;
@@ -53,15 +70,41 @@
 			max-height: 0;
 			padding: 0;
 			list-style: none;
+			overflow: hidden;
 		}
 		.menu a:hover{ background-color: var(--hover) }
 		.menu span{ padding: .5rem }
 		.menu.active{ max-height: 600px }
 
 /*Small Devices - Smartphones*/
+	@media screen and (min-width: 576px){
 
+	}
 /*Medium Devices - Tablets*/
-
+	@media screen and (min-width: 768px){
+	/*Navigation*/	
+		.menu,
+		.menu a{
+			display: flex;
+			align-items: center;
+		}
+		.menu{ 
+			width: auto;
+			max-height: 600px; 
+		}
+		.menu a{ font-size: 1.5rem }
+		.menu span, nav .button{ display: none }
+	}
 /*Large Devices - Desktop*/
-
+	@media screen and (min-width: 992px){
+	/*Navigation*/
+		.menu span{
+			display: inline-block;
+			font-size: 1rem;
+		}
+	}
 /*ExtraLarge Devices - Desktop HD*/
+	@media screen and (min-width: 1200px){
+	/*Navigation*/
+		nav{ justify-content: space-around }
+	}
