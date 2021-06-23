@@ -33,6 +33,20 @@
 				<p>
 					A la etiqueta previamente mencionada, se le deben colocar al menos <em>2 atributos</em>, por un lado esta el <strong>action="..."</strong> que indica al navegador que hacer cuando se realiza el envio, por lo general se utiliza <em>un script en lenguaje de servidor, por ejemplo php</em>. Por otro lado existe el atributo <strong>method="..."</strong> que define la prioridad de los datos y como se van a procesar los mismos, existen <em>2 valores posibles</em> que podemos utilizar.
 				</p>
+				<ul class="example">
+					<li><strong>GET</strong> Metodo rapido que permite el envio de datos a traves de texto plano, permitiendo la visualizacion de los datos ingresados en el formulario desde la URL y la prioridad radica en el SERVIDOR
+						<ul>
+							<li>Buscador - Consulta Query</li>
+						</ul>
+					</li>
+					<li><strong>POST</strong> Metodo seguro que encripta los datos antes de realizar el envio, protegiendolos durante la comunicacion, ya que la prioridad en este caso radica en el CLIENTE
+						<ul>
+							<li>Inscripcion - Registro</li>
+							<li>Acceso - Inicio Sesion</li>
+							<li>Contacto - Consulta Web</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
