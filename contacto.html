@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="icon" href="img/css.svg">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<nav>
@@ -35,7 +37,7 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="" method="">
+		<form id="contacto" action="contacto.php" method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Ingrese su Nombre</label>
 			<input 
@@ -45,7 +47,40 @@
 				minlength="3"
 				maxlength="50" 
 				required />
+			<label for="email">Ingrese su Correo</label>
+			<input 
+				id="email"
+				name="email" 
+				type="email"
+				minlength="8" 
+				required />
+			<label for="consulta">Ingrese su Consulta</label>
+			<textarea 
+				id="consulta" 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				required ></textarea>
+			<button>ENVIAR</button>
+			<div>
+				<strong>Bases y condiciones</strong>
+				<input id="si" name="contrato" type="radio"> 
+				<label for="si">acepto el contrato</label>
+				<input id="no" name="contrato" type="radio"> 
+				<label for="no">no acepto el contrato</label>
+			</div>
 		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">Facebook</a>
+			<a href="https://instagram.com" target="_blank">Instagram</a>
+			<a href="https://twitter.com" target="_blank">Twitter</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/html-xv-14" target="_blank">GitHub</a>
+		</div>
+		<p>
+			&copy; Todos los derechos reservados 
+			<a href="#">Cristian Racedo</a> 
+			&amp; Compañia.
+		</p>
 	</footer>
 </body>
 </html>
