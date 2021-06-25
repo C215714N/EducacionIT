@@ -10,9 +10,71 @@
 		margin: 0;
 	}
 /*Navegacion*/
-
+	.menu{
+		padding: 0;
+		list-style: none;
+		background-color: #448;
+		text-align: center;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: .5rem; /*root EM(ancho M) => 16px*/
+	}
+	.menu li:hover{
+		background-color: rgba(51,51,51,.5);
+	}
 /*Cabecera*/
-
+	#header{
+		padding: 20% 1rem; /*top right bottom left*/
+		background-color: #ccc;
+		text-align: center;
+	}
 /*Contenido Principal*/
 
 /*Pie de Pagina*/
+	#footer{
+		padding: 1rem;
+		color: #eee;
+		background-color: #224;
+	}
+	#contacto{
+		max-width: 540px;
+		margin: auto;
+	}
+	#contacto input,
+	#contacto textarea{
+		width: calc(100% - 1rem);
+		outline: none;
+		border: none;
+		padding: .5rem;
+		font-size: 1rem;
+	}
+	#contacto textarea{
+		min-height: 8rem;
+		resize: none;
+	}
+	#contacto .option strong{
+		padding-top: .5rem;
+		display: block;
+	}
+	#contacto .option input{
+		width: auto;
+	}
+	#contacto button{
+		display: block;
+		margin-left: auto;
+		border-radius: .25rem;
+		border: .1rem solid #eee;
+		padding: .5rem 1rem;
+		color: #eee;
+		background-color: transparent;
+		font-size: 1rem;
+	}
+	#contacto button:hover{
+		color: #224;
+		background-color: #eee;
+	}
