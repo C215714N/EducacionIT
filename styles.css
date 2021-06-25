@@ -57,13 +57,14 @@
 		min-height: 8rem;
 		resize: none;
 	}
-	#contacto .option strong{
-		padding-top: .5rem;
-		display: block;
-	}
-	#contacto .option input{
-		width: auto;
-	}
+	/*Bases y condiciones*/
+		#contacto .option strong{
+			padding-top: .5rem;
+			display: block;
+		}
+		#contacto .option input{
+			width: auto;
+		}
 	#contacto button{
 		display: block;
 		margin-left: auto;
@@ -78,3 +79,18 @@
 		color: #224;
 		background-color: #eee;
 	}
+	/*Redes sociales*/
+		.social{
+			text-align: center;
+		}
+		.social img{
+			width: 3rem;
+			margin: .5rem;
+			border-radius: .5rem;
+			padding: .5rem;
+			background-color: rgba(238,238,238, .7);
+		}
+		.social img:hover{
+			background-color: #eee;
+			box-shadow: 0 0 .5rem #eee;/*-x+ -y+ blur color*/
+		}
