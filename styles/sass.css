@@ -1,0 +1,164 @@
+/*icons*/
+.youtube, .whatsapp, .twitter, .linkedin, .instagram, .github, .facebook, .css {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  background-size: 2.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.youtube:hover, .whatsapp:hover, .twitter:hover, .linkedin:hover, .instagram:hover, .github:hover, .facebook:hover, .css:hover {
+  background-color: #fefefe;
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/*social media*/
+.css {
+  background-image: url("../assets/icon/css.svg");
+}
+
+.facebook {
+  background-image: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  background-image: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  background-image: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  background-image: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  background-image: url("../assets/icon/twitter.svg");
+}
+
+.whatsapp {
+  background-image: url("../assets/icon/whatsapp.svg");
+}
+
+.youtube {
+  background-image: url("../assets/icon/youtube.svg");
+}
+
+/*Bootstrap Classes*/
+.text-primary {
+  color: #448;
+}
+
+.text-secondary {
+  color: #36c;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-light {
+  color: #eee;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #dc3;
+}
+
+.text-info {
+  color: #48f;
+}
+
+.bg-primary {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #36c;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #dc3;
+}
+
+.bg-info {
+  background-color: #48f;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #36c;
+}
+
+.border-dark {
+  border-color: #333;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-success {
+  border-color: #3c6;
+}
+
+.border-danger {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #dc3;
+}
+
+.border-info {
+  border-color: #48f;
+}
+
+main section article .example {
+  margin: 1rem;
+  outline: 0;
+  border-left: 0.25rem solid var(--fst);
+  padding: 1rem;
+}
+
+#footer #contact {
+  margin: auto;
+  outline: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=sass.css.map */

@@ -1,0 +1,85 @@
+//Variables
+	$fst: var(--fst);
+	$snd: var(--snd);
+	$path: '../assets/icon';
+	$icons:
+		css,
+		facebook,
+		github,
+		instagram,
+		linkedin,
+		twitter,
+		whatsapp,
+		youtube;
+	$attributes:
+		text 		color,
+		bg 			background-color,
+		border 		border-color;
+	$colors:
+		primary 	#448,
+		secondary 	#36c,
+		dark 		#333,
+		light 		#eee,
+		success	 	#3c6,
+		danger 		#c33,
+		warning 	#dc3,
+		info 		#48f;
+//Mixins
+	@mixin background ($bs:cover, $bp:center, $bc: transparent, $br: no-repeat, $ba: scroll){
+		background-color: $bc;
+		background-size: $bs;
+		background-position: $bp;
+		background-repeat: $br;
+		background-attachment: $ba;
+	}
+	@mixin normalize (
+		$m:0, $p: 0, $b: 0, $o: 0,
+		$ba: border, $ma: margin, $pa: padding, $oa: outline
+		){
+		#{$ma}: $m;
+		#{$oa}: $o;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+//Hidden Style
+	/*icons*/
+	%icon{
+		display: block;
+		width: 5rem;
+		height: 5rem;
+		@include background(2.5rem);
+		&:hover{
+			@include background(4rem, $bc:#fefefe);
+	}	}
+//Bucles
+	/*social media*/
+		@each $ico in $icons{
+			.#{$ico}{
+				@extend %icon;
+				background-image: url('#{$path}/#{$ico}.svg');
+		}	}
+	/*Bootstrap Classes*/
+		@each $prop, $attr in $attributes{
+			@each $cname, $cval in $colors{
+				.#{$prop}-#{$cname}{
+					#{$attr}: $cval;
+		}	}	}
+//Nesting
+	main{
+		section{
+			article{
+				.example{
+					@include normalize(1rem, 1rem, .25rem solid $fst, $ba:border-left);
+				}
+			}
+		}
+	}
+	#footer{
+		#contact{
+			@include normalize(auto);
+			input,
+			textarea{
+				
+			}
+		}
+	}
