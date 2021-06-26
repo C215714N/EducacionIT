@@ -24,7 +24,6 @@
             'osx-mountain-lion.jpg',
             'osx-sierra.jpg',
             'osx-snow-leopard.png';
-
 // Styles Nesting
     /*Main Header*/
         #header{
@@ -80,8 +79,11 @@
         }   }   }
     /*Main Footer*/
         #footer{
-            #contact{
-                .flexbox(column);
+            #contact{ 
+                .flexbox(column); 
+                .normalize(auto); 
+                @media screen and (min-width: @sm){.col-22;}
+                @media screen and (min-width: @md){.col-12;}
             }
             .social{
                 .flexbox;
@@ -89,13 +91,8 @@
                     .unstyled;
                     .rounded;
                     .normalize(.5rem; .5rem);
-                    font-size: calc(1vw + 1rem);
-                    &:hover{ background-color: darken(@light, 10%); }
-            }   }
-            .copy{
-
-            }
-        }
+                    font-size: calc(1vw + 1rem)
+        }   }   }   
 // Mixins: Estilos que se aplican dentro de los selectores;
     .unstyled (){ 
         list-style: none;
@@ -129,6 +126,7 @@
         flex-wrap: @fw;
     }
 // Mixins Recursivos: Estilos que repiten en base a una condicion;
+    //Backgrounds
     .bg(@i: 1) when (@i <= length(@backgrounds)){
         @bg: extract(@backgrounds, @i);
         &:nth-child(@{i}){
@@ -136,3 +134,11 @@
         }
         .bg(@i + 1);
     }
+    //GridSystem
+        .grid(@i:1) when (@i <= @col){
+            .col-@{i}{
+                width: percentage((@i / @col));
+            }
+            .grid(@i + 1);
+        }
+    .grid;
