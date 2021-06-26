@@ -1,7 +1,9 @@
 //Variables
 	$fst: var(--fst);
 	$snd: var(--snd);
+	$col: 24;
 	$path: '../assets/icon';
+	$form: Name, Phone, Email, Consult;
 	$icons:
 		css,
 		facebook,
@@ -24,6 +26,12 @@
 		danger 		#c33,
 		warning 	#dc3,
 		info 		#48f;
+	$viewports:
+		sm 			576px,
+		md 			768px,
+		lg 			992px,
+		xl 			1200px,
+		xxl 		1400px;
 //Mixins
 	@mixin background ($bs:cover, $bp:center, $bc: transparent, $br: no-repeat, $ba: scroll){
 		background-color: $bc;
@@ -64,22 +72,98 @@
 				.#{$prop}-#{$cname}{
 					#{$attr}: $cval;
 		}	}	}
+	/*responsive GridSystem*/
+		@each $vn, $vw in $viewports { 
+			@media screen and (min-width: $vw){
+				@for $i from 1 through $col{
+					.col-#{$vn}-#{$i}{
+						width: percentage($i / $col);
+		}	}	}	}
 //Nesting
 	main{
+		@include normalize(auto);
+		@extend .col-sm-22, .col-md-20, .col-lg-18;
 		section{
 			article{
 				.example{
 					@include normalize(1rem, 1rem, .25rem solid $fst, $ba:border-left);
-				}
-			}
-		}
-	}
+	}	}	}	}
 	#footer{
+		@include normalize($p:1rem);
 		#contact{
+			@extend .col-md-20, .col-lg-16, .col-xl-12;
 			@include normalize(auto);
+			@media screen and (min-width: 1200px){
+				display: grid;
+				grid-template-columns: 50% 50%;
+				grid-template-areas: 
+					'title 		title'
+					'lblName  	lblPhone'
+					'cmdName 	cmdPhone'
+					'vldName 	vldPhone'
+					'lblEmail	lblEmail'
+					'cmdEmail 	cmdEmail'
+					'vldEmail 	vldEmail'
+					'lblConsult lblConsult'
+					'cmdConsult cmdConsult'
+					'vldConsult vldConsult'
+					'. 			button'
+					'msg 		msg';
+				gap: 0 .5rem;
+				h2{ grid-area: title;}
+				@each $cmd in $form{
+					label[for="contact#{$cmd}"]{ grid-area: lbl+$cmd}
+					#contact#{$cmd}{ 
+						grid-area: cmd+$cmd;
+						& + .valid { grid-area: vld+$cmd;}
+				}	}
+				.button{grid-area: button;}
+
+			}
+			label{
+				@include normalize(.5rem, $ma: margin-top, $o: uppercase, $oa: text-transform);
+				max-height: 0;
+				@media screen and (min-width: 768px){
+					max-height: 300px;
+				}
+				&::after{
+					content: ' (*)';
+					@extend .text-danger;
+			}	}
+			textarea{
+				resize: none;
+				min-height: 8rem;
+			}
 			input,
 			textarea{
-				
+				@include normalize(0, .5rem 1rem, .1rem solid transparent);
+				@extend .bg-light;
+				font-size: 1rem;
+				&:focus{
+					@extend .border-dark;
+					& + .valid {
+						@include normalize($p: .5rem);
+						max-height: 300px;
+					} &:valid { 
+						@extend .border-success;
+						& + .valid { @extend .bg-success;}
+					} &:not(:placeholder-shown):invalid {
+						@extend .border-danger;
+						& + .valid{ @extend .bg-danger; }
+			} 	}	}
+			.valid{
+				max-height: 0;
+				@extend .text-light, .bg-dark;
+				overflow: hidden;
+				text-shadow: 0 0 .5rem #333;
 			}
-		}
-	}
+			.button{
+				@include normalize(.2rem 0, .5rem 1rem, .1rem solid, auto,$oa:margin-left);
+				text-transform: uppercase;
+				font-size: 1rem;
+				font-family: century gothic;
+				@extend .bg-light, .text-dark, .border-dark;
+				&:hover{
+					@extend .bg-dark, .text-light;
+				}
+	}	}	}

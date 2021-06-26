@@ -3,6 +3,10 @@
 		@import url('icomoon.css');
 		@import url('less.css');
 		@import url('sass.css');
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
 	/*General Rules*/
 		*{
 			box-sizing: border-box;
@@ -75,6 +79,8 @@
 		.menu a:hover{ background-color: var(--hover) }
 		.menu span{ padding: .5rem }
 		.menu.active{ max-height: 600px }
+	/*Headings*/
+		h1{ font-family: "star wars"; }
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 		
