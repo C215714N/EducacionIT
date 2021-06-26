@@ -96,6 +96,11 @@ main section {
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
 }
+main section article .example {
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
 /*Main Footer*/
 #footer #contact {
   display: flex;
