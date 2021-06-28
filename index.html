@@ -56,6 +56,32 @@
 				<header>
 					<h3>Etiquetas para Estadisticas</h3>
 				</header>
+				<p>
+					Existen dos elementos que permiten llevar a cabo el control de tareas segun sus estados, estos son <strong>&lt;progress></strong> que se utiliza para definir el estado de una tarea cuando esta aun no fue finalizada, e.g:<em> el avance durante la capacitacion</em>; y <strong>&lt;meter></strong> que se implementa cuando necesitamos comparar los valores de una tarea cuando ya fue finaliza, e.g<em> el resultado de un examen</em>.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>PROGRESS</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								sin value definido
+							</li>
+							<li>
+								<progress value="20" max="100"></progress>
+								value:20; max:100
+							</li>
+							<li class="progress">
+								<progress max="100"></progress>
+								<input type="number" min="0" max="100" />
+								value: JavaScript
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>METER</strong>
+					</li>
+				</ul>
 			</article>
 		</section>
 	</main>
