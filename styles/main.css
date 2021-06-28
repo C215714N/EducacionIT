@@ -1,0 +1,70 @@
+/*Content First - Mobile First*/
+	/*General Rules*/
+		@import url('less.css');
+		:root{
+			--first: #448;
+			--second: #36c;
+			--light: #eee;
+			--dark: #333;
+			--hover: rgba(51,51,51,.5);
+		}
+		*{
+			box-sizing: border-box;
+			font-family: 'Raleway','segoe ui', 'calibri', sans-serif;
+		}
+		body,
+		h1,
+		h2,
+		h3,
+		.menu{
+			margin: 0;
+		}
+		.opacity{ opacity: .3; }
+		.opacity:hover{ opacity: .7; }
+	/*Navigation*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: 
+				var(--first)
+				linear-gradient( var(--second), var(--first))
+			;
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: var(--light);
+			text-decoration: none;
+		}
+		.logo{
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.menu{
+			width: 100%;
+			padding: 0;
+			list-style: none;
+		}
+		.menu a:hover{
+			background-color: var(--hover);
+		}
+		.icon-back{
+			position: fixed;
+			right: .5rem;
+			bottom: .5rem;
+			background-color: var(--dark);
+		}
+	/*Header*/
+
+	/*Main*/
+
+	/*Footer*/
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets*/
+
+/*Large Devices - Desktop*/
+
+/*ExtraLarge Devices - HD Desktop*/
