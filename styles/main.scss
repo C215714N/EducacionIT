@@ -132,16 +132,16 @@
 					'lblEmail 	lblEmail'
 					'cmdEmail 	cmdEmail'
 					'vldEmail 	vldEmail'
-					'lblCon 	lblCon'
-					'cmdCon 	cmdCon'
+					'lblConsult lblConsult'
+					'cmdConsult cmdConsult'
 					'.  		button'
 					'msg 		msg';
 				gap: 0 .5rem;
 				h2{grid-area: heading }
-				@each $sel in $form{
-					label[for="contact#{$sel}"]{ grid-area: lbl+$sel }
-					#contact#{$sel}{ grid-area: cmd+$sel;
-					& + .valid { grid-area: vld+$sel;
+				@each $field in $form{
+					label[for="contact#{$field}"]{ grid-area: lbl+$field }
+					#contact#{$field}{ grid-area: cmd+$field;
+					& + .valid { grid-area: vld+$field;
 				}	}	}
 				.button{ grid-area: button}
 				div:last-child{ grid-area: msg}

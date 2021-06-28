@@ -170,3 +170,17 @@
 	/*Navigation*/
 		nav{ justify-content: space-around }
 	}
+
+	section{	
+		animation-fill-mode: backwards;
+		animation: appear 2s ease;
+		animation-play-state: paused;
+	}
+	@keyframes appear{
+		from{
+			transform: translate(-100vw);
+		}
+		to {
+			transform: translate(0);
+		}
+	}

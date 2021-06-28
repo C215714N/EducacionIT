@@ -608,7 +608,7 @@ section .example {
 @media screen and (min-width: 1200px) {
   #footer #contact {
     grid-template-columns: 50% 50%;
-    grid-template-areas: "heading 	heading" "lblName 	lblPhone" "cmdName 	cmdPhone" "vldName 	vldPhone" "lblEmail 	lblEmail" "cmdEmail 	cmdEmail" "vldEmail 	vldEmail" "lblCon 	lblCon" "cmdCon 	cmdCon" ".  		button" "msg 		msg";
+    grid-template-areas: "heading 	heading" "lblName 	lblPhone" "cmdName 	cmdPhone" "vldName 	vldPhone" "lblEmail 	lblEmail" "cmdEmail 	cmdEmail" "vldEmail 	vldEmail" "lblConsult lblConsult" "cmdConsult cmdConsult" ".  		button" "msg 		msg";
     gap: 0 0.5rem;
   }
   #footer #contact h2 {
