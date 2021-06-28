@@ -20,12 +20,15 @@
 			--inc: 45deg;
 		}
 		@keyframes appear{
-			from{
+			from{ 
 				transform: 
-					translateY(100vh)
-					scale(50)
-					rotateX(30deg);
-			}
+					translateY(100vh) 
+					scale(50) 
+					rotateX(30deg);	
+		}	}
+		@keyframes jump {
+			from{ transform: rotate(-20deg) }
+			to{	transform: rotate(20deg) }
 		}
 		body, h1, h2, h3, .menu, .title{
 			margin:0;
@@ -87,7 +90,12 @@
 			.menu span{ padding: .5rem; }
 			.menu a:hover{ background-color: var(--hvr)}
 			.menu.active{ max-height: 600px }
-			
+			.menu a:hover::before{
+				transform-origin: bottom center;
+				animation: jump .2s ease-out .2s;/*name duration timing-funcion delay*/
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
 	/* Headings */
 		#header{
 			display: grid;
@@ -106,7 +114,7 @@
 			font-family: 'star wars', sans-serif; 
 			animation-name: appear;
 			animation-duration: 3s;
-			animation-timing-function: ease;
+			animation-timing-function: ease-in;
 		}
 		#header button{
 			outline: none;
