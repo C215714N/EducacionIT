@@ -160,6 +160,81 @@
 			border-radius: .5rem;
 			border: .5rem solid var(--dark);
 		}
+		/*Animaciones*/
+			.animate div{
+				padding: .5rem;
+				animation: moveIt 5s;
+				animation-iteration-count: 6;
+			}
+			.timing div:nth-child(1){ animation-timing-function: ease; }
+			.timing div:nth-child(2){ animation-timing-function: ease-in; }
+			.timing div:nth-child(3){ animation-timing-function: ease-out; }
+			.timing div:nth-child(4){ animation-timing-function: ease-in-out; }
+			.timing div:nth-child(5){ animation-timing-function: linear; }
+			.timing div:nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+			.direction div:nth-child(1){ animation-direction: normal; }
+			.direction div:nth-child(2){ animation-direction: reverse; }
+			.direction div:nth-child(3){ animation-direction: alternate; }
+			.direction div:nth-child(4){ animation-direction: alternate-reverse; }
+
+			.around{ 
+				position: relative;
+				min-height: 300px 
+			}
+			.around div{
+				width: 10rem;
+				height: 3rem;
+				animation: around 5s;
+				animation-iteration-count: infinite;
+				animation-play-state: paused;
+			}
+			.around button{
+				position: absolute;
+				bottom: .5rem;
+				right: .5rem;
+			}
+			@keyframes moveIt{
+				from{
+					transform: translate(-10rem);
+					background-color: tomato;
+				}
+				to{
+					transform: translate(10rem);
+					background-color: lightgreen;
+				}
+			}
+			@keyframes around{
+				0%{
+					transform: 
+						translate(0,0) 
+						skew(15deg, 0);
+					background-color: hsl(0, 50%, 50%);
+				}
+				25%{
+					transform: 
+						translate(300%, 0) 
+						skew(0, 15deg);
+					background-color: hsl(90, 50%, 50%);
+				}
+				50%{
+					transform: 
+						translate(300%, 300%) 
+						skew(-15deg, 0);
+					background-color: hsl(180, 50%, 50%);
+				}
+				75%{
+					transform: 
+						translate(0, 300%) 
+						skew(0, -15deg);
+					background-color: hsl(270, 50%, 50%);
+				}
+				100%{
+					transform: 
+						translate(15,0)
+						skew(0deg,0);
+					background-color: hsl(0, 50%, 50%);
+				}
+			}
 /* Small Devices - Smartphones */
 	@media screen and (min-width:  576px){
 

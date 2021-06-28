@@ -34,3 +34,16 @@
 							newItem = itemList[ itemList.length - 1]
 		}	}	} newItem.classList.add('active')
 	}
+/* Animations */
+	animBox = document.querySelector('.around div')
+	playBtn = document.querySelector('.around button')
+
+	playBtn.onclick = () => {
+		if (animBox.style.animationPlayState == 'paused') {
+			animBox.style.animationPlayState = 'running'
+			playBtn.innerHTML = 'PAUSE'
+		} else { 
+			animBox.style.animationPlayState = 'paused'
+			playBtn.innerHTML = 'PLAY'
+		}
+	}

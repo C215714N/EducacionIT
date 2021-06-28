@@ -207,6 +207,50 @@
 			</div>
 		</article>
 	</section>
+	<section>
+		<header class="header">
+			<h2>Animaciones</h2>
+		</header>
+		<article>
+			<header>
+				<h3>Timing-Function</h3>
+				<p>
+					Corresponde a la forma es la que van a suceder las animaciones con respecto a la distribution del tiempo y los fotogramas. Existen paginas como <a href="https://cubic-bezier.com/">cubic-bezier</a> donde podemos comparar cada uno de los valores de este atributo y probar ejemplos propios.
+				</p>
+				<div class="example animate timing">
+					<div>ease</div>
+					<div>ease-in</div>
+					<div>ease-out</div>
+					<div>ease-in-out</div>
+					<div>linear</div>
+					<div>cubic-bezier(x1,y1,x2,y2)</div>
+				</div>
+			</header>
+		</article>
+		<article>
+			<header>
+				<h3>Direction</h3>
+			</header>
+			<p>
+				Al igual que cualquier pelicula, podemos controlar el sentido de la reproduccion, por defecto es <strong>normal</strong> que indica que nuestra animacion va a ocurrir del <em>from al to</em>, pero podemos indicar otros valores. debemos tener en cuenta que para aplicar valores como <strong>alternate</strong> el atributo <em>animation-iteration-count</em> debe poseer un valor mayor a 1.
+			</p>
+			<div class="example animate direction">
+				<div>normal</div>
+				<div>reverse</div>
+				<div>alternate</div>
+				<div>alternate-reverse</div>
+			</div>
+		</article>
+		<article>
+			<header>
+				<h3>Animacion por Keyframes</h3>
+			</header>
+			<div class="example around">
+				<div></div>
+				<button>PLAY</button>
+			</div>
+		</article>
+	</section>
 <!-- Footer -->
 	<footer id="footer">
 		<form action="" id="contact">
