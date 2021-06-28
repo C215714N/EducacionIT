@@ -96,10 +96,15 @@ main section {
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
 }
-main section article .example {
+main section .example {
   list-style: none;
   text-decoration: none;
   background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: unset;
+  flex-wrap: wrap;
 }
 /*Main Footer*/
 #footer #contact {
@@ -107,7 +112,7 @@ main section article .example {
   flex-direction: column;
   justify-content: center;
   align-items: unset;
-  flex-wrap: flex-wrap;
+  flex-wrap: wrap;
   margin: auto;
   border: none;
   padding: 0;
@@ -127,7 +132,7 @@ main section article .example {
   flex-direction: row;
   justify-content: center;
   align-items: unset;
-  flex-wrap: flex-wrap;
+  flex-wrap: wrap;
 }
 #footer .social a {
   list-style: none;
