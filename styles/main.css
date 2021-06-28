@@ -19,6 +19,14 @@
 			--grad: linear-gradient(#66c8, #2248);
 			--inc: 45deg;
 		}
+		@keyframes appear{
+			from{
+				transform: 
+					translateY(100vh)
+					scale(50)
+					rotateX(30deg);
+			}
+		}
 		body, h1, h2, h3, .menu, .title{
 			margin:0;
 		}
@@ -79,6 +87,7 @@
 			.menu span{ padding: .5rem; }
 			.menu a:hover{ background-color: var(--hvr)}
 			.menu.active{ max-height: 600px }
+			
 	/* Headings */
 		#header{
 			display: grid;
@@ -88,8 +97,17 @@
 			font-size: calc(2vw + .5rem);/* viewport width */
 			text-align: center;
 			text-shadow: 0 0 .5rem var(--dark);
+			overflow: hidden;
+			
+			perspective: 1px;
+			perspective-origin: center;
 		}
-		#header h1{ font-family: 'star wars', sans-serif; }
+		#header h1{ 
+			font-family: 'star wars', sans-serif; 
+			animation-name: appear;
+			animation-duration: 3s;
+			animation-timing-function: ease;
+		}
 		#header button{
 			outline: none;
 			border: none;
@@ -169,18 +187,4 @@
 	@media screen and (min-width:  1200px){
 	/*Navigation*/
 		nav{ justify-content: space-around }
-	}
-
-	section{	
-		animation-fill-mode: backwards;
-		animation: appear 2s ease;
-		animation-play-state: paused;
-	}
-	@keyframes appear{
-		from{
-			transform: translate(-100vw);
-		}
-		to {
-			transform: translate(0);
-		}
 	}

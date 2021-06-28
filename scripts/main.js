@@ -34,19 +34,3 @@
 							newItem = itemList[ itemList.length - 1]
 		}	}	} newItem.classList.add('active')
 	}
-/* Animations */
-	let sections = document.querySelectorAll('section')
-
-	window.onscroll = () => {
-		for(i = 0; i < sections.length; i++){
-			console.log(
-				Math.round(sections[i].getBoundingClientRect().top), 
-				Math.round(window.window.innerHeight / 3.5)
-			)
-			if(
-				Math.round(sections[i].getBoundingClientRect().top) <= 
-				Math.round(window.innerHeight / 2)){
-				sections[i].style.animationPlayState = "running"
-			}
-		}
-	}
