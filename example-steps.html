@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		form{
+			position: relative;
+			display: grid;
+			align-content: center;
+			justify-content: center;
+			width: 100vw;
+			min-height: 100vh;
+		}
+		form div{
+			position: relative;
+			display: none;
+			height: calc(100vh - 4rem);
+			width: calc(100vw - 2rem);
+			padding:  1rem;
+			max-width: 540px;
+			border-radius: 1rem;
+			background-color: #ccc;
+		}
+		form .active{
+			display: block;
+		}
+		form p{
+			cursor: pointer;
+			text-align: center;
+			color: #eee;
+			background-color: #333;
+			position: absolute;
+			bottom: 2rem;
+			width: 8rem;
+			left: calc(50% - 4rem);
+		}
+		form span{
+			position: absolute;
+			top: -1rem;
+			border-radius: 1rem;
+			width: 2rem;
+			line-height: 2rem;
+			text-align: center;
+			background-color: #3338;
+		}
+		form .order-1{left: calc( 33.3% - 1rem)}
+		form .order-2{left: calc( 50% - 1rem)}
+		form .order-3{right: calc( 33.3% - 1rem)}
+	</style>
+</head>
+<body>
+	<form action="">
+		<div class="active">
+			<span class="order-1">1</span>
+			paso 1
+		</div>
+		<div>
+			<span class="order-2">2</span>
+			paso 2
+		</div>
+		<div>
+
+			<span class="order-3">3</span>
+			paso 3
+		</div>
+		<p>CONTINUAR</p>
+	</form>
+	<script>
+		steps = document.querySelectorAll('form div')
+		btn = document.querySelector('form p')
+
+		btn.onclick = () => {
+			for (i = 0; i < steps.length; i++){
+				if(steps[i].classList.contains('active')){
+					steps[i].classList.remove('active')
+					i < steps.length - 1 ?
+						nextItem = steps[i + 1] :
+						alert('has completado el formulario con exito')
+				}
+			}
+			nextItem.classList.add('active')
+		}
+	</script>
+</body>
+</html>
