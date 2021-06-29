@@ -1,5 +1,6 @@
 /*Content First - Mobile First*/
 	/*General Rules*/
+		@import url('icomoon.css');
 		*{
 			box-sizing: border-box;
 			font-family: 'Raleway', 'segoe ui', calibri, sans-serif;
@@ -49,6 +50,7 @@
 			padding: .5rem;
 			color: var(--light);
 			text-decoration: none;
+			transition: all .2s ease-in; /*property duration timing-function delay*/
 		}
 		.menu{
 			width: 100%;
@@ -59,6 +61,7 @@
 			transition: all .5s; /* property duration timing-function delay*/
 		}
 		.menu a:hover{ background-color: var(--hover) }
+		.menu span{ padding: .5rem }
 		.menu.active{ max-height: 600px }
 		.icon-back{
 			position: fixed;
@@ -67,20 +70,38 @@
 			border-radius: 50%;
 			background-color: var(--dark);
 		}
-
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: ){
 
 	}
 /*Medium Devices - Tablets*/
-	@media screen and (min-width: ){
-
+	@media screen and (min-width: 768px){
+	/*Navigation*/
+		nav .btn,
+		nav span{
+			display: none;
+		}
+		.menu,
+		.menu a{
+			display: flex;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+		.menu{
+			max-height: 600px;
+			width: auto;
+		}
 	}
 /*Large Devices - Desktop*/
-	@media screen and (min-width: ){
-
+	@media screen and (min-width: 992px){
+	/*Navigation*/
+		nav span{
+			display: block;
+			font-size: 1rem;
+		}
 	}
 /*ExtraLarge Devices - HD Desktop*/
-	@media screen and (min-width: ){
-
+	@media screen and (min-width: 1200px){
+	/*Navigation*/
+		nav{ justify-content: space-around }
 	}
