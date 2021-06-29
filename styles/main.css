@@ -70,6 +70,11 @@
 			border-radius: 50%;
 			background-color: var(--dark);
 		}
+	/*Contact*/
+		#contact label::after{
+			content:' *';
+			color: tomato;
+		}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: ){
 
