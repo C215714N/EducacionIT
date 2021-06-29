@@ -149,6 +149,7 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			gap: .5rem;
+			background-color: var(--snd);
 		}
 		.example video,
 		.example img,
@@ -193,6 +194,15 @@
 				bottom: .5rem;
 				right: .5rem;
 			}
+			.loading div{
+				animation: loading 1s;
+				animation-iteration-count: infinite;
+				width: 3rem;
+				height: 3rem;
+				border-radius: 3rem;
+				border: .5rem solid;
+				border-color: whitesmoke lightblue skyblue darkblue;
+			}
 			@keyframes moveIt{
 				from{
 					transform: translate(-10rem);
@@ -234,6 +244,9 @@
 						skew(0deg,0);
 					background-color: hsl(0, 50%, 50%);
 				}
+			}
+			@keyframes loading{
+				to{ transform: rotate(360deg) }
 			}
 /* Small Devices - Smartphones */
 	@media screen and (min-width:  576px){

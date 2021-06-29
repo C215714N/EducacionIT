@@ -1,0 +1,74 @@
+// Variables
+	@functions:
+		lineal,
+		cuadratica,
+		trigonometrica,
+		exponencial,
+		radical;
+// Styles Nesting
+	section article .functions{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		min-height: 100vh;
+		div{
+			max-width: 10rem;
+			margin:.5rem;
+			border-radius: .5rem;
+			border: .2rem dashed var(--dark);
+			padding: 1rem;
+			color: var(--snd);
+			background-color: var(--fst);
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			.childs;
+			&:hover{
+				.shadows;
+			}
+		}
+	}
+// Mixins recursivos
+	.childs (@i: 1) when (@i <= length(@functions)){
+		@f: extract(@functions, @i);
+		&:nth-child(@{i}){
+			animation-name: @f;
+			animation-delay: @i * 2s;
+		}
+		.childs(@i + 1);
+	}
+	//animaciones
+	.animations (@i: 1) when (@i <= length(@functions)){
+		@f: extract(@functions, @i);
+		@keyframes @f {
+			.keyframes(@f);
+		}
+		.animations (@i + 1);
+	}
+	.animations;
+	// fotogramas
+	.keyframes(@f; @n:0%; @x: -20px) when (@n <= 100%){
+		@{n}{
+			transform: 
+				if( @f = lineal, 
+					translate((@x + 20px) * 10, @x + 20px),
+				if( @f = cuadratica,
+					translate((@x + 20px) * 10, pow(@x, 2px)),
+				if( @f = trigonometrica,
+					translate((@x + 20px) * 10, sin(@x) * 50px),
+				if( @f = exponencial, 
+					translate((@x + 20px) * 10, pow(1.2px,@x)),
+				if( @x = 0,
+					translate((@x + 20px) * 10, @x * 0),
+					translate((@x + 20px) * 10, (1px / @x) * 200px),
+				)	)	)	)	)
+			;
+		}
+		.keyframes(@f, @n + 5%, @x + 2);
+	}
+
+	.shadows(@i: 0) when (@i <= 360){
+		box-shadow+: cos(@i) * 120px sin(@i) * 120px 3rem hsl(@i, 50%, 50%);
+		.shadows(@i + 30);
+	}
+
