@@ -1,6 +1,7 @@
 /*Content First - Mobile First*/
 	/*General Rules*/
 		@import url('icomoon.css');
+		@import url('less.css');
 		@import url('sass.css');
 		:root{
 			--first: #448;
@@ -28,6 +29,7 @@
 			border: .1rem solid var(--light);
 			color: var(--light);
 			background-color: transparent;
+			transition: all .5s ease-in;
 		}
 		.btn:hover{
 			color: var(--first);
@@ -49,6 +51,7 @@
 			z-index: 2;
 		}
 		nav a{
+			position: relative;
 			display: block;
 			padding: .5rem;
 			color: var(--light);
@@ -63,7 +66,36 @@
 			overflow: hidden;
 			transition: all .5s; /* property duration timing-function delay*/
 		}
-		.menu a:hover{ background-color: var(--hover) }
+		.menu a:hover{ 
+			background-color: var(--hover);
+			transform: scale(1.2);
+			margin: 0 .5rem;
+			padding-left: 10vw; /*Ancho Viewport*/
+		}
+		.menu a:hover::before{
+			transform-origin: bottom center;
+			animation: jump .5s ease infinite; /*name duration timing-function delay iteration-count*/
+			animation-direction: alternate;
+		}
+		@keyframes jump{
+			from{ transform: rotate(-30deg) }
+			to{ transform: rotate(30deg) }
+		}
+		.menu a::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: .2rem;
+			background-color: var(--light);
+			opacity: 0;
+			transition: all .5s ease-out;
+		}
+		.menu a:hover::after{
+			width: 100%;
+			opacity: 1;
+		}
 		.menu span{ padding: .5rem }
 		.menu.active{ max-height: 600px }
 		.icon-back{
@@ -93,6 +125,10 @@
 		.menu{
 			max-height: 600px;
 			width: auto;
+			overflow: visible;
+		}
+		.menu a:hover{
+			padding: .5rem;
 		}
 	}
 /*Large Devices - Desktop*/

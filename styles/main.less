@@ -1,0 +1,61 @@
+// Variables
+	
+//Nesting
+	#header{
+		position: relative;
+		height: 100vh;
+		.normalize(300px; 1rem; 600px; max-height; min-height);
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+		font-size: calc(2vw + .8rem);
+		color: var(--light);
+		background-color: var(--dark);
+		perspective: 2px;
+		perspective-origin: center;
+		overflow: hidden;
+		.header{
+			animation: appear 2s linear;
+			h1, p{ .normalize; }
+		}
+		.slide{
+			.normalize;
+			li{
+				position:absolute;
+				.position;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		button{
+			position: absolute;
+			.normalize(@p: .5rem);
+			color: var(--light);
+			background-color: transparent;
+			.position(@fx: bottom);
+			&.icon-prev{ left: 0; }
+			&.icon-next{ right: 0; }
+		}
+	}
+	@keyframes appear{
+		from{ 
+			transform: 
+				scale(200)
+				rotateX(15deg);
+		}
+	}
+// Mixins parametricos
+	.normalize(
+		@m:0; @p:0; @b:0;
+		@ba:border; @ma:margin; @pa:padding
+	){
+		@{ma}:@m;
+		@{ba}:@b;
+		@{pa}:@p;
+	}
+	.position(@x:0; @y:0; @fx:left; @fy: top){
+		@{fy}:@y;
+		@{fx}:@x;
+	}
+// Mixins recursivos
