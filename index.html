@@ -8,14 +8,15 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<!--Cabecera-->
 	<header id="header">
 		<div class="header">
 			<h1>Cristian Racedo</h1>
-			<p class="subtitle">
-				<strong>Presenta:</strong> 
-				Fundamentos HTML
+			<p class="sub">
+				<strong>Presenta:</strong> Fundamentos HTML
 			</p>
 		</div>	
+		<!--Barra de Navegacion-->
 		<nav>
 			<ul class="menu">
 				<li class="active"><a href="#">Inicio</a></li>
@@ -25,7 +26,9 @@
 			</ul>	
 		</nav>
 	</header>
+	<!--Contenido Principal-->
 	<main>
+		<!--Tabla de Contenidos-->
 		<dl class="index">
 			<dt>Tabla de Contenidos</dt>
 			<dd><a href="#desarrolladores">Tipos de Desarrolladores</a></dd>
@@ -43,7 +46,7 @@
 			<section>
 				<header>
 					<h3>Front-End:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Desarrollo del lado del cliente 
 						<br>
 						<em>(HTML - CSS - Javascript)</em>
@@ -79,7 +82,7 @@
 			<section>
 				<header>
 					<h3>Back-End:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Desarrollo del lado del servidor 
 						<br>
 						<em>(SQL - PHP - JAVA)</em>
@@ -117,7 +120,7 @@
 			<section>
 				<header>
 					<h3>Full-Stack:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Proceso de Desarrollo
 						<br>
 						<em>(VCS - Librerias - Frameworks)</em>
@@ -158,7 +161,7 @@
 			<section>
 				<header>
 					<h3>Dominio</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Sistema de Nombres 
 						<br>
 						<em>(TLD - ccTLD - gTLD)</em>
@@ -196,7 +199,7 @@
 			<section>
 				<header>
 					<h3>Hosting</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Almacenamiento Web 
 						<br>
 						<em>(SSL - SMTP - FTP)</em>
@@ -241,7 +244,7 @@
 			<section>
 				<header>
 					<h3>Standard</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Organizaciones involucradas
 						<br>
 						<em>(SGML - W3C - WHATWG)</em>
@@ -252,7 +255,7 @@
 					<strong> imagen, vídeo, script, etc. </strong>, 
 					no se incrusta directamente en el código de la página, sino que se hace referencia a la ubicación del mismo mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web, <strong>interprete del código</strong>, la tarea de unir todos los elementos y visualizar la página final.
 				</p>
-				<a href="https://www.iso.org/standard/16387.html" target="_blank" class="article"> 
+				<a href="https://www.iso.org/standard/16387.html" target="_blank" class="article">
 					<h4>¿Que es SGML?</h4>
 					<p>
 						<strong>Standard Generalized Markup Language </strong> 
@@ -279,7 +282,7 @@
 			<section>
 				<header>
 					<h3>Elementos</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Tipos de Marcado HTML 
 						<br>
 						<em>(Estructural - Presentacional - Hipertextual)</em>
@@ -319,7 +322,7 @@
 			<section>
 				<header>
 					<h3>Atributos</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Tipos de los Elementos
 						<br>
 						<em>(block - inline - inline-block)</em>
@@ -362,7 +365,7 @@
 			<section>
 				<header>
 					<h3>Estilos CSS</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Tipos de Implementación
 						<br>(Inline - Internal - External)
 					</p>
@@ -402,7 +405,7 @@
 			<section>
 				<header>
 					<h3>Selectores</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Escala Jerarquica
  						<br> (Tag - Class - Id)
 					</p>
@@ -448,9 +451,11 @@
 			<img class="index-back" src="assets/icon/upload.png" alt="volver"/>
 		</a>
 	</main>
+	<!--Pie de Pagina-->
 	<footer id="footer">
+		<!--Formulario de Contacto-->
 		<form id="contacto" action="contact.php" method="post">
-			<h2 class="subtitle">Información de Contacto</h2>		
+			<h2 class="sub">Información de Contacto</h2>		
 			<label for="nombre">Nombre</label>
 			<input 
 				id="nombre" 
@@ -459,22 +464,28 @@
 				placeholder="Nombre: Cristian Racedo" 
 				pattern="[a-z A-Z]{2,50}"
 				title="Ingrese su nombre completo sin numeros, ni simbolos" 
-				required
-			/>
+				required />
 			<label for="correo">Correo</label>
 			<input 
 				id="correo" 
 				name="correo"
 				type="email" 
 				placeholder="Correo: cristiandracedo@hotmail.com" 
-				multiple required
-			/>
+				title="Ingrese su correo respetando el formato usuario@servidor" 
+				multiple required />
 			<label for="tipo">Tipo</label>
-			<select id="tipo" name="tipo" required>
-				<option value="" hidden>Practical Web Development</option>
-				<option value="fewd">FrontEnd Web Development</option>
-				<option value="bewd">BackEnd Web Development</option>
-				<option value="fswd">FullStack Web Development</option>
+			<select 
+				id="tipo" 
+				name="tipo" 
+				placeholder="Practical Web Development"
+				title="Seleccione un tema para realizar la consulta" 
+				required>
+				<optgroup label="Practical Web Development">
+					<option hidden selected>Practical Web Development</option>
+					<option value="fewd">FrontEnd Web Development</option>
+					<option value="bewd">BackEnd Web Development</option>
+					<option value="fswd">FullStack Web Development</option>
+				</optgroup>
 			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 
@@ -483,34 +494,39 @@
 				minlength="10"
 				maxlength="200" 
 				placeholder="Consulta: Realiza tu Consulta"
-			></textarea>
-			<button type="submit">
-				Enviar</button>
+				title="Escriba una consulta sobre el tema seleccionado" 
+				required></textarea>
+			<button>Enviar</button>
 		</form>
+		<!--Redes Sociales-->
 		<div class="social-media">
 			<a 	href="https://www.facebook.com/RacedoCristian" 
 				target="_blank">
-				<img src="assets/icon/facebook.png" alt="Facebook"/>
+				<img src="assets/icon/facebook.svg" alt="Facebook"/>
 			</a>
 			<a 	href="https://twitter.com/Racedo_Cristian" 
 				target="_blank">
-				<img src="assets/icon/twitter.png" alt="Twitter"/>
+				<img src="assets/icon/twitter.svg" alt="Twitter"/>
 			</a>
 			<a 	href="https://instagram.com" 
 				target="_blank">
-				<img src="assets/icon/instagram.png" alt="Instagram"/>
+				<img src="assets/icon/instagram.svg" alt="Instagram"/>
 			</a>
 			<a 	href="https://www.linkedin.com/in/racedocristian/" 
 				target="_blank">
-				<img src="assets/icon/linkedin.png" alt="LinkdeIn"/>
+				<img src="assets/icon/linkedin.svg" alt="LinkdeIn"/>
 			</a>
 			<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 				target="_blank">
-				<img src="assets/icon/youtube.png" alt="YouTube"/>
+				<img src="assets/icon/youtube.svg" alt="YouTube"/>
 			</a>
 			<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 				target="_blank">
-				<img src="assets/icon/whatsapp.png" alt="Whatsapp"/>
+				<img src="assets/icon/whatsapp.svg" alt="Whatsapp"/>
+			</a>
+			<a 	href="https://github.com/c215714n/EducacionIT/tree/fundamentos-HTML" 
+				target="_blank">
+				<img src="assets/icon/github.svg" alt="GitHub"/>
 			</a>
 		</div>
 		<iframe 

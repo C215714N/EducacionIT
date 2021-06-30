@@ -7,14 +7,15 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<!--Cabecera-->
 	<header id="header">
 		<div class="header">
 			<h1>Cristian Racedo</h1>
-			<p class="subtitle">
-				<strong>Presenta:</strong> 
-				Fundamentos HTML
+			<p class="sub">
+				<strong>Presenta:</strong> Fundamentos HTML
 			</p>
 		</div>
+		<!--Barra de Navegacion-->
 		<nav>	
 			<ul class="menu">
 				<li><a href="index.html">Inicio</a></li>
@@ -24,7 +25,9 @@
 			</ul>
 		</nav>
 	</header>
+	<!--Contenido Principal-->
 	<main>
+		<!--Tabla de Contenidos-->
 		<dl class="index">
 			<dt>Tabla de Contenidos</dt>
 			<dd><a href="#imagenes">Formatos de Imagen</a></dd>
@@ -41,7 +44,7 @@
 			<section>
 				<header>
 					<h3>Pixeles:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Mapa de Bits 
 						<br>
 						<em>(JPG - PNG - GIF)</em>
@@ -79,7 +82,7 @@
 			<section>
 				<header>
 					<h3>Vectores:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Graficos Escalables 
 						<br>
 						<em>(SVG - SWF - VML)</em>
@@ -91,27 +94,34 @@
 				<a href="https://www.ibm.com/ar-es/cloud/databases" target="_blank" class="article">
 					<h4>¿Que es SVG?</h4>
 					<p>
-						<strong>Scalable Vector Graphics </strong>
+						<strong>Scalable Vector Graphics </strong>es un lenguaje de marcado XML para describir gráficos de dos dimensiones. Básicamente, es a los gráficos lo que HTML es al texto. SVG es un estándar Web abierto basado en texto. SVG trabaja con HTML, CSS and JavaScript
 					</p>				
 				</a>
 				<a href="https://www.oracle.com/java/" target="_blank" class="article">
 					<h4>¿Que es SWF?</h4>
 					<p>
-						<strong>Small Web Format </strong>
+						<strong>Small Web Format </strong> son archivos constituidos por objetos basados en vectores e imágenes. Originalmente Adobe Flash Professional utiliza un formato con extensión <em>".fla"</em> con los que el usuario trabaja y que después lo compila y comprime en SWF. 
 					</p>
+					<embed src="assets/img/snow.swf">
 				</a>
 				<a href="https://www.php.net/" target="_blank" class="article">
 					<h4>¿Que es VML?</h4>
 					<p>
-						<strong>Vector Markup Language </strong> 
+						<strong>Vector Markup Language </strong> es un lenguaje que se puede integrar en el código HTML a través del elemento <em>v:vmlframe</em> relacionado con algunos ficheros XML. Dicho elemento permite establecer los gráficos vectoriales de manera análoga a los imágenes bitmap. 
 					</p>
-				</a>
+					<img src="assets/img/vml.vml">
+		        	<vml>
+		        		<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:30px;">
+		           		<v:fill type="tile" src="https://media.emailonacid.com/wp-content/uploads/2018/05/Logo_Light-Background.png" color="#f6f6f6" />
+		         	</v:rect> 
+		        	</vml>
+		        </a>
 			</section>
 			<hr/>
 			<section>
 				<header>
 					<h3>Colores</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Sintesis
 						<br>
 						<em>(HTML - RGB - HEX)</em>
@@ -150,7 +160,7 @@
 			<section>
 				<header>
 					<h3>Audio</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Sonidos en la Web 
 						<br>
 						<em>(OGG - WAV - MP3)</em>
@@ -199,7 +209,7 @@
 			<section>
 				<header>
 					<h3>Video</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Reproductores 
 						<br>
 						<em>(OGV - AVI - MP4)</em>
@@ -268,7 +278,7 @@
 			<section>
 				<header>
 					<h3>Standard</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Organizaciones involucradas
 						<br>
 						<em>(SGML - W3C - WHATWG)</em>
@@ -306,7 +316,7 @@
 			<section>
 				<header>
 					<h3>Elementos</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Tipos de Marcado HTML 
 						<br>
 						<em>(Estructural - Presentacional - Hipertextual)</em>
@@ -346,7 +356,7 @@
 			<section>
 				<header>
 					<h3>Atributos</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Tipos de los Elementos
 						<br>
 						<em>(block - inline - inline-block)</em>
@@ -383,9 +393,11 @@
 			<img class="index-back" src="assets/icon/upload.png" alt="volver"/>
 		</a>
 	</main>
+	<!--Pie de Pagina-->
 	<footer id="footer">
+		<!--Formulario de Contacto-->
 		<form id="contacto" action="contact.php" method="post">
-			<h2 class="subtitle">Información de Contacto</h2>		
+			<h2 class="sub">Información de Contacto</h2>		
 			<label for="nombre">Nombre</label>
 			<input 
 				id="nombre" 
@@ -394,22 +406,28 @@
 				placeholder="Nombre: Cristian Racedo" 
 				pattern="[a-z A-Z]{2,50}"
 				title="Ingrese su nombre completo sin numeros, ni simbolos" 
-				required
-			/>
+				required />
 			<label for="correo">Correo</label>
 			<input 
 				id="correo" 
 				name="correo"
 				type="email" 
 				placeholder="Correo: cristiandracedo@hotmail.com" 
-				multiple required
-			/>
+				title="Ingrese su correo respetando el formato usuario@servidor" 
+				multiple required />
 			<label for="tipo">Tipo</label>
-			<select id="tipo" name="tipo" required>
-				<option value="" hidden>Practical Web Development</option>
-				<option value="fewd">FrontEnd Web Development</option>
-				<option value="bewd">BackEnd Web Development</option>
-				<option value="fswd">FullStack Web Development</option>
+			<select 
+				id="tipo" 
+				name="tipo" 
+				placeholder="Practical Web Development"
+				title="Seleccione un tema para realizar la consulta" 
+				required>
+				<optgroup label="Practical Web Development">
+					<option hidden selected>Practical Web Development</option>
+					<option value="fewd">FrontEnd Web Development</option>
+					<option value="bewd">BackEnd Web Development</option>
+					<option value="fswd">FullStack Web Development</option>
+				</optgroup>
 			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 
@@ -418,39 +436,43 @@
 				minlength="10"
 				maxlength="200" 
 				placeholder="Consulta: Realiza tu Consulta"
-				required 
-			></textarea>
-			<button type="submit"> Enviar </button>
+				title="Escriba una consulta sobre el tema seleccionado" 
+				required></textarea>
+			<button>Enviar</button>
 		</form>
+		<!--Redes Sociales-->
 		<div class="social-media">
 			<a 	href="https://www.facebook.com/RacedoCristian" 
 				target="_blank">
-				<img src="assets/icon/facebook.png" alt="Facebook"/>
+				<img src="assets/icon/facebook.svg" alt="Facebook"/>
 			</a>
 			<a 	href="https://twitter.com/Racedo_Cristian" 
 				target="_blank">
-				<img src="assets/icon/twitter.png" alt="Twitter"/>
+				<img src="assets/icon/twitter.svg" alt="Twitter"/>
 			</a>
 			<a 	href="https://instagram.com" 
 				target="_blank">
-				<img src="assets/icon/instagram.png" alt="Instagram"/>
+				<img src="assets/icon/instagram.svg" alt="Instagram"/>
 			</a>
 			<a 	href="https://www.linkedin.com/in/racedocristian/" 
 				target="_blank">
-				<img src="assets/icon/linkedin.png" alt="LinkdeIn"/>
+				<img src="assets/icon/linkedin.svg" alt="LinkdeIn"/>
 			</a>
 			<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 				target="_blank">
-				<img src="assets/icon/youtube.png" alt="YouTube"/>
+				<img src="assets/icon/youtube.svg" alt="YouTube"/>
 			</a>
 			<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 				target="_blank">
-				<img src="assets/icon/whatsapp.png" alt="Whatsapp"/>
+				<img src="assets/icon/whatsapp.svg" alt="Whatsapp"/>
+			</a>
+			<a 	href="https://github.com/c215714n/EducacionIT/tree/fundamentos-HTML" 
+				target="_blank">
+				<img src="assets/icon/github.svg" alt="GitHub"/>
 			</a>
 		</div>
 		<iframe 
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar" 
-			allowfullscreen="" 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar"
 			aria-hidden="false">
 		</iframe>
 		<p>
