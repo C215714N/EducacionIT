@@ -63,11 +63,22 @@
 					width: percentage( $i / $col);
 	}	}	}	}
 // Nesting
+	/*Footer */
+		#footer{
+			padding: 1rem;
+		}
 	/*Formulario*/
 	#contact{
 		@extend .col-sm-20, .col-md-16, .col-lg-12; 
 		@include normalize(auto);
 		@include flexbox(column);
+		label{
+			@include normalize(.2rem, 0, hidden, overflow, height, margin-top);
+			@media screen and (min-width: 768px){ height: auto }
+			&::after{
+					@extend .text-danger;
+					content:' *';
+		}	}
 		textarea{
 			min-height: 8rem;
 			resize: none;

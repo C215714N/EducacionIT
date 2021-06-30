@@ -34,7 +34,7 @@
   color: #e93;
 }
 
-.text-danger {
+.text-danger, #contact label::after {
   color: #c33;
 }
 
@@ -509,6 +509,11 @@
     width: 100%;
   }
 }
+/*Footer */
+#footer {
+  padding: 1rem;
+}
+
 /*Formulario*/
 #contact {
   margin: auto;
@@ -519,6 +524,19 @@
   justify-content: center;
   align-items: unset;
   flex-wrap: wrap;
+}
+#contact label {
+  height: 0.2rem;
+  overflow: hidden;
+  margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  #contact label {
+    height: auto;
+  }
+}
+#contact label::after {
+  content: " *";
 }
 #contact textarea {
   min-height: 8rem;
