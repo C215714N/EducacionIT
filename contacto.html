@@ -65,8 +65,56 @@
 				En la actualidad los navegadores incorporan API's de reproduccion de contenido y podemos acceder a estas con las etiquetas <em>&lt;audio</em> y <em>&lt;video></em>. Estas funcionan de manera similar a la etiqueta <em>&lt;img></em> debido a que solamente podemos reproducir contenido compatible con estos elementos.
 			</p>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<section>
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					Existe una categoria conocida como <em>embed</em> que se utiliza para definir un contenido que no pertenece al sitio o incluso al universo hmtl, pero que fue compartido desde otra direccion. Normalmente este contenido se agrega mediante la etiqueta <strong>&lt;iframe></strong> que permite la carga asincronica de contenido.
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/TYYW_WwYHuM" 
+						title="Fortune Faded - Red Hot Chili Peppers" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/_DxvWkaLp9g" 
+						title="Blair Witch Project - Te lo Resumo"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Multimedia sin Plugins?</h3>
+				</header>
+				<p>
+					En la actualidad los navegadores incorporan API's de reproduccion de contenido multimedia y podemos acceder a ellas gracias a las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3 - .wav- .ogg</em> y <em>.mp4 - .webm - .ogv</em> respectivamente. Tambien podemos utilizar atributos como <em>autoplay muted loop</em> para generar fondos con dichos elementos.
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="media/live-learn.mp3">link</a>
+						</p>
+					</audio>
+					<video src="media/fortune-faded.mp4" controls autoplay loop muted>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="media/by-the-way.ogv">link</a>
+						</p>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
+		<!--Formulario de Contacto-->
 		<form id="contacto" action="contacto.php" method="POST">
 			<h2>Contactanos</h2>
 			<label for="nombre">Ingrese su Nombre</label>
@@ -100,6 +148,7 @@
 				<label for="no">no acepto el contrato</label>
 			</div>
 		</form>
+		<!--Redes sociales-->
 		<div class="social">
 			<a href="https://facebook.com" target="_blank" title="facebook">
 				<img src="img/facebook.svg" alt="facebook"/>
@@ -114,6 +163,10 @@
 				<img src="img/github.svg" alt="github"/>
 			</a>
 		</div>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0627853011606!2d-58.376907015081166!3d-34.60257383389973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc41153a23%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1625074046016!5m2!1ses-419!2sar"
+			loading="lazy">
+		</iframe>
 		<p>
 			&copy; Todos los derechos reservados 
 			<a href="#">Cristian Racedo</a> 

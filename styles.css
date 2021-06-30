@@ -41,6 +41,12 @@
 		color: #eee;
 		background-color: #224;
 	}
+	#footer iframe{
+		width: calc(100% + 2rem);
+		min-height: 240px;
+		margin: 0 -1rem;
+		border: none;
+	}
 	#contacto{
 		max-width: 540px;
 		margin: auto;
