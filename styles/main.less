@@ -28,8 +28,20 @@
 			text-shadow: 0 0 .5rem var(--dark);
 			animation: appear 2s linear;
 			h1, p{ .normalize; }
+			span{
+				display: inline-block;
+				width: 1rem;
+				height: 1rem;
+				transition: all .5s ease;
+				box-shadow: 0 0 .5rem var(--dark);
+				.normalize(.5rem; var(--light); 2rem; @pa: background-color; @ba: border-radius);
+				&.active{
+					width:4rem;
+				}
+			}
 		}
 		.slide{
+			text-align: center;
 			.normalize;
 			li{
 				position:absolute;
