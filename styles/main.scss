@@ -1,0 +1,79 @@
+// Variables
+	$attributes:
+		text 		color,
+		bg  		background-color,
+		border 		border-color;
+	$colors:
+		primary 	#448,
+		secondary 	#36c,
+		light 		#eee,
+		dark 		#333,
+		success 	#3c6,
+		warning 	#e93,
+		danger 		#c33,
+		info 		#48e;
+	$viewports:
+		sm 			576px,
+		md 			768px,
+		lg 			992px,
+		xl 			1200px;
+	$col: 			24;
+// Mixins
+	@mixin normalize(
+		$m: 0, $p: 0, $b:0,
+		$ba: border, $ma: margin, $pa: padding
+	){
+		#{$ma}: $m; 
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+	@mixin flexbox (
+		$fd: row,
+		$fj: center,
+		$fa: unset,
+		$fw: wrap,
+		$d: flex,
+	){
+		display: 			$d;
+		flex-direction: 	$fd;
+		justify-content: 	$fj;
+		align-items: 		$fa;
+		flex-wrap: 			$fw;
+	}
+// Loops
+	/*Color Classes*/
+	@each $prop, $attr in $attributes{
+		@each $color, $value in $colors{
+			.#{$prop}-#{$color}{
+				#{$attr}: $value;
+	}	}	}
+	/*Grid System*/
+	@each $vn, $vw in $viewports{
+		@media screen and (min-width: $vw){
+			@for $i from 1 through $col {
+				.col-#{$vn}-#{$i}{
+					width: percentage( $i / $col);
+	}	}	}	}
+// Nesting
+	/*Formulario*/
+	#contact{
+		@extend .col-sm-20, .col-md-16, .col-lg-12; 
+		@include normalize(auto);
+		@include flexbox(column);
+		input,
+		select,
+		textarea{
+			@include normalize(none, .5rem 1rem, .2rem solid transparent, $ma:outline);
+		}
+		.valid{
+			max-height: 0;
+			overflow: hidden;
+		}
+		.btn{
+			@extend .text-dark, .border-dark;
+			@include normalize(.5rem 0 .2rem auto, .5rem 1rem, .1rem solid);
+			text-transform: uppercase;
+			font-size: 1rem;
+			&:hover{ @extend .text-light, .bg-dark; }
+		}
+	}

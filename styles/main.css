@@ -1,16 +1,18 @@
 /*Content First - Mobile First*/
 	/*General Rules*/
 		@import url('icomoon.css');
-		*{
-			box-sizing: border-box;
-			font-family: 'Raleway', 'segoe ui', calibri, sans-serif;
-		}
+		@import url('sass.css');
 		:root{
 			--first: #448;
 			--second: #36c;
 			--light: #eee;
 			--dark: #333;
 			--hover: rgba(51,51,51,.5);
+			--font: 'Raleway', 'segoe ui', calibri, sans-serif;;
+		}
+		*{
+			box-sizing: border-box;
+			font-family: var(--font);
 		}
 		body,
 		h1,
@@ -19,6 +21,7 @@
 		.menu{
 			margin: 0;
 		}
+	/*General Classes*/
 		.btn{
 			margin: .5rem;
 			border-radius: .25rem;
@@ -70,13 +73,13 @@
 			border-radius: 50%;
 			background-color: var(--dark);
 		}
-	/*Contact*/
+	/*Contact Form*/
 		#contact label::after{
 			content:' *';
 			color: tomato;
 		}
 /*Small Devices - Smartphones*/
-	@media screen and (min-width: ){
+	@media screen and (min-width: 576px){
 
 	}
 /*Medium Devices - Tablets*/
