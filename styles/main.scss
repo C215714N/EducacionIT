@@ -18,6 +18,14 @@
 		lg 			992px,
 		xl 			1200px;
 	$col: 			24;
+// Hidden Style
+	%transform{
+		transition: all .5s ease;
+		transform: 
+			scale(1.1)
+			translate(0, -1rem);
+		;
+	}
 // Mixins
 	@mixin normalize(
 		$m: 0, $p: 0, $b:0,
@@ -60,10 +68,30 @@
 		@extend .col-sm-20, .col-md-16, .col-lg-12; 
 		@include normalize(auto);
 		@include flexbox(column);
+		textarea{
+			min-height: 8rem;
+			resize: none;
+		}
 		input,
 		select,
 		textarea{
-			@include normalize(none, .5rem 1rem, .2rem solid transparent, $ma:outline);
+			@extend .bg-light;
+			@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma:outline);
+			&:focus{
+				@extend %transform, .border-dark;
+				& + .valid{ 
+					@extend %transform, .text-light, .bg-dark;
+					@include normalize(300px, .5rem 1rem, $ma:max-height);
+				}
+				&:valid{ 
+					@extend .border-success;
+					& + .valid{ @extend .bg-success; }
+				}
+				&:not(:placeholder-shown):invalid{
+					@extend .border-danger;
+					& + .valid{ @extend .bg-danger; }
+				}
+			}
 		}
 		.valid{
 			max-height: 0;
