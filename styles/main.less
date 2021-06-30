@@ -1,5 +1,15 @@
 // Variables
-	
+	@path: '../assets/img';
+	@backgrounds:
+		'osx-high-sierra.jpg',
+		'osx-leopard.png',
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave-night.jpg',
+		'osx-mojave.jpg',
+		'osx-mountain-lion.jpg',
+		'osx-sierra.jpg',
+		'osx-snow-leopard.png';
 //Nesting
 	#header{
 		position: relative;
@@ -11,11 +21,11 @@
 		text-align: center;
 		font-size: calc(2vw + .8rem);
 		color: var(--light);
-		background-color: var(--dark);
 		perspective: 2px;
 		perspective-origin: center;
 		overflow: hidden;
 		.header{
+			text-shadow: 0 0 .5rem var(--dark);
 			animation: appear 2s linear;
 			h1, p{ .normalize; }
 		}
@@ -26,6 +36,13 @@
 				.position;
 				width: 100%;
 				height: 100%;
+				background-size: cover;
+				background-position: center;
+				z-index: -1;
+				opacity: 0;
+				transition: all 1s ease;
+				.backgrounds;
+				&.active{ opacity: 1; }
 			}
 		}
 		button{
@@ -33,6 +50,7 @@
 			.normalize(@p: .5rem);
 			color: var(--light);
 			background-color: transparent;
+			font-size: calc(2vw + 1rem);
 			.position(@fx: bottom);
 			&.icon-prev{ left: 0; }
 			&.icon-next{ right: 0; }
@@ -59,3 +77,10 @@
 		@{fx}:@x;
 	}
 // Mixins recursivos
+	.backgrounds (@i: 1) when (@i <= length(@backgrounds)){
+		@img: extract(@backgrounds, @i);
+		&:nth-child(@{i}){
+			background-image: url('@{path}/@{img}');
+		}
+		.backgrounds(@i + 1);
+	}
