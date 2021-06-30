@@ -10,6 +10,11 @@
 		margin: 0;
 	}
 /*Navegacion*/
+	nav{
+		position: sticky;
+		top: 0;
+		z-index: 3;
+	}
 	.menu{
 		padding: 0;
 		list-style: none;
@@ -32,9 +37,48 @@
 		padding: 20% 1rem; /*top right bottom left*/
 		background-color: #ccc;
 		text-align: center;
+		text-shadow: 0 0 .5rem #eee;
+		background-image: url('img/osx-lion.png');
+		background-position: center;
+		background-size: cover;
 	}
 /*Contenido Principal*/
-
+	main{
+		max-width: 960px;
+		margin: auto;
+		padding: 1rem;
+	}
+	main article{
+		margin: 1rem 0;
+		border-radius: .25rem;
+		padding: 1rem;
+		box-shadow: 0 0 .5rem #333;/* -x+ -y+ blur color */
+	}
+	main .header{
+		color: #333;
+	}
+	main header{ 
+		color: #999;
+		border-bottom: .1rem solid #999; 
+	}
+	.example{
+		margin: .5rem;
+		margin-left: 2rem;
+		border-left: .2rem solid #448;
+		padding: .5rem;
+		background-color: #eee;
+		line-height: 1.5rem;
+		list-style: none;
+		overflow: auto;
+	}
+	.example img,
+	.example iframe,
+	.example video{
+		width: 100%;
+		border-radius: .5rem;
+		border: none;
+		box-shadow: 0 0 .5rem #333;
+	}
 /*Pie de Pagina*/
 	#footer{
 		padding: 1rem;
