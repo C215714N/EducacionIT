@@ -7,29 +7,36 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<!--Cabecera-->
 	<header id="header">
 		<div class="header">
 			<h1>Cristian Racedo</h1>
-			<p class="subtitle">
-				<strong>Presenta:</strong> 
-				Fundamentos HTML
+			<p class="sub">
+				<strong>Presenta:</strong> Fundamentos HTML
 			</p>
 		</div>
+		<!--Barra de Navegacion-->
 		<nav>	
 			<ul class="menu">
 				<li><a href="index.html">Inicio</a></li>
+				<li><a href="about.html">Acerca</a></li>
 				<li class="active"><a href="#">Galeria</a></li>				
-				<li><a href="#contacto">Contacto</a></li>				
-				<li><a href="https://github.com/C215714N/EducacionIT/tree/fundamentos-HTML" target="_blank">Repositorio</a></li>	
+				<li><a href="#contacto">Contacto</a></li>	
 			</ul>
 		</nav>
 	</header>
+	<!--Contenido Principal-->
 	<main>
+		<!--Tabla de Contenidos-->
 		<dl class="index">
 			<dt>Tabla de Contenidos</dt>
-			<dd><a href="#imagenes">Formatos de Imagen</a></dd>
-			<dd><a href="#multimedia">Contenido Multimedia</a></dd>
-			<dd><a href="#tablas">Tablas Semanticas</a></dd>
+			<dd><strong><a href="#imagenes">Formatos de Imagen</a></strong></dd>
+			<dd><a href="#imagenes">Pixeles: Mapa de Bits</a></dd>
+			<dd><a href="#imagenes">Vectores: Graficos Escalables</a></dd>
+			<dd><a href="#imagenes">Colores: Sintesis Aditiva</a></dd>
+			<dd><strong><a href="#multimedia">Contenido Multimedia</a></strong></dd>
+			<dd><a href="#multimedia">Audio: API de reproduccion</a></dd>
+			<dd><a href="#multimedia">Video: Compatibilidad Integrada</a></dd>
 		</dl>
 		<article id="imagenes">
 			<header>
@@ -41,7 +48,7 @@
 			<section>
 				<header>
 					<h3>Pixeles:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Mapa de Bits 
 						<br>
 						<em>(JPG - PNG - GIF)</em>
@@ -79,7 +86,7 @@
 			<section>
 				<header>
 					<h3>Vectores:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Graficos Escalables 
 						<br>
 						<em>(SVG - SWF - VML)</em>
@@ -91,34 +98,41 @@
 				<a href="https://www.ibm.com/ar-es/cloud/databases" target="_blank" class="article">
 					<h4>¿Que es SVG?</h4>
 					<p>
-						<strong>Scalable Vector Graphics </strong>
+						<strong>Scalable Vector Graphics </strong>es un lenguaje de marcado XML para describir gráficos de dos dimensiones. Básicamente, es a los gráficos lo que HTML es al texto. SVG es un estándar Web abierto basado en texto. SVG trabaja con HTML, CSS and JavaScript
 					</p>				
 				</a>
 				<a href="https://www.oracle.com/java/" target="_blank" class="article">
 					<h4>¿Que es SWF?</h4>
 					<p>
-						<strong>Small Web Format </strong>
+						<strong>Small Web Format </strong> son archivos constituidos por objetos basados en vectores e imágenes. Originalmente Adobe Flash Professional utiliza un formato con extensión <em>".fla"</em> con los que el usuario trabaja y que después lo compila y comprime en SWF. 
 					</p>
+					<embed src="assets/img/snow.swf">
 				</a>
 				<a href="https://www.php.net/" target="_blank" class="article">
 					<h4>¿Que es VML?</h4>
 					<p>
-						<strong>Vector Markup Language </strong> 
+						<strong>Vector Markup Language </strong> es un lenguaje que se puede integrar en el código HTML a través del elemento <em>v:vmlframe</em> relacionado con algunos ficheros XML. Dicho elemento permite establecer los gráficos vectoriales de manera análoga a los imágenes bitmap. 
 					</p>
-				</a>
+					<img src="assets/img/vml.vml">
+		        	<vml>
+		        		<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:30px;">
+		           		<v:fill type="tile" src="https://media.emailonacid.com/wp-content/uploads/2018/05/Logo_Light-Background.png" color="#f6f6f6" />
+		         	</v:rect> 
+		        	</vml>
+		        </a>
 			</section>
 			<hr/>
 			<section>
 				<header>
 					<h3>Colores</h3>
-					<p class="subtitle">
-						Sintesis
+					<p class="sub">
+						Sintesis Aditiva
 						<br>
 						<em>(HTML - RGB - HEX)</em>
 					</p>
 				</header>
 				<p>
-					
+					La síntesis aditiva es un modelo que permite explicar la obtención de un color a partir de la suma de los componentes de color. El proceso de reproducción aditiva normalmente utiliza luz roja, verde y azul como componentes para producir el resto de colores.
 				</p>
 				<a href="https://google.com/search?=" class="article">
 					<h4>¿Que son los colores HTML?</h4>
@@ -150,8 +164,8 @@
 			<section>
 				<header>
 					<h3>Audio</h3>
-					<p class="subtitle">
-						Sonidos en la Web 
+					<p class="sub">
+						API de Reproduccion
 						<br>
 						<em>(OGG - WAV - MP3)</em>
 					</p>
@@ -199,8 +213,8 @@
 			<section>
 				<header>
 					<h3>Video</h3>
-					<p class="subtitle">
-						Reproductores 
+					<p class="sub">
+						Compatibilidad Integrada 
 						<br>
 						<em>(OGV - AVI - MP4)</em>
 					</p>
@@ -258,134 +272,15 @@
 				</a>
 			</section>
 		</article>
-		<article id="tablas">
-			<header>
-				<a href="#">
-					<img class="index-back" src="assets/icon/back.png" alt="volver">
-				</a>
-				<h2>Lenguaje de Marcas de Hipertexto</h2>
-			</header>
-			<section>
-				<header>
-					<h3>Standard</h3>
-					<p class="subtitle">
-						Organizaciones involucradas
-						<br>
-						<em>(SGML - W3C - WHATWG)</em>
-					</p>
-				</header>
-				<p>
-					HTML Es el estándar que se ha impuesto en la visualización de páginas web, es el que todos los navegadores actuales han adoptado y basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página como 
-					<strong> imagen, vídeo, script, etc. </strong>, 
-					no se incrusta directamente en el código de la página, sino que se hace referencia a la ubicación del mismo mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web, <strong>interprete del código</strong>, la tarea de unir todos los elementos y visualizar la página final.
-				</p>
-				<a href="https://www.iso.org/standard/16387.html" target="_blank" class="article"> 
-					<h4>¿Que es SGML?</h4>
-					<p>
-						<strong>Standard Generalized Markup Language </strong> 
-						es una norma ISO derivada de <em>GML de IBM</em>, corresponde a Lenguaje de Señalización General Normalizado. Este permite que la estructura del documento pueda ser definida en base a la relación lógica de sus partes.
-					</p>				
-				</a>
-				<a href="https://www.w3.org/" target="_blank" class="article">
-					<h4>¿Que es la W3C?</h4>
-					<p>
-						<strong>World Wide Web Consortium </strong>, es un consorcio internacional fundado en 1994 y dirigido por Tim Berners-Lee, 
-						<em> el creador original del URL </em>, genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a largo plazo.
-					</p>
-				</a>
-				<a href="https://whatwg.org/" target="_blank" class="article">
-					<h4>¿Que es la WHATWG?</h4>
-					<p>
-						La comunidad de <strong> Web Hypertext Application Technology Working Group </strong>
-						compusesta de personas y empresas que se interesan en la evolución de HTML y las tecnologías conexas. Fue fundado por integrantes de 
-						<em> Apple, la Fundación Mozilla y Opera Software. </em>
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h3>Elementos</h3>
-					<p class="subtitle">
-						Tipos de Marcado HTML 
-						<br>
-						<em>(Estructural - Presentacional - Hipertextual)</em>
-					</p>
-				</header>
-				<p>
-					HTML se escribe en forma de «etiquetas», rodeadas por corchetes angulares <strong>&lt;&gt;...&lt;/&gt;</strong>, puede describir la apariencia de un documento e incluir o hacer referencia a un tipo de programa llamado script, que puede afectar el comportamiento de navegadores web y otros procesadores de HTML.
-
-					Tambien sirve para referirse al contenido del tipo de <strong>MIME text/html</strong> o todavía más ampliamente como un término genérico, ya sea en <em>forma descendida de <strong>XML</strong> como XHTML 1.0 o posterior</em>, o en <em>forma descendida directamente de <strong>SGML</strong> como HTML 4.0 o anterior</em>.
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Estructural?</h4>
-					<p> 
-						<strong>El marcado estructural </strong>
-						describe el propósito del texto, no define cómo se verá el elemento, pero la mayoría de los navegadores web han estandarizado el formato de los elementos. La etiqueta
-						<strong> &lt;h1&gt;</strong>...<strong>&lt;/h1&gt; </strong> define al Texto como un encabezado de Primer Nivel.
-					</p>				
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Presentacional?</h4>
-					<p> 
-						<strong>El Marcado presentacional </strong>
-						describe cual es la apariencia del texto, sin importar su funcion. La mayoria de este fue desechada desde la versión 4.01, en favor de la implementacion de CSS. 
-						<strong> &lt;style&gt;</strong>...<strong>&lt;style&gt; </strong> 
-						se utiliza para la implementacion de estilos en bloque.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Hipertextual?</h4>
-					<p> 
-						<strong>El marcado hipertextual </strong>
-						se utiliza para enlazar partes del documento con otros documentos o con otras partes del mismo. Es necesario utilizar la etiqueta ancla <strong>&lt;a&gt;</strong>...<strong>&lt;/a&gt;</strong> con el atributo <strong>href</strong>, que establecerá la dirección <em>URL</em> a la que apunta el enlace.
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h3>Atributos</h3>
-					<p class="subtitle">
-						Tipos de los Elementos
-						<br>
-						<em>(block - inline - inline-block)</em>
-					</p>
-				</header>
-				<p>
-					Cada elemento HTML debe cumplir con las reglas que definen qué tipo de contenido puede contener. Estas reglas se agrupan en modelos de contenido comunes a varios elementos. 
-					Cada elemento HTML pertenece a cero, uno o varios modelos de contenido. Un modelo establece las reglas que el contenido del elemento debe cumplir en un documento HTML-conformant.
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Block?</h4>
-					<p> 
-						Son elementos que <strong>ocupan todo el espacio de su contenedor</strong>, 
-						cada vez que se presenta uno se hace un <em>salto de linea</em> de manera predeterminada, siendo estos representados en <em>lineas independientes</em>.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es inline?</h4>
-					<p>
-						Son elementos cuyo <strong> contenido se muestra en una misma linea</strong>, 
-						de modo que si colocamos dos o más de estos, sin implementar algun salto de linea, estos se veran presentados de <em>manera consecutiva</em>.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Inline-Block?</h4>
-					<p> 
-						Son aquellos elementos de <strong> comportamiento intermedio</strong>, 
-						fluyen con el texto y demás elementos como si fueran elementos <em>inline</em> y además respetan el ancho, el alto y los márgenes verticales.
-					</p>
-				</a>
-			</section>
-		</article>
 		<a class="link" href="#">
 			<img class="index-back" src="assets/icon/upload.png" alt="volver"/>
 		</a>
 	</main>
+	<!--Pie de Pagina-->
 	<footer id="footer">
+		<!--Formulario de Contacto-->
 		<form id="contacto" action="contact.php" method="post">
-			<h2 class="subtitle">Información de Contacto</h2>		
+			<h2 class="sub">Información de Contacto</h2>		
 			<label for="nombre">Nombre</label>
 			<input 
 				id="nombre" 
@@ -394,22 +289,28 @@
 				placeholder="Nombre: Cristian Racedo" 
 				pattern="[a-z A-Z]{2,50}"
 				title="Ingrese su nombre completo sin numeros, ni simbolos" 
-				required
-			/>
+				required />
 			<label for="correo">Correo</label>
 			<input 
 				id="correo" 
 				name="correo"
 				type="email" 
 				placeholder="Correo: cristiandracedo@hotmail.com" 
-				multiple required
-			/>
+				title="Ingrese su correo respetando el formato usuario@servidor" 
+				multiple required />
 			<label for="tipo">Tipo</label>
-			<select id="tipo" name="tipo" required>
-				<option value="" hidden>Practical Web Development</option>
-				<option value="fewd">FrontEnd Web Development</option>
-				<option value="bewd">BackEnd Web Development</option>
-				<option value="fswd">FullStack Web Development</option>
+			<select 
+				id="tipo" 
+				name="tipo" 
+				placeholder="Practical Web Development"
+				title="Seleccione un tema para realizar la consulta" 
+				required>
+				<optgroup label="Practical Web Development">
+					<option hidden selected>Practical Web Development</option>
+					<option value="fewd">FrontEnd Web Development</option>
+					<option value="bewd">BackEnd Web Development</option>
+					<option value="fswd">FullStack Web Development</option>
+				</optgroup>
 			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 
@@ -418,39 +319,43 @@
 				minlength="10"
 				maxlength="200" 
 				placeholder="Consulta: Realiza tu Consulta"
-				required 
-			></textarea>
-			<button type="submit"> Enviar </button>
+				title="Escriba una consulta sobre el tema seleccionado" 
+				required></textarea>
+			<button>Enviar</button>
 		</form>
+		<!--Redes Sociales-->
 		<div class="social-media">
 			<a 	href="https://www.facebook.com/RacedoCristian" 
 				target="_blank">
-				<img src="assets/icon/facebook.png" alt="Facebook"/>
+				<img src="assets/icon/facebook.svg" alt="Facebook"/>
 			</a>
 			<a 	href="https://twitter.com/Racedo_Cristian" 
 				target="_blank">
-				<img src="assets/icon/twitter.png" alt="Twitter"/>
+				<img src="assets/icon/twitter.svg" alt="Twitter"/>
 			</a>
 			<a 	href="https://instagram.com" 
 				target="_blank">
-				<img src="assets/icon/instagram.png" alt="Instagram"/>
+				<img src="assets/icon/instagram.svg" alt="Instagram"/>
 			</a>
 			<a 	href="https://www.linkedin.com/in/racedocristian/" 
 				target="_blank">
-				<img src="assets/icon/linkedin.png" alt="LinkdeIn"/>
+				<img src="assets/icon/linkedin.svg" alt="LinkdeIn"/>
 			</a>
 			<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 				target="_blank">
-				<img src="assets/icon/youtube.png" alt="YouTube"/>
+				<img src="assets/icon/youtube.svg" alt="YouTube"/>
 			</a>
 			<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 				target="_blank">
-				<img src="assets/icon/whatsapp.png" alt="Whatsapp"/>
+				<img src="assets/icon/whatsapp.svg" alt="Whatsapp"/>
+			</a>
+			<a 	href="https://github.com/c215714n/EducacionIT/tree/fundamentos-HTML" 
+				target="_blank">
+				<img src="assets/icon/github.svg" alt="GitHub"/>
 			</a>
 		</div>
 		<iframe 
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar" 
-			allowfullscreen="" 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.9925584527174!2d-58.37620362245415!3d-34.60243211740226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596181391934!5m2!1ses!2sar"
 			aria-hidden="false">
 		</iframe>
 		<p>

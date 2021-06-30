@@ -8,30 +8,36 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<!--Cabecera-->
 	<header id="header">
 		<div class="header">
 			<h1>Cristian Racedo</h1>
-			<p class="subtitle">
-				<strong>Presenta:</strong> 
-				Fundamentos HTML
+			<p class="sub">
+				<strong>Presenta:</strong> Fundamentos HTML
 			</p>
 		</div>	
+		<!--Barra de Navegacion-->
 		<nav>
 			<ul class="menu">
 				<li class="active"><a href="#">Inicio</a></li>
+				<li><a href="about.html">Acerca</a></li>	
 				<li><a href="galeria.html">Galeria</a></li>				
-				<li><a href="#contacto">Contacto</a></li>				
-				<li><a href="https://github.com/C215714N/EducacionIT/tree/fundamentos-HTML" target="_blank">Repositorio</a></li>	
+				<li><a href="#contacto">Contacto</a></li>	
 			</ul>	
 		</nav>
 	</header>
+	<!--Contenido Principal-->
 	<main>
+		<!--Tabla de Contenidos-->
 		<dl class="index">
 			<dt>Tabla de Contenidos</dt>
-			<dd><a href="#desarrolladores">Tipos de Desarrolladores</a></dd>
-			<dd><a href="#requerimientos">Requerimientos de un Sitio Web</a></dd>
-			<dd><a href="#html">Lenguaje de Marcas de Hipertexto</a></dd>
-			<dd><a href="#css">Hojas de Estilo en Cascada</a></dd>
+			<dd><strong><a href="#desarrolladores">Tipos de Desarrolladores</a></strong></dd>
+			<dd><a href="#desarrolladores">Front-End: Desarrollo del lado del Cliente</a></dd>
+			<dd><a href="#desarrolladores">Back-End: Desarrollo del lado del Servidor</a></dd>
+			<dd><a href="#desarrolladores">Full-Stack: Proceso de Desarrollo</a></dd>
+			<dd><strong><a href="#requisitos">Requisitos de un Sitio Web</a></strong></dd>
+			<dd><a href="#requisitos">Dominio: Sistema de Nombres</a></dd>
+			<dd><a href="#requisitos">Hosting: Almacenamiento Web</a></dd>
 		</dl>
 		<article id="desarrolladores">
 			<header>
@@ -43,7 +49,7 @@
 			<section>
 				<header>
 					<h3>Front-End:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Desarrollo del lado del cliente 
 						<br>
 						<em>(HTML - CSS - Javascript)</em>
@@ -79,7 +85,7 @@
 			<section>
 				<header>
 					<h3>Back-End:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Desarrollo del lado del servidor 
 						<br>
 						<em>(SQL - PHP - JAVA)</em>
@@ -117,7 +123,7 @@
 			<section>
 				<header>
 					<h3>Full-Stack:</h3>
-					<p class="subtitle">
+					<p class="sub">
 						Proceso de Desarrollo
 						<br>
 						<em>(VCS - Librerias - Frameworks)</em>
@@ -148,17 +154,17 @@
 				</a>
 			</section>
 		</article>
-		<article id="requerimientos">
+		<article id="requisitos">
 			<header>
 				<a href="#">
 					<img class="index-back" src="assets/icon/back.png" alt="volver">
 				</a>
-				<h2>Requerimientos de un Sitio Web</h2>
+				<h2>Requisitos de un Sitio Web</h2>
 			</header>
 			<section>
 				<header>
-					<h3>Dominio</h3>
-					<p class="subtitle">
+					<h3>Dominio:</h3>
+					<p class="sub">
 						Sistema de Nombres 
 						<br>
 						<em>(TLD - ccTLD - gTLD)</em>
@@ -195,8 +201,8 @@
 			<hr/>
 			<section>
 				<header>
-					<h3>Hosting</h3>
-					<p class="subtitle">
+					<h3>Hosting:</h3>
+					<p class="sub">
 						Almacenamiento Web 
 						<br>
 						<em>(SSL - SMTP - FTP)</em>
@@ -231,226 +237,15 @@
 				</a>
 			</section>
 		</article>
-		<article id="html">
-			<header>
-				<a href="#">
-					<img class="index-back" src="assets/icon/back.png" alt="volver">
-				</a>
-				<h2>Lenguaje de Marcas de Hipertexto</h2>
-			</header>
-			<section>
-				<header>
-					<h3>Standard</h3>
-					<p class="subtitle">
-						Organizaciones involucradas
-						<br>
-						<em>(SGML - W3C - WHATWG)</em>
-					</p>
-				</header>
-				<p>
-					HTML Es el estándar que se ha impuesto en la visualización de páginas web, es el que todos los navegadores actuales han adoptado y basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página como 
-					<strong> imagen, vídeo, script, etc. </strong>, 
-					no se incrusta directamente en el código de la página, sino que se hace referencia a la ubicación del mismo mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web, <strong>interprete del código</strong>, la tarea de unir todos los elementos y visualizar la página final.
-				</p>
-				<a href="https://www.iso.org/standard/16387.html" target="_blank" class="article"> 
-					<h4>¿Que es SGML?</h4>
-					<p>
-						<strong>Standard Generalized Markup Language </strong> 
-						es una norma ISO derivada de <em>GML de IBM</em>, corresponde a Lenguaje de Señalización General Normalizado. Este permite que la estructura del documento pueda ser definida en base a la relación lógica de sus partes.
-					</p>				
-				</a>
-				<a href="https://www.w3.org/" target="_blank" class="article">
-					<h4>¿Que es la W3C?</h4>
-					<p>
-						<strong>World Wide Web Consortium </strong>, es un consorcio internacional fundado en 1994 y dirigido por Tim Berners-Lee, 
-						<em> el creador original del URL </em>, genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a largo plazo.
-					</p>
-				</a>
-				<a href="https://whatwg.org/" target="_blank" class="article">
-					<h4>¿Que es la WHATWG?</h4>
-					<p>
-						La comunidad de <strong> Web Hypertext Application Technology Working Group </strong>
-						compusesta de personas y empresas que se interesan en la evolución de HTML y las tecnologías conexas. Fue fundado por integrantes de 
-						<em> Apple, la Fundación Mozilla y Opera Software. </em>
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h3>Elementos</h3>
-					<p class="subtitle">
-						Tipos de Marcado HTML 
-						<br>
-						<em>(Estructural - Presentacional - Hipertextual)</em>
-					</p>
-				</header>
-				<p>
-					HTML se escribe en forma de «etiquetas», rodeadas por corchetes angulares <strong>&lt;&gt;...&lt;/&gt;</strong>, puede describir la apariencia de un documento e incluir o hacer referencia a un tipo de programa llamado script, que puede afectar el comportamiento de navegadores web y otros procesadores de HTML.
-
-					Tambien sirve para referirse al contenido del tipo de <strong>MIME text/html</strong> o todavía más ampliamente como un término genérico, ya sea en <em>forma descendida de <strong>XML</strong> como XHTML 1.0 o posterior</em>, o en <em>forma descendida directamente de <strong>SGML</strong> como HTML 4.0 o anterior</em>.
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Estructural?</h4>
-					<p> 
-						<strong>El marcado estructural </strong>
-						describe el propósito del texto, no define cómo se verá el elemento, pero la mayoría de los navegadores web han estandarizado el formato de los elementos. La etiqueta
-						<strong> &lt;h1&gt;</strong>...<strong>&lt;/h1&gt; </strong> define al Texto como un encabezado de Primer Nivel.
-					</p>				
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Presentacional?</h4>
-					<p> 
-						<strong>El Marcado presentacional </strong>
-						describe cual es la apariencia del texto, sin importar su funcion. La mayoria de este fue desechada desde la versión 4.01, en favor de la implementacion de CSS. 
-						<strong> &lt;style&gt;</strong>...<strong>&lt;style&gt; </strong> 
-						se utiliza para la implementacion de estilos en bloque.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Hipertextual?</h4>
-					<p> 
-						<strong>El marcado hipertextual </strong>
-						se utiliza para enlazar partes del documento con otros documentos o con otras partes del mismo. Es necesario utilizar la etiqueta ancla <strong>&lt;a&gt;</strong>...<strong>&lt;/a&gt;</strong> con el atributo <strong>href</strong>, que establecerá la dirección <em>URL</em> a la que apunta el enlace.
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h3>Atributos</h3>
-					<p class="subtitle">
-						Tipos de los Elementos
-						<br>
-						<em>(block - inline - inline-block)</em>
-					</p>
-				</header>
-				<p>
-					Cada elemento HTML debe cumplir con las reglas que definen qué tipo de contenido puede contener. Estas reglas se agrupan en modelos de contenido comunes a varios elementos. 
-					Cada elemento HTML pertenece a cero, uno o varios modelos de contenido. Un modelo establece las reglas que el contenido del elemento debe cumplir en un documento HTML-conformant.
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Block?</h4>
-					<p> 
-						Son elementos que <strong>ocupan todo el espacio de su contenedor</strong>, 
-						cada vez que se presenta uno se hace un <em>salto de linea</em> de manera predeterminada, siendo estos representados en <em>lineas independientes</em>.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es inline?</h4>
-					<p>
-						Son elementos cuyo <strong> contenido se muestra en una misma linea</strong>, 
-						de modo que si colocamos dos o más de estos, sin implementar algun salto de linea, estos se veran presentados de <em>manera consecutiva</em>.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Inline-Block?</h4>
-					<p> 
-						Son aquellos elementos de <strong> comportamiento intermedio</strong>, 
-						fluyen con el texto y demás elementos como si fueran elementos <em>inline</em> y además respetan el ancho, el alto y los márgenes verticales.
-					</p>
-				</a>
-			</section>
-		</article>
-		<article id="css">
-			<header>
-				<a href="#">
-					<img class="index-back" src="assets/icon/back.png" alt="volver">
-				</a>
-				<h2>Hojas de Estilo en Cascada</h2>
-			</header>			
-			<section>
-				<header>
-					<h3>Estilos CSS</h3>
-					<p class="subtitle">
-						Tipos de Implementación
-						<br>(Inline - Internal - External)
-					</p>
-				</header>
-				<p>
-					Las hojas de estilo en cascada se utilizan para formatear el diseño de una página web.
-					Con CSS, se puede controlar el color, la fuente, el tamaño del texto, el espacio entre los elementos, cómo se colocan y distribuyen los elementos, qué imágenes de fondo o colores de fondo se utilizarán, diferentes pantallas para diferentes dispositivos y tamaños de pantalla, y muchas otras cosas más.
-				</p>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Inline CSS?</h4>
-					<p>
-						Se utiliza CSS en línea para aplicar estilo a un único elemento HTML mediante el atributo
-						<strong> &lt;body style="..."&gt; </strong> 
-						de un elemento HTML. Este puede contener cualquier propiedad CSS
-					</p>				
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Internal CSS?</h4>
-					<p>
-						Se usa un CSS interno para definir un estilo para una sola página HTML.
-						Se define en la seccion
-						<strong>  &lt;head&gt; </strong> 
-						de una página HTML, dentro de un elemento
-						<strong> &lt;style&gt;...&lt;/style&gt; </strong>.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es External CSS?</h4>
-					<p>
-						Las Hojas de Estilo Externa se usan para definir el estilo de multiples páginas HTML.
-						En la seccion <strong>&lt;head&gt;</strong> de cada página se agrega 
-						<strong> &lt;link rel="stylesheet" type="text/css" href="..."&gt; </strong>
-					</p>
-				</a>
-			</section>
-			<hr/>
-			<section>
-				<header>
-					<h3>Selectores</h3>
-					<p class="subtitle">
-						Escala Jerarquica
- 						<br> (Tag - Class - Id)
-					</p>
-				</header>
-				<p> 
-					Una hoja de estilos consiste en una serie de reglas. Cada regla, o conjunto de reglas consisten en uno o más selectores, y un bloque de declaración.
-					CSS tiene una sintaxis simple y usa un conjunto de palabras clave en inglés para especificar los nombres de varias propiedades de estilo.
-
-					Un selector simple es aquel que está formado solo por una única cadena textual, sin ningún combinador, como el
-					<strong> selector universal [*]</strong>, el selector por tipo de 
-					<strong> elemento del DOM</strong>, el selector de ID y de clase, el de atributo, el de pseudoclase y el de pseudoelemento.
-				</p>
-				<a href="https://google.com/search?=" class="article"> 
-					<h4>¿Que es Tag selector?</h4>
-					<p> 
-						Un selector de etiqueta permite indicar a cual de los elementos se les debe aplicar un estilo determinado mediante el nombre del mismo.
-						<strong> p{...} </strong> selecciona a todos los parrafos.
-					</p>				
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Class selector?</h4>
-					<p> 
-						Para seleccionar elementos con una clase específica, debe escribirse un
-						<em> carácter de punto </em>
-						<strong> [.]</strong>,
-						Seguido del nombre de la clase.
-						<strong> p.css{...} </strong> selecciona los parrafos con clase css.
-					</p>
-				</a>
-				<a href="https://google.com/search?=" class="article">
-					<h4>¿Que es Id selector?</h4>
-					<p>
-						Para seleccionar un elemento con Id debe escribirse un
-						<em> carácter hash </em>
-						<strong> [#]</strong>,
-						 seguido del valor utilizado como identificacion unica.
-						 <strong> p#html{...} </strong> selecciona al parrafo con Id html.
-					</p>
-				</a>
-			</section>
-		</article>
 		<a class="link" href="#">
 			<img class="index-back" src="assets/icon/upload.png" alt="volver"/>
 		</a>
 	</main>
+	<!--Pie de Pagina-->
 	<footer id="footer">
+		<!--Formulario de Contacto-->
 		<form id="contacto" action="contact.php" method="post">
-			<h2 class="subtitle">Información de Contacto</h2>		
+			<h2 class="sub">Información de Contacto</h2>		
 			<label for="nombre">Nombre</label>
 			<input 
 				id="nombre" 
@@ -459,22 +254,28 @@
 				placeholder="Nombre: Cristian Racedo" 
 				pattern="[a-z A-Z]{2,50}"
 				title="Ingrese su nombre completo sin numeros, ni simbolos" 
-				required
-			/>
+				required />
 			<label for="correo">Correo</label>
 			<input 
 				id="correo" 
 				name="correo"
 				type="email" 
 				placeholder="Correo: cristiandracedo@hotmail.com" 
-				multiple required
-			/>
+				title="Ingrese su correo respetando el formato usuario@servidor" 
+				multiple required />
 			<label for="tipo">Tipo</label>
-			<select id="tipo" name="tipo" required>
-				<option value="" hidden>Practical Web Development</option>
-				<option value="fewd">FrontEnd Web Development</option>
-				<option value="bewd">BackEnd Web Development</option>
-				<option value="fswd">FullStack Web Development</option>
+			<select 
+				id="tipo" 
+				name="tipo" 
+				placeholder="Practical Web Development"
+				title="Seleccione un tema para realizar la consulta" 
+				required>
+				<optgroup label="Practical Web Development">
+					<option hidden selected>Practical Web Development</option>
+					<option value="fewd">FrontEnd Web Development</option>
+					<option value="bewd">BackEnd Web Development</option>
+					<option value="fswd">FullStack Web Development</option>
+				</optgroup>
 			</select>
 			<label for="consulta">Consulta</label>
 			<textarea 
@@ -483,34 +284,39 @@
 				minlength="10"
 				maxlength="200" 
 				placeholder="Consulta: Realiza tu Consulta"
-			></textarea>
-			<button type="submit">
-				Enviar</button>
+				title="Escriba una consulta sobre el tema seleccionado" 
+				required></textarea>
+			<button>Enviar</button>
 		</form>
+		<!--Redes Sociales-->
 		<div class="social-media">
 			<a 	href="https://www.facebook.com/RacedoCristian" 
 				target="_blank">
-				<img src="assets/icon/facebook.png" alt="Facebook"/>
+				<img src="assets/icon/facebook.svg" alt="Facebook"/>
 			</a>
 			<a 	href="https://twitter.com/Racedo_Cristian" 
 				target="_blank">
-				<img src="assets/icon/twitter.png" alt="Twitter"/>
+				<img src="assets/icon/twitter.svg" alt="Twitter"/>
 			</a>
 			<a 	href="https://instagram.com" 
 				target="_blank">
-				<img src="assets/icon/instagram.png" alt="Instagram"/>
+				<img src="assets/icon/instagram.svg" alt="Instagram"/>
 			</a>
 			<a 	href="https://www.linkedin.com/in/racedocristian/" 
 				target="_blank">
-				<img src="assets/icon/linkedin.png" alt="LinkdeIn"/>
+				<img src="assets/icon/linkedin.svg" alt="LinkdeIn"/>
 			</a>
 			<a 	href="https://www.youtube.com/user/CR15T14ND4M14N/" 
 				target="_blank">
-				<img src="assets/icon/youtube.png" alt="YouTube"/>
+				<img src="assets/icon/youtube.svg" alt="YouTube"/>
 			</a>
 			<a 	href="https://api.whatsapp.com/send?phone=1156591548&text=%22Buenos%20dias,%20necesito%20un%20presupuesto%22" 
 				target="_blank">
-				<img src="assets/icon/whatsapp.png" alt="Whatsapp"/>
+				<img src="assets/icon/whatsapp.svg" alt="Whatsapp"/>
+			</a>
+			<a 	href="https://github.com/c215714n/EducacionIT/tree/fundamentos-HTML" 
+				target="_blank">
+				<img src="assets/icon/github.svg" alt="GitHub"/>
 			</a>
 		</div>
 		<iframe 
