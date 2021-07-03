@@ -57,13 +57,15 @@
 		width: 100%;
 		height: 100%;
 	}
+	%transition{
+		transition: all 1s ease;
+	}
 	%icon{
 		display: block;
 		width: 3rem;
 		height: 3rem;
 		@include background(2rem, $bc:#eee);
-		transition-property: all;
-		transition-duration: .5s;
+		@extend %transition;
 		opacity: .7;
 		&:hover{
 			transform: 
@@ -72,7 +74,7 @@
 				rotate(360deg);
 			opacity: 1;
 	}	}
-//Bucles
+//Loops
 	/*social media*/
 		@each $ico in $icons{
 			.#{$ico}{
@@ -93,101 +95,120 @@
 						width: percentage($i / $col);
 		}	}	}	}
 //Nesting
-	main{
-		@include normalize(auto);
-		@extend .col-sm-22, .col-md-20, .col-lg-18;
-		section{
-			article{
-				.example{
-					@extend .bg-light;
-					@include normalize(1rem, 1rem, .25rem solid $fst, $ba:border-left);
-	}	}	}	}
-	#footer{
-		@include normalize($p:3rem 1rem 0);
-		position: relative;
-		iframe{
-			position: absolute;
-			@extend %bg-item;
-			@include normalize(-1, .9, none, $ma:z-index, $pa:opacity);
-			&.active{ 
-				position: fixed; 
-				z-index: 3;
-		}	}
-		#contact{
-			@extend .col-md-20, .col-lg-16, .col-xl-12, .text-light, .bg-primary;
-			@include normalize(1rem auto, 1.5rem, .25rem, $ba:border-radius);
-			@media screen and (min-width: 1200px){
-				display: grid;
-				grid-template-columns: 50% 50%;
-				grid-template-areas: 
-					'title 		title'
-					'lblName  	lblPhone'
-					'cmdName 	cmdPhone'
-					'vldName 	vldPhone'
-					'lblEmail	lblEmail'
-					'cmdEmail 	cmdEmail'
-					'vldEmail 	vldEmail'
-					'lblConsult lblConsult'
-					'cmdConsult cmdConsult'
-					'vldConsult vldConsult'
-					'. 			button'
-					'msg 		msg';
-				gap: 0 .5rem;
-				h2{ grid-area: title;}
-				@each $cmd in $form{
-					label[for="contact#{$cmd}"]{ grid-area: lbl+$cmd}
-					#contact#{$cmd}{ 
-						grid-area: cmd+$cmd;
-						& + .valid { grid-area: vld+$cmd;}
-				}	}
-				.button{grid-area: button;}
-			}
-			label{
-				@include normalize(.5rem, $ma: margin-top, $o: uppercase, $oa: text-transform);
-				max-height: 0;
-				@media screen and (min-width: 768px){
-					max-height: 300px;
-				}
-				&::after{
-					content: ' (*)';
-					@extend .text-warning;
+	/*Main Content*/
+		main{
+			@include normalize(auto);
+			@extend .col-sm-22, .col-md-20, .col-lg-18;
+			section{
+				article{
+					.example{
+						@extend .bg-light;
+						@include normalize(1rem, 1rem, .25rem solid $fst, $ba:border-left);
+		}	}	}	}
+	/*Main Footer*/
+		#footer{
+			@include normalize($p:3rem 1rem 0);
+			position: relative;
+			iframe{
+				position: absolute;
+				@extend %bg-item;
+				@include normalize(-1, .9, none, $ma:z-index, $pa:opacity);
+				&.active{ 
+					position: fixed; 
+					z-index: 3;
 			}	}
-			textarea{
-				resize: none;
-				min-height: 8rem;
-			}
-			input,
-			textarea{
-				@include normalize(0, .5rem 1rem, .1rem solid transparent);
+		/*Contact Form*/
+			#contact{
+				@extend .col-md-20, .col-lg-16, .col-xl-12, .text-light, .bg-primary;
+				@include normalize(1rem auto, 1.5rem, .25rem, $ba:border-radius);
+				@media screen and (min-width: 1200px){
+					display: grid;
+					grid-template-columns: 50% 50%;
+					grid-template-areas: 
+						'title 		title'
+						'lblName  	lblPhone'
+						'cmdName 	cmdPhone'
+						'vldName 	vldPhone'
+						'lblEmail	lblEmail'
+						'cmdEmail 	cmdEmail'
+						'vldEmail 	vldEmail'
+						'lblConsult lblConsult'
+						'cmdConsult cmdConsult'
+						'vldConsult vldConsult'
+						'. 			button'
+						'msg 		msg';
+					gap: 0 .5rem;
+					h2{ grid-area: title;}
+					@each $cmd in $form{
+						label[for="contact#{$cmd}"]{ grid-area: lbl+$cmd}
+						#contact#{$cmd}{ 
+							grid-area: cmd+$cmd;
+							& + .valid { grid-area: vld+$cmd;}
+					}	}
+					.button{grid-area: button;}
+				}
+				label{
+					max-height: 0;
+					@include normalize(.5rem, $ma: margin-top, $o: uppercase, $oa: text-transform);
+					@media screen and (min-width: 768px){ max-height: 300px }
+					&::after{
+						content: ' (*)';
+						@extend .text-warning;
+				}	}
+				textarea{
+					resize: none;
+					min-height: 8rem;
+				}
+				input,
+				textarea{
+					@include normalize(0, .5rem 1rem, .1rem solid transparent);
+					width: 100%;
+					font-size: 1rem;
+					&:focus{
+						@extend .border-dark;
+					/* Fields Validation */
+						& + .valid {
+							@include normalize($p: .5rem);
+							max-height: 300px;
+						} &:valid { 
+							@extend .border-success;
+							& + .valid { @extend .bg-success;}
+						} &:not(:placeholder-shown):invalid {
+							@extend .border-danger;
+							& + .valid{ @extend .bg-danger; }
+				} 	}	}
+				.valid{
+					max-height: 0;
+					@extend .text-light, .bg-dark;
+					overflow: hidden;
+					text-shadow: 0 0 .5rem #333;
+				}
+			}	
+			.button{
+				@include normalize(.2rem 0, .5rem 1rem, .1rem solid, auto,$oa:margin-left);
+				text-transform: uppercase;
 				font-size: 1rem;
-				&:focus{
-					@extend .border-dark;
-					& + .valid {
-						@include normalize($p: .5rem);
-						max-height: 300px;
-					} &:valid { 
-						@extend .border-success;
-						& + .valid { @extend .bg-success;}
-					} &:not(:placeholder-shown):invalid {
-						@extend .border-danger;
-						& + .valid{ @extend .bg-danger; }
-			} 	}	}
-			.valid{
-				max-height: 0;
-				@extend .text-light, .bg-dark;
-				overflow: hidden;
-				text-shadow: 0 0 .5rem #333;
+				font-family: century gothic;
+				&.opacity{
+					@include normalize(.5rem, .5rem, 0, 0, $ba:top, $oa:right);
+					@extend .text-light, .border-dark, .bg-dark;
+					z-index: 2;
+					&.icon-min{ position: fixed; z-index: 3 }
+					&.icon-max{ position: absolute }
+			}	}
+		/*Social media*/
+			.social{
+				@include normalize(3rem auto 0, .5rem, 320px, .25rem .25rem 0 0 , $ba:max-width, $oa:border-radius);
+				@extend .bg-primary; 
 			}
-		}	
-		.button{
-			@include normalize(.2rem 0, .5rem 1rem, .1rem solid, auto,$oa:margin-left);
-			text-transform: uppercase;
-			font-size: 1rem;
-			font-family: century gothic;
-			&.opacity{
-				@include normalize(.5rem, .5rem, 0, 0, $ba:top, $oa:right);
-				@extend .text-light, .border-dark, .bg-dark;
-				z-index: 2;
-				&.icon-min{ position: fixed; z-index: 3 }
-				&.icon-max{ position: absolute }
-	}	}	}
+			.copy{
+				@include normalize(-1rem -1rem 0, 1.5rem);
+				@extend .text-light, .bg-primary;
+				a{
+					display: inline-block;
+					transition: all .5s ease-in;
+					font-weight: bold;
+					@include normalize(0 .25rem, .25rem, .25rem, $ba:border-radius, $oa:text-decoration);
+					@extend .text-secondary, .bg-light;
+					&:hover{ transform: translateY(-.5rem); }
+		}	}	}

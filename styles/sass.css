@@ -7,6 +7,10 @@
 }
 
 .youtube, .whatsapp, .twitter, .linkedin, .instagram, .github, .facebook, .css {
+  transition: all 1s ease;
+}
+
+.youtube, .whatsapp, .twitter, .linkedin, .instagram, .github, .facebook, .css {
   display: block;
   width: 3rem;
   height: 3rem;
@@ -15,8 +19,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  transition-property: all;
-  transition-duration: 0.5s;
   opacity: 0.7;
 }
 .youtube:hover, .whatsapp:hover, .twitter:hover, .linkedin:hover, .instagram:hover, .github:hover, .facebook:hover, .css:hover {
@@ -62,7 +64,7 @@
   color: #448;
 }
 
-.text-secondary {
+.text-secondary, #footer .copy a {
   color: #36c;
 }
 
@@ -70,7 +72,7 @@
   color: #333;
 }
 
-.text-light, #footer .button.opacity, #footer #contact .valid, #footer #contact {
+.text-light, #footer .copy, #footer .button.opacity, #footer #contact .valid, #footer #contact {
   color: #eee;
 }
 
@@ -90,7 +92,7 @@
   color: #48f;
 }
 
-.bg-primary, #footer #contact {
+.bg-primary, #footer .copy, #footer .social, #footer #contact {
   background-color: #448;
 }
 
@@ -102,7 +104,7 @@
   background-color: #333;
 }
 
-.bg-light, main section article .example {
+.bg-light, #footer .copy a, main section article .example {
   background-color: #eee;
 }
 
@@ -645,6 +647,7 @@
     width: 100%;
   }
 }
+/*Main Content*/
 main {
   margin: auto;
   outline: 0;
@@ -658,12 +661,15 @@ main section article .example {
   padding: 1rem;
 }
 
+/*Main Footer*/
 #footer {
   margin: 0;
   outline: 0;
   border: 0;
   padding: 3rem 1rem 0;
   position: relative;
+  /*Contact Form*/
+  /*Social media*/
 }
 #footer iframe {
   position: absolute;
@@ -733,11 +739,11 @@ main section article .example {
   }
 }
 #footer #contact label {
+  max-height: 0;
   margin-top: 0.5rem;
   text-transform: uppercase;
   border: 0;
   padding: 0;
-  max-height: 0;
 }
 @media screen and (min-width: 768px) {
   #footer #contact label {
@@ -757,7 +763,12 @@ main section article .example {
   outline: 0;
   border: 0.1rem solid transparent;
   padding: 0.5rem 1rem;
+  width: 100%;
   font-size: 1rem;
+}
+#footer #contact input:focus,
+#footer #contact textarea:focus {
+  /* Fields Validation */
 }
 #footer #contact input:focus + .valid,
 #footer #contact textarea:focus + .valid {
@@ -794,6 +805,30 @@ main section article .example {
 }
 #footer .button.opacity.icon-max {
   position: absolute;
+}
+#footer .social {
+  margin: 3rem auto 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  max-width: 320px;
+  padding: 0.5rem;
+}
+#footer .copy {
+  margin: -1rem -1rem 0;
+  outline: 0;
+  border: 0;
+  padding: 1.5rem;
+}
+#footer .copy a {
+  display: inline-block;
+  transition: all 0.5s ease-in;
+  font-weight: bold;
+  margin: 0 0.25rem;
+  text-decoration: 0;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+#footer .copy a:hover {
+  transform: translateY(-0.5rem);
 }
 
 /*# sourceMappingURL=sass.css.map */

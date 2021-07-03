@@ -52,6 +52,7 @@
                     &.active{ width: 3rem; }
                 }
             }
+            /*Slide Gallery*/
             .slide{
                 .unstyled; // aplicacion del Mixin
                 .normalize;
@@ -64,12 +65,14 @@
                     z-index: -1;
                     background-size: cover;
                     background-position: center;
+                    background-attachment: fixed;
                     opacity: 0;
                     transition: all .5s ease-in;
                     .bg;
                     &.active{ opacity: 1; }
                 }
             }
+            /*Slide Controls*/
             button{
                 .unstyled;
                 .normalize(@p: .5rem);
@@ -83,27 +86,28 @@
             }
         }
     /*Main Content*/
-        main{
-            section{
-                .rounded;
-                    .example{
-                        .unstyled;
-                        .flexbox;
-        }   }   }
+        main section{ 
+            .rounded;
+            .example{
+                .unstyled;
+                .flexbox;
+        }   }
     /*Main Footer*/
         #footer{
+            /*Contact Form*/
             #contact{ 
                 .flexbox(column); 
                 .normalize(auto); 
                 @media screen and (min-width: @sm){.col-22;}
                 @media screen and (min-width: @md){.col-12;}
             }
+            /*Social Media*/
             .social{
-                .flexbox;
+                .flexbox(@fj: space-evenly);
                 a{
                     .unstyled;
                     .rounded;
-                    .normalize(.5rem; .5rem);
+                    .normalize(.25rem; .5rem);
                     background-color: @light;
                     font-size: calc(1vw + 1rem)
         }   }   }   

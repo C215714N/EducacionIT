@@ -60,6 +60,7 @@
 				linear-gradient( var(--snd), var(--fst) );
 		}
 		nav a{
+			position: relative;
 			display: block;
 			padding: .5rem;
 			color: var(--light);
@@ -78,17 +79,49 @@
 			padding: 0;
 			list-style: none;
 			overflow: hidden;
+			transition: all .5s ease-in-out;
 		}
 		.menu a:hover{ background-color: var(--hover) }
 		.menu span{ padding: .5rem }
 		.menu.active{ max-height: 600px }
-	/*Headings*/
-		h1{ font-family: "star wars" }
+		.menu a::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: .2rem;
+			background-color: var(--light);
+			opacity: 0;
+			transition: all 1s ease-out;
+		}
+		.menu a:hover::after{
+			opacity: 1;
+			width: 100%;
+		}
+	/*Main Header*/
+		#header{
+			perspective: 300px;
+			perspective-origin:top center;
+			padding: .5rem;
+			overflow: hidden;
+		}
+		h1{ 
+			font-family: "star wars";
+			transform: rotateX(10deg);
+		}
 	/*Main Content*/
+		.example li,
+		.example div{
+			padding: .5rem;
+		}
 		.example img,
 		.example video,
-		.example iframe{
+		.example iframe,
+		.example progress,
+		.example meter{
 			width: 100%;
+			min-height: 1.5rem;
 		}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
