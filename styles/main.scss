@@ -187,7 +187,7 @@
 			&.opacity{
 				@include normalize(.5rem, .5rem, 0, 0, $ba:top, $oa:right);
 				@extend .text-light, .border-dark, .bg-dark;
-				z-index: 3;
-				&.icon-min{ position: fixed }
+				z-index: 2;
+				&.icon-min{ position: fixed; z-index: 3 }
 				&.icon-max{ position: absolute }
 	}	}	}

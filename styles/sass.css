@@ -786,10 +786,11 @@ main section article .example {
   right: 0;
   top: 0;
   padding: 0.5rem;
-  z-index: 3;
+  z-index: 2;
 }
 #footer .button.opacity.icon-min {
   position: fixed;
+  z-index: 3;
 }
 #footer .button.opacity.icon-max {
   position: absolute;

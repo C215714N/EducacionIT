@@ -30,6 +30,7 @@
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem #333;
   background: #eee;
+  transition: all 0.5s ease-out;
 }
 #header .header span.active {
   width: 3rem;
@@ -52,6 +53,7 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
+  transition: all 0.5s ease-in;
 }
 #header .slide li:nth-child(1) {
   background-image: url('../assets/img/osx-high-sierra.jpg');
