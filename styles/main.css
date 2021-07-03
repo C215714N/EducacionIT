@@ -81,6 +81,12 @@
 		.menu.active{ max-height: 600px }
 	/*Headings*/
 		h1{ font-family: "star wars" }
+	/*Main Content*/
+		.example img,
+		.example video,
+		.example iframe{
+			width: 100%;
+		}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 		

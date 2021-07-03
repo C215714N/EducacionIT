@@ -40,6 +40,16 @@
                 font-size: calc(2vw + .5rem); /*Viewport Width: Ancho Ventana*/
                 text-align: center;
                 h1, p{ margin: 0 }
+                span{
+                    display: inline-block;
+                    width: 1rem;
+                    height: 1rem;
+                    .normalize(.25rem, .5rem, none);
+                    border-radius: 1rem;
+                    box-shadow: 0 0 .5rem @dark;
+                    background: @light;
+                    &.active{ width: 3rem; }
+                }
             }
             .slide{
                 .unstyled; // aplicacion del Mixin
