@@ -51,6 +51,12 @@
 	}
 //Hidden Style
 	/*icons*/
+	%bg-item{
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+	}
 	%icon{
 		display: block;
 		width: 5rem;
@@ -86,13 +92,24 @@
 		section{
 			article{
 				.example{
+					@extend .bg-light;
 					@include normalize(1rem, 1rem, .25rem solid $fst, $ba:border-left);
 	}	}	}	}
 	#footer{
-		@include normalize($p:1rem);
+		@include normalize($p:3rem 1rem 0);
+		position: relative;
+		iframe{
+			position: absolute;
+			@extend %bg-item;
+			@include normalize(-1, .9, none, $ma:z-index, $pa:opacity);
+			&.active{ 
+				position: fixed; 
+				z-index: 3;
+			}
+		}
 		#contact{
-			@extend .col-md-20, .col-lg-16, .col-xl-12;
-			@include normalize(auto);
+			@extend .col-md-20, .col-lg-16, .col-xl-12, .text-light, .bg-primary;
+			@include normalize(1rem auto, 1.5rem, .25rem, $ba:border-radius);
 			@media screen and (min-width: 1200px){
 				display: grid;
 				grid-template-columns: 50% 50%;
@@ -118,7 +135,6 @@
 						& + .valid { grid-area: vld+$cmd;}
 				}	}
 				.button{grid-area: button;}
-
 			}
 			label{
 				@include normalize(.5rem, $ma: margin-top, $o: uppercase, $oa: text-transform);
@@ -128,7 +144,7 @@
 				}
 				&::after{
 					content: ' (*)';
-					@extend .text-danger;
+					@extend .text-warning;
 			}	}
 			textarea{
 				resize: none;
@@ -137,7 +153,6 @@
 			input,
 			textarea{
 				@include normalize(0, .5rem 1rem, .1rem solid transparent);
-				@extend .bg-light;
 				font-size: 1rem;
 				&:focus{
 					@extend .border-dark;
@@ -157,13 +172,16 @@
 				overflow: hidden;
 				text-shadow: 0 0 .5rem #333;
 			}
-			.button{
-				@include normalize(.2rem 0, .5rem 1rem, .1rem solid, auto,$oa:margin-left);
-				text-transform: uppercase;
-				font-size: 1rem;
-				font-family: century gothic;
-				@extend .bg-light, .text-dark, .border-dark;
-				&:hover{
-					@extend .bg-dark, .text-light;
-				}
+		}	
+		.button{
+			@include normalize(.2rem 0, .5rem 1rem, .1rem solid, auto,$oa:margin-left);
+			text-transform: uppercase;
+			font-size: 1rem;
+			font-family: century gothic;
+			&.opacity{
+				@include normalize(.5rem, .5rem, 0, 0, $ba:top, $oa:right);
+				@extend .text-light, .border-dark, .bg-dark;
+				z-index: 3;
+				&.icon-min{ position: fixed }
+				&.icon-max{ position: absolute }
 	}	}	}

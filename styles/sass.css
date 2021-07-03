@@ -1,4 +1,11 @@
 /*icons*/
+#footer iframe {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .youtube, .whatsapp, .twitter, .linkedin, .instagram, .github, .facebook, .css {
   display: block;
   width: 5rem;
@@ -59,11 +66,11 @@
   color: #36c;
 }
 
-.text-dark, #footer #contact .button {
+.text-dark {
   color: #333;
 }
 
-.text-light, #footer #contact .button:hover, #footer #contact .valid {
+.text-light, #footer .button.opacity, #footer #contact .valid, #footer #contact {
   color: #eee;
 }
 
@@ -71,11 +78,11 @@
   color: #3c6;
 }
 
-.text-danger, #footer #contact label::after {
+.text-danger {
   color: #c33;
 }
 
-.text-warning {
+.text-warning, #footer #contact label::after {
   color: #dc3;
 }
 
@@ -83,7 +90,7 @@
   color: #48f;
 }
 
-.bg-primary {
+.bg-primary, #footer #contact {
   background-color: #448;
 }
 
@@ -91,12 +98,11 @@
   background-color: #36c;
 }
 
-.bg-dark, #footer #contact .button:hover, #footer #contact .valid {
+.bg-dark, #footer .button.opacity, #footer #contact .valid {
   background-color: #333;
 }
 
-.bg-light, #footer #contact .button, #footer #contact input,
-#footer #contact textarea {
+.bg-light, main section article .example {
   background-color: #eee;
 }
 
@@ -126,7 +132,7 @@
   border-color: #36c;
 }
 
-.border-dark, #footer #contact .button, #footer #contact input:focus,
+.border-dark, #footer .button.opacity, #footer #contact input:focus,
 #footer #contact textarea:focus {
   border-color: #333;
 }
@@ -656,13 +662,25 @@ main section article .example {
   margin: 0;
   outline: 0;
   border: 0;
-  padding: 1rem;
+  padding: 3rem 1rem 0;
+  position: relative;
+}
+#footer iframe {
+  position: absolute;
+  z-index: -1;
+  outline: 0;
+  border: none;
+  opacity: 0.9;
+}
+#footer iframe.active {
+  position: fixed;
+  z-index: 3;
 }
 #footer #contact {
-  margin: auto;
+  margin: 1rem auto;
   outline: 0;
-  border: 0;
-  padding: 0;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
 }
 @media screen and (min-width: 1200px) {
   #footer #contact {
@@ -754,7 +772,7 @@ main section article .example {
   overflow: hidden;
   text-shadow: 0 0 0.5rem #333;
 }
-#footer #contact .button {
+#footer .button {
   margin: 0.2rem 0;
   margin-left: auto;
   border: 0.1rem solid;
@@ -762,6 +780,19 @@ main section article .example {
   text-transform: uppercase;
   font-size: 1rem;
   font-family: century gothic;
+}
+#footer .button.opacity {
+  margin: 0.5rem;
+  right: 0;
+  top: 0;
+  padding: 0.5rem;
+  z-index: 3;
+}
+#footer .button.opacity.icon-min {
+  position: fixed;
+}
+#footer .button.opacity.icon-max {
+  position: absolute;
 }
 
 /*# sourceMappingURL=sass.css.map */
