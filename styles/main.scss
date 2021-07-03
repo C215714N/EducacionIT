@@ -59,11 +59,18 @@
 	}
 	%icon{
 		display: block;
-		width: 5rem;
-		height: 5rem;
-		@include background(2.5rem);
+		width: 3rem;
+		height: 3rem;
+		@include background(2rem, $bc:#eee);
+		transition-property: all;
+		transition-duration: .5s;
+		opacity: .7;
 		&:hover{
-			@include background(4rem, $bc:#fefefe);
+			transform: 
+				scale(1.5)
+				translate(0, -.5rem)
+				rotate(360deg);
+			opacity: 1;
 	}	}
 //Bucles
 	/*social media*/
