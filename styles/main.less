@@ -17,8 +17,20 @@
 		@xl: 	1200px;
 		@col: 	24;
 		@r: 	2.5rem;
+	//Archivos
+	@path: '../assets/img';
+	@backgrounds: 
+		'osx-high-sierra.jpg',
+		'osx-leopard.png',
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave-night.jpg',
+		'osx-mojave.jpg',
+		'osx-mountain-lion.jpg',
+		'osx-sierra.jpg',
+		'osx-snow-leopard.png';
 //Nesting: Colocando un selector dentro de otro, nos crea un selector especifico
-	/*Header*/
+/*Header*/
 	#header{
 		.normalize(@p:1rem);
 		.position(relative);
@@ -28,7 +40,6 @@
 		height: 100vh;/*viewport height*/
 		min-height: 200px;
 		max-height: 600px;
-		background-color: @dark;
 		text-align: center;
 		.header{
 			.text-shadow;
@@ -37,17 +48,31 @@
 			h1{ font-family: star wars; }
 			h1,p{ .normalize; }
 		}
+/*Slide Gallery*/
 		.slide{
 			.normalize;
 			.position;
+			width: 100%;
+			height: 100%;
 			list-style: none;
-			li{ .position; }
+			li{ 
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				opacity:0;
+				.position; 
+				background-size: cover;
+				background-position: center;
+				.bg;
+				&.active{ opacity: 1; }
+			}
 		}
 		button{
 			.normalize(@p:.5rem);
 			.position(@xa:bottom);
 			color: @light;
 			background-color: transparent;
+			font-size: calc(2vw + 1rem);
 			&.icon-prev{ .position; }
 			&.icon-next{ .position(@xa:right); }
 		}
@@ -74,3 +99,17 @@
 		@{xa}: @x;
 	}
 //Mixins Recursivos: Estilos que se repiten en base a una condicion;
+	/* Grid System */ 
+		.grid (@i:1) when (@i <= @col){
+			.col-@{i}{ width: percentage( (@i/@col) ); }
+			.grid(@i + 1);
+		}
+		.grid;
+	// Slide Gallery
+		.bg (@i:1) when (@i <= length(@backgrounds)){
+			@bg: extract(@backgrounds, @i);
+			&:nth-child(@{i}){
+				background-image: url('@{path}/@{bg}');
+			}
+			.bg(@i + 1);
+		}
