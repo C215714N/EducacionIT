@@ -1,3 +1,8 @@
+/*Importaciones*/
+	@font-face{
+		src: url('../assets/fonts/starjedi.ttf');
+		font-family: 'star wars';
+	}
 //Variables Globales
 	//Colores
 		@first: #448;
@@ -17,17 +22,26 @@
 	#header{
 		.normalize(@p:1rem);
 		.position(relative);
-		
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;/*viewport height*/
+		min-height: 200px;
+		max-height: 600px;
+		background-color: @dark;
+		text-align: center;
 		.header{
 			.text-shadow;
 			color: @light;
+			font-size: calc(2vw + .5rem); /*viewport width*/
+			h1{ font-family: star wars; }
+			h1,p{ .normalize; }
 		}
 		.slide{
 			.normalize;
+			.position;
 			list-style: none;
-			li{
-				.position;
-			}
+			li{ .position; }
 		}
 		button{
 			.normalize(@p:.5rem);
