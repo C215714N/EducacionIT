@@ -53,6 +53,9 @@
 			color: var(--light);
 			text-decoration: none;
 		}
+		nav span{
+			padding: .5rem;
+		}
 		.logo{
 			font-weight: bold;
 			text-transform: uppercase;
@@ -74,6 +77,7 @@
 			position: fixed;
 			right: .5rem;
 			bottom: .5rem;
+			border-radius: 1rem;
 			background-color: var(--dark);
 		}
 	/*Header*/
@@ -87,13 +91,32 @@
 	}
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
-
+	/*Navigation*/
+		nav .btn,
+		nav span{ 
+			display: none 
+		}	
+		nav .menu,
+		.menu a{
+			display: flex;
+			align-items: center;
+		}
+		nav .menu{ 
+			width: auto;
+			max-height: 600px; 
+		}
+		.menu a{ font-size: 1.5rem; }	
 	}
 /*Large Devices - Desktop*/
 	@media screen and (min-width: 992px){
-
+	/*Navigation*/
+		nav span{
+			display: block;
+			font-size: 1rem;
+		}
 	}
 /*ExtraLarge Devices - HD Desktop*/	
 	@media screen and (min-width: 1200px){
-
+	/*Navigation*/
+		nav{ justify-content: space-around }
 	}
