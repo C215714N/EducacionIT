@@ -3,6 +3,9 @@
   margin: 0;
   border: none;
   padding: 1rem;
+  position: relative;
+  top: 0;
+  left: 0;
   background-color: #333;
 }
 #header .header {
@@ -13,15 +16,32 @@
   margin: 0;
   border: none;
   padding: 0;
+  list-style: none;
 }
 #header .slide li {
-  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #header button {
   margin: 0;
   border: none;
   padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: #eee;
   background-color: transparent;
+}
+#header button.icon-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#header button.icon-next {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .text-shadow {
   text-shadow: 0 0 0.5rem #333;

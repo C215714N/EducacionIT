@@ -16,20 +16,26 @@
 	/*Header*/
 	#header{
 		.normalize(@p:1rem);
-		background-color: @dark;
+		.position(relative);
+		
 		.header{
 			.text-shadow;
 			color: @light;
 		}
 		.slide{
 			.normalize;
+			list-style: none;
 			li{
-				list-style: none;
+				.position;
 			}
 		}
 		button{
 			.normalize(@p:.5rem);
+			.position(@xa:bottom);
+			color: @light;
 			background-color: transparent;
+			&.icon-prev{ .position; }
+			&.icon-next{ .position(@xa:right); }
 		}
 	}
 //Mixins: Estilos anidables que se utilizan como atributos;
@@ -48,7 +54,9 @@
 		border: @b;
 		padding: @p;
 	}
-	.position(){
-		
+	.position(@p: absolute; @x:0; @y:0; @ya:top; @xa:left){
+		position:@p;
+		@{ya}: @y;
+		@{xa}: @x;
 	}
 //Mixins Recursivos: Estilos que se repiten en base a una condicion;
