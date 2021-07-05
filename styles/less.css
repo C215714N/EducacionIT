@@ -1,4 +1,31 @@
-nav {
+/*Header*/
+#header {
+  margin: 0;
+  border: none;
+  padding: 1rem;
+  background-color: #333;
+}
+#header .header {
+  text-shadow: 0 0 0.5rem #333;
   color: #eee;
-  background-color: #448;
+}
+#header .slide {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+#header .slide li {
+  list-style: none;
+}
+#header button {
+  margin: 0;
+  border: none;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+.text-shadow {
+  text-shadow: 0 0 0.5rem #333;
+}
+.box-shadow {
+  box-shadow: 0 0 0.5rem #333;
 }

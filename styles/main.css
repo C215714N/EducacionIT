@@ -1,5 +1,6 @@
 /*Content First - Mobile First*/
 	/*General Rules*/
+		@import url('icomoon.css');
 		@import url('less.css');
 		:root{
 			--first: #448;
@@ -81,9 +82,18 @@
 
 	/*Footer*/
 /*Small Devices - Smartphones*/
+	@media screen and (min-width: 576px){
 
+	}
 /*Medium Devices - Tablets*/
+	@media screen and (min-width: 768px){
 
+	}
 /*Large Devices - Desktop*/
+	@media screen and (min-width: 992px){
 
-/*ExtraLarge Devices - HD Desktop*/
+	}
+/*ExtraLarge Devices - HD Desktop*/	
+	@media screen and (min-width: 1200px){
+
+	}

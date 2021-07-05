@@ -1,7 +1,51 @@
-@color: #eee
-@bg-color: #448
-
-nav{
-	color: @color;
-	background-color: @bg-color;
-}
+//Variables Globales
+	//Colores
+		@first: #448;
+		@second:#36c;
+		@light: #eee;
+		@dark: 	#333;
+		@hover: rgba(51,51,51,.5);
+	//Medidas
+		@sm: 	576px;
+		@md: 	768px;
+		@lg: 	992px;
+		@xl: 	1200px;
+		@col: 	24;
+		@r: 	2.5rem;
+//Nesting: Colocando un selector dentro de otro, nos crea un selector especifico
+	/*Header*/
+	#header{
+		.normalize(@p:1rem);
+		background-color: @dark;
+		.header{
+			.text-shadow;
+			color: @light;
+		}
+		.slide{
+			.normalize;
+			li{
+				list-style: none;
+			}
+		}
+		button{
+			.normalize(@p:.5rem);
+			background-color: transparent;
+		}
+	}
+//Mixins: Estilos anidables que se utilizan como atributos;
+	.rounded(){
+		-webkit-border-radius: @r;
+		-moz-border-radius: @r;
+		-ms-border-radius: @r;
+		-o-border-radius: @r;
+		border-radius: @r;
+	}
+	.text-shadow{ text-shadow: 0 0 .5rem @dark; }
+	.box-shadow{ box-shadow: 0 0 .5rem @dark; }
+//Mixins Parametricos: Estilos que reciben valores que van a se aplicados;
+	.normalize(@m:0; @p:0; @b:none){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+//Mixins Recursivos: Estilos que se repiten en base a una condicion;
