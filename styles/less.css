@@ -36,6 +36,24 @@
   border: none;
   padding: 0;
 }
+#header .header span {
+  margin: 0.25rem;
+  border: none;
+  padding: 0;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem #333;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #eee;
+}
+#header .header span.active {
+  width: 3rem;
+}
 #header .slide {
   margin: 0;
   border: none;

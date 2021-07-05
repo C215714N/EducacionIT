@@ -16,7 +16,7 @@
 		@lg: 	992px;
 		@xl: 	1200px;
 		@col: 	24;
-		@r: 	2.5rem;
+		@r: 	.5rem;
 	//Archivos
 	@path: '../assets/img';
 	@backgrounds: 
@@ -47,6 +47,18 @@
 			font-size: calc(2vw + .5rem); /*viewport width*/
 			h1{ font-family: star wars; }
 			h1,p{ .normalize; }
+			span{ 
+				.normalize(.25rem);
+				.rounded;
+				.box-shadow;
+				display: inline-block;
+				width: 1rem;
+				height: 1rem;
+				background-color: @light;
+				&.active{
+					width: 3rem;
+				}
+			}
 		}
 /*Slide Gallery*/
 		.slide{
