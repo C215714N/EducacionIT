@@ -97,7 +97,7 @@
 //Nesting
 	/*Main Content*/
 		main{
-			@include normalize(auto);
+			@include normalize(.5rem auto, .5rem);
 			@extend .col-sm-22, .col-md-20, .col-lg-18;
 			section{
 				article{

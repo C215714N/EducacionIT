@@ -37,3 +37,11 @@
 						i > 0 ? newItem = itemList[i - 1] :	newItem = itemList[itemList.length - 1]
 		}	}	}	newItem.classList.add('active')
 	}
+/*Parallax Effect*/
+	bgList = document.querySelectorAll('section.parallax')
+	window.onscroll = () => { bgList.forEach( bg => {
+			if (bg.getBoundingClientRect().top < window.innerHeight ){
+				bg.style.backgroundPosition = `
+					center ${bg.getBoundingClientRect().top * 2}px,
+					center ${bg.getBoundingClientRect().top / 2}px`
+	} 	}	)	}

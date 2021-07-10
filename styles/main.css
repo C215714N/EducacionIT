@@ -123,6 +123,22 @@
 			width: 100%;
 			min-height: 1.5rem;
 		}
+		/*Parallax Effect*/
+			.parallax{
+				min-width: 100vh;
+				padding-top: 50%;
+				background-image: 
+					url('../assets/icon/css.svg'),
+					url('../assets/img/osx-big-sur-day.jpg');
+				background-repeat: no-repeat;
+				background-size: 6rem, cover;
+				background-attachment: fixed;
+			}
+			.parallax *{
+				margin: 0;
+				padding: 1rem;
+				background-color: var(--light);
+			}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 		
