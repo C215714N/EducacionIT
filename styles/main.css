@@ -109,7 +109,16 @@
 		h1{ 
 			font-family: "star wars";
 			transform: rotateX(10deg);
+			animation-name: appear;
+			animation-duration: 5s;
+			animation-timing-function: linear;
 		}
+		@keyframes appear{
+			from{
+				transform: 
+					scale(10)
+					translateY(50%);
+		}	}
 	/*Main Content*/
 		.example li,
 		.example div{
@@ -139,6 +148,91 @@
 				padding: 1rem;
 				background-color: var(--light);
 			}
+		/*Animations*/
+			.animation div{
+				width: 100%;
+				max-width: 20rem;
+				margin: .5rem;
+				padding: 1rem;
+				color: var(--light);
+				background-color: var(--fst);
+				text-shadow: 0 0 .5rem var(--dark);
+				animation: moveIt 5s ease 2s;
+				animation-iteration-count: infinite;
+			}
+			.loading div{
+				width: 5rem;
+				height: 5rem;
+				margin: .5rem;
+				border-radius: 50%;
+				border: .5rem solid;
+				border-color: transparent lightblue skyblue darkblue;
+				animation: loading 1s .5s infinite;
+			}
+			.travel{ min-height: 15rem; }
+			.travel div{
+				width: 5rem;
+				height: 3rem;
+				border-radius: .5rem;
+				border: .2rem solid var(--light);
+				background-color: var(--snd);
+				animation: travel 5s .2s infinite;
+			}
+			/*Timing Function*/
+				.timing div:nth-child(2){ animation-timing-function: ease-in; }
+				.timing div:nth-child(3){ animation-timing-function: ease-out; }
+				.timing div:nth-child(4){ animation-timing-function: ease-in-out; }
+				.timing div:nth-child(5){ animation-timing-function: linear; }
+				.timing div:nth-child(6){ animation-timing-function: cubic-bezier(0, 1, 1, 0); }
+			/*Direction*/
+				.direction div:nth-child(2){ animation-direction: reverse; }
+				.direction div:nth-child(3){ animation-direction: alternate; }
+				.direction div:nth-child(4){ animation-direction: alternate-reverse; }
+			/*Animation Keyframes*/
+				@keyframes moveIt {
+					from{
+						background-color: #c33;
+						transform: translate(-10rem);
+					}
+					to{
+						background-color: #3c6;
+						transform: translate(10rem);
+				}	}
+				@keyframes loading{
+					to{ transform: rotate(360deg); }
+				}
+				@keyframes travel{
+					0%{
+						transform: 
+							translate(0,0) 
+							skew(15deg, 0);
+						background-color: hsl(0, 50%, 50%);
+					}
+					25%{
+						transform: 
+							translate(20rem, 0) 
+							skew(0, 15deg) ;
+						background-color: hsl(90, 50%, 50%);
+					}	
+					50%{
+						transform: 
+						 translate(20rem, 10rem) 
+						 skew(-15deg, 0);
+						background-color: hsl(180, 50%, 50%);
+					}
+					75%{
+						transform: 
+							translate(0, 10rem) 
+							skew(0, -15deg);
+						background-color: hsl(270, 50%, 50%);
+					}
+					100%{
+						transform: 
+							translate(0,0) 
+							skew(15deg,0);
+						background-color: hsl(360, 50%, 50%);
+					}
+				}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 		
