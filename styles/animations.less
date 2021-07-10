@@ -1,0 +1,85 @@
+// Variables
+	@functions: 
+		lineal,				
+		cuadratica,			
+		trigonometrica,		
+		exponencial,				
+		limite,				
+	;
+// Nesting
+.anima{
+	min-height: 100vh;
+	overflow: hidden;
+	background: url('../assets/img/osx-big-sur-night.jpg') center;
+	background-size: cover;
+	div{
+		width: 2rem;
+		height: 2rem;
+		margin: .25rem;
+		border-radius: 50%;
+		background-color: var(--light);
+		opacity: .5;
+		.childs;
+	}
+}
+// Mixin Recursivo (nth-childs)
+	.childs(@i: 1) when (@i <= length(@functions)){
+		@f: extract(@functions, @i);
+		&:nth-child(@{i}n){
+			animation-name: @f;	
+			animation-duration: 2s;
+			animation-direction: alternate;
+			animation-delay: @i * .5s;
+			animation-iteration-count:infinite;
+		}
+		.childs(@i + 1);
+	}
+// Mixin Recursivo condicional(keyframes){
+	.animations(@n: 1) when (@n <= length(@functions)){
+		@f: extract(@functions, @n);
+		@keyframes @f{ 
+			.keyframes(@i:0%; @x: -20px) when (@i <= 100%){
+				@{i}{
+					transform:
+						if(@f = lineal,
+							translate( (@x + 20px)*20px, @x + 20px),
+						if(@f = cuadratica,
+							translate( (@x + 20px)*30px, pow(@x, 2)),
+						if(@f = trigonometrica, 
+							translate( (@x + 20px)*10px, sin(@x) * 200px),
+						if(@f = exponencial, 
+							translate( (@x + 20px)*10px, pow(1.2px, @x)),
+						if(@x = 0,
+							translate( (@x + 20px)*10px, (1 / (@x + 1))),
+							translate( (@x + 20px)*10px, (1 / @x))
+						)	)	)	)	);
+				}	
+				.keyframes(@i + 5; @x + 5);
+			}	.keyframes;
+		}	
+		.animations(@n + 1);
+	}	.animations;
+
+// Multiple atributes
+	.btn{
+		margin: .5rem auto;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		border: .1rem solid var(--light);
+		color: var(--light);
+		background-color: transparent;
+		transition: all 1s ease-out;
+		font-size: 1rem;
+		text-transform: uppercase;
+		&:hover{
+			.box-shadow;
+			color:var(--fst);
+			background-color: var(--light);
+		}
+	}
+
+	.box-shadow(@i: 0) when (@i <= 360){
+		box-shadow+: sin(@i) * 3rem cos(@i) * 3rem .2rem hsla(@i, 60%, 60%, .5);
+		.box-shadow(@i + 30);
+	}
