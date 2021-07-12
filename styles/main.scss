@@ -1,0 +1,155 @@
+//Variables
+	$col: 24;
+	$path: '../assets/icon';
+	$icons:
+		'css',
+		'facebook',
+		'github',
+		'instagram',
+		'linkedin',
+		'twitter',
+		'whatsapp',
+		'youtube';
+	$viewport:
+		sm 576px,
+		md 768px,
+		lg 992px,
+		xl 1200px;
+	$attributes:
+		text 		color,
+		bg 			background-color,
+		border 		border-color;
+	$colors:
+		primary 	#448,
+		secondary 	#248,
+		light 		#eee,
+		dark 		#333,
+		success		#3c6,
+		warning  	#ec3,
+		danger 		#c33,
+		info 		#38e;
+	$areas: lbl, cmd, vld ;
+	$form: Name, Email, Phone, Consult;
+//Mixins
+	@mixin normalize (
+		$m:0, $p:0, $b:0,
+		$ba:border, $ma:margin, $pa:padding
+	){
+		#{$ma}: $m;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+	@mixin flexbox(
+		$fd: row,
+		$fj: center,
+		$fa: stretch,
+		$fw: wrap,
+		$f: flex
+	){
+		display: $f;
+		flex-direction: $fd;
+		justify-content: $fj;
+		align-items: $fa;
+		flex-wrap: $fw;
+	}
+//Loops
+	/*Social Media Icons*/
+		@each $ico in $icons{
+			.#{$ico}{ background-image: url('#{$path}/#{$ico}.svg') }
+		}
+	/*Grid System*/
+		@each $vn,$vw in $viewport{
+			@media screen and (min-width: $vw){
+				@for $i from 1 through $col{
+				.col-#{$vn}-#{$i}{
+					width: percentage($i / $col);
+		}	}	}	}
+	/*colors*/
+		@each $prop, $attr in $attributes{
+			@each $cn, $cv in $colors {
+				.#{$prop}-#{$cn}{
+					#{$attr}: $cv;
+		}	}	}
+//Nesting
+	#footer{
+		@include normalize($p:1rem);
+		#contact{
+			@include normalize(.5rem auto, 1rem, .25rem, border-radius);
+			@include flexbox(column);
+			@extend 
+				.col-sm-20, 
+				.col-md-16, 
+				.col-lg-12, 
+				.text-light, 
+				.bg-primary;
+			@media screen and (min-width: 1200px){
+				display: grid;
+				grid-template-areas: 
+					'heading 	heading'
+					'lblName 	lblPhone'
+					'cmdName 	cmdPhone'
+					'vldName 	vldPhone'
+					'lblEmail	lblEmail'
+					'cmdEmail 	cmdEmail'
+					'vldEmail 	vldEmail'
+					'lblConsult lblConsult'
+					'cmdConsult cmdConsult'
+					'. 			btn';
+				gap: 0 .5rem;
+				@each $a in  $areas{
+					$selector:'#contact';
+					@each $field in $form{
+						@if $a == lbl { 
+							$selector: 'label[for="contact#{$field}"]'; 
+						} @else if $a == cmd { 
+							$selector: '#contact#{$field}';
+						} @else { 
+							$sel: '#contact#{$field} + .valid'; 
+						} 
+					#{$selector}{ grid-area: $a+$field; }
+				}	}
+				.btn{ grid-area: btn; }
+				h2{ grid-area: heading; }
+			}
+			label{
+				max-height:0;
+				margin-top: .5rem;
+				&::after{
+					content: ' *';
+					@extend .text-warning;
+				}
+				@media screen and (min-width: 768px){ max-height: 200px; }
+			}
+			textarea{ 
+				min-height: 8rem;
+				resize: none;
+			}
+			input,
+			textarea{
+				@include normalize(.25rem, .5rem 1rem, .1rem solid transparent, $ma:border-radius);
+				outline: none;
+				&:focus{
+					@extend .border-dark;
+					& + .valid{
+						@include normalize($p:.5rem); 
+						max-height: 600px;
+					} &:valid{
+						@extend .border-success;
+						& + .valid{ @extend .bg-success; }
+					} &:not(:placeholder-shown):invalid{
+						@extend .border-danger;
+						& + .valid{ @extend .bg-danger;  }
+					}
+				}
+			}
+			.valid{
+				@extend .text-light, .bg-dark;
+				max-height: 0;
+				overflow: hidden;
+				text-shadow: 0 0 .5rem #333;
+			}
+			.btn{
+				@include normalize(.25rem 0, .5rem 1rem, auto, $ba:margin-left);
+			}
+		}
+	}

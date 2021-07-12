@@ -1,0 +1,630 @@
+/*Social Media Icons*/
+.css {
+  background-image: url("../assets/icon/css.svg");
+}
+
+.facebook {
+  background-image: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  background-image: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  background-image: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  background-image: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  background-image: url("../assets/icon/twitter.svg");
+}
+
+.whatsapp {
+  background-image: url("../assets/icon/whatsapp.svg");
+}
+
+.youtube {
+  background-image: url("../assets/icon/youtube.svg");
+}
+
+/*Grid System*/
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-sm-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-sm-3 {
+    width: 12.5%;
+  }
+
+  .col-sm-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-sm-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-sm-6 {
+    width: 25%;
+  }
+
+  .col-sm-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-sm-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-sm-9 {
+    width: 37.5%;
+  }
+
+  .col-sm-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-sm-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-sm-12 {
+    width: 50%;
+  }
+
+  .col-sm-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-sm-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-sm-15 {
+    width: 62.5%;
+  }
+
+  .col-sm-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-sm-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-sm-18 {
+    width: 75%;
+  }
+
+  .col-sm-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-sm-20, #footer #contact {
+    width: 83.3333333333%;
+  }
+
+  .col-sm-21 {
+    width: 87.5%;
+  }
+
+  .col-sm-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-sm-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-sm-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-md-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-md-3 {
+    width: 12.5%;
+  }
+
+  .col-md-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-md-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-md-6 {
+    width: 25%;
+  }
+
+  .col-md-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-md-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-md-9 {
+    width: 37.5%;
+  }
+
+  .col-md-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-md-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-md-12 {
+    width: 50%;
+  }
+
+  .col-md-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-md-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-md-15 {
+    width: 62.5%;
+  }
+
+  .col-md-16, #footer #contact {
+    width: 66.6666666667%;
+  }
+
+  .col-md-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-md-18 {
+    width: 75%;
+  }
+
+  .col-md-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-md-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-md-21 {
+    width: 87.5%;
+  }
+
+  .col-md-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-md-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-md-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-lg-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-lg-3 {
+    width: 12.5%;
+  }
+
+  .col-lg-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-lg-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-lg-6 {
+    width: 25%;
+  }
+
+  .col-lg-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-lg-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-lg-9 {
+    width: 37.5%;
+  }
+
+  .col-lg-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-lg-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-lg-12, #footer #contact {
+    width: 50%;
+  }
+
+  .col-lg-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-lg-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-lg-15 {
+    width: 62.5%;
+  }
+
+  .col-lg-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-lg-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-lg-18 {
+    width: 75%;
+  }
+
+  .col-lg-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-lg-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-lg-21 {
+    width: 87.5%;
+  }
+
+  .col-lg-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-lg-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-lg-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-xl-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-xl-3 {
+    width: 12.5%;
+  }
+
+  .col-xl-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-xl-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-xl-6 {
+    width: 25%;
+  }
+
+  .col-xl-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-xl-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-xl-9 {
+    width: 37.5%;
+  }
+
+  .col-xl-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-xl-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-xl-12 {
+    width: 50%;
+  }
+
+  .col-xl-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-xl-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-xl-15 {
+    width: 62.5%;
+  }
+
+  .col-xl-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-xl-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-xl-18 {
+    width: 75%;
+  }
+
+  .col-xl-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-xl-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-xl-21 {
+    width: 87.5%;
+  }
+
+  .col-xl-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-xl-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-xl-24 {
+    width: 100%;
+  }
+}
+/*colors*/
+.text-primary {
+  color: #448;
+}
+
+.text-secondary {
+  color: #248;
+}
+
+.text-light, #footer #contact .valid, #footer #contact {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-warning, #footer #contact label::after {
+  color: #ec3;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-info {
+  color: #38e;
+}
+
+.bg-primary, #footer #contact {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #248;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark, #footer #contact .valid {
+  background-color: #333;
+}
+
+.bg-success, #footer #contact input:focus:valid + .valid,
+#footer #contact textarea:focus:valid + .valid {
+  background-color: #3c6;
+}
+
+.bg-warning {
+  background-color: #ec3;
+}
+
+.bg-danger, #footer #contact input:focus:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:focus:not(:placeholder-shown):invalid + .valid {
+  background-color: #c33;
+}
+
+.bg-info {
+  background-color: #38e;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #248;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark, #footer #contact input:focus,
+#footer #contact textarea:focus {
+  border-color: #333;
+}
+
+.border-success, #footer #contact input:focus:valid,
+#footer #contact textarea:focus:valid {
+  border-color: #3c6;
+}
+
+.border-warning {
+  border-color: #ec3;
+}
+
+.border-danger, #footer #contact input:focus:not(:placeholder-shown):invalid,
+#footer #contact textarea:focus:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-info {
+  border-color: #38e;
+}
+
+#footer {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+}
+#footer #contact {
+  margin: 0.5rem auto;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1200px) {
+  #footer #contact {
+    display: grid;
+    grid-template-areas: "heading 	heading" "lblName 	lblPhone" "cmdName 	cmdPhone" "vldName 	vldPhone" "lblEmail	lblEmail" "cmdEmail 	cmdEmail" "vldEmail 	vldEmail" "lblConsult lblConsult" "cmdConsult cmdConsult" ". 			btn";
+    gap: 0 0.5rem;
+  }
+  #footer #contact label[for=contactName] {
+    grid-area: lblName;
+  }
+  #footer #contact label[for=contactEmail] {
+    grid-area: lblEmail;
+  }
+  #footer #contact label[for=contactPhone] {
+    grid-area: lblPhone;
+  }
+  #footer #contact label[for=contactConsult] {
+    grid-area: lblConsult;
+  }
+  #footer #contact #contactName {
+    grid-area: cmdName;
+  }
+  #footer #contact #contactEmail {
+    grid-area: cmdEmail;
+  }
+  #footer #contact #contactPhone {
+    grid-area: cmdPhone;
+  }
+  #footer #contact #contactConsult {
+    grid-area: cmdConsult;
+  }
+  #footer #contact #contact {
+    grid-area: vldName;
+  }
+  #footer #contact #contact {
+    grid-area: vldEmail;
+  }
+  #footer #contact #contact {
+    grid-area: vldPhone;
+  }
+  #footer #contact #contact {
+    grid-area: vldConsult;
+  }
+  #footer #contact .btn {
+    grid-area: btn;
+  }
+  #footer #contact h2 {
+    grid-area: heading;
+  }
+}
+#footer #contact label {
+  max-height: 0;
+  margin-top: 0.5rem;
+}
+#footer #contact label::after {
+  content: " *";
+}
+@media screen and (min-width: 768px) {
+  #footer #contact label {
+    max-height: 200px;
+  }
+}
+#footer #contact textarea {
+  min-height: 8rem;
+  resize: none;
+}
+#footer #contact input,
+#footer #contact textarea {
+  border-radius: 0.25rem;
+  border: 0.1rem solid transparent;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  margin: 0;
+  border: 0;
+  padding: 0.5rem;
+  max-height: 600px;
+}
+#footer #contact .valid {
+  max-height: 0;
+  overflow: hidden;
+  text-shadow: 0 0 0.5rem #333;
+}
+#footer #contact .btn {
+  margin: 0.25rem 0;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+}
+
+/*# sourceMappingURL=sass.css.map */
