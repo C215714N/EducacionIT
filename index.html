@@ -124,9 +124,64 @@
 	</main>
 	<!--Footer-->
 	<footer id="footer">
-		<form id="contact" action="">
+		<form id="contact" action="" method="POST">
 			<h2>Contactanos</h2>
+			<label for="contactName">Ingrese su Nombre Completo</label>
+			<input 
+				id="contactName" 
+				name="contactName"
+				type="text" 
+				maxlength="50" 
+				pattern="[a-z A-Z]{3,50}"
+				placeholder="Nombre(*): Cristian Racedo" 
+				required />
+			<div class="valid">
+				Ingrese su nombre solamente con letras y espacios.
+				El mismo debera contar con al menos 3 caracteres 
+				y un maximo de 50 caracteres.
+			</div>
+			<label for="contactEmail">Ingrese su Correo Electronico</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail"
+				type="email" 
+				minlength="8"  
+				placeholder="Correo(*): cristiandracedo@hotmail.com"
+				required/>
+			<div class="valid">
+				Ingrese una direccion de correo valida que respete 
+				el siguiente formato "usuario@servidor". 
+				La misma debe contar con al menos 8 caracteres
+			</div>
+			<label for="contactPhone">Ingrese su Numero de Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel"
+				pattern="[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}"
+				placeholder="Telefono(*): (5411)2345-6789" 
+				required/>
+			<div class="valid">
+				Ingrese su numero telefonico como figura en el 
+				ejemplo: (5411)2345-6789. Puede insertar un guion
+				cada 3 a 6 digitos.
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				name="contactConsult" 
+				id="contactConsult" 
+				minlenght="10" 
+				maxlenght="200" 
+				placeholder="Consulta (*): Buenos dias, necesito un presupuesto" 
+				required ></textarea>
+			<button class="btn">Enviar</button>
 		</form>
+		<div class="social">
+			<a href="https://facebook.com" class="facebook" target="_blank"></a>
+			<a href="https://instagram.com" class="instagram" target="_blank"></a>
+			<a href="https://twitter.com" class="twitter" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/mav-l-10" class="github" target="_blank"></a>
+		</div>
 		<p class="copy">
 			&copy; Todos los derechos reservados
 			<a href="#"> Cristian Racedo </a>
