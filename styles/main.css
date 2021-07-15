@@ -1,3 +1,64 @@
 /*Content First - Mobile First*/
-	/*Importaciones*/
+	/*Imports*/
 		@import url('icomoon.css');
+	/*General Rules*/
+		:root{
+			--first:  #48e;
+			--second: #e8c;
+			--light:  #eee;
+			--dark:   #333;
+			--hover:  rgba(51, 51, 51, .5);
+			--font:   'Raleway', 'calibri', 'segoe ui', sans-serif;
+		}
+		*{
+			box-sizing: border-box;
+			font-family: var(--font);
+		}
+		body,
+		h1,
+		h2,
+		h3,
+		.menu{
+			margin: 0;
+		}
+		.opacity{ opacity: .3; }
+		.opacity:hover{ opacity: .7; }
+	/*Navigation*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: var(--first) linear-gradient(var(--second), var(--first));
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: var(--light);
+			text-decoration: none;
+			text-shadow: 0 0 .5rem var(--dark);/* x y blur color*/
+		}
+		.menu{
+			width: 100%;
+			max-height: 0;
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+		}
+		.menu.active{ max-height: 600px; }
+		.menu span{ padding: .5rem;	}
+		.menu a:hover{ background-color: var(--hover); }
+		.icon-back{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			border-radius: 50%;
+			background-color: var(--dark);
+		}
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets*/
+
+/*Large Devices - Desktop*/
+
+/*ExtraLarge Devices - HD Desktop*/
