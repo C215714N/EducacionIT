@@ -70,6 +70,31 @@
 				.#{$prop}-#{$cn}{
 					#{$attr}: $cv;
 		}	}	}
+//	Hidden Styles
+	%icon{
+		display: inline-block;
+		width: min(calc(5vw + .5rem), 3rem);
+		height: min(calc(5vw + .5rem), 3rem);
+		background-size: min(5vw, 2.5rem);
+		background-position: center;
+		background-repeat: no-repeat;
+		// Transitions
+		@extend %transition;
+		&:hover{
+			transform:
+				scale(1.2)
+				rotate(360deg)
+				translate(0, -.5rem);
+		}
+	}
+	%transition{
+		transition-property: all;
+		transition-duration: .5s;
+		transition-timing-function: ease-in-out;
+	}
+	%scale{ transform: scale(1.1); /*unidades en x,y*/ }
+	%rotate{ transform: rotate(15deg); /*grados*/}
+	%translate{ transform: translate(10rem); /*distancia en x,y*/}
 //Nesting
 	#footer{
 		@include normalize($p:1rem);
@@ -129,9 +154,10 @@
 				@include normalize(.25rem, .5rem 1rem, .1rem solid transparent, $ma:border-radius);
 				outline: none;
 				&:focus{
-					@extend .border-dark;
+					@extend .border-dark, %scale, %transition;
 					& + .valid{
 						@include normalize($p:.5rem); 
+						@extend %scale, %transition;
 						max-height: 600px;
 					} &:valid{
 						@extend .border-success;
@@ -150,6 +176,17 @@
 			}
 			.btn{
 				@include normalize(.25rem 0, .5rem 1rem, auto, $ba:margin-left);
+			}
+		}
+		.social{
+			min-height: 5rem;
+			@include flexbox($fa: center);
+			a{
+				@include normalize(.5rem, 0, .25rem, border-radius);
+				@extend %icon;
+				&:hover{
+					box-shadow: 0 0 .5rem #333;
+				}
 			}
 		}
 	}

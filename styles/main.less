@@ -51,6 +51,7 @@
 				.normalize(.25rem);
 				.rounded;
 				.box-shadow;
+				.transition;
 				display: inline-block;
 				width: 1rem;
 				height: 1rem;
@@ -75,6 +76,7 @@
 				.position; 
 				background-size: cover;
 				background-position: center;
+				.transition;
 				.bg;
 				&.active{ opacity: 1; }
 			}
@@ -97,6 +99,7 @@
 		-o-border-radius: @r;
 		border-radius: @r;
 	}
+	.transition{ transition: all .5s ease-in-out; }
 	.text-shadow{ text-shadow: 0 0 .5rem @dark; }
 	.box-shadow{ box-shadow: 0 0 .5rem @dark; }
 //Mixins Parametricos: Estilos que reciben valores que van a se aplicados;

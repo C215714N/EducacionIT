@@ -522,6 +522,33 @@
   border-color: #38e;
 }
 
+#footer .social a {
+  display: inline-block;
+  width: min(calc(5vw + .5rem), 3rem);
+  height: min(calc(5vw + .5rem), 3rem);
+  background-size: min(5vw, 2.5rem);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#footer .social a:hover {
+  transform: scale(1.2) rotate(360deg) translate(0, -0.5rem);
+}
+
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid, #footer #contact input:focus,
+#footer #contact textarea:focus, #footer .social a {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid, #footer #contact input:focus,
+#footer #contact textarea:focus {
+  transform: scale(1.1);
+  /*unidades en x,y*/
+}
+
 #footer {
   margin: 0;
   border: 0;
@@ -625,6 +652,22 @@
   margin: 0.25rem 0;
   margin-left: auto;
   padding: 0.5rem 1rem;
+}
+#footer .social {
+  min-height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#footer .social a {
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0;
+}
+#footer .social a:hover {
+  box-shadow: 0 0 0.5rem #333;
 }
 
 /*# sourceMappingURL=sass.css.map */
