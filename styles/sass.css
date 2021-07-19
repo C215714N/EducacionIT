@@ -567,16 +567,16 @@
   #footer #contact #contactConsult {
     grid-area: cmdConsult;
   }
-  #footer #contact #contact {
+  #footer #contact #contactName + .valid {
     grid-area: vldName;
   }
-  #footer #contact #contact {
+  #footer #contact #contactEmail + .valid {
     grid-area: vldEmail;
   }
-  #footer #contact #contact {
+  #footer #contact #contactPhone + .valid {
     grid-area: vldPhone;
   }
-  #footer #contact #contact {
+  #footer #contact #contactConsult + .valid {
     grid-area: vldConsult;
   }
   #footer #contact .btn {

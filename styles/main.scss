@@ -100,11 +100,11 @@
 					$selector:'#contact';
 					@each $field in $form{
 						@if $a == lbl { 
-							$selector: 'label[for="contact#{$field}"]'; 
+							$selector: 'label[for=contact#{$field}]'; 
 						} @else if $a == cmd { 
 							$selector: '#contact#{$field}';
 						} @else { 
-							$sel: '#contact#{$field} + .valid'; 
+							$selector: '#contact#{$field} + .valid'; 
 						} 
 					#{$selector}{ grid-area: $a+$field; }
 				}	}
