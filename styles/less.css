@@ -19,6 +19,10 @@
   min-height: 200px;
   max-height: 600px;
   text-align: center;
+  overflow: hidden;
+  /*Perspectiva*/
+  perspective: 10rem;
+  perspective-origin: top center;
   /*Slide Gallery*/
 }
 #header .header {
@@ -29,6 +33,7 @@
 }
 #header .header h1 {
   font-family: star wars;
+  transform: rotateX(15deg);
 }
 #header .header h1,
 #header .header p {

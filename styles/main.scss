@@ -78,6 +78,7 @@
 		background-size: min(5vw, 2.5rem);
 		background-position: center;
 		background-repeat: no-repeat;
+		cursor: pointer;
 		// Transitions
 		@extend %transition;
 		&:hover{
@@ -87,6 +88,10 @@
 				translate(0, -.5rem);
 		}
 	}
+	%front-side{
+		position: fixed; 
+		z-index: 2;
+	}
 	%transition{
 		transition-property: all;
 		transition-duration: .5s;
@@ -94,10 +99,11 @@
 	}
 	%scale{ transform: scale(1.1); /*unidades en x,y*/ }
 	%rotate{ transform: rotate(15deg); /*grados*/}
-	%translate{ transform: translate(10rem); /*distancia en x,y*/}
+	%translate{ transform: translate(0, -.5rem); /*distancia en x,y*/}
 //Nesting
 	#footer{
 		@include normalize($p:1rem);
+		position:relative;
 		#contact{
 			@include normalize(.5rem auto, 1rem, .25rem, border-radius);
 			@include flexbox(column);
@@ -165,9 +171,7 @@
 					} &:not(:placeholder-shown):invalid{
 						@extend .border-danger;
 						& + .valid{ @extend .bg-danger;  }
-					}
-				}
-			}
+			}	}	}
 			.valid{
 				@extend .text-light, .bg-dark;
 				max-height: 0;
@@ -176,17 +180,46 @@
 			}
 			.btn{
 				@include normalize(.25rem 0, .5rem 1rem, auto, $ba:margin-left);
-			}
-		}
+		}	}
 		.social{
-			min-height: 5rem;
+			@include normalize(3rem auto 0, .5rem);
 			@include flexbox($fa: center);
+			@extend .bg-primary;
+			max-width: 280px;
+			border-radius: .25rem .25rem 0 0;
 			a{
 				@include normalize(.5rem, 0, .25rem, border-radius);
-				@extend %icon;
+				@extend %icon, .bg-light;
 				&:hover{
 					box-shadow: 0 0 .5rem #333;
-				}
+		}	}	}
+		iframe{
+			@include normalize(100%, 100%, $ma:width, $pa:height);
+			position:absolute;
+			top: 0;
+			left:0;
+			z-index: -1;
+			&.active{
+				@extend %front-side;
+				opacity: .9;
+		}	}
+		.btn.opacity{
+			@extend %icon, .bg-dark, .text-light;
+			position: absolute;
+			top: .5rem;
+			right: .5rem;
+			&.icon-min{ @extend %front-side }
+		}
+		.copy{
+			@include normalize(0 -1rem -1rem, 1rem);
+			@extend .bg-primary, .text-light;
+			a{
+				@include normalize(0 .25rem, .25rem, none, text-decoration);
+				@extend %transition;
+				display: inline-block;
+				border-radius: .25rem;
+				@extend .bg-light;
+				&:hover{ @extend %translate; }
 			}
 		}
 	}

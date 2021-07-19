@@ -429,7 +429,7 @@
   color: #248;
 }
 
-.text-light, #footer #contact .valid, #footer #contact {
+.text-light, #footer .copy, #footer .btn.opacity, #footer #contact .valid, #footer #contact {
   color: #eee;
 }
 
@@ -453,7 +453,7 @@
   color: #38e;
 }
 
-.bg-primary, #footer #contact {
+.bg-primary, #footer .copy, #footer .social, #footer #contact {
   background-color: #448;
 }
 
@@ -461,11 +461,11 @@
   background-color: #248;
 }
 
-.bg-light {
+.bg-light, #footer .copy a, #footer .social a {
   background-color: #eee;
 }
 
-.bg-dark, #footer #contact .valid {
+.bg-dark, #footer .btn.opacity, #footer #contact .valid {
   background-color: #333;
 }
 
@@ -522,21 +522,27 @@
   border-color: #38e;
 }
 
-#footer .social a {
+#footer .btn.opacity, #footer .social a {
   display: inline-block;
   width: min(calc(5vw + .5rem), 3rem);
   height: min(calc(5vw + .5rem), 3rem);
   background-size: min(5vw, 2.5rem);
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
-#footer .social a:hover {
+#footer .btn.opacity:hover, #footer .social a:hover {
   transform: scale(1.2) rotate(360deg) translate(0, -0.5rem);
 }
 
-#footer #contact input:focus + .valid,
+#footer .btn.opacity.icon-min, #footer iframe.active {
+  position: fixed;
+  z-index: 2;
+}
+
+#footer .copy a, #footer #contact input:focus + .valid,
 #footer #contact textarea:focus + .valid, #footer #contact input:focus,
-#footer #contact textarea:focus, #footer .social a {
+#footer #contact textarea:focus, #footer .btn.opacity, #footer .social a {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
@@ -549,10 +555,16 @@
   /*unidades en x,y*/
 }
 
+#footer .copy a:hover {
+  transform: translate(0, -0.5rem);
+  /*distancia en x,y*/
+}
+
 #footer {
   margin: 0;
   border: 0;
   padding: 1rem;
+  position: relative;
 }
 #footer #contact {
   margin: 0.5rem auto;
@@ -654,12 +666,16 @@
   padding: 0.5rem 1rem;
 }
 #footer .social {
-  min-height: 5rem;
+  margin: 3rem auto 0;
+  border: 0;
+  padding: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 280px;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 #footer .social a {
   margin: 0.5rem;
@@ -668,6 +684,35 @@
 }
 #footer .social a:hover {
   box-shadow: 0 0 0.5rem #333;
+}
+#footer iframe {
+  width: 100%;
+  border: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#footer iframe.active {
+  opacity: 0.9;
+}
+#footer .btn.opacity {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+#footer .copy {
+  margin: 0 -1rem -1rem;
+  border: 0;
+  padding: 1rem;
+}
+#footer .copy a {
+  margin: 0 0.25rem;
+  text-decoration: none;
+  padding: 0.25rem;
+  display: inline-block;
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=sass.css.map */
