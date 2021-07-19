@@ -201,7 +201,7 @@
 			z-index: -1;
 			&.active{
 				@extend %front-side;
-				opacity: .9;
+				opacity: .8;
 		}	}
 		.btn.opacity{
 			@extend %icon, .bg-dark, .text-light;

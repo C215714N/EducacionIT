@@ -34,3 +34,8 @@
 							newItem = array[array.length - 1]
 		}	}	}	newItem.classList.add(className)	
 	}
+/*Mapa de Contacto*/
+	mapFrm = document.querySelector('#footer iframe')
+	mapBtn = document.querySelector('#footer .btn.opacity')
+
+	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max','icon-min') : mapBtn.classList.replace('icon-min', 'icon-max')
