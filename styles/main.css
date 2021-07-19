@@ -98,12 +98,48 @@
 			border-radius: 1rem;
 			background-color: var(--dark);
 		}
+	/*Main Content*/
+		main, section{
+			margin: 1rem auto;
+			padding: 1rem;
+		}
+		section{
+			border-radius: .25rem;
+			box-shadow: 0 0 .5rem var(--dark);
+		}
+		main .header{
+			font-size: min(calc(2vw + .5rem), 3rem);
+			text-align: center;
+		}
+		article header{
+			color: #333;
+			border-bottom: .1rem solid;
+		}
+		.example{
+			display: flex;
+			flex-wrap: wrap;
+			margin: .5rem;
+			margin-left: 2rem;
+			border-left: .25rem solid var(--first);
+			padding: 1rem;
+			background-color: var(--light);
+			list-style: none;
+		}
+		.example > div{
+			padding: .5rem;
+		}
+		.example [class*="col-"]{
+			border: .1rem dashed var(--dark);
+		}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
-
+	/*General Rules*/
+		main{ max-width: 540px; }
 	}
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
+	/*General Rules*/
+		main{ max-width: 720px; }
 	/*Navigation*/
 		nav .btn,
 		nav span{ 
@@ -122,6 +158,8 @@
 	}
 /*Large Devices - Desktop*/
 	@media screen and (min-width: 992px){
+	/*General Rules*/
+		main{ max-width: 960px; }
 	/*Navigation*/
 		nav span{
 			display: block;
