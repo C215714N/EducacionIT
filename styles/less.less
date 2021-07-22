@@ -1,0 +1,76 @@
+// 	Variables: valores que se almacenan en la memoria y pueden cambiar
+	@first:  #48e;
+	@second: #e8c;
+	@light:  #eee;
+	@dark:   #333;
+	@r: 	.25rem;
+//	Nesting: capacidad de colocar un selector dentro de otro para generar uno complejo
+	#header{
+		.position(@xa: height; @x:min(100vh, 720px));
+		.normalize(@p:1rem);
+		.flexbox(@fa: center);
+		.header{
+			h1,p{ margin:0; }
+			span{
+				@r: 1rem;
+				.rounded;	
+			}
+		}
+		.slide{
+			.normalize;
+			&:extend(.unstyled);
+			&:extend(.cover);
+			li{
+				&:extend(.cover);
+			}
+		}
+		button{
+			.position(absolute; @xa:bottom);
+			&.icon-prev{ left: 0; }
+			&.icon-next{ right: 0; }
+		}
+	}
+
+//	Mixins: estilos que se pueden aplicar como atributos
+	.unstyled{
+		text-decoration: none;
+		list-style: none;
+		outline: none;
+	}
+	.rounded(){
+		-webkit-border-radius: @r;
+		-moz-border-radius: @r;
+		-ms-border-radius: @r;
+		-o-border-radius: @r;
+		border-radius: @r;
+	}
+	.cover{
+		.position(absolute);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+//	Mixins Parametricos: estilos que recibe parametros como una funcion ;
+	.normalize(@m: 0; @p:0; @b:0){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+	.position(@p: relative; @x:0; @y:0; @ya:top; @xa:left){
+		position: @p;
+		@{ya}: @y;
+		@{xa}: @x;
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: stretch;
+		@fw: wrap; 
+		@f:  flex
+	){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
