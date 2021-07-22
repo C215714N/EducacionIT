@@ -5,10 +5,12 @@
 	@dark:   #333;
 	@r: 	.25rem;
 //	Nesting: capacidad de colocar un selector dentro de otro para generar uno complejo
+	// Cabecera Principal
 	#header{
 		.position(@xa: height; @x:min(100vh, 720px));
 		.normalize(@p:1rem);
 		.flexbox(@fa: center);
+		// Encabezado
 		.header{
 			h1,p{ margin:0; }
 			span{
@@ -16,14 +18,15 @@
 				.rounded;	
 			}
 		}
+		// Galeria de Imagenes
 		.slide{
 			.normalize;
-			&:extend(.unstyled);
-			&:extend(.cover);
+			&:extend(.unstyled, .cover);
 			li{
 				&:extend(.cover);
 			}
 		}
+		// Botones de Control
 		button{
 			.position(absolute; @xa:bottom);
 			&.icon-prev{ left: 0; }
