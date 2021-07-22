@@ -4,6 +4,18 @@
 	@light:  #eee;
 	@dark:   #333;
 	@r: 	.25rem;
+	@col: 	24;
+	@path:	'../assets/img';
+	@backgrounds: 
+		'osx-high-sierra.jpg',
+		'osx-leopard.png',
+		'osx-lion.png',
+		'osx-mavericks.png',
+		'osx-mojave-night.jpg',
+		'osx-mojave.jpg',
+		'osx-mountain-lion.jpg',
+		'osx-sierra.jpg',
+		'osx-snow-leopard.png';
 //	Nesting: capacidad de colocar un selector dentro de otro para generar uno complejo
 	// Cabecera Principal
 	#header{
@@ -12,10 +24,25 @@
 		.flexbox(@fa: center);
 		// Encabezado
 		.header{
-			h1,p{ margin:0; }
-			span{
-				@r: 1rem;
-				.rounded;	
+			h1,p{ 
+				margin:0; 
+				font-size: ~'min(calc(5vw + 1rem), 5rem)'; /*viewport width*/
+				text-shadow: 0 0 .5rem @light;
+			}
+			div{
+				.flexbox(@fa: center);
+				span{
+					.normalize(.25rem);
+					@r: 50%;
+					.rounded;
+					width: 1rem;
+					height: 1rem;
+					background-color: @light;
+					box-shadow: 0 0 .5rem @dark;
+					&.active{
+						width: 3rem;
+					}
+				}
 			}
 		}
 		// Galeria de Imagenes
@@ -24,11 +51,19 @@
 			&:extend(.unstyled, .cover);
 			li{
 				&:extend(.cover);
+				background-size: cover;
+				background-position: center;
+				.bg(@backgrounds);
+				opacity: 0;
+				&.active{ opacity: 1; }
 			}
 		}
 		// Botones de Control
 		button{
 			.position(absolute; @xa:bottom);
+			.normalize(@p: 1rem);
+			background-color: transparent;
+			font-size: ~'min(calc(2vw + .8rem), 3rem)';
 			&.icon-prev{ left: 0; }
 			&.icon-next{ right: 0; }
 		}
@@ -76,4 +111,17 @@
 		justify-content: @fj;
 		align-items: @fa;
 		flex-wrap: @fw;
+	}
+//	Mixins Recursivos: estilos que repiten en base a una condicion;
+	.grid(@i: 1) when (@i <= @col){
+		.col-@{i}{ width: percentage( ( @i / @col ) ); }
+		.grid(@i + 1);
+	}
+	// llamamos al mixin recursivo;
+	.grid;
+	// imagenes de fondo
+	.bg(@array; @i: 1) when (@i <= length(@array)){
+		@bg: extract(@array, @i);
+		&:nth-child(@{i}n){ background-image: url('@{path}/@{bg}'); }
+		.bg(@array; @i + 1);
 	}
