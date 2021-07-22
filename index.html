@@ -42,9 +42,76 @@
 			<li></li>
 			<li></li>
 		</ul>
-		<button class="icon-prev"></button>
-		<button class="icon-next"></button>
+		<button class="opacity icon-prev"></button>
+		<button class="opacity icon-next"></button>
 	</header>
+	<main>
+		<section>
+			<header class="header">
+				<h2>Elementos HTML5</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Estadisticas</h3>
+					<p>
+						Podemos evaluar los resultados de una tarea segun su estado, para ello existen los elementos <strong>&lt;progress></strong> que se utiliza cuan la misma no fue finalizada <em>ej: el avance durante la capacitacion</em> y <strong>&lt;meter></strong> cuando esta ya fue concluida <em>ej: el resultado de un meter</em>
+					</p>
+					<ul class="example">
+						<li>
+							<strong>PROGRESS</strong>
+							<ul>
+								<li>
+									<progress></progress>
+									sin value
+								</li>
+								<li>
+									<progress value="40" max="100"></progress>
+									value = "40"; max = "100"
+								</li>
+								<li class="progress">
+									<progress min="0" max="100"></progress>
+									<input type="number" min="0" max="100">
+									value = javaScript
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>METER</strong>
+							<ul>
+								<li>
+									<meter 
+									min="0" 
+									value="30" 
+									low="40" 
+									high="70" 
+									optimum="90" 
+									max="100"></meter>
+									<strong>value</strong> < low < high < optimum
+								</li>
+								<li>
+									<meter min="0" value="60" low="40" high="70" optimum="90" max="100"></meter>
+									low < <strong>value</strong> < high < optimum
+								
+								</li>
+								<li>
+									<meter min="0" value="90" low="40" high="70" optimum="90" max="100"></meter>
+									low < high < <strong>value</strong> < optimum
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</header>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Preprocesadores</h2>
+			</header>
+			<article>
+				
+			</article>
+		</section>
+	</main>
 	<!--Script JS-->
 	<script src="scripts/main.js"></script>
 </body>
