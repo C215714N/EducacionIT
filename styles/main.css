@@ -142,23 +142,120 @@
 		.example [class*="col-"]{
 			border: .1rem dashed var(--dark);
 		}
+		.transform div,
+		.animation div,
+		.colors div{ 
+			min-width: 10rem;
+			max-height: 5rem;
+			margin: .25rem;
+			padding: .5rem;
+			color: var(--light);
+			background-color: var(--first);
+			transition: all 1s ease-out;
+		}
 		/*Transformaciones*/
 			.transform{
 				perspective: 300px;
 				perspective-origin: top center;
-			}
-			.transform div{ 
-				margin: .25rem;
-				padding: .5rem;
-				color: var(--light);
-				background-color: var(--first);
-				transition: all 1s ease-out;
 			}
 			.transform :nth-child(1):hover{transform: scale(2)}
 			.transform :nth-child(2):hover{transform: translate(2rem, 1rem);}
 			.transform :nth-child(3):hover{transform: rotate(360deg)}
 			.transform :nth-child(4):hover{transform: skew(45deg);}
 			.transform :nth-child(5):hover{transform: rotateY(720deg) }
+		/*Animaciones*/
+			.animation div{
+				animation: moveIt 5s 2s;
+				animation-iteration-count: 5;
+			}
+			.loading{
+				display: grid;
+				padding: 1rem;
+				grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+			}
+			.loading div{
+				width: 5rem;
+				height: 5rem;
+				border-radius: 50%;
+				border: .5rem solid;
+				border-color: transparent lightblue skyblue darkblue;/*top right bottom left*/
+				animation: loading 1s infinite; /*name duration timing delay count*/
+			}
+			/*Timing Function*/
+				.timing :nth-child(1){ animation-timing-function: ease; }
+				.timing :nth-child(2){ animation-timing-function: ease-in; }
+				.timing :nth-child(3){ animation-timing-function: ease-out; }
+				.timing :nth-child(4){ animation-timing-function: ease-in-out; }
+				.timing :nth-child(5){ animation-timing-function: linear; }
+				.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+			/*Direction*/
+				.direction :nth-child(1){ animation-direction: normal; }
+				.direction :nth-child(2){ animation-direction: reverse; }
+				.direction :nth-child(3){ animation-direction: alternate; }
+				.direction :nth-child(4){ animation-direction: alternate-reverse; }
+			/*Progression*/
+				.colors{ 
+					position: relative;
+					min-height: 25rem; 
+				}
+				.colors div{ animation: around  5s linear infinite; animation-play-state: paused;}
+				.colors .btn{
+					position: absolute;
+					bottom: .5rem;
+					right: .5rem;
+					color: var(--dark);
+					border-color: var(--dark);
+					cursor: pointer;
+				}
+				.colors .btn:hover{
+					color: var(--light);
+					background-color: var(--dark);
+				}
+			@keyframes moveIt{
+				from{
+					background-color: var(--dark);
+					transform: translate(-100%) skew(15deg);
+				}
+				to{
+					background-color: var(--second);
+					transform: translate(100%);
+				}
+			}
+			@keyframes loading{
+				to{ transform: rotate(360deg) }
+			}
+			@keyframes around{
+				0%{
+					transform: 
+						translate(0,0)
+						skew(15deg, 0);
+					background-color: hsl(0, 50%, 50%);/*tono saturacion brillo*/
+				}
+				25%{
+					transform: 
+						translate(300%, 0)
+						skew(0, 15deg);
+					background-color: hsl(90, 50%, 50%);
+				}
+				50%{
+					transform: 
+						translate(300%, 300%)
+						skew(-15deg,0);
+					background-color: hsl(180, 50%, 50%);
+				}
+				75%{
+					transform: 
+						translate(0, 300%)
+						skew(0, -15deg);
+					background-color: hsl(270, 50%, 50%);
+				}
+				100%{
+					transform: 
+						translate(0, 0)
+						skew(15deg, 0);
+					background-color: hsl(360, 50%, 50%);
+				}
+			}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 	/*General Rules*/

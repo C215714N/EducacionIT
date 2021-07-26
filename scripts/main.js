@@ -8,6 +8,21 @@
 	pIn  = document.querySelector('.progress input')
 	
 	pIn.addEventListener('input', () => pBar.value = pIn.value)
+/*Reproduccion de Contenido*/
+	animaBtn = document.querySelector('.colors .btn')
+	animated = document.querySelector('.colors div')
+
+	animaBtn.onclick = () => evalState(animated.style.animationPlayState)
+
+	const evalState = (state) => {
+		if(state == 'running'){
+			animated.style.animationPlayState = 'paused'
+			animaBtn.innerHTML = 'PLAY'
+		} else {
+			animated.style.animationPlayState = 'running'
+			animaBtn.innerHTML = 'PAUSE'
+		}
+	}
 /*Galeria de Imagenes*/
 	prev = document.querySelector('#header .icon-prev');
 	next = document.querySelector('#header .icon-next');
