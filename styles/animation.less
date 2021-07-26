@@ -1,0 +1,61 @@
+@path: '../assets/img';
+@funciones: 
+	lineal,
+	cuadratica,
+	exponencial,
+	trigonometrica,
+	limite;
+
+.cover{
+	min-height: ~'min(calc(100vh - 3rem), 720px)';
+	background: url('@{path}/macos-bigsur-day.jpg') center/cover;
+	overflow: hidden;
+	div{
+		width: 1rem;
+		height: 1rem;
+		margin: .25rem;
+		border-radius: 50%;
+		background: radial-gradient(circle at top left, var(--light), #ccc);
+		.animations(@funciones);
+	}
+}
+
+// Mixins
+	//	Animaciones
+	.animations(@list; @i:1) when (@i <= length(@list)){
+		@name: extract(@list, @i);
+		&:nth-child(@{i}n){ 
+			animation: @name 5s @i * 2s alternate infinite;	
+			box-shadow: 0 0 .5rem hsl(@i * 60, 50%, 50%);
+		}	.animations(@list; @i + 1);	
+	}
+	// Keyframes
+	.keyframes (@list; @i:1) when (@i <= length(@list)){
+		@name: extract(@list; @i);
+		@keyframes @name{
+			.progression (@p:0%; @x: -50rem) when (@p <= 100%){
+				@{p}{
+					//	Funciones
+					transform:
+						if( @name = lineal, 
+							translate(@x + 50rem, (@x / 2rem)),
+						if( @name = cuadratica,
+							translate(@x + 50rem, pow((@x / 10), 2) ),
+						if( @name = trigonometrica,
+							translate((@x + 50rem) * 10, sin(@x) * 10rem),
+						if( @name = exponencial,
+							translate(@x + 50rem, pow(1.2rem, @x)),
+						if( @x = 0,
+							translate(@x + 50rem, (1rem / (@x + 1rem))),
+							translate(@x + 50rem, (1rem / @x)) 
+						)	)	)	)	)
+					;
+					width: 	if(@p > 25% and @p < 50%, 3rem, 2rem);
+					height: if(@p > 25% and @p < 50%, 3rem, 2rem);
+
+				}	.progression(@p + 2; @x + 2);
+			} 	.progression;
+		}	.keyframes(@list; @i + 1);
+	}
+	.keyframes(@funciones);
+
