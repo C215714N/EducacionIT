@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fundamentos Web</title>
 </head>
-<body>
+<body style="font-family: century gothic, segoe ui, sans-serif;">
 	<!-- BODY: parte visible (contenido / imagenes / hipervinculos) -->
 	<!-- Encabezado Principal (Heading 1) -->
 	<h1>Fundamentos Web</h1>
@@ -58,5 +58,41 @@
 			Lenguaje de Scripting que corre en el navegador, se utiliza para darle funcionalidad a las paginas de un sitio y maneja conceptos como BOM y DOM.
 		</li>
 	</ul>
+	<hr/>
+	<h2>Tipos de elementos</h2>
+	<p>
+		En HTML podemos encontrar 2 grupos de elementos, por un lado se organizan segun su funcionalidad y por el otro se organizan por su tipo. Para el primer caso estan los presentacionales y semanticos, y para el segundo los de bloque y  los de linea. 
+
+		Son presentacionales aquellos elementos que solo cumplen funciones esteticas, en la actualidad solamente se utilizan de este grupo las etiquetas DIV y SPAN. EN cuanto a elementos Semanticos, nos referimos a la mayoria de las etiquetas HTML que poseen un significado dentro de la pagina.
+	</p>
+	<ul>
+		<li>
+			<!-- Contenido Destacado -->
+			<strong>DE BLOQUE: </strong>
+			Son aquellas que ocupan todo el espacio de su contenedor,
+			generan salto de linea y no comparten espacio con otros elementos, tambien se les puede dar tamaño (ancho y alto) y 
+			<!-- Contenido Enfatizado -->
+			<em>generalmente funcionan como contenedores</em>
+		</li>
+		<li>
+			<strong>DE LINEA:</strong>
+			Son aquellas que ocupan una parte de su contenedor, 
+			comparten espacio con otros elementos de su mismo tipo, no se les puede dar tamaño (automatico) y 
+			<em>generalmente funcionan como contenido</em>
+		</li>
+	</ul>
+	<!-- Capa (Division) -->
+	<div style="color: whitesmoke; background-color: darkslateblue; width: 300px; padding: 50px;">
+		<h2>Caracteristicas de las Etiquetas</h2>
+		<p>
+			<span style="color:gold; font-size: 32px;">T</span>odas las etiquetas poseen atributos, caracteristicas que podemos modificar y que poseen valores predeterminados, dentro de las mas importantes o principales encontramos las siguientes:
+		</p>
+		<ul>
+			<li>margin: distancia entre las etiquetas</li>
+			<li>border: linea que rodea la etiqueta</li>
+			<li>padding: relleno que existe entre el borde y el contenido</li>
+			<li>content: elementos (texto / etiquetas) que se encuentran dentro</li>
+		</ul>
+	</div>
 </body>
 </html>
