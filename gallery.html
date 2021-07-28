@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<!--Cabecera-->
+	<div id="header">
+		<h1>Fundamentos Web</h1>
+		<p>html | css | js</p>
+		<div id="nav">
+			<ul>
+				<li><!-- Rutas Relativas / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Rutas Ancla / Marcador -->
+					<a href="#">Galeria</a>
+				</li>
+				<li><!-- Rutas Ancla / Marcador -->
+					<a href="#footer">Contacto</a>
+				</li>
+				<li><!-- Rutas Absolutas / Externa -->
+					<a href="https://github.com/c215714n/EducacionIT/tree/f_pescar-html" target="_blank">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--Contenido Principal-->
+	<div id="main">
+		<h2>Reglas de Nomenclatura</h2>
+		<ul class="important">
+			<li>
+				<strong>Evitar el uso de espacios</strong> debido a que este caracter suele ser reemplazado por el <em>conjunto %20</em> y por lo tanto si nuestro arhivo se llama <em>"foto 01.jpg"</em> el navegador interpretara <em>"foto%2001.jpg"</em> no pudiendo encontrar la misma. <strong>Utiliza guiones (-_) como separadores</strong> para que el nombre quede como <em>"foto_01.jpg"</em>
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> para facilitar el trabajo como desarrollador, como por ejemplo: <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em>. <strong>Evitar nombres automatizados o genericos</strong> como <em>"2021-07-28-1503100.jpg"</em> o <em>"foto_01.jpg"</em>
+			</li>
+			<li>
+				<strong>Implementar solamente minusculas </strong> para reducir el margen de error y debido a que los servidores son <em>caseSensitive</em>, ya que no son lo mismo los siguientes nombres <em>"background.jpg", "Background.jpg", "BACKGROUND.jpg"</em>.
+			</li>
+		</ul>
+		<div>
+			<h2>Utilizando Imagenes</h2>
+			<img style="width:300px" 
+				src="img/jjba-theworld-01.jpg" 
+				alt="Dibujo JJBA the World" />
+			<img style="width:300px" 
+				src="img/jjba-theworld-02.jpg" 
+				alt="Dibujo JJBA the World" />
+			<img style="width:300px" 
+				src="img/jjba-theworld-03.jpg" 
+				alt="Dibujo JJBA the World" />
+			<img style="width:300px" 
+				src="img/jjba-theworld-04.jpg" 
+				alt="Dibujo JJBA the World" />
+		</div>
+		<h2>Elementos Semanticos</h2>
+		<ul>
+			<li>
+				<strong>HEADER</strong>
+			</li>
+			<li>
+				<strong>NAV</strong>
+			</li>
+			<li>
+				<strong>MAIN</strong>
+			</li>
+			<li>
+				<strong>SECTION</strong>
+			</li>
+			<li>
+				<strong>ARTICLE</strong>
+			</li>
+			<li>
+				<strong>ASIDE</strong>
+			</li>
+			<li>
+				<strong>FOOTER</strong>
+			</li>
+		</ul>
+	</div>
+	<!--Pie de Pagina-->
+	<div id="footer">
+		<p>
+			&copy; Todos los derechos reservados | 
+			<a href="#">Cristian Racedo</a> 
+			&amp; compañia.
+		</p>
+	</div>
+</body>
+</html>
