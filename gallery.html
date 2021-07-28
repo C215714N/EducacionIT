@@ -10,6 +10,9 @@
 			font-family: segoe ui, calibri, sans-serif;
 			margin: 0;
 		}
+		main{
+			padding: 16px;
+		}
 		/*selector multiple (,)*/
 		header, footer{
 			padding: 24px;
@@ -35,6 +38,34 @@
 		/*:pseudoclass (instancia o caracteristica de un elemento)*/
 		nav li:hover{
 			background-color: rgba(51, 51, 51, .5); /* a = alpha (transparencia) */
+		}
+		/*selector de clase (.class)*/
+		.important{
+			max-width: 720px;
+			margin: 16px;
+			border-radius: 8px;
+			padding: 48px;
+			color: #448;
+			background-color: #ccc;
+			line-height: 24px;
+			list-style: decimal-leading-zero;
+		}
+		/*selector de Id (#id)*/
+		#header h1, 
+		#header p{
+			margin: 2px;
+			text-shadow: 0 0 8px; /*-x+ -y+ (blur) (color)*/
+		}
+		/*Imagenes y texto*/
+		.content img{
+			width: 300px;
+			float: left; /*posiciona el elemento a un costado*/
+			margin-right: 16px;
+		}
+		.content p{
+			overflow: hidden; /*impide el desbordamiento*/
+			padding: 16px;
+			background-color: #eee;
 		}
 	</style>
 </head>
@@ -90,7 +121,7 @@
 				alt="Dibujo JJBA the World" />
 		</div>
 		<h2>Elementos Semanticos</h2>
-		<ul>
+		<ul class="important">
 			<li>
 				<strong>HEADER</strong> Cabecera de la pagina, contiene elementos introductorios como los titulos principales, alguna galeria e incluso la navegacion principal.
 			</li>
@@ -113,6 +144,38 @@
 				<strong>FOOTER</strong> Pie de pagina, Contenido de despedida donde se coloca la informacion del autor, formulario/datos de contacto, suele contener las redes sociales e incluso un mapa del sitio.
 			</li>
 		</ul>
+		<div class="content">
+			<p>
+				<img src="img/poster-californication.jpg" alt="Portada Album Californication - Red Hot Chili Peppers">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non expedita iusto, deleniti quos. Ducimus, illo impedit dolorem quisquam velit sapiente nam numquam corporis tempora accusamus fuga saepe nobis quis optio!
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. At id officia adipisci ipsum animi quis dolorem molestias, voluptatum aperiam fugiat suscipit illo sint nobis, doloribus veritatis vitae nisi est rem.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Illum atque laborum, iusto qui voluptate perferendis est debitis vero soluta nostrum nam ut, repellendus laboriosam cupiditate architecto possimus itaque optio dolorem.
+
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa earum reprehenderit animi, veritatis odio magnam officiis ipsam nisi iste architecto, maxime quasi ea nam. Neque facilis doloremque accusantium distinctio reiciendis?
+			</p>
+			<p>
+				<img src="img/poster-cant-stop.jpg" alt="Portada Album Californication - Red Hot Chili Peppers">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non expedita iusto, deleniti quos. Ducimus, illo impedit dolorem quisquam velit sapiente nam numquam corporis tempora accusamus fuga saepe nobis quis optio!
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. At id officia adipisci ipsum animi quis dolorem molestias, voluptatum aperiam fugiat suscipit illo sint nobis, doloribus veritatis vitae nisi est rem.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Illum atque laborum, iusto qui voluptate perferendis est debitis vero soluta nostrum nam ut, repellendus laboriosam cupiditate architecto possimus itaque optio dolorem.
+
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa earum reprehenderit animi, veritatis odio magnam officiis ipsam nisi iste architecto, maxime quasi ea nam. Neque facilis doloremque accusantium distinctio reiciendis?
+			</p>
+			<p>
+				<img src="img/poster-by-the-way.jpg" alt="Portada Album Californication - Red Hot Chili Peppers">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non expedita iusto, deleniti quos. Ducimus, illo impedit dolorem quisquam velit sapiente nam numquam corporis tempora accusamus fuga saepe nobis quis optio!
+
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. At id officia adipisci ipsum animi quis dolorem molestias, voluptatum aperiam fugiat suscipit illo sint nobis, doloribus veritatis vitae nisi est rem.
+
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Illum atque laborum, iusto qui voluptate perferendis est debitis vero soluta nostrum nam ut, repellendus laboriosam cupiditate architecto possimus itaque optio dolorem.
+
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa earum reprehenderit animi, veritatis odio magnam officiis ipsam nisi iste architecto, maxime quasi ea nam. Neque facilis doloremque accusantium distinctio reiciendis?
+			</p>
+		</div>
 	</main>
 	<!--Pie de Pagina-->
 	<footer id="footer">
