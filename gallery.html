@@ -4,13 +4,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fundamentos Web</title>
+	<style>
+		/*selector general*/
+		body{
+			font-family: segoe ui, calibri, sans-serif;
+			margin: 0;
+		}
+		/*selector multiple (,)*/
+		header, footer{
+			padding: 24px;
+			color: #eee; /*hexadecimal: RRGGBB (0 = FF)*/
+			background-color: #448;
+			text-align: center;
+		}
+		/*selector especifico (padre hijo)*/
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+		nav ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			background-color: #66c;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/*:pseudoclass (instancia o caracteristica de un elemento)*/
+		nav li:hover{
+			background-color: rgba(51, 51, 51, .5); /* a = alpha (transparencia) */
+		}
+	</style>
 </head>
 <body>
 	<!--Cabecera-->
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>html | css | js</p>
-		<div id="nav">
+		<nav id="nav">
 			<ul>
 				<li><!-- Rutas Relativas / Interna -->
 					<a href="index.html">Inicio</a>
@@ -25,10 +58,10 @@
 					<a href="https://github.com/c215714n/EducacionIT/tree/f_pescar-html" target="_blank">GitHub</a>
 				</li>
 			</ul>
-		</div>
-	</div>
+		</nav>
+	</header>
 	<!--Contenido Principal-->
-	<div id="main">
+	<main id="main">
 		<h2>Reglas de Nomenclatura</h2>
 		<ul class="important">
 			<li>
@@ -80,14 +113,14 @@
 				<strong>FOOTER</strong> Pie de pagina, Contenido de despedida donde se coloca la informacion del autor, formulario/datos de contacto, suele contener las redes sociales e incluso un mapa del sitio.
 			</li>
 		</ul>
-	</div>
+	</main>
 	<!--Pie de Pagina-->
-	<div id="footer">
+	<footer id="footer">
 		<p>
 			&copy; Todos los derechos reservados | 
 			<a href="#">Cristian Racedo</a> 
 			&amp; compañia.
 		</p>
-	</div>
+	</footer>
 </body>
 </html>
