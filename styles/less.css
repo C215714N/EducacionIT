@@ -29,11 +29,11 @@
   margin: 0.25rem;
   border: 0;
   padding: 0;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
-  border-radius: 0.25rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border-radius: 1rem;
   width: 1rem;
   height: 1rem;
   background-color: #eee;
@@ -103,6 +103,13 @@
   text-decoration: none;
   list-style: none;
   outline: none;
+}
+.rounded {
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 .cover,
 #header .slide,

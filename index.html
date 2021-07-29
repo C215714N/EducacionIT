@@ -117,7 +117,53 @@
 	<footer id="footer">
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
-			
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				maxlength="50" 
+				pattern="[a-z A-Z]{3,50}"
+				placeholder="Nombre(*): Cristian Racedo" 
+				required />
+			<div class="valid">
+				Ingrese su nombre solamente con letras y espacios,
+				el mismo debe contar con al menos 3 caracteres y 50 como maximo.
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email"
+				minlength="8" 
+				placeholder="Correo(*): cristiandracedo@hotmail.com" 
+				required />
+			<div class="valid">
+				Ingrese una direccion de correo valida respetando el 
+				siguiente formato "usuario@servidor".
+			</div>
+			<label for="contactPhone">Ingrese su telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel"
+				pattern="([0-9]{6,20} || [\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})" 
+				placeholder="Telefono(*):(11)0303-4567" 
+				required />
+			<div class="valid">
+				Ingrese su numero, puede colocar la caracteristica 
+				entre parentesis y utilizar guiones cada 3 a 6 digitos 
+				como se muestra en los ejemplo: (11)2345-6789 o 1123456789
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea  
+				id="contactConsult"
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto..." 
+				required></textarea>
+			<button class="btn">enviar</button>
 		</form>
 		<div class="social">
 			<a class="facebook" href="https://facebook.com" target="_blank"></a>
