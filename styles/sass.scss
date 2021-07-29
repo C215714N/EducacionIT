@@ -22,6 +22,13 @@
 		warning		#ec3,
 		success		#3c6,
 		info 		#248;
+	$col: 	24;
+	$viewport:
+		sm 	576px,
+		md 	768px,
+		lg 	992px,
+		xl 	1200px,
+		xxl 1400px;
 //	Mixins: Estilos anidables;
 	@mixin normalize ($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
 		#{$ma}: $m;
@@ -29,14 +36,31 @@
 		#{$pa}: $p;
 	}
 //	Loops
+	/*Redes Sociales*/
 	@each $ico in $icons{
 		.#{$ico}{ background-image: url('#{$path}/#{$ico}.svg'); }
 	}
+	/*Classes de Atributos y Colores*/
 	@each $prop, $attr in $attributes{
 		@each $cn, $cv in $colors{
 			.#{$prop}-#{$cn}{ #{$attr}: $cv; }
 	}	}
+	/*Sistema de Grillas Responsive*/
+	@each $vn, $vw in $viewport{
+	/* #{$vn} devices: #{$vw}  */
+	@media screen and (min-width: $vw){
+		@for $i from 1 through $col{
+		.col-#{$vn}-#{$i}{ width: percentage( $i / $col ); }	
+	}	}	}
 //	Hidden Styles
+	.btn{
+		@include normalize(.5rem, .25rem .5rem, .1rem solid);
+		@extend .text-light;
+		font-size: 1rem;
+		text-transform: uppercase;
+		background-color: transparent;
+		&:hover{ @extend .text-primary, .bg-light; }
+	}
 	%icon{
 		@include normalize(.25rem);
 		display: inline-block;
@@ -56,11 +80,38 @@
 		#contact{
 			display: grid;
 			@include normalize(1rem auto, 1rem, .25rem, border-radius);
-			@extend .bg-primary;
+			@extend .text-light, .bg-primary, .col-sm-22, .col-md-18, .col-lg-14, .col-xl-10;
+			//	Validacion
+			textarea{ min-height: 8rem; resize: none;}
+			input,
+			textarea{
+				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma: outline);
+				&:focus{ @extend .border-dark;
+					& + .valid{ 
+						@include normalize(300px,.5rem, $ma:max-height);
+						@extend .text-light, .bg-dark; }
+					&:valid{ 
+						@extend .border-success;
+						& + .valid{ @extend .bg-success; } }
+					&:not(:placeholder-shown):invalid{ 
+						@extend .border-danger;
+						& + .valid{ @extend .bg-danger; } }
+			}	}
+			.valid{
+				max-height: 0;
+				overflow: hidden;
+			}
+			.btn{ margin: .25rem 0 .5rem auto; /*top right bottom left*/ }
 		}
 		// 	Redes sociales
 		.social{
+			background: linear-gradient( lighten(#e8c, 20%), #e8c);
 			a{ @extend %icon; }
 		}
 		// CopyRight
+		.copy{ background: linear-gradient(#e8c, var(--first)); }
+		.social, 
+		.copy{
+			@include normalize(1rem -1rem -1rem, 1rem, center, text-align );
+		}
 	}
