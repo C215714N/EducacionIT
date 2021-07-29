@@ -9,6 +9,19 @@
 		'twitter',
 		'whatsapp',
 		'youtube';
+	$attributes:
+		text 	color,
+		bg 		background-color,
+		border 	border-color;
+	$colors:
+		primary 	#48e,
+		secondary	#e8c,
+		light		#eee,
+		dark		#333,
+		danger		#c33,
+		warning		#ec3,
+		success		#3c6,
+		info 		#248;
 //	Mixins: Estilos anidables;
 	@mixin normalize ($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
 		#{$ma}: $m;
@@ -19,6 +32,10 @@
 	@each $ico in $icons{
 		.#{$ico}{ background-image: url('#{$path}/#{$ico}.svg'); }
 	}
+	@each $prop, $attr in $attributes{
+		@each $cn, $cv in $colors{
+			.#{$prop}-#{$cn}{ #{$attr}: $cv; }
+	}	}
 //	Hidden Styles
 	%icon{
 		@include normalize(.25rem);
@@ -35,7 +52,15 @@
 //	Nesting: 
 	#footer{
 		@include normalize($p:1rem);
+		//	Formulario de Contacto
+		#contact{
+			display: grid;
+			@include normalize(1rem auto, 1rem, .25rem, border-radius);
+			@extend .bg-primary;
+		}
+		// 	Redes sociales
 		.social{
 			a{ @extend %icon; }
 		}
+		// CopyRight
 	}

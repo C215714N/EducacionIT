@@ -30,6 +30,102 @@
   background-image: url("../assets/icon/youtube.svg");
 }
 
+.text-primary {
+  color: #48e;
+}
+
+.text-secondary {
+  color: #e8c;
+}
+
+.text-light {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #ec3;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-info {
+  color: #248;
+}
+
+.bg-primary, #footer #contact {
+  background-color: #48e;
+}
+
+.bg-secondary {
+  background-color: #e8c;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #ec3;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-info {
+  background-color: #248;
+}
+
+.border-primary {
+  border-color: #48e;
+}
+
+.border-secondary {
+  border-color: #e8c;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark {
+  border-color: #333;
+}
+
+.border-danger {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #ec3;
+}
+
+.border-success {
+  border-color: #3c6;
+}
+
+.border-info {
+  border-color: #248;
+}
+
 #footer .social a {
   margin: 0.25rem;
   border: 0;
@@ -48,6 +144,12 @@
 #footer {
   margin: 0;
   border: 0;
+  padding: 1rem;
+}
+#footer #contact {
+  display: grid;
+  margin: 1rem auto;
+  border-radius: 0.25rem;
   padding: 1rem;
 }
 
