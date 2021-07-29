@@ -1,0 +1,41 @@
+//	Variables:
+	$path: '../assets/icon';
+	$icons: 
+		'css',
+		'facebook',
+		'github',
+		'instagram',
+		'linkedin',
+		'twitter',
+		'whatsapp',
+		'youtube';
+//	Mixins: Estilos anidables;
+	@mixin normalize ($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
+		#{$ma}: $m;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+//	Loops
+	@each $ico in $icons{
+		.#{$ico}{ background-image: url('#{$path}/#{$ico}.svg'); }
+	}
+//	Hidden Styles
+	%icon{
+		@include normalize(.25rem);
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		background-size: 1.5rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-size: 2rem;
+		}
+	}
+//	Nesting: 
+	#footer{
+		@include normalize($p:1rem);
+		.social{
+			a{ @extend %icon; }
+		}
+	}
