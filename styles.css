@@ -1,0 +1,82 @@
+/*Reglas Generales*/
+	body{
+		margin: 0;
+		font-family: segoe ui, calibri, sans-serif;
+	}
+/*Navegacion Principal*/
+	.menu{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		background-color: #448; /*rgb(68, 68, 136)*/
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px;
+	}
+	.menu li:hover{
+		background-color: rgba(51,51,51,.5); /*#333*/
+	}
+/*Cabecera*/
+	#header{
+		padding: 20% 20px; /*top right bottom left*/
+		text-align: center;
+		background-color: #ccc; /*rgb(204,204,204)*/
+	}
+	#header h1,
+	#header p,
+	h2, 
+	h3, 
+	h4{
+		margin: 0;
+	}
+/*Contenido Principal*/
+
+/*Pie de Pagina*/
+	#footer{
+		padding: 24px;
+		color: #eee;
+		background-color: #448;
+	}
+	#contact{
+		margin: auto;
+		max-width: 540px;
+	}
+	#contact label{
+		display: inline-block;
+		margin-top: 5px;
+	}
+	#contact input,
+	#contact textarea{
+		width: calc(100% - 10px);
+		outline: none;
+		border: none;
+		padding: 5px;
+		font-size: 16px;
+		font-family: segoe ui, sans-serif;
+	}
+	#contact textarea{
+		resize: none;
+		min-height: 120px;
+	}
+	#contact .contract input{
+		width: 20px;
+	}
+	#contact button{
+		cursor: pointer;
+		display: block;
+		margin-left: auto;
+		border: 1px solid #eee;
+		padding: 8px 16px;
+		color: #eee;
+		background-color: transparent;
+	}
+	#contact button:hover{
+		color: #448;
+		background-color: #eee;
+	}
