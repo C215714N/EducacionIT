@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<!--Navegacion Principal-->
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="gallery.html">Galeria</a></li>
+			<li><a href="#contact">Contacto</a></li>
+		</ul>
+	</nav>
+	<!--Cabecera-->
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p>html | css | js</p>
+	</header>
+	<!--Contenido Principal-->
+	<main>
+		<article>
+			<header class="header">
+				<h1>Formularios HTML</h1>
+			</header>
+			<p>
+				Son herramientas que permiten la interaccion entre <strong>cliente / servidor (intercambio de datos)</strong>, con las cuales el usuario completa o selecciona datos dentro del mismo para que luego sean enviados a modo de <em>peticion/solicitud</em>. Para poder colocar un formulario dentro de la pagina debemos utilizar la etiqueta <strong>&lt;form></strong> y dentro de la misma colocar el contenido a ser procesado.
+			</p>
+			<section>
+				<header>
+					<h1>¿Como funcionan?</h1>
+				</header>
+				<p>
+					Dentro de la etiqueta <em>menciona anteriormente</em> debemos colocar al menos 2 atributos, entre ellos estan: <strong>action="..."</strong> que define lo que debe suceder despues que el usuario presione el boton de envio, normalmente se utiliza un <em>script en lenguaje de servidor (por ejemplo: PHP)</em> para que este ultimo resuelva que hacer con los datos; y <strong>method="..."</strong> que define como deben manipularse los datos que seran enviados al servidor, en este caso los mismos estan predefinidos y son los siguientes.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong>
+						Metodo menos seguro debido a que la informacion permanece visible en la barra de direcciones, es mas rapido ya que no encripta los datos y se utiliza cuando la prioridad radica en la <em>respuesta del Servidor.</em>
+						<ul>
+							<li><strong>Buscador: </strong> consulta query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST: </strong>
+						Metodo mas seguro ya que antes de realizar el envio encripta los datos que van a ser enviados al servidor, debido a esto es mas lento ya que se debe codificar y decodificar la informacion. En este caso la prioridad radica en la <em>proteccion de los datos del usuario</em>
+						<ul>
+							<li><strong>Registro: </strong> Inscripcion</li>
+							<li><strong>Acceso: </strong> Inicio sesion</li>
+							<li><strong>Contacto: </strong> Consulta Web</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+</body>
+</html>
