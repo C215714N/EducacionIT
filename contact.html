@@ -112,7 +112,61 @@
 					</li>
 				</ul>
 			</section>
+			<footer>
+				<address>
+					Para mas informacion visitar
+					<a href="https://alumni.education" target="_blank">Alumni</a> 
+					o enviar un mail a
+					<a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
+			</footer>
 		</article>
 	</main>
+	<footer id="footer">
+		<form id="contact" action="contact.php" method="POST">
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName"
+				name="contactName"
+				type="text"
+				maxlength="50" 
+				placeholder="Nombre *: Cristian Racedo" 
+				required />
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactName" 
+				type="email" 
+				minlength="8" 
+				placeholder="Correo *: cristiandracedo@hotmail.com" 
+				required />
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea
+				id="contactConsult"
+				name="contactConsult"
+				minlength="20"
+				maxlength="200"
+				placeholder="Consulta *: Buenas, necesito un presupuesto"
+				required ></textarea>
+			<button> ENVIAR </button>
+			<div class="contract">
+				<input id="accept" type="radio" name="contract" value="1">
+				<label for="accept">Acepto las Bases y condiciones</label>
+				<input id="cancel" type="radio" name="contract" value="0">
+				<label for="cancel">No quiero recibir newsletters</label>
+			</div>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">facebook</a>
+			<a href="https://instagram.com" target="_blank">instagram</a>
+			<a href="https://twitter.com" target="_blank">twitter</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/f_pescar-html" target="_blank">Github</a>
+		</div>
+		<p>
+			&copy; todos los derechos reservados
+			<a href="#">Cristian Racedo</a> 
+			&amp; Compañia.
+		</p>
+	</footer>
 </body>
 </html>
