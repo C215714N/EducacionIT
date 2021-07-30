@@ -54,6 +54,64 @@
 					</li>
 				</ul>
 			</section>
+			<section>
+				<header>
+					<h3>¿Como estan compuestos?</h3>
+				</header>
+				<p>
+					Para cualquiera de los tipos de formarios mencionados podemos encontrar 2 tipos de elementos, entre ellos estan: las <strong>etiquetas (LABEL)</strong> que se utilizan para indicar al usuario que datos debe ingresar o seleccionar dentro del formulario y tambien facilitan la accesibilidad, siempre y cuando esten vinculadas a un campo de formulario; por otro lado, los <strong>campos (INPUT / TEXTAREA / SELECT)</strong> se utilizan para facilitar al usuario la carga de datos, ya sea ingresandolos o seleccionandolos, estos poseen 2 atributos importantes: <em>value="..."</em> y <em>type="..."</em>, los mismos pueden o no estar explicitamente.
+				</p>
+				<ul class="example">
+					<li>
+						<label>Campo de Texto (!#Aa123)</label>
+						<input type="text" maxlength="100" />
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number" max="100" />
+					</li>
+					<li>
+						<label>Campo Correo (user@dom)</label>
+						<input type="email" />
+					</li>
+					<li>
+						<label>Campo Contraseña (*****)</label>
+						<input type="password" />
+					</li>
+					<li>
+						<label>Campo Fecha (yyyy-mm-dd)</label>
+						<input type="date" />
+					</li>
+					<li>
+						<label>Campo Opcion Unica</label>
+						| si <input type="radio" name="ok" value="si" />
+						| no <input type="radio" name="ok" value="no" />
+					</li>
+					<li>
+						<label>Campo Opcion Multiple</label>
+						| arte <input type="checkbox" name="hobbie" value="art" />
+						| musica <input type="checkbox" name="hobbie" value="music" />
+						| deporte <input type="checkbox" name="hobbie" value="sport" />
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Campo Lista Desplegable</label>
+						<select>
+							<option value="0">html</option>
+							<option value="1">css</option>
+							<option value="2">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset">
+						<input type="submit">
+						<button> ENVIAR </button>
+					</li>
+				</ul>
+			</section>
 		</article>
 	</main>
 </body>
