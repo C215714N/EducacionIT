@@ -130,7 +130,7 @@
 			<p>
 				Son elementos que permiten organizar la informacion de manera tabular, deben utizarse siempre y cuando los datos que se mostraran en pantalla requieren de cierta estructura que no debe se modificada por los cambios que pueda llegar a tener la pagina a nivel visual. Para crear una tabla debemos utilizar la etiqueta <strong>&lt;table></strong> y en su interior colocar la estructura de la misma.
 			</p>
-			<article>
+			<section>
 				<header>
 					<h2>¿Cual es su estructura?</h2>
 				</header>
@@ -142,8 +142,76 @@
 					<li><strong>TBODY</strong> correponde al cuerpo de la tabla, donde se coloca la informacion principal, distribuida en multiples filas e incluso puede poseer titulos.</li>
 					<li><strong>TFOOT</strong> corresponde al pie de la tabla, donde colocamos la informacion complementaria al cuerpo, como totales, promedios o porcentajes, entre otros.</li>
 				</ul>
-				
-			</article>
+				<div class="example">
+					<table class="classic">
+						<caption>Lista de usuarios</caption>
+						<thead>
+							<tr><!-- Fila (Table Row) -->
+								<th>Nombre</th><!-- Celda Encabezado (Table Heading)-->
+								<th>Correo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cristian Racedo</td><!-- Celda (Table Division) -->
+								<td>Cristiandracedo@hotmail.com</td>
+							</tr>
+							<tr>
+								<td>Vitto Corleone</td>
+								<td>v.corleone@godfather.com</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="modern">
+						<thead>
+							<tr>
+								<th>Turno</th>
+								<th>Lu</th>
+								<th>Ma</th>
+								<th>Mi</th>
+								<th>Ju</th>
+								<th>Vi</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Mañana</th>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+								<td></td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<th>Tarde</th>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<th>Noche</th>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<td>3</td>
+								<td>2</td>
+								<td>2</td>
+								<td>2</td>
+								<td>2</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</section>
 		</article>
 	</main>
 	<footer id="footer">
