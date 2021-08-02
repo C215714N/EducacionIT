@@ -49,6 +49,46 @@
 	main .header{
 		border-bottom: .1rem solid #333; /*width style color*/
 	}
+	.example{
+		margin: 1rem;
+		margin-left: 2.5rem;
+		border-left: .2rem solid #448; /*width style color*/
+		padding: 1rem;
+		list-style: none;
+		line-height: 1.5rem;
+		background-color: #eee;
+		overflow: auto;
+	}
+	/*Estilos de Tablas*/
+		.classic,
+		.classic caption,
+		.classic th,
+		.classic td{
+			border: .1rem solid #248;
+			border-collapse: collapse;
+		}
+		.classic caption{
+			border-bottom: none;
+		}
+		.modern,
+		.modern caption,
+		.modern tr,
+		.modern td{
+			color: #eee;
+			background-color: rgba(34, 136, 68, .5);
+		}
+		table caption{
+			margin-top: .5rem;
+		}
+		table caption,
+		table th,
+		table td{
+			padding: .5rem;
+		}
+		th,	td{
+			width: 120px;
+		}
+	/*Contenido Multimedia*/
 /*Pie de Pagina*/
 	#footer{
 		padding: 24px;

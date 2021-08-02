@@ -278,6 +278,70 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2> 
+			</header>
+			<p>
+				En la actualidad los navegadores permiten la reproduccion de todo tipo de pista de audio o video de forma nativa, aunque tambien existen otras etiquetas que se utilizan para incorporar contenido externo desde otra web, siempre y cuando este sea compartido.
+			</p>
+			<section>
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					Categoria web que se utiliza para definir a todo elemento que no pertenece al universo HTML o no pertenece al sitio donde se esta reproduciendo. Normalmente para la incorporacion de este tipo de contenido se utiliza la etiqueta <strong>&lt;iframe></strong> que permite la carga asincronica de contenido.
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs" 
+						title="YouTube: Carvel (Copyright)"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/Pwu_z6hX5gI" 
+						title="YouTube: Te lo Resumo" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Multimedia sin Plugins?</h3>
+				</header>
+				<p>
+					Los navegadores actuales incorporan API´s de reproduccion de contenido, a las que podemos acceder utilizando la etiquetas <strong>&lt;AUDIO> y &lt;VIDEO></strong>, las mismas soportan los formatos <em>.mp3 - .wav - .ogg</em> y <em>.mp4 - .webm - .ogv</em> respectivamente. Tambien permiten la reproduccion automatica siempre y cuando utilicemos los siguientes atributos <em>autoplay muted loop</em>.
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+							<a href="media/live-learn.mp3">link</a>
+						</p>
+					</audio>
+					<audio src="media/californication.mp4" controls autoplay>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+							<a href="media/californication.mp4">link</a>
+						</p>
+					</audio>
+					<video src="media/by-the-way.ogv" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+							<a href="media/californication.mp4">link</a>
+						</p>
+					</video>
+					<video src="media/cant-stop.webm" controls autoplay loop muted>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+							<a href="media/californication.mp4">link</a>
+						</p>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contact" action="contact.php" method="POST">
@@ -320,6 +384,10 @@
 			<a href="https://twitter.com" target="_blank">twitter</a>
 			<a href="https://github.com/c215714n/EducacionIT/tree/f_pescar-html" target="_blank">Github</a>
 		</div>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0725634326486!2d-58.378012085195266!3d-34.602326564930614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc41153a23%3A0xeb2ed79d5240bc97!2sISTEA%20-%20Educaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1627932636613!5m2!1ses!2sar" 
+			loading="lazy">
+		</iframe>
 		<p>
 			&copy; todos los derechos reservados
 			<a href="#">Cristian Racedo</a> 
