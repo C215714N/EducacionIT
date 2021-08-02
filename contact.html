@@ -25,14 +25,14 @@
 	<main>
 		<article>
 			<header class="header">
-				<h1>Formularios HTML</h1>
+				<h2>Formularios HTML</h2>
 			</header>
 			<p>
 				Son herramientas que permiten la interaccion entre <strong>cliente / servidor (intercambio de datos)</strong>, con las cuales el usuario completa o selecciona datos dentro del mismo para que luego sean enviados a modo de <em>peticion/solicitud</em>. Para poder colocar un formulario dentro de la pagina debemos utilizar la etiqueta <strong>&lt;form></strong> y dentro de la misma colocar el contenido a ser procesado.
 			</p>
 			<section>
 				<header>
-					<h1>¿Como funcionan?</h1>
+					<h3>¿Como funcionan?</h3>
 				</header>
 				<p>
 					Dentro de la etiqueta <em>menciona anteriormente</em> debemos colocar al menos 2 atributos, entre ellos estan: <strong>action="..."</strong> que define lo que debe suceder despues que el usuario presione el boton de envio, normalmente se utiliza un <em>script en lenguaje de servidor (por ejemplo: PHP)</em> para que este ultimo resuelva que hacer con los datos; y <strong>method="..."</strong> que define como deben manipularse los datos que seran enviados al servidor, en este caso los mismos estan predefinidos y son los siguientes.
@@ -132,7 +132,7 @@
 			</p>
 			<section>
 				<header>
-					<h2>¿Cual es su estructura?</h2>
+					<h3>¿Cual es su estructura?</h3>
 				</header>
 				<p>
 					A la etiqueta mencionada anteriormente, debemos colocarle 2 elementos que son <strong>las filas (TR)</strong> y <strong>las celdas (TD)</strong> respetando el modelo de cajas, es decir, utilizando el primero como contenedor del segundo. Ademas las mismas poseen una estructura semantica como se muestra a continuacion.
@@ -163,6 +163,7 @@
 						</tbody>
 					</table>
 					<table class="modern">
+						<caption>Organigrama</caption>
 						<thead>
 							<tr>
 								<th>Turno</th>
@@ -209,6 +210,70 @@
 								<td>2</td>
 							</tr>
 						</tfoot>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Celdas Combinadas?</h3>
+				</header>
+				<p>
+					Al igual que en cualquier programa, las tablas posee filas y columnas, y por lo tanto tambien podemos combinar las mismas, en caso que sea necesario. Para realizar dicha accion debemos colocar el atributo <strong>colspan="n"</strong> para expandir una celda entre columnas y <strong>rowspan="n"</strong> para expandir una celda entre filas. Cabe destacar que el contenido pertinente se movera "n" lugares a la derecha de su posicion original.
+				</p>
+				<div class="example">
+					<table class="modern classic">
+						<caption>Venta de Productos</caption>
+						<thead>
+							<tr>
+								<th>Articulo</th>
+								<th>Cant.</th>
+								<th>Precio/u</th>
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>monitor</td>
+								<td>3</td>
+								<td>18500</td>
+								<td>55500</td>
+							</tr>
+							<tr>
+								<td>gabinete</td>
+								<td>1</td>
+								<td>5800</td>
+								<td>5800</td>
+							</tr>
+							<tr>
+								<td>teclado</td>
+								<td>2</td>
+								<td>3200</td>
+								<td>6400</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>67700</td>
+						</tfoot>
+					</table>
+					<table class="classic">
+						<caption>Desarrolladores</caption>
+						<thead>
+							<th>Tipo</th>
+							<th>Lenguajes</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">frontEnd</td>
+								<td>html</td>
+							</tr>
+							<tr>
+								<td>css</td>
+							</tr>
+							<tr>
+								<td>js</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</section>
