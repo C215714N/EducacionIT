@@ -89,11 +89,32 @@
 			width: 120px;
 		}
 	/*Contenido Multimedia*/
+		video,
+		iframe{
+			display: block;
+			max-width: 540px;
+			width: 100%;
+			margin: .5rem auto;
+			border-radius: .25rem;
+			border: none;
+			box-shadow: 0 0 .5rem #eee;
+		}
 /*Pie de Pagina*/
 	#footer{
 		padding: 24px;
 		color: #eee;
 		background-color: #448;
+	}
+	.social{
+		text-align: center;
+		padding: .5rem;
+	}
+	.social a{
+		padding: .25rem;
+		color: #ccc;
+	}
+	.social a:hover{
+		color: #eee;
 	}
 	#contact{
 		margin: auto;
