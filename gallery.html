@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+	<link rel="stylesheet" href="assets/logo.svg">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html" title="">Inicio</a></li>
+			<li><a href="about.html" title="">Acerca</a></li>
+			<li><a href="#" title="">Galeria</a></li>
+			<li><a href="#contact" title="">Contacto</a></li>
+		</ul>
+	</nav>
+	<header id="header">
+		<div class="header">
+			<img src="assets/logo.svg" alt="Logo CSS">
+			<h1>Fundamentos Web</h1>
+			<p>
+				Bienvenidos al proyecto final del curso introductorio de fundamentos Web. En el mismo podremos poner en practica todo lo aprendido hasta el momento, entre los temas a tratar estan los <strong>elementos semanticos</strong>, hipervinculos, formularios y etc...
+			</p>
+		</div>
+	</header>
+	<section class="light">
+		<div class="gallery">
+			<h2>Galeria de Imagenes</h2>
+			<img src="assets/gallery/jjba-theworld-01.jpg" alt="JJBA the World">
+			<img src="assets/gallery/jjba-theworld-02.jpg" alt="JJBA the World">
+			<img src="assets/gallery/jjba-theworld-03.jpg" alt="JJBA the World">
+			<img src="assets/gallery/jjba-theworld-04.jpg" alt="JJBA the World">
+			<img src="assets/gallery/jjba-d4c-01.jpg" alt="JJBA d4c">
+			<img src="assets/gallery/jjba-d4c-02.jpg" alt="JJBA d4c">
+			<img src="assets/gallery/jjba-d4c-03.jpg" alt="JJBA d4c">
+			<img src="assets/gallery/jjba-d4c-04.jpg" alt="JJBA d4c">
+			<img src="assets/gallery/jjba-kingcrimson-01.jpg" alt="JJBA King Crimson">
+			<img src="assets/gallery/jjba-kingcrimson-02.jpg" alt="JJBA King Crimson">
+			<img src="assets/gallery/jjba-kingcrimson-03.jpg" alt="JJBA King Crimson">
+			<img src="assets/gallery/jjba-kingcrimson-04.jpg" alt="JJBA King Crimson">
+		</div>
+	</section>
+	<section>
+		<form id="contact" action="" method="post">
+			<h2>Informacion de Contacto</h2>
+			<label for="contactName">Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text"
+				required>
+			<label for="contactEmail">Correo</label>
+			<input 
+				id="contactEmail"
+				name="contactEmail" 
+				type="email"
+				required>
+			<label for="contactConsult">Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult"
+				required></textarea>
+			<button class="btn">Enviar</button>
+		</form>
+	</section>
+	<footer id="footer">
+		<div class="social">
+			<a href="https://facebook.com">
+				<img src="assets/icons/facebook.svg" alt="logo facebook">
+			</a>
+			<a href="https://instagram.com">
+				<img src="assets/icons/instagram.svg" alt="logo instagram">
+			</a>
+			<a href="https://twitter.com">
+				<img src="assets/icons/twitter.svg" alt="logo twitter">
+			</a>
+		</div>
+		<p class="copy">
+			Todos los derechos reservados
+			<a href="#">Cristian Racedo</a>
+			&amp; Compañia.
+		</p>
+	</footer>
+</body>
+</html>

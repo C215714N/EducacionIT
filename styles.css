@@ -1,0 +1,144 @@
+/*Reglas Generales*/
+	body,
+	h1, 
+	h2,
+	h3,
+	.menu{
+		margin: 0;
+		font-family: segoe ui, calibri, sans-serif;
+	}
+	a{ text-decoration: none }
+	.btn{
+		border-radius: .25rem;
+		border: .1rem solid #36c;
+		padding: .5rem 1rem;
+		color: #36c;
+		background-color: transparent;
+		text-transform: uppercase;
+	}
+	.btn:hover{
+		color: #eee;
+		background-color: #36c;
+	}
+/*Navegacion*/
+	.menu{
+		padding: 0;
+		text-align: center;
+		background-color: #248;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: .5rem;
+	}
+	.menu li:hover{
+		background-color: #36c;
+	}
+/*Cabecera */
+	#header{
+		padding: 1rem;
+		background-color: #ccc;
+	}
+	#header img{
+		float: right;
+		width: 100%;
+		max-width: 300px;
+	}
+	#header .header{
+		max-width: 720px;
+		margin: auto;
+		text-align: left;
+		overflow: hidden;
+	}
+/*Contenido Principal*/
+	.light{
+		padding: 1rem;
+		background-color: #eee;
+	}
+	.gallery{
+		max-width: 1140px;
+		margin: auto;
+	}
+	.gallery img{
+		max-width: 250px;
+		width: 100%;
+		margin: .25rem;
+		border-radius: .25rem;
+		border: .5rem solid #333;
+	}
+	.table{
+		margin: auto;
+		border-collapse: collapse;
+	}
+	.table caption,
+	.table th,
+	.table td{
+		padding: .25rem .5rem;
+	}
+	.table caption,
+	.table thead{
+		color: #eee;
+		background-color: #333;
+	}
+	.table tbody{
+		background-color: #ccc;
+	}
+	.table caption{
+		margin-top: 1rem;
+		border-radius: .25rem .25rem 0 0;
+	}
+	.content{
+		max-width: 540px;
+		margin: auto;
+		border-radius: .25rem;
+		padding: 1rem;
+		color: #eee;
+		background-color: #248;
+	}
+/*Pie de pagina*/
+	#footer{
+		padding: 1rem;
+		color: #eee;
+		background-color: #248;
+	}
+	#footer a{
+		color: #ccc;
+		font-weight: bold;
+	}
+	.social{
+		float: right;
+	}
+	.social img{
+		margin: .25rem;
+		border-radius: .25rem;
+		padding: .25rem;
+		width: 2rem;
+		background-color: #eee;
+	}
+	.social img:hover{
+		box-shadow: 0 0 .5rem #eee;
+	}
+/*Seccion de Contacto*/
+	#contact{
+		max-width: 720px;
+		margin: auto;
+		padding: 1rem;
+	}
+	#contact input,
+	#contact textarea{
+		width: calc(100% - 1.2rem);
+		outline: none;
+		border: .1rem solid #333;
+		padding: .5rem;
+	}
+	#contact textarea{
+		min-height: 8rem;
+		resize: none;
+	}
+	#contact .btn{
+		display: block;
+		margin-left: auto;
+	}
