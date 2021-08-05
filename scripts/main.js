@@ -1,4 +1,4 @@
-/*Navigation*/
+/* Navigation */
 	menuBtn = document.querySelector('nav .btn')
 	menuLst = document.querySelector('nav .menu')
 
@@ -8,3 +8,40 @@
 	pIn  = document.querySelector('.progress input')
 
 	pIn.addEventListener('input', () => pBar.value = pIn.value )
+/* Gallery */
+	const changeItem = (array, type) => {
+		for(i = 0; i < array.length; i++){
+			if (array[i].classList.contains('active')){
+				array[i].classList.remove('active')
+				switch(type){
+					case true:
+						i < array.length - 1 ?
+							newItem = array[i + 1] :
+							newItem = array[0]
+					break;
+					default:
+						i > 0 ? 
+							newItem = array[i - 1] :
+							newItem = array[array.length - 1]
+		}	}	}	newItem.classList.add('active')
+	}
+	window.setInterval( () => forwards[0].click() , 30000)
+	/*obtener todas las galerias*/
+		counters = document.querySelectorAll('.slide_count') 
+		galleries = document.querySelectorAll('.slide')
+	/*obtener todos los botones*/
+		backwards = document.querySelectorAll('.icon-prev')
+		forwards  = document.querySelectorAll('.icon-next')
+	/*eventos por cada boton*/
+		backwards.forEach( (a, i) => { a.onclick = () => {
+			let g = galleries[i].querySelectorAll('li')
+			let c = counters[i].querySelectorAll('span')
+			changeItem(g)
+			changeItem(c)
+		}	}	)
+		forwards.forEach( (s,i) => { s.onclick = () => {
+			let g = galleries[i].querySelectorAll('li')
+			let c = counters[i].querySelectorAll('span')
+			changeItem(g, true)
+			changeItem(c, true)
+		}	}	)

@@ -75,6 +75,7 @@
 	}
 //	Nesting: 
 	#footer{
+		position: relative;
 		@include normalize($p:1rem);
 		//	Formulario de Contacto
 		#contact{
