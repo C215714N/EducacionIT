@@ -8,6 +8,11 @@
 	pIn  = document.querySelector('.progress input')
 
 	pIn.addEventListener('input', () => pBar.value = pIn.value )
+/* Contact Map */
+	mapBtn = document.querySelector('#footer .btn.opacity')
+	mapFrm = document.querySelector('#footer iframe.cover')
+
+	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max', 'icon-min') : mapBtn.classList.replace('icon-min', 'icon-max') 
 /* Gallery */
 	const changeItem = (array, type) => {
 		for(i = 0; i < array.length; i++){

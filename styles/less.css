@@ -10,6 +10,15 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  perspective: 200px;
+  perspective-origin: top center;
+}
+#header .header {
+  text-align: center;
+}
+#header .header h1 {
+  font-family: 'star wars';
+  transform: rotateX(30deg);
 }
 #header .header h1,
 #header .header p {
@@ -38,6 +47,7 @@
   height: 1rem;
   background-color: #eee;
   box-shadow: 0 0 0.5rem #333;
+  transition: all 1s ease-out;
 }
 #header .header div span.active {
   width: 3rem;
@@ -51,6 +61,7 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
+  transition: all 1s ease-in-out;
 }
 #header .slide li:nth-child(1n) {
   background-image: url('../assets/img/osx-high-sierra.jpg');

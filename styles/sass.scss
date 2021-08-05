@@ -59,7 +59,11 @@
 		font-size: 1rem;
 		text-transform: uppercase;
 		background-color: transparent;
-		&:hover{ @extend .text-primary, .bg-light; }
+		transition: all .5s ease-in .2s; /*property duration timing delay*/
+		&:hover{ 
+			@extend .text-primary, .bg-light; 
+			transform: scale(1.2)
+		}
 	}
 	%icon{
 		@include normalize(.25rem);
@@ -69,14 +73,33 @@
 		background-size: 1.5rem;
 		background-repeat: no-repeat;
 		background-position: center;
-		&:hover{
-			background-size: 2rem;
+		// Transitions
+		transition-property: transform;
+		transition-duration: 1s;
+		&:hover{	
+			transform: 
+				scale(1.5)
+				translate(0, -.5rem)
+				rotate(360deg);
 		}
+	}
+	%front{
+		position: fixed;
+		z-index: 2;
 	}
 //	Nesting: 
 	#footer{
 		position: relative;
-		@include normalize($p:1rem);
+		@include normalize($p:3rem 1rem 1rem);
+		.btn.opacity{
+			@extend .text-light, .border-light, .bg-primary;
+			top: .5rem;
+			right: .5rem;
+			opacity: .9;
+			&.icon-max{ position: absolute; }
+			&.icon-min{ @extend %front; }	
+		}
+		iframe.active{ @extend %front; }
 		//	Formulario de Contacto
 		#contact{
 			display: grid;

@@ -3,6 +3,10 @@
 		@import url('icomoon.css');
 		@import url('less.css');
 		@import url('sass.css');
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
 	/*General Rules*/
 		:root{
 			--first:  #48e;
@@ -49,6 +53,7 @@
 			padding: 0;
 			list-style: none;
 			overflow: hidden;
+			transition: all .5s ease-out;
 		}
 		.menu.active{ max-height: 600px; }
 		.menu span{ padding: .5rem;	}
@@ -60,6 +65,50 @@
 			border-radius: 50%;
 			background-color: var(--dark);
 		}
+	/*Contenido Principal*/
+		main, section{
+			padding: 1rem;
+		}
+		section{
+			margin: 1rem auto;
+			border-radius: .25rem;
+			box-shadow: 0 0 .5rem var(--dark);
+		}
+		.example{
+			display: flex;
+			flex-wrap: wrap;
+			margin: .5rem;
+			border-left: .2rem solid var(--first);
+			padding: 1rem;
+			line-height: 1.5rem;
+			list-style: none;
+			background-color: var(--light);
+		}
+		.example div{
+			padding: .5rem;
+		}
+		.less div{
+			border: .1rem dashed var(--dark);
+		}
+		.transform{
+			perspective: 200px;
+			perspective-origin: center;
+		}
+		.transform div{
+			margin: .25rem;
+			border: .2rem dotted var(--dark);
+			background-color: var(--second);
+			min-width: 15rem;
+			transition: all 1s ease;
+		}
+		.transform div:nth-child(1n):hover{ transform: scale(1.5); }
+		.transform div:nth-child(2n):hover{ transform: translate(1rem,-1rem);}
+		.transform div:nth-child(3n):hover{ transform: rotate(45deg); }
+		.transform div:nth-child(4n):hover{ transform: skewX(45deg); }
+		.transform div:nth-child(5n):hover{ transform: skewY(-15deg) }
+		.transform div:nth-child(6n):hover{ transform: rotateX(30deg) }
+		.transform div:nth-child(7n):hover{ transform: rotateY(-45deg) }
+		.transform div:nth-child(8n):hover{ transform: translateZ(5rem); }
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/

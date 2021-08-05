@@ -41,7 +41,7 @@
 }
 
 .text-light, #footer #contact input:focus + .valid,
-#footer #contact textarea:focus + .valid, #footer #contact, .btn {
+#footer #contact textarea:focus + .valid, #footer #contact, #footer .btn.opacity, .btn {
   color: #eee;
 }
 
@@ -65,7 +65,7 @@
   color: #248;
 }
 
-.bg-primary, #footer #contact {
+.bg-primary, #footer #contact, #footer .btn.opacity {
   background-color: #48e;
 }
 
@@ -108,7 +108,7 @@
   border-color: #e8c;
 }
 
-.border-light {
+.border-light, #footer .btn.opacity {
   border-color: #eee;
 }
 
@@ -633,7 +633,13 @@
   font-size: 1rem;
   text-transform: uppercase;
   background-color: transparent;
+  transition: all 0.5s ease-in 0.2s;
+  /*property duration timing delay*/
 }
+.btn:hover {
+  transform: scale(1.2);
+}
+
 #footer .social a {
   margin: 0.25rem;
   border: 0;
@@ -644,16 +650,31 @@
   background-size: 1.5rem;
   background-repeat: no-repeat;
   background-position: center;
+  transition-property: transform;
+  transition-duration: 1s;
 }
 #footer .social a:hover {
-  background-size: 2rem;
+  transform: scale(1.5) translate(0, -0.5rem) rotate(360deg);
+}
+
+#footer iframe.active, #footer .btn.opacity.icon-min {
+  position: fixed;
+  z-index: 2;
 }
 
 #footer {
   position: relative;
   margin: 0;
   border: 0;
-  padding: 1rem;
+  padding: 3rem 1rem 1rem;
+}
+#footer .btn.opacity {
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 0.9;
+}
+#footer .btn.opacity.icon-max {
+  position: absolute;
 }
 #footer #contact {
   display: grid;

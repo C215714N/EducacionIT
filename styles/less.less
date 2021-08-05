@@ -22,9 +22,17 @@
 		.position(@xa: height; @x:min(100vh, 720px));
 		.normalize(@p:1rem);
 		.flexbox(@fa: center);
+		perspective: 200px;
+		perspective-origin: top center;
 		// Encabezado
 		.header{
-			h1,p{ 
+			text-align: center;
+			h1{ 
+				font-family: 'star wars'; 
+				transform: rotateX(30deg);
+			}
+			h1,
+			p{ 
 				margin:0; 
 				font-size: ~'min(calc(5vw + 1rem), 5rem)'; /*viewport width*/
 				text-shadow: 0 0 .5rem @light;
@@ -39,6 +47,7 @@
 					height: 1rem;
 					background-color: @light;
 					box-shadow: 0 0 .5rem @dark;
+					transition: all 1s ease-out;
 					&.active{
 						width: 3rem;
 					}
@@ -55,6 +64,7 @@
 				background-position: center;
 				.bg(@backgrounds);
 				opacity: 0;
+				transition: all 1s ease-in-out;
 				&.active{ opacity: 1; }
 			}
 		}
