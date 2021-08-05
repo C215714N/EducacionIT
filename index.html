@@ -23,5 +23,41 @@
 		<h1>Maquetacion Web</h1>
 		<p>html | css | js</p>
 	</header>
+	<main><!--MAIN: Contenido Principal (Interes del Usuario)-->
+		<section><!-- SECTION: Contenido contextualizado (funciona internamente) -->
+			<header class="header">
+				<h2>Introduccion a la Maquetacion</h2>
+			</header>
+			<article><!-- ARTICLE: Contenido independiente (funciona externamente) -->
+				<header>
+					<h3>Elementos Semanticos</h3>
+				</header>
+				<p>
+					HTML5 incorporo nuevos elementos que permiten a los navegadores y motores de busqueda interpretar con mayor facilidad el tipo de contenido que se utilizan dentro de cada pagina. Por un lado la idea de esta implementa radica en la reduccion de usos de etiquetas "div" y mejorar la estructura semantica de los sitios web, haciendo referencia a la funcion que cumple cada elemento contenedor dentro de cada pagina del sitio.
+				</p>
+				<ul class="example">
+					<li><strong>HEAD</strong> Corresponde a la cabecera de pagina o contenido introductorio; debe poseer titulos, puede contener la navegacion principal e incluso una galeria.</li>
+					<li><strong>NAV</strong> Corresponde a la navegacion principal, debe poseer los links mas importantes.</li>
+					<li><strong>MAIN</strong> Corresponde al contenido de mayor relevancia dentro de la pagina, para notificar algo al usuario, el mismo puede estar divido en mas partes.</li>
+					<li><strong>SECTION</strong> Correponde al contenido contextualizado, es decir, aquel que depende de otro dentro de la pagina pagina para comprenderse en su totalidad.</li>
+					<li><strong>ARTICLE</strong> Corresponde al contenido independiente, que funciona tanto dentro como fuera del sitio debido a que posee una estructura autoconclusiva</li>
+					<li><strong>ASIDE</strong> Corresponde al contenido tangencial, es decir, que se relaciona indirectamente con sus elementos hermanos. Se utiliza normalmente para publicidad o sugerencias.</li>
+					<li><strong>FOOTER</strong> Corresponde al pie de pagina, donde colocamos la informacion complementaria como las redes sociales, alguna mapa del sitio e informacion de copyright.</li>
+				</ul>
+			</article>
+		</section>
+	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			<h2>Contactanos</h2>
+		</form>
+		<div class="social">
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+		</div>
+		<p class="copy">&copy; Todos los derechos reservados</p>
+	</footer>
 </body>
 </html>
