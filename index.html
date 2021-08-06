@@ -23,7 +23,30 @@
 		<h1>Maquetacion Web</h1>
 		<p>html | css | js</p>
 	</header>
-	<!-- MAIN: Contenido de mayor relevancia para el usuario -->
+	<main><!-- MAIN: Contenido de mayor relevancia para el usuario -->
+		<section><!-- SECTION: Contenido contextualizado (dependiente) -->
+			<header class="header">
+				<h2>Introducion a la Maquetacion</h2>
+			</header>
+			<article><!-- ARTICLE: Contenido Independiente -->
+				<header>
+					<h3>Elementos Semanticos</h3>
+				</header>
+				<p>
+					HTML5 incorporo en su lanzamiento nuevos elementos que facilitan a los navegadores y motores de busqueda identificar el tipo de contenido de las paginas de nuestro sitio. Esto mejora la legibilidad a nivel estructural y permite, a las herramientas mencionadas anteriormente, indexar de manera mucho mas clara los contenidos para realizar las sugerencias de busqueda. Se conocen como elementos semanticos debido a que definen la funcion que cumplen los bloques de contenido dentro de la pagina.
+				</p>
+				<ul class="example">
+					<li><strong>HEADER</strong> Corresponde a la cabecera o contenido introductorio, debe contener a los titulos, puede incluir la navegacion e incluso una galeria a modo de presentacion.</li>
+					<li><strong>NAV</strong> Corresponde a la navegacion principal, es decir, los links mas importantes del sitio.</li>
+					<li><strong>MAIN</strong> Corresponde al contenido principal o de mayor relevancia para el usuario y en ocasiones tambien puede estar divido en partes, segun el contenido.</li>
+					<li><strong>SECTION</strong> Corresponde al contenido contextualizado, es decir, aquel que solamente se puede interpretar de manera correcta dentro de la pagina.</li>
+					<li><strong>ARTICLE</strong> Corresponde al contenido independiente, debido a que posee su propia estructura, se puede interpretar tanto dentro como fuera de la pagina.</li>
+					<li><strong>ASIDE</strong> Corresponde al contenido Tangencial, es decir, aquel que se relaciona indirectamente con sus elementos hermanos. Normalmente se utiliza para sugerencias o publicidad.</li>
+					<li><strong>FOOTER</strong> Corresponde al Pie de pagina o contenido complementario, suele colocarse en su interior informacion de contacto, copyright, redes sociales e incluso un mapa del sitio.</li>
+				</ul>
+			</article>
+		</section>
+	</main>
 	<footer id="footer"><!-- FOOTER: Informacion complementaria -->
 		<form id="contact" action="" method="">
 			<h2>Contactanos</h2>
@@ -32,7 +55,7 @@
 			<a href="https://facebook.com" target="_blank"></a>
 			<a href="https://instagram.com" target="_blank"></a>
 			<a href="https://twitter.com" target="_blank"></a>
-			<a href="https://github.com/c215714n/EducacionIT/tree/css-j-19" target="_blank"></a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/css-j-19" target="_blank">GitHub</a>
 		</div>
 		<p class="copy">&copy; Todos los derechos reservados.</p>
 	</footer>
