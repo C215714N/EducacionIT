@@ -9,6 +9,7 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Maquetacion Web</title>
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body><!-- Parte VISIBLE: Content / images / text -->
 	<nav><!-- NAV: Links mas importantes -->
@@ -57,6 +58,21 @@
 					<li><strong>BORDER</strong> Linea que rodea a una etiqueta, su valor predeterminado es cero y suma tamaño.</li>
 					<li><strong>PADDING</strong> Relleno o distancia entre el borde y el contenido, que tambien suma tamaño.</li>
 					<li><strong>CONTENT</strong> Elementos que se encuentran dentro de una etiqueta a los que se les puede dar tamaño.</li>
+				</ul>
+				<h4>Dimensionamiento (Box-Sizing)</h4>
+				<ul class="example">
+					<li><strong>content-box</strong>
+						<ul>
+							<li>final-width = width + padding + border</li>
+							<li>content-width = width</li>
+						</ul>
+					</li>
+					<li><strong>border-box</strong>
+						<ul>
+							<li>final-width = width</li>
+							<li>content-width = width - padding - border</li>
+						</ul>
+					</li>
 				</ul>
 			</article>
 		</section>
