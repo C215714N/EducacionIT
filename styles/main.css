@@ -14,8 +14,23 @@
 /*Navegacion*/
 
 /*Cabecera*/
-	h1{
-		font-family: 'star wars', 'calibri', sans-serif;
+	h1{ font-family: 'star wars', 'calibri', sans-serif; }
+
+	.priority #span span{
+		text-transform: uppercase;
+		color: darkblue;
+		background-color: skyblue;
+	}
+	.priority .span span{
+		font-weight: bold;
+		color: darkgreen;
+		background-color: limegreen;
+	}
+	.priority span{
+		display: inline-block;
+		padding: .25rem;
+		color: darkred;
+		background-color: tomato;
 	}
 /*Contenido Principal*/
 

@@ -75,6 +75,37 @@
 					</li>
 				</ul>
 			</article>
+			<article>
+				<header>
+					<h3>Jerarquia de Selectores</h3>
+				</header>
+				<p>
+					En CSS3, si bien, no es importante el orden de las reglas, debido a que estas no afectan el producto final, si es relevante el orden de aplicacion de las mismas para determinar los estilos que se van a priorizar. En igualdad de condiciones el navegador determinara que la regla que a aplicar siempre sera la ultima declarada dentro de las hojas de estilos, pero antes que eso priorizara el tipo de elemento a que estamos aplicando los estilos, segun los atributos <strong>class y Id</strong> correspondiendo a la siguiente lista de selectores.
+				</p>
+				<ul class="example priority">
+					<li>
+						<strong>Tag Selector</strong>
+						<ul>
+							<li><span>header</span>{...}</li>
+							<li><span>header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li class="span">
+						<strong>Class Selector</strong>
+						<ul>
+							<li><span>.header</span>{...}</li>
+							<li><span>.header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li id="span" class="span">
+						<strong>Id Selector</strong>
+						<ul>
+							<li><span>#header</span>{...}</li>
+							<li><span>#header</span> h1{...}</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
 		</section>
 	</main>
 	<footer id="footer"><!-- FOOTER: Contenido Complementario -->
