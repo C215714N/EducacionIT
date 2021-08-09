@@ -11,27 +11,59 @@
 		box-sizing: border-box;
 		font-family: 'Raleway', 'Calibri', 'segoe ui', sans-serif;
 	}
+	body{
+		margin: 0;
+	}
 /*Navegacion*/
 
 /*Cabecera*/
-	h1{ font-family: 'star wars', 'calibri', sans-serif; }
-
-	.priority #span span{
-		text-transform: uppercase;
-		color: darkblue;
-		background-color: skyblue;
+	#header{
+		padding: 20% 1rem; /*top right bottom left*/
+		text-align: center;
+		color: #eee;
+		background-image:
+			url('../assets/backgrounds/starwars_deathstar.png'),
+			radial-gradient(
+				hsl(240, 50%, 20%) 10%,
+				hsl(250, 50%, 10%) 30%,
+				hsl(250, 30%, 5%) 50%);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 50%, cover;/*x y, word(cover | contain)*/
+		background-attachment: fixed;
 	}
-	.priority .span span{
-		font-weight: bold;
-		color: darkgreen;
-		background-color: limegreen;
-	}
-	.priority span{
-		display: inline-block;
-		padding: .25rem;
-		color: darkred;
-		background-color: tomato;
+	h1{ 
+		text-shadow: 0 0 1rem #ca3;
+		letter-spacing: .2rem;
+		font-family: 'star wars', 'calibri', sans-serif; 
 	}
 /*Contenido Principal*/
+	/*Jerarquias de Estilos*/
+		.priority #span span{
+			text-transform: uppercase;
+			color: darkblue;
+			background-color: skyblue;
+		}
+		.priority .span span{
+			font-weight: bold;
+			color: darkgreen;
+			background-color: limegreen;
+		}
+		.priority span{
+			display: inline-block;
+			padding: .25rem;
+			color: darkred;
+			background-color: tomato;
+		}
+	/*Modelos de color*/ 
+		.colors li{
+			margin: .25rem;
+			padding: .5rem;
+			color: #eee;
+		}
+		.colors li:first-child{ background-color: darkslateblue; }
+		.colors li:nth-child(2){ background-color: rgba(68,68,136); }
+		.colors li:nth-last-child(2){ background-color: #448; }
+		.colors li:last-child{ background-color: hsl(240, 40%, 40%); }
 
 /*Pie de Pagina*/
