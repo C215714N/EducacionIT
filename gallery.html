@@ -30,7 +30,7 @@
 	<!-- Contenido Principal: Revelante para el usuario -->
 	<main>
 		<h2>Elementos Semanticos</h2>
-		<ul>
+		<ul class="list">
 			<li>
 				<strong>HEADER</strong> es la cabecera de pagina o contenido introductorio, contiene los titulos principales, puede contener la navegacion e incluso una galeria a modo de presentacion.
 			</li>
@@ -53,6 +53,58 @@
 				<strong>FOOTER</strong> corresponde al pie de pagina o contenido complementario, donde se coloca la informacion de contacto, copyright, algun mapa del sitio e incluso las redes sociales.
 			</li>
 		</ul>
+		<section>
+			<h2>Implementacion de Imagenes</h2>
+			<p>
+				la etiqueta para utilzar imagenes es <strong>&lt;img></strong> y dentro de la misma se debe especicar donde se encuentra la misma utilizando el atributo <em>src="..."</em>, pero ademas, para brindar accesibilidad a la misma de debe indicar un texto alternativo utilizando el atributo <em>alt="..."</em>.
+			</p>
+			<img src="assets/gallery/jjba-kingcrimson-01.jpg" alt="Dibujo King Crimson - JJBA">
+			<img src="assets/gallery/jjba-kingcrimson-02.jpg" alt="Dibujo King Crimson - JJBA">
+			<img src="assets/gallery/jjba-kingcrimson-03.jpg" alt="Dibujo King Crimson - JJBA">
+			<img src="assets/gallery/jjba-kingcrimson-04.jpg" alt="Dibujo King Crimson - JJBA">
+		</section>
+		<h2>Reglas de Nomenclatura</h2>
+		<ul class="list">
+			<li>
+				<strong>Evitar el uso de espacios en los nombres de los archivos</strong> debido a que los navegadores interpretan este caracater como el <em>conjunto "%20"</em>. Si nuestro archivo se llama <em>"foto 01.jpg"</em> el navegador interpretara <em>"foto%2001.jpg"</em>, no encontrando el mismo; debido a esto se aconseja <strong>utilizar guiones (-_)</strong>.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> para poder implementar las imagenes con mayor facilidad. <strong>Evitar los nombres genericos o automatizados, especialmente si trabajamos con muchos elementos,</strong> como <em>foto_01.jpg</em> o <em>"2021-09-08-121840100.jpg"</em>.
+			</li>
+			<li>
+				<strong>Nombrar los archivos en minusculas para reducir el margen de error</strong> debido a que los servidores son <em>caseSensitive</em> y no es los mismo <em>"background.jpg", "Background.jpg", "BACKGROUND.jpg"</em>.
+			</li>
+		</ul>
+		<article>
+			<h2>Imagenes y Texto</h2>
+			<p>
+				<img src="assets/gallery/usm-scorpion-01.jpg" alt="Dibujo Ultimate Scorpion">
+				
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus nisi hic a adipisci sunt, voluptatum, soluta, rerum laboriosam cumque corporis dicta dolorum? Nulla maiores accusantium alias fuga assumenda dolore!
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officiis obcaecati autem maxime esse nulla architecto voluptate omnis praesentium id laboriosam harum commodi non cum reiciendis debitis et pariatur, quam!
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis exercitationem reprehenderit est autem voluptatem quasi aliquid, a reiciendis velit, quia ducimus vitae laudantium quaerat magnam soluta modi incidunt excepturi.
+			</p>
+			<p>
+				<img src="assets/gallery/usm-scorpion-02.jpg" alt="Dibujo Ultimate Scorpion">
+				
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus nisi hic a adipisci sunt, voluptatum, soluta, rerum laboriosam cumque corporis dicta dolorum? Nulla maiores accusantium alias fuga assumenda dolore!
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officiis obcaecati autem maxime esse nulla architecto voluptate omnis praesentium id laboriosam harum commodi non cum reiciendis debitis et pariatur, quam!
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis exercitationem reprehenderit est autem voluptatem quasi aliquid, a reiciendis velit, quia ducimus vitae laudantium quaerat magnam soluta modi incidunt excepturi.
+			</p>
+			<p>
+				<img src="assets/gallery/usm-scorpion-03.jpg" alt="Dibujo Ultimate Scorpion">
+				
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus nisi hic a adipisci sunt, voluptatum, soluta, rerum laboriosam cumque corporis dicta dolorum? Nulla maiores accusantium alias fuga assumenda dolore!
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officiis obcaecati autem maxime esse nulla architecto voluptate omnis praesentium id laboriosam harum commodi non cum reiciendis debitis et pariatur, quam!
+
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis exercitationem reprehenderit est autem voluptatem quasi aliquid, a reiciendis velit, quia ducimus vitae laudantium quaerat magnam soluta modi incidunt excepturi.
+			</p>
+		</article>
 	</main>
 	<!-- Pie de pagina: Informacion complementaria -->
 	<footer id="footer">
