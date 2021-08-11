@@ -137,60 +137,85 @@
 		}
 /*Pie de Pagina*/
 	/*Formulario de Contacto*/
-	#contact{
-		max-width: 720px;
-		display: flex;
-		flex-direction: column;
-		margin: 1rem auto;
-		border-radius: .25rem;
-		padding: 1rem;
-		color: #eee;
-		background-image: linear-gradient( #36c, #448);
-	}
-	#contact h2{
-		font-family: 'star wars';
-	}
-	#contact label{
-		margin-top: .5rem;
-		height: 0;
-		overflow: hidden;
-	}
-	#contact input,
-	#contact textarea{
-		outline: none;
-		border: .15rem solid transparent;
-		padding: .5rem 1rem;
-		font-size: 1rem;
-	}
-	#contact textarea{
-		min-height: 8rem;
-		resize: none;
-	}
-	#contact .valid{
-		display: none;
-		padding: .5rem;
-		background-color: #333;
-	}
-	#contact button{
-		align-self: flex-end;
-		margin: .25rem 0;
-		border: .1rem solid #eee;
-		padding: .5rem 1rem;
-		text-transform: uppercase;
-		color: #eee;
-		background-color: transparent;
-		font-weight: bold;
-		cursor: pointer;
-	}
-	#contact button:hover{
-		color: #448;
-		background-color: #eee;
-		box-shadow: 0 0 .5rem #eee;
-	}
-	/* Validacion del Formulario */
+		#contact{
+			max-width: 720px;
+			display: flex;
+			flex-direction: column;
+			margin: 1rem auto;
+			border-radius: .25rem;
+			padding: 1rem;
+			color: #eee;
+			background-image: linear-gradient( #36c, #448);
+		}
+		#contact h2{
+			font-family: 'star wars';
+		}
+		#contact label{
+			margin-top: .5rem;
+			height: 0;
+			overflow: hidden;
+		}
+		#contact input,
+		#contact textarea{
+			outline: none;
+			border: .15rem solid transparent;
+			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			min-height: 8rem;
+			resize: none;
+		}
+		#contact .valid{
+			display: none;
+			padding: .5rem;
+			background-color: #333;
+		}
+		#contact button{
+			align-self: flex-end;
+			margin: .25rem 0;
+			border: .1rem solid #eee;
+			padding: .5rem 1rem;
+			text-transform: uppercase;
+			color: #eee;
+			background-color: transparent;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		#contact button:hover{
+			color: #448;
+			background-color: #eee;
+			box-shadow: 0 0 .5rem #eee;
+		}
+	/*Validacion del Formulario*/
 		#contact :not(button):focus{ border-color: #333 }
 		#contact :not(button):focus + .valid{ display: block }
 		#contact :not(button):focus:valid{ border-color: #3c6; }
 		#contact :not(button):valid + .valid{ background-color: #3c6; }
 		#contact :not(:placeholder-shown):invalid{ border-color: #c33; }
 		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
+	/*Redes Sociales*/
+	.social{
+		max-width: 320px;
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+	.social h2{ width: 100%; }
+	.social a{
+		width: 4rem;
+		height: 4rem;
+		margin: .25rem;
+		background-size: 2rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: .6;
+	}
+	.social a:hover{
+		background-size: 4rem;
+		opacity: 1;
+	}
+	.facebook{	background-image: url('../assets/icons/facebook.svg');	}
+	.instagram{	background-image: url('../assets/icons/instagram.svg');	}
+	.twitter{	background-image: url('../assets/icons/twitter.svg');	}
+	.github{	background-image: url('../assets/icons/github.svg');	}
