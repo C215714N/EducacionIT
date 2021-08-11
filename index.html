@@ -152,7 +152,8 @@
 				<p>
 					El modelo de cajas flexible es estandar que se incorporo en CSS3 y corresponde a un modelo unidireccional que permite la organizacion del contenido mediante la implementacion de un <strong>eje primario</strong> y un <strong>eje secundario</strong> en una etiqueta contenedora. Debe implementarse en diseños simples, donde el contenido deba disponerse en una fila o columna de manera organica.
 				</p>
-				<h4>Justify-Content</h4>
+				<label for="flex-jc"><h4>Justify-Content</h4></label>
+				<input class="hidden" id="flex-jc" type="checkbox">
 				<div class="example flex">
 					<div>div 1</div>
 					<div>div 2</div>
@@ -167,7 +168,8 @@
 					<span>span 5</span>
 					<span>span 6</span>
 				</div>
-				<h4>Align-Items</h4>
+				<label for="flex-ai"><h4>Align-Items</h4></label>
+				<input class="hidden" id="flex-ai" type="checkbox">
 				<div class="example flex align">
 					<div>div 1</div>
 					<div>div 2</div>
@@ -183,53 +185,65 @@
 					<span>span 6</span>
 				</div>
 				<h4>Flex-Direction</h4>
-				<div class="example">
-					<div class="flex align col">
-						<strong>Column</strong>
-						<div>div 1</div>
-						<div>div 2</div>
-						<div>div 3</div>
-						<div>div 4</div>
-						<div>div 5</div>
-						<div>div 6</div>
-						<span>span 1</span>
-						<span>span 2</span>
-						<span>span 3</span>
-						<span>span 4</span>
-						<span>span 5</span>
-						<span>span 6</span>
-					</div>
-					<div class="flex align row-r">
-						<strong>Row-Reverse</strong>
-						<div>div 1</div>
-						<div>div 2</div>
-						<div>div 3</div>
-						<div>div 4</div>
-						<div>div 5</div>
-						<div>div 6</div>
-						<span>span 1</span>
-						<span>span 2</span>
-						<span>span 3</span>
-						<span>span 4</span>
-						<span>span 5</span>
-						<span>span 6</span>
-					</div>
-					<div class="flex align col-r">
-						<strong>Column-Reverse</strong>
-						<div>div 1</div>
-						<div>div 2</div>
-						<div>div 3</div>
-						<div>div 4</div>
-						<div>div 5</div>
-						<div>div 6</div>
-						<span>span 1</span>
-						<span>span 2</span>
-						<span>span 3</span>
-						<span>span 4</span>
-						<span>span 5</span>
-						<span>span 6</span>
-					</div>
-				</div>
+				<ul>
+					<li>
+						<label for="col">Column</label>
+						<input type="checkbox" class="hidden" id="col">
+						<div class="example flex align col">
+								<strong>Column</strong>
+								<div>div 1</div>
+								<div>div 2</div>
+								<div>div 3</div>
+								<div>div 4</div>
+								<div>div 5</div>
+								<div>div 6</div>
+								<span>span 1</span>
+								<span>span 2</span>
+								<span>span 3</span>
+								<span>span 4</span>
+								<span>span 5</span>
+								<span>span 6</span>
+						</div>
+					</li>
+					<li>
+						<label for="row-r">Row-Reverse</label>
+						<input class="hidden" id="row-r" type="checkbox">
+						<div class="example flex align row-r">
+								<strong>Row-Reverse</strong>
+								<div>div 1</div>
+								<div>div 2</div>
+								<div>div 3</div>
+								<div>div 4</div>
+								<div>div 5</div>
+								<div>div 6</div>
+								<span>span 1</span>
+								<span>span 2</span>
+								<span>span 3</span>
+								<span>span 4</span>
+								<span>span 5</span>
+								<span>span 6</span>
+						</div>
+					</li>
+					<li>
+						<label for="col-r">Column-Reverse</label>
+						<input class="hidden" id="col-r" type="checkbox">
+						<div class="example flex align col-r">
+								<strong>Column-Reverse</strong>
+								<div>div 1</div>
+								<div>div 2</div>
+								<div>div 3</div>
+								<div>div 4</div>
+								<div>div 5</div>
+								<div>div 6</div>
+								<span>span 1</span>
+								<span>span 2</span>
+								<span>span 3</span>
+								<span>span 4</span>
+								<span>span 5</span>
+								<span>span 6</span>
+						</div>
+					</li>
+				</ul>
 			</article>
 		</section>
 	</main>

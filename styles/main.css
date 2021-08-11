@@ -65,13 +65,36 @@
 		font-family: 'star wars', 'calibri', sans-serif; 
 	}
 /*Contenido Principal*/
+	main{
+		max-width: 960px;
+		margin: auto;
+		padding: 1rem;
+	}
 	.example{
-		gap: .5rem;
+		max-height: 600px;
+		display: flex;
+		flex-wrap: wrap;
 		margin: .25rem;
-		padding: .5rem;
+		margin-left: 2rem;
+		border-left: .2rem solid #448;
+		padding: 1rem;
 		background-color: #ccc;
+		line-height: 1.5rem;
+		list-style: none;
+		overflow: auto;
+	}
+	.example > li{
+		width: 50%;
+		min-width: 200px;
+		padding: .5rem;
+	}
+	.example .flex{
+		width: 100%;
 	}
 	/*Jerarquias de Estilos*/
+		.priority > li{
+			width: 30%;
+		}
 		.priority #span span{
 			text-transform: uppercase;
 			color: darkblue;
@@ -90,6 +113,7 @@
 		}
 	/*Modelos de color*/ 
 		.colors li{
+			width: calc(50% - .5rem);
 			margin: .25rem;
 			padding: .5rem;
 			color: #eee;
@@ -107,13 +131,13 @@
 			color: #eee;
 			background: linear-gradient(#36c, #224);
 		}
-		.flex{ 
+		:checked + .flex{ 
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
 			margin: 1rem;
 		}
-		.align{
+		:checked + .align{
 			min-height: 300px;
 			align-items: center;
 		}
@@ -135,6 +159,21 @@
 			border-left: .5rem dotted #3c6;
 			border-bottom: .5rem dotted #c33;
 		}
+		.flex, 
+		.align{
+			height: 0;
+			padding: 0;
+			border: 0;
+		}
+		input:checked + .flex,
+		input:checked + .align{
+			height: auto;
+		}
+		label{
+			cursor: pointer;
+			border-bottom: .1rem solid #448;
+		}
+		.hidden{ display: none; }
 /*Pie de Pagina*/
 	/*Formulario de Contacto*/
 		#contact{
