@@ -158,7 +158,7 @@
 	#contact input,
 	#contact textarea{
 		outline: none;
-		border: .2rem solid transparent;
+		border: .15rem solid transparent;
 		padding: .5rem 1rem;
 		font-size: 1rem;
 	}
@@ -187,3 +187,10 @@
 		background-color: #eee;
 		box-shadow: 0 0 .5rem #eee;
 	}
+	/* Validacion del Formulario */
+		#contact :not(button):focus{ border-color: #333 }
+		#contact :not(button):focus + .valid{ display: block }
+		#contact :not(button):focus:valid{ border-color: #3c6; }
+		#contact :not(button):valid + .valid{ background-color: #3c6; }
+		#contact :not(:placeholder-shown):invalid{ border-color: #c33; }
+		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
