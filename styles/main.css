@@ -11,25 +11,49 @@
 		box-sizing: border-box;
 		font-family: 'Raleway', 'Calibri', 'segoe ui', sans-serif;
 	}
-	body{
+	body,
+	h1, 
+	.menu{
 		margin: 0;
 	}
 /*Navegacion*/
-
+	.menu{
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		background-color: #448;
+		list-style: none;
+	}
+	.menu a{
+		display: block;
+		padding: .5rem;
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu a:hover{
+		color: #448;
+		background-color: #eee;
+	}
 /*Cabecera*/
 	#header{
 		padding: 20% 1rem; /*top right bottom left*/
 		text-align: center;
 		color: #eee;
 		background-image:
+			url('../assets/backgrounds/starwars_millenniumfalcon.png'),
 			url('../assets/backgrounds/starwars_deathstar.png'),
 			radial-gradient(
 				hsl(240, 50%, 20%) 10%,
 				hsl(250, 50%, 10%) 30%,
 				hsl(250, 30%, 5%) 50%);
 		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 50%, cover;/*x y, word(cover | contain)*/
+		background-position: 
+			center right, 
+			center;
+		background-size: 
+			10%, 
+			50%, 
+			cover;/*x y, word(cover | contain)*/
 		background-attachment: fixed;
 	}
 	h1{ 
@@ -38,6 +62,12 @@
 		font-family: 'star wars', 'calibri', sans-serif; 
 	}
 /*Contenido Principal*/
+	.example{
+		gap: .5rem;
+		margin: .25rem;
+		padding: .5rem;
+		background-color: #ccc;
+	}
 	/*Jerarquias de Estilos*/
 		.priority #span span{
 			text-transform: uppercase;
@@ -65,5 +95,53 @@
 		.colors li:nth-child(2){ background-color: rgba(68,68,136); }
 		.colors li:nth-last-child(2){ background-color: #448; }
 		.colors li:last-child{ background-color: hsl(240, 40%, 40%); }
-
+	/*Flexbox*/
+		.flex div,
+		.flex span{
+			margin: .25rem;
+			border: .2rem solid #eee;
+			padding: .5rem;
+			color: #eee;
+			background: linear-gradient(#36c, #224);
+		}
+		.flex{ 
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin: 1rem;
+		}
+		.align{
+			min-height: 300px;
+			align-items: center;
+		}
+		.align :first-child{ font-size: 2rem; }
+		.align span:first-of-type{ font-size: 3rem;	}
+		.align :last-child{ align-self: flex-end; }
+		.col{ 
+			flex-direction: column;
+			border-left: .5rem dotted #3c6;
+			border-top: .5rem dotted #c33;
+		}
+		.row-r{
+			flex-direction: row-reverse;
+			border-top: .5rem dotted #3c6;
+			border-right: .5rem dotted #c33;
+		}
+		.col-r{
+			flex-direction: column-reverse;
+			border-left: .5rem dotted #3c6;
+			border-bottom: .5rem dotted #c33;
+		}
 /*Pie de Pagina*/
+	/*Formulario de Contacto*/
+	#contact{
+		max-width: 540px;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+	}
+	#contact button{
+		margin: .2rem 0;
+		align-self: flex-end;
+	}

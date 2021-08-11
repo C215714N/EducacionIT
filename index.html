@@ -147,15 +147,104 @@
 			</article>
 			<article>
 				<header>
-					<h3></h3>
+					<h3>Flexbox</h3>
 				</header>
-				<p></p>
+				<p>
+					El modelo de cajas flexible es estandar que se incorporo en CSS3 y corresponde a un modelo unidireccional que permite la organizacion del contenido mediante la implementacion de un <strong>eje primario</strong> y un <strong>eje secundario</strong> en una etiqueta contenedora. Debe implementarse en diseños simples, donde el contenido deba disponerse en una fila o columna de manera organica.
+				</p>
+				<h4>Justify-Content</h4>
+				<div class="example flex">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<div>div 5</div>
+					<div>div 6</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+					<span>span 5</span>
+					<span>span 6</span>
+				</div>
+				<h4>Align-Items</h4>
+				<div class="example flex align">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<div>div 5</div>
+					<div>div 6</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+					<span>span 5</span>
+					<span>span 6</span>
+				</div>
+				<h4>Flex-Direction</h4>
+				<div class="example">
+					<div class="flex align col">
+						<strong>Column</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<div>div 5</div>
+						<div>div 6</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+						<span>span 5</span>
+						<span>span 6</span>
+					</div>
+					<div class="flex align row-r">
+						<strong>Row-Reverse</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<div>div 5</div>
+						<div>div 6</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+						<span>span 5</span>
+						<span>span 6</span>
+					</div>
+					<div class="flex align col-r">
+						<strong>Column-Reverse</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<div>div 5</div>
+						<div>div 6</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+						<span>span 5</span>
+						<span>span 6</span>
+					</div>
+				</div>
 			</article>
 		</section>
 	</main>
 	<footer id="footer"><!-- FOOTER: Contenido Complementario -->
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
+			<label for="">ingrese su contenido</label>
+			<input type="text">
+			<label for="">ingrese su contenido</label>
+			<input type="text">
+			<label for="">ingrese su contenido</label>
+			<input type="text">
+			<label for="">Ingrese su consulta</label>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<button>Enviar</button>
 		</form>
 		<div class="social">
 			<h2>Redes Sociales</h2>
