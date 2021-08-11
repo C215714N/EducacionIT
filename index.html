@@ -234,16 +234,53 @@
 		</section>
 	</main>
 	<footer id="footer"><!-- FOOTER: Contenido Complementario -->
-		<form action="" id="contact">
+		<form id="contact">
 			<h2>Contactanos</h2>
-			<label for="">ingrese su contenido</label>
-			<input type="text">
-			<label for="">ingrese su contenido</label>
-			<input type="text">
-			<label for="">ingrese su contenido</label>
-			<input type="text">
-			<label for="">Ingrese su consulta</label>
-			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input
+				id="contactName"
+				name="contactName"
+				type="text"
+				maxlength="50"
+				pattern="[a-z A-Z ñÑ]{3,50}"
+				title="Ingrese su nombre solamente con letras y espacios"
+				placeholder="Nombre (*): Cristian Racedo"
+				required>
+			<div class="valid">
+				Ingrese su nombre completo utilizando solamente letras y espacios, el mismo debe contar con al menos 3 caracteres y un maximo de 50.
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail"
+				type="email" 
+				minlength="8"
+				placeholder="Correo(*): cristiandracedo@hotmail.com" 
+				required>
+			<div class="valid">
+				Ingrese una direccion de correo valida, la misma debe poseer al menos 8 caracteres y respetar el siguiente formato "usuario@servidor"
+			</div>
+			<label for="contactPhone">Ingrese su Telefono</label>
+			<input 
+				id="contactPhone"
+				name="contactPhone" 
+				type="tel"
+				maxlength="20" 
+				pattern="([0-9]{6,20})|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})"
+				title="Ingrese un numero de telefono valido"
+				placeholder="Telefono(*): (5411)2345-6789" 
+				required>
+			<div class="valid">
+				Ingrese su numero telefonico solamente con numeros, el mismo debe poseer entre 6 y 20 digitos. Puede tambien escribir su numero respetando el ejemplo: (5411)2345-6789.
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Buenas, necesito un presupuesto" 
+				required></textarea>
 			<button>Enviar</button>
 		</form>
 		<div class="social">
