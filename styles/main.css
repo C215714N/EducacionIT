@@ -66,9 +66,27 @@
 	}
 /*Contenido Principal*/
 	main{
-		max-width: 960px;
+		max-width: 1140px;
 		margin: auto;
+		padding: .5rem;
+	}
+	section{
+		margin: 1rem 0;
+		border-radius: .25rem;
 		padding: 1rem;
+		box-shadow: 0 0 .5rem #999;
+	}
+	section header{
+		padding: .5rem;
+		color: #666;
+		border-bottom: .1rem solid #ccc;
+	}
+	.header{
+		margin: -1rem -1rem 0;/* top right bottom left */
+		border-radius: .25rem .25rem 0 0; /*tl tr br bl*/
+		padding: .75rem;
+		color: #eee;
+		background-color: #333;
 	}
 	.example{
 		max-height: 600px;
@@ -165,6 +183,7 @@
 			padding: 0;
 			border: 0;
 		}
+		input:checked + .layout,
 		input:checked + .flex,
 		input:checked + .align{
 			height: auto;
@@ -258,3 +277,43 @@
 	.instagram{	background-image: url('../assets/icons/instagram.svg');	}
 	.twitter{	background-image: url('../assets/icons/twitter.svg');	}
 	.github{	background-image: url('../assets/icons/github.svg');	}
+/*Ejemplos Layout*/
+	.layout{
+		height: 0;
+		overflow: hidden;
+	}
+	:checked + .layout{
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		margin: 1rem 0;
+		padding: 1rem;
+		background-color: #333;
+	}
+	.layout div{
+		clear: both;
+		margin: .25rem;
+		border-radius: .2rem;
+		padding: 1rem;
+		overflow: hidden;
+		background-color: #eee;
+	}
+	.layout img{ width: 100%; }
+	.layout_title{ 
+		font: bold 1.5rem 'Raleway', 'segoe ui', sans-serif; 
+		/*style weight size family*/
+	}
+	.layout_row{  width: calc(100% - 1rem) 	 }
+	.layout_col{  width: calc(33.3% - .5rem) }
+	.layout_span{ width:calc(50% - 1rem); 	 }
+	.layout_min{  min-width: 320px }
+	.layout_row img{
+		max-width: 200px;
+		margin-left: 1rem;
+		float: right;
+	}
+	.layout_span img{
+		float: left;
+		margin-right: 1rem;
+		max-width: 200px;
+	}
