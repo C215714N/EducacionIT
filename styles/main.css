@@ -10,3 +10,33 @@
 	h1{
 		font-family: 'star wars';
 	}
+/*Contenido Principal*/
+
+	/*Jerarquias de Selectores*/
+		.example li#span span{
+			color: darkblue;
+			background-color: skyblue;
+			text-transform: uppercase;
+		}
+		.example li.span span{
+			color: darkgreen;
+			background-color: lightgreen;
+			font-weight: bold;
+		}
+		.example li span{
+			display: inline-block;
+			padding: .5rem; /*1rem rootEM(ancho M raiz => 16px)*/
+			color: darkred;
+			background-color: tomato;
+		}
+	/*Modelos de color*/
+		.colors li{
+			margin: .5rem;
+			border: .2rem solid; /*width style color*/
+			padding: .5rem;
+			color: #eee;
+		}
+		.colors li:first-child{ background-color: darkslateblue; }
+		.colors li:nth-child(2){ background-color: rgb(68, 68, 136); }
+		.colors li:nth-last-child(2){ background-color: #448; }
+		.colors li:last-child{ background-color: hsl(245, 45%, 35%); }

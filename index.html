@@ -54,10 +54,103 @@
 					Todas las etiquetas poseen caracteristicas que tienen valores predeterminados y pueden ser modificadas, dentro de las propiedades mas comunes, las cuales preferentemente conviene trabajarlas con css (externo), encontramos los siguientes atributos.
 				</p>
 				<ul class="example">
-					<li><strong>margin</strong> Distancia que separa a una etiqueta de otra y siempre aplica el de mayor tamaño.</li>
-					<li><strong>border</strong> Linea que rodea a las etiquetas, por defecto es cero y suma tamaño.</li>
-					<li><strong>padding</strong> Relleno de una etiqueta, es decir, la distancia que separa al contenido del borde.</li>
-					<li><strong>content</strong> Elementos que se encuentran dentro de la etiqueta en cuestio, a los que se les puede dar tamaño</li>
+					<li><strong>MARGIN</strong> Distancia que separa a una etiqueta de otra y siempre aplica el de mayor tamaño.</li>
+					<li><strong>BORDER</strong> Linea que rodea a las etiquetas, por defecto es cero y suma tamaño.</li>
+					<li><strong>PADDING</strong> Relleno de una etiqueta, es decir, la distancia que separa al contenido del borde.</li>
+					<li><strong>CONTENT</strong> Elementos que se encuentran dentro de la etiqueta en cuestio, a los que se les puede dar tamaño</li>
+				</ul>
+				<h4>Box-Sizing</h4>
+				<ul class="example">
+					<li>
+						<strong>content-box</strong>
+						<ul>
+							<li>content-width: width</li>
+							<li>final-width: width + padding + border</li>
+						</ul>
+					</li>
+					<li>
+						<strong>border-box</strong>
+						<ul>
+							<li>content-width: width - padding - border</li>
+							<li>final-width: width</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h3>Jerarquia de Selectores</h3>
+				</header>
+				<p>
+					En CSS3 generalmente no importa el orden de las reglas, ya que este no suele afectar el producto, pero en ciertos casos suelen superponerse y el navegador decide cual regla mantener. Debemos tener en cuenta que ante igualdad de condiciones se prioriza la ultima regla escrita, de lo contrario, prioriza la jerarquia que se muestra a continuacion.
+				</p>
+			</article>
+			<ul class="example">
+				<li>
+					<strong>Tag selector</strong>
+					<ul>
+						<li><span>header</span>{...}</li>
+						<li><span>header</span> h1{...}</li>
+					</ul>
+				</li>
+				<li class="span">
+					<strong>Class selector</strong>
+					<ul>
+						<li><span>.header</span>{...}</li>
+						<li><span>.header</span> h1{...}</li>
+					</ul>
+				</li>
+				<li id="span" class="span">
+					<strong>Id selector</strong>
+					<ul>
+						<li><span>#header</span>{...}</li>
+						<li><span>#header</span> h1{...}</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Planificacion del Diseño</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Unidades de Medida</h3>
+				</header>
+				<p>
+					Cuando trabajamos en la planificacion del diseño debemos tener en cuentas las medidas que vamos a utilizar en relacion a los dispositivos donde se podra visualizar nuestra pagina y las proporciones con respecto a los demas elementos internos. Para este tipo de situacion podemos aplicar limitantes y definir tamaños de manera proporcional, utilizando los siguientes tipos de unidades.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Unidades Absolutas</strong> son aquellas que siempre valen los mismo indistintamente del medio donde se reproduzcan.
+						<ul>
+							<li>distancia: mm, cm, pc, in</li>
+							<li>tipografica: pt</li>
+							<li>hibrida: px (depende de la resolucion)</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Unidades Relativas</strong> son aquellas que dependen de otro elemento para determinar el tamaño de las mismas.
+						<ul>
+							<li>contenedor: %(porcentaje)</li>
+							<li>tipografica: em, ex, ch</li>
+							<li>hibrida: rem (ancho de M en HTML)</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h3>Modelos de color</h3>
+				</header>
+				<p>
+					
+				</p>
+				<ul class="example colors">
+					<li>color HTML: darkslateblue</li>
+					<li>color DEC: rgb(68, 68, 136)</li>
+					<li>color HEX: #444488</li>
+					<li>color HSL: hsl(245, 40%, 40%)</li>
 				</ul>
 			</article>
 		</section>
