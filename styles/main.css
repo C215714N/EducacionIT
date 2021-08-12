@@ -90,25 +90,49 @@
 		.less div{
 			border: .1rem dashed var(--dark);
 		}
-		.transform{
-			perspective: 200px;
-			perspective-origin: center;
-		}
-		.transform div{
-			margin: .25rem;
-			border: .2rem dotted var(--dark);
-			background-color: var(--second);
-			min-width: 15rem;
-			transition: all 1s ease;
-		}
-		.transform div:nth-child(1n):hover{ transform: scale(1.5); }
-		.transform div:nth-child(2n):hover{ transform: translate(1rem,-1rem);}
-		.transform div:nth-child(3n):hover{ transform: rotate(45deg); }
-		.transform div:nth-child(4n):hover{ transform: skewX(45deg); }
-		.transform div:nth-child(5n):hover{ transform: skewY(-15deg) }
-		.transform div:nth-child(6n):hover{ transform: rotateX(30deg) }
-		.transform div:nth-child(7n):hover{ transform: rotateY(-45deg) }
-		.transform div:nth-child(8n):hover{ transform: translateZ(5rem); }
+		/*Transformaciones*/
+			.transform{
+				perspective: 200px;
+				perspective-origin: center;
+			}
+			.transform div{
+				margin: .25rem;
+				border: .2rem dotted var(--dark);
+				background-color: var(--second);
+				min-width: 15rem;
+				transition: all 1s ease;
+			}
+			.transform div:nth-child(1n):hover{ transform: scale(1.5); }
+			.transform div:nth-child(2n):hover{ transform: translate(1rem,-1rem);}
+			.transform div:nth-child(3n):hover{ transform: rotate(45deg); }
+			.transform div:nth-child(4n):hover{ transform: skewX(45deg); }
+			.transform div:nth-child(5n):hover{ transform: skewY(-15deg) }
+			.transform div:nth-child(6n):hover{ transform: rotateX(30deg) }
+			.transform div:nth-child(7n):hover{ transform: rotateY(-45deg) }
+			.transform div:nth-child(8n):hover{ transform: translateZ(5rem); }
+		/*Animaciones*/
+		/*Video de Fondo*/
+			.bg-vid{ 
+				position: relative;
+				padding-top: min(55%, 627px);
+				overflow: hidden;
+				color: var(--light);
+			}
+			.bg-vid h2{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+			}
+			.bg-vid video{
+				background-color: black;
+			}
+			.bg-vid .btn{
+				position: absolute;
+				bottom: .5rem;
+				right: .5rem;
+			}
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/

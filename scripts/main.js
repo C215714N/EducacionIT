@@ -8,6 +8,14 @@
 	pIn  = document.querySelector('.progress input')
 
 	pIn.addEventListener('input', () => pBar.value = pIn.value )
+/* Video Player*/
+	playTag = document.querySelector('.bg-vid')
+	playBtn = document.querySelector('.bg-vid .btn')
+	playVid = document.querySelector('.bg-vid video')
+
+	playTag.onclick = () => playVid.paused ? 
+		(playVid.play(), playBtn.classList.replace('icon-play', 'icon-pause')) : 
+		(playVid.pause(), playBtn.classList.replace('icon-pause', 'icon-play'))
 /* Contact Map */
 	mapBtn = document.querySelector('#footer .btn.opacity')
 	mapFrm = document.querySelector('#footer iframe.cover')
