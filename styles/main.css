@@ -111,6 +111,21 @@
 			.transform div:nth-child(7n):hover{ transform: rotateY(-45deg) }
 			.transform div:nth-child(8n):hover{ transform: translateZ(5rem); }
 		/*Animaciones*/
+			#header{ overflow: hidden }
+			#header h1{
+				animation-name: appear;
+				animation-duration: 3s;
+				animation-timing-function: ease-out;
+				animation-delay: 1s;
+				animation-fill-mode: backwards;
+			}
+			@keyframes appear{ 
+				from{ 
+					transform: 
+						translateZ(20rem) 
+						rotateX(30deg); 
+				} 
+			}
 		/*Video de Fondo*/
 			.bg-vid{ 
 				position: relative;
