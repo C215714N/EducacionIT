@@ -33,4 +33,15 @@
 			color: darkred;
 			background-color: tomato;
 		}
+	/*Modelos de Color*/
+		.colors li{
+			margin: .25rem;
+			border: .2rem solid; /*width style color*/
+			padding: .5rem;
+			color: #eee;
+		}
+		.colors li:first-child{ background-color: darkslateblue; }
+		.colors li:nth-child(2){ background-color: rgb(68,68,136); }
+		.colors li:nth-last-child(2){ background-color: #448; }
+		.colors li:last-child{ background-color: hsl(245, 35%, 35%); }
 /*Pie de Pagina*/
