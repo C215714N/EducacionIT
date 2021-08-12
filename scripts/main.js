@@ -12,8 +12,8 @@
 	aniDiv = document.querySelector('.progression div')
 	aniBtn = document.querySelector('.progression button')
 
-	aniBtn.onclick = () => aniDiv.style.animationPlayState == 'paused' ? 
-		(aniDiv.style.animationPlayState = 'running', aniBtn.innerHTML = 'PAUSE' ): 
+	aniBtn.onclick = () => aniDiv.style.animationPlayState === 'paused' ? 
+		(aniDiv.style.animationPlayState = 'running', aniBtn.innerHTML = 'PAUSE' ) : 
 		(aniDiv.style.animationPlayState = 'paused', aniBtn.innerHTML = 'PLAY' )
 /* Video Player*/
 	playTag = document.querySelector('.bg-vid')
