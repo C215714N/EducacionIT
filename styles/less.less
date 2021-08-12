@@ -78,7 +78,6 @@
 			&.icon-next{ right: 0; }
 		}
 	}
-
 //	Mixins: estilos que se pueden aplicar como atributos
 	.unstyled{
 		text-decoration: none;
@@ -135,3 +134,5 @@
 		&:nth-child(@{i}n){ background-image: url('@{path}/@{bg}'); }
 		.bg(@array; @i + 1);
 	}
+/*Animaciones*/
+	@import url('animation.less');

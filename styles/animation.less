@@ -1,0 +1,72 @@
+// Variables
+@functions: 
+	lineal,
+	cuadratica,
+	trigonometrica,
+	exponencial,
+	limite;
+// Nesting
+	.anima{
+		height: 100vh;
+		max-height: 720px;
+		padding: 1rem;
+		background:
+			radial-gradient(
+				circle at top right,
+				hsl(30, 70%, 60%) 10%,
+				hsl(180, 50%, 50%),
+				hsl(240, 40%, 30%)
+			);
+		div{
+			.childs(@functions);
+			animation-duration: 3s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+			width: 2rem;
+			height: 2rem;
+			margin: .5rem;
+			border-radius: 50%;
+			background: 
+				radial-gradient(
+					circle at top left,
+					var(--light),
+					var(--first)
+				);
+		}
+	}
+// Mixins
+	.childs(@array; @i:1) when (@i <= length(@array)){
+		&:nth-child(@{i}n){
+			animation-name: extract(@array, @i);
+			animation-delay: @i * 2s;
+		}	.childs(@array; @i + 1);
+	}
+	.animations (@n: 1) when (@n <= length(@functions)){
+		@f: extract(@functions, @n);
+		@keyframes @f{
+			.key (@i: 0%; @x:-20px) when (@i <= 100%){
+				@y: @x + 20px;
+				@{i}{
+					transform:
+						if(@f = lineal, 
+							translate(@y, (@x / 2)),
+						if(@f = cuadratica,
+							translate(@y, pow(@x, 2)),
+						if(@f = trigonometrica,
+							translate(@y * 20px, sin(@x) * 100px),
+						if(@f = exponencial,
+							translate(@y, pow(1.2rem, @x)),
+						if( @x = 0,
+							translate(@y, (1000rem /(@x + 1rem))),
+							translate(@y, (1000rem / @x))
+						)	)	)	)	);
+					width: if(@i > 50%, @x, @x * -2px);
+					height: if(@i > 50% @x, @x * -2px);
+				}
+				.key(@i + 5; @x + 5);
+			}
+			.key;
+		}
+		.animations(@n + 1);
+	}
+	.animations;
