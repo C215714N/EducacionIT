@@ -59,6 +59,54 @@
 					<li><strong>PADDING </strong> Relleno de una etiqueta o distancia que existe entre el borde y el contenido.</li>
 					<li><strong>CONTENT </strong> Elementos que se encuentran dentro de una etiquetas, a los cuales podemos darle tamaño.</li>
 				</ul>
+				<h4>Box-Sizing</h4>
+				<ul class="example">
+					<li>
+						<strong>content-box</strong>
+						<ul>
+							<li>content-width: width</li>
+							<li>final-width: width + padding + border</li>
+						</ul>
+					</li>
+					<li>
+						<strong>border-box</strong>
+						<ul>
+							<li>content-width: width - padding - border</li>
+							<li>final-width: width</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<header>
+					<h3>Jerarquia de Selectores</h3>
+				</header>
+				<p>
+					En CSS3 generalmente el orden de las reglas no altera el producto, ya que al ser un lenguaje de diseño, simplemente define la apariencia de los elementos de la pagina; pero en caso de producirsse una superposicion de reglas, el navegador debe decidir. En igualdad de condiciones se aplica la ultima regla escrita y en otras circunstancias prioriza el tipo de elemento al que estamos aplicando dichas reglas.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Tag Selector</strong>
+						<ul>
+							<li><span>header</span>{...}</li>
+							<li><span>header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Class Selector</strong>
+						<ul class="span">
+							<li><span>.header</span>{...}</li>
+							<li><span>.header</span> h1{...}</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Id Selector</strong>
+						<ul id="span" class="span">
+							<li><span>#header</span>{...}</li>
+							<li><span>#header</span> h1{...}</li>
+						</ul>
+					</li>
+				</ul>
 			</article>
 		</section>
 	</main>
