@@ -124,8 +124,79 @@
 					transform: 
 						translateZ(20rem) 
 						rotateX(30deg); 
-				} 
-			}
+			} 	}
+			/*Ejemplos*/
+				.animation{
+					display: grid;
+					justify-content: center;
+				}
+				.animation div{
+					margin: .25rem;
+					border: .1rem solid var(--dark);
+					padding: .5rem;
+					animation: moveIt 3s infinite;/*name duration timing delay i-count*/
+				}
+				@keyframes moveIt{
+					from{
+						transform: translate(-20vw);
+						background-color: var(--first);
+					}
+					to{
+						transform: translate(20vw);
+						background-color: var(--second);
+				}	}
+			/*Timing Function*/
+				.timing :nth-child(1){ animation-timing-function: ease; }
+				.timing :nth-child(2){ animation-timing-function: ease-in; }
+				.timing :nth-child(3){ animation-timing-function: ease-out; }
+				.timing :nth-child(4){ animation-timing-function: ease-in-out; }
+				.timing :nth-child(5){ animation-timing-function: linear; }
+				.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+			/*Direction*/
+				.direction :nth-child(1){ animation-direction: normal; }
+				.direction :nth-child(2){ animation-direction: reverse; }
+				.direction :nth-child(3){ animation-direction: alternate; }
+				.direction :nth-child(4){ animation-direction: alternate-reverse; }
+			/*Progression*/
+				.progression{
+					align-items: flex-start;
+					position: relative;
+					min-height: 300px;
+				}
+				.progression div{
+					min-width: 10rem;
+					min-height: 5rem;
+					border: .2rem solid var(--light);
+					padding: .5rem;
+					animation: advance 5s linear .5s infinite;
+					animation-play-state: paused;
+				}
+				.progression button{
+					position: absolute;
+					right: .5rem;
+					bottom: .5rem;
+				}
+				@keyframes advance{
+					0%{
+						transform: translate(0,0) skew(15deg,0);
+						background-color: hsl(0,50%,50%);
+					}
+					25%{
+						transform: translate(60vw,0) skew(0, 15deg);
+						background-color: hsl(90,50%,50%);
+					}
+					50%{
+						transform: translate(60vw, 200px) skew(-15deg, 0);
+						background-color: hsl(180,50%,50%);
+					}
+					75%{
+						transform: translate(0, 200px) skew(0,-15deg);
+						background-color: hsl(270,50%,50%);
+					}
+					100%{
+						transform: translate(0,0) skew(15deg,0);
+						background-color: hsl(0,50%,50%);
+				}	}
 		/*Video de Fondo*/
 			.bg-vid{ 
 				position: relative;
