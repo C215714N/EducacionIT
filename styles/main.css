@@ -15,6 +15,17 @@
 	.menu{
 		margin: 0;
 	}
+/*Navegacion*/
+	.menu{
+		display: flex;
+		padding: 0;
+		list-style: none;
+	}
+	.menu a{
+		display: block;
+		padding: .5rem;
+		text-decoration: none;
+	}
 /*Cabecera de Pagina*/
 	#header{
 		padding: 20% 1rem; /*top right bottom left*/
@@ -30,16 +41,18 @@
 			url('../assets/backgrounds/starfish.svg'),
 			url('../assets/backgrounds/starfish.svg'),
 			url('../assets/backgrounds/starfish.svg'),
-			linear-gradient(
+			radial-gradient(
+				circle at top right,
+				hsl(45,  80%, 60%) 10%,
 				hsl(180, 70%, 50%),
-				hsl(240, 50%, 50%)
+				hsl(240, 50%, 30%)
 			);
 		background-size: 
 			3rem, 
-			5rem,
-			1rem,
+			10%,
+			12%,
 			1.5rem,
-			7rem,
+			20%,
 			2rem,
 			cover; /* width height || cover/contain */
 		background-position: 
@@ -51,6 +64,9 @@
 			30% 20%,
 			center; /* x y || top/bottom/left/right/center */
 		background-repeat: no-repeat;
+		/*ancla el fondo a la ventana: efecto parallax*/
+		background-attachment: fixed;
+		/*ShortHand Background: color image position/size repeat*/
 	}
 	h1{
 		font-family: 'star wars';
