@@ -9,11 +9,27 @@
 		box-sizing: border-box;
 		font-family: 'Raleway', 'segoe ui', 'calibri', sans-serif;
 	}
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	.menu,
+	#header p{
+		margin: 0;
+	}
 /*Navegacion*/
 
 /*Cabecera de Pagina*/
+	#header{
+		padding: 20% 1rem;/*top right bottom left*/
+		color: #eee;
+		text-align: center;
+		background-color: #333;
+	}
 	h1{
 		font-family: 'star wars';
+		letter-spacing: .1rem;
 	}
 /*Contenido Principal*/
 	/*Jerarquia de Selectores*/
