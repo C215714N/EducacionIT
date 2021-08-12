@@ -5,6 +5,14 @@
 	trigonometrica,
 	exponencial,
 	limite;
+@timing:
+	ease,
+	ease-in,
+	ease-out,
+	ease-in-out,
+	linear,
+	cubic-bezier,
+;
 // Nesting
 	.anima{
 		height: 100vh;
@@ -38,10 +46,15 @@
 	.childs(@array; @i:1) when (@i <= length(@array)){
 		&:nth-child(@{i}n){
 			animation-name: extract(@array, @i);
-			animation-delay: @i * 2s;
-		}	.childs(@array; @i + 1);
+			animation-delay: @i * .2s;
+		}	
+		@a:(30 - @i * 5);
+		&:nth-child(-n+@{a}){
+			animation-direction: extract(@timing, @i)
+		}
+		.childs(@array; @i + 1);
 	}
-	.animations (@n: 1) when (@n <= length(@functions)){
+	.animations(@n: 1) when (@n <= length(@functions)){
 		@f: extract(@functions, @n);
 		@keyframes @f{
 			.key (@i: 0%; @x:-20px) when (@i <= 100%){
@@ -49,24 +62,21 @@
 				@{i}{
 					transform:
 						if(@f = lineal, 
-							translate(@y, (@x / 2)),
+							translate(@y * 20px, (@x / 2)),
 						if(@f = cuadratica,
-							translate(@y, pow(@x, 2)),
+							translate(@y * 20px, pow(@x, 2)),
 						if(@f = trigonometrica,
 							translate(@y * 20px, sin(@x) * 100px),
 						if(@f = exponencial,
-							translate(@y, pow(1.2rem, @x)),
+							translate(@y * 20px, pow(1.2rem, @x)),
 						if( @x = 0,
-							translate(@y, (1000rem /(@x + 1rem))),
-							translate(@y, (1000rem / @x))
+							translate(@y * 20px, (1000rem /(@x + 1rem))),
+							translate(@y * 20px, (1000rem / @x))
 						)	)	)	)	);
 					width: if(@i > 50%, @x, @x * -2px);
 					height: if(@i > 50% @x, @x * -2px);
 				}
 				.key(@i + 5; @x + 5);
-			}
-			.key;
-		}
-		.animations(@n + 1);
-	}
-	.animations;
+			} 	.key;
+		}	.animations(@n + 1);
+	}	.animations;
