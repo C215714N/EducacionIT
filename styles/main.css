@@ -7,6 +7,51 @@
 		box-sizing: border-box;
 		font-family: 'Raleway', 'segoe ui', calibri, sans-serif;
 	}
+	body, 
+	h1,
+	h2,
+	h3,
+	h4,
+	.menu{
+		margin: 0;
+	}
+/*Cabecera de Pagina*/
+	#header{
+		padding: 20% 1rem; /*top right bottom left*/
+		color: #eee;
+		text-align: center;
+		text-shadow: 0 0 .5rem #333;/*-x+ -y+ blur color*/
+		/*Propiedades de fondo*/
+		background-color: #333;
+		background-image: 
+			url('../assets/backgrounds/starfish.svg'),
+			url('../assets/backgrounds/starfish.svg'),
+			url('../assets/backgrounds/starfish.svg'),
+			url('../assets/backgrounds/starfish.svg'),
+			url('../assets/backgrounds/starfish.svg'),
+			url('../assets/backgrounds/starfish.svg'),
+			linear-gradient(
+				hsl(180, 70%, 50%),
+				hsl(240, 50%, 50%)
+			);
+		background-size: 
+			3rem, 
+			5rem,
+			1rem,
+			1.5rem,
+			7rem,
+			2rem,
+			cover; /* width height || cover/contain */
+		background-position: 
+			90% 10%,
+			bottom left,
+			90% 85%,
+			center,
+			top left,
+			30% 20%,
+			center; /* x y || top/bottom/left/right/center */
+		background-repeat: no-repeat;
+	}
 	h1{
 		font-family: 'star wars';
 	}
