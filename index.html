@@ -185,6 +185,9 @@
 					<span>span 6</span>
 				</div>
 				<h4>Flex-Direction</h4>
+				<p>
+					Esta propiedad permite definir las direcciones del <strong>eje principal</strong> y <strong>eje secundario</strong>, que por defecto se organizan de forma horizontal, justicando el contenido de izquierda a derecha; y vertical, alineando desde arriba hacia abajo los elementos afectados por el modelo de cajas flexible.
+				</p>
 				<ul>
 					<li>
 						<label for="col">Column</label>
@@ -244,6 +247,50 @@
 						</div>
 					</li>
 				</ul>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Distribucion del Contenido</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Sistema de Grillas</h3>
+				</header>
+				<p>
+					
+				</p>
+				<h4>Expansion de filas y columnas</h4>
+				<div class="example grid">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<label for="flexgrid">Contraposicion con Flexbox (No aconsejable)</label>
+				<input class="hidden" id="flexgrid" type="checkbox">
+				<div class="container flex-grid row">
+					<div class="w100">div 1</div>
+					<div class="flex-grid row w100">
+						<span class="w30">span 4</span>
+						<div class="flex-grid column w60">
+							<div class="w100">div 2</div>
+							<div class="flex-grid row w100">
+								<span class="w50">span 1</span>
+								<div class="w50">
+									<div>div 3</div>
+									<div>div 4</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="w60">span 2</span>
+					<span class="w30">span 3</span>
+				</div>
 			</article>
 		</section>
 		<section>
