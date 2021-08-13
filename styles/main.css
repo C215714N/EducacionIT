@@ -92,27 +92,28 @@
 		color: #eee;
 		background-color: #333;
 	}
-	.example{
-		max-height: 600px;
-		display: flex;
-		flex-wrap: wrap;
-		margin: .25rem;
-		margin-left: 2rem;
-		border-left: .2rem solid #448;
-		padding: 1rem;
-		background-color: #ccc;
-		line-height: 1.5rem;
-		list-style: none;
-		overflow: auto;
-	}
-	.example > li{
-		width: 50%;
-		min-width: 200px;
-		padding: .5rem;
-	}
-	.example .flex{
-		width: 100%;
-	}
+	/*Ejemplos*/
+		.example{
+			max-height: 600px;
+			display: flex;
+			flex-wrap: wrap;
+			margin: .25rem;
+			margin-left: 2rem;
+			border-left: .2rem solid #448;
+			padding: 1rem;
+			background-color: #ccc;
+			line-height: 1.5rem;
+			list-style: none;
+			overflow: auto;
+		}
+		.example > li{
+			width: 50%;
+			min-width: 200px;
+			padding: .5rem;
+		}
+		.example .flex{
+			width: 100%;
+		}
 	/*Jerarquias de Estilos*/
 		.priority > li{
 			width: 30%;
@@ -260,6 +261,116 @@
 			.areas :nth-last-child(3){ grid-area: aside; }
 			.areas :nth-last-child(2){ grid-area: footer; }
 			.areas :last-child{ grid-area: extra; }
+	/*Pseudo*/
+		/*Contador*/
+			main{ counter-reset: clase; }
+			main section{ counter-reset: tema; }
+			main article{ counter-reset: subtema; }
+			main h2::before{ 
+				counter-increment: clase;
+				content: 'Clase ' counter(clase) ': ';
+			}
+			main h3::before{
+				counter-increment: tema;
+				content: 'Tema ' counter(tema) ': ';
+			}
+			main h4::before{
+				counter-increment: subtema;
+				content: 'item ' counter(subtema) ': ';
+			}
+			.pseudo h3::after{
+				content: 'Elementos CSS';
+			}
+			.pseudo p::after{
+				content: 
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quidem iusto delectus facere deserunt tenetur, quis aperiam vel saepe facilis officia non quos ut ad debitis cupiditate, omnis asperiores pariatur ipsa cumque illo animi aut sequi error! Mollitia porro animi exercitationem quas, minima illo commodi rem numquam, praesentium nam voluptate distinctio amet sit, voluptas sunt, error. Modi totam, atque nostrum alias ratione rerum dolores officia error eaque tempore cupiditate quisquam odio et repellendus quibusdam aperiam magnam aut veritatis pariatur, eligendi unde dolore. Nulla, possimus omnis obcaecati accusantium a! Deleniti itaque veritatis molestias culpa sit earum qui autem quia fugiat quis?';
+			}
+		/*:pseudoclase: instancia o caracteristica de una etiqueta*/
+			.pseudoclass h4::after{
+				content: 'PseudoClass';
+			}
+			.pseudoclass p::after{
+				content: 'Estado, instancia o caracteristica que tiene o puede presentar alguna etiqueta dentro de la pagina, se utilizan como modificadores para determinar el aspecto de los elementos ante cierto cambio.';
+			}
+		/*::pseudoelemento: partes o elementos dentro de una etiqueta*/
+			.pseudoelement h4::after{
+				content: 'PseudoElement';
+			}
+			.pseudoelement p::after{
+				content: 'Partes o elementos que se encuentran dentro de una etiqueta, solamente se pueden aplicar en aquellas etiquetas que posean cierre y por lo tanto sirvan, generalmente, como contenedores.';
+			}
+		/*Tabla de Contenidos*/
+			.list,
+			.list ol,
+			.list ul{
+				list-style: none;
+				padding: 0;
+			}
+			.list{
+				max-width: 450px;
+				border-radius: .25rem .25rem 0 0;
+				padding: 1rem;
+				background-color: #eee;
+			}
+			.list::before{
+				content: 'Tabla de Contenidos';
+				display: block;
+				margin: -1rem -1rem .5rem;
+				border-radius: .25rem .25rem 0 0;/*tl tr br bl*/
+				padding: .5rem;
+				color: #eee;
+				background-color: #333;
+			}
+			/*Declaracion de contadores*/
+				.list{ counter-reset: fst; }
+				.list ol{ counter-reset: snd; }
+				.list ol ol{ counter-reset: trd; }
+				.list ol ol ol{ counter-reset: fth; }
+			/*Incremento de contadores*/
+				.list li{ 
+					counter-increment: fst; 
+					color: #000;
+					font-weight: bold;
+				}
+				.list li li{ 
+					counter-increment: snd; 
+					color: #333;
+				}
+				.list li li li{ 
+					counter-increment: trd; 
+					color: #666;
+				}
+				.list li li li li{ 
+					counter-increment: fth; 
+					color: #999;
+				}
+			/*Aplicacion de contadores*/
+				.list li::before{
+					content: 
+						counter(fst)'.'
+						counter(snd)'.'
+						counter(trd)'.'
+						counter(fth);
+					display: inline-block;
+					min-width: 3.5rem;	
+					padding: .25rem .5rem;
+				}
+	/*Borders*/
+	.borders{
+		max-width: 960px;
+		display: grid;
+		margin: auto;
+		padding: .5rem;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: .5rem;
+	}
+	.borders div{
+		padding: 3rem 1rem;
+		color: #eee;
+		text-shadow: 0 0 .5rem #000;
+		background: url('../assets/images/poster-californication.jpg') center/cover no-repeat;
+		background-attachment: fixed;
+	}
 /*Pie de Pagina*/
 	/*Formulario de Contacto*/
 		#contact{
