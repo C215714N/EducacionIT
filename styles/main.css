@@ -31,27 +31,22 @@
 			url('../assets/backgrounds/blood.svg'),
 			url('../assets/backgrounds/blood.svg'),
 			url('../assets/backgrounds/blood.svg'),
-			url('../assets/backgrounds/blood.svg'),
-			url('../assets/backgrounds/blood.svg'),
 			linear-gradient(
 				hsl(0, 50%, 25%),
 				hsl(0, 0%, 0%) );
 		background-position: 
 			top left,
-			bottom right,
-			center,
 			80% 10%,
 			25% 15%,
 			center; /*x y || top/right/bottom/left/center */
 		background-size: 
 			auto 50%,
-			20%,
-			auto 20rem,
 			300px,
 			50%,
 			contain;/*width height || cover/contain*/
 		background-repeat: repeat, no-repeat;
 		/*Efecto Parallax*/
+		background-attachment: fixed;
 	}
 	h1{
 		font-family: 'star wars';
