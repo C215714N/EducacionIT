@@ -19,7 +19,18 @@
 		margin: 0;
 	}
 /*Navegacion*/
-
+	.menu{
+		display: flex;
+		justify-content: center;
+		background: linear-gradient(#812, #402);
+		list-style: none;
+	}
+	.menu a{
+		display: block;
+		padding: .5rem;
+		color: #ecc;
+		text-decoration: none;
+	}
 /*Cabecera de Pagina*/
 	#header{
 		padding: 20% 1rem;/*top right bottom left*/
@@ -31,7 +42,8 @@
 			url('../assets/backgrounds/blood.svg'),
 			url('../assets/backgrounds/blood.svg'),
 			url('../assets/backgrounds/blood.svg'),
-			linear-gradient(
+			radial-gradient(
+				circle,
 				hsl(0, 50%, 25%),
 				hsl(0, 0%, 0%) );
 		background-position: 
@@ -47,6 +59,7 @@
 		background-repeat: repeat, no-repeat;
 		/*Efecto Parallax*/
 		background-attachment: fixed;
+		/* background: color image position/size repeat */
 	}
 	h1{
 		font-family: 'star wars';
