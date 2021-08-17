@@ -3,6 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			margin: 0;
+			font-family: segoe ui, calibri, sans-serif;
+		}
+		/* Selectores Multiples (,) */
+		header, footer{
+			padding: 24px;
+			color: #eee; /*RRGGBB*/
+			background-color: #448;
+			text-align: center;
+		}
+		/* Selectores Especificos (padre hijo) */
+		nav ul{
+			margin: 0;
+			padding: 0;
+			background-color: #112;
+			text-align: center;
+		}
+		nav a{
+			color: #eee;
+			text-decoration: none;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px; /*top right bottom left*/
+		}
+		/*Pseudoclass: instancia o caracteristica de una etiqueta*/
+		nav li:hover{
+			background-color: #66c;
+		}
+		main div img{
+			width: 300px;
+		}
+	</style>
 </head>
 <body>
 	<!--Cabecera Principal-->
@@ -57,6 +93,14 @@
 			<img src="img/jjba-starplatinum-03.jpg" alt="Dibujo JJBA Star Platinum">
 			<img src="img/jjba-starplatinum-04.jpg" alt="Dibujo JJBA Star Platinum">
 		</div>
+		<p>
+			<img src="img/usm-venom-03.jpg" alt="Ultimate Spiderman Venom">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nemo suscipit cupiditate possimus harum sequi maxime exercitationem commodi ex, eos at est neque rem quae atque doloribus soluta nisi. Recusandae!
+
+			Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Labore delectus itaque, tempore maiores quae provident, molestiae tempora aperiam expedita possimus, laboriosam alias voluptatem repellendus asperiores cum dicta? Sapiente, animi, sit!
+
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam autem, numquam, inventore distinctio eveniet doloribus sint totam, quod molestiae mollitia cupiditate maiores id, voluptas pariatur voluptates nostrum laborum rerum nam.
+		</p>
 	</main>
 	<!--Pie de Pagina-->
 	<footer>
