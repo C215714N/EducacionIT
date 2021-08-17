@@ -3,7 +3,7 @@
 <head>
 	<title>Fundamentos WEB</title>
 </head>
-<body>
+<body style="font-family: segoe ui, calibri, sans-serif;">
 	<!-- Encabezado Principal (Heading 1) -->
 	<h1>Fundamentos Web</h1>
 	<p>html y css</p>
@@ -22,5 +22,42 @@
 		<li>css</li>
 		<li>js</li>
 	</ul>
+	<h2>HTML (HyperText Markup Language)</h2>
+	<p>
+		HTML es un lenguaje de marcado de hipertexto que utiliza etiquetas para identificar a cada uno de los elementos que componen la pagina web. Cada etiqueta posee diferentes caracteristicas y las podemos clasificar segun su funcion, aspecto o espacio ocupado.
+	</p>
+	<h3>Clasificacion de las etiquetas</h3>
+	<ul>
+		<li>
+			<!-- Contenido destacado / Importante -->
+			<strong>Segun su función: </strong>
+			<!-- Salto de Linea (Break) / Huerfana -->
+			<br>
+			Encontramos los <em>"elementos semanticos"</em>, que son aquellos de definen cual es el rol de contenido dentro de la pagin, como por ejemplo: h1 para los encabezados o p para los bloques de contenido.
+
+			Por otro lado estan los <em>"elementos presentacionales"</em>, que son aquellos que no cumplen una funcion en particular, sino que existen para facilitar la aplicacion del diseño, como por ejemplo: div que sirve para encerrar contenido o span que sirve para facilitar la aplicacion de estilos en pequeñas porciones de texto.
+		</li>
+		<li>
+			<strong>Segun su aspecto: </strong>
+			<br>
+			<!--Contenido enfatizado / Connotado-->
+			Encontramos las <em>"etiquetas de bloque"</em>, que son aquellas que ocupan todo el espacio de su contenedor, generan salto de linea, se les puede dar tamaño, y funcionan principalmente como contenedores.
+
+			Por otro lado estan las <em>"etiquetas de linea"</em>, que son aquellas que ocupan una porcion de su contendio, comparten espacio con otros elementos de su mismo tipo, no se les puede dar tamaño (automatico), y funcionan principalmente como contenido.
+		</li>
+	</ul>
+	<!--Capa (Division)-->
+	<div style="color:whitesmoke; background-color: darkslateblue; padding: 20px;">
+		<h2>CSS (Cascading Styles Sheets)</h2>
+		<p><!--Expandir-->
+			<span style="color:gold; font-size: 32px;">C</span>SS es un lenguaje de hojas de estilo, que permite definir el aspecto de los elementos dentro de la pagina. Existen 3 formas de implementarlo, en linea dentro de un documento html, en bloque en la etiqueta head de una pagina o en un archivo externo. Este lenguaje utiliza normalmente selectores y reglas para definir los estilos.
+		</p>
+		<ul>
+			<li><strong>margin:</strong> distancia que existe entre las etiquetas</li>
+			<li><strong>border:</strong> linea que rodea a las etiquetas</li>
+			<li><strong>padding:</strong> relleno que existe entre el borde y el contenido</li>
+			<li><strong>content:</strong> elementos que se encuentran dentro de la etiqueta, a los que podemos darle tamaño.</li>
+		</ul>
+	</div>
 </body>
 </html>
