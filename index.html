@@ -40,9 +40,61 @@
 		<button class="icon-next"></button>
 	</header>
 	<!--Main-->
-
+	<main>
+		<section>
+			<header class="header">
+				<h2>Elementos de HTML5</h2>
+			</header>
+			<p>
+				Con la aparicion del nuevo estandar se introdujeron nuevas etiquetas, que si bien, son soportadas por la mayoria de los navegadores, aun existen algunos que no las implementan en sus motores. Para este tipo de situaciones el mismo navegador solamente reemplaza dicho elemento por una etiqueta div.
+			</p>
+			<article>
+				<header>
+					<h3>Estadisticas</h3>
+				</header>
+				<p>
+					Cuando debemos exponer en la pagina valores que representas los estados de una tarea podemos utilizar las siguientes etiquetas: <strong>&lt;progress></strong> que se utiliza cuando queremos mostrar el avance en una tarea cuando esta aun no fue finalizada <em>ej: el progreso durante la capacitacion</em>; y <strong>&lt;meter></strong> que se utiliza cuando queremos comparar los resultados de la tarea cuando ya fue finalizada <em>ej: Resultado de un Examen</em>.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Progress</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								elemento sin value
+							</li>
+							<li>
+								<progress max="100" value="20"></progress>
+								max="100"; value="20"
+							</li>
+							<li class="progress">
+								<progress max="100"></progress>
+								<input min="0" max="100" type="number">
+								value = javaScript
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Meter</strong>
+						<ul>
+							<li>
+								<meter max="100" value="30" low="40" high="70" optimum="90"></meter>
+							</li>
+							<li>
+								<meter max="100" value="60" low="40" high="70" optimum="90"></meter>
+							</li>
+							<li>
+								<meter max="100" value="90" low="40" high="70" optimum="90"></meter>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+		</section>
+	</main>
 	<!--Footer-->
 
+	<script src="scripts/main.js"></script>
 	<!-- Emmet
 		padre>hijo
 		ul>li
