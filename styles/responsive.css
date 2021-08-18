@@ -1,0 +1,66 @@
+/*Content First - Mobile First*/
+	/*Reglas Generales*/	
+		:root{
+			--first: #448;
+			--second: #36c;
+			--light: #eee;
+			--dark: #333;
+			--hover: rgba(51,51,51,.5);
+			--letter: 1rem;
+			--size: 100%;
+			--font: 'Raleway', 'calibri', 'segoe', sans-serif;
+		}
+		*{
+			box-sizing: border-box;
+			font-family: var(--font);
+		}
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		.menu{ margin: 0 }
+	/*Navegacion Principal*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: linear-gradient( var(--second), var(--first) );
+		}
+		nav a{
+			display: block;
+			padding: calc(var(--letter) / 4);
+			color: var(--light);
+			text-decoration: none;
+		}
+		.logo{
+			font: bold 1.5rem var(--font);
+		}
+		.icon-back{
+			position: fixed;
+			bottom: calc( var(--letter) / 2);
+			right: calc( var(--letter) / 2);
+			border-radius: calc(var(--size) / 2);
+			background-color: var(--dark);
+		}
+		.menu{
+			max-height: 0;
+			width: var(--size);
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+		}
+		.menu.active{ max-height: 600px; }
+		.menu a:hover{
+			background-color: var(--hover);
+		}
+	/*Cabecera de Pagina*/
+
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets*/
+
+/*Large Devices - Desktop*/
+
+/*Extra Devices - HD Desktop*/
