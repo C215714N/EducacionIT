@@ -185,6 +185,66 @@
 					<span>span 3</span>
 					<span>span 4</span>
 				</div>
+				<h4>Organizacion del Contenido (Align-Items)</h4>
+				<ul class="example">
+					<li><strong>flex-start</strong> alinea el contenido al principio del flex (por defecto arriba)</li>
+					<li><strong>flex-end</strong> alinea el contenido al final del flex (por defecto abajo)</li>
+					<li><strong>center</strong> alinea el contenido hacia el centro (por defecto vertical)</li>
+					<li><strong>baseline</strong> alinea el contenido de manera tal que los textos sean legibles</li>
+					<li><strong>align-self(*)</strong> atributo que permite definir la alineacion de una etiqueta dentro del flex</li>
+				</ul>
+				<div class="flex align">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<h4>Orientacion del flex (Flex-Direction)</h4>
+				<ul class="example">
+					<li><strong>row</strong> distribuye el contenido de izquierda a derecha (justify-content) y lo organiza de arriba hacia abajo (align-items)</li>
+					<li><strong>column</strong> distribuye el contenido de arriba hacia abajo (justify-content) y lo organiza de izquierda a derecha (align-items)</li>
+					<li><strong>row-reverse</strong> similar a row, pero los elementos de disponen de derecha a izquierda (justify-content)</li>
+					<li><strong>column-reverse</strong> similar a column, pero lo elementos se disponen de abajo hacia arriba (justify-content)</li>
+				</ul>
+				<div class="overflow">
+					<div class="flex align col">
+						<strong>Column</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+					</div>
+					<div class="flex align row-r">
+						<strong>Row-Reverse</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+					</div>
+					<div class="flex align col-r">
+						<strong>Column-Reverse</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+					</div>
+				</div>
 			</article>
 		</section>
 	</main>

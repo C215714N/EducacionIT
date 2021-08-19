@@ -107,7 +107,7 @@
 			margin: 1rem;
 			border: .2rem solid #333;
 		}
-		.flex div,
+		.flex div, 
 		.flex span{
 			max-width: 300px;
 			margin: .25rem;
@@ -116,4 +116,32 @@
 			color: #eee;
 			background-color: #224;
 		}
+		.align{
+			align-items: center;
+			min-height: 300px;
+		}
+		.align span:first-of-type{
+			align-self: flex-start;
+			font-size: 3rem;
+		}
+		.align span:last-child{
+			align-self: flex-end;
+			font-size: 1.5rem;
+		}
+		.col{
+			flex-direction: column;
+			border-left-color: #3c6;
+			border-top-color: #c33;
+		}
+		.row-r{
+			flex-direction: row-reverse;
+			border-top-color: #3c6;
+			border-right-color: #c33;
+		}
+		.col-r{
+			flex-direction: column-reverse;
+			border-left-color: #3c6;
+			border-bottom-color: #c33;
+		}
+
 /*Pie de Pagina*/
