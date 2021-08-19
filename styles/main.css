@@ -211,10 +211,11 @@
 			background-color: #eee;
 		}
 	/*Validacion*/
-		#contact input:focus{ border-radius: .25rem .25rem 0 0;	}
+		#contact input:focus{ border-radius: 4rem .25rem 0 0;	}
 		#contact :not(button):focus{ border-color: #333; }
 		#contact :focus + .valid{ display: block; }
 		#contact :focus:valid{ border-color: #3c6; }
 		#contact :valid + .valid{ background-color: #3c6; }
 		#contact :not(:placeholder-shown):focus:invalid{ border-color: #c33; }
 		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
+	/*Redes sociales*/
