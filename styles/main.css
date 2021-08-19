@@ -211,7 +211,7 @@
 			background-color: #eee;
 		}
 	/*Validacion*/
-		#contact input:focus{ border-radius: 4rem .25rem 0 0;	}
+		#contact input:focus{ border-radius: .25rem .25rem 0 0;	}
 		#contact :not(button):focus{ border-color: #333; }
 		#contact :focus + .valid{ display: block; }
 		#contact :focus:valid{ border-color: #3c6; }
@@ -219,3 +219,23 @@
 		#contact :not(:placeholder-shown):focus:invalid{ border-color: #c33; }
 		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
 	/*Redes sociales*/
+		.social{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.social a{
+			width: 4rem;
+			height: 4rem;
+			border-radius: .25rem;
+			background-position: center;
+			background-size: 2rem;
+			background-repeat: no-repeat;
+		}
+		.social a:hover{
+			background-size: contain;
+		}
+		.facebook{ background-image: url('../assets/icons/facebook.svg'); }
+		.instagram{ background-image: url('../assets/icons/instagram.svg'); }
+		.twitter{ background-image: url('../assets/icons/twitter.svg'); }
+		.github{ background-image: url('../assets/icons/github.svg'); }
