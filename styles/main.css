@@ -159,3 +159,62 @@
 			border-bottom-color: #c33;
 		}
 /*Pie de pagina*/
+
+	/*Formulario de Contacto*/
+		#contact{
+			max-width: 720px;
+			display: flex;
+			flex-direction: column;
+			margin: 1rem auto; /*top right bottom left*/
+			border-radius: .25rem;
+			padding: 1rem;
+			color: #eee;
+			background: 
+				#36c 
+				linear-gradient(
+					hsl(180, 70%, 50%),
+					hsl(240, 50%, 30%)
+				);
+			text-shadow: 0 0 .25rem #333;
+		}
+		#contact label{ margin: .5rem 0 .2rem; }
+		#contact input,
+		#contact textarea,
+		#contact button{
+			outline: none;
+			border: .1rem solid transparent;
+			border-radius: .25rem;
+			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			min-height: 8rem;
+			resize: none;
+		}
+		#contact .valid{ 
+			display: none;
+			border-radius: 0 0 .25rem .25rem; /*tl tr br bl*/
+			padding: .5rem;
+			background-color: #333;
+		}
+		#contact button{
+			cursor: pointer;
+			align-self: flex-end;
+			margin: .25rem 0;
+			border-color: #eee;
+			text-transform: uppercase;
+			color: #eee;
+			background-color: transparent;
+		}
+		#contact button:hover{
+			color: #36c;
+			background-color: #eee;
+		}
+	/*Validacion*/
+		#contact input:focus{ border-radius: .25rem .25rem 0 0;	}
+		#contact :not(button):focus{ border-color: #333; }
+		#contact :focus + .valid{ display: block; }
+		#contact :focus:valid{ border-color: #3c6; }
+		#contact :valid + .valid{ background-color: #3c6; }
+		#contact :not(:placeholder-shown):focus:invalid{ border-color: #c33; }
+		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
