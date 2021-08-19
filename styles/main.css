@@ -18,6 +18,18 @@
 	#header p{
 		margin: 0;
 	}
+	.square{ 
+		display: inline-block;
+		margin: 0 .25rem;
+		padding: .5rem;
+	}
+	.green{ background-color: #3c6; }
+	.red{ background-color: #c33; }
+	.unstyled{ list-style: none; }
+	.overflow{
+		max-height: 300px;
+		overflow: auto;
+	}
 /*Navegacion*/
 	.menu{
 		display: flex;
@@ -143,5 +155,4 @@
 			border-left-color: #3c6;
 			border-bottom-color: #c33;
 		}
-
 /*Pie de Pagina*/
