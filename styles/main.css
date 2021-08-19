@@ -15,6 +15,19 @@
 	.menu{
 		margin: 0;
 	}
+	.overflow{
+		max-height: 500px;
+		overflow: auto;
+	}
+	.green,
+	.red{
+		display: inline-block;
+		margin: 0 .25rem;
+		padding: .5rem;
+	}
+	.green{ background-color: #3c6; }
+	.red{ background-color: #c33; }
+	.unstyled{ list-style: none; }
 /*Navegacion*/
 	.menu{
 		display: flex;
@@ -101,3 +114,47 @@
 		.colors li:nth-child(2){ background-color: rgb(68, 68, 136); }
 		.colors li:nth-last-child(2){ background-color: #448; }
 		.colors li:last-child{ background-color: hsl(240, 30%, 40%); }
+	/*Introduccion a Flexbox*/
+		.flex{
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin: 1rem;
+			border: .2rem solid #333;
+		}
+		.flex div,
+		.flex span{
+			max-width: 300px;
+			margin: .25rem;
+			border: .1rem dashed #eee;
+			padding: .5rem;
+			color: #eee;
+			background-color: #36c;
+		}
+		.align{
+			align-items: center;
+			min-height: 300px;
+		}
+		.align span:first-of-type{
+			font-size: 2rem;
+			align-self: flex-start;
+		}
+		.align span:last-child{
+			font-size: 1.5rem;
+			align-self: flex-end;
+		}
+		.col{
+			flex-direction: column;
+			border-left-color: #3c6;
+			border-top-color: #c33;
+		}
+		.row-r{
+			flex-direction: row-reverse;
+			border-top-color: #3c6;
+			border-right-color: #c33;
+		}
+		.col-r{
+			flex-direction: column-reverse;
+			border-left-color: #3c6;
+			border-bottom-color: #c33;
+		}

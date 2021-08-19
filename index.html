@@ -150,8 +150,104 @@
 					<li>color HTML: darkslateblue</li>
 					<li>color DEC: rgb(68, 68, 136)</li>
 					<li>color HEX: #444488</li>
-					<li>color HSL: hsl(245, 40%, 40%)</li>
+					<li>color HSL: hsl(240, 30%, 40%)</li>
 				</ul>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Aplicacion del Diseño</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Introduccion a Flexbox</h3>
+				</header>
+				<p>
+					Es un modelo de caja flexible unidimensional, se utiliza para organizar el contenido dentro de una etiqueta. Trabaja con un eje principal y otro secundario que facilitan la distribucion de los elementos, que sean hijos directos, sobre el eje principal. Una de las cosas a tener en cuenta, es que cuando aplicamos el atributo <strong>display</strong> con valor <em>flex</em> todos los hijos directos pasan a considerarse elementos de bloque.
+				</p>
+				<h4>Distribucion de los elementos (Justify-Content)</h4>
+				<ul class="example">
+					<li><strong>flex-start</strong> dispone los alemento al principio del flex (por defecto izquierda)</li>
+					<li><strong>flex-end</strong> dispone los elementos al final del flex (por defecto derecha)</li>
+					<li><strong>center</strong> dispone los elemento hacia el centro (por defecto horizontal)</li>
+					<li><strong>space-around</strong> separa los elementos aplicando la misma distancia, pero en el medio estas se suman</li>
+					<li><strong>space-between</strong> separa los elementos entre extremos.</li>
+					<li><strong>space-evenly</strong> separa equitativamente todos los elementos (no compatible con todos los navegadores)</li>
+				</ul>
+				<div class="flex">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<h4>Organizacion de los elementos (Align-Items)</h4>
+				<ul class="example">
+					<li><strong>flex-start</strong> alinea los elementos al principio del flex (por defecto arriba)</li>
+					<li><strong>flex-end</strong> alinea los elementos al final del flex (por defecto abajo)</li>
+					<li><strong>center</strong> alinea los elementos hacia el centro (por defecto vertical)</li>
+					<li><strong>baseline</strong> alinea los elementos de manera tal que el contenido quede en el mismo renglon</li>
+					<li><strong>align-self(*)</strong> atributo que permite definir la alineacion de un elemento dentro del contendor flex</li>
+				</ul>
+				<div class="flex align">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<h4>Orientacion de los Ejes (Flex-Direction)</h4>
+				<ul class="example">
+					<li><strong>row</strong> el contenido se dispone de izquierda a derecha (justify) y de arriba hacia abajo (align)</li>
+					<li><strong>column</strong> el contenido se dispone de arriba hacia abajo (justify) y de izquierda a derecha (align)</li>
+					<li><strong>row-reverse</strong> similar a row, pero el eje principal dispone el contenido de derecha a izquierda</li>
+					<li><strong>column-reverse</strong> similar a column, pero el eje principal dispone el contenido de abajo hacia arriba</li>
+				</ul>
+				<ul class="unstyled">
+					<li><span class="green"></span>eje principal (justify-content)</li>
+					<li><span class="red"></span>eje secundario (align-items)</li>
+				</ul>
+				<div class="overflow">
+					<div class="flex align col">
+						<strong>Column</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+					</div>
+					<div class="flex align row-r">
+						<strong>Row-Reverse</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+					</div>
+					<div class="flex align col-r">
+						<strong>Column-Reverse</strong>
+						<div>div 1</div>
+						<div>div 2</div>
+						<div>div 3</div>
+						<div>div 4</div>
+						<span>span 1</span>
+						<span>span 2</span>
+						<span>span 3</span>
+						<span>span 4</span>
+					</div>
+				</div>
 			</article>
 		</section>
 	</main>
