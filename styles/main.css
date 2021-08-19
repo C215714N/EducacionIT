@@ -99,4 +99,21 @@
 		.colors li:nth-child(2){ background-color: rgb(68,68,136); }
 		.colors li:nth-last-child(2){ background-color: #448; }
 		.colors li:last-child{ background-color: hsl(240, 30%, 40%); }
+	/*Flexbox*/
+		.flex{
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			margin: 1rem;
+			border: .2rem solid #333;
+		}
+		.flex div,
+		.flex span{
+			max-width: 300px;
+			margin: .25rem;
+			border: .1rem solid #666;
+			padding: 1rem;
+			color: #eee;
+			background-color: #224;
+		}
 /*Pie de Pagina*/
