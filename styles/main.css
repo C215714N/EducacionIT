@@ -22,6 +22,7 @@
 	.menu{
 		display: flex;
 		justify-content: center;
+		padding: 0;
 		background: linear-gradient(#812, #402);
 		list-style: none;
 	}
@@ -30,6 +31,10 @@
 		padding: .5rem;
 		color: #ecc;
 		text-decoration: none;
+	}
+	.menu a:hover{
+		text-shadow: -.1rem .1rem .25rem #c33;
+		background-color: rgba(34, 0, 17, .5);
 	}
 /*Cabecera de Pagina*/
 	#header{
@@ -93,5 +98,5 @@
 		.colors li:first-child{ background-color: darkslateblue; }
 		.colors li:nth-child(2){ background-color: rgb(68,68,136); }
 		.colors li:nth-last-child(2){ background-color: #448; }
-		.colors li:last-child{ background-color: hsl(245, 35%, 35%); }
+		.colors li:last-child{ background-color: hsl(240, 30%, 40%); }
 /*Pie de Pagina*/
