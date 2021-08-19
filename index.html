@@ -251,9 +251,56 @@
 			</article>
 		</section>
 	</main>
-	<footer id="footer">
+	<footer id="footer"><!--FOOTER: Contenido Complementario-->
 		<form action="" id="contact">
 			<h2>Contactanos</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				maxlength="50" 
+				pattern="[a-z A-Z]{3,50}"
+				title="Ingrese su nombre solamente con letras y espacios" 
+				placeholder="Nombre(*): Cristian Racedo" 
+				required>
+			<div class="valid">
+				Ingrese su nombre completo solamente con letras y espacios, 
+				el mismo debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email"  
+				minlength="8" 
+				placeholder="Correo(*): cristiandracedo@hotmail.com" 
+				required>
+			<div class="valid">
+				Ingrese un correo valido, el misma debe poseer 
+				al menos 8 caracteres y respetar el siguiente formato "usuario@servidor"
+			</div>
+			<label for="contactPhone">Ingrese su Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				pattern="([0-9]{6,18})|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})"
+				placeholder="Telefono(*):(5411)2345-6789" 
+				required>
+			<div class="valid">
+				Ingrese su numero telefonico, puede colocar la caracteristica entre parentesis e insertar un guion cada 3 a 6 digitos, como se muestra en el ejemplo: (5411)2345-6789
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto" 
+				required
+			></textarea>
+			<button>enviar</button>	
 		</form>
 		<div class="social">
 			<a href=""></a>
