@@ -128,6 +128,25 @@
 		}
 		#header .icon-prev{ left: 0; }
 		#header .icon-next{ right: 0; }
+	/*Contenido Principal*/
+		main{
+			counter-reset: seccion;
+			padding: var(--letter); 
+		}
+		main h2:before{ content: 'Seccion ' counter(seccion); }
+		main h3:before{	content: 'Articulo ' counter(article);}
+		main p:after{
+			content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, totam. Soluta quae, placeat unde laboriosam tempore libero temporibus voluptas. Dignissimos, velit nemo molestias quos dolorem corrupti pariatur magnam, labore officia, suscipit doloribus incidunt impedit harum cupiditate itaque mollitia voluptatem natus hic ut, eum maiores expedita temporibus. Rem beatae eos, error.';
+		}
+		section{
+			counter-reset: article;
+			counter-increment: seccion;
+			margin: var(--letter) auto;
+			border-radius: calc(var(--letter)/4);
+			padding: var(--letter);
+			box-shadow: 0 0 calc(var(--letter)/2) var(--dark);
+		}
+		article{ counter-increment: article; }
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
