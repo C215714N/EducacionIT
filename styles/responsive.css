@@ -19,7 +19,9 @@
 		h2,
 		h3,
 		h4,
-		.menu{ margin: 0 }
+		.menu,
+		.slide,
+		.header p{ margin: 0 }
 		.btn{
 			cursor: pointer;
 			margin: calc(var(--letter)/2);
@@ -70,7 +72,54 @@
 			background-color: var(--hover);
 		}
 	/*Cabecera de Pagina*/
-
+		#header{
+			position: relative;
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			height: min(100vh, 720px); /*viewport height*/
+			padding: var(--letter);
+			text-shadow: 0 0 calc(var(--letter)/3) var(--light);
+			font-size: min(calc(2vw + .8rem), 4rem);
+		}
+		#header .slide,
+		#header .slide li{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: var(--size);
+			height: var(--size);
+			background: var(--light) linear-gradient( var(--light), var(--dark))
+		}
+		#header .slide li:nth-child(1){ 
+			--light: hsl(0, 50%, 60%); 
+			--dark: hsl(300, 40%, 30%);
+		}
+		#header .slide li:nth-child(2){ 
+			--light: hsl(120, 50%, 60%); 
+			--dark: hsl(240, 40%, 30%);
+		}
+		#header .slide li:nth-child(3){ 
+			--light: hsl(270, 50%, 60%); 
+			--dark: hsl(270, 40%, 30%);
+		}
+		#header .slide li:nth-child(4){ 
+			--light: hsl(30, 50%, 60%); 
+			--dark: hsl(0, 40%, 30%);
+		}
+		#header .slide li{ opacity: 0; }
+		#header .slide li.active{ opacity: 1; }
+		#header button{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			outline: none;
+			border: none;
+			padding: 1rem;
+			background-color: transparent;
+			font-size: min(calc(2vw + 1rem), 3rem);
+		}
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
