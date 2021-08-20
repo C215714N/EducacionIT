@@ -20,8 +20,22 @@
 		h3,
 		h4,
 		.menu{ margin: 0 }
+		.btn{
+			cursor: pointer;
+			margin: calc(var(--letter)/2);
+			border: .1rem solid var(--light);
+			color: var(--light);
+			background-color: transparent;
+		}
+		.btn:hover{
+			color: var(--first);
+			background-color: var(--light);
+		}
 	/*Navegacion Principal*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 2;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -35,12 +49,12 @@
 			text-decoration: none;
 		}
 		.logo{
-			font: bold 1.5rem var(--font);
+			font: bold 1.25rem var(--font);
 		}
 		.icon-back{
 			position: fixed;
-			bottom: calc( var(--letter) / 2);
-			right: calc( var(--letter) / 2);
+			bottom: calc(var(--letter) / 2);
+			right: calc(var(--letter) / 2);
 			border-radius: calc(var(--size) / 2);
 			background-color: var(--dark);
 		}
@@ -60,7 +74,22 @@
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
-
+	@media screen and (min-width: 768px){
+		nav .btn{
+			display: none;
+		}
+		.menu{
+			display: flex;
+			width: auto;
+			max-height: 600px;
+		}
+		.menu a{
+			padding: calc(var(--letter)/2);
+		}
+	}
 /*Large Devices - Desktop*/
 
 /*Extra Devices - HD Desktop*/
+	@media screen and (min-width: 1200px){
+		nav{ justify-content: space-around; }
+	}
