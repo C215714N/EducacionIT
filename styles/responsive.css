@@ -33,6 +33,8 @@
 			color: var(--first);
 			background-color: var(--light);
 		}
+		.opacity{ opacity: .3; }
+		.opacity:hover{ opacity: .7; }
 	/*Navegacion Principal*/
 		nav{
 			position: sticky;
@@ -79,8 +81,9 @@
 			align-content: center;
 			height: min(100vh, 720px); /*viewport height*/
 			padding: var(--letter);
+			text-align: center;
 			text-shadow: 0 0 calc(var(--letter)/3) var(--light);
-			font-size: min(calc(2vw + .8rem), 4rem);
+			font-size: min(calc(1vw + .8rem), 4rem);
 		}
 		#header .slide,
 		#header .slide li{
@@ -120,6 +123,8 @@
 			background-color: transparent;
 			font-size: min(calc(2vw + 1rem), 3rem);
 		}
+		#header .icon-prev{ left: 0; }
+		#header .icon-next{ right: 0; }
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
