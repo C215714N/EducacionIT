@@ -1,5 +1,6 @@
 /*Content First - Mobile First*/
 	/*Reglas Generales*/	
+		@import url('icomoon.css');
 		:root{
 			--first: #448;
 			--second: #36c;
@@ -60,6 +61,7 @@
 			bottom: calc(var(--letter) / 2);
 			right: calc(var(--letter) / 2);
 			border-radius: calc(var(--size) / 2);
+			padding: .5rem;
 			background-color: var(--dark);
 		}
 		.menu{
