@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<!--Estilo Externo-->
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<!--Navegacion-->
@@ -31,13 +33,29 @@
 			<input 
 				id="contactName" 
 				name="nombre" 
-				type="text">
-			
+				type="text"
+				maxlength="50" 
+				required>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail"
+				name="correo" 
+				type="email"
+				minlength="8" 
+				required>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="constactConsult" 
+				name="consulta" 
+				minlength="10" 
+				maxlength="200" 
+				required></textarea>
+			<button>ENVIAR</button>
 			<div>
 				<label for="accept">acepto el contrato</label>
-				<input id="accept" type="radio" name="contrato">
+				<input id="accept" type="radio" name="contrato" value="true">
 				<label for="cancel">no me interesa recibir newsletter</label>
-				<input id="cancel" type="radio" name="contrato">
+				<input id="cancel" type="radio" name="contrato" value="false">
 			</div>
 		</form>
 		<!--Redes sociales-->
