@@ -75,6 +75,7 @@
 		.menu a:hover{
 			background-color: var(--hover);
 		}
+		.menu span{ padding: calc(var(--letter)/2) }
 	/*Cabecera de Pagina*/
 		#header{
 			position: relative;
@@ -131,7 +132,8 @@
 
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
-		nav .btn{
+		nav .btn,
+		.menu span{
 			display: none;
 		}
 		.menu{
@@ -140,11 +142,21 @@
 			max-height: 600px;
 		}
 		.menu a{
+			font-size: 1.5rem;
 			padding: calc(var(--letter)/2);
 		}
 	}
 /*Large Devices - Desktop*/
-
+	@media screen and (min-width: 992px){
+		.menu a{
+			display: flex;
+			align-items: center;
+		}
+		.menu span{ 
+			display: block; 
+			font-size: var(--letter);
+		}
+	}
 /*Extra Devices - HD Desktop*/
 	@media screen and (min-width: 1200px){
 		nav{ justify-content: space-around; }
