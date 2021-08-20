@@ -156,3 +156,45 @@
 			border-bottom-color: #c33;
 		}
 /*Pie de Pagina*/
+	/*Formulario de Contacto*/
+		#contact{
+			max-width: 720px;
+			display: flex;
+			flex-direction: column;
+			margin: 1rem auto;
+			border-radius: .5rem;
+			padding: 1rem;
+			color: #eee;
+			background: #402 linear-gradient(#812, #402);
+		}
+		#contact label{ margin: .5rem 0 .2rem; /*top right bottom left*/ }
+		#contact input,
+		#contact textarea,
+		#contact button{
+			outline: none;
+			border: .1rem solid transparent;
+			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact textarea{
+			min-height: 5rem;
+			resize: none;
+		}
+		#contact button{
+			cursor: pointer;
+			margin: .25rem 0;
+			border-color: #eee;
+			align-self: flex-end;
+			color: #eee;
+			background-color: transparent;
+			text-transform: uppercase;
+		}
+		#contact button:hover{
+			color: #402;
+			background-color: #eee;
+		}
+		#contact .valid{
+			display: none;
+			padding: .5rem;
+			background-color: #151515;
+		}
