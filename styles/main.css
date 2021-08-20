@@ -156,7 +156,7 @@
 			border-bottom-color: #c33;
 		}
 /*Pie de Pagina*/
-	/*Formulario de Contacto*/
+	/*Formulario Contacto*/
 		#contact{
 			max-width: 720px;
 			display: flex;
@@ -197,4 +197,37 @@
 			display: none;
 			padding: .5rem;
 			background-color: #151515;
+			text-shadow: 0 0 .25rem #333;
 		}
+	/*Validacion*/
+		#contact :not(button):focus{ 
+			border-color: #151515; 
+			box-shadow: 0 0 .5rem #ca3;
+		}
+		#contact :focus + .valid{ display: block; }
+		#contact :not(button):focus:valid{ border-color: #284; }
+		#contact :valid + .valid{ background-color: #284; }
+		#contact :not(:placeholder-shown):focus:invalid{ border-color: #c33; }
+		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
+	/*Redes Sociales*/
+		.social{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 1rem;
+		}
+		.social a{
+			width: 4rem;
+			height: 4rem;
+			background-position: center;
+			background-size: 2rem;
+			background-repeat: no-repeat;
+		}
+		.social a:hover{
+			background-size: 3.5rem;
+		}
+		.facebook{ background-image: url('../assets/icons/facebook.svg'); }
+		.instagram{ background-image: url('../assets/icons/instagram.svg'); }
+		.twitter{ background-image: url('../assets/icons/twitter.svg'); }
+		.youtube{ background-image: url('../assets/icons/youtube.svg'); }
+		.github{ background-image: url('../assets/icons/github.svg'); }
