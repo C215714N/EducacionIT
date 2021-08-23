@@ -148,9 +148,12 @@
 		}
 		article{ counter-increment: article; }
 /*Small Devices - Smartphones*/
-
+	@media screen and (min-width: 576px){
+		section{ max-width: 540px; }
+	}
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
+		section{ max-width: 720px; }
 		nav .btn,
 		.menu span{
 			display: none;
@@ -167,6 +170,18 @@
 	}
 /*Large Devices - Desktop*/
 	@media screen and (min-width: 992px){
+		section{ 
+			max-width: 960px; 
+			display: flex;
+			flex-wrap: wrap;
+		}
+		section .header{ width: var(--size) }
+		section p{ width: var(--size) }
+		section article{ 
+			width: calc(var(--size)/2);
+			padding: calc(var(--letter)/2);
+		}
+		section article:last-child{ width: var(--size); }
 		.menu a{
 			display: flex;
 			align-items: center;
@@ -178,5 +193,33 @@
 	}
 /*Extra Devices - HD Desktop*/
 	@media screen and (min-width: 1200px){
+		section article,
+		section article:last-child{ width: calc(var(--size)/3) }
+		section{ max-width: 1140px; }
 		nav{ justify-content: space-around; }
 	}
+/*Ejemplo Grilla estilo Bootstrap*/
+	.flex-grid{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.flex-grid div{
+		border: .1rem solid #333;
+		padding: 1rem;
+	}
+	.w-25 {	width: calc(var(--size)/4);  }
+	.w-50 {	width: calc(var(--size)/2);  }
+	.w-75 {	width: calc(var(--size)/3/4);}
+	.w-100{ width:  var(--size); }
+	.col-1{ width: calc( 1 / 12 * var(--size)) }
+	.col-2{ width: calc( 2 / 12 * var(--size)) }
+	.col-3{ width: calc( 3 / 12 * var(--size)) }
+	.col-4{ width: calc( 4 / 12 * var(--size)) }
+	.col-5{ width: calc( 5 / 12 * var(--size)) }
+	.col-6{ width: calc( 6 / 12 * var(--size)) }
+	.col-7{ width: calc( 7 / 12 * var(--size)) }
+	.col-8{ width: calc( 8 / 12 * var(--size)) }
+	.col-9{ width: calc( 9 / 12 * var(--size)) }
+	.col-10{ width: calc( 10 / 12 * var(--size)) }
+	.col-11{ width: calc( 11 / 12 * var(--size)) }
+	.col-12{ width: calc( 12 / 12 * var(--size)) }
