@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="
+			width=device-width, 
+			initial-scale=1,
+			maximum-scale=3">
+	<title>Maquetacion Web</title>
+	<link rel="stylesheet" href="styles/icomoon.css">
+	<!--Styles BOOTSTRAP-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+	<!--Navegation-->
+	<nav class="
+		container-fluid | 
+		navbar navbar-dark navbar-expand-lg | 
+		bg-dark bg-gradient sticky-top">
+		<a class="navbar-brand" href="">css</a>
+		<button 
+			class="navbar-toggler" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#menu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<ul id="menu" class="navbar-nav navbar-collapse collapse align-items-start">
+			<li class="nav-item"><a class="nav-link" href="index.html">inicio</a></li>
+			<li class="nav-item"><a class="nav-link" href="about.html">acerca</a></li>
+			<li class="nav-item"><a class="nav-link active" href="#">galeria</a></li>
+			<li class="nav-item"><a class="nav-link" href="#contact">contacto</a></li>
+			<li class="nav-item dropdown">
+				<a 	href="#" 
+					id="submenu" 
+					class="nav-link dropdown-toggle" 
+					data-bs-toggle="dropdown">
+					Enlaces Externos
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="submenu">
+					<li><a href="https://alumni.education" target="_blank" class="dropdown-item">Alumni</a></li>
+					<li><a href="https://getbootstrap.com" target="_blank" class="dropdown-item">Bootstrap</a></li>
+					<li><a href="https://github.com/c215714n/EducacionIT/tree/f_pescar-css" target="_blank" class="dropdown-item">GitHub</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<!--Cabecera-->
+	<header class="p-3 text-center bg-light">
+		<h1 class="display-1">Maquetacion Web</h1>
+		<p class="h3">responsive web design</p>
+	</header>
+	<!--Contenido Principal-->
+	<main class="container">
+		<section>
+			<h2>Introduccion a Bootstrap</h2>
+			<p>
+				Es un <strong class="mark">framework de css</strong> compilado con el preprocesador sass que facilita la aplicacion de estilos en nuestro sitio, ya que cuenta con una plantilla de mas de 10000 lineas de codigo que se centran en brindar una buena experiencia de usuario al momento de visualizar nuestro sitio en el navegador, presentando muchas caracteristicas de diseño responsive. Mediante la aplicacion de la metodologia BEM (Block Element Modifier) define multiples cantidades de clases para que el desarrollador las utilice dentro del HTML.
+			</p>
+			<h3>Breakpoints</h3>
+			<P>
+				Como todo diseño responsive, debe adaptarse a los diferentes tamaños de pantalla, por lo tanto define con ciertos nombres simples los puntos de quiebre segun las dimensiones del dispositivo donde se visualice la pagina, en la siguiente tabla se muestran dichos breakpoints.
+			</P>
+			<table class="table table-dark table-striped">
+				<thead>
+					<tr>
+						<th>Class</th>
+						<th>Display</th>
+						<th>Max-width</th>
+						<th>Devices</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>.xs</td>
+						<td> &lt;576px</td>
+						<td>100%</td>
+						<td>smartwatch</td>
+					</tr>
+					<tr>
+						<td>.sm</td>
+						<td>>=576px & &lt;768px</td>
+						<td>540px</td>
+						<td>smartphones</td>
+					</tr>
+					<tr>
+						<td>.md</td>
+						<td>>=768px & &lt;992px</td>
+						<td>720px</td>
+						<td>tablets, smartphones(landscape)</td>
+					</tr>
+					<tr>
+						<td>.lg</td>
+						<td>>=992px & &lt;1200px</td>
+						<td>960px</td>
+						<td>netbooks, tablets(landscape)</td>
+					</tr>
+					<tr>
+						<td>.xl</td>
+						<td>>=1200px & &lt;1400px</td>
+						<td>1140px</td>
+						<td>notebooks, desktop</td>
+					</tr>
+					<tr>
+						<td>.xxl</td>
+						<td>>=1400px</td>
+						<td>1360px</td>
+						<td>hd desktop, smart tv</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Sistema de Grillas</h3>
+			<p>
+				Cuando surge este framework, implementaba una grilla utilizando flexbox, la misma divide al elemento contenedor en 12 columnas y cada columna representa un tamaño en porcentaje, siendo la clase <em>col-12</em> igual a <em>100%</em>, asi como tambien <em>col-6</em> es igual <em>50%</em>. Igual que como se menciona anteriormente, bootstrap utiliza los puntos de quiebre para muchos atributos y  por lo tanto tambien podemos definir en que tamaño de pantalla nuestro contenido ocupara cierta cantidad de columnas.
+			</p>
+			<div class="row">
+				<span class="border | col-md-6 col-lg-12 ">md-6 lg-12</span>
+				<span class="border | col-md-3 col-lg-1 ">md-3 lg-1</span>
+				<span class="border | col-md-3 col-lg-11 ">md-3 lg-11</span>
+				<span class="border | col-md-4 col-lg-2 ">md-4 lg-2</span>
+				<span class="border | col-md-2 col-lg-10 ">md-2 lg-10</span>
+				<span class="border | col-md-5 col-lg-3 ">md-5 lg-3</span>
+				<span class="border | col-md-1 col-lg-9 ">md-1 lg-9</span>
+				<span class="border | col-md-4 ">md-4</span>
+				<span class="border | col-md-8 ">md-8</span>
+				<span class="border | col-sm-5 ">sm-5</span>
+				<span class="border | col-sm-7 ">sm-7</span>
+			</div>
+		</section>
+	</main>
+	<!--Scripts Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
