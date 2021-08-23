@@ -49,6 +49,64 @@
 					</li>
 				</ul>
 			</section>
+			<section>
+				<header>
+					<h3>¿Como estan compuestos?</h3>
+				</header>
+				<p>
+					Los formularios poseen <em>2 tipos de elementos</em>, por un lado estan las <strong>Etiquetas (LABEL)</strong> que funcionan como rotulos que indican al usuario de datos debe seleccionar o escribir; y por el otro estan los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que permiten al usuarios seleccionar/ingresar los datos, estos poseen 2 atributos importantes, <em>value="..."</em> que hace referencia al dato que sera enviado y <em>type="..."</em> que se refiere al tipo de dato.
+				</p>
+				<ul class="list">
+					<li>
+						<label>Campo de Texto (Aa!#123)</label>
+						<input type="text">
+					</li>
+					<li>
+						<label>Campo Numerico (123456)</label>
+						<input type="number">
+					</li>
+					<li>
+						<label>Campo Correo (user@serv)</label>
+						<input type="email">
+					</li>
+					<li>
+						<label>Campo Contraseña (*****)</label>
+						<input type="password">
+					</li>
+					<li>
+						<label>Campo fecha (yyyy/mm/dd)</label>
+						<input type="date">
+					</li>
+					<li>
+						<label>Campo Opcion Unica</label>
+						| si <input type="radio" name="ok" value="true">
+						| no <input type="radio" name="ok" value="false">
+					</li>
+					<li>
+						<label>Campo Opcion Multiple</label>
+						| arte <input type="checkbox" name="hobbie" value="a">
+						| music <input type="checkbox" name="hobbie" value="m">
+						| deporte <input type="checkbox" name="hobbie" value="s">
+					</li>
+					<li>
+						<label>Campo Multilinea</label>
+						<textarea></textarea>
+					</li>
+					<li>
+						<label>Campo Lista Desplegable</label>
+						<select>
+							<option value="0">html</option>
+							<option value="1">css</option>
+							<option value="2">js</option>
+						</select>
+					</li>
+					<li>
+						<input type="reset">
+						<input type="submit">
+						<button>ENVIAR</button>
+					</li>
+				</ul>
+			</section>
 		</article>	
 	</main>	
 </body>
