@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<!--Navegacion-->
+	<nav>	
+		<li><a href="index.html">Inicio</a></li>
+		<li><a href="gallery.html">Galeria</a></li>
+		<li><a href="#contact">Contacto</a></li>
+	</nav>
+	<!--Cabecera Principal-->
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p>html | css | js</p>
+	</header>
+	<!--Contenido Principal-->
+	<main>	
+		<article>	
+			<header class="header">	
+				<h2>Formularios HTML</h2>
+			</header>
+			<p>
+				Son herramientas que permiten una interaccion (intercambio de datos) entre el cliente y servidor, se utilizan para solicitar informacion y enviar consultas a este ultimo. Para poder implementarlos debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma los elementos que lo componen, ya que al realizar el envio de los datos, solamente se tomara en cuenta el contenido del mismo.
+			</p>
+			<section>
+				<header>
+					<h3>¿Como funcionan?</h3>
+				</header>
+				<p>
+					A la etiqueta mencionada anteriormente, se le debe especificar al menos <em>2 atributos</em>, por un lado esta <strong>action="..."</strong> que define lo que se debe hacer con los datos una vez enviado el formulario, se suele utilizar un script de backend (ej:php) para que el servidor resuelva esto; y por otro lado esta <strong>method="..."</strong> que define como se van a procesar los datos.
+				</p>
+				<ul class="list">
+					<li>
+						<strong>GET</strong> Metodo menos seguro, ya que los datos siempre estan visibles en la barra de direcciones al momento de hacer la consulta y que prioriza la respuesta del servidor.
+						<ul>
+							<li><em>Buscador</em> - Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST</strong> Metodo mas seguro que encripta los datos al momento de realizar el envio, dando prioridad de este modo a la informacion provista por el usuario y debido a esto es mas lento.
+						<ul>
+							<li><em>Inscripcion</em> - Registro</li>
+							<li><em>Acceso</em> - Inicio Sesion</li>
+							<li><em>Contacto</em> - Consulta Web</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>	
+	</main>	
+</body>
+</html>
