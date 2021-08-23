@@ -1,15 +1,44 @@
+/*Reglas Generales*/
+	body{
+		margin: 0;
+		font-family: 'segoe ui', 'calibri', sans-serif;
+	}
 /*Barra de Navegacion*/
 	nav ul{
+		margin: 0;
 		padding: 0;
 		background-color: #36c;
 		text-align: center;
 		list-style: none;
 	}
+	nav a{
+		color: #eee;
+		text-decoration: none;
+	}
 	nav li{
 		display: inline-block;
 		padding: 8px;
 	}
+	nav li:hover{
+		background-color: rgba(51,51,51,.5);
+	}
+/*Cabecera Principal*/
+	#header{
+		padding: 20% 16px; /*top right bottom left*/
+		color: #eee;
+		background-color: #333;
+		text-align: center;
+	}
 /*Contenido Principal*/
+	.list{
+		margin: 20px;
+		margin-left: 40px;
+		border-left: 4px solid #248; /*width style color*/
+		padding: 24px;
+		background-color: #ccc;
+		list-style: none;
+		line-height: 24px;
+	}
 	section img{
 		width: 300px;
 	}
@@ -20,6 +49,47 @@
 	}
 	article p{
 		overflow: hidden;
-		padding: 24px;
-		background-color: #ccc;
+		padding: 16px;
+	}
+/*Pie de pagina*/
+	#footer{
+		padding: 16px;
+		color: #eee;
+		background-color: #248;
+	}
+	#contact{
+		max-width: 540px;
+		margin: auto;
+	}
+	#contact input, 
+	#contact textarea{
+		width: calc(100% - 32px);
+		outline: none;
+		border-radius: 4px;
+		border: none;
+		padding: 8px 16px; /*top right bottom left*/
+		font-size: 16px;
+		font-family: 'segoe ui', 'calibri', sans-serif;
+	}
+	#contact :focus{
+		box-shadow: 0 0 8px #eee;/*x y blur color*/
+	}
+	#contact textarea{
+		height: 80px;
+		resize: none;
+	}
+	#contact button{
+		cursor: pointer;
+		display: block;
+		margin-left: auto;
+		border-radius: 4px;
+		border: 2px solid #eee;
+		padding: 8px 16px;
+		color: #eee;
+		background-color: transparent;
+		font-weight: bold;
+	}
+	#contact button:hover{
+		color: #248;
+		background-color: #eee;
 	}

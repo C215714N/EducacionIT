@@ -3,13 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<!--Navegacion-->
 	<nav>	
-		<li><a href="index.html">Inicio</a></li>
-		<li><a href="gallery.html">Galeria</a></li>
-		<li><a href="#contact">Contacto</a></li>
+		<ul>		
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="gallery.html">Galeria</a></li>
+			<li><a href="#contact">Contacto</a></li>
+		</ul>
 	</nav>
 	<!--Cabecera Principal-->
 	<header id="header">
@@ -118,6 +121,7 @@
 				id="contactName"
 				name="nombre" 
 				type="text"
+				placeholder="Nombre: Cristian Racedo"
 				maxlength="50"
 				required>
 			<label for="contactEmail">Ingrese su Correo</label>
@@ -125,12 +129,14 @@
 				id="contactEmail"
 				name="correo" 
 				type="email"
+				placeholder="Correo: cristiandracedo@hotmail.com"
 				minlength="8" 
 				required>
 			<label for="contactConsult">Ingrese su Consulta</label>
 			<textarea 
 				id="contactConsult" 
 				name="consulta"
+				placeholder="Buenas, necesito un presupuesto" 
 				minlength="20"
 				maxlength="200" 
 				required></textarea>
