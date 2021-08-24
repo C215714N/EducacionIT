@@ -22,18 +22,46 @@
 	</header>
 	<!--Contenido Principal-->
 	<main>
-		
+		<article>
+			<h2>Formularios HTML</h2>
+			<p>
+				Son herramientas que permiten la interaccion entre el cliente y el servidor (intercambio de datos). Para poder implementarlos solamente debemos colocar la etiqueta <strong>&lt;form></strong> en nuestra pagina y dentro de la misma ubicar los elementos que seran procesados al momento de realizar el envio
+			</p>
+			<section>
+				<h3>¿como funcionan?</h3>
+				<p>
+					A la etiqueta mencionada anteriormente debemos colocarle los siguientes atributos, <strong>action="..."</strong> para definir que hacer una vez realizado el envio y <strong>method="..."</strong> para definir quien tiene la prioridad el momento de realizarlos.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET</strong> metodo menos seguro debido a que la informacion permanece visible en la barra de direcciones al momento de realizar el envio, pero cuya prioridad radica en la respuesta del servidor.
+						<ul>
+							<li><em>Buscador</em> Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST</strong> metodo seguro que encripta los datos al momento de realizar el envio, ya que la prioridad radica en la proteccion de los datos del usuario y por lo tanto es mas lento.
+						<ul>
+							<li><em>Registro</em> Inscripcion</li>
+							<li><em>Acceso</em> Inicio Sesion</li>
+							<li><em>Contacto</em> Consulta Web</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
 	</main>
 	<!--Pie de pagina-->
 	<footer id="footer">
 		<!--Formulario de contacto-->
-		<form id="contact" action="">
+		<form id="contact" action="contact.php" method="POST">
 			<h2>Dejanos tu consulta</h2>
 			<label for="contactName">Ingrese su Nombre</label>
 			<input 
 				id="contactName" 
 				name="nombre" 
 				type="text"
+				minlength="3" 
 				maxlength="50" 
 				required>
 			<label for="contactEmail">Ingrese su Correo</label>
