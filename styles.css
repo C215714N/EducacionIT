@@ -1,10 +1,36 @@
 /*Reglas Generales*/
-	body{
+	body,
+	.menu{
 		margin: 0;
 		font-family: 'segoe ui', calibri, sans-serif;
 	}
 /*Navegacion*/
-
+	.menu{
+		padding: 0;
+		text-align: center;
+		background-color: #448;
+		list-style: none;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px;
+	}
+	.menu li:hover{
+		background-color: rgba(51,51,51,.5);
+	}
+/*Cabecera Principal*/
+	#header{
+		padding: 20% 16px; /*top right bottom left*/
+		color: #eee;
+		background-image: url('img/osx-mavericks.png');
+		background-size: cover;
+		text-align: center;
+		text-shadow: 0 0 8px #333;/*-x+ -y+ blur color*/
+	}
 /*Contenido Principal*/
 
 /*Pie de pagina*/
