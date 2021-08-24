@@ -32,3 +32,7 @@
 			}
 		} newItem.classList.add('active')
 	}
+/*Modo*/
+	modeBtn = document.querySelector('#tema')
+	modeEls = document.querySelectorAll('.mode')
+	modeBtn.onclick = () => modeEls.forEach( el => el.classList.contains('light') ? el.classList.replace('light','dark') : el.classList.replace('dark', 'light'))

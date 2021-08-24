@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
+	<input id="mode" type="checkbox">
 	<!--Navegacion Principal-->
 	<nav class="navbar sticky-top">
 		<a href="#" class="logo">css</a>
@@ -22,6 +23,7 @@
 			<li><a class="icon-about" href="#" title="Acerca"><span>acerca</span></a></li>
 			<li><a class="icon-gallery" href="gallery.html" title="Galeria"><span>galeria</span></a></li>
 			<li><a class="icon-contact" href="#contact" title="Contacto"><span>contacto</span></a></li>
+			<li><a class="icon-chat"><label for="mode">Modo</label></a></li>
 		</ul>
 		<a class="icon-back opacity" title="Volver a la parte superior" href="#"></a>
 	</nav>
@@ -41,7 +43,7 @@
 		<button class="icon-next opacity" title="Imagén Siguiente"></button>
 	</header>
 	<!--Contenido Principal-->
-	<main>
+	<main class="mode light">
 		<section>
 			<header class="header">
 				<h2></h2>
@@ -159,6 +161,7 @@
 			</article>
 		</section>
 	</main>
+	<button id="tema">MODO</button>
 	<!-- Scripts -->
 	<script src="scripts/main.js"></script>
 </body>

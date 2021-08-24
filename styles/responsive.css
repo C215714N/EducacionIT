@@ -47,7 +47,8 @@
 			flex-wrap: wrap;
 			background: linear-gradient( var(--second), var(--first) );
 		}
-		nav a{
+		nav a,
+		nav label{
 			display: block;
 			padding: calc(var(--letter) / 4);
 			color: var(--light);
@@ -75,7 +76,7 @@
 		.menu a:hover{
 			background-color: var(--hover);
 		}
-		.menu span{ padding: calc(var(--letter)/2) }
+		.menu span, .menu label{ padding: calc(var(--letter)/2) }
 	/*Cabecera de Pagina*/
 		#header{
 			position: relative;
@@ -186,7 +187,8 @@
 			display: flex;
 			align-items: center;
 		}
-		.menu span{ 
+		.menu span,
+		.menu label{ 
 			display: block; 
 			font-size: var(--letter);
 		}
@@ -223,3 +225,44 @@
 	.col-10{ width: calc( 10 / 12 * var(--size)) }
 	.col-11{ width: calc( 11 / 12 * var(--size)) }
 	.col-12{ width: calc( 12 / 12 * var(--size)) }
+/*Modos de color*/
+	#mode{ display: none; }
+	/*Claro*/
+		#mode:not(:checked) ~ nav label:after{
+			content: ' Nocturno';
+		}
+		#mode:not(:checked) ~ .mode{
+			color: var(--dark);
+			background-color: var(--light);
+		}
+	/*Oscuro*/
+		#mode:checked ~ nav label:after{
+			content: ' Diurno';
+		}
+		#mode:checked ~ * {
+			--first: #112;
+			--second: #248;
+		}
+		#mode:checked ~ .mode{
+			color: var(--light);
+			background-color: var(--dark);
+		}
+		#mode:checked ~ .mode section{
+			box-shadow: 0 0 .5rem var(--light);
+		}
+		#mode:checked ~ #header .slide li:nth-child(1){ 
+			--light: hsl(0, 50%, 30%); 
+			--dark: hsl(300, 40%, 5%);
+		}
+		#mode:checked ~ #header .slide li:nth-child(2){ 
+			--light: hsl(120, 50%, 30%); 
+			--dark: hsl(240, 40%, 5%);
+		}
+		#mode:checked ~ #header .slide li:nth-child(3){ 
+			--light: hsl(270, 50%, 30%); 
+			--dark: hsl(270, 40%, 5%);
+		}
+		#mode:checked ~ #header .slide li:nth-child(4){ 
+			--light: hsl(30, 50%, 30%); 
+			--dark: hsl(0, 40%, 5%);
+		}

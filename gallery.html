@@ -127,8 +127,57 @@
 				<span class="border | col-sm-5 ">sm-5</span>
 				<span class="border | col-sm-7 ">sm-7</span>
 			</div>
+			<h3>Colores</h3>
+			<p>
+				Al igual que en cualquier hoja de estilos, bootstrap posee ciertos valores predefinidos, a los que le asigna un nombre. Estos valores pueden ser modificados, siempre y cuando redefinamos las clases en cuestion segun lo que necesitemos modificar.
+			</p>
+			<ul class="list-unstyled d-flex">
+				<li class="m-1 px-2 btn btn-primary">text-primary</li>
+				<li class="m-1 px-2 btn btn-secondary">text-secondary</li>
+				<li class="m-1 px-2 btn btn-light">text-light</li>
+				<li class="m-1 px-2 btn btn-dark">text-dark</li>
+				<li class="m-1 px-2 btn btn-success">text-success</li>
+				<li class="m-1 px-2 btn btn-warning">text-warning</li>
+				<li class="m-1 px-2 btn btn-danger">text-danger</li>
+				<li class="m-1 px-2 btn btn-info">text-info</li>
+			</ul>
+			<ul class="list-unstyled d-flex">
+				<li class="m-1 px-1 btn btn-outline-primary">bg-primary</li>
+				<li class="m-1 px-1 btn btn-outline-secondary">bg-secondary</li>
+				<li class="m-1 px-1 btn btn-outline-light">bg-light</li>
+				<li class="m-1 px-1 btn btn-outline-dark text-light">bg-dark</li>
+				<li class="m-1 px-1 btn btn-outline-success">bg-success</li>
+				<li class="m-1 px-1 btn btn-outline-warning">bg-warning</li>
+				<li class="m-1 px-1 btn btn-outline-danger">bg-danger</li>
+				<li class="m-1 px-1 btn btn-outline-info">bg-info</li>
+			</ul>
 		</section>
 	</main>
+	<!--Pie de pagina-->
+	<footer>
+		<form class="container mx-auto col-md-8 col-lg-6" >
+			<label class="form-label" for="">Ingrese su Nombre</label>
+			<input class="form-control" 
+				type="text" 
+				maxlength="50" 
+				pattern="[a-z A-z]{3,50}" 
+				required>
+			<label class="form-label" for="">Ingrese su Correo</label>
+			<input class="form-control" 
+				type="email" 
+				minlength="8" 
+				required>
+			<label class="form-label" for="">Ingrese su Consulta</label>
+			<textarea class="form-control" 
+				minlength="10"
+				maxlength="200" 
+				required></textarea>
+			<button class="w-100 btn btn-outline-success">ENVIAR</button>
+		</form>
+		<p>
+			&copy; Todos los derechos reservados
+		</p>
+	</footer>
 	<!--Scripts Bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
