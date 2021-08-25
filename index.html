@@ -90,6 +90,47 @@
 					</li>
 				</ul>
 			</article>
+			<article>
+				<header>
+					<h3>Multimedia</h3>
+				</header>
+				<p>
+					Actualmente la mayoria de los navegadores soporta este tipo de contenido, e incluyen una API de reproduccion para facilitar la implementaicion del mismo. Las etiquetas involucradas son <strong>&lt;audio></strong> y <strong>&lt;video></strong> que soportan los formatos <em>.mp3, .wav, .ogg</em> y <em>.mp4, .webm, .ogv</em> respectivamente. Un detalle a tener en cuenta es que los navegadores impiden la reproduccion automatica en caso de tener el sonido activado.
+				</p>
+				<div class="example video">
+					<video controls autoplay muted>
+						<source src="assets/media/californication.ogv">
+						<source src="assets/media/cant-stop.webm">
+						<source src="assets/media/by-the-way.mp4">
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente
+							 <a href="assets/media/by-the-way.mp4">link</a>
+						</p>
+					</video>
+				</div>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Preprocesadores CSS</h2>
+				<p>
+					Tambien conocidos como pseudolenguajes, son herramientas que permiten la creacion de hojas de estilos en un lenguaje similar a css, pero que admite metodos que no vienen incorporados en este ultimo de forma nativa. Se suele utilizar una herramienta de compilacion para generar el archivo de estilos resultante, la mayoria de los preprocesadores admite el uso de <em>variables, anidacion de estilos, funciones, bucles, metodos</em> entre sus caracteristicas.
+				</p>
+				<article>
+					<header>
+						<h3>LESS</h3>
+						<p>
+							Herramienta que utiliza <strong>JavaScript</strong> como lenguaje inteprete y de compilacion, podemos acceder a la documentacion de esta herramienta desde el sitio <a href="https://lesscss.org">lesscss.org</a> y tambien podemos instalarla desde el CLI utilizando el siguiente comando <em>npm i -g less</em>. Para generar nuestras hojas de estilos podemos utilizar el siguiente comando <em>lessc "input.less" "output.css"</em>
+						</p>
+						<p>
+							Debido a que este compilador debe ser ejecutado cada vez que realizamos un cambio en nuestro proyecto, podemos utilizar una alternativa que posee metodos de observacion, la misma se llama <strong>less watch compiler</strong>. Para instalarla solamente debemos escribir en el CLI el comando <em>npm i less-watch-compiler</em> y para ejecutar el compilador debemos ingresar el comando <em>less-watch-compiler "input_folder/" "output_folder/" "file.less"</em> pudiendo seleccionar una ubicacion diferente para la compilacion.
+						</p>
+						<div class="example">
+							
+						</div>
+					</header>
+				</article>
+			</header>
 		</section>
 	</main>
 	<!--Footer-->
