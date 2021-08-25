@@ -22,8 +22,22 @@
 		}
 		.opacity{ opacity: .3; }
 		.opacity:hover{ opacity: .7; }
+		.btn{
+			margin: .5rem;
+			border-radius: .2rem;
+			border: .1rem solid var(--light);
+			color: var(--light);
+			background-color: transparent;
+		}
+		.btn:hover{
+			color: var(--first);
+			background-color: var(--light);
+		}
 	/*Navigation*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 2;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -58,7 +72,28 @@
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
-
+@media screen and (min-width: 768px){
+	nav .btn,
+	nav span{ 
+		display: none; 
+		font-size: 1rem;
+	}
+	.menu{
+		width: auto;
+		max-height: 600px;
+	}
+	.menu,
+	.menu a{
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+	}
+}
 /*Large Devices - Desktop*/
-
+@media screen and (min-width: 992px){
+	nav span{ display: block; }
+}
 /*Extra Large Devices - HD Desktop*/
+@media screen and (min-width:  1200px){
+	nav{ justify-content: space-around; }
+}
