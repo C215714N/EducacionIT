@@ -1,0 +1,45 @@
+/*Main Header Styles*/
+#header {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: min(100vh, 720px);
+  /*viewport height: altura de la ventana*/
+  color: var(--light);
+  background-color: var(--dark);
+  font-size: min(calc(2vw + .8rem), 5rem);
+  /*viewport width: ancho de la ventana*/
+  text-shadow: 0 0 0.5rem var(--dark);
+}
+.unstyled,
+#header .header *,
+#header .slide,
+#header button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+.rounded {
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.cover,
+#header .slide,
+#header .slide li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

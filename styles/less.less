@@ -1,0 +1,86 @@
+// Variables: Valor que se almacena en la memoria y que puede cambiar;
+	// Colores
+		@first: #448;
+		@second: #36c;
+		@light: var(--light);
+		@dark: var(--dark);
+	// Medidas
+		@sm: 576px; 
+		@md: 768px;
+		@lg: 992px;
+		@xl: 1200px;
+		@r: .25rem;
+
+// Nesting: Capacidad de generar selectores dentro de las reglas;
+/*Main Header Styles*/
+	#header{
+		.normalize(@p:1rem);
+		.flexbox(column; @fa: center);
+		height: min(100vh, 720px);/*viewport height: altura de la ventana*/
+		color: @light;
+		background-color: @dark;
+		font-size: ~'min(calc(2vw + .8rem), 5rem)'; /*viewport width: ancho de la ventana*/
+		text-shadow: 0 0 .5rem @dark;
+		// Heading Styles
+			.header{
+
+				*{ &:extend(.unstyled); }
+			}
+		// Slide Gallery
+			.slide{
+				&:extend(.unstyled);
+				&:extend(.cover);
+				li{
+					&:extend(.cover);
+				}
+			}
+		// Slide Controls
+			button{
+				&:extend(.unstyled);
+			}
+	}
+
+// Mixins: Estilos declarados utilizados como reglas de un selector ;
+	.unstyled{
+		.normalize;
+		outline: none;
+		list-style: none;
+		text-decoration: none;
+	}
+	.rounded{
+		-webkit-border-radius: @r;
+		-moz-border-radius: @r;
+		-ms-border-radius: @r;
+		-o-border-radius: @r;
+		border-radius: @r;
+	}
+	.cover{
+		.position(absolute);
+		width: 100%;
+		height: 100%;
+	}
+// Mixins parametricos: Estilos que reciben valores para ser aplicados (Funciones);
+	.normalize(@m:0; @p:0; @b:0){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+	.position(@p: relative; @x:0; @y:0; @px:left; @py:top){
+		position: @p;
+		@{px}: @x;
+		@{py}: @y;
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: unset;
+		@fw: wrap;
+		@f: flex
+	){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+// Mixins Recursivos: Estilos que se repiten en base a una condicion (Bucles);

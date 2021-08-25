@@ -1,6 +1,7 @@
 /*Content First - Mobile First*/
 	/*General Rules*/
 		@import url('icomoon.css');
+		@import url('less.css');
 		:root{
 			--first: #448;
 			--second: #36c;
@@ -94,6 +95,6 @@
 	nav span{ display: block; }
 }
 /*Extra Large Devices - HD Desktop*/
-@media screen and (min-width:  1200px){
+@media screen and (min-width: 1200px){
 	nav{ justify-content: space-around; }
 }
