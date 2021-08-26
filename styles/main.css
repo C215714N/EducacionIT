@@ -197,6 +197,41 @@
 		.areas :nth-child(4){ grid-area: section; }
 		.areas :nth-last-child(2){ grid-area: aside; }
 		.areas :last-child{ grid-area: footer; }
+	/* Ejemplos Layout */
+		.layout{
+			margin: 1rem;
+			padding: 1rem;
+		}
+		.layout div{
+			margin: .5rem 0;
+			border-radius: .25rem;
+			padding: 1rem;
+			color: #eee;
+			background-color: #333;
+		}
+		.layout p::after{
+			content: 
+				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt id ad porro nulla temporibus, atque, excepturi dolorem nisi in quisquam aliquam quam praesentium eligendi. Autem necessitatibus aliquid suscipit ratione obcaecati eius vel natus, dolorum praesentium sequi fugiat quisquam ab eos eveniet excepturi illo mollitia voluptas! Cupiditate, perspiciatis ad! Suscipit, consequatur!';
+		}
+		.show{
+			cursor: pointer;
+			margin: .5rem;
+			border-bottom: .1rem solid #999;
+			padding: .25rem;
+		}
+		.flex-grid{ 
+			display: flex; 
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+		/*Extra Class*/
+		.col-1{ width: 30% }
+		.col-2{ width: 45% }
+		.col-3{ width: 95% }
+		.w-100{ width: 100% }
+		.min{ min-width: 250px; }
+		.max{ max-width: 250px; }
+		.f-right{ float: right; }
 /*Pie de Pagina*/
 	/*Formulario Contacto*/
 		#contact{
