@@ -185,9 +185,11 @@
 				'nav 		nav 		nav'
 				'header		header		header'
 				'aside 		main 		main'
-				'aside  	section  	art-1'
-				'aside 		section  	art-2'
+				'aside  	section  	.'
+				'aside 		section 	.'
 				'footer 	footer 		footer';
+			justify-content: center;
+			align-content: center;
 		}
 		.areas :first-child{  grid-area: header; }
 		.areas :nth-child(2){ grid-area: nav; }
