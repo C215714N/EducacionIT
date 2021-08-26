@@ -249,6 +249,115 @@
 					</div>
 				</div>
 			</article>
+			<article>
+				<header>
+					<h3>Introduccion a CSS-Grid</h3>
+				</header>
+				<p>
+					Modelo multidimensional que permite la creacion de un sistema de grillas, sin necesidad de agregar elementos elementos innecesario aun contenedor, para organizar su contenido. A diferencia de flexbox este permite la creacion de multiples filas y columnas para el diseño, solamente debemos definir el atributo <strong>display</strong> con el valor <em>grid</em> y automaticamente los elemento se orgazaran en una columna, considerandose automaticamente de bloque.
+				</p>
+				<h4>plantillas de diseño (grid-template)</h4>
+				<ul class="example">
+					<li><strong>grid-template-columns</strong> Permite definir la cantidad de columnas mediante la colocacion de sus tamaños.</li>
+					<li><strong>grid-template-rows</strong> Permite definir el tamaños de las filas especificadas</li>
+					<li><strong>grid-template-areas</strong> Permite la creacion de una plantilla con nombres que pueden ser asignados</li>
+					<li><strong>grid-column</strong> Define la posicion de la celda entre las columnas, se compone de los atributos <em>grid-column-start</em>/<em>grid-column-end</em></li>
+					<li><strong>grid-row</strong> Define la posicion de la celda entre las filas, se compone de los atributos <em>grid-row-start</em>/<em>grid-row-end</em></li>
+					<li><strong>gap</strong> Indica la separacion de filas y columnas respectivamente dentro de la grilla</li>
+					<li><strong>grid-area</strong> Define el area de perten</li>
+				</ul>
+				<div class="grid">
+					<div>div 1</div>
+					<div>div 2</div>
+					<div>div 3</div>
+					<div>div 4</div>
+					<span>span 1</span>
+					<span>span 2</span>
+					<span>span 3</span>
+					<span>span 4</span>
+				</div>
+				<h4>Distribucion y Organizacion (justify / align)</h4>
+				<ul class="example">
+					<li><strong>justify-content</strong> Define como se va distribuir horizontalmente la grilla dentro del contenedor grid</li>
+					<li><strong>align-content</strong> Define como se va distribuir verticalmente la grilla dentro del contenedor grid</li>
+					<li><strong>justify-items</strong> Define como se va a organizar el contenido dentro de la celda horizontalmente</li>
+					<li><strong>align-items</strong> Define como se va a organizar el contenido dentro de la celda verticalmente</li>
+				</ul>
+				<div class="areas">
+					<div>header</div>
+					<div>nav</div>
+					<div>main</div>
+					<div>section</div>
+					<div>article</div>
+					<div>article</div>
+					<div>aside</div>
+					<div>footer</div>
+				</div>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Ejemplos de Layout</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Flexbox</h3>
+				</header>
+				<h4 class="show">apilacion</h4>
+				<div class="layout flexbox">
+					<div class="col-3 overflow">
+						<img class="f-right max" src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+					<div class="col-3 overflow">
+						<img class="f-right max" src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+					<div class="col-3 overflow">
+						<img class="f-right max" src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+				</div>
+				<h4 class="show">comparacion</h4>
+				<div class="layout flexbox">
+					<div class="col-1 min">
+						<img src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+					<div class="col-1 min">
+						<img src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+					<div class="col-1 min">
+						<img src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+				</div>
+				<h4 class="show">destacado</h4>
+				<div class="layout flexbox">
+					<div class="col-3">
+						<img class="f-right max" src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+					<div class="col-2">
+						<img class="f-right max" src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+					<div class="col-2">
+						<img class="f-right max" src="assets/backgrounds/poster-cant-stop.jpg" alt="">
+						<p></p>
+						<p></p>
+					</div>
+				</div>
+			</article>
 		</section>
 	</main>
 	<footer id="footer"><!--FOOTER: Contenido Complementario-->

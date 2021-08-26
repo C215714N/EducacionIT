@@ -158,6 +158,79 @@
 			border-left-color: #3c6;
 			border-bottom-color: #c33;
 		}
+	/*Introduccion a CSSGrid*/
+		.grid,
+		.areas{
+			display: grid;
+			grid-template-columns: auto auto auto;/*tamaños c/columna*/
+			gap: .5rem;
+			margin: 1rem;
+			padding: .25rem;
+		}
+		.grid div,
+		.grid span,
+		.areas div,
+		.areas span{
+			padding: 1rem;
+			border: .1rem solid #248;	
+			background-color: #eee;
+		}
+		.grid :first-child{ grid-column: span 3; }
+		.grid :nth-child(2){ grid-row: span 3; }
+		.grid span:first-of-type{ grid-column: 2 / 4; }
+		.grid :nth-last-child(2){ grid-row: span 2; }
+		.grid :last-child{ grid-column: 1 / 3; }
+		/*Areas de Grid*/
+			.areas{
+				justify-content: center;
+				align-content: flex-end;
+				grid-template-areas: 
+					'nav 		nav 		nav'
+					'header 	header 		header'
+					'aside 		main 		main'
+					'aside 		section  	.'
+					'aside  	section  	.'
+					'footer 	footer 		footer';
+			}
+			.areas :first-child{  grid-area: header; }
+			.areas :nth-child(2){ grid-area: nav; }
+			.areas :nth-child(3){ grid-area: main; }
+			.areas :nth-child(4){ grid-area: section; }
+			.areas :nth-last-child(2){ grid-area: aside; }
+			.areas :last-child{ grid-area: footer; }
+	/*Ejemplos Layout*/
+		.show{
+			margin: .5rem;
+			padding: .25rem;
+			cursor: pointer;
+			border-bottom: .1rem solid #333;
+		}
+		.layout{
+			overflow: hidden;
+			height: 0;
+		}
+		.layout p::after{
+			content: 'Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Ad, veritatis alias soluta nulla vitae earum distinctio sint, id, sunt quis error iure ipsam? Animi, beatae? Repudiandae ex cumque consequatur molestias quam quae amet nulla in. Beatae rerum magni, aperiam. Officiis, libero, harum. Facilis voluptate nihil ad, nesciunt tenetur minima minus.';
+		}
+		.flexbox{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.flexbox div{
+			margin: .5rem;
+			border-radius: .25rem;
+			padding: 1rem;
+			background-color: #ccc;
+		}
+		.flexbox img{ width:100%; }
+		.min{ min-width: 250px; }
+		.max{ max-width: 250px; }
+		.overflow{ overflow: hidden; }
+		.f-right{ float: right; }
+		.col-1{ width: 30% }
+		.col-2{ width: 45% }
+		.col-3{ width: 100% }
 /*Pie de pagina*/
 
 	/*Formulario de Contacto*/
