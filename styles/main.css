@@ -209,28 +209,74 @@
 			overflow: hidden;
 			height: 0;
 		}
+		.layout.active{
+			padding: 1rem;
+			height: auto;
+		}
 		.layout p::after{
 			content: 'Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Ad, veritatis alias soluta nulla vitae earum distinctio sint, id, sunt quis error iure ipsam? Animi, beatae? Repudiandae ex cumque consequatur molestias quam quae amet nulla in. Beatae rerum magni, aperiam. Officiis, libero, harum. Facilis voluptate nihil ad, nesciunt tenetur minima minus.';
 		}
-		.flexbox{
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-		}
-		.flexbox div{
-			margin: .5rem;
-			border-radius: .25rem;
-			padding: 1rem;
-			background-color: #ccc;
-		}
-		.flexbox img{ width:100%; }
-		.min{ min-width: 250px; }
-		.max{ max-width: 250px; }
-		.overflow{ overflow: hidden; }
-		.f-right{ float: right; }
-		.col-1{ width: 30% }
-		.col-2{ width: 45% }
-		.col-3{ width: 100% }
+		/*Contadores*/
+			main{ counter-reset: chapter; }
+			main h2::before{ 
+				counter-increment: chapter;
+				content: 'Capitulo ' counter(chapter) ': ';
+			}
+			main section{ counter-reset: theme; }
+			main h3::before{
+				counter-increment: theme;
+				content: 'Tema ' counter(theme) ': ';
+			}
+			main article{
+				counter-reset: section;
+			}
+			main h4::before{
+				counter-increment: section;
+				content: 'Seccion ' counter(section) ': ';
+			}
+		/*ejemplos flexbox*/
+			.flexbox{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			.flexbox div{
+				margin: .5rem;
+				border-radius: .25rem;
+				padding: 1rem;
+				background-color: #ccc;
+			}
+			.flexbox img,
+			.css-grid img{ width:100%; }
+		/*ejemplos css-grid*/
+			.css-grid{
+				display: grid;
+				grid-template-columns: auto auto auto;
+				gap: .5rem;
+			}
+			.css-grid img{ 
+				height: 100%;
+				object-fit: cover; 
+			}
+			.css-grid div{ 
+				border-radius: .25rem;
+				padding: .5rem;
+				background-color: #333; 
+			}
+			.css-grid:first-of-type :nth-child(even){ grid-row: span 2; }
+			.responsive{ grid-template-columns: repeat( auto-fit, minmax(200px, 1fr)); }
+		/*Clases extra*/
+			.w-100{ width: 100%; }
+			.w-75{ width: 75% }
+			.w-50{ width: 50% }
+			.w-25{ width: 25% }
+			.min{ min-width: 250px; }
+			.max{ max-width: 250px; }
+			.overflow{ overflow: hidden; }
+			.f-right{ float: right; }
+			.col-1{ width: 30% }
+			.col-2{ width: 45% }
+			.col-3{ width: 100% }
 /*Pie de pagina*/
 
 	/*Formulario de Contacto*/
