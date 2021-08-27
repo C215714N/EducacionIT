@@ -17,7 +17,7 @@
 	);
 	DESCRIBE users;
 	
-    DROP TABLES IF EXISTS users_data;
+    DROP TABLE IF EXISTS users_data;
 	CREATE TABLE users_data(
 		data_id INT AUTO_INCREMENT,
         user INT,
@@ -33,6 +33,34 @@
     );
 	DESCRIBE users_data;
     
+    DROP TABLE IF EXISTS categories;
+	CREATE TABLE categories(
+		cat_id INT AUTO_INCREMENT,
+        description VARCHAR(50),
+        PRIMARY KEY(cat_id),
+        UNIQUE KEY(description)
+    );
+    ALTER TABLE categories 
+		MODIFY description VARCHAR(50) NOT NULL;
+    DESCRIBE categories;
+    
+    DROP TABLE IF EXISTS products;
+    CREATE TABLE products (
+		product_id INT AUTO_INCREMENT,
+        product VARCHAR(50) NOT NULL,
+        category INT,
+        PRIMARY KEY(product_id),
+        UNIQUE KEY(product),
+        FOREIGN KEY(category) REFERENCES categories(cat_id)
+    );
+    DESCRIBE products;
+    /*
+		users 	=> users_data
+				=> posts
+        caterigories => products => posts
+        users 	=> sells => post
+    
+    */
 	# verificacion de estructura
     SHOW DATABASES; -- lista las db del server
     SHOW TABLES; -- tablas de la db actual
