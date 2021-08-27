@@ -54,13 +54,27 @@
         FOREIGN KEY(category) REFERENCES categories(cat_id)
     );
     DESCRIBE products;
-    /*
-		users 	=> users_data
-				=> posts
-        caterigories => products => posts
-        users 	=> sells => post
     
-    */
+    DROP TABLE IF EXISTS posts;
+    CREATE TABLE posts(
+		post_id INT AUTO_INCREMENT,
+        product INT,
+        user INT,
+        post_title VARCHAR(50),
+        post_description VARCHAR(200),
+        price DECIMAL(11,2) NOT NULL,
+        quantity INT,
+        PRIMARY KEY (post_id),
+        FOREIGN KEY(product) REFERENCES products(product_id),
+        FOREIGN KEY(user) REFERENCES users(user_id)
+    );
+    ALTER TABLE posts
+		ADD COLUMN is_used BOOLEAN DEFAULT FALSE,
+		ADD COLUMN delivery BOOLEAN DEFAULT FALSE,
+		ADD COLUMN post_date DATE,
+		ADD COLUMN post_update DATE;
+    DESCRIBE posts;
+   
 	# verificacion de estructura
     SHOW DATABASES; -- lista las db del server
     SHOW TABLES; -- tablas de la db actual
