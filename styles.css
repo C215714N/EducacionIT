@@ -48,7 +48,7 @@
 	}
 	/*Ejemplos*/
 		.example{
-			max-height: 300px;
+			height: 300px;
 			margin: 16px;
 			margin-left: 32px;
 			border-left: 4px solid #66c; /*width style color*/
@@ -57,6 +57,7 @@
 			line-height: 24px;
 			list-style: none;
 			overflow: auto;
+			resize: vertical;
 		}
 	/*Tablas*/
 		table{
@@ -91,11 +92,41 @@
 		.modern tfoot td{
 			background-color: #36c;
 		}
+	/*Contenido Multimedia*/
+		video,
+		iframe{
+			width: 100%;
+			border: none;
+		}
 /*Pie de pagina*/
 	#footer{
 		padding: 24px;
 		color: #eee;
 		background-color: #338;
+	}
+	#footer iframe{
+		width: calc(100% + 48px);
+		min-height: 300px;
+		margin: 0 -24px;
+	}
+/*Redes sociales*/
+	.social{	
+		margin: 0 -24px;
+		padding: 4px 0;
+		width: calc(100% + 48px);
+		background-color: #448;
+		text-align: center;
+	}
+	.social a{
+		display: inline-block;
+		margin: 4px;
+		border-radius: 8px;
+		padding: 8px;
+		color: #eee;
+	}
+	.social a:hover{
+		color: #338;
+		background-color: #ccc;
 	}
 /*Formulario*/
 	#contact{

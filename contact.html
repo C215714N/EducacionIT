@@ -22,6 +22,7 @@
 	</header>
 	<!--Contenido Principal-->
 	<main>
+		<!--Formularios-->
 		<article>
 			<h2>Formularios HTML</h2>
 			<p>
@@ -50,6 +51,7 @@
 				</ul>
 			</section>
 		</article>
+		<!--Tablas-->
 		<article>
 			<h2>Tablas HTML</h2>
 			<p>
@@ -62,7 +64,7 @@
 				</p>
 				<ul>
 					<li><strong>THEAD</strong> Cabecera de tabla que debe contener los titulos de la misma y en su interior solamente colocaremos celdas de encabezado th (table heading)</li>
-					<li><strong>TBODY</strong> Cuerpo de tabla que contiene la informacion relevante para el usuario, esta parte suele estar compuesta por varias filas.</li>
+					<li><strong>TBODY</strong> Cuerpo de tabla que contiene la informacion relevante para el usuario, suele estar compuesta por varias filas.</li>
 					<li><strong>TFOOT</strong> Pie de tabla que contiene la informacion complementaria al cuerpo, como los totales, promedios, max, min, etc.</li>
 				</ul>
 				<div class="example">
@@ -152,6 +154,50 @@
 				</div>
 			</section>
 		</article>
+		<!--Multimedia-->
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<p>
+				Actualmente los navegadores incorporan una API de reproduccion de contenido, podemos acceder a ellas utilizando las etiquetas <strong>&lt;audio></strong> y <strong>&lt;video></strong>, tambien podemos embeber contenido dentro de nuestra pagina gracias el elemento <strong>&lt;iframe></strong>
+			</p>
+			<section>
+				<header>
+					<h3>¿Cuando Utilizarlos?</h3>
+				</header>
+				<p>
+					Las primeras etiquetas mencionadas anteriormente, soportan los formatos de audio <em>.mp3, .wav, .ogg</em> y de video <em>.mp4, .webm, .ogv</em> pero debemos definir ciertos atributos para poder utilizarlos, como <em>controls</em> para habilitar el reproductor.
+				</p>
+				<p>
+					Por otro lado la ultima etiqueta mencionada en el apartado anterior, permite la incorporacion, de manera asincrona, de contenido externo en nuestra pagina. Se utiliza como parte de una categoria web especialmente diseñada para la compaticion de contenido, conocida como <strong>embed</strong>
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						title="Video con Copyright - Carvel" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/l2S0lHNrHgs" 
+						title="Video de Youtube - Te lo Resumo" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<audio src="media/californication.ogv" controls>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="media/californication.ogv">Link</a>
+						</p>
+					</audio>
+					<video src="media/fortune-faded.mp4" autoplay muted loop>
+						<p>
+							Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="media/californication.ogv">Link</a>
+						</p>
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<!--Pie de pagina-->
 	<footer id="footer">
@@ -195,6 +241,10 @@
 			<a href="https://twiter.com" target="_blank">Twitter</a>
 			<a href="https://github.com/c215714n/EducacionIT/tree/html-mv-18" target="_blank">GitHub</a>
 		</div>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.054048530252!2d-58.376791082540244!3d-34.60279476767883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses!2sar!4v1630104287094!5m2!1ses!2sar" 
+			loading="lazy">
+		</iframe>
 		<p>&copy; Todos los derechos reservados.</p>
 	</footer>
 </body>
