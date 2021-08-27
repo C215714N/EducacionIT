@@ -32,9 +32,46 @@
 		text-shadow: 0 0 8px #333;/*-x+ -y+ blur color*/
 	}
 /*Contenido Principal*/
-
+	/*Ejemplos*/
+	/*Tablas*/
+		table{
+			margin: auto;
+		}
+		table caption,
+		table th, 
+		table td{
+			padding: 8px;
+		}
+		table caption{
+			margin-top: 8px;
+			border-radius: 4px 4px 0 0; /*top-left top-rigth bottom-right bottom-left*/
+		}
+		.classic,
+		.classic caption,
+		.classic th,
+		.classic td{
+			border: 2px solid #448; /*width style color*/
+			border-collapse: collapse;
+		}
+		.classic caption{
+			border-bottom: none;
+		}
+		.modern,
+		.modern caption,
+		.modern tr,
+		.modern td{
+			color: #eee;
+			background-color: rgba(34,34,68,.5);
+		}
+		.modern tfoot td{
+			background-color: #36c;
+		}
 /*Pie de pagina*/
-
+	#footer{
+		padding: 24px;
+		color: #eee;
+		background-color: #338;
+	}
 /*Formulario*/
 	#contact{
 		max-width: 540px;
