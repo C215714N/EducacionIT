@@ -13,6 +13,7 @@
 			('Pablo Molina','palitomolina22@gmail.com'),
             ('Gino Long','ginolong@hotmail.com'),
             ('Sebastian Macaya','contacto@sebastianmacaya.com');
+    
     ## TABLA USERS_DATA
 		-- carga parcial
         INSERT INTO users_data(last_name, first_name, gender, birth_date, cuit, user)
@@ -23,7 +24,8 @@
 				('Gino', 'Long','20-29386382-2'),
 				('Pablo', 'Molina','20-10234882-6'),
                 ('Marcelo', 'Martinez', '25-08291283-2');
-	## TABLA CATEGORIES
+	
+    ## TABLA CATEGORIES
 		INSERT INTO categories(description)
 		VALUES 	('autopartes'),
 				('articulos de limpieza'),
@@ -34,7 +36,8 @@
                 ('indumentaria'),
                 ('jardineria'),
                 ('tecnologia');
-	## TABLA PRODUCTS
+	
+    ## TABLA PRODUCTS
 		INSERT INTO products(category, product)
         VALUES 	(1,'neumatico'),
 				(1,'optica'),
@@ -65,3 +68,27 @@
                 (9,'pc escritorio'),
                 (9,'teclado'),
                 (9, 'monitor');
+	
+    ## TABLA POSTS
+		INSERT INTO posts(product, user, post_title, post_description, quantity)
+        VALUES ( 	
+			(SELECT product_id FROM products WHERE product LIKE "lava%rropas"),
+			(SELECT user_id FROM users WHERE user_email LIKE "cristiandracedo@hotmail.com" ),
+            'Lavarropas Drean Excel 16kg',
+            'Ultimos lavarropas en muy buen estado, se vende por liquidacion de stock',
+            10 
+		);
+        INSERT INTO posts(product, user, quantity, post_date)
+        VALUES 
+			(7,5,20,current_date()),
+            (20,5,5, current_date()),
+            (22,5,10,current_date()),
+			(4,6,20,current_date()),
+            (5,6,25, current_date()),
+            (2,6,30,current_date()),
+			(10,3,22,current_date()),
+            (15,3,14, current_date()),
+            (18,3,44,current_date()),
+			(3,4,33,current_date()),
+            (6,4,12, current_date()),
+            (4,4,10,current_date());
