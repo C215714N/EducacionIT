@@ -32,8 +32,32 @@
 		text-shadow: 0 0 8px #333;/*-x+ -y+ blur color*/
 	}
 /*Contenido Principal*/
+	main{
+		max-width: 960px;
+		margin: auto;
+		padding: 16px;
+	}
+	h2{
+		border-bottom: 1px solid;
+	}
+	article{
+		margin: 16px 0;
+		padding: 16px;
+		border-radius: 8px;
+		box-shadow: 0 0 8px #333; /* x y blur color */
+	}
 	/*Ejemplos*/
-	
+		.example{
+			max-height: 300px;
+			margin: 16px;
+			margin-left: 32px;
+			border-left: 4px solid #66c; /*width style color*/
+			padding: 20px;
+			background-color: #eee;
+			line-height: 24px;
+			list-style: none;
+			overflow: auto;
+		}
 	/*Tablas*/
 		table{
 			margin: auto;
