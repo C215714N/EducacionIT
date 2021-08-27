@@ -199,6 +199,11 @@
 		.areas :last-child{ grid-area: footer; }
 	/* Ejemplos Layout */
 		.layout{
+			height: 0;
+			overflow: hidden;
+		}
+		.layout.active{
+			height: auto;
 			margin: 1rem;
 			padding: 1rem;
 		}
@@ -223,6 +228,23 @@
 			display: flex; 
 			justify-content: space-around;
 			flex-wrap: wrap;
+		}
+		.css-grid{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			gap: 0 1rem;
+		}
+		.css-grid :nth-child(even){ grid-row: span 2; }
+		.css-grid img,
+		.responsive-grid img{ 
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.responsive-grid{
+			display: grid;
+			gap: 0 .5rem; /*row column*/
+			grid-template-columns: repeat( auto-fit, minmax( 250px, 1fr ) );
 		}
 		/*Extra Class*/
 		.col-1{ width: 30% }
