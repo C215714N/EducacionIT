@@ -197,6 +197,22 @@
 		.areas :nth-child(4){ grid-area: section; }
 		.areas :nth-last-child(2){ grid-area: aside; }
 		.areas :last-child{ grid-area: footer; }
+	/* Contadores */
+		main{ counter-reset: chapter; }
+		section{ counter-reset: theme; }
+		article{ counter-reset: section; }
+		main h2::before{ 
+			counter-increment: chapter;
+			content: 'Capitulo ' counter(chapter) ': ';
+		}
+		main h3::before{
+			counter-increment: theme;
+			content: 'Tema ' counter(theme) ': ';
+		}
+		main h4::before{
+			counter-increment: section;
+			content: 'Seccion ' counter(section) ': ';
+		}
 	/* Ejemplos Layout */
 		.layout{
 			height: 0;
