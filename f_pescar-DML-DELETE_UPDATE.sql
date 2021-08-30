@@ -1,6 +1,11 @@
 /*DATA MANIPULATION LANGUAGE - DELETE*/
+	-- reinicio de tabla
 	TRUNCATE posts;
+    -- eliminacion masiva
 	DELETE FROM posts;
+    -- eliminacion segura
+    DELETE FROM posts
+    WHERE post_id = 14;
 
 /* DATA MANIPULATION LANGUAGE - UPDATE*/
 	-- actualizacion especifica
@@ -50,7 +55,16 @@
 			C2f |  F  | F		C2f | F   | V		C2f | F   | V
             C2v |  F  | V		C2v | V	  | V		C2v | V	  | F
         */
-	UPDATE sales 
-    SET price = (
-    
-    ) WHERE price IS NULL
+	-- actualizacion de precios de venta
+	UPDATE sales SET price = 
+		( SELECT price FROM posts WHERE post_id = post ) 
+    WHERE price IS NULL;
+    -- aumento del stock publicado
+    UPDATE posts SET quantity = quantity - 150;
+	-- actualizacion de stock de publicacion
+    UPDATE posts SET quantity = quantity - 
+        CASE 
+			WHEN (SELECT SUM(quantity) FROM sales WHERE post = post_id) IS NULL THEN 0
+			ELSE (SELECT SUM(quantity) FROM sales WHERE post = post_id)
+		END;
+	SELECT * FROM posts;
