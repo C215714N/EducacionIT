@@ -110,6 +110,7 @@
 					</li>
 				</ul>
 				<ul class="list">
+					<h4>Ejemplo (Mostrar / Ocultar)</h4>
 					<label for="male">masculino</label>
 					<input id="male" type="checkbox" name="">
 					<div class="mostrar">
@@ -123,6 +124,52 @@
 				</ul>
 			</section>
 		</article>	
+		<article>
+			<header class="header">
+				<h2>Tablas HTML</h2>
+			</header>
+			<p>
+				Son herramientas que permite organizar la informacion de manera tabular, al igual que en cualquier ambito, se componen de filas, columnas y celdas; pero a diferencia de los programas que las utilizan, en HTML se respeta el <strong>modelo de cajas</strong> utilizando la etiqueta <strong>&lt;table></strong> para contener la estructura, luego <strong>&lt;tr> (table row)</strong> para el contenedor de fila y por ultimo <strong>&lt;td> (table division)</strong> para las celdas de contenido.
+			</p>
+			<section>
+				<header>
+					<h3>¿Cual es su Estructura?</h3>
+				</header>
+				<p>
+					Al igual que el documento HTML, las tablas tambien poseen una <em>Estructura Semantica</em> que permite diferenciar cada una de las partes de la misma, facilitando a los motores de busqueda y al desarrollador la identificacion del contenido. La estructura actual de las tablas debe utilizarse antes de las filas y se compone de las siguientes etiquetas:
+				</p>
+				<ul>
+					<li><strong>THEAD</strong> Cabecera de tabla, contiene los titulos de la tabla que se representan con la etiqueta <strong>&l;th></strong></li>
+					<li><strong>TBODY</strong> Cuerpo de tabla, contiene los datos relevantes para el usuario, suele poseer la mayor cantidad de filas y tambien puede contener encabezados.</li>
+					<li><strong>TFOOT</strong> Pie de tabla, contiene la informacion complementaria al cuerpo, como detalles, totales, maximos, minimos, etc. y a diferencia de los anteriores es opcional.</li>
+				</ul>
+				<div class="list">
+					<table border="1">
+						<caption>Usuarios</caption>
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Correo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cristian Racedo</td>
+								<td>cristiandracedo@hotmail.com</td>
+							</tr>
+							<tr>
+								<td>C2151714n</td>
+								<td>cristiandracedo@gmail.com</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th>Total</th>
+							<td>2</td>
+						</tfoot>
+					</table>
+				</div>
+			</section>
+		</article>
 	</main>	
 	<!--Pie de pagina-->
 	<footer id="footer">
