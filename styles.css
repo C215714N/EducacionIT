@@ -93,3 +93,15 @@
 		color: #248;
 		background-color: #eee;
 	}
+
+/*Mostrar ocultar*/
+	.mostrar,
+	#male, 
+	#female{ 
+		display: none; 
+	}
+	#female:checked + .mostrar,
+	#male:checked + .mostrar{ 
+		display: block;
+	}
+
