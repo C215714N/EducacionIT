@@ -51,6 +51,25 @@
 		overflow: hidden;
 		padding: 16px;
 	}
+	/*Tablas*/
+		table{ 
+			margin: auto;
+		}
+		table caption,
+		table th,
+		table td{
+			padding: 4px;
+		}
+		.classic,
+		.classic caption,
+		.classic th,
+		.classic td{
+			border: 2px solid #448;
+			border-collapse: collapse;
+		}
+		.classic caption{
+			border-bottom: none;
+		}
 /*Pie de pagina*/
 	#footer{
 		padding: 16px;
@@ -93,7 +112,6 @@
 		color: #248;
 		background-color: #eee;
 	}
-
 /*Mostrar ocultar*/
 	.mostrar,
 	#male, 
