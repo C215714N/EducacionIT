@@ -92,3 +92,16 @@
 			(3,4,33,current_date()),
             (6,4,12, current_date()),
             (4,4,10,current_date());
+		
+        INSERT INTO sales(user, post, quantity)
+        VALUES
+			(1,1,5),
+			(1,7,2),
+			(2,11,3),
+			(4,8,4),
+			(5,4,4),
+			(6,10,5),
+			(6,11,12),
+			(4,8,10),
+			(3,3,4),
+			(3,2,5);

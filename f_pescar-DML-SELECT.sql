@@ -38,3 +38,21 @@
 	
     ## TABLA POSTS
 		SELECT * FROM posts;
+        SELECT 
+            COUNT(*) AS "publicaciones", -- conteo de registros
+			MIN(price) AS "producto economico", -- valor mas bajo
+			MAX(price) AS "producto costoso", -- valor mas alto
+            ROUND( AVG(price), 2) AS "precio promedio",  -- valor promedio
+            SUM(price) AS "total productos", -- suma de valores
+            SUM(price * quantity) AS "total recaudacion"
+		FROM posts;
+	## TABLA SALES
+		SELECT * FROM sales;
+        SELECT 
+			user, 
+            post, 
+            quantity, 
+            price,  
+            (price * quantity) AS total -- campo calculado
+		FROM sales;
+        

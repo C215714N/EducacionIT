@@ -75,6 +75,22 @@
 		ADD COLUMN post_update DATE;
     DESCRIBE posts;
    
+	DROP TABLE IF EXISTS sales;
+	CREATE TABLE sales(
+		sale_id INT AUTO_INCREMENT,
+        user INT,
+        post INT,
+        quantity INT,
+        price DECIMAL(11,2),
+        sell_date DATETIME DEFAULT (current_date()),
+        state ENUM('reintegro','cancelado','en proceso', 'entregado') DEFAULT 'en proceso',
+        PRIMARY KEY (sale_id),
+        FOREIGN KEY (user) REFERENCES users(user_id),
+        FOREIGN KEY (post) REFERENCES posts(post_id)
+	);
+    ALTER TABLE sales
+		MODIFY sell_date DATETIME DEFAULT (current_timestamp());
+	DESCRIBE sales;
 	# verificacion de estructura
     SHOW DATABASES; -- lista las db del server
     SHOW TABLES; -- tablas de la db actual
