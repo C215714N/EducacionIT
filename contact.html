@@ -299,7 +299,31 @@
 			<p>
 				Actualmente los navegadores incorporan una API de reproduccion de contenido multimedia, para poder acceder a la misma debemos utilizar las etiquetas <strong>&lt;audio></strong> y <strong>&lt;video></strong>, las cuales son compatibles con los formatos <em>.mp3, .wav, .ogg</em> y <em>.mp4, .webm, .ogv</em> respectivamente. Tambien podemos agregar contenido de manera externa y asincrona utilizando la etiqueta <strong>&lt;iframe></strong>
 			</p>
-
+			<section>
+				<header>
+					<h3>¿Cuando implementarlo?</h3>
+				</header>
+				<p>
+					A la ultima etiqueta mencionada anteriormente, la utilizaremos solamente en caso de incorporar contenido externo, tambien conocido como <em>embebido</em>, indicando que lo hacemos con permisos del autor. Podemos acceder a esta opcion desde cualquier menu que diga compartir, share, embed, embeber, codigo de insercion. 
+				</p>
+				<p>
+					En caso de querer incorporar videos o pistas de audio propias, debemos utilizar la etiquetas pertinentes y debemos evitar utilizar material que este licenciado. El contenido normalmente estara cargado dentro de nuestro servidor y afectara, segun su tamaño, a los tiempos de carga.
+				</p>
+				<div class="list">
+					<iframe 
+						src="https://www.youtube.com/embed/l2S0lHNrHgs" 
+						title="YouTube - Te lo Resumo (Hercules)" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						title="YouTube - John Frusciante (Carvel)" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
 		</article>
 	</main>	
 	<!--Pie de pagina-->
