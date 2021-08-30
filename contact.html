@@ -199,6 +199,7 @@
 								<td>x</td>
 								<td></td>
 								<td>x</td>
+								<td></td>
 							</tr>
 							<tr>
 								<th>No</th>
@@ -221,6 +222,72 @@
 								<td>1</td>
 							</tr>
 						</tfoot>
+					</table>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h3>¿Celdas Combinadas?</h3>
+				</header>
+				<p>
+					En ciertas ocasiones es necesario que una celda ocupe mas de una fila o una columna y para ello vamos a recurrir al <em>atributo html</em> <strong>rowspan y colspan</strong> respectivamente, donde deberemos indicar la cantidad de celdas que abarcara. Todos las celdas inferiores, en el caso de rowspan, y las celdas a la derecha, en el caso de colspan, se desplazaran x cantidad de lugares.
+				</p>
+				<div class="list">
+					<table class="modern">
+						<caption>Venta de Productos</caption>
+						<thead>
+							<tr>
+								<th>Articulo</th>
+								<th>Precio.U</th>
+								<th>Cant.</th>
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Monitor</td>
+								<td>11500</td>
+								<td>3</td>
+								<td>34500</td>
+							</tr>
+							<tr>
+								<td>Gabinete</td>
+								<td>5800</td>
+								<td>1</td>
+								<td>5800</td>
+							</tr>
+							<tr>
+								<td>Gamepad</td>
+								<td>4800</td>
+								<td>2</td>
+								<td>9600</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<th colspan="3">Total</th>
+							<td>49900</td>
+						</tfoot>
+					</table>
+					<table class="classic">
+						<caption>Desarrolladores</caption>
+						<thead>
+							<tr>
+								<th>Tipo</th>
+								<th>Lenguaje</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">FrontEnd</td>
+								<td>HTML</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+							</tr>
+							<tr>
+								<td>JS</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</section>
