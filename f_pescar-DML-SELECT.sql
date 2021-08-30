@@ -38,21 +38,77 @@
 	
     ## TABLA POSTS
 		SELECT * FROM posts;
+        SELECT * FROM posts
+        WHERE post_id IN(13,14);
+        -- consulta con funciones de campos
         SELECT 
-            COUNT(*) AS "publicaciones", -- conteo de registros
-			MIN(price) AS "producto economico", -- valor mas bajo
-			MAX(price) AS "producto costoso", -- valor mas alto
-            ROUND( AVG(price), 2) AS "precio promedio",  -- valor promedio
-            SUM(price) AS "total productos", -- suma de valores
-            SUM(price * quantity) AS "total recaudacion"
+            COUNT(*) AS publicaciones, -- conteo de registros
+			MIN(price) AS producto_economico, -- valor mas bajo
+			MAX(price) AS producto_costoso, -- valor mas alto
+            ROUND( AVG(price), 2) AS precio_promedio,  -- valor promedio
+            SUM(price) AS total_productos, -- suma de valores
+            SUM(price * quantity) AS total_recaudacion
 		FROM posts;
-	## TABLA SALES
+		-- cantidad de publicaciones por usuario
+        SELECT 
+			user,
+            GROUP_CONCAT(product) AS products,
+			COUNT(price) AS posts,
+            ROUND(AVG(price), 2) AS average,
+            SUM(price) AS total_unit,
+            SUM(price * quantity) AS total_final,
+            ROUND( SUM(price * quantity) * 0.21, 2) AS comission
+		FROM posts
+        GROUP BY user
+        ORDER BY user, product;
+        -- cantidad de publicaciones por producto
+        SELECT
+			GROUP_CONCAT(user) AS users,
+            product,
+            COUNT(*) AS posts,
+            price,
+            SUM(price * quantity) AS total
+		FROM posts
+        GROUP BY product
+        ORDER BY user, product;
+	-- busqueda de duplicados
+    SELECT 
+		GROUP_CONCAT(post_id) AS id,
+        user,
+        product
+	FROM posts
+	GROUP BY user, product;
+    ## TABLA SALES
 		SELECT * FROM sales;
+        -- consulta campo calculado por registro
         SELECT 
 			user, 
             post, 
             quantity, 
             price,  
             (price * quantity) AS total -- campo calculado
-		FROM sales;
+		FROM sales
+        HAVING total >= 5000; -- clausula para campos calculados
+        -- agrupacion de compras por estado
+        SELECT
+			user,
+            GROUP_CONCAT(post) AS posts,
+            CASE
+				WHEN state IN(1,2) THEN SUM(price * quantity) * -1
+                ELSE SUM(price * quantity)
+			END AS accounting,
+			state
+		FROM sales
+        GROUP BY state, user
+        ORDER BY state DESC, post, user;
         
+	SELECT 
+		post_id,
+        products.product,
+        post_title,
+        post_description,
+        quantity,
+        price
+	FROM posts, products
+    WHERE product_id = posts.product
+    ORDER BY post_id;
