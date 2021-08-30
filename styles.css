@@ -97,18 +97,20 @@
 	/* Redes sociales */
 	.social{
 		margin-top: 24px;
-		padding: 16px;
+		padding: 8px;
 		text-align: center;
 		background-color: #36c;
 	}
 	.social a{
+		text-decoration: none;
+	}
+	.social img{
+		height: 32px;
 		border-radius: 4px;
 		padding: 4px;
-		text-decoration: none;
-		color: #333;
 		background-color: #ccc;
 	}
-	.social a:hover{
+	.social img:hover{
 		background-color: #eee;
 		box-shadow: 0 0 4px #eee;
 	}
