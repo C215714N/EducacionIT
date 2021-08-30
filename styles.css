@@ -1,5 +1,8 @@
 /*Reglas Generales*/
-	body{
+	body,
+	h1,
+	h2,
+	h3{
 		margin: 0;
 		font-family: 'segoe ui', 'calibri', sans-serif;
 	}
@@ -38,6 +41,8 @@
 		background-color: #ccc;
 		list-style: none;
 		line-height: 24px;
+		overflow: auto;
+		max-height: 300px;
 	}
 	section img{
 		width: 300px;
@@ -52,6 +57,21 @@
 		margin: 4px;
 		padding: 4px;
 	}
+	/*Estilo Principal*/
+		main{
+			max-width: 960px;
+			margin: auto;
+			padding: 16px;
+		}
+		article{
+			margin: 24px 0;
+			border-radius: 4px;
+			padding: 16px;
+			box-shadow: 0 0 8px #333; /*-x+ -y+ blur color*/
+		}
+		.header{
+			border-bottom: 1px solid #333;
+		}
 	/*Tablas*/
 		table{ 
 			margin: auto;
@@ -87,9 +107,20 @@
 			background-color: rgba(34,34,68, .5);
 		}
 	/*Contenido Multimedia*/
-	iframe{
-		border: none;
-	}
+		iframe,
+		video{
+			width: 100%;
+			max-width: 480px;
+			min-height: 240px;
+			border: none;
+		}
+		/*	
+			aspect-ratio	width 		height
+			16/10 			1.6(h)		62.5(w)
+			16/9			1.78(h) 	56.2%(w)
+			4/3 			1.33(h) 	75%(w)
+		*/
+
 /*Pie de pagina*/
 	#footer{
 		color: #eee;
@@ -119,6 +150,7 @@
 	.map{
 		display: block;
 		width: 100%;
+		max-width: 100%;
 		min-height: 320px;
 	}
 	/*Formulario de Contacto*/
