@@ -85,12 +85,40 @@
 			color: #eee;
 			background-color: rgba(34,34,68, .5);
 		}
+	/*Contenido Multimedia*/
+	iframe{
+		border: none;
+	}
 /*Pie de pagina*/
 	#footer{
-		padding: 16px;
 		color: #eee;
 		background-color: #248;
 	}
+	/* Redes sociales */
+	.social{
+		margin-top: 24px;
+		padding: 16px;
+		text-align: center;
+		background-color: #36c;
+	}
+	.social a{
+		border-radius: 4px;
+		padding: 4px;
+		text-decoration: none;
+		color: #333;
+		background-color: #ccc;
+	}
+	.social a:hover{
+		background-color: #eee;
+		box-shadow: 0 0 4px #eee;
+	}
+	/*Mapa de Contacto*/
+	.map{
+		display: block;
+		width: 100%;
+		min-height: 320px;
+	}
+	/*Formulario de Contacto*/
 	#contact{
 		max-width: 540px;
 		margin: auto;
