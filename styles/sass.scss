@@ -63,6 +63,14 @@
 				@for $i from 1 through $col{ .col-#{$vname}-#{$i}{ width: percentage($i / $col) } }
 		}	}
 // 	Hidden Styles: Estilos cuyos selectores no aparecen en la compilacion
+	%hidden{
+		max-height: 0;
+		overflow: hidden;
+	}
+	%shown{ 
+		@include normalize($p: .5rem);
+		max-height: 300px;
+	}
 	%icon{
 		display: inline-block;
 		min-width: 3rem;
@@ -75,21 +83,50 @@
 	}
 // 	Nesting: Capacidad de apilar selectores
 	#footer{
+		position: relative;
 		@include normalize($p: 1rem);
 		#contact{
-			@extend .container-md;
+			display: grid;
+			@extend .container-md, .text-light, .bg-primary;
 			@include normalize(1rem auto, $p: 1rem);
+			label{
+				margin-top: .5rem;
+				@extend %hidden;
+				@media screen and (min-width: 768px){
+					max-height: 300px;
+			}	}
+			textarea{
+				resize: none;
+				min-height: 8rem;
+			}
 			input,
 			textarea{
-
+				font-size: 1rem;
+				@include normalize(none, .1rem solid transparent, .25rem .5rem, outline );
+				&:focus{ @extend .border-dark;
+					& + .valid{ @extend %shown;	}	}
+				&:valid{ @extend .border-success;
+					& + .valid{ @extend .bg-success; }	}
+				&:not(:placeholder-shown):invalid{ @extend .border-danger;
+					& + .valid{ @extend .bg-danger;  }	}
+			}
+			.valid{ @extend .bg-dark, %hidden; }
+			.btn{ 
+				font: 1rem;
+				text-transform: uppercase;
+				@include normalize(.2rem 0 1rem auto, .1rem solid, .5rem 1rem);
 			}
 		}
 		.social{
-			a{
-				@extend %icon;
-			}
+			@extend .container-sm;
+			@include normalize(1rem auto 0, .25rem .25rem 0 0, 1rem, $ba:border-radius);
+			display: flex;
+			justify-content: center;
+			background: linear-gradient(var(--light), var(--first));
+			a{ @extend %icon; }
 		}
 		.copy{
-
+			@include normalize(0 -1rem -1rem, center, 1rem, $ba:text-align);
+			background: linear-gradient( var(--first), var(--dark));
 		}
 	}

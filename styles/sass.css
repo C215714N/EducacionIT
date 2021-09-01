@@ -40,7 +40,7 @@
   color: #c36;
 }
 
-.text-light {
+.text-light, #footer #contact {
   color: #eee;
 }
 
@@ -64,7 +64,7 @@
   color: #3c6;
 }
 
-.bg-primary {
+.bg-primary, #footer #contact {
   background-color: #448;
 }
 
@@ -76,7 +76,7 @@
   background-color: #eee;
 }
 
-.bg-dark {
+.bg-dark, #footer #contact .valid {
   background-color: #333;
 }
 
@@ -88,11 +88,13 @@
   background-color: #da3;
 }
 
-.bg-danger {
+.bg-danger, #footer #contact input:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:not(:placeholder-shown):invalid + .valid {
   background-color: #c33;
 }
 
-.bg-success {
+.bg-success, #footer #contact input:valid + .valid,
+#footer #contact textarea:valid + .valid {
   background-color: #3c6;
 }
 
@@ -108,7 +110,8 @@
   border-color: #eee;
 }
 
-.border-dark {
+.border-dark, #footer #contact input:focus,
+#footer #contact textarea:focus {
   border-color: #333;
 }
 
@@ -120,11 +123,13 @@
   border-color: #da3;
 }
 
-.border-danger {
+.border-danger, #footer #contact input:not(:placeholder-shown):invalid,
+#footer #contact textarea:not(:placeholder-shown):invalid {
   border-color: #c33;
 }
 
-.border-success {
+.border-success, #footer #contact input:valid,
+#footer #contact textarea:valid {
   border-color: #3c6;
 }
 
@@ -291,7 +296,7 @@
 
 /*Grilla responsive*/
 @media screen and (min-width: 576px) {
-  .container, .container-sm {
+  .container, .container-sm, #footer .social {
     max-width: 540px;
   }
 
@@ -795,6 +800,19 @@
     width: 100%;
   }
 }
+#footer #contact .valid, #footer #contact label {
+  max-height: 0;
+  overflow: hidden;
+}
+
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  margin: 0;
+  border: 0;
+  padding: 0.5rem;
+  max-height: 300px;
+}
+
 #footer .social a {
   display: inline-block;
   min-width: 3rem;
@@ -807,14 +825,56 @@
 }
 
 #footer {
+  position: relative;
   margin: 0;
   border: 0;
   padding: 1rem;
 }
 #footer #contact {
+  display: grid;
   margin: 1rem auto;
   border: 0;
   padding: 1rem;
+}
+#footer #contact label {
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  #footer #contact label {
+    max-height: 300px;
+  }
+}
+#footer #contact textarea {
+  resize: none;
+  min-height: 8rem;
+}
+#footer #contact input,
+#footer #contact textarea {
+  font-size: 1rem;
+  outline: none;
+  border: 0.1rem solid transparent;
+  padding: 0.25rem 0.5rem;
+}
+#footer #contact .btn {
+  font: 1rem;
+  text-transform: uppercase;
+  margin: 0.2rem 0 1rem auto;
+  border: 0.1rem solid;
+  padding: 0.5rem 1rem;
+}
+#footer .social {
+  margin: 1rem auto 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(var(--light), var(--first));
+}
+#footer .copy {
+  margin: 0 -1rem -1rem;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(var(--first), var(--dark));
 }
 
 /*# sourceMappingURL=sass.css.map */
