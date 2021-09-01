@@ -1,0 +1,62 @@
+// 	Variables
+	// Atributos
+
+	// Colores
+		
+	// Multimedia
+	$path: "../assets/icons";
+	$social:
+		"css",
+		"facebook",
+		"github",
+		"instagram",
+		"linkedin",
+		"twitter",
+		"whatsapp",
+		"youtube";
+	// Unidades
+
+	$r: .25rem;
+	$col: 24;
+
+// 	Mixins: Estilos anidables
+	@mixin normalize ($m:0, $b:0, $p:0, $ma:margin, $ba:border, $pa:padding){
+		#{$ma}: $m;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+// 	Loops: Repeticion de un procedimiento en base a una condicion
+	/*Redes Sociales*/
+	@each $ico in $social{ 
+		.#{$ico}{ --bg: url("#{$path}/#{$ico}.svg") } 
+	}
+	/*Sistema de Grillas*/
+	@for $i from 1 through $col{
+		.col-#{$i}{ width: percentage( $i / $col) }
+	}
+// 	Hidden Styles: Estilos cuyos selectores no aparecen en la compilacion
+	%icon{
+		display: inline-block;
+		min-width: 3rem;
+		min-height: 3rem;
+		border-radius: $r;
+		background: var(--light) var(--bg) center/1.5rem no-repeat;
+		&:hover{
+			background-size: 2.5rem;
+		}
+	}
+// 	Nesting: Capacidad de apilar selectores
+	#footer{
+		@include normalize($p: 1rem);
+		#contact{
+
+		}
+		.social{
+			a{
+				@extend %icon;
+			}
+		}
+		.copy{
+
+		}
+	}
