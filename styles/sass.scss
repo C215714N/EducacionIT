@@ -1,24 +1,41 @@
 // 	Variables
 	// Atributos
-
+		$attributes: 
+			text 	color,
+			bg 		background-color,
+			border 	border-color,
+			shadow  --box,
+			gradient --color;
 	// Colores
-		
+		$colors:
+			primary 	#448,
+			secondary 	#c36,
+			light 		#eee,
+			dark 		#333,
+			info 		#36c,
+			warning 	#da3,
+			danger 		#c33,
+			success 	#3c6;
 	// Multimedia
-	$path: "../assets/icons";
-	$social:
-		"css",
-		"facebook",
-		"github",
-		"instagram",
-		"linkedin",
-		"twitter",
-		"whatsapp",
-		"youtube";
+		$path: "../assets/icons";
+		$social:
+			"css",
+			"facebook",
+			"github",
+			"instagram",
+			"linkedin",
+			"twitter",
+			"whatsapp",
+			"youtube";
 	// Unidades
-
-	$r: .25rem;
-	$col: 24;
-
+		$r: .25rem;
+		$col: 24;
+		$media:
+			sm 	 576px 	 540px,
+			md 	 768px 	 720px,
+			lg 	 992px 	 960px,
+			xl 	 1200px  1140px,
+			xxl  1400px  1360px; 
 // 	Mixins: Estilos anidables
 	@mixin normalize ($m:0, $b:0, $p:0, $ma:margin, $ba:border, $pa:padding){
 		#{$ma}: $m;
@@ -27,20 +44,31 @@
 	}
 // 	Loops: Repeticion de un procedimiento en base a una condicion
 	/*Redes Sociales*/
-	@each $ico in $social{ 
-		.#{$ico}{ --bg: url("#{$path}/#{$ico}.svg") } 
-	}
+		@each $ico in $social{ 
+			.#{$ico}{ --bg: url("#{$path}/#{$ico}.svg") } 
+		}
+	/*Attribute Class*/
+		@each $prop, $attr in $attributes {
+			@each $cn, $cv in $colors{
+				.#{$prop}-#{$cn}{ #{$attr}: $cv; }
+		}	}
 	/*Sistema de Grillas*/
-	@for $i from 1 through $col{
-		.col-#{$i}{ width: percentage( $i / $col) }
-	}
+		@for $i from 1 through $col{
+			.col-#{$i}{ width: percentage( $i / $col) }
+		}
+	/*Grilla responsive*/
+		@each $vname, $vwidth, $vmax in $media{
+			@media screen and (min-width: $vwidth){
+				.container, .container-#{$vname}{ max-width: $vmax }
+				@for $i from 1 through $col{ .col-#{$vname}-#{$i}{ width: percentage($i / $col) } }
+		}	}
 // 	Hidden Styles: Estilos cuyos selectores no aparecen en la compilacion
 	%icon{
 		display: inline-block;
 		min-width: 3rem;
 		min-height: 3rem;
 		border-radius: $r;
-		background: var(--light) var(--bg) center/1.5rem no-repeat;
+		background: var(--bg) center/1.5rem no-repeat;
 		&:hover{
 			background-size: 2.5rem;
 		}
@@ -49,7 +77,12 @@
 	#footer{
 		@include normalize($p: 1rem);
 		#contact{
+			@extend .container-md;
+			@include normalize(1rem auto, $p: 1rem);
+			input,
+			textarea{
 
+			}
 		}
 		.social{
 			a{
