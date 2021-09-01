@@ -60,11 +60,10 @@
 		( SELECT price FROM posts WHERE post_id = post ) 
     WHERE price IS NULL;
     -- aumento del stock publicado
-    UPDATE posts SET quantity = quantity - 150;
+    UPDATE posts SET quantity = quantity + 150;
 	-- actualizacion de stock de publicacion
     UPDATE posts SET quantity = quantity - 
         CASE 
 			WHEN (SELECT SUM(quantity) FROM sales WHERE post = post_id) IS NULL THEN 0
 			ELSE (SELECT SUM(quantity) FROM sales WHERE post = post_id)
 		END;
-	SELECT * FROM posts;
