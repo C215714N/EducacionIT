@@ -1,6 +1,6 @@
 /*DATA MANIPULATION LANGUAGE - JOIN*/
 
-## inner Join (factor común)
+## inner Join (factor común) || Todas las ventas realizadas con detalle
 	SELECT
 		sale_id AS id,
     -- posts
@@ -26,7 +26,7 @@
     JOIN users_data AS us ON us.user = p.user
     JOIN users AS u ON u.user_id = us.user
     ORDER BY sale_id DESC;
-## left Join (tabla base <= tabla anidada)
+## left Join (tabla base <= tabla anidada) || Todos los productos (hayan sido o no publicados)
 	SELECT 
     -- products
 		p.product,
@@ -43,7 +43,7 @@
     LEFT JOIN users_data AS us ON po.user = us.user
     HAVING Publisher IS NULL;
 
-## right Join (tabla base => tabla anidada)
+## right Join (tabla base => tabla anidada) || Todos los Usuarios (hayan comprado o no)
 	SELECT 
     -- products
 		p.product,
@@ -59,3 +59,15 @@
     RIGHT JOIN posts AS po ON product_id = po.product
     RIGHT JOIN sales AS s ON post_id = s.post
     RIGHT JOIN users_data AS us ON s.user = us.user;
+    
+/*BILLETERAS*/
+	SELECT 
+		u.user,
+		first_name,
+        last_name,
+        cuit,
+        pm.description,
+        pay_data
+	FROM users_data AS u
+    JOIN billing AS b ON b.user = u.user
+    JOIN pay_methods AS pm ON pm.pay_id = b.pay_m

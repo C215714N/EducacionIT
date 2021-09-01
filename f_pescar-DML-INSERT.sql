@@ -112,3 +112,20 @@
 			(4,8,10),
 			(3,3,4),
 			(3,2,5);
+	## TABLA PAY_METHODS
+		INSERT INTO pay_methods(description) 
+        VALUES 
+			('efectivo'),
+            ('debito'),
+            ('credito'),
+            ('cbu'),
+            ('cvu');
+
+	## TABLA BILLING
+		INSERT INTO billing(pay_m, user, pay_data)
+        VALUES 
+			(2,1,'2094-2349-2348-1234'),
+			(2,2,'7822-1234-7438-1283'),
+            (3,1,'7438-1283-1238-1238'),
+            (4,1,'2374091823740123823'),
+            (5,2,'2983741293048172034');

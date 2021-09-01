@@ -91,6 +91,27 @@
     ALTER TABLE sales
 		MODIFY sell_date DATETIME DEFAULT (current_timestamp());
 	DESCRIBE sales;
+    
+    DROP TABLE IF EXISTS pay_methods;
+    CREATE TABLE pay_methods(
+		pay_id INT AUTO_INCREMENT,
+		description VARCHAR(20),
+		PRIMARY KEY(pay_id),
+		UNIQUE KEY(description)
+	);
+    DROP TABLE IF EXISTS billing;
+    CREATE TABLE billing(
+		bill_id INT AUTO_INCREMENT,
+        pay_m INT,
+        user INT,
+        pay_title VARCHAR(20) NOT NULL,
+        pay_data VARCHAR(50) NOT NULL,
+        load_date DATE DEFAULT (current_timestamp()),
+        PRIMARY KEY (bill_id),
+        UNIQUE KEY (pay_m, user, pay_data),
+        FOREIGN KEY (pay_m) REFERENCES pay_methods(pay_id),
+        FOREIGN KEY (user) REFERENCES users(user_id)
+    );
 	# verificacion de estructura
     SHOW DATABASES; -- lista las db del server
     SHOW TABLES; -- tablas de la db actual
