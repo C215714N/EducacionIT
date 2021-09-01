@@ -27,6 +27,35 @@
     JOIN users AS u ON u.user_id = us.user
     ORDER BY sale_id DESC;
 ## left Join (tabla base <= tabla anidada)
-	
+	SELECT 
+    -- products
+		p.product,
+	-- categories
+        c.description,
+	-- user_data (salesman)
+		CONCAT(last_name, " ", first_name) AS publisher,
+		cuit,
+        birth_date,
+        phone
+    FROM products AS p
+    LEFT JOIN categories AS c ON cat_id = category
+    LEFT JOIN posts AS po ON product_id = po.product
+    LEFT JOIN users_data AS us ON po.user = us.user
+    HAVING Publisher IS NULL;
 
 ## right Join (tabla base => tabla anidada)
+	SELECT 
+    -- products
+		p.product,
+	-- categories
+        c.description,
+	-- user_data (salesman)
+		CONCAT(last_name, " ", first_name) AS client,
+		cuit,
+        birth_date,
+        phone
+    FROM products AS p
+    RIGHT JOIN categories AS c ON cat_id = category
+    RIGHT JOIN posts AS po ON product_id = po.product
+    RIGHT JOIN sales AS s ON post_id = s.post
+    RIGHT JOIN users_data AS us ON s.user = us.user;

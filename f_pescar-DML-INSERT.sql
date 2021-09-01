@@ -13,6 +13,13 @@
 			('Pablo Molina','palitomolina22@gmail.com'),
             ('Gino Long','ginolong@hotmail.com'),
             ('Sebastian Macaya','contacto@sebastianmacaya.com');
+	-- carga por asignacion
+    INSERT INTO users_data
+	SET user = 10,
+		first_name = "Linus",
+		last_name = "Torvald",
+        gender = 1,
+        cuit = "30-03020130-2";
     
     ## TABLA USERS_DATA
 		-- carga parcial
