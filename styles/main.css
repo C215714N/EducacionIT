@@ -406,21 +406,48 @@
 		position: relative;
 		padding: 5rem .5rem .5rem;
 	}
-	.cover{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border: none;
-		z-index: -1;
-	}
 	.copy{
 		margin: 0 -.5rem -.5rem;
 		padding: 1rem;
 		text-align: center;
 		background: linear-gradient(#ccc, #999);
 	}
+	/*Mapa de contacto*/
+		.cover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+			z-index: -1;
+		}
+		.btn{
+			min-width: 2.5rem;
+			min-height: 2.5rem;
+			border-radius: .25rem;
+			border: .1rem solid #eee;
+			color: #eee;
+			background-color: #333;
+			font-size: 1.5rem;
+		}
+		.btn:hover{
+			color: #333;
+			background-color: #eee;
+		}
+		.map{
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+		}
+		.cover.active,
+		.min{
+			position: fixed;
+			z-index: 2;
+			opacity: .9;
+		}
+		.max::before{ content: '+' }
+		.min::before{ content: '-' }
 	/*Formulario de Contacto*/
 		#contact{
 			max-width: 720px;
