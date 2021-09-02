@@ -258,6 +258,42 @@
 			top: 3rem;
 		}
 		/*Menu Desplegable*/
+		.submenu{
+			display: flex;
+			justify-content: center;
+			background: linear-gradient(#c36, #612);
+		}
+		.submenu a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		.submenu,
+		.submenu ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.submenu ul{
+			display: none;
+			min-width: 6rem;
+			position: absolute;
+			background: linear-gradient(#612, #824);
+		}
+		.submenu li ul{
+			top: 100%;
+			left: 0;
+		}
+		.submenu li li ul{
+			top: 0;
+			left: 100%;
+		}
+		.submenu li{ position: relative }
+		.submenu li:hover > ul{ display: block }
+		.submenu li:hover{
+			background: linear-gradient(#c24, #612)
+		}
 	/* Ejemplos Layout */
 		.layout{
 			height: 0;
