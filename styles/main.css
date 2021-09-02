@@ -29,6 +29,12 @@
 	.red{ background-color: #c33; }
 	.unstyled{ list-style: none; }
 /*Navegacion*/
+	nav{
+		position: sticky;
+		top: 0;
+		z-index: 2;
+		background-color: #eee;
+	}
 	.menu{
 		display: flex;
 		padding: 0;
@@ -216,6 +222,7 @@
 		.layout p::after{
 			content: 'Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Ad, veritatis alias soluta nulla vitae earum distinctio sint, id, sunt quis error iure ipsam? Animi, beatae? Repudiandae ex cumque consequatur molestias quam quae amet nulla in. Beatae rerum magni, aperiam. Officiis, libero, harum. Facilis voluptate nihil ad, nesciunt tenetur minima minus.';
 		}
+	/*PseudoElements*/
 		/*Contadores*/
 			main{ counter-reset: chapter; }
 			main h2::before{ 
@@ -277,6 +284,85 @@
 			.col-1{ width: 30% }
 			.col-2{ width: 45% }
 			.col-3{ width: 100% }
+	/*Position*/
+		.position{
+			position: relative;
+			min-height: 300px;
+			margin: 1rem;
+			border: .1rem dashed #c36;
+			padding: 1rem;
+		}
+		/*static: el elemento no puede alterar su posicion (valor predeterminado) y no funciona como referente*/
+		.position div{
+			margin: .25rem;
+			padding: 1rem;
+			background-color: rgba(204, 51, 102, .5);
+		}
+		/*relative: el elemento es su propio referente y sigue ocupando lugar dentro del flow y lo podemos desplazar se su ubicacion */
+		.position div:nth-child(2){
+			position: relative;
+			top: 1rem;
+			left: 1rem;
+			box-shadow: -1rem -1rem .1rem #333;
+		}
+		/*absolute: el elemento se posiciona dentro del primer ancestro que no sea static, ocupa el espacio de su contenido y permanece fuera del flow*/
+		.position div:nth-child(3){
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		/*fixed: el elemento utiliza como referente al viewport y al igual que absolute al aplicar este valor, permanece fuera del flow*/
+		.position div:nth-last-child(2){
+			position: fixed;
+			right: 0;
+			top: calc(50% - 1.5rem);
+			z-index: -1;
+		}
+		/*sticky: el elemento permanece dentro del flow hasta cumplir con la condicion de su posicion y siempre permanece dentro de su contenedor*/
+		.position div:last-child{
+			position: sticky;
+			top: 3rem;
+		}
+		/*Menu desplegable*/
+			.submenu{
+				display: flex;
+				justify-content: center;
+				background: linear-gradient(#36c, #248);
+			}
+			.submenu a{
+				display: block;
+				padding: .5rem;
+				color: #eee;
+				text-decoration: none;
+			}
+			.submenu li{
+				position: relative;
+				list-style: none;
+			}
+			.submenu ul{
+				min-width: 5rem;
+				display: none;
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(#36c, #136);
+			}
+			.submenu li ul{
+				top: 100%;
+				left: 0;
+			}
+			.submenu li li ul{
+				top: 0;
+				left: 100%;
+			}
+			.submenu li:hover{
+				background: linear-gradient(
+					hsla(240, 50%, 50%) 50%,
+					hsla(240, 50%, 30%)
+				);
+			}
+			.submenu li:hover > ul{ display: block }
+			
 /*Pie de pagina*/
 
 	/*Formulario de Contacto*/
