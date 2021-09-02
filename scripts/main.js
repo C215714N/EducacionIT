@@ -1,3 +1,8 @@
+/*Menu Hamburguesa*/
+	menuBtn = document.querySelector('nav .btn')
+	menuLst = document.querySelector('nav .menu')
+
+	menuBtn.onclick = () => menuLst.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;'
 /*Mapa de contacto*/
 	mapBtn 	= document.querySelector('#footer .map')
 	mapFrm 	= document.querySelector('#footer .cover')
