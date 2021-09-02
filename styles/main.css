@@ -31,6 +31,11 @@
 		overflow: auto;
 	}
 /*Navegacion*/
+	nav{
+		position: sticky;
+		top: 0;
+		z-index: 2;
+	}
 	.menu{
 		display: flex;
 		justify-content: center;
@@ -215,7 +220,7 @@
 		}
 	/*Position*/
 		.position{
-			min-height: 450px;
+			min-height: 300px;
 			position: relative;
 			margin: 1rem;
 			border: .2rem dotted #822;
@@ -245,12 +250,14 @@
 			position: fixed;
 			top: calc(50% - 1.6rem);
 			right: 0;
+			z-index: -1;
 		}
 		/*sticky: el elemento permanece dentro del flow hasta cumplir con su condicion de posicion, que es cuando queda fuera del mismo*/
 		.position div:last-child{
 			position: sticky;
-			top: 0;
+			top: 3rem;
 		}
+		/*Menu Desplegable*/
 	/* Ejemplos Layout */
 		.layout{
 			height: 0;
