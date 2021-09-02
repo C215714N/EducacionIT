@@ -88,6 +88,47 @@
 		letter-spacing: .1rem;
 	}
 /*Contenido Principal*/
+	main{
+		max-width: 1140px;
+		margin: 1rem auto;
+		padding: .5rem;
+	}
+	section{
+		margin: 1rem 0;
+		border-radius: .25rem;
+		padding: 1rem;
+		box-shadow: 0 0 .5rem #333;
+	}
+	main .header{
+		margin: -1rem -1rem 1rem;
+		border-radius: .25rem .25rem 0 0; /*tl tr bl br*/
+		padding: 1rem;
+		color: #eee;
+		background-color: #402;
+	}
+	main header{
+		color: #201;
+		border-bottom: .1rem solid #402
+	}
+	.example{
+		position: relative;
+		margin: 1rem;
+		margin-left: 2rem;
+		padding: 1rem 2rem;
+		line-height: 1.5rem;
+		background-color: #eee;
+		box-shadow: -.5rem .5rem .5rem #999;
+		list-style: none;
+	}
+	.example::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: .25rem;
+		background: linear-gradient(#c3a, #402);
+	}
 	/*Jerarquia de Selectores*/
 		.example #span span{
 			color: darkblue;
@@ -258,42 +299,42 @@
 			top: 3rem;
 		}
 		/*Menu Desplegable*/
-		.submenu{
-			display: flex;
-			justify-content: center;
-			background: linear-gradient(#c36, #612);
-		}
-		.submenu a{
-			display: block;
-			padding: .5rem;
-			color: #eee;
-			text-decoration: none;
-		}
-		.submenu,
-		.submenu ul{
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-		.submenu ul{
-			display: none;
-			min-width: 6rem;
-			position: absolute;
-			background: linear-gradient(#612, #824);
-		}
-		.submenu li ul{
-			top: 100%;
-			left: 0;
-		}
-		.submenu li li ul{
-			top: 0;
-			left: 100%;
-		}
-		.submenu li{ position: relative }
-		.submenu li:hover > ul{ display: block }
-		.submenu li:hover{
-			background: linear-gradient(#c24, #612)
-		}
+			.submenu{
+				display: flex;
+				justify-content: center;
+				background: linear-gradient(#c36, #612);
+			}
+			.submenu a{
+				display: block;
+				padding: .5rem;
+				color: #eee;
+				text-decoration: none;
+			}
+			.submenu,
+			.submenu ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.submenu ul{
+				display: none;
+				min-width: 6rem;
+				position: absolute;
+				background: linear-gradient(#612, #824);
+			}
+			.submenu li ul{
+				top: 100%;
+				left: 0;
+			}
+			.submenu li li ul{
+				top: 0;
+				left: 100%;
+			}
+			.submenu li{ position: relative }
+			.submenu li:hover > ul{ display: block }
+			.submenu li:hover{
+				background: linear-gradient(#c24, #612)
+			}
 	/* Ejemplos Layout */
 		.layout{
 			height: 0;
