@@ -292,6 +292,28 @@
 					<div>footer</div>
 				</div>
 			</article>
+			<article>
+				<header>
+					<h3>Atributos de Posicion</h3>
+				</header>
+				<p>
+					Los elementos dentro de la pagina se crean de derecha a izquiera y de arriba hacia abajo y esto corresponde al flujo de documento tambien conocido como flow. De manera predeterminada, este posicionamiento no se puede modificar, pero gracias al atributo <strong>position</strong> podemos definir un referente para la etiqueta afectada y de esta manera reubicar al elemento en cuestion utilizando los atributos <em>top, right, bottom y left</em>
+				</p>
+				<ul class="example">
+					<li><strong>static</strong> valor predeterminado, respeta su lugar en el flow y su posicion no se puede alterar</li>
+					<li><strong>relative</strong> el elemento es su propio referente y mantiene su posicion original dentro del flow</li>
+					<li><strong>absolute</strong> el elemento utiliza al primer ancestro que no sea static como referente y permanece fuera del flow</li>
+					<li><strong>fixed</strong> el elemento usa al viewport como referente, su tamaño se adapta a su contenido y queda fuera del flow</li>
+					<li><strong>sticky</strong> el elemento permanece dentro del flow hasta cumplir con su condicion de posicion, que es cuando queda fuera del mismo</li>
+				</ul>
+				<div class="position">
+					<div>position static</div>
+					<div>position relative</div>
+					<div>position absolute</div>
+					<div>position fixed</div>
+					<div>position sticky</div>
+				</div>
+			</article>
 		</section>
 		<section>
 			<header class="header">

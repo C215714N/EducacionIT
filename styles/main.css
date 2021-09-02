@@ -213,6 +213,44 @@
 			counter-increment: section;
 			content: 'Seccion ' counter(section) ': ';
 		}
+	/*Position*/
+		.position{
+			min-height: 450px;
+			position: relative;
+			margin: 1rem;
+			border: .2rem dotted #822;
+			padding: 1rem;
+		}
+		/*static: valor predeterminado, respeta su lugar en el flow y su posicion no se puede alterar*/
+		.position div{
+			margin: .25rem;
+			padding: 1rem;
+			background-color: rgba(136,34,34,.5);
+		}
+		/*relative: el elemento es su propio referente y mantiene su posicion original dentro del flow*/
+		.position div:nth-child(2){
+			position: relative;
+			top: 1rem;
+			left: 1rem;
+			box-shadow: -1rem -1rem .25rem #633;
+		}
+		/*absolute: el elemento utiliza al primer ancestro que no sea static como referente y permanece fuera del flow*/
+		.position div:nth-child(3){
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		/*fixed: el elemento utiliza al viewport como referente y al igual que con absolute, su tamaño se adapta al de su contenido y queda fuera del flow.*/
+		.position div:nth-last-child(2){
+			position: fixed;
+			top: calc(50% - 1.6rem);
+			right: 0;
+		}
+		/*sticky: el elemento permanece dentro del flow hasta cumplir con su condicion de posicion, que es cuando queda fuera del mismo*/
+		.position div:last-child{
+			position: sticky;
+			top: 0;
+		}
 	/* Ejemplos Layout */
 		.layout{
 			height: 0;
