@@ -112,6 +112,22 @@
         FOREIGN KEY (pay_m) REFERENCES pay_methods(pay_id),
         FOREIGN KEY (user) REFERENCES users(user_id)
     );
+	DROP TABLE IF EXISTS accounting;
+    CREATE TABLE accounting(
+		account_id INT,
+        sale INT,
+        pay_m INT,
+        type INT
+    );
+    ALTER TABLE accounting
+		MODIFY account_id INT AUTO_INCREMENT,
+        MODIFY type ENUM('debe', 'haber') DEFAULT 'debe',
+		ADD CONSTRAINT PRIMARY KEY(account_id),
+        ADD CONSTRAINT FOREIGN KEY(sale) REFERENCES sales(sale_id),
+        ADD CONSTRAINT FOREIGN KEY(pay_m) REFERENCES pay_methods(pay_id),
+		ADD COLUMN pay_date DATETIME DEFAULT (current_timestamp()) AFTER account_id;
+    DESCRIBE accounting;
+    
 	# verificacion de estructura
     SHOW DATABASES; -- lista las db del server
     SHOW TABLES; -- tablas de la db actual

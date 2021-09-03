@@ -78,7 +78,8 @@
         product
 	FROM posts
 	GROUP BY user, product;
-    ## TABLA SALES
+   
+   ## TABLA SALES
 		SELECT * FROM sales;
         -- consulta campo calculado por registro
         SELECT 
@@ -112,3 +113,6 @@
 	FROM posts, products
     WHERE product_id = posts.product
     ORDER BY post_id;
+
+## TABLA ACCOUNTING
+	SELECT * FROM accounting;

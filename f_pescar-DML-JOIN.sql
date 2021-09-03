@@ -70,4 +70,18 @@
         pay_data
 	FROM users_data AS u
     JOIN billing AS b ON b.user = u.user
-    JOIN pay_methods AS pm ON pm.pay_id = b.pay_m
+    JOIN pay_methods AS pm ON pm.pay_id = b.pay_m;
+
+/*FACTURACION*/
+	SELECT
+		account_id,
+		pm.description,
+        p.post_title,
+        s.price,
+        s.quantity,
+        sum(s.price * s.quantity) AS total,
+        type
+    FROM accounting AS a
+	JOIN sales AS s ON sale_id = sale
+    JOIN posts AS p ON post_id = post
+    JOIN pay_methods AS pm ON pay_id = pay_m;

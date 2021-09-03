@@ -1,0 +1,547 @@
+%YAML 1.1
+---
+# fundacion_pescar.accounting
+-
+  account_id: 1
+  sale: 1
+  pay_m: 2
+  type: "debe"
+-
+  account_id: 2
+  sale: 3
+  pay_m: 4
+  type: "debe"
+# fundacion_pescar.billing
+-
+  bill_id: 1
+  pay_m: 2
+  user: 1
+  pay_title: ""
+  pay_data: "2094-2349-2348-1234"
+  load_date: "2021-09-01"
+-
+  bill_id: 2
+  pay_m: 2
+  user: 2
+  pay_title: ""
+  pay_data: "7822-1234-7438-1283"
+  load_date: "2021-09-01"
+-
+  bill_id: 3
+  pay_m: 3
+  user: 1
+  pay_title: ""
+  pay_data: "7438-1283-1238-1238"
+  load_date: "2021-09-01"
+-
+  bill_id: 4
+  pay_m: 4
+  user: 1
+  pay_title: ""
+  pay_data: "2374091823740123823"
+  load_date: "2021-09-01"
+-
+  bill_id: 5
+  pay_m: 5
+  user: 2
+  pay_title: ""
+  pay_data: "2983741293048172034"
+  load_date: "2021-09-01"
+# fundacion_pescar.categories
+-
+  cat_id: 12
+  description: "arte"
+-
+  cat_id: 2
+  description: "articulos de limpieza"
+-
+  cat_id: 1
+  description: "autopartes"
+-
+  cat_id: 3
+  description: "deportes"
+-
+  cat_id: 4
+  description: "electrodomesticos"
+-
+  cat_id: 10
+  description: "entretenimiento"
+-
+  cat_id: 5
+  description: "herramientas"
+-
+  cat_id: 6
+  description: "hogar"
+-
+  cat_id: 7
+  description: "indumentaria"
+-
+  cat_id: 8
+  description: "jardineria"
+-
+  cat_id: 9
+  description: "tecnologia"
+# fundacion_pescar.pay_methods
+-
+  pay_id: 4
+  description: "cbu"
+-
+  pay_id: 3
+  description: "credito"
+-
+  pay_id: 5
+  description: "cvu"
+-
+  pay_id: 2
+  description: "debito"
+-
+  pay_id: 1
+  description: "efectivo"
+# fundacion_pescar.posts
+-
+  post_id: 1
+  product: 7
+  user: 5
+  post_title: "Art. Deportivo -  (Long Gino)"
+  price: 1200.00
+  quantity: 341
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 2
+  product: 20
+  user: 5
+  post_title: "Indumentaria para  (Long Gino)"
+  price: 700.00
+  quantity: 341
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 3
+  product: 22
+  user: 5
+  post_title: "Indumentaria para  (Long Gino)"
+  price: 400.00
+  quantity: 342
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 4
+  product: 4
+  user: 6
+  post_title: "Art. Limpieza -  (Macaya Sebastian)"
+  price: 400.00
+  quantity: 342
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 5
+  product: 5
+  user: 6
+  post_title: "Art. Limpieza -  (Macaya Sebastian)"
+  price: 1200.00
+  quantity: 348
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 6
+  product: 2
+  user: 6
+  post_title: "Autoparte -  (Macaya Sebastian)"
+  price: 50000.00
+  quantity: 348
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 7
+  product: 10
+  user: 3
+  post_title: "Electrodomestico -  (Martinez Marcelo)"
+  price: 700.00
+  quantity: 344
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 8
+  product: 15
+  user: 3
+  post_title: "Herramienta -  (Martinez Marcelo)"
+  price: 400.00
+  quantity: 332
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 9
+  product: 18
+  user: 3
+  post_title: "Art. del Hogar -  (Martinez Marcelo)"
+  price: 700.00
+  quantity: 348
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 10
+  product: 3
+  user: 4
+  post_title: "Autoparte -  (Molina Pablo)"
+  price: 50000.00
+  quantity: 341
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 11
+  product: 6
+  user: 4
+  post_title: "Art. Limpieza -  (Molina Pablo)"
+  price: 1200.00
+  quantity: 331
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 12
+  product: 4
+  user: 4
+  post_title: "Art. Limpieza -  (Molina Pablo)"
+  price: 400.00
+  quantity: 348
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+-
+  post_id: 13
+  product: 10
+  user: 2
+  post_title: "Electrodomestico - Racedo Cristian"
+  post_description: "Ultimos lavarropas en muy buen estado, se vende por liquidacion de stock"
+  price: 700.00
+  quantity: 348
+  is_used: 0
+  delivery: 0
+  post_date: "2021-08-27"
+  post_update: "2021-08-27"
+# fundacion_pescar.products
+-
+  product_id: 1
+  product: "neumatico"
+  category: 1
+-
+  product_id: 2
+  product: "optica"
+  category: 1
+-
+  product_id: 3
+  product: "radio"
+  category: 1
+-
+  product_id: 4
+  product: "alcohol en gel"
+  category: 2
+-
+  product_id: 5
+  product: "suavizante"
+  category: 2
+-
+  product_id: 6
+  product: "detergente"
+  category: 2
+-
+  product_id: 7
+  product: "calzado"
+  category: 3
+-
+  product_id: 8
+  product: "camiseta"
+  category: 3
+-
+  product_id: 9
+  product: "guantes de box"
+  category: 3
+-
+  product_id: 10
+  product: "lavarropas"
+  category: 4
+-
+  product_id: 11
+  product: "microondas"
+  category: 4
+-
+  product_id: 12
+  product: "secarropas"
+  category: 4
+-
+  product_id: 13
+  product: "serrucho"
+  category: 5
+-
+  product_id: 14
+  product: "martillo"
+  category: 5
+-
+  product_id: 15
+  product: "destornillador"
+  category: 5
+-
+  product_id: 16
+  product: "pala"
+  category: 5
+-
+  product_id: 17
+  product: "sommier"
+  category: 6
+-
+  product_id: 18
+  product: "modular"
+  category: 6
+-
+  product_id: 19
+  product: "pintura"
+  category: 6
+-
+  product_id: 20
+  product: "camisa"
+  category: 7
+-
+  product_id: 21
+  product: "saco"
+  category: 7
+-
+  product_id: 22
+  product: "corbata"
+  category: 7
+-
+  product_id: 23
+  product: "abono"
+  category: 8
+-
+  product_id: 24
+  product: "manguera"
+  category: 8
+-
+  product_id: 25
+  product: "rastrillo"
+  category: 8
+-
+  product_id: 26
+  product: "notebook"
+  category: 9
+-
+  product_id: 27
+  product: "pc escritorio"
+  category: 9
+-
+  product_id: 28
+  product: "teclado"
+  category: 9
+-
+  product_id: 29
+  product: "monitor"
+  category: 9
+-
+  product_id: 30
+  product: "pullover"
+  category: 7
+# fundacion_pescar.sales
+-
+  sale_id: 1
+  user: 1
+  post: 1
+  quantity: 5
+  price: 1200.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "reintegro"
+-
+  sale_id: 2
+  user: 1
+  post: 7
+  quantity: 2
+  price: 700.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "entregado"
+-
+  sale_id: 3
+  user: 2
+  post: 11
+  quantity: 3
+  price: 1200.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "cancelado"
+-
+  sale_id: 4
+  user: 4
+  post: 8
+  quantity: 4
+  price: 400.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "en proceso"
+-
+  sale_id: 5
+  user: 5
+  post: 4
+  quantity: 4
+  price: 400.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "cancelado"
+-
+  sale_id: 6
+  user: 6
+  post: 10
+  quantity: 5
+  price: 50000.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "entregado"
+-
+  sale_id: 7
+  user: 6
+  post: 11
+  quantity: 12
+  price: 1200.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "en proceso"
+-
+  sale_id: 8
+  user: 4
+  post: 8
+  quantity: 10
+  price: 400.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "en proceso"
+-
+  sale_id: 9
+  user: 3
+  post: 3
+  quantity: 4
+  price: 400.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "entregado"
+-
+  sale_id: 10
+  user: 3
+  post: 2
+  quantity: 5
+  price: 700.00
+  sell_date: "2021-08-30 00:00:00"
+  state: "cancelado"
+# fundacion_pescar.users
+-
+  user_id: 1
+  user_name: "Cristian Racedo"
+  user_email: "cristiandracedo@gmail.com"
+  user_password: ""
+-
+  user_id: 2
+  user_name: "c215714n"
+  user_email: "cristiandracedo@hotmail.com"
+  user_password: "admin"
+-
+  user_id: 3
+  user_name: "Marcelo Martinez"
+  user_email: "mjmserviciostecnicos@gmail.com"
+  user_password: ""
+-
+  user_id: 4
+  user_name: "Pablo Molina"
+  user_email: "palitomolina22@gmail.com"
+  user_password: ""
+-
+  user_id: 5
+  user_name: "Gino Long"
+  user_email: "ginolong@hotmail.com"
+  user_password: ""
+-
+  user_id: 6
+  user_name: "Sebastian Macaya"
+  user_email: "contacto@sebastianmacaya.com"
+  user_password: ""
+-
+  user_id: 10
+  user_name: "Tux"
+  user_email: "lt@linux.com"
+  user_password: ""
+-
+  user_id: 12
+  user_name: "test"
+  user_email: "test@f_pescar"
+  user_password: "root"
+# fundacion_pescar.users_data
+-
+  data_id: 1
+  user: 1
+  first_name: "Cristian"
+  last_name: "Racedo"
+  birth_date: "1991-04-18"
+  gender: "male"
+  phone: "111098506"
+  cuit: "20-35336446-5"
+-
+  data_id: 3
+  user: 6
+  first_name: "Sebastian"
+  last_name: "Macaya"
+  gender: "male"
+  phone: "1171135331"
+  cuit: "20-03034567-3"
+-
+  data_id: 4
+  user: 5
+  first_name: "Gino"
+  last_name: "Long"
+  gender: "male"
+  phone: "1182281142"
+  cuit: "20-29386382-2"
+-
+  data_id: 5
+  user: 4
+  first_name: "Pablo"
+  last_name: "Molina"
+  gender: "male"
+  phone: "1117899720"
+  cuit: "20-10234882-6"
+-
+  data_id: 10
+  user: 3
+  first_name: "Marcelo"
+  last_name: "Martinez"
+  gender: "male"
+  phone: "1122555174"
+  cuit: "25-08291283-2"
+-
+  data_id: 13
+  user: 2
+  first_name: "Cristian"
+  last_name: "Racedo"
+  birth_date: "1991-04-18"
+  gender: "male"
+  phone: "1158976713"
+  cuit: "20-64463353-5"
+-
+  data_id: 14
+  user: 10
+  first_name: "Linus"
+  last_name: "Torvald"
+  gender: "male"
+  phone: "1147118050"
+  cuit: "30-03020130-2"
+...
