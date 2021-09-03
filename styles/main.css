@@ -393,6 +393,51 @@
 		.max{ max-width: 250px; }
 		.f-right{ float: right; }
 /*Pie de Pagina*/
+	#footer{
+		position: relative;
+		padding: 5rem 1rem 1rem;
+	}
+	.cover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		border: none;
+	}
+	.map{
+		position: absolute;
+		top: .5rem;
+		right: .5rem;
+		min-width: 2.5rem;
+		min-height: 2.5rem;
+		border-radius: .25rem;
+		border: .1rem solid #ecc;
+		font-size: 1.5rem;
+		color: #eac;
+		background-color: #333;
+	}
+	.map:hover{
+		color: #333;
+		background-color: #eac;
+	}
+	.icon-min::before{ content: '-' }
+	.icon-max::before{ content: '+' }
+	.cover.active,
+	.map.icon-min{
+		position: fixed;
+		z-index: 2;
+		opacity: .9;
+	}
+	.copy{
+		margin: 0 -1rem -1rem;
+		padding: 1rem;
+		color: #eee;
+		text-align: center;
+		text-shadow: 0 0 .25rem #402;
+		background: linear-gradient(#fac, #d8a);
+	}
 	/*Formulario Contacto*/
 		#contact{
 			max-width: 720px;
@@ -448,10 +493,14 @@
 		#contact :not(:placeholder-shown):invalid + .valid{ background-color: #c33; }
 	/*Redes Sociales*/
 		.social{
+			max-width: 420px;
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
+			margin: 3rem auto 0;
+			border-radius: .25rem .25rem 0 0;
 			padding: 1rem;
+			background: linear-gradient(#fcd, #fac);
 		}
 		.social a{
 			width: 4rem;
