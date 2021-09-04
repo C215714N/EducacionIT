@@ -1,0 +1,40 @@
+DATABASE (Schema)(
+	Estructura definida: almacen de datos,
+	tablas: organizacion de datos (
+		campos: datos de un mismo tipo (columna),
+		registros: datos con una relacion entre si (fila),
+		dato: minima porcion de informacion (celda)
+	),
+	tipos (
+		relacional (*),
+		jerarquica,
+		transaccional,
+		orientadas a objetos,
+		etc...
+	)
+);
+
+Database Engine(MySQL)(
+	IBM: Desarrolla Lenguaje SQL,
+	ORACLE: Adquiere SQL,
+			Desarrolla( Oracle SQL, MySQL Workbench)
+	COMUNIDAD: Desarrolla MariaDB
+);
+
+SQL(Structured Query Language)(
+	DDL(Data Definition Language)
+		CREATE 	crear bd/tablas/usuarios
+		DROP 	eliminar db/tablas/usuarios
+		ALTER 	modificar tablas
+
+	DML(Data Manipulation Language)
+		INSERT 	agregar registros
+		DELETE 	eliminar registros
+		UPDATE 	actualizar registros
+		SELECT 	consultar registros
+
+	DCL(Data Control Language)
+		GRANT 	otorgar permisos
+		REVOKE 	remover permisos
+		FLUSH PRIVILES 	refrescar permisos
+)
