@@ -47,6 +47,7 @@
 			background: linear-gradient( var(--second), var(--first) );
 		}
 		nav a{
+			position: relative;
 			display: block;
 			padding: .5rem;
 			color: var(--light);
@@ -69,12 +70,33 @@
 		}
 		.menu span{ padding: .5rem; }
 		.menu a:hover{ background-color: var(--hover); }
+		.menu a::after{
+			content: '';
+			position: absolute;
+			width: .2rem;
+			height: .2rem;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(to right, var(--hover), var(--light));
+			opacity: 0;
+			transition: all .5s ease-out; /*property duration timing delay*/
+		}
+		.menu a:hover::after{
+			width: 100%;
+			opacity: 1;
+		}
 		.icon-back{
 			position: fixed;
-			bottom: .5rem;
-			right: .5rem;
+			bottom: 1rem;
+			right: 1rem;
 			border-radius: 50%;
 			background-color: var(--dark);
+			transition: transform .5s ease-in;
+		}
+		.icon-back:hover{
+			transform: 
+				scale(1.5) 
+				rotate(90deg);
 		}
 /*Small Devices - Smartphones*/
 

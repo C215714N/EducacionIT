@@ -20,8 +20,9 @@
   /*viewport width: ancho de la ventana*/
 }
 #header .slide li {
-  background: var(--bg) center / cover;
+  background: #448 var(--bg) center / cover;
   opacity: 0;
+  mix-blend-mode: multiply;
 }
 #header .slide li:nth-child(1n) {
   --bg: url('../assets/backgrounds/osx-leopard-day.jpg');
@@ -108,8 +109,8 @@
 .show,
 #header .slide li,
 #header .control span {
-  transition-property: all;
-  transition-duration: 1s;
+  transition-property: all, width;
+  transition-duration: 9s, 1s;
   transition-timing-function: ease-out;
   transition-delay: 0.2s;
 }
