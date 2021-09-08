@@ -1,0 +1,80 @@
+/*Content First - Mobile First*/
+	/*Imports*/
+
+	/*Variables*/
+		:root{
+			--first:  	#24ce; /*rr gg bb aa*/
+			--second:	#c24e;
+			--light: 	#eee;
+			--dark: 	#333;
+			--view:  	100vw;
+			--size: 	100%;
+			--letter:  	1rem;
+			--font:  	'Raleway', 'calibri', 'segoe ui', sans-serif;;
+		}
+	/*General Rules*/
+		*{
+			box-sizing: border-box;
+			font-family: var(--font);
+		}	
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		.menu,
+		.slide{
+			margin: 0;
+		}
+		.menu,
+		.slide{
+			padding: 0;
+		}
+		.example,
+		.menu,
+		.slide{
+			list-style: none;
+		}
+	/*Navigation*/
+		nav{
+			position: sticky;
+			top: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: linear-gradient(var(--first), var(--second));
+		}
+		nav a,
+		nav label{
+			padding: calc( var(--letter) / 4 );
+			color: var(--light);
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		.menu{
+			width: 100%;
+		}
+	/*Mode*/
+		#mode{ display: none; }
+		#mode ~ nav label::after{ content: 'claro'	}
+		#mode:checked ~ nav label::after{ content: 'oscuro' }
+		#mode ~ .mode{
+			--color: var(--dark);
+			--bg-color: var(--light);
+			color: var(--color);
+			background-color: var(--bg-color);
+		}
+		#mode:checked ~ .mode{
+			--color: var(--light);
+			--bg-color: var(--dark);
+			color: var(--color);
+			background-color: var(--bg-color);
+		}
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets*/
+
+/*Large Devices - Desktop*/
+
+/*Extra Large - HD Desktop*/
