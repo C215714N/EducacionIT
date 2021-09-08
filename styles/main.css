@@ -99,6 +99,10 @@
 				rotate(90deg);
 		}
 	/*Content*/
+		main{
+			margin: 1rem auto;
+			padding: 1rem;
+		}
 		.example{
 			position: relative;
 			margin-left: 2.5rem;
@@ -158,10 +162,12 @@
 		align-items: center;
 		font-size: 1.5rem;
 	}
+	main{ max-width: 720px; }
 }
 /*Large Devices - Desktop*/
 @media screen and (min-width: 992px){
 	nav span{ display: block; }
+	main{ max-width: 960px; }
 }
 /*Extra Large Devices - HD Desktop*/
 @media screen and (min-width: 1200px){
