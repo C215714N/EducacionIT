@@ -71,15 +71,34 @@
 		@include normalize($p: .5rem);
 		max-height: 300px;
 	}
+	%twist{
+		transform: 
+			scale(1.5)
+			translateY(-.75rem)
+			rotate(720deg);
+	}
+	%ease{ transition: all 1s ease; }
+	%resize{
+		transform:
+			translateY(-1rem)
+			scale(1.1);
+	}
 	%icon{
 		display: inline-block;
-		min-width: 3rem;
-		min-height: 3rem;
+		margin: .25rem .5rem;
+		min-width: 2rem;
+		min-height: 2rem;
 		border-radius: $r;
-		background: var(--bg) center/1.5rem no-repeat;
+		background: var(--light) var(--bg) center/1.5rem no-repeat;
+		transition: all 1s ease;
 		&:hover{
-			background-size: 2.5rem;
+			@extend %twist;
 		}
+	}
+	%frontside{
+		position: fixed;
+		z-index: 2;
+		opacity: .8;
 	}
 // 	Nesting: Capacidad de apilar selectores
 	#footer{
@@ -102,15 +121,16 @@
 			input,
 			textarea{
 				font-size: 1rem;
+				@extend %ease;
 				@include normalize(none, .1rem solid transparent, .25rem .5rem, outline );
-				&:focus{ @extend .border-dark;
-					& + .valid{ @extend %shown;	}	}
+				&:focus{ @extend .border-dark, %resize;
+					& + .valid{ @extend %shown, %resize;}	}
 				&:valid{ @extend .border-success;
-					& + .valid{ @extend .bg-success; }	}
+					& + .valid{ @extend .bg-success; 	}	}
 				&:not(:placeholder-shown):invalid{ @extend .border-danger;
-					& + .valid{ @extend .bg-danger;  }	}
+					& + .valid{ @extend .bg-danger;  	}	}
 			}
-			.valid{ @extend .bg-dark, %hidden; }
+			.valid{ @extend .bg-dark, %hidden, %ease; }
 			.btn{ 
 				font: 1rem;
 				text-transform: uppercase;
@@ -118,14 +138,27 @@
 			}
 		}
 		.social{
-			@extend .container-sm;
 			@include normalize(1rem auto 0, .25rem .25rem 0 0, 1rem, $ba:border-radius);
+			max-width: 320px;
 			display: flex;
 			justify-content: center;
-			background: linear-gradient(var(--light), var(--first));
+			background: linear-gradient(var(--second), var(--first));
 			a{ @extend %icon; }
 		}
+		.map{
+			border:none; 
+			&.active{ @extend %frontside; }
+		}
+		.map-btn{
+			@extend .bg-dark;
+			@include normalize(.25rem, .1rem solid, .5rem);
+			&.icon-max{ position: absolute }
+			&.icon-min{ @extend %frontside; }
+			top:.5rem;
+			right:.5rem;
+		}
 		.copy{
+			@extend .text-light;
 			@include normalize(0 -1rem -1rem, center, 1rem, $ba:text-align);
 			background: linear-gradient( var(--first), var(--dark));
 		}

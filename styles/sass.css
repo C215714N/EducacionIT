@@ -40,7 +40,7 @@
   color: #c36;
 }
 
-.text-light, #footer #contact {
+.text-light, #footer .copy, #footer #contact {
   color: #eee;
 }
 
@@ -76,7 +76,7 @@
   background-color: #eee;
 }
 
-.bg-dark, #footer #contact .valid {
+.bg-dark, #footer .map-btn, #footer #contact .valid {
   background-color: #333;
 }
 
@@ -296,7 +296,7 @@
 
 /*Grilla responsive*/
 @media screen and (min-width: 576px) {
-  .container, .container-sm, #footer .social {
+  .container, .container-sm {
     max-width: 540px;
   }
 
@@ -813,15 +813,34 @@
   max-height: 300px;
 }
 
+#footer .social a:hover {
+  transform: scale(1.5) translateY(-0.75rem) rotate(720deg);
+}
+
+#footer #contact .valid, #footer #contact input,
+#footer #contact textarea {
+  transition: all 1s ease;
+}
+
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid, #footer #contact input:focus,
+#footer #contact textarea:focus {
+  transform: translateY(-1rem) scale(1.1);
+}
+
 #footer .social a {
   display: inline-block;
-  min-width: 3rem;
-  min-height: 3rem;
+  margin: 0.25rem 0.5rem;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 0.25rem;
-  background: var(--bg) center/1.5rem no-repeat;
+  background: var(--light) var(--bg) center/1.5rem no-repeat;
+  transition: all 1s ease;
 }
-#footer .social a:hover {
-  background-size: 2.5rem;
+#footer .map-btn.icon-min, #footer .map.active {
+  position: fixed;
+  z-index: 2;
+  opacity: 0.8;
 }
 
 #footer {
@@ -866,9 +885,23 @@
   margin: 1rem auto 0;
   border-radius: 0.25rem 0.25rem 0 0;
   padding: 1rem;
+  max-width: 320px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(var(--light), var(--first));
+  background: linear-gradient(var(--second), var(--first));
+}
+#footer .map {
+  border: none;
+}
+#footer .map-btn {
+  margin: 0.25rem;
+  border: 0.1rem solid;
+  padding: 0.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+#footer .map-btn.icon-max {
+  position: absolute;
 }
 #footer .copy {
   margin: 0 -1rem -1rem;

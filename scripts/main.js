@@ -9,7 +9,11 @@
 	pIn  = d.querySelector('.progress input')
 
 	pIn.addEventListener( 'input', () => pBar.value = pIn.value )
+/*Background Map*/
+	mapFrm = d.querySelector('.map')
+	mapBtn = d.querySelector('.map-btn')
 
+	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max', 'icon-min') : mapBtn.classList.replace('icon-min', 'icon-max')
 /*Gallery*/
 	prev = d.querySelectorAll('.icon-prev')
 	next = d.querySelectorAll('.icon-next')
