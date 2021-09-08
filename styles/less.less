@@ -49,6 +49,7 @@
 				&:extend(.cover);
 				li{
 					&:extend(.cover);
+					&:extend(.show);
 					background: var(--bg) center/cover;
 					.bg(@backgrounds);
 					opacity: 0;
@@ -56,6 +57,22 @@
 				}
 			}
 		// Slide Controls
+			.control{
+				.flexbox;
+				span{
+					@r: 1rem;
+					&:extend(.show);
+					width: @r;
+					height: @r;
+					margin: (@r / 2);
+					border-radius: @r;
+					background-color: @light;
+					box-shadow: 0 0 .5rem @dark;
+					&.active{
+						width: @r * 3;
+					}
+				}
+			}
 			button{
 				.normalize(@p:1rem);
 				color: @light;
@@ -78,6 +95,12 @@
 		width: 100%;
 		height: 100%;
 		z-index: -1;
+	}
+	.show{
+		transition-property: all;
+		transition-duration: 1s;
+		transition-timing-function: ease-out;
+		transition-delay: .2s;
 	}
 	.flex{ .flexbox(@fj: flex-start); }
 // Mixins parametricos: Estilos que reciben valores para ser aplicados (Funciones);
