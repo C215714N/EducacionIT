@@ -49,6 +49,63 @@
 		<button></button>
 		<button></button>
 	</header>
+	<!--Content-->
+	<main class="mode">
+		<section>
+			<header class="header">
+				<h2>Elementos HTML5</h2>
+				<p>Incorporaciones al estandar</p>
+			</header>
+			<p>
+				Con el surgimiento de HTML5 en 2014 se añadieron nuevos elementos, entre ellos, etiquetas que facilitan a los motores de busqueda la identificacion de cierto tipo de contenidos, haciendo incapie en la semantica, como los que se mencionan mas adelante.
+			</p>
+			<article>
+				<header>
+					<h3>Etiquetas estadisticas</h3>
+				</header>
+				<p>
+					Son elementos que se utilizan para definir el estado de una tarea, estan son <strong>&lt;progress></strong> que se debe implementar cuando la misma aun no fue finalizada y por lo tanto sus valores pueden cambiar <em>ej: el avance durante la capacitacion</em>; y <strong>&lt;meter></strong> que a diferencia de la anterior, se utiliza cuando la tarea fue finalizada y necesitamos realizar una comparacion, <em>ej: resultado de un examen</em>.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Progress</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								value = undefined
+							</li>
+							<li>
+								<progress value="20" max="100"></progress>
+								value = 20; max = 100
+							</li>
+							<li class="progress">
+								<progress max="100"></progress>
+								<input type="number" min="0" max="100">
+								value = javaScript
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Meter</strong>
+						<ul>
+							<li>
+								<meter low="40" high="70" optimum="10" max="100" value="30"></meter>
+								<em>value <</em> low < high < optimum
+							</li>
+							<li>
+								<meter low="40" high="70" optimum="10" max="100" value="60"></meter>
+								low < <em>value <</em> high < optimum
+							</li>
+							<li>
+								<meter low="40" high="70" optimum="10" max="100" value="90"></meter>
+								low < high < <em>value <</em> optimum
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+		</section>
+	</main>
 	<!-- Scripts JS -->
 	<script src="scripts/main.js"></script>
 </body>
