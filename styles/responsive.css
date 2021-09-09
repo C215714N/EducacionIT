@@ -52,7 +52,7 @@
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
-			background: linear-gradient(#c63, #448);
+			background: linear-gradient(-45deg,#c63, #448);
 		}
 		nav a{
 			display: block;
@@ -93,15 +93,23 @@
 			color: #eee;
 			text-shadow: 0 0 .5rem #333;
 			text-align: center;
-			font-size: calc(2vw + .8rem);
+			font-size: min(calc(2vw + .8rem), 3rem);
 		}
 		/*Gallery*/
 			.slide li{ opacity: 0 }
 			.slide li.active{ opacity: 1 }
-			.slide li:nth-child(1){background-image: linear-gradient( hsl(0,50%,60%), hsl(30,50%,30%) )}
-			.slide li:nth-child(2){background-image: linear-gradient( hsl(60,50%,60%), hsl(90,50%,30%) )}
-			.slide li:nth-child(3){background-image: linear-gradient( hsl(120,50%,60%), hsl(150,50%,30%) )}
-			.slide li:nth-child(4){background-image: linear-gradient( hsl(180,50%,60%), hsl(210,50%,30%) )}
+			.slide li:nth-child(1){
+				background-image: linear-gradient(hsl(0,50%,60%), hsl(30,50%,30%))	
+			}
+			.slide li:nth-child(2){
+				background-image: linear-gradient(hsl(60,50%,60%), hsl(90,50%,30%))	
+			}
+			.slide li:nth-child(3){
+				background-image: linear-gradient(hsl(120,50%,60%), hsl(150,50%,30%))	
+			}
+			.slide li:nth-child(4){
+				background-image: linear-gradient(hsl(180,50%,60%), hsl(210,50%,30%))	
+			}
 		/*Controls*/
 			#header button{
 				position: absolute;
@@ -111,12 +119,56 @@
 				border: none;
 				color: #eee;
 				background-color: transparent;
-				font-size: calc(5vw + .8rem);
+				font-size: min(calc(5vw + .8rem), 3rem);
 			}
 			#header .icon-prev{ left:0 }
 			#header .icon-next{ right:0 }
+	/*footer*/
+		#footer{
+			position: relative;
+			padding: 1rem;
+		}
+		/*Formulario de contacto*/
+			#contact{
+				display: grid;
+				margin: auto;
+				border-radius: .25rem;
+				padding: 1.5rem;
+				color: #eee;
+				background: radial-gradient(circle at top right, #c63, #448);
+			}
+			#contact label{
+				height: 0;
+				margin: .5rem 0 .2rem;
+				overflow: hidden;
+			}
+			#contact textarea{
+				min-height: 8rem;
+				resize: none;
+			}
+			#contact input,
+			#contact textarea,
+			#contact select,
+			#contact button{
+				outline: none;
+				border: .1rem solid #eee;
+				padding: .5rem 1rem;
+				font-size: 1rem;
+			}
+			#contact button{
+				text-transform: uppercase;
+			}
+			.valid{ 
+				display: none; 
+				padding: .5rem;
+				text-shadow: 0 0 .25rem #333;
+			}
+		/*validacion*/
+			#contact :focus{ box-shadow: 0 0 .5rem #eee; }
+			#contact :focus + .valid{ display: block; }
 /* Small Devices - Smartphones */
 	@media screen and (min-width: 576px){
+	/*Navegacion*/
 		nav .btn,
 		.menu span{
 			display: none;
@@ -131,17 +183,63 @@
 			align-items: center;
 			font-size: 1.5rem;
 		}
+	/*formulario de contacto*/
+		#contact{
+			max-width: 540px;
+		}
 	}
 /* Medium Devices - Tablets */
 	@media screen and (min-width: 768px){
+	/*navegacion*/
 		.menu span{
 			display: block;
 			font-size: 1rem;
+		}	
+	/*formulario de contacto*/
+		#contact{
+			max-width: 720px;
 		}
 	}
 /* Large Devices - Desktop */
 	@media screen and (min-width: 992px){
-
+	/*formulario de contacto*/
+		#contact{
+			grid-template-columns: 50% 50%;
+			grid-template-areas:  
+				'title 		title'
+				'lblName 	lblPhone'
+				'cmdName 	cmdPhone'
+				'vldName 	vldPhone'
+				'lblEmail 	lblEmail'
+				'cmdEmail 	cmdEmail'
+				'vldEmail 	vldEmail'
+				'lblText 	lblText'
+				'cmdText 	cmdText'
+				'.			btn';
+			gap: 0 .5rem;
+		}
+		#contact label{ height: auto; }
+		#contact button{ 
+			grid-area: btn; 
+			margin-top: .2rem;
+			justify-self: flex-end;
+		}
+		#contact h2{ grid-area: title; }
+		/*Rotulos*/
+			#contact label[for="contactName"]{ grid-area: lblName; }
+			#contact label[for="contactEmail"]{ grid-area: lblEmail; }
+			#contact label[for="contactPhone"]{ grid-area: lblPhone; }
+			#contact label[for="contactConsult"]{ grid-area: lblText; }
+		/*Campos*/
+			#contactName{ grid-area: cmdName; }
+			#contactEmail{ grid-area: cmdEmail; }
+			#contactPhone{ grid-area: cmdPhone; }
+			#contactConsult{ grid-area: cmdText; }
+		/*validadores*/
+			#contactName + .valid{ grid-area: vldName; }
+			#contactEmail + .valid{ grid-area: vldEmail; }
+			#contactPhone + .valid{ grid-area: vldPhone; }
+			#contactConsult + .valid{ grid-area: vldText; }
 	}
 /* Extra Large Devices - HD Desktop */
 	@media screen and (min-width: 1200px){

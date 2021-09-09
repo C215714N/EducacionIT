@@ -10,6 +10,9 @@
 	<title>Maquetacion Web</title>
 	<!--Styles CSS-->
 	<link rel="stylesheet" href="styles/responsive.css">
+	<link 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+		rel="stylesheet">
 </head>
 <body>
 	<!--Navegacion-->
@@ -39,8 +42,174 @@
 		<button class="icon-prev opacity"></button>
 		<button class="icon-next opacity"></button>
 	</header>
-
+	<main class="container">
+		<section>
+			<h2 class="h1">Introduccion a Bootstrap</h2>
+			<p>
+				Es un framework de css que nos ofrece una plantilla de hoja de estilos y scripting, para agilizar el desarrollo de una pagina utilizando diferentes clases de css que se encuentran definidas previamente. Esta herramienta fue desarrollada por el equipo de twitter y es la misma que se implementa en muchos sitios debido a que esta pensado para el desarrollo responsive
+			</p>
+			<article>
+				<h3 class="bg-secondary m-0 px-3 py-1">Breakpoints</h3>
+				<table class="table table-dark table-striped">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Device-width</th>
+							<th>Max-width</th>
+							<th>Devices</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>xs</td>
+							<td><576px</td>
+							<td>100%</td>
+							<td>smartwatch</td>
+						</tr>
+						<tr>
+							<td>sm</td>
+							<td>>=576px & <768px</td>
+							<td>540px</td>
+							<td>smartphones</td>
+						</tr>
+						<tr>
+							<td>md</td>
+							<td>>=768px & <992px</td>
+							<td>720px</td>
+							<td>tablets</td>
+						</tr>
+						<tr>
+							<td>lg</td>
+							<td>>=992px & <1200px</td>
+							<td>960px</td>
+							<td>netbooks</td>
+						</tr>
+						<tr>
+							<td>xl</td>
+							<td>>=1200px & <1400px</td>
+							<td>1140px</td>
+							<td>desktop</td>
+						</tr>
+						<tr>
+							<td>xxl</td>
+							<td>>=1400px</td>
+							<td>1320px</td>
+							<td>hd desktop</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Sistema de Grillas</h3>
+				<div class="row">
+					<div class="col-12 border">col</div>
+					<div class="col-md-6 border">col</div>
+					<div class="col-lg-3 border">col</div>
+					<div class="col-lg-2 border">col</div>
+					<div class="col-lg-1 border">col</div>
+					<div class="col-md-5 border">col</div>
+					<div class="col-md-7 border">col</div>
+					<div class="col-lg-8 border">col</div>
+					<div class="col-lg-4 border">col</div>
+				</div>
+				<h3 class="text-primary">Estilos</h3>
+				<ul>
+					<li class="btn btn-primary">color </li>
+					<li class="btn btn-secondary">color </li>
+					<li class="btn btn-light">color </li>
+					<li class="btn btn-dark">color </li>
+					<li class="btn btn-success">color </li>
+					<li class="btn btn-warning">color </li>
+					<li class="btn btn-danger">color </li>
+					<li class="btn btn-info">color </li>
+				</ul>
+				<ul>
+					<li class="btn btn-outline-primary">color </li>
+					<li class="btn btn-outline-secondary">color </li>
+					<li class="btn btn-outline-light">color </li>
+					<li class="btn btn-outline-dark">color </li>
+					<li class="btn btn-outline-success">color </li>
+					<li class="btn btn-outline-warning">color </li>
+					<li class="btn btn-outline-danger">color </li>
+					<li class="btn btn-outline-info">color </li>
+				</ul>
+			</article>
+		</section>
+	</main>
+	<!--Pie de Pagina-->
+	<footer id="footer">
+		<div class="map">
+			<iframe class="cover" 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.068715758423!2d-58.37805708519527!3d-34.602423864935744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses!2sar!4v1630595792614!5m2!1ses!2sar" 
+				loading="lazy">
+			</iframe>
+			<button class="icon-max"></button>
+		</div>
+		<form id="contact">
+			<h2>Contactanos</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				maxlength="50" 
+				pattern="[a-z A-Z]{3,50}"
+				title="Ingrese su nombre solamente con letras y espacios" 
+				placeholder="Nombre(*): Cristian Racedo" 
+				required>
+			<div class="valid">
+				Ingrese su nombre completo solamente con letras y espacios, 
+				el mismo debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email"  
+				minlength="8" 
+				placeholder="Correo(*): cristiandracedo@hotmail.com" 
+				required>
+			<div class="valid">
+				Ingrese un correo valido, el misma debe poseer 
+				al menos 8 caracteres y respetar el siguiente formato "usuario@servidor"
+			</div>
+			<label for="contactPhone">Ingrese su Telefono</label>
+			<input 
+				id="contactPhone" 
+				name="contactPhone" 
+				type="tel" 
+				pattern="([0-9]{6,18})|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})"
+				placeholder="Telefono(*):(5411)2345-6789" 
+				required>
+			<div class="valid">
+				Ingrese su numero telefonico, puede colocar la caracteristica entre parentesis e insertar un guion cada 3 a 6 digitos, como se muestra en el ejemplo: (5411)2345-6789
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto" 
+				required
+			></textarea>
+			<button class="btn">enviar</button>	
+		</form>
+		<div class="social">
+			<a href="https://.com" class="" title=""></a>
+			<a href="https://.com" class="" title=""></a>
+			<a href="https://.com" class="" title=""></a>
+			<a href="https://.com" class="" title=""></a>
+		</div>
+		<form class="row container mt-5 p-3 rounded mx-auto bg-dark text-light">
+			<h2 class="col-12">suscribite</h2>
+			<input type="text" class="col form-control">
+			<button class="col-3 btn btn-outline-light align-self-end">enviar</button>
+		</form>
+		<p class="copy">&copy;2021 Todos los derechos reservados<a href="">cristian racedo</a>&amp; Compañia</p>
+	</footer>
 	<!--Scripts JS-->
 	<script src="scripts/main.js"></script>
+	<script 
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" >
+	</script>
 </body>
 </html>
