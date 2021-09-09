@@ -43,6 +43,9 @@
 		.menu.active{
 			max-height: 600px;
 		}
+		.menu span{
+			padding: .25rem;
+		}
 		.menu a:hover{
 			background-color: rgba(51,51,51,.5);
 		}
@@ -54,9 +57,39 @@
 			background-color: #408;
 		}
 /*Small Devices - Smartphones*/
-
+	@media screen and (min-width: 576px){
+	/*Navigation*/
+		nav .btn,
+		.menu span{
+			display: none;
+		}
+		.menu{
+			width: auto;
+			max-height: 600px;
+			font-size: 1.5rem;
+		}
+		.menu,
+		.menu a{
+			display: flex;
+			align-items: center;
+		}
+	}
 /*Medium Devices - Tablets*/
-
+	@media screen and (min-width: 768px){
+	/*Navigation*/
+		.menu span{
+			display: block;
+			font-size: 1rem;
+		}
+	}
 /*Large Devices - Desktop*/
+	@media screen and (min-width: 992px){
 
+	}
 /*Extra Large Devices - HD Desktop*/
+	@media screen and (min-width: 1200px){
+	/*Navigation*/
+		nav{
+			justify-content: space-around;
+		}
+	}
