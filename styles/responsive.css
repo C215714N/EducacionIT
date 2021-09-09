@@ -1,4 +1,7 @@
 /*Content First - Mobile First*/
+	/*Imports*/
+		@import url('icomoon.css');
+		@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&display=swap');
 	/*General Rules*/
 		*{
 			box-sizing: border-box;
@@ -50,6 +53,9 @@
 		}
 		.menu.active{
 			max-height: 600px;
+		}
+		.menu span{
+			padding: .25rem;
 		}
 		.menu a:hover{
 			background-color: rgba(51, 51, 51, .5);
