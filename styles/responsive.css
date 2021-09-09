@@ -96,10 +96,8 @@
 			font-size: calc(2vw + .8rem);
 		}
 		/*Gallery*/
-			.slide li{
-				background-position: center;
-				background-size: cover;
-			}
+			.slide li{ opacity: 0 }
+			.slide li.active{ opacity: 1 }
 			.slide li:nth-child(1){background-image: linear-gradient( hsl(0,50%,60%), hsl(30,50%,30%) )}
 			.slide li:nth-child(2){background-image: linear-gradient( hsl(60,50%,60%), hsl(90,50%,30%) )}
 			.slide li:nth-child(3){background-image: linear-gradient( hsl(120,50%,60%), hsl(150,50%,30%) )}
