@@ -67,10 +67,38 @@
 			border-radius: 50%;
 			background-color: #333;
 		}
+
 /* Small Devices - Smartphones */
-
+	@media screen and (min-width: 576px){
+		nav .btn,
+		.menu span{
+			display: none;
+		}
+		.menu{
+			width: auto;
+			max-height: 600px;
+		}
+		.menu,
+		.menu a{
+			display: flex;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+	}
 /* Medium Devices - Tablets */
-
+	@media screen and (min-width: 768px){
+		.menu span{
+			display: block;
+			font-size: 1rem;
+		}
+	}
 /* Large Devices - Desktop */
+	@media screen and (min-width: 992px){
 
+	}
 /* Extra Large Devices - HD Desktop */
+	@media screen and (min-width: 1200px){
+		nav{
+			justify-content: space-around;
+		}
+	}
