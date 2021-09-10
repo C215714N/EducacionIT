@@ -7,36 +7,38 @@
 			box-sizing: border-box;
 			font-family: 'Raleway', 'segoe ui', 'calibri', sans-serif;
 		}
+		body{
+		}
 		/*no margin*/
-		body,
-		h1,
-		h2,
-		h3,
-		.menu,
-		.slide,
-		.header p{
-			margin: 0;
-		}
+			body,
+			h1,
+			h2,
+			h3,
+			.menu,
+			.slide,
+			.header p{
+				margin: 0;
+			}
 		/*no padding*/
-		.menu{
-			padding: 0;
-		}
+			.menu{
+				padding: 0;
+			}
 		/*list unstyled*/
-		.menu,
-		.slide{
-			list-style: none;
-		}
+			.menu,
+			.slide{
+				list-style: none;
+			}
 		/*position absolute*/
-		.cover,
-		.slide,
-		.slide li{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-		}
+			.cover,
+			.slide,
+			.slide li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
 		/*opacity*/
 			.opacity{ opacity: .3; }
 			.opacity:hover{ opacity: .7; }
@@ -49,7 +51,7 @@
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
-			background: linear-gradient(#f80, #80f);
+			background: linear-gradient(45deg,#f80, #80f);
 		}
 		nav a{
 			display: block;
@@ -127,6 +129,51 @@
 			}
 			#header .icon-prev{ left:0 }
 			#header .icon-next{ right: 0 }
+	/*Footer*/
+		#footer{
+			position: relative;
+			padding: 5rem 1rem 1rem;
+		}
+		#contact{
+			display: grid;
+			margin: auto;
+			border-radius: .25rem;
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .25rem #333;
+			background: radial-gradient(circle at top right, #f80, #80f);
+		}
+		#contact label{
+			height: 0;
+			margin: .5rem 0 .2rem;
+			overflow: hidden;
+		}
+		#contact textarea{
+			min-height: 8rem;
+			resize: none;
+		}
+		#contact input,
+		#contact textarea,
+		#contact select,
+		#contact button{
+			outline: none;
+			border-radius: .25rem;
+			border: .1rem solid #eee;
+			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact .valid{
+			display: none;
+			padding: .25rem 0;
+		}
+		/*Validacion*/
+		#contact :focus{
+			box-shadow: 0 0 .5rem #eee;
+		}
+		#contact :focus + .valid{
+			display: block;
+		}
+
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 	/*Navigation*/
@@ -144,6 +191,10 @@
 			display: flex;
 			align-items: center;
 		}
+	/*Contact Form*/
+		#contact{
+			max-width: 540px;
+		}
 	}
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
@@ -152,10 +203,21 @@
 			display: block;
 			font-size: 1rem;
 		}
+	/*Contact Form*/
+		#contact{
+			max-width: 720px;
+		}
 	}
 /*Large Devices - Desktop*/
 	@media screen and (min-width: 992px){
-
+	/*Contact Form*/
+		#contact label{
+			height: auto;
+		}
+		#contact button{
+			margin: .5rem 0;
+			justify-self: flex-end;
+		}
 	}
 /*Extra Large Devices - HD Desktop*/
 	@media screen and (min-width: 1200px){
@@ -163,4 +225,36 @@
 		nav{
 			justify-content: space-around;
 		}
+	/*Contact Form*/
+		#contact{
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+				'title 		title'
+				'lblName 	lblPhone'
+				'cmdName 	cmdPhone'
+				'vldName 	vldPhone'
+				'lblEmail 	lblEmail'
+				'cmdEmail 	cmdEmail'
+				'vldEmail 	vldEmail'
+				'lblText  	lblText'
+				'cmdText 	cmdText'
+				'. 			btn';
+			gap: 0 .5rem;
+		}
+		#contact h2{ grid-area: title; }
+		#contact button{ grid-area: btn; }
+		/*form labels*/
+			label[for="contactName"]{ grid-area: lblName }
+			label[for="contactEmail"]{ grid-area: lblEmail }
+			label[for="contactPhone"]{ grid-area: lblPhone }
+			label[for="contactConsult"]{ grid-area: lblText }
+		/*form fields*/
+			#contactName{ grid-area: cmdName }
+			#contactEmail{ grid-area: cmdEmail }
+			#contactPhone{ grid-area: cmdPhone }
+			#contactConsult{ grid-area: cmdText }
+		/*form validation*/
+			#contactName + .valid{ grid-area: vldName }
+			#contactEmail + .valid{ grid-area: vldEmail }
+			#contactPhone + .valid{ grid-area: vldPhone }
 	}

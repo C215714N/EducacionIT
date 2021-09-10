@@ -43,6 +43,70 @@
 	</header>
 	<!-- Content -->
 	<!-- Footer -->
+	<footer id="footer">
+		<div class="map">
+			<iframe class="cover" 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.068715758423!2d-58.37805708519527!3d-34.602423864935744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses!2sar!4v1630627611983!5m2!1ses!2sar"
+			loading="lazy">
+		</iframe>
+			<button class="icon-max" title="agrandar/achicar mapa"></button>
+		</div>
+		<form id="contact" action="" method="">
+			<h2>Contactanos</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName" 
+				type="text" 
+				maxlength="50"
+				pattern="[A-Z a-z]{3,50}"
+				title="Ingrese su nombre con letras y espacios" 
+				placeholder="Nombre(*): Cristian Racedo"
+				required>
+			<div class="valid">
+				Ingrese su nombre completo utilizando letras y espacios, el mismo debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				type="email"
+				minlength="8"
+				placeholder="Correo(*): cristiandracedo@hotmail.com" 
+				required>
+			<div class="valid">
+				Ingrese un correo valido que respete el siguiente formato "usuario@servidor", este debe poseer al menos 8 caracteres.
+			</div>
+			<label for="contactPhone">Ingrese su Telefono</label>
+			<input 
+				type="tel" 
+				id="contactPhone" 
+				name="contactPhone" 
+				pattern="([0-9]{6,18})|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})"
+				placeholder="Telefono(*): (5411)2345-6789" 
+				required>
+			<div class="valid">
+				Ingrese su numero telefonico, puede colocar la caracterisca entre parentesis e insertar un guion cada 3 a 6 digitos, como se ve en el ejemplo: (5411)2345-6789
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="contactConsult"
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto" 
+				required></textarea>
+			<button>Enviar</button>
+		</form>
+		<div class="social">
+			<a class="facebook" title="Seguinos en facebook" href="https://facebook.com" target="_blank"></a>
+			<a class="instagram" title="Seguinos en instagram" href="https://instagram.com" target="_blank"></a>
+			<a class="twitter" title="Seguinos en twitter" href="https://twitter.com" target="_blank"></a>
+			<a href="https://youtube.com" class="youtube" title="Suscribite a nuestro canal de Youtube" target="_blank"></a>
+			<a class="github" title="Hace fork en github" href="https://github.com/c215714n/EducacionIT/tree/css-j-19" target="_blank"></a>
+		</div>
+		<p class="copy">&copy; Todos los derechos reservados.</p>
+	</footer>
 	<!-- Scripts JS -->
 	<script src="scripts/main.js"></script>
 </body>
