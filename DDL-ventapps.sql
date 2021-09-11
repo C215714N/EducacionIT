@@ -28,7 +28,18 @@
             PRIMARY KEY(cat_id),
             UNIQUE KEY(description)
         );
+        ALTER TABLE categories -- tabla a modificar
+			ADD COLUMN active boolean DEFAULT true,-- agrego una columna
+			MODIFY description VARCHAR(100); -- edito una columna
         DESCRIBE categories;
     ## Tabla Productos
-    
-    
+		DROP TABLE IF EXISTS products;
+		CREATE TABLE products(
+			product_id INT AUTO_INCREMENT,
+            product VARCHAR(150) NOT NULL,
+            category INT, -- campo relacionado
+            PRIMARY KEY (product_id),
+            UNIQUE KEY(product, category),
+            FOREIGN KEY(category) REFERENCES categories(cat_id) -- campo externo
+		);
+        DESCRIBE products;
