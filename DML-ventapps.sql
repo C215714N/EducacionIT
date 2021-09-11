@@ -39,8 +39,13 @@
 			('Serrucho', 13),
 			('Pantalones', 3);
 /*DML - Data Manipulation Language - SELECT*/
+	## Tabla Usuarios
 	SELECT * FROM users;
-    SELECT * FROM categories;
+	## Tabla Categorias
+		SELECT * FROM categories;
+        SELECT * FROM categories
+        WHERE cat_id BETWEEN 1 AND  5;
+    ## Tabla Productos
     SELECT * FROM products;
     -- consulta selectiva
     SELECT product, category FROM products
@@ -61,5 +66,4 @@
 		AND|c1v |c1f		OR |c1v	|c1f		XOR	|c1v|c1f
         c1v| V	| F			c1v| V	| V			c1v	| F	| V
         c2f| F	| F			c2f| V	| F			c2f	| V	| F
-			
     */

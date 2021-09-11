@@ -20,6 +20,26 @@
             UNIQUE KEY(user_email) -- no debe repetirse
         );
 		DESCRIBE users;
+	## Tabla Datos de Usuario
+		DROP TABLE IF EXISTS users_data;
+        CREATE TABLE users_data(
+			data_id INT AUTO_INCREMENT,
+            last_name VARCHAR(50),
+            first_name VARCHAR(50),
+            address_street VARCHAR(100),
+            address_number INT,
+            birth_date DATE,
+            zip_code VARCHAR(10),
+            nationality VARCHAR(20),
+            gender ENUM('M','F','O'),
+            doc_type ENUM('DU','LC','LE','CI','PASS'),
+            doc_number VARCHAR(20),
+            user INT,
+            PRIMARY KEY (data_id),
+            UNIQUE KEY(last_name, first_name, address_street, address_number, birth_date),
+            UNIQUE KEY(nationality, gender, doc_type, doc_number),
+            FOREIGN KEY(user) REFERENCES users(user_id)
+        );
     ## Tabla Categorias
 		DROP TABLE IF EXISTS categories;
 		CREATE TABLE categories(
@@ -32,6 +52,7 @@
 			ADD COLUMN active boolean DEFAULT true,-- agrego una columna
 			MODIFY description VARCHAR(100); -- edito una columna
         DESCRIBE categories;
+    
     ## Tabla Productos
 		DROP TABLE IF EXISTS products;
 		CREATE TABLE products(
@@ -43,3 +64,15 @@
             FOREIGN KEY(category) REFERENCES categories(cat_id) -- campo externo
 		);
         DESCRIBE products;
+	
+    ## Tabla Publicaciones
+		CREATE TABLE posts(
+			post_id INT AUTO_INCREMENT,
+            post_title VARCHAR(50),
+            post_detail VARCHAR(250),
+            user INT,
+            product INT,
+            post_date DATETIME default (current_timestamp()),
+            price DECIMAL(11,2),
+            quantity INT
+        );
