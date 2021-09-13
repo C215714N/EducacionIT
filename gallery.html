@@ -29,7 +29,23 @@
 	</header>
 	<!--Contenido Principal-->
 	<main>
-		
+		<div>
+			<h2>Reglas de Nomenclatura</h2>
+			<ul>
+				<li>
+					<strong>Evitar el uso de espacios</strong> debido a que este caracter suele ser reemplazado por <em>el conjunto %20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> sera identificado como <em>"foto%2001.jpg"</em> no pudiendo ser encontrada por el navegador. Para resolver esto se recomienda <strong>utilizar guiones (-_) en los nombres</strong>, dando como resultado <em>"foto_01.jpg"</em>
+				</li>
+				<li>
+					<strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> para facilitar la busqueda de las mismas por parte del desarrollador. Es recomendable evitar nombres genericos como <em>"foto_01.jpg"</em> o automatizados como <em>"2021-09-13-2033100.jpg"</em>, ya que mientras mas elementos tengamos, mas dificil va a ser su implementacion.
+				</li>
+				<li>
+					<strong>Nombrar los archivos solamente con minusculas</strong> debido a que los servidores son <em>caseSensitive</em> y para reducir el margen de error, debido a que una imagen puede no encontrarse si esta mal escrita <strong>la ruta, su nombre, el formato y como esta escrito</strong>
+				</li>
+			</ul>
+		</div>
+		<div class="example">
+			<img src="img/jjba-crazydiamond-01.jpg" alt="Dibujo JJBA Crazy Diamond">
+		</div>
 	</main>
 	<!--Pie de Pagina-->
 	<footer>
