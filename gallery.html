@@ -3,7 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundametos Web</title>
-	
+	<style>
+		/* selectores Generales */
+		body{
+			margin: 0;
+			font-family: 'segoe ui', 'calibri', sans-serif;
+		}
+		/* selectores Multiples (,) */
+		header, footer{
+			padding: 16px;
+			color: #eee;
+			background-color: #448; /* rr gg bb */
+			text-align: center;
+		}
+		/* selectores especificos (padre hijo) */
+		nav a{
+			color: #ccc;
+			text-decoration: none;
+		}
+		nav ul{
+			padding: 0;
+			list-style: none;
+			background-color: #224;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/*Pseudoclase: Instancia o caracteristica de una etiqueta*/
+		nav li:hover{
+			background-color: #66a;
+		}
+		/*float y overflow*/
+		figure{
+			overflow: hidden;
+			padding: 16px;
+			background-color: #ccc;
+		}
+		figure img{
+			float: left;
+			margin-right: 16px;
+		}
+	</style>
 </head>
 <body>
 	<!--Cabecera-->
@@ -59,7 +100,7 @@
 				alt="Dibujo JJBA Crazy Diamond">
 		</div>
 		<figure>
-			<img style="width:200px;" 
+			<img style="width:350px;" 
 				src="img/poster-californication.jpg" 
 				alt="Poster Californication Red Hot Chili Peppers">
 			<figcaption>Californication 1999</figcaption>
@@ -73,7 +114,7 @@
 			</p>
 		</figure>
 		<figure>
-			<img style="width:200px;" 
+			<img style="width:350px;" 
 				src="img/poster-by-the-way.jpg" 
 				alt="Poster By the Way Red Hot Chili Peppers">
 			<figcaption>Californication 2002</figcaption>
@@ -87,8 +128,8 @@
 			</p>
 		</figure>
 		<figure>
-			<img style="width:200px;" 
-				src="img/poster-californication.jpg" 
+			<img style="width:350px;" 
+				src="img/poster-cant-stop.jpg" 
 				alt="Poster Greatest Hits Red Hot Chili Peppers">
 			<figcaption>Greatest Hits 2003</figcaption>
 			<p>
@@ -100,6 +141,10 @@
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod dolorem quidem perferendis numquam, iste molestiae aspernatur eius assumenda sequi doloremque! Ex ipsa commodi sequi eaque fugit maxime nisi! Dicta, harum.
 			</p>
 		</figure>
+		<p>
+			Para mas informacion, visitar el 
+			<a href="https://alumni.education" target="_blank">Alumni</a>
+		</p>
 	</main>
 	<!--Pie de Pagina-->
 	<footer>
