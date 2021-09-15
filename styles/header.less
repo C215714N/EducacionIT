@@ -1,0 +1,27 @@
+// Variables
+	@color: #448;
+	@bg-color: #c24;
+	@mixed: @color + @bg-color;
+
+// Nesting (Anidacion de estilos)
+	#header{
+		color:@mixed;
+		background-color: @color;
+		.header *{
+			margin: 0;
+		}
+		.slide{
+			list-style: none;
+			li{
+				&:nth-child(odd){
+					background-color: lighten( @bg-color, 20%);
+				}
+				&:nth-child(even){ 
+					background-color: darken( @bg-color, 20%);
+				}
+			}
+		}
+		button{
+			background-color: transparent;
+		}
+	}

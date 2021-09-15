@@ -1,0 +1,19 @@
+#header {
+  color: #ff66cc;
+  background-color: #448;
+}
+#header .header * {
+  margin: 0;
+}
+#header .slide {
+  list-style: none;
+}
+#header .slide li:nth-child(odd) {
+  background-color: #e76d86;
+}
+#header .slide li:nth-child(even) {
+  background-color: #751327;
+}
+#header button {
+  background-color: transparent;
+}

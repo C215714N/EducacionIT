@@ -1,6 +1,6 @@
 /*Content First - Mobile First*/
 	/*Imports*/
-
+		@import url('header.css');
 	/*Variables*/
 		:root{
 			--first:  	#24ce; /*rr gg bb aa*/
@@ -52,8 +52,19 @@
 			text-transform: uppercase;
 			text-decoration: none;
 		}
+		.icon-back{
+			position: fixed;
+			bottom: .5rem;
+			right: .5rem;
+			background-color: var(--dark);
+		}
 		.menu{
-			width: 100%;
+			width: var(--size);
+			max-height: 0;
+			overflow: hidden;
+		}
+		.menu.active{
+			max-height: 600px;
 		}
 	/*Mode*/
 		#mode{ display: none; }
@@ -68,13 +79,26 @@
 		#mode:checked ~ .mode{
 			--color: var(--light);
 			--bg-color: var(--dark);
-			color: var(--color);
-			background-color: var(--bg-color);
 		}
 /*Small Devices - Smartphones*/
-
+	
 /*Medium Devices - Tablets*/
-
+	@media screen and (min-width: 768px){
+		nav .btn{
+			display: none;
+		}
+		.menu{
+			--size: auto;
+			display: flex;
+			max-height: 600px;
+		}
+	}
 /*Large Devices - Desktop*/
 
 /*Extra Large - HD Desktop*/
+	@media screen and (min-width: 1200px){
+		nav{
+			justify-content: space-around;
+			padding: 0 calc((var(--view)/2) - 600px); /*top right bottom left*/
+		}
+	}
