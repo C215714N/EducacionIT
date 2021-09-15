@@ -1,27 +1,81 @@
 // Variables
-	@color: #448;
+	@color: #248;
 	@bg-color: #c24;
 	@mixed: @color + @bg-color;
+	@r: 1rem;
 
 // Nesting (Anidacion de estilos)
 	#header{
+		height: 100vh;
+		max-height: 720px;
+		.position;
+		.flexbox(column);
+		.normalize(@p:1rem);
 		color:@mixed;
-		background-color: @color;
 		.header *{
-			margin: 0;
+			.normalize;
 		}
 		.slide{
-			list-style: none;
+			&:extend(.unstyled);
+			&:extend(.cover);
+			.normalize;
 			li{
-				&:nth-child(odd){
-					background-color: lighten( @bg-color, 20%);
-				}
-				&:nth-child(even){ 
-					background-color: darken( @bg-color, 20%);
-				}
+				&:extend(.cover);
+				opacity: 0;
+				&:nth-child(odd){ background-color: lighten( @bg-color, 20%); }
+				&:nth-child(even){ background-color: darken( @bg-color, 20%); }
+				&.active{ opacity: 1 }
 			}
 		}
 		button{
+			@r: .25rem;
+			.rounded;
+			.normalize(@p:1rem);
+			.position(absolute,@px:bottom);
+			color: @color;
 			background-color: transparent;
+			&.icon-prev{ left: 0; }
+			&.icon-next{ right:0; }
 		}
+	}
+// Mixins (Estilos anidables como atributos)
+	.unstyled{
+		list-style: none;
+	}
+	.rounded{
+		border-radius:@r;
+		-o-border-radius:@r;
+		-ms-border-radius:@r;
+		-moz-border-radius:@r;
+		-webkit-border-radius:@r;
+	}
+	.cover{
+		.position(absolute; @z:-1);
+		width: 100%;
+		height: 100%;
+	}
+// Mixins Parametricos (Estilos que reciben valores - funcion)
+	.normalize(@m:0; @p:0; @b:0){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: stretch;
+		@fw: wrap;
+		@f: flex
+		){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+	.position(@p:relative; @x: 0; @y:0; @z: 0; @px:left; @py: top){
+		position: @p;
+		@{py}:@x;
+		@{px}:@y;
+		z-index: @z;
 	}

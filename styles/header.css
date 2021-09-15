@@ -1,12 +1,32 @@
 #header {
-  color: #ff66cc;
-  background-color: #448;
+  height: 100vh;
+  max-height: 720px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  color: #ee66cc;
 }
 #header .header * {
   margin: 0;
+  border: 0;
+  padding: 0;
 }
 #header .slide {
-  list-style: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+#header .slide li {
+  opacity: 0;
 }
 #header .slide li:nth-child(odd) {
   background-color: #e76d86;
@@ -14,6 +34,49 @@
 #header .slide li:nth-child(even) {
   background-color: #751327;
 }
+#header .slide li.active {
+  opacity: 1;
+}
 #header button {
+  border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  color: #248;
   background-color: transparent;
+}
+#header button.icon-prev {
+  left: 0;
+}
+#header button.icon-next {
+  right: 0;
+}
+.unstyled,
+#header .slide {
+  list-style: none;
+}
+.rounded {
+  border-radius: 1rem;
+  -o-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+}
+.cover,
+#header .slide,
+#header .slide li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
