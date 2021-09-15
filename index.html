@@ -193,6 +193,36 @@
 					<div>translateZ(dZ)</div>
 				</div>
 			</article>
+			<article>
+				<header>
+					<h3>Animaciones</h3>
+				</header>
+				<p>
+					Es una pelicula creada a partir de los cambios que vamos a aplicar dentro del elemento a animar, poseen un inicio <strong>(From)</strong> y un fin <strong>(To)</strong>, pero ademas no necesitan de un evento desencadenante para ejecutarse. Para poder aplicarlas debemos crear nuestra animacion utilizando la regla <em>@keyframes</em> donde vamos a detallar los cambios, asignandole un nombre a la animacion y luego para aplicarla debemos utilizar el atributo <em>animation-name</em> sobre la etiqueta que queremos animar.
+				</p>
+				<h4>Animation-Timing-Function</h4>
+				<p>
+					Atributo que define la forma en la que se va a ejecutar nuestra animacion, gracias a esto, una animacion puede tener diferentes variantes en funcion del tiempo y dar como resultado varias animaciones diferentes utilizando los mismos cambios.
+				</p>
+				<div class="example animation timing">
+					<div>timing: ease</div>
+					<div>timing: ease-in</div>
+					<div>timing: ease-out</div>
+					<div>timing: ease-in-out</div>
+					<div>timing: linear</div>
+					<div>timing: cubic-bezier(x1,y1,x2,y2)</div>
+				</div>
+				<h4>Animation-Direction</h4>
+				<p>
+					Este atributo permite definir la forma en la que van a ejecutarse los cambios de estado <strong>from => to</strong> o <strong>to => from</strong>, incluso podemos usar valores como reverse que permiten ambas reproducciones, pero es necesario que hayamos definido el atributo<em>animation-iteration-count</em> con un valor mayor a 1.
+				</p>
+				<div class="example animation direction">
+					<div>normal (from - to)</div>
+					<div>reverse (to - from)</div>
+					<div>alternate (from-to-from)</div>
+					<div>alternate reverse (to-from-to)</div>
+				</div>
+			</article>
 		</section>
 	</main>
 	<!--Footer-->
