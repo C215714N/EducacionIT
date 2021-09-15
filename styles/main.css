@@ -93,6 +93,10 @@
 		}
 		.menu span{ padding: .5rem; }
 		.menu a:hover{ background-color: var(--hover); }
+		.menu a:hover::before{
+			animation: jump .5s ease-in-out .2s alternate infinite;
+			transform-origin: bottom center;
+		}
 		.menu a::after{
 			content: '';
 			position: absolute;
@@ -120,6 +124,10 @@
 			transform: 
 				scale(1.5) 
 				rotate(90deg);
+		}
+		@keyframes jump{
+			from{ transform: translateY(-.25rem) rotate(-45deg); }
+			to{ transform: translateY(-.25rem) rotate(45deg); }
 		}
 	/*Content*/
 		main{
@@ -178,14 +186,6 @@
 				animation-delay: .5s;
 				animation-iteration-count: 5;
 			}
-			@keyframes translate {
-				from{
-					transform: translate(-200%);
-				}
-				to{
-					transform: translate(300%);
-				}
-			}
 			/*Timing Function*/
 				.timing div:nth-child(1){ animation-timing-function: ease; }
 				.timing div:nth-child(2){ animation-timing-function: ease-in; }
@@ -204,7 +204,34 @@
 				.direction div:nth-child(2){ animation-direction: reverse; }
 				.direction div:nth-child(3){ animation-direction: alternate; }
 				.direction div:nth-child(4){ animation-direction: alternate-reverse; }
-			/*Keyframes*/
+			/*Loading Animation*/
+				.loading{
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+				}
+				.loading div{
+					width: 5rem;
+					height: 5rem;
+					margin: .25rem;
+					border-radius: 50%;
+					border: .5rem solid;
+					border-color: 
+						hsl(240,80%,80%)
+						hsl(240,60%,60%)
+						hsl(240,40%,40%)
+						hsl(240,20%,20%);
+					animation: loading 2s infinite;
+				}
+			/*Keyframes*/			
+				@keyframes translate {
+					from{
+						transform: translate(-200%);
+					}
+					to{
+						transform: translate(300%);
+					}
+				}
 				@keyframes moving {
 					0%{
 						transform: 
@@ -236,6 +263,9 @@
 							skew(15deg, 0);
 						background-color: hsl(0,50%,50%);
 					}
+				}
+				@keyframes loading{
+					to{ transform: rotate(360deg); }
 				}
 /*Small Devices - Smartphones*/
 
