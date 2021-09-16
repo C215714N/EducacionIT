@@ -1,0 +1,58 @@
+/*Content First - Mobile First*/
+	/*General Rules*/
+	*{
+		box-sizing: border-box;
+		font-family: 'Raleway', 'segoe ui', sans-serif;
+	}
+	body,
+	.menu{
+		margin: 0;
+	}
+	/*Navigation*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background-color: #c36;
+		}
+		nav a{
+			display: block;
+			padding: .25rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		.menu{
+			width: 100%;
+			padding: 0;
+			list-style: none;
+		}
+		.menu a:hover{
+			background-color: #3338; /*rgba(51,51,51,.5)*/
+		}
+/*SM Devices - Smartphones*/
+
+/*MD Devices - Tablets*/
+	@media screen and (min-width: 768px){
+		nav button{
+			display: none;
+		}
+		.menu{
+			width: auto;
+			display: flex;
+		}
+	}
+/*LG Devices - Netbooks*/
+
+/*XL Devices - Desktop*/
+	@media screen and (min-width: 1200px){
+		nav{
+			justify-content: space-around;
+		}
+	}
+/*XXL Devices - HD Desktop*/
+
+/*PRINTABLE*/
+	@media print{
+
+	}
