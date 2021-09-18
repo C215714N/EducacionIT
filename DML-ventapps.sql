@@ -7,6 +7,12 @@
         -- carga selectiva de datos
         INSERT INTO users(user_email,user_name)
         VALUES ('cristiandacedo@gmail.com','d477714n');
+        INSERT INTO users(user_email, user_name)
+        VALUES
+			('raul2021@gmail.com','raul'),
+			('alicia25@gmail.com','alicia'),
+			('arbolito@hotmail.com','arbolito'),
+			('carlos55@gmail.com','carlos');
 	## Tabla Categorias
 		-- carga multiple de datos
 		INSERT INTO categories(description)
@@ -38,6 +44,14 @@
 			('Martillo', 13),
 			('Serrucho', 13),
 			('Pantalones', 3);
+     ## Tabla Publicaciones
+     INSERT INTO posts(user, product)
+     VALUES 
+		(3,7),(3,8),(3,9), /*Vendedor Raul*/
+		(4,2),(4,3), /*Vendedor Alicia*/
+		(5,12),(5,1),(5,10),(5,5), /*Vendedor Arbolito*/
+		(6,4); /*Vendedor Carlos*/
+
 /*DML - Data Manipulation Language - SELECT*/
 	## Tabla Usuarios
 	SELECT * FROM users;
@@ -67,3 +81,5 @@
         c1v| V	| F			c1v| V	| V			c1v	| F	| V
         c2f| F	| F			c2f| V	| F			c2f	| V	| F
     */
+    ## Tabla Publicaciones
+    SELECT * FROM posts;
