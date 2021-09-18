@@ -72,7 +72,50 @@
             post_detail VARCHAR(250),
             user INT,
             product INT,
-            post_date DATETIME default (current_timestamp()),
+            post_date DATETIME DEFAULT (current_timestamp()),
             price DECIMAL(11,2),
-            quantity INT
+            quantity INT,
+            PRIMARY KEY(post_id),
+            FOREIGN KEY(user) REFERENCES users(user_id),
+            FOREIGN KEY(product) REFERENCES products(product_id)
         );
+        DESCRIBE posts;
+        
+        ## Tabla Ventas
+        DROP TABLE IF EXISTS sales;
+        CREATE TABLE sales(
+			sale_id INT AUTO_INCREMENT,
+            user INT,
+            post INT,
+            price DECIMAL(11,2),
+            quantity INT,
+            sale_date DATETIME default (current_timestamp()),
+            PRIMARY KEY (sale_id),
+            FOREIGN KEY(user) REFERENCES users(user_id),
+            FOREIGN KEY(post) REFERENCES posts(post_id)
+        );
+        DESCRIBE sales;
+	
+		## Tabla Medios de Pago
+		DROP TABLE IF EXISTS pay_methods;
+        CREATE TABLE pay_methods(
+			method_id INT AUTO_INCREMENT,
+            description VARCHAR(50),
+            PRIMARY KEY(method_id),
+            UNIQUE KEY(description)
+        );
+        DESCRIBE pay_methods;
+        ## Tabla billeteras
+        DROP TABLE IF EXISTS wallets;
+        CREATE TABLE wallets(
+			wallet_id INT AUTO_INCREMENT,
+            user INT,
+            method INT,
+            title VARCHAR(20),
+            detail VARCHAR(50),
+            PRIMARY KEY(wallet_id),
+            UNIQUE KEY(user, method, detail),
+            FOREIGN KEY(user) REFERENCES users(user_id),
+            FOREIGN KEY(method) REFERENCES pay_methods(method_id)
+        );
+        
