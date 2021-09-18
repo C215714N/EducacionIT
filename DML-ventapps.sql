@@ -83,3 +83,24 @@
     */
     ## Tabla Publicaciones
     SELECT * FROM posts;
+    -- campo calculados
+    SELECT 
+		post_title, 
+        quantity, 
+        price,
+        price * quantity AS total
+	FROM posts;
+    -- campos agrupados
+    SELECT 
+		user,
+		ROUND(AVG(price), 2) AS promedio,
+		MIN(price) AS producto_economico,
+        MAX(price) AS producto_costoso,
+        COUNT(price) AS publicaciones,
+        SUM(price * quantity) AS recaudacion_maxima,
+        SUM(price * quantity) * 0.15 AS comision
+    FROM posts
+    WHERE user IN (3,5) -- condicion para campos de tabla
+	GROUP BY user -- condicion de agrupacion
+    HAVING comision >= 1800000 -- condicion para campos calculados
+	;
