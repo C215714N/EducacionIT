@@ -113,5 +113,33 @@
 		</article>
 	</main>
 	<!-- Pie de Pagina -->
+	<footer id="footer">
+		<form id="contact" action="contact.php" method="POST">
+			<h2>Contactanos</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="nombre"	
+				type="text"
+				minlength="3"
+				maxlength="50" 
+				required>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="correo"
+				type="email"
+				minlength="8"
+				required>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				required></textarea>
+			<button>ENVIAR</button>
+		</form>
+	</footer>
 </body>
 </html>
