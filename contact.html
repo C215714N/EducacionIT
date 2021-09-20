@@ -23,13 +23,34 @@
 		<!-- Contenido Independiente -->
 		<article>
 			<header class="header">
-				<h2>Formularios HTML</h2>
+				<h1>Formularios HTML</h1>
 			</header>
-
+			<p>
+				Son herramientas que permiten la interaccion entre cliente y servidor (intercambio de datos), para poder implementarlos debemos utilizar la etiqueta <strong>&lt;form></strong> y dentro de la misma colocar los elementos que van a formar parte del envio, sobre los cuales el usuario debera seleccionar o ingresar los datos pertinentes.
+			</p>
 			<section>
 				<header>
-					<h3>¿Como funcionan?</h3>
+					<h1>¿Como funcionan?</h1>
 				</header>
+				<p>
+					A la etiqueta mencionada anteriormente debemos agregarle por lo menos 2 atributos, por un lado <strong>action="..."</strong> que indica al navegador que se debe realizar cuando el usuario envia el formulario, por lo general se utiliza un <em>script en lenguaje de backEnd (ej: php)</em>; por otro lado <strong>method="..."</strong> indica cual es la prioridad y como debe realizarse el envio.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>GET: </strong> Metodo menos seguro, que da prioridad a la respuesta del servidor, la informacion enviada puede visualizarse desde la barra de direcciones y es el metodo mas rapido.
+						<ul>
+							<li><strong>Buscador</strong> Consulta Query</li>
+						</ul>
+					</li>
+					<li>
+						<strong>POST: </strong> Metodo mas seguro debido a que encripta los datos antes de realizar el envio y cuya prioridad es resguardar la informacion del usuario, por este motivo es mas lento.
+						<ul>
+							<li><strong>Registro</strong> Inscripcion</li>
+							<li><strong>Acceso</strong> Inicio Sesion</li>
+							<li><strong>Contacto</strong> Consulta Web</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</article>
 	</main>
