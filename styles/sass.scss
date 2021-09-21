@@ -163,3 +163,19 @@
 			background: linear-gradient( var(--first), var(--dark));
 		}
 	}
+
+
+@keyframes functions{
+	@for $i from 0 through 100%{
+		@if $f = lineal{
+			$y: $x;
+		} @else if $f = cuadratica{
+			$y: pow($x, 2);
+		} @else if @f = trigonometrica{
+			$y: sin($x) * 20px;
+		} @else {
+			$y: $x;
+		}
+		transform: translate($x, $y)
+	}
+}

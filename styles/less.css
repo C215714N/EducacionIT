@@ -589,3 +589,209 @@
     width: 100%;
   }
 }
+/*Animaciones LESS*/
+/*Contenido Animaciones*/
+.animations {
+  height: min(100vh, 720px);
+  background: url('../assets/backgrounds/macos-bigsur-day.jpg') center / cover;
+  overflow: hidden;
+}
+.animations div {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.25rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, var(--light), var(--first));
+}
+.animations div:nth-child(1n) {
+  animation: lineal 5s linear 0.2s alternate infinite;
+}
+.animations div:nth-child(2n) {
+  animation: cuadratica 5s linear 0.4s alternate infinite;
+}
+.animations div:nth-child(3n) {
+  animation: trigonometrica 5s linear 0.6s alternate infinite;
+}
+.animations div:nth-child(4n) {
+  animation: exponencial 5s linear 0.8s alternate infinite;
+}
+.animations div:nth-child(5n) {
+  animation: limite 5s linear 1s alternate infinite;
+}
+/*Mixins Recursivos*/
+/*Keyframes Animaciones*/
+@keyframes lineal {
+  0% {
+    transform: translate(0vw, -20rem);
+  }
+  10% {
+    transform: translate(10vw, -15rem);
+  }
+  20% {
+    transform: translate(20vw, -10rem);
+  }
+  30% {
+    transform: translate(30vw, -5rem);
+  }
+  40% {
+    transform: translate(40vw, 0rem);
+  }
+  50% {
+    transform: translate(50vw, 5rem);
+  }
+  60% {
+    transform: translate(60vw, 10rem);
+  }
+  70% {
+    transform: translate(70vw, 15rem);
+  }
+  80% {
+    transform: translate(80vw, 20rem);
+  }
+  90% {
+    transform: translate(90vw, 25rem);
+  }
+  100% {
+    transform: translate(100vw, 30rem);
+  }
+}
+@keyframes cuadratica {
+  0% {
+    transform: translate(0vw, -400px);
+  }
+  10% {
+    transform: translate(10vw, -225px);
+  }
+  20% {
+    transform: translate(20vw, -100px);
+  }
+  30% {
+    transform: translate(30vw, -25px);
+  }
+  40% {
+    transform: translate(40vw, 0px);
+  }
+  50% {
+    transform: translate(50vw, -25px);
+  }
+  60% {
+    transform: translate(60vw, -100px);
+  }
+  70% {
+    transform: translate(70vw, -225px);
+  }
+  80% {
+    transform: translate(80vw, -400px);
+  }
+  90% {
+    transform: translate(90vw, -625px);
+  }
+  100% {
+    transform: translate(100vw, -900px);
+  }
+}
+@keyframes trigonometrica {
+  0% {
+    transform: translate(0vw, -91.29452507rem);
+  }
+  10% {
+    transform: translate(10vw, -65.02878402rem);
+  }
+  20% {
+    transform: translate(20vw, 54.40211109rem);
+  }
+  30% {
+    transform: translate(30vw, 95.89242747rem);
+  }
+  40% {
+    transform: translate(40vw, 0rem);
+  }
+  50% {
+    transform: translate(50vw, -95.89242747rem);
+  }
+  60% {
+    transform: translate(60vw, -54.40211109rem);
+  }
+  70% {
+    transform: translate(70vw, 65.02878402rem);
+  }
+  80% {
+    transform: translate(80vw, 91.29452507rem);
+  }
+  90% {
+    transform: translate(90vw, -13.23517501rem);
+  }
+  100% {
+    transform: translate(100vw, -98.80316241rem);
+  }
+}
+@keyframes exponencial {
+  0% {
+    transform: translate(0vw, 2.48832rem);
+  }
+  10% {
+    transform: translate(10vw, 6.19173642rem);
+  }
+  20% {
+    transform: translate(20vw, 15.40702157rem);
+  }
+  30% {
+    transform: translate(30vw, 38.33759992rem);
+  }
+  40% {
+    transform: translate(40vw, 95.39621664rem);
+  }
+  50% {
+    transform: translate(50vw, 237.3763138rem);
+  }
+  60% {
+    transform: translate(60vw, 590.66822915rem);
+  }
+  70% {
+    transform: translate(70vw, 1469.77156797rem);
+  }
+  80% {
+    transform: translate(80vw, 3657.26198801rem);
+  }
+  90% {
+    transform: translate(90vw, 9100.43815rem);
+  }
+  100% {
+    transform: translate(100vw, 22644.80225741rem);
+  }
+}
+@keyframes limite {
+  0% {
+    transform: translate(0vw, -0.05rem);
+  }
+  10% {
+    transform: translate(10vw, -0.06666667rem);
+  }
+  20% {
+    transform: translate(20vw, -0.1rem);
+  }
+  30% {
+    transform: translate(30vw, -0.2rem);
+  }
+  40% {
+    transform: translate(40vw, 1rem);
+  }
+  50% {
+    transform: translate(50vw, 0.2rem);
+  }
+  60% {
+    transform: translate(60vw, 0.1rem);
+  }
+  70% {
+    transform: translate(70vw, 0.06666667rem);
+  }
+  80% {
+    transform: translate(80vw, 0.05rem);
+  }
+  90% {
+    transform: translate(90vw, 0.04rem);
+  }
+  100% {
+    transform: translate(100vw, 0.03333333rem);
+  }
+}

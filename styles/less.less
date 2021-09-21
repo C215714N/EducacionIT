@@ -12,22 +12,6 @@
 		@xxl: 1400px;
 		@r: .25rem;
 		@col: 24;
-	// Multimedia
-		@path: '../assets/backgrounds';
-		@parallax: 
-			'macos-bigsur-day.jpg',
-			'macos-bigsur-night.jpg',
-			'macos-monterrey-day.jpg',
-			'macos-monterrey-night.jpg';
-		@backgrounds: 
-			'osx-leopard-day.jpg',
-			'osx-mojave-day.jpg',
-			'osx-catalina-day.jpg',
-			'osx-bigsur-day.jpg',
-			'osx-leopard-night.jpg',
-			'osx-mojave-night.jpg',
-			'osx-catalina-night.jpg',
-			'osx-bigsur-night.jpg';
 // Nesting: Capacidad de generar selectores dentro de las reglas;
 /*Main Header Styles*/
 	#header{
@@ -158,3 +142,5 @@
 		.media(lg; @lg);
 		.media(xl; @xl);
 		.media(xxl; @xxl);
+/*Animaciones LESS*/
+@import url('animation.less');

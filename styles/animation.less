@@ -1,0 +1,71 @@
+// Variables
+	@path: '../assets/backgrounds';
+	@parallax: 
+		'macos-bigsur-day.jpg',
+		'macos-bigsur-night.jpg',
+		'macos-monterrey-day.jpg',
+		'macos-monterrey-night.jpg';
+	@backgrounds: 
+		'osx-leopard-day.jpg',
+		'osx-mojave-day.jpg',
+		'osx-catalina-day.jpg',
+		'osx-bigsur-day.jpg',
+		'osx-leopard-night.jpg',
+		'osx-mojave-night.jpg',
+		'osx-catalina-night.jpg',
+		'osx-bigsur-night.jpg';
+	@functions: 
+		lineal,
+		cuadratica,
+		trigonometrica,
+		exponencial,
+		limite;
+/*Contenido Animaciones*/
+.animations{
+	@img: extract(@parallax, 1);
+	height: min(100vh, 720px);
+	background: url('@{path}/@{img}') center/cover;
+	overflow: hidden;
+	div{
+		width: 2rem;
+		height: 2rem;
+		margin: .25rem;
+		border-radius: 50%;
+		background: radial-gradient(circle at top left, var(--light), var(--first));
+		.childs;
+	}
+}
+/*Mixins Recursivos*/
+	.childs (@i: 1) when (@i <= length(@functions)){
+		@f: extract(@functions, @i); 
+		&:nth-child(@{i}n){
+			animation: @f 5s linear @i * .2s alternate infinite;
+		}
+		.childs(@i + 1);
+	}
+/*Keyframes Animaciones*/
+	.keys(@n: 1) when (@n <= length(@functions)){
+		@f: extract(@functions, @n);
+		@keyframes @f{
+			.frames(@i:0%; @y: -20rem) when (@i <= 100%){
+				@x: 0vw + @i;
+				@{i}{
+					transform: 
+						if(@f = lineal,
+							translate(@x, @y),
+						if(@f = cuadratica,
+							translate(@x, (-1px * pow(@y, 2px))),
+						if(@f = trigonometrica
+							translate(@x, sin(@y) * 100rem),
+						if(@f = exponencial,
+							translate(@x, pow(1.2rem, (@y + 25))),
+						if(@y = 0,
+							translate(@x, 1rem),
+							translate(@x, (1/@y))
+						)	)	)	)	);
+				}
+				.frames(@i + 10; @y + 5);
+			} .frames;
+		} .keys(@n + 1);
+	}
+	.keys;

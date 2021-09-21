@@ -95,7 +95,7 @@
 		.menu span{ padding: .5rem; }
 		.menu a:hover{ background-color: var(--hover); }
 		.menu a:hover::before{
-			animation: jump .5s ease-in-out .2s alternate infinite;
+			animation: jump .5s infinite alternate;
 			transform-origin: bottom center;
 		}
 		.menu a::after{
@@ -134,6 +134,19 @@
 		main{
 			margin: 1rem auto;
 			padding: 1rem;
+		}
+		main section{
+			margin: 1.5rem 0;
+			border-radius: .25rem;
+			padding: 1rem;
+			box-shadow: 0 0 .5rem var(--dark);
+		}
+		main .header{
+			position: relative;
+			margin: .5rem;
+			border-bottom: 1px solid var(--hover);
+			text-align: center;
+			font-size: calc(2vw + .5rem);
 		}
 		.example{
 			position: relative;
