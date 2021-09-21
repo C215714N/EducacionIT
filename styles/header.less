@@ -1,11 +1,27 @@
 // Variables
 	@color: #248;
 	@bg-color: #c24;
-	@mixed: @color + @bg-color;
+	@mixed: @color * @bg-color;
 	@r: 1rem;
-
+	@path: '../assets/background';
+	@bg_day:
+		'macos-bigsur-day.jpg',
+		'macos-monterrey-day.jpg',
+		'osx-bigsur-day.jpg',
+		'osx-catalina-day.jpg',
+		'osx-leopard-day.jpg',
+		'osx-mojave-day.jpg';
+	@bg_night:
+		'macos-bigsur-night.jpg',
+		'macos-monterrey-night.jpg',
+		'osx-bigsur-night.jpg',
+		'osx-catalina-night.jpg',
+		'osx-leopard-night.jpg',
+		'osx-mojave-night.jpg';
+	@col: 24;	
 // Nesting (Anidacion de estilos)
 	#header{
+		.col-24;
 		height: 100vh;
 		max-height: 720px;
 		.position;
@@ -22,8 +38,8 @@
 			li{
 				&:extend(.cover);
 				opacity: 0;
-				&:nth-child(odd){ background-color: lighten( @bg-color, 20%); }
-				&:nth-child(even){ background-color: darken( @bg-color, 20%); }
+				background: var(--bg) center/cover no-repeat;
+				.bg(@bg_day);
 				&.active{ opacity: 1 }
 			}
 		}
@@ -36,6 +52,11 @@
 			background-color: transparent;
 			&.icon-prev{ left: 0; }
 			&.icon-next{ right:0; }
+		}
+	}
+	#mode:checked {
+		& ~ #header li{
+			.bg(@bg_night);
 		}
 	}
 // Mixins (Estilos anidables como atributos)
@@ -75,7 +96,23 @@
 	}
 	.position(@p:relative; @x: 0; @y:0; @z: 0; @px:left; @py: top){
 		position: @p;
-		@{py}:@x;
-		@{px}:@y;
+		@{py}:@y;
+		@{px}:@x;
 		z-index: @z;
 	}
+// Mixins Recursivos: Estilos que se repiten en base a una condicion;
+	// Imagenes de Fondo
+	.bg(@array, @i:1) when(@i <= length(@array)){
+		@bg: extract(@array, @i);
+		&:nth-child(@{i}){
+			--bg: url('@{path}/@{bg}');
+		}	.bg(@array, @i + 1);
+	}
+	// Sistema de Grillas
+	.grid(@i:1) when(@i <= @col){
+		.col-@{i}{
+			width: percentage((@i / @col));
+		}	.grid(@i + 1);
+	}
+	// aplicacion del mixin
+	.grid;
