@@ -34,9 +34,18 @@
 			background-color: #3338; /*rgba(51,51,51,.5)*/
 		}
 	/*Content*/
-		section{
+		.grid{
 			display: grid;
 			gap: .5rem 1rem;
+		}
+		.absolute{
+			max-width: 300px;
+		}
+		.relative{
+			width: 100%;
+		}
+		.flexible{
+			width: 80vw;
 		}
 	/*FlexGrid System*/
 		.flex{ 
@@ -73,7 +82,7 @@
 			display: flex;
 		}
 	/*Content*/
-		section{
+		.grid{
 			grid-template-areas: 
 				'h2 		h2'
 				'text 		text'
@@ -111,7 +120,7 @@
 			justify-content: space-around;
 		}
 	/*Content*/
-		section{
+		.grid{
 			grid-template-areas:
 				'h2 	h2 		 h2'
 				'text 	text 	 text'

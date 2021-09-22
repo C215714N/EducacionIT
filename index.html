@@ -31,7 +31,7 @@
 			Cristian Racedo
 		</p>
 	</header>
-	<section class="cont box-center">
+	<section class="cont box-center grid">
 		<header>
 			<img src="" alt="">
 			<h2>Tipos de Diseño</h2>
@@ -64,8 +64,44 @@
 			</p>
 		</article>
 	</section>
-	<section>
-		
+	<section class="cont box-center">
+		<header>
+			<img src="" alt="">
+			<h2>Unidades de Medida</h2>
+		</header>
+		<article>
+			<h3>Absolutas</h3>
+			<p>
+				Son aquellas que representan un valor fijo independiente al tamaño del medio en el que se visualice nuestra pagina. Debido a esto es conveniente utilizarlas para limitar el tamaño de los elementos de la pagina, utilizando los atributos <em>min-width y max-width</em>, dentro de las unidades mas conocidas se encuentran las siguientes:
+			</p>
+			<ul class="absolute">
+				<li><strong>distancia: </strong> mm, cm, in</li>
+				<li><strong>tipografia: </strong> pt, dpi</li>
+				<li><strong>hibrida: </strong> px (puntos en pantalla)</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Relativas</h3>
+			<p>
+				Son aquellas que dependen de otro elemento para identificar su valor dentro de la pagina. Se utilizan principalmente para definir el tamaño que ocupan los elementos y las fuentes dentro de la pagina, para ello utilizamos los atributos <em>width y font-size</em>.
+			</p>
+			<ul class="relative">
+				<li><strong>contenedor: </strong> porcentaje(%)</li>
+				<li><strong>tipografia: </strong>em, ex, ch</li>
+				<li><strong>hibrida: </strong>rem (ancho M en la raiz)</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Flexibles</h3>
+			<p>
+				Son aquellas que toman como referente a la pantalla o navegador donde se visualiza la pagina, permiten la implementacion de tipografia adaptable, pero el inconveniente radica en los tamaños extremos. Estas medidas son independientes al contenedor donde sean utilizadas.
+			</p>
+			<ul class="flexible">
+				<li><strong>ancho: </strong>vw</li>
+				<li><strong>alto: </strong>vh</li>
+				<li><strong>dimension:</strong> vmin, vmax</li>
+			</ul>
+		</article>
 	</section>
 	<script src="scripts/main.js"></script>
 </body>
