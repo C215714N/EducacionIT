@@ -8,6 +8,9 @@
 	.menu{
 		margin: 0;
 	}
+	.box-center{
+		margin: auto;
+	}
 	/*Navigation*/
 		nav{
 			display: flex;
@@ -30,8 +33,36 @@
 		.menu a:hover{
 			background-color: #3338; /*rgba(51,51,51,.5)*/
 		}
+	/*Content*/
+		section{
+			display: grid;
+			gap: .5rem 1rem;
+		}
+	/*FlexGrid System*/
+		.flex{ 
+			display: flex; 
+			flex-wrap: wrap;
+		}
+		.cont{
+			padding: 1rem;
+		}
+		.c1{ width: calc(1 / 6 * 100%) }
+		.c2{ width: calc(2 / 6 * 100%) }
+		.c3{ width: calc(3 / 6 * 100%) }
+		.c4{ width: calc(4 / 6 * 100%) }
+		.c5{ width: calc(5 / 6 * 100%) }
+		.c6{ width: calc(6 / 6 * 100%) }
 /*SM Devices - Smartphones*/
-
+	@media screen and (min-width: 576px){
+	/*FlexGrid SM*/
+		.cont{ max-width: 540px; }
+		.c-sm1{ width: calc(1 / 6 * 100%) }
+		.c-sm2{ width: calc(2 / 6 * 100%) }
+		.c-sm3{ width: calc(3 / 6 * 100%) }
+		.c-sm4{ width: calc(4 / 6 * 100%) }
+		.c-sm5{ width: calc(5 / 6 * 100%) }
+		.c-sm6{ width: calc(6 / 6 * 100%) }
+	}
 /*MD Devices - Tablets*/
 	@media screen and (min-width: 768px){
 		nav button{
@@ -41,17 +72,71 @@
 			width: auto;
 			display: flex;
 		}
+	/*Content*/
+		section{
+			grid-template-areas: 
+				'h2 		h2'
+				'text 		text'
+				'adaptive 	adaptive'
+				'fluid 		responsive';
+		}
+		section h2{ grid-area: h2; }
+		section > p{ grid-area: text; }
+		section article:first-of-type{ grid-area: fluid; }
+		section article:first-of-type + article{ grid-area: adaptive; }
+		section article:last-of-type{grid-area: responsive;}
+	/*FlexGrid MD*/
+		.cont{ max-width: 720px; }
+		.c-md1{ width: calc(1 / 6 * 100%) }
+		.c-md2{ width: calc(2 / 6 * 100%) }
+		.c-md3{ width: calc(3 / 6 * 100%) }
+		.c-md4{ width: calc(4 / 6 * 100%) }
+		.c-md5{ width: calc(5 / 6 * 100%) }
+		.c-md6{ width: calc(6 / 6 * 100%) }
 	}
 /*LG Devices - Netbooks*/
-
+	@media screen and (min-width: 992px){
+	/*FlexGrid LG*/
+		.cont{ max-width: 960px; }
+		.c-lg1{ width: calc(1 / 6 * 100%) }
+		.c-lg2{ width: calc(2 / 6 * 100%) }
+		.c-lg3{ width: calc(3 / 6 * 100%) }
+		.c-lg4{ width: calc(4 / 6 * 100%) }
+		.c-lg5{ width: calc(5 / 6 * 100%) }
+		.c-lg6{ width: calc(6 / 6 * 100%) }
+	}
 /*XL Devices - Desktop*/
 	@media screen and (min-width: 1200px){
 		nav{
 			justify-content: space-around;
 		}
+	/*Content*/
+		section{
+			grid-template-areas:
+				'h2 	h2 		 h2'
+				'text 	text 	 text'
+				'fluid 	adaptive responsive';
+		}
+	/*FlexGrid XL*/
+		.cont{ max-width: 1140px; }
+		.c-xl1{ width: calc(1 / 6 * 100%) }
+		.c-xl2{ width: calc(2 / 6 * 100%) }
+		.c-xl3{ width: calc(3 / 6 * 100%) }
+		.c-xl4{ width: calc(4 / 6 * 100%) }
+		.c-xl5{ width: calc(5 / 6 * 100%) }
+		.c-xl6{ width: calc(6 / 6 * 100%) }
 	}
 /*XXL Devices - HD Desktop*/
-
+	@media screen and (min-width: 1400px){
+	/*FlexGrid XXL*/
+		.cont{ max-width: 1320px; }
+		.c-xxl1{ width: calc(1 / 6 * 100%) }
+		.c-xxl2{ width: calc(2 / 6 * 100%) }
+		.c-xxl3{ width: calc(3 / 6 * 100%) }
+		.c-xxl4{ width: calc(4 / 6 * 100%) }
+		.c-xxl5{ width: calc(5 / 6 * 100%) }
+		.c-xxl6{ width: calc(6 / 6 * 100%) }
+	}
 /*PRINTABLE*/
 	@media print{
 
