@@ -1,6 +1,7 @@
 /*Content First - Mobile First*/
 	/*Imports*/
 		@import url('header.css');
+		@import url('footer.css');
 	/*Variables*/
 		:root{
 			--first:  	#24ce; /*rr gg bb aa*/
@@ -44,7 +45,7 @@
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
-			background: linear-gradient(var(--first), var(--second));
+			background: linear-gradient(to right, var(--first), var(--second));
 		}
 		nav a,
 		nav label{

@@ -1,0 +1,53 @@
+// Variables
+	$col: 24;
+	$path: '../assets/icon';
+	$social: 
+		'css',
+		'facebook',
+		'github',
+		'instagram',
+		'linkedin',
+		'twitter',
+		'whatsapp',
+		'youtube';
+//  Mixins
+	@mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
+		#{$ma}: $m;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+//	Styles
+	.icon{
+		display: inline-block;
+		width: 3rem;
+		height: 3rem;
+		margin: .25rem;
+		background: var(--bg) center/2rem no-repeat;
+		&:hover{
+			background-size: 3rem;
+	}	}
+//  Loops
+	@each $icon in $social{
+		.#{$icon}{
+			--bg: url('#{$path}/#{$icon}.svg');
+		}
+	}
+// Nesting
+	#footer{
+		@include normalize($p:1rem);
+		.map{
+
+		}
+		#contact{
+			@include normalize(1rem auto, 1rem, .25rem, border-radius);
+			input,
+			textarea{
+				@include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
+			}
+		}
+		.social{
+			a{
+				@extend .icon;
+			}
+		}
+	}
