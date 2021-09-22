@@ -10,6 +10,19 @@
 		'twitter',
 		'whatsapp',
 		'youtube';
+	$attributes:
+		text 	color,
+		bg 		background-color,
+		border 	border-color;
+	$colors:
+		primary 	#24c, 
+		secondary 	#c36,
+		light 		#eee,
+		dark 		#333,
+		danger 		#c33,
+		warning 	#da3,
+		success 	#3c6,
+		info 		#36c;
 //  Mixins
 	@mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
 		#{$ma}: $m;
@@ -27,11 +40,12 @@
 			background-size: 3rem;
 	}	}
 //  Loops
-	@each $icon in $social{
-		.#{$icon}{
-			--bg: url('#{$path}/#{$icon}.svg');
-		}
-	}
+	@each $icon in $social{ .#{$icon}{ --bg: url('#{$path}/#{$icon}.svg'); } }
+	/*Clases con colores*/
+	@each $prop, $attr in $attributes{
+		@each $cn, $cv in $colors{
+			.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
+	}	}
 // Nesting
 	#footer{
 		@include normalize($p:1rem);
@@ -40,9 +54,30 @@
 		}
 		#contact{
 			@include normalize(1rem auto, 1rem, .25rem, border-radius);
+			@extend .text-light, .bg-primary;
+			display: grid;
 			input,
 			textarea{
 				@include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
+				&:focus{
+					@extend .border-dark;
+					& + .valid{ 
+						@include normalize(300px, .5rem, $ma: max-height);
+						@extend .bg-dark;
+					}
+				}
+				&:valid{
+					@extend .border-success;
+					& + .valid{ @extend .bg-success; }
+				}
+				&:not(:placeholder-shown):invalid{
+					@extend .border-danger;
+					& + .valid{ @extend .bg-danger; }
+				}
+			}
+			.valid{
+				max-height: 0;
+				overflow: hidden;
 			}
 		}
 		.social{
