@@ -5,10 +5,6 @@
 		font-family: 'Raleway', 'segoe ui', sans-serif;
 	}
 	body,
-	h1,
-	h2,
-	h3,
-	header p,
 	.menu{
 		margin: 0;
 	}
@@ -63,13 +59,16 @@
 			font-size: 1.5rem;
 		}
 		.flexible{
-			width: 80vw;
+			width: min(80vw, 100%);
 			font-size: min(5vmin, 2rem);
 		}
 	/*FlexGrid System*/
 		.flex{ 
 			display: flex; 
 			flex-wrap: wrap;
+		}
+		.flex article{
+			padding: .5rem;
 		}
 		.cont{
 			padding: 1rem;

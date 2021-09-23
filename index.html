@@ -9,7 +9,13 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Responsive Web Design</title>
+	<!--Styles CSS-->
 	<link rel="stylesheet" href="styles/main.css">
+	<!--Styles BOOTSTRAP-->
+	<link rel="stylesheet" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
+		crossorigin="anonymous">
 </head>
 <body>
 	<!--Navigation: Links mas importantes-->
@@ -64,12 +70,15 @@
 			</p>
 		</article>
 	</section>
-	<section class="cont box-center">
-		<header>
+	<section class="cont box-center flex">
+		<header class="c6">
 			<img src="" alt="">
 			<h2>Unidades de Medida</h2>
 		</header>
-		<article>
+		<p>
+			Al momento de implementar los diseños aprobados debemos optar entre diferentes unidades que definan el aspecto de los elementos a representar, como los parrafos, titulos, imagenes, etc..., a estos debemos indicarles tamaños, altos de linea, tipografia, entre otros atributos.
+		</p>
+		<article class="c-md3 c-lg2">
 			<h3>Absolutas</h3>
 			<p>
 				Son aquellas que representan un valor fijo independiente al tamaño del medio en el que se visualice nuestra pagina. Debido a esto es conveniente utilizarlas para limitar el tamaño de los elementos de la pagina, utilizando los atributos <em>min-width y max-width</em>, dentro de las unidades mas conocidas se encuentran las siguientes:
@@ -80,7 +89,7 @@
 				<li><strong>hibrida: </strong> px (puntos en pantalla)</li>
 			</ul>
 		</article>
-		<article>
+		<article class="c-md3 c-lg2">
 			<h3>Relativas</h3>
 			<p>
 				Son aquellas que dependen de otro elemento para identificar su valor dentro de la pagina. Se utilizan principalmente para definir el tamaño que ocupan los elementos y las fuentes dentro de la pagina, para ello utilizamos los atributos <em>width y font-size</em>.
@@ -91,7 +100,7 @@
 				<li><strong>hibrida: </strong>rem (ancho M en la raiz)</li>
 			</ul>
 		</article>
-		<article>
+		<article class="c-md6 c-lg2">
 			<h3>Flexibles</h3>
 			<p>
 				Son aquellas que toman como referente a la pantalla o navegador donde se visualiza la pagina, permiten la implementacion de tipografia adaptable, pero el inconveniente radica en los tamaños extremos. Estas medidas son independientes al contenedor donde sean utilizadas.
@@ -103,6 +112,113 @@
 			</ul>
 		</article>
 	</section>
-	<script src="scripts/main.js"></script>
+	<section class="container-lg">
+		<header>
+			<img src="" alt="">
+			<h2 class="display-1">Bootstrap</h2>
+		</header>
+		<p>
+			Es un framework de CSS que ofrece al desarrollador una hoja de estilos predefinida, ademas de unos cuantos scripts que acompañan al diseño. Esta herramienta se centra en el uso de clase de estilos y componentes para agilizar el diseño de la pagina, solamente implementando dichas clases sobre nuestro documento HTML.
+		</p>
+		<article>
+			<h3 class="h1">Breakpoints</h3>
+			<p>
+				Bootstrap se centra en el desarrollo responsive y en su plantilla ofrece estilos segun los diferentes tamaños de pantalla, a los cuales se les asigna un nombre utilizando abreviaturas. segun los cambios que querramos aplicar, debemos indicar los siguientes puntos de quiebre.
+			</p>
+			<table class="table table-dark table-striped">
+				<thead>
+					<tr>
+						<th>name</th>
+						<th>device-width</th>
+						<th>max-width</th>
+						<th>devices</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>xs</td>
+						<td><576px</td>
+						<td>100%</td>
+						<td>cellphones</td>
+					</tr>
+					<tr>
+						<td>sm</td>
+						<td>>=576px & <768px</td>
+						<td>540px</td>
+						<td>smartphones</td>
+					</tr>
+					<tr>
+						<td>md</td>
+						<td>>=768px & <992px</td>
+						<td>720px</td>
+						<td>tablets</td>
+					</tr>
+					<tr>
+						<td>lg</td>
+						<td>>=992px & <1200px</td>
+						<td>960px</td>
+						<td>netbooks</td>
+					</tr>
+					<tr>
+						<td>xl</td>
+						<td>>=1200px & <1400px</td>
+						<td>1140px</td>
+						<td>desktop</td>
+					</tr>
+					<tr>
+						<td>xxl</td>
+						<td>>=1400px</td>
+						<td>1320px</td>
+						<td>hd desktop</td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+		<article>
+			<h3>Atributos Comunes</h3>
+			<p>
+				Una de las caracteristicas de Bootstrap radica en el uso de clases predefinidas y podemos implementar dentro de lo que nos ofrece cualquier atributo que exista en CSS, como margin, padding, border, text-align, etc... Para ello solamente debemos utilizar un selector que suele empezar con la letra del atributo y un valor que suele rondar entre 0 y 5; en caso que esto lo querramos aplicar segun el tamaño de la pantalla, podemos indicar el query dentro de la clase.
+			</p>
+			<ul class="row">
+				<li class="col-12 col-md-6"><strong>margin</strong>
+					<ul class="list-unstyled">
+						<li class="border rounded p-2 | m-3">m-3 (margin: 1rem)</li>
+						<li class="border rounded p-2 | mx-3">mx-3 (margin-left: 1rem; margin-right: 1rem)</li>
+						<li class="border rounded p-2 | my-3">my-3 (margin-top: 1rem; margin-bottom: 1rem)</li>
+						<li class="border rounded p-2 | mt-3">mx-3 (margin-top: 1rem)</li>
+					</ul>
+				</li>
+				<li class="col-12 col-md-6"><strong>padding</strong>
+					<ul class="list-unstyled">
+						<li class="border rounded m-2 | p-3">p-3 (padding: 1rem)</li>
+						<li class="border rounded m-2 | px-3">px-3 (padding-left: 1rem; padding-right: 1rem)</li>
+						<li class="border rounded m-2 | py-3">py-3 (padding-top: 1rem; padding-bottom: 1rem)</li>
+						<li class="border rounded m-2 | pt-3">px-3 (padding-top: 1rem)</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="row">
+				<p class="bg-light col | p-5 border me-3">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
+				</p>
+				<p class="bg-light col | py-5 px-1 border me-3">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
+				</p>
+				<p class="bg-light col | px-5 py-1 border me-3">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
+				</p>
+				<p class="bg-light col | mt-5 border me-3">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
+				</p>
+			</div>
+		</article>
+	</section>
+	<!-- Scripts JS -->
+		<script src="scripts/main.js"></script>
+	<!--Scripts BOOTSTRAP-->
+		<script 
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
+			crossorigin="anonymous"></script>
 </body>
 </html>
