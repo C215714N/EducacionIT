@@ -26,3 +26,7 @@
 				' - Producto de ', post_title );
 		-- convertir texto a mayusculas
 			UPDATE posts SET post_title = UPPER(post_title);
+	## Tabla Ventas
+		UPDATE sales
+        SET price = (SELECT price FROM posts WHERE post = post_id)
+        WHERE price IS NULL;

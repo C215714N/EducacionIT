@@ -135,3 +135,7 @@
 	;
     ## Tabla Metodos de Pago
     SELECT * FROM pay_methods;
+    ## Tabla Billeteras
+	SELECT * FROM wallets;
+    ## Tabla Ventas
+    SELECT * FROM sales;
