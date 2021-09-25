@@ -94,6 +94,10 @@
             FOREIGN KEY(user) REFERENCES users(user_id),
             FOREIGN KEY(post) REFERENCES posts(post_id)
         );
+        ALTER TABLE sales
+        ADD COLUMN wallet INT AFTER quantity,
+        ADD COLUMN state ENUM('pendiente', 'enviado','recibido','cancelado','devuelto','rechazado') DEFAULT 'pendiente',
+        ADD CONSTRAINT FOREIGN KEY(wallet) REFERENCES wallets(wallet_id);
         DESCRIBE sales;
 	
 		## Tabla Medios de Pago

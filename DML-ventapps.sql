@@ -51,7 +51,36 @@
 		(4,2),(4,3), /*Vendedor Alicia*/
 		(5,12),(5,1),(5,10),(5,5), /*Vendedor Arbolito*/
 		(6,4); /*Vendedor Carlos*/
-
+	## Tabla Metodos de Pago
+	INSERT INTO pay_methods(description)
+    VALUES  
+        ('credito'), 
+        ('debito'), 
+		('efectivo'),
+        ('electronico'), 
+        ('transferencia');
+    ## Tabla Billeteras
+	INSERT INTO wallets (user,method, title,detail)
+    VALUES
+		(1, 4,'MercadoPago','alpha.tango.foxtrot'),
+        (1, 1,'BBVA','1234-1234-4321-1234'),
+        (1, 2,'BBVA','4231-1234-9012-3213'),
+		(3, 1,'SANTANDER','rock.salsa.merengue'),
+        (3, 1,'PROVINCIA','1234-8765-4761-1234'),
+        (4, 2,'BBVA','4231-1234-9012-3213'),
+		(6, 4,'MODO','bravo.stars.racoon'),
+        (6, 4,'UALA','108347102893470123894'),
+        (6, 2,'NACION','7651-8734-9012-3213');
+	## Tabla Ventas
+		INSERT INTO sales (user, post, quantity, wallet)
+        VALUES
+			(1,3,5,1),
+            (1,7,1,2),
+            (4,9,50,6),
+            (4,2,1,6),
+            (3,5,1,4),
+            (3,4,2,5);
+            
 /*DML - Data Manipulation Language - SELECT*/
 	## Tabla Usuarios
 	SELECT * FROM users;
@@ -104,3 +133,5 @@
 	GROUP BY user -- condicion de agrupacion
     HAVING comision >= 1800000 -- condicion para campos calculados
 	;
+    ## Tabla Metodos de Pago
+    SELECT * FROM pay_methods;
