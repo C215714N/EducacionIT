@@ -1,5 +1,5 @@
 /*DML - Data Manipulation Language - JOIN*/
-/*	LEFT JOIN: Todos los campos de la TABLA BASE 
+/*	LEFT JOIN: Todos los datos de la TABLA BASE 
 	(Todos los usuarios hayan o no comprado productos) */
 	SELECT 
     -- users
@@ -16,7 +16,7 @@
     LEFT JOIN posts AS p ON p.post_id = s.post -- Prioridad: Ventas
     LEFT JOIN products AS prod ON prod.product_id = p.product; -- Prioridad: Publicaciones
     
-/* 	RIGHT JOIN: Todos los campos de la TABLA ANIDADA 
+/* 	RIGHT JOIN: Todos los datos de la TABLA ANIDADA 
 	(Pubicaciones existan o no de Todos los productos y categorias ) */
 	SELECT 
 	-- posts
@@ -31,7 +31,7 @@
     RIGHT JOIN products AS prod ON p.product = prod.product_id -- Prioridad: Productos
     RIGHT JOIN categories AS c ON c.cat_id = prod.category; -- Prioridad Categorias
     
-/* 	INNER JOIN: Todos los campos coincidentes 
+/* 	INNER JOIN: Todos los datos coincidentes 
 	(Usuarios que realizaron compras en alguna publicacion y sus metodos de pago) */
 	SELECT 
 	-- users 

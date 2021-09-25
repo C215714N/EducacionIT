@@ -13,6 +13,23 @@
 			('alicia25@gmail.com','alicia'),
 			('arbolito@hotmail.com','arbolito'),
 			('carlos55@gmail.com','carlos');
+            
+	## Tabla Datos de Usuario
+    -- carga asociativa de datos
+    INSERT INTO users_data 
+    SET
+		user = 1,
+		last_name = 'Racedo',
+		first_name = 'Cristian',
+		address_street = 'Micasa',
+		address_number = 2021,
+		birth_date = '1991-04-18',
+		zip_code = '1991',
+		nationality = 'Argentina',
+		gender = 1 ,
+		doc_type = 1,
+		doc_number = '35.336.446';
+        
 	## Tabla Categorias
 		-- carga multiple de datos
 		INSERT INTO categories(description)
@@ -29,6 +46,7 @@
 		VALUES
             ('Autopartes', false),
             ('Herramientas', true);
+            
     ## Tabla Productos
 		INSERT INTO products(product, category)
 		VALUES
@@ -44,6 +62,7 @@
 			('Martillo', 13),
 			('Serrucho', 13),
 			('Pantalones', 3);
+            
      ## Tabla Publicaciones
      INSERT INTO posts(user, product)
      VALUES 
@@ -51,6 +70,7 @@
 		(4,2),(4,3), /*Vendedor Alicia*/
 		(5,12),(5,1),(5,10),(5,5), /*Vendedor Arbolito*/
 		(6,4); /*Vendedor Carlos*/
+        
 	## Tabla Metodos de Pago
 	INSERT INTO pay_methods(description)
     VALUES  
@@ -59,6 +79,7 @@
 		('efectivo'),
         ('electronico'), 
         ('transferencia');
+        
     ## Tabla Billeteras
 	INSERT INTO wallets (user,method, title,detail)
     VALUES
@@ -71,6 +92,7 @@
 		(6, 4,'MODO','bravo.stars.racoon'),
         (6, 4,'UALA','108347102893470123894'),
         (6, 2,'NACION','7651-8734-9012-3213');
+        
 	## Tabla Ventas
 		INSERT INTO sales (user, post, quantity, wallet)
         VALUES
@@ -84,10 +106,15 @@
 /*DML - Data Manipulation Language - SELECT*/
 	## Tabla Usuarios
 	SELECT * FROM users;
-	## Tabla Categorias
+    
+    ## Tabla Datos de Usuario
+    SELECT * FROM users_data;
+	
+    ## Tabla Categorias
 		SELECT * FROM categories;
         SELECT * FROM categories
         WHERE cat_id BETWEEN 1 AND  5;
+    
     ## Tabla Productos
     SELECT * FROM products;
     -- consulta selectiva
@@ -103,13 +130,8 @@
 		OR category = (SELECT cat_id FROM categories WHERE description = 'tecnologia');
 	-- consulta con rango de valores
     SELECT product, category FROM products
-    WHERE category IN(2,4,13) OR product LIKE 'Abono%';
-    -- _ 1 caracter || % cualquier cantidad de caracteres
-    /*
-		AND|c1v |c1f		OR |c1v	|c1f		XOR	|c1v|c1f
-        c1v| V	| F			c1v| V	| V			c1v	| F	| V
-        c2f| F	| F			c2f| V	| F			c2f	| V	| F
-    */
+    WHERE category IN(2,4,13) OR product LIKE 'Abono%'; -- _ 1 caracter || % cualquier cantidad de caracteres
+    
     ## Tabla Publicaciones
     SELECT * FROM posts;
     -- campo calculados
@@ -131,11 +153,13 @@
     FROM posts
     WHERE user IN (3,5) -- condicion para campos de tabla
 	GROUP BY user -- condicion de agrupacion
-    HAVING comision >= 1800000 -- condicion para campos calculados
-	;
+    HAVING comision >= 1800000; -- condicion para campos calculados
+
     ## Tabla Metodos de Pago
     SELECT * FROM pay_methods;
+    
     ## Tabla Billeteras
 	SELECT * FROM wallets;
+    
     ## Tabla Ventas
     SELECT * FROM sales;
