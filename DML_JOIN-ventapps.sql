@@ -1,5 +1,6 @@
 /*DML - Data Manipulation Language - JOIN*/
-## LEFT JOIN: Todos los campos de la TABLA BASE
+/*	LEFT JOIN: Todos los campos de la TABLA BASE 
+	(Todos los usuarios hayan o no comprado productos) */
 	SELECT 
     -- users
 		user_name,
@@ -11,11 +12,12 @@
         s.quantity,
         wallet
 	FROM users AS u
-    LEFT JOIN sales AS s ON user_id = user
-    LEFT JOIN posts AS p ON p.post_id = s.post
-    LEFT JOIN products AS prod ON prod.product_id = p.product
-    WHERE post IS NULL;
-## RIGHT JOIN: Todos los campos de la TABLA ANIDADA
+    LEFT JOIN sales AS s ON user_id = user -- Prioridad: Usuarios
+    LEFT JOIN posts AS p ON p.post_id = s.post -- Prioridad: Ventas
+    LEFT JOIN products AS prod ON prod.product_id = p.product; -- Prioridad: Publicaciones
+    
+/* 	RIGHT JOIN: Todos los campos de la TABLA ANIDADA 
+	(Pubicaciones existan o no de Todos los productos y categorias ) */
 	SELECT 
 	-- posts
 		post_title,
@@ -26,10 +28,11 @@
 	-- categories
         description
 	FROM posts AS p
-    RIGHT JOIN products AS prod ON p.product = prod.product_id
-    RIGHT JOIN categories AS c ON c.cat_id = prod.category
-    WHERE post_title IS NULL;
-## INNER JOIN: Todos los campos coincidentes
+    RIGHT JOIN products AS prod ON p.product = prod.product_id -- Prioridad: Productos
+    RIGHT JOIN categories AS c ON c.cat_id = prod.category; -- Prioridad Categorias
+    
+/* 	INNER JOIN: Todos los campos coincidentes 
+	(Usuarios que realizaron compras en alguna publicacion y sus metodos de pago) */
 	SELECT 
 	-- users 
 		user_name, 
@@ -47,6 +50,6 @@
 		sale_date, 
 		state
 	FROM sales AS s
-	JOIN users AS u ON s.user = u.user_id
-	JOIN posts AS p ON s.post = p.post_id
-	JOIN wallets AS w ON s.wallet = w.wallet_id;
+	JOIN users AS u ON s.user = u.user_id -- Relacion: Ventas
+	JOIN posts AS p ON s.post = p.post_id -- Relacion: Pulicaciones
+	JOIN wallets AS w ON s.wallet = w.wallet_id; -- Relacion: Billeteras
