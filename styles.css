@@ -35,6 +35,39 @@
 	}
 /*Contenido*/
 
+/*Tablas HTML*/
+	table{
+		margin: 16px auto;
+	}
+	table caption{
+		border-radius: 4px 4px 0 0; /*top-left top-right bottom-right bottom-left*/
+	}
+	caption,
+	th,
+	td{
+		padding: 4px 8px;
+	} 
+	th, 
+	td{
+		width: 80px;
+	}
+	.classic,
+	.classic caption,
+	.classic th,
+	.classic td{
+		border-collapse: collapse;
+		border: 2px solid #448; /*width style color*/
+	}
+	.classic caption{
+		border-bottom: none;
+	}
+	.modern,
+	.modern caption,
+	.modern tr,
+	.modern td{
+		color: #eee;
+		background-color: rgba(68, 68, 136, .5); /*hex: #44 44 88*/
+	}
 /*Pie de Pagina*/
 	#footer{
 		padding: 20px;
