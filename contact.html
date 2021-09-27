@@ -127,7 +127,88 @@
 					Podemos encontrar 2 tipos de elementos, los identificadores que se utilizan para armar la tabla como <strong>&lt;tr> (Table Row) y &lt;th> (Table Division)</strong> y por otro lado estan los elementos semanticos como <strong>&lt;THEAD>, &lt;TBODY> y &lt;TFOOT></strong> que facilitan a los motores de busqueda el analisis del contenido de las tablas.
 				</p>
 				<div class="example">
-					
+					<table class="classic">
+						<caption>Usuarios</caption>
+						<!-- Cabecera de Tabla: Encabezados -->
+						<thead>
+							<tr><!--Fila-->
+								<th>Nombre</th><!--Celda de Encabezado-->
+								<th>Correo</th>
+							</tr>
+						</thead>
+						<!-- Cuerpo de Tabla: Datos -->
+						<tbody>
+							<tr>
+								<td>c215714n</td>
+								<td>cristiandracedo@hotmail.com</td>
+							</tr>
+							<tr>
+								<td>da77714n</td>
+								<td>cristiandracedo@gmail.com</td>
+							</tr>
+						</tbody>
+						<!-- Pie de Tabla: Complementario -->
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<td>2</td>
+							</tr>
+						</tfoot>
+					</table>
+					<table class="modern">
+						<caption>Rutina semanal</caption>
+						<thead>
+							<tr>
+								<th>Turno / dia</th>
+								<th>L</th>
+								<th>M</th>
+								<th>X</th>
+								<th>J</th>
+								<th>V</th>
+								<th>S</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Mañana</th>
+								<td></td>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>Tarde</th>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<th>Noche</th>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Total</th>
+								<td>2</td>
+								<td>3</td>
+								<td>1</td>
+								<td>3</td>
+								<td>3</td>
+								<td>1</td>
+							</tr>
+						</tfoot>
+					</table>
 				</div>
 			</section>
 		</article>
