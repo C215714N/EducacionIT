@@ -37,10 +37,11 @@
 		#{$ba}: $b;
 		#{$pa}: $p;
 	}
-	@mixin transition($tp:all, $td: 1s, $tf: ease-out){
-		transition-property: $tp;
-		transition-duration: $td;
-		transition-timing-function: $tf;
+	@mixin transition($tprop:all, $tdur: 1s, $tfunc: ease-out, $tdy: .2s){
+		transition-property: $tprop;
+		transition-duration: $tdur;
+		transition-timing-function: $tfunc;
+		transition-delay: $tdy;
 	}
 //	Styles
 	.icon{
