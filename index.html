@@ -111,15 +111,39 @@
 				<p>Pseudolenguajes</p>
 			</header>
 			<p>
-				Son herramientas que permiten la implementacion de un compilador que utiliza algun lenguaje de programacion para facilitar la creacion de hojas de estilos 
+				Es un programa que permite generar CSS a partir de una sintaxis única, estas herramientas disponen de utilidades que no están en el lenguaje CSS y, por tanto, no las interpretan los navegadores directamente.
+			</p>
+			<p>
+				Utilizando un preprocesador conseguimos economizar tiempo, ya que escribimos menos código. Además, su mantenimiento es fácil y resulta más comprensible, debido básicamente a su optimizada organización.
+			</p>
+			<p>
+				Por el contrario, utilizar un preprocesador implica aprender un nuevo lenguaje y escribir código poco común, que debe ser compilado en CSS y que afecta al flujo de desarrollo. Este código, que no entiende el navegador, deberemos traducirlo antes de llevar un sitio web a producción.
 			</p>
 			<article>
-				
+				<header>
+					<h3>LESS</h3>
+				</header>
+				<p>
+					Preprocesador que utiliza <strong>javascript</strong> como herramienta de compilacion para crear hojas de estilo. Su principal ventaja es la asincronicidad del lenguaje que permite al usuario llamar a los estilos sin importar el orden de aparicion en las lineas de codigo, para compilarlo debemos utilizar el comando <em>lessc input.less output.css</em>
+				</p>
+				<div class="example">
+					<div class="col-12">col-12</div>
+					<div class="col-6">col-6</div>
+					<div class="col-3">col-3</div>
+					<div class="col-2">col-2</div>
+					<div class="col-1">col-1</div>
+					<div class="col-8">col-8</div>
+					<div class="col-9">col-9</div>
+					<div class="col-7">col-7</div>
+				</div>
 			</article>
 			<article>
 				<header>
 					<h3>SASS</h3>
 				</header>
+				<p>
+					Preprocesador que utiliza <strong>ruby</strong> como herramienta de compilacion, y ademas brinda la opcion de observar los archivos que utilizamos mediante el comando <em>sass --watch input.scss output.css</em>. Esta biblioteca actualmente es utilizada por el equipo de desarrollo de <em>Bootstrap</em> y cuenta con metodos parecidos a los de cualquier lenguaje de programacion.
+				</p>
 				<ul class="example">
 					<li class="bg-primary">primary</li>
 					<li class="bg-secondary">secondary</li>
