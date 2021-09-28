@@ -30,11 +30,44 @@
 		text-align: center;
 	}
 	#header h1,
-	#header p{
+	#header p,
+	h2,
+	h3{
 		margin: 0;
 	}
 /*Contenido*/
-
+	main{
+		padding: 24px;
+	}
+	article{
+		max-width: 960px;
+		margin: 24px auto;
+		border-radius: 4px;
+		padding: 16px;
+		box-shadow: 0 0 8px #333; /*-x+ -y+ blur color*/
+	}
+	.header{
+		margin: -16px -16px 8px;
+		border-radius: 4px 4px 0 0;
+		padding: 16px;
+		color: #eee;
+		background-color: #333;
+		text-align: center;
+	}
+	main header{
+		border-bottom: 1px solid #333;
+		padding: 4px 0;
+	}
+/*Ejemplos*/
+	.example{
+		margin: 16px; /*top right bottom left*/
+		margin-left: 32px;
+		border-left: 4px solid #448;
+		padding: 16px;
+		background-color: #eee;
+		list-style: none;
+		overflow: auto;
+	}
 /*Tablas HTML*/
 	table{
 		margin: 16px auto;
@@ -70,11 +103,24 @@
 		background-color: rgba(68, 68, 136, .5); /*hex: #44 44 88*/
 		text-align: center;
 	}
+/*Contenido Multimedia*/
+	iframe,
+	video{
+		width: 100%;
+		min-height: 240px;
+		border-radius: 4px;
+		border: none;
+	}
 /*Pie de Pagina*/
 	#footer{
 		padding: 20px;
 		color: #eee;
 		background-color: #336;
+	}
+	#footer iframe{
+		width: calc(100% + 40px);
+		border-radius: 0;
+		margin: 0 -20px;
 	}
 	#contact{
 		max-width: 540px;
@@ -104,4 +150,22 @@
 	#contact button:hover{
 		color: #336;
 		background-color: #eee;
+	}
+/*Redes sociales*/
+	.social{
+		padding:  16px;
+		text-align: center;
+	}
+	#footer a{
+		margin: 0 4px;
+		border-radius: 4px;
+		padding: 4px 8px;
+		color: #eee;
+		background-color: #666;
+		text-decoration: none;
+		text-shadow: 0 0 8px #333;
+	}
+	.social a:hover{
+		background-color: #999;
+		box-shadow: 0 0 8px #eee;
 	}
