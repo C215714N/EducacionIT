@@ -304,6 +304,36 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+			<p>
+				En la actualidad podemos incorporar estos elementos de forma nativa, gracias a que los navegadores incluyen una <em>API (Application Programming Interface)</em> de reproduccion. Tambien podemos agregar elementos externos, igual a como se hacia antes, pero en este ultimo caso el mismo debe pertenecer a una categoria conocida como <strong>embed (embebido)</strong> que indica a los motores de busqueda que dicho material fue compartido con autorizacion del sitio involucrado.
+			</p>
+			<section>
+				<header>
+					<h3>¿Contenido Embebido?</h3>
+				</header>
+				<p>
+					Como se menciona anteriormente, esta categoria corresponde a todo contenido ajeno a nuestro sitio que fue compartido desde la web del autor. Normalmente se utiliza una opcion como <em>compartir, codigo de insercion, etc...</em> que nos copia al portapapeles una etiqueta <strong>&lt;iframe></strong> con un link a la web especificada, dentro de este link encontraremos la palabra <em>embed</em>.
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/ju_IBXCfz0k" 
+						title="YouTube: Te Lo Resumo"  
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						title="YouTube: Carvel - John Frusciante"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+		</article>
 	</main>
 	<!-- Pie de Pagina -->
 	<footer id="footer">
@@ -333,6 +363,10 @@
 				required></textarea>
 			<button>ENVIAR</button>
 		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0400787192616!2d-58.376343798409465!3d-34.603148031001375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1632788456529!5m2!1ses-419!2sar"  
+			loading="lazy">
+		</iframe>
 	</footer>
 </body>
 </html>
