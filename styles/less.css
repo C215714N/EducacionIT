@@ -1,4 +1,3 @@
-/*Cabecera*/
 #header {
   height: 100vh;
   max-height: 720px;
@@ -15,6 +14,16 @@
   border: 0;
   padding: 1rem;
   color: #ffffff;
+}
+#header .header * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+#header .slide {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 #header .slide li {
   opacity: 0;
@@ -81,17 +90,9 @@
 #mode:checked ~ #header li:nth-child(6) {
   --bg: url('../assets/background/osx-mojave-night.jpg');
 }
-/*Helpers*/
 .unstyled,
 #header .slide {
   list-style: none;
-}
-.zeroise,
-#header .header *,
-#header .slide {
-  margin: 0;
-  border: 0;
-  padding: 0;
 }
 .rounded {
   border-radius: 1rem;
@@ -181,4 +182,10 @@
 }
 .col-24 {
   width: 100%;
+}
+footer {
+  text-align: center;
+}
+footer form {
+  max-width: 600px;
 }

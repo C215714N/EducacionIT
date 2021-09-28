@@ -1,3 +1,4 @@
+@use 'sass:math';
 // Variables
 	$col: 24;
 	$path: '../assets/icon';
@@ -23,21 +24,39 @@
 		warning 	#da3,
 		success 	#3c6,
 		info 		#36c;
+	$media:
+		sm 		576px	540px,
+		md 		768px	720px,
+		lg 		992px	960px,
+		xl 		1200px	1140px,
+		xxl		1400px	1320px;
+	$col: 24;
 //  Mixins
 	@mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
 		#{$ma}: $m;
 		#{$ba}: $b;
 		#{$pa}: $p;
 	}
+	@mixin transition($tp:all, $td: 1s, $tf: ease-out){
+		transition-property: $tp;
+		transition-duration: $td;
+		transition-timing-function: $tf;
+	}
 //	Styles
 	.icon{
+		@include transition;
 		display: inline-block;
 		width: 3rem;
 		height: 3rem;
 		margin: .25rem;
-		background: var(--bg) center/2rem no-repeat;
+		border-radius: .25rem;
+		background: var(--light) var(--bg) center/2rem no-repeat;
 		&:hover{
-			background-size: 3rem;
+			transform: 
+				translate(0,-1rem) // distancia x y
+				scale(1.25) // unidad escala
+				rotate(360deg) // grados
+				;
 	}	}
 //  Loops
 	@each $icon in $social{ .#{$icon}{ --bg: url('#{$path}/#{$icon}.svg'); } }
@@ -46,26 +65,45 @@
 		@each $cn, $cv in $colors{
 			.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
 	}	}
+	/*Sistema de grilla responsive*/
+	@each $vn, $vw, $vmax in $media{
+		@media screen and (min-width: $vw){
+			.container,
+			.container-#{$vn}{
+				max-width: $vmax;
+			}
+			@for $i from 1 through $col{
+				.col-#{$vn}-#{$i}{
+					width: percentage(math.div($i, $col));
+	}	}	}	}
 // Nesting
 	#footer{
 		@include normalize($p:1rem);
+		position: relative;
+		background: linear-gradient(to right,#24c8, #c368);
 		.map{
-
+			iframe{
+				@include normalize;
+			}
 		}
 		#contact{
 			@include normalize(1rem auto, 1rem, .25rem, border-radius);
-			@extend .text-light, .bg-primary;
+			@extend 
+				.text-light, 
+				.bg-primary,
+				.col-lg-12,
+				.container;
 			display: grid;
 			input,
 			textarea{
 				@include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
+				font-size: 1rem;
 				&:focus{
 					@extend .border-dark;
 					& + .valid{ 
 						@include normalize(300px, .5rem, $ma: max-height);
 						@extend .bg-dark;
-					}
-				}
+				}	}
 				&:valid{
 					@extend .border-success;
 					& + .valid{ @extend .bg-success; }
@@ -81,8 +119,20 @@
 			}
 		}
 		.social{
+			@include normalize(2rem auto 0);
+			text-align: center;
 			a{
 				@extend .icon;
+			}
+		}
+		.copy{
+			@include normalize(1rem -1rem, 1rem, .5, opacity);
+			@include transition;
+			@extend .text-light, .bg-dark;
+			text-align: center;
+			&:hover{
+				opacity: .8;
+				text-shadow: 0 0 .5rem var(--light);
 			}
 		}
 	}

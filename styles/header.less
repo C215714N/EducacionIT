@@ -20,6 +20,7 @@
 		'osx-mojave-night.jpg';
 	@col: 24;	
 // Nesting (Anidacion de estilos)
+/*Cabecera*/
 	#header{
 		height: 100vh;
 		max-height: 720px;
@@ -28,12 +29,12 @@
 		.normalize(@p:1rem);
 		color:@mixed;
 		.header *{
-			.normalize;
+			&:extend(.zeroise);
 		}
 		.slide{
 			&:extend(.unstyled);
 			&:extend(.cover);
-			.normalize;
+			&:extend(.zeroise);
 			li{
 				&:extend(.cover);
 				opacity: 0;
@@ -59,8 +60,12 @@
 		}
 	}
 // Mixins (Estilos anidables como atributos)
+/*Helpers*/
 	.unstyled{
 		list-style: none;
+	}
+	.zeroise{
+		.normalize;
 	}
 	.rounded{
 		border-radius:@r;
