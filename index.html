@@ -9,14 +9,13 @@
 			initial-scale=1,
 			maximum-scale=3">
 	<title>Responsive Web Design</title>
-	<!--Styles CSS-->
-	<link rel="stylesheet" href="styles/main.css">
 	<!--Styles BOOTSTRAP-->
 	<link rel="stylesheet" 
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
 		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
 		crossorigin="anonymous">
-</head>
+	<!--Styles CSS-->
+	<link rel="stylesheet" href="styles/main.css"></head>
 <body>
 	<!--Navigation: Links mas importantes-->
 	<nav>
@@ -118,7 +117,7 @@
 	<section class="container-lg">
 		<header>
 			<img src="" alt="">
-			<h2 class="display-1">Bootstrap</h2>
+			<h2 class="display-1 fw-bolder text-uppercase text-center">bootstrap</h2>
 		</header>
 		<p>
 			Es un framework de CSS que ofrece al desarrollador una hoja de estilos predefinida, ademas de unos cuantos scripts que acompañan al diseño. Esta herramienta se centra en el uso de clase de estilos y componentes para agilizar el diseño de la pagina, solamente implementando dichas clases sobre nuestro documento HTML.
@@ -182,8 +181,8 @@
 			<p>
 				Una de las caracteristicas de Bootstrap radica en el uso de clases predefinidas y podemos implementar dentro de lo que nos ofrece cualquier atributo que exista en CSS, como margin, padding, border, text-align, etc... Para ello solamente debemos utilizar un selector que suele empezar con la letra del atributo y un valor que suele rondar entre 0 y 5; en caso que esto lo querramos aplicar segun el tamaño de la pantalla, podemos indicar el query dentro de la clase.
 			</p>
-			<ul class="row list-unstyled">
-				<li class="col-12 col-md-6"><strong class="h2">margin</strong>
+			<ul class="list-unstyled | row">
+				<li class="col-md-6"><strong class="h2">margin</strong>
 					<ul class="list-unstyled">
 						<li class="border rounded p-2 | m-3">m-3 (margin: 1rem)</li>
 						<li class="border rounded p-2 | mx-3">mx-3 (margin-left: 1rem; margin-right: 1rem)</li>
@@ -191,7 +190,7 @@
 						<li class="border rounded p-2 | mb-3">mx-3 (margin-bottom: 1rem)</li>
 					</ul>
 				</li>
-				<li class="col-12 col-md-6"><strong class="h2">padding</strong>
+				<li class="col-md-6"><strong class="h2">padding</strong>
 					<ul class="list-unstyled">
 						<li class="border rounded mt-2 | p-3">p-3 (padding: 1rem)</li>
 						<li class="border rounded mt-2 | px-3">px-3 (padding-left: 1rem; padding-right: 1rem)</li>
@@ -200,20 +199,83 @@
 					</ul>
 				</li>
 			</ul>
-			<div class="row">
-				<p class="bg-light col | p-5 border me-3">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
-				</p>
-				<p class="bg-light col | py-5 px-1 border me-3">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
-				</p>
-				<p class="bg-light col | px-5 py-1 border me-3">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
-				</p>
-				<p class="bg-light col | mt-5 border me-3">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit dicta quas quia nesciunt, possimus suscipit dignissimos beatae et quidem voluptate velit autem aliquam natus provident vitae hic cum facere!
-				</p>
+			<ul class="list-unstyled | d-flex flex-wrap | justify-content-between 
+				align-items-baseline ">
+				<li class="h1">Heading 1</li>
+				<li class="h2">Heading 2</li>
+				<li class="h3">Heading 3</li>
+				<li class="h4">Heading 4</li>
+				<li class="h5">Heading 5</li>
+				<li class="h6">Heading 6</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Sistema de Grillas Responsive</h3>
+			<p>
+				Una de las caracteristicas destacables de Bootstrap es su sistema de grillas, que consiste en dividir un contenedor en 12 columnas, de las cuales tenemos la misma cantidad de clases representando el espacio que debe ocupar cada elemento. La estructura de estas clases es la siguiente <em class="mark">col-#{$breakpoint}-#{$quantity}</em> donde indicamos en que tamaño de pantalla se aplica y cuantas columnas se deben ocupar.
+			</p>
+			<h4>Distribucion en 12 columnas</h4>
+			<div class="row text-dark bg-secondary p-3">
+				<div class="border col-md-6 col-lg-4">flexbox 1</div>
+				<div class="border col-md-6 col-lg-4">flexbox 2</div>
+				<div class="border col-md-8 col-lg-4">flexbox 3</div>
+				<div class="border col-md-4 col-lg-5">flexbox 4</div>
+				<div class="border col-md-5 col-lg-4">flexbox 5</div>
+				<div class="border col-md-7 col-lg-3">flexbox 6</div>
 			</div>
+			<h4>Generacion de espacios</h4>
+			<div class="row text-light bg-dark p-3">
+				<div class="border offset-md-6 col-md-6 col-lg-4">flexbox 1</div>
+				<div class="border col-md-6 col-lg-4">flexbox 2</div>
+				<div class="border offset-md-1 col-md-8 col-lg-4">flexbox 3</div>
+				<div class="border offset-lg-2 col-md-4 col-lg-5">flexbox 4</div>
+				<div class="border offset-lg-4 col-md-5 col-lg-4">flexbox 5</div>
+				<div class="border offset-lg-1 col-md-7 col-lg-3">flexbox 6</div>
+			</div>
+		</article>
+		<article>
+			<h3>Aspectos Basicos</h3>
+			<ul class="list-unstyled row">
+				<li class="col-md-4">
+					<strong>Hipervinculos</strong>
+					<ul class="list-unstyled d-flex flex-wrap justify-content-evenly">
+						<li class="btn link-primary">enviar</li>
+						<li class="btn link-secondary">enviar</li>
+						<li class="btn link-light">enviar</li>
+						<li class="btn link-dark">enviar</li>
+						<li class="btn link-info">enviar</li>
+						<li class="btn link-danger">enviar</li>
+						<li class="btn link-warning">enviar</li>
+						<li class="btn link-success">enviar</li>
+					</ul>
+				</li>
+				<li class="col-md-4">
+					<strong>Botones con Relleno</strong>
+					<ul class="d-flex flex-wrap justify-content-evenly">
+						<li class="btn btn-primary">enviar</li>
+						<li class="btn btn-secondary">enviar</li>
+						<li class="btn btn-light">enviar</li>
+						<li class="btn btn-dark">enviar</li>
+						<li class="btn btn-info">enviar</li>
+						<li class="btn btn-danger">enviar</li>
+						<li class="btn btn-warning">enviar</li>
+						<li class="btn btn-success">enviar</li>
+					</ul>
+				</li>
+				<li class="col-md-4">
+					<strong>Botones con Borde</strong>
+					<ul class="d-flex flex-wrap justify-content-evenly">
+						<li class="btn btn-outline-primary">enviar</li>
+						<li class="btn btn-outline-secondary">enviar</li>
+						<li class="btn btn-outline-light">enviar</li>
+						<li class="btn btn-outline-dark">enviar</li>
+						<li class="btn btn-outline-info">enviar</li>
+						<li class="btn btn-outline-danger">enviar</li>
+						<li class="btn btn-outline-warning">enviar</li>
+						<li class="btn btn-outline-success">enviar</li>
+					</ul>
+				</li>
+			</ul>
 		</article>
 	</section>
 	<!-- Scripts JS -->
