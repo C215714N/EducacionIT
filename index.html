@@ -43,7 +43,7 @@
 			<h2>Tipos de Diseño</h2>
 		</header>
 		<p>
-			A lo largo de los años, la forma de diseñar sitios web fue cambiando en base a las necesidades de los diseñadores y desarrolladores. Esto se debe a que la web no es un medio estatico como si lo son los libros, revistas, diarios, etc... y por lo tanto los desarrolladores deben planificar el diseño para su correcta visualizacion en la mayor cantidad de dispositivos posible.
+			A lo largo de los años, la forma de diseñar sitios web fue cambiando en base a las necesidades de los diseñadores y desarrolladores. Esto se debe a que la web no es un medio estatico como si lo son los libros, revistas, diarios, etc... y por lo tanto los desarrolladores deben planificar el diseño para su correcta visualizacion en la mayor cantidad de dispositivos.
 		</p>
 		<article>
 			<h3>Fluid Web Design</h3>
@@ -58,6 +58,9 @@
 			<h3>Adaptive Web Design</h3>
 			<p>
 				Este tipo de diseño consiste en generar una pagina exclusiva para cada tamaño de pantalla o dispositivo, por un lado resuelve el inconveniente de la adaptabilidad, pero el problema que trae es la generacion de contenido duplicado, afectando al indexado que realizan los motores de busqueda. Ademas implica que ocuparemos mas espacio dentro del servidor, pero por otro lado es mas sencillo de aplicar.
+			</p>
+			<p>
+				Este tipo de diseño ofrece un bajo nivel de usabilidad y muestra una versión reducida de los contenidos en móviles y funciona para clientes con presupuesto reducido, ya que utiliza plantillas estáticas basadas en puntos de quiebre.
 			</p>
 		</article>
 		<article>
@@ -179,21 +182,21 @@
 			<p>
 				Una de las caracteristicas de Bootstrap radica en el uso de clases predefinidas y podemos implementar dentro de lo que nos ofrece cualquier atributo que exista en CSS, como margin, padding, border, text-align, etc... Para ello solamente debemos utilizar un selector que suele empezar con la letra del atributo y un valor que suele rondar entre 0 y 5; en caso que esto lo querramos aplicar segun el tamaño de la pantalla, podemos indicar el query dentro de la clase.
 			</p>
-			<ul class="row">
-				<li class="col-12 col-md-6"><strong>margin</strong>
+			<ul class="row list-unstyled">
+				<li class="col-12 col-md-6"><strong class="h2">margin</strong>
 					<ul class="list-unstyled">
 						<li class="border rounded p-2 | m-3">m-3 (margin: 1rem)</li>
 						<li class="border rounded p-2 | mx-3">mx-3 (margin-left: 1rem; margin-right: 1rem)</li>
 						<li class="border rounded p-2 | my-3">my-3 (margin-top: 1rem; margin-bottom: 1rem)</li>
-						<li class="border rounded p-2 | mt-3">mx-3 (margin-top: 1rem)</li>
+						<li class="border rounded p-2 | mb-3">mx-3 (margin-bottom: 1rem)</li>
 					</ul>
 				</li>
-				<li class="col-12 col-md-6"><strong>padding</strong>
+				<li class="col-12 col-md-6"><strong class="h2">padding</strong>
 					<ul class="list-unstyled">
-						<li class="border rounded m-2 | p-3">p-3 (padding: 1rem)</li>
-						<li class="border rounded m-2 | px-3">px-3 (padding-left: 1rem; padding-right: 1rem)</li>
-						<li class="border rounded m-2 | py-3">py-3 (padding-top: 1rem; padding-bottom: 1rem)</li>
-						<li class="border rounded m-2 | pt-3">px-3 (padding-top: 1rem)</li>
+						<li class="border rounded mt-2 | p-3">p-3 (padding: 1rem)</li>
+						<li class="border rounded mt-2 | px-3">px-3 (padding-left: 1rem; padding-right: 1rem)</li>
+						<li class="border rounded mt-2 | py-3">py-3 (padding-top: 1rem; padding-bottom: 1rem)</li>
+						<li class="border rounded mt-2 | pt-3">pt-3 (padding-top: 1rem)</li>
 					</ul>
 				</li>
 			</ul>
