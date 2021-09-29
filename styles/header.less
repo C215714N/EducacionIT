@@ -28,6 +28,8 @@
 		.flexbox(column);
 		.normalize(@p:1rem);
 		color:@mixed;
+		font-size: ~'min(calc(2vw + .8rem), 3rem)';
+		text-align: center;
 		.header *{
 			&:extend(.zeroise);
 		}
@@ -48,8 +50,9 @@
 			.rounded;
 			.normalize(@p:1rem);
 			.position(absolute,@px:bottom);
-			color: @color;
+			color: var(--light);
 			background-color: transparent;
+			font-size: ~'min(calc(2vw + .8rem), 5rem)';
 			&.icon-prev{ left: 0; }
 			&.icon-next{ right:0; }
 		}
