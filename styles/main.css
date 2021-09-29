@@ -128,11 +128,30 @@
 			padding: .25rem;
 			border: .1rem dashed var(--bg-color);
 		}
+		/*estilos sass*/
 		.sass li{
 			margin: .25rem;
 			padding: .5rem 1rem;
 		}
-		/*estilos sass*/
+		/*Transformaciones*/
+		.transform{
+			perspective: 300px;
+			perspective-origin: top center;
+		}
+		.transform div{ 
+			min-width: 10rem;
+			max-height: 5rem;
+			margin: .25rem;
+			padding: .5rem;
+			color: var(--light);
+			background-color: var(--first);
+			transition: all 1s ease-out;
+		}
+		.transform :nth-child(1):hover{transform: scale(2)}
+		.transform :nth-child(2):hover{transform: translate(2rem, 1rem);}
+		.transform :nth-child(3):hover{transform: rotate(360deg)}
+		.transform :nth-child(4):hover{transform: skew(45deg);}
+		.transform :nth-child(5):hover{transform: rotateY(720deg) }
 	/*Mode*/
 		#mode{ display: none; }
 		#mode ~ nav label::after{ content: 'claro'	}
