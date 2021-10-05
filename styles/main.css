@@ -147,11 +147,13 @@
 			background-color: var(--first);
 			transition: all 1s ease-out;
 		}
-		.transform :nth-child(1):hover{transform: scale(2)}
-		.transform :nth-child(2):hover{transform: translate(2rem, 1rem);}
-		.transform :nth-child(3):hover{transform: rotate(360deg)}
-		.transform :nth-child(4):hover{transform: skew(45deg);}
-		.transform :nth-child(5):hover{transform: rotateY(720deg) }
+		.transform :nth-child(1):hover{transform: scale(2) }
+		.transform :nth-child(2):hover{transform: translate(2rem, 1rem) }
+		.transform :nth-child(3):hover{transform: rotate(360deg) }
+		.transform :nth-child(4):hover{transform: skew(45deg) }
+		.transform :nth-child(5):hover{transform: rotateX(720deg) }
+		.transform :nth-child(6):hover{transform: rotateY(720deg) }
+		.transform :nth-child(7):hover{transform: translateZ(2rem) }
 	/*Mode*/
 		#mode{ display: none; }
 		#mode ~ nav label::after{ content: 'claro'	}
