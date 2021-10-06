@@ -1,7 +1,47 @@
 /*Content First - Mobile First*/
 	/*Imports*/
+		@import url('icomoon.css');
 		@import url('header.css');
 		@import url('footer.css');
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
+	/*Animaciones */
+		@keyframes intro{
+			from{ 
+				transform: 
+					scale(10)
+					translateY(100vh)
+					translateZ(20rem);
+			}
+		}
+		@keyframes jump{
+			from{ transform: rotate(-30deg); }
+			to{ transform: rotate(30deg); }
+		}
+		@keyframes racing{
+			0%{
+				background-color: hsl(0, 50%, 50%);
+				transform: translate(0,0) skew(15deg, 0);
+			}
+			25%{
+				background-color: hsl(90, 50%, 50%);
+				transform: translate(10vw, 0) skew(0, 15deg);
+			}
+			50%{
+				background-color: hsl(180, 50%, 50%);
+				transform: translate(10vw, 500%) skew(-15deg, 0);
+			}
+			75%{
+				background-color: hsl(270, 50%, 50%);
+				transform: translate(0,500%) skew(0, -15deg);
+			}
+			100%{
+				background-color: hsl(0, 50%, 50%);
+				transform: translate(0,0) skew(15deg, 0);
+			}
+		}
 	/*Variables*/
 		:root{
 			--first:  	#24ce; /*rr gg bb aa*/
@@ -57,12 +97,15 @@
 			color: var(--light);
 			text-transform: uppercase;
 			text-decoration: none;
+			font-size: 1.5rem;
 			transition: all .5s ease-out;
 		}
 		.icon-back{
 			position: fixed;
 			bottom: .5rem;
 			right: .5rem;
+			border-radius: 50%;
+			padding: .5rem;
 			background-color: var(--dark);
 		}
 		.menu{
@@ -70,11 +113,27 @@
 			max-height: 0;
 			overflow: hidden;
 		}
-		.menu :hover{
+		.menu :is(a, label):hover{
 			--dark: #3335;
 			background-color: var(--dark);
 		}
-		.menu :is(a, label)::before{
+		.menu :is(a, label){
+			display: flex;
+			align-items: center;
+		}
+		.menu span{
+			padding: .5rem;
+			font-size: 1.25rem;
+			text-transform: uppercase;
+		}
+		.menu :is(a,label)::before{
+			transform-origin: bottom center;
+		}
+		.menu :is(a, label):hover::before{
+			animation: jump .5s ease-in-out infinite; /*name duration timing delay count*/
+			animation-direction: alternate;
+		}
+		.menu :is(a, label)::after{
 			content: '';
 			position: absolute;
 			bottom: 0;
@@ -85,7 +144,7 @@
 			background:  linear-gradient(to right, var(--dark), var(--light) );
 			transition: all .5s ease-out .1s; /*property duration timing delay*/
 		}
-		.menu :is(a, label):hover::before{
+		.menu :is(a, label):hover::after{
 			width: 100%;
 			opacity: 1;
 		}
@@ -154,10 +213,35 @@
 		.transform :nth-child(5):hover{transform: rotateX(720deg) }
 		.transform :nth-child(6):hover{transform: rotateY(720deg) }
 		.transform :nth-child(7):hover{transform: translateZ(2rem) }
+	/*Animations*/
+		.animation{
+			min-height: 300px;
+			align-items: flex-start;
+		}
+		.animation div{
+			min-width: 3rem;
+			min-height: 1rem;
+			margin: .25rem;
+			border: .2rem dashed var(--light);
+			padding: .5rem;
+			animation: racing 5s infinite;
+			animation-play-state: paused;
+		}
+		.timing div:nth-child(1){ animation-timing-function: ease; }
+		.timing div:nth-child(2){ animation-timing-function: ease-in; }
+		.timing div:nth-child(3){ animation-timing-function: ease-out; }
+		.timing div:nth-child(4){ animation-timing-function: ease-in-out; }
+		.timing div:nth-child(5){ animation-timing-function: linear; }
+		.timing div:nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+
+		.direction div:nth-child(1){ animation-direction: normal; }
+		.direction div:nth-child(2){ animation-direction: alternate; }
+		.direction div:nth-child(3){ animation-direction: reverse; }
+		.direction div:nth-child(4){ animation-direction: alternate-reverse; }
 	/*Mode*/
 		#mode{ display: none; }
-		#mode ~ nav label::after{ content: 'claro'	}
-		#mode:checked ~ nav label::after{ content: 'oscuro' }
+		#mode ~ nav label span::after{ content: ' claro'	}
+		#mode:checked ~ nav label span::after{ content: ' oscuro' }
 		#mode ~ .mode{
 			--color: var(--dark);
 			--bg-color: var(--light);

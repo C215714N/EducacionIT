@@ -30,8 +30,39 @@
 		color:@mixed;
 		font-size: ~'min(calc(2vw + .8rem), 3rem)';
 		text-align: center;
-		.header *{
-			&:extend(.zeroise);
+		perspective: 300px;
+		overflow: hidden;
+		.header {
+			perspective: 300px;
+			animation-name: intro;
+			animation-duration: 3s;
+			animation-timing-function: ease-out;
+			animation-delay: 1s;
+			animation-fill-mode: backwards;
+			*{
+				&:extend(.zeroise);
+			}
+			h1{
+				font-family: 'star wars';
+				line-height: 80%;
+				text-shadow: 0 0 2vw var(--dark);
+				transform: rotateX(15deg);
+			}
+		}
+		.control{
+			.flexbox;
+			span{
+				&:extend(.rounded);
+				width: 1rem;
+				height: 1rem;
+				margin: .5rem;
+				background-color: var(--light);
+				box-shadow: 0 .1rem .5rem var(--dark);
+				transition: all .5s ease-in;
+				&.active{
+					width: 3rem;
+				}
+			}
 		}
 		.slide{
 			&:extend(.unstyled);
@@ -40,6 +71,7 @@
 			li{
 				&:extend(.cover);
 				opacity: 0;
+				transition: all 5s ease-out;
 				background: var(--bg) center/cover no-repeat;
 				.bg(@bg_day);
 				&.active{ opacity: 1 }
@@ -52,7 +84,8 @@
 			.position(absolute,@px:bottom);
 			color: var(--light);
 			background-color: transparent;
-			font-size: ~'min(calc(2vw + .8rem), 5rem)';
+			font-size: ~'min(calc(2vw + 1.5rem), 5rem)';
+			text-shadow: 0 0 2vw var(--dark);
 			&.icon-prev{ left: 0; }
 			&.icon-next{ right:0; }
 		}

@@ -17,9 +17,44 @@
   color: #ffffff;
   font-size: min(calc(2vw + .8rem), 3rem);
   text-align: center;
+  perspective: 300px;
+  overflow: hidden;
+}
+#header .header {
+  perspective: 300px;
+  animation-name: intro;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+#header .header h1 {
+  font-family: 'star wars';
+  line-height: 80%;
+  text-shadow: 0 0 2vw var(--dark);
+  transform: rotateX(15deg);
+}
+#header .control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+#header .control span {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  background-color: var(--light);
+  box-shadow: 0 0.1rem 0.5rem var(--dark);
+  transition: all 0.5s ease-in;
+}
+#header .control span.active {
+  width: 3rem;
 }
 #header .slide li {
   opacity: 0;
+  transition: all 5s ease-out;
   background: var(--bg) center / cover no-repeat;
 }
 #header .slide li:nth-child(1) {
@@ -58,7 +93,8 @@
   z-index: 0;
   color: var(--light);
   background-color: transparent;
-  font-size: min(calc(2vw + .8rem), 5rem);
+  font-size: min(calc(2vw + 1.5rem), 5rem);
+  text-shadow: 0 0 2vw var(--dark);
 }
 #header button.icon-prev {
   left: 0;
@@ -96,7 +132,8 @@
   border: 0;
   padding: 0;
 }
-.rounded {
+.rounded,
+#header .control span {
   border-radius: 1rem;
   -o-border-radius: 1rem;
   -ms-border-radius: 1rem;
