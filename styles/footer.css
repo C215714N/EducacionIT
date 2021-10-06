@@ -14,6 +14,12 @@
   transform: translate(0, -1rem) scale(1.25) rotate(360deg);
 }
 
+.fixed, #footer .map button.icon-min, #footer .map iframe.active {
+  position: fixed;
+  opacity: 0.9;
+  z-index: 2;
+}
+
 .css {
   --bg: url("../assets/icon/css.svg");
 }
@@ -92,7 +98,7 @@
 }
 
 .bg-dark, #footer .copy, #footer #contact input:focus + .valid,
-#footer #contact textarea:focus + .valid {
+#footer #contact textarea:focus + .valid, #footer .map button {
   background-color: #333;
 }
 
@@ -671,6 +677,11 @@
   margin: 0;
   border: 0;
   padding: 0;
+}
+#footer .map button {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
 #footer #contact {
   margin: 1rem auto;

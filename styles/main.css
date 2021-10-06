@@ -88,6 +88,22 @@
 			color: var(--first);
 			background-color: var(--light);
 		}
+		.top-right{
+			top: .5rem;
+			right: .5rem;
+		}
+		.top-left{
+			top: .5rem;
+			left: .5rem;
+		}
+		.bottom-right{
+			bottom: .5rem;
+			right: .5rem;
+		}
+		.bottom-left{
+			bottom: .5rem;
+			left: .5rem;
+		}
 	/*Navigation*/
 		nav{
 			position: sticky;
@@ -229,10 +245,8 @@
 			min-height: 300px;
 			align-items: flex-start;
 		}
-		.bottom-right{
+		.animation button{
 			position: absolute;
-			bottom: .5rem;
-			right: .5rem;
 		}
 		.animation div{
 			min-width: 3rem;

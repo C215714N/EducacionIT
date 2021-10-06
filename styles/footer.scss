@@ -59,6 +59,11 @@
 				rotate(360deg) // grados
 				;
 	}	}
+	.fixed{
+		position: fixed;
+		opacity: .9;
+		z-index: 2;
+	}
 //  Loops
 	@each $icon in $social{ .#{$icon}{ --bg: url('#{$path}/#{$icon}.svg'); } }
 	/*Clases con colores*/
@@ -85,6 +90,18 @@
 		.map{
 			iframe{
 				@include normalize;
+				&.active{
+					@extend .fixed;
+				}
+			}
+			button{
+				position: absolute;
+				font-size: 1.5rem;
+				padding: .5rem;
+				@extend .bg-dark;
+				&.icon-min{
+					@extend .fixed;
+				}
 			}
 		}
 		#contact{

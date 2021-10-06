@@ -8,6 +8,10 @@
 	const spanLst = d.querySelectorAll('.control span')
 	const prev = d.querySelector('.icon-prev')
 	const next = d.querySelector('.icon-next')
+	const animationItems = d.querySelectorAll('.animation div')
+	const animationBtn = d.querySelector('.animation button')
+	const mapBtn = d.querySelector('.map button')
+	const mapFrm = d.querySelector('.map iframe')
 
 // Navigation Bar
 	menuBtn.onclick = () => menuLst.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;'
@@ -34,3 +38,11 @@
 			break;
 			default: newItem = el.previousElementSibling || el.parentNode.lastElementChild
 	}	}
+/*play Animation*/
+	animationBtn.onclick = () => animationItems.forEach( a => a.style.animationPlayState = 'running')
+
+/* Mapa de contacto */
+	mapBtn.onclick = () => 
+		mapFrm.classList.toggle('active') ? 
+		mapBtn.classList.replace('icon-max', 'icon-min') : 
+		mapBtn.classList.replace('icon-min', 'icon-max')
