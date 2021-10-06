@@ -78,6 +78,16 @@
 		}
 		.opacity{ opacity: .3; }
 		.opacity:hover{ opacity: .7; }
+		.btn{
+			border: .1rem solid var(--light);
+			color: var(--light);
+			background-color: transparent;
+			transition: all .5s ease-in;
+		}
+		.btn:hover{
+			color: var(--first);
+			background-color: var(--light);
+		}
 	/*Navigation*/
 		nav{
 			position: sticky;
@@ -215,8 +225,14 @@
 		.transform :nth-child(7):hover{transform: translateZ(2rem) }
 	/*Animations*/
 		.animation{
+			position: relative;
 			min-height: 300px;
 			align-items: flex-start;
+		}
+		.bottom-right{
+			position: absolute;
+			bottom: .5rem;
+			right: .5rem;
 		}
 		.animation div{
 			min-width: 3rem;
