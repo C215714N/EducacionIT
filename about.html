@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="styles/bootstrap.css">
 	<link rel="stylesheet" href="styles/bootstrap-icons.css">
 	<!-- Styles CSS -->
+	<style>
+
+	</style>
 </head>
 <body>
 	<!-- Navegacion -->
@@ -26,27 +29,37 @@
 	</nav>
 	<!-- Cabecera -->
 	<header class="position-relative | text-light bg-secondary | text-center">
-		<div class="carousel slide">
+		<div id="slide" class="carousel slide" data-bs-ride="carousel">
 			<ul class="list-unstyled | carousel-inner">
 				<li class="carousel-item active">
+					<strong class="carousel-caption"></strong>
 					<img src="assets/bg/background-01A.jpg" class="d-block d-lg-none w-100" alt="imagen 1">
 					<img src="assets/bg/background-01B.jpg" class="d-none d-lg-block w-100" alt="imagen 1">
 				</li>
 				<li class="carousel-item">
-					<img src="assets/bg/background-02A.jpg" class="d-block w-100" alt="imagen 2">
+					<strong class="carousel-caption"></strong>
+					<img src="assets/bg/background-02A.jpg" class="d-block d-lg-none w-100" alt="imagen 2">
 					<img src="assets/bg/background-02B.jpg" class="d-none d-lg-block w-100" alt="imagen 1">
 				</li>
 				<li class="carousel-item">
-					<img src="assets/bg/background-03A.jpg" class="d-block w-100" alt="imagen 3">
+					<strong class="carousel-caption"></strong>
+					<img src="assets/bg/background-03A.jpg" class="d-block d-lg-none w-100" alt="imagen 3">
 					<img src="assets/bg/background-03B.jpg" class="d-none d-lg-block w-100" alt="imagen 1">
 				</li>
 				<li class="carousel-item">
-					<img src="assets/bg/background-04A.jpg" class="d-block w-100" alt="imagen 3">
+					<strong class="carousel-caption"></strong>
+					<img src="assets/bg/background-04A.jpg" class="d-block d-lg-none w-100" alt="imagen 3">
 					<img src="assets/bg/background-04B.jpg" class="d-none d-lg-block w-100" alt="imagen 1">
 				</li>
 			</ul>
-			<button class="carousel-control-prev carousel-control-prev-icon"></button>
-			<button class="carousel-control-next carousel-control-next-icon"></button>
+			<button class="carousel-control-prev bi-chevron-left display-4" 
+				data-bs-target="#slide" 
+				data-bs-slide="prev">
+			</button>
+			<button class="carousel-control-next bi-chevron-right display-4" 
+				data-bs-target="#slide" 
+				data-bs-slide="next">
+			</button>
 		</div>	
 		<div class="position-absolute top-50 start-50 | translate-middle">
 			<h1 class="display-1 text-uppercase fw-bold">Bootstrap</h1>
@@ -89,9 +102,47 @@
 			</article>
 		</section>
 	</main>
-
 	<!-- Pie de Pagina -->
-
+	<footer>
+		<form class="container | col-md-8 col-lg-6">
+			<h2 class="h4">Contactanos</h2>
+			<label for="">
+				<input class="form-control" type="text">
+				<div class="valid-feedback">
+					sus datos han sido validados
+				</div>
+				<div class="invalid-feedback">
+					complete el campo respetando el formato
+				</div>
+			</label>
+			<label for="">
+				<input class="form-control" type="tel">
+				<div class="valid-feedback">
+					sus datos han sido validados
+				</div>
+				<div class="invalid-feedback">
+					complete el campo respetando el formato
+				</div>
+			</label>
+			<label for="">
+				<input class="form-control" type="email" required>
+				<div class="valid-feedback">
+					sus datos han sido validados
+				</div>
+				<div class="invalid-feedback">
+					complete el campo respetando el formato
+				</div>
+			</label>
+			<label for="">
+				<textarea class="form-control"></textarea>
+			</label>
+			<button class="btn btn-outline-primary">enviar</button>
+		</form>
+		<div>
+			<h2 class="h4">Mapa del sitio</h2>
+		</div>
+		<p>&copy;2021 Todos los derechos reservados</p>
+	</footer>		
 	<!-- Bootstrap JS -->
 	<script src="scripts/bootstrap.bundle.js"></script>
 </body>
