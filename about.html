@@ -6,14 +6,18 @@
 	<title>Bootstrap</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="styles/bootstrap.css">
+	<link rel="stylesheet" href="styles/bootstrap-icons.css">
 	<!-- Styles CSS -->
 </head>
 <body>
 	<!-- Navegacion -->
 	<nav class="navbar navbar-dark navbar-expand-md | container-fluid sticky-top | bg-dark bg-gradient">
-		<a class="navbar-brand" href="#">Bootstrap</a>
-		<button class="navbar-toggler navbar-toggler-icon"></button>
-		<ul class="navbar-nav navbar-collapse collapse">
+		<a class="navbar-brand bi-bootstrap" href="#">Bootstrap</a>
+		<button 
+			class="navbar-toggler navbar-toggler-icon | border-0" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#menu"></button>
+		<ul id="menu" class="navbar-nav navbar-collapse collapse">
 			<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
 			<li class="nav-item"><a class="nav-link active" href="#">Acerca</a></li>
 			<li class="nav-item"><a class="nav-link" href="gallery.html">Galeria</a></li>
@@ -22,14 +26,31 @@
 	</nav>
 	<!-- Cabecera -->
 	<header class="min-vh-100 | d-grid align-content-center | text-light bg-secondary | text-center">
-		<h1 class="display-1 text-uppercase fw-bold">Bootstrap</h1>
-		<p class="display-5">Responsive Web Design</p>
+		<div class="carousel slide">
+			<ul class="carousel-inner">
+				<li class="carousel-item">
+					
+				</li>
+				<li class="carousel-item">
+					
+				</li>
+				<li class="carousel-item">
+					
+				</li>
+			</ul>
+			<button class="carousel-control-prev"></button>
+			<button class="carousel-control-next"></button>
+		</div>
+		<div>
+			<h1 class="display-1 text-uppercase fw-bold">Bootstrap</h1>
+			<p class="display-5">Responsive Web Design</p>
+		</div>
 	</header>
 	<!-- Contenido -->
 	<main class="container">
 		<section class="row">
 			<h2>Tipos de Diseño</h2>
-			<article class="col-lg | card | my-3 m-lg-2">
+			<article class="col-lg | card | my-3 m-lg-2 p-0">
 				<h3 class="card-header">Fluid Design</h3>
 				<p class="card-body">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illum exercitationem, vero. Consequatur dicta fugit eum ad dignissimos sapiente omnis itaque explicabo. Molestias, sint. Fugiat iure nulla ipsa nihil adipisci!
@@ -39,7 +60,7 @@
 					<a href="https://alumni.education" target="_blank">Alumni</a>
 				</address>
 			</article>
-			<article class="col-lg | card | my-3 m-lg-2">
+			<article class="col-lg | card | my-3 m-lg-2 p-0">
 				<h3 class="card-header">Adaptive Design</h3>
 				<p class="card-body">
 					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Magni, voluptatibus. Praesentium earum saepe omnis mollitia animi sint nihil aspernatur repellat rerum, corrupti. Aliquid tenetur, harum officia quam nostrum, cumque voluptas.
@@ -49,7 +70,7 @@
 					<a href="https://alumni.education" target="_blank">Alumni</a>
 				</address>
 			</article>
-			<article class="col-lg | card | my-3 m-lg-2">
+			<article class="col-lg | card | my-3 m-lg-2 p-0">
 				<h3 class="card-header">Responsive Design</h3>
 				<p class="card-body">
 					Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Magni, praesentium! Consequuntur, veniam at earum accusantium facere, quisquam tenetur, odio hic dolorem eveniet voluptas rerum neque esse qui iure quis aspernatur.
@@ -65,6 +86,6 @@
 	<!-- Pie de Pagina -->
 
 	<!-- Bootstrap JS -->
-	<script src="scripts/Bootstrap.bundle.js"></script>
+	<script src="scripts/bootstrap.bundle.js"></script>
 </body>
 </html>
