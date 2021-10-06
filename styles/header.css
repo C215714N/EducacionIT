@@ -222,3 +222,723 @@
 .col-24 {
   width: 100%;
 }
+.bg-content {
+  background-image: url(../assets/background/macos-bigsur-day.jpg);
+  overflow: hidden;
+}
+.preAnimate {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  animation: rotate 60s linear infinite;
+  min-height: 100vh;
+}
+.preAnimate div {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.preAnimate div:nth-child(1n) {
+  animation: lineal-h 2s 2s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(30, 50%, 50%));
+}
+.preAnimate div:nth-child(2n) {
+  animation: cuadratica-h 2s 4s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(60, 50%, 50%));
+}
+.preAnimate div:nth-child(3n) {
+  animation: trigonometrica-h 2s 6s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(90, 50%, 50%));
+}
+.preAnimate div:nth-child(4n) {
+  animation: exponencial-h 2s 8s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(120, 50%, 50%));
+}
+.preAnimate div:nth-child(5n) {
+  animation: limite-h 2s 10s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(150, 50%, 50%));
+}
+.preAnimate div:nth-child(6n) {
+  animation: lineal-v 2s 2s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(180, 50%, 50%));
+}
+.preAnimate div:nth-child(7n) {
+  animation: cuadratica-v 2s 4s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(210, 50%, 50%));
+}
+.preAnimate div:nth-child(8n) {
+  animation: trigonometrica-v 2s 6s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(240, 50%, 50%));
+}
+.preAnimate div:nth-child(9n) {
+  animation: exponencial-v 2s 8s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(270, 50%, 50%));
+}
+.preAnimate div:nth-child(10n) {
+  animation: limite-v 2s 10s infinite;
+  animation-direction: alternate;
+  background: linear-gradient(var(--light), hsl(300, 50%, 50%));
+}
+@keyframes lineal-h {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  5% {
+    transform: translate(5vw, 2.5vw);
+  }
+  10% {
+    transform: translate(10vw, 5vw);
+  }
+  15% {
+    transform: translate(15vw, 7.5vw);
+  }
+  20% {
+    transform: translate(20vw, 10vw);
+  }
+  25% {
+    transform: translate(25vw, 12.5vw);
+  }
+  30% {
+    transform: translate(30vw, 15vw);
+  }
+  35% {
+    transform: translate(35vw, 17.5vw);
+  }
+  40% {
+    transform: translate(40vw, 20vw);
+  }
+  45% {
+    transform: translate(45vw, 22.5vw);
+  }
+  50% {
+    transform: translate(50vw, 25vw);
+  }
+  55% {
+    transform: translate(55vw, 27.5vw);
+  }
+  60% {
+    transform: translate(60vw, 30vw);
+  }
+  65% {
+    transform: translate(65vw, 32.5vw);
+  }
+  70% {
+    transform: translate(70vw, 35vw);
+  }
+  75% {
+    transform: translate(75vw, 37.5vw);
+  }
+  80% {
+    transform: translate(80vw, 40vw);
+  }
+  85% {
+    transform: translate(85vw, 42.5vw);
+  }
+  90% {
+    transform: translate(90vw, 45vw);
+  }
+  95% {
+    transform: translate(95vw, 47.5vw);
+  }
+  100% {
+    transform: translate(100vw, 50vw);
+  }
+}
+@keyframes cuadratica-h {
+  0% {
+    transform: translate(0vw, 125vw);
+  }
+  5% {
+    transform: translate(5vw, 101.25vw);
+  }
+  10% {
+    transform: translate(10vw, 80vw);
+  }
+  15% {
+    transform: translate(15vw, 61.25vw);
+  }
+  20% {
+    transform: translate(20vw, 45vw);
+  }
+  25% {
+    transform: translate(25vw, 31.25vw);
+  }
+  30% {
+    transform: translate(30vw, 20vw);
+  }
+  35% {
+    transform: translate(35vw, 11.25vw);
+  }
+  40% {
+    transform: translate(40vw, 5vw);
+  }
+  45% {
+    transform: translate(45vw, 1.25vw);
+  }
+  50% {
+    transform: translate(50vw, 0vw);
+  }
+  55% {
+    transform: translate(55vw, 1.25vw);
+  }
+  60% {
+    transform: translate(60vw, 5vw);
+  }
+  65% {
+    transform: translate(65vw, 11.25vw);
+  }
+  70% {
+    transform: translate(70vw, 20vw);
+  }
+  75% {
+    transform: translate(75vw, 31.25vw);
+  }
+  80% {
+    transform: translate(80vw, 45vw);
+  }
+  85% {
+    transform: translate(85vw, 61.25vw);
+  }
+  90% {
+    transform: translate(90vw, 80vw);
+  }
+  95% {
+    transform: translate(95vw, 101.25vw);
+  }
+  100% {
+    transform: translate(100vw, 125vw);
+  }
+}
+@keyframes trigonometrica-h {
+  0% {
+    transform: translate(0vw, 1vw);
+  }
+  5% {
+    transform: translate(5vw, -4vw);
+  }
+  10% {
+    transform: translate(10vw, -4vw);
+  }
+  15% {
+    transform: translate(15vw, 2vw);
+  }
+  20% {
+    transform: translate(20vw, 5vw);
+  }
+  25% {
+    transform: translate(25vw, 1vw);
+  }
+  30% {
+    transform: translate(30vw, -5vw);
+  }
+  35% {
+    transform: translate(35vw, -3vw);
+  }
+  40% {
+    transform: translate(40vw, 3vw);
+  }
+  45% {
+    transform: translate(45vw, 5vw);
+  }
+  50% {
+    transform: translate(50vw, 0vw);
+  }
+  55% {
+    transform: translate(55vw, -5vw);
+  }
+  60% {
+    transform: translate(60vw, -3vw);
+  }
+  65% {
+    transform: translate(65vw, 3vw);
+  }
+  70% {
+    transform: translate(70vw, 5vw);
+  }
+  75% {
+    transform: translate(75vw, -1vw);
+  }
+  80% {
+    transform: translate(80vw, -5vw);
+  }
+  85% {
+    transform: translate(85vw, -2vw);
+  }
+  90% {
+    transform: translate(90vw, 4vw);
+  }
+  95% {
+    transform: translate(95vw, 4vw);
+  }
+  100% {
+    transform: translate(100vw, -1vw);
+  }
+}
+@keyframes exponencial-h {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  5% {
+    transform: translate(5vw, 0vw);
+  }
+  10% {
+    transform: translate(10vw, 0vw);
+  }
+  15% {
+    transform: translate(15vw, 0vw);
+  }
+  20% {
+    transform: translate(20vw, 0vw);
+  }
+  25% {
+    transform: translate(25vw, 0vw);
+  }
+  30% {
+    transform: translate(30vw, 0vw);
+  }
+  35% {
+    transform: translate(35vw, 0vw);
+  }
+  40% {
+    transform: translate(40vw, 0vw);
+  }
+  45% {
+    transform: translate(45vw, 0vw);
+  }
+  50% {
+    transform: translate(50vw, 0vw);
+  }
+  55% {
+    transform: translate(55vw, 0vw);
+  }
+  60% {
+    transform: translate(60vw, 0vw);
+  }
+  65% {
+    transform: translate(65vw, 0vw);
+  }
+  70% {
+    transform: translate(70vw, 0vw);
+  }
+  75% {
+    transform: translate(75vw, 1vw);
+  }
+  80% {
+    transform: translate(80vw, 2vw);
+  }
+  85% {
+    transform: translate(85vw, 6vw);
+  }
+  90% {
+    transform: translate(90vw, 15vw);
+  }
+  95% {
+    transform: translate(95vw, 37vw);
+  }
+  100% {
+    transform: translate(100vw, 91vw);
+  }
+}
+@keyframes limite-h {
+  0% {
+    transform: translate(0vw, -2vw);
+  }
+  5% {
+    transform: translate(5vw, -2vw);
+  }
+  10% {
+    transform: translate(10vw, -3vw);
+  }
+  15% {
+    transform: translate(15vw, -3vw);
+  }
+  20% {
+    transform: translate(20vw, -3vw);
+  }
+  25% {
+    transform: translate(25vw, -4vw);
+  }
+  30% {
+    transform: translate(30vw, -5vw);
+  }
+  35% {
+    transform: translate(35vw, -7vw);
+  }
+  40% {
+    transform: translate(40vw, -10vw);
+  }
+  45% {
+    transform: translate(45vw, -20vw);
+  }
+  50% {
+    transform: translate(50vw, 0);
+  }
+  55% {
+    transform: translate(55vw, 20vw);
+  }
+  60% {
+    transform: translate(60vw, 10vw);
+  }
+  65% {
+    transform: translate(65vw, 7vw);
+  }
+  70% {
+    transform: translate(70vw, 5vw);
+  }
+  75% {
+    transform: translate(75vw, 4vw);
+  }
+  80% {
+    transform: translate(80vw, 3vw);
+  }
+  85% {
+    transform: translate(85vw, 3vw);
+  }
+  90% {
+    transform: translate(90vw, 3vw);
+  }
+  95% {
+    transform: translate(95vw, 2vw);
+  }
+  100% {
+    transform: translate(100vw, 2vw);
+  }
+}
+@keyframes lineal-v {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  5% {
+    transform: translate(2.5vw, 5vw);
+  }
+  10% {
+    transform: translate(5vw, 10vw);
+  }
+  15% {
+    transform: translate(7.5vw, 15vw);
+  }
+  20% {
+    transform: translate(10vw, 20vw);
+  }
+  25% {
+    transform: translate(12.5vw, 25vw);
+  }
+  30% {
+    transform: translate(15vw, 30vw);
+  }
+  35% {
+    transform: translate(17.5vw, 35vw);
+  }
+  40% {
+    transform: translate(20vw, 40vw);
+  }
+  45% {
+    transform: translate(22.5vw, 45vw);
+  }
+  50% {
+    transform: translate(25vw, 50vw);
+  }
+  55% {
+    transform: translate(27.5vw, 55vw);
+  }
+  60% {
+    transform: translate(30vw, 60vw);
+  }
+  65% {
+    transform: translate(32.5vw, 65vw);
+  }
+  70% {
+    transform: translate(35vw, 70vw);
+  }
+  75% {
+    transform: translate(37.5vw, 75vw);
+  }
+  80% {
+    transform: translate(40vw, 80vw);
+  }
+  85% {
+    transform: translate(42.5vw, 85vw);
+  }
+  90% {
+    transform: translate(45vw, 90vw);
+  }
+  95% {
+    transform: translate(47.5vw, 95vw);
+  }
+  100% {
+    transform: translate(50vw, 100vw);
+  }
+}
+@keyframes cuadratica-v {
+  0% {
+    transform: translate(125vw, 0vw);
+  }
+  5% {
+    transform: translate(101.25vw, 5vw);
+  }
+  10% {
+    transform: translate(80vw, 10vw);
+  }
+  15% {
+    transform: translate(61.25vw, 15vw);
+  }
+  20% {
+    transform: translate(45vw, 20vw);
+  }
+  25% {
+    transform: translate(31.25vw, 25vw);
+  }
+  30% {
+    transform: translate(20vw, 30vw);
+  }
+  35% {
+    transform: translate(11.25vw, 35vw);
+  }
+  40% {
+    transform: translate(5vw, 40vw);
+  }
+  45% {
+    transform: translate(1.25vw, 45vw);
+  }
+  50% {
+    transform: translate(0vw, 50vw);
+  }
+  55% {
+    transform: translate(1.25vw, 55vw);
+  }
+  60% {
+    transform: translate(5vw, 60vw);
+  }
+  65% {
+    transform: translate(11.25vw, 65vw);
+  }
+  70% {
+    transform: translate(20vw, 70vw);
+  }
+  75% {
+    transform: translate(31.25vw, 75vw);
+  }
+  80% {
+    transform: translate(45vw, 80vw);
+  }
+  85% {
+    transform: translate(61.25vw, 85vw);
+  }
+  90% {
+    transform: translate(80vw, 90vw);
+  }
+  95% {
+    transform: translate(101.25vw, 95vw);
+  }
+  100% {
+    transform: translate(125vw, 100vw);
+  }
+}
+@keyframes trigonometrica-v {
+  0% {
+    transform: translate(1vw, 0vw);
+  }
+  5% {
+    transform: translate(-4vw, 5vw);
+  }
+  10% {
+    transform: translate(-4vw, 10vw);
+  }
+  15% {
+    transform: translate(2vw, 15vw);
+  }
+  20% {
+    transform: translate(5vw, 20vw);
+  }
+  25% {
+    transform: translate(1vw, 25vw);
+  }
+  30% {
+    transform: translate(-5vw, 30vw);
+  }
+  35% {
+    transform: translate(-3vw, 35vw);
+  }
+  40% {
+    transform: translate(3vw, 40vw);
+  }
+  45% {
+    transform: translate(5vw, 45vw);
+  }
+  50% {
+    transform: translate(0vw, 50vw);
+  }
+  55% {
+    transform: translate(-5vw, 55vw);
+  }
+  60% {
+    transform: translate(-3vw, 60vw);
+  }
+  65% {
+    transform: translate(3vw, 65vw);
+  }
+  70% {
+    transform: translate(5vw, 70vw);
+  }
+  75% {
+    transform: translate(-1vw, 75vw);
+  }
+  80% {
+    transform: translate(-5vw, 80vw);
+  }
+  85% {
+    transform: translate(-2vw, 85vw);
+  }
+  90% {
+    transform: translate(4vw, 90vw);
+  }
+  95% {
+    transform: translate(4vw, 95vw);
+  }
+  100% {
+    transform: translate(-1vw, 100vw);
+  }
+}
+@keyframes exponencial-v {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  5% {
+    transform: translate(0vw, 5vw);
+  }
+  10% {
+    transform: translate(0vw, 10vw);
+  }
+  15% {
+    transform: translate(0vw, 15vw);
+  }
+  20% {
+    transform: translate(0vw, 20vw);
+  }
+  25% {
+    transform: translate(0vw, 25vw);
+  }
+  30% {
+    transform: translate(0vw, 30vw);
+  }
+  35% {
+    transform: translate(0vw, 35vw);
+  }
+  40% {
+    transform: translate(0vw, 40vw);
+  }
+  45% {
+    transform: translate(0vw, 45vw);
+  }
+  50% {
+    transform: translate(0vw, 50vw);
+  }
+  55% {
+    transform: translate(0vw, 55vw);
+  }
+  60% {
+    transform: translate(0vw, 60vw);
+  }
+  65% {
+    transform: translate(0vw, 65vw);
+  }
+  70% {
+    transform: translate(0vw, 70vw);
+  }
+  75% {
+    transform: translate(1vw, 75vw);
+  }
+  80% {
+    transform: translate(2vw, 80vw);
+  }
+  85% {
+    transform: translate(6vw, 85vw);
+  }
+  90% {
+    transform: translate(15vw, 90vw);
+  }
+  95% {
+    transform: translate(37vw, 95vw);
+  }
+  100% {
+    transform: translate(91vw, 100vw);
+  }
+}
+@keyframes limite-v {
+  0% {
+    transform: translate(-2vw, 0vw);
+  }
+  5% {
+    transform: translate(-2vw, 5vw);
+  }
+  10% {
+    transform: translate(-3vw, 10vw);
+  }
+  15% {
+    transform: translate(-3vw, 15vw);
+  }
+  20% {
+    transform: translate(-3vw, 20vw);
+  }
+  25% {
+    transform: translate(-4vw, 25vw);
+  }
+  30% {
+    transform: translate(-5vw, 30vw);
+  }
+  35% {
+    transform: translate(-7vw, 35vw);
+  }
+  40% {
+    transform: translate(-10vw, 40vw);
+  }
+  45% {
+    transform: translate(-20vw, 45vw);
+  }
+  50% {
+    transform: translate(0, 50vw);
+  }
+  55% {
+    transform: translate(20vw, 55vw);
+  }
+  60% {
+    transform: translate(10vw, 60vw);
+  }
+  65% {
+    transform: translate(7vw, 65vw);
+  }
+  70% {
+    transform: translate(5vw, 70vw);
+  }
+  75% {
+    transform: translate(4vw, 75vw);
+  }
+  80% {
+    transform: translate(3vw, 80vw);
+  }
+  85% {
+    transform: translate(3vw, 85vw);
+  }
+  90% {
+    transform: translate(3vw, 90vw);
+  }
+  95% {
+    transform: translate(2vw, 95vw);
+  }
+  100% {
+    transform: translate(2vw, 100vw);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

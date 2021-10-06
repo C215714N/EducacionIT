@@ -1,0 +1,66 @@
+@funciones_h:
+	lineal-h, 			// ax + b
+	cuadratica-h,		// ax^2 + bx + c
+	trigonometrica-h,	// sin(x)
+	exponencial-h,		// n^x
+	limite-h;			// 1/x
+@funciones_v:
+	lineal-v,
+	cuadratica-v,
+	trigonometrica-v,
+	exponencial-v,
+	limite-v;
+.bg-content{
+	background-image: url(../assets/background/macos-bigsur-day.jpg);
+	overflow: hidden;
+}
+.preAnimate{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	animation: rotate 60s linear infinite;
+	min-height: 100vh;
+	div{
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		.anim(@funciones_h);
+		.anim(@funciones_v; 5);
+	}
+}
+
+.anim(@array; @d:0; @i:1) when (@i <= length(@array)){
+	@n: @i + @d;
+	&:nth-child(@{n}n){
+		animation: extract(@array, @i) 2s @i * 2s infinite;
+		animation-direction: alternate;
+		background: linear-gradient(var(--light), hsl(30 * @n, 50%, 50%));
+	}	.anim(@array; @d; @i + 1);
+}
+
+.keys(@array; @c:true; @i:1) when (@i <= length(@array)){
+	@f: extract(@array, @i);
+	@keyframes @f{ .percentages(@c; @i); }
+	.keys(@array; @c; @i + 1);
+}	
+.keys(@funciones_h);
+.keys(@funciones_v; false);
+
+.percentages(@c; @i; @y: -50vw; @p:0%) when (@p <= 100%){
+	@x: @y + 50;
+	@valores:
+		//lineal
+		(@x / 2),
+		//cuadratica
+		(pow(@y, 2) / 20),				
+		//trigonometrica
+		round(sin(@y) * 5vw),	 		
+		//exponencial
+		round((pow(1.2vw, @y) / 100)), 		
+		//limite (condicion en caso de div/0)
+		if(@y = 0,0, round((1vw / @y)*100));
+	@fx: extract(@valores, @i);
+	@{p}{
+		transform: if(@c = true, translate(@x, @fx), translate(@fx, @x));
+	}	.percentages(@c; @i; @y + 5; @p + 5);
+}
+@keyframes rotate { to{ transform: rotate(360deg);	}	}
