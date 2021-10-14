@@ -37,5 +37,53 @@
 		<button>prev</button>
 		<button>next</button>
 	</header>
+	<!-- Contenido: Relevante para el usuario -->
+	<main>
+		<section>
+			<header class="header">
+				<h2>Caracteristicas HTML5</h2>
+				<p>Nuevos Elementos del estandar</p>
+			</header>
+			<p>
+				Con el surgimiento del nuevo estandar, se incorporaron nuevas etiquetas que facilitaron a los desarrolladores la implementacion de estadisticas, contenido multimedia e incluso API's de dibujo. 
+
+				Si bien la mayoria de los navegadores actuales soporta dichas caracteristicas, debemos tener en cuenta que todavia existen algunos que no y por ende nuestro diseño debe contemplar dichas situaciones. 
+
+				Por eso podemos consultar sitios como <a href="https://caniuse.com/">Can I Use</a> donde se nos mostrara una lista de compatibilidad de elementos.
+			</p>
+			<article>
+				<h3>Elementos Estadisticos</h3>
+				<p>
+					Cada vez que necesitemos comparar valores o evaluar una situacion especifica podemos utilizar 2 etiquetas, <strong>&lt;progress></strong> que debe implementarse cuando estamos llevando a cabo una tarea que aun no fue finalizada, ya que se utiliza para medir el avance dentro de la misma, <em>ej: el progreso dentro de la capacitacion</em>; y <strong>&lt;meter></strong> que debe implementarse cuando la tarea fue finalizada y debemos establecer una comparacion de valores, <em>ej: el resultado de un examen.</em>
+				</p>
+				<ul class="example">
+					<li>
+						<strong>Progress</strong>
+						<ul>
+							<li>
+								<progress></progress>
+								<span>value = undefined</span>
+							</li>
+							<li>
+								<progress value="20" max="100"></progress>
+								<span>value = 20; max = 100</span>
+							</li>
+							<li class="progress">
+								<progress max="100"></progress>
+								<input type="number" min="0" max="100">
+								<span>value = javaScript</span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Meter</strong>
+					</li>
+				</ul>
+			</article>
+		</section>
+	</main>
+
+	<!-- Script JS -->
+	<script src="scripts/main.js"></script>
 </body>
 </html>
