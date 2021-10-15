@@ -77,6 +77,52 @@
 					</li>
 					<li>
 						<strong>Meter</strong>
+						<ul>
+							<li>
+								<meter value="30" low="40" high="70" optimum="90" max="100"></meter>
+								<span><strong>value</strong> < low < high < optimum</span>
+							</li>
+							<li>
+								<meter value="60" low="40" high="70" optimum="90" max="100"></meter>
+								<span>low < <strong>value</strong> < high < optimum</span>
+							</li>
+							<li>
+								<meter value="90" low="40" high="70" optimum="90" max="100"></meter>
+								<span>low < high < <strong>value</strong> < optimum</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>API's de Dibujo</h3>
+				<p>
+					Actualmente disponemos de 2 herramientas para dibujar dentro de nuestro documento HTML, <strong>&lt;svg></strong> (scalable vector graphics) que utiliza como lenguaje base <em>XML</em> y permite la creacion de graficos vectoriales mediante la implementacion de lineas y curvas; y por otro lado <strong>canvas</strong> (lienzo) que utiliza como lenguaje base <em>javaScript</em> y permite la creacion de graficos pixelares o tambien conocidos como mapa de bits. Si bien estas herramientas nos permiten realizar graficos dentro de nuestra pagina, tambien podemos utilizar nuestros conocimientos sobre las mismas, para poder editar graficos existentes.
+				</p>
+				<ul class="example">
+					<li>
+						<strong>SVG (Vectores)</strong>
+						<svg width="300" height="300" style="border:1px solid #333">
+							<rect 
+								x="50" y="50" 
+								width="100" height="100"
+								fill="hsl(240, 30%, 40%)" stroke=""/>
+							<circle 
+								r="50" cx="150" cy="150" 
+								fill="hsla(0, 50%, 50%, .5)" stroke=""/>
+							<polygon 
+								points="150,50 150,150 225,100" 
+								fill="hsla(120, 50%, 50%, .5)" stroke="" stroke-width=""/>
+							<text x="50" y="250" 
+								style="font: bold 1rem calibri, sans-serif;"
+								fill="none" stroke="#333" stroke-width="1">
+								SCALABLE VECTOR GRAPHICS
+							</text>
+						</svg>
+					</li>
+					<li>
+						<strong>Canvas (Raster)</strong>
+						<canvas id="canvas" width="300" height="300" style="border:1px solid #333"></canvas>
 					</li>
 				</ul>
 			</article>
