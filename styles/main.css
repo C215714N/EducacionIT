@@ -1,0 +1,28 @@
+/*Content First - Mobile First*/
+	/*Imports*/
+	/*Variables*/
+		:root{
+			--first: #448;
+			--second: #c3a;
+			--font: 'Raleway', 'calibri', 'segoe', sans-serif;
+		}
+	/*General Rules*/
+		*{
+			box-sizing: border-box;
+			font-family: var(--font);
+		}
+		body,
+		h1,
+		h2,
+		h3,
+		.menu{
+			margin: 0;
+		}
+	/*Navigation*/
+		nav{
+			background-image: linear-gradient(to right, var(--second), var(--first));
+		}
+/*Small Devices - Smartphones*/
+/*Medium Devices - Tablets*/
+/*Large Devices - Desktop*/
+/*Extra Large Devices - HD Desktop */
