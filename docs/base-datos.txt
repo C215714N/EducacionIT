@@ -1,0 +1,42 @@
+DataBase (Schema) (
+	- Estructura para organizar datos,
+	- Almacena los datos en tablas(
+		campos: conjunto de datos del mismo tipo (columna),
+		registros: conjunto de datos que poseen relacion entre si (fila),
+		datos: minima porcion de informacion que pertenece a un tipo (celda)
+	),
+	- Tipos de Base Datos (
+		relacional (*),
+		jerarquica,
+		transaccional,
+		orientada a objetos,
+		etc...
+	)
+)
+
+Database Engine (MySQL) (
+	- IBM Desarrolla SQL (Sequel)
+	- Oracle adquiere los derechos (
+		Oracle SQL Server,
+		MySQL Workbench
+	)
+	- La comunidad desarrolla MariaDB (XAMPP)
+)
+
+SQL (Structure Query Language) (
+	DDL(Data Definition Language)
+		- CREATE: 	crear db/tablas/usuarios
+		- DROP: 	eliminar db/tablas/usuarios
+		- ALTER: 	modificar tablas
+
+	DML(Data Manipulation Language)
+		- INSERT: 	agregar registros
+		- DELETE: 	eliminar registros
+		- UPDATE: 	actualizar registros
+		- SELECT: 	consultar registros
+
+	DCL(Data Control Language)
+		- GRANT: 	otorgar permisos
+		- REVOKE: 	quitar permisos
+		- FLUSH PRIVILEGES: refrescar permisos
+)
