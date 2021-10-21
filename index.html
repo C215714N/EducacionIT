@@ -129,6 +129,24 @@
 				</ul>
 			</article>
 		</section>
+		<section>
+			<header class="header">
+				<h2>Preprocesadores</h2>
+				<p>Pseudolenguajes de CSS</p>
+			</header>
+			<p>
+				Son herramientas que utilizan una sintaxis particular, tomando como base el lenguaje de hojas de estilos. Permiten la implementacion de todos los metodos y caracteristicas que existen en CSS, pero ademas agrega algunas funcionalidades extra; para utilizarlos debemos crear un archivo con el formato del preprocesador que vayamos a utilizar y luego generamos la hoja de estilos mediante el uso de un compilador, es decir, un interprete de las intrucciones previamente escritas en el codigo que las convierte a un archivo de CSS convencional.
+			</p>
+			<article>
+				<h3>LESS</h3>
+				<p>
+					Preprocesador que utiliza JavaScript como lenguaje compilador, tambien implementa varias caracteristicas del lenguaje como la asincronicidad. Para instalarlo debemos utilizar el siguiente comando con NodeJS <em>npm i -g less</em> y una vez que creamos la hoja de estilos la compilamos con el siguiente comando <em>lessc 'input.less' 'output.less'</em>. 
+				</p>
+				<p>
+					Lamentablemente el preprocesado no posee un metodo de observacion, pero para ello instalamos otro paquete conocido como <strong>Less watch Compiler</strong> utilizando el comando con NodeJS <em>npm i -g less-watch-compiler</em> y para compilar y observar los cambios para actualizar las hojas de estilos utilizamos el comando <em>less-watch-compiler 'input/' 'output/' 'input.less'</em>
+				</p>
+			</article>
+		</section>
 	</main>
 
 	<!-- Script JS -->

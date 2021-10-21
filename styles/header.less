@@ -1,0 +1,33 @@
+// Variables
+	@color: #448;
+	@bg_color: #ccc;
+	@r: .25rem;
+
+// Nesting: anidacion de selectores;
+	#header{
+		.header{
+			
+		}
+		.slide{
+
+		}
+		button{
+			@r: 50%;
+			.rounded;	
+		}
+	}
+
+// Mixin: estilos que se utilizan como atributos;
+	.normalize{
+		margin:0;
+		outline:0;
+		border:0;
+		padding: 0;
+	}
+	.rounded{
+		-webkit-border-radius: @r;
+		-moz-border-radius: @r;
+		-ms-border-radius: @r;
+		-o-border-radius: @r;
+		border-radius: @r;
+	}
