@@ -56,5 +56,19 @@
 		}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/
+@media screen and (min-width: 768px){
+	nav .btn{ 
+		display: none; 
+	}
+	nav .menu{
+		display: flex;
+		width: auto;
+		max-height: 640px;
+	}
+}
 /*Large Devices - Desktop*/
 /*Extra Large Devices - HD Desktop */
+	nav{
+		justify-content: space-around;
+		padding: 0 calc(50vw - 570px);
+	}
