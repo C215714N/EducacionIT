@@ -4,6 +4,7 @@
 		:root{
 			--first: #448;
 			--second: #c3a;
+			--hover: rgba(51,51,51,.5);
 			--font: 'Raleway', 'calibri', 'segoe', sans-serif;
 		}
 	/*General Rules*/
@@ -18,9 +19,40 @@
 		.menu{
 			margin: 0;
 		}
+		.menu{
+			padding: 0;
+		}
 	/*Navigation*/
 		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
 			background-image: linear-gradient(to right, var(--second), var(--first));
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		.btn{
+			margin: .5rem;
+			border: .1rem solid #eee;
+			color: #eee;
+			background-color: transparent;
+		}
+		.menu{
+			width: 100%;
+			max-height: 0;
+			list-style: none;
+			overflow: hidden;
+		}
+		.menu.active{
+			max-height: 640px;
+		}
+		.menu a:hover{
+			background-color: var(--hover);
 		}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/
