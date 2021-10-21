@@ -1,8 +1,12 @@
 // Declaraciones
 	const d = document
+	const menuBtn = d.querySelector('nav .btn')
+	const menuLst = d.querySelector('nav .menu')
 	const pBar = d.querySelector('.progress progress')
 	const pIn = d.querySelector('.progress input')
 	const ctx = d.querySelector('#canvas').getContext('2d')
+//navigation bar
+	menuBtn.onclick = () => menuLst.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;'
 //progress bar
 	pIn.oninput = () => pBar.value = pIn.value 
 //canvas
