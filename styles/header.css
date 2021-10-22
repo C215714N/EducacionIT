@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
+  position: relative;
+  top: 0;
+  left: 0;
   margin: 0;
   border: 0;
   padding: 1rem;
@@ -12,6 +15,52 @@
 #header .header {
   font-size: min(calc(2vw + .5rem), 3rem);
   text-align: center;
+}
+#header .slide li {
+  background: var(--bg) center / cover;
+  opacity: 0;
+}
+#header .slide li:nth-child(1) {
+  --bg: url('../assets/bg/osx-bigsur-day.jpg');
+}
+#header .slide li:nth-child(2) {
+  --bg: url('../assets/bg/osx-catalina-day.jpg');
+}
+#header .slide li:nth-child(3) {
+  --bg: url('../assets/bg/osx-leopard-day.jpg');
+}
+#header .slide li:nth-child(4) {
+  --bg: url('../assets/bg/osx-mojave-day.jpg');
+}
+#header .slide li.active {
+  opacity: 1;
+}
+#header button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  background-color: transparent;
+}
+#header button.icon-prev {
+  left: 0;
+}
+#header button.icon-next {
+  right: 0;
+}
+#header.dark .slide li:nth-child(1) {
+  --bg: url('../assets/bg/osx-bigsur-night.jpg');
+}
+#header.dark .slide li:nth-child(2) {
+  --bg: url('../assets/bg/osx-catalina-night.jpg');
+}
+#header.dark .slide li:nth-child(3) {
+  --bg: url('../assets/bg/osx-leopard-night.jpg');
+}
+#header.dark .slide li:nth-child(4) {
+  --bg: url('../assets/bg/osx-mojave-night.jpg');
 }
 .unstyled,
 #header .header *,
