@@ -24,3 +24,28 @@ USE pepe_y_los_globos_store;
         UNIQUE KEY(customer_name) -- campo unico
     );
     DESCRIBE customers;
+    
+-- proveedores
+CREATE TABLE providers(
+	provider_id INT AUTO_INCREMENT,
+	description VARCHAR(100), -- cadena de texto variable
+	cuit CHAR(13), -- cadena de texto fija
+	address VARCHAR(150),
+	PRIMARY KEY(provider_id),
+	UNIQUE KEY(cuit)
+);
+ALTER TABLE providers
+MODIFY COLUMN cuit CHAR(13) NOT NULL;
+DESCRIBE providers;
+
+-- productos
+CREATE TABLE products(
+	product_id INT AUTO_INCREMENT,
+	description VARCHAR(50),
+	PRIMARY KEY(product_id),
+	UNIQUE KEY(description)
+);
+ALTER TABLE products
+ADD COLUMN stock INT default 0;
+DESCRIBE products;
+    
