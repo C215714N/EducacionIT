@@ -13,10 +13,16 @@ INSERT INTO customers(customer_email, customer_pass) -- carga selectiva
 VALUES ('cristiandracedo@gmail.com', 'root');
 
 INSERT INTO customers 
-SET 
+SET
 	customer_name = 'oracle',
     customer_email = 'mysql@oracle.com',
     customer_pass = 'sql_pass';
+    
+INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
+VALUES (1, 'Cristian Damian', 'Racedo', '1991-04-18', '20-35336446-5');
+
+INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
+VALUES (3, 'Cristian', 'Racedo', '1991-04-18', '27-35336446-6');
 
 -- providers
 INSERT INTO providers(description, cuit)
@@ -30,7 +36,7 @@ VALUES -- carga multiple
 
 -- productos
 INSERT INTO products(description)
-VALUES 
+VALUES
 	('Notebook Elitebook 8470p'),
     ('Netbook NP150'),
     ('Notebook Vivobook x512'),
@@ -42,6 +48,7 @@ VALUES
 ## Consulta de Datos
 -- clientes
 SELECT * FROM customers; -- consulta total
+SELECT * FROM customers_data;
 -- proveedores
 SELECT * FROM providers;
 -- productos

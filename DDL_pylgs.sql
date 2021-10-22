@@ -25,6 +25,20 @@ USE pepe_y_los_globos_store;
     );
     DESCRIBE customers;
     
+    CREATE TABLE customers_data(
+		data_id INT AUTO_INCREMENT,
+        customer INT,
+        first_name VARCHAR(50),
+        last_name VARCHAR(50),
+        birth DATE,
+        cuit CHAR(13) NOT NULL,
+        address VARCHAR(100),
+        phone VARCHAR(20),
+        PRIMARY KEY (data_id),
+        UNIQUE KEY(cuit), -- clave unica
+        UNIQUE KEY(first_name, last_name, birth, address), -- clave unica combinada
+        FOREIGN KEY (customer) REFERENCES customers(customer_id) -- (campo_local) => tabla(campo_externo)
+    );
 -- proveedores
 CREATE TABLE providers(
 	provider_id INT AUTO_INCREMENT,
