@@ -39,6 +39,8 @@ USE pepe_y_los_globos_store;
         UNIQUE KEY(first_name, last_name, birth, address), -- clave unica combinada
         FOREIGN KEY (customer) REFERENCES customers(customer_id) -- (campo_local) => tabla(campo_externo)
     );
+    DESCRIBE customers_data;
+
 -- proveedores
 CREATE TABLE providers(
 	provider_id INT AUTO_INCREMENT,
@@ -51,6 +53,19 @@ CREATE TABLE providers(
 ALTER TABLE providers
 MODIFY COLUMN cuit CHAR(13) NOT NULL;
 DESCRIBE providers;
+
+CREATE TABLE transactions(
+	transaction_id INT AUTO_INCREMENT,
+    provider INT,
+    product INT,
+    quantity INT,
+    price DECIMAL(11,2),
+	transaction_date DATETIME DEFAULT (current_timestamp()),
+    PRIMARY KEY (transaction_id),
+    FOREIGN KEY(provider) REFERENCES providers(provider_id),
+    FOREIGN KEY(product) REFERENCES products(product_id)
+);
+DESCRIBE transactions;
 
 -- productos
 CREATE TABLE products(
