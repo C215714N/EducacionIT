@@ -5,29 +5,63 @@
 
 // Nesting: anidacion de selectores;
 	#header{
+		.flexbox(column);
+		.normalize(@p: 1rem);
+		height: min(100vh, 640px);
 		.header{
-			
+			font-size: ~'min(calc(2vw + .5rem), 3rem)';
+			text-align: center;
+			*{ &:extend(.unstyled); }
 		}
 		.slide{
-
+			&:extend(.unstyled);
+			&:extend(.cover);
+			li{
+				&:extend(.cover);
+			}
 		}
-		button{
-			@r: 50%;
-			.rounded;	
+		button{	
 		}
 	}
 
-// Mixin: estilos que se utilizan como atributos;
-	.normalize{
-		margin:0;
-		outline:0;
-		border:0;
-		padding: 0;
+//	Mixin: estilos que se utilizan como atributos;
+	.unstyled{ 
+		.normalize;
+		list-style: none; 
 	}
-	.rounded{
+	.rounded(){
 		-webkit-border-radius: @r;
 		-moz-border-radius: @r;
 		-ms-border-radius: @r;
 		-o-border-radius: @r;
 		border-radius: @r;
+	}
+	.cover{
+		.position(absolute; @z:-1);
+		width: 100%;
+		height: 100%;
+	}
+//	Mixin Parametrico: recibe parametros al igual que una funcion
+	.normalize(@m:0; @p:0; @b:0){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: stretch;
+		@fw: wrap;
+		@f: flex
+		){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+	.position(@p: relative; @y:0; @x:0; @z:0; @p1: top; @p2: left){
+		position: @p;
+		@{p1}: @y;
+		@{p2}: @x;
 	}
