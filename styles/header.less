@@ -2,6 +2,7 @@
 	@color: #448;
 	@bg_color: #ccc;
 	@r: .25rem;
+	@col: 24;
 	@path: '../assets/bg';
 	@bg_day:
 		'osx-bigsur-day.jpg',
@@ -89,12 +90,17 @@
 		position: @p;
 		@{p1}: @y;
 		@{p2}: @x;
+		z-index: @z;
 	}
 //	Mixin Recursivo: estilo que se repite en base a una condicion
 	.bg(@array; @i:1) when (@i <= length(@array)){
 		@bg: extract(@array, @i);
-		&:nth-child(@{i}){
-			--bg: url('@{path}/@{bg}');
-		}
+		&:nth-child(@{i}){ --bg: url('@{path}/@{bg}'); }
 		.bg(@array; @i + 1);
 	}
+	.grid(@i: 1) when (@i <= @col){
+		.col-@{i}{ width: percentage( (@i / @col) ); }
+		.grid(@i+1);
+	} 
+/* Sistema de grillas (Flexbox)*/
+	.grid;
