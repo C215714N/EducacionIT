@@ -67,10 +67,10 @@
 			<h2>Unidades de Medida</h2>
 			<article>
 				<h2>Unidades Absolutas</h2>
-				<ul class="absolute">
+				<ul class="example absolute relative flexible">
 					<li>
 						<strong>distancia</strong>
-						son unidades que poseen un valor definido, es decir que indistintamente del dispositivo, se representan siempre con el mismo tamaño y se utilzan para las cajas.
+						Unidades que poseen un valor definido, es decir que indistintamente del dispositivo, se representan siempre con el mismo tamaño y se utilzan para las cajas.
 						<ul>
 							<li>mm: milimetros</li>
 							<li>cm: centimetros</li>
@@ -79,7 +79,7 @@
 					</li>
 					<li>
 						<strong>tipografia</strong>
-						son unidades con valores de referencia fijos que se utilizan para los texto, asi como tambien para los elementos que tengan relacion proporcional con estos.
+						Unidades con valores de referencia fijos que se utilizan para los texto, asi como tambien para los elementos que tengan relacion proporcional con estos.
 						<ul>
 							<li>pt: puntos (0.35mm)</li>
 							<li>pc: picas (12 puntos)</li>
@@ -87,7 +87,7 @@
 					</li>
 					<li>
 						<strong>hibrida</strong>	
-						son unidades absolutas que toman como referencia un valor relativo como lo es la resolucion de pantalla, ya que si bien los pixeles poseen un tamaño, su representacion varias segun el valor de este factor.
+						Unidades absolutas que toman como referencia un valor relativo como lo es la resolucion de pantalla, ya que si bien los pixeles poseen un tamaño, su representacion varias segun el valor de este factor.
 						<ul>
 							<li>px: pixel (1/96in)</li>
 						</ul>				
@@ -96,18 +96,52 @@
 			</article>
 			<article>
 				<h2>Unidades Relativas</h2>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+				<ul class="example absolute relative flexible">
+					<li>
+						<strong>contenedor</strong>
+						unidades cuyo tamaño depende de la caja contenedora, una vez obtenida esta unidad, el navegador la intepreta en px y se utiliza para definir el aspecto de los elementos.
+						<ul>
+							<li>% porcentaje (contenedor)</li>
+						</ul>
+					</li>
+					<li>
+						<strong>tipografia</strong>
+						unidades que toman como referencia el tamaño de la tipografia del elemento contenedor, se utiliza para mantener las proporciones en las distancias y espacios de los contenidos.
+						<ul>
+							<li>em: ancho de "M"</li>
+							<li>ex: alto de "x"</li>
+							<li>ch: ancho del caracter "0"</li>
+							<li>%: porcentaje (contenido)</li>
+						</ul>
+					</li>
+					<li>
+						<strong>hibrida</strong>
+						Unidades que toman como referencia un valor absoluto dentro de la pagina y a pesar de que este cambie dentro de la misma, siempre va a mantener su unidad.
+						<ul>
+							<li>rem: ancho de M en la Raiz (html)</li>
+						</ul>
+					</li>
 				</ul>
 			</article>
 			<article>
-				<h2>Unidades ...</h2>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+				<h2>Unidades Flexibles</h2>
+				<ul class="example absolute relative flexible">
+					<li>
+						<strong>viewport size</strong>
+						Unidades que se calculan en base al tamaño de alguna de las dimensiones de la ventana donde se reproduce la pagina, normalmente se aplican para definir altos.
+						<ul>
+							<li>vw: % del ancho del viewport</li>
+							<li>vh: % del alto del viewport</li>
+						</ul>
+					</li>
+					<li>
+						<strong>viewport dimensions</strong>
+						Unidades que toman de refencia el tamaño mas grande o chico del viewport, segun corresponde y se recalculan si redimensionamos la ventana del navegador, tambien se usan para tipografia flexible.
+						<ul>
+							<li>vmin: % del lado mas pequeño</li>
+							<li>vmax: % del lado mas grande</li>
+						</ul>
+					</li>
 				</ul>
 			</article>
 		</section>
