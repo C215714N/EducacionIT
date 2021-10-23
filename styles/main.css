@@ -86,6 +86,7 @@
 		}
 	/*Units Example*/
 		.example{
+			margin: 0;
 			list-style: none;
 			overflow: auto;
 		}
@@ -106,18 +107,51 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
-		.col-1	{	width:	calc(33.33% - 1rem)	}
-		.col-2	{	width:	calc(66.7% - 1rem)	}
-		.col-3	{	width:	100%  	}
-
+		.col-a	{	width:	calc(33.33% - 1rem)	}
+		.col-b	{	width:	calc(66.7% - 1rem)	}
+		.col-c	{	width:	100%  	}
+	/*Footer*/
+		#footer{
+			position: relative;
+			min-height: min(100vh, 640px);
+			background-color: rgba(68,68,136,.5);
+		}
+		.map iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		.map .btn{
+			position: absolute;
+			top: .5rem;
+			right: .5rem;
+			min-width: 3rem;
+			background-color: #999;
+			font-size: 2rem;
+		}
+		.icon-min::before{
+			content: '-';
+		}
+		.icon-max::before{
+			content: '+';
+		}
+		.map iframe.active,
+		.map .btn.icon-min{
+			position: fixed;
+			z-index: 2;
+		}
 /*Small Devices - Smartphones*/
 	@media screen and (min-width: 576px){
 		section{
 			max-width: 540px;
 		}
-		.col-sm-1	{	width:	calc(33.33% - 1rem)	}
-		.col-sm-2	{	width:	calc(66.7% - 1rem)	}
-		.col-sm-3	{	width:	calc(100% - 1rem) 	}
+		.col-sm-a	{	width:	calc(33.33% - 1rem)	}
+		.col-sm-b	{	width:	calc(66.7% - 1rem)	}
+		.col-sm-c	{	width:	calc(100% - 1rem) 	}
 	}
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
@@ -132,18 +166,18 @@
 		section{
 			max-width: 720px;
 		}
-		.col-md-1	{	width:	calc(33.33% - 1rem)	}
-		.col-md-2	{	width:	calc(66.7% - 1rem)	}
-		.col-md-3	{	width:	calc(100% - 1rem) 	}
+		.col-md-a	{	width:	calc(33.33% - 1rem)	}
+		.col-md-b	{	width:	calc(66.7% - 1rem)	}
+		.col-md-c	{	width:	calc(100% - 1rem) 	}
 	}
 /*Large Devices - Laptops*/
 	@media screen and (min-width: 996px){
 		section{
 			max-width: 960px;
 		}
-		.col-lg-1	{	width:	calc(33.33% - 1rem)	}
-		.col-lg-2	{	width:	calc(66.7% - 1rem)	}
-		.col-lg-3	{	width:	calc(100% - 1rem) 	}
+		.col-lg-a	{	width:	calc(33.33% - 1rem)	}
+		.col-lg-b	{	width:	calc(66.7% - 1rem)	}
+		.col-lg-c	{	width:	calc(100% - 1rem) 	}
 	}
 /*Extra Large - Desktop*/
 	@media screen and (min-width: 1200px){
@@ -151,7 +185,7 @@
 			justify-content: space-around;
 			padding: 0 calc(50vw - 570px);
 		}
-		.col-xl-1	{	width:	calc(33.33% - 1rem)	}
-		.col-xl-2	{	width:	calc(66.7% - 1rem)	}
-		.col-xl-3	{	width:	calc(100% - 1rem) 	}
+		.col-xl-a	{	width:	calc(33.33% - 1rem)	}
+		.col-xl-b	{	width:	calc(66.7% - 1rem)	}
+		.col-xl-c	{	width:	calc(100% - 1rem) 	}
 	}
