@@ -63,8 +63,20 @@
 	
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
-
+		nav .btn{
+			display: none;
+		}
+		.menu{
+			display: flex;
+			width: auto;
+			max-height: 640px;
+		}
 	}
 /*Large Devices - Laptops*/
 
 /*Extra Large - Desktop*/
+	@media screen and (min-width: 1200px){
+		nav{
+			justify-content: space-around;
+		}
+	}
