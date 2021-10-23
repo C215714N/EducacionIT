@@ -17,8 +17,15 @@
 			color: #eee;
 			background-color: transparent;
 		}
+		.btn:hover{
+			color: #448;
+			background-color: #eee;
+		}
 	/*Navigation*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 0;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -30,6 +37,10 @@
 			padding: .5rem;
 			color: #eee;
 			text-decoration: none;
+		}
+		nav .btn{
+			margin: .5rem;
+			font-size: 1rem;
 		}
 		.menu{
 			width: 100%;
@@ -43,6 +54,10 @@
 		}
 		.menu a:hover{
 			background-color: rgba(51,51,51,.5);
+		}
+	/*Headings*/
+		#header{
+			position: relative;
 		}
 /*Small Devices - Smartphones*/
 	
