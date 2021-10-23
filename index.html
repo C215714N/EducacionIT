@@ -10,6 +10,8 @@
 	<title>Responsive Web Design</title>
 	<!-- Styles CSS -->
 	<link rel="stylesheet" href="styles/main.css">
+	<!-- Styles BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<!-- Navegacion: Links mas importantes -->
@@ -30,7 +32,7 @@
 	</header>
 	<!-- Contenido: Informacion relevante para el usuario -->
 	<main>
-		<section class="row">
+		<section class="row-flex">
 			<h2 class="col-c">Tipos de Diseño</h2>
 			<p>
 				A lo largo de los años las estrategias de planificacion del diseño han ido evolucionando en funcion del publico y los dispositivos utilizados para la visualizacion de los sitios web. Si bien, en sus comienzos el uso de internet era algo reservado para unos cuantos y el acceso a las paginas web se obtenia a traves del uso de las computadoras de escritorio, hoy en dia podemos visitar cualquier sitio de internet desde una variada cantidad de dispositivos, cada uno con sus respectivos tamaños, como celulares, smartphones, tablets, laptops e incluso televisores.
@@ -63,7 +65,7 @@
 				</p>
 			</article>
 		</section>
-		<section class="row">
+		<section class="row-flex">
 			<h2 class="col-c">Unidades de Medida</h2>
 			<p>
 				Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Autem esse fuga, nobis iure provident accusantium, modi eveniet sapiente excepturi, beatae laudantium perferendis, pariatur illum odio neque ad reprehenderit! Reprehenderit, iste.
@@ -148,6 +150,64 @@
 				</ul>
 			</article>
 		</section>
+		<section>
+			<h2>Boostrap</h2>
+			<p>
+				Framework de CSS que esta orientado al diseño responsive y esta compuesto por algunos archivos de CSS y JS. Su estructura de trabajo consiste en la aplicacion de clases predefinidas en las hojas de estilo mencionadas anteriormente para la aplicacion de estilos e implementacion de componentes, estos ultimos son basicamente elementos con su propia estructura definida por el equipo de desarrollo de bootstrap.
+			</p>
+			<h3>Breakpoints</h3>
+			<p>
+				Debido a que esta orientado al diseño responsive, Bootstrap posee estilos para los diferentes tamaños de pantalla y les asigna un nombre para facilitar su identificacion. ademas aporta clases para limitar el tamaño de los elementos, segun el tipo de dispositivo como se muestra a continuacion.
+			</p>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>breakpoint</th>
+						<th>screen-size</th>
+						<th>max-width</th>
+						<th>devices</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>xs</td>
+						<td>< 576px</td>
+						<td>100%</td>
+						<td>smartwatches</td>
+					</tr>
+					<tr>
+						<td>sm</td>
+						<td>>=576px & <768px</td>
+						<td>540px</td>
+						<td>smartphones</td>
+					</tr>
+					<tr>
+						<td>md</td>
+						<td>>=768px & <992px</td>
+						<td>720px</td>
+						<td>tablets</td>
+					</tr>
+					<tr>
+						<td>lg</td>
+						<td>>=992px & <1200px </td>
+						<td>960px</td>
+						<td>Laptops</td>
+					</tr>
+					<tr>
+						<td>xl</td>
+						<td>>=1200px & <1400px </td>
+						<td>1140px</td>
+						<td>Desktop</td>
+					</tr>
+					<tr>
+						<td>xxl</td>
+						<td>>=1400</td>
+						<td>1320px</td>
+						<td>HD Desktop</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 	</main>
 	<!-- Pie de Pagina: Informacion Complementaria -->
 	<footer id="footer">
@@ -171,5 +231,7 @@
 	</footer>
 	<!-- Scripts JS -->
 	<script src="scripts/main.js"></script>
+	<!-- Scripts BOOTSTRAP -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

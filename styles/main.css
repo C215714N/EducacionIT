@@ -103,7 +103,7 @@
 			max-height: 100vh;
 		}
 	/*Flexbox Grid System*/
-		.row{
+		.row-flex{
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -114,7 +114,9 @@
 		#footer{
 			position: relative;
 			min-height: min(100vh, 640px);
+			color: #eee;
 			background-color: rgba(68,68,136,.5);
+			text-shadow: 0 0 .5rem #333;
 		}
 		.map iframe{
 			position: absolute;
