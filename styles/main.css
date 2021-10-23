@@ -25,7 +25,7 @@
 		nav{
 			position: sticky;
 			top: 0;
-			z-index: 0;
+			z-index: 2;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -58,7 +58,32 @@
 	/*Headings*/
 		#header{
 			position: relative;
+			display: grid;
+			align-content: center;
+			text-align: center;
+			height: 100vh; /* alto del viewport */
+			max-height: 640px;
+			color: #eee;
+			background-color: #333;
+			font-size: min(calc(5vw + .5rem), 3rem);
 		}
+	/*Units Example*/
+		.example{
+			overflow: auto;
+		}
+		.absolute{
+			min-width: 200px;
+			max-width: 640px;
+		}
+		.relative{
+			padding: 1.5rem;
+			font-size: 1rem;
+		}
+		.flexible{
+			min-height: 20vh;
+			max-height: 100vh;
+		}
+
 /*Small Devices - Smartphones*/
 	
 /*Medium Devices - Tablets*/
@@ -78,5 +103,6 @@
 	@media screen and (min-width: 1200px){
 		nav{
 			justify-content: space-around;
+			padding: 0 calc(50vw - 570px);
 		}
 	}
