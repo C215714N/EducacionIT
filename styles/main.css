@@ -67,25 +67,58 @@
 			background-color: #333;
 			font-size: min(calc(5vw + .5rem), 3rem);
 		}
+		main h2{
+			border-bottom: .1rem solid #333;
+		}
+	/*Content*/
+		main{
+			padding: 1rem;
+		}
+		section{
+			margin: 1rem auto;
+			padding: 1rem;
+		}
+		article{
+			margin: .5rem;
+			border-radius: .25rem;
+			padding: .5rem;
+			background-color: #eee;
+		}
 	/*Units Example*/
 		.example{
+			list-style: none;
 			overflow: auto;
 		}
 		.absolute{
 			min-width: 200px;
-			max-width: 640px;
+			max-width: 480px;
 		}
 		.relative{
-			padding: 1.5rem;
+			padding: 1rem;
 			font-size: 1rem;
 		}
 		.flexible{
 			min-height: 20vh;
 			max-height: 100vh;
 		}
+	/*Flexbox Grid System*/
+		.row{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.col-1	{	width:	calc(33.33% - 1rem)	}
+		.col-2	{	width:	calc(66.7% - 1rem)	}
+		.col-3	{	width:	100%  	}
 
 /*Small Devices - Smartphones*/
-	
+	@media screen and (min-width: 576px){
+		section{
+			max-width: 540px;
+		}
+		.col-sm-1	{	width:	calc(33.33% - 1rem)	}
+		.col-sm-2	{	width:	calc(66.7% - 1rem)	}
+		.col-sm-3	{	width:	calc(100% - 1rem) 	}
+	}
 /*Medium Devices - Tablets*/
 	@media screen and (min-width: 768px){
 		nav .btn{
@@ -96,13 +129,29 @@
 			width: auto;
 			max-height: 640px;
 		}
+		section{
+			max-width: 720px;
+		}
+		.col-md-1	{	width:	calc(33.33% - 1rem)	}
+		.col-md-2	{	width:	calc(66.7% - 1rem)	}
+		.col-md-3	{	width:	calc(100% - 1rem) 	}
 	}
 /*Large Devices - Laptops*/
-
+	@media screen and (min-width: 996px){
+		section{
+			max-width: 960px;
+		}
+		.col-lg-1	{	width:	calc(33.33% - 1rem)	}
+		.col-lg-2	{	width:	calc(66.7% - 1rem)	}
+		.col-lg-3	{	width:	calc(100% - 1rem) 	}
+	}
 /*Extra Large - Desktop*/
 	@media screen and (min-width: 1200px){
 		nav{
 			justify-content: space-around;
 			padding: 0 calc(50vw - 570px);
 		}
+		.col-xl-1	{	width:	calc(33.33% - 1rem)	}
+		.col-xl-2	{	width:	calc(66.7% - 1rem)	}
+		.col-xl-3	{	width:	calc(100% - 1rem) 	}
 	}

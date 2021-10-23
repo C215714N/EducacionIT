@@ -30,12 +30,12 @@
 	</header>
 	<!-- Contenido: Informacion relevante para el usuario -->
 	<main>
-		<section>
-			<h2>Tipos de Diseño</h2>
+		<section class="row">
+			<h2 class="col-3">Tipos de Diseño</h2>
 			<p>
 				A lo largo de los años las estrategias de planificacion del diseño han ido evolucionando en funcion del publico y los dispositivos utilizados para la visualizacion de los sitios web. Si bien, en sus comienzos el uso de internet era algo reservado para unos cuantos y el acceso a las paginas web se obtenia a traves del uso de las computadoras de escritorio, hoy en dia podemos visitar cualquier sitio de internet desde una variada cantidad de dispositivos, cada uno con sus respectivos tamaños, como celulares, smartphones, tablets, laptops e incluso televisores.
 			</p>
-			<article>
+			<article class="col-lg-1">
 				<h3>Fluid Design</h3>
 				<p>
 					Modelo de maquetado que utiliza medidas relativas como porcentajes y em para definir el tamaño de los elementos dentro de la pagina. desde sus comienzos la web presenta este tipo de caractericas, pero uno de los problemas que se presenta con la misma es la incapacidad de poder predefinir un tamaño asi como en diseño grafico al utilizar un formato de papel.
@@ -44,7 +44,7 @@
 					Para solucionar el hecho que no se cuenta con un tamaño definido, se implemento el <strong>Liquid Design</strong> que consiste en agregar limites (max-width, min-width) a los elementos de la pagina, pero el problema que presenta esto son los espacios que se producen en dispositivos grandes y que los elementos se salgan del viewport en dispositivos pequeños.
 				</p>
 			</article>
-			<article>
+			<article class="col-lg-1">
 				<h3>Adaptive Design</h3>
 				<p>
 					Modelo de maquetado que plantea el diseño de contenido para cada tamaño de dispositivo al que nuestro sitio este destinado para su visualizacion, es decir, armar una pagina diferente para cada tamaño de pantalla y utilizando herramientas de redireccionamiento, que el navegador no ubique en el sitio adecuado.
@@ -53,7 +53,7 @@
 					El problema que surge con esto es la generacion de contenido duplicado, ya que utilizamos los mismos texto o diferentes imagenes para cada resolucion, sin tener en cuenta que esto afectara a los tiempos de carga del sitio. Esta opcion seria rentable para clientes con poco presupuesto debido a su facil mantenimiento.
 				</p>
 			</article>
-			<article>
+			<article class="col-lg-1">
 				<h3>Responsive Design</h3>
 				<p>
 					Modelo de maquetado cuyos origenes se corresponden a una publicacion realizada por <strong>Ethan Marcotte</strong> en el sitio <a href="https://alistapart.com/article/responsive-web-design/">A list Apart</a> donde se plantea el concepto de <em>One Web for All</em> y comenta sobre diseñar para dispositivos moviles, la implementacion de media queries, sistemas de grillas para la planificacion, entre otras cosas.
@@ -63,10 +63,13 @@
 				</p>
 			</article>
 		</section>
-		<section>
-			<h2>Unidades de Medida</h2>
-			<article>
-				<h2>Unidades Absolutas</h2>
+		<section class="row">
+			<h2 class="col-3">Unidades de Medida</h2>
+			<p>
+				Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Autem esse fuga, nobis iure provident accusantium, modi eveniet sapiente excepturi, beatae laudantium perferendis, pariatur illum odio neque ad reprehenderit! Reprehenderit, iste.
+			</p>
+			<article class="col-lg-1">
+				<h3>Unidades Absolutas</h3>
 				<ul class="example absolute relative flexible">
 					<li>
 						<strong>distancia</strong>
@@ -94,8 +97,8 @@
 					</li>
 				</ul>
 			</article>
-			<article>
-				<h2>Unidades Relativas</h2>
+			<article class="col-lg-1">
+				<h3>Unidades Relativas</h3>
 				<ul class="example absolute relative flexible">
 					<li>
 						<strong>contenedor</strong>
@@ -123,8 +126,8 @@
 					</li>
 				</ul>
 			</article>
-			<article>
-				<h2>Unidades Flexibles</h2>
+			<article class="col-lg-1">
+				<h3>Unidades Flexibles</h3>
 				<ul class="example absolute relative flexible">
 					<li>
 						<strong>viewport size</strong>
