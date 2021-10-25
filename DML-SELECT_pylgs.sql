@@ -1,10 +1,23 @@
 ## CONSULTA DE DATOS
+USE pepe_y_los_globos_store;
 -- clientes
 SELECT customer_name, customer_email FROM customers
 WHERE customer_name IS NULL; -- cliente sin nombre de usuario
 
 SELECT * FROM customers_data
 WHERE customer = 1; -- datos del cliente 1 (c215714n)
+
+SELECT 
+	LEFT(first_name, 1) AS initial, -- extrae una cant. de caracteres de izquierda a derecha
+    RIGHT(phone, 4) AS last_digits, -- extrae una cant. de caracteres de derecha a izquierda
+    SUBSTRING(cuit, 4, 8) AS document -- extrae una cant. de caracteres a partir de la posicion especificada
+FROM customers_data;
+
+SELECT 
+	CONCAT('sr/a.: ', last_name, " ", first_name) AS client, -- combina cadenas de texto
+	CURDATE() AS today, -- retorna la fecha actual
+    ROUND((DATEDIFF(CURDATE(), birth) / 365), 2) AS age -- retorna la diferencia en dias entre la primer fecha y la segunda
+FROM customers_data;
 
 -- proveedores
 SELECT cuit, description FROM providers
@@ -36,7 +49,23 @@ WHERE provider BETWEEN 3 AND 6; -- resultado entre los valores especificados
     C2f |  F  |  F		C2v |  V  |  V		C2f |  F  | V
     C2v |  F  |  V		C2f |  V  |  F		C2v |  V  | F 
 */
+
+SELECT 
+	product, 
+    quantity, 
+    price,
+    quantity * price AS total,
+    ROUND(price * 50 / 100, 2) AS charge
+FROM transactions;
+
+SELECT 
+	MIN(price) AS cheapest, -- devuelve el menor valor entre los registros (columna)
+	MAX(price) AS most_expensive, -- devuelve el valor mas alto entre los registros (columna)
+    ROUND(AVG(price), 2) AS average -- calcula el promedio entre registros (columna)
+FROM transactions;
+
 -- productos
+SELECT * FROM products;
 SELECT *, 'Reponer' AS situacion FROM products
 WHERE stock <= 10; -- productos con menos de 10 unidades
 
