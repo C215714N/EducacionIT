@@ -19,6 +19,16 @@ SELECT
     ROUND((DATEDIFF(CURDATE(), birth) / 365), 2) AS age -- retorna la diferencia en dias entre la primer fecha y la segunda
 FROM customers_data;
 
+-- productos
+SELECT * FROM products;
+SELECT *, 'Reponer' AS situacion FROM products
+WHERE stock <= 10; -- productos con menos de 10 unidades
+
+SELECT description, stock FROM products -- tabla de origen
+ORDER BY description -- criterio de orden
+LIMIT 3 -- cantidad de registros n
+OFFSET 3; -- a partir de la posicion x
+
 -- proveedores
 SELECT cuit, description FROM providers
 ORDER BY cuit, description DESC; -- orden de resultados
@@ -64,12 +74,10 @@ SELECT
     ROUND(AVG(price), 2) AS average -- calcula el promedio entre registros (columna)
 FROM transactions;
 
--- productos
-SELECT * FROM products;
-SELECT *, 'Reponer' AS situacion FROM products
-WHERE stock <= 10; -- productos con menos de 10 unidades
-
-SELECT description, stock FROM products -- tabla de origen
-ORDER BY description -- criterio de orden
-LIMIT 3 -- cantidad de registros n
-OFFSET 3; -- a partir de la posicion x
+-- ventas
+SELECT
+    pay_method,
+	COUNT(pay_method) AS total_sales, -- cuenta los registros
+    SUM(total) AS total_price -- suma todos los registros
+FROM sales
+GROUP BY pay_method; -- agrupa los valores segun lo indicado

@@ -54,6 +54,32 @@ VALUES
 	(6,6,100,6000), (6,4,10,16000); -- apple
 
 -- ventas
+INSERT INTO sales(customer, pay_method)
+VALUES 
+	(1,2),(3,5),(2,3),
+	(1,4),(2,2),(1,1),
+	(3,3),(3,5),(1,1),
+	(1,4),(2,3),(3,3),
+	(2,5),(2,4),
+	((SELECT customer_id FROM customers WHERE customer_name = 'c215714n'),'credito'); -- consulta anidada
+
+INSERT INTO sales(customer)
+VALUES ((SELECT customer FROM customers_data WHERE cuit LIKE '%35336446%'));
+/*
+	LIKE 
+	% cualquier cantidad de caracteres
+    _ un caracter cualquiera
+*/
+
+INSERT INTO sales_detail(sale, product, quantity)
+VALUES
+	(1,3,20),(1,2,20),(1,1,10),(1,4,25),
+    (2,4,2),(2,6,4),(2,7,10),
+    (3,5,5),(3,7,2),
+    (4,3,5),(4,1,5),(4,4,5),
+    (5,4,1),
+    (6,5,10),
+    (7,1,2),(7,2,1),(7,3,2);
 
 ## Consulta de Datos
 -- clientes
@@ -66,3 +92,7 @@ SELECT * FROM products;
 -- proveedores
 SELECT * FROM providers;
 SELECT * FROM transactions;
+
+-- ventas
+SELECT * FROM sales;
+SELECT * FROM sales_detail;
