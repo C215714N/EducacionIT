@@ -81,3 +81,17 @@ SELECT
     SUM(total) AS total_price -- suma todos los registros
 FROM sales
 GROUP BY pay_method; -- agrupa los valores segun lo indicado
+
+SELECT 
+	sale,
+    product,
+    quantity,
+    price,
+    price * quantity AS total
+FROM sales_detail;
+
+SELECT 
+	sale,
+    SUM(price * quantity) AS total
+FROM sales_detail
+GROUP BY sale;
