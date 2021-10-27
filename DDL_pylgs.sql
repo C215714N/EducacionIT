@@ -23,7 +23,6 @@ CREATE TABLE customers(
 	UNIQUE KEY(customer_email), -- restriccion local
 	UNIQUE KEY(customer_name) -- campo unico
 );
-DESCRIBE customers;
     
 CREATE TABLE customers_data(
 	data_id INT AUTO_INCREMENT,
@@ -39,7 +38,6 @@ CREATE TABLE customers_data(
 	UNIQUE KEY(first_name, last_name, birth, address), -- clave unica combinada
 	FOREIGN KEY (customer) REFERENCES customers(customer_id) -- (campo_local) => tabla(campo_externo)
 );
-DESCRIBE customers_data;
 
 -- productos
 CREATE TABLE products(
@@ -51,7 +49,6 @@ CREATE TABLE products(
 ALTER TABLE products
 ADD COLUMN stock INT DEFAULT 0,
 ADD COLUMN price DECIMAL(11,2) DEFAULT 0;
-DESCRIBE products;
 
 -- proveedores
 CREATE TABLE providers(
@@ -64,7 +61,6 @@ CREATE TABLE providers(
 );
 ALTER TABLE providers
 MODIFY COLUMN cuit CHAR(13) NOT NULL;
-DESCRIBE providers;
 
 CREATE TABLE transactions(
 	transaction_id INT AUTO_INCREMENT,
@@ -77,7 +73,6 @@ CREATE TABLE transactions(
     FOREIGN KEY(provider) REFERENCES providers(provider_id),
     FOREIGN KEY(product) REFERENCES products(product_id)
 );
-DESCRIBE transactions;
 
 -- ventas
 CREATE TABLE sales(
@@ -101,3 +96,15 @@ CREATE TABLE sales_detail(
     FOREIGN KEY(product) REFERENCES products(product_id)
 );
 
+## verificacion de Tablas
+-- clientes
+DESCRIBE customers;
+DESCRIBE customers_data;
+-- productos
+DESCRIBE products;
+-- proveedores
+DESCRIBE providers;
+DESCRIBE transactions;
+-- ventas
+DESCRIBE sales;
+DESCRIBE sales_detail;

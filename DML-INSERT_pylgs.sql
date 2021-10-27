@@ -22,7 +22,7 @@ INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
 VALUES (1, 'Cristian Damian', 'Racedo', '1991-04-18', '20-35336446-5');
 
 INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
-VALUES (3, 'Cristian', 'Racedo', '1991-04-18', '27-35336446-6');
+VALUES (3, 'Cristian', 'Racedo', '1991-04-18', '27-35336666-6');
 
 -- productos
 INSERT INTO products(description)
@@ -83,16 +83,13 @@ VALUES
 
 ## Consulta de Datos
 -- clientes
-SELECT * FROM customers; -- consulta total
+SELECT * FROM customers;
 SELECT * FROM customers_data;
-
 -- productos
 SELECT * FROM products;
-
 -- proveedores
 SELECT * FROM providers;
 SELECT * FROM transactions;
-
 -- ventas
 SELECT * FROM sales;
 SELECT * FROM sales_detail;
