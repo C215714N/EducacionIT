@@ -29,7 +29,7 @@ SET price = ( -- actualizacion de precios
 	SELECT price -- valor consultado
     FROM products -- tabla consultada
     WHERE product_id = product -- condicion (requerida)
-) 	WHERE price IN(0,NULL); -- condicion actualizacion
+) 	WHERE price IS NULL; -- condicion actualizacion
 
 UPDATE sales
 SET total = ( -- actualizacion de compra

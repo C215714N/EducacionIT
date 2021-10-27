@@ -17,6 +17,14 @@ SET
 
 INSERT INTO customers(customer_email, customer_pass) -- carga selectiva
 VALUES ('cristiandracedo@gmail.com', 'root');
+
+INSERT INTO customers(customer_name, customer_email)
+VALUES
+	('pepito','pepe_1234@hotmail.com'),
+	('juan_perez','juan_perez@gmail.com'),
+	('Jose','jo_ar@live.com'),
+	('chayanne','chayanne_123@gmail.com'),
+	('diego_coleman','coleman_diego@outlook.com');
     
 INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
 VALUES (1, 'Cristian Damian', 'Racedo', '1991-04-18', '20-35336446-5');
@@ -81,6 +89,18 @@ VALUES
     (6,5,10),
     (7,1,2),(7,2,1),(7,3,2);
 
+INSERT INTO sales_detail(sale, product, quantity)
+VALUES
+	(8,2,5),(8,4,10),
+    (9,3,8),(9,1,4),(9,2,3),
+	(10,1,1),
+    (11,5,10),
+    (12,6,5),(12,7,5),
+    (13,4,2),(13,6,4),(13,7,3),
+    (14,4,1),(14,2,1),
+    (15,1,5),(15,3,5),
+    (16,2,2),(16,6,2),(16,4,3);
+    
 ## Consulta de Datos
 -- clientes
 SELECT * FROM customers;
