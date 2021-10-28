@@ -39,6 +39,17 @@ CREATE TABLE customers_data(
 	FOREIGN KEY (customer) REFERENCES customers(customer_id) -- (campo_local) => tabla(campo_externo)
 );
 
+CREATE TABLE wallets(
+	wallet_id INT AUTO_INCREMENT,
+    customer INT,
+    title VARCHAR(20),
+    description VARCHAR(50),
+    notes VARCHAR(150),
+    PRIMARY KEY(wallet_id),
+    UNIQUE KEY(customer, description),
+    FOREIGN KEY(customer) REFERENCES customers(customer_id)
+);
+
 -- productos
 CREATE TABLE products(
 	product_id INT AUTO_INCREMENT,
@@ -100,6 +111,7 @@ CREATE TABLE sales_detail(
 -- clientes
 DESCRIBE customers;
 DESCRIBE customers_data;
+DESCRIBE wallets;
 -- productos
 DESCRIBE products;
 -- proveedores

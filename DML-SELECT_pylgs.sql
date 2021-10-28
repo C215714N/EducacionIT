@@ -29,6 +29,14 @@ ORDER BY description -- criterio de orden
 LIMIT 3 -- cantidad de registros n
 OFFSET 3; -- a partir de la posicion x
 
+SELECT *,
+	CASE -- analisis de casos
+		WHEN stock < 100 THEN 'reponer' -- condicion a => valor
+		WHEN stock < 200 THEN 'cuidado' -- condicion b => valor si a no se cumple
+		ELSE 'segui vendiendo' -- valor si ab no se cumplen
+    END AS status
+FROM products;
+
 -- proveedores
 SELECT cuit, description FROM providers
 ORDER BY cuit, description DESC; -- orden de resultados

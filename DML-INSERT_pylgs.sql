@@ -32,6 +32,14 @@ VALUES (1, 'Cristian Damian', 'Racedo', '1991-04-18', '20-35336446-5');
 INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
 VALUES (3, 'Cristian', 'Racedo', '1991-04-18', '27-35336666-6');
 
+INSERT INTO customers_data(customer, first_name, last_name, birth, cuit)
+VALUES
+	(4,'Pepito','Lopez','1972-02-29','20-12374753-8'),
+	(5,'Juan','Perez','1999-10-31','32-19283593-6'),
+	(6,'Jose','Carreras','1980-05-15','27-17923819-5'),
+	(7,'Elmer','Figueroa Arce','1968-06-28','33-01237382-3'),
+	(8,'Diego','Coleman','2001-03-20','29-54238492-2');
+
 -- productos
 INSERT INTO products(description)
 VALUES
