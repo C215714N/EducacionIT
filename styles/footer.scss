@@ -1,0 +1,29 @@
+// Variables
+	$path: '../assets/icon';
+	$social:
+		'facebook',  
+		'github',    
+		'instagram', 
+		'linkedin',   
+		'twitter',  
+		'youtube',
+		'whatsapp';
+// Mixins
+	@mixin normalize($m:0, $p:0, $b:0, $ba: border, $ma: margin, $pa: padding){
+		#{$ma}:$m;
+		#{$ba}:$b;
+		#{$pa}:$p;
+	}
+// Nesting
+	#footer{
+		@include normalize($p: 1rem);
+		#contact{
+			@include normalize(5rem auto 1rem, 1rem 1.5rem);
+			display: grid;
+			input,
+			textarea,
+			select{
+				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma: outline);
+			}
+		}
+	}
