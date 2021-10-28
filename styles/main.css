@@ -55,6 +55,20 @@
 		.menu a:hover{
 			background-color: var(--hover);
 		}
+	/*Example LESS*/
+		.less{
+			display: flex;
+			flex-wrap: wrap;
+			padding: 1rem;
+		}
+		.less div{
+			border: .1rem dashed var(--hover);
+			padding: .5rem;
+		}
+	/*Example SASS*/
+		.sass div{
+
+		}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/
 @media screen and (min-width: 768px){
