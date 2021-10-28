@@ -69,7 +69,9 @@
 }
 /*Large Devices - Desktop*/
 /*Extra Large Devices - HD Desktop */
+@media screen and (min-width: 1200px){
 	nav{
 		justify-content: space-around;
 		padding: 0 calc(50vw - 570px);
 	}
+}
