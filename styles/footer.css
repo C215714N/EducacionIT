@@ -1,20 +1,716 @@
+.facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  --bg: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.youtube {
+  --bg: url("../assets/icon/youtube.svg");
+}
+
+.whatsapp {
+  --bg: url("../assets/icon/whatsapp.svg");
+}
+
+.bg-primary, #footer #contact {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark, #footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid,
+#footer #contact select:focus + .valid {
+  background-color: #333;
+}
+
+.bg-danger, #footer #contact input:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:not(:placeholder-shown):invalid + .valid,
+#footer #contact select:not(:placeholder-shown):invalid + .valid {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #ca3;
+}
+
+.bg-success, #footer #contact input:valid + .valid,
+#footer #contact textarea:valid + .valid,
+#footer #contact select:valid + .valid {
+  background-color: #3c6;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.text-primary {
+  color: #448;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-light, #footer #contact {
+  color: #eee;
+}
+
+.text-dark, #footer .map button {
+  color: #333;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #ca3;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark, #footer #contact input:focus,
+#footer #contact textarea:focus,
+#footer #contact select:focus {
+  border-color: #333;
+}
+
+.border-danger, #footer #contact input:not(:placeholder-shown):invalid,
+#footer #contact textarea:not(:placeholder-shown):invalid,
+#footer #contact select:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #ca3;
+}
+
+.border-success, #footer #contact input:valid,
+#footer #contact textarea:valid,
+#footer #contact select:valid {
+  border-color: #3c6;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+@media screen and (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+
+  .col-sm-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-sm-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-sm-3 {
+    width: 12.5%;
+  }
+
+  .col-sm-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-sm-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-sm-6 {
+    width: 25%;
+  }
+
+  .col-sm-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-sm-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-sm-9 {
+    width: 37.5%;
+  }
+
+  .col-sm-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-sm-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-sm-12 {
+    width: 50%;
+  }
+
+  .col-sm-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-sm-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-sm-15 {
+    width: 62.5%;
+  }
+
+  .col-sm-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-sm-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-sm-18 {
+    width: 75%;
+  }
+
+  .col-sm-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-sm-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-sm-21 {
+    width: 87.5%;
+  }
+
+  .col-sm-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-sm-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-sm-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container, .container-md, #footer #contact {
+    max-width: 720px;
+  }
+
+  .col-md-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-md-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-md-3 {
+    width: 12.5%;
+  }
+
+  .col-md-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-md-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-md-6 {
+    width: 25%;
+  }
+
+  .col-md-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-md-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-md-9 {
+    width: 37.5%;
+  }
+
+  .col-md-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-md-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-md-12 {
+    width: 50%;
+  }
+
+  .col-md-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-md-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-md-15 {
+    width: 62.5%;
+  }
+
+  .col-md-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-md-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-md-18, #footer #contact {
+    width: 75%;
+  }
+
+  .col-md-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-md-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-md-21 {
+    width: 87.5%;
+  }
+
+  .col-md-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-md-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-md-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container, .container-lg {
+    max-width: 960px;
+  }
+
+  .col-lg-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-lg-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-lg-3 {
+    width: 12.5%;
+  }
+
+  .col-lg-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-lg-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-lg-6 {
+    width: 25%;
+  }
+
+  .col-lg-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-lg-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-lg-9 {
+    width: 37.5%;
+  }
+
+  .col-lg-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-lg-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-lg-12, #footer #contact {
+    width: 50%;
+  }
+
+  .col-lg-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-lg-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-lg-15 {
+    width: 62.5%;
+  }
+
+  .col-lg-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-lg-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-lg-18 {
+    width: 75%;
+  }
+
+  .col-lg-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-lg-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-lg-21 {
+    width: 87.5%;
+  }
+
+  .col-lg-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-lg-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-lg-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container, .container-xl {
+    max-width: 1140px;
+  }
+
+  .col-xl-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-xl-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-xl-3 {
+    width: 12.5%;
+  }
+
+  .col-xl-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-xl-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-xl-6 {
+    width: 25%;
+  }
+
+  .col-xl-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-xl-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-xl-9 {
+    width: 37.5%;
+  }
+
+  .col-xl-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-xl-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-xl-12 {
+    width: 50%;
+  }
+
+  .col-xl-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-xl-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-xl-15 {
+    width: 62.5%;
+  }
+
+  .col-xl-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-xl-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-xl-18 {
+    width: 75%;
+  }
+
+  .col-xl-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-xl-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-xl-21 {
+    width: 87.5%;
+  }
+
+  .col-xl-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-xl-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-xl-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container, .container-xxl {
+    max-width: 1320px;
+  }
+
+  .col-xxl-1 {
+    width: 4.1666666667%;
+  }
+
+  .col-xxl-2 {
+    width: 8.3333333333%;
+  }
+
+  .col-xxl-3 {
+    width: 12.5%;
+  }
+
+  .col-xxl-4 {
+    width: 16.6666666667%;
+  }
+
+  .col-xxl-5 {
+    width: 20.8333333333%;
+  }
+
+  .col-xxl-6 {
+    width: 25%;
+  }
+
+  .col-xxl-7 {
+    width: 29.1666666667%;
+  }
+
+  .col-xxl-8 {
+    width: 33.3333333333%;
+  }
+
+  .col-xxl-9 {
+    width: 37.5%;
+  }
+
+  .col-xxl-10 {
+    width: 41.6666666667%;
+  }
+
+  .col-xxl-11 {
+    width: 45.8333333333%;
+  }
+
+  .col-xxl-12 {
+    width: 50%;
+  }
+
+  .col-xxl-13 {
+    width: 54.1666666667%;
+  }
+
+  .col-xxl-14 {
+    width: 58.3333333333%;
+  }
+
+  .col-xxl-15 {
+    width: 62.5%;
+  }
+
+  .col-xxl-16 {
+    width: 66.6666666667%;
+  }
+
+  .col-xxl-17 {
+    width: 70.8333333333%;
+  }
+
+  .col-xxl-18 {
+    width: 75%;
+  }
+
+  .col-xxl-19 {
+    width: 79.1666666667%;
+  }
+
+  .col-xxl-20 {
+    width: 83.3333333333%;
+  }
+
+  .col-xxl-21 {
+    width: 87.5%;
+  }
+
+  .col-xxl-22 {
+    width: 91.6666666667%;
+  }
+
+  .col-xxl-23 {
+    width: 95.8333333333%;
+  }
+
+  .col-xxl-24 {
+    width: 100%;
+  }
+}
+.icon, #footer .social a, #footer .map button {
+  display: inline-block;
+  margin: 0.25rem;
+  border: 0;
+  border-radius: 0.25rem;
+  width: 4rem;
+  height: 4rem;
+  background: #ccc var(--bg) center/2rem no-repeat;
+}
+.icon:hover, #footer .social a:hover, #footer .map button:hover {
+  background-size: 3rem;
+  background-color: #eee;
+}
+
 #footer {
   margin: 0;
   border: 0;
   padding: 1rem;
+  position: relative;
+  background: linear-gradient(#c365, #4485);
+}
+#footer .map .active,
+#footer .map button.icon-min {
+  position: fixed;
+  z-index: 2;
+}
+#footer .map button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+}
+#footer .map button.icon-min::before {
+  content: "-";
+}
+#footer .map button.icon-max::before {
+  content: "+";
 }
 #footer #contact {
   margin: 5rem auto 1rem;
   border: 0;
   padding: 1rem 1.5rem;
   display: grid;
+  border-radius: 0.25rem;
 }
 #footer #contact input,
 #footer #contact textarea,
 #footer #contact select {
   outline: none;
-  border: 0.1rem solid transparent;
+  border: 0.15rem solid transparent;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid,
+#footer #contact select:focus + .valid {
+  max-height: 300px;
+  border: 0;
+  padding: 0.5rem;
+}
+#footer #contact .valid {
+  max-height: 0;
+  overflow: hidden;
+}
+#footer #contact .btn {
+  margin: 0.2rem 0 1rem auto;
+  border: 0.1rem solid #eee;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+#footer .social {
+  text-align: center;
 }
 
 /*# sourceMappingURL=footer.css.map */
