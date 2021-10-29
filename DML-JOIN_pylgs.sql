@@ -1,5 +1,5 @@
 /*DATA MANIPULATION LANGUAGE - JOIN*/
-## INNER JOIN: todos los registros que posean coincidencia
+## INNER JOIN: todos los registros que posean coincidencia en ambas tablas
 -- ventas
 SELECT 
 	sale,
@@ -27,12 +27,19 @@ JOIN customers ON customer_id = cd.customer;
 ## LEFT JOIN: todos los registros de la tabla base y las coincidencia de la anidada
 -- proveedores
 SELECT 
-	CONCAT(cuit, ' - ', description) AS corppration,
+	CONCAT(cuit, ' - ', description) AS corporation,
     SUM(t.price * t.quantity) AS total -- pago total a proveedores
 FROM providers AS p
 LEFT JOIN transactions AS t ON provider_id = provider -- tabla anidada
 GROUP BY provider
 ORDER BY cuit;
+
+SELECT
+	description AS article,
+    SUM(t.quantity * t.price) AS total
+FROM products
+LEFT JOIN transactions AS t ON product = product_id
+GROUP BY product;
 
 ## RIGHT JOIN: las coincidencias de la tabla base y todos los registros de la anidada
 -- proveedores
@@ -56,3 +63,17 @@ SELECT
 FROM sales AS s
 RIGHT JOIN customers_data AS cd ON cd.customer = s.customer -- anidacion de tabla
 ORDER BY sale_id; -- orden de registros
+
+## Recreacion de tablas
+-- clientes
+SHOW CREATE TABLE customers;
+SHOW CREATE TABLE customers_data;
+SHOW CREATE TABLE wallets;
+-- productos
+SHOW CREATE TABLE products;
+-- proveedores
+SHOW CREATE TABLE providers;
+SHOW CREATE TABLE transactions;
+-- ventas
+SHOW CREATE TABLE sales;
+SHOW CREATE TABLE sales_detail;
