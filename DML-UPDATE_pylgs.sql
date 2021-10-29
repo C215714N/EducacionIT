@@ -24,6 +24,9 @@ SET price = ( -- actualizacion de precios
 )	WHERE price = 0 OR price IS NULL; -- condicion actualizacion
 
 -- ventas
+UPDATE sales 
+SET customer =  ROUND(RAND() * 4 + 4, 0); -- numero aleatorio entre 4 y 8
+
 UPDATE sales_detail
 SET price = ( -- actualizacion de precios
 	SELECT price -- valor consultado
