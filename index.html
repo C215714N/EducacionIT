@@ -159,7 +159,7 @@
 			<p>
 				Debido a que esta orientado al diseño responsive, Bootstrap posee estilos para los diferentes tamaños de pantalla y les asigna un nombre para facilitar su identificacion. ademas aporta clases para limitar el tamaño de los elementos, segun el tipo de dispositivo como se muestra a continuacion.
 			</p>
-			<table class="table table-striped">
+			<table class="table table-dark table-striped">
 				<thead>
 					<tr>
 						<th>breakpoint</th>
@@ -207,6 +207,41 @@
 					</tr>
 				</tbody>
 			</table>
+			<h3>Implementacion de atributos</h3>
+			<p>
+				Cuando implementamos Bootstrap y a pesar de reinicio que este framework hace sobre nuestro diseño, necesitamos modificar el valor de atributos convencionales como margin, border o padding, simplemente debemos utilizar la clase con la inicial del atributo (en otros casos el nombre) y luego un guion seguido del valor  de dicho atributo (esto varia segun el atributo en cuestion). Para las medidas Bootstrap suele implementar valores que van del 0 al 5, siendo variaciones de rem (3 = 1rem)
+			</p>
+			<ul class="list-unstyled">
+				<li>
+					<strong class="h2">Margin</strong>
+					<ul>
+						<li class="m-2">margin: .5rem; class="m-2"</li>
+						<li class="mb-3">margin-bottom: 1rem; class="mb-3"</li>
+						<li class="ms-4">margin-left: 1.5rem; class="ms-4"</li>
+						<li class="my-3">margin: 1rem 0; class="my-3"</li>
+						<li class="mt-2 mx-3 mb-1">margin: .5rem 1rem .25rem; class="mt-2 mx-3 mb-1"</li>
+					</ul>
+				</li>
+				<li>
+					<strong class="h2">Border</strong>
+					<ul>
+						<li class="m-1 border">border: 1px solid; class="border"</li>
+						<li class="m-1 border rounded">border-radius: .25rem; class="rounder"</li>
+						<li class="border border-dark">border-color: #333; class="border-dark"(modifier)</li>
+						<li class="border-start border-success">border-left: 1px solid; class="border-start"</li>
+					</ul>
+				</li>
+				<li>
+					<strong class="h2">Padding</strong>
+					<ul>
+						<li class="p-2">padding: .5rem; class="p-2"</li>
+						<li class="pb-3">padding-bottom: 1rem; class="pb-3"</li>
+						<li class="ps-4">padding-left: 1.5rem; class="ps-4"</li>
+						<li class="py-3">padding: 1rem 0; class="py-3"</li>
+						<li class="pt-2 px-3 pb-1">padding: .5rem 1rem .25rem; class="pt-2 px-3 pb-1"</li>
+					</ul>
+				</li>
+			</ul>
 		</section>
 	</main>
 	<!-- Pie de Pagina: Informacion Complementaria -->
