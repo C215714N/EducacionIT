@@ -211,8 +211,8 @@
 			<p>
 				Cuando implementamos Bootstrap y a pesar de reinicio que este framework hace sobre nuestro diseño, necesitamos modificar el valor de atributos convencionales como margin, border o padding, simplemente debemos utilizar la clase con la inicial del atributo (en otros casos el nombre) y luego un guion seguido del valor  de dicho atributo (esto varia segun el atributo en cuestion). Para las medidas Bootstrap suele implementar valores que van del 0 al 5, siendo variaciones de rem (3 = 1rem)
 			</p>
-			<ul class="list-unstyled">
-				<li>
+			<ul class="list-unstyled row">
+				<li class="col">
 					<strong class="h2">Margin</strong>
 					<ul>
 						<li class="m-2">margin: .5rem; class="m-2"</li>
@@ -222,7 +222,7 @@
 						<li class="mt-2 mx-3 mb-1">margin: .5rem 1rem .25rem; class="mt-2 mx-3 mb-1"</li>
 					</ul>
 				</li>
-				<li>
+				<li class="col">
 					<strong class="h2">Border</strong>
 					<ul>
 						<li class="m-1 border">border: 1px solid; class="border"</li>
@@ -231,7 +231,7 @@
 						<li class="border-start border-success">border-left: 1px solid; class="border-start"</li>
 					</ul>
 				</li>
-				<li>
+				<li class="col">
 					<strong class="h2">Padding</strong>
 					<ul>
 						<li class="p-2">padding: .5rem; class="p-2"</li>
@@ -242,6 +242,81 @@
 					</ul>
 				</li>
 			</ul>
+			<ul class="list-unstyled row">
+				<li class="col">
+					<strong class="h2">Botones rellenos</strong>
+					<ul>
+						<li class="btn btn-primary">Boton Primary</li>
+						<li class="btn btn-secondary">Boton Secondary</li>
+						<li class="btn btn-light">Boton Light</li>
+						<li class="btn btn-dark">Boton Dark</li>
+						<li class="btn btn-danger">Boton Danger</li>
+						<li class="btn btn-warning">Boton Warning</li>
+						<li class="btn btn-success">Boton Success</li>
+						<li class="btn btn-info">Boton Info</li>
+					</ul>
+				</li>
+				<li class="col">
+					<strong class="h2">Botones de borde</strong>
+					<ul>
+						<li class="btn btn-outline-primary">Boton Primary</li>
+						<li class="btn btn-outline-secondary">Boton Secondary</li>
+						<li class="btn btn-outline-light">Boton Light</li>
+						<li class="btn btn-outline-dark">Boton Dark</li>
+						<li class="btn btn-outline-danger">Boton Danger</li>
+						<li class="btn btn-outline-warning">Boton Warning</li>
+						<li class="btn btn-outline-success">Boton Success</li>
+						<li class="btn btn-outline-info">Boton Info</li>
+					</ul>
+				</li>
+			</ul>
+			<h3>Sistema de Grillas Responsive</h3>
+			<div class="row">
+				<strong class="h4">Columnas Fijas</strong>
+				<div class="col-1 bg-primary">col-1</div>
+				<div class="col-2 bg-secondary">col-2</div>
+				<div class="col-3 bg-light">col-3</div>
+				<div class="col-6 bg-warning">col-6</div>
+				<div class="col-5 bg-danger">col-5</div>
+				<div class="col-7 bg-success">col-7</div>
+				<div class="col-4 bg-dark text-light">col-4</div>
+				<div class="col-8 bg-info">col-8</div>
+			</div>
+			<div class="row">
+				<strong class="h4">Columnas adaptables</strong>
+				<div class="p-2 col-md-6 col-lg-4">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-md-6 col-lg-4">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-md-4 col-lg-4">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-md-4 col-lg-6">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-sm col-md col-lg-6">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-sm col-md-8 col-lg-4">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-md col-lg-4">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+				<div class="p-2 col-md col-lg-4">
+
+					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
+				</div>
+			</div>
 		</section>
 	</main>
 	<!-- Pie de Pagina: Informacion Complementaria -->
@@ -259,8 +334,23 @@
 			<a href="https://.com" target="_blank"></a>
 			<a href="https://.com" target="_blank"></a>
 		</div>
-		<form action="" id="contact">
+		<form id="contact" class="container-md mx-auto col-md-8 col-lg-6 col-xxl-4">
 			<h2>Dejanos tu consulta</h2>
+			<label for="">Ingrese su Nombre</label>
+			<input type="text" class="col-12 form-control">
+			<div class="valid">
+				Ingrese su Nombre solamente con letras y espacios. 
+				El mismo debe poseer entre 3 y 50 caracteres.
+			</div>
+			<label for="">Ingrese su Correo</label>
+			<input type="email" class="col-12 form-control">
+			<div class="valid">
+				Ingrese su correo respetando el formato "usuario@servidor". 
+				El mismo debe tener como minimo 8 caracteres
+			</div>
+			<label for="">Ingrese su Consulta</label>
+			<textarea class="col-12 form-control"></textarea>
+			<button class="btn btn-outline-light | text-uppercase d-block | mt-1 ms-auto">enviar</button>
 		</form>
 		<p class="copy">&copy;2021 Todos los derechos reservados</p>
 	</footer>
