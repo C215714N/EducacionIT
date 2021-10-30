@@ -16,7 +16,7 @@
 	<nav class="container-fluid | navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | sticky-top">
 		<a href="#" class="navbar-brand">Bootstrap</a>
 		<button class="btn d-md-none navbar-toggler-icon fs-2"></button>
-		<ul class="navbar-nav navbar-collapse align-items-start">
+		<ul class="navbar-nav navbar-collapse collapse align-items-start">
 			<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Acerca</a></li>
 			<li class="nav-item"><a class="nav-link" href="gallery.html">Galeria</a></li>
@@ -29,31 +29,40 @@
 		<p class="h1">Responsive Web Design</p>
 	</header>
 	<!-- Contenido -->
-	<main class="container row | my-3 mx-auto border rounded p-2">
-		<section>
-			<article>
-				<h2>Fluid Design</h2>
-				<p>
+	<main class="container row | my-3 mx-auto">
+		<section class="row">
+			<article class="card | col-lg px-0">
+				<h2 class="card-header h3">Fluid Design</h2>
+				<p class="card-body">
 					Modelo que utiliza porcentajes para definir el tamaño de los elementos de la pagina y su relacion entre si. Uno de los problemas del mismo radica en que nuestro diseño pierde proporcion en pantallas pequeñas, ya que los porcentajes se mantienen; y por otro lado, en pantallas grandes se estira demasiado el contenido.
 					<br>
 					Una alternativa a este tipo de diseño es el <strong>Fluid Design</strong> que aplica atributos de maximos y minimos para evitar la compresion y estiramiento de los elementos. El problema radica en los espacios generados para la separacion de contenido.
 				</p>
+				<address class="card-footer">
+					Para mas informacion visitar <a href="https://alumni.education" target="_blank">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
 			</article>
-			<article>
-				<h2>Adaptive Design</h2>
-				<p>
+			<article class="card | col-lg my-4 my-lg-0 mx-lg-2 px-0">
+				<h2 class="card-header h3">Adaptive Design</h2>
+				<p class="card-body">
 					Modelo que implementa el diseño individual de contenido para cada tamaño de pantalla, facilita la implementacion del diseño y es una alternativa para clientes con poco presupuesto. Se utilizan herramientas de redireccionamiento para que el cliente visite la version mas adecuada para su dispositivo.
 					<br>
 					Uno de los problemas principales de este tipo de contenido radica en la duplicidad del mismo y la repeticion de archivos dentro del sitio, ya que se usa uno distinto segun el tamaño de pantalla para que se diseñe.
 				</p>
+				<address class="card-footer">
+					Para mas informacion visitar <a href="https://alumni.education" target="_blank">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
 			</article>
-			<article>
-				<h2>Responsive Design</h2>
-				<p>
+			<article class="card | col-lg px-0">
+				<h2 class="card-header h3">Responsive Design</h2>
+				<p class="card-body">
 					Modelo cuyos origenes radican en una publicacion realizada por <strong>Ethan Marcotte</strong> en el sitio <a href="">A List Apart</a> donde explica como se deberian implementar los <em>Media Quieries</em>, el diseño a partir de la vista en dispositivos moviles y el concepto conocido como <strong>One Web for All</strong> donde debemos utilizar una unica fuente de informacion (estructura).
 					<br>
 					Una evolucion de este tipo de diseño es la que se conoce como Content-first, ya que a diferencia del Mobile-first, plantea empezar a trabajar con el contenido final.
 				</p>
+				<address class="card-footer">
+					Para mas informacion visitar <a href="https://alumni.education" target="_blank">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
 			</article>
 		</section>
 	</main>
