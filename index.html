@@ -207,13 +207,14 @@
 					</tr>
 				</tbody>
 			</table>
+			<hr>
 			<h3>Implementacion de atributos</h3>
 			<p>
 				Cuando implementamos Bootstrap y a pesar de reinicio que este framework hace sobre nuestro diseño, necesitamos modificar el valor de atributos convencionales como margin, border o padding, simplemente debemos utilizar la clase con la inicial del atributo (en otros casos el nombre) y luego un guion seguido del valor  de dicho atributo (esto varia segun el atributo en cuestion). Para las medidas Bootstrap suele implementar valores que van del 0 al 5, siendo variaciones de rem (3 = 1rem)
 			</p>
 			<ul class="list-unstyled row">
 				<li class="col">
-					<strong class="h2">Margin</strong>
+					<strong class="h4">Margin</strong>
 					<ul>
 						<li class="m-2">margin: .5rem; class="m-2"</li>
 						<li class="mb-3">margin-bottom: 1rem; class="mb-3"</li>
@@ -223,7 +224,7 @@
 					</ul>
 				</li>
 				<li class="col">
-					<strong class="h2">Border</strong>
+					<strong class="h4">Border</strong>
 					<ul>
 						<li class="m-1 border">border: 1px solid; class="border"</li>
 						<li class="m-1 border rounded">border-radius: .25rem; class="rounder"</li>
@@ -232,7 +233,7 @@
 					</ul>
 				</li>
 				<li class="col">
-					<strong class="h2">Padding</strong>
+					<strong class="h4">Padding</strong>
 					<ul>
 						<li class="p-2">padding: .5rem; class="p-2"</li>
 						<li class="pb-3">padding-bottom: 1rem; class="pb-3"</li>
@@ -244,7 +245,7 @@
 			</ul>
 			<ul class="list-unstyled row">
 				<li class="col">
-					<strong class="h2">Botones rellenos</strong>
+					<strong class="h4">Botones rellenos</strong>
 					<ul>
 						<li class="btn btn-primary">Boton Primary</li>
 						<li class="btn btn-secondary">Boton Secondary</li>
@@ -257,7 +258,7 @@
 					</ul>
 				</li>
 				<li class="col">
-					<strong class="h2">Botones de borde</strong>
+					<strong class="h4">Botones de borde</strong>
 					<ul>
 						<li class="btn btn-outline-primary">Boton Primary</li>
 						<li class="btn btn-outline-secondary">Boton Secondary</li>
@@ -270,6 +271,7 @@
 					</ul>
 				</li>
 			</ul>
+			<hr>
 			<h3>Sistema de Grillas Responsive</h3>
 			<div class="row">
 				<strong class="h4">Columnas Fijas</strong>
@@ -316,6 +318,17 @@
 
 					Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quasi, dicta molestias omnis, perspiciatis unde sequi quae dolore ad modi nulla?
 				</div>
+			</div>
+			<div class="row">
+				<strong class="h4">Columas Desplazadas</strong>
+				<div class="border p-3 offset-md-6 col-md-6">columna offset-md-6</div>
+				<div class="border p-3 offset-md-2 col-lg-3">columna offset-md-2</div>
+				<div class="border p-3 offset-md-2 col-lg-3">columna offset-md-2</div>
+				<div class="border p-3 offset-md-2 col-md">columna offset-md-2</div>
+				<div class="border p-3 offset-1 col-lg-4">columna offset-1</div>
+				<div class="border p-3 offset-1 col-lg-4">columna offset-1</div>
+				<div class="border p-3 offset-lg-4 col-md">columna offset-lg-4</div>
+				<div class="border p-3 offset-lg-4 col-md">columna offset-lg-4</div>
 			</div>
 		</section>
 	</main>
