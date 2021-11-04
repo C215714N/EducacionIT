@@ -18,7 +18,8 @@
 		h1,
 		h2,
 		h3,
-		.menu{
+		.menu,
+		.header p{
 			margin: 0;
 		}
 		.menu{
@@ -56,6 +57,35 @@
 		.menu a:hover{
 			background-color: var(--hover);
 		}
+	/*Content*/
+		main{
+			margin: auto;
+		}
+		section{
+			margin: 1.5rem .5rem;
+			border-radius: .25rem;
+			padding: 1rem;
+			box-shadow: 0 0 .5rem #333;
+		}
+		main .header{
+			margin: -1rem -1rem .5rem;
+			border-radius: .25rem .25rem 0 0;/*tl tr br bl*/
+			padding: 1rem;
+			color: #eee;
+			background-color: #333;
+		}
+		main h3{
+			border-bottom: .1rem solid var(--hover);
+		}
+		.example{
+			display: flex;
+			flex-wrap: wrap;
+			margin: .5rem 2rem;
+			border-left: .25rem solid var(--first);
+			padding: 1rem;
+			background-color: #eee;
+			list-style: none;
+		}
 	/*Example LESS*/
 		.less{
 			display: flex;
@@ -69,14 +99,45 @@
 	/*Example SASS*/
 		.sass{
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
 			padding: 1rem;
+			gap: .5rem;
 		}
 		.sass div{
 			padding: 1rem;
 			color: #eee;
 			text-shadow: 0 0 .5rem #333;
 		}
+	/*Example TRANSFORM*/
+		.transform{
+			perspective: 10rem; /*proximidad*/
+			perspective-origin: center; /*punto de fuga*/
+		}
+		.transform div{
+			margin: .5rem 1rem;
+			padding: 1rem;
+			background-color: var(--second);
+			/*transition*/
+			transition-property: transform;
+			transition-duration: 1s;
+			transition-timing-function: ease;
+			transition-delay: .5s;
+		}
+		/*2d*/
+		.transform :nth-child(1){ transform: translate(.5rem, -.5rem); /*distancia*/ }
+		.transform :nth-child(2){ transform: scale(1.2); /*unidades*/ }
+		.transform :nth-child(3){ transform: rotate(-15deg) ; /*grados*/ }
+		.transform :nth-child(4){ transform: skewX(30deg);  }
+		.transform :nth-child(5){ transform: skewY(30deg); }
+		/*3d*/
+		.transform :nth-child(6){ transform: rotateX(60deg); }
+		.transform :nth-child(7){ transform: rotateY(60deg); }
+		.transform :nth-child(8){ transform: translateZ(2rem); }
+		
+		.transform:hover div{ 
+			transform: rotate(0); 
+		}
+
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/
 @media screen and (min-width: 768px){
