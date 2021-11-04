@@ -67,8 +67,15 @@
 			padding: .5rem;
 		}
 	/*Example SASS*/
+		.sass{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+			padding: 1rem;
+		}
 		.sass div{
-
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .5rem #333;
 		}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/

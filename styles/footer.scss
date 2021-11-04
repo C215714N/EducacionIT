@@ -14,7 +14,7 @@
 		light 		#eee,
 		dark 		#333,
 		danger 		#c33,
-		warning 	#ca3,
+		warning 	#ea3,
 		success 	#3c6,
 		info 		#36c;
 	$attributes:
@@ -76,7 +76,7 @@
 				position:absolute;
 				top: .5rem;
 				right: .5rem;
-				font-size: 1.5rem;
+				font-size: 2rem;
 				&.icon-min::before{content:'-'}
 				&.icon-max::before{content:'+'}
 			}
@@ -95,10 +95,10 @@
 			textarea,
 			select{
 				@include normalize(none, .5rem 1rem, .15rem solid transparent, $ma: outline);
+				width: 100%;
 				font-size: 1rem;
 				&:focus{ @extend .border-dark;
-					& + .valid { @extend .bg-dark; 
-					@include normalize(300px, .5rem, $ma:max-height);
+					& + .valid { @include normalize(300px, .5rem, $ma:max-height);
 				}	}
 				&:valid{ @extend .border-success;
 					& + .valid{ @extend .bg-success; 
@@ -108,6 +108,7 @@
 				}	}
 			}
 			.valid{
+				@extend .bg-dark; 
 				max-height: 0;
 				overflow: hidden;
 			}

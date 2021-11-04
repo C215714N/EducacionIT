@@ -38,9 +38,7 @@
   background-color: #eee;
 }
 
-.bg-dark, #footer #contact input:focus + .valid,
-#footer #contact textarea:focus + .valid,
-#footer #contact select:focus + .valid {
+.bg-dark, #footer #contact .valid {
   background-color: #333;
 }
 
@@ -51,7 +49,7 @@
 }
 
 .bg-warning {
-  background-color: #ca3;
+  background-color: #ea3;
 }
 
 .bg-success, #footer #contact input:valid + .valid,
@@ -85,7 +83,7 @@
 }
 
 .text-warning {
-  color: #ca3;
+  color: #ea3;
 }
 
 .text-success {
@@ -121,7 +119,7 @@
 }
 
 .border-warning {
-  border-color: #ca3;
+  border-color: #ea3;
 }
 
 .border-success, #footer #contact input:valid,
@@ -669,7 +667,7 @@
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 #footer .map button.icon-min::before {
   content: "-";
@@ -690,6 +688,7 @@
   outline: none;
   border: 0.15rem solid transparent;
   padding: 0.5rem 1rem;
+  width: 100%;
   font-size: 1rem;
 }
 #footer #contact input:focus + .valid,
