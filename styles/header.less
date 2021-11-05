@@ -28,6 +28,19 @@
 			text-shadow: 0 0 calc(1vw + .5rem) darken(@color, 10%);
 			*{ &:extend(.unstyled); }
 		}
+		.controls{
+			.flexbox;
+			span{
+				width: 1rem;
+				height: 1rem;
+				.normalize(.25rem);
+				border-radius: .5rem;
+				background-color: #eee;
+				box-shadow: 0 .25rem .5rem #333;
+				transition: all .5s ease-out;
+				&.active{ width: 3rem; }
+			}
+		}
 		.slide{
 			&:extend(.unstyled);
 			&:extend(.cover);
@@ -35,6 +48,7 @@
 				&:extend(.cover);
 				background: var(--bg) center/cover;
 				opacity: 0;
+				transition: all 2s ease-in;
 				.bg(@bg_day);
 				&.active{ opacity: 1; }
 			}

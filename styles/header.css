@@ -19,9 +19,31 @@
   color: #ffffff;
   text-shadow: 0 0 calc(1vw + 0.5rem) #333366;
 }
+#header .controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+#header .controls span {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem;
+  border: 0;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  box-shadow: 0 0.25rem 0.5rem #333;
+  transition: all 0.5s ease-out;
+}
+#header .controls span.active {
+  width: 3rem;
+}
 #header .slide li {
   background: var(--bg) center / cover;
   opacity: 0;
+  transition: all 2s ease-in;
 }
 #header .slide li:nth-child(1) {
   --bg: url('../assets/bg/osx-bigsur-day.jpg');

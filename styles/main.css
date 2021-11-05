@@ -52,6 +52,7 @@
 			max-height: 0;
 			list-style: none;
 			overflow: hidden;
+			transition: all .5s ease-out;
 		}
 		.menu.active{
 			max-height: 640px;
@@ -74,6 +75,8 @@
 			width: 100%;
 			opacity: 1;
 		}
+		.menu .light::after{ content: ' diurno'; }
+		.menu .dark::after{ content: ' nocturno' }
 	/*Content*/
 		main{
 			margin: auto;
