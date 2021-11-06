@@ -15,8 +15,11 @@
 	<!-- Navegacion -->
 	<nav class="container-fluid | navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | sticky-top">
 		<a href="#" class="navbar-brand">Bootstrap</a>
-		<button class="btn d-md-none navbar-toggler-icon fs-2"></button>
-		<ul class="navbar-nav navbar-collapse collapse align-items-start">
+		<button class="btn d-md-none navbar-toggler-icon fs-2"
+			data-bs-toggle="collapse"
+			data-bs-target="#menu">
+		</button>
+		<ul id="menu" class="navbar-nav navbar-collapse collapse align-items-start">
 			<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
 			<li class="nav-item"><a class="nav-link active" href="#">Acerca</a></li>
 			<li class="nav-item"><a class="nav-link" href="gallery.html">Galeria</a></li>
@@ -24,9 +27,48 @@
 		</ul>
 	</nav>
 	<!-- Cabecera -->
-	<header id="header" class="d-grid justify-content-center align-content-center | text-light bg-secondary | vh-100">
-		<h1 class="display-1 fw-bold text-uppercase">Bootstrap</h1>
-		<p class="h1">Responsive Web Design</p>
+	<header id="header" class="carousel slide | text-light bg-secondary" data-bs-ride="carousel">
+		<!-- Indicadores -->
+		<div class="carousel-indicators">
+			<button data-bs-target="#header" data-bs-slide-to="0" class="active"></button>
+			<button data-bs-target="#header" data-bs-slide-to="1"></button>
+			<button data-bs-target="#header" data-bs-slide-to="2"></button>
+		</div>
+		<!-- Galeria -->
+		<ul class="carousel-inner | list-unstyled">
+			<li class="carousel-item active">
+				<img class="d-block d-lg-none w-100" 
+					src="assets/bg/header-sm-01.jpg" alt="OS X Mavericks">
+				<img class="d-none d-lg-block w-100" 
+					src="assets/bg/header-lg-01.jpg" alt="Ubuntu Focal Fossa">
+			</li>
+			<li class="carousel-item">
+				<img class="d-block d-lg-none w-100" 
+					src="assets/bg/header-sm-02.jpg" alt="OS X Yosemite">
+				<img class="d-none d-lg-block w-100" 
+					src="assets/bg/header-lg-02.jpg" alt="Ubuntu Groove Gorilla">
+			</li>
+			<li class="carousel-item">
+				<img class="d-block d-lg-none w-100" 
+					src="assets/bg/header-sm-03.jpg" alt="OS X Sierra">
+				<img class="d-none d-lg-block w-100" 
+					src="assets/bg/header-lg-03.jpg" alt="Ubuntu Hisurte Hippo">
+			</li>
+		</ul>
+		<!-- Controles -->
+		<button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y"
+			data-bs-target="#header"
+			data-bs-slide="prev">
+		</button>
+		<button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y"
+			data-bs-target="#header"
+			data-bs-slide="next">
+		</button>
+		<!-- Encabezado -->
+		<div class="position-absolute top-50 start-50 translate-middle | text-center">
+			<h1 class="display-1 fw-bold text-uppercase">Bootstrap</h1>
+			<p class="h1">Responsive Web Design</p>
+		</div>
 	</header>
 	<!-- Contenido -->
 	<main class="container row | my-3 mx-auto">
