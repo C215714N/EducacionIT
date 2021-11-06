@@ -150,11 +150,80 @@
 			</div>
 			<aside class="col | border rounded">
 				<h2>Componentes</h2>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<strong>Alert</strong>
+						<div class="alert alert-success alert-dismissible fade show">
+							Alert Success <button class="btn-close" data-bs-dismiss="alert"></button>
+						</div>
+						<div class="alert alert-warning alert-dismissible fade show">
+							Alert Warning <button class="btn-close" data-bs-dismiss="alert"></button>
+						</div>
+						<div class="alert alert-danger alert-dismissible fade show">
+							Alert Danger <button class="btn-close" data-bs-dismiss="alert"></button>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<strong>Breadcrumb</strong>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">categoria</li>
+							<li class="breadcrumb-item">producto</li>
+							<li class="breadcrumb-item active">publicacion</li>
+						</ol>
+					</li>
+					<li class="list-group-item">
+						<strong>progress bar</strong>
+						<div class="progress">
+							<span class="progress-bar bg-danger w-50">50%</span>
+						</div>
+						<div class="progress | my-2">
+							<span class="progress-bar bg-success progress-bar-striped w-75">75%</span>
+						</div>
+						<div class="progress">
+							<span class="progress-bar progress-bar-striped progress-bar-animated w-100">100%</span>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<strong>Spinners</strong>
+						<br>
+						<div class="spinner-border"></div>
+						<div class="spinner-grow"></div>
+						<div class="spinner-border text-secondary"></div>
+						<div class="spinner-grow text-secondary"></div>
+						<div class="spinner-border text-primary"></div>
+						<div class="spinner-grow text-primary"></div>
+					</li>
+				</ul>
 			</aside>
 		</section>
 	</main>
 	<!-- Footer -->
-
+	<footer>
+		<form class="container | mx-auto rounded | was-validated" novalidate>
+			<h2>Datos de contacto</h2>
+			<div class="form-floating">
+				<input id="contactName" type="text" minlength="3" placeholder="nombre" class="form-control" required>
+				<label for="contactName">Nombre</label>
+				<div class="valid-feedback">
+					Su nombre parece valido
+				</div>
+				<div class="invalid-feedback">
+					Ingrese su nombre solamente con letras y espacios
+				</div>
+			</div>
+			<div class="form-floating">
+				<input id="contactEmail" type="email" minlength="8" placeholder="correo" class="form-control" required>
+				<label for="contactEmail">Correo</label>
+				<div class="valid-feedback">
+					Su correo parece valido
+				</div>
+				<div class="invalid-feedback">
+					Ingrese un correo que posea al menos 8 caracteres
+				</div>
+			</div>
+			<button class="btn btn-outline-primary | my-1">enviar</button>
+		</form>
+	</footer>
 	<!-- scripts BOOTSTRAP -->
 	<script src="scripts/bootstrap.bundle.js"></script>
 </body>
