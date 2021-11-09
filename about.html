@@ -112,7 +112,7 @@
 		<section class="row | py-3">
 			<div class="col-lg-8 me-lg-2">
 				<article class="row | border rounded p-2">
-					<h2>Unidades Relativas</h2>
+					<h2 class="offset-md-4 | text-center text-md-start">Unidades Absolutas</h2>
 					<img class="col-8 col-md-4 | mx-auto px-3" 
 						src="assets/icons/bounding-box.svg" alt="Unidades Absolutas">
 					<ul class="list-group list-group-flush col-md">
@@ -125,7 +125,7 @@
 					</ul>						
 				</article>
 				<article class="row | my-2 border rounded p-2">
-					<h2>Unidades Relativas</h2>
+					<h2 class="offset-md-4 | text-center text-md-start">Unidades Relativas</h2>
 					<img class="col-8 col-md-4 | mx-auto px-3" 
 						src="assets/icons/hexagon.svg" alt="Unidades Relativas">
 					<ul class="list-group list-group-flush | col-md">
@@ -137,7 +137,7 @@
 					</ul>
 				</article>
 				<article class="row | border rounded p-2">
-					<h2>Unidades Flexibles</h2>
+					<h2 class="offset-md-4 | text-center text-md-start">Unidades Flexibles</h2>
 					<img class="col-8 col-md-4 | mx-auto px-3" 
 						src="assets/icons/box.svg" alt="Unidades Flexibles">
 					<ul class="list-group list-group-flush | col-md">
@@ -172,6 +172,18 @@
 						</ol>
 					</li>
 					<li class="list-group-item">
+						<strong>Placeholder</strong>
+						<div class="placeholder-glow">
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-7"></span>
+							<span class="placeholder placeholder-lg col-2"></span>
+							<span class="placeholder placeholder-lg col-4"></span>
+							<span class="placeholder placeholder-lg col-5"></span>
+							<span class="placeholder placeholder-sm col-4"></span>
+							<span class="placeholder placeholder-sm col-6"></span>
+						</div>	
+					</li>
+					<li class="list-group-item">
 						<strong>progress bar</strong>
 						<div class="progress">
 							<span class="progress-bar bg-danger w-50">50%</span>
@@ -198,8 +210,8 @@
 		</section>
 	</main>
 	<!-- Footer -->
-	<footer>
-		<form class="container | mx-auto rounded | was-validated" novalidate>
+	<footer class="p-3">
+		<form class="container col-md-8 col-lg-6 | mx-auto rounded | was-validated" novalidate>
 			<h2>Datos de contacto</h2>
 			<div class="form-floating">
 				<input id="contactName" type="text" minlength="3" placeholder="nombre" class="form-control" required>
@@ -221,7 +233,7 @@
 					Ingrese un correo que posea al menos 8 caracteres
 				</div>
 			</div>
-			<button class="btn btn-outline-primary | my-1">enviar</button>
+			<button class="btn btn-outline-primary | d-block ms-auto">enviar</button>
 		</form>
 	</footer>
 	<!-- scripts BOOTSTRAP -->
