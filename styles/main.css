@@ -47,6 +47,9 @@
 			list-style: none;
 			overflow: hidden;
 		}
+		.menu.active{
+			max-height: 640px;
+		}
 		.menu a:hover{
 			text-shadow: 0 0 .5rem #eee; /*-x+ -y+ blur color*/
 		}
