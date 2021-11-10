@@ -63,6 +63,85 @@
 				</p>
 			</article>
 		</section>
+		<section>
+			<h2>Unidades de Medida</h2>
+			<p>
+				Al momento de desarrollar un sitio web debemos tener en cuenta las medidas, proporciones y relaciones que existen entre los elementos nuestra pagina. Ya sea que planifiquemos el sitio desde cero o debamos realizar la codificacion de un mockup, es importante que al migrar el diseño se mantengan todas estas relaciones y se altere lo menos posible la proporcion cuando lo veamos en diferentes dispositivos.
+			</p>
+			<article>
+				<h3>Absolutas</h3>
+				<p>
+					Son unidades cuyo valor siempre es igual indistitamente del dispositivo donde se visualice, son ideales para definir limites de tamaño para la etiquetas como <em>min-width o max-width</em>, pero no se aconseja utilizarlas el atributos que tengan relacion con el texto como <em>margin, padding o border</em>. Tambien se suelen utilizar para definir el diseño del sitio para su impresion en papel.
+				</p>
+				<ul class="example absolute">
+					<li><strong>distancia</strong>
+						<ul>
+							<li>mm milimetros</li>
+							<li>cm centimetros</li>
+							<li>in pulgadas (2.54cm)</li>
+						</ul>
+					</li>
+					<li><strong>tipografia</strong>
+						<ul>
+							<li>pc picas (1/6in - 4.23mm )</li>
+							<li>pt puntos (1/72in - 0.35mm )</li>
+						</ul>
+					</li>
+					<li><strong>hibrida</strong>
+						<ul>
+							<li>px pixel (1/96in - 0.2mm)</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Relativas</h3>
+				<p>
+					Son unidades cuyo valor depende de otro elemento, generalmente siendo este el contenedor de la etiqueta afectada, se utilizan para definir el tamaño de los etiquetas y la tipografias implementadas dentro del sitio. Esto permite que ante un cambio la pagina mantenga sus proporciones, pero normalmente se aplican a los anchos ya que no se suele asignar una altura para los contenedores.
+				</p>
+				<ul class="example relative">
+					<li><strong>contenedor</strong>
+						<ul>
+							<li>% porcentaje del tamaño del elemento contenedor</li>
+							<li>fr fraccion del elemento contenedor (css-grid)</li>
+						</ul>
+					</li>
+					<li><strong>tipografia</strong>
+						<ul>
+							<li>% porcentaje de la tipografia del contenedor</li>
+							<li>em ancho de "M" en el contenedor</li>
+							<li>ex alto de "x" en el contenedor</li>
+							<li>ch ancho del caracter "0" en el contenedor</li>
+						</ul>
+					</li>
+					<li><strong>hibrida</strong>
+						<ul>
+							<li>rem ancho de "M" de la raiz(HTML)</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Flexibles</h3>
+				<p>
+					Son unidades relativas que a diferencia del resto, toman como referente las dimensiones del viewport, es decir, la ventana donde se visualiza la pagina web y cuya informacion se obtiene mediante metadatos. Estas son ideales para definir alturas dentro del sitio y para implementar tipografia flexible o adaptable a cada tamaño de pantalla.
+				</p>
+				<ul class="example flexible">
+					<li><strong>dimension</strong>
+						<ul>
+							<li>vw % del ancho del viewport</li>
+							<li>vh % del alto del viewport</li>
+						</ul>
+					</li>
+					<li><strong>proporcion</strong>
+						<ul>
+							<li>vmin % de la menor unidad del viewport</li>
+							<li>vmax % de la mayor unidad del viewport</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+		</section>
 	</main>
 	<!-- Pie de pagina: Contenido Complementario -->
 	<footer id="footer">
