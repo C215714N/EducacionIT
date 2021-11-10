@@ -53,6 +53,16 @@
 		.menu a:hover{
 			text-shadow: 0 0 .5rem #eee; /*-x+ -y+ blur color*/
 		}
+	/*Ejemplos*/
+		.example{
+			margin: .5rem;
+			margin-left: min(5vw, 3rem);
+			max-width: 640px;
+			border-left: .25rem solid #448;
+			padding: 1rem;
+			background-color: #eee;
+			list-style: none;
+		}
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
