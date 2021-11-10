@@ -97,21 +97,21 @@
 			<article>
 				<h3>Relativas</h3>
 				<p>
-					Son unidades cuyo valor depende de otro elemento, generalmente siendo este el contenedor de la etiqueta afectada, se utilizan para definir el tamaño de los etiquetas y la tipografias implementadas dentro del sitio. Esto permite que ante un cambio la pagina mantenga sus proporciones, pero normalmente se aplican a los anchos ya que no se suele asignar una altura para los contenedores.
+					Son unidades cuyo valor depende de otro elemento, generalmente el contenedor de la etiqueta afectada, se utilizan para definir el tamaño de los etiquetas y la tipografias implementadas dentro del sitio. Esto permite que ante un cambio la pagina mantenga sus proporciones, pero normalmente se aplican a los anchos ya que no se suele asignar una altura para los contenedores.
 				</p>
 				<ul class="example">
 					<li><strong>contenedor</strong>
 						<ul>
-							<li>% porcentaje del tamaño del elemento contenedor</li>
-							<li>fr fraccion del elemento contenedor (css-grid)</li>
+							<li>% porcentaje del tamaño</li>
+							<li>fr fraccion (css-grid)</li>
 						</ul>
 					</li>
 					<li><strong>tipografia</strong>
 						<ul>
-							<li>% porcentaje de la tipografia del contenedor</li>
-							<li>em ancho de "M" en el contenedor</li>
-							<li>ex alto de "x" en el contenedor</li>
-							<li>ch ancho del caracter "0" en el contenedor</li>
+							<li>% porcentaje de la tipografia</li>
+							<li>em ancho de "M"</li>
+							<li>ex alto de "x" </li>
+							<li>ch ancho del caracter "0"</li>
 						</ul>
 					</li>
 					<li><strong>hibrida</strong>
@@ -124,7 +124,7 @@
 			<article>
 				<h3>Flexibles</h3>
 				<p>
-					Son unidades relativas que a diferencia del resto, toman como referente las dimensiones del viewport, es decir, la ventana donde se visualiza la pagina web y cuya informacion se obtiene mediante metadatos. Estas son ideales para definir alturas dentro del sitio y para implementar tipografia flexible o adaptable a cada tamaño de pantalla.
+					Son unidades relativas que toman como referente las dimensiones del viewport, es decir, la ventana donde se visualiza la pagina web y cuya informacion se obtiene mediante metadatos. Estas son ideales para definir alturas dentro del sitio y para implementar tipografia flexible o adaptable a cada tamaño de pantalla, siempre que se implementen maximos y minimos para la misma.
 				</p>
 				<ul class="example">
 					<li><strong>dimension</strong>
@@ -146,7 +146,10 @@
 	<!-- Pie de pagina: Contenido Complementario -->
 	<footer id="footer">
 		<div class="map">
-			
+			<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13135.194960059227!2d-58.375158503785634!3d-34.60925041505106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1636559115857!5m2!1ses-419!2sar"
+				loading="lazy">
+			</iframe>
 		</div>
 		<form action="" id="contact">
 			<h2>Dejanos tu consulta</h2>

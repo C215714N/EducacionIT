@@ -9,7 +9,8 @@
 		h2,
 		h3,
 		h4,
-		.menu{
+		.menu,
+		#header p{
 			margin: 0;
 		}
 		.menu{
@@ -28,6 +29,8 @@
 		}
 	/*Navegacion*/
 		nav{
+			position: sticky;
+			top: 0;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -53,18 +56,96 @@
 		.menu a:hover{
 			text-shadow: 0 0 .5rem #eee; /*-x+ -y+ blur color*/
 		}
+	/*Cabecera*/
+		#header{
+			display: grid;
+			align-content: center;
+			min-height: min(100vh, 640px);
+			padding: 1rem;
+			background-color: #ccc;
+			text-align: center;
+			font-size: min(calc(2vw + .8rem), 3rem);
+		}
+	/*Contenido*/
+		main{
+			margin: 1rem auto; /*top right bottom left*/
+		}
+		section{
+			margin: 1rem .25rem;
+			border-radius: .25rem;
+			padding: 1rem;
+			box-shadow: 0 0 .5rem #333;
+		}
+		main h2{
+			width: calc(100% + 2rem);
+			margin: -1rem -1rem .5rem;
+			border-radius: .25rem .25rem 0 0;
+			padding: 1rem;
+			font-size: min(calc(2vw + .5rem), 2.5rem);
+			color: #eee;
+			text-shadow: 0 0 .5rem #333;
+			background: linear-gradient(to right, #448, #c36);
+		}
+		main h3{
+			border-bottom: .1rem solid #999;
+		}
 	/*Ejemplos*/
 		.example{
-			margin: .5rem;
-			margin-left: min(5vw, 3rem);
+			margin: 1rem;
+			margin-left: min(2vw, 1rem);
 			max-width: 640px;
 			border-left: .25rem solid #448;
 			padding: 1rem;
 			background-color: #eee;
 			list-style: none;
+			box-shadow: -.5rem .5rem .5rem #999; /*x y blur color*/
+		}
+	/*Pie de pagina*/
+		#footer{
+			padding: 1rem;
+			color: #eee;
+			background-image: linear-gradient(#c36, #448);
+		}
+		.map{
+			position: relative;
+			margin: -1rem -1rem 1rem;
+			padding-top: min(62.5%, 640px);
+			/* aspect-ratio		width 		height
+				4:3				1.33(h) 	75%(w)
+				16:9			1.78(h)		56.25%(w)
+				16:10			1.6(h)		62.5%(2)
+			*/
+		}
+		.map iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		#contact{
+			display: grid;
+			margin: .5rem auto;
+		}
+		#contact :is(input,textarea,select,button){
+			outline: none;
+			margin: .2rem 0;
+			border-radius: .25rem;
+			border: .1rem solid #eee;
+			padding: .5rem 1rem;
+			font-size: 1rem;
+		}
+		#contact button{
+			justify-self: flex-end;
 		}
 /*Small Devices - Smartphones*/
-
+@media screen and (min-width: 576px){
+	main, 
+	#contact{
+		max-width: 540px;
+	}
+}
 /*Medium Devices - Tablets*/
 @media screen and (min-width: 768px){
 	nav .btn{
@@ -75,12 +156,31 @@
 		width: auto;
 		max-height: 640px;
 	}
+	main,
+	#contact{
+		max-width: 720px;
+	}
 }
 /*Large Devices - Desktop*/
-
+@media screen and (min-width: 992px){
+	main{
+		max-width: 960px;
+	}
+	section{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	article{
+		width: 33.3%;
+		padding: .5rem 1rem;
+	}
+}
 /*Extra Large Devices - HD Desktop*/
 @media screen and (min-width: 1200px){
 	nav{
 		justify-content: space-around;
+	}
+	main{
+		max-width: 1140px;
 	}
 }
