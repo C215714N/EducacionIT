@@ -11,10 +11,16 @@
 	const next = d.querySelectorAll('.icon-next')
 	const slides = d.querySelectorAll('.slide')
 	const controls = d.querySelectorAll('.controls')
+	const animBtn = d.querySelector('.around button')
+	const animDiv = d.querySelector('.around div')
 //navigation bar
 	menuBtn.onclick = () => menuLst.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;'
 //contact map
 	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max','icon-min') : mapBtn.classList.replace('icon-min','icon-max')
+//animation play state
+	animBtn.onclick = () => animDiv.style.animationPlayState == 'running' ? 
+		(animDiv.style.animationPlayState = 'paused', animBtn.innerHTML = 'PLAY'): 
+		(animDiv.style.animationPlayState = 'running', animBtn.innerHTML = 'PAUSE') 
 //progress bar
 	pIn.oninput = () => pBar.value = pIn.value 
 //canvas

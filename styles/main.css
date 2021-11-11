@@ -160,6 +160,19 @@
 			transform: rotate(0); 
 		}
 	/*Example ANIMATIONS*/
+		/*Timing Function*/
+			.timing :nth-child(1){ animation-timing-function: ease; }
+			.timing :nth-child(2){ animation-timing-function: ease-in; }
+			.timing :nth-child(3){ animation-timing-function: ease-out; }
+			.timing :nth-child(4){ animation-timing-function: ease-in-out; }
+			.timing :nth-child(5){ animation-timing-function: linear; }
+			.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+		/*Direction*/
+			.direction :nth-child(1){ animation-direction: normal; }
+			.direction :nth-child(2){ animation-direction: reverse; }
+			.direction :nth-child(3){ animation-direction: alternate; }
+			.direction :nth-child(4){ animation-direction: alternate-reverse; }
+		/*Animations*/			
 			.animation{
 				flex-direction: column;
 				align-content: center;
@@ -174,19 +187,34 @@
 					-.5rem .5rem .5rem #666,
 					-.5rem .5rem .5rem #666 inset;
 			}
-		/*Timing Function*/
-			.timing :nth-child(1){ animation-timing-function: ease; }
-			.timing :nth-child(2){ animation-timing-function: ease-in; }
-			.timing :nth-child(3){ animation-timing-function: ease-out; }
-			.timing :nth-child(4){ animation-timing-function: ease-in-out; }
-			.timing :nth-child(5){ animation-timing-function: linear; }
-			.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
-		/*Animations*/
 			.translate div{
 				animation-name: translate;
 				animation-duration: 5s;
 				animation-delay: .5s;
-				animation-iteration-count: 10;
+				animation-iteration-count: infinite;
+			}
+			.loading{ flex-direction: row; }
+			.loading div{
+				min-width: 5rem;
+				min-height: 5rem;
+				margin: .25rem;
+				border-radius: 50%;
+				border: .5rem solid;
+				border-color: #acf #36c #248 #124;
+				animation: loading 1s infinite; /*name duration timing delay count*/
+			}
+			.around{ 
+				position: relative;
+				min-height: 300px; 
+			}
+			.around div{
+				animation: around 10s linear infinite;
+				animation-play-state: paused;
+			}
+			.around button{
+				position: absolute;
+				bottom: .5rem;
+				right: .5rem;
 			}
 		/*Keyframes*/
 			@keyframes translate{
@@ -197,6 +225,43 @@
 				to{
 					transform: translate(50vw);
 					background-color: #448;
+				}
+			}
+			@keyframes loading{
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes around{
+				0%{
+					transform: 
+						skew(15deg, 0)
+						translate(-25vw, 0);
+					background-color: hsl(0,50%,50%);
+				}
+				25%{
+					transform: 
+						skew(0, 15deg)
+						translate(25vw, 0);
+					background-color: hsl(90,50%,50%);
+				}
+				50%{
+					transform: 
+						skew(-15deg, 0)
+						translate(25vw, 200px);
+					background-color: hsl(180,50%,50%);
+				}
+				75%{
+					transform: 
+						skew(0,-15deg)
+						translate(-25vw, 200px);
+					background-color: hsl(270,50%,50%);
+				}
+				100%{
+					transform: 
+						skew(15deg,0)
+						translate(-25vw, 0);
+					background-color: hsl(0,50%,50%);
 				}
 			}
 /*Small Devices - Smartphones*/
