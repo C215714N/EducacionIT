@@ -203,7 +203,8 @@
 				border-color: #acf #36c #248 #124;
 				animation: loading 1s infinite; /*name duration timing delay count*/
 			}
-			.around{ 
+			.around, 
+			.background{ 
 				position: relative;
 				min-height: 300px; 
 			}
@@ -215,6 +216,19 @@
 				position: absolute;
 				bottom: .5rem;
 				right: .5rem;
+			}
+			.background .cover{
+				width: 500%;
+				background: linear-gradient(to right,
+					hsla(0,70%,50%),
+					hsla(90,70%,50%),
+					hsla(180,70%,50%),
+					hsla(270,70%,50%),
+					hsla(360,70%,50%),
+					hsla(90,70%,50%)	
+				);
+				z-index: 1;
+				animation: bg 60s linear infinite;
 			}
 		/*Keyframes*/
 			@keyframes translate{
@@ -263,6 +277,9 @@
 						translate(-25vw, 0);
 					background-color: hsl(0,50%,50%);
 				}
+			}
+			@keyframes bg{
+				from{ left:-400%; }
 			}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/
