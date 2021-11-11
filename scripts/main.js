@@ -2,6 +2,8 @@
 	const d = document
 	const menuBtn = d.querySelector('nav .btn')
 	const menuLst = d.querySelector('nav .menu')
+	const mapBtn = d.querySelector('.map .btn')
+	const mapFrm = d.querySelector('.map iframe')
 	const pBar = d.querySelector('.progress progress')
 	const pIn = d.querySelector('.progress input')
 	const ctx = d.querySelector('#canvas').getContext('2d')
@@ -11,6 +13,8 @@
 	const controls = d.querySelectorAll('.controls')
 //navigation bar
 	menuBtn.onclick = () => menuLst.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;'
+//contact map
+	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max','icon-min') : mapBtn.classList.replace('icon-min','icon-max')
 //progress bar
 	pIn.oninput = () => pBar.value = pIn.value 
 //canvas
@@ -33,8 +37,7 @@
 		ctx.strokeText("JAVASCRIPT CANVAS", 50, 250) /*text, x, y*/
 //gallery
 	const changeItem = (array, type, className = 'active') => {
-		for(i = 0; i < array.length; i++){
-			el = array[i]
+		for(const el of array){
 			if(el.classList.contains(className)){
 				el.classList.remove(className)
 				getDir(el, type)
@@ -42,8 +45,8 @@
 	}
 	const getDir = (el, type) => {
 		newItem = ( type ? 
-			el.nextElementSibling ?? el.parentNode.firsElementChild : 
-			el.previousElementSibling ?? el.parentNode.lastElementChild
+			el.nextElementSibling || el.parentNode.firstElementChild : 
+			el.previousElementSibling || el.parentNode.lastElementChild
 	)	}
 	prev.forEach((p,i) => { p.onclick = () => {
 		changeItem(slides[i].querySelectorAll('li'))

@@ -18,6 +18,7 @@
 		h1,
 		h2,
 		h3,
+		h4,
 		.menu,
 		.header p{
 			margin: 0;
@@ -105,6 +106,7 @@
 			padding: 1rem;
 			background-color: #eee;
 			list-style: none;
+			overflow: hidden;
 		}
 	/*Example LESS*/
 		.less{
@@ -157,7 +159,46 @@
 		.transform:hover div{ 
 			transform: rotate(0); 
 		}
-
+	/*Example ANIMATIONS*/
+			.animation{
+				flex-direction: column;
+				align-content: center;
+			}
+			.animation div{
+				min-width: 5rem;
+				min-height: 3rem;
+				margin: .5rem .25rem;
+				border-radius: .25rem;
+				background-color: #333;
+				box-shadow: 
+					-.5rem .5rem .5rem #666,
+					-.5rem .5rem .5rem #666 inset;
+			}
+		/*Timing Function*/
+			.timing :nth-child(1){ animation-timing-function: ease; }
+			.timing :nth-child(2){ animation-timing-function: ease-in; }
+			.timing :nth-child(3){ animation-timing-function: ease-out; }
+			.timing :nth-child(4){ animation-timing-function: ease-in-out; }
+			.timing :nth-child(5){ animation-timing-function: linear; }
+			.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+		/*Animations*/
+			.translate div{
+				animation-name: translate;
+				animation-duration: 5s;
+				animation-delay: .5s;
+				animation-iteration-count: 10;
+			}
+		/*Keyframes*/
+			@keyframes translate{
+				from{
+					transform: translate(-50vw);
+					background-color: #c36;
+				}
+				to{
+					transform: translate(50vw);
+					background-color: #448;
+				}
+			}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/
 @media screen and (min-width: 768px){
