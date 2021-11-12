@@ -14,20 +14,29 @@
 		'osx-catalina-night.jpg',
 		'osx-leopard-night.jpg',
 		'osx-mojave-night.jpg';
-
-// Nesting: anidacion de selectores;
+// 	Nesting: anidacion de selectores;
 	#header{
 		.flexbox(column);
 		.position;
 		.normalize(@p: 1rem);
 		height: min(100vh, 640px);
+		overflow: hidden;
+		perspective: 10rem;
+		perspective-origin: center;
 		.header{
 			font-size: ~'min(calc(2vw + .5rem), 3rem)';
 			text-align: center;
 			color: lighten(@bg_color, 20%);
 			text-shadow: 0 0 calc(1vw + .5rem) darken(@color, 10%);
-			animation: translate 2s ease-out 1s;
+			perspective-origin: top center;
+			perspective: 600px;
+			animation: intro 10s linear 1s;
+			animation-fill-mode: backwards;
 			*{ &:extend(.unstyled); }
+			h1{ 
+				font-family: 'star wars'; 
+				transform: rotateX(30deg);
+			}
 		}
 		.controls{
 			.flexbox;
@@ -123,3 +132,28 @@
 	} 
 /* Sistema de grillas (Flexbox)*/
 	.grid;
+/*Animacion Intro */
+@keyframes intro{
+	0%{
+		transform: 
+			scale(30)
+			translateY(0);
+	}
+	30%{
+		transform: 
+			scale(1)
+			translateY(0);
+	}
+	50%{
+		transform: 
+			scale(.25)
+			translateY(-100vh);
+	}
+	100%{
+		transform:
+			scale(1)
+			translateY(0vh);
+	}
+}
+// importaciones LESS
+@import url('animation.less');

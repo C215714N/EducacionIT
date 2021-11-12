@@ -10,6 +10,10 @@
 			--font: 'Raleway', 'calibri', 'segoe', sans-serif;
 		}
 	/*General Rules*/
+		@font-face{
+			src: url('../assets/fonts/starjedi.ttf');
+			font-family: 'star wars';
+		}
 		*{
 			box-sizing: border-box;
 			font-family: var(--font);
@@ -28,6 +32,9 @@
 		}
 	/*Navigation*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 2;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -41,6 +48,11 @@
 			color: #eee;
 			text-decoration: none;
 			transition: all .5s ease-out;/* property duration timing delay */
+		}
+		.logo{
+			font: bold 1.5rem var(--font);
+			letter-spacing: -.2rem;
+			animation: breath 2s ease-out infinite alternate;
 		}
 		.btn{
 			margin: .5rem;
@@ -280,6 +292,10 @@
 			}
 			@keyframes bg{
 				from{ left:-400%; }
+			}
+			@keyframes breath{
+				from{ letter-spacing: .2rem; }
+
 			}
 /*Small Devices - Smartphones*/
 /*Medium Devices - Tablets*/

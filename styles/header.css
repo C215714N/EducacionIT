@@ -12,13 +12,23 @@
   border: 0;
   padding: 1rem;
   height: min(100vh, 640px);
+  overflow: hidden;
+  perspective: 10rem;
+  perspective-origin: center;
 }
 #header .header {
   font-size: min(calc(2vw + .5rem), 3rem);
   text-align: center;
   color: #ffffff;
   text-shadow: 0 0 calc(1vw + 0.5rem) #333366;
-  animation: translate 2s ease-out 1s;
+  perspective-origin: top center;
+  perspective: 600px;
+  animation: intro 10s linear 1s;
+  animation-fill-mode: backwards;
+}
+#header .header h1 {
+  font-family: 'star wars';
+  transform: rotateX(30deg);
 }
 #header .controls {
   display: flex;
@@ -182,3 +192,20 @@
 .col-24 {
   width: 100%;
 }
+/*Animacion Intro */
+@keyframes intro {
+  0% {
+    transform: scale(30) translateY(0);
+  }
+  30% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(0.25) translateY(-100vh);
+  }
+  100% {
+    transform: scale(1) translateY(0vh);
+  }
+}
+/*asignacion*/
+/*animaciones*/
