@@ -29,13 +29,15 @@
 	@keyframes rotate{
 		to{ transform: rotate(360deg); }
 	}
+	// bucle principal
 	.animations(@n: 1) when (@n <= length(@functions)){
 		@f: extract(@functions, @n);
 		@keyframes @f {
+			// bucle secundario
 			.keys(@i: 0%; @y: -50vw) when (@i <= 100%){
 				@x: @y + 50vw;
 				@{i}{
-					transform:
+					transform: 	// condicional
 						if( @n = 1, // lineal
 							translate( @x, (@x / 2vh) ),
 						if( @n = 2, // cuadratica
@@ -48,14 +50,10 @@
 							translate(@x, 1vh),
 							translate(@x, (1vh / @y) * 20 )
 						)	)	)	)	);
-				}
-				.keys(@i + 5; @y + 5);
-			}
-			.keys;
-		}
-		.animations(@n + 1);
-	}
-	.animations;
+				}	.keys(@i + 5; @y + 5); //repeticion
+			}	.keys; // invocacion
+		}	.animations(@n + 1); // repeticion
+	}	.animations; // invocacion
 // mixins parametricos
 	.childs(@i: 1) when (@i <= length(@functions)){
 		&:nth-child(@{i}n){
