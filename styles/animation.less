@@ -1,3 +1,66 @@
+// 	variables
+	@functions: 
+		lineal, 		// ax+b
+		cuadratica,		// ax^2+bx+c
+		trigonometrica,	// sin(x) cos(x) tan(x)
+		exponencial,	// n^x
+		limite;			// n/x
 /*asignacion*/
-	
+	.hidden{
+		min-height: 100vh;
+		background: url('../assets/bg/osx-animation.jpg') center/cover no-repeat;
+		overflow: hidden;
+	}
+	.less-animation{
+		display: flex;
+		flex-wrap: wrap;
+		animation: rotate 20s infinite;
+		div{
+			width: 3rem;
+			height: 3rem;
+			margin: 1rem;
+			border-radius: 50%;
+			background: radial-gradient(circle at top right, #eee3, #36c3);
+			box-shadow: .25rem -.25rem .25rem #fefefe88 inset;
+			.childs;
+		}
+	}
 /*animaciones*/
+	@keyframes rotate{
+		to{ transform: rotate(360deg); }
+	}
+	.animations(@n: 1) when (@n <= length(@functions)){
+		@f: extract(@functions, @n);
+		@keyframes @f {
+			.keys(@i: 0%; @y: -50vw) when (@i <= 100%){
+				@x: @y + 50vw;
+				@{i}{
+					transform:
+						if( @n = 1, // lineal
+							translate( @x, (@x / 2vh) ),
+						if( @n = 2, // cuadratica
+							translate( @x, (pow(@y, 2vh) / 12.5) ),
+						if( @n = 3, // trigonometrica
+							translate( @x, sin(@y) * 5vh),
+						if( @n = 4, // exponencial
+							translate(@x, (pow(1.2vh, @y) / 45) ),
+						if( @y = 0, 
+							translate(@x, 1vh),
+							translate(@x, (1vh / @y) * 20 )
+						)	)	)	)	);
+				}
+				.keys(@i + 5; @y + 5);
+			}
+			.keys;
+		}
+		.animations(@n + 1);
+	}
+	.animations;
+// mixins parametricos
+	.childs(@i: 1) when (@i <= length(@functions)){
+		&:nth-child(@{i}n){
+			animation: extract(@functions, @i) 2s (@i * 2s) infinite alternate;
+			background-color: hsla(@i * 60, 50%, 50%, .5);
+		}
+		.childs(@i + 1);
+	}
