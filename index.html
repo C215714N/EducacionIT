@@ -153,7 +153,7 @@
 			<p>
 				Una de las caracteristicas, bastante presente en cualquier framework de css, es el uso de clases de ayuda o helpers, que consisten en estilos individuales que se utilizan para definir el aspecto de los elementos cuando necesitamos cambiar algun atributo. En el caso de bootstrap suele utilizarse la letra del atributo y un valor que ronda entre 0 y 5, cuyas medidas estan establecidas en <em>rem</em>.
 			</p>
-			<ul class="list-unstyled | row | mx-auto">
+			<ul class="list-unstyled | row | mx-auto | text-center">
 				<li class="col"><strong class="h4">Margin</strong>
 					<ul class="list-unstyled">
 						<li class="border border-dark | m-2">margin: .5rem; (.m-2)</li>
@@ -185,6 +185,84 @@
 					</ul>	
 				</li>
 			</ul>
+			<h3 class="w-100">Sistema de grillas</h3>
+			<p>
+				Una de las caracteristicas principales de este framework es su sistema de grillas responsive utilizando flexbox, el cual consiste en dividir un contenedor en 12 columnas, asignando un porcentaje a cada tamaño. Las clases se componen de las palabras <em>col-n</em> donde n representa el espacio ocupado por el elemento dentro de la grilla. Las columnas se acomodaran de izquierda a derecha siempre y cuando el contenedor posea la clase <em>row</em> Podemos indicar diferentes tamaños si agregamos puntos de quiebre a las mismas.
+			</p>
+			<div class="w-100 | row | px-3 | text-center">
+				<div class="border col-12">col-12</div>
+				<div class="border col-1">col-1</div>
+				<div class="border col-2">col-2</div>
+				<div class="border col-3">col-3</div>
+				<div class="border col-6">col-6</div>
+				<div class="border col-4">col-4</div>
+				<div class="border col-8">col-8</div>
+				<div class="border col-5">col-5</div>
+				<div class="border col-7">col-7</div>
+			</div>
+			<div class="w-100 | row | px-3 py-2 | text-center">
+				<div class="border col | offset-8">offset-8</div>
+				<div class="border col | offset-4">offset-4</div>
+				<div class="border col | offset-3">offset-3</div>
+				<div class="border col | offset-2">offset-2</div>
+				<div class="border col | offset-5">offset-5</div>
+				<div class="border col | offset-1">offset-1</div>
+				<div class="border col | offset-7">offset-7</div>
+				<div class="border col | offset-6">offset-6</div>
+				<div class="border col | offset-10">offset-10</div>
+			</div>
+			<h3 class="w-100">Puntos de quiebre</h3>
+			<p>	
+				El sistema responsive funciona gracias a que las clases se organizan segun los diferentes puntos de quiebre, indentificando cada pantalla mediante su iniciales, los atributos por lo tanto, se utilizan de la siguiente manera <em>attribute-breakpoint-value</em>, tambien existe una clase llamada container para definir el tamaño maximo de un elemento y su contenido. Esta estructura de tamaños esta compuesta de la siguiente manera:
+			</p>
+			<table class="table table-striped">
+				<thead>	
+					<tr>
+						<th>Breakpoint</th>
+						<th>screen-size</th>
+						<th>max-width</th>
+						<th>Device</th>
+					</tr>	
+				</thead>
+				<tbody>
+					<tr>
+						<td>xs</td>
+						<td>< 576px</td>
+						<td>100%</td>
+						<td>Smartwatch</td>
+					</tr>
+					<tr>
+						<td>sm</td>
+						<td>>= 576px && < 768px </td>
+						<td>540px</td>
+						<td>Smartphones</td>
+					</tr>
+					<tr>
+						<td>md</td>
+						<td>>= 768px && < 992px </td>
+						<td>720px</td>
+						<td>Tablets</td>
+					</tr>
+					<tr>
+						<td>lg</td>
+						<td>>= 992 && < 1200px </td>
+						<td>960px</td>
+						<td>Laptops</td>
+					</tr>
+					<tr>
+						<td>xl</td>
+						<td>>= 1200px && < 1400px </td>
+						<td>1140px</td>
+						<td>Desktop</td>
+					</tr>
+					<tr>
+						<td>xxl</td>
+						<td>>=1400px</td>
+						<td>1320px</td>
+						<td>HD Desktop</td>
+					</tr>
+				</tbody>
+			</table>	
 		</section>
 	</main>
 	<!-- Pie de pagina: Contenido Complementario -->
