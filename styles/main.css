@@ -1,0 +1,54 @@
+/*Content First - Mobile First*/
+	/*Reglas Generales*/
+		*{
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body,
+		.menu,
+		h1,
+		h2,
+		h3,
+		h4{
+			margin: 0;
+		}
+		.menu{
+			padding: 0;
+		}
+	/*Navegacion*/
+		nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background: linear-gradient(to right, #c36, #448);
+		}
+		nav a{
+			display: block;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+		}
+		.menu{
+			width: 100%;
+			list-style: none;
+		}
+		.menu a:hover{
+			text-shadow: 0 0 .25rem #eee;
+		}
+/*Small Devices - Smartphones*/
+
+/*Medium Devices - Tablets*/
+@media screen and (min-width: 768px){
+	/*Navegacion*/
+	nav .btn{
+		display: none;
+	}
+	.menu{
+		display: flex;
+		width: auto;
+	}
+}
+/*Large Devices - Laptops*/
+
+/*Extra Large Devices - Desktop*/
