@@ -14,19 +14,63 @@
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark | container-fluid sticky-top | bg-dark bg-gradient">
 		<a class="navbar-brand" href="#">Bootstrap</a>
-		<button class="navbar-toggler navbar-toggler-icon | border-0">
+		<button class="navbar-toggler navbar-toggler-icon | border-0"
+			data-bs-toggle="collapse"
+			data-bs-target="#menu">
 		</button>
-		<ul class="navbar-nav navbar-collapse collapse | align-items-start">
+		<ul id="menu" class="navbar-nav navbar-collapse collapse | align-items-start">
 			<li class="nav-item"><a class="nav-link" href="#">inicio</a></li>
 			<li class="nav-item"><a class="nav-link active" href="about.html">acerca</a></li>
 			<li class="nav-item"><a class="nav-link" href="gallery.html">galeria</a></li>
 			<li class="nav-item"><a class="nav-link disabled" href="#contact">contacto</a></li>
 		</ul>
 	</nav>
-	<header class="min-vh-100 | d-grid align-content-center | bg-secondary text-light text-center">
-		<h1 class="display-1 | mb-0 | text-uppercase fw-bold">Responsive</h1>
-		<p class="h1 fw-light">Web Design</p>
+	<header id="header" class="carousel slide | position-relative | text-light text-center" data-bs-ride="carousel">
+		<ul class="carousel-inner | list-unstyled">
+			<li class="carousel-item active">
+				<img class="w-100 | d-lg-none" 
+					src="assets/bg/header-sm-01.jpg" alt="macOS Mavericks">
+				<img class="w-100 | d-none d-lg-block" 
+					src="assets/bg/header-lg-01.jpg" alt="Ubuntu Focal Fossa">
+			</li>
+			<li class="carousel-item">
+				<img class="w-100 | d-lg-none" 
+					src="assets/bg/header-sm-02.jpg" alt="macOS Yosemite">
+				<img class="w-100 | d-none d-lg-block" 
+					src="assets/bg/header-lg-02.jpg" alt="Ubuntu Groove Gorilla">
+			</li>
+			<li class="carousel-item">
+				<img class="w-100 | d-lg-none" 
+					src="assets/bg/header-sm-03.jpg" alt="macOS Sierra">
+				<img class="w-100 | d-none d-lg-block" 
+					src="assets/bg/header-lg-03.jpg" alt="Ubuntu Hisurte Hippo">
+			</li>
+		</ul>
+		<button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y"
+			data-bs-target="#header"
+			data-bs-slide="prev"
+			title="imagen anterior">
+		</button>
+		<button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y"
+			data-bs-target="#header"
+			data-bs-slide="next"
+			title="imagen siguiente">
+		</button>
+		<div class="position-absolute top-50 start-50 | translate-middle">
+			<h1 class="display-1 | mb-0 | text-uppercase fw-bold">Responsive</h1>
+			<p class="h1 fw-light">Web Design</p>
+		</div>
 	</header>
+	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 	<!-- BOOTSTRAP js -->
 	<script src="scripts/bootstrap.bundle.js"></script>
 </body>
