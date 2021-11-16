@@ -65,10 +65,13 @@
 	.menu{
 		display: flex;
 		width: auto;
+		max-height: 640px;
 	}
 }
 /*Large Devices - Laptops*/
 @media screen and (min-width: 992px){
-
+	nav{
+		justify-content: space-around;
+	}
 }
 /*Extra Large Devices - Desktop*/
