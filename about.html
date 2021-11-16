@@ -19,13 +19,15 @@
 			data-bs-target="#menu">
 		</button>
 		<ul id="menu" class="navbar-nav navbar-collapse collapse | align-items-start">
-			<li class="nav-item"><a class="nav-link" href="#">inicio</a></li>
-			<li class="nav-item"><a class="nav-link active" href="about.html">acerca</a></li>
+			<li class="nav-item"><a class="nav-link" href="index.html">inicio</a></li>
+			<li class="nav-item"><a class="nav-link active" href="#">acerca</a></li>
 			<li class="nav-item"><a class="nav-link" href="gallery.html">galeria</a></li>
 			<li class="nav-item"><a class="nav-link disabled" href="#contact">contacto</a></li>
 		</ul>
 	</nav>
-	<header id="header" class="carousel slide | position-relative | text-light text-center" data-bs-ride="carousel">
+	<header id="header" class="carousel slide | position-relative | 
+		text-light text-center" 
+		data-bs-ride="carousel">
 		<ul class="carousel-inner | list-unstyled">
 			<li class="carousel-item active">
 				<img class="w-100 | d-lg-none" 
@@ -46,12 +48,14 @@
 					src="assets/bg/header-lg-03.jpg" alt="Ubuntu Hisurte Hippo">
 			</li>
 		</ul>
-		<button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y"
+		<button class="carousel-control-prev 
+			carousel-control-prev-icon | top-50 translate-middle-y"
 			data-bs-target="#header"
 			data-bs-slide="prev"
 			title="imagen anterior">
 		</button>
-		<button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y"
+		<button class="carousel-control-next 
+			carousel-control-next-icon | top-50 translate-middle-y"
 			data-bs-target="#header"
 			data-bs-slide="next"
 			title="imagen siguiente">
@@ -61,16 +65,50 @@
 			<p class="h1 fw-light">Web Design</p>
 		</div>
 	</header>
-	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+	<main class="container">
+		<section>
+			<article>
+				<header>
+					<h2>Fluid Design</h2>
+				</header>
+				<p>
+					Modelo que utiliza porcentajes y ems para los tamaños de los elementos y las tipografias respectivamente. Surge para mantener la proporcion de los elementos dentro de la pagina, pero el problema principal radica en la dificultad para poder visualizar el contenido en pantallas grandes o pequeñas.
+				</p>
+				<footer>
+					<address>
+						Para mas informacion visitar <a href="https://alumni.education">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">Cristiandracedo@hotmail.com</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h2>Adaptive Design</h2>
+				</header>
+				<p>
+					
+					Modelo que consiste en diseñar una pagina diferente segun la cantidad de dispositivos a los que se apunta. Surge debido al aumento en la cantidad de visualizaciones de paginas web en dispositivos moviles y es una buena alternativa para clientes con bajo prespuesto debido a que es facil de mantener.
+				</p>
+				<footer>
+					<address>
+						Para mas informacion visitar <a href="https://alumni.education">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">Cristiandracedo@hotmail.com</a>
+					</address>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<h2>Responsive Design</h2>
+				</header>
+				<p>
+					Modelo que esta orientado a trabajar el contenido final en una sola web para evitar la duplicidad de contenidos, implementando multimedia flexible, sistemas de grillas que adapten el contenido segun el tamaño de pantalla y siempre tratando de implementar los contenidos finales en el diseño.
+				</p>
+				<footer>
+					<address>
+						Para mas informacion visitar <a href="https://alumni.education">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">Cristiandracedo@hotmail.com</a>
+					</address>
+				</footer>
+			</article>
+		</section>
+	</main>
 	<!-- BOOTSTRAP js -->
 	<script src="scripts/bootstrap.bundle.js"></script>
 </body>
