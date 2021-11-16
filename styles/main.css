@@ -9,7 +9,8 @@
 		h1,
 		h2,
 		h3,
-		h4{
+		h4,
+		#header p{
 			margin: 0;
 		}
 		.menu{
@@ -29,6 +30,9 @@
 		}
 	/*Navegacion*/
 		nav{
+			position: sticky;
+			top: 0;
+			z-index: 2;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -54,6 +58,25 @@
 			text-shadow: 0 0 .25rem #eee;
 			background-color: rgba(51,51,51,.5);
 		}
+	/*Cabecera*/
+		#header{
+			display: grid;
+			align-content: center;
+			height: min(100vh, 640px);
+			text-align: center;
+			font-size: min(calc(2vw + .5rem), 3rem);
+			background-color: #ccc;
+		}
+	/*Contenido*/
+
+	/*Ejemplos*/
+		.example{
+			margin: .5rem min(5vw, 3rem);
+			border-left: .25rem solid #c36;
+			padding: 1rem;
+			background-color: #eee;
+			list-style: none;
+		}
 /*Small Devices - Smartphones*/
 
 /*Medium Devices - Tablets*/
@@ -75,3 +98,8 @@
 	}
 }
 /*Extra Large Devices - Desktop*/
+@media screen and (min-width: 1200px){
+	nav{
+		padding: .5rem calc(50vw - 570px);
+	}
+}
