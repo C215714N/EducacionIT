@@ -10,6 +10,8 @@
 	<title>Responsive Web Design</title>
 	<!-- Styles CSS -->
 	<link rel="stylesheet" href="styles/main.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<!-- Navegacion: Links mas importantes -->
@@ -151,6 +153,46 @@
 				</ul>
 			</article>
 		</section>
+		<section>
+			<header class="header">
+				<h2>Bootstrap</h2>
+			</header>
+			<p>
+				Es un framework de CSS desarrollado por el equipo de trabajo de twitter que se caracteriza por la implementacion de clases orientadas al diseño responsive. Utiliza un sistema de grillas basado en porcentajes, clases de utilidad y componentes que aplicaremos sobre nuestro HTML.
+			</p>
+			<article>
+				<h3>Caracteristicas Basicas</h3>
+				<p>
+					Podemos modificar los elementos de nuestra pagina mediante la aplicacion de clases de utilidad, en la mayoria de los casos simplemente debemos colocar la inicial o nombre del atributo que queremos utilizar y un valor preestablecido, que suele rondar entre 0 y 5.
+				</p>
+				<ul>
+					<li><strong>margin</strong>
+						<ul>
+							<li class="border m-2">margin: .5rem (.m-2)</li>
+							<li class="border mb-3">margin-bottom:1rem; (.mb-3)</li>
+							<li class="border my-1 mx-4"> margin: .25rem 1.5rem (.my-1 .mx-4)</li>
+							<li class="border me-5">margin-right: 3rem (.me-5)</li>
+						</ul>
+					</li>
+					<li><strong>padding</strong>
+						<ul>
+							<li class="border p-2">padding: .5rem (.p-2)</li>
+							<li class="border pb-3">padding-bottom:1rem; (.pb-3)</li>
+							<li class="border py-1 px-4"> padding: .25rem 1.5rem (.py-1 .px-4)</li>
+							<li class="border pe-5">padding-right: 3rem (.pe-5)</li>
+						</ul>
+					</li>
+					<li><strong>border</strong>
+						<ul>
+							<li class="border-4 border-dark border-start">border-left: 4px solid (.border-start)</li>
+							<li class="border-3 border-dark border-bottom">border-bottom: 3px solid; (.border-bottom)</li>
+							<li class="border border-dark">border: 1px solid (.border)</li>
+							<li class="border-5 border-dark border-end">border: 5px solid (.border-end)</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+		</section>
 	</main>
 	<!-- Pie de Pagina: Contenido Complementario -->
 	<footer id="footer">
@@ -180,5 +222,7 @@
 	</footer>
 	<!-- Scripts JS -->
 	<script src="scripts/main.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
