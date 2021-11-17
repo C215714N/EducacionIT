@@ -1,0 +1,35 @@
+nav{
+	display: grid;
+	max-width: 3rem;
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	background: linear-gradient( var(--first), var(--second));
+}
+nav a{
+	display: flex;
+	align-items: center;
+	color: var(--light);
+	text-decoration: none;
+	padding: .5rem;
+	font-size: 1.5rem;
+}
+nav a:hover{
+	text-shadow: 0 0 .5rem var(--light);
+}
+nav span{
+	display: none;
+	padding: .25rem;
+}
+.menu-bottom{
+	margin-top: auto;
+}
+@media screen and (min-width: 996px){
+	nav{
+		max-width: 320px;
+	}
+	nav span{
+		display: inline-block;
+		font-size: 1rem;
+	}
+}

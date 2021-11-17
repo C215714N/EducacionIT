@@ -1,6 +1,15 @@
+/* Variables */
+	:root{
+		--first: #3c6;
+		--second: #36c;
+		--light: #eee;
+		--dark: #333;
+		--font: 'Raleway', 'calibri', 'segoe ui', sans-serif;
+	}
 /* Reglas Generales */
 	*{
 		box-sizing: border-box;
+		font-family: var(--font);
 	}
 	body,
 	h1,
@@ -16,11 +25,11 @@
 /* Pagina Principal */
 	body{
 		display: grid;
-		grid-template-columns: 1fr 5fr;
 		grid-template-areas: 
 			'nav header'
 			'nav main'
 			'nav footer';
+		gap: .5rem;
 	}
 	nav{ grid-area: nav; }
 	#header{ grid-area: header; }
@@ -35,7 +44,7 @@
 	}
 
 	canvas, svg{
-		border: .1rem solid #333;
+		border: .1rem solid var(--dark);
 		width: 300px;
 		height: 300px;
 	}
