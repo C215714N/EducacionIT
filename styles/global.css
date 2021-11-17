@@ -22,6 +22,7 @@
 	[class*="menu"]{
 		padding: 0;
 	}
+	.example,
 	[class*="menu"]{
 		list-style: none;
 	}
@@ -39,3 +40,25 @@
 	main{ grid-area: main; }
 	#footer{grid-area: footer;}
 /*Utilidades*/
+	.example{
+		position: relative;
+		margin: 1rem 2rem;
+		padding: 1rem;
+		line-height: 1.5rem;
+		background-color: var(--light);
+	}
+	.example::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: .25rem;
+		height: 100%;
+		background: linear-gradient(var(--first), var(--second));
+	}
+	canvas,
+	svg{
+		width: 300px;
+		height: 300px;
+		border: 1px solid var(--dark);
+	}
