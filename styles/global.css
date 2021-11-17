@@ -1,0 +1,38 @@
+/*Variables*/
+	:root{
+		--first: #3c6;
+		--second: #36c;
+		--light: #eee;
+		--dark: #333;
+		--font: 'Raleway', 'segoe ui', 'calibri', sans-serif;
+	}
+/*Reglas Generales*/
+	*{
+		box-sizing: border-box;
+		font-family: var(--font);
+	}
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	[class*="menu"]{
+		margin: 0;
+	}
+	[class*="menu"]{
+		padding: 0;
+	}
+/*Contenido*/
+	body{
+		display: grid;
+		grid-template-areas: 
+			'nav	header'
+			'nav  	main'
+			'nav 	footer';
+		gap: .5rem;
+	}
+	nav{ grid-area: nav; }
+	#header{ grid-area: header; }
+	main{ grid-area: main; }
+	#footer{grid-area: footer;}
+/*Utilidades*/
