@@ -10,6 +10,7 @@
 		h2,
 		h3,
 		h4,
+		.copy,
 		#header p{
 			margin: 0;
 		}
@@ -96,9 +97,65 @@
 			background-color: #eee;
 			list-style: none;
 		}
+	/*Pie de Pagina*/
+		#footer{
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .5rem #333; /*x y blur color*/
+			background: linear-gradient(#c36,#448);
+		}
+		#contact{
+			display: grid;
+			margin: auto;
+			padding: 1rem .5rem;
+		}
+		#contact :is(input, textarea, select){
+			outline: none;
+			margin-bottom: .25rem;
+			border-radius: .25rem;
+			border: .1rem solid #eee;
+			padding: .5rem 1rem;
+		}
+		#contact textarea{
+			min-height: 8rem;
+			resize: none;
+		}
+		#contact :is(input, textarea, select):focus{
+			box-shadow: 0 0 .5rem #eee;
+		}
+		#contact .btn{
+			margin: .5rem 0;
+			padding: .5rem 1rem;
+			justify-self: flex-end;
+			text-transform: uppercase;
+		}
+		.map{
+			position: relative;
+			left: -1rem;
+			right: -1rem;
+			padding-top: min(56.25%, 640px);
+			/*
+				aspect-ratio	width 		height
+				4:3				1.33(h) 	75%(w)
+				16:9			1.78(h) 	56.25%(w)
+			*/
+		}
+		.map iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: calc(100% + 2rem);
+			height: 100%;
+			border: none;
+		}
+		.copy{
+			padding: 1rem;
+			text-align: center;
+		}
 /*Small Devices - Smartphones*/
 @media screen and (min-width: 576px){
-	main{
+	main, 
+	#contact{
 		max-width: 540px;
 	}
 }
@@ -113,7 +170,8 @@
 		width: auto;
 		max-height: 640px;
 	}
-	main{
+	main, 
+	#contact{
 		max-width: 720px;
 	}
 }
