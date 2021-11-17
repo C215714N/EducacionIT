@@ -110,6 +110,35 @@
 					</li>
 				</ul>
 			</article>
+			<article>
+				<h3>API's de Dibujo</h3>
+				<p>
+					Los navegadores actuales incluyen herramientas que nos permiten realizar dibujos dentro de la pagina, estas son <strong>SVG</strong> para la realizacion de graficos vectoriales, es decir, imagenes creadas a partir de lineas y curvas matematicamente, utilizando el lenguaje <em>XML</em>;y <strong>Canvas</strong> para la creacion de imagenes rasters (mapa de bits), utilizando el lenguaje JS para la creacion de los mismos.
+				</p>
+				<div class="example">
+					<figure>
+						<img src="assets/icon/css3.png" alt="Logo CSS3 (Raster)">
+						<figcaption>Logo CSS3 (Raster)</figcaption>
+					</figure>
+					<figure>
+						<img src="assets/icon/css3.svg" alt="Logo CSS3 (Vector)">
+						<figcaption>Logo CSS3 (Vector)</figcaption>
+					</figure>
+				</div>
+				<svg>
+					<rect x="50" y="50" 
+						width="100" height="100" fill="#448"/>
+					<circle r="50" cx="150" cy="150" 
+						fill="hsla(0,50%,50%,.5)"/>
+					<polygon points="150,50 150,150 240,100" 
+						fill="rgba(15,204,68,.5)"/>
+					<text x="50" y="250" 
+						fill="transparent" stroke="#333">
+						SVG Graphic (XML)
+					</text>
+				</svg>
+				<canvas id="canvas" width="300" height="300"></canvas>
+			</article>
 		</section>
 	</main>
 	<!-- Footer -->
