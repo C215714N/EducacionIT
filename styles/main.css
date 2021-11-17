@@ -129,6 +129,24 @@
 			justify-self: flex-end;
 			text-transform: uppercase;
 		}
+		.social{
+			display: flex;
+			justify-content: center;
+		}
+		.social a{
+			position: relative;
+			margin: .25rem;
+			border-radius: .25rem;
+			padding: .5rem;
+			color: #eee;
+			text-decoration: none;
+			background-color: #333;
+		}
+		.social a:hover{
+			bottom: .25rem;
+			background-color: #666;
+			box-shadow: 0 0 .5rem #eee;
+		}
 		.map{
 			position: relative;
 			left: -1rem;
