@@ -1,0 +1,34 @@
+/* Reglas Generales */
+	*{
+		box-sizing: border-box;
+	}
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	[class*="menu"]{
+		margin: 0;
+	}
+	[class*="menu"]{
+		padding: 0;
+	}
+/* Pagina Principal */
+	body{
+		display: grid;
+		grid-template-areas: 
+			'nav header'
+			'nav main'
+			'nav footer';
+	}
+	nav{ grid-area: nav; }
+	#header{ grid-area: header; }
+	main{ grid-area: main; }
+	#footer{ grid-area: footer; }
+/* Utilidades */
+	.opacity{
+		opacity: .3;
+	}
+	.opacity:hover{
+		opacity: .7;
+	}
