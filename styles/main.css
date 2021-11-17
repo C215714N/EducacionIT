@@ -68,17 +68,40 @@
 			background-color: #ccc;
 		}
 	/*Contenido*/
-
+		main{
+			margin: 1rem auto;
+		}
+		section{
+			margin: 1rem;
+			border-radius: .25rem;
+			padding: 1rem;
+			box-shadow: 0 0 .5rem #333;
+		}
+		main .header{
+			margin: -1rem -1rem .5rem;
+			border-radius: .25rem .25rem 0 0;
+			padding: 1rem;
+			color: #eee;
+			text-shadow: 0 0 .25rem #333;
+			background: linear-gradient(to left, #c36, #448);
+		}
+		main h3{
+			border-bottom: .1rem solid #666;
+		}
 	/*Ejemplos*/
 		.example{
-			margin: .5rem min(5vw, 3rem);
+			margin: .5rem min(5vw, 2rem);
 			border-left: .25rem solid #c36;
 			padding: 1rem;
 			background-color: #eee;
 			list-style: none;
 		}
 /*Small Devices - Smartphones*/
-
+@media screen and (min-width: 576px){
+	main{
+		max-width: 540px;
+	}
+}
 /*Medium Devices - Tablets*/
 @media screen and (min-width: 768px){
 	/*Navegacion*/
@@ -90,12 +113,27 @@
 		width: auto;
 		max-height: 640px;
 	}
+	main{
+		max-width: 720px;
+	}
 }
 /*Large Devices - Laptops*/
 @media screen and (min-width: 992px){
 	nav{
 		justify-content: space-around;
 	}
+	main{
+		max-width: 960px;
+	}
+	section{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	main .header{ width: calc(100% + 2rem) }
+	main article{ padding: .5rem }
+	.col-a{ width: 33.3% } /*1 de 3 columnas*/
+	.col-b{ width: 66.6% } /*2 de 3 columnas*/
+	.col-c{ width: 100% }  /*3 de 3 columnas*/
 }
 /*Extra Large Devices - Desktop*/
 @media screen and (min-width: 1200px){
