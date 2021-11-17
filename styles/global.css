@@ -22,13 +22,16 @@
 	[class*="menu"]{
 		padding: 0;
 	}
+	[class*="menu"]{
+		list-style: none;
+	}
 /*Contenido*/
 	body{
 		display: grid;
 		grid-template-areas: 
-			'nav	header'
-			'nav  	main'
-			'nav 	footer';
+			'nav header'
+			'nav main'
+			'nav footer';
 		gap: .5rem;
 	}
 	nav{ grid-area: nav; }
