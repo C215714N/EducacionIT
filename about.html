@@ -13,14 +13,14 @@
 </head>
 <body>
 	<!-- Navegacion -->
-	<nav>
-		<a href="">Bootstrap</a>
-		<button></button>
-		<ul>
-			<li><a href="index.html">inicio</a></li>
-			<li><a href="#">acerca</a></li>
-			<li><a href="gallery.html">galeria</a></li>
-			<li><a href="#contact">contacto</a></li>
+	<nav class="navbar navbar-expand-md navbar-dark | container-fluid sticky-top | bg-dark bg-gradient">
+		<a class="navbar-brand" href="#">Bootstrap</a>
+		<button class="navbar-toggler navbar-toggler-icon | border-0"></button>
+		<ul class="navbar-nav navbar-collapse collapse | align-items-start">
+			<li class="nav-item"><a class="nav-link" href="index.html">inicio</a></li>
+			<li class="nav-item"><a class="nav-link active" href="#">acerca</a></li>
+			<li class="nav-item"><a class="nav-link" href="gallery.html">galeria</a></li>
+			<li class="nav-item"><a class="nav-link disabled" href="#contact">contacto</a></li>
 		</ul>
 	</nav>
 	<!-- Cabecera -->
@@ -29,46 +29,46 @@
 		<p class="h1 fw-light">Responsive Web Design</p>
 	</header>
 	<!-- Contenido Principal -->
-	<main>
-		<section>
-			<article>
-				<header>
-					<h2>Fluid Design</h2>
-				</header>
-				<p>
+	<main class="container">
+		<section class="row | py-3">
+			<article class="card | col-lg | p-0">
+				<h2 class="card-header">Fluid Design</h2>
+				<p class="card-body">
+					
 					Modelo que utiliza porcentajes y ems para definir el tamaño de los elementos de la pagina y la tipografia de la misma. Se utiliza para mantener la proporcion de las etiquetas en los diferentes tamaños, pero en pantallas pequeñas el contenido se reduce demasiado y en pantallas grandes este se estira excesivamente.
 				</p>
-				<footer>
-					<address>
-						Para mas informacion consultar <a href="https://alumni.education" target="_blank">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
-					</address>
-				</footer>
+				<address class="card-footer">
+					Para mas informacion consultar 
+					<a href="https://alumni.education" target="_blank">Alumni</a> 
+					o contactarse via mail a  
+					<a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
 			</article>
-			<article>
-				<header>
-					<h2>Adaptive Design</h2>
-				</header>
-				<p>
-					Modelo que plantea la creacion de paginas individuales para cada tamaño de pantalla en el que se enfoque el diseño, normalmente empezando desde la vista de escritorio. Es facil de mantener y una buena alternativa para clientes con poco presupuesto, pero los contenidos de encontraran por duplicado en el sitio.
+			<article class="card | col-lg | my-3 my-lg-0 mx-lg-3 p-0">
+				<h2 class="card-header">Adaptive Design</h2>
+				<p class="card-body">
+					
+					Modelo que plantea la creacion de paginas individuales para cada tamaño de pantalla en el que se enfoque el diseño, normalmente empezando desde la vista de escritorio. Es facil de mantener y una buena lternativa para clientes con poco presupuesto, pero los contenidos de encontraran por duplicado en el sitio.
 				</p>
-				<footer>
-					<address>
-						Para mas informacion consultar <a href="https://alumni.education" target="_blank">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
-					</address>
-				</footer>
+				<address class="card-footer">
+					Para mas informacion consultar 
+					<a href="https://alumni.education" target="_blank">Alumni</a> 
+					o contactarse via mail a  
+					<a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
 			</article>
-			<article>
-				<header>
-					<h2>Responsive Design</h2>
-				</header>
-				<p>
+			<article class="card | col-lg | p-0">
+				<h2 class="card-header">Responsive Design</h2>
+				<p class="card-body">
+					
 					Modelo que implica la realizacion de un diseño que responda segun cada tamaño de pantalla, implementando un sistema de grillas, multimedia flexible y media queries para generar las reglas del diseño; todo esto utilizando una unica estructura base y, por lo tanto, con el mismo contenido para todas las versiones.
 				</p>
-				<footer>
-					<address>
-						Para mas informacion consultar <a href="https://alumni.education" target="_blank">Alumni</a> o enviar un correo a <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
-					</address>
-				</footer>
+				<address class="card-footer">
+					Para mas informacion consultar 
+					<a href="https://alumni.education" target="_blank">Alumni</a> 
+					o contactarse via mail a  
+					<a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+				</address>
 			</article>
 		</section>
 	</main>
