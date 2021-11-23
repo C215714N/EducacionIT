@@ -18,7 +18,7 @@
 		position: relative;
 		min-height: min(100vh, 640px);
 		color: @light;
-		text-shadow: 0 0 min(2vw);
+		text-shadow: 0 0 min(2vw) @dark;
 		.header{
 			h1,
 			p{
@@ -29,17 +29,18 @@
 			&:extend(.zeroise);
 			&:extend(.unstyled);
 			li{
-				.background(@backgrounds);
 				&:extend(.cover);
+				.background(@backgrounds);
 				opacity: 0;
 				&.active{ opacity: 1; }
 			}
 		}
 		button{
-			.normalize(@p:50% 1rem 1rem);
-			.fontsize(@min2: 1.5rem);
 			&:extend(.unstyled);
+			.normalize(@p:~'min(50%, 300px)' 1rem 1rem);
+			.fontsize(@min2: 1.5rem);
 			.position(absolute; @xa: bottom);
+			color: @light;
 			&.icon-prev{left:0;}
 			&.icon-next{right:0;}
 		}

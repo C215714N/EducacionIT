@@ -11,7 +11,7 @@
   position: relative;
   min-height: min(100vh, 640px);
   color: #eee;
-  text-shadow: 0 0 2vw;
+  text-shadow: 0 0 2vw #333;
 }
 #header .slide li {
   opacity: 0;
@@ -34,12 +34,13 @@
 #header button {
   margin: 0;
   border: 0;
-  padding: 50% 1rem 1rem;
+  padding: min(50%, 300px) 1rem 1rem;
   font-size: min(calc(2vw + 1.5rem), 5rem);
   position: absolute;
   top: 0;
   bottom: 0;
   z-index: 0;
+  color: #eee;
 }
 #header button.icon-prev {
   left: 0;
