@@ -5,9 +5,20 @@
 	@r: (@letter/4);
 	@col: 24;
 	@path: '../assets/bg';
+	@backgrounds:
+		'osx-yosemite.jpg',
+		'osx-el_capitan.jpg',
+		'osx-sierra.jpg',
+		'osx-high_sierra.jpg';
 //	Nesting: selectores que se utilizan dentro en forma de cascada;
 	#header{
+		.flexbox(column);
 		.normalize(@p:1rem);
+		.fontsize;
+		position: relative;
+		min-height: min(100vh, 640px);
+		color: @light;
+		text-shadow: 0 0 min(2vw);
 		.header{
 			h1,
 			p{
@@ -18,12 +29,19 @@
 			&:extend(.zeroise);
 			&:extend(.unstyled);
 			li{
-
+				.background(@backgrounds);
+				&:extend(.cover);
+				opacity: 0;
+				&.active{ opacity: 1; }
 			}
 		}
 		button{
-			.normalize(@p:1rem);
+			.normalize(@p:50% 1rem 1rem);
+			.fontsize(@min2: 1.5rem);
 			&:extend(.unstyled);
+			.position(absolute; @xa: bottom);
+			&.icon-prev{left:0;}
+			&.icon-next{right:0;}
 		}
 	}
 //	Mixins: estilos que se utilizan como atributos;
@@ -40,9 +58,44 @@
 		-o-border-radius: @r;
 		border-radius:@r;
 	}
+	.cover{
+		.position(absolute; @z: -1);
+		width: 100%;
+		height: 100%;
+	}
 //	Mixins parametricos: estilos que reciben parametros para definir valores;
 	.normalize(@m:0; @p:0; @b:0){
 		margin: @m;
 		border: @b;
 		padding: @p;
+	}
+	.fontsize(@min1: 2vw, @min2: .8rem, @max: 5rem){
+		font-size: ~'min(calc(@{min1} + @{min2}), @{max})';
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: stretch;
+		@fw: wrap;
+		@f: flex
+	){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+	.position(@p: relative; @x:0; @y:0; @z:0; @xa:left; @ya:top){
+		position: @p;
+		@{ya}: @y;
+		@{xa}: @x;
+		z-index: @z;
+	}
+//	Mixins Recursivos: estilos que se repiten en base a una condicion;
+	.background(@array; @i: 1) when (@i <= length(@array)){
+		@bg: extract(@array, @i);
+		&:nth-child(@{i}){
+			background: hsl(@i * 30, 50%, 50%) url('@{path}/@{bg}') center/cover;
+		}
+		.background(@array; @i + 1);
 	}

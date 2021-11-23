@@ -1,12 +1,51 @@
 #header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
   margin: 0;
   border: 0;
   padding: 1rem;
+  font-size: min(calc(2vw + 0.8rem), 5rem);
+  position: relative;
+  min-height: min(100vh, 640px);
+  color: #eee;
+  text-shadow: 0 0 2vw;
+}
+#header .slide li {
+  opacity: 0;
+}
+#header .slide li:nth-child(1) {
+  background: hsl(30, 50%, 50%) url('../assets/bg/osx-yosemite.jpg') center / cover;
+}
+#header .slide li:nth-child(2) {
+  background: hsl(60, 50%, 50%) url('../assets/bg/osx-el_capitan.jpg') center / cover;
+}
+#header .slide li:nth-child(3) {
+  background: hsl(90, 50%, 50%) url('../assets/bg/osx-sierra.jpg') center / cover;
+}
+#header .slide li:nth-child(4) {
+  background: hsl(120, 50%, 50%) url('../assets/bg/osx-high_sierra.jpg') center / cover;
+}
+#header .slide li.active {
+  opacity: 1;
 }
 #header button {
   margin: 0;
   border: 0;
-  padding: 1rem;
+  padding: 50% 1rem 1rem;
+  font-size: min(calc(2vw + 1.5rem), 5rem);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+#header button.icon-prev {
+  left: 0;
+}
+#header button.icon-next {
+  right: 0;
 }
 .zeroise,
 #header .header h1,
@@ -29,4 +68,13 @@
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
   border-radius: 0.25rem;
+}
+.cover,
+#header .slide li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
