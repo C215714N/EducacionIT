@@ -9,7 +9,8 @@
 	#header{
 		.normalize(@p:1rem);
 		.header{
-			h1,p{
+			h1,
+			p{
 				&:extend(.zeroise);
 			}
 		}
@@ -26,9 +27,7 @@
 		}
 	}
 //	Mixins: estilos que se utilizan como atributos;
-	.zeroise{
-		.normalize;
-	}
+	.zeroise{ .normalize; }
 	.unstyled{
 		list-style: none;
 		text-decoration: none;
