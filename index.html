@@ -141,6 +141,24 @@
 				<canvas id="canvas" width="300" height="300"></canvas>
 			</article>
 		</section>
+		<section>
+			<header class="header">
+				<h2>Preprocesadores</h2>
+				<p>Pseudolenguajes CSS</p>
+			</header>
+			<p>
+				Son herramientas que facilitan la creacion de hojas de estilos css mediante una herramienta de compilacion, las mismas estan desarrolladas con algun lenguaje de programacion y se caracterizan por agregar a la sintaxis de css funciones que no se encuentran disponibles en el lenguaje de hojas de estilo. Una vez realizada la compilacion, dicha herramienta creara la sintaxis css en un archivo que pueda ser leido por el navegador.
+			</p>
+			<article>
+				<h3>LESS (Leaner Styles Sheets)</h3>
+				<p>
+					Preprocesador que utiliza Javascript como lenguaje principal para la compilacion de la hoja de estilos, podemos instalarlo mediante <strong>NodeJS</strong> utilizando el comando <em>npm i -g less</em>. Cabe destacar que dicha herramienta posee algunas ventajas del lenguaje como la asincronicidad y la capacidad para llamar funciones o metodos; y para compilar nuestros archivos debemos utilizar el comando <em>lessc "input.less" "output.css"</em>
+				</p>
+				<p>
+					Uno de los inconvenientes que presenta el paquete original de <strong>LESS</strong> radica en la falta de un metodo de observacion, es decir, que debemos compilar cada vez que realizamos cambios. Una solucion a esto es el paquete <strong>less-watch-compiler</strong> que podemos instalar con NodeJS y para compilar debemos utilizar el comando <em>less-watch-compiler "input/" "output/" "file.less"</em>
+				</p>
+			</article>
+		</section>
 	</main>
 	<!-- Footer -->
 	<footer id="footer">
