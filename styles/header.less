@@ -1,0 +1,49 @@
+//	Variables: dato que se almacenan en memoria y cuyo valor puede cambiar;
+	@light: #eee;
+	@dark: #333;
+	@letter: 1rem;
+	@r: (@letter/4);
+	@col: 24;
+	@path: '../assets/bg';
+//	Nesting: selectores que se utilizan dentro en forma de cascada;
+	#header{
+		.normalize(@p:1rem);
+		.header{
+			h1,p{
+				&:extend(.zeroise);
+			}
+		}
+		.slide{
+			&:extend(.zeroise);
+			&:extend(.unstyled);
+			li{
+
+			}
+		}
+		button{
+			.normalize(@p:1rem);
+			&:extend(.unstyled);
+		}
+	}
+//	Mixins: estilos que se utilizan como atributos;
+	.zeroise{
+		.normalize;
+	}
+	.unstyled{
+		list-style: none;
+		text-decoration: none;
+		background-color:transparent;
+	}
+	.rounded{
+		-webkit-border-radius:@r;
+		-moz-border-radius:@r;
+		-ms-border-radius:@r;
+		-o-border-radius: @r;
+		border-radius:@r;
+	}
+//	Mixins parametricos: estilos que reciben parametros para definir valores;
+	.normalize(@m:0; @p:0; @b:0){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
