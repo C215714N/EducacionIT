@@ -10,12 +10,14 @@
 	<title>Responsive Web Design</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="styles/bootstrap.css">
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="styles/bootstrap-icons.css">
 </head>
 <body>
 	<!-- Navegacion -->
 	<nav class="navbar navbar-expand-md navbar-dark | container-fluid sticky-top | bg-dark bg-gradient">
-		<a class="navbar-brand" href="#">Bootstrap</a>
-		<button class="navbar-toggler navbar-toggler-icon | border-0"
+		<a class="navbar-brand bi-bootstrap" href="#"> Bootstrap</a>
+		<button class="navbar-toggler bi-list | border-0 p-2"
 			data-bs-toggle="collapse"
 			data-bs-target="#menu">
 		</button>
@@ -59,11 +61,11 @@
 					class="w-100 d-none d-md-block">
 			</li>
 		</ul>
-		<button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y"
+		<button class="carousel-control-prev | top-50 translate-middle-y | bi-chevron-left fs-1"
 			data-bs-slide="prev"
 			data-bs-target="#header">
 		</button>
-		<button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y"
+		<button class="carousel-control-next | top-50 translate-middle-y | bi-chevron-right fs-1"
 			data-bs-slide="next"
 			data-bs-target="#header">
 		</button>
@@ -117,24 +119,24 @@
 		</section>
 	</main>
 	<!-- Pie de Pagina -->
-	<footer>
-		<iframe 
+	<footer class="position-relative">
+		<iframe class="position-absolute top-0 start-0 | w-100 h-100 | opacity-50" 
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.9723196256296!2d-58.37559165964706!3d-34.60341388162349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1637018588419!5m2!1ses-419!2sar"
 			loading="lazy">
 		</iframe>
-		<form id="contact" method="POST">
+		<form id="contact" class="position-relative" method="POST">
 			<h2>Dejanos tu Consulta</h2>
 			<input type="text">
 			<textarea name=""></textarea>
 			<button>enviar</button>
 		</form>
-		<div>
-			<a href="https://facebook.com" target="_blank"></a>
-			<a href="https://instagram.com" target="_blank"></a>
-			<a href="https://twitter.com" target="_blank"></a>
-			<a href="https://github.com/c215714n/EducacionIT/tree/responsive-lmx19" target="_blank"></a>
+		<div class="position-relative fs-1">
+			<a class="bi-facebook" href="https://facebook.com" target="_blank"></a>
+			<a class="bi-instagram text-danger" href="https://instagram.com" target="_blank"></a>
+			<a class="bi-twitter text-info" href="https://twitter.com" target="_blank"></a>
+			<a class="bi-github text-dark" href="https://github.com/c215714n/EducacionIT/tree/responsive-lmx19" target="_blank"></a>
 		</div>
-		<p>
+		<p class="position-relative ">
 			&copy;2021 Todos los derechos reservados
 		</p>
 	</footer>
