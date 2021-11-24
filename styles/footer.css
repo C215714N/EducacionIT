@@ -100,7 +100,7 @@
   border-color: #36c;
 }
 
-.border-light, #footer #contact input, #footer #contact textarea, #footer #contact select {
+.border-light {
   border-color: #eee;
 }
 
@@ -154,7 +154,7 @@
 }
 #footer #contact input, #footer #contact textarea, #footer #contact select {
   outline: none;
-  border: 0.1rem solid;
+  border: 0.1rem solid transparent;
   padding: 0.5rem 1rem;
 }
 #footer .social {

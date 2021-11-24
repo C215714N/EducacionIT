@@ -197,9 +197,40 @@
 	<!-- Footer -->
 	<footer id="footer">
 		<iframe src="" frameborder="0" class="map"></iframe>
-		<button class="icon-add"></button>
+		<button class="icon icon-add"></button>
 		<form action="" id="contact">
 			<h2>Hacenos tu Consulta</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="contactName"
+				maxlength="50" 
+				pattern="[A-Z a-z]{3,50}"
+				type="text"
+				required>
+			<div class="valid">
+				Ingrese su nombre solamente con letras y espacios, 
+				el mismo debe contener entre 3 y 50 caracteres.
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="contactEmail" 
+				minlength="8" 
+				type="email"
+				required>
+			<div class="valid">
+				Ingrese una direccion que posea 8 caracteres minimo, 
+				respetando el siguiente formato "usuario@servidor"
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				required></textarea>
+			<button class="btn">enviar</button>
 		</form>
 		<div class="social">
 			<a class="facebook" href="https://facebook.com" target="_blank"></a>

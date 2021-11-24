@@ -67,8 +67,7 @@
 			@extend .text-light, .bg-secondary;
 			
 			input, textarea, select{
-				@include normalize(none, .5rem 1rem, .1rem solid, $ma: outline);
-				@extend .border-light;
+				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma: outline);
 				&:focus{
 					@extend .border-dark;
 				}
