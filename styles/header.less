@@ -1,0 +1,42 @@
+//	Variables: Dato que se almacena en memoria y cuyo valor puede cambiar;
+	@light: #eee;
+	@dark: #333;
+	@letter: 1rem;
+	@r: (@letter / 4);
+// 	Nesting: Implementacion de selectores en forma de cascada;
+	#header{
+		.normalize(@p: 1rem);
+		// Estilos texto
+		.header{
+			h1,p{
+				&:extend(.zeroise);
+			}
+			.control{
+			
+			}
+		}
+		// Galeria
+		.slide{
+			&:extend(.zeroise);
+			&:extend(.unstyled);
+		}
+		// Controles
+		button{
+			&:extend(.unstyled);
+		}
+	}
+//	Mixin: Selectores que se implementan como atributos;
+	.zeroise{ .normalize; }
+	.unstyled{
+		outline: none;
+		list-style: none;
+		text-decoration: none;
+	}
+//	Mixin Parametricos: Estilos que reciben valores como argumentos;
+	.normalize(@m:0; @p:0; @b:0){
+		margin: @m;
+		border: @b;
+		padding: @p;
+	}
+
+// 	Mixin Recursivos: Estilos que se repiten en base a una condicion
