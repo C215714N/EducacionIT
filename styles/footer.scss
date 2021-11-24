@@ -142,3 +142,9 @@
 			&:hover{ @extend .bg-primary;}
 		}
 	}
+	.sass{
+		@include normalize(.5rem, 1rem);
+		div{
+			@include normalize(.25rem, .5rem 1rem, inline-block, display);
+		}
+	}
