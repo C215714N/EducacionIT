@@ -124,7 +124,25 @@
 						Vector Graphics (XML)
 					</text>
 				</svg>
-				<canvas></canvas>
+				<canvas id="canvas" width="300" height="300"></canvas>
+			</article>
+		</section>
+		<section>
+			<header class="header">
+				<h2>Preprocesadores</h2>
+				<p>Pseudolenguajes de CSS</p>
+			</header>
+			<p>
+				Herramienta que facilita la creacion de hojas de estilos, gracias a que agrega caracteristicas que no vienen incluidas en CSS. Generalmente vamos a escribir codigo con una sintaxis bastante parecida al lenguajes original, pero con algunos elementos nuevos y una vez finalizada la creacion de dicho archivo, podemos crear nuestra hoja de estilos compatible con el navegador utilizando un compilador (programa que genera dicho archivo).
+			</p>
+			<article>
+				<h3>LESS (Leaner Style Sheets)</h3>
+				<p>
+					Preprocesador que utiliza JavaScript como lenguaje de compilacion y entre sus caracteristicas, aporta la asincronicidad del lenguaje para la implementacion de funciones o metodos. Para instalarlo debemos ingresar el comando de <strong>NodeJS</strong> <em>npm i -g less</em> y para generar las hojas de estilos, simplemente ingresamos el comando <em>lessc "input.less" "output.css"</em>.
+				</p>
+				<p>
+					Uno de los inconvenientes de esta herramienta radica en que no posee un metodo de observacion de cambios y por ende, debemos compilar cada vez que modificamos el archivo en formato LESS. Podemos resolver este problema instalando el paquete <strong>less-watch-compiler</strong> y para compilar solamente ingresamos el comando <em>less-watch-compiler "input/" "output/" "file.less"</em>
+				</p>
 			</article>
 		</section>
 	</main>
