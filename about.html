@@ -124,19 +124,60 @@
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.9723196256296!2d-58.37559165964706!3d-34.60341388162349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1637018588419!5m2!1ses-419!2sar"
 			loading="lazy">
 		</iframe>
-		<form id="contact" class="position-relative" method="POST">
+		<form id="contact" class="was-validated | container position-relative col-md-8 col-lg-6 | bg-light | p-3" method="POST">
 			<h2>Dejanos tu Consulta</h2>
-			<input type="text">
-			<textarea name=""></textarea>
-			<button>enviar</button>
+			<div class="form-floating mb-3">
+				<input class="form-control" 
+					id="contactName" 
+					name="contactName"
+					type="text"
+					maxlength="50" 
+					pattern="[A-Z a-z]{3,50}"
+					placeholder="Ingrese su nombre" 
+					required>
+				<label for="contactName">Ingrese su Nombre</label>
+				<div class="valid-feedback">
+					¡Felicitaciones! Su nombre ha sido validado.
+				</div>
+				<div class="invalid-feedback">
+					Corrobore que su nombre no posea numeros, ni simbolos, y tenga al menos 3 caracteres
+				</div>
+			</div>
+			<div class="form-floating mb-3">
+				<input class="form-control" 
+					id="contactEmail" 
+					name="contactEmail" 
+					minlength="8" 
+					type="email"
+					placeholder="Ingrese su Correo" 
+					required>
+				<label for="contactEmail">Ingrese su Correo</label>
+				<div class="valid-feedback">
+					Su correo ha sido verificado
+				</div>
+				<div class="invalid-feedback">
+					Revise que su correo respete la siguiente estructura "usuario@servidor" y posea 8 caracteres minimo
+				</div>
+			</div>	
+			<div class="form-floating mb-3">
+				<textarea class="form-control" 
+					id="contactConsult" 
+					name="contactConsult"
+					minlength="10" 
+					maxlength="200" 
+					placeholder="Ingrese su Consulta" 
+					required></textarea>
+				<label for="contactConsult">Ingrese su Consulta</label>
+			</div>
+			<button class="btn btn-outline-primary | d-block ms-auto text-uppercase">enviar</button>
 		</form>
-		<div class="position-relative fs-1">
+		<div class="position-relative fs-1 | text-center">
 			<a class="bi-facebook" href="https://facebook.com" target="_blank"></a>
 			<a class="bi-instagram text-danger" href="https://instagram.com" target="_blank"></a>
 			<a class="bi-twitter text-info" href="https://twitter.com" target="_blank"></a>
 			<a class="bi-github text-dark" href="https://github.com/c215714n/EducacionIT/tree/responsive-lmx19" target="_blank"></a>
 		</div>
-		<p class="position-relative ">
+		<p class="position-relative | text-center btn-dark opacity-50 | p-3">
 			&copy;2021 Todos los derechos reservados
 		</p>
 	</footer>
