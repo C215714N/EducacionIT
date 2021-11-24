@@ -45,6 +45,13 @@
 			&.icon-next{right:0;}
 		}
 	}
+	.less{
+		.flexbox;
+		.normalize(.5rem 1rem; .5rem);
+		div{
+			.normalize(0; 1rem; .1rem dashed);
+		}
+	}
 //	Mixins: estilos que se utilizan como atributos;
 	.zeroise{ .normalize; }
 	.unstyled{
@@ -100,3 +107,12 @@
 		}
 		.background(@array; @i + 1);
 	}
+	//	sistema de grillas
+	.grid(@i:1) when (@i <= @col){
+		.col-@{i}{
+			width: percentage( (@i / @col) );
+		}
+		.grid(@i + 1);
+	}
+	/* Sistema de grillas - basico */
+	.grid; // aplicacion del MIXIN
