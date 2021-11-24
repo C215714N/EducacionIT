@@ -3,26 +3,51 @@
 	@dark: #333;
 	@letter: 1rem;
 	@r: (@letter / 4);
+	@path: '../assets/bg';
+	@backgrounds:
+		'osx-el_capitan.jpg',
+		'osx-yosemite.jpg',
+		'osx-sierra.jpg',
+		'osx-high_sierra.jpg';
 // 	Nesting: Implementacion de selectores en forma de cascada;
 	#header{
-		.normalize(@p: 1rem);
+		position: relative;
+		.flexbox(column);
+		.normalize(min(100vh, 640px); 1rem; center; text-align; @ma:min-height);
 		// Estilos texto
 		.header{
+			.font;
 			h1,p{
 				&:extend(.zeroise);
 			}
 			.control{
-			
+				.flexbox;
+				span{
+					.normalize(.25rem; .5rem; 1rem; border-radius);
+					background-color: @light;
+					&.active{ min-width: 3rem; }
+				}
 			}
 		}
 		// Galeria
 		.slide{
 			&:extend(.zeroise);
 			&:extend(.unstyled);
+			li{
+				&:extend(.cover);
+				.bg(@backgrounds);
+				opacity: 0;
+				&.active{ opacity: 1; }
+			}
 		}
 		// Controles
 		button{
 			&:extend(.unstyled);
+			.position(absolute; top; bottom);
+			border: none;
+			background-color: transparent;
+			&.icon-prev{ left:0; }
+			&.icon-next{ right:0; }
 		}
 	}
 //	Mixin: Selectores que se implementan como atributos;
@@ -32,11 +57,44 @@
 		list-style: none;
 		text-decoration: none;
 	}
-//	Mixin Parametricos: Estilos que reciben valores como argumentos;
-	.normalize(@m:0; @p:0; @b:0){
-		margin: @m;
-		border: @b;
-		padding: @p;
+	.cover{
+		.position(absolute; @z:-1);
+		width: 100%;
+		height: 100%;
 	}
-
-// 	Mixin Recursivos: Estilos que se repiten en base a una condicion
+//	Mixin Parametrico: Estilos que reciben valores como argumentos;
+	.normalize(@m:0; @p:0; @b:0; @ba: border; @ma: margin; @pa: padding){
+		@{ma}: @m;
+		@{ba}: @b;
+		@{pa}: @p;
+	}
+	.font(@f1: 2vw, @f2: .8rem, @f3: 5rem){
+		font-size: ~'min(calc(@{f1} + @{f2}), @{f3})';
+	}
+	.flexbox(
+		@fd: row;
+		@fj: center;
+		@fa: stretch;
+		@fw: wrap;
+		@f: flex
+	){
+		display: @f;
+		flex-direction: @fd;
+		justify-content: @fj;
+		align-items: @fa;
+		flex-wrap: @fw;
+	}
+	.position(@p: relative; @p1:top; @p2:left; @x:0; @y:0; @z:0){
+		position: @p;
+		@{p1}:@y;
+		@{p2}:@x;
+		z-index: @z;
+	}
+// 	Mixin Recursivo: Estilos que se repiten en base a una condicion
+	.bg(@array; @ba: fixed; @i: 1) when (@i <= length(@array)){
+		@bg: extract(@array, @i);
+		&:nth-child(@{i}){
+			background: url('@{path}/@{bg}') center/cover;
+			background-attachment: @ba;
+		}	.bg(@array; @i + 1);
+	}
