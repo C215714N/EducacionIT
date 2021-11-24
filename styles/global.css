@@ -25,11 +25,13 @@
 /* Pagina Principal */
 	body{
 		display: grid;
-		grid-template-areas: 
+		grid-template-areas:
+			'error error' 
 			'nav header'
 			'nav main'
 			'nav footer';
 	}
+	body::before{ grid-area: 'error'; }
 	nav{ grid-area: nav; }
 	#header{ grid-area: header; }
 	main{ grid-area: main; }
