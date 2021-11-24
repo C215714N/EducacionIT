@@ -1,0 +1,68 @@
+.facebook {
+  --bg: url("../assets/icons/facebook.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icons/instagram.svg");
+}
+
+.twitter {
+  --bg: url("../assets/icons/twitter.svg");
+}
+
+.github {
+  --bg: url("../assets/icons/github.svg");
+}
+
+.linkedin {
+  --bg: url("../assets/icons/linkedin.svg");
+}
+
+.whatsapp {
+  --bg: url("../assets/icons/whatsapp.svg");
+}
+
+.youtube {
+  --bg: url("../assets/icons/youtube.svg");
+}
+
+.zeroise, #footer .map {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.icon, #footer .social a, #footer button.icon-add {
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  background: #eee var(--bg) center/2.5rem no-repeat;
+  background-attachment: scroll;
+  display: inline-block;
+  min-width: 3rem;
+  min-height: 3rem;
+  box-shadow: 0 0 0.5rem #333;
+}
+
+#footer {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+}
+#footer #contact {
+  margin: 5rem auto 1rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+#footer .social {
+  margin: 0.5rem auto;
+  border: 0;
+  padding: 0.5rem;
+}
+#footer .copy {
+  margin: 0.5rem -1rem;
+  border: 0;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=footer.css.map */

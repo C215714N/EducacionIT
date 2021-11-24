@@ -1,0 +1,59 @@
+// 	Variables
+	$path: '../assets/icons';
+	$social:
+		facebook,
+		instagram,
+		twitter,
+		github,
+		linkedin,
+		whatsapp,
+		youtube;
+
+//	Mixins: estilos que se utilizan como atributos
+	@mixin normalize($m:0, $p:0, $b:0, 
+		$ba:border, $ma:margin, $pa: padding){
+		#{$ma}: $m; 
+		#{$ba}: $b; 
+		#{$pa}: $p;
+	}
+	@mixin background($bc:#eee, $bi: var(--bg), $bp:center, $bs:cover, $br:no-repeat, $ba:scroll){
+		background: $bc $bi $bp / $bs $br;
+		background-attachment: $ba;
+	}
+//	Bucles: reglas que se repiten en base a una condicion
+	@each $ico in $social{
+		.#{$ico}{
+			--bg: url('#{$path}/#{$ico}.svg');
+	}	}
+//	Estilos de utilidad
+	.zeroise{ @include normalize; }
+	.icon{
+		@include normalize(.25rem, 1rem, .25rem, border-radius);
+		@include background($bs: 2.5rem);
+		display: inline-block;
+		min-width: 3rem;
+		min-height: 3rem;
+		box-shadow: 0 0 .5rem #333;
+	}
+// 	Nesting: selectores que se utilizan en forma de cascada
+	#footer{
+		@include normalize(0, 1rem);
+		.map{
+			@extend .zeroise;
+		}
+		button.icon-add{
+			@extend .icon;
+		}
+		#contact{
+			@include normalize(5rem auto 1rem, 1rem, .25rem, border-radius);
+		}
+		.social{
+			@include normalize(.5rem auto, .5rem);
+			a{
+				@extend .icon;
+			}
+		}
+		.copy{
+			@include normalize(.5rem -1rem, 1rem);
+		}
+	}
