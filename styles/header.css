@@ -1,5 +1,4 @@
 #header {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +7,7 @@
   min-height: min(100vh, 640px);
   text-align: center;
   padding: 1rem;
+  position: relative;
 }
 #header .header {
   font-size: min(calc(2vw + 0.8rem), 5rem);
@@ -55,6 +55,7 @@
   top: 0;
   bottom: 0;
   z-index: 0;
+  font-size: min(calc(2vw + 0.8rem), 5rem);
   border: none;
   background-color: transparent;
 }

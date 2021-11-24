@@ -11,15 +11,13 @@
 		'osx-high_sierra.jpg';
 // 	Nesting: Implementacion de selectores en forma de cascada;
 	#header{
-		position: relative;
 		.flexbox(column);
 		.normalize(min(100vh, 640px); 1rem; center; text-align; @ma:min-height);
-		// Estilos texto
+		position: relative;
+		// Encabezado
 		.header{
 			.font;
-			h1,p{
-				&:extend(.zeroise);
-			}
+			h1,p{ &:extend(.zeroise); }
 			.control{
 				.flexbox;
 				span{
@@ -44,6 +42,7 @@
 		button{
 			&:extend(.unstyled);
 			.position(absolute; top; bottom);
+			.font;
 			border: none;
 			background-color: transparent;
 			&.icon-prev{ left:0; }
@@ -96,5 +95,5 @@
 		&:nth-child(@{i}){
 			background: url('@{path}/@{bg}') center/cover;
 			background-attachment: @ba;
-		}	.bg(@array; @i + 1);
+		}	.bg(@array; @ba; @i + 1);
 	}
