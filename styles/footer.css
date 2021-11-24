@@ -1,3 +1,4 @@
+/*Redes sociales*/
 .facebook {
   --bg: url("../assets/icons/facebook.svg");
 }
@@ -24,6 +25,103 @@
 
 .youtube {
   --bg: url("../assets/icons/youtube.svg");
+}
+
+/*Utilidades*/
+.text-primary {
+  color: #3c6;
+}
+
+.text-secondary {
+  color: #36c;
+}
+
+.text-light, #footer #contact {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-info {
+  color: #6cc;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-success {
+  color: #284;
+}
+
+.bg-primary {
+  background-color: #3c6;
+}
+
+.bg-secondary, #footer #contact {
+  background-color: #36c;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-info {
+  background-color: #6cc;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-success {
+  background-color: #284;
+}
+
+.border-primary {
+  border-color: #3c6;
+}
+
+.border-secondary {
+  border-color: #36c;
+}
+
+.border-light, #footer #contact input, #footer #contact textarea, #footer #contact select {
+  border-color: #eee;
+}
+
+.border-dark, #footer #contact input:focus, #footer #contact textarea:focus, #footer #contact select:focus {
+  border-color: #333;
+}
+
+.border-info {
+  border-color: #6cc;
+}
+
+.border-danger {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success {
+  border-color: #284;
 }
 
 .zeroise, #footer .map {
@@ -53,6 +151,11 @@
   margin: 5rem auto 1rem;
   border-radius: 0.25rem;
   padding: 1rem;
+}
+#footer #contact input, #footer #contact textarea, #footer #contact select {
+  outline: none;
+  border: 0.1rem solid;
+  padding: 0.5rem 1rem;
 }
 #footer .social {
   margin: 0.5rem auto;

@@ -8,7 +8,19 @@
 		linkedin,
 		whatsapp,
 		youtube;
-
+	$attributes:
+		text 		color,
+		bg 			background-color,
+		border 		border-color;
+	$colors:
+		primary		#3c6,
+		secondary	#36c,
+		light		#eee,
+		dark		#333,
+		info		#6cc,
+		danger		#c33,
+		warning		#da3,
+		success		#284;
 //	Mixins: estilos que se utilizan como atributos
 	@mixin normalize($m:0, $p:0, $b:0, 
 		$ba:border, $ma:margin, $pa: padding){
@@ -21,9 +33,15 @@
 		background-attachment: $ba;
 	}
 //	Bucles: reglas que se repiten en base a una condicion
+	/*Redes sociales*/
 	@each $ico in $social{
 		.#{$ico}{
 			--bg: url('#{$path}/#{$ico}.svg');
+	}	}
+	/*Utilidades*/
+	@each $prop, $attr in $attributes{
+		@each $cn, $cv in $colors{
+			.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
 	}	}
 //	Estilos de utilidad
 	.zeroise{ @include normalize; }
@@ -46,6 +64,15 @@
 		}
 		#contact{
 			@include normalize(5rem auto 1rem, 1rem, .25rem, border-radius);
+			@extend .text-light, .bg-secondary;
+			
+			input, textarea, select{
+				@include normalize(none, .5rem 1rem, .1rem solid, $ma: outline);
+				@extend .border-light;
+				&:focus{
+					@extend .border-dark;
+				}
+			}
 		}
 		.social{
 			@include normalize(.5rem auto, .5rem);
