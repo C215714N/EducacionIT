@@ -1,5 +1,10 @@
 // 	Variables
-	$path: '../assets/icons';
+	$path: '../assets/icon';
+	$position:
+		relative,
+		absolute,
+		fixed,
+		sticky;
 	$social:
 		facebook,
 		instagram,
@@ -21,6 +26,13 @@
 		danger		#c33,
 		warning		#da3,
 		success		#284;
+	$media:
+		sm	576px	540px,
+		md 	768px	720px,
+		lg 	992px	960px,
+		xl 	1200px	1140px,
+		xxl 1400px	1320px;
+	$col: 	24;
 //	Mixins: estilos que se utilizan como atributos
 	@mixin normalize($m:0, $p:0, $b:0, 
 		$ba:border, $ma:margin, $pa: padding){
@@ -34,43 +46,88 @@
 	}
 //	Bucles: reglas que se repiten en base a una condicion
 	/*Redes sociales*/
-	@each $ico in $social{
-		.#{$ico}{
-			--bg: url('#{$path}/#{$ico}.svg');
-	}	}
+		@each $ico in $social{
+			.#{$ico}{
+				--bg: url('#{$path}/#{$ico}.svg');
+		}	}
 	/*Utilidades*/
-	@each $prop, $attr in $attributes{
-		@each $cn, $cv in $colors{
-			.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
-	}	}
+		@each $prop, $attr in $attributes{
+			@each $cn, $cv in $colors{
+				.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
+		}	}
+	/*Sistema de grillas Responsive*/
+	@each $vn, $vw, $vmax in $media{
+		@media screen and (min-width: #{$vw}){
+			.container, .container-#{$vn}{ max-width: $vmax; }
+		@for $i from 1 through $col{
+			.col-#{$vn}-#{$i}{ width: percentage($i / $col); }
+	}	}	}
 //	Estilos de utilidad
 	.zeroise{ @include normalize; }
 	.icon{
 		@include normalize(.25rem, 1rem, .25rem, border-radius);
 		@include background($bs: 2.5rem);
 		display: inline-block;
-		min-width: 3rem;
-		min-height: 3rem;
-		box-shadow: 0 0 .5rem #333;
+		min-width: 4rem;
+		min-height: 4rem;
+		&:hover{
+			background-size: 3rem;
+			box-shadow: 0 0 .5rem #333;
+		}
+	}
+	@each $p in $position{ .#{$p}{ position: $p; } }
+	@for $i from -1 through 2{.z#{$i}{ z-index: $i;} }
+	@for $i from 0 through 10{
+		.opacity-#{$i * 10}{
+			opacity: $i / 10;
+		}
 	}
 // 	Nesting: selectores que se utilizan en forma de cascada
 	#footer{
 		@include normalize(0, 1rem);
+		position: relative;
+		text-align: center;
 		.map{
 			@extend .zeroise;
-		}
-		button.icon-add{
-			@extend .icon;
+			&.active{ @extend .fixed, .z2, .opacity-80;
+			& + .icon{ @extend .fixed, .z2, .opacity-80;
+		}	}	}
+		button.icon{
+			position: absolute;
+			top: .5rem;
+			right: .5rem;
 		}
 		#contact{
 			@include normalize(5rem auto 1rem, 1rem, .25rem, border-radius);
-			@extend .text-light, .bg-secondary;
-			
+			@extend .text-light, .bg-secondary, .container-md;
+			display: grid;
+			text-align: left;
+			label{
+				@include normalize(.5rem 0 0, 0, hidden, overflow, $pa:max-height);
+				&::after{
+					content: ' *';
+					@extend .text-warning;
+				}
+				@media screen and (min-width: 768px){
+					max-height: 300px;
+				}
+			}
 			input, textarea, select{
 				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma: outline);
-				&:focus{
-					@extend .border-dark;
-				}
+				font-size: 1rem;
+				&:focus{ @extend .border-dark;
+				& + .valid{ @include normalize(0 0 .25rem, .5rem 1rem, 300px, max-height);
+				}	}
+				&:valid{ @extend .border-success;
+				& + .valid{ @extend .bg-success; 
+				}	}
+				&:invalid:not(:placeholder-shown){ @extend .border-danger; 
+				& + .valid{ @extend .bg-danger; 
+				}	}
+			}
+			.valid{
+				@include normalize(0, 0, hidden, overflow, max-height);
+				@extend .text-light, .bg-dark;
 			}
 		}
 		.social{
@@ -80,6 +137,8 @@
 			}
 		}
 		.copy{
-			@include normalize(.5rem -1rem, 1rem);
+			@include normalize(.5rem -1rem, 1rem, .5, opacity);
+			@extend .text-light, .bg-secondary;
+			&:hover{ @extend .bg-primary;}
 		}
 	}
