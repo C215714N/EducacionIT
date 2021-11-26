@@ -1,0 +1,36 @@
+DataBase (Schema)(
+	- Estructura cuya finalidad es coleccionar datos
+	- Posee una organizacion segun la "Estrategia de Negocios"
+	Composicion:
+		- Tablas: Entidad donde se almacenan un conjunto de datos
+		- Campos: Datos que pertenecen a un mismo tipo (Columna)
+		- Registros: Datos que guardan un relacion entre si (Fila)
+		- Datos: Minima porcion de Informacion (Celda)
+);
+
+Motor de Base Datos (MySQL)(
+	- Desarrollado por IBM (SQL)
+	- Oracle adquiere los derechos(
+		MySQL Workbench
+		ORACLE SQL server 
+	)
+	- Comunidad desarrolla un proyecto (MariaDB)
+);
+
+Structure Query Language (SQL)(
+	DDL (Data Definition Language)
+		CREATE		crear db/tablas/usuarios
+		DROP		eliminar db/tablas/usuarios
+		ALTER		modificar tablas
+
+	DML (Data Manipulation Language)
+		INSERT		agregar registros
+		DELETE		eliminar registros
+		UPDATE		actualizar registros
+		SELECT		consultar registros
+
+	DCL (Data Control Language)
+		GRANT		otorgar permisos
+		REVOKE 		quitar permisos
+		FLUSH PRIVILEGES 	refrescar permisos
+)	
