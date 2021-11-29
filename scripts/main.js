@@ -3,30 +3,28 @@
 	const pBar = d.querySelector('.progress progress')
 	const pIn = d.querySelector('.progress input')
 	const ctx = d.querySelector('#canvas').getContext('2d')
-	const prevBtn = d.querySelector('.icon-prev')
-	const nextBtn = d.querySelector('.icon-next')
-	const slideLst = d.querySelectorAll('#header .slide li')
-	const spanLst = d.querySelectorAll('#header .control span')
-/* Galeria de imagenes*/
+	// Multiples galerias
+		const prev = d.querySelectorAll('.icon-prev')
+		const next = d.querySelectorAll('.icon-next')
+		const slide = d.querySelectorAll('.slide')
+		const control = d.querySelectorAll('.control')
+/* 	Galeria de imagenes	*/
 	const getItem = (array = [], dir = false, className = 'active') => {
-		for(i = 0; i < array.length; i++){
-			if(array[i].classList.contains(className)){
-				array[i].classList.remove(className)
-				switch(dir){
-					case true:
-						i < array.length - 1 ?
-							newItem = array[i + 1] :
-							newItem = array[0]
-					break;
-					default:
-						i > 0 ?
-							newItem = array[i - 1] :
-							newItem = array[array.length - 1]
-		}	}	}	newItem.classList.add(className)
+		for(el of array){
+			if(el.classList.contains(className)){
+				el.classList.remove(className)
+				newItem = dir ? (el.nextElementSibling || el.parentNode.firstElementChild) : (el.previousElementSibling || el.parentNode.lastElementChild)
+		}	}	newItem.classList.add(className)
 	}
-	prevBtn.onclick = () => ( getItem(slideLst), getItem(spanLst) )
-	nextBtn.onclick = () => ( getItem(slideLst, true), getItem(spanLst, true) )
-
+/*	Multiples galerias	*/
+	prev.forEach((p,i) => p.addEventListener('click', () => {
+		getItem(slide[i].querySelectorAll('li'))
+		getItem(control[i].querySelectorAll('span'))
+	}	)	)
+	next.forEach((n,i)=> n.addEventListener('click', () => {
+		getItem(slide[i].querySelectorAll('li'),true	)
+		getItem(control[i].querySelectorAll('span'),true)
+	}	) 	)
 /* Progress Bar */
 	pIn.addEventListener('input',() => pBar.value = pIn.value)
 /* Canvas*/
