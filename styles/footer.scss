@@ -44,6 +44,9 @@
 		background: $bc $bi $bp / $bs $br;
 		background-attachment: $ba;
 	}
+	@mixin transition($s:1s, $t:ease, $d:0s, $p:all){
+		transition: $p $s $t $d;
+	}
 //	Bucles: reglas que se repiten en base a una condicion
 	/*Redes sociales*/
 		@each $ico in $social{
@@ -67,6 +70,7 @@
 	.icon{
 		@include normalize(.25rem, 1rem, .25rem, border-radius);
 		@include background($bs: 2.5rem);
+		@include transition($t:ease-out);
 		display: inline-block;
 		min-width: 4rem;
 		min-height: 4rem;
@@ -115,6 +119,7 @@
 			input, textarea, select{
 				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma: outline);
 				font-size: 1rem;
+				@include transition(.5s);
 				&:focus{ @extend .border-dark;
 				& + .valid{ @include normalize(0 0 .25rem, .5rem 1rem, 300px, max-height);
 				}	}
@@ -127,19 +132,38 @@
 			}
 			.valid{
 				@include normalize(0, 0, hidden, overflow, max-height);
+				@include transition(.5s);
 				@extend .text-light, .bg-dark;
+			}
+			button{
+				@include normalize(.2rem 0 .2rem auto, .5rem 1rem, .25rem, border-radius);
+				@include transition(.5s, ease-in-out);
+				@extend .border-light, .text-light;
+				text-transform: uppercase;
+				background-color: transparent;
+				&:hover{ @extend .bg-light, .text-secondary; }
 			}
 		}
 		.social{
 			@include normalize(.5rem auto, .5rem);
 			a{
 				@extend .icon;
+				&:hover{
+					transform: 
+						rotate(720deg)
+						translateY(-1rem);
+				}
 			}
 		}
 		.copy{
-			@include normalize(.5rem -1rem, 1rem, .5, opacity);
+			@include normalize(.5rem -1rem, 1rem, .6, opacity);
+			@include transition;
 			@extend .text-light, .bg-secondary;
-			&:hover{ @extend .bg-primary;}
+			text-shadow: 0 0 .5rem nth(nth($colors, 4), 2);
+			&:hover{ 
+				@extend .bg-primary;
+				opacity: .8;
+			}
 		}
 	}
 	.sass{
