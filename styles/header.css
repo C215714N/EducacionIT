@@ -13,7 +13,34 @@
   color: #eee;
   text-shadow: 0 0 2vw #333;
 }
+#header .control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+#header .control span {
+  margin: 0.25rem;
+  border: 1px solid;
+  padding: 0.5rem;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0.2s;
+  min-width: 1rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  box-shadow: -0.2rem 0.2rem 0.2rem #333;
+}
+#header .control span.active {
+  min-width: 3rem;
+}
 #header .slide li {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0;
   opacity: 0;
 }
 #header .slide li:nth-child(1) {

@@ -25,12 +25,25 @@
 				&:extend(.zeroise);
 			}
 		}
+		.control{
+			.flexbox;
+			span{
+				.normalize(.25rem; .5rem; 1px solid);
+				.transition;
+				min-width: 1rem;
+				border-radius: .5rem;
+				background-color: @light;
+				box-shadow: -.2rem .2rem .2rem @dark;
+				&.active{ min-width: 3rem; }
+			}
+		}
 		.slide{
 			&:extend(.zeroise);
 			&:extend(.unstyled);
 			li{
 				&:extend(.cover);
 				.background(@backgrounds);
+				.transition(2s; ease-in; 0);
 				opacity: 0;
 				&.active{ opacity: 1; }
 			}
@@ -98,6 +111,12 @@
 		@{ya}: @y;
 		@{xa}: @x;
 		z-index: @z;
+	}
+	.transition(@s: 1s; @t:ease; @d:.2s; @p: all){
+		transition-property: @p;
+		transition-duration: @s;
+		transition-timing-function: @t;
+		transition-delay: @d;
 	}
 //	Mixins Recursivos: estilos que se repiten en base a una condicion;
 	.background(@array; @i: 1) when (@i <= length(@array)){

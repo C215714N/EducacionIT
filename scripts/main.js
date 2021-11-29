@@ -3,11 +3,12 @@
 	const pBar = d.querySelector('.progress progress')
 	const pIn = d.querySelector('.progress input')
 	const ctx = d.querySelector('#canvas').getContext('2d')
-	// Multiples galerias
-		const prev = d.querySelectorAll('.icon-prev')
-		const next = d.querySelectorAll('.icon-next')
-		const slide = d.querySelectorAll('.slide')
-		const control = d.querySelectorAll('.control')
+	const prev = d.querySelectorAll('.icon-prev')
+	const next = d.querySelectorAll('.icon-next')
+	const slide = d.querySelectorAll('.slide')
+	const control = d.querySelectorAll('.control')
+	const mapBtn = d.querySelector('#footer .icon')
+	const mapFrm = d.querySelector('#footer .map')
 /* 	Galeria de imagenes	*/
 	const getItem = (array = [], dir = false, className = 'active') => {
 		for(el of array){
@@ -25,6 +26,7 @@
 		getItem(slide[i].querySelectorAll('li'),true	)
 		getItem(control[i].querySelectorAll('span'),true)
 	}	) 	)
+	window.setInterval(() => next[0].click(), 15000)
 /* Progress Bar */
 	pIn.addEventListener('input',() => pBar.value = pIn.value)
 /* Canvas*/
@@ -45,3 +47,5 @@
 	// Texto
 		ctx.font = 'normal 1.2rem sans-serif'
 		ctx.strokeText('Bitmap Canvas (JS)', 50, 250)
+/* Mapa de contacto */
+	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-add','icon-rem') : mapBtn.classList.replace('icon-rem', 'icon-add')
