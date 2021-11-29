@@ -1,16 +1,34 @@
-.example{
-	display: flex;
-	margin: 1rem min(5vw, 3rem);
-	padding: 1rem;
-	background-color: var(--light);
-	list-style: none;
-}
-[class*="transform"] div{
-	margin: .25rem;
-	padding: 1rem .5rem;
-	color: var(--light);
-	background-color: var(--second);
-}
+/*Contenido principal*/
+	main{
+		margin: 1rem auto;
+		padding: .5rem;
+	}
+	section{
+		margin: 1.5rem 0;
+		border-radius: .25rem;
+		padding: 1rem;
+		box-shadow: 0 0 .5rem var(--dark);
+	}
+/*Ejemplos*/
+	.example{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 1rem min(5vw, 3rem);
+		padding: 1rem;
+		background-color: var(--light);
+		list-style: none;
+	}
+	[class*="transform"] div{
+		margin: .25rem;
+		padding: 1rem .5rem;
+		color: var(--light);
+		background-color: var(--second);
+	}
+	[class*="transform"]:hover div{
+		transform: translate(.5rem);
+	}
 /*Transformaciones*/
 	.transform-2d :nth-child(1){
 		transform: translate(-1rem, -1rem); /*x,y*/
@@ -22,10 +40,26 @@
 		transform: rotate(-30deg);
 	}
 	.transform-2d :nth-child(4){
-		transform: skewX();
+		transform: skewX(30deg);
 	}
 	.transform-2d :nth-child(5){
-		transform: skewY();
+		transform: skewY(-30deg);
+	}	
+	.transform-3d{
+		min-height: 300px;
+		perspective: 10rem;
+		perspective-origin: center;
 	}
-
+	.transform-3d :nth-child(1){
+		transform: rotateX(60deg);
+	}
+	.transform-3d :nth-child(2){
+		transform: rotateY(60deg);
+	}
+	.transform-3d :nth-child(3){
+		transform: translateZ(2rem);
+	}
 /*Transiciones*/
+	.transition div{
+		transition: all 2s ease 1s;
+	}
