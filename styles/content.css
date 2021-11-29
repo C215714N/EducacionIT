@@ -1,0 +1,31 @@
+.example{
+	display: flex;
+	margin: 1rem min(5vw, 3rem);
+	padding: 1rem;
+	background-color: var(--light);
+	list-style: none;
+}
+[class*="transform"] div{
+	margin: .25rem;
+	padding: 1rem .5rem;
+	color: var(--light);
+	background-color: var(--second);
+}
+/*Transformaciones*/
+	.transform-2d :nth-child(1){
+		transform: translate(-1rem, -1rem); /*x,y*/
+	}
+	.transform-2d :nth-child(2){
+		transform: scale(1.2);
+	}
+	.transform-2d :nth-child(3){
+		transform: rotate(-30deg);
+	}
+	.transform-2d :nth-child(4){
+		transform: skewX();
+	}
+	.transform-2d :nth-child(5){
+		transform: skewY();
+	}
+
+/*Transiciones*/
