@@ -1,0 +1,61 @@
+/*Seccion animaciones*/
+	@functions:
+		lineal,				// ax+b
+		cuadratica,			// ax^2+bx+cx
+		trigonometrica, 	// sin(x)
+		exponencial,		// n^x
+		limite;				// n / x
+	.less{
+		overflow: hidden;
+		&-animation{
+			animation: rotation 60s infinite;
+			grid-template-columns: repeat(auto-fit, minmax(min(5rem, 100%), 1fr));
+			div{
+				width: 3rem;
+				height: 3rem;
+				margin: .5rem;
+				border-radius: 2rem;
+				box-shadow: 
+					-.25rem .25rem .25rem var(--light) inset,
+					-.5rem .5rem .5rem var(--dark);
+				.colorize;
+				.animation;
+	}	}	}
+/*Animaciones LESS*/
+.colorize(@i:0) when (@i <= 6){
+	&:nth-child(@{i}n){
+		background: radial-gradient(
+			circle at top left,
+			hsl(@i * 30deg, 50%, 50%),
+			hsl(@i * 60deg, 50%, 50%)
+	);	}
+	.colorize(@i + 1);
+}
+.animation(@i:1) when(@i <= length(@functions)){
+	&:nth-child(@{i}n){
+		animation: extract(@functions, @i) 2s @i * 2s alternate infinite;
+	}
+	.animation(@i + 1);
+}
+.keys(@i:1) when (@i <= length(@functions)){
+	@keyframes extract(@functions, @i){
+		.percentage(@p:0%; @x:-20vw) when (@p <= 100%){
+			@f: 
+				(@x / 2vw), // lineal
+				(pow(@x, 2vw) / 4vw), // cuadratica
+				(sin(@x) * 10vw), // trigonometrica
+				pow(1.5vw, @x), // exponencial
+				if(@x = 0, 1vw, (1/@x)); // limite
+			@{p}{
+				transform: translate(@x + 20vw, extract(@f, @i));
+			}
+			.percentage(@p + 5; @x + 2);
+		} .percentage;
+	} .keys(@i + 1);
+}
+.keys;
+@keyframes rotation{
+	to {
+		transform: rotate(360deg);
+	}
+}

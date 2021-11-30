@@ -1,3 +1,4 @@
+@use './animation';
 // 	Variables
 	$path: '../assets/icon';
 	$position:
@@ -172,3 +173,5 @@
 			@include normalize(.25rem, .5rem 1rem, inline-block, display);
 		}
 	}
+//	Imports
+	@import url('global.css');

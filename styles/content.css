@@ -94,17 +94,17 @@
 		animation-iteration-count: 5;
 	}
 	/*Timing Function*/
-		.timing :nth-child(1){ animation-timing-function: ease; }
-		.timing :nth-child(2){ animation-timing-function: ease-in; }
-		.timing :nth-child(3){ animation-timing-function: ease-out; }
-		.timing :nth-child(4){ animation-timing-function: ease-in-out; }
-		.timing :nth-child(5){ animation-timing-function: linear; }
-		.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+		.timing :nth-child(1n){ animation-timing-function: ease; }
+		.timing :nth-child(2n){ animation-timing-function: ease-in; }
+		.timing :nth-child(3n){ animation-timing-function: ease-out; }
+		.timing :nth-child(4n){ animation-timing-function: ease-in-out; }
+		.timing :nth-child(5n){ animation-timing-function: linear; }
+		.timing :nth-child(6n){ animation-timing-function: cubic-bezier(0,1,1,0); }
 	/*Direction*/
-		.direction :nth-child(1){ animation-direction: normal; }
-		.direction :nth-child(2){ animation-direction: reverse; }
-		.direction :nth-child(3){ animation-direction: alternate; }
-		.direction :nth-child(4){ animation-direction: alternate-reverse; }
+		.direction :nth-child(1n){ animation-direction: normal; }
+		.direction :nth-child(2n){ animation-direction: reverse; }
+		.direction :nth-child(3n){ animation-direction: alternate; }
+		.direction :nth-child(4n){ animation-direction: alternate-reverse; }
 	/*Percentages*/
 		.translation{
 			position: relative;
