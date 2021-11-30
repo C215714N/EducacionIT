@@ -2,12 +2,21 @@
 	main{
 		margin: 1rem auto;
 		padding: .5rem;
+		font-size: 1.2rem;
 	}
 	section{
 		margin: 1.5rem 0;
 		border-radius: .25rem;
 		padding: 1rem;
 		box-shadow: 0 0 .5rem var(--dark);
+	}
+	section .header{
+		margin: -1rem -1rem .5rem;
+		border-radius: .25rem .25rem 0 0;
+		padding: 1rem;
+		color: var(--light);
+		background-color: var(--second);
+		font-size: min(calc(1vw + .8rem), 2rem);
 	}
 /*Ejemplos*/
 	.example{
