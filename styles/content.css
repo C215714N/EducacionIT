@@ -115,6 +115,30 @@
 			bottom: .5rem;
 			right: .5rem;
 		}
+	/*Ejemplos*/
+		.loading div{
+			margin: .25rem;
+			border-radius: 50%;
+			border: .5rem solid;
+			border-color: #8cf8 #6aca #48cc #248;
+			padding: 2rem;
+			animation: loading 1s infinite;
+		}
+		.bg-animation{
+			min-height: 300px;
+			background: 
+			linear-gradient(
+				to right,
+				hsl(0,50%,50%),
+				hsl(60,50%,50%),
+				hsl(120,50%,50%),
+				hsl(180,50%,50%),
+				hsl(240,50%,50%),
+				hsl(300,50%,50%),
+				hsl(0,50%,50%)
+			) 0/500%;
+			animation: background 900s infinite;
+		}
 	/*Fotogramas*/
 		@keyframes race{
 			from{	
@@ -158,9 +182,9 @@
 				background-color: hsl(0,50%,50%);
 			}
 		}
-		@keyframes loading{
-			to{ transform: rotate(360deg); }
-		}
 		@keyframes background{
 			from{ background-position: -500% 0; }
+		}
+		@keyframes loading{
+			to{ transform: rotate(360deg); }
 		}
