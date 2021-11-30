@@ -9,6 +9,8 @@
 	const control = d.querySelectorAll('.control')
 	const mapBtn = d.querySelector('#footer .icon')
 	const mapFrm = d.querySelector('#footer .map')
+	const aniBtn = d.querySelector('.translation button')
+	const aniDiv = d.querySelector('.translation div')
 /* 	Galeria de imagenes	*/
 	const getItem = (array = [], dir = false, className = 'active') => {
 		for(el of array){
@@ -27,9 +29,9 @@
 		getItem(control[i].querySelectorAll('span'),true)
 	}	) 	)
 	window.setInterval(() => next[0].click(), 15000)
-/* Progress Bar */
+/* 	Progress Bar */
 	pIn.addEventListener('input',() => pBar.value = pIn.value)
-/* Canvas*/
+/* 	Canvas*/
 	// Rectangulo
 		ctx.fillStyle = '#448'
 		ctx.fillRect(50, 50, 100, 100) // x y width height
@@ -47,5 +49,12 @@
 	// Texto
 		ctx.font = 'normal 1.2rem sans-serif'
 		ctx.strokeText('Bitmap Canvas (JS)', 50, 250)
-/* Mapa de contacto */
+/* 	Mapa de contacto */
 	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-add','icon-rem') : mapBtn.classList.replace('icon-rem', 'icon-add')
+/*	Reproduccion de Animacion*/
+	aniBtn.onclick = () => aniDiv.style.animationPlayState == 'running' ? (	
+		aniDiv.style.animationPlayState = 'paused', 
+		aniBtn.classList.replace('icon-pause', 'icon-play') 
+		):
+		(aniDiv.style.animationPlayState = 'running', 
+		aniBtn.classList.replace('icon-play', 'icon-pause'))

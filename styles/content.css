@@ -97,64 +97,70 @@
 		.direction :nth-child(3){ animation-direction: alternate; }
 		.direction :nth-child(4){ animation-direction: alternate-reverse; }
 	/*Percentages*/
-	.translation{
-		position: relative;
-		min-height: 300px;
-		justify-content: flex-start;
-		align-content: flex-start;
-	}
-	.translation div{
-		min-width: 5rem;
-		min-height: 3rem;
-		border: .1rem solid var(--dark);
-		animation: translate 4s linear 1s infinite;/*name duration timing delay direction count*/
-		animation-play-state: paused;
-	}
-	.translation button{
-		position: absolute;
-		bottom: .5rem;
-		right: .5rem;
-	}
+		.translation{
+			position: relative;
+			min-height: 300px;
+			justify-content: flex-start;
+			align-content: flex-start;
+		}
+		.translation div{
+			min-width: 5rem;
+			min-height: 3rem;
+			border: .1rem solid var(--dark);
+			animation: translate 4s linear infinite;/*name duration timing delay direction count*/
+			animation-play-state: paused;
+		}
+		.translation button{
+			position: absolute;
+			bottom: .5rem;
+			right: .5rem;
+		}
 	/*Fotogramas*/
-	@keyframes race{
-		from{	
-			transform: translateX(min(-50vw, -720px));
-			background-color: var(--second);
+		@keyframes race{
+			from{	
+				transform: translateX(min(-50vw, -720px));
+				background-color: var(--second);
+			}
+			to{
+				transform: translateX(min(50vw, 720px));
+				background-color: #c33;
+			}
 		}
-		to{
-			transform: translateX(min(50vw, 720px));
-			background-color: #c33;
+		@keyframes translate{
+			0%{
+				transform: 
+					translate(0,0)
+					skew(15deg,0);
+				background-color: hsl(0,50%,50%);
+			}
+			25%{
+				transform: 
+					translate(min(calc(50vw - 2rem), 992px),0)
+					skew(0,15deg);
+				background-color: hsl(90,50%,50%);
+			}
+			50%{
+				transform: 
+					translate(min(calc(50vw - 2rem), 992px),200px)
+					skew(-15deg,0);
+				background-color: hsl(180,50%,50%);
+			}
+			75%{
+				transform: 
+					translate(0,200px)
+					skew(0,-15deg);
+				background-color: hsl(270,50%,50%);
+			}
+			100%{
+				transform: 
+					translate(0,0)
+					skew(15deg,0);
+				background-color: hsl(0,50%,50%);
+			}
 		}
-	}
-	@keyframes translate{
-		0%{
-			transform: 
-				translate(0,0)
-				skew(15deg,0);
-			background-color: hsl(0,50%,50%);
+		@keyframes loading{
+			to{ transform: rotate(360deg); }
 		}
-		25%{
-			transform: 
-				translate(min(calc(50vw - 2rem), 992px),0)
-				skew(0,15deg);
-			background-color: hsl(90,50%,50%);
+		@keyframes background{
+			from{ background-position: -500% 0; }
 		}
-		50%{
-			transform: 
-				translate(min(calc(50vw - 2rem), 992px),200px)
-				skew(-15deg,0);
-			background-color: hsl(180,50%,50%);
-		}
-		75%{
-			transform: 
-				translate(0,200px)
-				skew(0,-15deg);
-			background-color: hsl(270,50%,50%);
-		}
-		100%{
-			transform: 
-				translate(0,0)
-				skew(15deg,0);
-			background-color: hsl(0,50%,50%);
-		}
-	}
