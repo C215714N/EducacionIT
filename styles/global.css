@@ -22,14 +22,20 @@
 	[class*="menu"]{
 		padding: 0;
 	}
+	[class*="menu"],
+	.example{
+		list-style: none;
+	}
 /* Pagina Principal */
 	body{
+		max-width: 1440px;
 		display: grid;
 		grid-template-areas:
 			'error error' 
 			'nav header'
 			'nav main'
 			'nav footer';
+		margin: auto;
 	}
 	body::before{ grid-area: 'error'; }
 	nav{ grid-area: nav; }
@@ -43,9 +49,12 @@
 	.opacity:hover{
 		opacity: .7;
 	}
-
 	canvas, svg{
+		display: none;
 		border: .1rem solid var(--dark);
-		width: 300px;
+		width: min(100%,300px);
 		height: 300px;
+	}
+	@media screen and (min-width: 576px){
+		canvas,svg{	display: inline-block; }
 	}

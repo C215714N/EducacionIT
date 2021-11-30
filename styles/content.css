@@ -12,14 +12,19 @@
 /*Ejemplos*/
 	.example{
 		display: flex;
+		width: calc(100% - min(5vw, 3rem) * 2);
 		justify-content: space-around;
 		align-items: center;
 		flex-wrap: wrap;
 		margin: 1rem min(5vw, 3rem);
 		padding: 1rem;
 		background-color: var(--light);
-		list-style: none;
+		overflow: hidden;
 	}
+	.example :is(img, video, iframe){
+		width: 100%;
+	}
+/*Transformaciones*/
 	[class*="transform"] div{
 		margin: .25rem;
 		padding: 1rem .5rem;
@@ -29,7 +34,6 @@
 	[class*="transform"]:hover div{
 		transform: translate(.5rem);
 	}
-/*Transformaciones*/
 	.transform-2d :nth-child(1){
 		transform: translate(-1rem, -1rem); /*x,y*/
 	}
@@ -62,4 +66,39 @@
 /*Transiciones*/
 	.transition div{
 		transition: all 2s ease 1s;
+	}
+/*Animaciones*/
+	.animation{
+		display: grid;
+		gap: 1rem;
+	}
+	.animation div{
+		padding: 1rem;
+		border-radius: 0 1rem 1rem 0; /*tl tr br bl*/
+		color: var(--light);
+		background: radial-gradient(circle at top right, #c368, #4488);
+		box-shadow: -1rem .5rem .25rem var(--dark);
+
+		animation-name: race;
+		animation-duration: 5s;
+		animation-delay: 2s;
+		animation-iteration-count: 5;
+	}
+	.animation :nth-child(1){ animation-timing-function: ease; }
+	.animation :nth-child(2){ animation-timing-function: ease-in; }
+	.animation :nth-child(3){ animation-timing-function: ease-out; }
+	.animation :nth-child(4){ animation-timing-function: ease-in-out; }
+	.animation :nth-child(5){ animation-timing-function: linear; }
+	.animation :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+
+	/*Fotogramas*/
+	@keyframes race{
+		from{	
+			transform: translateX(min(-50vw, -720px));
+			background-color: var(--second);
+		}
+		to{
+			transform: translateX(min(50vw, 720px));
+			background-color: #c33;
+		}
 	}
