@@ -84,13 +84,37 @@
 		animation-delay: 2s;
 		animation-iteration-count: 5;
 	}
-	.animation :nth-child(1){ animation-timing-function: ease; }
-	.animation :nth-child(2){ animation-timing-function: ease-in; }
-	.animation :nth-child(3){ animation-timing-function: ease-out; }
-	.animation :nth-child(4){ animation-timing-function: ease-in-out; }
-	.animation :nth-child(5){ animation-timing-function: linear; }
-	.animation :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
-
+	/*Timing Function*/
+		.timing :nth-child(1){ animation-timing-function: ease; }
+		.timing :nth-child(2){ animation-timing-function: ease-in; }
+		.timing :nth-child(3){ animation-timing-function: ease-out; }
+		.timing :nth-child(4){ animation-timing-function: ease-in-out; }
+		.timing :nth-child(5){ animation-timing-function: linear; }
+		.timing :nth-child(6){ animation-timing-function: cubic-bezier(0,1,1,0); }
+	/*Direction*/
+		.direction :nth-child(1){ animation-direction: normal; }
+		.direction :nth-child(2){ animation-direction: reverse; }
+		.direction :nth-child(3){ animation-direction: alternate; }
+		.direction :nth-child(4){ animation-direction: alternate-reverse; }
+	/*Percentages*/
+	.translation{
+		position: relative;
+		min-height: 300px;
+		justify-content: flex-start;
+		align-content: flex-start;
+	}
+	.translation div{
+		min-width: 5rem;
+		min-height: 3rem;
+		border: .1rem solid var(--dark);
+		animation: translate 4s linear 1s infinite;/*name duration timing delay direction count*/
+		animation-play-state: paused;
+	}
+	.translation button{
+		position: absolute;
+		bottom: .5rem;
+		right: .5rem;
+	}
 	/*Fotogramas*/
 	@keyframes race{
 		from{	
@@ -100,5 +124,37 @@
 		to{
 			transform: translateX(min(50vw, 720px));
 			background-color: #c33;
+		}
+	}
+	@keyframes translate{
+		0%{
+			transform: 
+				translate(0,0)
+				skew(15deg,0);
+			background-color: hsl(0,50%,50%);
+		}
+		25%{
+			transform: 
+				translate(min(calc(50vw - 2rem), 992px),0)
+				skew(0,15deg);
+			background-color: hsl(90,50%,50%);
+		}
+		50%{
+			transform: 
+				translate(min(calc(50vw - 2rem), 992px),200px)
+				skew(-15deg,0);
+			background-color: hsl(180,50%,50%);
+		}
+		75%{
+			transform: 
+				translate(0,200px)
+				skew(0,-15deg);
+			background-color: hsl(270,50%,50%);
+		}
+		100%{
+			transform: 
+				translate(0,0)
+				skew(15deg,0);
+			background-color: hsl(0,50%,50%);
 		}
 	}

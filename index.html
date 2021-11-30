@@ -239,6 +239,24 @@
 					<div>linear</div>
 					<div>cubic-bezier</div>
 				</div>
+				<h4>Direction</h4>
+				<p>
+					Otra caracteristica fundamental en las animaciones es la capacidad de controlar el sentido de reproduccion, ya que normalmente este se da <strong>del from{} al to{}</strong>, pero podemos ejecutar la misma en <em>reversa</em> o incluso de manera <em>alternada</em>, en este ultimo caso es necesario indicar un valor mayor a 1 en el atributo <strong>animation-iteration-count</strong> que se encarga de indicar la cantidad de repeticiones de la misma.
+				</p>
+				<div class="example animation direction">
+					<div>normal</div>
+					<div>reverse</div>
+					<div>alternate</div>
+					<div>a-reverse</div>
+				</div>
+				<h4>Fotogramas Clave</h4>
+				<p>
+					En caso de realizar animaciones sencillas, los selectores <strong>from{} y to{}</strong> son mas que suficientes, pero si requerimos que nuestro elemento pase por cambios durante la animacion debemos indicar mediante porcentajes cada una de estas etapas. Es necesario que siempre se empiece con <em>0%{}</em> y se finalice con <em>100%</em> ya que de lo contrario la animacion se cortara y no se hara de forma fluida.
+				</p>
+				<div class="example translation">
+					<div></div>
+					<button>PLAY</button>
+				</div>
 			</article>
 		</section>
 	</main>		
