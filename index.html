@@ -156,7 +156,84 @@
 		</section>
 	</main>
 	<!-- Pie de Pagina -->
-	
+	<footer id="footer">
+		<div class="map">
+			
+		</div>
+		<form action="" id="contact">
+			<h2>Dejanos tu consulta</h2>
+			<label for="contactName">Ingrese su Nombre</label>
+			<input  
+				id="contactName"
+				name="contactName"
+				type="text"
+				maxlength="50"
+				pattern="[A-Z a-z]{3,50}"
+				placeholder="Nombre(*): Cristian Racedo" 
+				required>
+			<div class="valid">
+				Utilice solamente letras y espacios, 
+				su nombre de poseer entre 3 y 50 caracteres
+			</div>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input  
+				id="contactEmail"
+				name="contactEmail"
+				type="email"
+				minlength="8" 
+				placeholder="Correo(*): cristiandracedo@hotmail.com" 
+				required>
+			<div class="valid">
+				su correo debe poseer al menor 8 caracteres 
+				respetando el formato "usuario@servidor"
+			</div>
+			<label for="contactPhone">Ingrese su Telefono</label>
+			<input  
+				id="contactPhone"
+				name="contactPhone"
+				type="tel"
+				pattern="([0-9]{6,18})|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})" 
+				placeholder="Telefono(*):(5411)0303-4567" 
+				required>
+			<div class="valid">
+				coloque la caracteristica entre parentesis y 
+				un guion cada 3/6 digitos, como se muestra
+				en el ejemplo: (5411)0303-4567
+			</div>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult"
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="150" 
+				placeholder="Consulta(*): Buenas, necesito un presupuesto" 
+				required ></textarea>
+			<button>enviar</button>
+		</form>
+		<div class="social">
+			<a 	href="https://instagram.com" 	
+				class="instagram" target="_blank" 
+				title="seguinos en Instagram">
+			</a>
+			<a 	href="https://twitter.com" 	
+				class="twitter" target="_blank" 
+				title="seguinos en twitter">
+			</a>
+			<a 	href="https://facebook.com" 	
+				class="facebook" target="_blank" 
+				title="seguinos en facebook">
+			</a>
+			<a 	href="https://api.whatsapp.com" 	
+				class="whatsapp" target="_blank" 
+				title="escribinos por Whatsapp">
+			</a>
+			<a 	href="https://github.com/c215714n/EducacionIT/tree/mav-s15" 	
+				class="github" target="_blank" 
+				title="hace fork en github">
+			</a>
+		</div>
+		<p class="copy">&copy;2021 Todos los derechos reservados</p>
+	</footer>
 	<!-- Scripts JS -->
 	<script src="scripts/main.js"></script>
 </body>
