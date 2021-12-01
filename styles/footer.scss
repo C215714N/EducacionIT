@@ -1,0 +1,34 @@
+// 	Variables
+	$path: '../assets/icon';
+	$social: 
+		facebook,
+		instagram,
+		linkedin,
+		twitter,
+		github,
+		whatsapp,
+		yotube;
+	$col: 24;
+// 	Mixins
+	@mixin normalize($m:0, $p:0, $b:0, 
+		$ba:border,$ma:margin, $pa:padding){
+		#{$ma}: $m;
+		#{$ba}: $b;
+		#{$pa}: $p;
+	}
+// 	Nesting
+	#footer{
+		@include normalize(relative,1rem,center,text-align,position);
+		.map{
+
+		}
+		#contact{
+
+		}
+		.social{
+
+		}
+		.copy{
+
+		}
+	}
