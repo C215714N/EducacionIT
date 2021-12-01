@@ -16,6 +16,25 @@
 		#{$ba}: $b;
 		#{$pa}: $p;
 	}
+	@mixin bg($s:cover, $p:center, $i:var(--bg), $a:scroll, $c:transparent, $r:no-repeat){
+		background: $c $i $p / $s $r;
+		background-attachment: $a;
+	}
+//	Loops
+	@each $ico in $social{
+		.#{$ico}{ --bg: url('#{$path}/#{$ico}.svg'); }
+	}
+//	Styles
+	.icon{
+		@include normalize(.25rem, .5rem 1rem, .25rem, border-radius);
+		@include bg(1.5rem, $c:#ccc);
+		min-width: 3rem;
+		min-height: 3rem;
+		&:hover{
+			@include bg(2rem, $c:#eee);
+			box-shadow: 0 0 .5rem #333;
+		}
+	}
 // 	Nesting
 	#footer{
 		@include normalize(relative,1rem,center,text-align,position);
@@ -26,7 +45,9 @@
 
 		}
 		.social{
-
+			display: flex;
+			justify-content: center;
+			a{ @extend .icon; }
 		}
 		.copy{
 

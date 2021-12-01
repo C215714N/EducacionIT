@@ -1,7 +1,54 @@
+.facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  --bg: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+.whatsapp {
+  --bg: url("../assets/icon/whatsapp.svg");
+}
+
+.yotube {
+  --bg: url("../assets/icon/yotube.svg");
+}
+
+.icon, #footer .social a {
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  background: #ccc var(--bg) center/1.5rem no-repeat;
+  background-attachment: scroll;
+  min-width: 3rem;
+  min-height: 3rem;
+}
+.icon:hover, #footer .social a:hover {
+  background: #eee var(--bg) center/2rem no-repeat;
+  background-attachment: scroll;
+  box-shadow: 0 0 0.5rem #333;
+}
+
 #footer {
   position: relative;
   text-align: center;
   padding: 1rem;
+}
+#footer .social {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=footer.css.map */
