@@ -144,6 +144,15 @@
 					Uno de los inconvenientes de esta herramienta radica en que no posee un metodo de observacion de cambios y por ende, debemos compilar cada vez que modificamos el archivo en formato LESS. Podemos resolver este problema instalando el paquete <strong>less-watch-compiler</strong> y para compilar solamente ingresamos el comando <em>less-watch-compiler "input/" "output/" "file.less"</em>
 				</p>
 			</article>
+			<article>
+				<h3>SASS (Syntactically Awesome Styles Sheets)</h3>
+				<p>
+					Preprocesador que utiliza Ruby como lenguaje de compilacion y a diferencia de LESS, no posee la capacidad de llamar funciones de manera asincrona, es decir, que los metodos pueden ser utilizados solamente si fueron previamente declarados. Para instalarlo debemos utilizar el comando de <strong>NodeJS</strong> <em>npm i -g sass</em>.
+				</p>
+				<p>
+					Si bien carece de asincronicidad, posee algunas otras ventajas, como la implementacion de diferentes tipos de bucles, la facil identificacion de los metodos y por defecto permite observar los archivos a compilar, e incluso agrega los errores de compilacion al codigo para idenficarlos facilmente. Para compilar los archivos debemos ingresar el comando <em>sass --watch "input.scss" "output.scss"</em>
+				</p>
+			</article>
 		</section>
 	</main>
 	<!-- Pie de Pagina -->
