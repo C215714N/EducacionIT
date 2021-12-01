@@ -1,3 +1,4 @@
+/*Redes Sociales*/
 .facebook {
   --bg: url("../assets/icon/facebook.svg");
 }
@@ -26,6 +27,103 @@
   --bg: url("../assets/icon/yotube.svg");
 }
 
+/*Atributos*/
+.text-primary {
+  color: #c36;
+}
+
+.text-secondary {
+  color: #36c;
+}
+
+.text-light, #footer #contact {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-success {
+  color: #284;
+}
+
+.text-info {
+  color: #448;
+}
+
+.bg-primary {
+  background-color: #c36;
+}
+
+.bg-secondary, #footer #contact {
+  background-color: #36c;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark, #footer #contact .valid {
+  background-color: #333;
+}
+
+.bg-danger, #footer #contact input:not(:placeholder-shown):invalid + .valid, #footer #contact textarea:not(:placeholder-shown):invalid + .valid, #footer #contact select:not(:placeholder-shown):invalid + .valid {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-success, #footer #contact input:valid + .valid, #footer #contact textarea:valid + .valid, #footer #contact select:valid + .valid {
+  background-color: #284;
+}
+
+.bg-info {
+  background-color: #448;
+}
+
+.border-primary {
+  border-color: #c36;
+}
+
+.border-secondary {
+  border-color: #36c;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark, #footer #contact input:focus, #footer #contact textarea:focus, #footer #contact select:focus {
+  border-color: #333;
+}
+
+.border-danger, #footer #contact input:not(:placeholder-shown):invalid, #footer #contact textarea:not(:placeholder-shown):invalid, #footer #contact select:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success, #footer #contact input:valid, #footer #contact textarea:valid, #footer #contact select:valid {
+  border-color: #284;
+}
+
+.border-info {
+  border-color: #448;
+}
+
 .icon, #footer .social a {
   margin: 0.25rem;
   border-radius: 0.25rem;
@@ -45,6 +143,27 @@
   position: relative;
   text-align: center;
   padding: 1rem;
+}
+#footer #contact {
+  margin: 3rem auto 1rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  display: grid;
+  text-align: left;
+}
+#footer #contact input, #footer #contact textarea, #footer #contact select {
+  outline: none;
+  border: 0.1rem solid transparent;
+  padding: 0.5rem 1rem;
+}
+#footer #contact input:focus + .valid, #footer #contact textarea:focus + .valid, #footer #contact select:focus + .valid {
+  max-height: 300px;
+  border: 0;
+  padding: 0.5rem;
+}
+#footer #contact .valid {
+  max-height: 0;
+  overflow: hidden;
 }
 #footer .social {
   display: flex;

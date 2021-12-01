@@ -8,6 +8,19 @@
 		github,
 		whatsapp,
 		yotube;
+	$attributes:
+		text 	color,
+		bg 		background-color,
+		border 	border-color;
+	$colors:
+		primary 	#c36,
+		secondary	#36c,
+		light		#eee,
+		dark		#333,
+		danger		#c33,
+		warning 	#da3,
+		success		#284,
+		info		#448;
 	$col: 24;
 // 	Mixins
 	@mixin normalize($m:0, $p:0, $b:0, 
@@ -21,9 +34,16 @@
 		background-attachment: $a;
 	}
 //	Loops
-	@each $ico in $social{
-		.#{$ico}{ --bg: url('#{$path}/#{$ico}.svg'); }
-	}
+	/*Redes Sociales*/
+		@each $ico in $social{
+			.#{$ico}{ --bg: url('#{$path}/#{$ico}.svg'); }
+		}
+	/*Atributos*/
+		@each $prop, $attr in $attributes{
+			@each $cn, $cv in $colors{
+				.#{$prop}-#{$cn}{
+					#{$attr}: $cv;
+		}	}	}
 //	Styles
 	.icon{
 		@include normalize(.25rem, .5rem 1rem, .25rem, border-radius);
@@ -42,7 +62,24 @@
 
 		}
 		#contact{
-
+			@include normalize(3rem auto 1rem, 1rem, .25rem, border-radius);
+			@extend .text-light, .bg-secondary;
+			display: grid;
+			text-align: left;
+			input, textarea, select{
+				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma:outline);
+				&:focus{ @extend .border-dark;
+					& + .valid { @include normalize(300px, .5rem, $ma:max-height); } }
+				&:valid{ @extend .border-success;
+					& + .valid{ @extend .bg-success; } }
+				&:not(:placeholder-shown):invalid{ @extend .border-danger;
+					& + .valid{ @extend .bg-danger; } }
+			}
+			.valid{ 
+				@extend .bg-dark; 
+				max-height: 0;
+				overflow: hidden;
+			}
 		}
 		.social{
 			display: flex;
