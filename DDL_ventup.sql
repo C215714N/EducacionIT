@@ -28,12 +28,30 @@ CREATE TABLE users(
 );
 DESCRIBE users;
 
+CREATE TABLE users_data(
+	data_id INT AUTO_INCREMENT,
+    user INT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    birth_date DATE,
+    cuit CHAR,
+    address VARCHAR(100),
+    zip_code VARCHAR(10),
+    nationality VARCHAR(50),
+    PRIMARY KEY(data_id),
+    UNIQUE KEY(cuit),
+    UNIQUE KEY(first_name, last_name, birth_date, address),
+    FOREIGN KEY(user) REFERENCES users(user_id)
+);
+ALTER TABLE users_data ADD COLUMN phone VARCHAR(18) AFTER cuit;
+
 CREATE TABLE categories(
 	cat_id INT AUTO_INCREMENT,
     description VARCHAR(50) NOT NULL,
     PRIMARY KEY(cat_id),
     UNIQUE KEY(description)
 );
+DESCRIBE categories;
 
 CREATE TABLE products(
 	product_id INT AUTO_INCREMENT,
@@ -43,3 +61,4 @@ CREATE TABLE products(
     UNIQUE KEY(description),
     FOREIGN KEY(category) REFERENCES categories(cat_id) -- clave externa OTRA_TABLA(PRIMARY KEY)
 );
+DESCRIBE products;
