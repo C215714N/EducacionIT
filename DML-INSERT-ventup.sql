@@ -28,3 +28,20 @@ USE ventup;
 		user_email = "steve_jobs@apple.com",
 		user_pass = "isaac_newton";
 /* Tabla Categorias */
+	INSERT INTO categories(description)
+    VALUES ("tecnologia"),("limpieza"),("alimentos"),("botanica"),("electrodomesticos"),("muebles");
+/* Tablas Productos*/
+	INSERT INTO products(description, category)
+    VALUES 
+		("polenta", 3),("tapa de asado", 3),("tomate", 3),("arroz", 3), -- alimentos
+        ("pc escritorio", 1),("notebook", 1),("teclado", 1),("tablet", 1),("celular", 1), -- tecnologia
+        ("abono para plantas", 4),("potus", 4), -- botanica
+        ("lavarropas", 5),("microondas", 5),("aire acondicionado", 5), -- electrodomesticos
+        ("ropero", 6),("modular", 6), -- muebles
+        ("suavizante", 2),("lavandina", 2),("quitamanchas", 2),("jabon", 2); -- limpieza
+	INSERT INTO products(description, category) VALUES ("detergente",2),("lavavajilla",2);
+
+
+
+
+

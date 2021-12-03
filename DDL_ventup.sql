@@ -27,3 +27,19 @@ CREATE TABLE users(
     UNIQUE KEY(user_email)
 );
 DESCRIBE users;
+
+CREATE TABLE categories(
+	cat_id INT AUTO_INCREMENT,
+    description VARCHAR(50) NOT NULL,
+    PRIMARY KEY(cat_id),
+    UNIQUE KEY(description)
+);
+
+CREATE TABLE products(
+	product_id INT AUTO_INCREMENT,
+    description VARCHAR(100),
+    category INT,
+    PRIMARY KEY(product_id),
+    UNIQUE KEY(description),
+    FOREIGN KEY(category) REFERENCES categories(cat_id) -- clave externa OTRA_TABLA(PRIMARY KEY)
+);
