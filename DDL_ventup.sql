@@ -34,7 +34,7 @@ CREATE TABLE users_data(
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     birth_date DATE,
-    cuit CHAR,
+    cuit CHAR(13),
     address VARCHAR(100),
     zip_code VARCHAR(10),
     nationality VARCHAR(50),
@@ -43,7 +43,9 @@ CREATE TABLE users_data(
     UNIQUE KEY(first_name, last_name, birth_date, address),
     FOREIGN KEY(user) REFERENCES users(user_id)
 );
-ALTER TABLE users_data ADD COLUMN phone VARCHAR(18) AFTER cuit;
+ALTER TABLE users_data 
+	ADD COLUMN phone VARCHAR(18) AFTER cuit,
+	MODIFY COLUMN cuit CHAR(13);
 
 CREATE TABLE categories(
 	cat_id INT AUTO_INCREMENT,

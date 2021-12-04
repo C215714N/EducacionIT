@@ -1,6 +1,5 @@
 /*Data Manipulation Language
-	insertar/eliminar/modificar/consultar
-    registros de tablas
+	INSERT agrega registros a las tablas
 */
 USE ventup;
 /* Tabla usuarios */
@@ -27,6 +26,14 @@ USE ventup;
 		user_name = "macOS",
 		user_email = "steve_jobs@apple.com",
 		user_pass = "isaac_newton";
+/* Tabla Datos de Usuario */
+	SELECT * FROM users_data;
+    INSERT INTO users_data(user, last_name, first_name, cuit, birth_date)
+    VALUES
+		(1, "Racedo","Cristian Damian","20-35336446-5", "1991-04-18"),
+        (6, "Perez", "Juan", "30-03034560-7", "1965-07-09"),
+        (4, "Doe", "John", "25-12342732-8", "1980-07-04");
+        
 /* Tabla Categorias */
 	INSERT INTO categories(description)
     VALUES ("tecnologia"),("limpieza"),("alimentos"),("botanica"),("electrodomesticos"),("muebles");
