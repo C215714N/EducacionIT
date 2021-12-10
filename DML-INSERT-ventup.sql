@@ -47,7 +47,18 @@ USE ventup;
         ("ropero", 6),("modular", 6), -- muebles
         ("suavizante", 2),("lavandina", 2),("quitamanchas", 2),("jabon", 2); -- limpieza
 	INSERT INTO products(description, category) VALUES ("detergente",2),("lavavajilla",2);
-
+/*Tabla Publicaciones*/
+	INSERT INTO posts(user,product,post_title,post_description, price, stock)
+	VALUES ( 
+		(SELECT user_id FROM USERS WHERE user_name = "juan_perez"),
+        (SELECT product_id FROM products WHERE description = "teclado"),
+        "Teclado Redragon K552-BB",
+        "Producto nuevo en caja con garantia de 12 meses",
+        5800,
+        100
+	);
+    
+/*Tabla Ventas*/
 
 
 

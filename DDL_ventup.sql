@@ -64,3 +64,34 @@ CREATE TABLE products(
     FOREIGN KEY(category) REFERENCES categories(cat_id) -- clave externa OTRA_TABLA(PRIMARY KEY)
 );
 DESCRIBE products;
+
+CREATE TABLE posts(
+	post_id INT AUTO_INCREMENT,
+    user INT,
+    product INT,
+    post_title VARCHAR(50),
+    post_description VARCHAR(250),
+    price DECIMAL(11,2),
+    stock INT,
+    is_used BOOLEAN DEFAULT FALSE,
+    delivery BOOLEAN DEFAULT TRUE,
+    post_date DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY(post_id),
+    UNIQUE KEY(user,product,post_title,post_description,price,stock,is_used,delivery),
+    FOREIGN KEY(user) REFERENCES users(user_id),
+    FOREIGN KEY(product) REFERENCES products(product_id)
+);
+DESCRIBE posts;
+
+CREATE TABLE sales(
+	sale_id INT AUTO_INCREMENT,
+    user INT,
+    post INT,
+    price DECIMAL(11,2),
+    quantity INT,
+    sale_date DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY(sale_id),
+    FOREIGN KEY(user) REFERENCES users(user_id),
+    FOREIGN KEY(post) REFERENCES posts(post_id)
+);
+DESCRIBE sales;
