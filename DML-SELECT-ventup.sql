@@ -11,7 +11,19 @@
 
 /*Tabla Datos de usuario*/
 	SELECT * FROM users_data
-    WHERE user = 2;
+    WHERE user = 1;
+    
+	SELECT
+		CONCAT("sr/a: ", last_name, " ", first_name) AS customer,
+        CONCAT("direccion: ", address, " - telefono: ", phone)  AS data
+    FROM users_data;
+    SELECT 
+		GROUP_CONCAT(data_id) AS id, -- id de datos
+        user,
+        last_name,
+        first_name
+    FROM users_data
+    GROUP BY last_name, first_name;
 /*Tabla Categorias*/
 	SELECT * FROM categories
 	WHERE description LIKE "bot_ni_a";
@@ -28,9 +40,47 @@
     -- el valor se encuentra entre 3 y 2
 	SELECT * FROM products
 	WHERE category IN(3,2);
-
 /*
 	AND	| C1F | C1V		OR 	| C1V | C1F 	XOR | C1F | C2V
     C2F |  F  |  F 		C2V |  V  |  V		C2F	|  F  |  V
     C2V |  F  |  V		C2F |  V  |  F		C2V |  V  |  F
 */
+/*Tabla Publicaciones*/
+	-- campos calculados (obtenidos mediante funciones de SQL)
+	SELECT 
+		COUNT(user) AS publicaciones, -- cuenta los registros
+        SUM(stock) AS articulos, -- suma los registros
+        MIN(price) AS menor_precio, -- retorna el valor mas bajo
+        MAX(price) AS mayor_precio, -- retorna el valor mas alto
+        ROUND(AVG(price), 2) AS promedio
+	FROM posts;
+    -- cant. de publiciones por usuario con total unitario
+    SELECT
+		user,
+		COUNT(user) AS posts, -- cuenta segun el valor de agrupacion
+        SUM(price) AS total_unit
+	FROM posts
+    GROUP BY user; -- agrupado por usuario
+    -- comisiones potenciales por publicacion
+    SELECT 
+		post_id, 
+        user, 
+        product, 
+        price * stock AS total, -- calculo ganancias
+        ROUND(price * stock * 0.105, 2) AS percentage -- comision por ventas
+	FROM posts
+    ORDER BY post_id;
+    -- comision total por vendedor (potencial)
+    SELECT 
+		user,
+        ROUND(SUM(price * stock) * 0.105, 2) AS commission
+	FROM posts
+    GROUP BY user;
+/*Tabla Ventas*/
+	SELECT 
+		sale_id,
+        user,
+        post,
+        price * quantity AS total
+    FROM sales;
+    
