@@ -11,12 +11,13 @@
 
 /*Tabla Datos de usuario*/
 	SELECT * FROM users_data
-    WHERE user = 1;
-    
+    WHERE user = 1; -- condicion
+    -- concatenacion de cadenas de texto
 	SELECT
 		CONCAT("sr/a: ", last_name, " ", first_name) AS customer,
-        CONCAT("direccion: ", address, " - telefono: ", phone)  AS data
+        CONCAT("direccion: ", address, " - telefono: ", phone)  AS user_data
     FROM users_data;
+    -- identificacion de registros duplicados
     SELECT 
 		GROUP_CONCAT(data_id) AS id, -- id de datos
         user,
