@@ -12,9 +12,10 @@
 	<h1>Fundamentos Web</h1>
 	<!-- Parrafo (paragraph): texto de contenido -->
 	<p>html | css</p>
+	<!-- Encabezado Secundario: Tipo de capitulo/seccion -->
 	<h2>Tabla  de Contenidos</h2>
 	<!-- Listas ordenadas (ordered list) -->
-	<ol>
+	<ol type="circle">
 		<!-- elementos de list (list item) -->
 		<li>Introducción HTML5</li>
 		<li>Imágenes e Hipervínculos</li>
@@ -22,12 +23,58 @@
 		<li>Contenido Multimedia y Tablas</li>
 		<li>Flexbox y Acceso FTP</li>
 	</ol>
-	<h2>Lenguajes de Front-End</h2>
+	<h2>Desarrollo Front-End</h2>
+	<p>
+		Front-end corresponde al desarrollo del lado del cliente (navegador) y engloba la estructura, el diseño grafico (UI/UX) y la logica o funcionalidad basica y los lenguajes involucrados son los siguientes:
+	</p>
 	<!-- Listas Desordenadas (unordered list) -->
 	<ul>
 		<li>html</li>
 		<li>css</li>
 		<li>js</li>
+	</ul>
+	<!-- Encabezado de tercer nivel -->
+	<div style="background-color: lightslategrey;">
+		<h3>HTML (HyperText Markup Language)</h3>
+		<p>
+			<strong>El lenguaje de marcado de hipertexto</strong> corresponde a un lenguaje de estructura, es decir, que es la base fundamental de un sitio web. Utiliza etiquetas para definir el rol que cumple cada elemento dentro de la pagina y su relacion con el contexto.
+		</p>
+		<h4>Clasificacion de las etiquetas</h4>
+		<ul>
+			<li>
+				Segun su tipo:
+				<br> <!-- Salto de linea (Break) | huerfana -->
+				<strong>De Bloque: </strong>
+					Son aquellas que ocupan todo el espacio de su contenedor,
+					generan salto de linea y no comparten espacio con otros elementos, se les puede dar tamaño y
+				<em> funcionan principalmente como contenedores.</em>
+					
+				<br>
+				<strong>De Linea: </strong>
+					Son aquellas que ocupan el espacio de su contenido,
+					no generan salto de linea y comparten espacio con otros elementos de su mismo tipo, no se les puede dar tamaño (automatico) y
+				<em> funcionan principalmente como contenido.</em>
+			</li>
+			<li>
+				Segun su funcion:
+				<br>
+				<strong>Con Carga Semantica:</strong>
+				Son aquellas que representan algun aspecto dentro de la pagina y corresponde a la mayoria de los elementos que podemos utilizar, permiten asignar una jerarquia.
+				<br>
+				<strong>Presentacionales: </strong>
+				Son aquellas cuya finalidad es apoyar o facilitar la aplicacion del diseño, actualmente son pocas etiquetas las que pertenecen a este tipo, pero podemos destacar <em>SPAN (expandir)</em> y <em>DIV(capa)</em> que sirven para aplicar estilos dentro de un texto o a un caracter, y agrupar elementos respectivamente.
+			</li>
+		</ul>
+	</div>
+	<h3 style="background-color: darkslateblue; color: whitesmoke; padding:20px"><span style="font-size: 32px;">C</span>SS (Cascading Styles Sheets)</h3>
+	<p>
+		<strong>Las hojas de estilo en cascada</strong> corresponden a un lenguaje de diseño grafico, que  se utiliza para definir la apariencia de los elementos dentro de la pagina. Utiliza principalmente selectores y reglas para poder realizar dichos cambios.
+	</p>
+	<ul style="width: 300px; background-color: skyblue; padding: 50px">
+		<li><strong>margin:</strong> distancia que separa a las etiquetas</li>
+		<li><strong>border:</strong> linea que rodea a la etiqueta y por defecto es cero</li>
+		<li><strong>padding:</strong> distancia entre el border y el contenido y, al igual que el borde, suma tamaño</li>
+		<li><strong>content:</strong> elementos que se encuentran dentro de la etiqueta, a los que podemos darle tamaño</li>
 	</ul>
 </body>
 </html>
