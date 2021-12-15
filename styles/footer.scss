@@ -85,6 +85,7 @@
 			text-align: left;
 			input, textarea, select{
 				@include normalize(none, .5rem 1rem, .1rem solid transparent, $ma:outline);
+				transition: all .5s ease-in-out;
 				&:focus{ @extend .border-dark;
 					& + .valid { @include normalize(300px, .5rem, $ma:max-height); } }
 				&:valid{ @extend .border-success;
@@ -96,6 +97,7 @@
 				@extend .bg-dark; 
 				max-height: 0;
 				overflow: hidden;
+				transition: all .5s linear;
 			}
 		}
 		.social{

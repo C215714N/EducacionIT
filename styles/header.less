@@ -15,6 +15,7 @@
 		.flexbox(column);
 		.normalize(min(100vh, 640px); 1rem; center; text-align; @ma:min-height);
 		position: relative;
+		color: @light;
 		// Encabezado
 		.header{
 			.font;
@@ -23,7 +24,10 @@
 				.flexbox;
 				span{
 					.normalize(.25rem; .5rem; 1rem; border-radius);
+					min-width: 1rem;
 					background-color: @light;
+					box-shadow: 0 0 .5rem @dark;
+					transition: all .5s ease-in;
 					&.active{ min-width: 3rem; }
 				}
 			}
@@ -36,6 +40,7 @@
 				&:extend(.cover);
 				.bg(@backgrounds);
 				opacity: 0;
+				transition: all 2s ease-out;
 				&.active{ opacity: 1; }
 			}
 		}

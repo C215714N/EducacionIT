@@ -8,6 +8,7 @@
   text-align: center;
   padding: 1rem;
   position: relative;
+  color: #eee;
 }
 #header .header {
   font-size: min(calc(2vw + 0.8rem), 5rem);
@@ -23,13 +24,17 @@
   margin: 0.25rem;
   border-radius: 1rem;
   padding: 0.5rem;
+  min-width: 1rem;
   background-color: #eee;
+  box-shadow: 0 0 0.5rem #333;
+  transition: all 0.5s ease-in;
 }
 #header .header .control span.active {
   min-width: 3rem;
 }
 #header .slide li {
   opacity: 0;
+  transition: all 2s ease-out;
 }
 #header .slide li:nth-child(1) {
   background: url('../assets/bg/osx-el_capitan.jpg') center / cover;

@@ -47,4 +47,4 @@
 		getItem(slide,true)
 		getItem(control,true)
 	} )
-	window.setInterval(() => next[0].click(), 30000)
+	window.setInterval(() => next[0].click(), 15000)
