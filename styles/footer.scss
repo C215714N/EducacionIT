@@ -67,9 +67,11 @@
 		@include bg(1.5rem, $c:#ccc);
 		min-width: 3rem;
 		min-height: 3rem;
+		transition: all 1s;
 		&:hover{
 			@include bg(2rem, $c:#eee);
 			box-shadow: 0 0 .5rem #333;
+			transform: rotate(360deg) translateY(-.25rem);
 		}
 	}
 // 	Nesting

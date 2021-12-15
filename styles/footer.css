@@ -735,11 +735,13 @@
   background-attachment: scroll;
   min-width: 3rem;
   min-height: 3rem;
+  transition: all 1s;
 }
 .icon:hover, #footer .social a:hover {
   background: #eee var(--bg) center/2rem no-repeat;
   background-attachment: scroll;
   box-shadow: 0 0 0.5rem #333;
+  transform: rotate(360deg) translateY(-0.25rem);
 }
 
 #footer {
