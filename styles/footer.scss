@@ -22,6 +22,12 @@
 		success		#284,
 		info		#448;
 	$col: 24;
+	$media:
+		sm	576px	540px,
+		md 	768px	720px,
+		lg 	992px	960px,
+		xl 	1200px	1140px,
+		xxl 1400px	1320px;
 // 	Mixins
 	@mixin normalize($m:0, $p:0, $b:0, 
 		$ba:border,$ma:margin, $pa:padding){
@@ -44,6 +50,17 @@
 				.#{$prop}-#{$cn}{
 					#{$attr}: $cv;
 		}	}	}
+	/*Sistema de Grillas*/
+		@for $i from 1 through $col{
+			.col-#{$i}{ width: percentage( $i / $col ); }
+		}
+	/*Sistema de grillas responsive*/
+		@each $vn, $vw, $max in $media{
+		@media screen and (min-width: $vw){
+			.container, .container-#{$vn}{ max-width: $max; }
+			@for $i from 1 through $col{
+			.col-#{$vn}-#{$i}{ width: percentage( $i / $col ); }
+		}	}	}
 //	Styles
 	.icon{
 		@include normalize(.25rem, .5rem 1rem, .25rem, border-radius);
@@ -63,7 +80,7 @@
 		}
 		#contact{
 			@include normalize(3rem auto 1rem, 1rem, .25rem, border-radius);
-			@extend .text-light, .bg-secondary;
+			@extend .text-light, .bg-secondary, .col-sm-22, .col-md-16, .col-lg-12, .col-xxl-8;
 			display: grid;
 			text-align: left;
 			input, textarea, select{

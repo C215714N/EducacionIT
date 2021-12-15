@@ -9,6 +9,7 @@
 		'osx-yosemite.jpg',
 		'osx-sierra.jpg',
 		'osx-high_sierra.jpg';
+	@col: 24;
 // 	Nesting: Implementacion de selectores en forma de cascada;
 	#header{
 		.flexbox(column);
@@ -97,3 +98,9 @@
 			background-attachment: @ba;
 		}	.bg(@array; @ba; @i + 1);
 	}
+	.grid(@i:1) when(@i <= @col){
+		.col-@{i}{ width: percentage((@i / @col)); }
+		.grid(@i + 1);
+	}
+	/*Sistema de Grillas*/
+	.grid;
