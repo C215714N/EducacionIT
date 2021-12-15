@@ -1,0 +1,28 @@
+/*Contenido Principal*/
+	main{
+		margin: 1rem auto;
+		padding: 1rem;
+	}
+	section{
+		margin: 1rem 0;
+		border-radius: .25rem;
+		padding: 1.5rem 1rem;
+		box-shadow: 0 0 .5rem var(--dark);
+	}
+	main .header{
+		margin: -1.5rem -1rem .5rem;
+		border-radius: .25rem .25rem 0 0;
+		padding: 1.5rem 1rem;
+		color: var(--light);
+		background: linear-gradient(to right, var(--second), var(--first));
+		font-size: min(calc(1vw + .5rem), 1.5rem);
+		text-shadow: 0 0 .5rem var(--dark);
+	}
+	article h3{
+		color: var(--second);
+		border-bottom: .1rem solid var(--second);
+	}
+/*Transformaciones*/
+	/*2d*/
+
+	/*3d*/
