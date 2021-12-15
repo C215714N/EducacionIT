@@ -3,6 +3,10 @@
 	const pBar = d.querySelector('.progress progress')
 	const pIn = d.querySelector('.progress input')
 	const ctx = d.querySelector('#canvas').getContext('2d')
+	const prev = d.querySelector('.icon-prev')
+	const next = d.querySelector('.icon-next')
+	const slideLst = d.querySelectorAll('#header .slide li')
+	const spanLst = d.querySelectorAll('#header .control span')
 /*Progress Bar*/
 	pIn.addEventListener('input', () => pBar.value = pIn.value)
 /*Canvas*/
@@ -23,3 +27,14 @@
 	// Texto
 		ctx.font = 'bold 1rem sans-serif'
 		ctx.strokeText('Rasters (Canvas)', 50, 250)
+/*Galeria*/
+	prev.onclick = () => (getItem(slideLst), getItem(spanLst))
+	next.onclick = () => (getItem(slideLst, true), getItem(spanLst, true))
+
+	const getItem = (array = [], dir = false, className = 'active') => {
+		for(el of array){
+			if(el.classList.contains(className)){
+				el.classList.remove(className)
+				newItem = (dir ? (el.nextElementSibling || el.parentNode.firstElementChild) : (el.previousElementSibling || el.parentNode.lastElementChild))
+		}	} 	newItem.classList.add(className)
+	}
