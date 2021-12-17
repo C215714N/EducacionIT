@@ -80,6 +80,18 @@
         ROUND(price * stock * 0.105, 2) AS percentage -- comision por ventas
 	FROM posts
     ORDER BY post_id;
+    -- situacion de reposicion
+    SELECT 
+		post_id,
+        post_title,
+        price,
+        stock,
+        CASE
+			WHEN stock <= 2000 THEN 'reponer'
+            WHEN stock < 5000 THEN 'revisar'
+            ELSE 'continuar'
+        END AS control
+    FROM posts;
     -- comision total por vendedor (potencial)
     SELECT 
 		user,
