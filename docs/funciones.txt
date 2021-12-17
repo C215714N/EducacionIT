@@ -1,0 +1,30 @@
+Funciones Fecha y Hora (DATE, TIME, DATETIME)
+	CURRENT_DATE()		devuelve la fecha actual
+	CURRENT_TIME()		devuelve la hora actual
+	CURRENT_TIMESTAMP()	devuelve la fecha y hora actual
+	DAY(date)		extrae el dia de la fecha especificada
+	MONTH(date)		extrae el mes de la fecha especificada
+	YEAR(date)		extrae el año de la fecha especificada
+	DAYNAME(date)		retorna el nombre del dia de la fecha 
+	MONTHNAME(date)		retorna el nombre del mes de la fecha
+	DATE_DIFF(d2,d1)	devuelve la diferencia en dias entre las fechas
+
+Funciones Numericas (INTEGER, DECIMAL, DOUBLE, LONG, FLOAT)
+	MAX(field)		obtiene el valor mas alto de toda la columna
+	MIN(field)		obtiene el valor mas bajo de toda la columna	
+	AVG(field)		calcula el promedio de toda la columna
+	SUM(field)		realiza la sumatoria de los valores de la columna
+	COUNT(field)		cuenta la cantidad de registros de la columna
+	ROUND(val,n)		redondea el valor con n can. de decimales
+	CEIL(val)		redondea hacia arriba el valor especificado
+	FLOOR(val)		redondea hacia abajo el valor especificado
+
+Funcioens de Cadenas de texto (STRING, CHAR, VARCHAR)
+	CONCAT(val,val)		combina los valores en una cadena de texto
+	GROUP_CONCAT(field)	devuelve todos los registros separados con coma
+	LOWER(val)		convierte los valores de texto a minusculas
+	UPPER(val)		convierte los valores de texto a mayusculas
+	LEFT(val, n)		extrae n cant. de caracteres de un texto desde el inicio
+	RIGHT(val,n)		extrae n cant. de caracteres de un texto desde el final
+	SUBSTRING(val, n, p)	extrae n cant. de caracteres de un texto desde la posicion p
+	POSITION(t IN text)	obtiene la posicion del texto buscado
