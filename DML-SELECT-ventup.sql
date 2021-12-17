@@ -25,6 +25,15 @@
         first_name
     FROM users_data
     GROUP BY last_name, first_name;
+    -- documentacion
+    SELECT
+		CONCAT(last_name, ", ", first_name) AS user, -- agrupacion de textos
+        ROUND(DATEDIFF(CURRENT_DATE(), birth_date) / 365, 1) AS age, -- diferencia de fechas
+        LEFT(cuit, 2) AS cuit_id, -- cant. de caracteres de izq a der
+        RIGHT(cuit, 1) AS cuit_verifier, -- cant. de caracteres  de der a izq
+        POSITION("-" in cuit) AS cuit_separator, -- ubica a partir de que posicion empieza el texto buscado
+        SUBSTRING(cuit, 4, 8) AS document -- cant de caracteres  de izq a der  a partir de la position indicada
+	FROM users_data;
 /*Tabla Categorias*/
 	SELECT * FROM categories
 	WHERE description LIKE "bot_ni_a";
@@ -78,10 +87,20 @@
 	FROM posts
     GROUP BY user;
 /*Tabla Ventas*/
+	-- facturacion final por venta
 	SELECT 
 		sale_id,
         user,
         post,
         price * quantity AS total
     FROM sales;
+    -- articulos vendidos por publicacion
+    SELECT 
+        post,
+		GROUP_CONCAT(user),
+		SUM(quantity) AS stock_count
+	FROM sales
+    GROUP BY post;
+        
+        
     
