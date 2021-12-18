@@ -19,6 +19,11 @@
 		( SELECT description FROM products WHERE product_id = product ), 
         ' publicado por ', (SELECT user_name FROM users WHERE user_id = user) )
     WHERE post_title IS NULL;
+	-- actualizacion masiva contemplando la ausencia de ventas
+	UPDATE posts SET stock = CASE
+		WHEN (SELECT SUM(quantity) FROM sales WHERE post = post_id ) IS NULL THEN stock -- precio sin modificaciones
+		ELSE stock - (SELECT SUM(quantity) FROM sales WHERE post = post_id) -- diferencia de productos vendidos
+	END;
 /*Tablas Ventas*/
     -- actualizacion por subconsulta de datos (unicos)
     UPDATE sales SET price = ( SELECT price FROM posts WHERE post_id = post ) 
