@@ -18,12 +18,19 @@
     UPDATE posts SET post_title = CONCAT( 
 		( SELECT description FROM products WHERE product_id = product ), 
         ' publicado por ', (SELECT user_name FROM users WHERE user_id = user) )
-    WHERE post_title IS NULL;
-	-- actualizacion masiva contemplando la ausencia de ventas
-	UPDATE posts SET stock = CASE
-		WHEN (SELECT SUM(quantity) FROM sales WHERE post = post_id ) IS NULL THEN stock -- precio sin modificaciones
-		ELSE stock - (SELECT SUM(quantity) FROM sales WHERE post = post_id) -- diferencia de productos vendidos
+    WHERE post_title IS NULL;	
+    -- actualizacion de precios por casos
+    UPDATE posts SET price = CASE
+		WHEN user IN(1,3,4) THEN price + price * 0.10 -- c215714n / cristian / user aumentan 10%
+        WHEN user BETWEEN 2 AND 8 THEN price + price * 0.15 -- windows / juan_perez / tux aumentan 15%
+        ELSE price * 0.85 -- los demas (macOS) disminuyen un 15%
 	END;
+    SELECT * FROM posts;
+	-- actualizacion contemplando ausencia de ventas y precio indefinido
+    UPDATE posts SET stock = CASE
+		WHEN ( SELECT SUM(quantity) FROM sales WHERE post = post_id AND price IS NULL ) IS NULL THEN stock
+        ELSE stock - ( SELECT SUM(quantity) FROM sales WHERE post = post_id AND price IS NULL )
+    END;
 /*Tablas Ventas*/
     -- actualizacion por subconsulta de datos (unicos)
     UPDATE sales SET price = ( SELECT price FROM posts WHERE post_id = post ) 

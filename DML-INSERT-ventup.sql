@@ -63,9 +63,15 @@ USE ventup;
     (5,13,15000,3000), (5,14,65000,2000), (5,12,35999.99,2500), -- windows
     (7,5,23999.99,4000), (7,8,15999.99,2000), (7,6,120000,5000), (7,7,1200,30000), -- tux
     (12,9,350000,2000), (12,17,500,10000), (12,18,400,15000); -- macOS
-
 /*Tabla Ventas*/
 	INSERT INTO sales(user, post, quantity)
     VALUES (4,13,2), (4,8,5), (4,10,1), (4,8,10);
-
-
+    -- carga de valores aleatorios
+    INSERT INTO sales(user, post, quantity)
+    VALUES 
+		( 1, (CEIL(RAND() * 15)), RAND() * 10 ), 	( 3, (CEIL(RAND() * 15)), RAND() * 10 ),
+		( 12, (CEIL(RAND() * 15)), RAND() * 10 ), 	( 5, (CEIL(RAND() * 15)), RAND() * 10 ),
+		( 7, (CEIL(RAND() * 15)), RAND() * 10 ), 	( 3, (CEIL(RAND() * 15)), RAND() * 10 ),
+		( 5, (CEIL(RAND() * 15)), RAND() * 10 ), 	( 1, (CEIL(RAND() * 15)), RAND() * 10 ),
+		( 7, (CEIL(RAND() * 15)), RAND() * 10 ), 	( 6, (CEIL(RAND() * 15)), RAND() * 10 ),
+		( 12, (CEIL(RAND() * 15)), RAND() * 10 ), 	( 12, (CEIL(RAND() * 15)), RAND() * 10 );

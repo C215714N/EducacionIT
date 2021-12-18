@@ -47,6 +47,27 @@ ALTER TABLE users_data
 	ADD COLUMN phone VARCHAR(18) AFTER cuit,
 	MODIFY COLUMN cuit CHAR(13);
 
+CREATE TABLE pay_methods(
+	method_id INT AUTO_INCREMENT,
+    description VARCHAR(20),
+    PRIMARY KEY(method_id),
+    UNIQUE (description)
+);
+DESCRIBE pay_methods;
+
+CREATE TABLE billing(
+	bill_id INT AUTO_INCREMENT,
+    user INT,
+    method INT,
+    bill_title VARCHAR(20),
+    bill_data VARCHAR(30),
+    PRIMARY KEY(bill_id),
+    UNIQUE KEY(user, bill_data),
+    FOREIGN KEY(user) REFERENCES users(user_id),
+    FOREIGN KEY(method) REFERENCES pay_methods(method_id)
+);
+DESCRIBE billing;
+
 CREATE TABLE categories(
 	cat_id INT AUTO_INCREMENT,
     description VARCHAR(50) NOT NULL,
@@ -94,4 +115,7 @@ CREATE TABLE sales(
     FOREIGN KEY(user) REFERENCES users(user_id),
     FOREIGN KEY(post) REFERENCES posts(post_id)
 );
+ALTER TABLE sales
+	ADD COLUMN bill INT,
+    ADD CONSTRAINT FOREIGN KEY(bill) REFERENCES billing(bill_id);
 DESCRIBE sales;
