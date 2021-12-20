@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<!-- Cabecera: Contenido Introductorio -->
+	<header>
+		<h1>Fundamentos Web</h1>
+		<p>html | css</p>
+		<!-- Navegacion: Links mas importantes -->
+		<nav>
+			<ul>
+				<li><!-- Ruta Relativa / Interna -->
+					<a href="index.html">Inicio</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador (refresh) -->
+					<a href="#">Galeria</a>
+				</li>
+				<li><!-- Ruta Ancla / Marcador (#id) -->
+					<a href="#contact">Contacto</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- Contenido Principal -->
+	<main>
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>evitar el uso de caracteres especiales</strong> como los espacios, ya que el navegador los traduce como el conjunto <em>%20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> este interpretaria <em>foto%2001.jpg</em>. Por esta razon se aconseja utilizar guiones(-_) quedando de la siguiente manera <em>"foto_01.jpg"</em>
+			</li>
+			<li>
+				<strong>utilizar minusculas para reducir el margen de error</strong> debido a que los servidores son <em>caseSensitive</em> y por lo tanto no encontraria el archivo si no esta escrito tal cual su nombre, es decir que no es lo mismo <em>"BACKGROUND.jpg" "Background.jpg" "background.jpg"</em>
+			</li>
+			<li>
+				<strong>utilizar nombres descriptivos</strong> para facilitar la implementacion de los archivos, como <em>"perritos_jugando.jpg" o "background.jpg"</em>. Evitar nombres genericos como <em>"foto_01.jpg"</em> asi como tambien nombres automatizados como <em>2021-12-20-1035100.jpg</em>
+			</li>
+		</ul>
+		<div>
+			<h2>Implementacion de Imagenes</h2>
+			<img src="assets/background/osx-mojave.jpg" alt="Desierto Mojave">
+		</div>
+	</main>
+	<!-- Pie de Pagina Gral -->
+	<footer>
+		<div>
+			<h2>Nuestras redes sociales</h2>
+			<a href="https://facebook.com" target="_blank">Facebook</a>
+			<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+			<a href="https://github.com/c215714n/EducacionIT/tree/html-lx09" target="_blank">GitHub</a>
+		</div>
+		<p id="contact">&copy;2021 Todos los derechos reservados</p>
+	</footer>
+</body>
+</html>
