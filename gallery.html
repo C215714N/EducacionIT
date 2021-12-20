@@ -4,6 +4,58 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores Generales */
+		body{
+			margin: 0;
+			font-family: 'segoe ui','calibri','century gothic', sans-serif;
+		}
+		/* Selectores Multiples (,) */
+		header, 
+		main, 
+		footer{
+			padding: 20px;
+		}
+		header,
+		footer{
+			color: #336;
+			background-color: #ffafcf; 	/*rgb - 16777216*/
+		}
+		/*Selectores Especificos (padre hijo)*/
+		nav a{
+			color: #448;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		nav ul{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		nav li{
+			display: inline-block;
+			padding: 5px;
+		}
+		/*Pseudoclase: Estado o Instancia de un elemento*/
+		nav li:hover{
+			background-color: rgba(204,51,51,.3);
+		}
+		/*Galeria*/
+		main img{
+			width: 100%;
+			max-width: 320px;
+		}
+		main p{
+			padding: 10px;
+			background-color: #eee;
+			overflow: hidden;
+		}
+		p img{
+			float: left;
+			margin-right: 10px;
+		}
+	</style>
 </head>
 <body>
 	<!-- Cabecera: Contenido Introductorio -->
@@ -35,13 +87,35 @@
 			<li>
 				<strong>utilizar minusculas para reducir el margen de error</strong> debido a que los servidores son <em>caseSensitive</em> y por lo tanto no encontraria el archivo si no esta escrito tal cual su nombre, es decir que no es lo mismo <em>"BACKGROUND.jpg" "Background.jpg" "background.jpg"</em>
 			</li>
-			<li>
+			<lix>
 				<strong>utilizar nombres descriptivos</strong> para facilitar la implementacion de los archivos, como <em>"perritos_jugando.jpg" o "background.jpg"</em>. Evitar nombres genericos como <em>"foto_01.jpg"</em> asi como tambien nombres automatizados como <em>2021-12-20-1035100.jpg</em>
 			</li>
 		</ul>
 		<div>
 			<h2>Implementacion de Imagenes</h2>
-			<img src="assets/background/osx-mojave.jpg" alt="Desierto Mojave">
+			<img src="assets/img/ih-greenhulk-01.jpg" alt="La muerte de Betty Banner">
+			<img src="assets/img/ih-greenhulk-02.jpg" alt="La muerte de Betty Banner">
+			<img src="assets/img/ih-greenhulk-03.jpg" alt="La muerte de Betty Banner">
+			<img src="assets/img/ih-greenhulk-04.jpg" alt="La muerte de Betty Banner">
+		</div>
+		<div>
+			<h2>Imagenes y texto</h2>
+			<p>
+				<img src="assets/img/jjba-theworld-01.jpg" alt="Dibujo the World">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
+			</p>
+			<p>
+				<img src="assets/img/jjba-theworld-02.jpg" alt="Dibujo the World">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
+			</p>
+			<p>
+				<img src="assets/img/jjba-theworld-03.jpg" alt="Dibujo the World">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
+			</p>
+			<p>
+				<img src="assets/img/jjba-theworld-04.jpg" alt="Dibujo the World">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
+			</p>
 		</div>
 	</main>
 	<!-- Pie de Pagina Gral -->
