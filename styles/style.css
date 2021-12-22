@@ -1,0 +1,40 @@
+/*Reglas Generales*/
+	body{
+		font-family: 'calibri', sans-serif;
+	}
+	/*Margenes*/
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	header p,
+	.menu{
+		margin: 0;
+	}
+	/*Rellenos*/
+	.menu{
+		padding: 0;
+	}
+/*Navegacion*/
+	.menu{
+		text-align: center;
+		background-color: #448;
+		list-style: none;
+	}
+	.menu a{
+		color: #eee;
+		text-decoration: none;
+	}
+	.menu li{
+		display: inline-block;
+		padding: 8px;
+	}
+	.menu li:hover{
+		text-shadow: 0 0 8px #eee;
+	}
+/*Cabecera*/
+
+/*Contenido*/
+
+/*Pie de Pagina
