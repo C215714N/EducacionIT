@@ -29,7 +29,6 @@
 				Son elementos que permiten el <strong>intercambio de datos</strong>	entre <em> cliente y servidor</em>, a diferencia de otras etiquetas como <em>a (hipervinculos) </em> cuya interaccion da como resultado un cambio de pagina (siempre el mismo archivo), los formularios permiten al	<strong> cliente </strong> interactuar con el sitio, ya sea completando o seleccionando opciones para luego realizar una peticion al
 				<strong> servidor </strong> que realizara una respuesta en base a los <em> datos y configuracion </em> definidos por el desarrollador.
 			</p>
-
 			<p>
 				Para implementar un formulario en una pagina es necesario utilizar la etiqueta
 				<strong>&lt;form&gt;</strong> y definir diferentes parametros dentro de la misma, ademas de los elementos que compondran al mismo para que sea completado por los usuarios que visiten la pagina. 
@@ -68,7 +67,42 @@
 		</article>
 	</main>
 	<footer>
-
+		<form id="contact" action="contact.php" method="POST">
+			<label for="contactName">Ingrese su Nombre</label>
+			<input 
+				id="contactName" 
+				name="nombre"
+				placeholder="Nombre: Cristian Racedo" 
+				type="text"
+				minlength="3"
+				maxlength="50" 
+				required>
+			<label for="contactAge">Ingrese su Edad</label>
+			<input 
+				id="contactAge" 
+				name="edad" 
+				type="number"
+				min="0"
+				max="150"
+				required>
+			<label for="contactEmail">Ingrese su Correo</label>
+			<input 
+				id="contactEmail" 
+				name="correo" 
+				placeholder="Correo: cristiandracedo@hotmail.com" 
+				type="email"
+				minlength="8"
+				required>
+			<label for="contactConsult">Ingrese su Consulta</label>
+			<textarea 
+				id="contactConsult" 
+				name="consulta"
+				placeholder="Buenas, necesito un presupuesto"
+				minlength="20" 
+				maxlength="200" 
+				required></textarea>
+			<button>enviar</button>
+		</form>
 	</footer>
 </body>
 </html>
