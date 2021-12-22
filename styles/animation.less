@@ -1,0 +1,56 @@
+/* Estilos Animados*/
+	.less{
+		animation: rotate 360s linear infinite;
+		.timing{
+			div{
+				width: 3rem;
+				height: 3rem;
+				margin: .25rem;
+				border-radius:50%;
+				box-shadow: 
+					-.25rem .25rem .25rem #eee8 inset,
+					-.25rem .25rem .5rem #333;
+				.colors(6);
+			}
+		}
+	}
+/* Fotogramas */
+@animations: 
+	lineal, 
+	cuadratica, 
+	trigonometrica, 
+	exponencial, 
+	limite;
+.keys(@i:1) when(@i <= length(@animations)){
+	@keyframes extract(@animations,@i){
+		.progress(@p:0%; @y: -50vh) when (@p <= 100%){
+			@functions:
+				(@y / 2vh), // lineal
+				(pow(@y, 2vh) / 25vh), // cuadratica
+				sin(@y) * 5vh, // trigonometrica
+				pow(1.2vh, @y), // exponencial
+				if(@y = 0, 1vh, (1vh / @y)); // limite
+			@x: (50vw + @y / 2);
+			@{p}{
+				transform: translate(@x, extract(@functions, @i));
+			}
+			.progress(@p + 2, @y + 2);
+		} .progress;
+	}
+	.keys(@i + 1);
+}
+// Invocacion
+	.keys;
+/*Mixins*/
+	.colors(@r; @i:1) when (@i <= @r){
+		&:nth-child(@{i}n){
+			background: radial-gradient(
+				circle at top right,
+				hsl(@i * 30, 50%, 60%),
+				hsl(@i * 30 + 60, 50%, 60%)
+			);
+			animation: extract(@animations, @i) 5s (@i / 2s) alternate infinite;
+		
+		}
+		.colors(@r, @i + 1)
+	}

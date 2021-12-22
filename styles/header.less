@@ -15,10 +15,19 @@
 		.flexbox(column);
 		.normalize(min(100vh, 640px); 1rem; center; text-align; @ma:min-height);
 		position: relative;
+		perspective-origin: center;
+		perspective: 25rem;
 		color: @light;
 		// Encabezado
 		.header{
+			transform: rotateX(30deg);
+			animation: star_wars 10s linear 1s;
+			animation-fill-mode: backwards;
 			.font;
+			h1{	
+				font-family: 'star wars';
+				text-shadow: 0 0 min(2vw, 3rem) var(--dark);
+			}
 			h1,p{ &:extend(.zeroise); }
 			.control{
 				.flexbox;
@@ -109,3 +118,27 @@
 	}
 	/*Sistema de Grillas*/
 	.grid;
+/* animacion*/
+@keyframes star_wars{
+	0%{
+		transform: 
+			rotateX(0deg)
+			translateZ(100rem)
+			translateY(100vh);
+	}
+	30%{
+		transform: 
+			rotateX(0deg)
+			translateZ(0);
+	}
+	60%{
+		transform: 
+			translateY(-100vh)
+			rotateX(15deg)
+			scale(.5);
+	}
+	100%{
+		transform: rotateX(30deg);
+	}
+}
+@import url('animation.less');
