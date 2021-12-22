@@ -55,6 +55,15 @@
 			float: left;
 			margin-right: 10px;
 		}
+		/*Selector de id (#id)*/
+		#contact{
+			text-shadow: 0 0 8px #c33;/*-x+ -y+ blur color*/
+		}
+		/*Selector de class (.class)*/
+		.dark-mode{
+			color: #fafcfd;
+			background-color: #448;
+		}
 	</style>
 </head>
 <body>
@@ -68,6 +77,9 @@
 				<li><!-- Ruta Relativa / Interna -->
 					<a href="index.html">Inicio</a>
 				</li>
+				<li>
+					<a href="about.html">Acerca</a>
+				</li>
 				<li><!-- Ruta Ancla / Marcador (refresh) -->
 					<a href="#">Galeria</a>
 				</li>
@@ -80,7 +92,7 @@
 	<!-- Contenido Principal -->
 	<main>
 		<h2>Reglas de Nomenclatura</h2>
-		<ul>
+		<ul class="dark-mode">
 			<li>
 				<strong>evitar el uso de caracteres especiales</strong> como los espacios, ya que el navegador los traduce como el conjunto <em>%20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> este interpretaria <em>foto%2001.jpg</em>. Por esta razon se aconseja utilizar guiones(-_) quedando de la siguiente manera <em>"foto_01.jpg"</em>
 			</li>
@@ -104,7 +116,7 @@
 				<img src="assets/img/jjba-theworld-01.jpg" alt="Dibujo the World">
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
 			</p>
-			<p>
+			<p class="dark-mode">
 				<img src="assets/img/jjba-theworld-02.jpg" alt="Dibujo the World">
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
 			</p>
@@ -112,7 +124,7 @@
 				<img src="assets/img/jjba-theworld-03.jpg" alt="Dibujo the World">
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
 			</p>
-			<p>
+			<p class="dark-mode">
 				<img src="assets/img/jjba-theworld-04.jpg" alt="Dibujo the World">
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident veritatis cumque delectus, assumenda perspiciatis, quod excepturi omnis aliquid dolorem doloribus aliquam. Quam, modi magnam sit rerum ratione maxime, soluta aperiam pariatur eius labore nam commodi accusantium non illum provident dignissimos quibusdam dolor nihil eveniet doloremque, nesciunt temporibus qui dolorem.
 			</p>
