@@ -68,3 +68,47 @@
 	.transition:hover div{
 		transform: translate(0, .5rem);
 	}
+/*Animaciones*/
+	.animation{
+		display: grid;
+		justify-content: center;
+		overflow: hidden;
+	}
+	.animation div{
+		max-width: 8rem;
+		margin: 1rem;
+		padding: 1rem .5rem;
+		text-align: center;
+		color: var(--light);
+		background: radial-gradient(ellipse at top left, #c36, #448);
+		box-shadow: 
+				-.5rem .5rem .25rem var(--dark),
+				-.5rem .5rem .25rem rgba(238,238,238,.3) inset;
+	}
+	.animation div{
+		animation-name: race;
+		animation-duration: 3s;
+		animation-delay: 2s;
+		animation-iteration-count: 5;
+		animation-fill-mode: backwards;
+	}
+	/*Timing Function*/
+	.timing div{ border-radius: 0 2.5rem 2.5rem 0; }
+	.timing div:nth-child(1n){ animation-timing-function: ease; }
+	.timing div:nth-child(2n){ animation-timing-function: ease-in; }
+	.timing div:nth-child(3n){ animation-timing-function: ease-out; }
+	.timing div:nth-child(4n){ animation-timing-function: ease-in-out; }
+	.timing div:nth-child(5n){ animation-timing-function: linear; }
+	.timing div:nth-child(6n){ animation-timing-function: cubic-bezier(0,1,1,-1); }
+	/*Direction*/
+	.direction div{ border-radius: 1.5rem; }
+	.direction div:nth-child(1n){ animation-direction: normal; }
+	.direction div:nth-child(2n){ animation-direction: reverse; }
+	.direction div:nth-child(3n){ animation-direction: alternate; }
+	.direction div:nth-child(4n){ animation-direction: alternate-reverse; }
+
+/*Fotogramas Clave*/
+	@keyframes race{
+		from{ transform: translate(calc(min(50vw, 720px)*-1));	}
+		to{	transform: translate(min(50vw, 720px)); }
+	}
