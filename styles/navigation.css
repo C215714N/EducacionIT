@@ -17,6 +17,15 @@ nav a{
 	color: var(--light);
 	text-decoration: none;
 }
+nav a:hover{
+	animation: glow .5s alternate infinite;
+}
+nav a:hover::before{
+	transform-origin: bottom center;
+	position: relative;
+	bottom: .25rem;
+	animation: shake .5s alternate infinite;
+}
 nav span{
 	display: none;
 	padding: .25rem;
@@ -30,4 +39,11 @@ nav span{
 	nav span{
 		display: block;
 	}
+}
+@keyframes shake{
+	from{ transform: rotate(-30deg); }
+	to{ transform: rotate(30deg); }
+}
+@keyframes glow{
+	to{ text-shadow: 0 0 .5rem var(--light); }
 }
