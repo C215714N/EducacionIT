@@ -106,9 +106,25 @@
 	.direction div:nth-child(2n){ animation-direction: reverse; }
 	.direction div:nth-child(3n){ animation-direction: alternate; }
 	.direction div:nth-child(4n){ animation-direction: alternate-reverse; }
-
+/*Ejemplos*/
+	.loading{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.loading div{
+		width: 5rem;
+		height: 5rem;
+		margin: .25rem;
+		border-radius: 50%;
+		border: .5rem solid;
+		border-color: #acd #8ac #36c #248;
+		animation:loading 1s infinite;
+	}
 /*Fotogramas Clave*/
 	@keyframes race{
 		from{ transform: translate(calc(min(50vw, 720px)*-1));	}
 		to{	transform: translate(min(50vw, 720px)); }
+	}
+	@keyframes loading{
+		to{ transform: rotate(360deg); }
 	}
