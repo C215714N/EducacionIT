@@ -9,6 +9,8 @@
 	const spanLst = d.querySelectorAll('.control')
 	const mapBtn = d.querySelector('.map button')
 	const mapFrm = d.querySelector('.map iframe')
+	const aniBtn = d.querySelector('.translate button')
+	const aniDiv = d.querySelector('.translate div')
 /*Progress Bar*/
 	pIn.addEventListener('input', () => pBar.value = pIn.value)
 /*Canvas*/
@@ -52,3 +54,7 @@
 	window.setInterval(() => next[0].click(), 15000)
 /*Mapa de contacto*/
 	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max','icon-min') : mapBtn.classList.replace('icon-min','icon-max')
+/*Reproducir animacion*/
+	aniBtn.onclick = () => aniDiv.style.animationPlayState === 'paused' ? 
+		(aniDiv.style.animationPlayState = 'running', aniBtn.classList.replace('icon-play','icon-pause') ) : 
+		(aniDiv.style.animationPlayState = 'paused', aniBtn.classList.replace('icon-pause','icon-play') )

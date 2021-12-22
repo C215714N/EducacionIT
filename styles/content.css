@@ -120,11 +120,68 @@
 		border-color: #acd #8ac #36c #248;
 		animation:loading 1s infinite;
 	}
+	.translate,
+	.background{
+		position: relative;
+		min-height: 320px;
+	}
+	.translate div{
+		width: 5rem;
+		height: 3rem;
+		border: .1rem solid;
+		animation: translate 5s linear infinite;
+		animation-play-state: paused;
+	}
+	.translate button{
+		position: absolute;
+		bottom: .5rem;
+		right: .5rem;
+		font-size: 2rem;
+	}
+	.background{
+		background:
+			linear-gradient(
+				to right,
+				hsl(0,50%,50%),
+				hsl(60,50%,50%),
+				hsl(120,50%,50%),
+				hsl(180,50%,50%),
+				hsl(240,50%,50%),
+				hsl(300,50%,50%),
+				hsl(0,50%,50%)
+			) -500%/500%;
+		animation: bg 600s linear infinite;
+	}
 /*Fotogramas Clave*/
 	@keyframes race{
 		from{ transform: translate(calc(min(50vw, 720px)*-1));	}
 		to{	transform: translate(min(50vw, 720px)); }
 	}
+	@keyframes bg{
+		from{ background-position: 0; }
+	}
 	@keyframes loading{
 		to{ transform: rotate(360deg); }
+	}
+	@keyframes translate{
+		0%{
+			transform: translate(0,0) skew(15deg, 0);
+			background-color: hsl(0, 50%,50%);
+		}
+		25%{
+			transform: translate(min(40vw, 720px), 0) skew(0,15deg);
+			background-color: hsl(90, 50%,50%);
+		}
+		50%{
+			transform: translate(min(40vw, 720px), 200px) skew(-15deg,0);
+			background-color: hsl(180, 50%,50%);
+		}
+		75%{
+			transform: translate(0, 200px) skew(0,-15deg);
+			background-color: hsl(270, 50%,50%);
+		}
+		100%{
+			transform: translate(0,0) skew(15deg,0	);
+			background-color: hsl(0, 50%,50%);
+		}
 	}
