@@ -727,7 +727,7 @@
     width: 100%;
   }
 }
-.icon, #footer .social a {
+.icon, #footer .social a, #footer .map button {
   margin: 0.25rem;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
@@ -737,17 +737,32 @@
   min-height: 3rem;
   transition: all 1s;
 }
-.icon:hover, #footer .social a:hover {
+.icon:hover, #footer .social a:hover, #footer .map button:hover {
   background: #eee var(--bg) center/2rem no-repeat;
   background-attachment: scroll;
   box-shadow: 0 0 0.5rem #333;
   transform: rotate(360deg) translateY(-0.25rem);
 }
 
+.fixed, #footer .map iframe.active + button, #footer .map iframe.active {
+  position: fixed;
+  z-index: 2;
+}
+
 #footer {
   position: relative;
   text-align: center;
   padding: 1rem;
+}
+#footer .map iframe {
+  border: none;
+  opacity: 0.9;
+}
+#footer .map button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.2rem;
 }
 #footer #contact {
   margin: 3rem auto 1rem;

@@ -7,6 +7,8 @@
 	const next = d.querySelectorAll('.icon-next')
 	const slideLst = d.querySelectorAll('.slide')
 	const spanLst = d.querySelectorAll('.control')
+	const mapBtn = d.querySelector('.map button')
+	const mapFrm = d.querySelector('.map iframe')
 /*Progress Bar*/
 	pIn.addEventListener('input', () => pBar.value = pIn.value)
 /*Canvas*/
@@ -48,3 +50,5 @@
 		getItem(control,true)
 	} )
 	window.setInterval(() => next[0].click(), 15000)
+/*Mapa de contacto*/
+	mapBtn.onclick = () => mapFrm.classList.toggle('active') ? mapBtn.classList.replace('icon-max','icon-min') : mapBtn.classList.replace('icon-min','icon-max')

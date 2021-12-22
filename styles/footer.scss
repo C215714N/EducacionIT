@@ -1,3 +1,4 @@
+@use 'sass:math';
 // 	Variables
 	$path: '../assets/icon';
 	$social: 
@@ -52,14 +53,14 @@
 		}	}	}
 	/*Sistema de Grillas*/
 		@for $i from 1 through $col{
-			.col-#{$i}{ width: percentage( $i / $col ); }
+			.col-#{$i}{ width: percentage( math.div($i, $col) ); }
 		}
 	/*Sistema de grillas responsive*/
 		@each $vn, $vw, $max in $media{
 		@media screen and (min-width: $vw){
 			.container, .container-#{$vn}{ max-width: $max; }
 			@for $i from 1 through $col{
-			.col-#{$vn}-#{$i}{ width: percentage( $i / $col ); }
+			.col-#{$vn}-#{$i}{ width: percentage( math.div($i, $col)); }
 		}	}	}
 //	Styles
 	.icon{
@@ -74,11 +75,27 @@
 			transform: rotate(360deg) translateY(-.25rem);
 		}
 	}
+	.fixed{
+		position: fixed;
+		z-index: 2;
+	}
 // 	Nesting
 	#footer{
 		@include normalize(relative,1rem,center,text-align,position);
 		.map{
-
+			iframe{
+				border: none;
+				opacity: .9;
+				&.active{ @extend .fixed;
+				& + button{	@extend .fixed; } }
+			}
+			button{
+				@extend .icon;
+				position: absolute;
+				top: .5rem;
+				right: .5rem;
+				font-size: 1.2rem;
+			}
 		}
 		#contact{
 			@include normalize(3rem auto 1rem, 1rem, .25rem, border-radius);
