@@ -60,7 +60,7 @@
 		</article>
 	</main>
 	<footer>
-		<form id="contact" action="contact.php" method="POST">
+		<form id="contact" action="scripts/contact.php" method="POST">
 			<label for="contactName">Ingrese su Nombre</label>
 			<input 
 				id="contactName" 
@@ -94,6 +94,16 @@
 				minlength="20" 
 				maxlength="200" 
 				required></textarea>
+			<div class="terms">
+				<label for="yes">
+					<input 
+						id="yes" 
+						name="terminos" 
+						type="checkbox"
+						value="si">
+					Acepto los <a href="">terminos</a>
+				</label>
+			</div>
 			<button>enviar</button>
 		</form>
 	</footer>
