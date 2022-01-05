@@ -37,4 +37,31 @@
 
 /*Contenido*/
 
-/*Pie de Pagina
+/*Pie de Pagina*/
+	#contact{
+		max-width: 540px;
+		margin: 24px auto; /*top right bottom left*/
+		border-radius: 5px;
+		padding: 16px;
+		background-color: #eee;
+	}
+	#contact input,
+	#contact textarea{
+		display: block;
+		width: calc(100% - 12px);
+		outline: none;
+		border: 1px solid #333;
+		border-radius: 4px;
+		padding: 5px;
+		resize: none;
+		font-family: 'segoe ui', sans-serif;
+	}
+	#contact .terms input{
+		display: inline-block;
+		width: 16px;
+	}
+	#contact button{
+		display: block;
+		padding: 4px 8px;
+		margin-left: auto;
+	}
