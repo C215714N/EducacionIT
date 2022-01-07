@@ -114,5 +114,4 @@
 	FROM sales
     GROUP BY post;
         
-        
     

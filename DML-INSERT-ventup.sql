@@ -33,7 +33,24 @@ USE ventup;
 		(1, "Racedo","Cristian Damian","20-35336446-5", "1991-04-18"),
         (6, "Perez", "Juan", "30-03034560-7", "1965-07-09"),
         (4, "Doe", "John", "25-12342732-8", "1980-07-04");
-        
+/* Tabla Metodos de Pago*/
+	INSERT INTO pay_methods(description)
+    VALUES ("efectivo"),("debito"),("credito"),("cbu"),("cvu"),("cheque");
+/* Tabla Billeteras de Usuario*/
+	INSERT INTO billing(user, method, bill_title, bill_data)
+    VALUES
+		(1,2,"BBVA Debito","4293-2879-5483-1298"),(1,3,"Galicia Credito","3298-1235-2983-2348"),(1,4,"BBVA CBU","tango.foxtrot.delta"), -- c215714n
+        (7,1,"Pesos","20-73249328-9"),(7,5,"MP","kernel.open.source"),(7,6,"Chequera","4324-12394293-233"),(7,4,"Santander Rio","10293478012298200012"), -- Tux
+        (12,4,"Black America","1927-8410-2934-8273"),(12,4,"Platinum America","1092-2039-1927-1239"), -- macOS
+        (5,2,"Gold Amex","2398-4293-8472-9289"),(5,3,"Silver Amex","2345-2349-3894-2928"), -- Windows
+        (6,5,"UALA","juan.perez.uala"),(6,5,"BIMO","283710923847019238470"),(6,3,"ICBC","1092-1238-2348-2309"); -- Juan Perez
+	INSERT INTO billing SET
+		user = 3,
+		method = 3,
+		bill_title = "Nacion",
+		bill_data = "cuenta.para.pagar";
+	INSERT INTO billing(user, method, bill_title, bill_data)
+    VALUES (4,2,"BRUBANK","1209-3948-1029-3847"),(4,3,"Provincia", "1230-7948-1720-3941"),(4,5,"MP","user.payment");
 /* Tabla Categorias */
 	INSERT INTO categories(description)
     VALUES ("tecnologia"),("limpieza"),("alimentos"),("botanica"),("electrodomesticos"),("muebles");

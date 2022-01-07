@@ -13,6 +13,9 @@
 /*Data Manipulation Language
 	UPDATE actualiza registros de las tablas
 */
+/*Tabla Billeteras de Usuarios*/
+	UPDATE billing SET method = 3
+    WHERE user = (SELECT user_id FROM users WHERE user_name = "macOS");
 /*Tabla Publicaciones*/
 	-- titulos de las publicaciones consultando productos y usuarios
     UPDATE posts SET post_title = CONCAT( 
@@ -35,4 +38,13 @@
     -- actualizacion por subconsulta de datos (unicos)
     UPDATE sales SET price = ( SELECT price FROM posts WHERE post_id = post ) 
 	WHERE price IS NULL;
-    
+	-- billetera del usuario que corresponda con el metodo seleccionado
+	UPDATE sales SET
+	bill = (
+		SELECT MIN(bill_id) FROM billing 
+		WHERE sales.user = billing.user AND method = 4
+	)	WHERE bill IS NULL;
+    -- billetera aleatoria entre 16 y 18
+	UPDATE sales SET
+	bill = CEIL(RAND() * 3) + 15
+	WHERE user = 4;
