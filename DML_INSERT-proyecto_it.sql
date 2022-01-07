@@ -21,3 +21,24 @@
 		("Tux","l.torvalds@linux.com","gnu_kernel"),
         ("Windows","b.gates@microsoft.com","system_32"),
         ("macOS","s.jobs@apple.com","macinstosh");
+        
+/*Tabla Categorias*/
+	INSERT INTO categories(description)
+    VALUES 
+		("tecnologia"),
+        ("hogar"),
+        ("maquillaje"),
+        ("indumentaria"),
+        ("mecanica"),
+        ("ferreteria"),
+        ("nft"),
+        ("entretenimiento");
+
+/* Tabla Products */
+	INSERT INTO products(product, category)
+	VALUES
+		("remera",4),("camisa",4),("pantalon",4), -- indumentaria
+		("aire acondicionado",2),("televisor",2),("parlante",2), -- hogar
+		("teclado",1),("laptop",1),("celular",1),("monitor",1); -- tecnologia
+	INSERT INTO products(product, category)
+    VALUES ("neumaticos",5);
