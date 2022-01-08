@@ -8,7 +8,7 @@
     <title>Fundamentos Web</title>
 </head>
 <!-- Cuerpo: Parte Visible (textos/imagenes/hipervinculos) -->
-<body>
+<body style="font-family: segoe ui, calibri, sans-serif;">
     <!-- Encabezado Nivel 1 (heading) -->
     <h1>Fundamentos Web</h1>
     <!-- Parrafo (paragraph) -->
@@ -24,5 +24,54 @@
         <li>Tablas y contenido Multimedia</li>
         <li>Flexbox y Acceso FTP</li>
     </ol>
+    <h2>Desarrollo Front-End</h2>
+    <p>
+        Desarrollo del lado del cliente (navegador) que consiste en aquellas caracteristicas que se pueden representar sin necesidad de consultar o solicitar permiso a un servidor. Entre los lenguajes que componen el Front-End se encuentran:
+    </p>
+    <!-- Lista Desordenada (Unordered List) -->
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+    </ul>
+    <h3>HTML (HyperText Markup Language)</h3>
+    <p>
+        Lenguaje de Marcado de Hipertexto (Estructura) que utiliza etiquetas para definir la funcion que cumple cada uno de los elementos dentro de la pagina. El orden de los factores altera el producto y podemos clasificar las etiquetas de la siguiente manera:
+    </p>
+    <ul>
+        <li>
+            Segun el espacio ocupado dentro de la pagina:
+            <br> 
+            <!-- Contenido Importante (destacado) -->
+            <strong>Bloque: </strong>
+            son aquellas que ocupan todo el ancho de su contenedor,
+            se les puede dar tamaño y generan salto de linea,
+            <!-- Contenido Contextualizado (enfasis) -->
+            <em> funcionan principalmente como contenedores.</em>
+            <br><!-- Salto de linea (break) | huerfana -->
+            <strong>Linea: </strong>
+            son aquellas que ocupan el ancho de su contenido,
+            su tamaño es automatico y comparten linea con otras etiquetas de su tipo,
+            <em> funcionan principalmente como contenido</em>
+        </li>
+        <li>
+            Segun la funcion que cumple dentro de la pagina:
+            <br>
+            <strong>Semantica: </strong>
+            son aquellas que marcan una jerarquia dentro de la pagina,
+            se corresponden con la mayoria de los elementos utilizados,
+            y facilitan la implementacion de la estructura.
+            <br>
+            <strong>Presentacional: </strong>
+            son aquellas que no poseen carga semantica, cuyo uso se limita pura y exclusivamente a facilitar la aplicacion del diseño. Si bien no se utilizan mucho, unas de las mas implementadas son <em>por ejemplo: div y span</em>
+        </li>
+    </ul>
+    <!-- Division (capa) | contenedor -->
+    <div style="color:whitesmoke; background-color: darkslateblue;">
+        <h3>CSS (Cascading Styles Sheets)</h3>
+        <p>
+            <span style="color:gold; font-size: 32px;">L</span>as Hojas de estilo en cascada (Diseño Grafico) utilizan selectores y reglas para definir el aspecto de los elementos dentro de la pagina. Los estilos utilizados con CSS pueden ser Internos o Externos, el orden de los factores NO altera el producto.
+        </p>
+    </div>
 </body>
 </html>
