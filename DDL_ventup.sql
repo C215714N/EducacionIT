@@ -104,6 +104,18 @@ CREATE TABLE posts(
 );
 DESCRIBE posts;
 
+CREATE TABLE shopping_chart(
+	chart_id INT AUTO_INCREMENT,
+    user INT NOT NULL,
+    post INT NOT NULL,
+    quantity INT NOT NULL,
+    PRIMARY KEY(chart_id),
+    UNIQUE KEY(user, post),
+    FOREIGN KEY(user) REFERENCES users(user_id),
+    FOREIGN KEY(post) REFERENCES posts(post_id)
+); 
+DESCRIBE shopping_chart;
+
 CREATE TABLE sales(
 	sale_id INT AUTO_INCREMENT,
     user INT,

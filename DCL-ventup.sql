@@ -17,7 +17,14 @@
     GRANT INSERT, SELECT, UPDATE, DELETE -- DML
     ON ventup.*
     TO 'manager'@'localhost';
-    
+
+/*usuario app - manipular registros (DML != DELETE)*/
+	DROP USER IF EXISTS 'client'@'localhost';
+	CREATE USER 'client'@'localhost' IDENTIFIED BY 'access';
+	GRANT INSERT, SELECT, UPDATE 
+	ON ventup.*
+	TO 'client'@'localhost';
+
 /*empleado - ingresar registros*/
 	DROP USER IF EXISTS 'employee'@'localhost';
     CREATE USER 'employee'@'localhost'
@@ -33,6 +40,8 @@
     GRANT SELECT
     ON ventup.*
     TO 'invited'@'localhost';
+-- refrescar permisos
+	FLUSH PRIVILEGES;
 
 USE mysql;
 SHOW tables;
