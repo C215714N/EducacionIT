@@ -58,6 +58,50 @@
 				</p>
 			</section>
 		</article>
+		<article>
+			<header class="header">
+				<h2>Contenido Multimedia</h2>
+			</header>
+				<p>
+					Actualmente los navegadores permiten la implementacion de elementos de <strong>audio</strong> y <strong>video</strong> de forma nativa, sin necesidad de instalar plugins o herramientas de terceros.
+				</p>
+				<section>
+					<header>
+						<h3>¿Multimedia sin plugins?</h3>
+					</header>
+					<p>
+						Como se menciona anteriormente, hoy en dia los navegadores permiten la reproduccion de este tipo de contenidos, ya que incorporan una API de reproduccion y en la misma podemos especificar algunos atributos para la implementacion de <em>controles</em> y bucles. Los formatos compatibles con dicho reproductor son <em>.mp3 - .wav - .ogg</em> y <em>.mp4 - .webm - .ogv</em> para audio y video respectivamente.
+					</p>
+					<video src="assets/media/californication.ogv" controls>
+						<p>
+							Lo sentimos pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/californication.ogv">link</a>
+						</p>
+					</video>
+					<video src="assets/media/cant-stop.webm" controls muted autoplay loop>
+						<p>
+							Lo sentimos pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/cant-stop.webm">link</a>
+						</p>
+					</video>
+				</section>
+				<section>
+					<header>
+						<h3>¿Contenido Embebido?</h3>
+					</header>
+					<p>
+						Es una categoria que se utiliza para identificar aquellos elementos que se utilizan dentro de la pagina y pertenecen a un sitio externo o no forman parte del universo HTML. Permite a los motores de busqueda identificar el contenido compartido desde otra web, como <em>por ejemplo: un video de YouTube</em>
+					</p>
+					<iframe 
+						width="727" 
+						height="409" 
+						src="https://www.youtube.com/embed/zJBzHQawsjs" 
+						title="YouTube video player" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe width="727" height="409" src="https://www.youtube.com/embed/AVSHvxs3lXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="530" height="409" src="https://www.youtube.com/embed/uUueCDfJShg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+				</section>
+		</article>
 	</main>
 	<footer>
 		<form id="contact" action="scripts/contact.php" method="POST">
@@ -108,10 +152,10 @@
 			<button>enviar</button>
 		</form>
 		<div class="social">
-			<a href="https://facebook.com" target="_blank"></a>
-			<a href="https://linkedin.com" target="_blank"></a>
-			<a href="https://instagram.com" target="_blank"></a>
-			<a href="https://github.com/c215714n/EducacionIT/tree/html-lx09" target="_blank"></a>
+			<a class="facebook" href="https://facebook.com" target="_blank"></a>
+			<a class="linkedin" href="https://linkedin.com" target="_blank"></a>
+			<a class="instagram" href="https://instagram.com" target="_blank"></a>
+			<a class="github" href="https://github.com/c215714n/EducacionIT/tree/html-lx09" target="_blank"></a>
 		</div>
 		<iframe 
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678329!2d-58.37812478519536!3d-34.60238856493385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1641818463590!5m2!1ses-419!2sar"

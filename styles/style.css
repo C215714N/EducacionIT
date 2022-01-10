@@ -55,6 +55,17 @@
 		padding: 1rem;
 		box-shadow: 0 0 .5rem #999;
 	}
+	.header{
+		color: #eee;
+		background-color: #999;
+		margin: -1rem -1rem .5rem;
+		border-radius: .25rem .25rem 0 0;
+		padding: 1rem;
+		text-shadow: -2px 2px 2px #333;
+	}
+	main header{
+		border-bottom: 1px solid #999;
+	}
 /*Pie de Pagina*/
 	#contact{
 		max-width: 540px;
@@ -102,7 +113,18 @@
 		height: 3rem;
 		border-radius: .25rem;
 		background-color: #eee;
+		background-size: 2rem;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 	.social a:hover{
 		box-shadow: 0 0 .5rem #333;
 	}
+	.facebook{ background-image: url('../assets/icon/facebook.png'); }
+	.facebook:hover{ background-image: url('../assets/icon/facebook.svg'); }
+	.instagram{ background-image: url('../assets/icon/instagram.png'); }
+	.instagram:hover{ background-image: url('../assets/icon/instagram.svg'); }
+	.linkedin{ background-image: url('../assets/icon/linkedin.png'); }
+	.linkedin:hover{ background-image: url('../assets/icon/linkedin.svg'); }
+	.github{ background-image: url('../assets/icon/github.svg'); }
+	.github:hover{ background-image: url('../assets/icon/github.svg'); }
