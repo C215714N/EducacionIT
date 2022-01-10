@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetado Avanzado</title>
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <a href="" class="logo">css</a>
+        <button class="btn">&equiv;</button>
+        <ul class="menu">
+            <li><a href="" class="icon-"><span>Link 1</span></a></li>
+            <li><a href="" class="icon-"><span>Link 2</span></a></li>
+            <li><a href="" class="icon-"><span>Link 3</span></a></li>
+            <li><a href="" class="icon-"><span>Link 4</span></a></li>
+        </ul>
+    </nav>
+    <!-- cabecera -->
+    <header id="header">
+        <h1>Maquetado Avanzado</h1>
+        <p>html | css | js</p>
+    </header>
+    <!-- Contenido -->
+    <main>
+
+    </main>
+    <!-- pie de pagina -->
+    <footer id="footer">
+        <div class="map">
+
+            <button class="btn icon-max"></button>
+        </div>
+        <div class="social">
+            <a href="https://.com" target="_blank"></a>
+            <a href="https://.com" target="_blank"></a>
+            <a href="https://.com" target="_blank"></a>
+            <a href="https://github.com/c215714n/EducacionIT/tree/mav-l19" target="_blank"></a>
+        </div>
+        <form id="contact" action="" method="POST">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="contact_name"
+                type="text" 
+                placeholder="Nombre(*):Cristian Racedo" 
+                pattern="[a-z A-Z ñÑ]{3,50}"
+                maxlength="50"
+                required="required">
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="contact_email"
+                type="email" 
+                placeholder="Correo(*):cristiandracedo@hotmail.com" 
+                minlength="8"
+                required>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone" 
+                name="contact_phone"
+                type="tel" 
+                placeholder="Telefono(*):(5411)0303-4567" 
+                pattern="[0-9]{6,20}|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})"
+                required="required">
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="contact_consult" 
+                placeholder="Buenas, necesito un presupuesto"
+                minlength="20" 
+                maxlength="200" 
+                required></textarea>
+            <button>Enviar</button>
+        </form>
+        <p class="copy">&copy;2022 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
