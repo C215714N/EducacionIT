@@ -1,0 +1,105 @@
+.text-primary {
+  color: #448;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.text-light, #footer #contact {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.bg-primary, #footer #contact {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark, #footer #contact input,
+#footer #contact textarea {
+  border-color: #333;
+}
+
+.border-danger, #footer #contact input:not(:placeholder-shown):invalid,
+#footer #contact textarea:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success, #footer #contact input:valid,
+#footer #contact textarea:valid {
+  border-color: #3c6;
+}
+
+#footer #contact input,
+#footer #contact textarea {
+  outline: none;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,35 @@
+//variables
+	$attributes:
+		text 		color,
+		bg 			background-color,
+		border 		border-color;
+	$colors: 
+		primary		#448,
+		secondary 	#c36,
+		info 		#36c,
+		light 		#eee,
+		dark 		#333,
+		danger		#c33,
+		warning 	#da3,
+		success 	#3c6;
+//mixins
+
+//loops
+	@each $prop, $attr in $attributes{
+		@each $cn, $cv in $colors{
+			.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
+	}	}
+
+//nesting
+#footer{
+	#contact{
+		@extend .text-light, .bg-primary;
+		input,
+		textarea{
+			@extend .border-dark;
+			outline: none;
+			&:valid{ @extend .border-success; }
+			&:not(:placeholder-shown):invalid{ @extend .border-danger; }
+		}
+	}
+}
