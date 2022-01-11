@@ -6,8 +6,15 @@ body,
 h1,
 h2,
 h3,
-h4{
+h4,
+.menu{
 	margin: 0;
+}
+.menu{
+	padding: 0;
+}
+.menu{
+	list-style: none;
 }
 
 @media screen and (min-width: 768px){

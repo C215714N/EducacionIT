@@ -7,7 +7,12 @@
 		position: sticky;
 		top: 0;
 		z-index: 2;
+		padding: .5rem;
 		background: linear-gradient(to right, #c36, #448);
+		@media screen and (min-width:768px){
+			align-items: flex-start;
+			height: 100vh;
+		}
 		a{
 			display: block;
 			color: #eee;
@@ -24,14 +29,12 @@
 			}
 			width: 100%;
 			a:hover{
+				display: flex;
 				animation: glow .5s ease-in alternate infinite;
 				&::before{
-					animation: jump 1s infinite;
-					transform-origin: bottom;
-				}
-			}
-		}
-	}
+					animation: jump .5s ease-out alternate infinite;
+					transform-origin: bottom center;
+	}	}	}	}
 	#header{
 		min-height: min(100vh, 640px);
 		animation: bg 3600s linear infinite;

@@ -6,7 +6,14 @@ nav {
   position: sticky;
   top: 0;
   z-index: 2;
+  padding: 0.5rem;
   background: linear-gradient(to right, #c36, #448);
+}
+@media screen and (min-width: 768px) {
+  nav {
+    align-items: flex-start;
+    height: 100vh;
+  }
 }
 nav a {
   display: block;
@@ -27,11 +34,12 @@ nav .menu {
   }
 }
 nav .menu a:hover {
+  display: flex;
   animation: glow 0.5s ease-in alternate infinite;
 }
 nav .menu a:hover::before {
-  animation: jump 1s infinite;
-  transform-origin: bottom;
+  animation: jump 0.5s ease-out alternate infinite;
+  transform-origin: bottom center;
 }
 #header {
   min-height: min(100vh, 640px);
