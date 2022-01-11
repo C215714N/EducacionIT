@@ -1,6 +1,6 @@
 /*	DML(Data Manipulation Language)
     Agregar/Modificar/Eliminar/Consultar registros
-    Filas de tablas
+    INSERT: cargas filas a las tablas
 */
 
 /* Tabla usuarios */
@@ -21,6 +21,15 @@
 		("Tux","l.torvalds@linux.com","gnu_kernel"),
         ("Windows","b.gates@microsoft.com","system_32"),
         ("macOS","s.jobs@apple.com","macinstosh");
+/*Tabla Datos de Usuario*/
+	# carga por asignacion (programacion)
+    INSERT INTO users_data SET
+		user = 1,
+        first_name = 'Cristian Damian',
+        last_name = 'Racedo',
+        cuit = '20-35336446-5',
+        birth_date = '1991-04-18',
+        gender = 1;
         
 /*Tabla Categorias*/
 	INSERT INTO categories(description)
