@@ -1,0 +1,68 @@
+// nesting
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+		flex-wrap: wrap;
+		position: sticky;
+		top: 0;
+		z-index: 2;
+		background: linear-gradient(to right, #c36, #448);
+		a{
+			display: block;
+			color: #eee;
+			text-decoration: none;
+		}
+		.btn{
+			@media screen and (min-width:768px){
+				display: none;
+			}
+		}
+		.menu{
+			@media screen and (min-width:768px){
+				max-width: 300px;
+			}
+			width: 100%;
+			a:hover{
+				animation: glow .5s ease-in alternate infinite;
+				&::before{
+					animation: jump 1s infinite;
+					transform-origin: bottom;
+				}
+			}
+		}
+	}
+	#header{
+		min-height: min(100vh, 640px);
+		animation: bg 3600s linear infinite;
+		background: linear-gradient(
+			to right,
+			hsl(0,50%,50%),
+			hsl(90, 50%,50%),
+			hsl(180, 50%, 50%),
+			hsl(270, 50%, 50%),
+			hsl(0, 50%, 50%)
+		) 0 / 500%;
+		font-size: ~'min(calc(2vw + .8rem), 3rem)';
+		li{	.bg; }
+	}
+// mixins
+// mixins recursivos
+.bg(@i:1) when (@i <= 12){
+	&:nth-child(@{i}){
+		background-color: hsl(@i * 30, 50%, 50%);
+	}
+	.bg(@i + 1);
+}
+
+// animations
+@keyframes bg{
+	from{ background-position: -500%; }
+}
+@keyframes glow{
+	to{ text-shadow: 0 0 .5rem #eee; }
+}
+@keyframes jump{
+	from{ transform: rotate(-15deg); }
+	to{ transform: rotate(15deg); }
+}

@@ -1,0 +1,26 @@
+*{
+	box-sizing: border-box;
+	font-family: 'calibri', 'segoe ui', sans-serif;
+}
+body,
+h1,
+h2,
+h3,
+h4{
+	margin: 0;
+}
+
+@media screen and (min-width: 768px){
+	body{
+		display: grid;
+		grid-template-columns: 1fr 9fr;
+		grid-template-areas: 
+			'nav header'
+			'nav main'
+			'nav footer'
+	}
+	#header{ grid-area:header }
+	#footer{grid-area: footer;}
+	nav{grid-area: nav;}
+	main{ grid-area: main; }
+}

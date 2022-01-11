@@ -97,9 +97,66 @@
   border-color: #3c6;
 }
 
+.front, #footer .map iframe.active + .btn, #footer .map iframe.active {
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+#footer {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(#4485, #c365);
+}
+#footer .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+#footer .map .btn {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 0;
+  transform: translate(-150%, 50%);
+}
+#footer .social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#footer .social a {
+  margin: 0.25rem;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.5s;
+}
+#footer .social a:hover {
+  transform: rotate(360deg) translateY(-0.5rem);
+  background-color: #eee;
+}
+#footer #contact {
+  margin: 1rem auto;
+  border: 0;
+  padding: 1rem;
+  display: grid;
+  max-width: 540px;
+}
 #footer #contact input,
 #footer #contact textarea {
+  margin: 0;
+  border: 0.1rem solid;
+  padding: 0.5rem;
   outline: none;
+  resize: none;
 }
 
 /*# sourceMappingURL=footer.css.map */

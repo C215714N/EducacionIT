@@ -13,21 +13,73 @@
 		warning 	#da3,
 		success 	#3c6;
 //mixins
-
+	@mixin normalize($m:0,$p:0,$b:0){
+		margin: $m;
+		border: $b;
+		padding: $p;
+	}
+	@mixin position($p:relative, $x:0, $y:0, $z:0){
+		position: $p;
+		top: $y;
+		left: $x;
+		z-index: $z;
+	}
 //loops
 	@each $prop, $attr in $attributes{
 		@each $cn, $cv in $colors{
 			.#{$prop}-#{$cn}{ #{$attr}: $cv; }	
 	}	}
-
+// helpers
+	.front{
+		position: fixed;
+		z-index: 2;
+		opacity: .9;
+	}
 //nesting
 #footer{
+	@include normalize($p:1rem);
+	position: relative;
+	background: linear-gradient(#4485, #c365);
+	.map{
+		iframe{
+			@include position(absolute, $z:-1);
+			width:100%;
+			height:100%;
+			&.active{ @extend .front; 
+			& + .btn{ @extend .front; } }
+		}
+		.btn{
+			@include position(absolute, 100%);
+			transform: translate(-150%, 50%);
+		}
+	}
+	.social{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		a{
+			@include normalize(.25rem, .5rem);
+			font-size: 2rem;
+			text-decoration: none;
+			color: #333;
+			transition: all .5s;
+			&:hover{
+				transform: rotate(360deg) translateY(-.5rem);
+				background-color:#eee;
+			}
+		}
+	}
 	#contact{
+		@include normalize(1rem auto, 1rem);
 		@extend .text-light, .bg-primary;
+		display: grid;
+		max-width: 540px;
 		input,
 		textarea{
+			@include normalize(0, .5rem, .1rem solid);
 			@extend .border-dark;
 			outline: none;
+			resize: none;
 			&:valid{ @extend .border-success; }
 			&:not(:placeholder-shown):invalid{ @extend .border-danger; }
 		}
