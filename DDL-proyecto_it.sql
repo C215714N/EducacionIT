@@ -24,9 +24,27 @@
     ALTER TABLE users -- modifica una tabla existente
     ADD COLUMN user_email VARCHAR(100) NOT NULL AFTER user_name, -- indico el orden
     MODIFY COLUMN user_name VARCHAR(20) NOT NULL; -- almacena un dato de forma obligatoria
-
     DESCRIBE users;
 
+	CREATE TABLE users_data(
+		data_id INT AUTO_INCREMENT,
+        user INT, -- numero
+        first_name VARCHAR(50), -- texto variable
+        last_name VARCHAR(50),
+        cuit CHAR(13), -- texto fijo 99-99999999-9
+        birth_date DATE, -- fecha
+        gender ENUM('M','F','O'), -- lista de valores
+        address VARCHAR(100),
+        phone VARCHAR(20),
+        profession VARCHAR(50),
+        education VARCHAR(50),
+        PRIMARY KEY(data_id),
+        UNIQUE KEY(cuit),
+        UNIQUE KEY(first_name, last_name, birth_date, address),
+        FOREIGN KEY(user) REFERENCES users(user_id)
+    );
+	DESCRIBE users_data;
+    
 	CREATE TABLE categories(
 		cat_id INT AUTO_INCREMENT,
         description VARCHAR(20),
@@ -45,6 +63,19 @@
     );
     DESCRIBE products;
     
+	CREATE TABLE posts(
+		post_id INT AUTO_INCREMENT,
+        user INT,
+        product INT,
+        post_title VARCHAR(50),
+        post_description VARCHAR(200),
+        stock INT NOT NULL,
+        price DECIMAL(11,2), -- cantidad de digitos, cuantos detras de la coma
+        post_date DATETIME DEFAULT CURRENT_TIMESTAMP(), -- 
+        PRIMARY KEY(post_id),
+        FOREIGN KEY(user) REFERENCES users(user_id),
+        FOREIGN KEY(product) REFERENCES products(product_id)
+    );
 # Control
 	SHOW DATABASES;
     SHOW TABLES;
