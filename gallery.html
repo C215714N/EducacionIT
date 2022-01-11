@@ -10,6 +10,7 @@
 	<header>
 		<h1>Fundamentos Web</h1>
 		<p>html | css</p>
+		<!-- Navegacion: links mas importantes -->
 		<nav>
 			<ul>
 				<li><!-- Ruta Relativa | Interna -->
@@ -29,12 +30,26 @@
 	</header>
 	<!-- Contenido: Informacion -->
 	<main>
-		
+		<h2>Reglas de Nomenclatura</h2>
+		<ul>
+			<li>
+				<strong>Evitar el uso de espacios o caracteres especiales </strong> ya que el navegador reemplazara los mismos y no podra encontrar los archivos. por ejemplo, si nuestra imagen se llama <em>"foto 01.jpg"</em> el navegador interpretara <em>"foto%2001.jpg"</em> no pudiendo encontrar la misma, por eso es aconsejable <strong>utilizar guiones (-_)</strong> dando como resultado un nombre como <em>"foto_01.jpg"</em>.
+			</li>
+			<li>
+				<strong>Utilizar nombres descriptivos</strong> como por ejemplo <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> para facilitar la implementacion de los archivos. Evitar nombres genericos como <em>"foto_01.jpg"</em> o automatizados como <em>"2022-11-01-1055100.jpg"</em> ya que demasia se dificulta el reconocimiento de los mismos.
+			</li>
+			<li>
+				<strong>Utilizar solamente minusculas para reducir el margen de error</strong> debido a que los servidores son <em>caseSensitive</em> y por lo tanto <em>"background.jpg", "Background.jpg" y "BACKGROUND.jpg"</em> se consideran archivos diferentes.
+			</li>
+		</ul>
+		<div>
+			<img src="assets/img/jjba-silverchariot-01.jpg" alt="Dibujo JJBA Silver Chariot">
+		</div>
 	</main>
 	<!-- Pie: Complementario -->
 	<footer>
 		<div>
-			<!-- Ruta Absoluta | Externa-->
+			<!-- Ruta Absoluta | Externa -->
 			<a href="https://facebook.com/" target="_blank">facebook</a>
 			<a href="https://instagram.com/" target="_blank">instagram</a>
 			<a href="https://linkedin.com/" target="_blank">linkedin</a>
