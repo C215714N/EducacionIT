@@ -4,10 +4,55 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fundamentos Web</title>
+	<style>
+		/* Selectores generales */
+		body{
+			margin: 0;
+			font-family: 'calibri','segoe ui', sans-serif;
+		}
+		/* Selectores multiples (,) */
+		header, 
+		footer{
+			padding: 20px;
+			color: #eee;
+			background-color: #248; /*rgb */
+		}
+		/* Selectores especificos (padre hijo) */
+		nav a{
+			color:#ccc;
+			text-decoration: none;
+		}
+		nav ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			background-color: #124;
+		}
+		nav li{
+			display: inline-block;
+			padding: 8px;
+		}
+		/* Pseudoclase: Instancia o caracteristica de un elemento */
+		nav li:hover{
+			background-color: #36c;
+		}
+		img{
+			width: 100%;
+			max-width: 320px;
+		}
+		/* Selector de Class */
+		.center{ 
+			text-align: center;
+		}
+		/* Selector de Id */
+		#contact{
+			text-shadow: -2px 2px 2px #333; /* -x+ -y+ blur color */
+		}
+	</style>
 </head>
 <body>
 	<!-- Cabecera: Introduccion -->
-	<header>
+	<header class="center">
 		<h1>Fundamentos Web</h1>
 		<p>html | css</p>
 		<!-- Navegacion: links mas importantes -->
@@ -42,12 +87,20 @@
 				<strong>Utilizar solamente minusculas para reducir el margen de error</strong> debido a que los servidores son <em>caseSensitive</em> y por lo tanto <em>"background.jpg", "Background.jpg" y "BACKGROUND.jpg"</em> se consideran archivos diferentes.
 			</li>
 		</ul>
-		<div>
+		<div class="center">
 			<img src="assets/img/jjba-silverchariot-01.jpg" alt="Dibujo JJBA Silver Chariot">
+			<img src="assets/img/jjba-silverchariot-02.jpg" alt="Dibujo JJBA Silver Chariot">
+			<img src="assets/img/jjba-silverchariot-03.jpg" alt="Dibujo JJBA Silver Chariot">
+			<img src="assets/img/jjba-silverchariot-04.jpg" alt="Dibujo JJBA Silver Chariot">
+		</div>
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, temporibus quo. Dolores quod assumenda ratione ab eos deserunt ex, et amet unde consectetur hic quos, quae labore quas enim pariatur.
+			</p>
 		</div>
 	</main>
 	<!-- Pie: Complementario -->
-	<footer>
+	<footer class="center">
 		<div>
 			<!-- Ruta Absoluta | Externa -->
 			<a href="https://facebook.com/" target="_blank">facebook</a>
