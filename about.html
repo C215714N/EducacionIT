@@ -47,6 +47,14 @@
                 <header>
                     <h3>¿como estan compuestos?</h3>
                 </header>
+                <ul class="example">
+                    <li>
+                        <strong>Etiquetas (LABEL)</strong> Textos que funcionan a modo de rotulos, indicando al usuario que debe completar dentro del campo de formulario con el que esta asociado, tambien facilitan la accesibilidad, ya que representan el texto legible.
+                    </li>
+                    <li>
+                        <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> Elementos donde el usuario selecciona o escribe sus datos, poseen atributos como <em>value="..."</em> que indica que datos se va a enviar en la consulta y <em>type="..."</em> que indica el formato de los mismos.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
@@ -54,7 +62,16 @@
     <footer id="footer">
         <!-- Formulario -->
         <form id="contact" action="" method="POST">
-
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input id="contact_name" type="text">
+            <label for="contact_age">Ingrese su Edad</label>
+            <input id="contact_age" type="number">
+            <label for="contact_email">Ingrese su Correo</label>
+            <input id="contact_email" type="email">
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea id="contact_consult" name=""></textarea>
+            <button>enviar</button>
         </form>
         <!-- Redes sociales -->
         <div class="social">
