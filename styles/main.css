@@ -1,0 +1,72 @@
+/* Reglas generales */
+    *{   
+        font-family: 'calibri', 'segoe ui', sans-serif;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    header p,
+    .menu{
+        margin:0;
+    }
+    .menu{
+        padding:0;
+    }
+    .menu{
+        list-style: none;
+    }
+/* Navegacion */
+    .menu{
+        text-align: center;
+        background-color: #448;
+    }
+    .menu li{
+        display: inline-block;
+        padding: 8px;
+    }
+    .menu a{
+        color: #ccc;
+        text-decoration: none;
+    }
+    .menu .active,
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 8px #fff; /*-x+ -y+ blur color*/
+    }
+/* Cabecera */
+
+/* Contenido */
+
+/* Pie de Pagina */
+    
+    /* Formulario de Contacto */
+    #contact{
+        max-width: 540px;
+        margin: auto;
+        padding: 16px;
+        color: #eee;
+        background-color: #448;
+    }
+    #contact input,
+    #contact textarea,
+    #contact button{
+        width: calc(100% - 32px);
+        outline: none;
+        border: none;
+        padding: 8px 16px; /* top right bottom left*/
+        font-size: 16px;
+    }
+    #contact button{
+        display: block;
+        width: auto;
+        margin-left: auto;
+        border: 1px solid #eee;
+        color: #eee;
+        background-color: transparent;
+    }
+    #contact button:hover{
+        color:#448;
+        background-color: #eee;
+    }
