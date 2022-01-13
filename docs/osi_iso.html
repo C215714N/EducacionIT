@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCNA (Cisco Certified Network Administrator)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            scroll-behavior: smooth;
+        }
+        .btn{
+            display: inline-block;
+            margin:.25rem;
+            border-radius: .25rem;
+            border: .1rem solid var(--color);
+            padding:.5rem;
+            text-decoration: none;
+            color: var(--color);
+        }
+        .btn:hover{
+            color: #eee;
+            background-color: var(--color);
+        }
+        .btn-success{
+            --color: #3c6;
+        }
+        .btn-danger{
+            --color: #c33;
+        }
+        #question article{
+            max-height: 0;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            transition: all .5s ease;
+        }
+        #question article p{
+            width: min(100%, 300px);
+            margin:.5rem;
+            border-radius: .25rem;
+            padding: 1rem;
+            background-color: #eee;
+        }
+        #question article:target{
+            max-height: 640px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CCNA</h1>
+        <p>Fundamentos de Redes</p>
+    </header>
+    <main>
+        <section>
+            <h2>Analisis Topologia</h2>
+            <p>¿iniciar el cuestionario? 
+                <a href="#layer_0">si</a>
+                <a href="#">no</a>
+            </p>
+            <div id="question"></div>
+        </section>
+    </main>
+    <footer>
+        <p class="copy">&copy;2021 Todos los derechos reservados</p>
+    </footer>
+    <script>
+        d = document
+        quest = d.querySelector('#question')
+        question =  [
+            { 
+                ask: "¿la red funciona correctamente?", 
+                yes: 5, 
+                no: 1, 
+                anwser: "Antes de continuar, recomendamos revisar las instalaciones, como minimo la conexion entre su equipo y el dipositivo de red, para aumentar la veracidad de sus respuestas."},
+            { 
+                ask: "¿el medio fisico se encuentra en condiciones?", 
+                yes: 2, 
+                no: 0, 
+                anwser:"corrobore que las distancias a los dispositivos de interconexion sean apropiadas y elimine cualquier fuente de EMI/RFI", },
+            { 
+                ask: "¿las tramas enviadas/recibidas son validas?", 
+                yes: 3, 
+                no: 0, 
+                anwser:"Verifique el funcionamiento de la interfaz con el comando <strong>ping &lt;LoopBack></strong>;asegurese que este habilitada y que los drivers esten actualizados", },
+            { 
+                ask: "¿la configuracion de red es correcta?", 
+                yes: 4, 
+                no: 0, 
+                anwser:"Revise su configuracion con el comando <strong>ipconfig /all</strong> y controle si hay comunicacion con el dispositivo utilizando el comando <strong>ping &lt;ip address></strong>", },
+            { 
+                ask: "¿el puerto se encuentra disponible?", 
+                yes: 5, 
+                no: 0, 
+                anwser:"Controle las comunicaciones utilizando el comando <strong>netstat -a</strong> y cierre cualquiera que este utilizando el puerto de destino", },
+            { 
+                ask: "¿posee credenciales que garanticen el acceso?", 
+                yes: 6, 
+                no: 0, 
+                anwser:"solicite el acceso o agregue el usuario a la lista de conexiones permitidas", },
+            { 
+                ask: "¿el formato de los datos es valido?", 
+                yes: 7, 
+                no: 0, 
+                anwser:"Asegurese de utilizar un formato de datos valido para la aplicacion de red, consulte la documentacion oficial", },
+            { 
+                ask: "¿la configuracion de la aplicacion es correcta?", 
+                yes: 8, 
+                no: 0, 
+                anwser:"Revise los datos de usuario, contraseña, dominio y puertos utilizados por la aplicacion y asegurese que sean los correctos" },
+            { 
+                ask: "¿existe algun proceso pendiente en la aplicacion?", 
+                yes: 0, 
+                no: "fin", 
+                anwser:"Abra el administrador de tareas <strong>taskmgr</strong> para verificar si existe algun proceso abierto despues de haber cerrado la aplicacion", }
+        ]
+        question.forEach( (q,i) => quest.innerHTML+= `
+            <article id="layer_${i}">
+                ${q.anwser ? '<p>'+q.anwser+'</p>' : '' }
+                <p>${q.ask}<br>
+                    <a class="btn btn-success" href="#layer_${q.yes}">Si</a>
+                    <a class="btn btn-danger" href="#layer_${q.no}">No</a>
+                </p>
+            </article>`
+        )
+        quest.innerHTML+=`
+            <article id="layer_fin">
+                <p>
+                    Si ha llegado hasta aqui y no se ha resuelto el conflicto, se aconseja elevar el problema
+                </p>
+                <p> ¿El problema ha sido resuelto? <br>
+                    <a class="btn btn-success" href="#layer_0">Si</a>
+                    <a class="btn btn-danger" href="#question">No</a>
+                </p>
+            </article>`
+    </script>
+</body>
+</html>
