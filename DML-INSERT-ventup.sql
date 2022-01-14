@@ -54,6 +54,8 @@ USE ventup;
 /* Tabla Categorias */
 	INSERT INTO categories(description)
     VALUES ("tecnologia"),("limpieza"),("alimentos"),("botanica"),("electrodomesticos"),("muebles");
+    INSERT INTO categories(description)
+    VALUES ("hogar"),("coleccionables"),("autopartes"), ("entretenimiento");
 /* Tablas Productos*/
 	INSERT INTO products(description, category)
     VALUES 
