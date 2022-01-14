@@ -4,7 +4,9 @@
 */
 /*Tabla Usuarios*/
 	SELECT * FROM users;
-    
+    SELECT * FROM users
+    WHERE user_email LIKE "%hotmail%" 
+    OR user_email LIKE "%gmail%";
 /*Tabla Datos de usuario*/
 	SELECT * FROM users_data;
     
