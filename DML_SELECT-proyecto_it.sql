@@ -30,10 +30,23 @@
     WHERE category = 1;
     ## Productos que contengan "la"
     SELECT * FROM products
-    WHERE product LIKE "%la%" 
+    WHERE product LIKE "%la%";
     
 /*
-	AND	|c1f| c1v 	OR 	|c1f|c1v	XOR |c1f|c1v
+	AND	|c1f| c1v 	OR 	|c1f|c1v	XOR |c1f| c1v
 	c2f | F	| F 	c2f | F | V		c2f | F | V
     c2v | F	| V		c2v | V | V		c2v | V | F	
 */
+
+/* Tabla Publicaciones */
+	SELECT * FROM posts;
+    -- Camisas de Tux (subconsulta)
+    SELECT * FROM posts
+    WHERE user = (SELECT user_id FROM users WHERE user_name = "Tux")
+    AND product = (SELECT product_id FROM products WHERE product = "camisa");
+    -- Productos cuyos valores sean los especificados
+    SELECT * FROM posts
+    WHERE product IN(5,7,8,10);
+    -- Productos entre determinado rango de valores
+    SELECT * FROM posts
+    WHERE product BETWEEN 4 AND 10;

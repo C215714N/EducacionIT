@@ -43,7 +43,7 @@
         ("nft"),
         ("entretenimiento");
 
-/* Tabla Products */
+/* Tabla Productos */
 	INSERT INTO products(product, category)
 	VALUES
 		("remera",4),("camisa",4),("pantalon",4), -- indumentaria
@@ -51,3 +51,22 @@
 		("teclado",1),("laptop",1),("celular",1),("monitor",1); -- tecnologia
 	INSERT INTO products(product, category)
     VALUES ("neumaticos",5);
+    select * From products;
+/* Tabla Publicaciones */
+	INSERT INTO posts(user, product, stock, price)
+    VALUES
+		(1,3,20,500), -- c215714n
+        (4,1,100,1200),(4,2,200,1800),(4,3,300,1500), -- Tux
+        (6,10,500,25999.99),(6,9,2000,179999.99), -- macOS
+        (5,8,200,65500),(5,8,200,89799.99),(5,7,750,5800),(5,10,1000,20000), -- Windows
+        (4,12,100,20000),(4,12,300,36000), -- Tux
+        (6,4,10000,85999.99),(6,5,5000,35000),(6,6,500,15000); -- macOS
+	-- Insercion con subconsulta
+		INSERT INTO posts(user, product, post_title, post_description, stock, price)
+        VALUES (
+			(SELECT user_id FROM users WHERE user_name = "racedo_cristian"), -- usuario
+            (SELECT product_id FROM products WHERE product LIKE "aire%"), -- producto
+            "Split 5000 frigorias Samsung", -- titulo
+            "Ultimas unidades de aire acondicionado split inverter, 5000 frigorias, dimensiones 100cmx50cmx30cm", -- descripcion
+            10, 45000); -- cantidad y precio
+        
