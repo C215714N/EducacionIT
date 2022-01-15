@@ -1,0 +1,781 @@
+[
+    {
+        "type": "header",
+        "version": "5.1.1",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "ventup"
+    },
+    {
+        "type": "table",
+        "name": "billing",
+        "database": "ventup",
+        "data": [
+            {
+                "bill_id": "1",
+                "user": "1",
+                "method": "2",
+                "bill_title": "BBVA Debito",
+                "bill_data": "4293-2879-5483-1298"
+            },
+            {
+                "bill_id": "2",
+                "user": "1",
+                "method": "3",
+                "bill_title": "Galicia Credito",
+                "bill_data": "3298-1235-2983-2348"
+            },
+            {
+                "bill_id": "3",
+                "user": "1",
+                "method": "4",
+                "bill_title": "BBVA CBU",
+                "bill_data": "tango.foxtrot.delta"
+            },
+            {
+                "bill_id": "4",
+                "user": "7",
+                "method": "1",
+                "bill_title": "Pesos",
+                "bill_data": "20-73249328-9"
+            },
+            {
+                "bill_id": "5",
+                "user": "7",
+                "method": "5",
+                "bill_title": "MP",
+                "bill_data": "kernel.open.source"
+            },
+            {
+                "bill_id": "6",
+                "user": "7",
+                "method": "6",
+                "bill_title": "Chequera",
+                "bill_data": "4324-12394293-233"
+            },
+            {
+                "bill_id": "7",
+                "user": "7",
+                "method": "4",
+                "bill_title": "Santander Rio",
+                "bill_data": "10293478012298200012"
+            },
+            {
+                "bill_id": "8",
+                "user": "12",
+                "method": "3",
+                "bill_title": "Black America",
+                "bill_data": "1927-8410-2934-8273"
+            },
+            {
+                "bill_id": "9",
+                "user": "12",
+                "method": "3",
+                "bill_title": "Platinum America",
+                "bill_data": "1092-2039-1927-1239"
+            },
+            {
+                "bill_id": "10",
+                "user": "5",
+                "method": "2",
+                "bill_title": "Gold Amex",
+                "bill_data": "2398-4293-8472-9289"
+            },
+            {
+                "bill_id": "11",
+                "user": "5",
+                "method": "3",
+                "bill_title": "Silver Amex",
+                "bill_data": "2345-2349-3894-2928"
+            },
+            {
+                "bill_id": "12",
+                "user": "6",
+                "method": "5",
+                "bill_title": "UALA",
+                "bill_data": "juan.perez.uala"
+            },
+            {
+                "bill_id": "13",
+                "user": "6",
+                "method": "5",
+                "bill_title": "BIMO",
+                "bill_data": "283710923847019238470"
+            },
+            {
+                "bill_id": "14",
+                "user": "6",
+                "method": "3",
+                "bill_title": "ICBC",
+                "bill_data": "1092-1238-2348-2309"
+            },
+            {
+                "bill_id": "15",
+                "user": "3",
+                "method": "3",
+                "bill_title": "Nacion",
+                "bill_data": "cuenta.para.pagar"
+            },
+            {
+                "bill_id": "16",
+                "user": "4",
+                "method": "2",
+                "bill_title": "BRUBANK",
+                "bill_data": "1209-3948-1029-3847"
+            },
+            {
+                "bill_id": "17",
+                "user": "4",
+                "method": "3",
+                "bill_title": "Provincia",
+                "bill_data": "1230-7948-1720-3941"
+            },
+            {
+                "bill_id": "18",
+                "user": "4",
+                "method": "5",
+                "bill_title": "MP",
+                "bill_data": "user.payment"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "categories",
+        "database": "ventup",
+        "data": [
+            {
+                "cat_id": "3",
+                "description": "alimentos"
+            },
+            {
+                "cat_id": "9",
+                "description": "autopartes"
+            },
+            {
+                "cat_id": "4",
+                "description": "botanica"
+            },
+            {
+                "cat_id": "8",
+                "description": "coleccionables"
+            },
+            {
+                "cat_id": "5",
+                "description": "electrodomesticos"
+            },
+            {
+                "cat_id": "10",
+                "description": "entretenimiento"
+            },
+            {
+                "cat_id": "7",
+                "description": "hogar"
+            },
+            {
+                "cat_id": "2",
+                "description": "limpieza"
+            },
+            {
+                "cat_id": "6",
+                "description": "muebles"
+            },
+            {
+                "cat_id": "1",
+                "description": "tecnologia"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "pay_methods",
+        "database": "ventup",
+        "data": [
+            {
+                "method_id": "4",
+                "description": "cbu"
+            },
+            {
+                "method_id": "6",
+                "description": "cheque"
+            },
+            {
+                "method_id": "3",
+                "description": "credito"
+            },
+            {
+                "method_id": "5",
+                "description": "cvu"
+            },
+            {
+                "method_id": "2",
+                "description": "debito"
+            },
+            {
+                "method_id": "1",
+                "description": "efectivo"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "posts",
+        "database": "ventup",
+        "data": [
+            {
+                "post_id": "1",
+                "user": "6",
+                "product": "7",
+                "post_title": "Teclado Redragon K552-BB",
+                "post_description": "Producto nuevo en caja con garantia de 12 meses",
+                "price": "6670.00",
+                "stock": "100",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 20:46:19"
+            },
+            {
+                "post_id": "2",
+                "user": "1",
+                "product": "1",
+                "post_title": "polenta publicado por c215714n",
+                "post_description": null,
+                "price": "220.00",
+                "stock": "5000",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "3",
+                "user": "1",
+                "product": "3",
+                "post_title": "tomate publicado por c215714n",
+                "post_description": null,
+                "price": "330.00",
+                "stock": "1000",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "4",
+                "user": "1",
+                "product": "2",
+                "post_title": "tapa de asado publicado por c215714n",
+                "post_description": null,
+                "price": "1210.00",
+                "stock": "2994",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "5",
+                "user": "1",
+                "product": "10",
+                "post_title": "abono para plantas publicado por c215714n",
+                "post_description": null,
+                "price": "220.00",
+                "stock": "4492",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "6",
+                "user": "5",
+                "product": "13",
+                "post_title": "microondas publicado por windows",
+                "post_description": null,
+                "price": "17250.00",
+                "stock": "2992",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "7",
+                "user": "5",
+                "product": "14",
+                "post_title": "aire acondicionado publicado por windows",
+                "post_description": null,
+                "price": "74750.00",
+                "stock": "2000",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "8",
+                "user": "5",
+                "product": "12",
+                "post_title": "lavarropas publicado por windows",
+                "post_description": null,
+                "price": "41399.99",
+                "stock": "2475",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "9",
+                "user": "7",
+                "product": "5",
+                "post_title": "pc escritorio publicado por Tux",
+                "post_description": null,
+                "price": "27599.99",
+                "stock": "3992",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "10",
+                "user": "7",
+                "product": "8",
+                "post_title": "tablet publicado por Tux",
+                "post_description": null,
+                "price": "18399.99",
+                "stock": "1999",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "11",
+                "user": "7",
+                "product": "6",
+                "post_title": "notebook publicado por Tux",
+                "post_description": null,
+                "price": "138000.00",
+                "stock": "4988",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "12",
+                "user": "7",
+                "product": "7",
+                "post_title": "teclado publicado por Tux",
+                "post_description": null,
+                "price": "1380.00",
+                "stock": "30000",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "13",
+                "user": "12",
+                "product": "9",
+                "post_title": "celular publicado por macOS",
+                "post_description": null,
+                "price": "297500.00",
+                "stock": "1989",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "14",
+                "user": "12",
+                "product": "17",
+                "post_title": "suavizante publicado por macOS",
+                "post_description": null,
+                "price": "425.00",
+                "stock": "9989",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            },
+            {
+                "post_id": "15",
+                "user": "12",
+                "product": "18",
+                "post_title": "lavandina publicado por macOS",
+                "post_description": null,
+                "price": "340.00",
+                "stock": "14998",
+                "is_used": "0",
+                "delivery": "1",
+                "post_date": "2021-12-10 21:17:02"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "products",
+        "database": "ventup",
+        "data": [
+            {
+                "product_id": "1",
+                "description": "polenta",
+                "category": "3"
+            },
+            {
+                "product_id": "2",
+                "description": "tapa de asado",
+                "category": "3"
+            },
+            {
+                "product_id": "3",
+                "description": "tomate",
+                "category": "3"
+            },
+            {
+                "product_id": "4",
+                "description": "arroz",
+                "category": "3"
+            },
+            {
+                "product_id": "5",
+                "description": "pc escritorio",
+                "category": "1"
+            },
+            {
+                "product_id": "6",
+                "description": "notebook",
+                "category": "1"
+            },
+            {
+                "product_id": "7",
+                "description": "teclado",
+                "category": "1"
+            },
+            {
+                "product_id": "8",
+                "description": "tablet",
+                "category": "1"
+            },
+            {
+                "product_id": "9",
+                "description": "celular",
+                "category": "1"
+            },
+            {
+                "product_id": "10",
+                "description": "abono para plantas",
+                "category": "4"
+            },
+            {
+                "product_id": "11",
+                "description": "potus",
+                "category": "4"
+            },
+            {
+                "product_id": "12",
+                "description": "lavarropas",
+                "category": "5"
+            },
+            {
+                "product_id": "13",
+                "description": "microondas",
+                "category": "5"
+            },
+            {
+                "product_id": "14",
+                "description": "aire acondicionado",
+                "category": "5"
+            },
+            {
+                "product_id": "15",
+                "description": "ropero",
+                "category": "6"
+            },
+            {
+                "product_id": "16",
+                "description": "modular",
+                "category": "6"
+            },
+            {
+                "product_id": "17",
+                "description": "suavizante",
+                "category": "2"
+            },
+            {
+                "product_id": "18",
+                "description": "lavandina",
+                "category": "2"
+            },
+            {
+                "product_id": "19",
+                "description": "quitamanchas",
+                "category": "2"
+            },
+            {
+                "product_id": "20",
+                "description": "jabon",
+                "category": "2"
+            },
+            {
+                "product_id": "21",
+                "description": "detergente",
+                "category": "2"
+            },
+            {
+                "product_id": "22",
+                "description": "lavavajilla",
+                "category": "2"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "sales",
+        "database": "ventup",
+        "data": [
+            {
+                "sale_id": "1",
+                "user": "4",
+                "post": "13",
+                "price": "350000.00",
+                "quantity": "2",
+                "sale_date": "2021-12-17 20:17:59",
+                "bill": "17"
+            },
+            {
+                "sale_id": "2",
+                "user": "4",
+                "post": "8",
+                "price": "35999.99",
+                "quantity": "5",
+                "sale_date": "2021-12-17 20:17:59",
+                "bill": "18"
+            },
+            {
+                "sale_id": "3",
+                "user": "4",
+                "post": "10",
+                "price": "15999.99",
+                "quantity": "1",
+                "sale_date": "2021-12-17 20:17:59",
+                "bill": "18"
+            },
+            {
+                "sale_id": "4",
+                "user": "4",
+                "post": "8",
+                "price": "35999.99",
+                "quantity": "10",
+                "sale_date": "2021-12-17 20:17:59",
+                "bill": "17"
+            },
+            {
+                "sale_id": "5",
+                "user": "1",
+                "post": "14",
+                "price": "425.00",
+                "quantity": "9",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "2"
+            },
+            {
+                "sale_id": "6",
+                "user": "3",
+                "post": "11",
+                "price": "138000.00",
+                "quantity": "9",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "15"
+            },
+            {
+                "sale_id": "7",
+                "user": "12",
+                "post": "4",
+                "price": "1210.00",
+                "quantity": "6",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "8"
+            },
+            {
+                "sale_id": "8",
+                "user": "5",
+                "post": "5",
+                "price": "220.00",
+                "quantity": "8",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "11"
+            },
+            {
+                "sale_id": "9",
+                "user": "7",
+                "post": "14",
+                "price": "425.00",
+                "quantity": "1",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "4"
+            },
+            {
+                "sale_id": "10",
+                "user": "3",
+                "post": "14",
+                "price": "425.00",
+                "quantity": "1",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "15"
+            },
+            {
+                "sale_id": "11",
+                "user": "5",
+                "post": "11",
+                "price": "138000.00",
+                "quantity": "3",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "11"
+            },
+            {
+                "sale_id": "12",
+                "user": "1",
+                "post": "9",
+                "price": "27599.99",
+                "quantity": "8",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "2"
+            },
+            {
+                "sale_id": "13",
+                "user": "7",
+                "post": "8",
+                "price": "41399.99",
+                "quantity": "10",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "4"
+            },
+            {
+                "sale_id": "14",
+                "user": "6",
+                "post": "6",
+                "price": "17250.00",
+                "quantity": "8",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "14"
+            },
+            {
+                "sale_id": "15",
+                "user": "12",
+                "post": "13",
+                "price": "297500.00",
+                "quantity": "9",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "8"
+            },
+            {
+                "sale_id": "16",
+                "user": "12",
+                "post": "15",
+                "price": "340.00",
+                "quantity": "2",
+                "sale_date": "2021-12-17 21:42:21",
+                "bill": "8"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "shopping_chart",
+        "database": "ventup",
+        "data": []
+    },
+    {
+        "type": "table",
+        "name": "users",
+        "database": "ventup",
+        "data": [
+            {
+                "user_id": "1",
+                "user_name": "c215714n",
+                "user_email": "cristiandracedo@hotmail.com",
+                "user_pass": "root"
+            },
+            {
+                "user_id": "3",
+                "user_name": "cristian",
+                "user_email": "cristiandracedo@gmail.com",
+                "user_pass": "1234"
+            },
+            {
+                "user_id": "4",
+                "user_name": "user",
+                "user_email": "user@domain",
+                "user_pass": "pass"
+            },
+            {
+                "user_id": "5",
+                "user_name": "windows",
+                "user_email": "bill_gates@microsoft",
+                "user_pass": "ms-dos!7.0"
+            },
+            {
+                "user_id": "6",
+                "user_name": "juan_perez",
+                "user_email": "juanp@gmail.com",
+                "user_pass": "juanit0!"
+            },
+            {
+                "user_id": "7",
+                "user_name": "Tux",
+                "user_email": "linus_torvalds@linux.com",
+                "user_pass": "kernel!5.3"
+            },
+            {
+                "user_id": "12",
+                "user_name": "macOS",
+                "user_email": "steve_jobs@apple.com",
+                "user_pass": "isaac_newton"
+            },
+            {
+                "user_id": "13",
+                "user_name": "john_doe",
+                "user_email": "johndoe@unknown.com",
+                "user_pass": "mrNobody"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "users_data",
+        "database": "ventup",
+        "data": [
+            {
+                "data_id": "10",
+                "user": "1",
+                "first_name": "Cristian Damian",
+                "last_name": "Racedo",
+                "birth_date": "1991-04-18",
+                "cuit": "20-35336446-5",
+                "phone": null,
+                "address": null,
+                "zip_code": null,
+                "nationality": null
+            },
+            {
+                "data_id": "11",
+                "user": "6",
+                "first_name": "Juan",
+                "last_name": "Perez",
+                "birth_date": "1965-07-09",
+                "cuit": "30-03034560-7",
+                "phone": null,
+                "address": null,
+                "zip_code": null,
+                "nationality": null
+            },
+            {
+                "data_id": "12",
+                "user": "4",
+                "first_name": "John",
+                "last_name": "Doe",
+                "birth_date": "1980-07-04",
+                "cuit": "25-12342732-8",
+                "phone": null,
+                "address": null,
+                "zip_code": null,
+                "nationality": null
+            }
+        ]
+    }
+]
