@@ -11,14 +11,49 @@
     <header>
         <h1>Fundamentos Web</h1>
         <p>html | css</p>
+        <!-- Navegacion: Links mas importantes -->
+        <nav>
+            <ul>
+                <li><!-- Ruta Relativa | Interna -->
+                    <a href="index.html">inicio</a>
+                </li>
+                <li>
+                    <a href="about.html">acerca</a>
+                </li>
+                <li><!-- Ruta Ancla | Marcador (refresh) -->
+                    <a href="#">galeria</a>
+                </li>
+                <li><!-- Ruta Ancla | Marcador (#id) -->
+                    <a href="#contact">contacto</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!-- Contenido: Informacion relevante para el usuario -->
     <main>
-
+        <h2>Reglas de Nomenclatura</h2>
+        <ul>
+            <li>
+                <strong>Evitar el uso de caracteres especiales</strong> como el espacio ya que el navegador no los interpreta. Si nombramos a nuestro archivo <em>"foto 01.jpg"</em> este interpretaria <em>"foto%2001.jpg"</em> y por lo tanto no encontraria al mismo, para evitar esto se aconseja <strong>implementar guiones(-_)</strong> dando como resultado un nombre como <em>"foto_01.jpg"</em>
+            </li>
+            <li>
+                <strong>Utilizar nombres decriptivos</strong> como <em>"background.jpg"</em> o <em>"perrito_jugando.jpg"</em> para facilitar su implementacion. Evitar el uso de nombres genericos como <em>"foto_01.jpg"</em> o automatizados como <em>"2022-01-15-1131100.jpg"</em> ya que en demasia dificulta su aplicacion.
+            </li>
+            <li>
+                <strong>Implementar solamente minusculas</strong> para reducir el margen de error al utilizar los archivos, esto se debe a que los servidores son <strong>caseSensitive</strong> y  por lo tanto identificaria como distintos los siguientes archivos <em>"BACKGROUND.jpg", "Background.jpg", "background.jpg"</em>
+            </li>
+        </ul>
+        <div>
+            <h2>Implementacion de Imagenes</h2>
+            <img src="assets/img/jjba-starplatinum-01.jpg" alt="Dibujo JJBA Star Platinum">
+            <img src="assets/img/jjba-starplatinum-02.jpg" alt="Dibujo JJBA Star Platinum">
+            <img src="assets/img/jjba-starplatinum-03.jpg" alt="Dibujo JJBA Star Platinum">
+            <img src="assets/img/jjba-starplatinum-04.jpg" alt="Dibujo JJBA Star Platinum">
+        </div>
     </main>
     <!-- Pie de Pagina: Complementario al contenido -->
-    <footer>
-        
+    <footer id="contact">
+        <p>&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
