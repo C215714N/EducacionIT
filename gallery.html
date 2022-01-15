@@ -5,6 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selectores Generales */
+        body{
+            margin:0;
+            font-family: 'segoe ui','calibri', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee; /* RGB(238,238,238) = #eeeeee */
+            background-color: #448; /* (68,68,136) */
+            text-align: center;
+        }
+        /* Selectores especificos (padre hijo) */
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav ul{
+            padding: 0;
+            list-style: none;
+            background-color: #224;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* Pseudoclass: instancia o caracteristica de una etiqueta */
+        nav li:hover{
+            background-color: #66c;
+        }
+        main img{
+            width: 100%;
+            max-width: 500px;
+        }
+        /* Selector de Class (.class)*/
+        .example{
+            margin: 8px;
+            padding: 24px;
+            color: #448;
+            background-color: #eee;
+        }
+        div.example{
+            text-align: center;
+        }
+        /* Selector de Id (#id)*/
+        #contact{
+            text-shadow: -2px 2px 8px #eee; /*-x+ -y+ blur color*/
+        }
+        /*Overflow y float*/
+        main p{
+            padding: 24px;
+            color: #eee;
+            background-color: #333;
+            overflow: hidden;
+        }
+        main p img{
+            float: left;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera: Introduccion o presentacion -->
@@ -72,8 +134,8 @@
         </ul>
     </main>
     <!-- Pie de Pagina: Complementario al contenido -->
-    <footer id="contact">
-        <p>&copy;2022 Todos los derechos reservados</p>
+    <footer>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
