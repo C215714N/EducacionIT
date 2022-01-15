@@ -49,19 +49,47 @@
     JOIN users ON user = user_id 
     JOIN products ON product = product_id
     ORDER BY post_id;
-
 /* Tabla Ventas */
+	## Ventas realizadas por usuario
+    SELECT 
+        post_id,
+		us.user_name AS vendedor,
+        post_title,
+        GROUP_CONCAT(u.user_name) AS compradores,
+        SUM(quantity) AS ventas
+    FROM sales AS s
+    RIGHT JOIN users AS u ON s.user = u.user_id -- usuario (comprador)
+    RIGHT JOIN posts AS p ON s.post = p.post_id
+    RIGHT JOIN users AS us ON p.user = us.user_id -- usuario (vendedor)
+    GROUP BY post_id; -- agrupado por publicacion
+    
+	## Detalle de Ventas
 	SELECT 
 		sale_id,
-        u.user_name AS comprador,
-        us.user_name AS vendedor,
+        us.user_name as vendedor,
         post_title,
-        bill_title,
         quantity,
-        s.price
+        s.price,
+        (s.price * quantity) AS total,
+        u.user_name as comprador,
+        bill_title
     FROM sales AS s
-    JOIN users AS u ON s.user = u.user_id
-    JOIN posts AS p ON s.post = p.post_id
-    JOIN billing AS b ON s.bill = b.bill_id
-    JOIN users AS us ON p.user = us.user_id
+    JOIN users AS u ON s.user = u.user_id -- usuarios (compradores)
+	JOIN posts AS p ON s.post = p.post_id -- publicaciones 
+    JOIN billing AS b ON s.bill = b.bill_id -- billeteras
+    JOIN users AS us ON p.user = us.user_id -- usuarios (vendedores)
     ORDER BY sale_id;
+    
+	## Detalle de Facturacion
+	SELECT 
+        CONCAT("Sr/a: ", last_name, " ", first_name) AS customer,
+        SUBSTRING(cuit, 4, 8) AS document, -- documento
+        pr.description AS product,
+        quantity,
+        s.price,
+        s.price * quantity AS total
+    FROM sales AS s 
+    LEFT JOIN users_data AS ud ON s.user = ud.user
+    JOIN posts AS p ON s.post = p.post_id
+    JOIN products AS pr ON p.product = pr.product_id
+    WHERE s.user = (SELECT user_id FROM users WHERE user_name = "c215714n"); -- usuario c215714n
