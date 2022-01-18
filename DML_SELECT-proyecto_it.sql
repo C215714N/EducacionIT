@@ -52,5 +52,50 @@
     -- Productos entre determinado rango de valores
     SELECT * FROM posts
     WHERE product BETWEEN 4 AND 10;
+    -- Situacion de las publicaciones segun stock
+    SELECT * , 
+		CASE
+			WHEN stock < 50 THEN 'reponer' 
+			WHEN stock <= 100 THEN 'atencion'
+            WHEN stock <= 300 THEN 'control'
+			ELSE 'venta libre'
+		END AS reposicion
+    FROM posts;
 /* Tabla Ventas */
 	SELECT * FROM sales;
+    -- totales de compra por usuario (campo calculado)
+    SELECT 
+		post, 
+        user, 
+        price * quantity AS total 
+	FROM sales
+    ORDER BY post;
+    -- descuentos segun la cantidad comprada
+    SELECT
+		sale_id,
+        user, 
+        post,
+        quantity,
+        price,
+        CASE 
+			WHEN quantity >= 10 THEN "10%"
+            WHEN quantity >= 5 THEN "5%"
+            ELSE "0%"
+        END AS discount,
+        quantity * price AS total,
+        CASE
+			WHEN quantity >= 10 THEN ROUND(quantity * ( price * .9 ), 2)
+            WHEN quantity >= 5 THEN ROUND(quantity * ( price * .95 ), 2)
+            ELSE ROUND(quantity * price, 2)
+        END AS final
+	FROM sales;
+    -- estadisticas de ventas por usuario
+    SELECT
+		user,
+		COUNT(price) AS sales, -- cuenta los registros
+		MIN(price * quantity) AS cheapest, -- obtiene el valor mas bajo del campo
+        MAX(price * quantity) AS most_expensive, -- obtiene el valor mas alto del campo
+        ROUND(AVG(price * quantity),2) AS average, -- calcula el promedio del campo
+        SUM(price * quantity) AS total -- suma los valores del campo
+	FROM sales
+    GROUP BY user;
