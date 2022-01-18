@@ -69,37 +69,38 @@
             <input 
                 id="contact_name" 
                 name="name"
-                type="text">
+                type="text"
+                required>
             <label for="contact_age">Ingrese su Edad</label>
             <input 
                 id="contact_age" 
                 name="age"
-                type="number">
+                type="number"
+                min="0"
+                max="150"
+                required>
             <label for="contact_email">Ingrese su Correo</label>
             <input 
                 id="contact_email" 
                 name="email"
-                type="email">
+                type="email"
+                minlength="8"
+                required>
             <label for="contact_consult">Ingrese su Consulta</label>
             <textarea 
                 id="contact_consult" 
                 name="consult"
-                ></textarea>
+                minlength="20"
+                maxlength="200"
+                required></textarea>
             <button>enviar</button>
-            <div class="contract">
-                <input 
-                    id="yes"
-                    name="contract"
-                    type="radio"
-                    value="Acepto los terminos">
-                <label for="yes">acepto</label>
-                <input 
-                    id="no"
-                    name="contract"
-                    type="radio"
-                    value="No acepto los terminos">
-                <label for="no">no acepto</label>
-            </div>
+            <input 
+                id="yes"
+                name="contract"
+                type="checkbox"
+                value="aceptado"
+                required>
+            <label for="yes">Aceptos los terminos y condiciones</label>
         </form>
         <!-- Redes sociales -->
         <div class="social">
