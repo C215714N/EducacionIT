@@ -63,17 +63,43 @@
     <!-- Footer -->
     <footer id="footer">
         <!-- Formulario -->
-        <form id="contact" action="" method="POST">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
-            <input id="contact_name" type="text">
+            <input 
+                id="contact_name" 
+                name="name"
+                type="text">
             <label for="contact_age">Ingrese su Edad</label>
-            <input id="contact_age" type="number">
+            <input 
+                id="contact_age" 
+                name="age"
+                type="number">
             <label for="contact_email">Ingrese su Correo</label>
-            <input id="contact_email" type="email">
+            <input 
+                id="contact_email" 
+                name="email"
+                type="email">
             <label for="contact_consult">Ingrese su Consulta</label>
-            <textarea id="contact_consult" name=""></textarea>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                ></textarea>
             <button>enviar</button>
+            <div class="contract">
+                <input 
+                    id="yes"
+                    name="contract"
+                    type="radio"
+                    value="Acepto los terminos">
+                <label for="yes">acepto</label>
+                <input 
+                    id="no"
+                    name="contract"
+                    type="radio"
+                    value="No acepto los terminos">
+                <label for="no">no acepto</label>
+            </div>
         </form>
         <!-- Redes sociales -->
         <div class="social">
@@ -82,6 +108,7 @@
             <a href="https://linkedin.com" target="_blank"></a>
             <a href="https://github.com/c215714n/EducacionIT/tree/html-mj10" target="_blank"></a>
         </div>
+        <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
