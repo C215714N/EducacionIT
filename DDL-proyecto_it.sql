@@ -76,6 +76,20 @@
         FOREIGN KEY(user) REFERENCES users(user_id),
         FOREIGN KEY(product) REFERENCES products(product_id)
     );
+    DESCRIBE posts;
+    
+    CREATE TABLE sales(
+		sale_id INT AUTO_INCREMENT,
+        user INT,
+        post INT,
+        quantity INT NOT NULL,
+        price DECIMAL(11,2) NOT NULL,
+        sale_date DATETIME DEFAULT CURRENT_TIMESTAMP(),
+        PRIMARY KEY(sale_id),
+        FOREIGN KEY(user) REFERENCES users(user_id),
+        FOREIGN KEY(post) REFERENCES posts(post_id)
+    );
+    DESCRIBE sales;
 # Control
 	SHOW DATABASES;
     SHOW TABLES;

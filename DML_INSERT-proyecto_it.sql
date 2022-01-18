@@ -69,4 +69,8 @@
             "Split 5000 frigorias Samsung", -- titulo
             "Ultimas unidades de aire acondicionado split inverter, 5000 frigorias, dimensiones 100cmx50cmx30cm", -- descripcion
             10, 45000); -- cantidad y precio
+/* Tabla Ventas */
+	INSERT INTO sales(post, quantity) 
+    VALUES 	(1,10),(2,6),(5,3),(10,2),(2,1),(12,3),
+			(7,4),(3,5),(5,10),(4,1),(1,2),(2,8);
         

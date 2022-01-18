@@ -52,3 +52,5 @@
     -- Productos entre determinado rango de valores
     SELECT * FROM posts
     WHERE product BETWEEN 4 AND 10;
+/* Tabla Ventas */
+	SELECT * FROM sales;
