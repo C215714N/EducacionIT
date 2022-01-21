@@ -12,19 +12,22 @@
         "cristiandracedo@hotmail.com", -- user_email
         "root" -- user_pass
     );
+    
     # carga selectiva 
     INSERT INTO users(user_email, user_name) -- indico los campos
     VALUES("cristiandracedo@gmail.com","racedo_cristian"); -- completo en el orden indicado
+    
     # carga multiple (registros)
     INSERT INTO users(user_name, user_email, user_pass)
     VALUES
 		("Tux","l.torvalds@linux.com","gnu_kernel"),
         ("Windows","b.gates@microsoft.com","system_32"),
         ("macOS","s.jobs@apple.com","macinstosh");
+
 /*Tabla Datos de Usuario*/
 	# carga por asignacion (programacion)
-    INSERT INTO users_data SET
-		user = 1,
+    INSERT INTO users_data 
+    SET	user = 1,
         first_name = 'Cristian Damian',
         last_name = 'Racedo',
         cuit = '20-35336446-5',
@@ -49,9 +52,11 @@
 		("remera",4),("camisa",4),("pantalon",4), -- indumentaria
 		("aire acondicionado",2),("televisor",2),("parlante",2), -- hogar
 		("teclado",1),("laptop",1),("celular",1),("monitor",1); -- tecnologia
+
 	INSERT INTO products(product, category)
     VALUES ("neumaticos",5);
     select * From products;
+
 /* Tabla Publicaciones */
 	INSERT INTO posts(user, product, stock, price)
     VALUES
@@ -61,7 +66,8 @@
         (5,8,200,65500),(5,8,200,89799.99),(5,7,750,5800),(5,10,1000,20000), -- Windows
         (4,12,100,20000),(4,12,300,36000), -- Tux
         (6,4,10000,85999.99),(6,5,5000,35000),(6,6,500,15000); -- macOS
-	-- Insercion con subconsulta
+	
+    ## Insercion con subconsulta
 		INSERT INTO posts(user, product, post_title, post_description, stock, price)
         VALUES (
 			(SELECT user_id FROM users WHERE user_name = "racedo_cristian"), -- usuario
@@ -69,14 +75,13 @@
             "Split 5000 frigorias Samsung", -- titulo
             "Ultimas unidades de aire acondicionado split inverter, 5000 frigorias, dimensiones 100cmx50cmx30cm", -- descripcion
             10, 45000); -- cantidad y precio
+
 /* Tabla Ventas */
 	INSERT INTO sales(post, quantity) 
     VALUES 	(1,10),(2,6),(5,3),(10,2),(2,1),(12,3),
 			(7,4),(3,5),(5,10),(4,1),(1,2),(2,8);
-            
+	
 	INSERT INTO sales
-    SET
-		user = 5,
+    SET	user = 5,
         post = 16,
         quantity = 5;
-	SELECT * FROM posts;

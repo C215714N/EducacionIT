@@ -90,6 +90,7 @@
         FOREIGN KEY(post) REFERENCES posts(post_id)
     );
     DESCRIBE sales;
+    
 # Control
 	SHOW DATABASES;
     SHOW TABLES;
