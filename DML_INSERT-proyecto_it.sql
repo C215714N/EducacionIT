@@ -73,4 +73,10 @@
 	INSERT INTO sales(post, quantity) 
     VALUES 	(1,10),(2,6),(5,3),(10,2),(2,1),(12,3),
 			(7,4),(3,5),(5,10),(4,1),(1,2),(2,8);
-        
+            
+	INSERT INTO sales
+    SET
+		user = 5,
+        post = 16,
+        quantity = 5;
+	SELECT * FROM posts;

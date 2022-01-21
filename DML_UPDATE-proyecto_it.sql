@@ -28,11 +28,25 @@
         " vendido por ", -- uno el texto escrito con espacios
         (SELECT user_name FROM users WHERE user_id = posts.user) -- obtengo el usuario
     ) WHERE post_title IS NULL; -- condicion: no deben poseer titulo
+    -- actualizacion masiva del stock
+    UPDATE posts
+    SET stock = CASE
+		WHEN (SELECT SUM(quantity) FROM sales WHERE post = post_id) IS NULL THEN stock
+        ELSE stock - (SELECT SUM(quantity) FROM sales WHERE post = post_id)
+    END;
+    -- actualizacion individual stock para venta 13
+    UPDATE posts
+    SET stock = stock - (SELECT quantity FROM sales WHERE sale_id = 13)
+    WHERE post_id = 16;
 /* Tabla Ventas */
 	-- actualizacion de precios por subconsulta
 	UPDATE sales
     SET price = (SELECT price FROM posts WHERE post_id = post) -- verificamos el precio de la publicacion
     WHERE price = 0.00; -- condicion: no debe tener precio definido
+    -- actualizacion de precio para la venta 13
+	UPDATE sales
+    SET price = (SELECT price FROM posts WHERE post_id = post)
+    WHERE sale_id = 13;
     -- asignacion aleatoria de usuarios
     UPDATE sales
 	SET user = CEIL(RAND() * 4 + 2 ) -- numero aleatorio entre 3 y 6
