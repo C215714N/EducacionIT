@@ -61,17 +61,44 @@
     <!-- Pie de pagina -->
     <footer id="footer">
         <!-- Formulario de contacto -->
-        <form id="contact" action="" method="POST">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
-            <input id="contact_name" name="name" type="text">
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text"
+                required>
             <label for="contact_age">Ingrese su Edad</label>
-            <input id="contact_age" name="age" type="number">
+            <input 
+                id="contact_age" 
+                name="age" 
+                type="number"
+                min="0"
+                max="150"
+                required>
             <label for="contact_email">Ingrese su Correo</label>
-            <input id="contact_email" name="email" type="email">
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email"
+                minlength="8"
+                required>
             <label for="contact_consult">Ingrese su Consulta</label>
-            <textarea id="contact_consult" name="consult"></textarea>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="20"
+                maxlength="200"
+                required></textarea>
             <button>ENVIAR</button>
+            <input 
+                id="contact_yes" 
+                name="contract" 
+                type="checkbox" 
+                value="acepto" 
+                required>
+            <label for="contact_yes">Acepto el Contrato</label>
         </form>
         <!-- Redes sociales -->
         <div class="social">
