@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="#" class="active">acerca</a></li>
+            <li><a href="gallery.html">galeria</a></li>
+            <li><a href="#contact">contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera -->
+    <header id="header">
+        <h1>Fundamentos Web</h1>
+        <p>html | css</p>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el <strong> intercambio de datos entre cliente y servidor</strong>, siendo el unico lugar de la pagina donde el usuario puede intervenir directamente. Para poder implementarlos debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma, los elementos que seran procesados al realizar el envio del mismo.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> metodo rapido que prioriza la respuesta del servidor, envia los datos en texto plano y estos permanecen visibles en la URL al realizar el mismo. Debido a esto ultimo, se lo considera un metodo poco seguro y solamente se lo utiliza para <em>formularios de Busqueda (Consulta Query)</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> metodo que prioriza la seguridad de los datos del cliente, ya que encripta los mismos antes de realizar el envio del formulario. Debido a esto es mas lento, pero funciona como medida de seguridad ante el robo de datos y se lo utiliza par la mayoria de los formularios como por ejemplo: <em>Registro, Acceso, Contacto (Consulta Web)</em>.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como se componen?</h3>
+                </header>
+                <ul class="example">
+                    <li>
+                        <strong>Etiqueta (LABEL)</strong> Corresponde al rotulo que identifica que tipo dato debemos seleccionar o completar en el formulario. Facilita la accesiblidad y debe vincularse con al menos un campo.
+                    </li>
+                    <li>
+                        <strong>Campos (INPUT/TEXTAREA/BUTTON)</strong> corresponden a los elementos sobre los cuales el usuario puede escribir o seleccionar alguna opcion, estos poseen 2 atributos importantes que son <strong>type="..."</strong> que indica el tipo de dato que se de ingresar/seleccionar y <strong>value="..."</strong> que corresponde al dato ingresado/seleccionado.
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <!-- Pie de pagina -->
+    <footer id="footer">
+        <!-- Formulario de contacto -->
+        
+        <!-- Redes sociales -->
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">facebook</a>
+            <a href="https://instagram.com" target="_blank">instagram</a>
+            <a href="https://linkedin.com" target="_blank">linkedin</a>
+            <a href="https://github.com/c215714n/EducacionIT/tree/html-s10" target="_blank">github</a>
+        </div>
+        <p>&copy;2022 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
