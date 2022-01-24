@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <!-- Cabecera: Introduccion -->
+    <header>
+        <h1>Fundamentos Web</h1>
+        <p>html | css</p>
+        <!-- Navegacion: Links mas importantes -->
+        <nav>
+            <ul>
+                <li><!-- Ruta Relativa | Interna -->
+                    <a href="index.html">inicio</a>
+                </li>
+                <li>
+                    <a href="about.html">acerca</a>
+                </li>
+                <li><!-- Ruta Ancla | Marcador (refresh) -->
+                    <a href="#">galeria</a>
+                </li>
+                <li><!-- Ruta Ancla | Marcador (id)-->
+                    <a href="#contact">contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido -->
+    <main>
+        <h2>Reglas de Nomenclatura</h2>
+        <ul>
+            <li>
+                <strong>Evitar el uso de caracteres especiales</strong> como tildes o espacios, ya que en este ultimo caso el navegador lo reemplazara por el <em>conjunto %20</em> y por lo tanto si nuestro archivo se llama <em>"foto 01.jpg"</em> este interpretara <em>"foto%2001.jpg"</em> no pudiendo encontrar el mismo. <strong>Es preferible implementar guiones (-_)</strong> quedando dicho archivo de la siguiente manera: <em>"foto_01.jpg"</em>
+            </li>
+            <li>
+                <strong>Utilizar nombres descriptivos</strong> como por ejemplo <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> para facilitar la implementacion de los archivos. Evitar nombres genericos como <em>"foto_01.jpg"</em> o automatizados como <em>"2022-01-04-10065900.jpg"</em>
+            </li>
+            <li>
+                <strong>Utilizar solamente minusculas </strong> para reducir el margen de error al momento de trabajar con archivos, debido a que los servidores son <em>caseSensitive</em> y distinguen entre mayusculas y minusculas.
+            </li>
+        </ul>
+        <div>
+            <h2>Implementacion de Imagenes</h2>
+            <img src="assets/img/jjba-d4c-01.jpg" alt="Dibujo JJBA D4C">
+            <img src="assets/img/jjba-d4c-02.jpg" alt="Dibujo JJBA D4C">
+            <img src="assets/img/jjba-d4c-03.jpg" alt="Dibujo JJBA D4C">
+            <img src="assets/img/jjba-d4c-04.jpg" alt="Dibujo JJBA D4C">
+        </div>
+    </main>
+    <!-- Pie de Pagina -->
+    <footer>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
