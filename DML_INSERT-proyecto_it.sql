@@ -81,7 +81,15 @@
     VALUES 	(1,10),(2,6),(5,3),(10,2),(2,1),(12,3),
 			(7,4),(3,5),(5,10),(4,1),(1,2),(2,8);
 	
+    ## carga por asignacion
 	INSERT INTO sales
     SET	user = 5,
         post = 16,
         quantity = 5;
+	INSERT INTO sales
+	
+    ## carga por asignacion con subconsulta
+    SET	user = 1,
+		post = 13,
+		quantity = 2,
+		price = (SELECT price FROM posts WHERE post_id = 13);

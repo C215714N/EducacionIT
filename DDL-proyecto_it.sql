@@ -45,6 +45,14 @@
     );
 	DESCRIBE users_data;
     
+	DROP TABLE IF EXISTS pay_methods;
+	CREATE TABLE pay_methods(
+		method_id INT AUTO_INCREMENT,
+		description VARCHAR(20),
+		PRIMARY KEY (method_id),
+		UNIQUE KEY (description)
+	);
+    
 	CREATE TABLE categories(
 		cat_id INT AUTO_INCREMENT,
         description VARCHAR(20),

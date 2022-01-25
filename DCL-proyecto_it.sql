@@ -26,7 +26,7 @@
     IDENTIFIED BY '123';
     #permisos (solo lectura)
     GRANT SELECT -- permisos de consulta
-    ON proyecto_it.users
+    ON proyecto_it.*
     TO 'invited'@'localhost';
     
 /*Actualizacion de permisos*/

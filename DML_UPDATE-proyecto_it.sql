@@ -4,6 +4,7 @@
 */
 	DELETE FROM users; -- no posible (FOREIGN KEY de users_data y posts)
 	DELETE FROM posts; -- eliminacion completa
+    DELETE FROM sales WHERE sale_id = 14; -- eliminacion de registro especifico
     TRUNCATE posts; -- reinicio de tabla (contador)
     TRUNCATE sales; -- eliminacion de datos
     
@@ -81,3 +82,8 @@
         WHEN post BETWEEN 5 AND 15 AND user = 6 THEN FLOOR(RAND() * 4 + 1) -- si !ab & c > 3
         ELSE user -- si !abc > 4
     END;
+    
+    ## agrega un producto a la venta
+    UPDATE sales
+	SET quantity = quantity + 1
+	WHERE sale_id = 15;
