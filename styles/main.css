@@ -69,8 +69,48 @@
         padding: 1rem;
         box-shadow: 0 0 .5rem #333;
     }
+    .example{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* apilacion de elementos*/
+        gap: .5rem; /* separacion */
+        margin: .5rem 1rem 1.5rem;
+        border-left: .25rem solid #66c;
+        padding: 1rem;
+        list-style: none;
+        line-height: 1.5rem;
+        background-color: #eee;
+        box-shadow: -.25rem .25rem .5rem #333;
+    }
+    .example figure{
+        min-width: min(100%, 240px);
+        max-width: 320px;
+        margin: 0;
+    }
+    .example audio,
+    .example iframe,
+    .example video{
+        width: 100%;
+        border: none;
+    }
+    .example iframe{
+        min-height: 180px;
+        /*
+            aspect-ratio    width(h)     height(w)
+            4:3             1.33(h)      75%(w)
+            16:9            1.78(h)      56.25%(w)
+            16:10           1.6(h)       62.50%(w)
+        */
+    }
 /* Pie de Pagina */
-    
+    .copy{
+        margin:0;
+        padding: 1rem;
+        font-weight: bold;
+        color:#448;
+        background-color: #ccc;
+        text-align: center;
+    }
     /* Formulario de Contacto */
     #contact{
         max-width: 540px;
