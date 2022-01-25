@@ -28,3 +28,13 @@
     GRANT SELECT -- permisos de consulta
     ON proyecto_it.users
     TO 'invited'@'localhost';
+    
+/*Actualizacion de permisos*/
+	FLUSH PRIVILEGES;
+    
+/*Solucion de Conflictos*/
+	SHOW DATABASES;
+    USE mysql;
+    SHOW TABLES;
+    SELECT * FROM db;
+    REPAIR TABLE db;
