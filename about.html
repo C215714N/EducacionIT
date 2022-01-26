@@ -69,7 +69,39 @@
     <!-- Pie de Pagina Principal -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        
+        <form id="contact" action="scripts/contact.php" method="POST">
+            <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text" 
+                maxlength="50"
+                required>
+            <label for="contact_age">Ingrese su Edad</label>
+            <input 
+                id="contact_age" 
+                name="age" 
+                type="number"
+                min="0"
+                max="150"
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email"
+                minlength="8"
+                required>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="20"
+                maxlength="200"
+                required></textarea>
+            <button>ENVIAR</button>
+        </form>
         <!-- Redes Sociales -->
         <div class="social">
             <a class="facebook" href="https://facebook.com/" target="_blank">facebook</a>
