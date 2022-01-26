@@ -25,12 +25,51 @@
     </header>
     <!-- Contenido Principal -->
     <main>
-
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el <strong>intercambio de datos entre cliente y servidor</strong>, para poder implementarlos debemos colocar dentro de la pagina la etiqueta <strong>&lt;form></strong> y solo se considerara para el envio de los datos, lo que se encuentre dentro del mismo. Ademas de dicha etiqueta debemos especificar ciertos atributos y colocar determinados elementos que se detallan en este articulo.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    A la etiqueta <em>mencionada anteriormente</em> debemos colocarle por lo menos 2 atributos, <strong>action="..."</strong> que indica lo que debe suceder al momento de realizar el envio del formulario, en la actualidad se suele utilizar un <em>script en lenguaje de servidor, como por ejemplo PHP</em>; y <strong>method="..."</strong> que indica como se procesa el envio y de quien es la prioridad en el intercambio de datos, los valores mas comunes son:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo mas rapido que prioriza la respuesta del servidor, la informacion siempre permanece visible en la barra de direcciones y envia los datos en texto plano. Se suele utilizar para <em>Buscadores (Consulta Query)</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> Metodo mas seguro, debido a que encripta los datos antes de realizar el envio, estos no figuran en ningun otro lado que no sea el formulario, pero es mas lento. Se suele utilizar para Formularios de <em>Registro, Acceso (Inicio sesion), Contacto (Consulta Web)</em>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como se componen?</h3>
+                </header>
+                <p>
+                    Si bien en los formularios podemos colocar cualquiera de las etiquetas vistas anteriormente, vale aclarar que si no se realiza el envio, los datos no se almacenan en ningun lado. Tambien es necesario trabajar con dos elementos que guian al usuario a la hora de completar el mismo. Entre estos elementos encontramos:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>Etiquetas (LABEL): </strong> Rotulo que indica al usuario cual es el valor a ingresar/seleccionar, facilitan la accesibilidad y deben estar vinculados con algun campo del formulario.
+                    </li>
+                    <li>
+                        <strong>Campos (INPUT/TEXTAREA/SELECT): </strong> Controles que permiten al usuario seleccionar/escribir los datos solicitados por el formulario, estos poseen 2 atributos que son <em>type="..."</em> indicando el formato de los datos y <em>value="..."</em> indicando cual es el dato seleccionado/ingresado.
+                    </li>
+                </ul>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina Principal -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-
+        
         <!-- Redes Sociales -->
         <div class="social">
             <a class="facebook" href="https://facebook.com/" target="_blank">facebook</a>
