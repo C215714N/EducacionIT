@@ -24,9 +24,21 @@
                 list-style: none;
             }
     /* Cabecera */
-
+        #header{
+            display: grid;
+            align-content: center;
+            height: min(100vh, 640px); /* viewport height */
+            padding: .5rem;
+            color:#eee;
+            background: linear-gradient(to right, #c33, #448);
+            font-size: min(calc(2vw + .5rem), 5rem);
+            text-align: center;
+        }
     /* Navegacion */
         nav{
+            position: sticky;
+            top: 0;
+            z-index: 2;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -57,7 +69,26 @@
     /* Contenido */
 
     /* Pie de Pagina */
-
+    
+    /* Sistema de grillas */
+        :root{
+            --grid: 6;
+        }
+        .grid{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .grid [class*="col-"]{
+            border: .1rem solid #333;
+            padding: .5rem;
+            width: calc( (var(--col) / var(--grid)) * 100% )
+        }
+        .col-1{--col: 1} /*16.67%*/
+        .col-2{--col: 2} /*33.33%*/
+        .col-3{--col: 3} /*50%*/
+        .col-4{--col: 4} /*66.67%*/
+        .col-5{--col: 5} /*83.33%*/
+        .col-6{--col: 6} /*100%*/
 /* Small Devices - Smartphones (576px) */
 
 /* Medium Devices - Tablets (768px) */
