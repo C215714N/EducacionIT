@@ -1,0 +1,42 @@
+/* Reglas Generales */
+
+/* Navegacion */
+
+/* Cabecera */
+
+/* Contenido */
+
+/* Pie de Pagina */
+
+    /* Formulario */
+    #contact{
+        max-width: 540px;
+        margin: 8px auto; /* top right bottom left*/
+        padding: 16px;
+        color:#eee;
+        background-color: #448;
+    }
+    #contact input,
+    #contact textarea{
+        width: calc(100% - 16px);
+        margin-bottom: 8px;
+        outline: 0;
+        border: 0;
+        padding: 8px;
+        resize: none;
+    }
+    #contact textarea{
+        min-height: 80px;
+    }
+    #contact button{
+        display: block;
+        margin-left: auto;
+        border: 1px solid #eee; /* width style color*/
+        padding: 4px 8px;
+        color: #eee;
+        background-color: transparent;
+    }
+    #contact button:hover{
+        color: #448;
+        background-color: #eee;
+    }
