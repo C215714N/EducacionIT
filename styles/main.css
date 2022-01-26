@@ -1,0 +1,68 @@
+/* Content First - Mobile First */
+        @import url('https://fonts.google.com');
+    /* Reglas Generales */
+        *{
+            box-sizing: border-box; /* final-width = width | content-width = width - padding - border */
+            font-family: 'Raleway', 'calibri', 'segoe ui', sans-serif;
+        }
+        /* Margenes */
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            header p,
+            .menu{
+                margin: 0;
+            }
+        /* Rellenos */
+            .menu{
+                padding: 0;
+            }
+        /* Listas */
+            .menu{
+                list-style: none;
+            }
+    /* Cabecera */
+
+    /* Navegacion */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: .5rem 1rem; /* unidad relativa - ancho "M" en la Raiz(html)*/
+            background: linear-gradient(to right, #c33, #448);
+        }
+        nav a{
+            display: block;
+            padding: .5rem 0; /*top right bottom left*/
+            color: #ccc;
+            text-decoration: none;
+        }
+        .menu{
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .menu.active{
+            max-height: 640px;
+        }
+        .menu a.active,
+        .menu a:hover{
+            color: #eee;
+            text-shadow: 0 0 .5rem #eee;
+        }
+    /* Contenido */
+
+    /* Pie de Pagina */
+
+/* Small Devices - Smartphones */
+
+/* Medium Devices - Tablets */
+
+/* Large Devices - Laptops */
+
+/* Extra Large - Desktop */
+
+/* Extra Extra Large - Smart TV */
