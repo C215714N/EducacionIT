@@ -1,5 +1,5 @@
 /* Content First - Mobile First */
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway');
     /* Reglas Generales */
         *{
             box-sizing: border-box; /* final-width = width | content-width = width - padding - border */
@@ -36,7 +36,7 @@
         }
         nav a{
             display: block;
-            padding: .5rem 0; /*top right bottom left*/
+            padding: .5rem .25rem; /*top right bottom left*/
             color: #ccc;
             text-decoration: none;
         }
@@ -58,12 +58,25 @@
 
     /* Pie de Pagina */
 
-/* Small Devices - Smartphones */
+/* Small Devices - Smartphones (576px) */
 
-/* Medium Devices - Tablets */
-
-/* Large Devices - Laptops */
-
-/* Extra Large - Desktop */
-
-/* Extra Extra Large - Smart TV */
+/* Medium Devices - Tablets (768px) */
+    @media screen and (min-width: 768px){
+        nav .btn{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            width: auto;
+            max-height: 640px;
+        }
+    }
+/* Large Devices - Laptops (992px) */
+    
+/* Extra Large - Desktop (1200px) */
+    @media screen and (min-width: 1200px){
+        nav{
+            justify-content: space-around;
+        }
+    }
+/* Extra Extra Large - Smart TV (1400px) */
