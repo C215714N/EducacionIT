@@ -102,6 +102,35 @@
             16:10           1.6(h)       62.50%(w)
         */
     }
+    .overflow{
+        overflow: auto;
+    }
+    /* Tablas */
+    table{
+        margin: 1rem auto;
+    }
+    table caption,
+    table th,
+    table td{
+        padding: .25rem .5rem;
+    }
+    .classic,
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: .1rem solid #66c;
+        border-collapse: collapse;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(34,34,68,.5);
+    }
 /* Pie de Pagina */
     .copy{
         margin:0;
