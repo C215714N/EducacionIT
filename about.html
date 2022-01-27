@@ -143,6 +143,52 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son elementos que permiten organizar la informacion de manera tabular, estan compuestas por <em>filas, columnas y celdas</em>, pero a diferencia de su representacion tradicional, la creacion de las mismas esta ligada al <strong>modelo de cajas</strong>, es decir que tenemos etiquetas contenedoras como <strong>&lt;table></strong> y <strong>&lt;tr> (table row)</strong>, asi como tambien etiquetas de contenido como <strong>&lt;td> (table division)</strong>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen Estructura Semantica?</h3>
+                </header>
+                <p>
+                    Al igual que sucede con la estructura de la pagina, con la aparicion de la version 5 de html, se incorporaron nuevas caracteristicas a las etiquetas <em>vistas recientemente</em>, entre ellas se encuentras las siguientes etiquetas que componen la estructura semantica de las tablas:
+                </p>
+                <ul class="example">
+                    <li><strong>thead: </strong> Cabecera de tabla, contiene los encabezados y sus celdas deben ser <em>&lt;th> (table heading)</em> debido a que estan en representacion de los datos de la columna.</li>
+                    <li><strong>tbody: </strong> Cuerpo de tabla, contiene los datos a representar, puede poseer una columna de encabezados, en caso de realizar una tabla de <em>referencias cruzadas</em> o producto cartesiano.</li>
+                    <li><strong>tfoot: </strong> Pie de tabla, contenido complementario que se utiliza para mostras operaciones con los datos, como por ejemplo: <em>totales, promedios, etc.</em>, por ende debe llevar una celda de encabezado.</li>
+                </ul>
+                <div class="overflow">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <thead>
+                            <tr>
+                                <th>nombre</th>
+                                <th>correo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d47714n</td>
+                                <td>dcr18@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <th>total</th>
+                            <td>2</td>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Footer -->
     <footer id="footer">
