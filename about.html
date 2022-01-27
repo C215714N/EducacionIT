@@ -182,8 +182,10 @@
                             </tr>
                         </tbody>
                         <tfoot>
-                            <th>total</th>
-                            <td>2</td>
+                            <tr>
+                                <th>total</th>
+                                <td>2</td>
+                            </tr>
                         </tfoot>
                     </table>
                     <table class="modern">
@@ -239,6 +241,100 @@
                                 <td>1</td>
                             </tr>
                         </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Celdas Combinadas?</h3>
+                </header>
+                <p>
+                    En ciertas ocasiones sera necesario crear una tabla en donde una de sus celdas deba ocupa mas de una columna o una fila, para ello debemos utilizar el atributo <strong>colspan="..."</strong> y <strong>rowspan="..."</strong> respectivamente. El valor a ingresar debe ser igual a la cantidad total de celdas a ocupar ya que sino, la estructura de la tabla podria desbordarse.
+                </p>
+                <div class="example overflow">
+                    <table class="modern semantic">
+                        <caption>Venta de productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Precio</th>
+                                <th>Cant.</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Teclado</td>
+                                <td>5400</td>
+                                <td>1</td>
+                                <td>5400</td>
+                            </tr>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>19500</td>
+                                <td>3</td>
+                                <td>58500</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>4800</td>
+                                <td>2</td>
+                                <td>9600</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">total</th>
+                                <td>73500</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="classic semantic">
+                        <caption>Desarrolladores</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">Front-End</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="classic">
+                        <tr>
+                            <td>1-1</td>
+                            <td>1-2</td>
+                            <td>1-3</td>
+                            <td>1-4</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">2-1</td>
+                            <td>2-2</td>
+                        </tr>
+                        <tr>
+                            <td>3-1</td>
+                            <td rowspan="3">3-2</td>
+                            <td>3-3</td>
+                            <td>3-4</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">4-1</td>
+                            <td colspan="2">4-2</td>
+                        </tr>
+                        <tr>
+                            <td>5-1</td>
+                            <td>5-2</td>
+                        </tr>
                     </table>
                 </div>
             </section>

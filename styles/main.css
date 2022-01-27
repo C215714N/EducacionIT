@@ -109,6 +109,9 @@
     table{
         margin: 1rem auto;
     }
+    table caption{
+        border-radius: .25rem .25rem 0 0;
+    }
     table caption,
     table th,
     table td{
@@ -130,6 +133,20 @@
     .modern td{
         color: #eee;
         background-color: rgba(34,34,68,.5);
+    }
+    .semantic{
+        color:#eee;
+        border-collapse: collapse;
+    }
+    .semantic caption,
+    .semantic thead{
+        background-color: #336;
+    }
+    .semantic tbody{
+        background-color: #224;
+    }
+    .semantic tfoot{
+        background-color: #448;
     }
 /* Pie de Pagina */
     .copy{
