@@ -81,8 +81,9 @@
 
 	INSERT INTO products(product, category)
     VALUES ("neumaticos",5);
-    select * From products;
-
+    
+	INSERT INTO products(product, category)
+    VALUES ("martillo", 6), ("destornillador",6), ("serrucho", 6), ("tenaza",6);
 /* Tabla Publicaciones */
 	INSERT INTO posts(user, product, stock, price)
     VALUES

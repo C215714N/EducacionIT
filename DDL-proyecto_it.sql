@@ -10,10 +10,13 @@
 /*
 	users => users_data
     categories => products => posts
+    pay_methods => wallets
     users => posts => sales
+    user => wallets
     users => sales
 */
 # Creacion de Tablas
+/* Tabla Usuarios */
 	CREATE TABLE users(
 		user_id INT AUTO_INCREMENT, -- numero entero
         user_name VARCHAR(20), -- cadena de texto variable
@@ -26,6 +29,7 @@
     MODIFY COLUMN user_name VARCHAR(20) NOT NULL; -- almacena un dato de forma obligatoria
     DESCRIBE users;
 
+/* Tabla Datos de Usuario */
 	CREATE TABLE users_data(
 		data_id INT AUTO_INCREMENT,
         user INT, -- numero
@@ -45,6 +49,7 @@
     );
 	DESCRIBE users_data;
     
+/* Tabla Metodos de Pago */
 	DROP TABLE IF EXISTS pay_methods;
 	CREATE TABLE pay_methods(
 		method_id INT AUTO_INCREMENT,
@@ -53,6 +58,7 @@
 		UNIQUE KEY (description)
 	);
     
+/* Tabla Billeteras */    
     CREATE TABLE wallets(
 		wallet_id INT AUTO_INCREMENT,
         user INT,
@@ -66,7 +72,8 @@
     ADD COLUMN method INT,
     ADD CONSTRAINT FOREIGN KEY (method) REFERENCES pay_methods(method_id);
     DESCRIBE wallets;
-    
+
+/* Tabla Categorias */
 	CREATE TABLE categories(
 		cat_id INT AUTO_INCREMENT,
         description VARCHAR(20),
@@ -75,6 +82,7 @@
     );
     DESCRIBE categories;
 
+/* Tabla Productos */
     CREATE TABLE products(
 		product_id INT AUTO_INCREMENT,
         category INT,
@@ -85,6 +93,7 @@
     );
     DESCRIBE products;
 
+/* Tabla Publicaciones */
 	CREATE TABLE posts(
 		post_id INT AUTO_INCREMENT,
         user INT,
@@ -100,6 +109,7 @@
     );
     DESCRIBE posts;
 
+/* Tabla Ventas */
     CREATE TABLE sales(
 		sale_id INT AUTO_INCREMENT,
         user INT,
@@ -114,7 +124,6 @@
     ALTER TABLE sales
     ADD COLUMN wallet INT AFTER price,
 	ADD CONSTRAINT FOREIGN KEY (wallet) REFERENCES wallets(wallet_id);
-    
     DESCRIBE sales;
 
 # Control
