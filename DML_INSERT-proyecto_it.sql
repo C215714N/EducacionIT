@@ -33,8 +33,34 @@
         cuit = '20-35336446-5',
         birth_date = '1991-04-18',
         gender = 1;
+/* Tabla Metodos de Pago */
+	INSERT INTO pay_methods(description)
+    VALUES ("credito"),("debito"),("cbu"),("cvu"),("efectivo");
+
+/* Tabla Billeteras */
+	INSERT INTO wallets (user, method, wallet_title, wallet_data)
+    VALUES 
+    -- c215714n
+		(1,1,"BBVA Credito","1289-3410-2318-1234"),
+        (1,1,"ICBC Credito","1720-9384-7102-3984"),
+        (1,2,"BBVA Debito","1029-7834-0123-1284"), 
+	-- racedo_cristian
+        (3,3,"MP","alpha.tango.foxtrot"),
+        (3,4,"Uala","delta.epsilon.pi"),
+	-- macOS
+        (6,3,"American","1982310293847102938470"),
+        (6,3,"Caiman","1230941293841492873470"),
+        (6,1,"Credit American", "4293-2834-2347-9128"),
+        (6,1,"Credit Caiman","2934-7891-2831-1238"),
+	 -- Tux
+        (4,4,"PayPal","kernel.gnu.opensource"),
+        (4,4,"BlueWallet","asd8709823ha89sdf1h2lkasd-jfvxzx8932490sdf7023094270"),
+	 -- Windows
+        (5,3,"Continental","betamax.video.cassette"),
+        (5,1,"Santander Credit","0192-8370-4182-3247"),
+        (5,1,"HSBC Credit","2903-4710-2938-1209-1384");
         
-/*Tabla Categorias*/
+/* Tabla Categorias */
 	INSERT INTO categories(description)
     VALUES 
 		("tecnologia"),

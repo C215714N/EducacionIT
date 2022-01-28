@@ -53,6 +53,20 @@
 		UNIQUE KEY (description)
 	);
     
+    CREATE TABLE wallets(
+		wallet_id INT AUTO_INCREMENT,
+        user INT,
+        wallet_title VARCHAR(20),
+        wallet_data VARCHAR(25),
+        PRIMARY KEY(wallet_id),
+        UNIQUE KEY(user, wallet_data),
+        FOREIGN KEY(user) REFERENCES users(user_id)
+    );
+    ALTER TABLE wallets
+    ADD COLUMN method INT,
+    ADD CONSTRAINT FOREIGN KEY (method) REFERENCES pay_methods(method_id);
+    DESCRIBE wallets;
+    
 	CREATE TABLE categories(
 		cat_id INT AUTO_INCREMENT,
         description VARCHAR(20),
@@ -60,7 +74,7 @@
         UNIQUE KEY (description) -- clave unica (local)
     );
     DESCRIBE categories;
-    
+
     CREATE TABLE products(
 		product_id INT AUTO_INCREMENT,
         category INT,
@@ -70,7 +84,7 @@
         FOREIGN KEY(category) REFERENCES categories(cat_id) -- clave foranea (externa)
     );
     DESCRIBE products;
-    
+
 	CREATE TABLE posts(
 		post_id INT AUTO_INCREMENT,
         user INT,
@@ -85,7 +99,7 @@
         FOREIGN KEY(product) REFERENCES products(product_id)
     );
     DESCRIBE posts;
-    
+
     CREATE TABLE sales(
 		sale_id INT AUTO_INCREMENT,
         user INT,
@@ -97,8 +111,12 @@
         FOREIGN KEY(user) REFERENCES users(user_id),
         FOREIGN KEY(post) REFERENCES posts(post_id)
     );
-    DESCRIBE sales;
+    ALTER TABLE sales
+    ADD COLUMN wallet INT AFTER price,
+	ADD CONSTRAINT FOREIGN KEY (wallet) REFERENCES wallets(wallet_id);
     
+    DESCRIBE sales;
+
 # Control
 	SHOW DATABASES;
     SHOW TABLES;
