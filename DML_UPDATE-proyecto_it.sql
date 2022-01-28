@@ -87,3 +87,20 @@
     UPDATE sales
 	SET quantity = quantity + 1
 	WHERE sale_id = 15;
+    
+    ## Actualizacion de Billeteras
+    UPDATE sales AS s
+    SET wallet = (
+		SELECT MIN(wallet_id) FROM wallets AS w
+        WHERE w.user = s.user AND 
+        CASE
+				WHEN price < 2000 THEN method = 1 -- pago con credito
+                WHEN price < 100000 THEN method = 4 -- pago con cvu
+                ELSE method = 3 -- pago con cbu
+        END
+    )	WHERE wallet IS NULL;
+	
+    ## actualizacion valores restantes
+    UPDATE sales AS s
+    SET wallet = (SELECT MIN(wallet_id) FROM wallets AS w WHERE w.user = s.user)
+    WHERE wallet IS NULL;
