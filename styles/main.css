@@ -44,3 +44,46 @@
 /* Contenido */
 
 /* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        max-width: 540px;
+        margin: auto;
+        border-radius: 4px;
+        padding: 16px;
+        color: #eee;
+        background-color: #448;
+    }
+    #contact input,
+    #contact textarea{
+        width: calc(100% - 16px);
+        margin-bottom: 4px;
+        outline: none;
+        border: none;
+        padding: 8px;
+        font-size: 16px;
+    }
+    #contact textarea{
+        height: 90px;
+        resize: none;
+    }
+    #contact #contact_yes{
+        width: 12px;
+    }
+    #contact input:focus,
+    #contact textarea:focus{
+        box-shadow: 0 0 8px #eee; /*x y blur color*/
+    }
+    #contact button{
+        display: block;
+        margin-left: auto;
+        border: 1px solid #eee; /*width style color*/
+        padding: 8px 16px; /*top right bottom left*/
+        color:#eee;
+        background-color: transparent;
+        font-size: 18px;
+    }
+    #contact button:hover{
+        color: #448;
+        background-color: #eee;
+    }
