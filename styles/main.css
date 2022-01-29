@@ -22,7 +22,23 @@
         list-style: none;
     }
 /* Navegacion */
-
+    .menu{
+        background-color: #448;
+        text-align: center;
+    }
+    .menu li{
+        display: inline-block;
+        padding: 8px;
+    }
+    .menu a{
+        color: #ccc;
+        text-decoration: none;
+    }
+    .menu a:hover,
+    .menu .active{
+        color: #eee;
+        text-shadow: 0 0 8px; /*-x+ -y+ blur color*/
+    }
 /* Cabecera */
 
 /* Contenido */
