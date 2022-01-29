@@ -43,6 +43,35 @@
 
 /* Contenido */
 
+    /* Tablas */
+    table{
+        margin: 16px auto;
+    }
+    table caption{
+        border-radius: 4px 4px 0 0; /* tl tr br bl */
+    }
+    table caption,
+    table th,
+    table td{
+        padding: 4px 8px; /* top right bottom left */
+    }
+    .classic,
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: 1px solid #228;
+        border-collapse: collapse;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color:#eee;
+        background-color: rgba(34,34,136,.5);
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
