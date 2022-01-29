@@ -29,7 +29,7 @@
             <header class="header">
                 <h2>Formularios HTML</h2>
             </header>
-            <p class="active">
+            <p>
                 Son herramientas que permiten el <strong> intercambio de datos entre cliente y servidor</strong>, siendo el unico lugar de la pagina donde el usuario puede intervenir directamente. Para poder implementarlos debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma, los elementos que seran procesados al realizar el envio del mismo.
             </p>
             <section>
@@ -57,6 +57,34 @@
                         <strong>Campos (INPUT/TEXTAREA/BUTTON)</strong> corresponden a los elementos sobre los cuales el usuario puede escribir o seleccionar alguna opcion, estos poseen 2 atributos importantes que son <strong>type="..."</strong> que indica el tipo de dato que se de ingresar/seleccionar y <strong>value="..."</strong> que corresponde al dato ingresado/seleccionado.
                     </li>
                 </ul>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten organizar la informacion de manera tabular y deben utilizarse siempre y cuando los datos deban manetener determinada estructura. A diferencia de otros ambitos, las mismas se crean respetando el <strong>modelo de cajas</strong> en el cual existen elementos contenedores y de contenido.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Cual es su estructura?</h3>
+                </header>
+                <p>
+                    Las tablas se componen de filas, columnas y celdas, pero se representan con las etiquetas <strong>&lt;table></strong> como contenedor principal, <strong>&lt;tr> (table row)</strong> como contenedor de fila y por ultimo <strong>&lt;td> (table division)</strong> como celda de contenido. Ademas con la aparicion de la ultima version de html se incorporo una estructura semantica con los siguientes elementos:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD: </strong> Cabecera de tabla, se utiliza para contener a los encabezados que se representan con la etiqueta <em>th (table heading)</em>
+                    </li>
+                    <li>
+                        <strong>TBODY: </strong> Cuerpo de tabla, es aquel que contiene los datos representados y en ocasiones puede contener una columna de titulos, especialmente si se trata de una tabla de referencias cruzadas.
+                    </li>
+                    <li>
+                        <strong>TFOOT: </strong> Pie de tabla, se utiliza para contener informacion complementaria a los datos del cuerpo, como totales, maximos, minimos, prodemios,etc...
+                    </li>
+                </ul>
+                
             </section>
         </article>
     </main>
