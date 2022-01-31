@@ -113,6 +113,38 @@
                 <header>
                     <h3>¿Multimedia sin plugins?</h3>
                 </header>
+                <p>
+                    Como se menciono anteriormente, era muy comun el uso de plugins para reproducir contenido multimedia, pero el inconveniente de esto radicaba en que el usuario necesitaba instalar un complemento que en ocasiones no era compatible con algun navegador. Para incorporar este tipo de elementos debemos utilizar las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente, cabe destacar que para mostrar los controles del reproductor es necesario utilizar el atributo <em>controls</em>
+                </p>
+                <div class="example">
+                    <figure>
+                        <audio src="assets/media/californication.ogv" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+                                <a href="assets/media/californication.ogv">link</a>
+                            </p>
+                        </audio>
+                        <figcaption>Audio: californication</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/by-the-way.mp4" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+                                <a href="assets/media/by-the-way.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Video: By the way</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/cant-stop.webm" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos, pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente 
+                                <a href="assets/media/cant-stop.webm">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Video: By the way (autoplay)</figcaption>
+                    </figure>
+                </div>
             </section>
         </article>
     </main>
