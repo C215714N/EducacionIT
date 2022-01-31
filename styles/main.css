@@ -1,9 +1,59 @@
 /* Reglas Generales */
-
+    *{
+        font-family: sans-serif;
+    }
+    /* Margenes */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        header p,
+        .menu{
+            margin: 0;
+        }
+    /* Rellenos */
+        .menu{
+            padding: 0;
+        }
+    /* Estilos */
+        .menu{
+            list-style: none;
+        }
 /* Navegacion */
-
+    .menu{
+        background-color: #448;
+        text-align: center;
+    }
+    .menu li{
+        display: inline-block;
+        padding: 8px 4px; /* top right bottom left */
+    }
+    .menu a{
+        color:#ccc;
+        text-decoration: none;
+    }
+    .menu a:hover,
+    .menu a.active{
+        color: #eee;
+        text-shadow: 0 0 8px; /* x y blur color */
+    }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 20px;
+        color: #eee;
+        background-color: #333;
+        text-align: center;
+    }
+    .header{
+        padding: 8px;
+        color: #eee;
+        background-color: #224;
+    }
+    header{
+        color: #448;
+        border-bottom: 1px solid; /* width style color */
+    }
 /* Contenido */
 
 /* Pie de Pagina */
