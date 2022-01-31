@@ -16,6 +16,10 @@
         color:#eee;
         background-color: #448;
     }
+    #contact label{
+        display: inline-block;
+        width: calc(100% - 28px);
+    }
     #contact input,
     #contact textarea{
         width: calc(100% - 16px);
@@ -27,6 +31,10 @@
     }
     #contact textarea{
         min-height: 80px;
+    }
+    #contact #contact_terms,
+    #contact #contact_news{
+        width: 12px;
     }
     #contact button{
         display: block;

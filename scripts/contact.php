@@ -4,11 +4,13 @@
     $email = $_POST['email'];
     $age = $_POST['age'];
     $consult = $_POST['consult'];
+    $options = $_POST['options'];
 
 // Generacion del Mensaje (Correo)
     $message = "
         <strong>Nombre: </strong> $name <br>
         <strong>Edad: </strong> $age <br>
+        <strong>Acepto: </strong> $options <br>
         <strong>Consulta: </strong> $consult";
     
     mail(
