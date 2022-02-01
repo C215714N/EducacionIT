@@ -381,12 +381,12 @@
                         </li>
                     </ul>
                     <hr>
-                    <div class="flexbox overflow justify-between menu">
+                    <div class="flexbox justify-between | overflow | menu">
                         <a href="">Maquetacion</a>
                         <button>&equiv;</button>
                     </div>
                     <hr>
-                    <div class="flexbox overflow justify-evenly menu">
+                    <div class="flexbox justify-evenly | overflow | menu">
                         <a href="">Maquetacion</a>
                         <ul>
                             <li><a href="#">link 1</a></li>
@@ -399,8 +399,45 @@
                 <hr>
                 <h4>Align Items</h4>
                 <p>
-                    Para organizar los elementos sobre el eje secundario es necesario que el contenedor posea una altura minima o que su contenido no sea del mismo tamaño, ya que de lo contrario no notaremos los cambios.
+                    Para organizar los elementos sobre el eje secundario es necesario que el contenedor posea una altura minima o que su contenido no sea del mismo tamaño, ya que de lo contrario no notaremos los cambios. si queremos implementar mas filas sera util aplicar el atributo <em>flex-wrap: wrap;</em>
                 </p>
+                <ul class="example">
+                    <li><strong>flex-start</strong> valor que organiza todos los elementos al principio del flex (arriba)</li>
+                    <li><strong>center</strong> valor que centra todas las cajas dentro del contenedor flex (verticalmente)</li>
+                    <li><strong>flex-end</strong> valor que ubica todos los elementos al final del flex (abajo)</li>
+                    <li><strong>stretch</strong> valor que estira las cajas dentro del contenedor para que ocupen el mismo tamaño</li>
+                    <li><strong>baseline</strong> valor que organiza los elementos de manera tal que sus textos sean legibles, independientemente del tamaño del contenedor</li>
+                </ul>
+                <div class="example align-center">
+                    <div class="flexbox align-stretch | overflow | min-h-300">
+                        <div class="box">
+                            <img class="max-w-200" src="assets/img/jjba-thefool-04.jpg" alt="JJBA the Fool">
+                            <p class="max-w-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nobis praesentium rerum maxime inventore sed molestias eius soluta ullam odio laborum pariatur quisquam totam perspiciatis dolor, alias dolore porro veritatis?
+                            </p>
+                        </div>
+                        <ul class="box menu">
+                            <li class="d-block"><a href="#">Link 1</a></li>
+                            <li class="d-block"><a href="#">Link 2</a></li>
+                            <li class="d-block"><a href="#">Link 3</a></li>
+                            <li class="d-block"><a href="#">Link 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="flexbox align-baseline menu">
+                        <a class="title" href="">Maquetacion</a>
+                        <ul>
+                            <li><a href="#">link 1</a></li>
+                            <li><a href="#">link 2</a></li>
+                            <li><a href="3">link 3</a></li>
+                            <li><a href="3">link 4</a></li>
+                        </ul>
+                        <div class="social-media">
+                            <a class="facebook" href=""></a>
+                            <a class="instagram" href=""></a>
+                            <a class="linkedin" href=""></a>
+                        </div>
+                    </div>
+                </div>  
             </section>
         </article>
     </main>
