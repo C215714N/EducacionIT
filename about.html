@@ -339,6 +339,70 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Introduccion a Flexbox</h2>
+            </header>
+            <p>
+                Con este nombre se conoce al modelo de Cajas flexible que facilita la organizacion y distribucion del los contenidos que sean hijos directos de la etiqueta en la que se utiliza. Para implementarlo debemos utilizar el atributo <strong>display: flex;</strong> sobre el elementos contenedor.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Cuales son sus bases?</h3>
+                </header>
+                <p>
+                    Al aplicar el atributo <em>mencionado en el punto anterior</em> el contenido se distribuye en un <strong>eje principal </strong> que va de izquierda a derecha, por defecto; y sobre un eje secundario que va de arriba hacia abajo, siempre y cuando especifiquemos el atributo <em>flex-wrap</em>, ya que caso contrario, flexbox intentara ubicar todos los elementos en una sola fila
+                </p>
+                <h4>Justify Content</h4>
+                <p>
+                    Eje principal que permite la separacion del contenido de izquierda a derecha, pero cuya direccion puede ser alterada si utilizamos el atributo <strong>flex-direction</strong> y los valores que se puede implementar son los siguientes:
+                </p>
+                <ul class="example">
+                    <li><strong>flex-start</strong> valor por defecto, que distribuye todos los elementos al principio del flex en orden (izquierda)</li>
+                    <li><strong>center</strong> valor que centra todas las cajas dentro del contenedor flex</li>
+                    <li><strong>flex-end</strong> valor que ubica en orden todos los elementos al final del flex (derecha)</li>
+                    <li><strong>space-around</strong> valor que separa los elementos calculando dejando una distancia mayor hacia el centro</li>
+                    <li><strong>space-between</strong> valor que separa los elementos entre los extremos</li>
+                    <li><strong>space-evenly</strong> valor que separa los elementos de manera equitativa, con exactamente la distancia para cada uno</li>
+                </ul>
+                <div class="practical-examples">
+                    <ul class="flexbox overflow">
+                        <li class="box">
+                            <strong class="title">html</strong>
+                            <em>lenguaje de marcado de hipertexto, se utiliza para definir la estructura de la pagina.</em>
+                        </li>
+                        <li class="box">
+                            <strong class="title">css</strong>
+                            <em>hojas de estilo en cascada, se utiliza para definir el diseño grafico de los elementos de la pagina.</em>
+                        </li>
+                        <li class="box">
+                            <strong class="title">js</strong>
+                            <em>lenguaje de programacion orientado a objetos, se utiliza para definir la funcionalidad de la pagina.</em>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="flexbox overflow justify-between menu">
+                        <a href="">Maquetacion</a>
+                        <button>&equiv;</button>
+                    </div>
+                    <hr>
+                    <div class="flexbox overflow justify-evenly menu">
+                        <a href="">Maquetacion</a>
+                        <ul>
+                            <li><a href="#">link 1</a></li>
+                            <li><a href="#">link 2</a></li>
+                            <li><a href="#">link 3</a></li>
+                            <li><a href="#">link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <h4>Align Items</h4>
+                <p>
+                    Para organizar los elementos sobre el eje secundario es necesario que el contenedor posea una altura minima o que su contenido no sea del mismo tamaño, ya que de lo contrario no notaremos los cambios.
+                </p>
+            </section>
+        </article>
     </main>
     <!-- Footer -->
     <footer id="footer">
