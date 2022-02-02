@@ -175,3 +175,20 @@
         color: #448;
         background-color: #eee;
     }
+    /* Social */
+    .social{
+        text-align: center;
+        padding: .5rem;
+    }
+    .social a{
+        display: inline-block;
+        margin: .25rem;
+        border-radius: .25rem;
+        padding: .5rem;
+        color: #eee;
+        background-color: #333;
+        text-decoration: none;
+    }
+    .social a:hover{
+        background-color: #666;
+    }
