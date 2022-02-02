@@ -9,7 +9,8 @@
         h3,
         h4,
         header p,
-        .menu{
+        .menu,
+        .example figure{
             margin: 0;
         }
     /* Rellenos */
@@ -20,6 +21,10 @@
         .menu,
         .example{
             list-style: none;
+        }
+        .example,
+        .overflow{
+            overflow: hidden;
         }
 /* Navegacion */
     .menu{
@@ -77,6 +82,11 @@
         line-height: 1.5rem;
         box-shadow: -.25rem .25rem .25rem #333; /*-x+ -y+ blur color*/
     }
+    .example video,
+    .example iframe{
+        width: 100%;
+        max-width: 640px;
+    }
     /* Tablas */
     table{
         margin: 1rem auto;
@@ -106,8 +116,21 @@
         color: #eee;
         background-color: rgba(68, 68, 136, .5); /* red green blue alpha */
     }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #3c6;
+    }
+    .semantic tfoot{
+        background-color: #36c;
+    }
 /* Pie de Pagina */
-
+    #footer iframe{
+        border: none;
+        width: 100%;
+        min-height: 240px;
+    }
     /* Formulario */
     #contact{
         max-width: 540px;
@@ -122,12 +145,16 @@
     }
     #contact input,
     #contact textarea{
-        width: calc(100% - 16px);
+        width: calc(100% - 20px);
         margin-bottom: 8px;
         outline: 0;
-        border: 0;
+        border: 2px solid transparent;
         padding: 8px;
         resize: none;
+    }
+    #contact input:focus,
+    #contact textarea:focus{
+        box-shadow: 0 0 .5rem #eee;
     }
     #contact textarea{
         min-height: 80px;
