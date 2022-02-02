@@ -77,6 +77,19 @@
         line-height: 1.5rem;
         box-shadow: -.25rem .25rem .25rem #333; /*-x+ -y+ blur color*/
     }
+    /* Tablas */
+    table{
+        margin: 1rem auto;
+    }
+    table caption{
+        border-radius: .25rem .25rem 0 0;
+    }
+    table caption,
+    table th,
+    table td{
+        padding: .5rem;
+    }
+    
 /* Pie de Pagina */
 
     /* Formulario */

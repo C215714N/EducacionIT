@@ -147,6 +147,112 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten organizar la informacion de manera tabular y tenemos que utilizarlas cuando los datos a representar requieren de una estructura que no debe ser alterada. Al igual que en cualquier otro ambito, las mismas se componen de <em>filas, columnas y celdas</em> pero en HTML se crean respetando el <strong> modelo de cajas</strong>, utilizando la etiqueta <strong>&lt;table></strong> como contenedor principal
+            </p>
+            <section>
+                <header>
+                    <h3>¿Cual es su estructura?</h3>
+                </header>
+                <p>
+                    Las tablas, a diferencia de otras representaciones en programas, no poseen columnas definidas, es decir que dentro del contenedor principal utilizaremos etiquetas como <strong>&lt;tr> (table row)</strong> para indicar al contenedor de fila y <strong>&lt;td> (table division)</strong> para indicar la celda de contenido. Ademas poseen estructura semantica y podemos clasificar su partes utilizando los siguientes contenedores:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD: </strong> Cabecera de tabla, contiene los encabezados que se representan con la etiqueta <em>&lt;th> (table heading)</em>
+                    </li>
+                    <li>
+                        <strong>TBODY: </strong> Cuerpo de tabla, contiene los datos representados y si realizamos tabla de referencias cruzadas tambien puede poseer encabezados.
+                    </li>
+                    <li>
+                        <strong>TFOOT: </strong> Pie de tabla, contiene datos complementarios al cuerpo, como por ejemplo: <em>totales, promedios, maximos, minimos, etc...</em>
+                    </li>
+                </ul>
+                <div class="overflow">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d477714n</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="modern">
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>L</th>
+                                <th>M</th>
+                                <th>X</th>
+                                <th>J</th>
+                                <th>V</th>
+                                <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>m</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>t</th>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>x</th>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>total</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como se combinan las celdas?</h3>
+                </header>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina Principal -->
     <footer id="footer">
