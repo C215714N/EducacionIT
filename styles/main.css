@@ -89,7 +89,23 @@
     table td{
         padding: .5rem;
     }
-    
+    .classic,
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: .1rem solid #448;
+        border-collapse: collapse;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5); /* red green blue alpha */
+    }
 /* Pie de Pagina */
 
     /* Formulario */
