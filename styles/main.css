@@ -40,9 +40,36 @@
         text-shadow: 0 0 8px; /*-x+ -y+ blur color*/
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 15rem) 1rem;
+        color: #eee;
+        background-color: #333;
+        text-align: center;
+        text-shadow: 0 0 .5rem #333;
+    }
+    .header{
+        margin: -1rem -1rem .5rem; /*top right bottom left*/
+        border-radius: .25rem .25rem 0 0; /*top-left top-right bottom-right bottom-left*/
+        padding: 1rem;
+        color: #eee;
+        background-color: #448;
+    }
+    header{
+        color: #448;
+        border-bottom: 1px solid;
+    }
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: auto;
+        padding: .5rem; /* ancho de "M" en la raiz (html)*/
+    }
+    article{
+        margin: 1.5rem 0; /* top right bottom left */
+        border-radius: .25rem;
+        padding: 1rem;
+        box-shadow: 0 0 .5rem #999; /*-x+ -y+ blur color*/
+    }
     /* Tablas */
     table{
         margin: 16px auto;
