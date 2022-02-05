@@ -110,7 +110,6 @@
                             </tr>
                         </tfoot>
                     </table>
-
                     <table class="modern">
                         <caption>Rutina semanal</caption>
                         <thead>
@@ -162,6 +161,54 @@
                                 <td>3</td>
                                 <td>1</td>
                                 <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como combinar celdas?</h3>
+                </header>
+                <p>
+                    Las tablas normalmente poseen una estructura uniforme, pero en ciertas ocasiones es necesario combinar mas de una celda, expandiendola mas de una columna o mas de una fila, para esos casos debemos utilizar los atributos <strong>colspan="..."</strong> y <strong>rowspan="..."</strong> indicando como valor la cantidad total de celdas a ocupar. Cuando realizamos estos cambios el contenido correlativo se desplazara a la derecha.
+                </p>
+                <img src="" alt="">
+                <div class="example">
+                    <table class="semantic modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Precio</th>
+                                <th>Cant</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>21500</td>
+                                <td>3</td>
+                                <td>64500</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>4800</td>
+                                <td>2</td>
+                                <td>9600</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>6400</td>
+                                <td>1</td>
+                                <td>6400</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">Total</th>
+                                <td>80500</td>
                             </tr>
                         </tfoot>
                     </table>
