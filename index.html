@@ -25,7 +25,79 @@
         <p>html | css | js</p>
     </header>
     <!-- Content -->
-
+    <main>
+        <section>
+            <h2 class="header">Introduccion a la Maquetacion</h2>
+            <p>
+                Uno de los aspectos principales al momento de maquetar se encuentra en la planificacion y conocimiento de las herramientas que vamos a estar utilizando, es por eso de debemos entender en su totalidad como funciona la estructura de nuestro documento, si esta ya fue realizada, y la jerarquia de los selectores y reglas de CSS.
+            </p>
+            <article>
+                <h3>Estructura Semantica HTML</h3>
+                <p>
+                    Parte importante de la maquetacion web se encuentra en la definicion de las etiquetas que se utilizan, para ello implementamos elementos que establecen cual el la funcion de cada parte de la pagina. Entre las etiquetas que componen la estructura semantica de HTML se encuentran:
+                </p>
+                <ul class="example">
+                    <li><strong>header</strong> corresponde al contenido introductorio</li>
+                    <li><strong>nav</strong> corresponde a la navegacion principal</li>
+                    <li><strong>main</strong> corresponde al contenido mas relevante</li>
+                    <li><strong>section</strong> corresponde al contenido contextualizado</li>
+                    <li><strong>article</strong> corresponde al contenido independiente</li>
+                    <li><strong>aside</strong> corresponde al contenido lateral</li>
+                    <li><strong>footer</strong> corresponde al contenido complementario</li>
+                </ul>
+            </article>
+            <p>
+                Si bien una correcta definicion de la estructura nos ayudara a mejorar el posicionamiento SEO, tambien debemos tener en cuenta la opinion de los usuarios. Por eso es que los motores de busqueda evaluan esto en base al diseño, experiencia e interfaz de usuario, ademas de la accesibilidad del sitio.
+            </p>
+            <article>
+                <h3>Atributos de las etiquetas</h3>
+                <p>
+                    Todos los elementos de una pagina web poseen caracteristicas que podemos modificar, en algunos casos desde el mismo HTML, como por ejemplo: <em>src="..."</em> o <em>href="..."</em> que indican el elemento que deseamos traer a nuestra pagina o a donde queremos que nos redirija respectivamente. Asi como tambien, desde CSS podemos aplicar los siguiente atributos comunes:
+                </p>
+                <ul class="example">
+                    <li><strong>margin</strong> distancia entre las etiquetas</li>
+                    <li><strong>border</strong> linea que rodea la etiqueta</li>
+                    <li><strong>padding</strong> relleno de la etiqueta</li>
+                    <li><strong>width</strong> ancho de la etiqueta</li>
+                    <li><strong>height</strong> altura de la etiquta</li>
+                    <li><strong>color</strong> color frontal del contenido (texto)</li>
+                    <li><strong>background-color</strong> color de fondo del contenido</li>
+                </ul>
+            </article>
+            <p>
+                Otro de los aspectos importantes, que no se relacionan directamente con el posicionamiento, radica en la forma en la que utilizamos los selectores CSS. Es importante tener en claro que elementos tienen prioridad y cuales no al momento de crear nuestras reglas, asi como tambien debemos tener en cuenta evitar la repeticion de estilos de manera constante.
+            </p>
+            <article>
+                <h3>Jerarquia de selectores CSS</h3>
+                <p>
+                    Al momento de aplicar estilos, si bien el orden de las reglas no altera la estructura, es importante tener en cuenta que en igualdad de condiciones si importa el orden, especialmente si existen reglas que sobreescriban a otras. Por otro podemos aprovechar la jerarquia existente para poder implementar nuestros diseños de una manera mas organizada.
+                </p>
+                <ul class="example hierarchy">
+                    <li>
+                        <strong>Tag Selector</strong>
+                        <ul>
+                            <li><span>header</span>{...}</li>
+                            <li><span>header</span> h1{...}</li>
+                        </ul>
+                    </li>
+                    <li class="span">
+                        <strong>Class Selector</strong>
+                        <ul>
+                            <li><span>.header</span>{...}</li>
+                            <li><span>.header</span> h1{...}</li>
+                        </ul>
+                    </li>
+                    <li id="span" class="span">
+                        <strong>Id Selector</strong>
+                        <ul>
+                            <li><span>#header</span>{...}</li>
+                            <li><span>#header</span> h1{...}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
     <!-- Footer -->
     <footer id="footer">
         <div class="map">
