@@ -1,0 +1,39 @@
+/* Imports */
+
+/* General Rules */
+    *{
+        box-sizing: border-box;
+        /*
+            content-box:
+                content-width = width
+                final-width = width + padding + border
+            bordex-box:
+                final-width = width
+                content-width = width - padding - border
+        */
+        font-family: 'Raleway', 'Calibri', sans-serif;
+    }
+/* Navigation */
+
+/* Header */
+
+/* Content */
+
+    /* Selectors Hierachy */
+    .hierarchy span{
+        display: inline-block;
+        padding: .25rem .5rem;
+        color: darkred;
+        background-color: tomato;
+    }
+    .hierarchy .span span{
+        font-weight: bold;
+        color: darkgreen;
+        background-color: lightgreen;
+    }
+    .hierarchy #span span{
+        text-transform: uppercase;
+        color: darkblue;
+        background-color: skyblue;
+    }
+/* Footer */
