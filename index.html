@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+        content="
+            width=device-width,
+            initial-scale=1,
+            maximum-scale=3">
+    <title>Maquetado Avanzado</title>
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Cabecera: presentacion -->
+    <header id="header">
+        <h1>Maquetado</h1>
+        <nav>
+            <button class="btn">&equiv;</button>
+            <ul class="menu">
+                <li><a href=""><span>Link 1</span></a></li>
+                <li><a href=""><span>Link 2</span></a></li>
+                <li><a href=""><span>Link 3</span></a></li>
+            </ul>
+            <a class="icon-back" href="#">&lt;</a>
+        </nav>
+    </header>
+    <!-- Contenido -->
+    <main>
+        <section>
+            <header class="header">
+                <h2>Nuevas Caracteristicas</h2>
+                <p>Incorporaciones al estandar</p>
+            </header>
+            <p>
+                Con la aparicion de html5 se agregaron nuevas etiquetas al lenguaje para facilitar a los motores de busqueda la identificacion de cierto tipo de contenido, que anteriormente se implementaban de forma visual. Entre estos se encuentran API's de reproduccion de contenido multimedia, API's que permiten dibujar sobre el navegador, e incluso elementos que facilitan el analisis estadistico.
+            </p>
+            <article>
+                <h3>Elementos estadisticos</h3>
+                <p>
+                    Para la representacion de valores numericos en diferentes circunstancias existen las etiquetas <strong>&lt;progress></strong> que se utiliza para representar el avance en una tarea cuando esta aun no fue finalizada, <em>por ejemplo: la realizacion de una capacitacion</em>; y <strong>&lt;meter></strong> que se utiliza para la comparacion de valores cuando una actividad fue finalizada, <em>por ejemplo: el resultado de un examen.</em>
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>Progress</strong>
+                        <ul>
+                            <li>
+                                <progress></progress>
+                                value = undefined
+                            </li>
+                            <li>
+                                <progress value="12.5" max="100"></progress>
+                                value = 12.5; max = 100
+                            </li>
+                            <li class="progress">
+                                <progress max="100"></progress>
+                                <input type="number" min="0" max="100">
+                                value = javascript
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Meter</strong>
+                        <ul>
+                            <li>
+                                <meter value="30" max="100" low="40" high="70" optimum="10"></meter>
+                                <strong>value</strong> &lt; low &lt; high &lt; optimum
+                            </li>
+                            <li>
+                                <meter value="60" max="100" low="40" high="70" optimum="10"></meter>
+                                low &lt; <strong>value</strong> &lt;  high &lt; optimum
+                            </li>
+                            <li>
+                                <meter value="90" max="100" low="40" high="70" optimum="10"></meter>
+                                low &lt; high &lt; <strong>value</strong> &lt; optimum
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <!-- Pie de Pagina -->
+    footer#footer
+    <!-- Scripts JS -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
