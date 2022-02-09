@@ -13,6 +13,27 @@
         */
         font-family: 'Raleway', 'Calibri', sans-serif;
     }
+    /* Margenes */
+    h1,
+    h2,
+    h3,
+    h4,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Rellenos */
+    .menu{
+        padding: 0
+    }
+    /* Estilos */
+    .menu{
+        list-style:none;
+    }
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
 /* Navigation */
 
 /* Header */
