@@ -99,7 +99,25 @@
         padding: .25rem 1rem;
     }
 /* Header */
-
+    #header{
+        padding: min(20%, 15rem) 1rem;
+        text-align: center;
+        color:#eee;
+        background-color: #333;
+        background-image: 
+            url('../assets/icons/f_pescar.svg'),
+            url('../assets/bg/osx-catalina.jpg');
+        background-position: 
+            center 1rem, /* x y */
+            center; /*x: left right y: top bottom ambos: center*/
+        background-size: 
+            clamp(5rem, 15%, 20rem), /* width height */
+            cover; /*cover: todo el espacio | contain: muestra la imagen*/
+        background-repeat: no-repeat;
+        background-attachment: 
+            scroll,
+            fixed;        
+    }
 /* Content */
 
     /* Selectors Hierachy */
@@ -127,4 +145,18 @@
             flex-direction: column;
             max-width: 540px;
             margin: auto;
+        }
+        #contact .valid{
+            display: none;
+            padding: .25rem;
+            color: #999;
+        }
+        #contact :focus + .valid{
+            display: block;
+        }
+        #contact :valid + .valid{
+            color: #284;
+        }
+        #contact :not(:placeholder-shown):invalid + .valid{
+            color: #c33;
         }
