@@ -14,10 +14,20 @@
 <body>
     <!-- Navigation -->
     <nav>
+        <a href="#" class="logo">Fundacion Pescar</a>
+        <form id="search" action="" method="GET">
+            <label for="search_field">realice una busqueda</label>
+            <input 
+                id="search_field"
+                name="search"
+                type="search"
+                placeholder="Realice una busqueda">
+            <button>Buscar</button>
+        </form>
         <ul class="menu">
-            <li><a href="">Link 1</a></li>
-            <li><a href="">Link 2</a></li>
-            <li><a href="">Link 3</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
     <!-- Header -->
@@ -106,6 +116,33 @@
         </div>
         <form action="" id="contact">
             <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                type="text" 
+                id="contact_name" 
+                name="name" 
+                pattern="[A-Z a-z ñÑ]{3,50}"
+                maxlength="50"
+                required>
+            <div class="valid">
+                Ingrese su nombre solamente con letras y sin tildes,
+                el mismo debe poseer entre 3 y 50 caracteres
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input type="email" id="contact_email" name="email" required>
+            <div class="valid">
+                Ingrese una direccion de al menos 8 caracteres,
+                respetando el siguiente formato "usuario@servidor"
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input type="tel" id="contact_phone" name="phone" required>
+            <div class="valid">
+                Ingrese la caracteristica con un signo + al comienzo,
+                utilice un guion cada 3 a 6 caracteres
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea name="consult" id="contact_consult" required></textarea>
+            <button>Enviar</button>
         </form>
         <div class="social">
             <a class="facebook" href="https://facebook.com" target="_blank"></a>

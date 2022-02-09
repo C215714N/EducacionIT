@@ -14,6 +14,7 @@
         font-family: 'Raleway', 'Calibri', sans-serif;
     }
     /* Margenes */
+    body,
     h1,
     h2,
     h3,
@@ -34,8 +35,69 @@
     footer a{
         text-decoration: none;
     }
+    input,
+    textarea,
+    select{
+        outline: none;
+    }
 /* Navigation */
-
+    nav{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: .5rem;
+        background-color: hsl(175, 50%, 47%); 
+        /* 
+            html        rgb(0-255)      hex         hsl
+            red         255,0,0         ff0000      0,100%,50%
+            green       0,255,0         00ff00      120,100%,50%
+            blue        0,0,255         0000ff      240,100%,50%
+            yellow      255,255,0       ffff00      60,100%,50%
+            cyan        0,255,255       00ffff      180,100%,50%
+            magenta     255,0,255       ff00ff      300,100%,50%
+            white       255,255,255     ffffff      0,0,100%
+            grey        128,128,128     808080      0,0,50%
+            black       0,0,0           000000      0,0,0
+            (140)       decimal                     
+        */
+    }
+    nav a{
+        color: #fff;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+    .menu a{
+        display: block;
+        padding: .25rem;
+    }
+    .logo{
+        font: 700 1.5rem 'Raleway', 'Calibri', sans-serif; /* style weight size family */
+        font-variant: small-caps;
+        letter-spacing: -.1rem;
+    }
+    /* Search form */
+    #search label{
+        display: none;
+    }
+    #search input{
+        border-radius: 1rem;
+    }
+    #search button{
+        margin-left: -2rem;
+        border-radius: 0 1rem 1rem 0; /*tl tr br bl*/
+        color: #fff;
+        background-color: #999;
+        font-weight: bolder;
+        text-shadow: 0 0 .25rem #333;
+    }
+    #search input,
+    #search button{ 
+        border: none;
+        padding: .25rem 1rem;
+    }
 /* Header */
 
 /* Content */
@@ -58,3 +120,11 @@
         background-color: skyblue;
     }
 /* Footer */
+
+    /* Formulario de contacto */
+        #contact{
+            display: flex;
+            flex-direction: column;
+            max-width: 540px;
+            margin: auto;
+        }
