@@ -1,6 +1,13 @@
-/* Estilos Externos */
-    @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Open+Sans');
-    @import url('font-awesome.css');
+/* Tipografias*/
+    /* Link Externo - Google Fonts*/
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Open+Sans');
+    /* Link Interno Font Awesome */
+        @import url('font-awesome.css');
+    /* Fuente Importada - Fantasia */
+        @font-face {
+            font-family: 'star wars';
+            src: url('../assets/fonts/death_star.otf');
+        }
 /* Reglas generales */
     *{
         box-sizing: border-box;
