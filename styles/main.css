@@ -46,7 +46,7 @@
         background-color: #333;
         text-align: center;
         text-shadow: 0 0 .25rem #333;
-        background-image: url('../assets/bg/osx-high-sierra.jpg');
+        background-image: url('../assets/bg/osx-sierra.jpg');
         background-position: center; /* x y | keywords*/
         background-size: cover; /* width height | keywords*/
         background-repeat: no-repeat;
@@ -162,21 +162,35 @@
     }
     /* Redes sociales */
     .social{
-        min-height: 5rem;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-wrap: wrap;
-        border: .25rem dashed #333;
         padding: .5rem;
     }
     .social a{
+        width: 4rem;
+        height: 4rem;
+        margin: .25rem;
         border-radius: .25rem;
-        padding: .5rem;
-        text-decoration: none;
-        text-shadow: 0 0 .25rem #333;
-        color: #eee;
-        background-color: #666;
+        background-color: #ccc;
+        background-position: center;
+        background-size: 2rem;
+        background-repeat: no-repeat;
     }
     .social a:hover{
-        background-color: #999;
+        background-color: #eee;
+        box-shadow: 0 0 .5rem #333;
+        background-size: 3rem;
+    }
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
     }
