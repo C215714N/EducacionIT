@@ -45,7 +45,11 @@
         color: #eee;
         background-color: #333;
         text-align: center;
-        text-shadow: 0 0 .5rem #333;
+        text-shadow: 0 0 .25rem #333;
+        background-image: url('../assets/bg/osx-high-sierra.jpg');
+        background-position: center; /* x y | keywords*/
+        background-size: cover; /* width height | keywords*/
+        background-repeat: no-repeat;
     }
     .header{
         margin: -1rem -1rem .5rem; /*top right bottom left*/
@@ -155,4 +159,24 @@
     #contact button:hover{
         color: #448;
         background-color: #eee;
+    }
+    /* Redes sociales */
+    .social{
+        min-height: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        border: .25rem dashed #333;
+        padding: .5rem;
+    }
+    .social a{
+        border-radius: .25rem;
+        padding: .5rem;
+        text-decoration: none;
+        text-shadow: 0 0 .25rem #333;
+        color: #eee;
+        background-color: #666;
+    }
+    .social a:hover{
+        background-color: #999;
     }
