@@ -74,6 +74,37 @@
         padding: 1rem;
         box-shadow: 0 0 .5rem #999; /*-x+ -y+ blur color*/
     }
+    /* Ejemplos */
+    .example{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        margin: .5rem 1rem 1rem;
+        border-left: .25rem solid #66c;
+        padding: 1rem;
+        line-height: 1.5rem;
+        background-color: #eee;
+        box-shadow: -.25rem .25rem .5rem #333; /* -x+ -y+ blur color*/
+    }
+    /* Multimedia */
+    .example figure{
+        margin: .25rem auto;
+    }
+    .example audio,
+    .example video,
+    iframe{
+        width: 100%;
+    }
+    iframe{
+        border: none;
+        height: 240px;
+    }
+    /*
+        aspect-ratio    width       height
+        4:3             1.33(h)     75%(w)
+        16:9            1.78(h)     56.25%(w)
+        16:10           1.6(h)      62.5%(w)
+    */
     /* Tablas */
     table{
         margin: 16px auto;
