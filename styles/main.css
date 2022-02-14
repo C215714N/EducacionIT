@@ -59,7 +59,7 @@
             white       255,255,255     ffffff      0,0,100%
             grey        128,128,128     808080      0,0,50%
             black       0,0,0           000000      0,0,0
-            (140)       decimal                     
+            (140)   (   decimal         16.777.216  colores   )              
         */
     }
     nav a{
@@ -160,3 +160,37 @@
         #contact :not(:placeholder-shown):invalid + .valid{
             color: #c33;
         }
+    /*Redes sociales*/
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+    .social a{
+        margin: .25rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: .25rem;
+        background-color: #ccc;
+        background-position: center;
+        background-size: 2rem;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 3rem;
+        box-shadow: 0 0 .5rem #333;
+    }
+    .facebook{
+        background-image: url('../assets/icons/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icons/instagram.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icons/linkedin.svg');
+    }
+    .github{
+        background-image: url('../assets/icons/github.svg');
+    }
