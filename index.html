@@ -113,7 +113,7 @@
             <p>
                 Uno de los aspectos mas importantes a la hora de realizar un diseño radica en la planificacion del mismo, ya que en esta etapa debemos establecer las bases para identificar la relacion que existe entre los elementos, las proporciones de las medidas y la cantidad de contenedores a utilizar; ya sea que trabajamos por cuenta propia y debemos realizar el diseño desde cero, o formemos parte de un equipo y debamos convertir una maqueta con medidas fijas a una que se adapte a los distintos tamaños que pueda tener una ventana de navegador.
             </p>
-            <section>
+            <article>
                 <h3>Unidades de Medida</h3>
                 <p>
                     Si bien CSS permite utilizar cualquier unidad existente, debemos tener en cuenta cuando debemos utilizar aquellas que son independientes y aquellas que basan su valor en otro elemento, para mantener la relacion de aspecto del diseño y evitar que este se desborde, se estire o contraiga demasiado con respecto a la pantalla donde se este visualizando. Por eso contamos con los siguiente tipos de unidades.
@@ -143,19 +143,65 @@
                         </ul>
                     </li>
                 </ul>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>Modelos de Color</h3>
                 <p>
                     Otro aspecto importante es la eleccion de la paleta de colores, ya sea calida o fria, una triada de color, valores complementarios o tonos de la misma familia; pero mas alla de eso, debemos elegir el modelo que mas se adecue a nuestras necesidades. Si bien solamente podemos utilizar una <strong>sintesis adhitiva</strong>, ya que las pantallas son fuentes de luz, disponemos de la siguientes modelos:
                 </p>
-                <ul class="example colors">
+                <ul class="example content colors">
                     <li>HTML: darkslateblue</li>
                     <li>DEC: rgb(68,68,136)</li>
                     <li>HEX: #444488</li>
                     <li>HSL: hsl(240, 40%,40%)</li>
                 </ul>
-            </section>
+            </article>
+        </section>
+        <section>
+            <h2 class="header">Implementacion del Diseño</h2>
+            <article>
+                <h3>Flexbox</h3>
+                <p>
+                    Modelo de cajas unidimensional donde se utiliza un <strong>eje principal</strong> que determina la direccion de creacion de los elementos y un <strong>eje secundario</strong> que acompaña en la orientacion de los mismos. Cuando utilizamos el atributo <strong>display:flex</strong> El contenedor principal <em>funciona como referente para las etiquetas afectadas por flexbox</em>
+                </p>
+                <div class="example content flex">
+                    <div>div 1</div>
+                    <div>div 2</div>
+                    <div>div 3</div>
+                    <div>div 4</div>
+                    <span>span 1</span>
+                    <span>span 2</span>
+                    <span>span 3</span>
+                    <span>span 4</span>
+                </div>
+            </article>
+            <article>
+                <h3>Css-Grid</h3>
+                <p>
+                    Modelos de cajas multidimensional donde se dispone de un <strong>eje horizontal</strong> y un <strong>eje vertical</strong> para distribuir los elementos dentro de una grilla, que por defecto posee una sola columna. Cuando utilizamos el atributo <strong>display: grid</strong> Las celdas <em> funcionan como referentes para cada etiqueta dentro de la grilla </em>
+                </p>
+                <div class="example content grid">
+                    <div>div 1</div>
+                    <div>div 2</div>
+                    <div>div 3</div>
+                    <div>div 4</div>
+                    <span>span 1</span>
+                    <span>span 2</span>
+                    <span>span 3</span>
+                    <span>span 4</span>
+                </div>
+                <h4>Template Areas</h4>
+                <div class="example content area">
+                    <div>header</div>
+                    <div>nav</div>
+                    <div>main</div>
+                    <div>section</div>
+                    <span>section</span>
+                    <span>article</span>
+                    <span>aside</span>
+                    <span>footer</span>
+                </div>
+            </article>
         </section>
     </main>
     <!-- Footer -->
