@@ -28,7 +28,8 @@
         padding: 0
     }
     /* Estilos */
-    .menu{
+    .menu,
+    .example{
         list-style:none;
     }
     nav a,
@@ -116,10 +117,11 @@
         background-repeat: no-repeat;
         background-attachment: 
             scroll,
-            fixed;        
+            fixed;  
+        font-size: min(calc(2vw + .8rem),5rem); 
+        text-shadow: 0 0 min(2vw, 5rem) #333;     
     }
 /* Content */
-
     /* Selectors Hierachy */
     .hierarchy span{
         display: inline-block;
@@ -136,6 +138,15 @@
         text-transform: uppercase;
         color: darkblue;
         background-color: skyblue;
+    }
+    /*Units*/
+    .example{
+        max-width: 720px; /* absoluta */
+        margin: .5rem min(5vw, 4rem); /* flexible */
+        padding: .5rem 1rem; /* relativa */
+        font-size: 1.25rem; /* relativa */
+        line-height: 150%; /* relativa */
+        background-color: #eee;
     }
 /* Footer */
 
