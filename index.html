@@ -82,8 +82,7 @@
             <article>
                 <h3>Contenido Multimedia</h3>
                 <p>
-                    etiquetas <strong>&lt;audio> y &lt;video></strong>
-                    formatos <em>.mp3 - .wav - .ogg y .mp4 - .webm - .ogv</em> respectivamente
+                    Uno de los elementos incorporados con la ultima version de HTML5 fueron las etiquetas <strong>&lt;audio> y &lt;video></strong> que permiten la reproduccion nativa de los formatos <em>.mp3 - .wav - .ogg y .mp4 - .webm - .ogv</em> respectivamente. Estas permiten acceder a la API de reproduccion, la cual podemos visualizar utilizando el atributo <em>controls</em>, incluso podemos hacer que estos elementos se reproduzcan automaticamente en bucle si utilizamos los atributos <em>autoplay muted loop</em>.
                 </p>
                 <div class="example">
                     <figure>
@@ -114,9 +113,8 @@
             <article>
                 <h3>Herramientas de Dibujo</h3>
                 <p>
-                    elementos <strong>&lt;SVG> (scalable vector graphics)</strong> <em>lenguaje XML</em>
-                    <strong>&lt;canvas> (Mapa de Bits)</strong> <em>lenguaje JavaScript</em>
-                </p>
+					Los navegadores actuales incluyen herramientas que nos permiten realizar dibujos dentro de la pagina, estas son los elementos <strong>&lt;SVG> (scalable vector graphics)</strong> para la realizacion de imagenes creadas  matematicamente a partir de lineas y curvas utilizando el <em>lenguaje XML</em>; y <strong>&lt;canvas> (Mapa de Bits)</strong> para la creacion de imagenes rasters, utilizando el <em>lenguaje JavaScript</em> para la creacion de los mismos.
+				</p>
                 <div class="example">
                     <figure>
                         <img src="assets/icon/css.svg" alt="Logo CSS3 (Vector)">
@@ -128,6 +126,61 @@
                     </figure>
                 </div>
             </article>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Preprocesadores</h2>
+                <p>Pseudolenguajes de CSS</p>
+            </header>
+            <p>
+                Es un programa que permite generar CSS a partir de una sintaxis única, estas herramientas disponen de utilidades que no están en el lenguaje CSS y, por tanto, no las interpretan los navegadores directamente.
+
+                Utilizando un preprocesador conseguimos economizar tiempo, ya que escribimos menos código. Además, su mantenimiento es fácil y resulta más comprensible, debido básicamente a su optimizada organización.
+                
+                Por el contrario, utilizar un preprocesador implica aprender un nuevo lenguaje y escribir código poco común, que debe ser compilado en CSS y que afecta al flujo de desarrollo. Este código, que no entiende el navegador, deberemos traducirlo antes de llevar un sitio web a producción.
+            </p>
+            <article>
+                <h3>LESS (Leaner Styles Sheets)</h3>
+				<p>
+					Preprocesador que utiliza Javascript como lenguaje principal para la compilacion de la hoja de estilos, podemos instalarlo mediante <strong>NodeJS</strong> utilizando el comando <em>npm i -g less</em>. Cabe destacar que dicha herramienta posee algunas ventajas del lenguaje como la asincronicidad y la capacidad de invocar funciones o metodos; y para compilar nuestros archivos debemos utilizar el comando <em>lessc "input.less" "output.css"</em>
+				</p>
+				<p>
+					Uno de los inconvenientes que presenta el paquete original de <strong>LESS</strong> radica en la falta de un metodo de observacion, es decir, que debemos compilar cada vez que realizamos cambios. Una solucion a esto es el paquete <strong>less-watch-compiler</strong> que podemos instalar con NodeJS y para compilar debemos utilizar el comando <em>less-watch-compiler "input/" "output/" "file.less"</em>
+				</p>
+            </article>
+            <article>
+                <h3>SASS (Syntactically Awesome Styles Sheets)</h3>
+				<p>
+					Preprocesador que utiliza Ruby como lenguaje principal para realizar la compilacion, una de las principales diferencias con respecto a LESS es que no permite el llamado de metodos si estos no fueron declarados previamente, es decir, que el orden de los elementos es fundamental. Tambien se caracteriza por diferencia cada tipo de elemento mediante su sintaxis. <strong>SASS</strong> posee dos tipos de sintaxis, <em>sass</em> que se maneja mediante tabulaciones y <em>scss</em> que es mas similar a css.
+				</p>
+				<p>
+					Para instalarlo debemos ejecutar desde la consola el comando <em>npm i -g sass</em> y para realizar la compilacion de los archivos utilizamos el comando <em>sass --watch "input.scss" "output.css"</em> permitiendonos realizar un seguimiento al mismo. En caso de presentarse algun problema en la compilacion, este permanecera visible dentro del sitio que utilice la hoja de estilos compilada con errores.
+				</p>
+            </article>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Efectos visuales</h2>
+                <p>Transiciones y Transformaciones</p>
+            </header>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Galeria de Imagenes</h2>
+                <p>Fondos de Pantalla</p>
+            </header>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Animaciones CSS</h2>
+                <p>Fotogramas clave</p>
+            </header>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Ejemplos de Layout</h2>
+                <p>Implementacion de Herramientas</p>
+            </header>
         </section>
     </main>
     <!-- Pie de Pagina -->
