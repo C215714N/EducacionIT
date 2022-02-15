@@ -1,0 +1,87 @@
+// Variables: valores almacenados en la memoria
+    @color: #eee;
+    @bg-color: #448;
+    @r: .25rem;
+    @smartphone: 540px;
+    @tablet: 768px;
+    @laptop: 992px;
+    @desktop: 1200px;
+// Nesting: selectores que se anidan dentro de otros
+body{
+    &:extend(.zeroise);
+}
+#header{
+    color: @color;
+    background-color: @bg-color;
+    .flexbox(@jc:space-between);
+    h1{
+        &:extend(.zeroise);
+    }
+    // Navigation Bar
+    nav{
+        .menu{
+            .normalize(@p:.5rem 1rem);
+            @media screen and (min-width: @tablet){
+                .flexbox;
+            }
+            li{
+                &:extend(.unstyled);
+                .normalize(.25rem, .5rem);
+            }
+        }
+    // menu button
+        .fa-bars{
+            @r: 1rem;
+            color: @color;
+            background-color: transparent;
+            .radius;
+            @media screen and (min-width: @tablet){
+                display: none;
+            }
+        }
+    // menu links
+        a{
+            &:extend(.unstyled);
+            color: lighten(@color, 10%);
+            &:hover{
+                text-shadow: 0 0 .5rem @color;
+            }
+        }
+    }
+}
+//  Mixins: estilos que se aplican como atributos
+    /* helpers */
+    .zeroise{
+        .normalize;
+    }
+    .unstyled{
+        list-style: none;
+        text-decoration: none;
+    }
+    .radius{
+        -webkit-border-radius: @r;
+        -moz-border-radius: @r;
+        -ms-border-radius: @r;
+        -o-border-radius: @r;
+        border-radius: @r;
+    }
+//  Mixins parametricos: estilos que reciben argumentos
+    .normalize(@m:0; @p:0; @b:0){
+        margin: @m;
+        border: @b;
+        padding: @p;
+    }
+    .flexbox(
+        @fd: row;
+        @jc: center;
+        @ai: center;
+        @fw: wrap;
+        @d: flex
+    ){
+        display: @d;
+        flex-direction: @fd;
+        justify-content: @jc;
+        align-items: @ai;
+        flex-wrap: @fw;
+    }
+//  Mixin recursivo: estilos que se repiten en base a una condicion

@@ -1,0 +1,69 @@
+#header {
+  color: #eee;
+  background-color: #448;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#header nav .menu {
+  margin: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  #header nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+#header nav .menu li {
+  margin: 0.25rem;
+  border: 0;
+  padding: 0.5rem;
+}
+#header nav .fa-bars {
+  color: #eee;
+  background-color: transparent;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 768px) {
+  #header nav .fa-bars {
+    display: none;
+  }
+}
+#header nav a {
+  color: #ffffff;
+}
+#header nav a:hover {
+  text-shadow: 0 0 0.5rem #eee;
+}
+/* helpers */
+.zeroise,
+body,
+#header h1 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.unstyled,
+#header nav .menu li,
+#header nav a {
+  list-style: none;
+  text-decoration: none;
+}
+.radius {
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
