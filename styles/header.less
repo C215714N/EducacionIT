@@ -1,54 +1,64 @@
 // Variables: valores almacenados en la memoria
-    @color: #eee;
-    @bg-color: #448;
-    @r: .25rem;
-    @smartphone: 540px;
-    @tablet: 768px;
-    @laptop: 992px;
-    @desktop: 1200px;
+    // color palletes    
+        @color: #eee;
+        @bg-color: #448;
+    //  sizes
+        @r: .25rem;
+        @col: 24;
+    //  media screen
+        @smartphone: 540px;
+        @tablet: 768px;
+        @laptop: 992px;
+        @desktop: 1200px;
 // Nesting: selectores que se anidan dentro de otros
-body{
-    &:extend(.zeroise);
-}
-#header{
-    color: @color;
-    background-color: @bg-color;
-    .flexbox(@jc:space-between);
-    h1{
+    body{
         &:extend(.zeroise);
     }
-    // Navigation Bar
-    nav{
-        .menu{
-            .normalize(@p:.5rem 1rem);
-            @media screen and (min-width: @tablet){
-                .flexbox;
+    /* Main heading */
+    #header{
+        color: @color;
+        background-color: @bg-color;
+        .flexbox(@jc:space-between);
+        .normalize;
+        nav{
+        // navigation bar
+            .menu{
+                .normalize(@p:.5rem 1rem);
+                @media screen and (min-width: @tablet){
+                    .flexbox;
+                }
+                li{
+                    &:extend(.unstyled);
+                    .normalize(.25rem, .5rem);
+                }
             }
-            li{
+        // menu button
+            .fa-bars{
+                @r: 1rem;
+                color: @color;
+                background-color: transparent;
+                .radius;
+                @media screen and (min-width: @tablet){
+                    display: none;
+                }
+            }
+        // menu links
+            a{
+                color: lighten(@color, 10%);
                 &:extend(.unstyled);
-                .normalize(.25rem, .5rem);
-            }
-        }
-    // menu button
-        .fa-bars{
-            @r: 1rem;
-            color: @color;
-            background-color: transparent;
-            .radius;
-            @media screen and (min-width: @tablet){
-                display: none;
-            }
-        }
-    // menu links
-        a{
-            &:extend(.unstyled);
-            color: lighten(@color, 10%);
-            &:hover{
-                text-shadow: 0 0 .5rem @color;
+                &:hover{
+                    text-shadow: 0 0 .5rem @color;
+                }
             }
         }
     }
-}
+    /* Content heading */
+    header{
+        .normalize(.25rem 0, 1rem);
+        p{
+            &:extend(.zeroise);
+        }
+    }
 //  Mixins: estilos que se aplican como atributos
     /* helpers */
     .zeroise{
@@ -85,3 +95,37 @@ body{
         flex-wrap: @fw;
     }
 //  Mixin recursivo: estilos que se repiten en base a una condicion
+    //  heading styles 
+        .headings(@i:1) when (@i <= 6){
+            h@{i}{
+                &:extend(.zeroise);
+            }
+            .headings(@i + 1);
+        }
+        .headings;
+    /* heading colors per section */
+        .titles(@n; @i:1) when (@i <= @n){
+            &:nth-child(@{i}n) .header{
+                background: linear-gradient(
+                    to right,
+                    hsl(@i * 30, 50%, 50%),
+                    hsl( @i * 60, 50%, 50%)
+                );
+            }
+            .titles(@n; @i + 1);
+        }
+        section{
+            .header{
+                color: @color;
+                text-shadow: 0 0 .5rem darken(@bg-color, 20%);
+            }
+            .titles(12);
+        }
+    /* grid system  columns */
+        .grid(@i: 1) when (@i <= @col){
+            .col-@{i}{
+                width: percentage( ( @i / @col ) );
+            }
+            .grid(@i + 1);
+        }
+        .grid;
