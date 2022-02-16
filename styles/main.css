@@ -122,6 +122,10 @@
         text-shadow: 0 0 min(2vw, 5rem) #333;     
     }
 /* Content */
+    main{
+        max-width: 960px;
+        margin: auto;
+    }
     /* Selectors Hierachy */
     .hierarchy span{
         display: inline-block;
@@ -297,7 +301,7 @@
         }
         .layout div{
             margin: .5rem;
-            padding: .5rem;
+            padding: .75rem;
             box-shadow: 0 0 .5rem #ccc;
         }
         .layout .title{
