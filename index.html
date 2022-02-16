@@ -164,7 +164,21 @@
                 <p>
                     Modelo de cajas unidimensional donde se utiliza un <strong>eje principal</strong> que determina la direccion de creacion de los elementos y un <strong>eje secundario</strong> que acompaña en la orientacion de los mismos. Cuando utilizamos el atributo <strong>display:flex</strong> El contenedor principal <em>funciona como referente para las etiquetas afectadas por flexbox</em>
                 </p>
-                <div class="example content flex">
+                <h4>alineacion y distribucion</h4>
+                <input id="justify-content" type="checkbox" checked>
+                <label for="justify-content">Justify-Content</label>
+                <input id="align-items" type="checkbox" checked>
+                <label for="align-items">Align-Items</label>
+                <ul class="example">
+                    <li class="justify align"><strong>flex-start</strong> ubica los elementos al comienzo del contenedor flex</li>
+                    <li class="justify align"><strong>center</strong> ubica los elementos hacia el centro del contenedor flex</li>
+                    <li class="justify align"><strong>flex-end</strong> ubica los elementos hacia el final del contenedor flex</li>
+                    <li class="justify"><strong>space-around</strong> separa elementos sumando las distancias intermedias</li>
+                    <li class="justify"><strong>space-between</strong> separa elementos ubicando al primero y al ultimo a los extremos</li>
+                    <li class="justify"><strong>space-evenly</strong> separa elementos de manera totalmente equitativa</li>
+                    <li class="align"><strong>baseline</strong> alinea verticalmente las etiquetas en funcion del texto</li>
+                </ul>
+                <div class="content flex">
                     <div>div 1</div>
                     <div>div 2</div>
                     <div>div 3</div>
@@ -180,7 +194,14 @@
                 <p>
                     Modelos de cajas multidimensional donde se dispone de un <strong>eje horizontal</strong> y un <strong>eje vertical</strong> para distribuir los elementos dentro de una grilla, que por defecto posee una sola columna. Cuando utilizamos el atributo <strong>display: grid</strong> Las celdas <em> funcionan como referentes para cada etiqueta dentro de la grilla </em>
                 </p>
-                <div class="example content grid">
+                <h4>Creacion de Grillas</h4>
+                <ul class="example">
+                    <li><strong>grid-template-columns</strong> define la cantidad de columnas mediante su tamaño</li>
+                    <li><strong>grid-template-rows</strong> define la altura de la fila especificada</li>
+                    <li><strong>grid-column</strong> posicion de la celda entre las columnas, podemos expandir la misma</li>
+                    <li><strong>grid-row</strong> posicion de la celda entre las filas, tambien se puede expandir</li>
+                </ul>
+                <div class="content grid">
                     <div>div 1</div>
                     <div>div 2</div>
                     <div>div 3</div>
@@ -190,8 +211,13 @@
                     <span>span 3</span>
                     <span>span 4</span>
                 </div>
-                <h4>Template Areas</h4>
-                <div class="example content area">
+                <h4>Plantilla de Areas</h4>
+                <ul class="example">
+                    <li><strong>grid-template-areas</strong> identifica nombres de areas para ubicar las celdas</li>
+                    <li><strong>grid-area</strong> asigna el area de pertenencia a la celda</li>
+                    <li><strong>grid-gap</strong> separacion entre celdas</li>
+                </ul>
+                <div class="content area">
                     <div>header</div>
                     <div>nav</div>
                     <div>main</div>

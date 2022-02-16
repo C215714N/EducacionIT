@@ -181,6 +181,32 @@
         align-items: center;
         flex-wrap: wrap;
     }
+    .align,
+    .justify,
+    #justify-content,
+    #align-items{
+        display: none;
+        margin: .25rem 0;
+    }
+    article label{
+        display: block;
+        border-left: 1.5rem solid;
+        padding: .25rem;
+    }
+    label[for="justify-content"]{
+        border-color: #284
+    }
+    label[for="align-items"]{
+        border-color: #c33;
+    }
+    #justify-content:checked ~ .example .justify{
+        display: block;
+        box-shadow: 0 .25rem #284;
+    }
+    #align-items:checked ~ .example .align{
+        display: block;
+        border-bottom: .25rem solid #c33;
+    }
     /* CSS-grid */
     .grid{
         display: grid;
@@ -213,7 +239,7 @@
             "aside  main    main"
             "aside  .       article"
             "aside  .       article"
-            "footer footer footer"
+            "footer footer  footer"
     }
     .area :first-child{ grid-area: header; }
     .area :nth-child(2){ grid-area: nav; }
