@@ -274,6 +274,7 @@
         .col-3{ width: 100%; }
         .w-50{ width: calc(50% - 1rem);  }
         .w-100{ width: 100%; }
+        .h-100{ height: 100%; }
         
         .float-left{
             float: left;
@@ -305,6 +306,27 @@
         }
         .layout .text{
             color: #333;
+        }
+        .css-grid{
+            grid-template-columns: repeat(auto-fit, minmax(min(100%,200px), 1fr));
+            padding: .5rem;
+        }
+        .css-grid img{
+            border-radius: .25rem;
+            border: .5rem solid #333;
+            object-fit: cover;
+        }
+        .mansorny img:nth-child(even){
+            grid-column: span 2;
+        }
+        .mansorny img:nth-child(odd){
+            grid-row: span 2;
+        }
+        .mansorny.alternative img:nth-child(2n){
+            grid-column: span 2;
+        }
+        .mansorny.alternative img:nth-child(3n){
+            grid-row: span 2;
         }
 /* Footer */
 
