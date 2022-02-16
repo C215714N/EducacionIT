@@ -292,13 +292,7 @@
         .hidden{
             display: none;
         }
-        .hidden:checked + .layout{
-            display: flex;
-        }
         /*styles*/
-        .layout{
-            display: none;
-        }
         .layout div{
             margin: .5rem;
             padding: .75rem;
@@ -310,7 +304,7 @@
             font-size: 1.5rem;
         }
         .layout .text{
-            color: #333
+            color: #333;
         }
 /* Footer */
 

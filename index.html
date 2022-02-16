@@ -233,13 +233,12 @@
             <h2 class="header">Ejemplos de Layout</h2>
             <article>
                 <h3>flexbox</h3>
-                <ul>
-                    <li><label for="comparacion">comparacion</label> </li>
-                    <li><label for="lista_elementos">lista de elementos</label> </li>
-                    <li><label for="destacado">Elemento destacado</label> </li>
+                <ul class="selection">
+                    <li>Comparacion de elementos <span class="status">(mostrar)</span></li>
+                    <li>lista de elementos <span class="status">(mostrar)</span></li>
+                    <li>Elemento destacado <span class="status">(mostrar)</span></li>
                 </ul>
                 <!-- Comparacion -->
-                <input class="hidden" id="comparacion" type="checkbox">
                 <div class="layout flexbox justify-center">
                     <div class="col-1 min-w200">
                         <img class="w-100" src="assets/bg/layout-californication.jpg" alt="Californication (1999)">
@@ -272,7 +271,6 @@
                     </div>
                 </div>
                 <!-- Lista de elementos -->
-                <input class="hidden" id="lista_elementos" type="checkbox">
                 <div class="layout flexbox">
                     <div class="col-3">
                         <img class="w-100 max-w300 float-right" src="assets/bg/layout-californication.jpg" alt="Californication (1999)">
@@ -305,7 +303,6 @@
                     </div>
                 </div>
                 <!-- Elemento destacado -->
-                <input class="hidden" id="destacado" type="checkbox">
                 <div class="layout flexbox justify-center">
                     <div class="col-3">
                         <img class="w-100 max-w300 float-left" src="assets/bg/layout-californication.jpg" alt="Californication (1999)">
@@ -337,7 +334,6 @@
                         </p>
                     </div>
                 </div>
-
             </article>
             <article>
                 <h3>css-grid</h3>
