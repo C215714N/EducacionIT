@@ -247,6 +247,67 @@
     .area :nth-last-child(3){ grid-area: article; }
     .area :nth-last-child(2){ grid-area: aside; }
     .area :last-child{ grid-area: footer; }
+    /* Layout examples */
+        .flexbox{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .css-grid{
+            display: grid;
+            gap: .5rem;
+        }
+        .justify-center{justify-content: center;}
+        .justify-between{justify-content: space-between;}
+        .justify-evenly{justify-content: space-evenly;}
+
+        .min-w200{ min-width: 200px; }
+        .min-w300{ min-width: 300px; }
+        .max-w200{ max-width: 200px; }
+        .max-w300{ max-width: 300px; }
+
+        .col-1{ width: calc(33.33% - 1rem); }
+        .col-2{ width: calc(66.67% - 1rem); }
+        .col-3{ width: 100%; }
+        .w-50{ width: calc(50% - 1rem);  }
+        .w-100{ width: 100%; }
+        
+        .float-left{
+            float: left;
+            margin-right: .5rem;
+        }
+        .float-right{
+            float: right;
+            margin-left: .5rem;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+        .overflow-auto{
+            overflow: auto;
+        }
+        .hidden{
+            display: none;
+        }
+        .hidden:checked + .layout{
+            display: flex;
+        }
+        /*styles*/
+        .layout{
+            display: none;
+        }
+        .layout div{
+            margin: .5rem;
+            padding: .5rem;
+            box-shadow: 0 0 .5rem #ccc;
+        }
+        .layout .title{
+            display: block;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .layout .text{
+            color: #333
+        }
 /* Footer */
 
     /* Formulario de contacto */
