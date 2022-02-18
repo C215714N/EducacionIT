@@ -126,6 +126,14 @@ h6 {
   -o-border-radius: 0.25rem;
   border-radius: 0.25rem;
 }
+.cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
 /* heading colors per section */
 section .header {
   color: #eee;

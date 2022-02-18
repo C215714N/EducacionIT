@@ -97,6 +97,11 @@
         -o-border-radius: @r;
         border-radius: @r;
     }
+    .cover{
+        width: 100%;
+        height: 100%;
+        .position(absolute; @z:-1);
+    }
 //  Mixins parametricos: estilos que reciben argumentos
     .normalize(@m:0; @p:0; @b:0){
         margin: @m;

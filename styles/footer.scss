@@ -1,0 +1,27 @@
+//  Variables:
+    $col: 24;
+//  Mixins: 
+    @mixin normalize($m:0, $p:0, $b:0){
+        margin: $m;
+        border: $b;
+        padding: $p;
+    }
+//  Bucles:
+
+//  Nesting:
+    #footer{
+        position: relative;
+        @include normalize($p: 1rem);
+        iframe{
+
+        }
+        #contact{
+
+        }
+        .social{
+
+        }
+        .copy{
+            
+        }
+    }
