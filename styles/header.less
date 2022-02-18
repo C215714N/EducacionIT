@@ -20,12 +20,24 @@
         background-color: @bg-color;
         .flexbox(@jc:space-between);
         .normalize;
+        .position(sticky; @z:2);
+        @media screen and (min-width: @laptop){
+            justify-content: space-around;
+        }
+        @media screen and (min-width: @desktop){
+            justify-content: center;
+        }
         nav{
         // navigation bar
             .menu{
+                background-color: @bg-color;
+                height: 100%;
                 .normalize(@p:.5rem 1rem);
+                .position(fixed, @x: -100%, @z:1);
+                &.active{ left:0; }
                 @media screen and (min-width: @tablet){
                     .flexbox;
+                    .position;
                 }
                 li{
                     &:extend(.unstyled);
@@ -48,6 +60,15 @@
                 &:extend(.unstyled);
                 &:hover{
                     text-shadow: 0 0 .5rem @color;
+                }
+                &.fa-arrow-up{
+                    opacity: .3;
+                    background-color: @bg-color;
+                    .normalize(1rem; .5rem; 1px solid @bg-color);
+                    .position(fixed; @z: 1; @x-axis: right; @y-axis:bottom);
+                    &:hover{
+                        opacity: .7;
+                    }
                 }
             }
         }
@@ -93,6 +114,15 @@
         justify-content: @jc;
         align-items: @ai;
         flex-wrap: @fw;
+    }
+    .position(
+        @p: relative; @x: 0; @y: 0; @z: 0; 
+        @x-axis: left; @y-axis: top
+    ){
+        position:@p;
+        @{x-axis}: @x;
+        @{y-axis}: @y;
+        z-index: @z;
     }
 //  Mixin recursivo: estilos que se repiten en base a una condicion
     //  heading styles 
