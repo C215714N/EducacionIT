@@ -57,7 +57,8 @@
   border: 0;
   padding: 0.5rem;
 }
-#header nav .fa-bars {
+#header nav .fa-bars,
+#header nav .fa-times {
   color: #eee;
   background-color: transparent;
   -webkit-border-radius: 1rem;
@@ -67,7 +68,8 @@
   border-radius: 1rem;
 }
 @media screen and (min-width: 768px) {
-  #header nav .fa-bars {
+  #header nav .fa-bars,
+  #header nav .fa-times {
     display: none;
   }
 }
