@@ -188,6 +188,51 @@
         <iframe src="" frameborder="0" class="cover"></iframe>
         <form action="" id="contact">
             <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su nombre|</label>
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z ñÑ]{3,50}"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
+            <div class="valid">
+                Escriba un nombre de al menos 3 caracteres y maximo 50, 
+                utilizando solamente letras
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input
+                id="contact_phone" 
+                name="phone" 
+                type="tel"
+                placeholder="Telefono(*): +(5411)0303-456"
+                required>
+            <div class="valid">
+                Escriba su numero colocando la caracteristica entre parentesis,
+                utilice un guion cada 3 o 4 digitos
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): Cristiandracedo@hotmail.com"
+                required>
+            <div class="valid">
+                Escriba una direccion de correo con al menos 8 caracteres, 
+                respetando el siguiente formato "usuario@servidor"
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                minlength="20" 
+                maxlength="200" 
+                placeholder="Consulta(*): Buenas, mi consulta es ..."
+                required></textarea>
+            <button class="btn">Enviar</button>
         </form>
         <div class="social">
             <a href="https://facebook.com" target="_blank" title="seguinos en facebook"></a>
