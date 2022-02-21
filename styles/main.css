@@ -142,8 +142,24 @@
     }
 /* Content */
     main{
-        max-width: 960px;
+        display: grid;
+        grid-template-areas: 
+            'aside .'
+            'aside .'
+            'aside .'
+            'aside .';
+        gap: 1rem;
+        max-width: 1320px;
         margin: auto;
+    }
+    aside{
+        position: sticky;
+        top: 3rem;
+        grid-area: aside;
+        height: 100vh;
+        padding: 1rem;
+        overflow: auto;
+        background-color: hsl(175, 30%, 90%);
     }
     /* Selectors Hierachy */
     .hierarchy span{
@@ -164,12 +180,22 @@
     }
     /*Units*/
     .example{
+        position: relative;
         max-width: 720px; /* absoluta */
         margin: .5rem min(5vw, 4rem); /* flexible */
-        padding: .5rem 1rem; /* relativa */
+        padding: .5rem 1.5rem; /* relativa */
         font-size: 1.25rem; /* relativa */
         line-height: 150%; /* relativa */
         background-color: #eee;
+    }
+    .example::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: .25rem;
+        background-image: linear-gradient(#3c6, #448);
     }
     /* color models */
     .colors{
@@ -190,6 +216,7 @@
     /*example contents*/
     .content{
         min-height: 300px;
+        overflow: hidden;
     }
     .content > *{
         margin: .25rem;
@@ -374,6 +401,75 @@
         .mansorny.alternative img:nth-child(3n){
             grid-row: span 2;
         }
+    /*Pseudoclases: instancias o estados de un elemnto :peudoclass */
+    /*Pseudoelementos: elementos o partes dentro de una etiqueta ::pseudoelement */
+    main{ 
+        counter-reset: chapter;
+    }
+    section{ 
+        counter-reset: theme;
+    }
+    article{ 
+        counter-reset: subtheme;
+    }
+    section h2::before{
+        counter-increment: chapter;
+        content: 'Capitulo ' counter(chapter) ': '
+    }
+    section h3::before{
+        counter-increment: theme;
+        content: 'Tema ' counter(theme) ': '
+    }
+    section h4::before{
+        counter-increment: subtheme;
+        content: 'Subtema ' counter(subtheme) ': '
+    }
+/*Aside*/
+    .index,
+    .index ul{
+        list-style: none;   
+        padding: 0;
+        font-weight: bold;
+    }
+    /*counters*/
+        .index{
+            counter-reset: first;
+        }
+        .index ul{
+            counter-reset: second;
+        }
+        .index ul ul{
+            counter-reset: third;
+        }
+        .index ul ul ul{
+            counter-reset: fourth;
+        }
+    /* increment */
+        .index li{
+            counter-increment: first;
+            color: #333;
+            font-variant: small-caps;
+        }
+        .index li li{
+            counter-increment: second;
+            color: #666;
+        }
+        .index li li li{
+            counter-increment: third;
+            color: #999;
+        }
+        .index li li li li{
+            counter-increment: fourth;
+            color: #ccc;
+        }
+    /* content table */
+    .index li::before{
+        content: 
+            counter(first)  '.'
+            counter(second) '.'
+            counter(third)  '.' 
+            counter(fourth) ' - ';
+    }
 /* Footer */
     #footer{
         position: relative;
