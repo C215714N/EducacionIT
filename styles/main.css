@@ -388,6 +388,30 @@
         z-index: -1;
         border: none;
     }
+    .map .btn{
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        min-width: 3rem;
+        min-height: 3rem;
+        border-radius: .25rem;
+        color: #eee;
+        background-color: #333;
+        box-shadow: 0 0 .5rem #333;
+        font-size: 2rem;
+    }
+    .icon-min::before{
+        content: '-';
+    }
+    .icon-max::before{
+        content: '+';
+    }
+    .map iframe.active,
+    .map .btn.icon-min{
+        position: fixed;
+        z-index: 2;
+        opacity: .9;
+    }
     /* Formulario de contacto */
         #contact{
             display: flex;
