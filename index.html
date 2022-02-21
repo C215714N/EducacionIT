@@ -229,6 +229,25 @@
                     <span>footer</span>
                 </div>
             </article>
+            <h3>Position</h3>
+            <p>
+                Atributo que permite indicar la forma en la que se dispondra el elemento afectado con respecto a su referente. Por defecto el valor de este atributo es <em>static</em> y cuando lo aplicamos podemos indicar los atributos <strong>top right left bottom y z-index</strong> que nos van a permitir desplazar la etiqueta afectada. 
+            </p>
+            <ul class="example">
+                <li><strong>static</strong> el elemento no puede cambiar su posicion y no sirve como referente</li>
+                <li><strong>relative</strong> se ubica con respecto a si mismo y sigue ocupando lugar dentro del flow</li>
+                <li><strong>absolute</strong> se ubica con respecto a su primer ancestro no static y sale del flow</li>
+                <li><strong>fixed</strong> se ubica con respecto al viewport y se sale del flow</li>
+                <li><strong>sticky</strong> se ubica dentro del flow hasta cumplir con determinada posicion</li>
+                <li><strong>z-index</strong> indica el indice de superposicion por capas </li>
+            </ul>
+            <div class="content position">
+                <div>static</div>
+                <div>relative</div>
+                <div>absolute</div>
+                <div>fixed</div>
+                <div>sticky</div>
+            </div>
         </section>
         <section>
             <h2 class="header">Ejemplos de Layout</h2>
@@ -274,7 +293,7 @@
                 <!-- Lista de elementos -->
                 <div class="layout hidden flexbox">
                     <div class="col-3">
-                        <img class="w-100 max-w300 float-right" src="assets/bg/layout-californication.jpg" alt="Californication (1999)">
+                        <img class="w-100 max-w200 float-right" src="assets/bg/layout-californication.jpg" alt="Californication (1999)">
                         <p>
                             <span class="title">Californication (1999)</span>
                             <span class="text">
@@ -283,7 +302,7 @@
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="w-100 max-w300 float-right" src="assets/bg/layout-by_the_way.jpg" alt="By the Way (2002)">
+                        <img class="w-100 max-w200 float-right" src="assets/bg/layout-by_the_way.jpg" alt="By the Way (2002)">
                         <p>
                             <span class="title">By the Way (2002)</span>
                             <span class="text">
@@ -292,7 +311,7 @@
                         </p>
                     </div>
                     <div class="col-3">
-                        <img class="w-100 max-w300 float-right" src="assets/bg/layout-stadium_arcadium.jpg" alt="By the Way (2002)">
+                        <img class="w-100 max-w200 float-right" src="assets/bg/layout-stadium_arcadium.jpg" alt="By the Way (2002)">
                         <p>
                             <span class="title">Stadium Arcadium (2006)</span>
                             <span class="text">
@@ -406,7 +425,11 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="map">
-            
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678329!2d-58.37812478519536!3d-34.60238856493385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1645445039957!5m2!1ses-419!2sar" 
+                loading="lazy">
+            </iframe>
+            <button class="btn icon-max"></button>
         </div>
         <form action="" id="contact">
             <h2>Dejanos tu Consulta</h2>
