@@ -1,13 +1,45 @@
 //  Variables:
+    $path: '../assets/icon';
+    $icons: 
+        css,
+        facebook,
+        github,
+        instagram,
+        linkedin,
+        twitter,
+        whatsapp,
+        youtube;
+    $attributes:
+        
+        ;
+    $colors:
+        primary     #448,
+        secondary   #c36,
+        light       #eee,
+        dark        #333,
+        danger      #da3,
+        warning     #c33,
+        success     #3c6,
+        info        #36c;
     $col: 24;
 //  Mixins: 
-    @mixin normalize($m:0, $p:0, $b:0){
-        margin: $m;
-        border: $b;
-        padding: $p;
+    @mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
+        #{$ma}: $m;
+        #{$ba}: $b;
+        #{$pa}: $p;
     }
 //  Bucles:
-
+    /* social-media icons */
+    @each $ico in $icons{ 
+        .#{$ico}{ 
+            background-image: url('#{$path}/#{$ico}.svg'); 
+    }   }
+    /* color attributes */
+    @each $cn, $cv in $colors{
+        .bg-#{$cn}{
+            background-color: $cv;
+        }
+    }
 //  Nesting:
     #footer{
         position: relative;
@@ -16,7 +48,11 @@
 
         }
         #contact{
-
+            @include normalize(1rem auto, 1rem, .25rem, border-radius);
+            input,
+            textarea{
+                @include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
+            }
         }
         .social{
 

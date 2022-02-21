@@ -1,8 +1,17 @@
-#footer {
-  position: relative;
-  margin: 0;
-  border: 0;
-  padding: 1rem;
-}
+/* Error: Expected expression.
+ *    ,
+ * 12 |     $attributes:
+ *    |                 ^
+ *    '
+ *   styles\footer.scss 12:17  root stylesheet */
 
-/*# sourceMappingURL=footer.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected expression.\a    \2577 \a 12 \2502      $attributes:\d\a    \2502                  ^\a    \2575 \a   styles\\footer.scss 12:17  root stylesheet";
+}
