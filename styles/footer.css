@@ -32,7 +32,7 @@
 }
 
 /* color attributes */
-.text-primary {
+.text-primary, #footer #contact .valid {
   color: #448;
 }
 
@@ -48,15 +48,17 @@
   color: #333;
 }
 
-.text-danger {
-  color: #da3;
-}
-
-.text-warning {
+.text-danger, #footer #contact input:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:not(:placeholder-shown):invalid + .valid {
   color: #c33;
 }
 
-.text-success {
+.text-warning {
+  color: #da3;
+}
+
+.text-success, #footer #contact input:valid + .valid,
+#footer #contact textarea:valid + .valid {
   color: #3c6;
 }
 
@@ -72,7 +74,7 @@
   background-color: #c36;
 }
 
-.bg-light, #footer #contact {
+.bg-light, #footer #contact, .icon, #footer .social a {
   background-color: #eee;
 }
 
@@ -81,11 +83,11 @@
 }
 
 .bg-danger {
-  background-color: #da3;
+  background-color: #c33;
 }
 
 .bg-warning {
-  background-color: #c33;
+  background-color: #da3;
 }
 
 .bg-success {
@@ -96,7 +98,8 @@
   background-color: #36c;
 }
 
-.border-primary {
+.border-primary, #footer #contact input:focus,
+#footer #contact textarea:focus {
   border-color: #448;
 }
 
@@ -112,15 +115,17 @@
   border-color: #333;
 }
 
-.border-danger {
-  border-color: #da3;
-}
-
-.border-warning {
+.border-danger, #footer #contact input:not(:placeholder-shown):invalid,
+#footer #contact textarea:not(:placeholder-shown):invalid {
   border-color: #c33;
 }
 
-.border-success {
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success, #footer #contact input:valid,
+#footer #contact textarea:valid {
   border-color: #3c6;
 }
 
@@ -640,6 +645,22 @@
     width: 100%;
   }
 }
+.icon, #footer .social a {
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-position: center;
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+}
+.icon:hover, #footer .social a:hover {
+  background-size: 2.25rem;
+  box-shadow: 0 0 0.5rem #333;
+}
+
 #footer {
   position: relative;
   margin: 0;
@@ -652,11 +673,27 @@
   padding: 1rem;
   display: grid;
 }
+#footer #contact label {
+  margin-top: 0.5rem;
+}
 #footer #contact input,
 #footer #contact textarea {
   outline: none;
   border: 0.1rem solid transparent;
   padding: 0.25rem 0.5rem;
+}
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid {
+  max-height: 300px;
+}
+#footer #contact .valid {
+  max-height: 0;
+  overflow: hidden;
+}
+#footer .social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=footer.css.map */

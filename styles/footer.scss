@@ -18,8 +18,8 @@
         secondary   #c36,
         light       #eee,
         dark        #333,
-        danger      #da3,
-        warning     #c33,
+        danger      #c33,
+        warning     #da3,
         success     #3c6,
         info        #36c;
     $col: 24;
@@ -58,6 +58,21 @@
                 .col-#{$vn}-#{$i}{
                     width: percentage( $i / $col );
     }   }   }   }
+// styles
+    .icon{
+        @include normalize(.25rem, $b: .25rem, $ba: border-radius);
+        @extend .bg-light;
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        background-position: center;
+        background-size: 1.5rem;
+        background-repeat: no-repeat;
+        &:hover{
+            background-size: 2.25rem;
+            box-shadow: 0 0 .5rem #333;
+        }
+    }
 //  Nesting:
     #footer{
         position: relative;
@@ -69,13 +84,32 @@
             @include normalize(1rem auto, 1rem, .25rem, border-radius);
             @extend .bg-light, .col-md-20, .col-lg-16, .col-xxl-12, .container-md;
             display: grid;
+            label{
+                margin-top: .5rem;
+            }
             input,
             textarea{
                 @include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
+                &:focus{ @extend .border-primary;
+                    & + .valid{ max-height: 300px; } }
+                &:valid{ @extend .border-success;
+                    & + .valid{ @extend .text-success; } }
+                &:not(:placeholder-shown):invalid{ @extend .border-danger;
+                    & + .valid{ @extend .text-danger; } }
+            }
+            .valid{
+                @extend .text-primary;
+                max-height: 0;
+                overflow: hidden;
             }
         }
         .social{
-
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a{
+                @extend .icon;
+            }
         }
         .copy{
             
