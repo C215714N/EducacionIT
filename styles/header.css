@@ -28,6 +28,7 @@
 #header nav .menu {
   background-color: #448;
   height: 100%;
+  transition: all 1s ease;
   margin: 0;
   border: 0;
   padding: 0.5rem 1rem;
@@ -53,6 +54,7 @@
   }
 }
 #header nav .menu li {
+  position: relative;
   margin: 0.25rem;
   border: 0;
   padding: 0.5rem;
@@ -75,9 +77,26 @@
 }
 #header nav a {
   color: #ffffff;
+  transition: all 0.5s ease-in;
+}
+#header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 0.1rem;
+  height: 0.1rem;
+  background: linear-gradient(to right, transparent, #eee);
+  opacity: 0;
+  transition: all 0.5s ease-out;
 }
 #header nav a:hover {
   text-shadow: 0 0 0.5rem #eee;
+}
+#header nav a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 #header nav a.fa-arrow-up {
   opacity: 0.3;
