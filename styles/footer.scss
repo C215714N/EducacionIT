@@ -87,9 +87,14 @@
             label{
                 margin-top: .5rem;
             }
+            textarea{
+                min-height: 5rem;
+                resize: none;
+            }
             input,
             textarea{
-                @include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
+                @include normalize(none, .25rem .5rem, .15rem solid transparent, $ma:outline);
+                transition: border .5s ease-in; /* property duration timing delay */
                 &:focus{ @extend .border-primary;
                     & + .valid{ max-height: 300px; } }
                 &:valid{ @extend .border-success;
@@ -101,6 +106,7 @@
                 @extend .text-primary;
                 max-height: 0;
                 overflow: hidden;
+                transition: all .5s ease .2s;
             }
         }
         .social{
@@ -109,6 +115,13 @@
             justify-content: center;
             a{
                 @extend .icon;
+                transition: all .5s ease-out;
+                &:hover{
+                    transform:
+                        translateY(-1rem)   // desplazamiento (distancia)
+                        scale(1.2)          // escalamiento (unidades)
+                        rotate(360deg);       // rotacion (grados)
+                }
             }
         }
         .copy{

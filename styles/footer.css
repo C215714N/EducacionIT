@@ -676,11 +676,17 @@
 #footer #contact label {
   margin-top: 0.5rem;
 }
+#footer #contact textarea {
+  min-height: 5rem;
+  resize: none;
+}
 #footer #contact input,
 #footer #contact textarea {
   outline: none;
-  border: 0.1rem solid transparent;
+  border: 0.15rem solid transparent;
   padding: 0.25rem 0.5rem;
+  transition: border 0.5s ease-in;
+  /* property duration timing delay */
 }
 #footer #contact input:focus + .valid,
 #footer #contact textarea:focus + .valid {
@@ -689,11 +695,18 @@
 #footer #contact .valid {
   max-height: 0;
   overflow: hidden;
+  transition: all 0.5s ease 0.2s;
 }
 #footer .social {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+#footer .social a {
+  transition: all 0.5s ease-out;
+}
+#footer .social a:hover {
+  transform: translateY(-1rem) scale(1.2) rotate(360deg);
 }
 
 /*# sourceMappingURL=footer.css.map */
