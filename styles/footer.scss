@@ -10,8 +10,9 @@
         whatsapp,
         youtube;
     $attributes:
-        
-        ;
+        text    color,
+        bg      background-color,
+        border  border-color;
     $colors:
         primary     #448,
         secondary   #c36,
@@ -22,6 +23,12 @@
         success     #3c6,
         info        #36c;
     $col: 24;
+    $media-queries: 
+        sm   576px   540px,
+        md   768px   720px,
+        lg   992px   960px,
+        xl   1200px  1140px,
+        xxl  1400px  1320px;
 //  Mixins: 
     @mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
         #{$ma}: $m;
@@ -35,11 +42,22 @@
             background-image: url('#{$path}/#{$ico}.svg'); 
     }   }
     /* color attributes */
-    @each $cn, $cv in $colors{
-        .bg-#{$cn}{
-            background-color: $cv;
-        }
-    }
+    @each $prop, $attr in $attributes{
+        @each $cn, $cv in $colors{
+            .#{$prop}-#{$cn}{
+                #{$attr}: $cv;
+    }   }   }
+    /* responsive grid system */
+    @each $vn, $vw, $max in $media-queries{
+        @media screen and (min-width: $vw){
+            .container, 
+            .container-#{$vn}{
+                max-width: $max;
+            }
+            @for $i from 1 through $col{
+                .col-#{$vn}-#{$i}{
+                    width: percentage( $i / $col );
+    }   }   }   }
 //  Nesting:
     #footer{
         position: relative;
@@ -49,6 +67,8 @@
         }
         #contact{
             @include normalize(1rem auto, 1rem, .25rem, border-radius);
+            @extend .bg-light, .col-md-20, .col-lg-16, .col-xxl-12, .container-md;
+            display: grid;
             input,
             textarea{
                 @include normalize(none, .25rem .5rem, .1rem solid transparent, $ma:outline);
