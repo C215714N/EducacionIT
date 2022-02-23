@@ -1,5 +1,67 @@
 /* Content First - Mobile First */
+    /* Imports */
+        @import url('https:/fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&family=Open+sans');
+        @font-face{
+            font-family: 'light side';
+            src: url('../assets/fonts/starjhol.ttf'); /* true type font */
+        }
+        @font-face{
+            font-family: 'dark side';
+            src: url('../assets/fonts/deathstar.otf') /* open type font */
+        }
+        /* General Rules */
+        *{
+            box-sizing: border-box;
+            font-family: 'Raleway', 'calibri', sans-serif;
+        }
+        /* margin */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        .menu{
+            margin: 0
+        }
+        /* padding */
+        .menu{
+            padding: 0;
+        }
+        /* border */
 
+        /* styles */
+        .menu{
+            list-style: none; 
+        }
+        nav a{
+            text-decoration: none;
+        }
+    /* Navigation */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #5d8ff4 linear-gradient(to right, #69f, #248); /*color image position/size repeat*/
+    }
+    nav a{
+        display: block;
+        padding: .5rem;
+        color: #eee;
+        font: 700 1rem 'Raleway', 'calibri', sans-serif; /* style weight size family */
+        letter-spacing: .07rem;
+    }
+    nav a.active,
+    .menu a:hover{
+        text-shadow: 0 0 .5rem #eee;
+    }
+    /* headings */
+    #header h1{
+        font-family: 'light side';
+        padding: 1rem;
+        color: gold;
+        background-color: #122;
+    }
 /* Small Devices - Smartphones */
 
 /* Medium Devices - Tablets */
