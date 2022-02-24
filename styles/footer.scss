@@ -73,12 +73,29 @@
             box-shadow: 0 0 .5rem #333;
         }
     }
+    .fixed{
+        position: fixed;
+        z-index: 2;
+        opacity: .9;
+    }
 //  Nesting:
     #footer{
         position: relative;
         @include normalize($p: 1rem);
         iframe{
-
+            border: none;
+            &.active{ @extend .fixed;
+            & + button.fa-compress{ @extend .fixed; } }
+        }
+        button.fa{
+            @include normalize($p: .5rem, $b: .25rem, $ba: border-radius);
+            @extend .bg-dark, .text-light, .border-light;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            &:hover{
+                @extend .bg-light, .text-dark;
+            }
         }
         #contact{
             @include normalize(1rem auto, 1rem, .25rem, border-radius);

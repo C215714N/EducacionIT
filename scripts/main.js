@@ -6,6 +6,8 @@
     const pIns = d.querySelectorAll('.progress input[type="number"]')
     const mVids = d.querySelectorAll('.media :is(audio, video)')
     const mBtns = d.querySelectorAll('.media .btn-play')
+    const mapBtn = d.querySelector('#footer button.fa')
+    const mapFrm = d.querySelector('#footer iframe.cover')
 
 //  Menu Hamburguesa
     menuBtn.onclick = () => 
@@ -22,3 +24,9 @@
         mVids[i].paused ? ( mVids[i].play(), text = 'PAUSE' ) : ( mVids[i].pause(), text = 'PLAY' )
         button.innerHTML = text
     })
+    
+//  Mapa de Contacto
+    mapBtn.onclick = () => { mapFrm.classList.toggle('active') ?
+        mapBtn.classList.replace('fa-expand', 'fa-compress') :
+        mapBtn.classList.replace('fa-compress', 'fa-expand')
+    }

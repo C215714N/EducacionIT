@@ -40,11 +40,11 @@
   color: #c36;
 }
 
-.text-light {
+.text-light, #footer button.fa {
   color: #eee;
 }
 
-.text-dark {
+.text-dark, #footer button.fa:hover {
   color: #333;
 }
 
@@ -74,11 +74,11 @@
   background-color: #c36;
 }
 
-.bg-light, #footer #contact, .icon, #footer .social a {
+.bg-light, #footer #contact, #footer button.fa:hover, .icon, #footer .social a {
   background-color: #eee;
 }
 
-.bg-dark {
+.bg-dark, #footer button.fa {
   background-color: #333;
 }
 
@@ -107,7 +107,7 @@
   border-color: #c36;
 }
 
-.border-light {
+.border-light, #footer button.fa {
   border-color: #eee;
 }
 
@@ -661,11 +661,28 @@
   box-shadow: 0 0 0.5rem #333;
 }
 
+.fixed, #footer iframe.active + button.fa-compress, #footer iframe.active {
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+}
+
 #footer {
   position: relative;
   margin: 0;
   border: 0;
   padding: 1rem;
+}
+#footer iframe {
+  border: none;
+}
+#footer button.fa {
+  margin: 0;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 #footer #contact {
   margin: 1rem auto;
