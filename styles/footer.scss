@@ -93,7 +93,7 @@
             }
             input,
             textarea{
-                @include normalize(none, .25rem .5rem, .15rem solid transparent, $ma:outline);
+                @include normalize(none, .25rem .5rem, 1px solid transparent, $ma:outline);
                 transition: border .5s ease-in; /* property duration timing delay */
                 &:focus{ @extend .border-primary;
                     & + .valid{ max-height: 300px; } }
