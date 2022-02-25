@@ -1,0 +1,81 @@
+/* examples */
+    .example{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,100px), 420px));
+        gap: .5rem;
+        margin: .5rem min(2vw, 5rem);
+        padding: 1rem 1.25rem;
+        background-color: #eee;
+        list-style: none;
+    }
+    .example::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: .25rem;
+        background: 
+            linear-gradient(#36c, #448, #c36)
+            0%/200% 200% no-repeat; /* color image position/size repeat */
+        transition: all 1s linear;
+    }
+    .example:hover::before{
+        background-position: 0 100%;
+    }
+    .example :is(img, video, progress, meter){
+        width: 100%;
+        max-height: 240;
+    }
+/* Transformaciones */
+    [class*="transform-"]{
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+    }
+    [class*="transform-"] div{
+        border: .1rem dashed #333;
+        padding: .5rem;
+        color: #eee;
+        background-color: #c36;
+        opacity: .8;
+        transition: all 3s ease 1s; /* property duration timing delay*/
+    }
+    /* 2d */
+    .transform-2d div:nth-child(1){
+        transform: translate( 1rem, 50%);
+    }
+    .transform-2d div:nth-child(2){
+        transform: scale(1.2);
+    }
+    .transform-2d div:nth-child(3){
+        transform: rotate(-15deg);
+    }
+    .transform-2d div:nth-child(4){
+        transform: skewX(30deg);
+    }
+    .transform-2d div:nth-child(5){
+        transform: skew(-45deg, 45deg);
+    }
+    /* 3d */
+    .transform-3d{
+        perspective: 300px;
+        perspective-origin: top center;
+    }
+    .transform-3d div:nth-child(1){
+        transform: rotateX(60deg);
+    }
+    .transform-3d div:nth-child(2){
+        transform: rotateY(60deg);
+    }
+    .transform-3d div:nth-child(3){
+        transform: translateZ(3rem);
+    }
+    .transform-3d div:nth-child(4){
+        transform: rotateX(15deg) rotateY(30deg) translateZ(-3rem);
+    }
+
+    [class*="transform-"]:hover div{
+        transform: translate(.25rem, .5rem);
+    }
