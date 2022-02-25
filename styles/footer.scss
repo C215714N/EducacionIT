@@ -142,6 +142,12 @@
             }
         }
         .copy{
-            
+            @include normalize(0 -1rem, 1rem);
+            @extend .text-light, .bg-primary;
+            transition: all 1s ease-out;
+            text-align: center;
+            &:hover{
+                @extend .bg-secondary;
+            }
         }
     }

@@ -40,7 +40,7 @@
   color: #c36;
 }
 
-.text-light, #footer button.fa {
+.text-light, #footer .copy, #footer button.fa {
   color: #eee;
 }
 
@@ -66,11 +66,11 @@
   color: #36c;
 }
 
-.bg-primary {
+.bg-primary, #footer .copy {
   background-color: #448;
 }
 
-.bg-secondary {
+.bg-secondary, #footer .copy:hover {
   background-color: #c36;
 }
 
@@ -724,6 +724,13 @@
 }
 #footer .social a:hover {
   transform: translateY(-1rem) scale(1.2) rotate(360deg);
+}
+#footer .copy {
+  margin: 0 -1rem;
+  border: 0;
+  padding: 1rem;
+  transition: all 1s ease-out;
+  text-align: center;
 }
 
 /*# sourceMappingURL=footer.css.map */
