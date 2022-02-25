@@ -1,5 +1,10 @@
+/*content*/
+    main{
+        margin: 1rem auto;
+    }
 /* examples */
     .example{
+        max-width: 720px;
         position: relative;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%,100px), 420px));
@@ -31,6 +36,7 @@
 /* Transformaciones */
     [class*="transform-"]{
         display: flex;
+        justify-content: space-around;
         align-items: center;
         min-height: 100px;
     }
@@ -79,3 +85,52 @@
     [class*="transform-"]:hover div{
         transform: translate(.25rem, .5rem);
     }
+/* animaciones */
+    .animation{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .animation div{
+        margin: .5rem;
+        border-radius: 0 1rem 1rem 0;
+        padding: 1rem .5rem;
+        color: #eee;
+        background: radial-gradient(circle at top right, #c36, #448);
+        box-shadow: -.5rem .5rem .25rem #333;
+    }
+    /* timing */
+    .animation div{
+        animation-name: translate;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+    }
+    .timing :nth-child(1){
+        animation-timing-function: ease;
+    }
+    .timing :nth-child(2){
+        animation-timing-function: ease-in;
+    }
+    .timing :nth-child(3){
+        animation-timing-function: ease-out;
+    }
+    .timing :nth-child(4){
+        animation-timing-function: ease-in-out;
+    }
+    .timing :nth-child(5){
+        animation-timing-function: linear;
+    }
+    .timing :nth-child(6){
+        animation-timing-function: cubic-bezier(0,1,1,-1);
+    }
+/* fotogramas */
+@keyframes translate{
+    from{
+        transform: translate(calc(min(50vw,360px) * -1));
+    }
+    to{
+        transform: translate(min(50vw, 360px));
+    }
+}
