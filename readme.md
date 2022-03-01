@@ -27,3 +27,5 @@ Una vez definida la estructura de la pagina debemos pasar implementar el diseño
 	* <a href="#">inicio</a>
 	* <a href="about.html">nosotros</a>
 	* <a href="gallery.html#">galeria</a>
+2. Diferenciar el `<header>` y `<footer>` de las diferentes paginas utilizando un `color` y `background-color` a eleccion y colocar contenido dentro de las mismas a gusto.
+3. Agregar hipervinculos de las redes sociales a eleccion e informacion de _copyright_
