@@ -13,3 +13,11 @@ Por esta razon en la version 5 se agregaron etiquetas que indican el funcionamie
 * **section** una seccion corresponde al contenido contextualizado, es decir que depende de otros elementos dentro de la pagina para su correcta comprension.
 * **aside** un contenido lateral es aquel que se relaciona tangencialmente con los elementos hermanos, se utiliza principalmente para sugerencias o publicidad
 * **footer** el pie de pagina indica el contenido final y es complementario a lo expuesto anteriormente, se suelen colocar aqui las redes sociales, mapas del sitio y formularios/informacion de contacto.
+
+## Selectores y reglas
+Una vez definida la estructura de la pagina debemos pasar implementar el diseño de la misma, indicando a que elementos se les deben aplicar los cambios (selectores) y cuales seran los mismos, indicando el atributo a modificar, seguido de su valor (reglas)
+
+* *_estilo interno_* Es aquel que se utiliza dentro de la misma pagina
+	* *inline*: Es el mas facil de aplicar y tiene mayor prioridad, ya que debemos indicar a cada etiqueta sus cambios _e.g: `<div style="color: darkblue;">`_ siendo poco practico y lento.
+	* *inblock*: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
+* *_estilo externo_* Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
