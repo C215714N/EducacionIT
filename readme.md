@@ -1,5 +1,5 @@
 # Fundamentos web
-ejercicios html y css
+html | css
 
 ## Estructura semantica
 Las paginas web no solamente deben ser llamativas para el usuario y deben contar con una interfaz facil de utilizar, tambien deben poseer una estructura correctamente definida.
@@ -21,3 +21,9 @@ Una vez definida la estructura de la pagina debemos pasar implementar el diseño
 	* *inline*: Es el mas facil de aplicar y tiene mayor prioridad, ya que debemos indicar a cada etiqueta sus cambios _e.g: `<div style="color: darkblue;">`_ siendo poco practico y lento.
 	* *inblock*: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
 * *_estilo externo_* Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
+
+## Ejercicios
+1. Crear una sitio web de al menos 3 paginas _por ejemplo: index.html, about.html, gallery.html_, las mismas deben respetar la estructura semantica y en cada una debe haber un menu de navegacion que nos permita desplazarnos entre las mismas
+	* <a href="#">inicio</a>
+	* <a href="about.html">nosotros</a>
+	* <a href="gallery.html#">galeria</a>
