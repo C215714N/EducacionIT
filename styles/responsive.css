@@ -17,7 +17,7 @@
             --light: #eee;
             --dark: #333;
             --success: #284;
-            --warning: #da3;
+            --warning: #ea3;
             --danger: #c33;
         }
     /* General Rules */
@@ -43,7 +43,8 @@
             h2,
             h3,
             h4,
-            .menu{
+            .menu,
+            #header p{
                 margin: 0
             }
         /* padding */
@@ -58,6 +59,9 @@
             }
             nav a{
                 text-decoration: none;
+            }
+            #header{
+                overflow: hidden;
             }
     /* styled components */
         /* Icons */
@@ -118,6 +122,7 @@
         nav{
             position: sticky;
             bottom: 0;
+            z-index: 2;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -152,8 +157,39 @@
             background-color: var(--dark);
         }
     /* Headings */
+        #header{
+            display: grid;
+            align-content: center;
+            min-height: min(100vh, 640px);
+            padding: 1rem;
+            font-size: min(calc(2vw + .5rem), 3rem);
+            text-align: center;
+            color: var(--warning);
+            background-color: var(--dark);
+            background-image: 
+                url('../assets/bg/millenium_falcon.png'),
+                url('../assets/bg/death_star.png'),
+                url('../assets/bg/hyperspace.jpg');
+            background-position: 
+                top left,
+                bottom right,
+                center;
+            background-size: 
+                max(20%, 10rem),
+                max(50%, 20rem),
+                cover;
+            background-repeat: no-repeat;
+            perspective: 15rem;
+        }
         #header h1{
             font-family: 'light side';
+            transform: rotateX(15deg);
+            animation: appear 5s ease-in;
+        }
+        @keyframes appear{
+            from{
+                transform: translateZ(10rem)
+            }
         }
 /* Small Devices - Smartphones */
 
@@ -179,12 +215,17 @@
             'content'
             'footer'
         }
+        nav{
+            top: 0;
+        }
+        nav .arrow-up{
+            bottom: .5rem;
+        }
     }
 /* Extra Large - Desktop  */
     @media screen and (min-width: 1200px){
     /* Navigation */
         nav{
-            top: 0;
             padding: .5rem calc(50vw - 660px);
         }
     }
