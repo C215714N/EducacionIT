@@ -107,7 +107,33 @@
         </section>
     </main>
     <footer id="footer">
-
+        <div id="contact">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su campo</label>
+            <input
+                id="contact_name" 
+                type="text" 
+                placeholder="Nombre(*): Cristian Racedo" required>
+            <div class="valid"></div>
+            <label for="contact_email">Ingrese su campo</label>
+            <input
+                id="contact_email" 
+                type="email" 
+                placeholder="Correo(*): cristiandracedo@hotmail.com" required>
+            <div class="valid"></div>
+            <label for="contact_phone">Ingrese su campo</label>
+            <input
+                id="contact_phone" 
+                type="tel" 
+                placeholder="Telefono(*): (5411)0303-456" required>
+            <div class="valid"></div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea  
+                id="contact_consult" 
+                name="" 
+                placeholder="Consulta(*): Buenas, mi consulta es ..." 
+                minlength="20" 
+                maxlenght="200" required></textarea><button class="btn">enviar</button></div>
     </footer>
     <!-- Scripts JS -->
     <script src="scripts/main.js"></script>

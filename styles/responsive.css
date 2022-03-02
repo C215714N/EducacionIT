@@ -52,7 +52,12 @@
                 padding: 0;
             }
         /* border */
-
+            input,
+            textarea,
+            select{
+                outline: none;
+                border: 1px solid;
+            }
         /* styles */
             .menu{
                 list-style: none; 
@@ -191,6 +196,25 @@
                 transform: translateZ(10rem)
             }
         }
+    /*Footer*/
+        /*contact form*/
+            #contact{
+                display: grid;
+                margin: 1rem auto;
+                padding: 1rem;
+                color: var(--light);
+                background: radial-gradient( circle at top right, var(--fst), var(--snd))
+            }
+            #contact label{
+                max-height: 0;
+                margin-top: .5rem;
+            }
+            #contact :is(input, textarea, button){
+                padding: .5rem 1rem;
+            }
+            #contact :focus{
+                box-shadow: 0 0 .5rem var(--light);
+            }
 /* Small Devices - Smartphones */
 
 /* Medium Devices - Tablets */
@@ -203,6 +227,13 @@
             display: flex;
             max-height: 640px;
             width: auto;
+        }
+    /*contact form*/
+        #contact{
+            max-width: 540px;
+        }
+        #contact label{
+            max-height: 300px;
         }
     }
 /* Large Devices - Laptops */
@@ -221,6 +252,38 @@
         nav .arrow-up{
             bottom: .5rem;
         }
+    /*contact form*/
+        #contact{
+            max-width: 720px;
+            grid-template-areas: 
+                'title      title'
+                'lblname    lblphone'
+                'cmdname    cmdphone'
+                'vldname    vldphone'
+                'lblemail   lblemail'
+                'cmdemail   cmdemail'
+                'vldemail   vldemail'
+                'lblconsult lblconsult'
+                'cmdconsult cmdconsult'
+                '.          send';
+            gap: .5rem;
+        }
+        #contact h2{ grid-area: title; }
+
+        label[for="contact_name"]{grid-area: lblname; }
+        label[for="contact_email"]{grid-area: lblemail; }
+        label[for="contact_phone"]{grid-area: lblphone; }
+
+        #contact_name{ grid-area: cmdname; }
+        #contact_email{ grid-area: cmdemail; }
+        #contact_phone{ grid-area: cmdphone; }
+        #contact_consult{ grid-area: cmdconsult; }
+        
+        #contact_name + .valid{ grid-area: vldname; }
+        #contact_email + .valid{ grid-area: vldemail; }
+        #contact_phone + .valid{ grid-area: vldphone; }
+
+        #contact .btn{ grid-area: send; }
     }
 /* Extra Large - Desktop  */
     @media screen and (min-width: 1200px){
