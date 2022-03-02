@@ -107,33 +107,65 @@
         </section>
     </main>
     <footer id="footer">
-        <div id="contact">
-            <h2>Dejanos tu consulta</h2>
-            <label for="contact_name">Ingrese su campo</label>
-            <input
-                id="contact_name" 
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678329!2d-58.37812478519536!3d-34.60238856493385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1645445039957!5m2!1ses-419!2sar" 
+                loading="lazy">
+            </iframe>
+            <button class="btn icon-max"></button>
+        </div>
+        <form action="" id="contact">
+            <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
                 type="text" 
-                placeholder="Nombre(*): Cristian Racedo" required>
-            <div class="valid"></div>
-            <label for="contact_email">Ingrese su campo</label>
-            <input
-                id="contact_email" 
+                id="contact_name" 
+                name="name" 
+                pattern="[A-Z a-z ñÑ]{3,50}"
+                maxlength="50"
+                placeholder="Nombre: Cristian Racedo"
+                required>
+            <div class="valid">
+                Ingrese su nombre solamente con letras y sin tildes,
+                el mismo debe poseer entre 3 y 50 caracteres
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
                 type="email" 
-                placeholder="Correo(*): cristiandracedo@hotmail.com" required>
-            <div class="valid"></div>
-            <label for="contact_phone">Ingrese su campo</label>
-            <input
-                id="contact_phone" 
+                id="contact_email" 
+                name="email" 
+                placeholder="Correo: Cristiandracedo@hotmail.com"
+                required>
+            <div class="valid">
+                Ingrese una direccion de al menos 8 caracteres,
+                respetando el siguiente formato "usuario@servidor"
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
                 type="tel" 
-                placeholder="Telefono(*): (5411)0303-456" required>
-            <div class="valid"></div>
+                id="contact_phone" 
+                name="phone" 
+                placeholder="Telefono: +(5411)0303-4567"
+                required>
+            <div class="valid">
+                Ingrese la caracteristica con un signo + al comienzo,
+                utilice un guion cada 3 a 6 caracteres
+            </div>
             <label for="contact_consult">Ingrese su Consulta</label>
-            <textarea  
-                id="contact_consult" 
-                name="" 
-                placeholder="Consulta(*): Buenas, mi consulta es ..." 
-                minlength="20" 
-                maxlenght="200" required></textarea><button class="btn">enviar</button></div>
+            <textarea 
+                id="contact_consult"     
+                name="consult"
+                placeholder="Consulta: Buenas, necesito una consulta"
+                required></textarea>
+            <button class="btn">Enviar</button>
+        </form>
+        <div class="social">
+            <a class="facebook" href="https://facebook.com" target="_blank"></a>
+            <a class="instagram" href="https://instagram.com" target="_blank"></a>
+            <a class="linkedin" href="https://linkedin.com" target="_blank"></a>
+            <a class="github" href="https://github.com/c215714n/EducacionIT/tree/f-pescar_css-lx09" target="_blank"></a>
+        </div>
+        <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
     <!-- Scripts JS -->
     <script src="scripts/main.js"></script>

@@ -197,6 +197,39 @@
             }
         }
     /*Footer*/
+        #footer{
+            padding: 5rem 0 1rem;
+            position: relative;
+        }
+        /*map*/
+        .map iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .map .btn{
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            padding: .5rem;
+            color: var(--light);
+            background-color: var(--dark);
+        }
+        .map iframe.active,
+        .map .btn.icon-min{
+            position: fixed;
+            z-index: 2;
+            opacity: .9;
+        }
+        .icon-min::before{
+            content: 'minimizar';
+        }
+        .icon-max::before{
+            content: 'maximizar';
+        }
         /*contact form*/
             #contact{
                 display: grid;
@@ -212,8 +245,16 @@
             #contact :is(input, textarea, button){
                 padding: .5rem 1rem;
             }
+            #contact .valid{
+                max-height: 0;
+                overflow: hidden;
+                transition: all .5s ease-out;
+            }
             #contact :focus{
                 box-shadow: 0 0 .5rem var(--light);
+            }
+            #contact :focus + .valid{
+                max-height: 640px;
             }
 /* Small Devices - Smartphones */
 
