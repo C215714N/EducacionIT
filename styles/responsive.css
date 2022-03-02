@@ -25,6 +25,18 @@
             box-sizing: border-box;
             font-family: var(--font);
         }
+        body{
+            display: grid;
+            grid-template-areas:
+                'header'
+                'content'
+                'footer'
+                'menu'
+        }
+        #header{ grid-area: header; }
+        main{ grid-area: content; }
+        #footer{ grid-area: footer; }
+        nav{ grid-area: menu; }
         /* margin */
             body,
             h1,
@@ -89,12 +101,27 @@
             .opacity:hover{
                 opacity: .7;
             }
+        /*pseudo-elements*/
+        .title h2::before{
+            content: 'Capitulo';
+        }
+        .title h3::before{
+            content: 'Tema'
+        }
+        .text::after{
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime dignissimos modi accusantium velit porro atque beatae minus suscipit, iste id officia animi rerum minima reprehenderit eos delectus dolorem temporibus deserunt ad quidem error, labore nostrum. Vitae modi error iusto eveniet, deleniti dolorum. Nesciunt laboriosam debitis consectetur atque, ex deserunt facere. At voluptate iusto a, cupiditate nemo dolor tempora modi recusandae aperiam, blanditiis asperiores nesciunt atque quisquam ipsa numquam maxime! Pariatur inventore, amet illum aperiam dolor repellendus nemo esse facere veniam earum, neque debitis illo quis! Beatae quisquam, nesciunt odio ad a voluptatibus mollitia ullam nam dolorum, doloremque inventore iste.'';
+        }
+        .short-text::after{
+            content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, maxime vel repellat minus iste repellendus excepturi mollitia voluptates doloremque molestias exercitationem ducimus aliquam. Reprehenderit dicta eos consequatur itaque molestias alias dignissimos at sunt quas. Nobis repellat, rerum, dignissimos necessitatibus distinctio labore assumenda atque, quod harum eos consequatur error eaque laudantium!.';
+        }
     /* Navigation */
         nav{
+            position: sticky;
+            bottom: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
             padding: .5rem;
             background: var(--fst) linear-gradient( to right, var(--fst), var(--snd) ); /*color image position/size repeat*/
         }
@@ -120,13 +147,13 @@
         }
         nav .arrow-up{
             position: fixed;
-            bottom: .5rem;
+            bottom: 5rem;
             right: .5rem;
+            background-color: var(--dark);
         }
     /* Headings */
         #header h1{
             font-family: 'light side';
-            padding: 1rem;
         }
 /* Small Devices - Smartphones */
 
@@ -143,11 +170,21 @@
         }
     }
 /* Large Devices - Laptops */
-
+    @media screen and (min-width: 992px){
+    /* General Rules */
+        body{
+            grid-template-areas: 
+            'menu'
+            'header'
+            'content'
+            'footer'
+        }
+    }
 /* Extra Large - Desktop  */
     @media screen and (min-width: 1200px){
     /* Navigation */
         nav{
+            top: 0;
             padding: .5rem calc(50vw - 660px);
         }
     }
