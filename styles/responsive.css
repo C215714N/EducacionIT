@@ -1,6 +1,7 @@
 /* Content First - Mobile First */
     /* Imports */
         @import url('https:/fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&family=Open+sans');
+        @import url('bootstrap.css');
         @font-face{
             font-family: 'light side';
             src: url('../assets/fonts/starjhol.ttf'); /* true type font */
@@ -117,8 +118,8 @@
         .title h3::before{
             content: 'Tema'
         }
-        .text::after{
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime dignissimos modi accusantium velit porro atque beatae minus suscipit, iste id officia animi rerum minima reprehenderit eos delectus dolorem temporibus deserunt ad quidem error, labore nostrum. Vitae modi error iusto eveniet, deleniti dolorum. Nesciunt laboriosam debitis consectetur atque, ex deserunt facere. At voluptate iusto a, cupiditate nemo dolor tempora modi recusandae aperiam, blanditiis asperiores nesciunt atque quisquam ipsa numquam maxime! Pariatur inventore, amet illum aperiam dolor repellendus nemo esse facere veniam earum, neque debitis illo quis! Beatae quisquam, nesciunt odio ad a voluptatibus mollitia ullam nam dolorum, doloremque inventore iste.'';
+        .long-text::after{
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium maxime dignissimos modi accusantium velit porro atque beatae minus suscipit, iste id officia animi rerum minima reprehenderit eos delectus dolorem temporibus deserunt ad quidem error, labore nostrum. Vitae modi error iusto eveniet, deleniti dolorum. Nesciunt laboriosam debitis consectetur atque, ex deserunt facere. At voluptate iusto a, cupiditate nemo dolor tempora modi recusandae aperiam, blanditiis asperiores nesciunt atque quisquam ipsa numquam maxime! Pariatur inventore, amet illum aperiam dolor repellendus nemo esse facere veniam earum, neque debitis illo quis! Beatae quisquam, nesciunt odio ad a voluptatibus mollitia ullam nam dolorum, doloremque inventore iste.';
         }
         .short-text::after{
             content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, maxime vel repellat minus iste repellendus excepturi mollitia voluptates doloremque molestias exercitationem ducimus aliquam. Reprehenderit dicta eos consequatur itaque molestias alias dignissimos at sunt quas. Nobis repellat, rerum, dignissimos necessitatibus distinctio labore assumenda atque, quod harum eos consequatur error eaque laudantium!.';
