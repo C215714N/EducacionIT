@@ -1,12 +1,14 @@
 /*content*/
-    section,
-    .header{
-        padding: 1rem calc(50vw - 480px);
+    main{
+        padding: .5rem;
     }
-    .header{
-        position: relative;
-        width: 100vw;
-        left: calc(-50vw + 480px);
+    main .header,
+    main section{
+        margin: 1rem var(--m);
+    }
+    main .header{
+        --m: -.5rem;
+        padding: 1rem;
     }
 /* examples */
     .example{
@@ -137,5 +139,29 @@
     }
     to{
         transform: translate(min(50vw, 360px));
+    }
+}
+
+@media screen and (min-width: 576px){
+    main .header,
+    main section{
+        --width: 540px;
+        padding: 1rem calc(50vw - var(--width)/2);
+    }
+    main .header{
+        width: 100vw;
+        transform: translateX(calc(-50vw + var(--width)/2));
+    }
+}
+@media screen and (min-width: 768px){
+    main .header,
+    main section{
+        --width: 720px;
+    }
+}
+@media screen and (min-width: 992px){
+    main .header,
+    main section{
+        --width: 960px;
     }
 }
