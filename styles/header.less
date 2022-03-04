@@ -19,7 +19,7 @@
         color: @color;
         background-color: @bg-color;
         .flexbox(@jc:space-between);
-        .normalize;
+        .normalize(@p: .5rem);
         .position(sticky; @z:2);
         @media screen and (min-width: @laptop){
             justify-content: space-around;
@@ -33,23 +33,25 @@
                 background-color: @bg-color;
                 height: 100%;
                 transition: all 1s ease;
-                .normalize(@p:.5rem 1rem);
-                .position(fixed, @x: -100%, @z:1);
+                .normalize(@p:3rem 1rem);
+                .position(fixed, @x: -100%, @z:-1);
                 &.active{ left:0; }
                 @media screen and (min-width: @tablet){
                     .flexbox;
+                    .normalize;
                     .position;
                 }
                 li{
                     position:relative;
                     &:extend(.unstyled);
-                    .normalize(.25rem, .5rem);
+                    .normalize(@p: 0 .25rem);
                 }
             }
         // menu button
             .fa-bars,
             .fa-times{
-                @r: 1rem;
+                @r: .5rem;
+                .normalize(.25rem, .5rem, .1rem solid @color);
                 color: @color;
                 background-color: transparent;
                 .radius;
@@ -92,7 +94,7 @@
     }
     /* Content heading */
     header{
-        .normalize(.25rem 0, 1rem);
+        .normalize;
         p{
             &:extend(.zeroise);
         }

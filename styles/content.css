@@ -4,10 +4,10 @@
     }
     main .header,
     main section{
-        margin: 1rem var(--m);
+        margin: var(--m);
     }
     main .header{
-        --m: -.5rem;
+        --m: -1rem -1rem .5rem;
         padding: 1rem;
     }
 /* examples */

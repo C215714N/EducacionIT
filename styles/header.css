@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   margin: 0;
   border: 0;
-  padding: 0;
+  padding: 0.5rem;
   position: sticky;
   left: 0;
   top: 0;
@@ -31,11 +31,11 @@
   transition: all 1s ease;
   margin: 0;
   border: 0;
-  padding: 0.5rem 1rem;
+  padding: 3rem 1rem;
   position: fixed;
   left: -100%;
   top: 0;
-  z-index: 1;
+  z-index: -1;
 }
 #header nav .menu.active {
   left: 0;
@@ -47,6 +47,9 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0;
+    border: 0;
+    padding: 0;
     position: relative;
     left: 0;
     top: 0;
@@ -55,19 +58,22 @@
 }
 #header nav .menu li {
   position: relative;
-  margin: 0.25rem;
+  margin: 0;
   border: 0;
-  padding: 0.5rem;
+  padding: 0 0.25rem;
 }
 #header nav .fa-bars,
 #header nav .fa-times {
+  margin: 0.25rem;
+  border: 0.1rem solid #eee;
+  padding: 0.5rem;
   color: #eee;
   background-color: transparent;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-  border-radius: 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   #header nav .fa-bars,
@@ -114,9 +120,9 @@
 }
 /* Content heading */
 header {
-  margin: 0.25rem 0;
+  margin: 0;
   border: 0;
-  padding: 1rem;
+  padding: 0;
 }
 /* helpers */
 .zeroise,
@@ -270,6 +276,7 @@ section:nth-child(12n) .header {
 /* estilos */
 a.fa::before {
   display: inline-block;
+  padding: 0.25rem;
   font-size: 2rem;
   transform-origin: bottom center;
 }

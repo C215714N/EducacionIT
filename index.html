@@ -201,18 +201,18 @@
             <h3>Fondo animado</h3>
             <div class="background"></div>
             <h3>Transicion de imagenes</h3>
-            <div class="">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+            <div class="gallery">
+                <ul class="gallery-container">
+                    <li class="gallery-item"></li>
+                    <li class="gallery-item"></li>
+                    <li class="gallery-item"></li>
                 </ul>
                 <button class="fa fa-arrow-left"></button>
-                <button class="fa fa-arrowright"></button>
+                <button class="fa fa-arrow-right"></button>
             </div>
             <h3>animaciones matematicas</h3>
-            <functions class="transition">
-                <div>
+            <div class="functions">
+                <div class="transition">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -220,7 +220,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div>
+                <div class="transition">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -228,7 +228,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div>
+                <div class="transition">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -236,7 +236,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div>
+                <div class="transition">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -244,7 +244,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div>
+                <div class="transition">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -252,7 +252,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div>
+                <div class="transition">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -260,7 +260,7 @@
                     <div></div>
                     <div></div>
                 </div>
-            </functions>
+            </div>
         </section>
         <section>
             <header class="header">
@@ -271,15 +271,24 @@
                 Al igual que algunos programas de diseño como <em>Adobe Animate (antiguamente conocido como FLASH)</em> podemos realizar animaciones en nuestra pagina web mediante la utilizacion de <strong>fotogramas claves</strong> donde indicamos cual debe ser la apariencia o cambios de nuestros elementos durante la misma, siendo el navegador el responsable de llenar los espacios intermedios.
             </p>
             <h4>Timing-Function</h4>
+            <p>
+                Esta caracteristica controla el modo en el que sucede la animacion y su valor predeterminado es <em>ease</em>. En caso de necesitar algun valor diferente a los que nos ofrece CSS, podemos personalizar la transicion utilizando el valor <em>cubic-bezier(x1,y1,x2,y2)</em> donde la <strong>"x" representa el tiempo e "y" la progresion</strong>, pudiendo realizar diferentes combinaciones con una sola animacion.
+            </p>
             <div class="example animation timing">
                 <div>ease</div>
                 <div>ease-in</div>
                 <div>ease-out</div>
                 <div>ease-in-out</div>
                 <div>linear</div>
-                <div>cubic-bezier (x1,y1)</div>
+                <div>cubic-bezier</div>
             </div>
             <h4>Direction</h4>
+            <p>
+                Como si se tratara de una pelicula, tambien podemos controlar la direccion de la misma, a diferencia del atributo <em>transition</em> que rellena los espacios. El valor predeterminado es <em>normal</em> que <strong>reproduce la animacion del from{...} al to{...}</strong> y en caso de necesitar que sea a la inversa podemos utilizar <em>reverse</em>.
+            </p>
+            <p>
+                Podemos hacer que nuestra animacion <em>alterne entre los diferentes valores</em>, pero para ello es necesario que definamos el atributo <strong>animation-iteration-count</strong> con un valor mayor a 1 para que esto pueda ser aplicado sin problemas, ya que de lo contrario, se reproducira en el primer sentido y luego la misma finalizara.
+            </p>
             <div class="example animation direction">
                 <div>normal</div>
                 <div>reverse</div>
@@ -287,6 +296,12 @@
                 <div>alternate-reverse</div>
             </div>
             <h4>Percentages</h4>
+            <p>
+                En caso de necesitar una mayor cantidad de cambios durante la animacion, podemos indicar cuales son los <strong>fotogramas clave</strong> utilizando porcentajes, pero la misma siempre debe iniciar con <strong>0%{...}</strong> y finalizar con <strong>100%{...}</strong> ya que de lo contrario se interrumpira abruptamente.
+            </p>
+            <p>
+                Ademas podemos agregar alguna funcionalidad adicional con el atributo <strong>animation-play-state</strong> el cual define es estado de la animacion, los cuales son <em>running y paused</em> para que el usuario presione algun boton que cambie dicho valor al elemento seleccionado.
+            </p>
             <div class="example movit">
                 <div class="item"></div>
                 <button class="btn">PLAY</button>
