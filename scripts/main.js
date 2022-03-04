@@ -8,6 +8,8 @@
     const mBtns = d.querySelectorAll('.media .btn-play')
     const mapBtn = d.querySelector('#footer button.fa')
     const mapFrm = d.querySelector('#footer iframe.cover')
+    const aniDiv = d.querySelector('.movit .item')
+    const aniBtn = d.querySelector('.movit .btn')
 
 //  Menu Hamburguesa
     menuBtn.onclick = () => 
@@ -30,3 +32,14 @@
         mapBtn.classList.replace('fa-expand', 'fa-compress') :
         mapBtn.classList.replace('fa-compress', 'fa-expand')
     }
+
+//  Animaciones
+    aniBtn.onclick = () => {
+        let text
+        let el = aniDiv.style;
+        let test = el.animationPlayState;
+        test == 'paused' || test == '' ?
+        (el.animationPlayState = 'running', text = 'PAUSE') :
+        (el.animationPlayState = 'paused', text = 'PLAY')
+        aniBtn.innerHTML = text   
+}
