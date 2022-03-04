@@ -1,0 +1,40 @@
+/* estilos */
+    a.fa{
+        &::before{
+            display: inline-block;
+            font-size: 2rem;
+            transform-origin: bottom center;
+        }
+        &:hover::before{
+            animation: menu-item .5s linear .1s infinite alternate;
+        }
+    }
+    .navbar{
+        &-brand{
+            color: white;
+        }
+        &-toggler{
+            &-icon{
+                color: black;
+            }
+        }
+        &-nav{
+            .nav{
+                &-item{
+                    color:grey
+                }
+                &-link{
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+/* animaciones less*/
+@keyframes menu-item{
+    from{
+        transform: rotate(-30deg);
+    }
+    to{
+        transform: rotate(30deg);
+    }
+}

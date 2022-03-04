@@ -267,3 +267,33 @@ section:nth-child(12n) .header {
 .col-24 {
   width: 100%;
 }
+/* estilos */
+a.fa::before {
+  display: inline-block;
+  font-size: 2rem;
+  transform-origin: bottom center;
+}
+a.fa:hover::before {
+  animation: menu-item 0.5s linear 0.1s infinite alternate;
+}
+.navbar-brand {
+  color: white;
+}
+.navbar-toggler-icon {
+  color: black;
+}
+.navbar-nav .nav-item {
+  color: grey;
+}
+.navbar-nav .nav-link {
+  color: whitesmoke;
+}
+/* animaciones less*/
+@keyframes menu-item {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
