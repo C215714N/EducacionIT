@@ -2,19 +2,22 @@
 
 ## configuracion inicial
 
-* Switch> (modo estandar)
+Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
+Una vez finalizada la misma, podremos acceder al dispositivo utilizando protocolos de red como _TELNET_ o _SSH_, siempre y cuando hayamos establecido una __direccion IP__ y un nombre de __dominio__ para conectarnos remotamente.
+
+1. Switch> (modo estandar) 
 	* __enable__: habilita el modo privilegiado
-* Switch# (modo privilegiado)
+2. Switch# (modo privilegiado)
 	* __configure terminal__: accede al modo de configuracion global
-* Switch(config)# (modo configuracion global)
+3. Switch(config)# (modo configuracion global)
 	* __hostname `<name>`__: define el nombre del dispositivo
 	* __username `<user>` password `<pass>`__: define un nombre de usuario y contraseña
 	* __ip domain name `<domain>`__: define el nombre de dominio al que pertenece el dispositivo.
 	* __crypto key generate rsa__: define una clave publica para conexiones SSH.
-	* __line console 0__: submodo de configuracion de linea de consola
+	4. __line console 0__: submodo de configuracion de linea de consola
 		* __login local__: habilita el inicio de sesion por contraseña
-	* __line vty 0 15__: submodo de configuracion de lineas virtuales
+	5. __line vty 0 15__: submodo de configuracion de lineas virtuales
 		* __transport input ssh__: habilita el acceso exclusivo por SSH
-	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
+	6. __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 		* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 		* __no shutdown__: enciende la interfaz seleccionada.
