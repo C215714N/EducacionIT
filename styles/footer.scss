@@ -1,3 +1,6 @@
+//  importaciones
+    @use 'sass:math';
+    @use 'animation.scss';
 //  Variables:
     $path: '../assets/icon';
     $icons: 
@@ -56,7 +59,7 @@
             }
             @for $i from 1 through $col{
                 .col-#{$vn}-#{$i}{
-                    width: percentage( $i / $col );
+                    width: percentage( math.div($i, $col) );
     }   }   }   }
 // styles
     .icon{
