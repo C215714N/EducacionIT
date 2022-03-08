@@ -68,11 +68,14 @@
         limite;
 
     .functions{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        justify-content: center;
+        align-items: center;
         background: linear-gradient(to top right, #36c, #448);
-        min-height: min(100vh, 640px);
+        min-height: min(100vh, 480px);
+        overflow: hidden;
         .transition{
+            animation: loading 360s infinite;
             display: flex;
             justify-content: space-around;
             div{
