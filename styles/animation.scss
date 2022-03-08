@@ -1,0 +1,61 @@
+//  variables
+    $path: '../assets/bg';
+    $gallery: 
+        'osx-el-capitan.jpg',
+        'osx-high-sierra.jpg',
+        'osx-mavericks.jpg',
+        'osx-mountain-lion.jpg',
+        'osx-sierra.jpg',
+        'osx-yosemite.jpg';
+//  hidden styles
+    @each $p in (relative,absolute,fixed,sticky) {
+        %p-#{$p}{ position: $p; }
+    }
+    @each $d in (top, right, bottom, left) {
+        @each $n in (0, 25, 50, 75, 100) {
+            %#{$d}-#{$n}{ #{$d}: $n * 1%; }   
+    }   }
+//  nesting
+    .gallery{
+        @extend %p-relative;
+        min-height: 480px;
+        border: 1px solid #333;
+        &-container{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &-item{
+            @extend %p-absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 1s ease;
+            background: var(--color) var(--bg) center/cover no-repeat;
+            @for $i from 1 through length($gallery){
+                &:nth-child(#{$i}n){
+                    --color: hsl( #{$i * 60}, 50%, 45%);
+                    --bg: url('#{$path}/#{nth($gallery, $i)}');
+                }
+            }
+            &.active{
+                opacity: 1;
+            }
+        }
+        &-button{
+            @extend %p-absolute, %top-0, %bottom-0;
+            border: none;
+            color: #eee;
+            background-color: transparent;
+            opacity: .5;
+            &:hover{
+                opacity: .8;
+            }
+            &.prev{
+                @extend %left-0;
+            }   
+            &.next{
+                @extend %right-0;
+            }
+        }
+    }
