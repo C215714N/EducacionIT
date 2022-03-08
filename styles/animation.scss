@@ -1,3 +1,4 @@
+@use 'sass:math';
 //  variables
     $path: '../assets/bg';
     $gallery: 
@@ -7,6 +8,7 @@
         'osx-mountain-lion.jpg',
         'osx-sierra.jpg',
         'osx-yosemite.jpg';
+    $timing: ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(0,1,1,0);
 //  hidden styles
     @each $p in (relative,absolute,fixed,sticky) {
         %p-#{$p}{ position: $p; }
@@ -19,7 +21,6 @@
     .gallery{
         @extend %p-relative;
         min-height: 480px;
-        border: 1px solid #333;
         &-container{
             list-style: none;
             margin: 0;
@@ -59,3 +60,72 @@
             }
         }
     }
+    $functions:
+        lineal,
+        cuadratica,
+        trigonometrica,
+        exponencial,
+        limite;
+
+    .functions{
+        display: flex;
+        flex-wrap: wrap;
+        background: linear-gradient(to top right, #36c, #448);
+        min-height: min(100vh, 640px);
+        .transition{
+            display: flex;
+            justify-content: space-around;
+            div{
+                width: 3rem;
+                height: 3rem;
+                margin: .25rem;
+                border-radius: 3rem;
+                box-shadow: 
+                    -.25rem .25rem .25rem #eee8 inset,
+                    -.25rem .25rem .25rem #333;
+            }
+        @for $i from 1 through length($functions){
+            &:nth-child(#{$i}n){
+            //  animaciones asignadas
+                & div{
+                    animation: nth($functions, $i) 10s alternate infinite;
+                    animation-fill-mode: backwards;
+                }
+            //  Numeros de hijos por cada transition
+            @for $n from 1 through 6{
+                & div:nth-child(#{$n}n){
+                    animation-delay: $n * 2s;
+                    background: radial-gradient(
+                        circle at top right,
+                        hsl($i * 60 + $n * 10, 50%, 70%),
+                        hsl($i * 40 + $n * 5, 40%, 40%)
+                    )
+                }
+            }   }
+        }   }
+    }
+
+@each $f in $functions {
+    @keyframes #{$f}{        
+        @for $p from 0 through 100 {
+            $x: $p - 50;
+            $y: 0;
+            @if $f == lineal {
+                $y: $x / -2;
+            } @else if $f == cuadratica {
+                $y: math.pow($x, 2) / 50;
+            } @else if $f == trigonometrica{
+                $y: math.sin($x) * 10;
+            } @else if $f == exponencial{
+                $y: math.pow(1.2, $x)
+            } @else if $x == 0 and $f == limite {
+                $y: 1px
+            } @else {
+                $y: math.div(100, $x);
+            }
+            #{$p * 1%}{
+                transform: translate(#{$p / 3}vw, #{$y}vh);
+            }
+        }
+    }
+}
