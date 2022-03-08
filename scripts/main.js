@@ -11,6 +11,10 @@
     const aniDiv = d.querySelector('.movit .item')
     const aniBtn = d.querySelector('.movit .btn')
 
+    const gallery = d.querySelectorAll('.gallery .gallery-item')
+    const prev = d.querySelector('.gallery .prev')
+    const next = d.querySelector('.gallery .next')
+
 //  Menu Hamburguesa
     menuBtn.onclick = () => 
         menuLst.classList.toggle('active') ? 
@@ -43,3 +47,22 @@
         (el.animationPlayState = 'paused', text = 'PLAY')
         aniBtn.innerHTML = text   
 }
+
+//  Galeria de imagenes
+    window.setInterval( ()=> next.click() , 30000 )
+    prev.onclick = () => getItem(gallery)
+    next.onclick = () => getItem(gallery, true)
+
+    getItem = (array = [], dir = false, className = 'active') => {
+        for( el of array){ 
+            if(el.classList.contains(className)){
+                el.classList.remove(className)
+                getDir(el, dir);
+        }   }   newItem.classList.add(className)  
+    }
+
+    getDir = (el, dir) => {
+        newItem = ( dir ? 
+            el.nextElementSibling || el.parentNode.firstElementChild : 
+            el.previousElementSibling || el.parentNode.lastElementChild
+    )   }
