@@ -28,11 +28,13 @@ CREATE TABLE patients(
     cuit CHAR(13), -- cadena de texto fija '99-99999999-9'
     PRIMARY KEY(pacient_id) -- clave primaria (campo relacional)
 );
+-- modificacion y generacion de columnas
 ALTER TABLE patients
 	CHANGE COLUMN patient_surname surname VARCHAR(50),
 	CHANGE COLUMN patient_name name VARCHAR(50),
 	ADD COLUMN address VARCHAR(200),
 	ADD COLUMN country VARCHAR(100);
+-- restricciones de campos (Unicas y Multiples)
 ALTER TABLE patients
 	ADD CONSTRAINT UNIQUE KEY(cuit),
     ADD CONSTRAINT UNIQUE KEY(surname, name, birth_date, address, country);
@@ -40,3 +42,38 @@ ALTER TABLE patients
 	RENAME TABLE pacients TO patients;
 */
 DESCRIBE patients;
+
+## Tabla Personal
+CREATE TABLE personal(
+	personal_id INT AUTO_INCREMENT,
+    surname VARCHAR(50),
+    name VARCHAR(100),
+    cuit CHAR(13) NOT NULL, -- debe cargarse
+    birth_date DATE,
+    role ENUM('ADM', 'MED', 'ENF', 'LIM', 'SEG') DEFAULT 'MED',
+    address VARCHAR(200),
+    phone VARCHAR(20),
+    email VARCHAR(200),
+    PRIMARY KEY(personal_id),
+    UNIQUE KEY(cuit),
+    UNIQUE KEY(email)
+);
+
+## Tabla departamentos
+CREATE TABLE departments(
+	department_id INT AUTO_INCREMENT,
+    department VARCHAR(35),
+    PRIMARY KEY(department_id),
+    UNIQUE KEY(department)
+);
+
+## Tabla Espacialidades
+CREATE TABLE professions(
+	profession_id INT AUTO_INCREMENT,
+    personal INT, -- campo relacional Personal(personal_id)
+    department INT, -- campo relacional Departments(department_id)
+    PRIMARY KEY(profession_id),
+    UNIQUE KEY(personal, department),
+    FOREIGN KEY(personal) REFERENCES Personal(personal_id), -- campo_local => tabla(campo_remoto)
+    FOREIGN KEY(department) REFERENCES Departments(department_id) -- el valor debe existir en la tabla relacional
+);
