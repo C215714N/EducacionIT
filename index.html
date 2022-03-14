@@ -8,7 +8,7 @@
     <title>Fundamentos Web</title>
 </head>
 <!-- Cuerpo (Parte Visible): contenido/imagenes/hipervinculos -->
-<body>
+<body style="font-family: calibri, century gothic, sans-serif;">
     <!-- Encabezado (heading) Nivel I: Titulo mas importante -->
     <h1>Fundamentos Web</h1>
     <!-- parrafo (paragraph) -->
@@ -32,8 +32,44 @@
         <li>js</li>
     </ul>
     <h3>HTML (HyperText Markup Language)</h3>
-    <p>
-        El Lenguaje de marcado de hipertexto utiliza etiquetas para definir la funcion que cumple cada elemento dentro de la pagina, indicando la jerarquia de los mismos. El orden de los factores altera el producto.
+    <p style="">
+        El Lenguaje de marcado de hipertexto utiliza etiquetas para definir la funcion que cumple cada elemento dentro de la pagina, indicando la jerarquia de los mismos. 
+        <!-- Salto de linea (Break) -->
+        <br>
+        Es un lenguaje que de estructura y por lo tanto el orden de los factores altera el producto.
+        <!-- Etiqueta huerfana (no posee cierre) -->
+        <br>
+        Las etiquetas creadas con este lenguaje se pueden clasificar de diferentes maneras, como se muestra a continuacion.
     </p>
+    <h4>Segun su funcion</h4>
+    <ul>
+        <li>
+            <!-- Texto destacado (Importante) -->
+            <strong>Semantica: </strong>
+            es aquella que cumple un rol dentro de la pagina, indicando la jerarquia que posee, 
+            <!-- Texto enfatizado (citas / contexto) -->
+            <em> como por ejemplo: h1, strong</em>
+        </li>
+        <li>
+            <strong>Presentacional: </strong>
+            es aquella que se utiliza para facilitar la implementacion del diseño, no posee carga semantica,
+            <em> como por ejemplo: div, span</em>
+        </li>
+    </ul>
+    <h4>Segun su disposicion</h4>
+    <ul style="color:whitesmoke; background-color: darkslateblue;">
+        <li>
+            <strong>Bloque: </strong>
+            <span style="color:gold">s</span>on aquellas que ocupan todo el espacio de su contenedor,
+            generan salto de linea y se puede cambiar su tamaño,
+            <em> generalmente funcionan como contenedores.</em>
+        </li>
+        <li>
+            <strong>Linea: </strong>
+            son aquellas que ocupan el espacio de su contenido,
+            comparten linea con otros elementos de su tipo y su tamaño es automatico,
+            <em>generalmente funcionan como contenido.</em>
+        </li>
+    </ul>
 </body>
 </html>
