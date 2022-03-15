@@ -18,7 +18,7 @@
 	OFFSET 0;
 -- cuit empezando con 21 o 25
     SELECT * FROM personal
-    WHERE cuit IN(21,25);
+    WHERE cuit IN(21,25); -- SQL busca los numeros en la cadena de texto
 -- apellidos empezados con "l" y nombres empezados con "m"
 	SELECT * FROM personal
     WHERE surname LIKE "l%" OR name LIKE "m%"; -- %: cualquier cantidad de caracteres
