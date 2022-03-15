@@ -67,7 +67,7 @@ CREATE TABLE departments(
     UNIQUE KEY(department)
 );
 
-## Tabla Espacialidades
+## Tabla Especialidades
 CREATE TABLE professions(
 	profession_id INT AUTO_INCREMENT,
     personal INT, -- campo relacional Personal(personal_id)
