@@ -4,8 +4,21 @@ En el mundo del __desarrollo web__ existen varias entidades que funcionan como r
 * __W3C (World Wide Web Consortium)__ Encargada de definir el estandar y por lo tanto quien regula que elementos deben utilizarse y la sintaxis de los diferentes lenguajes web
 * __WHATWG (Web Hypertext Application Technology Working Group)__ Fundada por _Mozilla y Apple_ se encarga de manetener y desarrollar HTML y las APIs para aplicaciones web.
 
+___
 
-## Desarrollo Front-End
+## Tabla de contenidos
+1. [Fundamentos Web](#fundamentos-web)
+    * W3C
+    * WHATWG
+2. [Desarrollo FrontEnd](#desarrollo-fronend)
+    * HTML
+    * CSS
+3. [Actividades](#actividades)
+    1. [Conceptos Basicos](#conceptos-basicos)
+
+___
+
+## Desarrollo FrontEnd
 * __HTML (Hypertext Markup Language)__ El lenguaje de marcado de hipertexto utiliza etiquetas para definir la funcion que cumple cada elementos dentro de la pagina, identificando asi la jerarquia de los mismos para facilitar a los motores de busqueda y al navegador su correcta interpretacion. Este aspecto se conoce como carga semantica y se utiliza para la indizacion de contenidos.
 _ejemplo: `<p>parrafo</p>`_
 
