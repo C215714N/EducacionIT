@@ -16,7 +16,12 @@
 	ORDER BY surname DESC, cuit
 	LIMIT 5
 	OFFSET 0;
-    
+-- cuit empezando con 21 o 25
+    SELECT * FROM personal
+    WHERE cuit IN(21,25);
+-- apellidos empezados con "l" y nombres empezados con "m"
+	SELECT * FROM personal
+    WHERE surname LIKE "l%" OR name LIKE "m%"; -- %: cualquier cantidad de caracteres
 ## Tabla departamentos
 /*
 	AND	| c1F | c1V		OR	| c1V | c1F		XOR	| c1V | c1F
@@ -34,6 +39,11 @@
 	SELECT * FROM departments 
 	WHERE department_id IN(1,7,8,10,11)
 	ORDER BY department_id;
-
+-- departamentos que no terminan en "...GIA"
+	SELECT * FROM departments
+    WHERE department NOT LIKE "%gia";
+-- departamentos que contenga la silaba "psi"
+	SELECT * FROM departments
+    WHERE department LIKE "%psi%";
 ## Tabla especialidades
 	SELECT * FROM professions;
