@@ -8,13 +8,9 @@ ___
 
 ## Tabla de contenidos
 1. [Fundamentos Web](#fundamentos-web)
-    * W3C
-    * WHATWG
 2. [Desarrollo FrontEnd](#desarrollo-frontend)
-    * HTML
-    * CSS
-3. Estructura semantica
-4.
+3. [Estructura semantica](#estructura-semantica)
+4. [Hojas de Estilo](#hojas-de-estilo)
 3. [Actividades](#actividades)
     * [Conceptos Basicos](#conceptos-basicos)
     * [Estructura de un sitio](#estructura-de-un-sitio)
@@ -36,12 +32,12 @@ Por esta razon en la version 5 se agregaron etiquetas que indican el funcionamie
 * **header** la cabecera indica el contenido introductorio, como encabezados.
 * **nav** la navegacion debe poseer los links mas importantes de nuestro sitio.
 * **main** el contenido principal puede indicar la informacion mas relevante para el usuario o el contenido mas relevante de la pagina.
-* **article** un articulo corresponde al contenido independiente dentro de la pagina, que funciona tanto dentro como fuera de la pagina.
-* **section** una seccion corresponde al contenido contextualizado, es decir que depende de otros elementos dentro de la pagina para su correcta comprension.
-* **aside** un contenido lateral es aquel que se relaciona tangencialmente con los elementos hermanos, se utiliza principalmente para sugerencias o publicidad
-* **footer** el pie de pagina indica el contenido final y es complementario a lo expuesto anteriormente, se suelen colocar aqui las redes sociales, mapas del sitio y formularios/informacion de contacto.
+* **article** un articulo corresponde al contenido independiente dentro de la pagina, que funciona tanto dentro como fuera de la misma.
+* **section** una seccion corresponde al contenido contextualizado, que depende de otros elementos dentro para su correcta comprension.
+* **aside** un contenido lateral es aquel que se relaciona tangencialmente con los elementos hermanos, se utiliza  para sugerencias o publicidad
+* **footer** el pie de pagina es complementario a lo expuesto anteriormente, contiene las redes sociales, mapas del sitio y formularios/datos de contacto.
 
-## Selectores y reglas
+## Hojas de Estilo
 Una vez definida la estructura de la pagina debemos pasar implementar el diseño de la misma, indicando a que elementos se les deben aplicar los cambios (selectores) y cuales seran los mismos, indicando el atributo a modificar, seguido de su valor (reglas)
 
 * *_estilo interno_* Es aquel que se utiliza dentro de la misma pagina
