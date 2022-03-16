@@ -5,10 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selectores generales */
+        body{
+            margin: 0;
+            font-family: 'Calibri','Century Gothic', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            text-align: center;
+            padding: 16px;
+            color: #eee;
+            background-color: #448; /*RRGGBB*/
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: #224;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* pseudoclase: instancia o caracteristica de un elemento*/
+        nav li:hover{
+            background-color: #66c;
+        }
+        /* selectores de Clase (.class) */
+        .social a{
+            color: #ccc;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .social a:hover{
+            color: #eee;
+        }
+        .content img{
+            width: 100%;
+            max-width: 300px;
+            margin-right: 8px;
+            float: left;
+        }
+        .content p{
+            margin: 8px;
+            padding: 24px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Introduccion -->
     <header>
+        <img src="assets/icons/f_pescar.svg" alt="Logo de la fundacion Pescar">
         <h1>Fundamentos Web</h1>
         <p>html | css</p>
         <!-- Navegacion: Links mas importantes -->
@@ -28,7 +83,38 @@
     </header>
     <!-- Contenido: Relevante para el usuario -->
     <main>
-        <img src="assets/icons/f_pescar.svg" alt="Logo de la fundacion Pescar">
+        <div class="content">
+            <h2>Estructura semantica</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto rem earum ullam minus quis animi consequuntur tempore? Placeat sint ipsam, veritatis nostrum tempore aliquam debitis asperiores cupiditate id nisi.
+            </p>
+            <ul>
+                <li>HEADER: Contiene los titulos y funciona a modo de presentacion.</li>
+                <li>NAV: Navegacion que posee los links mas importantes del sitio.</li>
+                <li>MAIN: Contenido principal o la informacion mas relevante para el usario.</li>
+                <li>SECTION: Contenido contextualizado que se desprende de algun otro elemento y funciona dentro de la pagina.</li>
+                <li>ARTICLE: Contenido independiente que funciona tanto dentro como fuera del sitio, debido a que posee su propia estructura.</li>
+                <li>ASIDE: Contenido Tangencial o relacionado indirectamente con sus elementos hermanos, se suele utilizar para sugerencias o publicidad.</li>
+                <li>FOOTER: Contiene informacion complementaria al contenido, como las redes sociales, datos/formulario de contacto e incluso un mapa del sitio.</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>
+                <img src="assets/bg/layout-californication.jpg" alt="Portada Californication">
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor non veniam eos dolores, amet in mollitia nesciunt ad obcaecati facilis, accusantium quam deleniti fuga, odio nihil! Soluta incidunt officia fugiat asperiores corporis earum magni impedit vel, nam omnis, ipsa odit inventore sint id deleniti? Necessitatibus, voluptatem. Delectus omnis, voluptas laboriosam assumenda quisquam fugiat animi vel corporis deleniti illum iure, expedita possimus perferendis blanditiis tempora tempore distinctio, perspiciatis saepe repellendus cupiditate. Laboriosam, placeat? Minus labore accusantium, quo non reiciendis alias nulla ex cum in asperiores impedit, officia natus qui nemo sed magnam dicta hic recusandae dolore laborum assumenda eius aliquam quis?
+            </p>
+            <p>
+                <img src="assets/bg/layout-by_the_way.jpg" alt="Portada By the Way">
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor non veniam eos dolores, amet in mollitia nesciunt ad obcaecati facilis, accusantium quam deleniti fuga, odio nihil! Soluta incidunt officia fugiat asperiores corporis earum magni impedit vel, nam omnis, ipsa odit inventore sint id deleniti? Necessitatibus, voluptatem. Delectus omnis, voluptas laboriosam assumenda quisquam fugiat animi vel corporis deleniti illum iure, expedita possimus perferendis blanditiis tempora tempore distinctio, perspiciatis saepe repellendus cupiditate. Laboriosam, placeat? Minus labore accusantium, quo non reiciendis alias nulla ex cum in asperiores impedit, officia natus qui nemo sed magnam dicta hic recusandae dolore laborum assumenda eius aliquam quis?
+            </p>
+            <p>
+                <img src="assets/bg/layout-stadium_arcadium.jpg" alt="Portada Californication">
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor non veniam eos dolores, amet in mollitia nesciunt ad obcaecati facilis, accusantium quam deleniti fuga, odio nihil! Soluta incidunt officia fugiat asperiores corporis earum magni impedit vel, nam omnis, ipsa odit inventore sint id deleniti? Necessitatibus, voluptatem. Delectus omnis, voluptas laboriosam assumenda quisquam fugiat animi vel corporis deleniti illum iure, expedita possimus perferendis blanditiis tempora tempore distinctio, perspiciatis saepe repellendus cupiditate. Laboriosam, placeat? Minus labore accusantium, quo non reiciendis alias nulla ex cum in asperiores impedit, officia natus qui nemo sed magnam dicta hic recusandae dolore laborum assumenda eius aliquam quis?
+            </p>
+        </div>
     </main>
     <!-- Pie de Pagina: Complementario -->
     <footer>
