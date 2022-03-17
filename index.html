@@ -27,7 +27,37 @@
         <p>Web Design</p>
     </header>
     <!-- Contenido: Informacion relevante para el usuario -->
+    <main>
+        <section>
+            <header class="header">
+                <h2>Tipos de Diseño</h2>
+                <p>Maquetacion de un sitio</p>
+            </header>
+            <p>
+                Desde que existen las paginas web y con la aparicion de CSS en el año 96 surgieron diferentes formas de estilizarlas, utilizando medidas absolutas, relativas e incluso flexibles y de todos los metodos implementados podemos destacar principalmente 3, que no necesariamente se aplican de manera individual:
+            </p>
+            <ul>
+                <li>
+                    <strong>Fluid Web Design</strong>
+                    Estilo que utiliza porcentajes para mantener las proporciones de los elementos de la pagina con respecto a su diseño. Debido a que solo utilizan porcentajes, estos diseños no suelen ser escalables en pantallas pequeñas y grandes.
+                    
+                    Una solucion a este problema surge con el <em>Liquid Web Design</em> que consiste en la implementacion de maximos y minimos, pero en pantallas grandes se generan espacios no contemplados
+                </li>
+                <li>
+                    <strong>Adaptive Web Design</strong>
+                    Estilo que consiste en crear una pagina para cada dispositivo objetivo, generalmente smartphone, tablet, desktop; es bastante practico cuando contemplamos dispositivo de bajos recursos, como poca capacidad de procesamiento o ancho de banda limitado, pero implica tener contenido duplicado.
+                    
+                    Es relativamente facil de mantener ya que maneja archivos por separado y es una solucion practica para clientes con bajo prespuesto, ademas suelen implementarse diferentes estilos segun el tamaño de la pantalla, empezando generalmente desde la vista de escritorio y reduciendo los contenido para las otras vistas.
+                </li>
+                <li>
+                    <strong>Responsive Web Design</strong>
+                    Estilo sugerido originalmente por <em>Ethan Marcotte</em> en una publicacion del sitio <a href="https://alistapart.com/article/resposive-web-design" target="_blank">A list apart</a> donde aplica un concepto conocido como <em>One Web for All</em> donde habla del uso de media-queries, sistemas de grillas con porcentajes y multimedia flexible entre otros conceptos.
 
+                    Se aconseja implementar una caracteristica conocida como <em>Content-first</em>, evolucion del <em>Mobile-first</em>, que consiste en planificar el diseño desde la vista movil utilizando los contenidos finales para tener una clara nocion de como se vera la pagina en el navegador, para luego ir cambiando el diseño segun las dimesiones de la pantalla donde se reproduzca.
+                </li>
+            </ul>
+        </section>
+    </main>
     <!-- Pie de pagina: Contenido Complementario -->
     <footer id="footer">
         <div class="social">
