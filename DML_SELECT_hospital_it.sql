@@ -1,6 +1,7 @@
 /*	DML Data Manipulation Language
 	SELECT: solicitar registros de tablas
 */
+USE hospital_it;
 
 ## Tabla pacientes
 -- consulta general
@@ -42,8 +43,9 @@
 -- departamentos que no terminan en "...GIA"
 	SELECT * FROM departments
     WHERE department NOT LIKE "%gia";
--- departamentos que contenga la silaba "psi"
+-- departamentos que contenga la silaba "...PSI..."
 	SELECT * FROM departments
     WHERE department LIKE "%psi%";
+    
 ## Tabla especialidades
 	SELECT * FROM professions;

@@ -28,7 +28,7 @@ USE hospital_it;
 			('Ramirez','Juan','21-18923402-1','ramirez_jc@hotmail.com');
 -- carga con valor aleatorio
 	INSERT INTO personal(surname, name, cuit, role)
-	VALUES	("Pantoja","Isabel","25-12381312-3", CEIL(RAND() * 5) ); -- numero entre 1 y 5
+	VALUES	("Ricardo","Ruben","20-38321312-3", CEIL(RAND() * 5) ); -- numero entre 1 y 5
 -- carga por asignacion
 	INSERT INTO personal 
 	SET	surname = "Storm",

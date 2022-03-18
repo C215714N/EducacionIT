@@ -77,3 +77,45 @@ CREATE TABLE professions(
     FOREIGN KEY(personal) REFERENCES Personal(personal_id), -- campo_local => tabla(campo_remoto)
     FOREIGN KEY(department) REFERENCES Departments(department_id) -- el valor debe existir en la tabla relacional
 );
+
+## Tabla coberturas Medicas
+CREATE TABLE medical_coverages(
+	coverage_id INT AUTO_INCREMENT,
+	coverage_name VARCHAR(150) NOT NULL,
+    description VARCHAR(200),
+    phone VARCHAR(20),
+    email VARCHAR(200),
+    address VARCHAR(100),
+    PRIMARY KEY(coverage_id),
+    UNIQUE KEY(coverage_name)
+);
+
+## Tabla Planes de Covertura
+CREATE TABLE coverage_plans(
+	plan_id INT AUTO_INCREMENT,
+    plan_name VARCHAR(50),
+    coverage INT,
+    medicament ENUM("si","no","parcial") DEFAULT "no",
+    translate ENUM("si", "no", "parcial") DEFAULT "no",
+    treatment ENUM("si","no","parcial") DEFAULT "no",
+    urgency ENUM("si", "no", "parcial") DEFAULT "no",
+    guard ENUM("si","no","parcial") DEFAULT "no",
+    home_attention ENUM("si", "no", "parcial") DEFAULT "no",
+    surgical_procedure ENUM("si","no","parcial") DEFAULT "no",
+    hospitalizations ENUM("si", "no", "parcial") DEFAULT "no",
+    PRIMARY KEY(plan_id),
+    UNIQUE KEY(plan_name, coverage),
+    FOREIGN KEY(coverage) REFERENCES medical_coverages(coverage_id)
+);
+
+## Tabla Coberturas por paciente
+CREATE TABLE patients_coverage(
+	id INT AUTO_INCREMENT,
+    patient INT,
+    plan INT,
+    type ENUM("PREPAGA","OBRA SOCIAL") DEFAULT "PREPAGA",
+	PRIMARY KEY(id),
+    UNIQUE KEY(patient, plan),
+    FOREIGN KEY(patient) REFERENCES patients(patient_id),
+    FOREIGN KEY(plan) REFERENCES coverage_plans(plan_id)
+);
