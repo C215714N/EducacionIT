@@ -90,7 +90,7 @@ CREATE TABLE medical_coverages(
     UNIQUE KEY(coverage_name)
 );
 
-## Tabla Planes de Covertura
+## Tabla Planes de Cobertura
 CREATE TABLE coverage_plans(
 	plan_id INT AUTO_INCREMENT,
     plan_name VARCHAR(50),
