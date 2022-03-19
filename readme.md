@@ -28,3 +28,14 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Configuracion de VLAN
+1. switch(config)# __(VLAN DE DATOS)__
+	* __vlan `<vlan-id>`__: submodo de configuraciond de vlan
+	* __name `<vlan>`__: establede el nombre de la vlan
+2. switch(config)# __(VLAN DE ADMINISTRACION)__
+	* __interface vlan `<vlan-id>`__: submodo de configuracion de interfaz
+	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
+3. switch(config)# __(DEFINICION DE ENLACES)__
+	* __interface `<fastEthernet 0/1>`__: accede al modo de configuracion de interfaz
+	* __switchport mode acces vlan `<vlan-id>`__: configura la interfaz en modo de acceso
