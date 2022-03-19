@@ -30,12 +30,15 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __no shutdown__: enciende la interfaz seleccionada.
 
 ## Configuracion de VLAN
+Las Redes de area Local Virtuales son una segmentacion del dominio de difusion capa 2 que se implementan para la separacion de dominios de Red, optimizacion de recursos y reduccion de costos de enlace, pero que a la vez agregan mayor complejidad a la topologia debido a que se pierde la comunicacion entre nodos y es necesario el enrutamiento para que esta se produzca entre segmentos.
+
 1. switch(config)# __(VLAN DE DATOS)__
 	* __vlan `<vlan-id>`__: submodo de configuraciond de vlan
 	* __name `<vlan>`__: establede el nombre de la vlan
 2. switch(config)# __(VLAN DE ADMINISTRACION)__
-	* __interface vlan `<vlan-id>`__: submodo de configuracion de interfaz
+	* __interface vlan `<vlan-id>`__: submodo de configuracion de interfaz (VLAN)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 3. switch(config)# __(DEFINICION DE ENLACES)__
-	* __interface `<fastEthernet 0/1>`__: accede al modo de configuracion de interfaz
-	* __switchport mode acces vlan `<vlan-id>`__: configura la interfaz en modo de acceso
+	* __interface `<fa0/1>`__: smodo de configuracion de interfaz (FastEthernet 0/1)
+	* __switchport acces vlan `<vlan-id>`__: configura la interfaz en modo de acceso
+	* __switchport mode trunk__: configura la interfaz en modo troncal
