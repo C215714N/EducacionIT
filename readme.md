@@ -11,9 +11,11 @@ ___
 2. [Desarrollo FrontEnd](#desarrollo-frontend)
 3. [Estructura semantica](#estructura-semantica)
 4. [Hojas de Estilo](#hojas-de-estilo)
+5. [Formularios](#formularios)
 3. [Actividades](#actividades)
     * [Conceptos Basicos](#conceptos-basicos)
     * [Estructura de un sitio](#estructura-de-un-sitio)
+    * [Formularios](#formularios)
 
 ___
 
@@ -45,21 +47,55 @@ Una vez definida la estructura de la pagina debemos pasar implementar el diseño
 	* *inblock*: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
 * *_estilo externo_* Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
 
+## Formularios
+Uno de los elementos fundamentales en las paginas web 2.0 son los formularios, ya que permiten al usuario realizar un intercambio de datos entre cliente y servidor. Si bien existen diferentes tipos y su funcionamiento varia segun este detalle, los elementos que los componen se dividen en los siguientes
+
+* __label__ elemento que identifica la opcion a selecciona o valor a completar.
+* __input__ campo monolinea que permite al usuario ingresar o seleccionar un valor
+    * <input type="text">  _type="text" (Abc123!#)_
+    * <input type="number">  _type="number" (12345)_
+    * <input type="email">  _type="email" (user@server)_
+    * <input type="password">  _type="password" (****)_
+    * <input type="date">  _type="date" (YYYY-MM-DD)_
+    * <input type="radio">  _type="radio" (opcion unica)_
+    * <input type="checkbox">  _type="checkbox" (opcion multiple)_
+* __textarea__ campo utilizado para desarrollar un comentario en varias lineas. <textarea></textarea>
+* __select__ campo de lista desplegable para que el usuario seleccione opciones.
+  <select>
+    <option>FrontEnd</option>
+    <option>BackEnd</option>
+    <option>Fullstack</option>
+  </select>
+* __botones__  elementos que permiten la ejecucion de acciones, entre ellas el envio de los formularios. <button>button</button> <input type="reset"> <input type="submit">
 ___
 
 ## Actividades
+
 ### Conceptos Basicos
 1. Realizar el tipo de lista que corresponda y ordenar, en caso que sea necesario, los siguientes elementos:
     * "edad media(3300 A.C. – 476 D.C)",  "edad antigua (476 – 1492)", "edad contemporanea (1789 – actualidad)", "edad moderna (1492 – 1789)"
     * "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
     * "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
     * "Alexander Zverev(7515pts)", "Novak Djokovic (8465pts)", "Rafael Nadal(6515pts)", "Daniil Mendeleev (8615pts)", "Stefanos Tsitsipas(6325pts)"
+
 ### Estructura de un sitio
 1. Crear una sitio web de al menos 3 paginas utilizando la estructura semantica.
 2. En cada pagina debe haber un menu de navegacion permita desplazarnos entre las mismas.
     * [inicio](index.html)
     * [nosotros](about.html)
     * [galeria](gallery.html)
-3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion 
+3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion
 4. Agregar hipervinculos de las redes sociales a eleccion e informacion de copyright
 5. Colocar contenido dentro de las diferentes paginas a eleccion.
+
+### Formularios
+1. Crear un formulario de registro o inicio de sesion con las siguientes caracteristicas:
+  * __nombre de usuario__ entre 5 y 20 caracteres maximo
+  * __contraseña__ de al menos 8 caracteres
+  * __edad__ con valor minimo de 18
+2. Crear un formulario donde se pueda elegir cualquiera de las siguientes opciones:
+  * __hobbies:__ "deporte", "cocina", "lectura", "cine", "teatro", "costura", "musica", "jardineria", "meditacion".
+  * __musica:__ "cumbia", "reggaeton", "rock", "metal", "salsa", "merengue", "bachata", "cuarteto", "clasica", "tango", "blues", "jazz", "country", "reggae", "disco".
+3. Crear un formulario donde solo se pueda elegir una de las siguientes opciones:
+  * __area:__ "diseño grafico", "diseño UX/UI", "Desarrollo frontend", "administrador DB" "Desarrollo backend", "desarrollo fullstack".
+  * __salario:__ "Cobro, luego Pago y despues subsisto", "menos de 50000", "entre 50000 y 100000", "entre 100000 y 200000", "entre 200000 y 500000", "Ni Jeff Bezos, ni Elon Musk pueden pagarme"
