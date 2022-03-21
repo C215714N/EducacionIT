@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Acerca</a></li>
+            <li><a class="active" href="#">Foro</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <header id="header">
+        <h1>Fundamentos Web</h1>
+        <p>html | css</p>
+    </header>
+    <main>
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el <strong> intercambio de datos entre cliente y servidor</strong> permitiendo al usuario el ingreso de datos o manipulacion dentro de la pagina. Para poder utilizarlos debemos colocar la etiqueta <em>&lt;form></em> y dentro de las misma los elementos que formaran parte del mismo al momento de realizar el envio.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos especificarle los atributos <strong>action="..."</strong> que indica lo que debe suceder cuando realizamos el envio, normalmente se utiliza un script en lenguaje de servidor <em>por ejemplo: PHP</em> para que este resuelva que hacer con los datos; y <strong>method="..."</strong> que indica la manera en la que realizara el mismo, definiendo quien tiene la prioridad. Entre los metodos mas utilizados encontramos los siguientes:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET:</strong> metodo menos seguro, debido a que los datos ingresos permanecen visibles en la barra de direcciones. La prioridad radica en la respuesta del servidor, los datos se envian en texto plano y por lo tanto es mucho mas rapido. Este metodo se utiliza principalmente en <em>Buscadores - Consulta Query</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> metodo mas seguro, ya que los datos se encriptan antes de realizar el envio, los mismos no figuran en ningun otro lado que no sea el formulario y la prioridad radica en la seguridad de los datos del cliente. Por estos motivos es el mas utilizado principalmente para formularios de <em>Registro - Inscripcion, Acceso - Inicio de sesion, Contacto - Consulta Web</em>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como se componen?</h3>
+                </header>
+                <p>
+                    Los formularios poseen 2 tipos de elementos, por un lado estan las <strong>etiquetas (LABEL)</strong> que se utilizan a modo de rotulo indicando al usuario que debe ingresar/seleccionar, ademas facilitan la accesibilidad; y por otro lado estan los <strong>campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los elementos donde el usuario ingresa / selecciona los datos.
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer id="footer">
+        <form id="contact" action="" method="POST">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input id="contact_name" name="name" type="text">            
+            <label for="contact_email">Ingrese su Correo</label>
+            <input id="contact_email" type="email">
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea id="contact_consult"></textarea>
+            <button>ENVIAR</button>
+            <div class="options">
+                <input id="contact_yes" name="option" type="checkbox">
+                <label for="contact_yes">acepto los terminos</label>
+            </div>
+        </form>
+        <p class="copy">&copy;2022 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
