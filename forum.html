@@ -54,17 +54,41 @@
         </article>
     </main>
     <footer id="footer">
-        <form id="contact" action="" method="POST">
+        <form id="contact" action="contact.php" method="GET">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
-            <input id="contact_name" name="name" type="text">            
+            <input 
+                id="contact_name" 
+                name="nombre" 
+                type="text"
+                minlength="3"
+                maxlength="50"
+                placeholder="Nombre: Cristian Racedo"
+                required>
             <label for="contact_email">Ingrese su Correo</label>
-            <input id="contact_email" type="email">
+            <input 
+                id="contact_email" 
+                name="correo"
+                type="email"
+                minlength="8"
+                placeholder="Correo: Cristiandracedo@hotmail.com"
+                required>
             <label for="contact_consult">Ingrese su Consulta</label>
-            <textarea id="contact_consult"></textarea>
+            <textarea 
+                id="contact_consult"
+                name="consulta"
+                minlength="20"
+                maxlength="200"
+                placeholder="Consulta: Buenas, mi consulta es..."
+                required></textarea>
             <button>ENVIAR</button>
             <div class="options">
-                <input id="contact_yes" name="option" type="checkbox">
+                <input 
+                    id="contact_yes" 
+                    name="terminos" 
+                    type="checkbox"
+                    checked
+                    required>
                 <label for="contact_yes">acepto los terminos</label>
             </div>
         </form>
