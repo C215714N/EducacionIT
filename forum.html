@@ -54,7 +54,7 @@
         </article>
     </main>
     <footer id="footer">
-        <form id="contact" action="contact.php" method="GET">
+        <form id="contact" action="contact.php" method="POST">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
@@ -87,6 +87,7 @@
                     id="contact_yes" 
                     name="terminos" 
                     type="checkbox"
+                    value="acepto los terminos"
                     checked
                     required>
                 <label for="contact_yes">acepto los terminos</label>
