@@ -48,8 +48,16 @@
                     <h3>¿Como se componen?</h3>
                 </header>
                 <p>
-                    Los formularios poseen 2 tipos de elementos, por un lado estan las <strong>etiquetas (LABEL)</strong> que se utilizan a modo de rotulo indicando al usuario que debe ingresar/seleccionar, ademas facilitan la accesibilidad; y por otro lado estan los <strong>campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los elementos donde el usuario ingresa / selecciona los datos.
+                    Los formularios poseen 2 tipos de elementos, por un lado estan las <strong>etiquetas (LABEL)</strong> que se utilizan a modo de rotulo indicando al usuario que debe ingresar/seleccionar, ademas facilitan la accesibilidad; y por otro lado estan los <strong>campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los elementos donde el usuario ingresa / selecciona los datos. Estos ultimos poseen ciertas caracteristicas que en algunos casos se encuentran definidas de manera implicita como las siguientes:
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>type="..."</strong> atributo que indica el tipo de dato admitido por el control, entre ellos se encuentran valores como <em>text, number, email, password, date</em> que permiten el ingreso de datos, pero tambien existen valores como <em>radio o checkbox</em> que limitan al usuario a seleccionar una opcion.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> atributo que indica cual es el valor del campo que sera utilizado al momento de enviar el formulario, normalmente corresponde al dato ingresado por el usuario, pero en aquellos casos donde este no puede escribir debe estar definido por el desarrollador para que se reciba algo.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
