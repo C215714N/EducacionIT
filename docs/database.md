@@ -1,6 +1,5 @@
 ## Database (schema)
-Estructura que se utiliza para almacenar informacion, la misma esta compuesta de tablas que facilitan la organizacion
-### Tablas:
+Estructura que se utiliza para almacenar informacion, la misma esta compuesta por tablas que facilitan la organizacion de la misma que a la vez se dividen en los siguientes elementos:
 * __campos (columna)__: conjunto de datos del mismo tipo.
 * __registros (fila)__: conjunto de datos que guardan relacion entre si
 * __datos (celda)__:	minima porcion de informacion.
