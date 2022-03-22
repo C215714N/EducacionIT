@@ -35,7 +35,10 @@ USE hospital_it;
 		name = "Susan",
 		cuit = "27-12893470-3",
 		email = "s.storm@fantastic_four.com";
-
+-- carga por consulta
+    INSERT INTO patients(surname, name)
+    SELECT surname, name FROM personal;
+    
 ## Tabla Departamentos
 	INSERT INTO departments(department)
 	VALUES	('TRAUMATOLOGIA'),
@@ -63,6 +66,9 @@ VALUES ("ACA SALUD | AVALIAN"),("AMEBPBA"),("ANDAR"),("APSOT | FSST"),("C.A.S.A.
 -- carga por subconsulta
 INSERT INTO coverage_plans(plan_name, coverage)
 VALUES ("Plan finanzas", (SELECT coverage_id FROM medical_coverages WHERE coverage_name LIKE "%osde%") );
+-- carga aleatoria
+INSERT INTO coverage_plans(plan_name, coverage)
+VALUES ("plan ...", CEIL(RAND() * 29) );
 
 ## Tabla Coberturas por paciente
 INSERT INTO patients_coverage(patient, plan)
@@ -70,3 +76,6 @@ VALUES (
 	(SELECT patient_id FROM patients WHERE cuit ="20-35335446-5"), -- busca paciente por cuit
 	(SELECT plan_id FROM coverage_plans WHERE plan_name LIKE "%finanzas%" AND coverage = 18) -- plan cuya entidad sea la 18
 );
+
+INSERT INTO patients_coverage(patient, plan)
+VALUES ( CEIL(RAND() * 7), CEIL(RAND() * 35) );

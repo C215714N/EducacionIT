@@ -49,3 +49,20 @@ USE hospital_it;
     
 ## Tabla especialidades
 	SELECT * FROM professions;
+## Tabla planes de coberturas
+SELECT
+	coverage,
+    COUNT(*) AS plans,
+    GROUP_CONCAT(plan_name)
+FROM coverage_plans
+GROUP BY coverage
+ORDER BY coverage;
+
+## Coberturas por pacientes
+	SELECT 
+		patient, 
+		COUNT(*) AS plans,
+		GROUP_CONCAT(plan) AS plan_list
+	FROM patients_coverage
+	GROUP BY patient
+	ORDER BY patient, plan, type;
