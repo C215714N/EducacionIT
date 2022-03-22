@@ -7,7 +7,7 @@
 * **Visual C++ 2019**: <https://support.microsoft.com/es-ar/help/2977003/the-latest-supported-visual-c-downloads>
 * **Net Framework 4.52**: <https://www.microsoft.com/es-ar/download/details.aspx?id=42642>
 ___
-## Contenidos
+## Tabla de Contenidos
 * [Base de datos](./docs/database.md)
 * [Tipos de datos](./docs/tipos-datos.md)
 * [Operadores](./docs/operadores.md)
