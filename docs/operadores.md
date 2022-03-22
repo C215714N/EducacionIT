@@ -20,7 +20,7 @@
   __!=__	|no es igual   | 3 != 7 | true
   __<>__	|distinto a    | 2 <> 2 | false
 
-### OPERADORES LOGICOS
+### LOGICOS
 | signo | representacion | ejemplo        | salida |
 |-------|----------------|----------------|--------|
 __AND__	| si "a" y "b"   | 2>0 AND 5<4    | false

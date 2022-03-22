@@ -1,4 +1,5 @@
-| TIPO 	      |	DESCRIPCION 	       |	VALORES |
+## TIPOS DE DATOS
+| CAMPO	      |	DESCRIPCION 	       |	VALORES |
 |-------------|----------------------|----------|
 |INT(n)  	    |numero entero		     | 10 |
 |DECIMAL(n,d)	|entero con decimales	 | 3.14 |
