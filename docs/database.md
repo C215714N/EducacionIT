@@ -36,3 +36,5 @@ Lenguaje de consulta estructurada cuya sintaxis se encuentra dividida en diferen
 *	__REVOKE__ 	remover permisos users
 *	__FLUSH__ PRIVILEGES refrescar permisos
 )
+
+[volver al inicio](../readme.md)

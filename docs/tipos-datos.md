@@ -10,3 +10,5 @@
 |TIME     	  |hora			             | "12:15:00" |
 |DATETIME	    |fecha y hora		       | "2021-05-18,12:15:00" |
 |BLOB    	    |objeto binario		     | Object |
+
+[volver al inicio](../readme.md)

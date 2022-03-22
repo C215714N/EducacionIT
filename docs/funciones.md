@@ -29,3 +29,5 @@
 *	__RIGHT(val,n)__		extrae n cant. de caracteres de un texto desde el final
 *	__SUBSTRING(val, n, p)__	extrae n cant. de caracteres de un texto desde la posicion p
 *	__POSITION(t IN text)__	obtiene la posicion del texto buscado
+
+[volver al inicio](../readme.md)

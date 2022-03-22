@@ -34,3 +34,5 @@ __XOR__	| si "a" y no "b"| 10>5 XOR 10<5  | true
 __LIKE _'%a%'___	|  si existe valor similar  | "texto" LIKE "%ex%" | true
 __IN _(a,b)___		| 	si alguno de los valores existe | 2 IN(1,3,4) | false
 __BETWEEN _a AND b___ | se encuentra entre los valores | 2 BETWEEN 1 AND 4 | true
+
+[volver al inicio](../readme.md)
