@@ -8,7 +8,7 @@
 * **Net Framework 4.52**: <https://www.microsoft.com/es-ar/download/details.aspx?id=42642>
 ___
 ## Contenidos
-* [Base de datos](./database.md)
-* [Tipos de datos](./tipos-datos.md)
-* [Operadores](./operadores.md)
-* [Funciones SQL](./funciones.md)
+* [Base de datos](./docs/database.md)
+* [Tipos de datos](./docs/tipos-datos.md)
+* [Operadores](./docs/operadores.md)
+* [Funciones SQL](./docs/funciones.md)
