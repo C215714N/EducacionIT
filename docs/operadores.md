@@ -1,12 +1,13 @@
 ## TIPOS DE OPERADORES
+
 ### MATEMATICOS
 | signo | representacion| ejemplo | salida |
 |-------|---------------|---------|--------|
-	__+__	|suma           | 4 + 6   | 10
-	__-__	|resta          | 15 - 10 | 5
-	__*__	|multiplicacion |  3 * 8  | 24
-	__/__	|division       |  10 / 5 | 2
-	__%__	|modulo         |  13 / 2 | 1
+ __+__	|suma           | 4 + 6   | 10
+ __-__	|resta          | 15 - 10 | 5
+ __*__	|multiplicacion |  3 * 8  | 24
+ __/__	|division       |  10 / 5 | 2
+ __%__	|modulo         |  13 / 2 | 1
 
 ### COMPARACION
 | signo   |representacion|ejemplo | salida |
