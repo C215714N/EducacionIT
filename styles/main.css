@@ -1,0 +1,77 @@
+/* Reglas Generales */
+    *{
+        font-family: 'calibri', 'segoe ui' , sans-serif;
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Rellenos */
+    .menu{
+        padding:0;
+    }
+    /* Estilos */
+    .menu,
+    .example{
+        list-style: none;
+    }
+    nav a,
+    header a,
+    footer a{
+        text-decoration: none;
+    }
+/* Barra Navegacion */
+    .menu{
+        display: flex;
+        justify-content: center;
+        background-color: #310;
+    }
+    .menu li{
+        padding: .5rem; /* rootEM (ancho de M en la raiz)*/
+    }
+    .menu a{
+        color: #edc;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 8px #edc; /* -x+ -y+ blur color */
+    }
+
+/* Cabecera de Pagina*/
+    #header{
+        padding: 20% .5rem; /*top right bottom left*/
+        color: #eee;
+        background-color: #333;
+        text-align: center;
+    }
+
+/* Contenido Principal */
+
+
+/* Pie de Pagina */
+
+
+/* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+        border-radius: .5rem;
+        padding: 1rem;
+        color: #edc;
+        background-color: #310;
+    }
+    #contact input,
+    #contact textarea,
+    #contact button{
+        padding: .25rem .5rem;
+        font-size: 1rem;
+    }
