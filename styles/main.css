@@ -53,6 +53,17 @@
         .menu.active{
             max-height: 640px;
         }
+    /* Header */
+        #header{
+            min-height: min(640px, 100vmin); /* viewport height */
+            display: grid;
+            align-content: center;
+            text-align: center;
+            color: #eee;
+            background: #333 url('../assets/bg/osx-sierra.jpg') center/cover; /* color image position/size repeat */
+            font-size: min(calc(2vw + .5rem), 3rem); /* viewport width */
+            text-shadow: 0 0 min(2vmin, 3rem) #333;
+        }
     /* Content */
         .example{
             display: grid;
@@ -100,6 +111,10 @@
     /* Navigation */
     nav{
         justify-content: space-around;
+    }
+    /*Header*/
+    #header{
+        background-image: url('../assets/bg/ubuntu-focalfossa.jpg');
     }
 }
 /* XXL devices - HD Desktop */
