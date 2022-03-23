@@ -4,8 +4,29 @@
             box-sizing: border-box;
             font-family: sans-serif;
         }
-        body{
+        /* Margins */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        header p,
+        .menu{
             margin: 0;
+        }
+        /* Paddings */
+        .menu{
+            padding: 0;
+        }
+        /* Styles */
+        .menu,
+        .example{
+            list-style: none;
+        }
+        nav a,
+        header a,
+        footer a{
+            text-decoration: none;
         }
     /*Navigation*/
         nav{
@@ -18,13 +39,10 @@
         }
         nav a{
             color: #eee;
-            text-decoration: none;
             text-shadow: 0 0 .5rem #333;
         }
         .menu{
             width: 100%;
-            padding: 0;
-            list-style: none;
         }
 /* Small devices - Smartphones */
 
@@ -45,7 +63,7 @@
 @media screen and (min-width: 1200px){
     /* Navigation */
     nav{
-        justify-content: center;
+        justify-content: space-around;
     }
 }
 /* XXL devices - HD Desktop */
