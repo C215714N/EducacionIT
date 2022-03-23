@@ -26,6 +26,19 @@
     footer a{
         text-decoration: none;
     }
+    /* Componentes */
+    .btn{
+        border-radius: .25rem;
+        border: 1px solid #eee;
+        padding: .5rem;
+        color: #eee;
+        background-color: transparent;
+    }
+    .btn:hover{
+        cursor: pointer;
+        color: #310;
+        background-color: #eee;
+    }
 /* Barra Navegacion */
     .menu{
         display: flex;
@@ -53,7 +66,10 @@
     }
 
 /* Contenido Principal */
-
+    main{
+        max-width: 960px;
+        margin: auto;
+    }
 
 /* Pie de Pagina */
 
@@ -70,8 +86,17 @@
         background-color: #310;
     }
     #contact input,
-    #contact textarea,
-    #contact button{
+    #contact textarea{
+        outline: none;
+        margin-bottom: .25rem;
+        border-style: none;
         padding: .25rem .5rem;
         font-size: 1rem;
+    }
+    #contact textarea{
+        min-height: 5rem;
+        resize: none;
+    }
+    #contact :focus{
+        box-shadow: 0 0 .5rem #edc;
     }
