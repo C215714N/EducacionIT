@@ -38,11 +38,19 @@
             background: linear-gradient(to right,#c63, #683);
         }
         nav a{
+            display: block;
+            padding: .25rem;
             color: #eee;
             text-shadow: 0 0 .5rem #333;
         }
         .menu{
             width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .5s;
+        }
+        .menu.active{
+            max-height: 640px;
         }
 /* Small devices - Smartphones */
 
@@ -55,6 +63,7 @@
     .menu{
         display: flex;
         width: auto;
+        max-height: 640px;
     }
 }
 /* Large devices - Laptops */
