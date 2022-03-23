@@ -15,7 +15,8 @@
             margin: 0;
         }
         /* Paddings */
-        .menu{
+        .menu,
+        .example{
             padding: 0;
         }
         /* Styles */
@@ -51,6 +52,32 @@
         }
         .menu.active{
             max-height: 640px;
+        }
+    /* Content */
+        .example{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax( min(100%,300px), 1fr));
+            flex-wrap: wrap;
+            gap: .5rem;
+            padding: .5rem;
+        }
+        .example img{
+            width: 100%;
+        }
+        .card{
+            border-radius: .25rem;
+            padding: .5rem 1rem;
+            background-color: #eee;
+            box-shadow: 0 0 .5rem #333;
+        }
+        .card-title{
+            display: block;
+            margin: -.5rem -1rem 1rem;
+            border-radius: .25rem .25rem 0 0;
+            padding: 1rem;
+            color: #eee;
+            background: linear-gradient(to left, #c63, #683 );
+            font-size: 1.5rem;
         }
 /* Small devices - Smartphones */
 
