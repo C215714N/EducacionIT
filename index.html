@@ -59,6 +59,49 @@
                 </li>
             </ul>
         </section>
+        <section>
+            <header class="header">
+                <h2>Unidades de medida</h2>
+                <p>usos y aplicaciones</p>
+            </header>
+            <p>
+
+            </p>
+            <ul class="example">
+                <li class="card">
+                    <strong class="card-title">Absolutas</strong>
+                    Son aquellas que representan siempre el mismo valor independientemente del tamaño de la pantalla del dispositivo donde se visualice la pagina web. 
+                    
+                    Se utilizan principalmente para establecer los limites de tamaño de los elementos de la pagina web, tanto maximos como minimos respecto al ancho de los mismos.
+                    <ul>
+                        <li><strong>distancia:</strong> mm, cm, in(2.54cm)</li>
+                        <li><strong>tipografia:</strong>pc(1/6in), pt(1/72in 0.35mm)</li>
+                        <li><strong>hibrida:</strong>px (1/96in) su representacion depende de la resolucion de la pantalla.</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <strong class="card-title">Relativas</strong>
+                    Son aquellas que dependen de otro elemento, generalmente el contenedor, para establecer su medida; por lo tanto un valor no siempre representa lo mismo. 
+
+                    Se aplican principalmente a la tipografia, atributos relacionados con esta como margin, padding y border, e incluso para definir el tamaño de las cajas de contenido. 
+                    <ul>
+                        <li><strong>tamaño:</strong> %(tamaño), fr(fraccion)</li>
+                        <li><strong>tipografia:</strong> em(ancho "M"), ex(alto de "x"), ch(ancho de "0"), %(letra)</li>
+                        <li><strong>hibrida:</strong>rem (root em) su unica referencia es la etiqueta Raiz(html)</li>
+                    </ul>
+                </li>
+                <li class="card">
+                    <strong class="card-title">Flexibles</strong>
+                    Son aquellas que toman como referente las dimensiones del viewport (ventana del navegador) y a diferencia del resto, no dependen de ningun otro contenedor.
+
+                    Se implementan principalmente para la generacion de tipografia responsive, establecer tamaños en vertical debido a que por defecto ningun elemento posee una altura definida.
+                    <ul>
+                        <li><strong>dimension: </strong>vw(% ancho viewport), vh(%alto viewport)</li>
+                        <li><strong>proporcion: </strong>vmin(% menor medida), vmax(% medida mayor)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </main>
     <!-- Pie de pagina: Contenido Complementario -->
     <footer id="footer">
