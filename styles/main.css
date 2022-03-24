@@ -62,12 +62,21 @@
             color: #eee;
             background: #333 url('../assets/bg/osx-sierra.jpg') center/cover; /* color image position/size repeat */
             font-size: min(calc(2vw + .5rem), 3rem); /* viewport width */
+            /*
+                min( a , b )
+                a = calc(x + y)
+            */
             text-shadow: 0 0 min(2vmin, 3rem) #333;
         }
     /* Content */
         .example{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax( min(100%,300px), 1fr));
+            /*
+                repeat(quantity, size)
+                size = minmax(min, max)
+                min = min(a,b)
+            */
             flex-wrap: wrap;
             gap: .5rem;
             padding: .5rem;
