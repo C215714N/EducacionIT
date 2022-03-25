@@ -17,6 +17,10 @@ USE hospital_it;
 -- carga selectiva (orden personalizado)
 	INSERT INTO patients(name, surname, cuit, birth_date)
 	VALUES ('Juan','Perez','25-08912342-4','1950-07-04');
+-- carga multiple (orden personalizado)    
+    INSERT INTO patients(surname, name, birth_date)
+	VALUES  ('Parker', 'Peter', '2001-08-10'),
+			('Villegas', 'Jose', '1983-06-24');
 
 ## Tabla Personal
 -- carga multiple

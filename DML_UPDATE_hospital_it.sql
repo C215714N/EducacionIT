@@ -15,6 +15,12 @@ USE hospital_it;
 	UPDATE: actualizar registros de tablas
 */
 ## Pacientes
+-- actualziacion condicional segura
+	UPDATE patients SET name = "usuario", surname = "otro" WHERE patient_id = 20;
+-- actualizacion condicional poco segura
+	UPDATE patients 
+	SET blood_group = 4, blood_type= 1
+	WHERE surname = "Villegas" AND name = "Jose" AND birth_date = "1983-06-24";
 -- actualizacion por casos
     UPDATE patients
     SET blood_group = 

@@ -18,7 +18,7 @@ USE hospital_it;
 # permisos: manipulacion total
 	GRANT SELECT, INSERT, UPDATE, DELETE
     ON hospital_it.*
-    TO 'employee'@'localhost';
+    TO 'manager'@'localhost';
     
 ## Usuario empleado
 	DROP USER IF EXISTS 'employee'@'localhost';
@@ -37,6 +37,9 @@ USE hospital_it;
 	GRANT SELECT
     ON hospital_it.*
     TO 'invited'@'localhost';
+    
+## Reaplicar permisos
+FLUSH PRIVILEGES;
     
 /* REPARACION: En caso de corrupcion de base de datos del servidor */
 	SHOW DATABASES;
