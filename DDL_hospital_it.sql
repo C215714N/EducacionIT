@@ -119,3 +119,19 @@ CREATE TABLE patients_coverage(
     FOREIGN KEY(patient) REFERENCES patients(patient_id),
     FOREIGN KEY(plan) REFERENCES coverage_plans(plan_id)
 );
+
+## Tabla de Turnos
+CREATE TABLE turns(
+	turn_id INT,
+    patient INT,
+    turn DATETIME,
+    professional INT
+);
+ALTER TABLE turns
+MODIFY turn_id INT AUTO_INCREMENT, -- modifica el tipo de dato
+ADD CONSTRAINT PRIMARY KEY(turn_id), -- agrega un PK (campo relacional)
+CHANGE professional area INT, -- cambia el nombre y tipo de dato
+ADD CONSTRAINT FOREIGN KEY(patient) REFERENCES patients(patient_id), -- agrega un FK (relacion externa)
+ADD CONSTRAINT FOREIGN KEY(area) REFERENCES professions(profession_id), 
+ADD CONSTRAINT UNIQUE KEY(turn, area), -- agrega una restriccion local
+ADD CONSTRAINT UNIQUE KEY(patient, turn);

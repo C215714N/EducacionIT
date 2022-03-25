@@ -83,3 +83,7 @@ VALUES (
 
 INSERT INTO patients_coverage(patient, plan)
 VALUES ( CEIL(RAND() * 7), CEIL(RAND() * 35) );
+
+## Turnos
+INSERT INTO turns(patient, area)
+VALUES (RAND() * 10, RAND() * 6);
