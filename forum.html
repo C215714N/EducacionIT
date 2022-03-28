@@ -65,10 +65,16 @@
             <header class="header">
                 <h2>Contenido Multimedia</h2>
             </header>
+            <p>
+                Desde un comienzo, la carga de este tipo de contenido era poco comun debido al ancho de banda manejado por las conexiones, pero con el paso del tiempo fue incorporandose en mayor medida. En un principio era necesario instalar algun <em>complemento o plugin</em> como <strong>flash player</strong>, pero actualmente los navegadores cuentan con una <strong>api de reproduccion</strong> nativa.
+            </p>
             <section>
                 <header>
                     <h3>¿Contenido Embebido?</h3>
                 </header>
+                <p>
+                    Es una categoria que se utiliza para identificar a todo contenido que haya sido compartido desde la web del autor y utilizado <em>con permiso del mismo</em> en otro sitio; asi como tambien a los elementos que se utilizan dentro de la pagina web, que <em>no pertecen al universo HTML</em>. En la mayoria de los casos haremos uso de la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido en nuestra pagina.
+                </p>
                 <div class="example">
                     <iframe
                         src="https://www.youtube.com/embed/zJBzHQawsjs" 
@@ -94,8 +100,7 @@
                     <h3>¿Multimedia sin plugins?</h3>
                 </header>
                 <p>
-                    <strong>&lt;audio> y &lt;video></strong>
-                    <em>.mp3 - .wav - .ogg y .mp4 - .webm - .ogv</em>
+                    Como se menciono anteriormente, era muy comun el uso de plugins para reproducir contenido multimedia, pero el inconveniente de esto radicaba en que el usuario necesitaba instalar un complemento que en ocasiones no era compatible con algun navegador. Para incorporar este tipo de elementos debemos utilizar las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente, cabe destacar que para mostrar los controles del reproductor es necesario utilizar el atributo <em>controls</em>
                 </p>
                 <div class="example">
                     <audio src="assets/media/californication.mp4" controls>
