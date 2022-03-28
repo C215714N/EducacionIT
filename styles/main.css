@@ -63,14 +63,58 @@
         color: #eee;
         background-color: #333;
         text-align: center;
+        background-image: url('../assets/bg/osx-catalina.jpg');
+        background-size: cover;
+        background-position: center;
+        text-shadow: 0 0 .5rem #333;
     }
-
+    .header{
+        margin: -1rem -1rem 1rem;
+        padding: 1rem;
+        color: #fed;
+        background-color: #620;
+    }
+    header{
+        color:#620;
+        border-bottom: .1rem solid #620;
+    }
 /* Contenido Principal */
     main{
-        max-width: 960px;
-        margin: auto;
+        padding: .5rem;
     }
-
+    article{
+        max-width: 960px;
+        margin: 1rem auto;
+        border-radius: .25rem;
+        padding: 1rem;
+        box-shadow: 0 0 .5rem #333;
+        overflow: hidden;
+    }
+    .example{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: .5rem;
+        margin: .5rem 1rem 1rem;
+        border-left: .25rem solid #620;
+        padding: 1rem;
+        background-color: #eee;
+        line-height: 1.5rem;
+        box-shadow: -.25rem .25rem 1rem #999; /* x y blur color*/
+        max-height: 380px;
+        overflow: auto;
+    }
+    .example audio{
+        width:100%;
+        box-shadow: 0 0 .5rem #310;
+    }
+    .example iframe,
+    .example video{
+        width: 100%;
+        max-width: 480px;
+        min-height: 270px;
+        border: none;
+        }
 /* Pie de Pagina */
 
 
@@ -99,4 +143,45 @@
     }
     #contact :focus{
         box-shadow: 0 0 .5rem #edc;
+    }
+/* Redes sociales */
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: .5rem;
+    }
+    .social a{
+        width: 3rem;
+        height: 3rem;
+        margin: .25rem;
+        border-radius: .25rem;
+        background-color: #ccc;
+        background-size: 1.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-size: 2.5rem;
+        background-color: #eee;
+        box-shadow: 0 0 .5rem #333;
+    }
+    .facebook{
+        background-image: url('../assets/icons/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icons/instagram.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icons/linkedin.svg');
+    }
+    .github{
+        background-image: url('../assets/icons/github.svg');        
+    }
+/* Mapa de Contacto*/
+    .map{
+        width: 100%;
+        margin: 1rem 0;
+        border: none;
+        min-height: 280px;
     }
