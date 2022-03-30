@@ -31,7 +31,7 @@
         <p>Web Design</p>
     </header>
     <!-- Contenido: Informacion relevante para el usuario -->
-    <main>
+    <main class="container">
         <section>
             <header class="header">
                 <h2>Tipos de Diseño</h2>
@@ -100,6 +100,60 @@
                     <ul>
                         <li><strong>dimension: </strong>vw(% ancho viewport), vh(%alto viewport)</li>
                         <li><strong>proporcion: </strong>vmin(% menor medida), vmax(% medida mayor)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <header class="header">
+                <h2>Bootstrap</h2>
+                <p>Framework CSS</p>
+            </header>
+            <p>
+                Conjunto de herramientas desarrollada por el equipo de twitter implementando sass y es6 (en las ultimas versiones), cuya finalidad es facilitar la creacion de sitios web responsive, accediendo a los estilos y scripts provistos por los desarrolladores del mismo.
+            </p>
+            <p>
+                Podemos implementarlo de manera externoa en nuestro proyecto a traves de la vinculacion del <strong>CDN (content distribution network)</strong> o descargar los archivos fuente, ya sea la <strong>hoja de estilos compilada</strong> o los archivos de preprocesador.
+            </p>
+            <h3>Estilos de utilidad o ayuda</h3>
+            <p>
+                Una de las caracteristicas de Bootstrap radica en sus <em>helpers o utilities</em> que son basicamente clases CSS que se utilizan dentro de la estructura para definir la apariencia basica de los elementos. La estructura de dichas clases suele ser la siguiente <strong>atributo-valor(unidad)</strong> representando el atributo con una letra o la palabra completa dependiendo de que tan general sea este.
+            </p>
+            <p>
+                A partir de la version 4.5, como el enfoque de bootstrap cambio para compatibilizar los sitios con los diferentes tipos de escritura (orientacion de texto) las clases cuyo valor corresponde a una orientacion como izquierda y  derecha ya no reciben esos nombres, sino que pasan a llamarse <strong>start y end</strong>
+            </p>
+            <ul class="list-unstyled">
+                <li>
+                    <strong>margin</strong>
+                    <ul>
+                        <li class="m-1">margin: .25rem; .m-1</li>
+                        <li class="ms-3">margin-left: 1rem; .ms-3</li>
+                        <li class="mt-2">margin-top: .5rem; .mt-2</li>
+                        <li class="mx-4">margin-right: 1.5rem; margin-left: 1.5rem; .mx-4</li>
+                        <li class="mb-5">magin-bottom: 3rem; .mb-5</li>
+                        <li class="my-3">margin-top: 1rem; margin-bottom: 1rem</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>padding</strong>
+                    <ul>
+                        <li class="p-3">padding: 1rem; .p-3</li>
+                        <li class="px-5">padding-left:3rem; padding-right:3rem; .px-5</li>
+                        <li class="pt-4">padding-top: 1.5rem; .pt-4</li>
+                        <li class="py-2">padding-bottom: .5rem; padding-top: .5rem; .py-2</li>
+                        <li class="pe-5">padding-right: 3rem; .pe-5</li>
+                        <li class="pb-3">padding-bottom: 1rem; .pb-3</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>border</strong>
+                    <ul>
+                        <li class="border border-3">border: 3px solid; .border .border-3</li>
+                        <li class="border-start">border-left: 1px solid; .border-start</li>
+                        <li class="border-top border-4px">border-top: 4px solid</li>
+                        <li class="border rounded">border: 1px solid; border-radius:.25rem; .border .rounded</li>
+                        <li class="border border-5 rounded-pill">border: 5px solid; border-radius: 50rem; .border .border-5 .rounded-circle</li>
+                        <li class="border rounded-circle">border-radius: 50%; .rounded-circle</li>
                     </ul>
                 </li>
             </ul>
