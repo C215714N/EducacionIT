@@ -2,10 +2,17 @@
 	SELECT: solicitar registros de tablas
 */
 USE hospital_it;
+## consultas generales
+    SELECT * FROM patients;
+    SELECT * FROM personal;
+    SELECT * FROM departments;
+    SELECT * FROM medical_coverages;
+    SELECT * FROM patients_coverage;
+    SELECT * FROM professions;
+    SELECT * FROM turns;
+    SELECT * FROM coverage_plans;
 
 ## Tabla pacientes
--- consulta general
-	SELECT * FROM patients;
 -- consulta con restricciones
 	SELECT patient_id, name, surname, cuit FROM patients
 	ORDER BY cuit  -- orden de los resultados
@@ -50,13 +57,13 @@ USE hospital_it;
 ## Tabla especialidades
 	SELECT * FROM professions;
 ## Tabla planes de coberturas
-SELECT
-	coverage,
-    COUNT(*) AS plans,
-    GROUP_CONCAT(plan_name)
-FROM coverage_plans
-GROUP BY coverage
-ORDER BY coverage;
+	SELECT
+		coverage,
+		COUNT(*) AS plans, -- cuenta los registros
+		GROUP_CONCAT(plan_name) AS all_plans -- agrupa los datos
+	FROM coverage_plans
+	GROUP BY coverage -- criterio para agrupar valores
+	ORDER BY coverage;
 
 ## Coberturas por pacientes
 	SELECT 

@@ -26,7 +26,7 @@ CREATE TABLE patients(
     blood_group ENUM('0','A','B','AB'), -- lista de valores
     blood_type ENUM('+','-') DEFAULT '+', -- valor predeterminado
     cuit CHAR(13), -- cadena de texto fija '99-99999999-9'
-    PRIMARY KEY(pacient_id) -- clave primaria (campo relacional)
+    PRIMARY KEY(patient_id) -- clave primaria (campo relacional)
 );
 -- modificacion y generacion de columnas
 ALTER TABLE patients

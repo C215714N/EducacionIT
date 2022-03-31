@@ -39,3 +39,12 @@ USE hospital_it;
 			home_attention = 1, surgical_procedure = 1,	hospitalizations = 1
 	WHERE plan_name = "Plan 360";
     
+    UPDATE coverage_plans
+    SET 
+		plan_name = CASE
+			WHEN plan_name IS NULL AND plan_id IN(3,5) THEN 'Plan 360'
+            WHEN plan_name IS NULL AND plan_id BETWEEN 1 AND 4 THEN 'Plan etario'
+            ELSE plan_name
+		END,
+        coverage = CEIL(RAND() * 6)
+	WHERE coverage IS NULL;
