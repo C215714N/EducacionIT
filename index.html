@@ -105,9 +105,9 @@
             </ul>
         </section>
         <section>
-            <header class="header">
-                <h2>Bootstrap</h2>
-                <p>Framework CSS</p>
+            <header class="text-center border-top">
+                <h2 class="display-1 fw-bold">Bootstrap</h2>
+                <p class="h1">Framework CSS</p>
             </header>
             <p>
                 Conjunto de herramientas desarrollada por el equipo de twitter implementando sass y es6 (en las ultimas versiones), cuya finalidad es facilitar la creacion de sitios web responsive, accediendo a los estilos y scripts provistos por los desarrolladores del mismo.
@@ -122,8 +122,8 @@
             <p>
                 A partir de la version 4.5, como el enfoque de bootstrap cambio para compatibilizar los sitios con los diferentes tipos de escritura (orientacion de texto) las clases cuyo valor corresponde a una orientacion como izquierda y  derecha ya no reciben esos nombres, sino que pasan a llamarse <strong>start y end</strong>
             </p>
-            <ul class="list-unstyled">
-                <li>
+            <ul class="list-unstyled row">
+                <li class="col">
                     <strong>margin</strong>
                     <ul>
                         <li class="m-1">margin: .25rem; .m-1</li>
@@ -134,7 +134,7 @@
                         <li class="my-3">margin-top: 1rem; margin-bottom: 1rem</li>
                     </ul>
                 </li>
-                <li>
+                <li class="col">
                     <strong>padding</strong>
                     <ul>
                         <li class="p-3">padding: 1rem; .p-3</li>
@@ -145,18 +145,79 @@
                         <li class="pb-3">padding-bottom: 1rem; .pb-3</li>
                     </ul>
                 </li>
-                <li>
+                <li class="col">
                     <strong>border</strong>
                     <ul>
                         <li class="border border-3">border: 3px solid; .border .border-3</li>
                         <li class="border-start">border-left: 1px solid; .border-start</li>
                         <li class="border-top border-4px">border-top: 4px solid</li>
                         <li class="border rounded">border: 1px solid; border-radius:.25rem; .border .rounded</li>
-                        <li class="border border-5 rounded-pill">border: 5px solid; border-radius: 50rem; .border .border-5 .rounded-circle</li>
+                        <li class="border border-5 rounded-pill">border: 5px solid; border-radius: 50rem; .border .border-5 .rounded-pill</li>
                         <li class="border rounded-circle">border-radius: 50%; .rounded-circle</li>
                     </ul>
                 </li>
             </ul>
+            <h3>Componentes y sistema de grillas</h3>
+            <p>
+                Bootstrap aplica la metodologia BEM (Block Element Modifier) para nombrar a las diferentes clases que forman parte de su repertorio, entre las cuales encontramos a los componentes. Estos son, basicamente, clases que deben implementarse en el HTML de cierta manera para generar diferentes estilos visuales predeterminados, como por ejemplo: <em>barras de navegacion, galerias, modales, tablas, etc...</em>
+            </p>
+            <p>
+                Esta metodologia se rige por las siguientes reglas:
+            </p>
+            <ul>
+                <li>el contenedor (bloque) define el nombre principal para los demas elementos y asi distinguir su jerarquia en los estilos, por ejemplo: .nav y .nav-link</li>
+                <li>los contenidos (elementos) se deben encontrar dentro de su Bloque segun indica su nombre y deben ser unicos, por ejemplo: <button class="btn">.btn</button></li>
+                <li>cada bloque o elementos puede ser modificado, pero las clases deben ser aplicadas en conjunto, por ejemplo: <button class="btn btn-dark">.btn .btn-dark</button></li>
+            </ul>
+            <h4>Breakpoitns</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>breakpoint</th>
+                        <th>screen-width</th>
+                        <th>max-width</th>
+                        <th>devices</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xs</td>
+                        <td> < 576px</td>
+                        <td>100%</td>
+                        <td>smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td> >= 576px & < 768px</td>
+                        <td>540px</td>
+                        <td>smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td> >= 768x & < 992px</td>
+                        <td>720px</td>
+                        <td>tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td> >= 992px & < 1200px</td>
+                        <td>960px</td>
+                        <td>laptops</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td> >= 1200px & < 1400px</td>
+                        <td>1140px</td>
+                        <td>desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td> >= 1400px</td>
+                        <td>1320px</td>
+                        <td>smartTV</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <!-- Pie de pagina: Contenido Complementario -->
