@@ -170,10 +170,10 @@
                 <li>cada bloque o elementos puede ser modificado, pero las clases deben ser aplicadas en conjunto, por ejemplo: <button class="btn btn-dark">.btn .btn-dark</button></li>
             </ul>
             <h4>Breakpoitns</h4>
-            <table>
+            <table class="table table-striped table-dark">
                 <thead>
                     <tr>
-                        <th>breakpoint</th>
+                        <th>name</th>
                         <th>screen-width</th>
                         <th>max-width</th>
                         <th>devices</th>
@@ -218,6 +218,25 @@
                     </tr>
                 </tbody>
             </table>
+            <p>
+                Bootstrap se caracteriza por su sistema de grillas de 12 columnas, el cual consiste en un utilizar un contenedor flex y asignar a cada elemento un numero de columna correspondiente al tamaño a ocupar. 
+            </p>
+            <p>
+                El calculo que se realiza para determinar el tamaño de cada columna es el siguiente <strong>N° columna / total columnas</strong> como por ejemplo col-4 (4 / 12) = 33.33%. Debemos tener en cuenta que la sumatoria de columnas no debe superar 12 para que los elementos sigan en la misma fila.
+            </p>
+            <div class="row m-3">
+                <div class="col-md-3 col-lg-1 bg-primary">col-1</div>
+                <div class="col-md-3 col-lg-2 bg-secondary">col-2</div>
+                <div class="col-md-3 col-lg-3 bg-dark text-light">col-3</div>
+                <div class="col-md-3 col-lg-6 bg-light">col-6</div>
+                <div class="col-sm-4 col-lg-5 bg-danger">col-5</div>
+                <div class="col-sm-4 col-lg-7 bg-warning">col-7</div>
+                <div class="col-sm-4 col-lg-8 bg-success">col-8</div>
+                <div class="col-lg-4 bg-info">col-4</div>
+            </div>
+            <p>
+                Si necesitamos que el tamaño de un elemento o cualquier otro atributo cambie segun el breakpoint, simplemente a las reglas mencionadas anteriormente interpolaremos el nombre de la pantalla cuestion, es decir que en lugar de usar <strong>col-4</strong> podemos utilizar <strong>col-lg-4</strong> para que dicho estilo se aplique a partir del tamaño correspondiente
+            </p>
         </section>
     </main>
     <!-- Pie de pagina: Contenido Complementario -->
