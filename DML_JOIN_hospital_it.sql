@@ -48,9 +48,23 @@ ORDER BY office, department;
 -- combinaciones de asignacion de turnos
 SELECT 
 	patient_id,
-	CONCAT(pa.surname, " ",pa.name) AS patient,
+	GROUP_CONCAT(pa.surname, " ",pa.name) AS patient,
     GROUP_CONCAT(pe.surname, " ",pe.name) AS professional
 FROM patients AS pa
 CROSS JOIN personal AS pe
 GROUP BY patient
 ORDER BY patient_id, professional;
+
+SELECT * FROM patients_coverage;
+
+SELECT
+	id,
+	CONCAT(pa.surname, " ", pa.name) AS patient,
+    type,
+    CONCAT(plan_name, " de ", coverage_name) AS coverage
+FROM patients_coverage AS pc
+RIGHT JOIN patients AS pa ON pa.patient_id = pc.patient
+RIGHT JOIN coverage_plans AS cp ON cp.plan_id = pc.plan
+RIGHT JOIN medical_coverages AS mc ON mc.coverage_id = cp.coverage
+GROUP BY type, patient
+ORDER BY id, type, plan_name;
