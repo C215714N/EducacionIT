@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-03-2022 a las 23:21:46
+-- Tiempo de generación: 01-04-2022 a las 20:34:23
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `hospital_it`
 --
-CREATE DATABASE IF NOT EXISTS `hospital_it` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `hospital_it`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `hospital_it`;
 -- Estructura de tabla para la tabla `coverage_plans`
 --
 
-DROP TABLE IF EXISTS `coverage_plans`;
 CREATE TABLE `coverage_plans` (
   `plan_id` int(11) NOT NULL,
   `plan_name` varchar(50) DEFAULT NULL,
@@ -71,10 +68,22 @@ INSERT INTO `coverage_plans` (`plan_id`, `plan_name`, `coverage`, `medicament`, 
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `customers`
+--
+
+CREATE TABLE `customers` (
+  `customer_id` int(11) NOT NULL,
+  `customer_name` varchar(20) DEFAULT NULL,
+  `customer_email` varchar(100) NOT NULL,
+  `customer_pass` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `departments`
 --
 
-DROP TABLE IF EXISTS `departments`;
 CREATE TABLE `departments` (
   `department_id` int(11) NOT NULL,
   `department` varchar(35) DEFAULT NULL
@@ -104,7 +113,6 @@ INSERT INTO `departments` (`department_id`, `department`) VALUES
 -- Estructura de tabla para la tabla `medical_coverages`
 --
 
-DROP TABLE IF EXISTS `medical_coverages`;
 CREATE TABLE `medical_coverages` (
   `coverage_id` int(11) NOT NULL,
   `coverage_name` varchar(150) NOT NULL,
@@ -156,7 +164,6 @@ INSERT INTO `medical_coverages` (`coverage_id`, `coverage_name`, `description`, 
 -- Estructura de tabla para la tabla `patients`
 --
 
-DROP TABLE IF EXISTS `patients`;
 CREATE TABLE `patients` (
   `patient_id` int(11) NOT NULL,
   `surname` varchar(50) DEFAULT NULL,
@@ -179,7 +186,7 @@ INSERT INTO `patients` (`patient_id`, `surname`, `name`, `birth_date`, `blood_gr
 (3, 'Alonso', 'Diego', '1978-01-12', 'B', '-', '25-07812345-7', 'Sarandí 878', 'Uruguay'),
 (4, 'Novo', 'Eva', '1990-12-06', 'B', '-', '21-04512346-4', 'Sarmiento 500', 'Argentina'),
 (5, 'Perez', 'Nicolas', '1988-05-21', 'B', '+', '23-08812343-1', 'Montevideo 1000', 'Argentina'),
-(21, 'Gomez', 'Gonzalo', NULL, 'O', '+', NULL, NULL, NULL),
+(21, 'Gomez', 'Gonzalo', NULL, 'O', '+', '', NULL, NULL),
 (22, 'Lopez', 'Leandro', NULL, 'O', '-', NULL, NULL, NULL),
 (23, 'Perez', 'Matias', NULL, 'AB', '-', NULL, NULL, NULL),
 (24, 'Diaz', 'Nicolas', NULL, 'B', '+', NULL, NULL, NULL),
@@ -192,7 +199,6 @@ INSERT INTO `patients` (`patient_id`, `surname`, `name`, `birth_date`, `blood_gr
 -- Estructura de tabla para la tabla `patients_coverage`
 --
 
-DROP TABLE IF EXISTS `patients_coverage`;
 CREATE TABLE `patients_coverage` (
   `id` int(11) NOT NULL,
   `patient` int(11) DEFAULT NULL,
@@ -230,7 +236,6 @@ INSERT INTO `patients_coverage` (`id`, `patient`, `plan`, `type`) VALUES
 -- Estructura de tabla para la tabla `personal`
 --
 
-DROP TABLE IF EXISTS `personal`;
 CREATE TABLE `personal` (
   `personal_id` int(11) NOT NULL,
   `surname` varchar(50) DEFAULT NULL,
@@ -261,7 +266,6 @@ INSERT INTO `personal` (`personal_id`, `surname`, `name`, `cuit`, `brith_date`, 
 -- Estructura de tabla para la tabla `professions`
 --
 
-DROP TABLE IF EXISTS `professions`;
 CREATE TABLE `professions` (
   `profession_id` int(11) NOT NULL,
   `personal` int(11) DEFAULT NULL,
@@ -286,7 +290,6 @@ INSERT INTO `professions` (`profession_id`, `personal`, `department`) VALUES
 -- Estructura de tabla para la tabla `turns`
 --
 
-DROP TABLE IF EXISTS `turns`;
 CREATE TABLE `turns` (
   `turn_id` int(11) NOT NULL,
   `patient` int(11) DEFAULT NULL,
@@ -299,7 +302,7 @@ CREATE TABLE `turns` (
 --
 
 INSERT INTO `turns` (`turn_id`, `patient`, `turn`, `area`) VALUES
-(1, 23, NULL, 40),
+(1, 23, '2022-04-04 15:00:00', 40),
 (2, 26, NULL, 43),
 (3, 24, NULL, 40),
 (4, 23, NULL, 43),
@@ -406,7 +409,7 @@ ALTER TABLE `medical_coverages`
 -- AUTO_INCREMENT de la tabla `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `patients_coverage`
