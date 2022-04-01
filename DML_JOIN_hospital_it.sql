@@ -42,4 +42,15 @@ RIGHT JOIN departments AS d ON d.department_id = pr.department
 RIGHT JOIN personal AS pe ON pe.personal_id = pr.personal
 WHERE turn_id IS NULL AND role = "MED"
 ORDER BY office, department;
-	
+
+## CROSS JOIN: producto cartesiano de las tablas
+# Tabla patiens (personal)
+-- combinaciones de asignacion de turnos
+SELECT 
+	patient_id,
+	CONCAT(pa.surname, " ",pa.name) AS patient,
+    GROUP_CONCAT(pe.surname, " ",pe.name) AS professional
+FROM patients AS pa
+CROSS JOIN personal AS pe
+GROUP BY patient
+ORDER BY patient_id, professional;
