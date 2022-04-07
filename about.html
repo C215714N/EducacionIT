@@ -19,7 +19,7 @@
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link active" href="#">Acerca</a></li>
             <li class="nav-item"><a class="nav-link disabled" href="galeria.html">Galeria</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
@@ -73,9 +73,85 @@
         </div>
     </header>
     <!-- Contenido Principal -->
-
+    <main class="container | row | mx-auto">
+        <article class="col-lg | shadow | card">
+            <header class="card-header">
+                <h2>contenido</h2>
+            </header>
+            <p class="card-body">
+                <img class="w-50 me-2 float-start" src="assets/bg/osx-mavericks.jpg" alt="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate magni autem exercitationem natus eligendi, beatae sequi dicta alias cum aliquid facere unde ullam delectus sit consectetur omnis, dignissimos laboriosam cupiditate?</p>
+            <address class="card-footer">
+                para mas informacion consultar
+                <a href="https://alumni.education" target="_blank">Alumni</a>
+            </address>
+        </article>
+        <article class="col-lg my-2 my-lg-0 mx-lg-2 | shadow | card">
+            <header class="card-header">
+                <h2>contenido</h2>
+            </header>
+            <p class="card-body">
+                <img class="w-50 me-2 float-start" src="assets/bg/osx-yosemite.jpg" alt="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate magni autem exercitationem natus eligendi, beatae sequi dicta alias cum aliquid facere unde ullam delectus sit consectetur omnis, dignissimos laboriosam cupiditate?</p>
+            <address class="card-footer">
+                para mas informacion consultar
+                <a href="https://alumni.education" target="_blank">Alumni</a>
+            </address>
+        </article>
+        <article class="col-lg | shadow | card">
+            <header class="card-header">
+                <h2>contenido</h2>
+            </header>
+            <p class="card-body">
+                <img class="w-50 me-2 float-start" src="assets/bg/osx-sierra.jpg" alt="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate magni autem exercitationem natus eligendi, beatae sequi dicta alias cum aliquid facere unde ullam delectus sit consectetur omnis, dignissimos laboriosam cupiditate?</p>
+            <address class="card-footer">
+                para mas informacion consultar
+                <a href="https://alumni.education" target="_blank">Alumni</a>
+            </address>
+        </article>
+    </main>
     <!-- Pie de Pagina -->
-    
+    <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form action="" id="contact" class="was-validated | col-md-8 col-lg-4 my-5 mx-auto p-3">
+            <h2>Dejanos tu consulta</h2>
+            <div class="form-floating">
+                <input 
+                    id="contact_name"
+                    class="form-control" 
+                    placeholder="Nombre: Cristian"
+                    type="text"
+                    maxlength="50"
+                    pattern="[a-z A-Z ñÑ]{3,50}"
+                    required>
+                <label for="contact_name">Ingrese su Nombre</label>
+                <div class="valid-feedback">
+                    Espero que hayas ingresado tu verdadero, ya que nos pondremos en contacto contigo.
+                </div>
+                <div class="invalid-feedback">
+                    Ingrese su nombre solamente con letras, sin numeros ni simbolos. Este debe poseer entre 3 y 50 caracteres
+                </div>
+            </div>
+            <div class="form-floating">
+                <input 
+                    id="contact_email"
+                    class="form-control" 
+                    placeholder="Correo: Cristian"
+                    type="email"
+                    minlength="8"
+                    required>
+                <label for="contact_name">Ingrese su Nombre</label>
+                <div class="valid-feedback">
+                    El correo ha sido validado, nos contactaremos contigo a la brevedad
+                </div>
+                <div class="invalid-feedback">
+                    Ingrese una direccion que posea al menos 8 caracteres y respete la estructura <em>"usuario@servidor"</em>
+                </div>
+            </div>
+            <button class="btn btn-outline-success | d-block ms-auto">enviar</button>
+        </form>
+    </footer>
     <!-- Scripts -->
     <script src="scripts/bootstrap.bundle.js"></script>
 </body>
