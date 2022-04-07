@@ -3,7 +3,7 @@
 ## configuracion inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
 
-1. Switch> (modo estandar) 
+1. Switch> (modo estandar)
 	* __enable__: habilita el modo privilegiado
 2. Switch# (modo privilegiado)
 	* __configure terminal__: accede al modo de configuracion global
@@ -28,3 +28,11 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Verificacion de Interfaces
+1. switch(config)# __(dispositivo a nivel de capa 2)__
+	* __show arp__ Muestra las direcciones ip asociadas a las mac address a travez del protocolo ARP (configuracion capa 3 necesaria)
+	* __show mac address-table__ Muestra las direcciones fisicas asociadas a las interfaces del dispositivo
+2. router(config)# __(dispositivo a nivel de capa 3)__
+	* __show ip interface brief__ Muestra un resumen de la configuracion de capa 3 de las interfaces del dispositivo.
+	* __show interface `<gigabitEthernet 0/0>`__ Muestra informacion detallada sobre el funcionamiento de la interfaz
