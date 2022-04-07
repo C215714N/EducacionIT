@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,9 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <nav class="navbar navbar-dark navbar-expand-md bg-dark bg-gradient | container-fluid">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark bg-gradient | container-fluid sticky-top">
         <a class="navbar-brand" href="#">Bootstrap</a>
-        <button class="navbar-toggler navbar-toggler-icon border-0" 
+        <button class="navbar-toggler navbar-toggler-icon | border-0" 
             data-bs-toggle="collapse" 
             data-bs-target=".navbar-nav">
         </button>
@@ -23,35 +23,59 @@
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
-    <header id="header">
+    <header id="header" class="carousel slide" data-bs-ride="carousel">
         <!-- Galeria de Imagenes -->
-        <ul>
-            <li>
-                <img src="assets/bg/osx-mavericks.jpg" alt="">
-                <img src="assets/bg/ubuntu-focalfossa.jpg" alt="">
+        <ul class="carousel-inner | list-unstyled">
+            <li class="carousel-item active">
+                <img class="w-100 d-lg-none" 
+                    src="assets/bg/osx-mavericks.jpg" 
+                    alt="OSX Mavericks">
+                <img class="w-100 d-none d-lg-block" 
+                    src="assets/bg/ubuntu-focalfossa.jpg" 
+                    alt="Ubuntu Focal Fossa">
             </li>
-            <li>
-                <img src="assets/bg/osx-yosemite.jpg" alt="">
-                <img src="assets/bg/ubuntu-groovegorilla.jpg" alt="">
+            <li class="carousel-item ">
+                <img class="w-100 d-lg-none" 
+                    src="assets/bg/osx-yosemite.jpg" 
+                    alt="OSX Yosemite">
+                <img class="w-100 d-none d-lg-block" 
+                    src="assets/bg/ubuntu-groovegorilla.jpg" 
+                    alt="Ubuntu Grovee Gorilla">
             </li>
-            <li>
-                <img src="assets/bg/osx-sierra.jpg" alt="">
-                <img src="assets/bg/ubuntu-hisurtehippo.jpg" alt="">
+            <li class="carousel-item">
+                <img class="w-100 d-lg-none" 
+                    src="assets/bg/osx-sierra.jpg" 
+                    alt="OSX Sierra">
+                <img class="w-100 d-none d-lg-block" 
+                    src="assets/bg/ubuntu-hisurtehippo.jpg" 
+                    alt="Ubuntu ubuntu Hisurte Hippo">
             </li>
         </ul>
+        <!-- Indicadores de Imagen -->
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#header" data-bs-slide-to="0"></button>
+            <button data-bs-target="#header" data-bs-slide-to="1"></button>
+            <button data-bs-target="#header" data-bs-slide-to="2"></button>
+        </div>
         <!-- Controles Galeria -->
-        <button></button>
-        <button></button>
+        <button class="carousel-control-prev | carousel-control-prev-icon | top-50 translate-middle-y p-3" 
+            data-bs-target="#header" 
+            data-bs-slide="prev">
+        </button>
+        <button class="carousel-control-next | carousel-control-next-icon | top-50 p-3" 
+            data-bs-target="#header" 
+            data-bs-slide="next">
+        </button>
         <!-- Encabezado -->
-        <div>
-            <h1>Bootstrap</h1>
-            <p>Responsive Web Design</p>
+        <div class="position-absolute top-50 start-50 translate-middle | text-light">
+            <h1 class="display-1 | fw-bold text-uppercase">Bootstrap</h1>
+            <p class="h1">Responsive Web Design</p>
         </div>
     </header>
     <!-- Contenido Principal -->
 
     <!-- Pie de Pagina -->
-
+    
     <!-- Scripts -->
     <script src="scripts/bootstrap.bundle.js"></script>
 </body>
