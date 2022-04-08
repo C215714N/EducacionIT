@@ -1,9 +1,13 @@
 # CCNA1 - Fundamentos de Red
+## Tabla de Contenidos
+* [Configuracion Inicial](#configuracion-inicial)
+* [Configuracion de acceso remoto](#configuracion-de-acceso-remoto)
+* [Ejercicios](#ejercicios)
 
 ## configuracion inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
 
-1. Switch> (modo estandar) 
+1. Switch> (modo estandar)
 	* __enable__: habilita el modo privilegiado
 2. Switch# (modo privilegiado)
 	* __configure terminal__: accede al modo de configuracion global
@@ -28,3 +32,15 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Ejercicios
+### Sistema Binario
+1. Expresar las siguientes direcciones con notacion binaria, separando con puntos cada grupo de octetos (bytes)
+	*	104.244.42.65
+	*	31.13.94.35
+	*	72.163.4.185
+	*	54.225.94.212
+2. Convertir las siguientes direcciones a expresion decimal
+	* 00011111.00001101.01011110.10101110
+	* 10000111.11110101.01000111.00011011
+	* 10011000.00000100.11101100.10101110
