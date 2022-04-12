@@ -6,6 +6,7 @@
 4. [Protocolo spanning-tree](#protocolo-spanning-tree)
 5. [Servidor de VLANs](#servidor-de-vlans)
 6. [Configuracion Etherchannel](#configuracion-etherchannel)
+7. [Protocolo de Enrutamiento redundante](#protocolo-de-enrutamiento-redundante)
 ___
 ## Configuracion Inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
@@ -86,3 +87,10 @@ Tecnologia que permite agrupar multiples enlaces redundantes de una misma conexi
 	* __channel-protocol `<LACP>`__ Prepara la interfaz para funcionar con LACP (Protocolo de Estandar abierto)
 	* __mode `<passive>`__ Habilita LACP cuando se detecta un dispositivo compatible
 	* __mode `<active>`__ Implementa LACP incondicionalmente
+
+## Protocolo de Enrutamiento redundante
+1. switch(config-if)# __(configuracion de interfaz)__
+	* __ip address `<192.168.0.2> <255.255.255.0>`__ establece la direccion de la interfaz
+	* __standby ip `<192.168.0.1>`__ define la direccion del router virtual HSRP.
+	* __standby track `<gigabitEthernet 0/0>`__ realiza seguimiento de la interfaz de salida
+	* __standby preempt__ reduce la prioridad cuando la interfaz de salida falla
