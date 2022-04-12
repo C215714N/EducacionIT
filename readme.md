@@ -1,4 +1,8 @@
 # CCNA1 - Fundamentos de Red
+## Tabla de Contenidos
+* [Configuracion Inicial](#configuracion-inicial)
+* [Configuracion de acceso remoto](#configuracion-de-acceso-remoto)
+* [Ejercicios](#ejercicios)
 
 ## configuracion inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
@@ -36,3 +40,15 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 2. router(config)# __(dispositivo a nivel de capa 3)__
 	* __show ip interface brief__ Muestra un resumen de la configuracion de capa 3 de las interfaces del dispositivo.
 	* __show interface `<gigabitEthernet 0/0>`__ Muestra informacion detallada sobre el funcionamiento de la interfaz
+
+## Ejercicios
+### Sistema Binario
+1. Expresar las siguientes direcciones con notacion binaria, separando con puntos cada grupo de octetos (bytes)
+	*	104.244.42.65
+	*	31.13.94.35
+	*	72.163.4.185
+	*	54.225.94.212
+2. Convertir las siguientes direcciones a expresion decimal
+	* 00011111.00001101.01011110.10101110
+	* 10000111.11110101.01000111.00011011
+	* 10011000.00000100.11101100.10101110
