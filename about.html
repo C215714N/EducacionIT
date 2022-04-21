@@ -5,6 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selectores generales */
+        body{
+            font-family: 'calibri', 'segoe ui', sans-serif;
+            margin: 0;
+        }
+        /* Selectores multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: rgb(238,238,238); /*Dec: (R,G,B) 0 => 255 */
+            background-color: #248; /* hex: #RRGGBB 0 => FF */
+            text-align: center;
+        }
+        /* Selectores especificos (padre hijo) */
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav ul{
+            list-style: none;
+            margin: auto;
+            padding: 0;
+            max-width: 640px;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+            width: 20%;
+            min-width: 50px;
+        }
+        main img{
+            max-width: 300px;
+        }
+        /* Pseudoclase: Instancia o caracteristica de un elemento */
+        nav li:hover{
+            background-color: #36c;
+        }
+        /* Selector de clase (.class)*/
+        .dark{
+            padding: 20px;
+            color: #eee;
+            background-color: #333;
+        }
+        .light{
+            padding: 16px;
+            color: #333;
+            background-color: #eee;
+        }
+        /*imagenes flotantes*/
+        .dark img{
+            float: left;
+            margin-right: 8px;
+        }
+        .dark p{
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera -->
@@ -55,6 +113,24 @@
                 alt="JoJo Bizarre Adventure - The World">
             <img src="assets/img/jjba-theworld-04.jpg" 
                 alt="JoJo Bizarre Adventure - The World">
+        </div>
+        <div class="dark">
+            <h2>Texto e Imagenes</h2>
+            <p>
+                <img src="assets/bg/layout-californication.jpg" alt="RHCP - Californication">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam iure aut inventore repellendus nesciunt illum totam quasi est officiis fuga vero cumque, expedita accusantium rerum repudiandae quia explicabo asperiores ut quibusdam nulla suscipit ad. Incidunt, ducimus delectus quisquam et accusamus nobis hic aliquam aperiam, ab ea quasi voluptates! Doloribus maxime molestiae rem sapiente tempore porro omnis fuga nulla harum, sed quos distinctio quis delectus enim qui ea odit. Sint eius a in, sunt amet repudiandae, molestiae soluta assumenda enim eaque blanditiis quo, eos dolores consectetur tempora? Repellendus debitis exercitationem praesentium corrupti, ratione sed consequuntur ipsa dolore laborum ex doloribus!
+            </p>
+            <p>
+                <img src="assets/bg/layout-by_the_way.jpg" alt="RHCP - By the Way">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam iure aut inventore repellendus nesciunt illum totam quasi est officiis fuga vero cumque, expedita accusantium rerum repudiandae quia explicabo asperiores ut quibusdam nulla suscipit ad. Incidunt, ducimus delectus quisquam et accusamus nobis hic aliquam aperiam, ab ea quasi voluptates! Doloribus maxime molestiae rem sapiente tempore porro omnis fuga nulla harum, sed quos distinctio quis delectus enim qui ea odit. Sint eius a in, sunt amet repudiandae, molestiae soluta assumenda enim eaque blanditiis quo, eos dolores consectetur tempora? Repellendus debitis exercitationem praesentium corrupti, ratione sed consequuntur ipsa dolore laborum ex doloribus!
+            </p>
+            <p>
+                <img src="assets/bg/layout-stadium_arcadium.jpg" alt="RHCP - Stadium Arcadium">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quam iure aut inventore repellendus nesciunt illum totam quasi est officiis fuga vero cumque, expedita accusantium rerum repudiandae quia explicabo asperiores ut quibusdam nulla suscipit ad. Incidunt, ducimus delectus quisquam et accusamus nobis hic aliquam aperiam, ab ea quasi voluptates! Doloribus maxime molestiae rem sapiente tempore porro omnis fuga nulla harum, sed quos distinctio quis delectus enim qui ea odit. Sint eius a in, sunt amet repudiandae, molestiae soluta assumenda enim eaque blanditiis quo, eos dolores consectetur tempora? Repellendus debitis exercitationem praesentium corrupti, ratione sed consequuntur ipsa dolore laborum ex doloribus!
+            </p>
         </div>
     </main>
     <!-- Pie de Pagina -->
