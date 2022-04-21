@@ -31,7 +31,31 @@
     </header>
     <!-- Contenido Principal -->
     <main>
-
+        <div class="dark">
+            <h2>Reglas de Nomenclatura</h2>
+            <ul>
+                <li>
+                    <strong>Evitar el uso de caracteres especiales</strong> como por ejemplo espacios, ya que en este caso seran reemplazados por el conjunto <em>%20</em> y por lo tanto, un archivo nombrado "foto 01.jpg" sera interpretado como "foto%2001.jpg", no pudiendo encontrarse el mismo.
+                </li>
+                <li>
+                    <strong>Utilizar nombres descriptivos</strong> como <em>perritos_jugando.jpg</em> o <em>background.jpg</em> para facilitar su implementacion. Evitar nombres automatizados o genericos como "2022-04-21-1534100.jpg" ni "foto_01.jpg".
+                </li>
+                <li>
+                    <strong>Implementar solamente minusculas</strong> debido a que los servidores de hosting son <em>caseSensitive</em> y por lo tanto, no es lo mismo "background.jpg", "Background.jpg", "BACKGROUND.jpg".
+                </li>
+            </ul>
+        </div>
+        <div class="light">
+            <h2>Implementacion de Imagenes</h2>
+            <img src="assets/img/jjba-theworld-01.jpg" 
+                alt="JoJo Bizarre Adventure - The World">
+            <img src="assets/img/jjba-theworld-02.jpg" 
+                alt="JoJo Bizarre Adventure - The World">
+            <img src="assets/img/jjba-theworld-03.jpg" 
+                alt="JoJo Bizarre Adventure - The World">
+            <img src="assets/img/jjba-theworld-04.jpg" 
+                alt="JoJo Bizarre Adventure - The World">
+        </div>
     </main>
     <!-- Pie de Pagina -->
     <footer id="contact">
