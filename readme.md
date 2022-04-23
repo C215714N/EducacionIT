@@ -89,8 +89,19 @@ Tecnologia que permite agrupar multiples enlaces redundantes de una misma conexi
 	* __mode `<active>`__ Implementa LACP incondicionalmente
 
 ## Protocolo de Enrutamiento redundante
-1. switch(config-if)# __(configuracion de interfaz)__
+1. router(config-if)# __(configuracion de interfaz)__
 	* __ip address `<192.168.0.2> <255.255.255.0>`__ establece la direccion de la interfaz
 	* __standby ip `<192.168.0.1>`__ define la direccion del router virtual HSRP.
 	* __standby track `<gigabitEthernet 0/0>`__ realiza seguimiento de la interfaz de salida
 	* __standby preempt__ reduce la prioridad cuando la interfaz de salida falla
+
+## Direccionamiento IPv6 con Servicio de DHCP
+1. router(config-if)# __(StateLess Adress AutoConfiguracion)__
+	* __ipv6 enable__ Habilita el protocolo IPv6 en la interfaz seleccionada
+	* __ipv6 address `<2002:acad:db6::1/64>`__ Establece la direccion y el prefijo para el enrutamiento
+	* __ipv6 address `<fe80::01>` link-local__ Define la direccion de enlace local para la comunicacion LAN
+	* __ipv6 unicat-routing__ Habilita el enrutamiento de paquetes IPv6 y mensajes Router Advertisement
+2. router(config-dhcp) __(Configuracion DHCP StateLess)__
+	* __ipv6 dhcp pool `<pool-name>`__ Crea un Pool DHCP con el nombre indicado
+	* __dns-server `<ipv6-address>`__ Establece la direccion del Servidor de Nombres
+	* __domain-name `<network-domain>`__ Define el nombre de Dominio de la topologia
