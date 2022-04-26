@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+    <!-- Icono de la Pagina -->
+    <link rel="icon" href="assets/icon/f_pescar.svg">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Acerca</a></li>
+            <li><a href="#">Foro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera Principal -->
+    <header id="header">
+        <h1>Fundamentos Web</h1>
+        <p>html | css</p>
+    </header>
+    <!-- Contenido Principal -->
+    <main>
+        <article>
+            <header>
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten la interaccion entre cliente y servidor (intercambio de datos) mediante una consulta. Para implementarlos debemos utilizar la etiqueta <strong>&lt;form></strong> y colocar en su interior los elementos correspondientes al mismo, cabe destacar que solo se enviara lo que se encuentre dentro del formulario y no se realizara ninguna consulta hasta confirmar el envio.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos especificarlo al menos 2 atributos, entre ellos <strong>action="..."</strong> que indica lo que debe suceder al momento de realizar el envio, generalmente se utiliza un script en lenguaje de servidor <em>EJ: PHP</em>; y <strong>method="..."</strong> que corresponde a un valor preexistente que indica como se realizara el envio y quien tiene la prioridad en la comunicacion.
+                </p>
+            </section>
+        </article>
+    </main>
+    <!-- Pie de pagina -->
+    <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form id="contact" action="scripts/contact.php" method="GET">
+            <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                type="text"
+                minlength="2"
+                maxlength="50"
+                placeholder="Nombre: Cristian Racedo"
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                type="email" 
+                minlength="8"
+                placeholder="Correo: Cristiandracedo@hotmail.com"
+                required>
+            <button>ENVIAR</button>
+        </form>
+        <p>
+            &copy; Todos los derechos reservados
+        </p>
+    </footer>
+</body>
+</html>
