@@ -44,11 +44,30 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 ## Ejercicios
 ### Sistema Binario
 1. Expresar las siguientes direcciones con notacion binaria, separando con puntos cada grupo de octetos (bytes)
-	*	104.244.42.65
-	*	31.13.94.35
-	*	72.163.4.185
-	*	54.225.94.212
+>	1. 104.244.42.65
+>	1. 31.13.94.35
+>	1. 72.163.4.185
+>	1. 54.225.94.212
+
 2. Convertir las siguientes direcciones a expresion decimal
-	* 00011111.00001101.01011110.10101110
-	* 10000111.11110101.01000111.00011011
-	* 10011000.00000100.11101100.10101110
+>	1. **00011111**.**00001101**.**01011110**.**10101110**
+>	1. **10000111**.**11110101**.**01000111**.**00011011**
+>	1. **10011000**.**00000100**.**11101100**.**10101110**
+
+### Subnetting
+
+1. Crear las diferentes subredes utilizando el metodo clasico como se indica en los siguientes puntos:
+>	1. Se necesitan **8 subredes** para la red **172.20.0.0/16**
+>	1. Se requieren **3 subredes** para la red **10.0.0.0/8**
+>	1. Se Solicitan **2 subredes** para la red **192.168.254.0/24**
+
+1. Organizar la topologia implementando el metodo VLSM para los siguientes departamentos utilizando la red 172.18.0.0/16
+>	1. __DTO-A:__ 2 switches, 4 impresoras, 20 pcs
+>	1. __DTO-B:__ 150 pcs, 15 impresoras, 4 switches, 2 routers
+>	1. __DTO-C:__ 40 pcs, 2 switches, 2 impresoras
+
+1. Determinar la direccion de las siguientes direcciones IP:
+> 1. 172.20.54.36**/25**
+> 1. 192.168.15.10**/30**
+> 1. 10.54.12.24**/24**
+> 1. 10.254.11.32**/28**
