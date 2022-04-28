@@ -43,7 +43,40 @@
 		text-shadow: 0 0 8px #eee; /* -x+ -y+ blur color */
 	}
 /* Cabecera Principal */
-
+	#header{
+		padding: min(15%, 200px) 20px;
+		text-shadow: 0 0 8px #eee;
+		background-color: #c82;
+		background-image: url('../assets/bg/osx-catalina.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		text-align: center;
+		font-size: 30px;
+	}
 /* Contenido Principal */
 
 /* Pie de Pagina */
+
+	/* Formulario */
+	#contact{
+		max-width: 540px;
+		display: flex;
+		flex-direction: column;
+		margin: 16px auto; /* top right bottom left */
+		border-radius: 4px;
+		padding: 16px;
+		color:#eee;
+		background-color: #e88;
+		text-shadow: -2px 2px 4px #333;
+	}
+	#contact textarea{
+		resize: none;
+		min-height: 60px;
+	}
+	#contact label,
+	#contact input,
+	#contact textarea,
+	#contact select{
+		font-size: 16px;
+	}

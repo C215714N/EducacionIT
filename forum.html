@@ -92,7 +92,11 @@
             <label for="contact_consult">Ingrese su Consulta</label>
             <textarea 
                 id="contact_consult"
-                name="consult"></textarea>
+                name="consult"
+                minlength="20"
+                maxlength="200"
+                placeholder="Consulta: Buenas, necesito un presupuesto"
+                required></textarea>
             <button>ENVIAR</button>
             <div id="contract">
                 <input id="yes" name="contract" type="checkbox" value="accept" checked required>
