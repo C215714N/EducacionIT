@@ -1,0 +1,49 @@
+/* Reglas Generales */
+	*{
+		font-family: "Raleway", "calibri", sans-serif;
+	}
+	/* Margenes (margin) */
+	body,
+	h1,
+	h2,
+	h3,
+	header p,
+	.menu,
+	.example{
+		margin: 0;
+	}
+	/* Rellenos (padding) */
+	.menu,
+	.example{
+		padding: 0;
+	}
+	/* Estilos (text-decoration | list-style) */
+	.menu{
+		list-style: none;
+	}
+/* Navegacion */
+	nav{
+		padding: 8px;
+		background-color: #d66;
+	}
+	.menu{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.menu a{
+		display: block;
+		padding: 16px;
+		color: #ccc;
+		text-decoration: none;
+	}
+	.menu a.active,
+	.menu a:hover{
+		color: #eee;
+		text-shadow: 0 0 8px #eee; /* -x+ -y+ blur color */
+	}
+/* Cabecera Principal */
+
+/* Contenido Principal */
+
+/* Pie de Pagina */

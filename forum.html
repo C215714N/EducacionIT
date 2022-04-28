@@ -16,7 +16,7 @@
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="about.html">Acerca</a></li>
-            <li><a href="#">Foro</a></li>
+            <li><a class="active" href="#">Foro</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -39,11 +39,30 @@
                     <h3>¿Como funcionan?</h3>
                 </header>
                 <p>
-                    <em>A la etiqueta mencionada anteriormente</em> debemos especificarlo al menos 2 atributos, entre ellos <strong>action="..."</strong> que indica lo que debe suceder al momento de realizar el envio, generalmente se utiliza un script en lenguaje de servidor <em>EJ: PHP</em>; y <strong>method="..."</strong> que corresponde a un valor preexistente que indica como se realizara el envio y quien tiene la prioridad en la comunicacion.
+                    <em>A la etiqueta mencionada anteriormente</em> debemos especificarlo al menos 2 atributos, entre ellos <strong>action="..."</strong> que indica lo que debe suceder al momento de realizar el envio, generalmente se utiliza un script en lenguaje de servidor <em>EJ: PHP</em>; y <strong>method="..."</strong> que corresponde a un valor preexistente que indica como se realizara el envio y quien tiene la prioridad en la comunicacion:
                 </p>
                 <ul class="example">
                     <li><strong>GET</strong> Metodo poco seguro cuya prioridad radica en la respuesta del servidor, los datos se envian en texto plano y permanecen visibles en la barra de direcciones. Los formularios que utilizan este metodo son los <em>Buscadores (Consulta Query)</em></li>
                     <li><strong>POST</strong> Metodo seguro que prioriza los datos enviados por el usuario, debido a que los mismos se cifran y por lo tanto, es mas lento que el anterior. Entre los formularios que usan este metodo en encuetran los de <em>Registro (Inscripcion) - Inicio de Sesion (Acceso) - Contacto (Consulta Web)</em></li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como se componen?</h3>
+                </header>
+                <p>
+                    Algunos de los elementos que debemos utilizar en los formularios son los <strong>Rotulos (LABEL)</strong> para informar al usuario que debe seleccionar o ingresar dentro del formulario, y ademas facilita la accesibilidad; por otro lado, los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> son aquellos elementos con los que el usuario interactua, estos poseen varios atributos entre los que destacan:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> Especifica el grupo de controles al que pertenece el campo y permite acceder al valor. Sirve tambien para distinguir entre opciones de formularios multiple choice.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> Indica cual es el tipo de valor admitido por el campo de formulario y debe especificarse de manera obligatoria en los <em>&lt;input></em> en caso de utilizar un campo que no sea texto.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> Corresponde al valor del dato a enviarse. Para los campos de tipo <em>radio, checkbox o select</em> es necesario especificarlo, ya que de no hacerlo, en la consulta figurarian en blanco.
+                    </li>
                 </ul>
             </section>
         </article>
@@ -51,11 +70,12 @@
     <!-- Pie de pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="scripts/contact.php" method="GET">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu Consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
                 id="contact_name" 
+                name="name"
                 type="text"
                 minlength="2"
                 maxlength="50"
@@ -64,11 +84,20 @@
             <label for="contact_email">Ingrese su Correo</label>
             <input 
                 id="contact_email" 
+                name="email"
                 type="email" 
                 minlength="8"
                 placeholder="Correo: Cristiandracedo@hotmail.com"
                 required>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="consult"></textarea>
             <button>ENVIAR</button>
+            <div id="contract">
+                <input id="yes" name="contract" type="checkbox" value="accept" checked required>
+                <label for="yes">Acepto los terminos</label>
+            </div>
         </form>
         <p>
             &copy; Todos los derechos reservados
