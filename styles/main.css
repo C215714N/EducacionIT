@@ -55,7 +55,36 @@
 		font-size: 30px;
 	}
 /* Contenido Principal */
-
+	main{
+		max-width: 960px;
+		margin: 8px auto;
+		padding: 8px;
+	}
+	article{
+		margin: 16px 8px;
+		border-radius: 4px;
+		padding: 16px;
+		box-shadow: 0 0 8px #333;
+		overflow: hidden;
+	}
+	.header{
+		margin: -16px -16px 8px;
+		padding: 16px;
+		color:#eee;
+		background-color: #c33;
+	}
+	main header{
+		color: #c33;
+		border-bottom: 1px solid #c33;
+	}
+	.example{
+		margin: 8px 16px;
+		border-left: 4px solid #c33;
+		padding: 20px;
+		list-style: none;
+		line-height: 28px;
+		background-color: #eee;
+	}
 /* Tablas */
 	table{
 		margin: 8px auto;
@@ -118,4 +147,37 @@
 	#contact textarea,
 	#contact select{
 		font-size: 16px;
+	}
+	/*Redes sociales*/
+	.social{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.social a{
+		width: 64px;
+		height: 64px;
+		margin: 4px;
+		border-radius: 4px;
+		background-color: #ccc;
+		background-position: center;
+		background-size: 32px;
+		background-repeat: no-repeat;
+	}
+	.social a:hover{
+		background-size: 48px;
+		background-color: #eee;
+		box-shadow: 0 0 8px #333;
+	}
+	.facebook{
+		background-image: url('../assets/icon/facebook.svg')
+	}
+	.instagram{
+		background-image: url('../assets/icon/instagram.svg')
+	}
+	.twitter{
+		background-image: url('../assets/icon/twitter.svg')
+	}
+	.github{
+	background-image: url('../assets/icon/github.svg')		
 	}
