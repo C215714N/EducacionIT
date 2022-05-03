@@ -56,6 +56,35 @@
 	}
 /* Contenido Principal */
 
+/* Tablas */
+	table{
+		margin: 8px auto;
+	}
+	table th,
+	table td,
+	table caption{
+		padding: 8px 16px;
+	}
+	.classic{
+		border-collapse: collapse;
+	}
+	.classic,
+	.classic caption,
+	.classic th,
+	.classic td{
+		border: 1px solid #c36; /* width style color */
+	}
+	.classic caption{
+		border-bottom: none;
+	}
+
+	.modern,
+	.modern caption,
+	.modern tr,
+	.modern td{
+		color: #eee;
+		background-color: rgba(68,68,136, .5);
+	}
 /* Pie de Pagina */
 
 	/* Formulario */
