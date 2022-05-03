@@ -28,7 +28,7 @@
     <!-- Contenido Principal -->
     <main>
         <article>
-            <header>
+            <header class="header">
                 <h2>Formularios HTML</h2>
             </header>
             <p>
@@ -64,6 +64,34 @@
                         <strong>value="..."</strong> Corresponde al valor del dato a enviarse. Para los campos de tipo <em>radio, checkbox o select</em> es necesario especificarlo, ya que de no hacerlo, en la consulta figurarian en blanco.
                     </li>
                 </ul>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten organizar la informacion de manera tabular y deben utilizarse cuando los datos a representar tienen que respetar cierta estructura. Para implementarlas debemos utilizar la etiqueta <strong>&lt;table></strong> y en su interior definir las filas y las celdas que la componen utilizando las etiquetas <strong>&lt;tr> (table row) y &lt;td> (table division)</strong> respectivamente.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen Estructura Semantica?</h3>
+                </header>
+                <p>
+                    Con el surgimiento de HTML5 se incorporaron nuevos elementos que permiten definir de mejor manera la estructura de las tablas, otorgando carga semantica a las mismas. Dentro de los elementos que se agregaron se encuentran los siguientes:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD: </strong> Cabecera de Tabla, donde se colocan los encabezados de la misma utilizando las etiquetas <em>&lt;TH></em>
+                    </li>
+                    <li>
+                        <strong>TBODY: </strong> Cuerpo de la tabla, suele poseer varias filas ya que corresponde a los datos representados. Tambien pueden poseer encabezados.
+                    </li>
+                    <li>
+                        <strong>TFOOT: </strong> Pie de tabla, informacion complementaria al cuerpo. Suele poseer datos estadisticos como totales, promedios, maximos, minimos, etc...
+                    </li>
+                </ul>
+                
             </section>
         </article>
     </main>
