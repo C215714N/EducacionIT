@@ -125,7 +125,11 @@
 		background-color: #36c;
 	}
 /* Pie de Pagina */
-
+	#footer iframe{
+		width: 100%;
+		min-height: 320px;
+		border: none;
+	}
 	/* Formulario */
 	#contact{
 		max-width: 540px;
