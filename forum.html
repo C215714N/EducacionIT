@@ -188,6 +188,67 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Desde que existen las paginas web, ha cambiado la forma de presentar la informacion, ya que antiguamente las mismas eran en su mayoria texto con un poco de este tipo de contenido. pero en la actualidad no solamente predomina el uso de elementos visuales, sino que tambien los navegadores permiten la reproduccion nativa de este tipo de elementos.
+            </p>
+            <section>
+                <header>
+                    <h2>¿Contenido Embebido?</h2>
+                </header>
+                <p>
+                    Se llama de esta manera a todo elemento que se utiliza dentro de la pagina, que no pertenece a la misma, ya sea porque corresponde al contenido de otra web o simplemente no pertenece al universo HTML. La etiqueta <strong>&lt;iframe></strong> es muy utilizada debido a que permite la carga asincronica de contenido.
+                </p>
+                <div class="example">
+                    <iframe     
+                        src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                        title="YouTube - Carvel (John Frusciante)"  
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <iframe
+                        src="https://www.youtube.com/embed/Jg8D2rlMZ9I" 
+                        title="YouTube - Batman (Te lo Resumo)" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                    <iframe
+                        src="https://www.youtube.com/embed/uUueCDfJShg" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin plugins?</h3>
+                </header>
+                <p>
+                    En la actualidad los navegadores poseen una API de reproduccion de contenido multimedia, que nos permite reproducir este tipo de contenido sin necesidad de descargar o instalar algun complemento o plugin de terceros. Para ello debemos utilizar las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente.
+                </p>
+                <div class="example">
+                    <audio src="assets/media/californication.mp4" controls>
+                        <p>
+                            Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/californication.mp4">link</a>
+                        </p>
+                    </audio>
+                    <video src="assets/media/by-the-way.ogv" controls>
+                        <p>
+                            Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/californication.mp4">link</a>
+                        </p>
+                    </video>
+                    <video src="assets/media/cant-stop.webm" controls autoplay muted loop>
+                        <p>
+                            Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/cant-stop.webm">link</a>
+                        </p>
+                    </video>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de pagina -->
     <footer id="footer">
@@ -225,6 +286,18 @@
                 <label for="yes">Acepto los terminos</label>
             </div>
         </form>
+        <!-- Redes sociales -->
+        <div class="social">
+            <a href="https://facebook.com" target="_blank" title="Seguinos en facebook"></a>
+            <a href="https://instagram.com" target="_blank" title="Seguinos en Instagram"></a>
+            <a href="https://twitter.com" target="_blank" title="Seguinos en Twitter"></a>
+            <a href="https://github.com/c215714n/EducacionIT/tree/f_pescar-html-mj14" target="_blank" title="Clona el repo de Github"></a>
+        </div>
+        <!-- Mapa -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.7311677488547!2d-58.37695065898535!3d-34.60269858155408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1651604241526!5m2!1ses-419!2sar" 
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <p>
             &copy; Todos los derechos reservados
         </p>
