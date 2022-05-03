@@ -91,7 +91,101 @@
                         <strong>TFOOT: </strong> Pie de tabla, informacion complementaria al cuerpo. Suele poseer datos estadisticos como totales, promedios, maximos, minimos, etc...
                     </li>
                 </ul>
-                
+                <div class="container">
+                    <table class="classic">
+                        <!-- Titulo de Tabla -->
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Cuenta</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>Cristian Racedo</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d477714n</td>
+                                <td>Cristian Damian</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Expansion de filas y columnas?</h3>
+                </header>
+                <p>
+                    En ciertas ocasiones es necesario que una celda ocupe 2 o mas filas/columnas, para ello debemos utilizar el atributo <strong>rowspan="..." y colspan="..."</strong> respectivamente. El contenido correlativo se va a desplazar x cantidad de celdas a la derecha.
+                </p>
+                <div class="container">
+                    <table class="modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Precio U</th>
+                                <th>Cant.</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>21500</td>
+                                <td>3</td>
+                                <td>64500</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>8500</td>
+                                <td>1</td>
+                                <td>8500</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>4300</td>
+                                <td>2</td>
+                                <td>8600</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">Total</th>
+                                <td>81600</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="modern classic">
+                        <caption>Desarrolladores</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">FrontEnd</td>
+                                <td>html</td>
+                            </tr>
+                            <tr>
+                                <td>css</td>
+                            </tr>
+                            <tr>
+                                <td>js</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </article>
     </main>
