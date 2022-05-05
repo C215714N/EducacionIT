@@ -1,0 +1,16 @@
+#header{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.header{
+    font-size: min(calc(2vw + .5rem), 3rem);
+}
+.menu{
+    display: flex;
+    background-color: #284;
+}
+.menu a{
+    padding: .5rem; /* root EM */
+    color: #ac6;
+}

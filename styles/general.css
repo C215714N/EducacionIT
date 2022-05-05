@@ -1,0 +1,41 @@
+/* Regla Universal */
+*{
+    box-sizing: border-box;
+    /* 
+        content-box: 
+            final-width     = width + padding + border
+            content-width   = width
+        
+        border-box:
+            final-width     = width
+            content-width   = width - padding - border
+    */
+    font-family: 'Raleway', 'calibri', sans-serif;
+}
+/* Margenes */
+body,
+h1,
+h2,
+h3,
+h4,
+header p,
+.menu{
+    margin: 0;
+}
+/* Rellenos */
+.menu{
+    padding: 0;
+}
+/* Bordes */
+iframe{
+    border: 0;
+}
+/* Estilos */
+#header a,
+#footer a{
+    text-decoration: none;
+}
+.menu{
+    list-style: none;
+}
+/* Componentes */
