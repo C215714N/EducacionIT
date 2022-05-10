@@ -5,6 +5,11 @@
 }
 .header{
     font-size: min(calc(2vw + .5rem), 3rem);
+    /*  Explicacion:
+        min(a,b)        utiliza el valor mas chico
+        a =             calcula 2% viewport + 1/2 font html
+        b =             equivalente a 3 veces font html
+    */
 }
 .menu{
     display: flex;
