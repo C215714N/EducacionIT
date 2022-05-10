@@ -17,6 +17,10 @@
         url('../assets/bg/bg_death_star.png') 80% 10%/min(20%,300px) no-repeat,/*death star*/
         #012 url('../assets/bg/bg_galaxy.jpg') center/cover; /*galaxy*/
     /* color image position/size repeat*/
+    background-attachment:
+        scroll,
+        fixed,
+        fixed;
 }
 .header h1,
 .header span{
