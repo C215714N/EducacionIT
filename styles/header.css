@@ -4,18 +4,41 @@
     text-align: center;
 }
 .header{
+    padding: min(50%, 270px) 1rem;
     font-size: min(calc(2vw + .5rem), 3rem);
     /*  Explicacion:
         min(a,b)        utiliza el valor mas chico
         a =             calcula 2% viewport + 1/2 font html
         b =             equivalente a 3 veces font html
     */
+    color: #eee;
+    background: 
+        url('../assets/bg/bg_millenium_falcon.png') 20% 50%/min(50%,600px) no-repeat, /*millenium falcon*/
+        url('../assets/bg/bg_death_star.png') 80% 10%/min(20%,300px) no-repeat,/*death star*/
+        #012 url('../assets/bg/bg_galaxy.jpg') center/cover; /*galaxy*/
+    /* color image position/size repeat*/
+}
+.header h1,
+.header span{
+    text-shadow: 0 0 .5rem, 
+        -.2rem -.2rem #da3, 
+        -.2rem .2rem #da3,
+        .2rem .2rem #da3,
+        .2rem -.2rem #da3;
+    letter-spacing: .3rem;
+    font-family: 'star wars';
 }
 .menu{
     display: flex;
+    padding: 1rem;
     background-color: #284;
 }
 .menu a{
     padding: .5rem; /* root EM */
     color: #ac6;
+}
+.menu a.active,
+.menu a:hover{
+    color: #dfc;
+    text-shadow: 0 0 .5rem #efc;
 }
