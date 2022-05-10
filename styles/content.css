@@ -11,8 +11,46 @@
     padding: 1rem;
     color: #eee;
     background-color: #012;
+    text-transform: uppercase;
+    text-shadow: 0 0 .5rem #333;
 }
 /* Degradados de color */
 .orange-gradient{
-    background: linear-gradient(to right, #c62, darkorange);
+    background: linear-gradient(
+        to right, /* direccion: horizontal*/
+        #c62, /* color hexadecimal  rgb: (00 - FF) */
+        darkorange /* color html: 140 nombres */
+    );
+}
+.blue-gradient{
+    background: radial-gradient(
+        circle at top left, /* direccion: circulo en la esquina */
+        rgb(51,102,204), /* color decimal rgb (0 - 255) */
+        hsl(220, 50%, 40%) /* color hsl (tono, saturacion, luminosidad)*/ 
+    ); 
+}
+.yellow-gradient{
+    background: conic-gradient(
+        from 90deg,
+        hsl(60, 80%, 50%),
+        hsl(45, 70%, 50%)
+    );
+}
+main{
+    margin: auto;
+    max-width: 1140px;
+    padding: .5rem;
+}
+/* Flexbox */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex > *{
+    flex: 1 0 min(100%, 300px);
+}
+.flex h2{
+    flex-basis: 100%;
+    padding: 1rem;
+    text-align: center;
 }
