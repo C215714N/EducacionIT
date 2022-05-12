@@ -130,6 +130,8 @@ main{
 #lateral{
     grid-area: aside;
 }
+/* Galeria de Imagenes */
+/* Clasica responsive */
 .gallery{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%,250px), 1fr));
@@ -144,4 +146,25 @@ main{
 .gallery img{
     width: 100%
 }
+/* Estilo Mosaico */
+.masonry{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: .5rem;
+}
+.masonry img{
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: .25rem;
+    border: .5rem solid #333;
+    object-fit: cover;
+}
 
+.masonry img:nth-child(even){
+    grid-column: span 2;    
+}
+
+.masonry img:nth-child(odd){
+    grid-row: span 2;
+}
