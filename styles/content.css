@@ -48,9 +48,100 @@ main{
 }
 .flex > *{
     flex: 1 0 min(100%, 300px);
+    overflow: auto;
 }
 .flex h2{
     flex-basis: 100%;
     padding: 1rem;
     text-align: center;
 }
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*=col]{
+    padding: 1rem;
+    border: 2px solid #012;
+}
+.col-1{
+    width: 33.33%;
+}
+.col-2{
+    width: 66.66%;
+}
+.col-3{
+    width: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid > * {
+    border: 2px solid #448;
+    padding: 1rem;
+    min-height: 100px;
+}
+.grid div:first-child{
+    grid-column: 2 / 4;
+}
+.grid div:nth-child(2){
+    grid-row: 1 / 6;
+}
+.grid div:nth-child(3){
+    grid-row: span 2;
+}
+.grid div:nth-last-child(2){
+    grid-column: 3;
+    grid-row: 3 / 6;
+}
+.grid div:last-child{
+    grid-column: span 3;
+}
+
+.template > *{
+    border: 2px solid #66c;
+}
+.template{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+        'header     header      main'
+        'aside      .           main'
+        'aside      .           main'
+        'aside      .           main'
+        'footer     footer      footer'
+        'nav        nav         nav'
+}
+#cabecera{
+    grid-area: header;
+}
+#navegacion{
+    grid-area: nav;
+}
+#principal{
+    grid-area: main;
+}
+#pie{
+    grid-area: footer;
+}
+#lateral{
+    grid-area: aside;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,250px), 1fr));
+    /* EXPLICACION:
+        repeat(a, b) (veces, tamaños)
+        a: 
+            auto-fit: agranda las celdas para rellenar el espacio
+            auto-fill: rellena con la cantidad de celdas necesaria
+        b: minmax(1,2) define el rango de tamaños
+    */
+}
+.gallery img{
+    width: 100%
+}
+
