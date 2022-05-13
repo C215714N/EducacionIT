@@ -1,0 +1,50 @@
+/* Mobile First - Content First */
+
+    /* Reglas Generales */
+        /* Variables */
+        :root{
+            --light: #eee;
+            --dark:  #333;
+            --font: 'Raleway', 'Calibri', 'Segoe ui', sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+            /*  EXPLICACION:
+                    content-box:
+                        final-width   = width + padding + border
+                        content-width = width
+
+                    border-box:
+                        final-width   = width
+                        content-width = width - padding - border
+            */
+            font-family: var(--font);
+        }
+        /* Margenes */
+
+        /* Rellenos */
+
+        /* Bordes */
+
+        /* Estilos */
+
+    /* Cabecera */
+        #header{
+            color: var(--light);
+            background-color: var(--dark);
+        }
+    /* Navegacion */
+
+    /* Contenido */
+
+    /* Pie */
+
+/* Small Devices - Smartphones */
+
+/* Medium Devices - Tablets */
+
+/* Large Devices - Laptops */
+
+/* Extra Large - HD Desktop */
+
+/* XXL Large - SmartTV */
