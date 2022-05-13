@@ -3,6 +3,8 @@
     /* Reglas Generales */
         /* Variables */
         :root{
+            --first: #448;
+            --second:#c36;
             --light: #eee;
             --dark:  #333;
             --font: 'Raleway', 'Calibri', 'Segoe ui', sans-serif;
@@ -43,13 +45,43 @@
         #footer a{
             text-decoration: none;
         }
+        .menu,
+        .example{
+            list-style: none;
+        }
     /* Cabecera */
         #header{
             color: var(--light);
             background-color: var(--dark);
         }
     /* Navegacion */
-        
+        nav{
+            --light: #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: .5rem;
+            background-image: linear-gradient(to right, var(--first), var(--second));
+        }
+        nav a{
+            padding: .25rem;
+            color: var(--light);
+        }
+        .menu{
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .menu.active{
+            max-height: 640px;
+        }
+        .menu a.active,
+        .menu a:hover{
+            --light: #eee;
+            color: var(--light);
+            text-shadow: 0 0 .5rem var(--light); /* -x+ -y+ blur color */
+        }
     /* Contenido */
 
     /* Pie */
