@@ -21,20 +21,35 @@
             font-family: var(--font);
         }
         /* Margenes */
-
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        header p,
+        .menu{
+            margin: 0;
+        }
         /* Rellenos */
-
+        .menu{
+            padding: 0;
+        }
         /* Bordes */
-
+        iframe{
+            border: none;
+        }
         /* Estilos */
-
+        nav a,
+        #footer a{
+            text-decoration: none;
+        }
     /* Cabecera */
         #header{
             color: var(--light);
             background-color: var(--dark);
         }
     /* Navegacion */
-
+        
     /* Contenido */
 
     /* Pie */
