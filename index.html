@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="header">    
+        <h1>Maquetacion Web</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#fixed">Position Fixed</a></li>
+                <li><a href="#absolute">Position Absolute</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="fixed">
+            <div class="container">
+                <h2>Position Fixed</h2>
+                <p>
+                    Atributo que toma la ventana del navegador como referencia para ubicar el elemento en pantalla. El mismo se sale del flujo de la pagina y el tamaño del contenedor, por defecto, pasa a ser igual al tamaño de su contenido.
+                </p>
+            </div>
+            <video src="assets/media/wet-sand.mp4" autoplay muted loop></video>
+        </section>
+        <section id="absolute">
+            <div class="container">
+                <h2>Position Absolute</h2>
+                <p>
+                    Atributo que toma como referencia al primer ancestro cuya posicion no sea estatica para ubicar el elemento en pantalla. El mismo se sale del flujo de la pagina y el tamaño del contenedor, por defecto, pasa a ser igual al tamaño de su contenido.
+                </p>
+            </div>
+            <video src="assets/media/wet-sand.mp4" autoplay muted loop></video>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
