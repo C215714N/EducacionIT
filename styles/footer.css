@@ -1,0 +1,62 @@
+#footer{
+    padding: 1rem;
+    color: #eee;
+    background: #3338 linear-gradient(transparent, #012) center/cover;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+.social a{
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    border-radius: .25rem;
+    background-color: #eee;
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    filter: grayscale(90%) opacity(.8);
+}
+.social a:hover{
+    /*  ANIMACION: CSS
+        animation: jump .5s ease-in-out alternate infinite; 
+        // nombre duracion tipo modo repeticion
+        transform-origin: bottom center
+    */
+    bottom: .25rem;
+    background-size: 3rem;
+    filter: drop-shadow(0 .5rem .5rem #333);
+}
+.facebook{
+    background-image: url('../assets/icon/facebook.svg');
+}
+.instagram{
+    background-image: url('../assets/icon/instagram.svg');
+}
+.twitter{
+    background-image: url('../assets/icon/twitter.svg');
+}
+.github{
+    background-image: url('../assets/icon/github.svg');
+}
+.linkedin{
+    background-image: url('../assets/icon/linkedin.svg');
+}
+/*  Animacion 
+@keyframes jump {
+    // Inicio
+    from{ 
+        transform: rotate(-15deg);
+    }
+    // Fin
+    to{
+        transform: rotate(15deg);
+    }
+}
+*/
