@@ -3,14 +3,80 @@
     color: #eee;
     background: #3338 linear-gradient(transparent, #012) center/cover;
 }
-
+/* Formulario de contacto */
+    #contact{
+        max-width: 720px;
+        display: grid;
+        margin: 1rem auto;
+        border-radius: .25rem;
+        padding: 1rem;
+        color: #333;
+        background-color: #eee;
+        font-weight: bold;
+    }
+    #contact label{
+        margin-top: .5rem;
+        overflow: hidden;
+    }
+    #contact label::after{
+        content: ' (*)';
+        font-family: calibri;
+        font-size: 1.25rem;
+        color: #448;
+        /* 
+            :pseudo-class = Caracteristica o instancia de un elemento
+            :pseudo-element = Parte o elemento dentro de una etiqueta
+                ::before = contenido antes del contenido
+                ::after = contenido despues del contenido
+        */
+    }
+    #contact :is(
+        input, 
+        textarea, 
+        select){
+            outline: none;
+            border: 1.5px solid #333;
+            padding: .25rem 1rem;
+            font-size: 1rem;
+        }
+    #contact textarea{
+        resize: vertical;
+        min-height: 5rem;
+    }
+    #contact button{
+        margin: .25rem 0 0 auto;
+        text-transform: uppercase;
+    }
+    #contact .validation{
+        display: none;
+    }
+    #contact :focus + .validation{
+        display: block;
+    }
+    /* Validation */
+    #contact :not(button):valid{
+        border-color: #284;
+    }
+    #contact :valid + .validation{
+        color: #284;
+    }
+    #contact :not(:placeholder-shown):invalid{
+        border-color: #c33;
+    }
+    #contact :not(:placeholder-shown):invalid + .validation{
+        color: #c33;
+    }
+    .rules span{
+        color: #448;
+        font-size: 1.25rem;
+    }
+/* Redes sociales */
 .social{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: .5rem;
 }
-
 .social a{
     position: relative;
     width: 4rem;
