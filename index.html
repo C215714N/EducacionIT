@@ -139,7 +139,56 @@
 
         </div>
         <form action="" id="contact">
-
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingresa tu Nombre Completo</label>
+            <input 
+                id="contact_name"
+                name="contact_name"
+                type="text"
+                maxlength="50"
+                pattern="[A-Za-z ñÑ]{2,50}"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
+            <div class="validation">
+                Utilice solamente letras para escribir su nombre, 
+                el mismo debe poseer entre 2 y 50 caracteres.
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="contact_phone"
+                type="tel"
+                pattern="[0-9]{6,18}|[\(]\d{2,8}[\)]\d{3,6}[\-]\d{3,6}"
+                placeholder="Telefono(*): (5411)0303-456"
+                required>
+            <div class="validation">
+                Coloque la caracteristica entre parentesis y utilice un guion
+                cada 3 a 6 digitos, como en el ejemplo: (5411)0303-456.
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input
+                id="contact_email" 
+                name="contact_email"
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): Cristiandracedo@hotmail.com"
+                required>
+            <div class="validation">
+                Ingrese una direccion que respete la estructura "usuario@servidor", 
+                la misma debe poseer por lo menos 8 caracteres.
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="contact_consult"
+                minlength="20"
+                maxlength="200"
+                placeholder="Consulta(*): Buenas, necesito un presupuesto"
+                required></textarea>
+            <button class="btn">Enviar</button>
+            <div class="rules">
+                Todos los campos con <span>(*)</span> son obligatorios
+            </div>
         </form>
         <div class="social">
             <a class="twitter" 
