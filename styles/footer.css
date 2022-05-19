@@ -1,8 +1,30 @@
 #footer{
-    padding: 1rem;
+    position: relative;
+    padding: 5rem 1rem 1rem;
     color: #eee;
     background: #3338 linear-gradient(transparent, #012) center/cover;
 }
+/* Mapa de Contacto */
+    .map .btn{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color:#eee;
+        text-shadow: 0 0 .5rem #eee;
+        background-color: #448;
+    }
+    .map .icon-max::before{
+        content: 'Pantalla Completa';
+    }
+    .map .icon-min::before{
+        content: 'Pagina Anterior';
+    }
+    .map :is(.cover.active, .icon-min){
+        position: fixed;
+        z-index: 2;
+        opacity: .9;
+    }
+
 /* Formulario de contacto */
     #contact{
         max-width: 720px;
