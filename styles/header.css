@@ -68,8 +68,26 @@ nav a{
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: all .5s linear;
+    transition: all .3s linear 0s;
 }
 .menu.active{
-    max-height: 640px;
+    max-height: 100vh;
+    background-color: #012;
+}
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px) {
+    nav .btn{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: auto;
+        max-height: 640px;
+    }
+}
+/* ExtraLarge Devices - HD Desktop */
+@media screen and (min-width: 1200px){
+    nav{
+        padding: .5rem calc(50vw - 660px);
+    }
 }
