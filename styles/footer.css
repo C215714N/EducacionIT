@@ -9,7 +9,7 @@
         display: grid;
         margin: 1rem auto;
         border-radius: .25rem;
-        padding: 1rem;
+        padding: 1.5rem;
         color: #333;
         background-color: #eee;
         font-weight: bold;
@@ -25,6 +25,8 @@
         color: #448;
         /* 
             :pseudo-class = Caracteristica o instancia de un elemento
+                :hover = el mouse se encuentra flotando sobre el elemento
+                :focus = el elemento fue seleccionado para interactuar
             :pseudo-element = Parte o elemento dentro de una etiqueta
                 ::before = contenido antes del contenido
                 ::after = contenido despues del contenido
@@ -60,12 +62,20 @@
     #contact :valid + .validation{
         color: #284;
     }
+    /*  EXPLICACION:
+        la pseudoclase :valid aplica para los campos
+        cuyas restricciones son respetadas
+    */
     #contact :not(:placeholder-shown):invalid{
         border-color: #c33;
     }
     #contact :not(:placeholder-shown):invalid + .validation{
         color: #c33;
     }
+    /*  EXPLICACION:
+        la pseudoclase :valid aplica para los campos
+        cuyas restricciones son respetadas
+    */
     .rules span{
         color: #448;
         font-size: 1.25rem;

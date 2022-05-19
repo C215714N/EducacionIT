@@ -32,6 +32,15 @@
     letter-spacing: .3rem;
     font-family: 'star wars';
 }
+nav{
+    width: 100%;
+    position: fixed;
+    /* EXPLICACION:
+        El elemento se ubica con respecto al viewport
+        y permanece fuera del flujo del documento
+    */
+    top: 0;
+}
 .menu{
     display: flex;
     padding: 1rem;

@@ -42,8 +42,14 @@ main{
     max-width: 1140px;
     padding: .5rem;
 }
+section{
+    display: none;
+}
+section:target{
+    display: block;
+}
 /* Flexbox */
-.flex{
+.flex:target{
     display: flex;
     flex-wrap: wrap;
 }
