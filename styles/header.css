@@ -1,7 +1,6 @@
 #header{
     display: flex;
     flex-direction: column-reverse;
-    text-align: center;
 }
 .header{
     padding: min(50%, 270px) 1rem;
@@ -12,6 +11,7 @@
         b =             equivalente a 3 veces font html
     */
     color: #eee;
+    text-align: center;
     background: 
         url('../assets/bg/bg_millenium_falcon.png') 20% 50%/min(50%,600px) no-repeat, /*millenium falcon*/
         url('../assets/bg/bg_death_star.png') 80% 10%/min(20%,300px) no-repeat,/*death star*/
@@ -41,18 +41,35 @@ nav{
     */
     top: 0;
     z-index: 2;
-}
-.menu{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 1rem;
-    background-color: #284;
+    background: linear-gradient(to right, #224, #012)
 }
-.menu a{
+nav .btn{
+    min-width: 2.5rem;
+    font-size: 1.25rem;
+    padding: .5rem;
+    color: #eee;
+    border-color: #eee;
+}
+nav a{
     padding: .5rem; /* root EM */
-    color: #ac6;
+    color: #ccc;
 }
 .menu a.active,
 .menu a:hover{
     color: #dfc;
     text-shadow: 0 0 .5rem #efc;
+}
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+.menu.active{
+    max-height: 640px;
 }

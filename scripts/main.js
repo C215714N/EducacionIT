@@ -4,6 +4,8 @@
     const mapButton = d.querySelector('#footer .map .btn');
 
 // Eventos
+
+/* Mapa de Contacto */
     mapButton.onclick = () => {
         // Operador Ternario condicion ? valor V : valor F
         mapFrame.classList.toggle('active') ? 
