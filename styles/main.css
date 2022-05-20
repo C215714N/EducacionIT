@@ -71,13 +71,26 @@
             padding: .25rem;
             color: var(--light);
         }
+        .btn{
+            position: relative;
+            z-index: 1;
+        }
         .menu{
+            display: grid;
+            align-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: -100vw;
             width: 100%;
-            max-height: 0;
+            height: 100%;
             overflow: hidden;
+            text-align: center;
+            background: linear-gradient(var(--first), var(--second));
+            opacity: .9;
+            transition: all .5s ease-in;
         }
         .menu.active{
-            max-height: 640px;
+            left: 0;
         }
         .menu a.active,
         .menu a:hover{
