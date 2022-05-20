@@ -51,8 +51,12 @@
         }
     /* Cabecera */
         #header{
+            display: grid;
+            justify-content: center;
             color: var(--light);
-            background-color: var(--dark);
+            background: linear-gradient(var(--first), var(--dark));
+            padding: min(50%, 200px) 1rem; /* top right bottom left */
+            font-size: min(calc(2vw + .5rem), 3rem);
         }
     /* Navegacion */
         nav{
@@ -119,9 +123,10 @@
         display: none;
     }
     .menu{
+        position: static;
         display: flex;
         width: auto;
-        max-height: 640px;
+        background: none;
     }
 }
 /* Large Devices - Laptops */
