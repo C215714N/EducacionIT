@@ -58,6 +58,12 @@
             padding: min(50%, 200px) 1rem; /* top right bottom left */
             font-size: min(calc(2vw + .5rem), 3rem);
         }
+        .header{
+            width: 100%;
+            color: var(--first);
+            text-align: center;
+            font-size: min(calc(1vw + .5rem), 2rem);
+        }
     /* Navegacion */
         nav{
             --light: #ccc;
@@ -112,13 +118,57 @@
             text-shadow: 0 0 .5rem var(--light); /* -x+ -y+ blur color */
         }
     /* Contenido */
-
+        main{
+            margin: 1rem auto;
+            padding: .5rem;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .card{
+            border-radius: .25rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 0 .5rem var(--dark);
+            flex: 1 0 min(100%, 300px);
+            overflow: hidden;
+        }
+        .card header{
+            margin: -1rem -1.5rem 1.5rem;
+            padding: 1rem;
+            color: var(--light);
+            background-color: var(--second);
+        }
+        .card footer{
+            position: relative;
+            padding: 1rem;
+        }
+        .card footer::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            border-radius: 1rem;
+            background-color: var(--second);
+            box-shadow: 0 0 .2rem var(--second);
+            opacity: .5;
+        }
     /* Pie */
 
 /* Small Devices - Smartphones */
-
+@media screen and (min-width: 576px){
+    main{
+        max-width: 540px;
+    }
+}
 /* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
+    main{
+        max-width: 720px;
+    }
     nav .btn{
         display: none;
     }
@@ -130,11 +180,18 @@
     }
 }
 /* Large Devices - Laptops */
-
+@media screen and (min-width: 992px){
+    main{
+        max-width: 960px;
+    }
+}
 /* Extra Large - HD Desktop */
 @media screen and (min-width: 1200px){
     nav{
         justify-content: space-around;
+    }
+    main{
+        max-width: 1140px;
     }
 }
 /* XXL Large - SmartTV */
