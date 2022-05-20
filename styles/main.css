@@ -156,6 +156,21 @@
             box-shadow: 0 0 .2rem var(--second);
             opacity: .5;
         }
+        /* Multimedia flexible */
+        [class*="ratio"]{
+            position: relative;
+        }
+        [class*="ratio"] .cover{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .ratio-4x3{
+            padding-top: 75%;
+        }
+        .ratio-16x9{
+            padding-top: 56.25%;
+        }
     /* Pie */
         #footer{
             --dark: #3338;
