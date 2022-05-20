@@ -74,6 +74,15 @@
         .btn{
             position: relative;
             z-index: 1;
+            border-radius: .25rem;
+            border: .1rem solid var(--light);
+            color: var(--light);
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .btn:hover{
+            color: var(--second);
+            background-color: var(--light);
         }
         .menu{
             display: grid;
