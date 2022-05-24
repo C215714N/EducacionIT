@@ -89,5 +89,11 @@ nav a{
 @media screen and (min-width: 1200px){
     nav{
         padding: .5rem calc(50vw - 660px);
+        /* 
+            box-sizing
+            border-box:
+            final-width: width
+            content-width: width - padding - border
+        */
     }
 }
