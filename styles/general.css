@@ -23,7 +23,9 @@ header p,
     margin: 0;
 }
 /* Rellenos */
-.menu{
+.menu,
+.content-table,
+.content-table :is(ul, ol){
     padding: 0;
 }
 /* Bordes */
@@ -35,7 +37,8 @@ iframe{
 #footer a{
     text-decoration: none;
 }
-.menu{
+.menu,
+.content-table li{
     list-style: none;
 }
 /* Componentes */

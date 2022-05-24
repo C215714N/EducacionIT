@@ -1,0 +1,89 @@
+/* Declaracion y reinicio de contadores*/
+    .content-table{
+        counter-reset: uno;
+        color: #222
+    }
+    .content-table ol{
+        counter-reset: dos;
+        color: #444;
+    }
+    .content-table ol ol{
+        counter-reset: tres;
+        color: #666;
+    }
+    .content-table ol ol ol{
+        counter-reset: cuatro;
+        color: #888;
+    }
+/* Incremento de contadores */
+    .content-table li{
+        counter-increment: uno;
+    }
+    .content-table li li{
+        counter-increment: dos;
+    }
+    .content-table li li li{
+        counter-increment: tres;
+    }
+    .content-table li li li li{
+        counter-increment: cuatro;
+    }
+/* Implementacion de los contadores */
+    .content-table li::before{
+        content: 
+            counter(uno) '.' 
+            counter(dos) '.'
+            counter(tres) '.'
+            counter(cuatro);
+        float: right;
+    }
+/* Extras */
+aside{
+    margin: .5rem;
+    padding: 1rem;
+    font-weight: bold;
+    overflow: auto;
+    max-height: 240px;
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb{
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background: linear-gradient(#eee, #ccc);
+    box-shadow: 0 0 .5rem #333;
+}
+.content-table li{
+    border-top: .1rem dotted #333;
+}
+.content-table > li:first-child{
+    border-top: none;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+        'aside'
+        '.'
+        '.'
+        '.';
+    gap: .5rem;
+}
+aside{
+    grid-area: aside;
+}
+@media screen and (min-width: 992px){
+    main{
+        grid-template-areas: 
+        'aside .'
+        'aside .'
+        'aside .';
+    }
+    aside{
+        position: sticky;
+        top: 4rem;
+        max-height: 100vh;
+    }
+}
