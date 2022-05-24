@@ -40,6 +40,8 @@ iframe{
 }
 /* Componentes */
 .btn{
+    position: relative;
+    z-index: 1;
     border-radius: .25rem;
     border: 1px solid #333;
     padding: .5rem;
@@ -61,4 +63,17 @@ iframe{
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+.sticky{
+    position: sticky;
 }
