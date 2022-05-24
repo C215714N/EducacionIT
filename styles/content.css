@@ -38,14 +38,13 @@
 }
 /* Contenido Principal */
 main{
-    margin: auto;
-    max-width: 1140px;
-    padding: .5rem;
+    padding: 1rem calc(50vw - 570px);
+    background: radial-gradient(circle at center, transparent, #333);
 }
-section{
+main section{
     display: none;
 }
-section:target{
+main section:target{
     display: block;
 }
 /* Flexbox */
@@ -195,4 +194,23 @@ section:target{
         |7|8|9|         |6|7| |
                         |8|9|
     */
+}
+/* Video de Fondo */
+/* 
+    ratio   ancho       altura
+    4:3     1.33(h)     75%(w)
+    16:9    1.78(h)     56.25%(w)
+    16:10   1.60(h)     62.5%(w)
+*/
+[class*="ratio"] .cover{
+    z-index: 0;
+}
+.ratio-4x3{
+    padding-top: 75%;
+}
+.ratio-16x9{
+    padding-top: min(56.25%, 742.5px);
+}
+.ratio-16x10{
+    padding-top: 62.5%;
 }
