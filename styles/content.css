@@ -39,7 +39,7 @@
 /* Contenido Principal */
 main{
     padding: 1rem calc(50vw - 570px);
-    background: radial-gradient(circle at center, transparent, #333);
+    background: radial-gradient(circle at center, #eee, #ccc);
 }
 main section{
     display: none;
@@ -213,4 +213,8 @@ main section:target{
 }
 .ratio-16x10{
     padding-top: 62.5%;
+}
+video{
+    object-fit: cover;
+    opacity: .7;
 }
