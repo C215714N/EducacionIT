@@ -1,0 +1,35 @@
+aside{
+    min-height: 480px;
+}
+.dropdown-menu li{
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+}
+.dropdown-menu{
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+    color: #eee;
+    background: linear-gradient(to right, #2488,#124);
+}
+.dropdown-menu ol{ 
+    min-width: 10rem;
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    background: linear-gradient(#21428488, #448);
+}
+.dropdown-menu ol ol{
+    top: 0;
+    left: 100%;
+}
+.dropdown-menu li:hover{
+    background-color: #36c8;
+}
+.dropdown-menu li:hover > ol{
+    display: block;
+}

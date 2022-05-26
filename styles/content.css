@@ -39,7 +39,7 @@
 /* Contenido Principal */
 main{
     padding: 1rem calc(50vw - 570px);
-    background: radial-gradient(circle at center, #eee, #ccc);
+    background: radial-gradient(circle at center, #eeec, #cccc);
 }
 main section{
     display: none;
@@ -65,7 +65,7 @@ main section:target{
     display: flex;
     flex-wrap: wrap;
 }
-[class*=col]{
+[class*="col"]{
     padding: 1rem;
     border: 2px solid #012;
 }
