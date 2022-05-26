@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetacion Web</title>
+    <!-- Styles CSS -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <h1>Bootstrap</h1>
+        </div>
+        <nav>
+            <a href="" class="logo"></a>
+            <button class="btn">&equiv;</button>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#intro">introduccion</a></li>
+                <li><a href="">link</a></li>
+                <li><a href="">link</a></li>
+                <li><a href="">link</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Bootstrap</h2>
+            <p>
+                Framework de css
+                utiliza la Metodologia BEM (Block Element Modifier)
+            </p>
+            <h3>Helpers</h3>
+            <h4>Colores</h4>
+            <ul class="list-unstyled p-3">
+                <li class="bg-primary">primary</li>
+                <li class="bg-secondary">secondary</li>
+                <li class="bg-light">light</li>
+                <li class="bg-dark">dark</li>
+                <li class="bg-danger">danger</li>
+                <li class="bg-warning">warning</li>
+                <li class="bg-success">success</li>
+                <li class="bg-info">info</li>
+            </ul>
+            <h3>Utilities</h3>
+            <h4>Breakpoints</h4>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>width</th>
+                        <th>max-width</th>
+                        <th>device</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xs</td>
+                        <td>&lt;576px</td>
+                        <td>100%</td>
+                        <td>smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td>&GreaterEqual;576px &amp; &lt;768px</td>
+                        <td>540px</td>
+                        <td>smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>&GreaterEqual;768px &amp; &lt;992px</td>
+                        <td>720px</td>
+                        <td>tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>&GreaterEqual;992px &amp; &lt;1200px</td>
+                        <td>960px</td>
+                        <td>Laptops</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>&GreaterEqual;1200px &amp; &lt;1400px</td>
+                        <td>1140px</td>
+                        <td>HD Desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>&gt;1400px</td>
+                        <td>1320px</td>
+                        <td>SmartTV</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Components</h3>
+            <div class="card">
+                <p class="card-header">Titulo</p>
+                <p class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime earum cumque reprehenderit impedit. Nulla ullam neque aliquid et, tenetur sunt ducimus accusamus iusto voluptatem corporis id similique recusandae distinctio atque.
+                </p>
+                <p class="card-footer">
+                    para mas informacion, consultar <a href="https://getbootstrap.com" target="_blank">bootstrap</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md | p-2">
+        <a href="#" class="navbar-brand">CR</a>
+        <button 
+            class="
+                navbar-toggler navbar-toggler-icon | 
+                fs-5 border-0"
+            data-bs-target="#menu"
+            data-bs-toggle="collapse">
+        </button>
+        <ul id="menu" class="navbar-nav navbar-collapse collapse">
+            <li class="nav-item"><a href="" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Link</a></li>
+        </ul>
+    </nav>
+    <footer id="footer">
+        <div class="map">
+            <iframe class="cover"
+                width="727" 
+                height="409" 
+                src="https://www.youtube.com/embed/wevJXEw1Fzo" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <button class="btn icon-max"></button>
+        </div>
+    </footer>
+    <!-- Scripts JS
+    <script src="scripts/main.js"></script> -->
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
