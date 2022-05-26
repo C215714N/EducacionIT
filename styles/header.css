@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column-reverse;
 }
+.header h1::first-line{
+    color: #012;
+}
 .header{
     padding: min(50%, 270px) 1rem;
     font-size: min(calc(2vw + .5rem), 3rem);
@@ -56,6 +59,8 @@ nav .btn{
     border-color: #eee;
 }
 nav a{
+    position: relative;
+    display: block;
     padding: .5rem; /* root EM */
     color: #ccc;
 }
@@ -64,6 +69,22 @@ nav a{
     color: #dfc;
     text-shadow: 0 0 .5rem #efc;
 }
+.menu a::after{
+    content: '';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    opacity: 0;
+    background: linear-gradient(to right, transparent, #eee);
+    transition: all .5s ease;
+}
+.menu a:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
 .menu{
     width: 100%;
     max-height: 0;
