@@ -303,16 +303,63 @@
         </section>
     </main>
     <!-- Pie de Pagina -->
-    <footer id="footer">
+    <footer id="footer" class="position-relative bg-dark bg-gradient">
         <!-- Mapa de Contacto -->
-        <iframe id="map" class="cover"
+        <iframe id="map" class="position-absolute w-100 h-100 top-0 start-0 opacity-50"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0701116821274!2d-58.37813014968164!3d-34.60238856483778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1653059770201!5m2!1ses-419!2sar" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <button class="map btn btn-outline-info"></button>
+        <!-- Formulario de Contacto -->
+        <form id="contact" class="col-md-8 col-lg-6 col-xl-4 col-xxl-2 | position-relative bg-light | mx-auto rounded p-3 | was-validated">
+            <h2>Dejanos tu consulta</h2>
+            <!-- Nombre -->
+            <div class="form-floating | my-2">
+                <input class="form-control"
+                    id="contact_name"
+                    name="name"
+                    type="text"
+                    maxlength="50"
+                    placeholder="Ingrese su Nombre"
+                    pattern="[a-z A-Z ñÑ]{3,50}"
+                    required>
+                <label for="contact_name">Ingrese su Nombre</label>
+                <div class="valid-feedback">
+                    El Nombre parece valido. Nos contactaremos a la brevedad
+                </div>
+                <div class="invalid-feedback">
+                    Utilice solamente letras, debe colocar entre 3 y 50 caracteres
+                </div>
+            </div>
+            <!-- Correo -->
+            <div class="form-floating | my-2">
+                <input class="form-control"
+                    id="contact_email"
+                    name="email"
+                    type="email"
+                    minlength="8"
+                    placeholder="Ingrese su Correo"
+                    required>
+                <label for="contact_email">Ingrese su Nombre</label>
+                <div class="valid-feedback">
+                    El correo ha sido verificado, enviaremos un mail a esta direccion
+                </div>
+                <div class="invalid-feedback">
+                    Coloque una direccion que posea al menos 8 caracteres y respete el formato "usuario@servidor"
+                </div>
+            </div>
+            <!-- Consulta -->
+            <div class="form-floating | my-2">
+                <textarea id="contact_consult" class="form-control" name="consult" placeholder="Ingrese su Consulta" minlength="20" maxlength="200" required></textarea>
+                <label for="contact_consult">Ingrese su Consulta</label>
+                <div class="valid-feedback">Muchas gracias por tu consulta</div>
+                <div class="invalid-feedback">Ingresa una consulta que posea entre 20 y 200 caracteres</div>
+            </div>
+            <button class="btn btn-outline-dark | d-block ms-auto">enviar</button>
+        </form>
         <!-- Derechos de autor -->
-        <p class="copy">&copy;2022 Todos los derechos reservados</p>
+        <p class="position-relative | text-center text-light bg-dark | mb-0 mt-3 p-3">&copy;2022 Todos los derechos reservados</p>
     </footer>
     <!-- Scripts JS -->
     <script src="scripts/main.js"></script>
