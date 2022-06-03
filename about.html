@@ -8,18 +8,51 @@
     <!-- Styles CSS -->
     <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
 <body>
     <!-- Cabecera -->
-    <header id="header">
-        <div class="p-md-5">
-            <h1 class="display-1 text-uppercase fw-bold">Bootstrap</h1>
-            <p class="h1 fw-normal">Resposive Web Design</p>
+    <header id="header" class="carousel slide">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#header" data-bs-slide-to="0"></button>
+            <button data-bs-target="#header" data-bs-slide-to="1"></button>
+            <button data-bs-target="#header" data-bs-slide-to="2"></button>
         </div>
         <!-- Galeria -->
-        <div>
-            
+        <ul class="carousel-inner | list-unstyled m-0">
+            <li class="carousel-item active">
+                <img class="w-100 d-lg-none" 
+                    src="assets/bg/header-md-01.jpg" alt="Background Sierra">
+                <img class="w-100 d-none d-lg-block" 
+                    src="assets/bg/header-lg-01.jpg" alt="Background Focal Fossa">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 d-lg-none" 
+                    src="assets/bg/header-md-02.jpg" alt="Background Yosemite">
+                <img class="w-100 d-none d-lg-block" 
+                    src="assets/bg/header-lg-02.jpg" alt="Background Groove Gorilla">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 d-lg-none" 
+                    src="assets/bg/header-md-03.jpg" alt="Background High Sierra">
+                <img class="w-100 d-none d-lg-block" 
+                    src="assets/bg/header-lg-03.jpg" alt="Background Hisurte Hippo">
+            </li>
+        </ul>
+        <!-- Controles -->
+        <button class="carousel-control-prev carousel-control-prev-icon | top-50 mx-5"
+            data-bs-target="#header"
+            data-bs-slide="prev">
+        </button>
+        <button class="carousel-control-next carousel-control-next-icon | top-50 mx-5"
+            data-bs-target="#header"
+            data-bs-slide="next">
+        </button>
+        <!-- Encabezado Principal -->
+        <div class="position-absolute top-50 start-50 translate-middle | text-light">
+            <h1 class="display-1 text-uppercase fw-bold">Bootstrap</h1>
+            <p class="h1 fw-normal">Resposive Web Design</p>
         </div>
     </header>
     <!-- Navegacion -->
@@ -162,6 +195,112 @@
                 <li class="col offset-md-4 offset-lg-7 | border">offset md-4 lg-7</li>
             </ul>
         </section>
+        <section>
+            <h2>Componentes</h2>
+            <p>
+                Clases utilizadas para predeterminar el aspecto de determinados elementos dentro de la pagina, se utilizan implementando la metodologia BEM (Block Element Modifier) y poseen determinados comportamientos preestablecidos.
+            </p>
+            <div class="row">
+                <article class="card | col-lg | p-0">
+                    <h3 class="card-header">Fluid Design</h3>
+                    <p class="card-body">
+                        Diseño que utiliza porcentajes para manterner las proporciones del diseño, pero no escala bien en pantallas pequeñas o grandes, debido a que los elementos se estiran o compactan demasiado.
+                    </p>
+                    <footer class="card-footer">
+                        <address>
+                            para mas informacion consultar
+                            <a href="https://alumni.education">Alumni</a>
+                        </address>
+                    </footer>
+                </article>
+                <article class="card | col-lg | my-2 my-lg-0 mx-lg-2 p-0">
+                    <h3 class="card-header">Adaptive Design</h3>
+                    <p class="card-body">
+                        Diseño que consiste en realizar una pagina para cada vista del sitio, es mas sencillo de mantener en el tiempo y economico para clientes con poco presupuesto, pero implica que haya contenidos duplicados
+                    </p>
+                    <footer class="card-footer">
+                        <address>
+                            para mas informacion consultar
+                            <a href="https://alumni.education">Alumni</a>
+                        </address>
+                    </footer>
+                </article>
+                <article class="card | col-lg | p-0">
+                    <h3 class="card-header">Responsive Design</h3>
+                    <p class="card-body">
+                        Diseño que implica la planificacion del diseño en diferentes tamaños de pantalla utilizando el mismo contenido siempre. Para ello se implementa el uso de media queries y un sistema de grillas ajustable.
+                    </p>
+                    <footer class="card-footer">
+                        <address>
+                            para mas informacion consultar
+                            <a href="https://alumni.education">Alumni</a>
+                        </address>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-lg-8 | my-3 mx-auto">
+                <h3>Unidades Absolutas</h3>
+                <p>
+                    son aquellas que siempre representan lo mismo independientemente del tamaño de la pantalla donde se visualicen o su contenedor. Se utilizan principalmente para definir los tamaños limite de las etiquetas.
+                </p>
+                <ul class="list-group-flush">
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">cm</strong> distancia 10mm
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">in</strong> distancia 2.54cm
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">pc</strong> tipografica 0.6cm
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">pt</strong> tipografica 0.35mm (1/72in)
+                    </li>
+                    <li class="list-group-item active">
+                        <strong class="badge rounded-pill bg-dark">px</strong> hibrida 0.2mm (1/96in)
+                    </li>
+                </ul>
+                <h3>Unidades Relativas</h3>
+                <p>
+                    Son aquellas que su medida depende de algun otro elemento, generalmente el contenedor. Se utilizan para definir el aspecto de los elementos en pantalla, asi como tambien la proporcion con respecto a la tipografia. 
+                </p>
+                <ul class="list-group-flush">
+                    <li class="list-group-item">
+                        <strong class="badge  rounded-pill bg-dark">%</strong> porcentaje del contenedor o tipografia del mismo
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge  rounded-pill bg-dark">em</strong> ancho de M mayuscula del contenedor
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge  rounded-pill bg-dark">ex</strong> alto de x minuscula del contenedor
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge  rounded-pill bg-dark">ch</strong> ancho del caracter 0 del contenedor
+                    </li>
+                    <li class="list-group-item active">
+                        <strong class="badge  rounded-pill bg-dark">rem</strong> ancho de M en la raiz del documento HTML
+                    </li>
+                </ul>
+                <h3>Unidades Flexibles</h3>
+                <p>
+                    Son aquellas que definen su medida en base al viewport, es decir, la ventana donde se visualiza la  pagina. Se utilizan principalmente para definir alturas e implementar tipografia adaptable al tamaño de pantalla.
+                </p>
+                <ul class="list-group-flush">
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">vw</strong> % del ancho del viewport
+                    </li>
+                    <li class="list-group-item active">
+                        <strong class="badge rounded-pill bg-dark">vh</strong> % del alto del viewport
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">vmin</strong> % de la menor medida del viewport
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="badge rounded-pill bg-dark">vmax</strong> % de la mayor medida del viewport
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
@@ -178,6 +317,6 @@
     <!-- Scripts JS -->
     <script src="scripts/main.js"></script>
     <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/bootstrap.bundle.js"></script>
 </body>
 </html>
