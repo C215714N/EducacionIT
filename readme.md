@@ -31,3 +31,12 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Identificacion de Dispositivos
+1. switch(config)# __(Protocolos nivel de capa 2)__
+	* __cdp run__: Habilita Cisco Discovery Protocol
+	* __lldp run__: Habilita Link Layer Discovery Protocol
+2. switch(config-if)# __(Configuracion LLDP)__
+	* __lldp transmit__ Habilita el envio de tramas LLDP (compartir datos)
+	* __lldp receive__ Habilita la recepcion de tramas LLDP (procesar datos)
+3. switch(config-if)# __()__
