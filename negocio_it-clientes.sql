@@ -53,3 +53,5 @@ VALUES  ('Kent','Clark','23-28327389-4'),
         ('Kyle','Selina','26-47382913-8');
 # Consulta de datos
 SELECT * FROM customers;
+SELECT last_name, first_name FROM customers
+WHERE last_name LIKE 'p%' OR first_name LIKE 'p%';
