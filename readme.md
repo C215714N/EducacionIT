@@ -33,10 +33,14 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __no shutdown__: enciende la interfaz seleccionada.
 
 ## Identificacion de Dispositivos
+Cuando trabajamos en una red previamente configurada y no disponemos de documentacion o simplemente necesitamos corroborar que dispositivos estan conectados en las diferentes interfaces de red, disponemos de protocolos de CAPA 2 que permiten a los dispositivos de internetworks intercambiar informacion utilizando tramas que se envian periodicamente, compartiendo la informacion del enlace.
+
 1. switch(config)# __(Protocolos nivel de capa 2)__
 	* __cdp run__: Habilita Cisco Discovery Protocol
 	* __lldp run__: Habilita Link Layer Discovery Protocol
 2. switch(config-if)# __(Configuracion LLDP)__
-	* __lldp transmit__ Habilita el envio de tramas LLDP (compartir datos)
-	* __lldp receive__ Habilita la recepcion de tramas LLDP (procesar datos)
-3. switch(config-if)# __()__
+	* __lldp transmit__: Habilita el envio de tramas LLDP (compartir datos)
+	* __lldp receive__: Habilita la recepcion de tramas LLDP (procesar datos)
+3. switch(config-if)# __(verificacion de vecinos)__
+	* __show cdp neighbors__: Muestra los dispositivos identificados mediante CDP
+	* __show lldp neighbors__: Muestra los dispositivos identificados meidante LLDP
