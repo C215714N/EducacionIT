@@ -101,6 +101,14 @@ VALUES
 ('Abono 500g',14,4, 8400,600), -- nescafe
 ('Ramo Jazmin 12u',8,4,24000,500); -- tcl
         
+## Carga por asignacion y subconsulta
+INSERT INTO products 
+SET 	product_name = 'Notebook x360',
+		brand = (SELECT brand_id FROM brands WHERE brand_name = 'HP'),
+        category = (SELECT category_id FROM categories WHERE category_name = 'tecnologia'),
+        stock = 11459,
+        price =  120599.99;
+        
 # Tabla Marcas
 ## Consulta General
 SELECT * FROM brands -- consulta de marcas
@@ -129,3 +137,6 @@ WHERE brand_name IN('bgh', 'samsung', 'nescafe', 'tophouse', 'dunlop', 'wilson')
 ## informacion cuyas marcas se encuentre entre los id especificados
 SELECT * FROM brands
 WHERE brand_id BETWEEN 8 AND 10 OR brand_id > 14;
+
+#Tabla Productos
+SELECT * FROM products;
