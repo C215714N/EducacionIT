@@ -5,7 +5,9 @@ Estructura utilizada para organizar y almacenar la informacion en forma de tabla
 ## Composicion:
 Las tablas representan las entidades principales dentro de una base de datos y se encuentran divididas en las siguientes partes:
 > **Campos(columnas)**:	Datos pertenecientes al mismo tipo
+>
 > **Registros(filas)**:	Conjunto de datos que guardan relacion
+>
 > **Datos(celdas)**: 	Minima porcion de informacion
 
 ## Modelos:

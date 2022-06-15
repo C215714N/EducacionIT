@@ -12,3 +12,4 @@ ___
 ## Tabla de Contenidos
 
 * [Bases de Datos](./docs/database.md)
+* [Tipos de datos](./docs/datatypes.md)
