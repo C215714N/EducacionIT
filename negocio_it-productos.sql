@@ -1,4 +1,5 @@
 /*	DDL Data Definition Language*/
+USE negocio_it;
 # Tabla Categorias
 CREATE TABLE categories(
 	category_id INT AUTO_INCREMENT,
@@ -81,24 +82,24 @@ VALUES
 ('Notebook 8470p', 9, 1, 1500, 69999.99), -- hp
 ('Tablet Tab-10', 7, 1, 5000, 45500), -- samsung
 -- electrodomesticos
-('',,11,,), -- bgh
-('',,11,,), -- samsung
-('',,11,,), -- nescafe
+('Aire split 3300w bgh-400',11,11, 5000, 85999.99), -- bgh
+('Aire split 2500w shc-2350',7,11,3500,120500), -- samsung
+('Cafetera Dolce gusto f50',14,11,25386, 32499.99), -- nescafe
 -- muebles
-('',,10,,), -- tophouse
-('',,10,,), -- dunlop
-('',,10,,), -- wilson
+('Modular TV th-5400',6,10,8500,35600), -- tophouse
+('Modular Microondas d-300',3,10,1300,15300), -- dunlop
+('Combo Mesa y sillas 6u',4,10,1200,35300), -- wilson
 -- alimentos
-('',,15,,), -- alicante
-('',,15,,), -- marolio
+('Sobre Provenzal 500g',1,15,28900,250), -- alicante
+('Aceite 1l',2,15,36803, 560), -- marolio
 -- indumentaria
-('',,2,,), -- nike
-('',,2,,), -- adadis
-('',,2,,), -- pumba
-('',,2,,), -- nike
+('Campera talle L',17,2,23000, 5600), -- nike
+('Camiseta talle XL',15,2,12500,2000), -- adadis
+('Camiseta talle XXL',16,2,1000,1300), -- pumba
+('Camiseta talle M',17,2,44000,9000), -- nike
  -- botanica
-('',,4,,), -- nescafe
-('',,4,,); -- tcl
+('Abono 500g',14,4, 8400,600), -- nescafe
+('Ramo Jazmin 12u',8,4,24000,500); -- tcl
         
 # Tabla Marcas
 ## Consulta General
@@ -120,3 +121,11 @@ WHERE category_name LIKE 'b%'; -- %cualquier cantidad de caracteres
 ## Categoria Electrodomesticos Alimentos y Muebles
 SELECT * FROM categories
 WHERE category_name IN ('electrodomesticos','alimentos','muebles');
+
+# Tabla Marcas
+## Informacion cuyas marcas se encuentren en los valores especificados
+SELECT * FROM brands
+WHERE brand_name IN('bgh', 'samsung', 'nescafe', 'tophouse', 'dunlop', 'wilson');
+## informacion cuyas marcas se encuentre entre los id especificados
+SELECT * FROM brands
+WHERE brand_id BETWEEN 8 AND 10 OR brand_id > 14;
