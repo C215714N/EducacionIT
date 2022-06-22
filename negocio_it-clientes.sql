@@ -55,3 +55,14 @@ VALUES  ('Kent','Clark','23-28327389-4'),
 SELECT * FROM customers;
 SELECT last_name, first_name FROM customers
 WHERE last_name LIKE 'p%' OR first_name LIKE 'p%';
+
+# Actualizacion segura Nombre Mujer Maravilla (Wonder Woman)
+UPDATE customers -- tabla a manipulacion
+SET first_name = 'Diana' -- valor de actualizacion
+WHERE customer_id = 2; -- registro unico
+
+# verificar bases de datos y tablas
+SHOW DATABASES;
+USE negocio_it;
+SHOW TABLES;
+SHOW CREATE TABLE customers;

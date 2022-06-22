@@ -45,6 +45,12 @@ VALUES 	(4,2,2),(4,7,1),
 		(5,16,4),(5,2,3),(5,6,5),(5,1,2),
 		(6,2,4),(6,8,2),(6,1,4);
 
+INSERT INTO sales_detail
+SET sale = 6,
+	product = 15,
+    quantity = 3,
+    price = (SELECT price FROM products WHERE product_id = 15 );
+
 SELECT *, quantity * price AS total FROM sales_detail;
 # Eliminamos producto cargado por error (notebook de A1387)
 DELETE FROM sales_detail 
@@ -53,4 +59,21 @@ WHERE sale = 6 AND product = 1;
 # Actualizacion de precios de venta
 UPDATE sales_detail
 	SET price = (SELECT price FROM products WHERE product_id = product)
-WHERE price IS NULL;
+WHERE sale = 6;
+
+SELECT * FROM sales_detail;
+
+# Estadistica de precios en detalle
+SELECT
+	min(price) AS cheapest,
+    max(price) AS most_expensive,
+    ROUND(AVG(price), 2) AS average -- round(valor, decimales)
+FROM sales_detail;
+
+# Total de ventas 
+SELECT 
+	sale,
+    GROUP_CONCAT(product) AS product_list,
+    SUM(price * quantity) AS total
+FROM sales_detail
+GROUP BY sale; -- pertecen a la misma venta
