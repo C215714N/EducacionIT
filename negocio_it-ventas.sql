@@ -77,3 +77,8 @@ SELECT
     SUM(price * quantity) AS total
 FROM sales_detail
 GROUP BY sale; -- pertecen a la misma venta
+
+SELECT * FROM sales;
+UPDATE sales
+SET sale_total = ( SELECT SUM(price * quantity) FROM sales_detail WHERE sale = sale_id )
+WHERE sale_total IS NULL OR sale_total = 0;
