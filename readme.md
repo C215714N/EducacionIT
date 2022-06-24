@@ -61,23 +61,24 @@ Las Redes de area Local Virtuales son una segmentacion del dominio de difusion c
 	* __switchport acces vlan `<vlan-id>`__: configura la interfaz en modo de acceso
 	* __switchport mode trunk__: configura la interfaz en modo troncal
 
-	## Protocolo spanning-tree
-	Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+## Protocolo spanning-tree
 
-	1. switch(config)# __(configuracion global)__
-		* __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge.
-		* __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia.
+Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
 
-	## Servidor de VLANs
-	Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+1. switch(config)# __(configuracion global)__
+	* __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge.
+	* __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia.
 
-	1. switch(config)# __(configuracion servidor)__
-		* __vtp mode `<server>`__: establece al dispositivo como servidor de VLANs
-		* __vtp domain `<domain>`__: define el dominio a compartir por BPDU para la Topologia
-		* __vtp password `<password>`__: contraseña para el acceso de la configuracion
-	2. switch# __(configuracion modo privilegiado)__
-		* __vlan database__: accede al archivo 'vlan.dat'de la memoria flash
-		*	__vlan `<vlan-id>` name `<name>`__: crea la vlan y le asigna el nombre indicado
-	3. switch(config)# __(mas configuraciones)__
-		*	__vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
-		* __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
+## Servidor de VLANs
+Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion servidor)__
+	* __vtp mode `<server>`__: establece al dispositivo como servidor de VLANs
+	* __vtp domain `<domain>`__: define el dominio a compartir por BPDU para la Topologia
+	* __vtp password `<password>`__: contraseña para el acceso de la configuracion
+2. switch# __(configuracion modo privilegiado)__
+	* __vlan database__: accede al archivo 'vlan.dat'de la memoria flash
+	*	__vlan `<vlan-id>` name `<name>`__: crea la vlan y le asigna el nombre indicado
+3. switch(config)# __(mas configuraciones)__
+	*	__vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
+	* __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
