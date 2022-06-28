@@ -3,9 +3,9 @@
 Esto es una guia practica realizada para los alumnos del curso de CCNA1_(Cisco Certified Network Associated)_ con la finalidad de reforzar los conceptos vistos en clase y para que puedan practicar las diferentes actividades provistas por la plataforma [Alumni](https://alumni.education)
 
 ## Tabla de contenidos
-[Introduccion](#introduccion)
-[Configuracion Inicial](#configuracion-inicial)
-[Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
+* [Introduccion](#introduccion)
+* [Configuracion Inicial](#configuracion-inicial)
+* [Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
 
 ## Introduccion
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads)
