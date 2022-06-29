@@ -13,3 +13,5 @@ ___
 
 * [Bases de Datos](./docs/database.md)
 * [Tipos de datos](./docs/datatypes.md)
+* [Operadores](./docs/operators.md)
+* [Funciones](./docs/functions.md)
