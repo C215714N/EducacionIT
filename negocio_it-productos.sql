@@ -140,3 +140,31 @@ WHERE brand_id BETWEEN 8 AND 10 OR brand_id > 14;
 
 #Tabla Productos
 SELECT * FROM products;
+SELECT
+	product_id,
+    product_name,
+    stock,
+    CASE
+		WHEN stock <= 2000 THEN "reponer"
+        WHEN stock <= 5000 THEN "cuidado"
+        WHEN stock <= 10000 THEN "estable"
+        ELSE "vender urgente"
+    END AS situation,
+    CASE
+		WHEN stock >= 10000 THEN 0
+        ELSE 10000 - stock
+    END AS needed,
+    price,
+    CASE 
+		WHEN price >= 50000 THEN "Costoso"
+        WHEN price >= 10000 THEN "Moderado"
+        WHEN price >= 5000 THEN "Accesible"
+        ELSE "economico"
+    END AS user_feedback
+FROM products
+HAVING needed > 5000 -- condicion para columnas que no existen en la tabla
+ORDER BY stock, price;
+
+SELECT * FROM products;
+
+
