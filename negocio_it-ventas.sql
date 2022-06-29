@@ -82,3 +82,19 @@ SELECT * FROM sales;
 UPDATE sales
 SET sale_total = ( SELECT SUM(price * quantity) FROM sales_detail WHERE sale = sale_id )
 WHERE sale_total IS NULL OR sale_total = 0;
+
+## Actualizacion masiva del stock
+UPDATE products
+SET stock = 
+	CASE 
+		WHEN (SELECT SUM(quantity) FROM sales_detail WHERE product = product_id) IS NULL THEN stock
+        ELSE stock - (SELECT SUM(quantity) FROM sales_detail WHERE product = product_id)
+	END;
+    
+## Actualizacion de stock por factura emitida
+UPDATE products, sales_detail
+SET stock = stock - (
+	SELECT quantity FROM sales_detail -- valor a obtener de la tabla detalle de ventas
+    WHERE sale = 6 AND product = product_id -- condicion para obtener la cantidad correcta
+)	
+WHERE product_id = product AND sale = 6; -- condicion para actualizar el stock de los productos vendidos
