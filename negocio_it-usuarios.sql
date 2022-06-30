@@ -23,8 +23,8 @@ ON negocio_it.*
 TO 'employee'@'localhost';
 
 ## Usuario Cliente
-DROP USER IF EXISTS 'employee'@'localhost';
-CREATE USER 'employee'@'localhost'
+DROP USER IF EXISTS 'client'@'localhost';
+CREATE USER 'client'@'localhost'
 IDENTIFIED BY '1234';
 ### Acceso a todas las tablas
 GRANT SELECT
