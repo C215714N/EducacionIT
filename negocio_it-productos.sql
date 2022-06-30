@@ -162,6 +162,7 @@ SELECT
         ELSE "economico"
     END AS user_feedback
 FROM products
+WHERE stock < 10000
 HAVING needed > 5000 -- condicion para columnas que no existen en la tabla
 ORDER BY stock, price;
 

@@ -94,10 +94,12 @@ SELECT
 FROM customers;
 
 ## calcular edades
-SELECT CONCAT_WS(' ',first_name,last_name,email) AS customer_data, -- concatenacion de caracteres
+SELECT 
+	CONCAT_WS(' ',first_name,last_name,email) AS customer_data, -- concatenacion de caracteres
 	DATEDIFF(CURRENT_DATE(),birth_date) / 365 AS edad, -- diferencia en dias, convertido a años
     YEAR(CURRENT_DATE()) - YEAR(birth_date) AS age -- diferencia de edades en años
-FROM customers;
+FROM customers
+HAVING age BETWEEN 20 AND 50;
 
 # verificar bases de datos y tablas
 SHOW DATABASES;
