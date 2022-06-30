@@ -4,6 +4,9 @@
 2. [Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
 3. [Identificacion de Dispositivos](#identificacion-de-dispositivos)
 4. [Configuracion de VLANs](#configuracion-de-vlans)
+5. [Protocolo Spanning Tree](#protocolo-spanning-tree)
+6. [Configuracion Etherchannel](#configuracion-etherchannel)
+7. [Servidor de VLANs](#servidor-de-vlans)
 
 ## Configuracion Inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
