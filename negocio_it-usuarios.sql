@@ -51,3 +51,7 @@ IDENTIFIED BY '123';
 GRANT SELECT
 ON negocio_it.*
 TO 'invited'@'localhost';
+
+## Here comes a new Challenger!
+CREATE USER 'cristian'@'localhost'
+IDENTIFIED BY 'cris';
