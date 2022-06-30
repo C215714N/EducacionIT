@@ -108,7 +108,16 @@ SET 	product_name = 'Notebook x360',
         category = (SELECT category_id FROM categories WHERE category_name = 'tecnologia'),
         stock = 11459,
         price =  120599.99;
-        
+## Producto de Ultimo momento
+INSERT INTO products(product_name)
+VALUES ('Pista Hotwheels AT580');
+## Actualizacion de Producto Hotwheels
+UPDATE products
+SET stock = 3000,
+	price = 9999,
+    category = (SELECT category_id FROM categories WHERE category_name = 'Jugueteria')
+WHERE product_name LIKE '%PISTA%HOTWHEELS%';
+
 # Tabla Marcas
 ## Consulta General
 SELECT * FROM brands -- consulta de marcas
