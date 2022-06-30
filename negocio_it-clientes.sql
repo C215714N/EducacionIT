@@ -64,6 +64,10 @@ VALUES  ('Kent','Clark','23-28327389-4'),
 		('Howlett','James','21-12938472-5'),
 		('Parker','Peter','20-46912848-5'),
         ('Kyle','Selina','26-47382913-8');
+# Aqui viene un nuevo cliente
+INSERT INTO customers(last_name, first_name, cuit, birth_date, email)
+VALUES ('wayne', 'bruce', '20-41289343-2', '1970-03-03', 'bruce@waynetech.com');
+
 # Consulta de datos
 SELECT * FROM customers;
 
