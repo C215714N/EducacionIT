@@ -9,7 +9,7 @@
     <title>fundamentos web</title>
 </head>
 <!-- Cuerpo del Documento: Contenido/Imagenes/Hipervinculos -->
-<body>
+<body style="font-family: century gothic, calibri, segoe ui, sans-serif;">
     <!-- Encabezado Principal (Heading 1) -->
     <h1>Fundamentos Web</h1>
     <!-- Parrafo (Paragraph) -->
@@ -35,5 +35,45 @@
         <li>css</li>
         <li>js</li>
     </ul>
+    <h3>HTML (HyperText Markup Language)</h3>
+    <p>
+        Lenguaje de marcado de hipertexto que utiliza etiquetas para identificar cado uno de los elementos que componen la pagina web y de esta manera establecer la jerarquia dentro de la misma. Las etiquetas corresponden a diferentes tipos que analizaremos a continuacion y el orden de los factores altera el producto.
+    </p>
+    <ul>
+        <li>
+            <!-- Texto destacado (Importante)  -->
+            <strong>DE BLOQUE: </strong>
+            <!-- Salto de Linea (break) | huerfana -->
+            <br>
+            Son aquellos que ocupan todo el ancho de su contenedor,
+            se les puede dar tamaño y generan salto de linea,
+            <!-- Texto enfatizado (emphasys) -->
+            <em> generalmente funcionan como contenedores.</em>
+        </li>
+        <li>
+            <strong>DE LINEA: </strong>
+            <br>
+            Son aquellos elementos que ocupan en ancho de su contenido,
+            su tamaño es automatico y comparten linea con otros de su tipo,
+            <em> generalmente funcionan como contenido.</em>
+        </li>
+    </ul>
+    <!-- Capa (Division) | Etiqueta de Bloque -->
+    <div style="color: whitesmoke; background-color: darkslateblue; width: 350px; padding: 50px;">
+        <h3>CSS (Cascadings StyleSheets)</h3>
+        <p>
+            <!-- Expandir (span) | Etiqueta de Linea -->
+            <span style="color: gold; font-size: 32px;">L</span>as hojas de estilo en cascada se utilizan para definir la apariencia de los elementos de la pagina web, utilizan selectores y reglas para definir el aspecto de los mismos. Debido a que afecta la forma en la que se ven los elementos, podemos decir que el orden de los factores NO altera el producto.
+        </p>
+        <p>
+            Las etiquetas poseen diferentes caracteristicas, entre ellas podemos encontrar 4 atributos en comun, que corresponden a los siguientes:
+        </p>
+        <ul>
+            <li><strong>margin:</strong> distancia que separa a las etiquetas, no suma tamaño</li>
+            <li><strong>border:</strong> linea que rodea a las etiquetas, por defecto es cero, suma tamaño </li>
+            <li><strong>padding:</strong> relleno que existe entre el borde y el contenido, tambien suma tamaño</li>
+            <li><strong>content:</strong> elementos que se encuentran dentro de las etiquetas, a los que podemos definirles ancho y alto.</li>
+        </ul>
+    </div>
 </body>
 </html>
