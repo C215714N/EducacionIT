@@ -14,7 +14,44 @@
     </header>
     <!-- Contenido Principal: Informacion relevante para el usuario -->
     <main>
+        <!-- Section: Contenido Contextualizado (funciona solamente dentro de la pagina) -->
+        <section>
+            <h2>Contenido Multimedia</h2>
+            <p>
+                En este apartado, explicaremos cuales son los elementos que podemos incorporar dentro de la pagina, a nivel audiovisual. Sus ventajas y desventajas, ademas de los diferentes formatos soportados por los navegadores.
+            </p>
+            <!-- Article: Contenido Independiente (funciona fuera de la pagina) -->
+            <article>
+                <h3>Imagenes</h3>
+                <p>
+                    Son elementos que podemos utilizar dentro de nuestra pagina web para exponer, darle una vista mas agradable al usuario o para realizar una muestra visual. 
+                    
+                    Al igual que el resto de los elementos de una pagina web, se representa con una etiqueta, siendo en este caso <strong> &lt;img></strong>
+                </p>
+                <p>
+                    La etiqueta de Imagenes cuenta con 2 atributos necesarios, estos son <em>src</em> para indicar la ruta de origen de la imagen y <em>alt</em> para exponer un texto alternativo en caso que la imagen no este accesible.
+                </p>
+                <div class="example">
+                    <img src="assets/img/JJBA-kingcrimson-01.jpg" alt="Dibujo de King Crimson - JoJo's Bizarre Adventure">
+                    <img src="assets/img/jjba-kingcrimson-02.jpg" alt="Dibujo de King Crimson - JoJo's Bizarre Adventure">
+                    <img src="assets/img/JJBA-kingcrimson-03.jpg" alt="Dibujo de King Crimson - JoJo's Bizarre Adventure">
+                    <img src="assets/img/jjba-kingcrimson-04.jpg" alt="Dibujo de King Crimson - JoJo's Bizarre Adventure">
+                </div>
+            </article>
+            <div class="float">
+                <h3>Integracion Imagenes y Texto</h3>
+                <p>
+                    <img src="assets/bg/osx-big-sur-dark.jpg" alt="Imagen de Fondo Big">
 
+                    En ciertas ocasiones puede que necesitemos utilizar imagenes dentro de un parrafo, similar a como utilizamos las letras capitales. Para ello podemos incorporar estas dentro de los mismos, pero debemos tener en cuenta que hay que aplicar ciertos estilos para que funcione de manera apropiada.
+                </p>
+                <p>
+                    <img src="assets/bg/osx-monterrey-dark.jpg" alt="Imagen de Fondo Monterrey">
+                    
+                    Los estilos los aplicamos mediante el uso de CSS, utilizando un atributo llamado <strong>float</strong> que permite que el elemento afectado se salga del flujo del documento, para ubicarse en un extremo de la etiqueta y que el resto de los elementos que se encuentren despues se ubique alrededor del mismo.
+                </p>
+            </div>
+        </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
