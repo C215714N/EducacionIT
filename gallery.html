@@ -5,6 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selectores Generales */
+        body{
+            font-family: 'calibri', 'segoe ui', sans-serif;
+        }
+        /* Selectores Multiples (,)*/
+        header, 
+        footer{
+            margin: -8px;
+            padding: 16px;
+            background-color: #999;
+        }
+        /* Selectores Especificos (padre hijo) */
+        header h1,
+        header p{
+            margin: 0;
+        }
+        main img{
+            width: 200px;
+        }
+        /* Selector de Clase (.class) */
+        .example{
+            padding: 8px;
+            text-align: center;
+            background-color: #666;
+        }
+        .example img{
+            width: 100%;
+            max-width: 480px;
+        }
+        /* Selector de Id (#id) */
+        #contact{
+            color: #224;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido introductorio -->
@@ -29,7 +65,7 @@
                     Al igual que el resto de los elementos de una pagina web, se representa con una etiqueta, siendo en este caso <strong> &lt;img></strong>
                 </p>
                 <p>
-                    La etiqueta de Imagenes cuenta con 2 atributos necesarios, estos son <em>src</em> para indicar la ruta de origen de la imagen y <em>alt</em> para exponer un texto alternativo en caso que la imagen no este accesible.
+                    La etiqueta de Imágenes cuenta con 2 atributos necesarios, estos son <em>src</em> para indicar la ruta de origen de la imagen y <em>alt</em> para exponer un texto alternativo en caso que la imagen no este accesible.
                 </p>
                 <div class="example">
                     <img src="assets/img/JJBA-kingcrimson-01.jpg" alt="Dibujo de King Crimson - JoJo's Bizarre Adventure">
@@ -39,7 +75,7 @@
                 </div>
             </article>
             <div class="float">
-                <h3>Integracion Imagenes y Texto</h3>
+                <h3>Integración Imágenes y Texto</h3>
                 <p>
                     <img src="assets/bg/osx-big-sur-dark.jpg" alt="Imagen de Fondo Big">
 
@@ -55,7 +91,7 @@
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        <p>&copy;2022 Todos los derechos reservados</p>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
