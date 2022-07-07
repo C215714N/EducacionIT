@@ -65,6 +65,19 @@ LEFT JOIN sales_detail AS sd ON sd.product = p.product_id
 LEFT JOIN sales AS s ON s.sale_id = sd.sale
 ORDER BY sale, product_name;
 
+## Cantidad de categorias sin productos y/o Productos que no se vendieron
+SELECT DISTINCT
+	count(category_id) AS total,
+    category_name,
+    GROUP_CONCAT(product_name) AS product_list,
+    sale
+FROM sales_detail AS sd
+RIGHT JOIN products AS p ON p.product_id = sd.product
+RIGHT JOIN categories AS c ON c.category_id = p.category
+GROUP BY category, sale
+HAVING sale IS NULL
+ORDER BY sale, category;
+
 /* CROSS JOIN: Producto cartesiano de 2 tablas*/
 ## Todas las combinaciones de clientes y productos que pueden comprar
 SELECT 
