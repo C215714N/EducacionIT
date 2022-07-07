@@ -33,7 +33,37 @@ SELECT
 FROM customers AS c
 JOIN sales AS s ON c.customer_id = s.customer
 WHERE sale_id IS NULL;
+SELECT * FROM sales_detail;
+SELECT 
+	sale_id,
+    sale_date,
+	pay_method,
+	-- cliente
+    concat_ws(' ', last_name, first_name,'- cuit:', cuit) AS client_data,
+    -- producto
+    CONCAT_WS(' ', product_name,"restan:",stock) AS product_data,
+    -- detalle de venta
+    CONCAT_WS('x', sd.price, quantity) AS sale_detail,
+    sd.price * quantity AS total
+FROM sales_detail AS sd
+JOIN sales AS s ON s.sale_id = sd.sale
+JOIN products AS p ON p.product_id = sd.product
+JOIN customers AS c ON c.customer_id = s.customer;
 
+## Todas las categorias, productos asociados y detalles correspondientes (si existen)
+SELECT DISTINCT
+	category_id,
+    category_name,
+    product_name,
+    p.price,
+    stock,
+    sale,
+    sale_date
+FROM products AS p
+RIGHT JOIN categories AS c ON c.category_id = p.category
+LEFT JOIN sales_detail AS sd ON sd.product = p.product_id
+LEFT JOIN sales AS s ON s.sale_id = sd.sale
+ORDER BY sale, product_name;
 
 /* CROSS JOIN: Producto cartesiano de 2 tablas*/
 ## Todas las combinaciones de clientes y productos que pueden comprar
