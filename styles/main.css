@@ -1,0 +1,81 @@
+/* Content First | Mobile First */
+/* Reglas Generales */
+    *{
+        box-sizing: border-box;
+        /*  Explicacion:
+            CONTENT-BOX
+                content-width = width
+                final-width = width + padding + border
+            BORDER-BOX
+                final-width = width
+                content-width = width - padding - border
+        */
+        font-family: 'Raleway', 'calibri', 'segoe ui', sans-serif;
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Rellenos */
+    .menu{
+        padding: 0;
+    }
+    /* Estilos */
+    nav a{
+        text-decoration: none;
+    }
+    .menu{
+        list-style: none;
+    }
+/* Cabecera */
+
+/* Navegacion */
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+        background: linear-gradient(to right, #3c6, #448)
+    }
+    nav a{
+        color: #eee;
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-content: space-around;
+        justify-content: center;
+        background: linear-gradient(#3c6, #448);
+        opacity: .9;
+        transition: all .5s ease;
+    }
+    .menu.active{
+        left: 0;
+    }
+    .btn{
+        position: relative;
+        z-index: 1;
+        border: 1px solid #eee;
+        color: #eee;
+        background-color: transparent;
+    }
+/* Contenido */
+
+/* Pie de Pagina */
+
+/* Medium Devices - Tablets */
+
+/* Extra large - HD Desktop */
