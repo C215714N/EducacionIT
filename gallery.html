@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <link rel="stylesheet" href="styles/style.css">
     <style>
-        /* Selectores Generales */
-        body{
-            font-family: 'calibri', 'segoe ui', sans-serif;
-        }
         /* Selectores Multiples (,)*/
         header, 
         footer{
@@ -33,12 +30,25 @@
         }
         .example img{
             width: 100%;
+            padding: 20px;
             max-width: 480px;
         }
         /* Selector de Id (#id) */
         #contact{
             color: #224;
             font-weight: bold;
+        }
+        /* Overflow y Float */
+        .float p{
+            padding: 24px;
+            color:#eee;
+            background-color: #333;
+            overflow: hidden;
+        }
+        .float img{
+            margin-right: 16px;
+            background-color: #eee;
+            float: left;
         }
     </style>
 </head>
@@ -47,6 +57,18 @@
     <header>
         <h1>Fundamentos Web</h1>
         <p>html y css</p>
+        <!-- Navegacion principal: links mas importantes -->
+        <nav>
+            <ul class="menu">
+                <!-- Ruta interna / Relativa -->
+                <li><a href="index.html">inicio</a></li>
+                <!-- Ruta ancla / Refresh (#) -->
+                <li><a href="#">galeria</a></li>
+                <li><a href="forum.html">foro</a></li>
+                <!-- Ruta ancla / Interna (#id) -->
+                <li><a href="#contact">contacto</a></li>
+            </ul>
+        </nav>
     </header>
     <!-- Contenido Principal: Informacion relevante para el usuario -->
     <main>
