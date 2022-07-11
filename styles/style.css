@@ -3,10 +3,47 @@
         box-sizing: border-box;
         font-family: 'Raleway', 'calibri', sans-serif;
     }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Bordes */
+
+    /* Rellenos */
+    .menu{
+        padding: 0;
+    }
+    /* Estilos */
+    .menu,
+    .example{
+        list-style: none;
+    }
+    nav a{
+        text-decoration: none;
+    }
 /* Cabecera */
 
 /* Navegacion */
-
+    .menu{
+        background-color: #448; /*hex: RRGGBB 444488 dec: rgb(68,68,136)*/
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a.active,
+    .menu a:hover{ /*pseudoclass: Instancia o caracteristica de un elemento*/
+        color: #eee;
+        text-shadow: 0 0 4px; /*-x+ -y+ blur color*/
+    }
+    .menu li{
+        display: inline-block;
+        padding: 8px;
+    }
 /* Contenido */
 
 /* Pie de Pagina */
