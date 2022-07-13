@@ -68,7 +68,7 @@
                             <strong>value="..."</strong> Corresponde al dato propiamente dicho, debe existir si el usuario no escribe dentro del formulario.
                         </li>
                         <li>
-                            <strong>type="..."</strong> Indica que criterios tiene el campo para su validacion y completado, es decir, que caracteres permite.
+                            <strong>type="..."</strong> Indica que criterios tiene el campo para su validacion y completado, es decir, que caracteres permite ingresar.
                         </li>
                     </ul>
                 </header>
@@ -77,7 +77,43 @@
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
-
+        <!-- Formulario de Contacto -->
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z]{3,50}"
+                title="Ingresa tu nombre completo solamente con letras"
+                placeholder="Nombre: Cristian Racedo"
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                minlength="8"
+                type="email"
+                placeholder="Correo: Cristiandracedo@hotmail.com"
+                required>
+            <label for="contact_subject">Seleccione el tipo de consulta</label>
+            <select id="contact_subject" name="subject">
+                <option value="fullstack">Desarrollo Fullstack</option>
+                <option value="frontend" selected>Desarrollo Frontend</option>
+                <option value="backend">Desarrollo Backend</option>
+            </select>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="20"
+                maxlength="200"
+                placeholder="Buenas, mi consulta es..."
+                required></textarea>
+            <button>ENVIAR</button>
+        </form>
     </footer>
 </body>
 </html>
