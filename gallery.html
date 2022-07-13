@@ -28,7 +28,37 @@
     </header>
     <!-- Contenido Principal: Relevante para el usuario -->
     <main>
-
+        <!-- Contenido Independiente: Funciona fuera de la pagina -->
+        <article>
+            <h2>Imágenes en la web</h2>
+            <p>
+                Podemos utilizar este tipo de elementos dentro de una pagina web, mediante la etiqueta <strong>&lt;img></strong>, la cual posee los atributos <em>src</em> que indica donde se encuentra el archivo y <em>alt</em> que permite indicar al usuario y al navegador de que trata la misma, ademas que aparece cuando la imagen no es accesible.
+            </p>
+            <div class="example">
+                <img src="assets/img/jjba-d4c-01.jpg" 
+                    alt="Dibujo JoJo Bizarre Adventure D4C">
+                <img src="assets/img/jjba-d4c-02.jpg" 
+                    alt="Dibujo JoJo Bizarre Adventure D4C">
+                <img src="assets/img/jjba-d4c-03.jpg" 
+                    alt="Dibujo JoJo Bizarre Adventure D4C">
+                <img src="assets/img/jjba-d4c-04.jpg" 
+                    alt="Dibujo JoJo Bizarre Adventure D4C">
+            </div>
+            <p>
+                Cuando utilizamos esta etiqueta debemos tener en cuenta que es un elemento de linea o mejor dicho de <strong>linea-bloque</strong>, que representa una subcategoria del primero. La diferencia radica en que <em>a las imagenes se las trata como texto</em>, pero a diferencia de este, <em>podemos darle tamaño</em> y afectar el alto de la linea.
+            </p>
+            <div class="float">
+                <h2>Imágenes y texto</h2>
+                <p>
+                    <img src="assets/bg/osx-big-sur-light.jpg" alt="Fondo de Pantalla Big Sur"> 
+                    Cuando utilizamos imagenes es necesario colocar el atributo alt por cuestiones de accesibilidad, ya que de lo contrario no habria forma en la que usuario sepa de que trata el archivo, indistintamente si la imagen se puede ver dentro de la pagina o no. Otra opcion es el atributo <em>title</em> que muestra un texto que representa a la imagen, que se visualiza cuando nos colocamos por encima de la misma.
+                </p>
+                <p>
+                    <img src="assets/bg/osx-big-sur-dark.jpg" alt="Fondo de Pantalla Big Sur">
+                    Ya que las imagenes se tratan como texto, si necesitamos colocar las mismas a un costado de la pagina, no podremos hacerlo utilizando html. Debemos utilizar CSS, aplicando los atributos <em>float</em> para indicar que el elemento en cuestion debe salirse del flujo del documento y los contenidos posteriores deben ubicarse alrededor, ademas de <em>overflow</em> en sus contenedores para evitar el desbordamiento de dichos elementos.
+                </p>
+            </div>
+        </article>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
