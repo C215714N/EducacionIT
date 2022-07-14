@@ -42,7 +42,7 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
 
-## Verificacione de Topologia
+## Verificaciones de Topologia
 Cuando establecemos la configuracion de los dispositivos de internetworks debemos verificar el funcionamiento de las interfaces, redes y dispositivos a los que se conecte dentro de la topologia. La misma dependera del tipo de dispositivo que estemos administrando.
 
 1. switch# (administracion general)
