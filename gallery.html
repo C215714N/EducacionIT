@@ -11,14 +11,61 @@
     <header>
         <h1>Fundamentos Web</h1>
         <p>html y css</p>
+        <!-- Navegacion Principal: Links mas importantes -->
+        <nav>
+            <UL><!-- Ruta Relativa (Interna) -->
+                <li><a href="index.html">Inicio</a></li>
+                <!-- Ruta Ancla (refresh) -->
+                <li><a href="#">Galeria</a></li>
+                <!-- Ruta Ancla (Marcador) [#id] -->
+                <li><a href="#contact">Contacto</a></li>
+            </UL>
+        </nav>
     </header>
     <!-- Contenido Principal: Relevante para el usuario -->
     <main>
-
+        <!-- Section: Contenido Contextualizado (funciona solo dentro de la pagina) -->
+        <section>
+            <h2>Implementacion de Imagenes</h2>
+            <p>
+                En este apartado veremos que cuales son los elementos que podemos utilizar de manera visual dentro de una pagina web, su caracteristicas y manipulacion correspondiente tanto con los lenguajes HTML y CSS.
+            </p>
+            <!-- Article: Contenido Independiente (funciona tanto dentro como fuera de la pagina) -->
+            <article>
+                <h3>Etiqueta de Imagen</h3>
+                <p>
+                    Para incorporar este tipo de elemento dentro de una pagina debemos utilizar la etiqueta <strong> &lt;img> </strong>, debemos completar los atributos <em>src="..."</em> para indicar donde se encuentra el archivo y <em>alt="..."</em> para generar un texto alternativo, en caso que la imagen no este disponible; ademas se utiliza para la accesibilidad y los motores de busqueda.
+                </p>
+                <div class="example">
+                    <img src="assets/img/jjba-killerqueen-01.jpg" 
+                        alt="Dibujo JoJo Bizarre Adventure - Killer Queen">
+                    <img src="assets/img/jjba-killerqueen-02.jpg" 
+                        alt="Dibujo JoJo Bizarre Adventure - Killer Queen">
+                    <img src="assets/img/jjba-killerqueen-03.jpg" 
+                        alt="Dibujo JoJo Bizarre Adventure - Killer Queen">
+                    <img src="assets/img/jjba-killerqueen-04.jpg" 
+                        alt="Dibujo JoJo Bizarre Adventure - Killer Queen">
+                </div>
+            </article>
+            <p>
+                Para facilitar el uso de este tipo de elementos es necesario seguir algunos consejos que nos ahorraran futuros inconvenientes, especialmente al momento de subir los archivos al servidor. En la siguiente lista tendremos el detalle de cada una de estas <em>"reglas"</em>
+            </p>
+            <ul class="example">
+                <li>
+                    <strong>Evitar el uso de caracteres especiales</strong> como por ejemplor el espacio, ya que seria traducido al <em>conjunto %20</em> no pudiendo encontrar el archivo. <strong>Es conveniente utilizar guiones (-_)</strong> para evitar este problema.
+                </li>
+                <li>
+                    <strong>Utilizar nombres simples y descriptivos</strong> para encontrar los archivos con mayor facilidad y <strong>evitar los nombres automatizados</strong> en caso que debamos cargar manualmente los mismos.
+                </li>
+                <li>
+                    <strong>Implementar solamente minusculas</strong> para los nombres, ya que los servidores web son <em>caseSensitive</em> y distinguen entre mayusculas y minusculas. Ademas <strong>se reduce, de esta manera, el margen de error.</strong>
+                </li>
+            </ul>
+        </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        <p>&copy;2022 Todos los derechos reservados</p>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
