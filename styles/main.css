@@ -33,7 +33,22 @@
         list-style: none;
     }
 /* Cabecera */
-
+    #header{
+        display: grid;
+        align-content: center;
+        min-height: min(100vh, 640px);
+        padding: 1rem;
+        color: #eee;
+        background: #333 url('../assets/bg/osx-mavericks.jpg');
+        /* color image position/size repeat */
+        text-align: center;
+        font-size: min(calc(2vw + .8rem), 3rem);
+        /*  EXPLICACION:
+            min(a,b) devuelve el valor mas chico (calculado por el navegador)
+            calc(...) permite realizar una operacion entre medidas no compatibles
+         */
+        text-shadow: 0 0 min(calc(1vw + .4rem), 1.5rem) #333; /* x y blur color*/
+    }
 /* Navegacion */
     nav{
         position: sticky;
