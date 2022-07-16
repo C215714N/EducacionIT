@@ -93,11 +93,36 @@
         margin: auto;
         padding: 1rem;
     }
+    /* Diseño con flexbox */
     .flex{
         display: flex;
         flex-wrap: wrap;
         gap: .5rem;
     }
+    .col{
+        flex: 1 1 min(100%, 320px); /*grow shrink basis*/
+    }
+    /* Diseño con CSS Grid */
+    .grid{
+        display: grid;
+        gap: .5rem
+    }
+    .grid img{
+        width: 100%;
+        border-radius: .25rem;
+        border: .5rem solid #333;
+    }
+    .responsive{
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr));
+        /* EXPLICACION: 
+            repeat(times, size): repite x cantidad de veces un tamaño (cant. de columnas)
+                auto-fit: encaja la cantidad de columas dentro del espacio
+                auto-fill: rellena con la cantidad de columnas necesarias
+            minmax(min, max): establece el tamaño con un valor intermedio
+
+        */
+    }
+    /* Elemento tarjeta */
     .card{
         border-radius: .25rem;
         padding: 1.5rem 1rem;
@@ -111,9 +136,6 @@
         background: radial-gradient(circle at center, #3c6, #448);
         text-shadow: 0 0 .5rem #448;
         font-size: 1.5rem;
-    }
-    .col{
-        flex: 1 1 min(100%, 320px); /*grow shrink basis*/
     }
 /* Pie de Pagina */
 
