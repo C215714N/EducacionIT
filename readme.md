@@ -15,8 +15,6 @@ Aqui dejo una lista de algunos editores con los que pueden utilizar para trabaja
 * [Brackets](https://brackets.io) Editor desarrollado con Javascript, pensado para ser utilizado por desarrolladores frontend y diseñadores web.
 * [VIM](https://www.vim.org/) Editor de consola, solo para los desarrolladores hardcore, capaces de abandonar la GUI y concentrarse en el codigo.
 
-___
-
 ## Desarrollo frontend
 
 En el mundo del __desarrollo web__ existen varias entidades que funcionan como reguladores del lenguajes, asi como referentes a la hora de escribir codigo, estableciendo lo que se conoce como __buenas practicas__.
@@ -34,3 +32,16 @@ _ejemplo: `<p>parrafo</p>`_
 
 * __CSS (Cascading Styles Sheets)__ Las hojas de estilo en cascada se utilizan para definir el diseño de los elementos representados en la pagina web, utilizando selectores y reglas para esto. El diseño debe planificarse en funcion de la estructura, teniendo en cuenta que este aspecto de la pagina esta destinado para mejorar la Experiencia de usuario mediante la interfaz.
 _ejemplo: `p{color:blue;}`_
+
+___
+
+## Actividades
+
+En este apartado se podran realizar diferentes ejercicios relacionados con los temas dictados en clase, organizados por contenido y donde se pondra a prueba su experiencia en el mundo del desarrollo web.
+
+### Conceptos Basicos
+1. Realizar el tipo de lista que corresponda y ordenar, en caso que sea necesario, los siguientes elementos:
+* "edad media(3300 A.C. – 476 D.C)",  "edad antigua (476 – 1492)", "edad contemporanea (1789 – actualidad)", "edad moderna (1492 – 1789)"
+* "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
+* "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
+* "Roger Federer(6630pts)", "Novak Djokovic (12030pts)", "Rafael Nadal(9850pts)", "Daniil Mendeleev (8470pts)", "Dominic Thiem(9125pts)"
