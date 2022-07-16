@@ -88,7 +88,33 @@
         background-color: transparent;
     }
 /* Contenido */
-
+    .container{
+        max-width: 1140px;
+        margin: auto;
+        padding: 1rem;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+    .card{
+        border-radius: .25rem;
+        padding: 1.5rem 1rem;
+        background-color: #cec;
+        overflow: hidden;
+    }
+    .card h3{
+        margin: -1.5rem -1rem 1.5rem; /* top right bottom left*/
+        padding: 1rem;
+        color: #eee;
+        background: radial-gradient(circle at center, #3c6, #448);
+        text-shadow: 0 0 .5rem #448;
+        font-size: 1.5rem;
+    }
+    .col{
+        flex: 1 1 min(100%, 320px); /*grow shrink basis*/
+    }
 /* Pie de Pagina */
 
 /* Medium Devices - Tablets */
