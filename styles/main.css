@@ -18,11 +18,17 @@
     h2,
     h3,
     header p,
+    figure,
     .menu{
         margin: 0;
     }
+    /* Bordes */
+    iframe{
+        border: none;
+    }
     /* Rellenos */
-    .menu{
+    .menu,
+    figure{
         padding: 0;
     }
     /* Estilos */
@@ -136,6 +142,34 @@
         background: radial-gradient(circle at center, #3c6, #448);
         text-shadow: 0 0 .5rem #448;
         font-size: 1.5rem;
+    }
+    /* Elemento video */
+    video,
+    .aspect-ratio{
+        position: relative;
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+    /* Relaciones de Aspecto */
+    .ratio-4x3{
+        padding-top: 75%;
+    }
+    .ratio-16x9{
+        padding-top: 56.25%;
+    }
+    .ratio-16x10{
+        padding-top: 62.5%;
+    }
+    .aspect-ratio figcaption{
+        position: absolute;
+        top: 100%;
+    }
+    .cover{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
     }
 /* Pie de Pagina */
 
