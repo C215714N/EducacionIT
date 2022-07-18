@@ -14,7 +14,9 @@
         margin: 0;
     }
     /* Bordes */
-
+    iframe{
+        border: none;
+    }
     /* Rellenos */
     .menu{
         padding: 0;
@@ -28,7 +30,22 @@
         text-decoration: none;
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%,240px) 16px;
+        text-align: center;
+        background-image: url('../assets/bg/osx-monterrey-dark.jpg');
+        background-size: cover;
+        color: #333;
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #448;   
+    }
+    header{
+        color: #448;
+        border-bottom: 2px solid #448;
+    }
 /* Navegacion */
     .menu{
         background-color: #448; /*hex: RRGGBB 444488 dec: rgb(68,68,136)*/
@@ -87,6 +104,14 @@
         height: 64px;
         border-radius: 8px;
         background-color: #ccc;
+        background-size: 36px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 0 8px #333;
     }
     /* Iconos redes */
     .facebook{
