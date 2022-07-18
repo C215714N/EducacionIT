@@ -14,5 +14,5 @@
     );
 
 // Redireccionamiento
-    header('location: https://github.com');
+    header('location: ../about.html');
 ?>
