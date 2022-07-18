@@ -75,3 +75,38 @@
     #contact :focus{
         box-shadow: 0 0 8px #eee; /* -x+ -y+(inverso a ejes cartesianos) blur color */
     }
+    /* Redes sociales */
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .social a{
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        background-color: #ccc;
+    }
+    /* Iconos redes */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
