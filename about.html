@@ -72,7 +72,7 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="" method="POST">
+        <form id="contact" action="" method="">
             <h2>Dejanos tu Consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
@@ -86,8 +86,13 @@
                 name="email"
                 type="email"
                 minlength="8">
-            <input type="reset">
-            <input type="submit">
+            <label for="contact_subject">Seleccione el asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="frontend">FrontEnd (consultas sobre html css o js)</option>
+                <option value="backend">BackEnd (consultas sobre sql php python ruby perl o java)</option>
+                <option value="fullstack">FullStack (todas las anteriores)</option>
+            </select>
+            <button type="submit">Enviar</button>
         </form>
         <!-- Copyright -->
         <p>&copy;2022 Todos los derechos reservados</p>
