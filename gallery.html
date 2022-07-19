@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos Externos -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Estilos Internos -->
     <style>
         /* Selectores Generales */
         body{
@@ -52,12 +55,12 @@
         }
         /* Overflow y float */
         .float img{
-            float: left;
+            float: left; /*ubica el elemento al costado izquierdo - los elementos que se encuentren debajo fluyen alrededor*/
             width: 200px;
             margin-right: 16px;
         }
         .float p{
-            overflow: hidden;
+            overflow: hidden; /*impide el desbordamiento - que una etiqueta se salga del contenedor */
             margin: 24px;
             padding: 16px;
             color: #eee;
@@ -76,6 +79,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <!-- Ruta Ancla (refresh) -->
                 <li><a href="#">Galeria</a></li>
+                <!-- Ruta Relativa (Interna) -->
+                <li><a href="about.html">Acerca</a></li>
                 <!-- Ruta Ancla (Marcador) [#id] -->
                 <li><a href="#contact">Contacto</a></li>
             </UL>
