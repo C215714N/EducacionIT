@@ -50,6 +50,19 @@
         #contact{
             font-weight: bold;
         }
+        /* Overflow y float */
+        .float img{
+            float: left;
+            width: 200px;
+            margin-right: 16px;
+        }
+        .float p{
+            overflow: hidden;
+            margin: 24px;
+            padding: 16px;
+            color: #eee;
+            background-color: #142;
+        }
     </style>
 </head>
 <body>
@@ -107,6 +120,19 @@
                     <strong>Implementar solamente minusculas</strong> para los nombres, ya que los servidores web son <em>caseSensitive</em> y distinguen entre mayusculas y minusculas. Ademas <strong>se reduce, de esta manera, el margen de error.</strong>
                 </li>
             </ul>
+            <div class="float">
+                <h3>Imágenes y texto</h3>
+                <p>
+                    <img src="assets/bg/osx-big-sur-dark.jpg" alt="Fondo Big Sur Oscuro">
+
+                    Debido a que las imagenes son elementos de linea bloque, podemos colocarlas dentro de un parrafo sin que esto cause problemas con el estilo de los mismos. Tambien debemos tener en cuenta que si hacemos esto, para dar estilo a las imagenes debemos considerarlas textos, es decir, que para centrar una imagen tendremos que utilzar atributos como <em>text-align</em> en el contenedor con un valor <em>center</em>. Cabe destacar que el renglon por defecto tomara la altura de la imagen.
+                </p>
+                <p>
+                    <img src="assets/bg/osx-monterrey-dark.jpg" alt="Fondo Monterrey Oscuro">
+
+                    En HTML no es posible colocar una imagen dentro de un parrafo y que este se ubique por defecto a un costado del mismo. Para ello utilizaremos CSS, especificamente los atributos <em>float</em> para colocar un elemento a unos de los extremos de la pagina y luego el contenido que se encuentre debajo del mismo se dispondra al costado opuesto. Al realizar esta accion debemos tener en cuenta que el contenedor ya no considerara al elemento flotante como parte de su contenido. La solucion a esto es simplemente indicar que no se permita el desbordamiento.
+                </p>
+            </div>
         </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
