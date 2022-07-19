@@ -19,9 +19,37 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-
+    <header id="header" class="header">
+        <h1>Fundamentos Web</h1>
+        <p>html y css</p>
+    </header>
     <!-- Contenido -->
-
+    <main>
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten la interaccion (intercambio de datos) entre cliente y servidor, para poder implementarlos dentro de una pagina web debemos utilizar la etiqueta <strong>&lt;form></strong>, ademas de especificar algunas caracteristicas. Solamente se tomara en cuenta, al momento del envio, los contenidos que se encuentren dentro de la etiqueta; es decir, que todo elemento fuera del formulario no sera considerado parte del mismo.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    A la etiqueta mencionada anteriormente debemos especificarle por lo menos dos atributos, estos son <strong>action="..."</strong> que indica lo que debe ocurrir al momento de realizar el envio y <strong>method="..."</strong> que indica quien tiene la prioridad y como se deben procesar los datos, entre los valores mas comunes se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo que prioriza la respuesta del servidor, los datos se envian en texto plano, permanecen visibles en la barra de direcciones y <em>se utilizan principalmente para los buscadores.</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> Metodo que prioriza la seguridad de los datos del usuario, ya que los mismos se cifran entre el envio y la recepcion, se utilizan para formularios de <em>registro, acceso, contacto, etc...</em>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
     <!-- Pie de Pagina -->
 
 </body>
