@@ -70,6 +70,36 @@
         </article>
     </main>
     <!-- Pie de Pagina -->
-
+    <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                maxlength="50">
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8">
+            <label for="contact_subject">Seleccione su Consulta</label>
+            <select id="contact_subject" name="subject">
+                <option value="frontend"> Desarrollo FrontEnd (HTML CSS y JS)</option>
+                <option value="backend">Desarrollo BackEnd (SQL PHP PYTHON...)</option>
+                <option value="fullstack">Todos los anteriores</option>
+            </select>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="20"
+                maxlength="200"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
 </body>
 </html>
