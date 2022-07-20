@@ -19,7 +19,7 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header id="header">
+    <header id="header" class="header">
         <h1>Fundamentos Web</h1>
         <p>html y css</p>
     </header>
@@ -127,6 +127,34 @@
                             </strong> 
                         </figcaption>
                     </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin plugins?</h3>
+                </header>
+                <p>
+                    Como se menciona en la seccion anterior, antiguamente se necesitaban plugins como flash player para reproducir este tipo de contenido dentro de la pagina. En la actualidad los navegadores incluyen una API de reproduccion de contenido y para acceder a esta debemos utilizar las etiquetas <strong>&lt;audio> y &lt;video></strong>
+                </p>
+                <p>
+                    Si bien este tipo de contenido se reproduce de manera nativa, debemos tener en cuenta los formatos compatibles, que son <em>.mp3, .wav y .ogg</em> para audio y <em>.mp4, .webm y .ogv</em> para video; ademas si queremos que se muestren los controles en pantalla tendremos que utilizar el atributo <strong>controls</strong>.
+                </p>
+                <div class="example">
+                    <video src="assets/media/scar-tissue.webm" controls>
+                        <p>
+                            Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/scar-tissue.mp4">link</a>
+                        </p>
+                    </video>
+                    <video src="assets/media/wet-sand.webm" autoplay muted loop>
+                        <p>
+                            Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                        </p>
+                    </video>
+                    <audio src="assets/media/fortune-faded.webm" controls>
+                        <p>
+                            Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/fortune-faded.mp4">link</a>
+                        </p>
+                    </audio>
                 </div>
             </section>
         </article>
