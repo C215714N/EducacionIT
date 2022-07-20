@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <!-- Cabecera de Pagina: Contenido Introductorio -->
+    <header>
+        <h1>Fundamentos Web</h1>
+        <p>html y css</p>
+        <!-- Navegacion Principal: Links mas Importantes -->
+        <nav>
+            <ul>
+                <!-- Ruta Interna (Relativa) -->
+                <li><a href="index.html">Inicio</a></li>
+                <!-- Ruta Ancla (Marcador) [refresh] -->
+                <li><a href="#">Acerca</a></li>
+                <!-- Ruta Ancla (Marcador) [#id] -->
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido Principal: Relevante para el usuario -->
+    <main>
+        <!-- Seccion: Contenido Contextualizado (Depende del contexto) -->
+        <section>
+            <h2>Contenido Multimedia</h2>
+            <p>
+                Podemos encontrar este tipo de elementos en cualquier pagina web, cada uno se representa con su propia etiqueta y entre ellos encontramos <strong>imagenes, video y sonidos</strong>. En la actualidad la mayoria de los navegadores es compatible con multiples formatos que se detallan mas adelante.
+            </p>
+            <!-- Article: Contenido Independiente (Funciona fuera de la pagina) -->
+            <article>
+                <h3>Imágenes en HTML</h3>
+                <p>
+                    Para utilizar una imagen dentro de una pagina web debemos colocar la etiqueta <strong>&lt;img></strong> e indicar donde se encuentra con el atributo <em>src="..."</em>, ademas de indicar de que trata la misma con el atributo <em>alt="..."</em> que se visualizara cuando la imagen no este disponible.
+                </p>
+            </article>
+        </section>
+    </main>
+    <!-- Pie de Pagina: Contenido Complementario -->
+    <footer>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
