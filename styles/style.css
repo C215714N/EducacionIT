@@ -10,7 +10,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -33,11 +34,12 @@
     #header{
         padding: min(20%,240px) 16px;
         text-align: center;
-        background-image: url('../assets/bg/osx-monterrey-dark.jpg');
+        background-image: url('../assets/bg/osx-monterrey-light.jpg');
         background-size: cover;
         color: #333;
     }
     .header{
+        margin: -16px -16px 16px; /* top right bottom left */
         padding: 16px;
         color: #eee;
         background-color: #448;   
@@ -63,7 +65,18 @@
         padding: 8px;
     }
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: auto;
+        padding: 8px;
+    }
+    article{
+        margin: 24px 0;
+        border-radius: 4px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #999;
+        overflow: hidden;
+    }
 /* Pie de Pagina */
     #contact{
         max-width: 540px;
