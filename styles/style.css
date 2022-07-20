@@ -1,9 +1,48 @@
 /* Reglas Generales */
     @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Open+Sans');
+    *{
+        font-family: 'Raleway', 'calibri', sans-serif;
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Bordes */
 
-
+    /* Rellenos */
+    .menu{
+        padding: 0;
+    }
+    /* Estilos */
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+    .menu{
+        list-style: none;
+    }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+        background-color: #c34;
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #eee;
+        font-weight: bold;
+        text-shadow: 0 0 8px; /* -x+ -y+ blur color*/
+    }
 /* Cabecera */
 
 /* Contenido */
