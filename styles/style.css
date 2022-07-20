@@ -10,11 +10,14 @@
     h3,
     h4,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
-
+    iframe{
+        border: none;
+    }
     /* Rellenos */
     .menu{
         padding: 0;
@@ -54,6 +57,7 @@
         background-repeat: no-repeat;
     }
     .header{
+        margin: -16px -16px 16px; /* top right bottom left*/
         padding: 16px;
         color: #eee;
         background-color: #c34;
@@ -63,7 +67,18 @@
         border-bottom: 2px solid; /* width style color */
     }
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: auto;
+        padding: 8px;
+    }
+    article{
+        margin: 24px 0;
+        border-radius: 4px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #999;
+        overflow: hidden;
+    }
 /* Pie de Pagina */
 
     /* Formulario */
@@ -110,4 +125,9 @@
     }
     .github{
         background-image: url('../assets/icon/github.svg');
+    }
+    /* Mapa de Contacto */
+    #footer iframe{
+        width: 100%;
+        min-height: 240px;
     }
