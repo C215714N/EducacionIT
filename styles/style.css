@@ -77,6 +77,62 @@
         box-shadow: -2px 2px 8px #999;
         overflow: hidden;
     }
+    .container{
+        overflow: auto;
+    }
+    /* Tablas HTML */
+    table{
+        width: 100%;
+        margin: 8px auto;
+    }
+    table caption{
+        border-radius: 4px 4px 0 0;
+    }
+    th,
+    td{
+        width: 200px;
+    }
+    table :is(
+        caption,
+        th,
+        td
+    ){
+        padding: 8px 16px;
+    }
+    /* Tabla clasica */
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic :is(
+        caption, 
+        th, 
+        td
+    ){
+        border: 2px solid #448;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    /* Tabla moderna */
+    .modern,
+    .modern :is(
+        caption,
+        tr,
+        td
+    ){
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5);
+    }
+    /* Tabla Semantica */
+    .semantyc thead{
+        background-color: #36c;
+    }
+    .semantyc tbody{
+        background-color: #284;
+    }
+    .semantyc tfoot{
+        background-color: #c34;
+    }
 /* Pie de Pagina */
     #contact{
         max-width: 540px;
