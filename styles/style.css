@@ -45,7 +45,19 @@
         text-shadow: 0 0 8px; /* -x+ -y+ blur color*/
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 280px) 16px; /* top right bottom left */
+        text-align: center;
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #124;
+    }
+    header{
+        color: #248;
+        border-bottom: 2px solid; /* width style color */
+    }
 /* Contenido */
 
 /* Pie de Pagina */
@@ -56,4 +68,28 @@
         flex-direction: column;
         max-width: 540px;
         margin: auto;
+        border-radius: 4px;
+        padding: 16px 24px;
+        color: #eee;
+        background-color: #248;
+    }
+    #contact label{
+        margin-top: 8px;
+    }
+    #contact input,
+    #contact select,
+    #contact textarea,
+    #contact button{
+        margin: 0;
+        outline: none;
+        border: 1px solid #eee;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    #contact :focus{
+        box-shadow: 0 0 8px #eee;
+    }
+    #contact button{
+        margin-top: 8px;
+        margin-left: auto;
     }
