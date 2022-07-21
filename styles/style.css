@@ -1,8 +1,32 @@
 /* Reglas Generales */
     @import url('https://fonts.googleapis.com/css2?family=Raleway');
-
-    body{
+    *{
         font-family: 'Raleway', 'calibri', 'segoe ui', sans-serif;
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Bordes */
+
+    /* Rellenos */
+    .menu{
+        padding: 0;
+    }
+    /* Estilos */
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+    .menu,
+    .example{
+        list-style: none;
     }
 /* Navegacion */
 
