@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="#">Acerca</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera -->
+    <header id="header" class="header">
+        <h1>Fundamentos Web</h1>
+        <p>html y css</p>
+    </header>
+    <!-- Contenido -->
+    <main>
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten la interaccion (intercambio de datos) entre el cliente y el servidor, para utilizarlos dentro de la pagina debemos colocar la etiqueta <strong>&lt;form></strong> y en su interior deben encontrarse los elementos que formen parte del mismo. Al momento de realizar el envio, no se tomara en cuenta cualquier elemento que se encuentre por fuera.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    A la etiqueta mencionada anteriormente debemos colocarle por lo menos 2 atributos, <em>action="..."</em> par indicar que sucede al enviar el formulario y <em>method="..."</em> para establecer quien tiene la prioridad al momento de realizar el envio, los valores mas comunes para este atributo son:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> metodo cuya prioridad radica en la respuesta del servidor, los datos permanecen visibles en la barra de direcciones y <em>se utiliza principalmente para buscadores.</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> metodo cuya prioridad se encuentra en la seguridad de los datos del usuario, ya que cifra los datos antes y despues del envio, <em>se utiliza para formularios de registro, acceso, consulta web, etc...</em>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <!-- Pie de Pagina -->
+</body>
+</html>
