@@ -5,6 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'segoe ui', 'calibri', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee;
+            background-color: #8c4; /* #RRGGBB rgb(136, 204, 68) */
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav ul{
+            padding: 0;
+            list-style: none;
+            background-color: #462;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :pseudoclass (caracteristica o instancia de un elemento) */
+        nav li:hover{
+            background-color: #231;
+        }
+        /* .class */
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
