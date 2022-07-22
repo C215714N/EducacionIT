@@ -48,6 +48,65 @@
                 <li class="border border-success rounded-pill px-5">border: 1px solid #284; border-radius: 1rem; </li>
             </ul>
         </section>
+        <section>
+            <h2>Sistema de Grillas Responsive</h2>
+            <p>
+                Como se menciona al principio de este contenido, una de las caracteristicas principales de Bootstrap es su grilla flexible, que consiste en dividir un contenedor en 12 columnas utilizando porcentajes. Para indicar el tamaño que debe ocupar una etiqueta debemos colocar la clase col seguido de la cantidad de columnas a ocupar; el valor porcentual de la misma corresponde al siguiente calculo <em>col-n: percentage(n/cols)</em> donde col es 12 y n el numero de columas.
+            </p>
+            <h3>Breakpoints</h3>
+            <p>
+                Al sistema de grillas, asi como a las demas clases, se les agrega por tamaño de pantalla un nombre que indica el punto de quiebre de la pantalla, facilitando aun mas el uso de esta herramienta, ya que practicamente podemos especificar los estilos necesarios simplemente indicando las clases segun el tamaño de la pantalla. Algunas caracteristicas de los breakpoints son las siguientes:
+            </p>
+            <table class="table table-striped">
+                <caption>breakpoints</caption>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>device width</th>
+                        <th>max-width</th>
+                        <th>device</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xs</td>
+                        <td>&lt;576px</td>
+                        <td>100%</td>
+                        <td>smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td>>=576px &lt;768px</td>
+                        <td>540px</td>
+                        <td>smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>>=768px &lt;992px</td>
+                        <td>720px</td>
+                        <td>tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>>=992px &lt;1200px</td>
+                        <td>960px</td>
+                        <td>laptops</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>>=1200px &lt;1400px</td>
+                        <td>1140px</td>
+                        <td>HD desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>>=1400px</td>
+                        <td>1320px</td>
+                        <td>Smart TV</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
     <!-- Pie de Pagina -->
 
