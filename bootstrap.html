@@ -41,7 +41,7 @@
             <p>
                 Consisten en clases que permiten al desarrollador establecer atributos de manera sencilla, para utilizarlos debemos colocar la letra o abreviatura del atributo a implementar seguido de un valor que pueder numerico o predefinido. Debido a que en las ultimas versiones se enfoca en el diseño a nivel global, para atributos que implique direccion como izquierda o derecha debemo utilizar valores como start y end, segun el tipo de escritura implementada.
             </p>
-            <ul class="list-unstyled d-flex gap-3">
+            <ul class="list-unstyled d-flex flex-wrap gap-3">
                 <li class="border border-dark p-2">border: 1px solid #333; padding: .5rem; </li>
                 <li class="border-bottom border-danger">border-bottom: 1px solid #c33;</li>
                 <li class="my-3 border border-primary rounded px-4">margin: 1rem 0;border: 1px solid #36c border-radius: 4px;</li>
@@ -106,10 +106,52 @@
                     </tr>
                 </tbody>
             </table>
+            <h3>Ejemplo de Grilla</h3>
+            <ul class="list-unstyled | row">
+                <li class="border col-md-6 col-xl-4">col-md-6 col-xl-4</li>
+                <li class="border col-md-6 col-xl-4">col-md-6 col-xl-4</li>
+                <li class="border col-xl-4">col-xl-4</li>
+                <li class="border col-lg-6">col-lg-6</li>
+                <li class="border col-md-6">col-md-6</li>
+                <li class="border col-md-6 col-lg">col-md-6 col-lg</li>
+            </ul>
+            <ul class="list-unstyled | row">
+                <li class="border col offset-lg-6">offset-lg-6</li>
+                <li class="border col offset-md-4">offset-md-4</li>
+                <li class="border col offset-xl-3">offset-xl-3</li>
+            </ul>
         </section>
     </main>
     <!-- Pie de Pagina -->
-
+    <footer id="footer">
+        <div class="text-center">
+            <a class="btn btn-outline-primary" 
+                href="https://facebook.com" 
+                title="Seguinos en facebook"
+                target="_blank">
+                facebook
+            </a>
+            <a class="btn btn-outline-danger" 
+                href="https://instagram.com" 
+                title="Seguinos en Instagram"
+                target="_blank">
+                instagram
+            </a>
+            <a class="btn btn-outline-success" 
+                href="https://api.whatsapp.com/send?phone=1103034567&text=buenas necesito un presupuesto" 
+                title="Contactanos por whatsapp"
+                target="_blank">
+                whatsapp
+            </a>
+            <a class="btn btn-outline-dark"
+                href="https://github.com/c215714n/EducacionIT/tree/rwd-v19"
+                title="Accede al repositorio de github"
+                target="_blank">
+                Github
+            </a>
+        </div>
+        <p>&copy;2022 Todos los derechos reservados</p>
+    </footer>
     <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
