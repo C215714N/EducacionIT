@@ -79,6 +79,48 @@
         box-shadow: -2px 2px 8px #999;
         overflow: hidden;
     }
+    .container{
+        overflow: auto;
+    }
+    /* Estilos de Tablas */
+    table{
+        margin: 16px auto;
+        width: 100%;
+    }
+    th,
+    td,
+    table caption{
+        padding: 8px 16px; /*top right bottom left*/
+    }
+    table caption{
+        border-radius: 4px 4px 0 0 ; /* tl tr br bl */
+    }
+    .classic,
+    .classic caption,
+    .classic th,
+    .classic td{
+        border-collapse: collapse;
+        border: 2px solid #c34; /*width style color*/
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5);
+    }
+    .semantic thead{
+        background-color: #f46;
+    }
+    .semantic tbody{
+        background-color: #284;
+    }
+    .semantic tfoot{
+        background-color: #36c;
+    }
 /* Pie de Pagina */
 
     /* Formulario */
