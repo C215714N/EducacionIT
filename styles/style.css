@@ -11,6 +11,7 @@
     h4,
     header p,
     .menu,
+    .example figure,
     #header{
         margin: 0;
     }
@@ -27,7 +28,8 @@
     footer a{
         text-decoration: none;
     }
-    .menu{
+    .menu,
+    .example{
         list-style: none;
     }
 /* Navegacion */
@@ -79,8 +81,24 @@
         box-shadow: -2px 2px 8px #999;
         overflow: hidden;
     }
+    .example{
+        max-height: 480px;
+        margin: 24px 0;
+        border-left: 4px solid #c34;
+        padding: 16px;
+        background-color: #ccc;
+        line-height: 24px;
+        overflow:auto;
+    }
     .container{
         overflow: auto;
+    }
+    video,
+    iframe{
+        width: 100%;
+    }
+    iframe{
+        min-height: 240px;
     }
     /* Estilos de Tablas */
     table{
