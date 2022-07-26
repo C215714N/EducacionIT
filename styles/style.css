@@ -10,7 +10,8 @@
     h3,
     h4,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -50,8 +51,13 @@
     #header{
         padding: min(20%, 280px) 16px; /* top right bottom left */
         text-align: center;
+        background-image: url('../assets/bg/osx-mojave-night.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .header{
+        margin: -16px -16px 16px;
         padding: 16px;
         color: #eee;
         background-color: #124;
@@ -62,7 +68,16 @@
     }
 /* Contenido */
     main{
+        max-width: 960px;
+        margin: auto;
         padding: 8px;
+    }
+    article{
+        margin: 24px 0;
+        border-radius: 8px;
+        padding: 16px;
+        overflow: hidden;
+        box-shadow: -2px 2px 8px #ccc;
     }
 /* Pie de Pagina */
 
