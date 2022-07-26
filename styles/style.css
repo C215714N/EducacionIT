@@ -14,11 +14,11 @@
         margin: 0;
     }
     /* Bordes */
-
-    /* Rellenos */
-    .menu{
-        padding: 0;
+    iframe{
+        border: none;
     }
+    /* Rellenos */
+
     /* Estilos */
     nav a,
     footer a{
@@ -61,7 +61,9 @@
         border-bottom: 2px solid; /* width style color */
     }
 /* Contenido */
-
+    main{
+        padding: 8px;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
@@ -99,6 +101,7 @@
     .social{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap-reverse;
         gap: 8px;
         padding: 16px;
     }
@@ -107,6 +110,14 @@
         height: 64px;
         border-radius: 4px;
         background-color: #ccc;
+        background-position: center;
+        background-size: 36px;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 2px 8px #333; /* -x+ -y+ blur color */
     }
     /* Iconos redes sociales */
     .facebook{
@@ -129,4 +140,10 @@
     }
     .youtube{
         background-image: url('../assets/icon/youtube.svg');
+    }
+    /* Mapa de Contacto */
+    #footer iframe{
+        width: 100%; /* relativo al elemento padre */
+        min-height: 320px; /* unidad absoluta */
+        
     }
