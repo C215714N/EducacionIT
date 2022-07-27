@@ -185,6 +185,93 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Termino que corresponde a los elementos graficos y audiovisuales que podemos incorporar dentro de una pagina web. Si bien en los comienzos de internet eran poco frecuentes, con el pasar del tiempo se han ido incorporando en mayor medida, permitiendo reducir la cantidad de textos en las paginas. Ademas los navegadores actuales incluyen una API de reproduccion de contenido.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Contenido Embebido?</h3>
+                </header>
+                <p>
+                    Recibe ese nombre una categoria de la web que indica que dicho contenido fue compartido con consentimiento del publicador original. Normalmente se utiliza la etiqueta <strong>&lt;iframe></strong> para cargar dicho material de manera asincrona, es decir, que no afecta a los tiempos de carga de mi sitio.
+                </p>
+                <div class="example">
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="John Frusciante - Carvel" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Video con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/7uax-RX8fAA" 
+                            title="Robert De Niro, El Ascenso Y La Caida | #TeLoResumo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>    
+                        <iframe 
+                            src="//www.slideshare.net/slideshow/embed_code/key/N99OEOmKr35PsJ" 
+                            scrolling="no"
+                            allowfullscreen> 
+                        </iframe> 
+                        <figcaption> 
+                            <strong> 
+                                <a href="//www.slideshare.net/HatemMahmoud/html5-7716606" title="HTML5" target="_blank">
+                                    HTML5
+                                </a> 
+                            </strong> from <strong>
+                                <a href="//www.slideshare.net/HatemMahmoud" target="_blank">
+                                    Hatem Mahmoud</a>
+                            </strong> 
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    Como se <em> hace mencion al principio</em>, antes era necesario instalar algun plugin o complemento en el navegador para reproducir este tipo de elementos. Las etiquetas que permiten acceder a la API de reproduccion son <strong>&lt;video> y &lt;audio></strong> y los formatos compatibles con estas son <em>.mp4, .ogv, .webm</em> y <em>.mp3, .ogg, .wav</em> respectivamente.
+                </p>
+                <div class="example">
+                    <figure>
+                        <video src="assets/media/scar-tissue.webm" controls>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/scar-tissue.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>RHCP - Scar Tissue (1999)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" autoplay muted loop controls>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>RHCP - Wet Sand (2006)</figcaption>
+                    </figure>
+                    <figure>
+                        <audio src="assets/media/fortune-faded.webm" controls>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/fortune-faded.mp4">link</a>
+                            </p>
+                        </audio>
+                        <figcaption>RHCP - Fortune Faded (2003)</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
