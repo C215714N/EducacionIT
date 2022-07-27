@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Acerca</a></li>
+            <li><a href="#" class="active">Detalle</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera -->
+    <header id="header" class="header">
+        <h1>Fundamentos Web</h1>
+        <p>html y css</p>
+    </header>
+    <!-- Contenido -->
+    <main>
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el <strong> intercambio de datos entre cliente y servidor</strong>, para utilizarlos dentro de una pagina web debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma, todo elemento que deba ser contemplado al momento de realizar el envio del mismo. Cualquier etiqueta que no se encuentre dentro del formulario, no sera tomada en cuenta para realizar el envio.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    A la etiqueta <em>mencionada anteriormente</em> debemos especificarle 2 atributos, <strong>action="..."</strong> que indica lo que debe ocurrir tras enviar el formularios; y <strong>method="..."</strong> que indica quien tiene la prioridad al realizar el envio y los valores mas utilizados son:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo rapido debido a que prioriza la respuesta del servidor, los datos permanecen visibles en la barra de direcciones y <em>se utiliza principalmente para buscadores.</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> Metodo seguro que prioriza la seguridad de los datos del usuario, ya que se cifran durante el envio. <em>Se utiliza para formularios de Registro, Acceso, Contacto, etc...</em>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como estan compuestos?</h3>
+                </header>
+                <p>
+                    Dentro de un formulario encontraremos diferentes elementos, aunque algunos son exclusivos de estas herramientas, entres se encuentran <strong>las etiquetas (LABEL)</strong> que funcionan a modo de rotulos indicando al usuario lo que debe seleccionar o completar; y <strong>los campos (INPUT / TEXTAREA / SELECT)</strong> que permiten al usuario ingresar o seleccionar los datos solicitados, entre los atributos mas comunes de estas etiquetas se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> indica el grupo de pertenencia del campo, necesario para capturar los datos e identificar los datos.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> corresponde al dato propiamente dicho y debe estar si el usuario solamente selecciona una opcion.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> indica como podemos completar el campo corresponde, que valores podemos utilizar.
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <!-- Pie de Pagina -->
+</body>
+</html>
