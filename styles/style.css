@@ -133,6 +133,37 @@
     .semantyc tfoot{
         background-color: #c34;
     }
+    /* Contenido Multimedia */
+    figure{
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+    iframe{
+        min-height: 360px;
+        /* aspect-ratio 
+            valor       ancho       alto        ejemplo
+            4:3         1.33(h)     75%(w)      720x540
+            16:9        1.78(h)     56.25%(w)   720x405
+            16:10       1.6(h)      62.5%(w)    720x450
+        */
+    }
+    video,
+    iframe{
+        width: 100%;
+        max-width: 640px;
+        object-fit: cover;
+        margin: auto;
+    }
+    /* Ejemplos */
+    .example{
+        max-height: 420px;
+        overflow: auto;
+        margin: 16px 0;
+        border-left: 4px solid #448;
+        padding: 16px;
+        background-color: #eee;
+    }
 /* Pie de Pagina */
     #contact{
         max-width: 540px;
@@ -205,7 +236,8 @@
         background-image: url('../assets/icon/youtube.svg');
     }
     /* Mapa de contacto */
-    .map{
+    iframe.map{
+        max-width: none;
         width: 100%;
         min-height: 320px;
     }
