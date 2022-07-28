@@ -72,6 +72,8 @@ header{
         background-color: #fe8;
     }
     #contact label{
+        height: 0;
+        overflow: hidden;
         margin-top: 8px;
     }
     input,
@@ -98,4 +100,47 @@ header{
         color: #fe8;
         background-color: #333;
     }
-    
+    /* Redes sociales */
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: 8px;
+        padding: 16px;
+    }
+    .social a{
+        width: 64px;
+        height: 64px;
+        border-radius: 4px;
+        background-color: #ccc;
+        background-position: center;
+        background-size: 36px;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 2px 8px #333;
+    }
+    /* Iconos redes sociales */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
