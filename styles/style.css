@@ -2,5 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway');
 
 *{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'segoe ui', sans-serif;
+}
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Bordes */
+
+    /* Rellenos */
+
+    /* Estilos */
+    .menu,
+    .example{
+        list-style: none;
+    }
+    nav a,
+    .social a{
+        text-decoration: none;
+    }
+/* Navegacion */
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #fe8;
+}
+.menu a{
+    color: #666;
+}
+.menu a.active,
+.menu a:hover{
+    color: #333;
+    text-shadow: 0 0 4px #c63; /* -x+ -y+ blur color */
 }
