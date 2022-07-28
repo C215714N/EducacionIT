@@ -84,7 +84,7 @@
                 </p>
                 <div class="example">
                     <figure>
-                        <iframe 
+                        <iframe class="ratio-16x9"
                             src="https://www.youtube.com/embed/eg2ijwwVWAA" 
                             title="Look On"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -93,7 +93,7 @@
                         <figcaption>Video con Copyright</figcaption>
                     </figure>
                     <figure>
-                        <iframe 
+                        <iframe class="ratio-16x9"
                             src="https://www.youtube.com/embed/7uax-RX8fAA" 
                             title="Robert De Niro, El Ascenso Y La Caida | #TeLoResumo"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -102,7 +102,7 @@
                         <figcaption>Licencia Creative Commons</figcaption>
                     </figure>
                     <figure>
-                        <iframe 
+                        <iframe class="ratio-4x3" 
                         src="//www.slideshare.net/slideshow/embed_code/key/N99OEOmKr35PsJ"
                         scrolling="no"
                         allowfullscreen> 
@@ -115,6 +115,40 @@
                         </figcaption>
                     </figure>
                 </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia Sin Plugins?</h3>
+                </header>
+                <p>
+                    Como se <em>menciona anteriormente</em>, hoy en dia no es necesario instalar ningun plugin o complemento en el navegador, ya que estos incorporan una API de reproduccion de contenido. Para acceder a estas debemos utilizar las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg</em> y <em>.mp4, .webm, .ogv</em> respectivamente.
+                </p>
+                <div class="example">
+                    <figure>
+                        <video src="assets/media/scar-tissue.webm" controls>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/scar-tissue.mp4">link</a>
+                            </p>
+                        </video>
+                        <figure>RHCP - Scar Tissue (1999)</figure>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figure>RHCP - Wet Sand (2006)</figure>
+                    </figure>
+                </div>
+                <figure>
+                    <audio src="assets/media/fortune-faded.webm" controls>
+                        <p>
+                            Lo sentimos pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/fortune-faded.mp4">link</a>
+                        </p>
+                    </audio>
+                    <figure>RHCP - Fortune Faded (2003)</figure>
+                </figure>
             </section>
         </article>
     </main>

@@ -79,6 +79,34 @@
         overflow: hidden;
         box-shadow: -2px 2px 8px #ccc;
     }
+    .example{
+        max-height: 420px;
+        overflow: auto;
+        margin: 16px 0;
+        border-left: 4px solid #248;
+        padding: 16px;
+        line-height: 24px;
+        background-color: #eee;
+    }
+    iframe,
+    video{
+        width: min(100%, 640px);
+    }
+    .example figure{
+        text-align: center;
+    }
+    /* 
+        aspect-ratio    ancho       alto
+        4:3             1.33(h)     75%(w)
+        16:9            1.78(h)     56.25%(w)
+        16:10           1.6(h)      62.5%(w)
+    */
+    .ratio-4x3{
+        min-height: 480px;
+    }
+    .ratio-16x9{
+        min-height: 360px;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
