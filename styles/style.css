@@ -43,7 +43,19 @@
     text-shadow: 0 0 4px #c63; /* -x+ -y+ blur color */
 }
 /* Cabecera */
-
+#header{
+    padding: min(20%,280px) 16px;
+    text-align: center;
+}
+.header{
+    padding: 16px;
+    color: #eee;
+    background-color: #c63;
+}
+header{
+    color: #c63;
+    border-bottom: 2px solid; /* width style color */
+}
 /* Contenido */
 
 /* Pie de Pagina */
@@ -86,3 +98,4 @@
         color: #fe8;
         background-color: #333;
     }
+    
