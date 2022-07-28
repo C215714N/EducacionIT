@@ -33,6 +33,27 @@ _ejemplo: `<p>parrafo</p>`_
 * __CSS (Cascading Styles Sheets)__ Las hojas de estilo en cascada se utilizan para definir el diseño de los elementos representados en la pagina web, utilizando selectores y reglas para esto. El diseño debe planificarse en funcion de la estructura, teniendo en cuenta que este aspecto de la pagina esta destinado para mejorar la Experiencia de usuario mediante la interfaz.
 _ejemplo: `p{color:blue;}`_
 
+
+## Estructura semantica
+Las paginas web no solamente deben ser llamativas para el usuario y deben contar con una interfaz facil de utilizar, tambien deben poseer una estructura correctamente definida.
+
+Por esta razon en la version 5 se agregaron etiquetas que indican el funcionamiento de cada parte de la pagina, de manera tal que le resulte mas facil al motor de busquedar realizar el indexado de los contenidos de nuestro sitio.
+
+* **header** la cabecera indica el contenido introductorio, como encabezados.
+* **nav** la navegacion debe poseer los links mas importantes de nuestro sitio.
+* **main** el contenido principal puede indicar la informacion mas relevante para el usuario o el contenido mas relevante de la pagina.
+* **article** un articulo corresponde al contenido independiente dentro de la pagina, que funciona tanto dentro como fuera de la misma.
+* **section** una seccion corresponde al contenido contextualizado, que depende de otros elementos dentro para su correcta comprension.
+* **aside** un contenido lateral es aquel que se relaciona tangencialmente con los elementos hermanos, se utiliza  para sugerencias o publicidad
+* **footer** el pie de pagina es complementario a lo expuesto anteriormente, contiene las redes sociales, mapas del sitio y formularios/datos de contacto.
+
+## Hojas de Estilo
+Una vez definida la estructura de la pagina debemos pasar implementar el diseño de la misma, indicando a que elementos se les deben aplicar los cambios (selectores) y cuales seran los mismos, indicando el atributo a modificar, seguido de su valor (reglas)
+
+> * *_estilo interno_* Es aquel que se utiliza dentro de la misma pagina
+>	* *inline*: Es el mas facil de aplicar y tiene mayor prioridad, ya que debemos indicar a cada etiqueta sus cambios _e.g: `<div style="color: darkblue;">`_ siendo poco practico y lento.
+>	* *inblock*: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
+> * *_estilo externo_* Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
 ___
 
 ## Actividades
@@ -45,3 +66,14 @@ En este apartado se podran realizar diferentes ejercicios relacionados con los t
 * "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
 * "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
 * "Roger Federer(6630pts)", "Novak Djokovic (12030pts)", "Rafael Nadal(9850pts)", "Daniil Mendeleev (8470pts)", "Dominic Thiem(9125pts)"
+
+
+### Estructura de un sitio
+1. Crear una sitio web de al menos 3 paginas utilizando la estructura semantica.
+2. En cada pagina debe haber un menu de navegacion permita desplazarnos entre las mismas, como por ejemplo:
+  * [inicio](index.html)
+  * [nosotros](about.html)
+  * [galeria](gallery.html)
+3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion
+4. Agregar hipervinculos de las redes sociales a eleccion e informacion de copyright
+5. Colocar contenido dentro de las diferentes paginas a eleccion.
