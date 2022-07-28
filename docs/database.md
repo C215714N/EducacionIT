@@ -22,7 +22,7 @@ Database Engine (MySQL)(
 		MySQL Workbench (8.1)
 		Oracle SQL
 	Comunidad desarrolla MariaDB (10.4)
-)
+);
 
 SQL(Strutured Query Language)(
 	DDL (Data Definition Language)
@@ -40,4 +40,4 @@ SQL(Strutured Query Language)(
 		GRANT 		otorgar permisos a usuarios
 		REVOKE 		quitar permisos a usuarios
 		FLUSH PRIVILEGES 	refrescar permisos
-)
+);
