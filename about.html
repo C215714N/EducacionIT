@@ -48,6 +48,76 @@
                 </ul>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Corresponde a todo elemento grafico y audiovisual que podemos incorporar dentro de una pagina web. Antiguamente eran poco frecuentes debido a las limitaciones de ancho de banda, pero actualmente se utilizan para reemplazar textos y realizar demostraciones, ademas que se pueden reproducir de forma nativa.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Contenido Embebido?</h3>
+                </header>
+                <p>
+                    Es una categoria de la web que indica que dicho material fue utilizado con autorizacion del publicador o autor original. Normalmente se incorporan estos elemento mediante la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido.
+                </p>
+                <div class="example">
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="John Frusciante - Carvel"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                        <figcaption>Video con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/7uax-RX8fAA" 
+                            title="Robert De Niro, El Ascenso Y La Caida | #TeLoResumo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="//www.slideshare.net/slideshow/embed_code/key/N99OEOmKr35PsJ"
+                            allowfullscreen> 
+                        </iframe> 
+                        <figcaption>
+                            <a href="//www.slideshare.net/HatemMahmoud/html5-7716606" target="_blank">HTML5</a> por <a href="//www.slideshare.net/HatemMahmoud" target="_blank">Hatem Mahmoud</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin plugins?</h3>
+                </header>
+                <p>
+                    Como se <em>hace mencion en el apartado anterior</em> hoy en dia este tipo de contenido se puede reproducir gracias a la API de reproduccion que poseen los navegadores actuales. Para acceder a la misma solamente debemos utilizar las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .ogg, .wav</em> y <em>.mp4, .ogv, .webm</em> respectivamente.
+                </p>
+                <div class="example">
+                    <figure>
+                        <video src="assets/media/scar-tissue.webm" controls>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con el elemento, podes descargar el contenido desde el siguiente <a href="assets/media/scar-tissue.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Scar Tissue (Californication 1999) - RHCP</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos pero tu navegador NO es compatible con el elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand (Stadium Arcadium 2006) - RHCP</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
@@ -110,6 +180,12 @@
                 target="_blank">
             </a>
         </div>
+        <!-- Mapa de Contacto -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678323!2d-58.37812478523344!3d-34.60238856493399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1659114349837!5m2!1ses-419!2sar" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </footer>
 </body>
 </html>
