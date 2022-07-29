@@ -15,7 +15,10 @@
         margin: 0;
     }
     /* Bordes */
-
+    iframe{
+        border: none;
+        min-height: 280px;
+    }
     /* Rellenos */
 
     /* Estilos */
@@ -69,7 +72,19 @@ header{
         margin: 24px 0;
         border-radius: 4px;
         padding: 16px;
-        box-shadow: -2px 2px 8px #ccc;
+        box-shadow: -2px 2px 8px #999;
+    }
+    .example{
+        overflow: auto;
+        max-height: 420px;
+        margin: 16px 0;
+        border-left: 4px solid #c63;
+        padding: 16px;
+        background-color: #eee;
+    }
+    iframe,
+    video{
+        width: 100%;
     }
 /* Pie de Pagina */
 
