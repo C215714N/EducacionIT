@@ -10,7 +10,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -48,6 +49,7 @@
     text-align: center;
 }
 .header{
+    margin: -16px -16px 16px;
     padding: 16px;
     color: #eee;
     background-color: #c63;
@@ -57,7 +59,18 @@ header{
     border-bottom: 2px solid; /* width style color */
 }
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: 24px auto;
+        padding: 8px;
+    }
+    article{
+        overflow: hidden;
+        margin: 24px 0;
+        border-radius: 4px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #ccc;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
