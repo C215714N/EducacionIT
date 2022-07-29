@@ -28,7 +28,38 @@
     </header>
     <!-- Contenido: Relevante para el usuario -->
     <main>
-
+        <!-- Contenido Contextualizado: solo funciona en la pagina -->
+        <section>
+            <h2>Contenido Multimedia</h2>
+            <p>
+                Este tipo de elementos es muy frecuente en la actualidad, ya que permiten transmitir de manera grafica diferentes mensajes en nuestro sitio. Se utilizan para fondos, presentacion de contenido y por asociacion para simplificar el uso del espacio.
+            </p>
+            <!-- Contenido Independiente: funciona fuera de la pagina -->
+            <article>
+                <h3>Imagenes</h3>
+                <p>
+                    Elementos graficos que se pueden utilizar dentro de una pagina web mediante la etiqueta <strong>&lt;img></strong>, la cual posee los atributos <em>src="..."</em> para indicar donde se encuentra el archivo y <em>alt="..."</em> el cual corresponde al texto alternativo que aparece cuando la imagen no se puede visualizar.
+                </p>
+                <div class="example">
+                    <img src="assets/img/jjba-thefool-01.jpg" alt="Dibujo JoJo Bizarre Adventure - The Fool">
+                    <img src="assets/img/jjba-thefool-02.jpg" alt="Dibujo JoJo Bizarre Adventure - The Fool">
+                    <img src="assets/img/jjba-thefool-03.jpg" alt="Dibujo JoJo Bizarre Adventure - The Fool">
+                    <img src="assets/img/jjba-thefool-04.jpg" alt="Dibujo JoJo Bizarre Adventure - The Fool">
+                </div>
+            </article>
+            <h3>Reglas de Nomenclatura</h3>
+            <ul>
+                <li>
+                    <strong>Evitar el uso de caracteres especiales</strong> como el espacio, ya que se traduce como %20 y no es lo mismo "foto 01.jpg" que "foto%2001.jpg". Se aconseja <strong>utilizar guiones (_-)</strong> en su lugar.
+                </li>
+                <li>
+                    <strong>Utilizar nombres descriptivos</strong> como "background.jpg" o "perrito_jugando.jpg" para facilitar la implementacion de los archivos. Se aconseja <strong>evitar nombres automatizados</strong>
+                </li>
+                <li>
+                    <strong>Nombrar los archivos utilizando solamente minusculas</strong> ya que los servidores son <em>caseSensitive</em> y distinguen entre mayusculas y minusculas. De esta manera <strong>reducimos el margen de error.</strong>
+                </li>   
+            </ul>
+        </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
