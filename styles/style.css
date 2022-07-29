@@ -4,15 +4,44 @@
         font-family: 'Raleway', 'segoe ui', sans-serif;
     }
     /* Margenes */
-
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
     /* Bordes */
 
     /* Rellenos */
 
     /* Estilos */
-
+    .menu,
+    .example{
+        list-style: none;
+    }
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px;
+        background-color: #923;
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 8px; /*-x+ -y+ blur color*/
+    }
 /* Cabecera */
 
 /* Contenido */
@@ -23,6 +52,41 @@
     #contact{
         display: flex;
         flex-direction: column;
+        gap: 4px;
         max-width: 540px;
         margin: auto;
+        border-radius: 8px;
+        padding: 16px 24px;
+        color: #fee;
+        text-shadow: 0 0 4px #333;
+        box-shadow: -8px 8px 8px rgba(51,17,31,.3);
+        background-color: rgba(149,34,51,.8);
+    }
+    #contact label{
+        margin-top: 8px;
+    }
+    input,
+    textarea,
+    select,
+    button{
+        border: 1px solid #eee;
+        outline: none;
+        padding: 8px 16px; /* top right bottom left*/
+        font-size: 16px;
+    }
+    #contact textarea{
+        min-height: 80px;
+        resize: none;
+    }
+    #contact button{
+        margin-left: auto;
+        color: #eee;
+        background-color: transparent;
+    }
+    #contact button:hover{
+        color: #623;
+        background-color: #eee;
+    }
+    #contact :focus{
+        box-shadow: 0 0 8px #eee;
     }
