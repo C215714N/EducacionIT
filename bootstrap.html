@@ -225,8 +225,55 @@
         </section>
     </main>
     <!-- Pie de Pagina -->
-    <footer id="footer">
-        <div class="text-center">
+    <footer id="footer" class="bg-dark bg-gradient | text-light py-5 px-3 | position-relative">
+        <!-- Mapa de Contacto -->
+        <iframe class="position-absolute top-0 start-0 w-100 h-100 opacity-50"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678323!2d-58.37812478523344!3d-34.60238856493399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1659139288931!5m2!1ses-419!2sar" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <!-- Formulario de Contacto -->
+        <form id="contact" class="container my-3 mx-auto rounded py-5 px-3 | bg-light text-dark | position-relative | col-md-8 col-lg-6 col-xxl-4 | was-validated">
+            <h2 class="h4">Dejanos tu consulta</h2>
+            <fieldset class="">
+                <label for="contact_name">Ingrese su Nombre</label>
+                <input class="form-control"
+                id="contact_name" 
+                name="name" 
+                type="text"
+                required>
+                <div class="invalid-feedback">
+                    Ingrese su nombre solamente con letras, este debe poseer entre 3 y 50 caracteres
+                </div>
+                <div class="valid-feedback">
+                    Tu nombre parece valido, muchas gracias por ingresarlo
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="contact_email">Ingrese su Correo</label>
+                <input class="form-control"
+                    id="contact_email" 
+                    name="email" 
+                    type="email"
+                    required>
+                <div class="invalid-feedback">
+                    Ingresa una direccion que respete el formato "usuario@servidor", la misma debe poseer al menos 8 caracteres
+                </div>
+                <div class="valid-feedback">
+                    Parece una direccion valida, nos estaremos contactando contigo a la brevedad
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="contact_consult">Ingrese su Consulta</label>
+                <textarea class="form-control"
+                    id="contact_consult" 
+                    name="consult"
+                    required></textarea>
+                </fieldset>
+            <button class="btn btn-outline-success | d-block mt-2 ms-auto">enviar</button>
+        </form>
+        <!-- Redes Sociales -->
+        <div class="text-center position-relative">
             <a class="btn btn-outline-primary" 
                 href="https://facebook.com" 
                 title="Seguinos en facebook"
