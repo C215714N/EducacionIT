@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Web Design</title>
     <!-- Estilos Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/bootstrap.css">
     <!-- Estilos Personalizados -->
     <style>
         #header img{
@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <nav class="navbar navbar-dark navbar-expand-lg | bg-dark bg-gradient sticky-top | p-2">
+    <nav class="navbar navbar-dark navbar-expand-lg | bg-primary bg-gradient sticky-top | p-2">
         <a href="#" class="navbar-brand">BS</a>
         <button class="navbar-toggler navbar-toggler-icon | border-0"
             data-bs-target="#menu"
@@ -233,15 +233,18 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <!-- Formulario de Contacto -->
-        <form id="contact" class="container my-3 mx-auto rounded py-5 px-3 | bg-light text-dark | position-relative | col-md-8 col-lg-6 col-xxl-4 | was-validated">
+        <form id="contact" class="container my-3 mx-auto rounded py-5 px-3 | bg-light text-dark | position-relative | col-md-8 col-lg-6 col-xxl-4 | was-validated" method="POST">
             <h2 class="h4">Dejanos tu consulta</h2>
-            <fieldset class="">
-                <label for="contact_name">Ingrese su Nombre</label>
+            <fieldset class="form-floating">
                 <input class="form-control"
                 id="contact_name" 
                 name="name" 
                 type="text"
+                pattern="[A-Z a-z]{3,50}"
+                maxlength="50"
+                placeholder="Ingrese su Nombre"
                 required>
+                <label for="contact_name">Ingrese su Nombre</label>
                 <div class="invalid-feedback">
                     Ingrese su nombre solamente con letras, este debe poseer entre 3 y 50 caracteres
                 </div>
@@ -249,13 +252,15 @@
                     Tu nombre parece valido, muchas gracias por ingresarlo
                 </div>
             </fieldset>
-            <fieldset>
-                <label for="contact_email">Ingrese su Correo</label>
+            <fieldset class="form-floating">
                 <input class="form-control"
                     id="contact_email" 
                     name="email" 
                     type="email"
+                    minlength="8"
+                    placeholder="Ingrese su Correo"
                     required>
+                <label for="contact_email">Ingrese su Correo</label>
                 <div class="invalid-feedback">
                     Ingresa una direccion que respete el formato "usuario@servidor", la misma debe poseer al menos 8 caracteres
                 </div>
@@ -263,12 +268,15 @@
                     Parece una direccion valida, nos estaremos contactando contigo a la brevedad
                 </div>
             </fieldset>
-            <fieldset>
-                <label for="contact_consult">Ingrese su Consulta</label>
+            <fieldset class="form-floating">
                 <textarea class="form-control"
                     id="contact_consult" 
                     name="consult"
+                    minlength="20"
+                    maxlength="200"
+                    placeholder="Ingrese su Consulta"
                     required></textarea>
+                <label for="contact_consult">Ingrese su Consulta</label>
                 </fieldset>
             <button class="btn btn-outline-success | d-block mt-2 ms-auto">enviar</button>
         </form>
@@ -298,6 +306,11 @@
                 target="_blank">
                 Github
             </a>
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show">
+            Eso es to.. eso es to.. eso es todo amigos
+            <button class="btn-close" data-bs-dismiss="alert"
+            ></button>
         </div>
         <p>&copy;2022 Todos los derechos reservados</p>
     </footer>
