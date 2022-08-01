@@ -11,7 +11,59 @@
     <title>Maquetacion Web</title>
 </head>
 <body>
-    
+    <!-- Navegacion -->
+    <!-- EMMET: nav>ul.menu>li*4>a{Link} -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabececa -->
+    <!-- EMMET: header#header>h1{Maquetacion Web}+p{html | css | js } -->
+    <header id="header">
+        <h1>Maquetacion Web</h1>
+        <p>html | css | js </p>
+    </header>
+    <!-- Pie de Pagina -->
+    <!-- EMMET: footer#footer>(form#contact>h2{Dejanos tu consulta})+p{&copy;2022 Todos los derechos reservados} -->
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <header class="header">
+                <h2>Introduccion a la Maquetacion</h2>
+            </header>
+            <p>
+                Cuando desarrollamos un sitio web debemos tener en cuenta varios aspectos del diseño, es por esto que la planificacion es importante, ademas de saber traducir las propuetas de diseño grafico a codigo que sera interpretado por el navegador.
+            </p>
+            <p>
+                Por otro lado debemos aprovechar las herramientas de los motores de busqueda, para optimizar el posicionamiento y brindar una grata experiencia de usuario. Para ello tendremos que considerar varios aspectos de los lenguajes, que se detallan mas adelante.
+            </p>
+            <article>
+                <h3>Estructura semantica HTML</h3>
+                <p>
+                    Se denomima asi a un conjunto de etiquetas que surgieron a partir de la version 5 de html y que permiten tanto a los desarrolladores como a los motores de busqueda identificar mas facilmente los elementos que componen una pagina web. Entre la etiquetas agregadas se encuentran las siguientes:
+                </p>
+                <ul class="example">
+                    <li><strong>header</strong> Cabecera o contenido introductorio, debe contener los encabezados y suele poseer alguna galeria a modo de introduccion.</li>
+                    <li><strong>nav</strong> Corresponde a los links mas importantes, se aconseja evitar el uso de redes sociales y tratar que sea de facil acceso.</li>
+                    <li><strong>main</strong> Contenido principal que suele englobar la informacion relevante para el usuario, aunque se utilizar tambien para resaltar la seccion mas importante de la pagina.</li>
+                    <li><strong>article</strong> Contenido Independiente que funciona tanto dentro como fuera de la pagina debido a que posee una Estructura definida.</li>
+                    <li><strong>section</strong> Contenido Contextualizado que solamente funciona dentro de la pagina y se relacion con otro elemento.</li>
+                    <li><strong>aside</strong> Contenido tangencial que se relaciona indirectamente con sus elementos hermanos, se utiliza para publicidad o sugerencias de contenido.</li>
+                    <li><strong>footer</strong> Contenido complementario de la pagina, se utiliza para mostrar informacion de contacto, redes sociales, mapa del sitio y derechos de autor.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <form action="" id="contact">
+            <h2>Dejanos tu consulta</h2>
+        </form>
+        <p>&copy;2022 Todos los derechos reservados</p>
+    </footer>
     <!-- 
         padre>hijo
         ul>li
