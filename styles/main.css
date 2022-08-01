@@ -1,0 +1,54 @@
+/* Reglas Generales */
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+    /* Star wars Fonts */
+    @font-face{
+        font-family: 'star wars';
+        src: url('../assets/fonts/Starjedi.ttf');
+        /*  Formatos Soportados
+            eot     ethernet open type
+            ttf     true type font
+            otf     open type font
+            woff    web open font file
+            svg     scalable vector graphics
+        */
+    }
+
+    *{
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+        /* EXPLICACION
+            Content-box
+            - content-width = width
+            - final-width = width + padding + border
+
+            Border-box
+            - final-width = width
+            - content-width = width - padding - border
+        */
+    }
+/* Cabecera */
+    #header{
+        padding: 3rem;
+        height: 100vh;
+        font-size: 5vw;
+        background-color: #ccc;
+        /* 
+            Unidades Absolutas
+            px (hibrida) limitar el tamaño de las cajas
+
+            Unidades Relativas
+            % porcentaje del contenedor para definir anchos
+            rem (hibrida) tipografias (ancho de M en la raiz)
+
+            Unidades Flexibles
+            definir la altura de elementos en base a la ventana
+            vw      ancho del viewport
+            vh      alto del viewport
+            vmin    dimension mas pequeña
+            vmax    dimension mas grande
+        */
+    };
+    h1{
+        font-family: 'star wars';
+    }
