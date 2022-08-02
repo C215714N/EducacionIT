@@ -107,6 +107,33 @@
     .ratio-16x9{
         min-height: 360px;
     }
+    /* Tablas */
+    .overflow{
+        overflow: auto;
+    }
+    table{
+        margin: 8px auto;
+    }
+    table caption{
+        border-radius: 8px 8px 0 0;
+        /* topleft topright bottomright bottomleft */
+    }
+    table caption,
+    th,
+    td{
+        padding: 8px 1rem;
+    }
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: 2px solid #248;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
