@@ -13,7 +13,9 @@
         margin: 0;
     }
     /* Bordes */
-
+    iframe{
+        border: 0;
+    }
     /* Rellenos */
 
     /* Estilos */
@@ -46,6 +48,24 @@
 
 /* Contenido */
 
+    /* Multimedia */
+    .example figure{
+        max-width: 640px;
+        margin: auto;
+        text-align: center;
+    }
+    iframe,
+    video{
+        width: 100%;
+    }
+    iframe{
+        min-height: 360px;
+        /* aspect-ratio width       height      exaple
+            4:3         1.33(h)     75%(w)      640x480
+            16:9        1.78(h)     56.25%(w)   640x360
+            16:10       1.6(h)      62.5%(w)    640x400
+        */
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
