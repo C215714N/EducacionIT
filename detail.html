@@ -68,6 +68,50 @@
                 </ul>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Corresponde a todo elemento grafico y audiovisual que podemos encontrar dentro de una pagina web. Antiguamente eran proco frecuentes debido a las limitaciones del ancho de banda y los navegadores de la epoca no soportaban algunos de estos elementos de forma nativa, es por eso que se recurria a la instalacion de plugins o complementos de terceros.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Contenido Embebido?</h3>
+                </header>
+                <p>
+                    Se conoce con este nombre a una categoria web que se utiliza para indicar que un contenido fue incorporado dentro de una pagina con autorizacion del autor/publicador original. Normalmente se implementa mediante la etiqueta <strong>&lt;iframe>(Marco Flotante)</strong> que permite la carga de contenido de manera asincrona.
+                </p>
+                <div class="example">
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="John Frusciante - Carvel"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Video con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/t-r65hT-aFQ" 
+                            title="Macaulay Culkin, El Ascenso Y La Caida"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe src="//www.slideshare.net/slideshow/embed_code/key/ocosHYPkZP7Ak8"
+                            allowfullscreen> 
+                        </iframe> 
+                        <figcaption> 
+                            <a href="//www.slideshare.net/ferchoc93/html5-10013507" title="Html5" target="_blank">Html5</a> de <a href="//www.slideshare.net/ferchoc93" target="_blank">Fernando Carvajal</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
@@ -106,6 +150,12 @@
                 required></textarea>
             <button> ENVIAR </button>
         </form>
+        <!-- Mapa de Contacto -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678323!2d-58.37812478523344!3d-34.60238856493399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1659484942901!5m2!1ses-419!2sar"
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
