@@ -29,10 +29,23 @@
     }
 /* Cabecera */
     #header{
-        padding: 3rem;
-        height: 100vh;
-        font-size: 5vw;
-        background-color: #ccc;
+        min-height: min(100vh, 640px);
+        font-size: calc(2vw + .8rem);
+        color: gold;
+        text-align: center;
+        background-color: #333;
+        background-image: 
+            url('../assets/bg/deathstar.png'),
+            url('../assets/bg/millenumfalcon.png'),
+            url('../assets/bg/hyperspace.jpg');
+        background-position: 
+            center left,
+            right top,
+            center;
+        background-size: 
+            30%,
+            cover;
+        background-repeat: no-repeat;
         /* 
             Unidades Absolutas
             px (hibrida) limitar el tamaño de las cajas
@@ -48,7 +61,7 @@
             vmin    dimension mas pequeña
             vmax    dimension mas grande
         */
-    };
+    }
     h1{
         font-family: 'star wars';
     }
