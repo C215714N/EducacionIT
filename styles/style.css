@@ -45,9 +45,13 @@
         text-shadow: 0 0 8px; /*-x+ -y+ blur color*/
     }
 /* Cabecera */
-
+    
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: auto;
+        padding: 8px;
+    }
     /* Multimedia */
     .example figure{
         max-width: 640px;
