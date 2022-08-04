@@ -178,12 +178,20 @@
         padding: 8px 16px;
         font-size: 16px;
     }
+    #contact button:hover,
     #contact :focus{
         box-shadow: 0 0 8px #eee;
     }
     #contact button{
         margin-top: 8px;
         margin-left: auto;
+        color:#eee;
+        background-color: transparent;
+    }
+    #contact button:hover{
+        color: #248;
+        background-color: #eee;
+        cursor: pointer;
     }
     /* Redes sociales */
     .social{
