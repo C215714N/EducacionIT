@@ -112,6 +112,7 @@
         overflow: auto;
     }
     table{
+        width: 100%;
         margin: 8px auto;
     }
     table caption{
@@ -133,6 +134,23 @@
     }
     .classic caption{
         border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(34,68,136, .5);
+        text-shadow: 0 0 4px #124;
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #284;
+    }
+    .semantic tfoot{
+        background-color: #448;
     }
 /* Pie de Pagina */
 
