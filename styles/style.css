@@ -45,7 +45,23 @@
         text-shadow: 0 0 8px; /*-x+ -y+ blur color*/
     }
 /* Cabecera */
-    
+    #header{
+        padding: min(20%, 280px) 16px;
+        text-align: center;
+        text-shadow: 0 0 8px #333;
+        background-image: url('../assets/bg/osx-sierra.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #923;
+    }
+    header{
+        color: #923;
+        border-bottom: 2px solid; /* width style color */
+    }
 /* Contenido */
     main{
         max-width: 960px;
