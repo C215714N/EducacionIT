@@ -36,16 +36,24 @@
         background-color: #333;
         background-image: 
             url('../assets/bg/deathstar.png'),
+            url('../assets/bg/fighter.png'),
+            url('../assets/bg/x-wing.png'),
             url('../assets/bg/millenumfalcon.png'),
             url('../assets/bg/hyperspace.jpg');
         background-position: 
-            center left,
-            right top,
+            center,
+            top left,
+            15%,
+            90% 20%,
             center;
         background-size: 
-            30%,
+            40%,
+            20%,
+            20%,
+            20%,
             cover;
         background-repeat: no-repeat;
+        text-shadow: 0 0 .5rem #333;
         /* 
             Unidades Absolutas
             px (hibrida) limitar el tamaño de las cajas
