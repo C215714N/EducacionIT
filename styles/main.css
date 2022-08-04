@@ -52,3 +52,22 @@
     h1{
         font-family: 'star wars';
     }
+/* Contenido Principal */
+
+    /* Jerarquia de Selectores */
+    .hierarchy #span span{
+        text-transform: uppercase;
+        color: darkblue;
+        background-color: skyblue;
+    }
+    .hierarchy .span span{
+        font-weight: bold;
+        color: darkgreen;
+        background-color: lightgreen;
+    }
+    .hierarchy span{
+        display: inline-block;
+        padding: .25rem;
+        color: darkred;
+        background-color: coral;
+    }
