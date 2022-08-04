@@ -9,7 +9,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -54,6 +55,7 @@
         background-size: cover;
     }
     .header{
+        margin: -16px -16px 16px; /* top right bottom left */
         padding: 16px;
         color: #eee;
         background-color: #923;
@@ -67,6 +69,13 @@
         max-width: 960px;
         margin: auto;
         padding: 8px;
+    }
+    article{
+        overflow: hidden;
+        margin: 24px 0;
+        border-radius: 4px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #999; /* -x+ -y+ blur color*/
     }
     /* Multimedia */
     .example figure{
