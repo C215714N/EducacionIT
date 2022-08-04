@@ -97,3 +97,6 @@ WHERE username = 'wolvie';
 
 # Tabla Datos de Usuario
 SELECT * FROM users_data;
+## Usuarios que no cargaron fecha de nacimiento
+SELECT * FROM users_data
+WHERE birth IS NULL;
