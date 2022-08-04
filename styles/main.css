@@ -27,9 +27,27 @@
             - content-width = width - padding - border
         */
     }
+/* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
+/* Estilos */
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+    .menu,
+    .example{
+        list-style: none;
+    }
 /* Cabecera */
     #header{
-        min-height: min(100vh, 640px);
+        min-height: min(100vh, 720px);
         font-size: calc(2vw + .8rem);
         color: gold;
         text-align: center;
@@ -41,17 +59,17 @@
             url('../assets/bg/millenumfalcon.png'),
             url('../assets/bg/hyperspace.jpg');
         background-position: 
-            center,
-            top left,
+            center, /* x: left center right */
+            5% 2%, /* top center bottom */
             15%,
-            90% 20%,
+            90% 20%,/* horizontal vertical*/
             center;
         background-size: 
-            40%,
-            20%,
-            20%,
-            20%,
-            cover;
+            min(40%, 600px), /* unidad mas pequeña */
+            clamp(3rem, 30%, 150px), /* medida intermedia*/
+            clamp(3rem, 20%, 200px),
+            clamp(3rem, 30%, 300px),
+            cover; /* cubre toda la etiqueta*/
         background-repeat: no-repeat;
         text-shadow: 0 0 .5rem #333;
         /* 
