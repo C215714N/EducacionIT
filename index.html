@@ -57,6 +57,35 @@
                     <li><strong>footer</strong> Contenido complementario de la pagina, se utiliza para mostrar informacion de contacto, redes sociales, mapa del sitio y derechos de autor.</li>
                 </ul>
             </article>
+            <article>
+                <h3>Jerarquia de selectores CSS</h3>
+                <p>
+                    Cada una de las reglas aplicadas con CSS posee una prioridad segun el tipo de selector utilizado, es fundamental que las mismas esten organizadas para facilitar la comprension del diseño y no superponer o repetir reglas de forma innecesaria. Los selectores segun su importancia se dividen de la siguiente manera:
+                </p>
+                <ul class="example hierarchy">
+                    <li>
+                        <strong>Tag Selector</strong>
+                        <ul>
+                            <li><span>header</span>{...}</li>
+                            <li><span>header</span>h1{...}</li>
+                        </ul>
+                    </li>
+                    <li class="span">
+                        <strong>Class Selector</strong>
+                        <ul>
+                            <li><span>.header</span>{...}</li>
+                            <li><span>.header</span>h1{...}</li>
+                        </ul>
+                    </li>
+                    <li id="span" class="span">
+                        <strong>Id Selector</strong>
+                        <ul>
+                            <li><span>#header</span>{...}</li>
+                            <li><span>#header</span>h1{...}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
         </section>
     </main>
     <footer id="footer">
