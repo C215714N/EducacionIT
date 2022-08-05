@@ -64,4 +64,24 @@ UPDATE sales
 SET user = FLOOR(RAND() * 5 + 3) -- usuario entre 3 y 7 (redondeado hacia abajo)
 WHERE user IS NULL; -- siempre que el usuario no este definido (NULL)
 
-SELECT * FROM sales;
+### Actualizacion de Precios por SubConsulta
+
+UPDATE posts
+SET price = (SELECT price FROM sales WHERE post = post_id);
+
+UPDATE sales
+SET price = (SELECT price FROM posts WHERE post_id = post), -- precio del registro que coincida con el numero de publicacion
+quantity = CASE -- evaluacion de casos
+	WHEN price >= 50000 THEN 1 -- si 1 entonces a
+	WHEN price >= 20000 THEN 2 -- si no 1 pero 2 entonces b
+	ELSE 5 -- si no 1 y 2 entonces c
+END -- fin de la evaluacion
+WHERE price IS NULL; -- condicion para realizar las actualizacion
+
+SELECT *,
+	CASE
+		WHEN PRICE >= 50000 THEN 'Hasta 18 cuotas'
+        WHEN price >= 20000 THEN 'Hasta 12 cuotas' 
+        ELSE 'Hasta 6 cuotas'
+    END AS credito
+FROM sales;
