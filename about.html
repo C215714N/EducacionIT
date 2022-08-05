@@ -77,25 +77,28 @@
                 id="contact_name" 
                 name="name"
                 type="text"
-                maxlength="50">
+                maxlength="50"
+                required>
             <label for="contact_email">Ingrese su Correo</label>
             <input
                 id="contact_email" 
                 name="email"
                 type="email"
-                minlength="8">
+                minlength="8"
+                required>
             <label for="contact_subject">Seleccione el Asunto</label>
             <select id="contact_subject" name="subject">
                 <option value="frontend">FrontEnd (HTML/CSS/JS)</option>
                 <option value="backend">BackEnd (SQL/PHP/JAVA/ETC...)</option>
-                <option value="fullstack">Fullstack (Todos los Anteriores)</option>
+                <option value="fullstack" selected>Fullstack (Todos los Anteriores)</option>
             </select>
             <label for="contact_consult">Ingrese su Consulta</label>
             <textarea 
                 id="contact_consult"
                 name="consult"
                 minlength="20"
-                maxlength="200"></textarea>
+                maxlength="200"
+                required></textarea>
             <button>Enviar</button>
         </form>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
