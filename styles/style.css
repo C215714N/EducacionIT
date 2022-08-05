@@ -1,4 +1,5 @@
 /* Reglas Generales */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway');
     *{
         font-family: 'Raleway', 'Segoe ui', sans-serif;
     }
@@ -10,3 +11,8 @@
 
 /* Pie de Pagina */
 
+    /* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+    }
