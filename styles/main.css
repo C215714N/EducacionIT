@@ -168,7 +168,15 @@
     .flexbox{
         display: flex;
         flex-wrap: wrap;
+        gap: 1rem;
     }
+    .justify-evenly{
+        justify-content: space-evenly;
+    }
+    .justify-between{
+        justify-content: space-between;
+    }
+    /* Anchos de Columna */
     .col-1{
         width: 30%;
     }
@@ -178,21 +186,13 @@
     .col-3{
         width: 90%;
     }
+    .w-50{
+        width: calc(50% - 1rem);
+    }
     .w-100{
         width: 100%;
     }
-    .max-300{
-        max-width: 300px;
-    }
-    .box{
-        padding: .5rem;
-        border-radius: .25rem;
-        box-shadow: 0 0 .5rem #333;
-    }
-    .title{
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+    /* Flotantes */
     .float-left{
         float: left;
         margin-right: 1rem;
@@ -200,4 +200,26 @@
     .float-right{
         float: right;
         margin-left: 1rem;
+    }
+    /* Maximos y minimos */
+    .min-300{
+        min-width: min(100%, 300px);
+    }
+    .max-300{
+        max-width: 300px;
+    }
+    .max-400{
+        max-width: 400px;
+    }
+    /* Componentes */
+    .box{
+        padding: .5rem;
+        border-radius: .25rem;
+        box-shadow: 0 0 .5rem #333;
+        overflow: hidden;
+    }
+    .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: block;
     }
