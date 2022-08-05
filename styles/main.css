@@ -163,3 +163,41 @@
     .color-hsl{ 
         background-color: hsl(240, 30%, 40%);
     }
+/* Ejemplos Layout */
+    /* Flexbox */
+    .flexbox{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-1{
+        width: 30%;
+    }
+    .col-2{
+        width: 60%;
+    }
+    .col-3{
+        width: 90%;
+    }
+    .w-100{
+        width: 100%;
+    }
+    .max-300{
+        max-width: 300px;
+    }
+    .box{
+        padding: .5rem;
+        border-radius: .25rem;
+        box-shadow: 0 0 .5rem #333;
+    }
+    .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .float-left{
+        float: left;
+        margin-right: 1rem;
+    }
+    .float-right{
+        float: right;
+        margin-left: 1rem;
+    }
