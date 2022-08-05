@@ -223,3 +223,57 @@
         font-weight: bold;
         display: block;
     }
+/* CSS Grid */
+:is(.grid, .layout-template) :is(
+    div,
+    span
+){
+    border: .2rem dotted;
+    padding: .5rem;
+    color: #fee;
+    background-color: #c36;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto; /* cantidad de columnas en base a su tamaño*/
+    gap: .5rem;
+}
+/* Pseudoclasses */
+.grid div:first-child{ /*primer hijo de un contenedor*/
+    grid-column: span 3;
+}
+.grid span:last-child{ /*ultimo hijo de un contenedor*/
+    grid-column: 1 / 4;
+}
+.grid div:nth-child(2){ /*numero de hijo (primero al ultimo)*/
+    grid-row: span 4;
+}
+.grid span:first-of-type{ /*primer elemento de su tipo*/
+    grid-column: span 2;
+    grid-row: 2;
+}
+.grid span:nth-last-child(2){ /*numero de hijo (ultimo al primero)*/
+    grid-row: 3 / span 3;
+    grid-column: 1;
+}
+/* Plantilla con CSS grid */
+.layout-template{
+    display: grid;
+    grid-template-areas: 
+        "header header  header  header"
+        "nav    main    main    ."
+        "nav    .       .       ."
+        "nav    footer  footer  footer";
+}
+.layout-template div:first-child{
+    grid-area: header;
+}
+.layout-template div:nth-child(2){
+    grid-area: nav;
+}
+.layout-template span:first-of-type{
+    grid-area: main;
+}
+.layout-template span:last-child{
+    grid-area: footer;
+}

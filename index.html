@@ -188,6 +188,35 @@
                     </p>
                 </div>
             </article>
+            <article>
+                <h3>CSS-Grid</h3>
+                <p>
+                    Modelo de Grillas multidimensional que facilita la organizacion de los elementos dentro de la pagina, posee un eje horizontal y un eje vertical. Cuando lo aplicamos, el contenedor se divide en filas y columnas (por defecto una) y cada etiqueta se aloja dentro de una celda, cuyo contenido puede ser manipulado como si estuviesemos implementando flexbox.
+                </p>
+                <div class="grid">
+                    <div>div 1</div>
+                    <div>div 2</div>
+                    <div>div 3</div>
+                    <div>div 4</div>
+                    <span>span 1</span>
+                    <span>span 2</span>
+                    <span>span 3</span>
+                    <span>span 4</span>
+                </div>
+                <p>
+                    Podemos armar el diseño de la pagina mediante una platilla de areas, donde se asigna un nombre a cada parte relevante de la grilla. Es importante que los elemento se correspondan con dichas areas, caso contrario quedaran por fuera de la misma. En caso de rellenar los espacios con celdas podemos colocar un punto (.)
+                </p>
+                <div class="layout-template">
+                    <div>header</div>
+                    <div>nav</div>
+                    <div>article</div>
+                    <div>article</div>
+                    <span>main</span>
+                    <span>section</span>
+                    <span>section</span>
+                    <span>footer</span>
+                </div>
+            </article>
         </section>
     </main>
     <footer id="footer">
