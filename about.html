@@ -28,17 +28,42 @@
                 <h2>Formularios HTML</h2>
             </header>
             <p>
-                Son herramientas que permiten la interaccion o<strong> intercambio de datos entre cliente y servidor</strong>
+                Son herramientas que permiten la interaccion o<strong> intercambio de datos entre cliente y servidor</strong>, para implementarlos dentro de una pagina web debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma los elementos que seran contemplados para el envio. Todo elemento que se encuentre por fuera de esta etiqueta no sera considerado parte del formulario.
             </p>
             <section>
                 <header>
                     <h3>¿Como funcionan?</h3>
                 </header>
+                <p>
+                    A la etiqueta <em>mencionada anteriormente</em> debemos especificarle por los menos 2 atributos, estos son <strong>action="..."</strong> que indica lo que sucede cuando se envia el formulario y <strong>method="..."</strong> que indica quien tiene la prioridad en la comunicacion, entre los valores mas utilizados se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo cuya prioridad radica en la respuesta del servidor, los datos figuran en la barra de direcciones y son enviados en texto plano. <em>Se utilizan principalmente para Buscadores</em>
+                    </li>
+                    <li>
+                        <strong>POST:</strong> Metodo cuya prioridad radica en la seguridad de los datos provistos por el usuario, ya que la informacion se cifra durante el envio. <em>Se utiliza para formularios de registro, acceso, contacto.</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
                     <h3>¿Como estan compuestos?</h3>
                 </header>
+                <p>
+                    Dentro de un formulario podemos colocar practicamente cualquier etiqueta conocida, pero 2 elementos son propios del mismo. Por un lado estan las <strong>Etiquetas (LABEL)</strong> que indican a modo de rotulo que debe seleccionar o completar el usuario, ademas de facilitar la accesibilidad; y por el otro, estan los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a las areas donde el usuario puede ingresar o seleccionar datos, entre sus atributos mas comunes se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> indica el grupo de pertenencia del control de formulario, ademas que los datos se obtienen mediante este identificador.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> corresponde al formato del dato a ingresar dentro del campo, se utiliza principalmente en los <em>input</em>.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> Dato a ser procesado, esta implicito en caso que el usuario escriba y solamente debe especificarse cuando se selecciona una opcion.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
