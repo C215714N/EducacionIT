@@ -69,6 +69,35 @@
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="name"
+                type="text"
+                maxlength="50">
+            <label for="contact_email">Ingrese su Correo</label>
+            <input
+                id="contact_email" 
+                name="email"
+                type="email"
+                minlength="8">
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="frontend">FrontEnd (HTML/CSS/JS)</option>
+                <option value="backend">BackEnd (SQL/PHP/JAVA/ETC...)</option>
+                <option value="fullstack">Fullstack (Todos los Anteriores)</option>
+            </select>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="consult"
+                minlength="20"
+                maxlength="200"></textarea>
+            <button>Enviar</button>
+        </form>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
