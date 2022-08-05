@@ -11,6 +11,7 @@
     h4,
     header p,
     .menu,
+    .copy,
     #header{
         margin: 0;
     }
@@ -153,7 +154,21 @@
         background-color: #448;
     }
 /* Pie de Pagina */
-
+    #footer{
+        box-shadow: 0 -2px 4px #ccc;
+        padding: 48px 0 16px;
+        background-image: url('../assets/bg/osx-big-sur-night.jpg');;
+        background-size: cover;
+    }
+    .copy{
+        padding: 16px 8px;
+        color: #eee;
+        background-color: #124;
+        text-align: center;
+    }
+    .copy:hover{
+        background-color: #248;
+    }
     /* Formulario de Contacto */
     #contact{
         display: flex;
@@ -164,6 +179,7 @@
         padding: 16px 24px;
         color: #eee;
         background-color: #248;
+        opacity: .8;
     }
     #contact label{
         margin-top: 8px;
@@ -177,6 +193,10 @@
         border: 1px solid #eee;
         padding: 8px 16px;
         font-size: 16px;
+    }
+    #contact textarea{
+        min-height: 80px;
+        resize: none;
     }
     #contact button:hover,
     #contact :focus{
