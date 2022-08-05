@@ -45,9 +45,28 @@
     .example{
         list-style: none;
     }
+/* Navegacion */
+    .menu{
+        display: flex;
+        gap: .5rem;
+        padding: .5rem; 
+        background: linear-gradient(to right,#124, #000);
+        /* color image position/size cover */
+    }
+    .menu a{
+        color: hsl(240, 50%, 80%);
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: hsl(60, 50%, 80%);
+        text-shadow: 0 0 .5rem hsl(45, 40%, 60%);
+    }
 /* Cabecera */
     #header{
         min-height: min(100vh, 720px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-size: calc(2vw + .8rem);
         color: gold;
         text-align: center;
@@ -61,7 +80,7 @@
         background-position: 
             center, /* x: left center right */
             5% 2%, /* top center bottom */
-            15%,
+            15% 70%,
             90% 20%,/* horizontal vertical*/
             center;
         background-size: 
@@ -71,6 +90,12 @@
             clamp(3rem, 30%, 300px),
             cover; /* cubre toda la etiqueta*/
         background-repeat: no-repeat;
+        background-attachment:             
+            fixed,
+            scroll,
+            scroll,
+            scroll,
+            fixed;
         text-shadow: 0 0 .5rem #333;
         /* 
             Unidades Absolutas
@@ -92,7 +117,17 @@
         font-family: 'star wars';
     }
 /* Contenido Principal */
-
+    /* Secciones de Ejemplos */
+    .example{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: .5rem;
+    }
+    .example > *{
+        flex: 1 1 min(100%,300px); /* grow shrink basis*/
+    }
     /* Jerarquia de Selectores */
     .hierarchy #span span{
         text-transform: uppercase;
