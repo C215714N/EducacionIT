@@ -78,13 +78,13 @@
             url('../assets/bg/millenumfalcon.png'),
             url('../assets/bg/hyperspace.jpg');
         background-position: 
-            center, /* x: left center right */
+            center min(40%, 200px), /* x: left center right */
             5% 2%, /* top center bottom */
             15% 70%,
             90% 20%,/* horizontal vertical*/
             center;
         background-size: 
-            min(40%, 600px), /* unidad mas pequeña */
+            min(30%, 600px), /* unidad mas pequeña */
             clamp(3rem, 30%, 150px), /* medida intermedia*/
             clamp(3rem, 20%, 200px),
             clamp(3rem, 30%, 300px),
@@ -144,4 +144,22 @@
         padding: .25rem;
         color: darkred;
         background-color: coral;
+    }
+    /* Modelos de Color */
+    [class*="color-"]{
+        border: .2rem dashed;
+        padding: 1rem;
+        color: #ccc;
+    }
+    .color-html{ 
+        background-color: darkslateblue 
+    }
+    .color-rgb{  
+        background-color: rgb(68, 68, 136);
+    }
+    .color-hex{  
+        background-color: #444488;
+    }
+    .color-hsl{ 
+        background-color: hsl(240, 30%, 40%);
     }
