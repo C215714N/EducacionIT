@@ -35,6 +35,7 @@ _ejemplo: `p{color:blue;}`_
 
 
 ## Estructura semantica
+
 Las paginas web no solamente deben ser llamativas para el usuario y deben contar con una interfaz facil de utilizar, tambien deben poseer una estructura correctamente definida.
 
 Por esta razon en la version 5 se agregaron etiquetas que indican el funcionamiento de cada parte de la pagina, de manera tal que le resulte mas facil al motor de busquedar realizar el indexado de los contenidos de nuestro sitio.
@@ -48,12 +49,27 @@ Por esta razon en la version 5 se agregaron etiquetas que indican el funcionamie
 * **footer** el pie de pagina es complementario a lo expuesto anteriormente, contiene las redes sociales, mapas del sitio y formularios/datos de contacto.
 
 ## Hojas de Estilo
+
 Una vez definida la estructura de la pagina debemos pasar implementar el diseño de la misma, indicando a que elementos se les deben aplicar los cambios (selectores) y cuales seran los mismos, indicando el atributo a modificar, seguido de su valor (reglas)
 
 > * *_estilo interno_* Es aquel que se utiliza dentro de la misma pagina
 >	* *inline*: Es el mas facil de aplicar y tiene mayor prioridad, ya que debemos indicar a cada etiqueta sus cambios _e.g: `<div style="color: darkblue;">`_ siendo poco practico y lento.
 >	* *inblock*: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
 > * *_estilo externo_* Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
+
+## Formularios Web
+
+Son herramientas que facilitan el intercambio de datos entre cliente y servidor mediante solicitudes HTTP (HyperText Tranfer Protocol) con la intervencion del usuario ya que es quien completa los datos a enviarse.
+
+En un formulario encontraremos campos de diferentes tipos, que indican que valores podemos ingresar en los mismos. Algunos de los tipo de datos mas comunes son:
+
+| Cadena de Texto | Numerico | Booleano |
+|---|---|---|
+| Texto <br> <input type="text" placeholder="Abcd1234!#$"> | Numero <br> <input type="number" placeholder="0123456789"> |  Multiple <br> <input id="opt-1" type="checkbox"> <label for="opt-1">checkbox</label>
+| Correo <br> <input type="email" placeholder="usuario@servidor">| Fecha <br> <input type="date" style="width:100%;"> | Unico <br> <input id="opt-a" type="radio" name="option"> <label for="opt-a"> radio</label>
+| Textarea <br> <textarea style="width:100%" placeholder="Campo de texto multiliena para comentarios"></textarea> | Color RGB <br> <input type="color" style="width: 100%; height: 2.5rem;"> | Seleccion <br> <select><option value="0">option 1</option><option value="1">option 2</option><option value="2">option 3</option></select>
+
+
 ___
 
 ## Actividades
@@ -77,3 +93,17 @@ En este apartado se podran realizar diferentes ejercicios relacionados con los t
 3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion
 4. Agregar hipervinculos de las redes sociales a eleccion e informacion de copyright
 5. Colocar contenido dentro de las diferentes paginas a eleccion.
+
+### Formularios
+1. Crear un formulario de inicio de sesion utilizando los siguientes elementos
+  * un campo de tipo __email__
+  * un campo de tipo __password__.
+2. Crear un formulario de registro que respete los siguientes criterios:
+  * nombre y apellido __(obligatorio)__
+  * fecha de nacimiento
+  * telefono y celular
+  * correo y contraseña __(obligatorio)__
+3. Crear un formulario para una red social que posea:
+  * campo para __nombre__
+  * campo de __comentario__
+  * opcion para elegir entre _publica o privada_.
