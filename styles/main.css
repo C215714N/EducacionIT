@@ -46,6 +46,11 @@
         list-style: none;
     }
 /* Navegacion */
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
     .menu{
         display: flex;
         gap: .5rem;
@@ -277,6 +282,43 @@
 .layout-template span:last-child{
     grid-area: footer;
 }
+/* Position*/
+    .position{
+        position: relative;
+        max-width: 960px;
+        margin: auto;
+        border: .5rem groove #333;
+    }
+    /* relative: el elemento es su propio referente (sigue formando parte del flow)*/
+    .position div{
+        margin: 1rem;
+    }
+    .position :nth-child(2){
+        position: relative;
+        left: 1rem;
+        top: 1rem;
+        box-shadow: -1rem -1rem #333;
+        z-index: 1;
+    }
+    /* absolute: su referente es el primer ancestro que no sea static (no forma parte del flow)*/
+    .position :nth-child(3){
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+    }
+    /* fixed: su referente es el viewport (tampoco forma parte del flow) */
+    .position :nth-last-child(2){
+        position: fixed;
+        right: .25rem;
+        top: 50%;
+        z-index: -1;
+    }
+    /* sticky: similar a relative pero con toques de absolute (necesita una condicion) */
+    .position :last-child{
+        position: sticky;
+        bottom: 0;
+    }
 
 /*Pie de Pagina*/
 
@@ -284,8 +326,11 @@
     #contact{
         display: grid;
         max-width: 720px;
-        margin: auto;
+        margin: 1rem auto;
+        border-radius: .25rem;
+        padding: 1.5rem;
         gap: .5rem;
+        background-image: linear-gradient(#ccc, transparent)
     }
     #contact :is(
         input, 
@@ -294,18 +339,42 @@
         outline: none;
         border-radius: .25rem;
         border: 2px solid #666;    
+        padding: .5rem;
+        transition: all .25s ease-in;
+    }
+    #contact button{
+        margin-left: auto;
+        border-radius: .25rem;
+        border: 1px solid;
+        padding: .5rem 1.5rem;
+        color: #124;
+        background-color: transparent;
+        text-transform: uppercase;
+        transition: all .1s ease;
+    }
+    #contact button:hover{
+        color: #eee;
+        background-image: radial-gradient(circle at top left, #124, #248);
     }
     /*Validacion*/
     #contact .valid{
-        display: none;
+        max-height: 0;
+        margin-top: -.5rem;
+        overflow: hidden;
+        transition: all .25s ease-in;
     }
     #contact :focus + .valid{
-        display: block;
-        margin-top: -.5rem;
+        max-height: 600px;
     }
     #contact :is(input, textarea):valid{
         border-color: #284;
     }
     #contact :focus:valid + .valid{
         color: #284;
+    }
+    #contact :not(:placeholder-shown):invalid{
+        border-color: #c33;
+    }
+    #contact :not(:placeholder-shown):invalid + .valid{
+        color: #c33;
     }
