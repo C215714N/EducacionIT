@@ -277,3 +277,35 @@
 .layout-template span:last-child{
     grid-area: footer;
 }
+
+/*Pie de Pagina*/
+
+    /* Formulario de Contacto */
+    #contact{
+        display: grid;
+        max-width: 720px;
+        margin: auto;
+        gap: .5rem;
+    }
+    #contact :is(
+        input, 
+        textarea
+    ){
+        outline: none;
+        border-radius: .25rem;
+        border: 2px solid #666;    
+    }
+    /*Validacion*/
+    #contact .valid{
+        display: none;
+    }
+    #contact :focus + .valid{
+        display: block;
+        margin-top: -.5rem;
+    }
+    #contact :is(input, textarea):valid{
+        border-color: #284;
+    }
+    #contact :focus:valid + .valid{
+        color: #284;
+    }
