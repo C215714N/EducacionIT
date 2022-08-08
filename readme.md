@@ -6,10 +6,12 @@ Esto es una guia practica realizada para los alumnos del curso de CCNA1_(Cisco C
 * [Introduccion](#introduccion)
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
+* [Enruatmiento Estatico](#enrutamiento-estatico)
 
 ## Ejercicios
 * [Sistema Binario](./ejercicios/binary-decimal.md)
 * [Sistema Hexadecimal](./ejercicios/hexadecimal.md)
+* [Subneting](./ejercicios/subnetting.md)
 
 ## Introduccion
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads)
