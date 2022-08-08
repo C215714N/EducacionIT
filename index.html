@@ -222,6 +222,39 @@
     <footer id="footer">
         <form action="" id="contact">
             <h2>Dejanos tu consulta</h2>
+            <!-- (label{Ingrese su }+input[required]+.valid)*2+label[for="contact_consult"]{Ingrese su Consulta}+textarea#contact_consult[required]+button{enviar} -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                minlength="3"
+                maxlength="50"
+                required>
+            <div class="valid">
+                Ingrese un nombre de al menos 3 caracteres y 50 como maximo
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8" 
+                required>
+            <div class="valid">
+                Ingrese una direccion que posea por lo menos 8 caracteres y respete el siguiente formato: usuario@servidor
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="20"
+                maxlength="200"
+                required></textarea>
+            <div class="valid">
+                Escriba una consulta de al menos 20 caracteres y no mas de 200
+            </div>
+            <button>enviar</button>
         </form>
         <p>&copy;2022 Todos los derechos reservados</p>
     </footer>
