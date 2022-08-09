@@ -7,6 +7,7 @@ Esto es una guia practica realizada para los alumnos del curso de CCNA1_(Cisco C
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
 * [Enrutamiento Estatico](#enrutamiento-estatico)
+* [Configuracion IPv6](#configuracion-ipv6)
 
 ## Ejercicios
 * [Sistema Binario](./ejercicios/binary-decimal.md)

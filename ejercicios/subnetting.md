@@ -10,3 +10,5 @@
 	>	1. __DTO-A:__ 2 switches, 4 impresoras, 20 pcs
 	>	1. __DTO-B:__ 150 pcs, 15 impresoras, 4 switches, 2 routers
 	>	1. __DTO-C:__ 40 pcs, 2 switches, 2 impresoras
+
+[volver al inicio](../readme.md)
