@@ -30,3 +30,30 @@ CREATE TABLE products(
     FOREIGN KEY(brand) REFERENCES brands(brand_id),
     FOREIGN KEY(category) REFERENCES categories(category_id)
 );
+
+# Insercion de Registros
+## Tabla Categorias
+INSERT INTO categories(category_name)
+VALUES 	('Tecnologia'), ('Hogar'), ('Botanica'), ('Electronica'), ('Indumentaria'), ('Calzado'), 
+		('Bazar'), ('Biblioteca'), ('Jugueteria'), ('Automotor'), ('NFT'), ('alimentos');
+## Tabla Marcas
+INSERT INTO brands(brand_name)
+VALUES 	('H3.14'), ('zamzung'), ('Fürd'), ('Adadis'), ('Naik'),
+        ('Pumba'), ('Sorny'), ('Panoramico'), ('Tapper'), ('LJ'),
+        ('Chebrolet'), ('puerto de patos'), ('jigabit'), ('de Luna'), ('tong');
+        
+## Tabla Productos
+INSERT INTO products (product_name, brand, category)
+VALUES
+-- categoria tecnologia
+('Notebook', 1, 1), -- H3.14
+('Tablet',2, 1), -- zamzung
+('Tablet', 10, 1), -- LJ
+-- categoria electronica
+('Procesador Intel', 2,4), -- zamzung
+('Procesador Intel', 1,4), -- H3.14
+('Memoria RAM', 13, 4), -- Jigabit
+-- categoria calzado
+('air max', 6, 5),	-- naik
+('predeitor',6, 4), -- adadis
+('adadis max', 6, 4); -- adadis
