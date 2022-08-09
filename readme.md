@@ -11,7 +11,7 @@ Esto es una guia practica realizada para los alumnos del curso de CCNA1_(Cisco C
 ## Ejercicios
 * [Sistema Binario](./ejercicios/binary-decimal.md)
 * [Sistema Hexadecimal](./ejercicios/hexadecimal.md)
-* [Capa 3 (Red)](./ejercicios/ip.md)
+* [Capa de Red](./ejercicios/ip.md)
 * [Subneting](./ejercicios/subnetting.md)
 
 ## Introduccion
