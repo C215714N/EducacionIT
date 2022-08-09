@@ -54,6 +54,21 @@ VALUES
 ('Procesador Intel', 1,4), -- H3.14
 ('Memoria RAM', 13, 4), -- Jigabit
 -- categoria calzado
-('air max', 6, 5),	-- naik
-('predeitor',6, 4), -- adadis
-('adadis max', 6, 4); -- adadis
+('air max', 5, 6),	-- naik
+('predeitor', 4 , 6), -- adadis
+('adadis max', 4, 6); -- adadis
+
+## Carga por asignacion (asociacion)
+INSERT INTO products
+SET 	
+	product_name = 'Placa de video',
+    model = 'rx3070',
+    brand = (SELECT brand_id FROM brands WHERE brand_name = 'jigabit'), -- subconsulta
+    category = (SELECT category_id FROM categories WHERE category_name = 'Electronica');
+
+## Actualizacion de producto
+UPDATE products -- tabla a manipular
+SET product_name = 'pepe'-- valor a actualizar
+WHERE product_id = 8; -- condicion para actualizar
+
+SELECT * FROM products;
