@@ -6,3 +6,11 @@
 ## Bibliotecas (Windows)
 * [Visual C++ 2019](https://support.microsoft.com/es-ar/help/2977003/the-latest-supported-visual-c-downloads)
 * [Net Framework 4.52](https://www.microsoft.com/es-ar/download/details.aspx?id=42642)
+___
+
+## Tabla de Contenidos
+
+* [Bases de Datos](./docs/database.md)
+* [Tipos de datos](./docs/datatypes.md)
+* [Operadores](./docs/operators.md)
+* [Funciones](./docs/functions.md)
