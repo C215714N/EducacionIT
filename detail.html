@@ -146,6 +146,36 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son elementos que se utilizan para organizar la informacion de manera tabular, se implementan en estructuras de datos, pero no deben utilizarse para diseñar la pagina, ya que evitan que los elementos dentro de ellas se amolden a las dimensiones de la ventana. Para crear una tabla debemos colocar la etiqueta <strong>&lt;table></strong> y dentro de la misma, las filas con la etiqueta <strong>&lt;tr> (table row)</strong>, asi como tambien las celdas de encabezado y contenido con <strong>&lt;th>(table heading) y &lt;th> (table division)</strong>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen estructura semantica?</h3>
+                </header>
+                <p>
+                    Como se menciona en el texto anterior, las tablas se crean respetando el <strong>modelo de cajas</strong>, es decir, que utilizaremos etiquetas contenedoras para las <em>filas</em> y etiquetas de contenido para las <em>celdas</em>, pero a pesar de esto el navegador no entenderia dicha estructura. Es por esta razon que en HTML5 se incorporaron elementos semanticos a las mismas, los cuales son:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD: </strong> Cabecera de tabla que contiene la fila de encabezados.
+                    </li>
+                    <li>
+                        <strong>TBODY: </strong> Cuerpo de tabla que principalmente contiene las filas de datos.
+                    </li>
+                    <li>
+                        <strong>TFOOT: </strong> Pie de tabla que contiene una fila complementaria a los datos.
+                    </li>
+                </ul>
+                <div class="overflow">
+                    
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
