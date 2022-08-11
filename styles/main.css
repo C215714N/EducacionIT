@@ -36,12 +36,17 @@
     .menu{
         margin: 0;
     }
+/* Rellenos */
+    .content-table :is(ul, ol){
+        padding: 0;
+    }
 /* Estilos */
     nav a,
     footer a{
         text-decoration: none;
     }
     .menu,
+    .content-table li,
     .example{
         list-style: none;
     }
@@ -121,6 +126,39 @@
     h1{
         font-family: 'star wars';
     }
+/* Tabla de contenidos */
+    /* Reinicio de Contadores */
+    .content-table{
+        counter-reset: first;
+        padding: .5rem;
+        color: #124;
+        font-weight: bold;
+    }
+    .content-table ul{
+        counter-reset: second;
+        color: #248;
+    }
+    .content-table ul ul{
+        counter-reset: third;
+        color: #36c;
+    }
+    /* Incrementos de Contadores */
+    .content-table > li{
+        counter-increment: first;
+    }
+    .content-table li li{
+        counter-increment: second;
+    }
+    .content-table li li li{
+        counter-increment: third;
+    }
+    /* Aplicacion */
+    .content-table li::before{
+        content: 
+            counter(first) '.'
+            counter(second) '.'
+            counter(third) ' - '
+    }
 /* Contenido Principal */
     main{
         display: grid;
@@ -139,6 +177,12 @@
         padding: .5rem;
         background-color: #eee;
         overflow: auto;
+    }
+    section > p:first-of-type::first-letter{
+        font-size: 1.5rem;
+        display: blocK;
+        float: left;
+        margin-right: .5rem;
     }
     /* Secciones de Ejemplos */
     .example{
@@ -178,6 +222,8 @@
     /* ::PseudoElementos  - Partes o elementos dentro de una etiqueta 
         h1::before      contenido antes del contenido de la etiqueta h1
         h1::after       contenido despues del contenido de la etiqueta h1
+        p::first-letter primera letra del contenido de un elemento p
+        p::first-line   primera linea de contenido de un elemento p
     */
     /* Jerarquia de Selectores */
     .hierarchy #span span{
