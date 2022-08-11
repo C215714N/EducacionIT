@@ -151,6 +151,25 @@
     .example > *{
         flex: 1 1 min(100%,300px); /* grow shrink basis*/
     }
+    /* Pseudo elementos */
+    
+    section h2::before{
+        content: 'Capitulo: ';
+    }
+    section h3::before{
+        content: 'Tema: ';
+    }
+
+    /* :PseudoClase  - Instancia o caracteristica de una etiqueta 
+        a:hover         pasar el mouse sobre el elemento a
+        a:active        cuando estoy haciendo el click sobre a
+        a:first-child   la etiqueta a que sea el primer hijo de su contenedor
+        a:last-child    la etiqueta a que sea el ultimo hijo de su contenedor
+    */
+    /* ::PseudoElementos  - Partes o elementos dentro de una etiqueta 
+        h1::before      contenido antes del contenido de la etiqueta h1
+        h1::after       contenido despues del contenido de la etiqueta h1
+    */
     /* Jerarquia de Selectores */
     .hierarchy #span span{
         text-transform: uppercase;
