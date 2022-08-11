@@ -1,3 +1,4 @@
+oot
 # Fundamentos de Redes
 
 Esto es una guia practica realizada para los alumnos del curso de CCNA1_(Cisco Certified Network Associated)_ con la finalidad de reforzar los conceptos vistos en clase y para que puedan practicar las diferentes actividades provistas por la plataforma [Alumni](https://alumni.education)
@@ -85,7 +86,7 @@ El protocolo de Internet version 6 viene desactivado de manera predeterminada, p
 	* __ipv6 enable__ Habilita el protocolo en la interfaz
 	* __ipv6 address `2001:DB6:ACAD:1::1`/`64`__ Direccion global con un prefijo (enrutable a traves de internet)
 	* __ipv6 address `fe80::1` `link-local`__ Direccion de enlace local para comunicacion privada (no enrutable)
-1. router(config)#
+1. router(config)# (Definicion de rutas estaticas IPv6)
 	* __ipv6 unicast-routing__ Habilita el enrutamiento IPv6
-	* __ipv6 route `2001:db8:acad::/64 3000::1`__ Enrutamiento estatico IPv6
-	* __IPv6 Unicast Routing__
+	* __ipv6 route `2001:db8:acad::/64` `3000::1`__ Enrutamiento estatico IPv6
+	* __ipv6 route `::/0` `3000::1`__ Ruta predeterminada IPv6
