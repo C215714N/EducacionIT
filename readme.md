@@ -36,4 +36,20 @@ __CSS Grid layout__ contiene funciones de diseño dirigidas a los _desarrollador
 
 ## Ejercicios
 
-### Atributos de Fondo
+### Planificacion del Diseño
+1. Crear una pagina en la que cada una de sus partes cumpla con los siguientes requisitos
+  * Cabecera:
+    * La cabecera debe tener la misma altura que la ventana
+    * La cabecera NO debe medir mas 720px de alto
+    * La tipografia debe poder adaptarse al ancho de la ventana
+    * La imagen de fondo debe estar fija con respecto a la ventana
+  * Contenido:
+    * Las secciones no deben superar los 1320px de ancho
+    * El contenido debe estar centrado respecto a la ventana
+    * Si implementa una barra lateral, no debe ser mayor a 320px
+  * Pie de Pagina:
+    * La seccion de contacto no debe superar los 540px de ancho
+    * Implementar un mapa de contacto con estilo a eleccion
+    * Debe poseer una seccion de redes sociales.
+2. Crear una galeria de imagenes utilizando alguna de las herramientas aprendidas
+3. Insertar los textos "Seccion de " o "realizado por ..." en los encabezados utilizando los pseudoelementos correspondientes
