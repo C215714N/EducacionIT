@@ -122,6 +122,24 @@
         font-family: 'star wars';
     }
 /* Contenido Principal */
+    main{
+        display: grid;
+        grid-template-areas: 'aside .';
+        gap: 1rem;
+    }
+    main > section{
+        grid-column: 2 ;
+        padding: .5rem;
+    }
+    aside{
+        position: sticky;
+        top: 2.5rem;
+        grid-area: aside;
+        max-height: calc(100vh - 3rem);
+        padding: .5rem;
+        background-color: #eee;
+        overflow: auto;
+    }
     /* Secciones de Ejemplos */
     .example{
         display: flex;
