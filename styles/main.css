@@ -152,14 +152,23 @@
         flex: 1 1 min(100%,300px); /* grow shrink basis*/
     }
     /* Pseudo elementos */
-    
+    main{
+        counter-reset: chapter;
+    }
+    section{
+        counter-reset: theme;
+    }
     section h2::before{
-        content: 'Capitulo: ';
+        counter-increment: chapter;
+        content: 'Capitulo ' counter(chapter) ': ';
     }
     section h3::before{
-        content: 'Tema: ';
+        counter-increment: theme;
+        content: 'Tema ' counter(theme) ': ';
     }
-
+    .filler::before{
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ex et cum enim vitae aliquam tenetur amet reiciendis accusantium distinctio corporis consequuntur delectus nihil laborum, nostrum explicabo. Vel vero sunt aliquid. Necessitatibus nisi labore deleniti iusto quam dolores, reprehenderit ipsam animi distinctio porro odit expedita cumque, delectus itaque unde placeat amet iure voluptas natus aliquid id? Ratione cumque nihil voluptates, quam modi eos amet. Amet maxime aut eveniet exercitationem officia iure quia a totam distinctio sapiente ipsum repellat quidem, impedit expedita eos voluptatem ratione voluptates repudiandae sint ea non qui aliquid vel. Corrupti vero repellendus rem ab aut itaque quibusdam!';
+    }
     /* :PseudoClase  - Instancia o caracteristica de una etiqueta 
         a:hover         pasar el mouse sobre el elemento a
         a:active        cuando estoy haciendo el click sobre a
