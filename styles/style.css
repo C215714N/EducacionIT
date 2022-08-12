@@ -88,6 +88,8 @@
         line-height: 1.5rem;
     }
     .overflow{
+        display: flex;
+        gap: 1rem;
         overflow: auto;
     }
     /* Multimedia */
@@ -110,6 +112,8 @@
     }
     /* Tablas HTML */
     table{
+        width: 100%;
+        max-width: 640px;
         margin: 8px auto;
     }
     table caption{
