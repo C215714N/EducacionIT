@@ -13,7 +13,9 @@
         margin: 0;
     }
     /* Bordes */
-
+    iframe{
+        border: 0;
+    }
     /* Rellenos */
 
     /* Estilos */
@@ -45,6 +47,11 @@
 
 /* Contenido */
 
+    /* Secciones de ejemplo */
+    iframe{
+        width: 100%;
+        min-height: 320px;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
