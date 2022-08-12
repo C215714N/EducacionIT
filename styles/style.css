@@ -26,7 +26,21 @@
         list-style: none;
     }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        justify-content: center; /* eje principal*/
+        gap: 8px; /* separacion entre los hijos */
+        padding: 8px;
+        background-color: #548; /* RRGGBB */
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 8px;/* -x+ -y+ blur color*/
+    }
 /* Cabecera */
 
 /* Contenido */
@@ -35,6 +49,43 @@
 
     /* Formulario de Contacto */
     #contact{
+        max-width: 540px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* orientacion de ejes */
+        margin: 24px auto; /* top right bottom left */
+        border-radius: 8px;
+        padding: 24px;
+        color: #eee;
+        background-color: #548;
+        box-shadow: -8px 8px 8px #999;
+    }
+    #contact label{
+        margin-top: 8px;
+    }
+    #contact input,
+    #contact textarea,
+    #contact select,
+    #contact button{
+        outline: none;
+        border: 2px solid #eee;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    #contact textarea{
+        resize: none;
+        min-height: 80px;
+    }
+    #contact :focus{
+        box-shadow: 0 0 8px #eee;
+    }
+    #contact button{
+        margin: 12px 0 4px auto;
+        color: #eee;
+        background-color: transparent;
+    }
+    #contact button:hover{
+        margin: 8px 0 8px auto;
+        color: #548;
+        background-color: #eee;
+        box-shadow: -4px 4px 4px #333;
     }
