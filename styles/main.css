@@ -165,16 +165,22 @@
     }
 /* Contenido Principal */
     main{
+        max-width: 1320px;
+        margin: auto;
         display: grid;
         grid-template-areas: 'aside .';
-        gap: 1rem;
     }
     main > section{
         grid-column: 2 ;
         padding: .5rem;
     }
+    section:nth-child(even){
+        background-color: #eee;
+    }
+    section:nth-child(odd){
+        background-color: #ccc;
+    }
     aside{
-        display: none;
         position: sticky;
         top: 2.5rem;
         grid-area: aside;
@@ -433,8 +439,22 @@
     }
     .css-grid img{
         width: 100%;
+        height: 100%;
         border-radius: .25rem;
         border: .8rem solid #333;
+        object-fit: cover;
+    }
+    /*  2n: aplica cada 2 etiquetas [2,4,6,8,10,12,14,16,18,20]
+        2n - 1: aplica cada 2 etiquetas empezando por la primera [1,3,5,7,9,11,13,15,17,19]
+        2n + 1: aplica cada 2 etiquetas empezando por la tercera [3,5,7,9,11,13,15,17,19]
+        3n: aplica cada 3 etiquetas [3,6,9,12,15,18]
+        -n + 3: aplica solamente a las primeras 3 etiquetas[1,2,3]
+    */
+    .masonry :nth-child(even){
+        grid-column: span 2;
+    }
+    .masonry :nth-child(3n - 2){
+        grid-row: span 2;
     }
 /*Pie de Pagina*/
     #footer{
