@@ -53,3 +53,9 @@ __CSS Grid layout__ contiene funciones de diseño dirigidas a los _desarrollador
     * Debe poseer una seccion de redes sociales.
 2. Crear una galeria de imagenes utilizando alguna de las herramientas aprendidas
 3. Insertar los textos "Seccion de " o "realizado por ..." en los encabezados utilizando los pseudoelementos correspondientes
+### Implementacion del diseño
+1. Crear un sitio que utilice alguna de las siguientes estructuras
+  * "nav    nav     nav"
+    "aside  header  header"
+    "aside  main    main"
+    "footer  footer  footer"
