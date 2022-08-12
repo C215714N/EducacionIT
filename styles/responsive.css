@@ -1,0 +1,72 @@
+/* Content First - Mobile First */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Open+Sans');
+    /* Reglas Generales */
+        *{
+            box-sizing: border-box;
+            font-family: var(--font);
+        }
+    /* Variables */
+        :root{
+            --first: #c36;
+            --second: #448;
+            --light: #eee;
+            --dark: #333;
+            --font: 'Poppins', 'Open Sans', 'Century Gothic', sans-serif
+        }
+    /* Margenes */
+        body,
+        h1,
+        h2,
+        h3,
+        .menu{
+            margin: 0;
+        }
+    /* Estilos */
+        nav a,
+        footer a{
+            text-decoration: none;
+        }
+        .menu{
+            list-style: none;
+        }
+    /* Navegacion */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: .5rem;
+        background: linear-gradient(to right, var(--first), var(--second) );
+    }
+    nav a{
+        color: var(--light);
+    }
+    .menu{
+        --light: #ccc;
+        width: 100%;
+        padding: .25rem;
+    }
+    .menu a{
+        color: var(--light);
+    }
+/* Small Devices - Smartphones */
+
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px){
+    nav button{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        gap: .5rem;
+        width: auto;
+    }
+}
+/* Large Devices - Laptops */
+
+/* Extra Large Devices - Desktop */
+@media screen and (min-width: 1200px){
+    nav{
+        justify-content: space-around;
+    }
+}
