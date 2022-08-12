@@ -174,6 +174,7 @@
         padding: .5rem;
     }
     aside{
+        display: none;
         position: sticky;
         top: 2.5rem;
         grid-area: aside;
@@ -414,7 +415,27 @@
         position: sticky;
         bottom: 0;
     }
-
+    /* Galeria con CSS Grid */
+    .css-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr));
+        /*  EXPLICACION 
+            repeat(a, b) 
+                a: cantidad de veces
+                b: valor
+            auto-fit:   rellena y encaja las celdas en el espacio
+            auto-fill:  inserta celdas segun el espacio disponible
+            minmax(x,y)
+            x: unidad minima
+            y: unidad maxima
+        */
+        gap: .5rem;
+    }
+    .css-grid img{
+        width: 100%;
+        border-radius: .25rem;
+        border: .8rem solid #333;
+    }
 /*Pie de Pagina*/
     #footer{
         position: relative;
