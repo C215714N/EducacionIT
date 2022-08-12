@@ -100,12 +100,39 @@
         margin: 8px auto;
     }
     table caption{
-        border-radius: 4px;
+        border-radius: 8px 8px 0 0; /*topleft toprright bottomright bottomleft*/
     }
     th,
     td,
     table caption{
         padding: 8px;
+    }
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: 2px solid #623;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(102, 34, 51, .7);
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #284;
+    }
+    .semantic tfoot{
+        background-color: #248;
     }
 /* Pie de Pagina */
 
