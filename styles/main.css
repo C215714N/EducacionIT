@@ -1,0 +1,76 @@
+/* Content-First | Mobile First */
+    /* Reglas Generales */
+    *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+        /*  EXPLICACION:
+            border-box
+                final-width   = width
+                content-width = width - padding - border
+            
+            content-box
+                content-width = width
+                final-width   = width + padding + border
+        */
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Rellenos */
+    .menu{
+        padding: 0;
+    }
+    /* Estilos */
+    .menu{
+        list-style: none;
+    }
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+    /* Navegacion */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: .5rem;
+        background-image: linear-gradient(to right, #248, #124);
+    }
+    nav a{
+        color: #ccc;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 .5rem;
+    }
+/* Small Devices | Smartphones */
+
+/* Medium Devices | Tablets */
+@media screen and (min-width: 768px){
+    nav .btn{
+        display: none;
+    }
+    .menu{
+        width: auto;
+        display: flex;
+        gap: .5rem;
+    }
+}
+/* Large Devices | Laptops */
+
+/* Extra Large | Desktop */
+@media screen and (min-width:1200px){
+    nav{
+        justify-content: space-around;
+    }
+}
