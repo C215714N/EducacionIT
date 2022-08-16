@@ -29,7 +29,52 @@
         <p>Web Design</p>
     </header>
     <!-- Contenido Principal -->
-
+    <main>
+        <section>
+            <header class="header">
+                <h2>Tipos de Diseño</h2>
+            </header>
+            <p>
+                Cuando planificamos la estructura de un sitio web, ya sea porque lo estamos diseñando desde cero o debemos traducir el diseño grafico/ux del mismo al formato web, debemos tener en cuenta las diferentes variantes a la hora de manener las proporciones de los elementos.
+            </p>
+            <article class="card">
+                <header>
+                    <h3>Fluid Design</h3>
+                </header>
+                <p>
+                    Diseño que utiliza solamente porcentajes para establecer el tamaño de los elementos de la pagina. Originalmente los sitios cuentan con este tipo de caracteristica, pero su principal problema radica en su visualizacion con pantallas pequeñas o grandes.
+                </p>
+                <p>
+                    Una solucion a esto es el <strong>Liquid Web Design</strong> que utiliza maximos y minimos para limitar las dimensiones de las cajas, pero el espacio generado se convierte en el problema, especialmente en pantallas grandes.
+                </p>
+                <address>Para mas informacion consultar <a href="https://alumni.education" target="_blank">Alumni</a></address>
+            </article>
+            <article class="card">
+                <header>
+                    <h3>Adaptive Design</h3>
+                </header>
+                <p>
+                    Diseño que consiste en la maquetacion de una pagina por cada tamaño de pantalla al que apunte nuestro sitio, suele utilizar <em>media queries</em>, asi como tambien medidas absolutas, y en caso de detectar una pantalla pequeña implementa alguna herramienta de redireccionamiento.
+                </p>
+                <p>
+                    Es ideal para clientes con bajo presupuesto, ya que son sencillas de mantener, pero su principal problema radica en la duplicidad de contenido y que la informacion de la paginas no es necesariamente la misma, ya que deberiamos armar estructuras similares, repitiendo estilos reiteradas veces.
+                </p>
+                <address>Para mas informacion consultar <a href="https://alumni.education" target="_blank">Alumni</a></address>
+            </article>
+            <article class="card">
+                <header>
+                    <h3>Responsive Design</h3>
+                </header>
+                <p>
+                    Tipo de diseño que debe su origen a una publicacion realizadad por <strong>Ethan Marcotte</strong> en el sitio <a href="https://alistapart.com/article/responsive-web-design/" target="_blank">A list apart</a> donde habla sobre el uso de <em>un sistema grillas articulable, multimedia flexible, la implementacion de breakpoints utilizando media queries, etc...</em> dando a conocer un concepto conocido como <strong>One Web for All</strong>
+                </p>
+                <p>
+                    Existen algunas variantes de este tipo de diseño conocidas como <strong>Mobile-first y Content-first</strong>, donde se empieza a planificar las vistas a partir de la pantalla mas pequeña para luego ir aumentando la complejidad del diseño; y su unica diferencia radica en que el segundo propone trabajar con el contenido final.
+                </p>
+                <address>Para mas informacion consultar <a href="https://alumni.education" target="_blank">Alumni</a></address>
+            </article>
+        </section>
+    </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
