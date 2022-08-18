@@ -50,12 +50,19 @@
     #footer{
         grid-area: footer;
     }
+    /* cabecera */
+    video{
+        width: 100%;
+    }
     /* Navegacion */
     nav{
+        position: sticky;
+        bottom: 0;
+        z-index: 2;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         padding: .5rem;
         background: linear-gradient(to right, var(--first), var(--second) );
     }
@@ -65,10 +72,23 @@
     .menu{
         --light: #ccc;
         width: 100%;
+        max-height: 0;
         padding: .25rem;
+        overflow: hidden;
     }
     .menu a{
         color: var(--light);
+    }
+    /* Contenido */
+    section,
+    aside{
+        min-height: 320px;
+    }
+    section:nth-child(even){
+        background-color: #eee;
+    }
+    section:nth-child(odd){
+        background-color: #ccc;
     }
 /* Small Devices - Smartphones */
 
@@ -77,21 +97,24 @@
     /* Diseño Pagina */
     body{
         grid-template-areas: 
-            'nav header'
-            'nav main'
-            'nav footer';
+            'header nav'
+            'main nav'
+            'footer nav';
     }
     /* Navegacion */
     nav button{
         display: none;
     }
     nav{
+        max-height: 100vh;
+        top: 0;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
     .menu{
         width: auto;
+        max-height: 640px;
     }
 }
 /* Large Devices - Laptops */
