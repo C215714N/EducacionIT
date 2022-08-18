@@ -57,6 +57,9 @@
         display: grid;
         align-content: center;
         text-align: center;
+        font-size: min( calc(2vw + .5rem), 3rem);
+        text-transform: uppercase;
+        text-shadow: 0 0 .5rem var(--dark);
         color: var(--light);
     }
     #header video{
@@ -108,8 +111,7 @@
         color: var(--light);
     }
     /* Contenido */
-    section,
-    aside{
+    section{
         min-height: 320px;
     }
     section:nth-child(even){
@@ -117,6 +119,16 @@
     }
     section:nth-child(odd){
         background-color: #ccc;
+    }
+    /* Contenido */
+    main{
+        display: grid;
+    }
+    aside{
+        grid-row: 1;
+    }
+    main > *{
+        padding: 1rem;
     }
 /* Small Devices - Smartphones */
 
@@ -159,6 +171,20 @@
             'header'
             'main'
             'footer';
+    }
+    main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main > * {
+        flex: 1 0 min(100%, 300px);
+    }
+    .examples{
+        display: grid;
+        grid-template-areas: 
+            'lateral a  a b  b'
+            'lateral .  d d  .'
+        ;
     }
     nav{
         flex-direction: row;
