@@ -51,8 +51,22 @@
         grid-area: footer;
     }
     /* cabecera */
-    video{
+    #header{
+        position: relative;
+        min-height: min(100vh, 640px);
+        display: grid;
+        align-content: center;
+        text-align: center;
+        color: var(--light);
+    }
+    #header video{
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
     /* Navegacion */
     nav{
