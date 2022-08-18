@@ -29,6 +29,27 @@
         .menu{
             list-style: none;
         }
+    /* Diseño Pagina */
+    body{
+        display: grid;
+        grid-template-areas: 
+        'header' 
+        'main'
+        'footer'
+        'nav';
+    }
+    #header{
+        grid-area: header;
+    }
+    nav{
+        grid-area: nav;
+    }
+    main{
+        grid-area: main;
+    }
+    #footer{
+        grid-area: footer;
+    }
     /* Navegacion */
     nav{
         display: flex;
@@ -53,17 +74,45 @@
 
 /* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
+    /* Diseño Pagina */
+    body{
+        grid-template-areas: 
+            'nav header'
+            'nav main'
+            'nav footer';
+    }
+    /* Navegacion */
     nav button{
         display: none;
     }
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     .menu{
-        display: flex;
-        gap: .5rem;
         width: auto;
     }
 }
 /* Large Devices - Laptops */
-
+@media screen and (min-width: 992px){
+    /* Diseño Pagina */
+    body{
+        grid-template-areas: 
+            'nav'
+            'header'
+            'main'
+            'footer';
+    }
+    nav{
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu{
+        display: flex;
+        gap: .5rem;
+    }
+}
 /* Extra Large Devices - Desktop */
 @media screen and (min-width: 1200px){
     nav{
