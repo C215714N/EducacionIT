@@ -71,10 +71,24 @@
     }
     .menu{
         --light: #ccc;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        display: grid;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        text-align: center;
         width: 100%;
-        max-height: 0;
+        height: 100%;
         padding: .25rem;
+        background-image: linear-gradient(var(--second), var(--first));
         overflow: hidden;
+        opacity: .8;
+        transition: all .5s ease;
+    }
+    .menu.active{
+        top:0;
     }
     .menu a{
         color: var(--light);
@@ -111,10 +125,15 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
     .menu{
         width: auto;
+        height: auto;
+        position: static;
         max-height: 640px;
+        background-image: none;
+        text-align: left;
     }
 }
 /* Large Devices - Laptops */
