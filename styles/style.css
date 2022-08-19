@@ -47,10 +47,13 @@
 
 /* Contenido */
 
-    /* Secciones de ejemplo */
+/* Secciones de ejemplo */
     iframe{
-        width: 100%;
         min-height: 320px;
+    }
+    iframe,
+    video{
+        width: 100%;
     }
 /* Pie de Pagina */
 
