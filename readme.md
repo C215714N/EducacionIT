@@ -63,13 +63,17 @@ Son herramientas que facilitan el intercambio de datos entre cliente y servidor 
 
 En un formulario encontraremos campos de diferentes tipos, que indican que valores podemos ingresar en los mismos. Algunos de los tipo de datos mas comunes son:
 
-| Cadena de Texto | Numerico | Booleano |
-|---|---|---|
-| Texto <br> <input type="text" placeholder="Abcd1234!#$"> | Numero <br> <input type="number" placeholder="0123456789"> |  Multiple <br> <input id="opt-1" type="checkbox"> <label for="opt-1">checkbox</label>
-| Correo <br> <input type="email" placeholder="usuario@servidor">| Fecha <br> <input type="date" style="width:100%;"> | Unico <br> <input id="opt-a" type="radio" name="option"> <label for="opt-a"> radio</label>
-| Textarea <br> <textarea style="width:100%" placeholder="Campo de texto multiliena para comentarios"></textarea> | Color RGB <br> <input type="color" style="width: 100%; height: 2.5rem;"> | Seleccion <br> <select><option value="0">option 1</option><option value="1">option 2</option><option value="2">option 3</option></select>
-
-
+|tipo|Tipo|Valores|
+|--------|----|----------|
+text <td rowspan="7">input</td>Cristian Damian
+|number|35336446|
+|email|cristiandracedo@hotmail.com|
+|password|********|
+|date|1991-04-18|
+|radio|(X) masculino ( ) femenino|
+|checkbox|[X] Español [X] Ingles [ ] Portugües |
+|textarea   | - | Caja de Comentarios|
+|select|option| 1. html <br> 2. css <br> 3. js |
 ___
 
 ## Actividades
