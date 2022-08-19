@@ -1,5 +1,17 @@
 /* Reglas Generales */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Open+Sans');
+
+    @font-face{
+        font-family: 'the Simpsons';
+        src: url('../assets/fonts/simpsons.otf');
+        /* FORMATOS: 
+            ttf  (true type font)
+            otf  (open type font)
+            eot  (Ethernet open type)
+            woff (web open font file)
+            svg  (scalable vector graphics)
+        */
+    }
 
     *{
         box-sizing: border-box;
@@ -11,7 +23,7 @@
                 final-width     = width
                 content-width   = width - padding - border
         */
-        font-family: 'Poppins', 'Century Gothic', sans-serif;
+        font-family: 'Open Sans','Poppins', 'Century Gothic', sans-serif;
     }
     /* Margenes */
     body,
@@ -33,9 +45,27 @@
         list-style: none;
     }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        padding: .5rem; /*Ancho de M en la raiz (html = 16px)*/
+        background: linear-gradient(to right, #a63, #f38);
+        /* color image position/size repeat */
+    }
+    .menu a{
+        color: #ccc;
+    }
 /* Cabecera */
-
+    #header{
+        padding: 20% 1rem;
+        color: #eee;
+        text-shadow: 0 0 .5rem #863;
+        background-image: radial-gradient(circle at top right, #fd3, #6af);
+    }
+    h1{
+        font-family: 'the Simpsons';
+    }
 /* Contenido */
 
 /* Pie de Pagina */
