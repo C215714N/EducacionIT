@@ -44,7 +44,20 @@
         text-shadow: 0 0 8px;/* -x+ -y+ blur color*/
     }
 /* Cabecera */
-
+    #header{
+        padding: min(30%, 280px) 16px; /* top right bottom left */
+        background-color: #333;
+        background-image: url('');
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #548;
+    }
+    header{
+        color: #548;
+        border-bottom: 2px solid; /* width style color*/
+    }
 /* Contenido */
 
 /* Secciones de ejemplo */
