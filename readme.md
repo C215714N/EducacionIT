@@ -61,19 +61,20 @@ Una vez definida la estructura de la pagina debemos pasar implementar el diseño
 
 Son herramientas que facilitan el intercambio de datos entre cliente y servidor mediante solicitudes HTTP (HyperText Tranfer Protocol) con la intervencion del usuario ya que es quien completa los datos a enviarse.
 
-En un formulario encontraremos campos de diferentes tipos, que indican que valores podemos ingresar en los mismos. Algunos de los tipo de datos mas comunes son:
+En un formulario encontraremos campos que indican que valores podemos ingresar. Las etiquetas correspondientes a los mismos son `<input>` para la mayoria de los campos monolinea, `<textarea>` para campos multilinea y `<select>` para listas de opciones; algunos de los tipo de datos mas comunes son:
 
-|tipo|Tipo|Valores|
-|--------|----|----------|
-text <td rowspan="7">input</td>Cristian Damian
+|Tipo|Valor|
+|----|----------|
+|text | Cristian Racedo
 |number|35336446|
 |email|cristiandracedo@hotmail.com|
-|password|********|
-|date|1991-04-18|
-|radio|(X) masculino ( ) femenino|
+|password|******** |
+| date|1991-04-18|
+|radio|(O) masculino ( ) femenino|
 |checkbox|[X] Español [X] Ingles [ ] Portugües |
-|textarea   | - | Caja de Comentarios|
-|select|option| 1. html <br> 2. css <br> 3. js |
+|textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
+|select| 1. html <br> 2. css <br> 3. js |
+
 ___
 
 ## Actividades
