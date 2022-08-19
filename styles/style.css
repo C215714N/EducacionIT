@@ -77,6 +77,19 @@
         box-shadow: -4px 4px 8px #999;
         overflow: hidden;
     }
+    /* Ejemplos */
+    .example{
+        max-height: 360px;
+        border-left: 4px solid #548;
+        padding: 16px;
+        line-height: 1.5;
+        background-color: #eee;
+        overflow: auto;
+    }
+    .example figure{
+        max-width: 640px;
+        margin: 16px auto;
+    }
 /* Secciones de ejemplo */
     iframe{
         min-height: 320px;
