@@ -9,7 +9,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -46,10 +47,15 @@
 /* Cabecera */
     #header{
         padding: min(30%, 280px) 16px; /* top right bottom left */
+        text-align: center;
+        text-shadow: 0 0 8px #333;
         background-color: #333;
-        background-image: url('');
+        background-image: url('../assets/bg/osx-monterrey-light.jpg');
+        background-position: center;
+        background-size: cover;
     }
     .header{
+        margin: -16px -16px 16px;
         padding: 16px;
         color: #eee;
         background-color: #548;
@@ -59,7 +65,18 @@
         border-bottom: 2px solid; /* width style color*/
     }
 /* Contenido */
-
+    main{
+        max-width: 1140px;
+        margin: 16px auto;
+        padding: 8px;
+    }
+    article{
+        margin: 24px 0;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: -4px 4px 8px #999;
+        overflow: hidden;
+    }
 /* Secciones de ejemplo */
     iframe{
         min-height: 320px;
