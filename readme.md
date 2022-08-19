@@ -83,32 +83,32 @@ En este apartado se podran realizar diferentes ejercicios relacionados con los t
 
 ### Conceptos Basicos
 1. Realizar el tipo de lista que corresponda y ordenar, en caso que sea necesario, los siguientes elementos:
-* "edad media(3300 A.C. – 476 D.C)",  "edad antigua (476 – 1492)", "edad contemporanea (1789 – actualidad)", "edad moderna (1492 – 1789)"
-* "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
-* "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
-* "Roger Federer(6630pts)", "Novak Djokovic (12030pts)", "Rafael Nadal(9850pts)", "Daniil Mendeleev (8470pts)", "Dominic Thiem(9125pts)"
+   * "edad media(3300 A.C. – 476 D.C)",  "edad antigua (476 – 1492)", "edad contemporanea (1789 – actualidad)", "edad moderna (1492 – 1789)"
+   * "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
+   * "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
+   * "Roger Federer(6630pts)", "Novak Djokovic (12030pts)", "Rafael Nadal(9850pts)", "Daniil Mendeleev (8470pts)", "Dominic Thiem(9125pts)"
 
 
 ### Estructura de un sitio
 1. Crear una sitio web de al menos 3 paginas utilizando la estructura semantica.
 2. En cada pagina debe haber un menu de navegacion permita desplazarnos entre las mismas, como por ejemplo:
-  * [inicio](index.html)
-  * [nosotros](about.html)
-  * [galeria](gallery.html)
+   * [inicio](index.html)
+   * [nosotros](about.html)
+   * [galeria](gallery.html)
 3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion
 4. Agregar hipervinculos de las redes sociales a eleccion e informacion de copyright
 5. Colocar contenido dentro de las diferentes paginas a eleccion.
 
 ### Formularios
 1. Crear un formulario de inicio de sesion utilizando los siguientes elementos
-  * un campo de tipo __email__
-  * un campo de tipo __password__.
+   * un campo de tipo __email__
+   * un campo de tipo __password__.
 2. Crear un formulario de registro que respete los siguientes criterios:
-  * nombre y apellido __(obligatorio)__
-  * fecha de nacimiento
-  * telefono y celular
-  * correo y contraseña __(obligatorio)__
+   * nombre y apellido __(obligatorio)__
+   * fecha de nacimiento
+   * telefono y celular
+   * correo y contraseña __(obligatorio)__
 3. Crear un formulario para una red social que posea:
-  * campo para __nombre__
-  * campo de __comentario__
-  * opcion para elegir entre _publica o privada_.
+   * campo para __nombre__
+   * campo de __comentario__
+   * opcion para elegir entre _publica o privada_.
