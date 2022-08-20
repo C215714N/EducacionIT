@@ -37,7 +37,20 @@
         text-decoration: none;
     }
 /* Navegacion */
-    
+    .menu{
+        display: flex;
+        gap: .5rem;
+        padding: .5rem; /* Ancho de M en la raiz (html) */
+        background-color: #012;
+    }
+    .menu a{
+        color: #fc6
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #fea;
+        text-shadow: 0 0 .5rem; /* -x+ -y+ blur color */
+    }
 /* Cabecera */
     h1{
         font-family: 'Star Wars';
