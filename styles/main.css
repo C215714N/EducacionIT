@@ -1,0 +1,47 @@
+/* Reglas Generales */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway');
+    
+    @font-face{
+        font-family: 'Star Wars';
+        src: url('../assets/fonts/death_star.otf');
+    }
+    
+    *{
+        font-family: 'Raleway', 'century gothic', sans-serif;
+        box-sizing: border-box;
+        /* EXPLICACION:
+            content-box
+            * content-width = width
+            * final-width   = width + padding + border
+            border-box
+            * final-width   = width
+            * content-width = width - padding - border
+        */
+    }
+
+    /* Margenes */
+    body, 
+    h1, 
+    h2,  
+    h3,  
+    header p, 
+    .menu{
+        margin: 0;
+    }
+    /* Estilos */
+    .menu{
+        list-style: none;
+    }
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+/* Navegacion */
+    
+/* Cabecera */
+    h1{
+        font-family: 'Star Wars';
+    }
+/* Contenido */
+
+/* Pie de pagina */
