@@ -100,3 +100,15 @@ SELECT * FROM users_data;
 ## Usuarios que no cargaron fecha de nacimiento
 SELECT * FROM users_data
 WHERE birth IS NULL;
+## Concatenacion de Apellido y Nombre + Calculo de edad
+SELECT 
+	CONCAT('Sr/a.: ', last_name, " ", first_name) AS app_user,
+    birth,
+    CURRENT_DATE() AS today, -- devuelve la fecha actual
+    ROUND(DATEDIFF(CURRENT_DATE(), birth) / 365, 2) AS age, -- diferencia en dias para calcular los años
+    YEAR(CURRENT_DATE()) - YEAR(birth) AS years, -- diferencia entre año actual y nacimiento
+    cuil,
+    LEFT(cuil, 2) AS gender, -- extrae de izquierda a derecha los primeros 2 caracteres
+    SUBSTRING(cuil, 4, 8) AS uid, -- extrae a partir del caracter 4 los siguientes 8 caracteres
+    RIGHT(cuil, 1) AS chk -- extrae de derecha a izquierda 1 caracter
+FROM users_data;
