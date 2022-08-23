@@ -77,7 +77,11 @@
     /* Pie de Pagina */
 
 /* Small Devices | Smartphones */
-
+@media screen and (min-width: 576px){
+    main{
+        max-width: 540px;
+    }
+}
 /* Medium Devices | Tablets */
 @media screen and (min-width: 768px){
     nav .btn{
@@ -88,12 +92,28 @@
         display: flex;
         gap: .5rem;
     }
+    main{
+        max-width: 720px;
+    }
 }
 /* Large Devices | Laptops */
-
+@media screen and (min-width: 992px){
+    main{
+        max-width: 960px;
+    }
+}
 /* Extra Large | Desktop */
 @media screen and (min-width:1200px){
     nav{
         justify-content: space-around;
+    }
+    main{
+        max-width: 1140px;
+    }
+}
+/* XXL Devices | HD Desktop */
+@media screen and (min-width: 1400px){
+    main{
+        max-width: 1320px;
     }
 }
