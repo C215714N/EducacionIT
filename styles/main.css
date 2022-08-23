@@ -19,7 +19,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Rellenos */
@@ -54,7 +55,28 @@
         text-shadow: 0 0 .5rem;
     }
     /* Cabecera */
-
+    #header{
+        min-height: min(100vh, 640px); /* viewport Height */
+        display: grid;
+        align-content: center;
+        text-align: center;
+        font-size: min(calc(2vw + .5rem), 3rem);
+        /* EXPLICACION:
+            min(a,b): devuelve el valor mas chico entre 2 medidas
+            calc(a + b): calcula el resultado utilizando unidades incompatibles
+        */
+    }
+    .header{
+        width: 100%;
+        margin: -1rem 0;
+        padding: 1rem;
+        color: #eee;
+        background-color: #248;
+    }
+    header{
+        color: #248;
+        border-bottom: 2px solid;
+    }
     /* Contenido */
     main{
         margin: 1rem auto;
@@ -65,15 +87,27 @@
         flex-wrap: wrap;
         gap: 1rem;
     }
-    .flex > .card{
+    .card{ 
         flex: 1 0 min(100%, 300px); /* grow shrink basis */
-    }
-    .card{
         border-radius: .25rem;
         padding: 1rem;
         background-color: #eee;
         box-shadow: -.25rem .25rem .5rem #999; /* x y blur color */
     }
+    /* 
+        tag           1
+        .class       10
+        #id         100
+        !important 1000
+        inline    10000
+
+        #header h1 => 101
+        #header .header => 110
+        #header h1.header => 111
+        h1{
+            color: blue; 1001
+        }
+    */
     /* Pie de Pagina */
 
 /* Small Devices | Smartphones */
