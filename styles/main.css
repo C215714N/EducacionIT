@@ -127,7 +127,52 @@
         }
     */
     /* Pie de Pagina */
-
+    
+        /* Formulario */
+        input,
+        textarea,
+        select,
+        button{
+            outline: none;
+            border: 1px solid #999;
+            padding: .25rem .5rem;
+            font-size: 1rem;
+        }
+        label{
+            margin: .5rem 0 .25rem;
+        }
+        .vertical{
+            max-width: 540px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 1rem;
+        }
+        .valid{
+            display: none;
+            padding: .25rem;
+        }
+        #contact :focus{
+            box-shadow: 0 0 .5rem #248;
+        }
+        #contact :focus + .valid{
+            display: block;
+        }
+        #contact button{
+            margin: .25rem 0 1rem auto;
+        }
+    /* Redes sociales */
+        .social{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            gap: .5rem;
+        }
+        .social a{
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            background-color: #ccc;
+        }
 /* Small Devices | Smartphones */
 @media screen and (min-width: 576px){
     main{
