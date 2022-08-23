@@ -82,7 +82,43 @@
         <!-- Mapa de Contacto -->
 
         <!-- Formulario -->
-        
+        <form action="" id="contact">
+            <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                type="text"
+                minlength="3"
+                maxlength="50"
+                required>
+            <div class="valid">
+                Ingrese un nombre con al menos 3 caracteres y  50 como maximo.
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                type="email"
+                minlength="8"
+                required>
+            <div class="valid">
+                Escriba una direccion de al menos 8 caracteres que respete el formato "usuario@servidor"
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone" 
+                type="tel"
+                required>
+            <div class="valid">
+                Coloque la caracteristica entre parentesis y utilice un guion cada 3 a 6 digitos.
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                minlength="20" 
+                maxlength="200" 
+                required></textarea>
+            <button>Enviar</button>
+        </form>
         <!-- Redes sociales -->
         <div class="social">
             <a class="facebook" href="https://facebook.com" target="_blank">facebook</a>
