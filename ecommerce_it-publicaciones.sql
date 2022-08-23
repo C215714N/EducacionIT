@@ -85,3 +85,23 @@ SELECT *,
         ELSE 'Hasta 6 cuotas'
     END AS credito
 FROM sales;
+## aumento del 15% en todas las publicaciones
+UPDATE posts
+SET price = price * 1.15; 
+## Aumento del 30% para las publicaciones del Usuario c215714n
+UPDATE posts
+SET price = price * 1.3
+WHERE user = 1;
+## Actualizacion de Stock en publicaciones que tuvieron ventas
+UPDATE posts
+SET stock = stock - (SELECT SUM(quantity) FROM sales WHERE post = post_id); -- Calcula el total de articulos vendidos y lo resta del stock
+## Estadisticas de ventas organizada por publicacion
+SELECT 
+	post,
+    SUM(quantity) AS sold, -- suma la cantidad de articulos vendidos
+    COUNT(quantity) AS sales, -- conteo de ventas realizadas
+    MIN(quantity) AS min, -- cantidad minima vendida
+    MAX(quantity) AS max, -- cantidad maxima vendida
+    ROUND(AVG(quantity), 2) AS average -- promedio de articulos por venta
+FROM sales
+GROUP BY post; -- separado por numero de publicacion
