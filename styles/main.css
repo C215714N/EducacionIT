@@ -53,6 +53,29 @@
         color: #eee;
         text-shadow: 0 0 .5rem;
     }
+    /* Cabecera */
+
+    /* Contenido */
+    main{
+        margin: 1rem auto;
+        padding: .5rem;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .flex > .card{
+        flex: 1 0 min(100%, 300px); /* grow shrink basis */
+    }
+    .card{
+        border-radius: .25rem;
+        padding: 1rem;
+        background-color: #eee;
+        box-shadow: -.25rem .25rem .5rem #999; /* x y blur color */
+    }
+    /* Pie de Pagina */
+
 /* Small Devices | Smartphones */
 
 /* Medium Devices | Tablets */
