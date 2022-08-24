@@ -58,23 +58,40 @@
     }
 /* Cabecera */
     #header{
-        padding: 20% 1rem;
+        padding: min(20%, 240px) 1rem;
         color: #eee;
-        text-shadow: 0 0 .5rem #863;
+        font-size: min(calc(2vw + .5rem), 3rem);
+        /* EXPLICACION:
+            min(a,b): devuelve el valor mas bajo
+            calc(a + b): realiza una operacion entre unidades
+        */
+        /* 
+            Unidades absolutas: Limites
+                min-width: 150px;
+                max-width: 540px;
+            Unidades Relativas: Tamaños (proporciones)
+                width: 100%;
+                padding: 1rem;
+            Unidades viewport: Alturas y tipografia flexible
+                min-height: 100vh;
+                font-size: 5vw;
+        */
+        text-align: center;
+        text-shadow: 0 0 min(1.5vw, 1.5rem) #333;
         background-image: 
             url('../assets/bg/simpsons-bart.png'),
             url('../assets/bg/simpsons-donut.png'),
             url('../assets/bg/simpsons-homer.png'),
             radial-gradient(circle at top right, #fd3, #6af);
         background-position: 
-            80% 30%, /*x y*/
+            90% bottom, /*x y*/
             center, /* centro absoluto */
-            center left; /* centro a la izquierda*/
+            top left; /* esquina superior izquierda*/
         background-size: 
-            10rem, /*width height*/
-            contain, /* */
-            30%, /**/
-            cover;
+            clamp(2rem, 50%, 160px),/* width */
+            contain, /* contenida (completa dentro del contenedor) */
+            clamp(5rem, 30%, 480px), /*calcula el tramaño entre un minimo, promedio ,maximo */
+            cover; /* cubriendo (tapa al contenedor sin importar si la imagen se ve completa)*/
         background-repeat: no-repeat;
     }
     h1{
