@@ -8,7 +8,7 @@
 *	__YEAR(date)__		extrae el año de la fecha especificada
 *	__DAYNAME(date)__		retorna el nombre del dia de la fecha
 *	__MONTHNAME(date)__		retorna el nombre del mes de la fecha
-*	__DATE_DIFF(d2,d1)__	devuelve la diferencia en dias entre las fechas
+*	__DATEDIFF(d2,d1)__	devuelve la diferencia en dias entre las fechas
 
 ### Numeros (INTEGER, DECIMAL, DOUBLE, LONG, FLOAT)
 *	__MAX(field)__		obtiene el valor mas alto de toda la columna

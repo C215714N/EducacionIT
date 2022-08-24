@@ -52,6 +52,18 @@ SELECT user_id FROM users WHERE user_id > 4; -- lista de valores a cargar
 ## Carga por consulta SELECT multiples campos
 INSERT INTO sales(post, quantity, price) -- tabla objetivo
 SELECT post_id, CEIL(stock / 100), price FROM posts; -- consulta de origen
+## Venta de Ultimo Momento
+INSERT INTO sales
+SET	post = 1,
+	user = (SELECT user_id FROM users WHERE username = 'Batman'),
+    quantity = 4,
+    price = (SELECT price FROM posts WHERE post_id = 1);
+    
+## Actualizacion por subconsulta dentro de subconsulta
+UPDATE posts -- tabla a actualizar
+SET stock = stock - (SELECT quantity FROM sales WHERE sale_id = ( -- cantidad 4
+	SELECT MAX(sale_id) FROM sales WHERE user = 4 )	) -- ultimo sale_id 9 para Batman
+WHERE post_id = 1; -- solamente para la publicacion 1
 
 ## Actualizacion aleatoria
 ### Numero de publicacion
@@ -65,10 +77,10 @@ SET user = FLOOR(RAND() * 5 + 3) -- usuario entre 3 y 7 (redondeado hacia abajo)
 WHERE user IS NULL; -- siempre que el usuario no este definido (NULL)
 
 ### Actualizacion de Precios por SubConsulta
-
 UPDATE posts
 SET price = (SELECT price FROM sales WHERE post = post_id);
 
+## Actualizacion por casos cantidad segun el precio
 UPDATE sales
 SET price = (SELECT price FROM posts WHERE post_id = post), -- precio del registro que coincida con el numero de publicacion
 quantity = CASE -- evaluacion de casos
@@ -78,6 +90,7 @@ quantity = CASE -- evaluacion de casos
 END -- fin de la evaluacion
 WHERE price IS NULL; -- condicion para realizar las actualizacion
 
+## Consulta por casos Cuotas segun el precio
 SELECT *,
 	CASE
 		WHEN PRICE >= 50000 THEN 'Hasta 18 cuotas'
@@ -93,8 +106,9 @@ UPDATE posts
 SET price = price * 1.3
 WHERE user = 1;
 ## Actualizacion de Stock en publicaciones que tuvieron ventas
-UPDATE posts
-SET stock = stock - (SELECT SUM(quantity) FROM sales WHERE post = post_id); -- Calcula el total de articulos vendidos y lo resta del stock
+UPDATE posts, sales
+SET stock = stock - (SELECT SUM(quantity) FROM sales WHERE post = post_id) -- Calcula el total de articulos vendidos y lo resta del stock
+WHERE post = post_id; -- prevencion de actualizacion de caso de valor NULL
 ## Estadisticas de ventas organizada por publicacion
 SELECT 
 	post,
