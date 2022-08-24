@@ -61,7 +61,21 @@
         padding: 20% 1rem;
         color: #eee;
         text-shadow: 0 0 .5rem #863;
-        background-image: radial-gradient(circle at top right, #fd3, #6af);
+        background-image: 
+            url('../assets/bg/simpsons-bart.png'),
+            url('../assets/bg/simpsons-donut.png'),
+            url('../assets/bg/simpsons-homer.png'),
+            radial-gradient(circle at top right, #fd3, #6af);
+        background-position: 
+            80% 30%, /*x y*/
+            center, /* centro absoluto */
+            center left; /* centro a la izquierda*/
+        background-size: 
+            10rem, /*width height*/
+            contain, /* */
+            30%, /**/
+            cover;
+        background-repeat: no-repeat;
     }
     h1{
         font-family: 'the Simpsons';
