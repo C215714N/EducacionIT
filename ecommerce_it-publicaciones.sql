@@ -119,3 +119,25 @@ SELECT
     ROUND(AVG(quantity), 2) AS average -- promedio de articulos por venta
 FROM sales
 GROUP BY post; -- separado por numero de publicacion
+
+## Total de cada venta
+SELECT 
+	sale_id,
+    p.post_title,
+    CONCAT_WS(", ",last_name, first_name) AS customer,
+    s.quantity,
+    s.price,
+    (s.price * s.quantity) AS total,
+    s.sale_date
+FROM sales AS s
+JOIN users_data AS ud ON ud.user = s.user
+JOIN posts AS p ON p.post_id = s.post;
+
+## Total gastado por usuario
+SELECT
+	CONCAT_WS(", ",last_name, first_name) AS customer,
+    COUNT(quantity) AS sales,
+    SUM(price * quantity) AS total
+FROM sales AS s 
+JOIN users_data AS u ON u.user = s.user
+GROUP BY s.user;
