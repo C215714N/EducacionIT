@@ -29,14 +29,17 @@ let operation = w.prompt('elija una operacion:\n 1-suma\n 2-resta\n 3-multiplica
 switch(operation){
     case '1':
     case 'suma':
+    case 'adicion':
         alert(num_a + num_b);
     break;
     case '2':
     case 'resta':
+    case 'sustraccion':
         alert(num_a - num_b);
     break;
     case '3':
     case 'producto':
+    case 'multiplicacion':
         alert(num_a * num_b);
     break;
     case '4':
