@@ -5,11 +5,11 @@ Esta es una guia Practica para los alumnos del curso de __Javascript desde Cero_
 ## Tabla de contenidos
 
 1. [Variables](#variables)
-  1. [Declaraciones](#declaraciones)
-  1. [Datos Primitivos](#datos-primitivos)
+    1. [Declaraciones](#declaraciones)
+    1. [Datos Primitivos](#datos-primitivos)
 1. [Comandos](#comandos)
-  1. [Entrada y Salida](#entrada-y-salida)
-  1. [Captura de Elementos](#captura-de-elementos)
+    1. [Entrada y Salida](#entrada-y-salida)
+    1. [Captura de Elementos](#captura-de-elementos)
 
 ## Variables
 
@@ -20,8 +20,9 @@ Corresponde a un espacio reservado en la memoria cuyo valor puede cambiar. Suele
 * El nombre de las mismas __no debe empezar con un numero__
 * Se hace distincion entre `mayusculas` y `minusculas`
 * No se pueden utilizar __palabras reservadas del lenguaje__
+
 | valido | invalido |
-|------|--------|
+|--------|--------|
 | Clase_1 | 1Clase |
 | $nombre | mi nombre |
 | _var | var |
@@ -72,3 +73,70 @@ Cuando trabajamos con un __documento HTML__ en ocasiones sera necesario acceder 
 | getElementsByTagName(`'Tag'`) | Devuelve una lista de elementos que correspondan con el tipo de etiqueta
 | querySelector(`'Selector'`) | Devuelve el primer elemento que coincida con el selector cuya sintaxis es similar a css
 |  querySelectorAll(`'Selector'`)| Devuelve una lista de elementos que correspondan con el selector
+
+## Condicionales
+
+En ciertas ocasiones deberemos generar una bifurcacion en nuestro codigo, donde se llevara a cabo una accion segun el resultado de una condicion, ya sea que se cumpla o no.
+
+### Sentencia if
+
+Para ejecutar varias sentencias en una cláusula, use una __sentencia block ({ ... })__ para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:
+
+```
+if ( test >= 7) {
+  console.log('approve')
+} else {
+  console.log('fail')
+}
+```
+
+Cualquier valor diferente de __undefined__, null, 0, -0, NaN, o la cadena vacía (""), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como verdadero en una sentencia condicional.
+
+```
+if (nota >= 7) {
+  console.log('aprobado')
+} else if (nota >= 4){
+  console.log('regular')
+} else {
+  console.log('aplazo')
+}
+```
+### Sentencia Switch
+
+Es una instrucción de __flujo de control__ que prueba el valor de una expresión contra varios casos. La computadora revisará la sentencia switch y __verificará la igualdad estricta === entre el  case y la expresión__.
+
+```
+switch(language){
+  case 'english':
+    console.log('welcome to the javascript course');
+  break;
+  case 'spanish':
+    console.log('bienvenido al curso de javascript');
+  break;
+  case 'french':
+    console.log('bienvenue dans le cours javascript');
+  break;
+  case 'portuguese':
+    console.log('bem vindo ao curso de javascript');
+  break;
+}
+```
+
+Si ninguno de los casos coincide con la expresión, se ejecutará la __cláusula predeterminada__.
+
+```
+switch(instrument){
+  case 'guitar':
+  case 'sitar':
+  case 'bass':
+    console.log('string')
+  break;
+  case 'flute':
+  case 'saxophone':
+  case 'trumpet':
+    console.log('wind')
+  break;
+  default:
+    console.log('percussion')
+}
+```
