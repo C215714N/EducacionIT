@@ -47,3 +47,7 @@ if(a){
             alert('selecciona una opcion valida');
     }
 }
+let forExample = '<li>for(condicion){...}</li>';
+let switchExample = '<li>switch(condicion){...}</li>';
+
+cuentas.innerHTML = forExample + switchExample;
