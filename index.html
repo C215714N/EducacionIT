@@ -10,6 +10,7 @@
     <title>Maquetación Web</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="assets/bg/simpsons-donut.svg">
 </head>
 <body>
     <!-- Navegacion -->
@@ -29,10 +30,60 @@
     </header>
     <!-- Contenido principal -->
     <main>
-        
+
     </main>
     <!-- Pie de pagina -->
     <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form action="" id="contact">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text" 
+                placeholder="Nombre(*): Cristian Racedo" 
+                pattern="[A-Z a-z]{3,50}"
+                title="Complete el campo ingresando solamente letras, sin ñ, ç, ni tildes, colocando entre 3 y 50 caracteres."
+                maxlength="50"
+                required>
+            <div class="valid">
+                Complete el campo ingresando solamente letras, sin ñ, ç, ni
+                tildes, colocando entre 3 y 50 caracteres.
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email" 
+                placeholder="Correo(*): cristiandracedo@hotmail.com.ar"
+                title="Complete el campo colocando una direccion de correo de al menos 8 caracteres y que respete el formato 'usuario@servidor'"
+                minlength="8"
+                required> 
+            <div class="valid">
+                Complete el campo colocando una direccion de correo de al menos 8 caracteres y que respete el formato 'usuario@servidor'
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="phone"
+                type="tel" 
+                placeholder="Telefono(*): (11)0303-4567" 
+                pattern="([0-9]{6,20})|([\(]\d{3,5}[\)]\d{3,6}[\-]\d{3,6})"
+                required>
+            <div class="valid">
+                Complete el campo colocando la caracteristica entre parentesis y separando con un guion cada 3 a 6 digitos, quedando al final 4 digitos como se muestra en el ejemplo (5411)0303-4567.
+                Tambien podes escribir solamente numeros
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                name="consult" 
+                id="contact_consult" 
+                minlength="20" 
+                maxlength="200" 
+                required></textarea>
+            <button>enviar</button>
+        </form>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
