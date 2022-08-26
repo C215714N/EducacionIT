@@ -150,6 +150,110 @@
                 </div>
             </section>
         </article>
+	<article>
+		<header class="header">
+			<h2>Tablas HTML</h2>
+		</header>
+		<p>
+			Son elementos que permiten organizar la informacion de manera tabular, se utilizan principalmente para estructura de datos y para implementarlas dentro de una pagina web debemos utilizar la etiqueta <strong>&lt;table></strong>. Las mismas respetan el <em>modelo de cajas</em> es decir que poseen, en su interior, elementos contenedores y de contenido.
+		<p>
+		<section>
+			<header>
+				<h3>¿Poseen Estructura Semantica?</h3>
+			</header>
+			<p>
+			Dentro de la <em>etiqueta mencionada anteriormente</em> debemos colocar las filas utilizando la etiqueta <strong>&lt;tr> (Table Row)</strong> y dentro de estas las celdas de encabezado y contenido con las etiquetas <strong>&lt;th> (Table Heading)</strong> y <strong>&lt;td> (Table Division)</strong> respectivamente. Ademas, debemos especificar a que parte de la tabla pertenece cada conjunto de elementos, esto se conoce como estructura semantica de tabla y se compone del siguiente grupo de etiquetas:
+			<ul class="example">
+				<li><strong>THEAD:</strong> Cabecera de tabla que contiene la fila de encabezados.</li>
+				<li><strong>TBODY:</strong> Cuerpo de Tabla que contiene los datos relevantes para el usuario</li>
+				<li><strong>TFOOT:</strong> Pie de Tabla que contiene datos complementarios al contenido principal</li>
+			</ul>
+			<div class="contain">
+				<table class="classic">
+					<caption>Usuarios</caption>
+					<!-- Cabecera -->
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Correo</th>
+						</tr>
+					</thead>
+					<!-- Cuerpo --> 
+					<tbody>
+						<tr>
+							<td>c215714n</td>
+							<td>cristiandracedo@hotmail.com</td>
+						</tr>
+						<tr>
+							<td>d477714n</td>
+							<td>cristiandracedo@gmail.com</td>
+						</tr>
+					</tbody>
+					<!-- Pie -->
+					<tfoot>
+						<tr>
+							<th>Total</th>
+							<td>2</td>
+						</tr>
+					</tfoot>
+				</table>
+				<table class="semantic modern">
+					<caption>Rutina Semanal</caption>
+				      <thead>
+				        <tr>
+				          <th>H</th>
+				          <th>L</th>
+				          <th>M</th>
+				          <th>X</th>
+				          <th>J</th>
+				          <th>V</th>
+				          <th>S</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr>
+				          <th>m</th>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				        </tr>
+				        <tr>
+				          <th>t</th>
+				          <td>x</td>
+				          <td></td>
+				          <td></td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td></td>
+				        </tr>
+				        <tr>
+				          <th>n</th>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td>x</td>
+				          <td></td>
+				        </tr>
+				      </tbody>
+				      <tfoot>
+				        <tr>
+				          <th>Total</th>
+				          <td>3</td>
+				          <td>2</td>
+				          <td>2</td>
+				          <td>3</td>
+				          <td>3</td>
+				          <td>1</td>
+				        </tr>
+				      </tfoot>
+				</table>
+			<div>
+		</section>
+	</article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
