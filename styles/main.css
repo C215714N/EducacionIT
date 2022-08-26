@@ -100,3 +100,22 @@
 /* Contenido */
 
 /* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        max-width: 540px;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+    }
+    input,
+    textarea,
+    select,
+    button{
+        padding: .25rem .5rem;
+        font-size: 1rem;
+    }
+    .valid{
+        max-height: 0;
+        overflow: hidden; /* evitar el desbordamiento */
+    }
