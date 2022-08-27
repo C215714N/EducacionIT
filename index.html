@@ -55,11 +55,13 @@
                 <header>
                     <h3>Jerarquia de Selectores</h3>
                 </header>
-                <p></p>
+                <p>
+                    En CSS cuando aplicamos estilos, debemos tener en cuenta el peso de cada selector que utilizamos, ya que en caso de solapamiento de reglas el navegador determinada cual debe aplicar por encima del resto en base al elemento afectado. Esto solamente aplica cuando las reglas corresponden a la misma etiqueta.
+                </p>
                 <ul class="example">
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><strong>tag</strong> selector de menor jerarquia que se puede sobrescibir facilmente, afecta a todas las etiquetas con el nombre seleccionado</li>
+                    <li><strong>.class</strong> selector de jerarquia intermedia que afecta a todas las etiquetas cuyo atributo class sea el especificado, pesa por encima de tag</li>
+                    <li><strong>#id</strong> selector de jerarquia superior que afecta a la etiqueta cuyo id corresponde con el del selector, aplica por encima del resto</li>
                 </ul>
             </article>
         </section>
