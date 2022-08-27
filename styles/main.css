@@ -54,6 +54,7 @@
 /* Cabecera */
     h1{
         font-family: 'Star Wars';
+        letter-spacing: .2rem;
     }
     #header{
         padding: min(20%, 240px) 1rem;
@@ -63,8 +64,48 @@
             min(a,b): el navegador devuelve el valor mas bajo entre las 2 unidades
             calc(a + b) el navegador realiza una operacion entre unidades (auque no sean compatibles)
         */
+        text-align: center;
         text-shadow: 0 0 .5rem #fc6;
-        background-image: url('../assets/bg/space.jpg');
+        background-image: 
+            linear-gradient( /* estilo de gradiente */
+                rgba(17, 34, 68, .5), 
+                rgba(17,17,34,.5)
+            ),
+            url('../assets/bg/tiefighter-top-right.png'),
+            url('../assets/bg/tiefighter-top-left.png'),
+            url('../assets/bg/xwing-left.png'),
+            url('../assets/bg/xwing-top-left.png'),
+            url('../assets/bg/millenium-falcon.png'),
+            url('../assets/bg/death-star.png'),
+            url('../assets/bg/space.jpg');
+        background-position: /*x y | left right top bottom center*/
+            center,
+            90% 15%,
+            bottom left,
+            40% center,
+            15% top,
+            95% bottom,
+            center 10%,
+            center;
+        background-size: /* width height | contain cover */
+            cover,
+            clamp(5rem, 30%,300px), 
+            clamp(5rem, 30%,300px),
+            clamp(5rem, 30%,300px), /* minimo, promedio maximo */
+            clamp(5rem, 30%,300px),  
+            clamp(5rem, 30%,500px), 
+            min(45%, 600px), /* muestra la imagen completa */
+            cover; /* cubre el total de la etiqueta */
+        background-repeat: no-repeat;   
+        background-attachment: 
+            fixed,
+            scroll,
+            scroll,
+            scroll,
+            scroll,
+            scroll,
+            fixed,
+            scroll;     
     }
     /*
         Unidades
