@@ -55,6 +55,35 @@
     h1{
         font-family: 'Star Wars';
     }
+    #header{
+        padding: min(20%, 240px) 1rem;
+        color: #ffa;
+        font-size: min(calc(2vw + .5rem), 3rem); /* ancho de la ventana*/
+        /* EXPLICACION:
+            min(a,b): el navegador devuelve el valor mas bajo entre las 2 unidades
+            calc(a + b) el navegador realiza una operacion entre unidades (auque no sean compatibles)
+        */
+        text-shadow: 0 0 .5rem #fc6;
+        background-image: url('../assets/bg/space.jpg');
+    }
+    /*
+        Unidades
+        ABSOLUTAS: siempre valen los mismo independientemente del medio
+        SE UTILIZAN PARA LIMITAR TAMAÑOS DE CAJAS
+            distancia: m cm mm in
+            tipografia: pt pc
+            hibrida: px (puntos en pantalla - depende de la resolucion)
+        RELATIVAS: su tamaño depende el elemento contenedor
+        SE UTILIZAN PARA DEFINIR TAMAÑOS Y TIPOGRAFIA
+            tamaños: % 
+            tipografia: em(ancho "M") ex(alto de "x") ch(ancho del caracter 0)
+            hibrida: rem (root EM - letra de la etiqueta HTML)
+        FLEXIBLES: basan su tamaño en el viewport
+            tamaños: vw(ancho) vh(alto)
+            dimension: vmin(menor) vmax(mayor) 
+            (portrait | landscape)
+        SE UTILIZAN PARA TIPOGRAFIA ADAPTABLE Y DEFINIR ALTURAS
+    */
 /* Contenido */
 
 /* Pie de pagina */
