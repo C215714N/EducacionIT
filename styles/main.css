@@ -1,0 +1,69 @@
+/* Calculadora */
+    body{
+        perspective: 600px;
+        perspective-origin: top center;
+    }
+    /* Disposicion de Elementos*/
+        #calculator{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: 
+                'result result'
+                'actions operators'
+                'numbers operators';
+            transform: rotateX(30deg);
+        }
+        #result{
+            grid-area: result;
+        }
+        #actions{
+            grid-area: actions;
+        }
+        #numbers{
+            grid-area: numbers;
+        }
+        #operators{
+            grid-area: operators;
+        }
+    /* Organizacion de Contenido*/
+        #actions,
+        #numbers,
+        #operators{
+            display: flex;
+            gap: .2rem;
+            flex: 1 0 100px;
+            flex-wrap: wrap-reverse;
+        }
+        #operators > input{
+            width: 100%;
+        }
+        :is(#actions, #numbers) input{
+            flex: 1 0 25%;
+        }
+        #numbers > input:first-child{
+            flex-basis: 100%;
+        }
+    /*Estilos Visuales*/
+        #calculator{
+            max-width: 320px;
+            flex-wrap: wrap;
+            gap: .25rem;
+            margin: auto;
+            border-radius: .5rem;
+            padding: 1rem;
+            background: linear-gradient(#666, #999);
+        }
+        #calculator :is(input, button){
+            outline: none;
+            border-radius: .25rem;
+            border: 2px solid #eee;
+            padding: .5rem;
+        }
+        [type="button"]{
+            color: #eee;
+            background-color: transparent;
+            text-shadow: 0 0 .5rem #333;
+        }
+        [type="button"]:hover{
+            background-color: #333;
+        }

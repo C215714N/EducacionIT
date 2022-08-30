@@ -48,9 +48,12 @@ for(i = 0; i < links.length; i++){
  *  pueden ser anonimas (deben estar asociadas a un evento) 
  *  pueden poseer un nombre para ser llamadas
 */
-
 function sumar(a,b) {
     return a + b
+}
+function parseMyNumber(a, b){
+    this.a = parseInt(a);
+    this.b = parseInt(b);
 }
 
 let numeroA = d.querySelector('#numeroA');
@@ -58,8 +61,50 @@ let numeroB = d.getElementById('numeroB');
 let resultado = d.querySelector('#result')
 let btnSumar = d.querySelector('button#sum');
 
+// elemento.evento = accion(funcion asociada al evento)
 btnSumar.onclick = function (){
-    a = parseInt(numeroA.value);
-    b = parseInt(numeroB.value);
+    a = numeroA.value;
+    b = numeroB.value;
+    parseMyNumber;
     resultado.innerHTML = sumar(a, b)
 }
+
+let cuentas = d.querySelectorAll('.cuentas');
+
+function operaciones(a,b,index){
+    let res;
+    switch(index){
+        case 0: // sumar
+            res = a + b
+        break;
+        case 1: // restar
+            res = a - b
+        break;
+        case 2: // multiplicar
+            res = a * b
+        break;
+        case 3:
+            if(b == 0){
+                res = 'no se puede dividir por cero'
+            } else {
+                res = a / b
+            }
+        break;
+        case 4:
+            res = a ** b
+    }
+    return res;
+}
+// forEach extrae de un array cada elemento individual
+// (elemento, indice) => debe devolver los elementos para su uso
+cuentas.forEach( (button, i) =>
+//  elemento.escuchador( "evento", accion(funcion asociada al evento) )
+    button.addEventListener(
+        'click', function () {
+            let a = numeroA.value;
+            let b = numeroB.value;
+            parseMyNumber(a,b);
+            result.innerHTML = (operaciones(a, b, i));
+        }
+    )
+)
