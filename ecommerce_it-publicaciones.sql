@@ -58,7 +58,20 @@ SET	post = 1,
 	user = (SELECT user_id FROM users WHERE username = 'Batman'),
     quantity = 4,
     price = (SELECT price FROM posts WHERE post_id = 1);
-    
+### Venta de ULTIMO MOMENTO
+INSERT INTO sales
+SET	post = 3,
+	user = (SELECT user_id FROM users WHERE username = 'Wonder'),
+    quantity = 2,
+    price = (SELECT price FROM posts WHERE post_id = 3);
+## Cambio de comprador
+UPDATE sales 
+SET user = 4 
+WHERE sale_id = 10;
+## Cancelacion de la venta
+DELETE FROM sales
+WHERE sale_id = 10;
+
 ## Actualizacion por subconsulta dentro de subconsulta
 UPDATE posts -- tabla a actualizar
 SET stock = stock - (SELECT quantity FROM sales WHERE sale_id = ( -- cantidad 4

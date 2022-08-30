@@ -29,3 +29,7 @@ IDENTIFIED BY '1111';
 GRANT SELECT
 ON ecommerce_it.*
 TO 'invited'@'localhost';
+
+/*DCL - USUARIO CRISTIAN*/
+CREATE USER IF NOT EXISTS 'c215714n'@'localhost'
+IDENTIFIED BY 'vtodyosmd48w58qh';
