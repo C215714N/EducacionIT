@@ -28,7 +28,7 @@
         </div>
     </header>
     <!-- Contenido -->
-    <main>
+    <main class="container">
         <section>
             <h2>Introduccion</h2>
             <p>
@@ -38,7 +38,7 @@
             <p>
                 Como se menciona mas arriba, las utilidades son clases que facilita la hoja de estilos de bootstrap para realizar cambios en el diseño de nuestra pagina mediante clases que son nombradas de la siguiente manera: <strong>attributo-valor</strong> y en la mayoria de los casos, se suele utilizar la letra inicial del attributo.
             </p>
-            <ul class="list-unstyled d-flex">
+            <ul class="list-unstyled d-flex flex-wrap">
                 <li class="m-3 p-2">margin: 1rem; padding: .5rem; (.m-3 .p-2)</li>
                 <li class="border px-5"> border: 1px solid; padding: 0 3rem; (.border .px-5)</li>
                 <li class="border-start border-3 ms-4">border-left: 3px solid; margin-left: 1.5rem (.border-start .border-3 .ms-4)</li>
@@ -47,6 +47,72 @@
             <p>
                 las utilidades se aplican sobre los elementos utilizando clases, y en ciertas oportunidades vamos a recurrir a los que se llama clases de ayuda, que permiten modificar alguna caracteristica de un valor establecido. Las podemos diferenciar, porque se repite el nombre del atributo y agrega un valor adicional, como por ejempo: <strong>border border-dark</strong>
             </p>
+            <p>
+                Asi como existen valores predefinidos para ciertos atributos como <em>justify-content, text-align</em>, hay ciertos valores que son definidos en el estilos. Bootstrap aplica unidades que van de 0 a 5 utilizando rem, en la mayoria de los casos, asi como tambien posee nombres de color predeterminados.
+            </p>
+            <ul class="list-unstyled">
+                <li class="bg-primary">primary</li>
+                <li class="bg-secondary">secondary</li>
+                <li class="bg-light">light</li>
+                <li class="bg-dark">dark</li>
+                <li class="bg-danger">danger</li>
+                <li class="bg-warning">warning</li>
+                <li class="bg-success">success</li>
+                <li class="bg-info">info</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Sistema de Grillas Responsive</h2>
+            <p>
+                Una de las caracteristicas principales del framework es su sistema de grillas que utiliza flexbox y basa los tamaños de sus elementos en porcentajes. La misma se divide en <strong>12 columnas</strong> en las que cada una representa un porcentaje del contenedor en el que se encuentre.
+            </p>
+            <table class="table table-dark table-striped">
+                <caption>Breakpoints</caption>
+                <thead>
+                    <th>name</th>
+                    <th>width</th>
+                    <th>max-width</th>
+                    <th>device</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xs</td>
+                        <td>&lt; 576px</td>
+                        <td>100%</td>
+                        <td>smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td>&GreaterEqual; 576px &amp; &lt; 768px</td>
+                        <td>540px</td>
+                        <td>smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>&GreaterEqual; 768px &amp; &lt; 992px</td>
+                        <td>720px</td>
+                        <td>tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>&GreaterEqual; 992px &amp; &lt; 1200px</td>
+                        <td>960px</td>
+                        <td>laptops</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>&GreaterEqual; 1200px &amp; &lt; 1400px</td>
+                        <td>1140px</td>
+                        <td>Desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>&GreaterEqual; 1400px</td>
+                        <td>1320px</td>
+                        <td>HD Desktop</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <!-- Pie de Pagina -->
