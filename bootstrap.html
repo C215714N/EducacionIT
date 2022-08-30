@@ -22,9 +22,9 @@
     </nav>
     <!-- Cabecera -->
     <header>
-        <div>
-            <h1>Bootstrap</h1>
-            <p>Responsive Web Design</p>
+        <div class="text-center">
+            <h1 class="display-1 fw-bold text-uppercase">Bootstrap</h1>
+            <p class="h1">Responsive Web Design</p>
         </div>
     </header>
     <!-- Contenido -->
@@ -66,70 +66,119 @@
             <p>
                 Una de las caracteristicas principales del framework es su sistema de grillas que utiliza flexbox y basa los tamaños de sus elementos en porcentajes. La misma se divide en <strong>12 columnas</strong> en las que cada una representa un porcentaje del contenedor en el que se encuentre.
             </p>
-            <table class="table table-dark table-striped">
-                <caption>Breakpoints</caption>
-                <thead>
-                    <th>name</th>
-                    <th>width</th>
-                    <th>max-width</th>
-                    <th>device</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>xs</td>
-                        <td>&lt; 576px</td>
-                        <td>100%</td>
-                        <td>smartwatch</td>
-                    </tr>
-                    <tr>
-                        <td>sm</td>
-                        <td>&GreaterEqual; 576px &amp; &lt; 768px</td>
-                        <td>540px</td>
-                        <td>smartphones</td>
-                    </tr>
-                    <tr>
-                        <td>md</td>
-                        <td>&GreaterEqual; 768px &amp; &lt; 992px</td>
-                        <td>720px</td>
-                        <td>tablets</td>
-                    </tr>
-                    <tr>
-                        <td>lg</td>
-                        <td>&GreaterEqual; 992px &amp; &lt; 1200px</td>
-                        <td>960px</td>
-                        <td>laptops</td>
-                    </tr>
-                    <tr>
-                        <td>xl</td>
-                        <td>&GreaterEqual; 1200px &amp; &lt; 1400px</td>
-                        <td>1140px</td>
-                        <td>Desktop</td>
-                    </tr>
-                    <tr>
-                        <td>xxl</td>
-                        <td>&GreaterEqual; 1400px</td>
-                        <td>1320px</td>
-                        <td>HD Desktop</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped">
+                    <caption>Breakpoints</caption>
+                    <thead>
+                        <th>name</th>
+                        <th>width</th>
+                        <th>max-width</th>
+                        <th>device</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>xs</td>
+                            <td>&lt; 576px</td>
+                            <td>100%</td>
+                            <td>smartwatch</td>
+                        </tr>
+                        <tr>
+                            <td>sm</td>
+                            <td>&GreaterEqual; 576px &amp; &lt; 768px</td>
+                            <td>540px</td>
+                            <td>smartphones</td>
+                        </tr>
+                        <tr>
+                            <td>md</td>
+                            <td>&GreaterEqual; 768px &amp; &lt; 992px</td>
+                            <td>720px</td>
+                            <td>tablets</td>
+                        </tr>
+                        <tr>
+                            <td>lg</td>
+                            <td>&GreaterEqual; 992px &amp; &lt; 1200px</td>
+                            <td>960px</td>
+                            <td>laptops</td>
+                        </tr>
+                        <tr>
+                            <td>xl</td>
+                            <td>&GreaterEqual; 1200px &amp; &lt; 1400px</td>
+                            <td>1140px</td>
+                            <td>Desktop</td>
+                        </tr>
+                        <tr>
+                            <td>xxl</td>
+                            <td>&GreaterEqual; 1400px</td>
+                            <td>1320px</td>
+                            <td>HD Desktop</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p>
                 Cuando aplicamos estilos con bootstrap, podemos utilizar los breakpoints mencionados anteriormente para definir a partir de que tamaño de pantalla debe aplicarse dicho atributo. Esto es ideal para la manipulacion del layout.
             </p>
             <ul class="list-unstyled | row">
-                <li class="border border-dark | col-md-4 col-lg-3">col</li>
-                <li class="border border-dark | col-md-4 col-lg-3">col</li>
-                <li class="border border-dark | col-md-4 col-lg-3">col</li>
-                <li class="border border-dark | col col-lg-3">col</li>
-                <li class="border border-dark | col-lg-6">col</li>
-                <li class="border border-dark | col-lg-6">col</li>
-                <li class="border border-dark | col-lg-6">col</li>
-                <li class="border border-dark | col-md-6">col</li>
-                <li class="border border-dark | col-sm">col</li>
-                <li class="border border-dark | col-sm">col</li>
-                <li class="border border-dark | col-sm">col</li>
-                <li class="border border-dark | col-sm">col</li>
+                <li class="border border-dark | col-md-4 col-lg-3">col-md-4 col-lg-3</li>
+                <li class="border border-dark | col-md-4 col-lg-3">col-md-4 col-lg-3</li>
+                <li class="border border-dark | col-md-4 col-lg-3">col-md-4 col-lg-3</li>
+                <li class="border border-dark | col col-lg-3">col col-lg-3</li>
+                <li class="border border-dark | col-lg-6">col-lg-6</li>
+                <li class="border border-dark | col-lg-6">col-lg-6</li>
+                <li class="border border-dark | col-lg-6">col-lg-6</li>
+                <li class="border border-dark | col-md-6">col-md-6</li>
+                <li class="border border-dark | col-sm">col-sm</li>
+                <li class="border border-dark | col-sm">col-sm</li>
+                <li class="border border-dark | col-sm">col-sm</li>
+                <li class="border border-dark | col-sm">col-sm</li>
             </ul>
+            <p>
+                En determinadas situaciones sera necesario agregar espacio entre las columnas, especificamente al principio de las mismas. Esto lo podemos hacer mediante la clase <em>offset-n</em> que agrega espacio equivalente al numero de columnas que deseamos saltar.
+            </p>
+            <ul class="list-unstyled | row">
+                <li class="border border-success | col-sm offset-md-6 offset-lg-4">offset-md-6 offset-lg-4</li>
+                <li class="border border-success | col-sm offset-lg-4">offset-lg-4</li>
+                <li class="border border-success | col-sm offset-md-4">offset-md-4</li>
+                <li class="border border-success | col-sm offset-md-5 offset-xl-3">offset-md-5 offset-xl-3</li>
+                <li class="border border-success | col-sm offset-xl-3">offset-xl-3</li>
+                <li class="border border-success | col-sm offset-md-6">offset-md-6</li>
+            </ul>
+        </section>
+        <section class="row">
+            <h2>Metodologia BEM</h2>
+            <p>
+                El nombre de esta metodologia de aplicacion de clases corresponde a <strong>Block Element Modifier</strong> donde cada contenedor posee una clase principal que define el nombre de la clase de sus contenido, los elementos corresponden a partes individuales dentro de dicho contenedor y los modificadores corresponden a clases de ayuda que varian alguna de las caracteristicas del elemento afectado.
+            </p>
+            <h3>Tipos de Diseño</h3>
+            <!-- Block: Contenedor Principal-->
+            <article class="card | p-0 | col-lg">
+                <!-- Element: Contenido del Bloque -->
+                <h4 class="card-header">Fluid Design</h4>
+                <p class="card-body">
+                    Utiliza porcentajes para definir el tamaño de sus elementos, pero quedan desproporcionados en pantallas grandes o pequeñas, aunque se pueden establecer maximos y minimos.
+                </p>
+                <footer class="card-footer">
+                    para mas informacion consultar <a href="https://alumni.education">Alumni</a>
+                </footer>
+            </article>
+            <article class="card | my-3 my-lg-0 mx-lg-3 p-0 | col-lg">
+                <h4 class="card-header">Adaptive Design</h4>
+                <p class="card-body">
+                    Utiliza varias plantillas segun el tamaño del dispositivo en que se visualice la pagina, facil de mantener e ideal para clientes con bajo presupuesto, pero implica la duplicidad de contenido.
+                </p>
+                <footer class="card-footer">
+                    para mas informacion consultar <a href="https://alumni.education">Alumni</a>
+                </footer class="card-footer">
+            </article>
+            <article class="card | p-0 | col-lg">
+                <h4 class="card-header">Responsive Design</h4>
+                <p class="card-body">
+                    Utiliza multimedia flexible, sistema de grillas basado en porcentajes y plantea el diseño a partir de la vista mobile y/o utilizando los texto finales, aplicando el concepto <em>One Web for All</em>
+                </p>
+                <footer class="card-footer">
+                    para mas informacion consultar <a href="https://alumni.education">Alumni</a>
+                </footer class="card-footer">
+            </article>
         </section>
     </main>
     <!-- Pie de Pagina -->
