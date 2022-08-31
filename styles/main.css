@@ -23,6 +23,7 @@
                 final-width     = width
                 content-width   = width - padding - border
         */
+        scroll-behavior: smooth;
         font-family: 'Open Sans','Poppins', 'Century Gothic', sans-serif;
     }
     /* Margenes */
@@ -100,7 +101,13 @@
 /* Contenido */
 
 /* Pie de Pagina */
-
+    #footer{
+        padding: 5rem 1rem;
+        background: linear-gradient(
+            #d8f,
+            #ca3
+        )
+    }
     /* Formulario de Contacto */
     #contact{
         max-width: 540px;
@@ -108,14 +115,67 @@
         display: flex;
         flex-direction: column;
     }
-    input,
-    textarea,
-    select,
-    button{
+    label{
+        margin: .5rem 0 .25rem;
+    }
+    #contact :is(
+        input,
+        textarea,
+        select,
+        button
+    ){
+        outline: none;
+        border-radius: .25rem;
+        border: 2px solid #333;
         padding: .25rem .5rem;
         font-size: 1rem;
     }
     .valid{
         max-height: 0;
         overflow: hidden; /* evitar el desbordamiento */
+        background: 
+            linear-gradient(
+                hsla(60, 60%, 100%, .6),
+                transparent
+            )
+    }
+    /* Validacion visual */
+    #contact :focus{
+        box-shadow: 0 0 .5rem #eee;
+    }
+    :focus + .valid{
+        padding: .5rem .5rem 2rem;
+        text-shadow: -.1rem .1rem .2rem #eee;
+        max-height: 600px;
+    }
+    #contact :is(
+        input, 
+        textarea
+    ):valid{
+        border-color: #3c6;
+    }
+    :valid + .valid{
+        color: #284;
+    }
+    #contact :is(
+        input, 
+        textarea
+    ):not(:placeholder-shown):invalid{
+        /* :not indica que no debe contar o poseer dicho elemento 
+            :placeholder-shown el texto de ayuda esta visible
+        */
+        border-color: #c33;
+    }
+    :invalid + .valid{
+        color: #c33
+    }
+    #contact button{
+        margin: .25rem 0 .5rem auto;
+        padding: .5rem 3rem;
+        background: transparent url('../assets/bg/simpsons-donut.svg') left center/contain no-repeat;/* color image position/size repeat */
+        text-transform: uppercase;
+    }
+    #contact button:hover{
+        color: #eee;
+        background: #333 url('../assets/bg/simpsons-donut.svg') right center/contain no-repeat;
     }
