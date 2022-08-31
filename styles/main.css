@@ -1,8 +1,4 @@
 /* Calculadora */
-    body{
-        perspective: 600px;
-        perspective-origin: top center;
-    }
     /* Disposicion de Elementos*/
         #calculator{
             display: grid;
@@ -11,10 +7,10 @@
                 'result result'
                 'actions operators'
                 'numbers operators';
-            transform: rotateX(30deg);
         }
         #result{
             grid-area: result;
+            text-align: right;
         }
         #actions{
             grid-area: actions;
@@ -30,7 +26,7 @@
         #numbers,
         #operators{
             display: flex;
-            gap: .2rem;
+            gap: .25rem;
             flex: 1 0 100px;
             flex-wrap: wrap-reverse;
         }
@@ -46,11 +42,10 @@
     /*Estilos Visuales*/
         #calculator{
             max-width: 320px;
-            flex-wrap: wrap;
-            gap: .25rem;
             margin: auto;
             border-radius: .5rem;
             padding: 1rem;
+            gap: .25rem;
             background: linear-gradient(#666, #999);
         }
         #calculator :is(input, button){
@@ -63,7 +58,8 @@
             color: #eee;
             background-color: transparent;
             text-shadow: 0 0 .5rem #333;
+            transition: all .25s ease;
         }
         [type="button"]:hover{
-            background-color: #333;
+            background: #3338;
         }
