@@ -31,7 +31,44 @@
     </header>
     <!-- Contenido principal -->
     <main>
-
+        <section>
+            <header class="header">
+                <h2>Planificacion del Diseño</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Unidades de medida</h3>
+                </header>
+                <p>
+                    Uno de los aspectos importantes a la hora de transcribir una propuesta diseño, consiste en la seleccion de las unidades de medida que se van a utilizar dentro de la pagina. Debemos tener en cuenta que las mismas deben permitir la correcta visualizacion del sitio en diferentes tamaños de pantalla, y entre las cuales se encuentran las siguientes:
+                </p>
+                <ul class="example">
+                    <li class="card">
+                        <strong class="title">Unidades absolutas</strong> son aquellas que siempre representan lo mismo sin importar el tamaño de la pantalla donde se visualice el sitio. Se utilizan principalmente para definir tamaños limites y la mas utilizada es el px.
+                        <ul>
+                            <li>distancia: mm cm in(2.54cm)</li>
+                            <li>tipografia: pt(1/72in) pc(1/6in)</li>
+                            <li>hibrida: px(1/96) depende de la resolucion</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <strong class="title">Unidades Relativas</strong> son aquellas que definen su tamaño o proporcion en base a su contenedor y su tamaño varia debido a esto. Se utilizan principalmente para definir el espacio a ocupar de los elementos, asi como tambien el tamaño de la tipografia:
+                        <ul>
+                            <li>contenedor: % (ancho del elemento padre)</li>
+                            <li>tipografia: em(ancho "M") ex(alto "x") ch(ancho "0")</li>
+                            <li>hibrida: rem (ancho de "M" en la raiz HTML)</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <strong class="title">Unidades Flexibles</strong> son aquellas medidas que utilizan al viewport como referencia para establecer su tamaño. Se utilizan principalmente para definir alturas cuando el elemento debe ocupar toda la pantalla, asi como tambien tipografia flexible.
+                        <ul>
+                            <li>dimension: vw(% del ancho) vh(% del alto)</li>
+                            <li>relacion de aspecto: vmin(menor) vmax(mayor)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
     </main>
     <!-- Pie de pagina -->
     <footer id="footer">
