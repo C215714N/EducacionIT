@@ -42,7 +42,8 @@
     footer a{
         text-decoration: none;
     }
-    .menu{
+    .menu,
+    .example{
         list-style: none;
     }
 /* Navegacion */
@@ -66,17 +67,6 @@
             min(a,b): devuelve el valor mas bajo
             calc(a + b): realiza una operacion entre unidades
         */
-        /* 
-            Unidades absolutas: Limites
-                min-width: 150px;
-                max-width: 540px;
-            Unidades Relativas: Tamaños (proporciones)
-                width: 100%;
-                padding: 1rem;
-            Unidades viewport: Alturas y tipografia flexible
-                min-height: 100vh;
-                font-size: 5vw;
-        */
         text-align: center;
         text-shadow: 0 0 min(1.5vw, 1.5rem) #333;
         background-image: 
@@ -99,7 +89,39 @@
         font-family: 'the Simpsons';
     }
 /* Contenido */
-
+    .example{
+        padding: 1rem;
+        background-color: #eee;
+    }
+    .title{
+        display: block;
+        margin: -1.5rem -1rem 1rem;
+        border-bottom: 2px solid;
+        padding: 1rem;
+        color: #eee;
+        background-color: #c36;
+        font-size: 1.5rem;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .flex > .card{
+        flex: 1 0 min(100%, 300px); 
+        /*  
+        ATRIBUTOS HIJOS FLEXBOX
+            grow: cuanto puede crecer con respecto a sus hermanos
+            shrink: cuanto puede reducir su tamaño para encajar
+            basis: tamaño base para el redimensionamiento
+        */
+    }
+    .card{
+        overflow: hidden;
+        border-radius: .25rem;
+        padding: 1.5rem 1rem;
+        box-shadow: -.25rem .25rem .5rem #666;
+    }
 /* Pie de Pagina */
     #footer{
         padding: 5rem 1rem;
