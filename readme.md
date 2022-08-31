@@ -10,6 +10,13 @@ Esta es una guia Practica para los alumnos del curso de __Javascript desde Cero_
 1. [Comandos](#comandos)
     1. [Entrada y Salida](#entrada-y-salida)
     1. [Captura de Elementos](#captura-de-elementos)
+1. [Condicionales](#condicionales)
+    1. [Sentencia if](#sentencia-if)
+    1. [Sentencia switch](#sentencia-switch)
+1. [Bucles](#bucles)
+    1. [Sentencia While](#while)
+    1. [Sentencia Do while](#sentencia-do-while)
+    1. [Sentencia For](#sentencia-for)
 
 ## Variables
 
@@ -84,21 +91,21 @@ Para ejecutar varias sentencias en una cláusula, use una __sentencia block ({ .
 
 ```
 if ( test >= 7) {
-  console.log('approve')
+  console.log('approve');
 } else {
-  console.log('fail')
+  console.log('fail');
 }
 ```
 
 Cualquier valor diferente de __undefined__, null, 0, -0, NaN, o la cadena vacía (""), y cualquier objecto, incluso un objeto Boolean cuyo valor es false, se evalúa como verdadero en una sentencia condicional.
 
 ```
-if (nota >= 7) {
-  console.log('aprobado')
-} else if (nota >= 4){
-  console.log('regular')
+if (speed >= 90) {
+  console.log('fast');
+} else if (speed >= 40){
+  console.log('regular');
 } else {
-  console.log('aplazo')
+  console.log('slow');
 }
 ```
 ### Sentencia Switch
@@ -121,7 +128,7 @@ switch(language){
   break;
 }
 ```
-
+Podemos establecer multiples casos para un mismo resultando, evitando colocar la clausula _break_ al final de cada bloque.
 Si ninguno de los casos coincide con la expresión, se ejecutará la __cláusula predeterminada__.
 
 ```
@@ -129,14 +136,53 @@ switch(instrument){
   case 'guitar':
   case 'sitar':
   case 'bass':
-    console.log('string')
+    console.log('string');
   break;
   case 'flute':
   case 'saxophone':
   case 'trumpet':
-    console.log('wind')
+    console.log('wind');
   break;
   default:
-    console.log('percussion')
+    console.log('percussion');
 }
+```
+## Bucles
+En ocasiones deberemos repetir una tarea reiterada cantidad de veces en nuestro codigo en base en una condición. Podemos crear ciclos definiendo un criterio que debe cumplirse y solamente se finalizara la ejecucion del mismo cuando dicho criterio ya no pueda cumplirse.
+
+### Sentencia While
+Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar el codigo del cuerpo.
+```
+i = 0;
+byte = 8;
+while ( i < byte ){
+  console.log(`bit ${i} value is ${2**i}`);
+  i++;
+}
+```
+
+### Sentencia Do While
+Crea un bucle que evalúa la condición para seguir ejecutándose luego de haber ejecutado el código dentro de su cuerpo, es decir, que el codigo siempre se ejecuta por lo menos una vez.
+```
+dec = 200,
+value = dec;
+bin = "";
+do {
+  bin = (dec % 2) + bin;
+  dec = Math.floor(dec / 2);
+} while (dec >= 1);
+console.log('binary value of ' + value + ' is ' + bin);
+```
+
+### Sentencia for
+Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+```
+bin = '11000000';
+dec = 0;
+for(i = 0; i < bin.length; i++){
+  if(reverse(bin)[i] == 1){
+    dec += 2**i;
+  }
+}
+console.log('decimal value of ' + bin + ' is ' + dec );
 ```

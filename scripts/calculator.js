@@ -58,6 +58,7 @@ function callAction(x){
     } 
     else if ( x == 'CE' || x == 'C' ){
         clearAll();
+        account = [];
     } 
     else if ( x == 'DEL' ){
         result.value = result.value.slice(0, -1);
