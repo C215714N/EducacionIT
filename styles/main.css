@@ -1,4 +1,18 @@
+/* Reglas Generales */
+    *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    body,
+    h1,
+    header p{
+        margin: 0;
+    }
 /* Calculadora */
+    body{
+        perspective: 20rem;
+        perspective-origin: top center;
+    }
     /* Disposicion de Elementos*/
         #calculator{
             display: grid;
@@ -7,6 +21,7 @@
                 'result result'
                 'actions operators'
                 'numbers operators';
+            transform: rotateX(15deg);
         }
         #result{
             grid-area: result;
@@ -63,3 +78,114 @@
         [type="button"]:hover{
             background: #3338;
         }
+
+#header{
+    position: relative;
+    min-height: min(100vh, 640px);
+}
+#header .controls button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: none;
+    padding: 3rem; 
+    color: #eee;
+    background-color: transparent;
+    font-size: calc(2vw + .5rem);
+}
+#header button.prev{
+    left: 0;
+}
+#header button.next{
+    right: 0;
+}
+.slide li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.slide li.active{
+    opacity: 1;
+}
+.slide :nth-child(1n){
+    background-color: #c338;
+}
+.slide :nth-child(2n){
+    background-color: #da38;
+}
+.slide :nth-child(3n){
+    background-color: #3c68;
+}
+.slide :nth-child(4n){
+    background-color: #36c8;
+}
+.slide :nth-child(5n){
+    background-color: #4488;
+}
+.indicators{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    padding: 1rem;
+}
+#header .indicators button{
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #333;
+    transition: all .5s ease;
+}
+#header .indicators button:hover{
+    background-color: #666;
+}
+#header .indicators .active{
+    width: 3rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #c36, #448);
+}
+.menu-open::before{
+    content: '🏠';
+}
+.menu{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition:  all .5s ease;
+}
+nav a{
+    color: #ccc;
+}
+.menu{
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.menu.active{
+    top: 0;
+    background-color: #448;
+}

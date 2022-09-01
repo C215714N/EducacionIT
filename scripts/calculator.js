@@ -1,10 +1,11 @@
 // Declaraciones
-let d = document;
+const d = document;
 // Elementos del DOM
-let result = d.querySelector('#result');
-let action = d.querySelector('#actions');
-let numbers = d.querySelector('#numbers');
-let operators = d.querySelector('#operators');
+const calculator = d.querySelector('#calculator');
+const result = d.querySelector('#result');
+const action = d.querySelector('#actions');
+const numbers = d.querySelector('#numbers');
+const operators = d.querySelector('#operators');
 // Valores de referencia
 let simbols = ['=','+','-','x','/'];
 let letters = ['CE','C','DEL'];
@@ -22,7 +23,7 @@ function renderElements (tag, array = [], limit = 10) {
 }   }
 // Asignacion de Funciones
 function renderAction(tag){
-    let buttons = tag.querySelectorAll('input');
+    let buttons = tag.querySelectorAll('input[type="button"]');
     buttons.forEach( btn => btn.onclick = () => callAction(btn.value) )   
 }
 // Carga de Valor Numerico
@@ -73,6 +74,4 @@ renderElements(numbers);
 renderElements(operators, simbols, simbols.length);
 renderElements(actions, letters, letters.length);
 // Asignacion
-renderAction(actions);
-renderAction(numbers); 
-renderAction(operators);
+renderAction(calculator);

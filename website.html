@@ -12,21 +12,61 @@
     <header id="header">
         <h1>Javascript</h1>
         <p>Introduccion a la programacion</p>
+        <ul class="slide">
+            <li class="active">1</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="indicators">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+        <div class="controls">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
     </header>
     <nav>
         <a class="logo" href=""></a>
         <button class="btn menu-open"></button>
         <ul class="unstyled menu">
-
+            <li><a href="">link 1</a></li>
+            <li><a href="">link 2</a></li>
+            <li><a href="">link 3</a></li>
         </ul>
     </nav>
     <main>
+        <p id="question">
 
+        </p>
+        <button>Abrir Pregunta</button>
     </main>
     <footer>
         <p class="copy">Todos los derechos reservados</p>
     </footer>
     <!-- Scripts JS -->
-    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
+    <script>
+        questions = [
+            '¿quien soy?',
+            '¿como me llamo?',
+            '¿cuantos años tengo?',
+            '¿cual es mi apodo?',
+            '¿cuando nos conocimos?',
+            '¿quien nos presento?',
+            '¿donde nos conocimos?'
+        ]
+        ask = document.querySelector('#question');
+        let btnQ = document.querySelector('main button')
+        btnQ.onclick = () => {
+            let n = Math.round( Math.random() * 6);
+            ask.innerHTML = questions[n]
+        }
+    </script>
 </body>
 </html>

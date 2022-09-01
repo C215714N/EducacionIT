@@ -153,10 +153,11 @@ En ocasiones deberemos repetir una tarea reiterada cantidad de veces en nuestro 
 ### Sentencia While
 Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar el codigo del cuerpo.
 ```
-i = 0;
+i = 0, 
 byte = 8;
 while ( i < byte ){
-  console.log(`bit ${i} value is ${2**i}`);
+  dec = 2**i;
+  console.log(`bit ${i} value is ${dec}`);
   i++;
 }
 ```
@@ -164,9 +165,9 @@ while ( i < byte ){
 ### Sentencia Do While
 Crea un bucle que evalúa la condición para seguir ejecutándose luego de haber ejecutado el código dentro de su cuerpo, es decir, que el codigo siempre se ejecuta por lo menos una vez.
 ```
-dec = 200,
+dec = 200;
+bin = '';
 value = dec;
-bin = "";
 do {
   bin = (dec % 2) + bin;
   dec = Math.floor(dec / 2);
@@ -177,12 +178,18 @@ console.log('binary value of ' + value + ' is ' + bin);
 ### Sentencia for
 Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
 ```
-bin = '11000000';
+bin = '11001000';
 dec = 0;
 for(i = 0; i < bin.length; i++){
   if(reverse(bin)[i] == 1){
     dec += 2**i;
-  }
-}
+} }
 console.log('decimal value of ' + bin + ' is ' + dec );
+```
+### Sentencia for of
+```
+for (i of array){
+
+  console.log('i');
+}
 ```
