@@ -50,7 +50,7 @@
         <p class="copy">Todos los derechos reservados</p>
     </footer>
     <!-- Scripts JS -->
-    <!-- <script src="scripts/main.js"></script> -->
+    <script src="scripts/main.js"></script>
     <script>
         questions = [
             '¿quien soy?',
@@ -61,8 +61,8 @@
             '¿quien nos presento?',
             '¿donde nos conocimos?'
         ]
-        ask = document.querySelector('#question');
-        let btnQ = document.querySelector('main button')
+        ask = d.querySelector('#question');
+        let btnQ = d.querySelector('main button')
         btnQ.onclick = () => {
             let n = Math.round( Math.random() * 6);
             ask.innerHTML = questions[n]
