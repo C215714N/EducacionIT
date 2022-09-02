@@ -8,16 +8,12 @@ d.addEventListener('DOMContentLoaded', () => {
 // Acciones del USuario
     prev.addEventListener('click', () => getItem(items, 'prev'))
     prev.addEventListener('click', () => getItem(buttons, 'prev'))
-    prev.onclick = () => {
-        getItem(items, 'prev');
-        getItem(buttons,'prev');
-    }
     next.onclick = () => {
         getItem(items, 'next');
         getItem(buttons,'next');
     }
     buttons.forEach( (btn, i) => btn.onclick = () => {
-        getItem(items,'', i);
+        getItem(items, '', i);
         getItem(buttons,'',i);
     } )
 // Funcion Resolvente (determina que elemento debe mostrarse)

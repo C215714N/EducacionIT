@@ -190,3 +190,83 @@
         top: 0;
         background-color: #448;
     }
+    .rotate button::before{
+        --position: attr(value);
+        position: relative;
+        transform: rotate(calc( var(--position) * 30deg));
+    }
+#human{
+    margin: .5rem;
+    border: .25rem solid;
+    position: relative;
+}
+#human *{
+    transition: all 1s ease;
+}
+.human-being{
+    position: relative;
+    max-width: 400px;
+    min-height: 450px;
+    margin: .5rem auto;
+    background-color: #eee;
+    perspective: 100px;
+    perspective-origin: top center;
+}
+.human-being .head{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: hsl(30, 50%, 50%);
+}
+.human-being .body{
+    position: relative;
+    height: 200px;
+    width: 120px;
+    margin: auto;
+    border-radius: .25rem;
+    background-color: #248;
+    transform: rotateX(-15deg);
+}
+.human-being .lower{
+    position: absolute;
+    top: 35%;
+    left: 36.56%;
+    width: 110px;
+    height: 100px;
+    z-index: 1;
+    border-radius: .5rem;
+    background-color: #444;
+    transform: rotateX(-10deg);
+}
+.human-being [class*="foot"]{
+    position: absolute;
+    height: 120px;
+    width: 30px;
+    top: 90%;
+    border-radius: 1rem 1rem .25rem .25rem;
+    background-color: #333;
+}
+.human-being [class*="leg"]{
+    position: absolute;
+    height: 150px;
+    width: 45px;
+    bottom: 100px;
+    border-radius: 1rem;
+    background-color: #444;
+}
+.human-being .left-leg{
+    left: 35%;
+}
+.human-being .right-leg{
+    left: 55%;
+}
+.human-being :is([class*="left"], [class*="right"]){
+    transform-origin: top center;
+}
+[class*="leg"].rotate{
+    transform: rotate(60deg);
+}
+[class*="foot"].rotate{
+    transform: rotate(-60deg);
+}

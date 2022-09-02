@@ -13,16 +13,16 @@
         <h1>Javascript</h1>
         <p>Introduccion a la programacion</p>
         <ul class="slide">
-            <li class="active">1</li>
+            <li class="">1</li>
             <li></li>
-            <li></li>
+            <li class="active"></li>
             <li></li>
             <li></li>
         </ul>
         <div class="indicators">
+            <button></button>
+            <button></button>
             <button class="active"></button>
-            <button></button>
-            <button></button>
             <button></button>
             <button></button>
         </div>
@@ -41,10 +41,29 @@
         </ul>
     </nav>
     <main>
-        <p id="question">
-
-        </p>
-        <button>Abrir Pregunta</button>
+        <section id="question">
+            <h2>Cuestionario</h2>
+            <p></p>
+            <button>Abrir Pregunta</button>
+        </section>
+        <section id="human">
+            <div class="human-being">
+                <div class="head"></div>
+                <div class="body">
+                </div>
+                <div class="lower"></div>
+                <div class="left-leg">
+                    <div class="left-foot"></div>
+                </div>
+                <div class="right-leg">
+                    <div class="right-foot"></div>
+                </div>
+            </div>
+            <button id="left-leg">Levantar pierna izquierda</button>
+            <button id="left-leg">Flexionar pierna izquierda</button>
+            <button id="right-leg">Levantar pierna derecha</button>
+            <button id="right-leg">Flexionar pierna derecha</button>
+        </section>
     </main>
     <footer>
         <p class="copy">Todos los derechos reservados</p>
@@ -61,12 +80,34 @@
             '¿quien nos presento?',
             '¿donde nos conocimos?'
         ]
-        ask = d.querySelector('#question');
-        let btnQ = d.querySelector('main button')
+        ask = d.querySelector('#question p');
+        let btnQ = d.querySelector('#question button')
         btnQ.onclick = () => {
             let n = Math.round( Math.random() * 6);
             ask.innerHTML = questions[n]
         }
+    </script>
+    <script>
+        let actions = d.querySelectorAll('#human button');
+        let parts = d.querySelectorAll('[class*="left"], [class*="right"]');
+        const changeText = (element) => {
+            let text = element.innerText
+            let newText;
+            
+            text.includes('Levantar') ?
+                newText = text.replace('Levantar', 'Bajar') :
+            text.includes('Bajar') ?
+                newText = text.replace('Bajar', 'Levantar') :
+            text.includes('Flexionar') ?
+                newText = text.replace('Flexionar', 'Estirar') :
+                newText = text.replace('Estirar', 'Flexionar')
+            
+            element.innerHTML = newText;
+        }
+        actions.forEach( (btn, i) => btn.addEventListener( 'click', () => {       
+            changeText(btn);
+            parts[i].classList.toggle('rotate')
+        }   )   )
     </script>
 </body>
 </html>
