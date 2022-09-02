@@ -5,18 +5,18 @@ Esta es una guia Practica para los alumnos del curso de __Javascript desde Cero_
 ## Tabla de contenidos
 
 1. [Variables](#variables)
-    1. [Declaraciones](#declaraciones)
-    1. [Datos Primitivos](#datos-primitivos)
+    * [Declaraciones](#declaraciones)
+    * [Datos Primitivos](#datos-primitivos)
 1. [Comandos](#comandos)
-    1. [Entrada y Salida](#entrada-y-salida)
-    1. [Captura de Elementos](#captura-de-elementos)
+    * [Entrada y Salida](#entrada-y-salida)
+    * [Captura de Elementos](#captura-de-elementos)
 1. [Condicionales](#condicionales)
-    1. [Sentencia if](#sentencia-if)
-    1. [Sentencia switch](#sentencia-switch)
+    * [Sentencia if](#sentencia-if)
+    * [Sentencia switch](#sentencia-switch)
 1. [Bucles](#bucles)
-    1. [Sentencia While](#while)
-    1. [Sentencia Do while](#sentencia-do-while)
-    1. [Sentencia For](#sentencia-for)
+    * [Sentencia While](#while)
+    * [Sentencia Do while](#sentencia-do-while)
+    * [Sentencia For](#sentencia-for)
 
 ## Variables
 
@@ -90,9 +90,9 @@ En ciertas ocasiones deberemos generar una bifurcacion en nuestro codigo, donde 
 Para ejecutar varias sentencias en una cláusula, use una __sentencia block ({ ... })__ para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:
 
 ```
-if ( test >= 7) {
++if ( test >= 7) {
   console.log('approve');
-} else {
++} else {
   console.log('fail');
 }
 ```
@@ -114,7 +114,7 @@ Es una instrucción de __flujo de control__ que prueba el valor de una expresió
 
 ```
 switch(language){
-  case 'english':
+case 'english':
     console.log('welcome to the javascript course');
   break;
   case 'spanish':
@@ -128,6 +128,7 @@ switch(language){
   break;
 }
 ```
+
 Podemos establecer multiples casos para un mismo resultando, evitando colocar la clausula _break_ al final de cada bloque.
 Si ninguno de los casos coincide con la expresión, se ejecutará la __cláusula predeterminada__.
 
@@ -147,11 +148,15 @@ switch(instrument){
     console.log('percussion');
 }
 ```
+
 ## Bucles
+
 En ocasiones deberemos repetir una tarea reiterada cantidad de veces en nuestro codigo en base en una condición. Podemos crear ciclos definiendo un criterio que debe cumplirse y solamente se finalizara la ejecucion del mismo cuando dicho criterio ya no pueda cumplirse.
 
 ### Sentencia While
+
 Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar el codigo del cuerpo.
+
 ```
 i = 0, 
 byte = 8;
@@ -163,7 +168,9 @@ while ( i < byte ){
 ```
 
 ### Sentencia Do While
+
 Crea un bucle que evalúa la condición para seguir ejecutándose luego de haber ejecutado el código dentro de su cuerpo, es decir, que el codigo siempre se ejecuta por lo menos una vez.
+
 ```
 dec = 200;
 bin = '';
@@ -172,11 +179,13 @@ do {
   bin = (dec % 2) + bin;
   dec = Math.floor(dec / 2);
 } while (dec >= 1);
-console.log('binary value of ' + value + ' is ' + bin);
+console.log{`binary value of ${value} is ${bin}`);
 ```
 
 ### Sentencia for
+
 Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+
 ```
 bin = '11001000';
 dec = 0;
@@ -184,12 +193,17 @@ for(i = 0; i < bin.length; i++){
   if(reverse(bin)[i] == 1){
     dec += 2**i;
 } }
-console.log('decimal value of ' + bin + ' is ' + dec );
+console.log(`decimal value of ${bin} is ${dec}`);
 ```
-### Sentencia for of
-```
-for (i of array){
 
-  console.log('i');
+### Sentencia for of
+
+Ejecuta un bloque de código para cada elemento de un objeto iterable, como los String, Array, objetos e iterables definidos por el usuario.
+
+```
+units = ['Kilo','Mega','Giga','Tera','Peta','Exa','Zeta','Yota','Bronto','Geop','Sangan'];
+for (u of units){
+  i = units.indexOf(u) - 1;
+  console.log(`1 ${u}Byte is equal to 1000${units[i] || ''} Bytes`);
 }
 ```
