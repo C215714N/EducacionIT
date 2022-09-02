@@ -102,6 +102,14 @@
         background-color: #c36;
         font-size: 1.5rem;
     }
+    
+    .card{
+        overflow: hidden;
+        border-radius: .25rem;
+        padding: 1.5rem 1rem;
+        box-shadow: -.25rem .25rem .5rem #666;
+    }
+    /* Contenedor Flex*/
     .flex{
         display: flex;
         flex-wrap: wrap;
@@ -116,11 +124,33 @@
             Basis: tamaño base para el redimensionamiento
         */
     }
-    .card{
-        overflow: hidden;
-        border-radius: .25rem;
-        padding: 1.5rem 1rem;
-        box-shadow: -.25rem .25rem .5rem #666;
+    /* CSS Grid */
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;/*cantidad de columnas definiendo su tamaño*/
+        gap: .5rem;
+    }
+    [class*="color"]{
+        border: 2px dashed #333;
+        padding: .5rem 1rem;
+        color: #eee;
+    }
+    .color-html{
+        background-color: darkslateblue;
+        grid-row: span 2;
+    }
+    .color-rgb{
+        background-color: rgb(68,68,136);
+    }
+    .color-hex{
+        background-color: #448;
+        grid-column: span 2;
+    }
+    .color-hsl{
+        background-color: hsl(240, 40%, 35%);
+    }
+    .color-hsl:last-child{
+        grid-row: 1 / 4
     }
 /* Pie de Pagina */
     #footer{
