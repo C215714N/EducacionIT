@@ -213,11 +213,33 @@
     perspective-origin: top center;
 }
 .human-being .head{
-    width: 50px;
+    position: relative;
+    width: 60px;
     height: 50px;
     margin: auto;
     border-radius: 50%;
+    background-color: hsl(180, 30%, 10%);
+}
+.human-being .head::before{
+    content: '';
+    position: absolute;
+    top: .5rem;
+    left: .25rem;
+    z-index: 1;
+    border-radius: 50%;
+    width: 50px;
+    height: 70px;
     background-color: hsl(30, 50%, 50%);
+}
+.human-being .head::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #222;
 }
 .human-being .body{
     position: relative;
