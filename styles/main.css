@@ -137,20 +137,53 @@
     }
     .color-html{
         background-color: darkslateblue;
-        grid-row: span 2;
     }
     .color-rgb{
         background-color: rgb(68,68,136);
     }
     .color-hex{
         background-color: #448;
-        grid-column: span 2;
     }
     .color-hsl{
         background-color: hsl(240, 40%, 35%);
     }
-    .color-hsl:last-child{
-        grid-row: 1 / 4
+    .overflow{
+        overflow: auto;
+    }
+    /* layout */
+    .layout{
+        display: grid;
+        /* grid-template-areas: 
+            'nav header'
+            'nav main'
+            'nav footer';
+        grid-template-areas: 
+            'header header  header'
+            'nav    main    aside'
+            'footer footer  footer'; 
+        grid-template-area:
+            'header header  header header'
+            'nav    subnav  subnav subnav'
+            'nav    main    main   aside'
+            'nav    .       .      aside'
+            */
+        grid-template-areas: 
+            'header'
+            'main'
+            'footer'
+            'nav';
+    }
+    .layout > nav{
+        grid-area: nav;
+    }
+    .layout > header{
+        grid-area: header;
+    }
+    .layout > main{
+        grid-area: main;
+    }
+    .layout > footer{
+        grid-area: footer;
     }
 /* Pie de Pagina */
     #footer{
