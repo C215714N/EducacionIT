@@ -173,8 +173,17 @@
     #contact{
         max-width: 540px;
         margin: 1rem auto;
+        border-radius: .25rem;
+        padding: 3rem 1.5rem;
         display: flex;
         flex-direction: column;
+        color:#eee;
+        background:
+            rgba(17, 34, 68, .5) 
+            url('../assets/bg/space.jpg')
+            center/cover;
+        /* color image position/size repeat */
+        text-shadow: 0 0 .5rem #333;
     }
     label{
         margin: .5rem 0 .2rem;
@@ -190,8 +199,13 @@
     }
     .valid{
         display: none;
+        padding: .5rem;
+        background-image: linear-gradient(#012, transparent);
     }
     /* Validacion */
+    form :focus{
+        box-shadow: 0 0 .5rem #eee;
+    }
     form :focus + .valid{
         display: block;
     }
@@ -212,4 +226,13 @@
     }
     form :invalid:not(:placeholder-shown) + .valid{
         color: #c33;
+    }
+    .btn{
+        margin: .25rem 0 .5rem auto;
+        padding: .5rem 1rem;
+        background-color: transparent;
+    }
+    .btn:hover{
+        color:#eee;
+        background-color: #333;
     }
