@@ -30,7 +30,8 @@
     }
     /* Estilos */
     .menu,
-    .example{
+    .example,
+    .unstyled{
         list-style: none;
     }
     nav a,
@@ -139,13 +140,31 @@
     .example li{
         width: 100%;
     }
-/* 
-tag           1
-.class       10
-#id         100
-!important 1000
-inline    10000 */
-
-
-
+/* Tarjetas de presentacion */
+    .card{
+        border-radius: .5rem;
+        padding: 1.5rem 1rem;
+        box-shadow: 0 0 .5rem #ccc;
+        overflow: hidden;
+    }
+    .card .header{
+        display: block;
+        margin: -1.5rem -1rem 1rem; /*top right bottom left*/
+        padding: 1rem;
+    }
+/* Flexbox: Modelo de Cajas Flexible */
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem .5rem;
+        padding: .5rem;
+    }
+    .flex > *{
+        flex: 1 0 min(100%,300px);
+    /* 
+        flex-grow: El elemento debe aumentar su tamaño para ocupar el espacio ;
+        flex-shrink: El elemento debe reducir su tamaño para encajar;
+        flex-basis: Tamaño base del elemento para definir su ancho 
+    */
+    }
 /* Pie de pagina */
