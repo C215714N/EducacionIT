@@ -146,6 +146,53 @@
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form action="" id="contact">
+            <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                maxlength="50"
+                pattern="[a-z A-Z]{3,50}"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
+            <div class="valid">
+                Ingrese un nombre que posea por al menos 3 caracteres y 50 como maximo, utilizando solamnete letras.
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): cristiandracedo@hotmail.com"
+                required>
+            <div class="valid">
+                Coloque un correo de al menos 8 caracteres que respete el la estructura "usuario@servidor".
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="phone"
+                type="tel"
+                pattern="[0-9]{6,20}|[\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6}"
+                placeholder="Telefono(*): (5411)0303-4567"
+                required>
+            <div class="valid">
+                Coloque la caracteristica entre parentesis y utilice un guion cada 3 a 6 digitos, o escriba solamente numeros.
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                name="" 
+                id="contact_consult" 
+                minlength="20" 
+                maxlength="200"
+                placeholder="Consulta(*): Buenas, Mi consulta es..." 
+                required></textarea>
+            <button class="btn">Enviar</button>
+        </form>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
     <!-- 
