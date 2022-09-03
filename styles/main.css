@@ -197,6 +197,10 @@
         padding: .25rem .5rem;
         font-size: 1rem;
     }
+    textarea{
+        resize: none;
+        min-height: 5rem;
+    }
     .valid{
         display: none;
         padding: .5rem;
@@ -230,9 +234,12 @@
     .btn{
         margin: .25rem 0 .5rem auto;
         padding: .5rem 1rem;
+        color: #eee;
         background-color: transparent;
+        text-transform: uppercase;
     }
     .btn:hover{
-        color:#eee;
-        background-color: #333;
+        color:#012;
+        text-shadow: 0 0 .5rem #012;
+        background-color: #eee;
     }
