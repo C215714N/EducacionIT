@@ -72,13 +72,35 @@
             <p></p>
             <article>
                 <header>
-                    <h3></h3>
+                    <h3>Unidades de Medida</h3>
                 </header>
-                <p></p>
-                <ul class="example">
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <p>
+                    Al momento de trasladar una maqueta (mockup) al codigo, debemos tener en cuenta las dimensiones de los elementos y su proporcion con respecto a las demas partes de la pagina, es por eso que debemos elegir entre distintos tipos de unidades, para mantener dicha relacion de aspecto entre las etiquetas. Dichas unidades son las siguientes:
+                </p>
+                <ul class="flex">        
+                    <li class="card">
+                        <strong class="header">ABSOLUTAS: </strong> Son aquellas que siempre valen los mismo independientemente del medio donde se reproduzcan. SE UTILIZAN PRINCIPALMENTE PARA LIMITAR TAMAÑOS DE CAJAS.
+                        <ul class="example">
+                            <li>distancia: m cm mm in</li>
+                            <li>tipografia: pt pc</li>
+                            <li>hibrida: px (puntos en pantalla - depende de la resolucion)</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <strong class="header">RELATIVAS: </strong> Son aquellas cuyo tamaño depende de otro elemento, siendo este generalmente, su contenedor. SE UTILIZAN PARA DEFINIR TAMAÑOS DE CAJA Y TIPOGRAFIA.
+                        <ul class="example">
+                            <li>tamaños: % (porcentaje del contenedor)</li>
+                            <li>tipografia: em(&harr;"M") ex(&#8597;"x") ch(&harr;0)</li>
+                            <li>hibrida: rem (root EM - letra de la etiqueta HTML)</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <strong class="header">FLEXIBLES: </strong> Son aquellas qu basan su tamaño en las dimensiones del viewport, es decir, la ventana del navegador donde se visualiza la pagina. SE UTILIZAN PARA TIPOGRAFIA ADAPTABLE Y DEFINIR ALTURAS
+                        <ul class="example">
+                            <li>tamaños: vw(ancho) vh(alto)</li>
+                            <li>dimension: vmin(menor) vmax(mayor) (portrait | landscape)</li>
+                        </ul>
+                    </li>
                 </ul>
             </article>
             <article>

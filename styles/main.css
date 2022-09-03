@@ -111,23 +111,7 @@
             scroll;     
     }
     /*
-        Unidades
-        ABSOLUTAS: siempre valen los mismo independientemente del medio
-        SE UTILIZAN PARA LIMITAR TAMAÑOS DE CAJAS
-            distancia: m cm mm in
-            tipografia: pt pc
-            hibrida: px (puntos en pantalla - depende de la resolucion)
-        RELATIVAS: su tamaño depende el elemento contenedor
-        SE UTILIZAN PARA DEFINIR TAMAÑOS Y TIPOGRAFIA
-            tamaños: % 
-            tipografia: em(ancho "M") ex(alto de "x") ch(ancho del caracter 0)
-            hibrida: rem (root EM - letra de la etiqueta HTML)
-        FLEXIBLES: basan su tamaño en el viewport
-            tamaños: vw(ancho) vh(alto)
-            dimension: vmin(menor) vmax(mayor) 
-            (portrait | landscape)
-        SE UTILIZAN PARA TIPOGRAFIA ADAPTABLE Y DEFINIR ALTURAS
-    */
+*/
     .header{
         color: #eee;
         background-color: #248;
@@ -140,7 +124,6 @@
 
 /* Ejemplos */
     .example{
-        max-width: 720px;
         display: flex;
         flex-wrap: wrap;
         margin: 1rem auto;
