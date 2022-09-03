@@ -243,3 +243,14 @@
         text-shadow: 0 0 .5rem #012;
         background-color: #eee;
     }
+    /* Redes sociales */
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: .5rem;
+    }
+    .social a{
+        padding: .5rem;
+        background-color: #ccc;
+    }
