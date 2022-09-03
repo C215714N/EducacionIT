@@ -29,7 +29,8 @@
         margin: 0;
     }
     /* Estilos */
-    .menu{
+    .menu,
+    .example{
         list-style: none;
     }
     nav a,
@@ -39,6 +40,8 @@
 /* Navegacion */
     .menu{
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: .5rem;
         padding: .5rem; /* Ancho de M en la raiz (html) */
         background-color: #012;
@@ -134,5 +137,32 @@
         border-bottom: 2px solid;
     }
 /* Contenido */
+
+/* Ejemplos */
+    .example{
+        max-width: 720px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem auto;
+        border-left: .25rem solid #012;
+        padding: 1rem;
+        line-height: 1.5;
+        background-color: #eee;
+        box-shadow: -.5rem .5rem .5rem #999;
+    }
+    .example strong{
+        text-transform: uppercase;
+    }
+    .example li{
+        width: 100%;
+    }
+/* 
+tag           1
+.class       10
+#id         100
+!important 1000
+inline    10000 */
+
+
 
 /* Pie de pagina */
