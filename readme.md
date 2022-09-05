@@ -23,3 +23,10 @@ class Persona{
     saludarPersona();
 }
 ```
+## Caracteristicas de POO
+
+* ABSTRACCION: Capacidad de separar las caracteristicas mas importantes de los elementos que interactuan en un sistema.
+* ENCAPSULAMIENTO: Aislar las caracteristicas principales de los elementos para su uso.
+* HERENCIA: Capacidad de pasar las caracteristicas de un elemento a otros.
+* POLIMORFISMO: Capacidad de adaptar caracteristicas a los diferentes elementos.
+
