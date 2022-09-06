@@ -7,6 +7,17 @@
     <title>Bootstrap</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #header li{
+            height: min(calc(100vh - 3rem), 640px);
+        }
+        #header img{
+            object-fit: cover;
+        }
+        #header{
+            text-shadow: 0 0 .5rem var(--bs-dark);
+        }
+    </style>
 </head>
 <body>
     <!-- Navegacion -->
@@ -25,32 +36,43 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header>
+    <header id="header" class="carousel slide" data-bs-ride="carousel">
         <!-- Galeria de Imagenes -->
-        <ul class=" | list-unstyled">
-            <li>
-                <img class="w-100" src="assets/bg/header-sm-01.jpg" alt="Paisaje ...">
-                <img class="w-100" src="assets/bg/header-lg-01.jpg" alt="Paisaje ...">
+        <ul class="carousel-inner | list-unstyled">
+            <li class="carousel-item active">
+                <img class="h-100 w-100 d-lg-none" src="assets/bg/header-sm-01.jpg" alt="Paisaje ...">
+                <img class="h-100 w-100 d-none d-lg-block" src="assets/bg/header-lg-01.jpg" alt="Paisaje ...">
             </li>
-            <li>
-                <img class="w-100" src="assets/bg/header-sm-02.jpg" alt="Paisaje ...">
-                <img class="w-100" src="assets/bg/header-lg-02.jpg" alt="Paisaje ...">
+            <li class="carousel-item">
+                <img class="h-100 w-100 d-lg-none" src="assets/bg/header-sm-02.jpg" alt="Paisaje ...">
+                <img class="h-100 w-100 d-none d-lg-block" src="assets/bg/header-lg-02.jpg" alt="Paisaje ...">
             </li>
-            <li>
-                <img class="w-100" src="assets/bg/header-sm-03.jpg" alt="Paisaje ...">
-                <img class="w-100" src="assets/bg/header-lg-03.jpg" alt="Paisaje ...">
+            <li class="carousel-item">
+                <img class="h-100 w-100 d-lg-none" src="assets/bg/header-sm-03.jpg" alt="Paisaje ...">
+                <img class="h-100 w-100 d-none d-lg-block" src="assets/bg/header-lg-03.jpg" alt="Paisaje ...">
             </li>
-            <li>
-                <img class="w-100" src="assets/bg/header-sm-04.jpg" alt="Paisaje ...">
-                <img class="w-100" src="assets/bg/header-lg-04.jpg" alt="Paisaje ...">
+            <li class="carousel-item">
+                <img class="h-100 w-100 d-lg-none" src="assets/bg/header-sm-04.jpg" alt="Paisaje ...">
+                <img class="h-100 w-100 d-none d-lg-block" src="assets/bg/header-lg-04.jpg" alt="Paisaje ...">
             </li>
         </ul>
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#header" data-bs-slide-to="0"></button>
+            <button data-bs-target="#header" data-bs-slide-to="1"></button>
+            <button data-bs-target="#header" data-bs-slide-to="2"></button>
+            <button data-bs-target="#header" data-bs-slide-to="3"></button>
+        </div>
         <!-- Controles -->
-        <button>
+        <button class="carousel-control-prev | carousel-control-prev-icon | top-50 translate-middle-y m-3 p-4"
+            data-bs-target="#header"
+            data-bs-slide="prev">
         </button>
-        <button>
+        <button class="carousel-control-next | carousel-control-next-icon | top-50 translate-middle-y m-3 p-4"
+            data-bs-target="#header"
+            data-bs-slide="next">
         </button>
-        <div class="text-center">
+        <div class="position-absolute top-50 start-50 translate-middle | text-center text-light">
             <h1 class="display-1 fw-bold text-uppercase">Bootstrap</h1>
             <p class="h1">Responsive Web Design</p>
         </div>
