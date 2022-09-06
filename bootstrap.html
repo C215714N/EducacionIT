@@ -242,6 +242,14 @@
                 </footer class="card-footer">
             </article>
         </section>
+        <section class="p-4">
+            <h2>Unidades de Medida</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Absolutas</li>
+                <li class="list-group-item active">Relativas</li>
+                <li class="list-group-item">Flexibles</li>
+            </ul>
+        </section>
     </main>
     <!-- Pie de Pagina -->
     <footer class="position-relative | py-5 px-3 bg-dark">
@@ -252,31 +260,58 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <!-- Formulario de Contacto -->
-        <form id="contact" class="container row col-lg-6 col-xxl-4 position-relative | my-5 mx-auto rounded py-4 px-3 | bg-light" action="">
+        <form id="contact" class="container col-lg-6 col-xxl-4 position-relative | my-5 mx-auto rounded p-4 | bg-light | was-validated" action="">
             <h2>Dejanos tu consulta</h2>
-            <label for="contact_name">Ingrese su Nombre</label>
-            <input class="form-control" 
-                id="contact_name" 
-                name="name"
-                type="text"
-                min="3"
-                maxlength="50"
-                required>
-            <label for="contact_email">Ingrese su Correo</label>
-            <input class="form-control"
-                id="contact_email"
-                name="email"
-                type="email"
-                minlength="8"
-                required>
-            <label for="contact_consult">Ingrese su Consulta</label>
-            <textarea class="form-control"
-                id="contact_consult"
-                name="consult"
-                minlength="20"
-                maxlength="200"
-                required></textarea>
-            <button class="btn btn-outline-primary | my-2 text-uppercase">enviar</button>
+            <fieldset class="form-floating">
+                <input class="form-control" 
+                    id="contact_name" 
+                    name="name"
+                    type="text"
+                    minlength="3"
+                    maxlength="50"
+                    placeholder="Ingrese su Nombre"
+                    required>
+                <label for="contact_name">Ingrese su Nombre</label>
+                <p class="valid-feedback">
+                Su nombre ha sido verificado y nos contactaremos lo antes posible
+                </p>
+                <p class="invalid-feedback">
+                Ingrese un nombre con al menos 3 caracteres y 50 como maximo
+                </p> 
+            </fieldset>
+            <fieldset class="form-floating">
+                <input class="form-control"
+                    id="contact_email"
+                    name="email"
+                    type="email"
+                    minlength="8"
+                    placeholder="Ingrese su Correo"
+                    required>
+                <label for="contact_email">Ingrese su Correo</label>
+                <p class="valid-feedback">
+                    El correo ha sido validado, nos contactaremos a esta direccion
+                </p>
+                <p class="invalid-feedback">
+                    Ingrese su correo respetando la estructura "usuario@servidor", el mismo debe poseer al menos 8 caracteres
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <textarea class="form-control"
+                    id="contact_consult"
+                    name="consult"
+                    minlength="20"
+                    maxlength="200"
+                    placeholder="Ingrese su Consulta"
+                    required></textarea>
+                <label for="contact_consult">Ingrese su Consulta</label>
+                <p class="valid-feedback">
+                    Muchas gracias por completar los campos, nos contactaremos a la brevedad
+                </p>
+                <p class="invalid-feedback">
+                    Ingrese una consulta de al menos 20 caracteres y no mas de 200
+                </p>
+            </fieldset>
+            <button class="btn btn-outline-primary | d-block ms-auto text-uppercase">enviar</button>
         </form>
         <!-- Redes sociales -->
         <div class="d-flex justify-content-center flex-wrap gap-3 | position-relative | p-3 text-capitalize">
@@ -287,9 +322,31 @@
             <a class="btn btn-secondary" href="">linkedin</a>
             <a class="btn btn-dark" href="">github</a>
         </div>
-        <p class="position-relative">&copy;2022 Todos los derechos reservados</p>
+        <p class="alert alert-primary alert-dismissible fade show">
+            &copy;2022 Todos los derechos reservados
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+        </p>
     </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<!-- SELECTOR CONSECUTIVO
+    .element + p{
+        color: red;
+    }
+    <p class="element"></p>
+    <p>red</p>
+    <p>blue</p>
+    <p>blue</p>
+
+    SELECTOR ADYACENTE
+    elemento ~ hermano{
+        color: blue
+    }
+    <p class="element"></p>
+    <p>blue</p>
+    <p>blue</p>
+    <p>blue</p>
+-->
