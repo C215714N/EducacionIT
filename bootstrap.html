@@ -58,17 +58,29 @@
         </ul>
         <!-- Indicadores -->
         <div class="carousel-indicators">
-            <button class="active" data-bs-target="#header" data-bs-slide-to="0"></button>
-            <button data-bs-target="#header" data-bs-slide-to="1"></button>
-            <button data-bs-target="#header" data-bs-slide-to="2"></button>
-            <button data-bs-target="#header" data-bs-slide-to="3"></button>
+            <button class="active" 
+                data-bs-target="#header" 
+                data-bs-slide-to="0">
+            </button>
+            <button 
+                data-bs-target="#header" 
+                data-bs-slide-to="1">
+            </button>
+            <button 
+                data-bs-target="#header" 
+                data-bs-slide-to="2">
+            </button>
+            <button 
+                data-bs-target="#header" 
+                data-bs-slide-to="3">
+            </button>
         </div>
         <!-- Controles -->
-        <button class="carousel-control-prev | carousel-control-prev-icon | top-50 translate-middle-y m-3 p-4"
+        <button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y | m-3 p-4"
             data-bs-target="#header"
             data-bs-slide="prev">
         </button>
-        <button class="carousel-control-next | carousel-control-next-icon | top-50 translate-middle-y m-3 p-4"
+        <button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y | m-3 p-4"
             data-bs-target="#header"
             data-bs-slide="next">
         </button>
@@ -232,9 +244,42 @@
         </section>
     </main>
     <!-- Pie de Pagina -->
-    <footer>
+    <footer class="position-relative | py-5 px-3 bg-dark">
+        <!-- Mapa de Contacto -->
+        <iframe class="position-absolute top-0 start-0 w-100 h-100 | opacity-50"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111678323!2d-58.37812478523344!3d-34.60238856493399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1662490815943!5m2!1ses-419!2sar" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <!-- Formulario de Contacto -->
+        <form id="contact" class="container row col-lg-6 col-xxl-4 position-relative | my-5 mx-auto rounded py-4 px-3 | bg-light" action="">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input class="form-control" 
+                id="contact_name" 
+                name="name"
+                type="text"
+                min="3"
+                maxlength="50"
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input class="form-control"
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                required>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea class="form-control"
+                id="contact_consult"
+                name="consult"
+                minlength="20"
+                maxlength="200"
+                required></textarea>
+            <button class="btn btn-outline-primary | my-2 text-uppercase">enviar</button>
+        </form>
         <!-- Redes sociales -->
-        <div class="d-flex justify-content-center flex-wrap gap-3 | p-3 text-capitalize">
+        <div class="d-flex justify-content-center flex-wrap gap-3 | position-relative | p-3 text-capitalize">
             <a class="btn btn-primary" href="">facebook</a>
             <a class="btn btn-danger" href="">intagram</a>
             <a class="btn btn-success" href="">whatstapp</a>
@@ -242,7 +287,7 @@
             <a class="btn btn-secondary" href="">linkedin</a>
             <a class="btn btn-dark" href="">github</a>
         </div>
-        <p>&copy;2022 Todos los derechos reservados</p>
+        <p class="position-relative">&copy;2022 Todos los derechos reservados</p>
     </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
