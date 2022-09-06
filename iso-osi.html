@@ -113,8 +113,8 @@
                 anwser:"Revise los datos de usuario, contraseña, dominio y puertos utilizados por la aplicacion y asegurese que sean los correctos" },
             { 
                 ask: "¿existe algun proceso pendiente en la aplicacion?", 
-                yes: 0, 
-                no: "fin", 
+                yes: "fin", 
+                no: 0, 
                 anwser:"Abra el administrador de tareas <strong>taskmgr</strong> para verificar si existe algun proceso abierto despues de haber cerrado la aplicacion", }
         ]
         question.forEach( (q,i) => quest.innerHTML+= `
