@@ -12,8 +12,12 @@
     <!-- Navegacion -->
     <nav class="navbar navbar-expand-md navbar-dark | bg-dark bg-gradient px-3">
         <a class="navbar-brand" href="#">Bootstrap</a>
-        <button class="navbar-toggler navbar-toggler-icon | border-0"></button>
-        <ul class="navbar-nav navbar-collapse">
+        <button class="navbar-toggler navbar-toggler-icon | border-0" 
+            title="menu de opciones"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-nav">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse">
             <li><a class="nav-link" href="index.html">Inicio</a></li>
             <li><a class="nav-link active" href="#">Bootstrap</a></li>
             <li><a class="nav-link disabled" href="">Link 3</a></li>
@@ -184,7 +188,7 @@
     <!-- Pie de Pagina -->
     <footer>
         <!-- Redes sociales -->
-        <div class="d-flex justify-content-center gap-3 | p-3 text-capitalize">
+        <div class="d-flex justify-content-center flex-wrap gap-3 | p-3 text-capitalize">
             <a class="btn btn-primary" href="">facebook</a>
             <a class="btn btn-danger" href="">intagram</a>
             <a class="btn btn-success" href="">whatstapp</a>
