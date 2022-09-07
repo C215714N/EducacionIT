@@ -25,7 +25,7 @@
         </ul>
     </nav>
     <!-- Cabecera de pagina -->
-    <header id="header">
+    <header id="header" class="header">
         <h1>Maquetacion</h1>
         <p>html | css | js</p>
     </header>
@@ -84,7 +84,7 @@
             </article>
         </section>
         <section>
-            <header>
+            <header class="header">
                 <h2>Implementacion del Diseño</h2>
             </header>
             <article>
@@ -95,77 +95,77 @@
                     Modelo unidimensional de cajas flexible, que permite disponer los elementos que sean hijos directos de un contenedor sobre un eje principal. Los atributos que permiten la manipulacion de dichos ejes son <strong>justify-content (principal)</strong> y <strong>align-item(secundario)</strong>
                 </p>
                 <h4>Lista de Personajes</h4>
-                <ul>
-                    <li>
-                        <img src="assets/gallery/homer-01.png" alt="Homer">
+                <ul class="flexbox unstyled justify-evenly">
+                    <li class="card">
+                        <img class="max-200 float-left" src="assets/gallery/homer-01.png" alt="Homer">
                         <p>
-                            <strong>Homer Simpson</strong>
+                            <strong class="heading">Homer Simpson</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/marge.png" alt="Marge">
+                    <li class="card">
+                        <img class="max-200 float-left" src="assets/gallery/marge.png" alt="Marge">
                         <p>
-                            <strong>Marge Simpson</strong>
+                            <strong class="heading">Marge Simpson</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/bart-01.png" alt="Bart">
+                    <li class="card">
+                        <img class="max-200 float-left" src="assets/gallery/bart-01.png" alt="Bart">
                         <p>
-                            <strong>Bart Simpson</strong>
+                            <strong class="heading">Bart Simpson</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/lisa-01.png" alt="Lisa">
+                    <li class="card">
+                        <img class="max-200 float-left" src="assets/gallery/lisa-01.png" alt="Lisa">
                         <p>
-                            <strong>Lisa Simpson</strong>
+                            <strong class="heading">Lisa Simpson</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/maggie.png" alt="Maggie">
+                    <li class="card">
+                        <img class="max-200 float-left" src="assets/gallery/maggie.png" alt="Maggie">
                         <p>
-                            <strong>Maggie Simpson</strong>
+                            <strong class="heading">Maggie Simpson</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
                 </ul>
                 <h4>El Pequeño Demonio</h4>
-                <ul>
-                    <li>
-                        <img src="assets/gallery/bart-01.png" alt="Bart">
+                <ul class="flexbox unstyled justify-evenly">
+                    <li class="card col-1 min-300">
+                        <img class="contain w-100 max-400 max-h300" src="assets/gallery/bart-01.png" alt="Bart">
                         <p>
-                            <strong>En persona</strong>
+                            <strong class="heading">En persona</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/bart-02.png" alt="Bart">
+                    <li class="card col-1 min-300">
+                        <img class="contain w-100 max-400 max-h300" src="assets/gallery/bart-02.png" alt="Bart">
                         <p>
-                            <strong>Yo no fui</strong>
+                            <strong class="heading">Yo no fui</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/bart-03.png" alt="Bart">
+                    <li class="card col-1 min-300">
+                        <img class="contain w-100 max-400 max-h300" src="assets/gallery/bart-03.png" alt="Bart">
                         <p>
-                            <strong>Skinner Apesta</strong>
+                            <strong class="heading">Skinner Apesta</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/bart-04.png" alt="Lisa">
+                    <li class="card w-50 min-300">
+                        <img class="contain w-100 max-400 max-h300" src="assets/gallery/bart-04.png" alt="Lisa">
                         <p>
-                            <strong>Comete mis pantalonsillos</strong>
+                            <strong class="heading">Comete mis pantalonsillos</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
-                    <li>
-                        <img src="assets/gallery/bart-05.png" alt="Bart">
+                    <li class="card w-50 min-300">
+                        <img class="contain w-100 max-400 max-h300" src="assets/gallery/bart-05.png" alt="Bart">
                         <p>
-                            <strong>Ropa Alternativa</strong>
+                            <strong class="heading">Ropa Alternativa</strong>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur cupiditate adipisci quam ea excepturi, neque dignissimos vero odio accusantium libero sequi reprehenderit dicta quo voluptatem saepe vel enim maiores tempore. Sint voluptas, sed voluptatibus iusto officiis quibusdam dignissimos veniam cupiditate vero facilis! Blanditiis tempore molestiae illum odio quas atque!
                         </p>
                     </li>
@@ -175,15 +175,33 @@
                 <header>
                     <H3>CSS Grid</H3>
                 </header>
-                <div class="grid">
-                    <div>div 1</div>
-                    <div>div 2</div>
-                    <div>div 3</div>
-                    <div>div 4</div>
-                    <span>span 4</span>
-                    <span>span 4</span>
-                    <span>span 4</span>
-                    <span>span 4</span>
+                <div class="css-grid dynamic">
+                    <img class="w-100 contain h-100" src="assets/gallery/homer-02.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/bart-01.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/marge.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/lisa-02.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/maggie.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/bob.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/krusty.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/flanders.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/wiggum.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/duffman.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/milhouse.png" alt="">
+                    <img class="w-100 contain h-100" src="assets/gallery/otto.png" alt="">
+                </div>
+                <div class="css-grid dynamic masonry">
+                    <img class="w-100 cover h-100" src="assets/gallery/homer-02.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/bart-01.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/marge.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/lisa-02.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/maggie.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/bob.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/krusty.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/flanders.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/wiggum.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/duffman.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/milhouse.png" alt="">
+                    <img class="w-100 cover h-100" src="assets/gallery/otto.png" alt="">
                 </div>
             </article>
         </section>
