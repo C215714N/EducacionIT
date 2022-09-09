@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+    <script>
+        class Persona{
+        // Propiedades de la clase
+            #nombre = ''; // string private
+            #apellido = ''; // string private
+            #edad = 0; // integer private
+        // Metodo que asigna los valores al Objeto
+            constructor(apellido, nombre, edad){
+                this.#nombre = nombre;
+                this.#apellido = apellido;
+                this.#edad = edad;
+            }
+        // Metodos de la Clase
+            getFullName(){
+                return `Bienvenido ${this.#nombre} ${this.#apellido}`
+            }
+            setName(name){
+                name = parseInt(name) || name
+                if (name.length >= 2 && name.length <= 50){
+                    this.#nombre = name;
+                } else {
+                    console.log('no se puede utilizar ese nombre');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
