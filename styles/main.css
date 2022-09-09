@@ -37,6 +37,9 @@
     .margin-0{
         margin: 0;
     }
+    iframe{
+        border: 0;
+    }
     .unstyled{
         padding: 0;
     }
@@ -60,7 +63,15 @@
         /* color image position/size repeat */
     }
     .menu a{
+        position: relative;
         color: #ccc;
+    }
+    .menu li:hover a{
+        color: #eee;
+        top: .25rem;
+    }
+    .menu li a:active{
+        top: -.25rem;
     }
 /* Cabecera */
     #header{
@@ -101,6 +112,9 @@
         font-family: 'the Simpsons';
     }
 /* Contenido */
+    section{
+        padding: 1rem;
+    }
     .example{
         padding: 1rem;
         background-color: #eee;
@@ -204,7 +218,6 @@
     .css-grid img{
         border-radius: .5rem;
         border: .5rem solid #ccc;
-        padding: 1rem;
     }
     .dynamic{
         grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr));
@@ -263,6 +276,9 @@
     .h-100{
         height: 100%;
     }
+    .min-h300{
+        min-height: 300px;
+    }
     .max-h300{
         max-height: 300px;
     }
@@ -288,12 +304,39 @@
     .cover{
         object-fit: cover;
     }
+    /* Atributos Position */
+    .bg-video{
+        margin: auto;
+    }
+    .ratio-4x3{
+        width: min(100%, 640px);
+        padding-top: min(75%, 480px);
+    }
+    .ratio-16x9{
+        width: min(100%, 640px);
+        padding-top: min(56.25%, 0px);
+    }
+    .relative{
+        position: relative; /* la etiqueta es su propio referente y sigue ocupando lugar dentro de la pagina, al desplazarse no afecta a los demas elementos*/
+    }
+    iframe.cover{
+        position: absolute; /* la etiqueta toma como referente al primer ancestro cuya posicion no sea static (deja de pertenecer al flow) */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .cover.active{
+        position: fixed; /* la etiqueta toma como referente al viewport y por defecto adopta el tamaño de su contenido (deja de pertenecer al flow) */
+        z-index: 1;
+    }
 /* Pie de Pagina */
     #footer{
         padding: 5rem 1rem;
         background: linear-gradient(
-            #d8f,
-            #ca3
+            #d8fc,
+            #ca3c
         )
     }
     /* Formulario de Contacto */
@@ -358,12 +401,16 @@
         color: #c33
     }
     #contact button{
+        position: relative; /* la etiqueta es su propio referente y se desplaza con respecto a su posicion original (sigue ocupando lugar dentro del Flow) */
         margin: .25rem 0 .5rem auto;
         padding: .5rem 3rem;
         background: transparent url('../assets/bg/simpsons-donut.svg') left center/contain no-repeat;/* color image position/size repeat */
         text-transform: uppercase;
     }
     #contact button:hover{
+        bottom: .5rem; /* parte inferior*/
+        left: .5rem; /* lado izquierdo */
+        box-shadow: -.5rem .5rem #eee;
         color: #eee;
         background: #333 url('../assets/bg/simpsons-donut.svg') right center/contain no-repeat;
     }
