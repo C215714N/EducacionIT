@@ -119,3 +119,26 @@ class Empleado extends Usuario{
 }
 Empleado = new Empleado("supervisor","Lomas de Zamora",'7g','Tarde')
 ```
+* __get__: Metodo utilizado para que la funcion retorne un valor
+* __set__: Metodo utilizado para modificar algun estado de las propiedades.
+
+```
+    // Metodos get (consultar o ver valores)
+    getCargo(){
+        return cargo
+    }
+    getSucursal(){
+        return sucursal
+    }
+    // Metodos set (definir o modificar valores)
+    setCargo(puesto){
+        this.#cargo = puesto
+    }
+    setSucursal(codigo){
+        if (codigo >= 1 && codigo <= 5){
+            this.#sucursal = codigo
+        } else {
+            alert('sucursal no existente')
+        }
+    }
+```
