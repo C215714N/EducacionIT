@@ -54,6 +54,11 @@
         list-style: none;
     }
 /* Navegacion */
+    nav{
+        position: sticky; /* el elemento es su propio referente y permanece dentro del flow hasta que se cumple determinada condicion. (relative con toques de absolute)*/
+        bottom: 0;
+        z-index: 2;
+    }
     .menu{
         display: flex;
         flex-wrap: wrap;
@@ -104,6 +109,10 @@
         color: #eee;
         background-color: #a63;
     }
+    main .header{
+        position: sticky;
+        top: 0;
+    }
     header{
         color: #c36;
         border-bottom: 2px solid;
@@ -113,7 +122,9 @@
     }
 /* Contenido */
     section{
+        min-height: 100vh;
         padding: 1rem;
+        overflow: auto;
     }
     .example{
         padding: 1rem;
@@ -426,4 +437,14 @@
         box-shadow: -.5rem .5rem #eee;
         color: #eee;
         background: #333 url('../assets/bg/simpsons-donut.svg') right center/contain no-repeat;
+    }
+    /* Redes sociales */
+    .social{
+        position: fixed;
+        bottom: 3rem;
+        right: .5rem;
+        border-radius: .25rem;
+        padding: 1rem;
+        opacity: .5;
+        background-color: #333;
     }
