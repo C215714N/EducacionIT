@@ -9,27 +9,103 @@
 <body>
     <script>
         class Persona{
-        // Propiedades de la clase
-            #nombre = ''; // string private
-            #apellido = ''; // string private
-            #edad = 0; // integer private
-        // Metodo que asigna los valores al Objeto
-            constructor(apellido, nombre, edad){
-                this.#nombre = nombre;
-                this.#apellido = apellido;
-                this.#edad = edad;
-            }
-        // Metodos de la Clase
-            getFullName(){
-                return `Bienvenido ${this.#nombre} ${this.#apellido}`
-            }
-            setName(name){
-                name = parseInt(name) || name
-                if (name.length >= 2 && name.length <= 50){
-                    this.#nombre = name;
-                } else {
-                    console.log('no se puede utilizar ese nombre');
+            // Propiedades de la clase
+                #nombre = ''; // string private
+                #apellido = ''; // string private
+                #edad = 0; // integer private
+                #genero = '';
+                #cuil = '';
+            // Metodo que asigna los valores al Objeto
+                constructor(apellido, nombre, edad){
+                    this.#nombre = nombre;
+                    this.#apellido = apellido;
+                    this.#edad = edad;
                 }
+            // Metodos de la Clase
+                getFullName(){
+                    return `Bienvenido ${this.#nombre} ${this.#apellido}`
+                }
+                setFullName(name, surname){
+                    name = parseInt(name) || name
+                    if (name.length >= 2 && name.length <= 50){
+                        this.#nombre = name;
+                        this.#apellido = surname
+                    } else {
+                        console.log('no se puede utilizar ese nombre');
+                    }
+                }
+                getAge(){
+                    return this.#edad    
+                }
+                setAge(age){
+                if (age < 18){
+                    console.log('no tienes edad suficiente para acceder')
+                } else {
+                    this.#edad = age;
+                }
+            }
+        }
+        class Empleado extends Persona{
+            #categoria;
+            #sucursal;
+            #sector;
+            #sueldo = 30000.0000;
+            #beneficios;
+            #alta;
+            #antiguedad;
+            porcentaje = 0.5;
+            constructor(categoria, sucursal, sector, beneficios, alta, antiguedad){
+                super(...arguments);
+                this.#categoria = categoria;
+                this.#sucursal = sucursal;
+                this.#sector = sector;
+                this.#beneficios = beneficios;
+                this.#alta = alta;
+                this.#antiguedad = antiguedad;
+            }
+            // Metodos get
+            getSueldo(){
+                return this.#sueldo;
+            }
+            getSueldoAnualComplementario(){
+                return this.#sueldo + this.#sueldo * this.porcentaje;
+            }
+            getBeneficioAntiguedad(){
+                return this.#sueldo + this.#sueldo * this.#antiguedad / 100
+            }
+            // Metodos set
+            setSueldo(monto){
+                this.#sueldo = monto;
+            }
+            setAjustePorInflacion(inflacion){
+                this.#sueldo += this.#sueldo * inflacion;
+            }
+            setAjusteImpositivo(descuento){
+                this.#sueldo -= this.#sueldo * descuento;
+            }
+            setAntiguedad(hoy){
+                this.#antiguedad = this.#alta - hoy
+            }
+        }
+
+        class Cliente extends Persona{
+            // Atributos Privados
+            #id;
+            #tipo;
+            #telefono;
+            #correo;
+            #direccion;
+            // Metodo constructor
+            constructor(id, tipo,telefono, correo, direccion){
+                super(...arguments);
+                this.#id = id;
+                this.#tipo = tipo;
+                this.#telefono = telefono;
+                this.#correo = correo;
+                this.#direccion = direccion;
+            }
+            getTelefono(){
+                return this.#telefono
             }
         }
     </script>
