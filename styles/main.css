@@ -327,9 +327,22 @@
         height: 100%;
         z-index: -1;
     }
-    .cover.active{
+    .cover.active,
+    .map.icon-min{
         position: fixed; /* la etiqueta toma como referente al viewport y por defecto adopta el tamaño de su contenido (deja de pertenecer al flow) */
         z-index: 1;
+        opacity: .9;
+    }
+    .map{
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+    }
+    .icon-min::before{
+        content: '-'
+    }
+    .icon-max::before{
+        content: '+';
     }
 /* Pie de Pagina */
     #footer{
