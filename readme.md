@@ -29,5 +29,56 @@ class Persona{
 * __ENCAPSULAMIENTO__: Aislar las caracteristicas principales de los elementos para su uso.
 * __HERENCIA__: Capacidad de pasar las caracteristicas de un elemento a otros.
 * __POLIMORFISMO__: Capacidad de adaptar caracteristicas a los diferentes elementos.
+* __SOBRECARGA__ Propiedad que permite la reutilizacion de metodos, alterando levemente su funcionamiento.
+* __VISIBILIDAD__ Capacidad de acceder a las propiedades o metodos desde fuera de la clase
 
 ## Propiedades y Metodos
+
+* SuperClases: Clases que se utilizan para definir caracteristicas principales, que seran heredadas por otras clases.
+
+* SubClases: Clases que heredan las caracteristicas de otra y agregan propiedades individuales;
+
+```
+// Superclase (define las propiedades principales)
+class Usuario{
+    string nombre;
+    string apellido;
+    string cuil;
+    array phone;
+    array email;
+}
+// Subclase de Usuario (polimorfismo)
+class Empleado extends Usuario{
+    string cargo;
+    float salario;
+    string sector;
+}
+// Subclase de Usuario (herencia)
+class Cliente extends Usuario{
+    string tipo;
+    array tarjetas;
+    array cuentas;
+}
+// Objeto Cliente Hereda las caracteristicas de la clase Usuario y agregas las propias
+let Objeto = new Cliente(
+    'cristian',
+    'racedo',
+    '20-35336446-5',
+    [
+        '11-0303-4567',
+        '4244-4424'
+    ],
+    [
+        'cristiandracedo@hotmail.com'
+    ],
+    'Individuo',
+    [
+        'visa credito', 
+        'visa debito'
+    ],
+    [
+        'caja ahorro pesos',
+        'cuenta corriente pesos'
+    ]
+);
+```
