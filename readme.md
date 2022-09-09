@@ -34,6 +34,7 @@ class Persona{
 
 ## Propiedades y Metodos
 
+### Tipos de clases
 * SuperClases: Clases que se utilizan para definir caracteristicas principales, que seran heredadas por otras clases.
 
 * SubClases: Clases que heredan las caracteristicas de otra y agregan propiedades individuales;
@@ -81,4 +82,40 @@ let Objeto = new Cliente(
         'cuenta corriente pesos'
     ]
 );
+```
+
+### Propiedades
+* __Privado__: Aquel atributo que solamente puede ser modificado mediante los metodos de la clase.
+* __Publico__: Aquel atributo al que podemos acceder y modificar tanto dentro como desde fuera de la clase.
+
+### Metodos
+* __constructor__: Metodo que se utiliza para definir los valores iniciales
+
+```
+class Usuario{
+    constructor(nombre, apellido, email){
+        this.nombre = nombre;
+        this.apellido = apellido,
+        this.email = email;
+    }
+}
+```
+* __argumentos__: Una superclase puede pasar sus propiedades a una subclase mediante metodos como _super(arguments)_, que utiliza los valore predeteminados de la clase Padre. 
+
+```
+class Empleado extends Usuario{
+    #cargo;
+    #sucursal;
+    #sector;
+    #turno;
+
+    constructor(cargo, sucursal, sector, turno){
+        super(arguments); // utiliza las propiedades de la superclase;
+        this.#cargo = cargo;
+        this.#sucursal = sucursal;
+        this.#sector = sector;
+        this.#turno = turno;
+    }
+}
+Empleado = new Empleado("supervisor","Lomas de Zamora",'7g','Tarde')
 ```
