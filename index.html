@@ -5,70 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POO</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h2{
+            margin: 0;
+        }
+        form{
+            padding: 1rem;
+        }
+        fieldset{
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+        }
+        input,
+        textarea,
+        select,
+        button{
+            flex: 1 0 min(100%, 200px);
+            padding: .25rem .5rem;
+        }
+    </style>
 </head>
 <body>
     <form id="formClientes">
         <h2>Clientes</h2>
-        <input type="hidden" name="id" value="1">
-        <input type="text" name="nombre" placeholder="Nombre">
-        <input type="text" name="apellido" placeholder="Apellido">
-        <input type="number" name="edad" placeholder="Edad">
-        <input type="email" name="email" placeholder="Correo">
-        <input type="date" name="fecha" title="fecha de nacimiento">
-        <input type="tel" name="cuil" placeholder="cuil">
-        <select name="genero">
-            <optgroup label="genero">
-                <option value="M">masculino</option>
-                <option value="F">femenino</option>
-                <option value="NB">no binario</option>
-                <option value="PND">prefiero no decirlo</option>
-                <option value="o">otro</option>
-            </optgroup>
-        </select>
-        <select name="tipo" label="tipo de cliente">
-            <option value="e">empresa</option>
-            <option value="p">pyme</option>
-            <option value="i">individuo</option>
-        </select>
-        <input type="tel" name="telefono" placeholder="telefono">
-        <textarea name="direccion" placeholder="direccion"></textarea>
-        <button>Agregar</button>
+        <fieldset>
+            <legend>Informacion Personal</legend>
+            <input type="hidden" name="id" value="1">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="number" name="edad" placeholder="Edad">
+            <input type="date" name="fecha" title="fecha de nacimiento">
+            <select name="genero">
+                <optgroup label="genero">
+                    <option value="M">masculino</option>
+                    <option value="F">femenino</option>
+                    <option value="NB">no binario</option>
+                    <option value="PND">prefiero no decirlo</option>
+                    <option value="o">otro</option>
+                </optgroup>
+            </select>
+            <input type="tel" name="cuil" placeholder="cuil">
+        </fieldset>
+        <fieldset>
+            <legend>Datos de Contacto</legend>
+            <select name="tipo" label="tipo de cliente">
+                <option value="e">empresa</option>
+                <option value="p">pyme</option>
+                <option value="i">individuo</option>
+            </select>
+            <input type="tel" name="telefono" placeholder="telefono">
+            <input type="email" name="email" placeholder="Correo">
+            <textarea name="direccion" placeholder="direccion"></textarea>
+            <button>Agregar</button>
+        </fieldset>
     </form>
     <form id="formEmpleados">
         <h2>Empleados</h2>
-        <input type="hidden" name="id" value="1">
-        <input type="text" name="nombre" placeholder="Nombre">
-        <input type="text" name="apellido" placeholder="Apellido">
-        <input type="number" name="edad" placeholder="Edad">
-        <input type="email" name="email" placeholder="Correo">
-        <select name="categoria">
-            <optgroup label="seleccione una categoria">
-                <option value="0">administracion</option>
-                <option value="1">atencion al cliente</option>
-                <option value="2">operar</option>
-                <option value="3">soporte tecnico</option>
-                <option value="4">asesor de cuenta</option>
-            </optgroup>
-        </select>
-        <select name="sucursal" id="">
-            <optgroup label="seleccione una sucursal">
-                <option value="0">zona norte</option>
-                <option value="1">zona oeste</option>
-                <option value="2">zona sur</option>
-                <option value="3">caba</option>
-            </optgroup>
-        </select>
-        <select name="sector" id="">
-            <optgroup label="seleccione su sector">
-                <option value="0">comercial</option>
-                <option value="1">caja</option>
-                <option value="2">contabilidad</option>
-                <option value="3">atencion al publico</option>
-            </optgroup>
-        </select>
-        <input type="date" title="fecha de alta">
-        <input type="number" name="antigüedad">
-        <button>agregar</button>
+        <fieldset>
+            <legend>Informacion Personal</legend>
+            <input type="hidden" name="id" value="1">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="number" name="edad" placeholder="Edad">
+            <input type="date" name="fecha" title="fecha de nacimiento">
+            <select name="genero">
+                <optgroup label="genero">
+                    <option value="M">masculino</option>
+                    <option value="F">femenino</option>
+                    <option value="NB">no binario</option>
+                    <option value="PND">prefiero no decirlo</option>
+                    <option value="o">otro</option>
+                </optgroup>
+            </select>
+            <input type="tel" name="cuil" placeholder="cuil">
+        </fieldset>
+        <fieldset>
+            <legend>Datos del Empleado</legend>            
+            <select name="categoria">
+                <optgroup label="seleccione una categoria">
+                    <option value="0">administracion</option>
+                    <option value="1">atencion al cliente</option>
+                    <option value="2">operar</option>
+                    <option value="3">soporte tecnico</option>
+                    <option value="4">asesor de cuenta</option>
+                </optgroup>
+            </select>
+            <select name="sucursal" id="">
+                <optgroup label="seleccione una sucursal">
+                    <option value="0">zona norte</option>
+                    <option value="1">zona oeste</option>
+                    <option value="2">zona sur</option>
+                    <option value="3">caba</option>
+                </optgroup>
+            </select>
+            <select name="sector" id="">
+                <optgroup label="seleccione su sector">
+                    <option value="0">comercial</option>
+                    <option value="1">caja</option>
+                    <option value="2">contabilidad</option>
+                    <option value="3">atencion al publico</option>
+                </optgroup>
+            </select>
+            <input type="number" name="beneficios">
+            <input type="date" title="fecha de alta">
+            <input type="number" name="antigüedad">
+            <button>agregar</button> 
+        </fieldset>
     </form>
     <form id="formCuentas">
         <h2>Cuentas</h2>
@@ -99,11 +145,14 @@
                 #genero = '';
                 #cuil = '';
             // Metodo que asigna los valores al Objeto
-                constructor(id, nombre, apellido, edad){
+                constructor(id, nombre, apellido, edad, fechaNacimiento, genero, cuil){
                     this.#id = id;
                     this.#nombre = nombre;
                     this.#apellido = apellido;
                     this.#edad = edad;
+                    this.#fechaNacimiento = fechaNacimiento;
+                    this.#genero = genero;
+                    this.#cuil = cuil;
                 }
             // Metodos de la Clase
                 getFullName(){
@@ -178,7 +227,7 @@
             #correo;
             #direccion;
             // Metodo constructor
-            constructor(tipo,telefono, correo, direccion){
+            constructor(tipo, telefono, correo, direccion){
                 super(...arguments);
                 this.#tipo = tipo;
                 this.#telefono = telefono;
