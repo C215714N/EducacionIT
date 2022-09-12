@@ -15,7 +15,7 @@
         <input type="number" name="edad" placeholder="Edad">
         <input type="email" name="email" placeholder="Correo">
         <input type="date" name="fecha" title="fecha de nacimiento">
-        <input type="tel" name="cuil" placeholder="telefono">
+        <input type="tel" name="cuil" placeholder="cuil">
         <select name="genero">
             <optgroup label="genero">
                 <option value="M">masculino</option>
@@ -69,6 +69,23 @@
         <input type="date" title="fecha de alta">
         <input type="number" name="antigüedad">
         <button>agregar</button>
+    </form>
+    <form id="formCuentas">
+        <h2>Cuentas</h2>
+        <fieldset>
+            <legend>Datos de la Cuenta</legend>
+            <input type="hidden" name="id" value="1">
+            <input type="tel" name="numero" placeholder="numero de cuenta">
+            <input type="text" name="cliente" placeholder="numero de cliente">
+            <button>Crear Cuenta</button>
+        </fieldset>
+        <fieldset>
+            <legend>Operaciones en Caja</legend>
+            <input id="ammount" type="number">
+            <button type="button" id="getSaldo" title="consultar">Consultar</button>
+            <button type="button" id="agregarDinero" title="depositar">Depositar</button>
+            <button type="button" id="extraerDinero" title="extraer">Extraer</button>
+        </fieldset>
     </form>
     <!-- Clases para Clientes y Empleados -->
     <script>
@@ -154,7 +171,6 @@
                 this.#antiguedad = this.#alta - hoy
             }
         }
-
         class Cliente extends Persona{
             // Atributos Privados
             #tipo;
@@ -173,6 +189,67 @@
                 return this.#telefono
             }
         }
+        
+        class Cuenta{
+            #id;
+            #cliente = 0;
+            #numero;
+            #saldo = 0.0000;
+            #descubierto = 5000;
+            #moneda = "pesos"
+            #interes;
+            constructor(id, numero, cliente){
+                this.#id = id;
+                this.#numero = numero;
+                this.#cliente = cliente;
+            }
+            
+        // Metodos de la cuenta
+            depositarDinero(dinero){
+                this.#saldo += parseFloat(dinero);
+            }
+            extraerDinero(dinero){
+                dinero <= this.#saldo ?
+                this.#saldo -= dinero :
+                window.alert(`no puede retirar mas de $${this.#saldo}`)
+            }
+            getSaldo(){
+                return this.#saldo;
+            }
+            getDescubierto(){
+                return this.#descubierto;
+            }
+            getInteres(){
+                return this.#interes;
+            }
+            setDescubierto(descubierto){
+                this.#descubierto = descubierto;
+            }
+            setInteres(interes){
+                this.#interes = interes;
+            }
+        }
+        class CuentaPlazoFijo extends Cuenta{
+            #plazo = 30;
+            #precancelable = false;
+            #renovacion = true;
+
+            setPlazo(plazo){
+                plazo >= 30 ?
+                this.#plazo = plazo :
+                window.alert('elija un periodo mayor a 30 dias');
+            }
+            setPrecancelacion(pc){
+                typeof pc == 'boolean' ?
+                this.#precancelable = pc :
+                window.alert('el tipo de dato seleccionado no es valido');
+            }
+            setRenovacion(renew){
+                typeof renew == 'boolean' ?
+                this.#renovacion = renew :
+                window.alert('el tipo de dato seleccionado no es valido');
+            }
+        }
     </script>
     <!-- Logica de formularios -->
     <script>
@@ -184,16 +261,55 @@
         // Empleados
         let arrayEmpleados = []
         const formEmpleados = d.querySelector('#formEmpleados');
+        // Cuentas
+        let arrayCuentas = [];
+        const formCuentas = d.querySelector('#formCuentas');
+        // Array Auxiliar
+        let values = [];
 
-        forms.forEach( f => f.addEventListener( 'submit', (e) => { 
+        forms.forEach( form => form.addEventListener( 'submit', (e) => { 
             e.preventDefault();
-        }   )   );
-        formClientes.addEventListener( 'submit', () => {
-            let values = [];
-            formClientes.querySelectorAll('input,select,textarea').forEach( field => values.push(field.value))
-            nuevoCliente = new Cliente(...values);
-            arrayClientes.push(nuevoCliente);
+            form.querySelectorAll('input,select,textarea').forEach( 
+                field => values.push(field.value)
+        )   }   )   )
+
+        formClientes.addEventListener('submit', () => {
+            addObjectToArray(arrayClientes, Cliente)
         }   )
+
+        formEmpleados.addEventListener('submit', () => {
+            addObjectToArray(arrayEmpleados, Empleado)
+        }   )
+
+        formCuentas.addEventListener('submit', () => {
+            addObjectToArray(arrayCuentas, Cuenta)
+        }   )
+        
+        function addObjectToArray(array, className){
+            newObject = new className(...values);
+            q = window.confirm('¿esta seguro que desea cargar sus datos?');
+            q ? array.push(newObject) : null;
+            values = [];
+        }
+    </script>
+    <!-- Operaciones en caja -->
+    <script>
+    const ammount = d.querySelector('#ammount');
+    const getSaldo = d.querySelector('#getSaldo');
+    const agregarDinero = d.querySelector('#agregarDinero');
+    const extraerDinero = d.querySelector('#extraerDinero');
+
+    getSaldo.onclick = () => {
+        ammount.value = arrayCuentas[0].getSaldo()
+    }
+    agregarDinero.onclick = () => {
+        arrayCuentas[0].depositarDinero(ammount.value);
+        ammount.value = arrayCuentas[0].getSaldo()
+    }
+    extraerDinero.onclick = () => {
+        arrayCuentas[0].extraerDinero(ammount.value);
+        ammount.value = arrayCuentas[0].getSaldo()
+    }
     </script>
 </body>
 </html>
