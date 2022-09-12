@@ -8,16 +8,39 @@
     <style>
         *{
             box-sizing: border-box;
+            font-family: 'Segoe ui', sans-serif;
         }
-        h2{
+        h2,
+        .menu{
             margin: 0;
         }
+        .menu a{
+            color: #448;
+            text-decoration: none;
+        }
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: .5rem;
+            gap: .5rem;
+        }
         form{
+            display: none;
+            max-width: 1320px;
+            margin: 1rem auto;
+            border-radius: .25rem;
             padding: 1rem;
+        }
+        form:target{
+            display: grid;
+            gap: .5rem;
+            box-shadow: -.2rem .2rem .5rem .25rem #999;
         }
         fieldset{
             display: flex;
             flex-wrap: wrap;
+            border-radius: .25rem;
             gap: .5rem;
         }
         input,
@@ -30,6 +53,13 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#formClientes">Clientes</a></li>
+            <li><a href="#formEmpleados">Empleados</a></li>
+            <li><a href="#formCuentas">Cuentas</a></li>
+        </ul>
+    </nav>
     <form id="formClientes">
         <h2>Clientes</h2>
         <fieldset>
