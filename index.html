@@ -10,6 +10,7 @@
     <title>Maquetación Web</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/media.css">
     <!-- Icono de la pagina -->
     <link rel="icon" href="assets/bg/simpsons-donut.svg">
 </head>
@@ -175,6 +176,7 @@
                 <header>
                     <H3>CSS Grid</H3>
                 </header>
+                <h4 id="personajes">Personajes de la serie</h4>
                 <div class="css-grid dynamic">
                     <img class="w-100 contain h-100" src="assets/gallery/homer-02.png" alt="">
                     <img class="w-100 contain h-100" src="assets/gallery/bart-01.png" alt="">
@@ -189,19 +191,12 @@
                     <img class="w-100 contain h-100" src="assets/gallery/milhouse.png" alt="">
                     <img class="w-100 contain h-100" src="assets/gallery/otto.png" alt="">
                 </div>
+                <h4 id="hogar">¿Quien anda ahi?</h4>
                 <div class="css-grid dynamic masonry">
-                    <img class="w-100 cover h-100" src="assets/gallery/homer-02.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/bart-01.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/marge.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/lisa-02.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/maggie.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/bob.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/krusty.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/flanders.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/wiggum.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/duffman.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/milhouse.png" alt="">
-                    <img class="w-100 cover h-100" src="assets/gallery/otto.png" alt="">
+                    <div class="bg-whois min-h300"></div>
+                    <div class="bg-whois min-h300"></div>
+                    <div class="bg-whois min-h300"></div>
+                    <div class="bg-whois min-h300"></div>
                 </div>
             </article>
         </section>
@@ -227,6 +222,42 @@
                 </iframe>
             </div>
         </section>
+        <aside>
+            <h2>Tabla de contenidos</h2>
+            <form id="search">
+                <input type="search">
+                <button>Buscar</button>
+            </form>
+            <ol class="table-content">
+                <li><a href="#">planificacion del diseño</a>
+                    <ol>
+                        <li><a href="#">unidades de medida</a></li>
+                        <li><a href="#">paleta de colores</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">implementacion del diseño</a>
+                    <ol>
+                        <li><a href="#">flexbox</a>
+                            <ol>
+                                <li><a href="#">lista de personajes</a></li>
+                                <li><a href="#">el pequeño demonio</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">css-grid</a>
+                            <li> <a href="#personajes">personajes de la serie</a></li>
+                            <li><a href="#hogar">¿quien anda ahi?</a></li>
+                        </li>
+                    </ol>
+                    </li>
+                <li><a href="#">introducciones</a>
+                    <ol>
+                        <li><a href="#">intro clasica</a></li>
+                        <li><a href="#">intro moderna </a></li>
+                    </ol>
+                </li>
+                <li><a href="#">dejanos tu consulta</a></li>
+            </ol>
+        </aside>
     </main>
     <!-- Pie de pagina -->
     <footer id="footer" class="relative">

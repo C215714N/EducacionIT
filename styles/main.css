@@ -103,6 +103,10 @@
             clamp(5rem, 30%, 480px), /*calcula el tramaño entre un minimo, promedio ,maximo */
             cover; /* cubriendo (tapa al contenedor sin importar si la imagen se ve completa)*/
         background-repeat: no-repeat;
+        background-attachment: 
+            scroll,
+            fixed,
+            fixed;
     }
     .header{
         padding: 1rem;
@@ -144,6 +148,10 @@
         border-radius: .25rem;
         padding: 1.5rem 1rem;
         box-shadow: -.25rem .25rem .5rem #666;
+    }
+    .bg-whois{
+        background: #333 url('../assets/bg/simpsons-bg.webp') center/cover no-repeat;
+        background-attachment: fixed;
     }
     /* Contenedor Flex*/
     .flex{
@@ -231,7 +239,7 @@
         border: .5rem solid #ccc;
     }
     .dynamic{
-        grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,200px), 1fr));
         /* EXPLICACION
             repeat(cantidad, tamaño)
             * auto-fit: rellena y encaja las celdas en el espacio restante
