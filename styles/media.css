@@ -1,0 +1,56 @@
+/* Contadores de la pagina*/
+    main{
+        counter-reset: capitulo;
+    }
+    section h2::before{
+        counter-increment: capitulo;
+        content: 'Capitulo ' counter(capitulo) ' : ';
+    }
+    section{
+        counter-reset: tema;
+    }
+    section h3::before{
+        counter-increment: tema;
+        content: 'Tema ' counter(capitulo) '.' counter(tema) ' : ';
+    }
+/* Lista de contenidos */
+.table-content ol{
+    padding: 0;
+}
+.table-content li{
+    list-style: none;
+}
+/* declaracion */
+    .table-content{
+        counter-reset: uno;
+    }
+    .table-content ol{
+        counter-reset: dos;
+    }
+    .table-content ol ol{
+        counter-reset: tres;
+    }
+    .table-content ol ol ol{
+        counter-reset: cuatro;
+    }
+/* incremento */
+    .table-content li{
+        counter-increment: uno;
+    }
+    .table-content li li{
+        counter-increment: dos;
+    }
+    .table-content li li li{
+        counter-increment: tres;
+    }
+    .table-content li li li li{
+        counter-increment: cuatro;
+    }
+/* aplicacion */
+    .table-content li::before{
+        content: 
+            counter(uno)'.'
+            counter(dos)'.'
+            counter(tres)'.'
+            counter(cuatro)' - ';
+    }
