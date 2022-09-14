@@ -22,7 +22,7 @@
 }
 /* declaracion */
     .table-content{
-        padding: 0;
+        padding-left: 4rem;
         counter-reset: uno;
     }
     .table-content ol{
@@ -53,7 +53,7 @@
     }
 
 /* aplicacion */
-    .table-content li::before{
+    .table-content li::marker{
         content: 
             counter(uno)'.'
             counter(dos)'.'
@@ -108,10 +108,10 @@ nav{
     background-color: #eee;
 }
 .open::before{
-    content: 'abrir'
+    content: '\2630'
 }
 .close::before{
-    content: 'cerrar';
+    content: '\00d7';
 }
 /* Pantallas Medianas */
 @media screen and (min-width: 768px){
@@ -131,6 +131,7 @@ nav{
 /* Pantallas Grandes */
 @media screen and (min-width: 992px){
     main{
+        max-width: 1320px;
         grid-template-columns: 1fr 3fr;
     }
     section{
@@ -145,9 +146,6 @@ nav{
 }
 /* Pantallas Extra grandes */
 @media screen and (min-width: 1400px){
-    main{
-        max-width: 1320px;
-    }
     nav{
         padding: 1rem calc(50vw - 660px);
     }
