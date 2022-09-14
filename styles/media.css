@@ -78,7 +78,40 @@ aside{
 }
 
 /* Menu hamburguesa */
-
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    padding: .5rem;
+    background: linear-gradient(to right, #a63, #f38);   
+}
+.menu{
+    display: block;
+    width: 100%;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+.menu.active{
+    max-height: 100vh;
+}
+.btn{
+    padding: .25rem .5rem;
+    color: #eee;
+    border: 1px solid #eee;
+    background-color: transparent;
+}
+.btn:hover{
+    color: #f38;
+    background-color: #eee;
+}
+.open::before{
+    content: 'abrir'
+}
+.close::before{
+    content: 'cerrar';
+}
 
 /* Pantallas Grandes */
 @media screen and (min-width: 992px){

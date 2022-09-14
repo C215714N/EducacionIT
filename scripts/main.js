@@ -1,10 +1,14 @@
 const d = document;
 const mapButton = d.querySelector('#footer .map');
 const mapFrame = d.querySelector('#footer .cover');
-
-
+const menuButton = d.querySelector('nav .btn');
+const menuList = d.querySelector('nav .menu');
 
 mapButton.onclick = () => alterClass(mapButton, mapFrame, 'icon-max', 'icon-min');
+
+menuButton.addEventListener('click', () => {
+    alterClass(menuButton, menuList, 'open','close')
+}   )
 
 function alterClass(el, tag, a, b){
     tag.classList.toggle('active') ?
