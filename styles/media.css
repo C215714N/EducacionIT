@@ -64,6 +64,7 @@
 /* Layout */
 main{
     display: grid;
+    margin: auto;
     gap: 1rem;
 }
 aside{
@@ -112,7 +113,21 @@ nav{
 .close::before{
     content: 'cerrar';
 }
-
+/* Pantallas Medianas */
+@media screen and (min-width: 768px){
+    main{
+        max-width: 720px;
+    }
+    nav .btn{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: auto;
+        max-height: 600px;
+        background-image: none;
+    }
+}
 /* Pantallas Grandes */
 @media screen and (min-width: 992px){
     main{
@@ -126,5 +141,14 @@ nav{
         top: .5rem;
         height: 100vh;
         max-height: 100vh;
+    }
+}
+/* Pantallas Extra grandes */
+@media screen and (min-width: 1400px){
+    main{
+        max-width: 1320px;
+    }
+    nav{
+        padding: 1rem calc(50vw - 660px);
     }
 }
