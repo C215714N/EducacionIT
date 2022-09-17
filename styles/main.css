@@ -39,6 +39,12 @@
         text-decoration: none;
     }
 /* Navegacion */
+    nav{
+        position: sticky;
+        /* el elemento ocupa lugar dentro del flow hasta que se cumple una determinada condicion (relative con toques de absolute) */
+        top: 0;
+        z-index: 2;
+    }
     .menu{
         display: flex;
         justify-content: center;
@@ -111,8 +117,6 @@
             fixed,
             scroll;     
     }
-    /*
-*/
     .header{
         color: #eee;
         background-color: #248;
@@ -120,6 +124,10 @@
     header{
         color: #248;
         border-bottom: 2px solid;
+    }
+    section > .header{
+        position: sticky;
+        top: 2rem;
     }
 /* Contenido */
 
@@ -291,6 +299,13 @@
         background-size: 3rem;
         box-shadow: 0 .25rem .5rem #333;
         /* x y blur color */
+    }
+    a.fixed-bottom{
+        position: fixed;
+        /* el elemento utiliza como referente al viewport y permanece fuera del flow (el tamaño depende de su contenido) */
+        right: 1rem;
+        bottom: 1rem;
+        opacity: .5;
     }
     /* Iconos redes sociales */
     .facebook{
