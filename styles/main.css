@@ -28,9 +28,14 @@
     .menu{
         margin: 0;
     }
+    /* Rellenos */
+    .content-table ol{
+        padding: 0;
+    }
     /* Estilos */
     .menu,
     .example,
+    .content-table li,
     .unstyled{
         list-style: none;
     }
@@ -150,6 +155,40 @@
     }
 
 /* Tabla de Contenidos */
+    /* Declaracion */
+    .content-table{
+        counter-reset: uno;
+        padding: .5rem;
+        padding-left: 4rem;
+        background-color: #eee;
+        font-weight: bold;
+    }
+    .content-table ol{
+        counter-reset: dos;
+    }
+    .content-table ol ol{
+        counter-reset: tres;
+    }
+    /* Incrementos */
+    .content-table li{
+        counter-increment: uno;
+        color: #124;
+    }
+    .content-table li li{
+        counter-increment: dos;
+        color: #248;
+    }
+    .content-table li li li{
+        counter-increment: tres;
+        color: #36c;
+    }
+    /* Aplicacion */
+    .content-table li::marker{
+        content: 
+            counter(uno) '.'
+            counter(dos) '.'
+            counter(tres) ' - '
+    }
 
 /* Pseudoelemento: parte o elemento que se encuentra dentro de una etiqueta */
     main{
@@ -166,6 +205,15 @@
     section h3::before{
         content: 'Tema ' counter(tema) ': ';
         counter-increment: tema;
+    }
+    article > p::first-letter {
+        float: left;
+        margin-right: .5rem;
+        font-size: 3rem;
+    }
+    article > p::first-line{
+        color: #124;
+        font-weight: bold;
     }
 /* Tarjetas de presentacion */
     .card{
