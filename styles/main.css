@@ -148,6 +148,25 @@
     .example li{
         width: 100%;
     }
+
+/* Tabla de Contenidos */
+
+/* Pseudoelemento: parte o elemento que se encuentra dentro de una etiqueta */
+    main{
+        counter-reset: capitulo;
+    }
+    section{
+        counter-reset: tema;
+    }
+    section h2::before{
+        content: 'Capitulo ' counter(capitulo) ': ';
+        counter-increment: capitulo;
+        text-shadow: 0 0 .5rem #fc6;
+    }
+    section h3::before{
+        content: 'Tema ' counter(tema) ': ';
+        counter-increment: tema;
+    }
 /* Tarjetas de presentacion */
     .card{
         border-radius: .5rem;
