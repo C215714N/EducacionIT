@@ -168,7 +168,25 @@
     */
     }
 /* Pie de pagina */
-
+#footer{
+    position: relative;
+    padding: 1rem;
+    background-image: linear-gradient(
+        rgba(17,17,34),
+        rgba(17, 34, 68, .5), 
+        rgba(17,17,34)
+    );
+}
+.cover{
+    position: absolute;
+    /* el elemento utiliza como referente al primer ancestro cuya posicion no sea "static" y permanece fuera del flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
     /* Formulario de Contacto */
     #contact{
         max-width: 540px;
@@ -182,8 +200,7 @@
             rgba(17, 34, 68, .5) 
             url('../assets/bg/space.jpg')
             center/cover;
-        /* color image position/size repeat */
-        text-shadow: 0 0 .5rem #333;
+        opacity: .9;
     }
     label{
         margin: .5rem 0 .2rem;
@@ -220,18 +237,19 @@
         border-color: #3c6;
     }
     form :valid + .valid{
-        color: #284;
+        color: #3c6;
     }
     form :is(
         input, 
         textarea
     ):invalid:not(:placeholder-shown){
-        border-color: #c33;
+        border-color: #e33;
     }
     form :invalid:not(:placeholder-shown) + .valid{
-        color: #c33;
+        color: #e33;
     }
     .btn{
+        position: relative;
         margin: .25rem 0 .5rem auto;
         padding: .5rem 1rem;
         color: #eee;
@@ -243,6 +261,12 @@
         text-shadow: 0 0 .5rem #012;
         background-color: #eee;
     }
+    #contact .btn:hover{
+        left: .25rem;
+        top: .25rem;
+        box-shadow: 
+            -.25rem -.25rem  #ccc;
+    }
     /* Redes sociales */
     .social{
         display: flex;
@@ -251,6 +275,42 @@
         gap: .5rem;
     }
     .social a{
-        padding: .5rem;
+        position: relative;
+        /* El elemento de ubica con respecto a si mismo (es su propio referente) y sigue ocupando su lugar dentro del flow*/
+        width: 4rem;
+        height: 4rem;
+        border-radius: .5rem;
         background-color: #ccc;
+        background-size: 2.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        bottom: .5rem;
+        background-color: #eee;
+        background-size: 3rem;
+        box-shadow: 0 .25rem .5rem #333;
+        /* x y blur color */
+    }
+    /* Iconos redes sociales */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
     }
