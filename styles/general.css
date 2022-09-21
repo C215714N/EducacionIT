@@ -10,6 +10,10 @@ h3,
 .menu{
     margin: 0;
 }
+/* Rellenos */
+ul.menu{
+    padding: 0;
+}
 /* Estilos */
 nav a,
 footer a{
@@ -53,7 +57,7 @@ main{
 /* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
     body{
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 8rem 5fr;
         grid-template-areas: 
         'nav header'
         'nav main'
