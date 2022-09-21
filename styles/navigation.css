@@ -1,0 +1,98 @@
+nav{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    padding: .5rem;
+    background: 
+        var(--primary)
+        linear-gradient(
+            15deg,
+            var(--secondary),
+            var(--light),
+            var(--secondary)
+        );
+    /* color image position/size repeat */
+}
+nav a{
+    color: var(--dark);
+    font-weight: bold;
+    text-shadow: 0 0 .5rem var(--light);
+}
+nav a:hover{
+    color: var(--light);
+    text-shadow: 
+        -.1rem .1rem .5rem var(--primary), 
+        0 0 .5rem var(--primary);
+}
+ul.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-out;
+}
+ul.menu.active{
+    max-height: 100vh;
+}
+.logo{
+    width: 3rem;
+    height: 3rem;
+    background: url('../assets/icon/skynet.png') center/contain no-repeat;
+}
+.menu.open::before{
+    content: '\2630';
+}
+.menu.close::before{
+    content: '\2279'
+}
+nav a::before{
+    font-size: 2rem;
+    line-height: 1.2;
+}
+a[href="#home"]::before{
+    content: '🌁';
+}
+a[href="#network"]::before{
+    content: '🌐';
+}
+a[href="#prototypes"]::before{
+    content: '⚙️';
+}
+a[href="#access"]::before{
+    content: '👍';
+}
+/* Small Devices - Smartphones */
+@media screen and (min-width: 576px){
+    nav button.menu,
+    nav a.logo{
+        display: none;
+    }
+    ul.menu{
+        max-height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .menu a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 768px){
+    nav{
+        max-width: 100px;
+        top: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    nav a.logo{
+        display: block;
+    }
+    ul.menu{
+        margin-top: auto;
+        flex-direction: column;
+    }
+}
