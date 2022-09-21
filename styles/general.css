@@ -2,3 +2,61 @@
     box-sizing: border-box;
     font-family: var(--font);
 }
+/* Margenes */
+body,
+h1,
+h2,
+h3,
+.menu{
+    margin: 0;
+}
+/* Estilos */
+nav a,
+footer a{
+    text-decoration: none;
+}
+.menu,
+.unstyled{
+    list-style: none;
+}
+/* Altura Maxima */
+nav{
+    max-height: 100vh;
+}
+/* Altura minima */
+#header,
+main,
+#footer{
+    min-height: 100vh;
+}
+/* Layout */
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer'
+    'nav';
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px){
+    body{
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+        'nav header'
+        'nav main'
+        'nav footer';
+    }
+}
