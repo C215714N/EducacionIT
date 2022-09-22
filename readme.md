@@ -41,10 +41,10 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
-	## Verificaciones de Ajustes
-	Cuando establecemos la configuracion de los dispositivos de internetworks debemos verificar el funcionamiento de las interfaces, redes y dispositivos a los que se conecte dentro de la topologia. La misma dependera del tipo de dispositivo que estemos administrando.
 
-## Verificacion de Ajustes
+## Verificaciones de Ajustes
+Cuando establecemos la configuracion de los dispositivos de internetworks debemos verificar el funcionamiento de las interfaces, redes y dispositivos a los que se conecte dentro de la topologia. La misma dependera del tipo de dispositivo que estemos administrando.
+
 1. switch# (administracion general)
 	* __show version__: Informacion del Sistema Operativo y version
 	* __show flash__: Lista de archivos de la memoria FLASH
