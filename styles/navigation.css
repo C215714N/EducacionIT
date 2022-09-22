@@ -47,6 +47,9 @@ ul.menu.active{
 .menu.close::before{
     content: '\2279'
 }
+nav a{
+    position: relative;
+}
 nav a::before{
     font-size: 2rem;
     line-height: 1.2;
@@ -82,7 +85,7 @@ a[href="#access"]::before{
 }
 @media screen and (min-width: 768px){
     nav{
-        max-width: 100px;
+        max-width: 8rem;
         top: 0;
         flex-wrap: wrap;
         justify-content: center;
@@ -94,5 +97,8 @@ a[href="#access"]::before{
     ul.menu{
         margin-top: auto;
         flex-direction: column;
+    }
+    ul.menu a:hover{
+        left: 1rem;
     }
 }
