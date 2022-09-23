@@ -1,0 +1,53 @@
+.header{
+    font-size: min(calc(var(--font-min)), var(--font-max));
+}
+#header{
+    --font-max: 5rem;
+    --font-min: 2.5vw + .8rem;
+    --gradient: radial-gradient(
+        circle at top right,
+        rgb(var(--light)) 4%,
+        var(--primary),
+        var(--dark)
+    );
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: .5rem;
+    color: rgb(var(--light));
+    text-shadow: 0 0 .5rem var(--dark);
+    background-image: var(--gradient);
+}
+#header > div{
+    flex: 1 0 min(100%, 320px);
+}
+article .header{
+    --font-max: 2.5rem;
+}
+.sample img{
+    width: min(100%, 320px);
+}
+.sample p{
+    max-height: 0;
+    overflow: auto;
+}
+@media screen and (min-width: 825px){
+    #header{
+        align-items: center;
+        background-image: 
+            url('../assets/prototypes/terminator_head.png'),
+            var(--gradient);
+        background-position: bottom left;
+        background-size: 50%, cover;
+        background-repeat: no-repeat;
+    }
+    .sample p{
+        max-height: 600px;
+    }
+}
+@media screen and (min-width: 992px){
+    #header{
+        background-size: contain;
+    }
+}
