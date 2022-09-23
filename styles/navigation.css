@@ -11,7 +11,7 @@ nav{
         linear-gradient(
             15deg,
             var(--secondary),
-            var(--light),
+            rgb(var(--light)),
             var(--secondary)
         );
     /* color image position/size repeat */
@@ -19,10 +19,10 @@ nav{
 nav a{
     color: var(--dark);
     font-weight: bold;
-    text-shadow: 0 0 .5rem var(--light);
+    text-shadow: 0 0 .5rem rgb(var(--light));
 }
 nav a:hover{
-    color: var(--light);
+    color: rgb(var(--light));
     text-shadow: 
         -.1rem .1rem .5rem var(--primary), 
         0 0 .5rem var(--primary);
