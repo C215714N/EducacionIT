@@ -1,11 +1,42 @@
 :root{
     --primary: #248;
     --secondary: #666;
-    --light: #eee;
+    --light: 236, 236, 236;
     --dark: #333;
-    --success: #3c6;
+    --success: #284;
     --warning: #da3;
     --danger: #c33;
     --info: #36c;
+    --font-min: 2vw + .5rem;
+    --font-max: 3.5rem;
     --font: 'Cairo', 'Kanit', 'Maven Pro', sans-serif;
+}
+
+.btn{
+    border-radius: .5rem;
+    color: var(--color);
+    border: 1px solid var(--color);
+    background-color: var(--bg);
+    font-size: 1.2rem;
+}
+.btn{
+    --bg: rgba(var(--light), .5); 
+}
+.btn:hover{
+    --bg: var(--dark);
+}
+.btn.success{
+    --color: var(--success);
+}
+.btn.danger{
+    --color: var(--danger);
+}
+
+[class*="flex"]{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+.flex-end{
+    justify-content: flex-end;
 }
