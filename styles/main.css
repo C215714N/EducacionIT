@@ -29,6 +29,7 @@
         margin: 0;
     }
     /* Rellenos */
+    .menu,
     .unstyled,
     .content-table ol{
         padding: 0;
@@ -50,23 +51,34 @@
         /* el elemento ocupa lugar dentro del flow hasta que se cumple una determinada condicion (relative con toques de absolute) */
         top: 0;
         z-index: 2;
-    }
-    .menu{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
-        gap: .5rem;
         padding: .5rem; /* Ancho de M en la raiz (html) */
-        background-color: #012;
+        background-image: linear-gradient(to right, #012, #124);
     }
-    .menu a{
-        color: #fc6
+    nav a{
+        color: #fc6;
+        line-height: 1.5;
     }
     .menu a.active,
     .menu a:hover{
         color: #fea;
         text-shadow: 0 0 .5rem; /* -x+ -y+ blur color */
     }
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .menu.active{
+        max-height: 640px;
+    }
+    .btn.open::before{
+        content: '\2630';
+    }
+
 /* Cabecera */
     h1{
         font-family: 'Star Wars';
@@ -504,6 +516,7 @@
     .btn{
         position: relative;
         margin: .25rem 0 .5rem auto;
+        border-radius: .25rem;
         padding: .5rem 1rem;
         color: #eee;
         background-color: transparent;
