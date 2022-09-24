@@ -122,7 +122,8 @@
             fixed,
             scroll;     
     }
-    .header{
+    .header{        
+        padding: 1rem;
         color: #eee;
         background-color: #248;
     }
@@ -135,7 +136,10 @@
         top: 2rem;
     }
 /* Contenido */
-
+    main{
+        margin: auto;
+        max-width: 1320px;
+    }
 /* Ejemplos */
     .example{
         display: flex;
@@ -160,7 +164,6 @@
         counter-reset: uno;
         padding: .5rem;
         padding-left: 4rem;
-        background-color: #eee;
         font-weight: bold;
     }
     .content-table ol{
@@ -225,7 +228,24 @@
     .card .header{
         display: block;
         margin: -1.5rem -1rem 1rem; /*top right bottom left*/
-        padding: 1rem;
+    }
+/* Modelos de color */
+    [class*="color"]{
+        color: #ccc;
+        border: 2px dashed;
+        padding: .5rem 1rem;
+    }
+    .color-html{
+        background-color: darkslateblue; /* 140 colores */
+    }
+    .color-rgb{
+        background-color: rgb(68, 68, 136); /* rojo verde azul */
+    }
+    .color-hex{
+        background-color: #448; /* 16.777.216 combinaciones */
+    }
+    .color-hsl{
+        background-color: hsl(250, 45%, 40%);
     }
 /* Flexbox: Modelo de Cajas Flexible */
     .flex{
@@ -241,6 +261,37 @@
         flex-shrink: El elemento debe reducir su tamaño para encajar;
         flex-basis: Tamaño base del elemento para definir su ancho 
     */
+    }
+/* CSS-Grid: Sistema de Grillas */
+    .grid{
+        display: grid;
+    }
+    .columns-2{
+        grid-template-columns: repeat(2, auto);
+    }
+    .columns-3{
+        grid-template-columns: repeat(3, auto);
+    }   
+    .columns-4{
+        grid-template-columns: repeat(4, auto);
+    }
+    .box :is(div, span){
+        margin: .5rem;
+        padding: .5rem;
+        color: #eee;
+        background-color: #c36;
+    }
+    .box :first-child{
+        grid-column: span 3;
+    }
+    .box :last-child{
+        grid-column: 2 / 4;
+    }
+    .box span:first-of-type{
+        grid-row: 3 / 6;
+    }
+    .box div:last-of-type{
+        grid-row: span 3;
     }
 /* Pie de pagina */
 #footer{
