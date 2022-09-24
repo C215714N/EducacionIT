@@ -29,6 +29,7 @@
         margin: 0;
     }
     /* Rellenos */
+    .unstyled,
     .content-table ol{
         padding: 0;
     }
@@ -332,6 +333,67 @@
     }
     .layout div:last-child{
         grid-area: footer;
+    }
+
+/* Ejemplos de Layout */
+    .flexbox{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+    .justify-between{
+        justify-content: space-between;
+    }
+    .jutify-around{
+        justify-content: space-around;
+    }
+    .justify-evenly{
+        justify-content: space-evenly;
+    }
+    .col-1{
+        width: 30%;
+    }
+    .col-2{
+        width: 60%
+    }
+    .col-3{
+        width: 90%;
+    }
+    .w-50{
+        width: calc(50% - .25rem);
+    }
+    .w-100{
+        width: 100%;
+    }
+    .min-h200{
+        min-height: 200px;
+    }
+    .max-h200{
+        max-height: 200px;
+    }
+    .min-300{
+        min-width: min(100%, 300px);
+    }
+    .max-300{
+        max-width: 300px;
+    }
+    .fit-cover{
+        object-fit: cover;
+    }
+    .fit-contain{
+        object-fit: contain;
+    }
+    .float-left{
+        float: left;
+        margin-right: .5rem;
+    }
+    .float-right{
+        float: right;
+        margin-left: .5rem;
+    }
+    .title{
+        font-size: 2rem;
+        display: block;
     }
 /* Pie de pagina */
 #footer{
