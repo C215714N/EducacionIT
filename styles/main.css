@@ -265,6 +265,7 @@
 /* CSS-Grid: Sistema de Grillas */
     .grid{
         display: grid;
+        gap: .5rem;
     }
     .columns-2{
         grid-template-columns: repeat(2, auto);
@@ -276,7 +277,6 @@
         grid-template-columns: repeat(4, auto);
     }
     .box :is(div, span){
-        margin: .5rem;
         padding: .5rem;
         color: #eee;
         background-color: #c36;
@@ -292,6 +292,33 @@
     }
     .box div:last-of-type{
         grid-row: span 3;
+    }
+    /* grid-areas */
+    .layout{
+        grid-template-areas: 
+            'nav    header  header  header'
+            'nav    main    main    aside'
+            'nav    article .       aside'
+            'nav    article .       aside'
+            'nav    footer  footer  footer'
+    }
+    .layout div:first-child{
+        grid-area: header;
+    }
+    .layout div:nth-child(2){
+        grid-area: nav;
+    }
+    .layout div:nth-child(3){
+        grid-area: main;
+    }
+    .layout div:nth-last-child(3){
+        grid-area: article;
+    }
+    .layout div:nth-last-child(2){
+        grid-area: aside;
+    }
+    .layout div:last-child{
+        grid-area: footer;
     }
 /* Pie de pagina */
 #footer{
