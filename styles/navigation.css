@@ -10,14 +10,14 @@ nav{
         var(--primary)
         linear-gradient(
             15deg,
-            var(--secondary),
+            rgb(var(--secondary)),
             rgb(var(--light)),
-            var(--secondary)
+            rgb(var(--secondary))
         );
     /* color image position/size repeat */
 }
 nav a{
-    color: var(--dark);
+    color: rgb(var(--dark));
     font-weight: bold;
     text-shadow: 0 0 .5rem rgb(var(--light));
 }

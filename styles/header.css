@@ -8,7 +8,7 @@
         circle at top right,
         rgb(var(--light)) 4%,
         var(--primary),
-        var(--dark)
+        rgb(var(--dark))
     );
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@
     padding: 1rem;
     gap: .5rem;
     color: rgb(var(--light));
-    text-shadow: 0 0 .5rem var(--dark);
+    text-shadow: 0 0 .5rem rgb(var(--dark));
     background-image: var(--gradient);
 }
 #header > div{
