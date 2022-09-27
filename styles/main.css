@@ -1,0 +1,49 @@
+#header,
+section,
+#footer{
+    --max: 1rem;
+    padding: 1rem var(--max);
+}
+main > section{
+    --first_color: var(--dark);
+    --second_color: var(--secondary);
+    background-image: linear-gradient(
+        to top right,
+        rgb(var(--first_color), .3),
+        rgb(var(--second_color), .3)
+    ); 
+    text-shadow: 0 0 .5rem rgb(var(--light));
+}
+
+main > section:nth-child(even){
+    --first_color: var(--light);
+    --second_color: var(--secondary);
+}
+
+@media screen and (min-width: 768px){
+    main > section{
+        --width: 360px;
+        --max: calc(50vw - var(--width));
+    }
+}
+@media screen and (min-width: 992px){
+    main > section{
+        --width: 480px;
+    }
+}
+@media screen and (min-width: 1200px){
+    main > section{
+        --width: 570px;
+    }
+}
+@media screen and (min-width: 1400px){
+    #header,
+    #footer{
+        padding: 1rem calc(50vw - var(--width));
+    }
+    #header,
+    #footer,
+    main > section{
+        --width: 660px;
+    }
+}
