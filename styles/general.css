@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: var(--font);
 }
 /* Margenes */
@@ -67,4 +68,18 @@ main{
         'nav main'
         'nav footer';
     }
+}
+::-webkit-scrollbar{
+    width: .5rem;
+    background: linear-gradient(
+        rgb(var(--light)),
+        rgb(var(--secondary))
+    );
+}
+::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background: linear-gradient(
+        rgb(var(--dark)),
+        rgb(var(--secondary))
+    );
 }

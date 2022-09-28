@@ -40,13 +40,22 @@
     flex-wrap: wrap;
     gap: .5rem
 }
+.flex-row{
+    flex-direction: row;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+}
 .flex-end{
     justify-content: flex-end;
 }
+/* Position */
 [class*="p-"]{
     position: var(--p)
 }
-/* Position */
 .p-relative{
     --p: relative;
 }

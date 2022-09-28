@@ -21,6 +21,10 @@ main > section:nth-child(even){
     --second_color: var(--secondary);
 }
 
+#access form:not(.active){
+    display: none;
+}
+
 /* Galeria de Imagenes */
 [class*="gallery"]{
     display: grid;
