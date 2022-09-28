@@ -20,6 +20,46 @@ main > section:nth-child(even){
     --second_color: var(--secondary);
 }
 
+[class*="gallery"]{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax( min(100%, var(--w)), 1fr)
+    );
+    gap: .5rem;
+}
+.gallery-small{
+    --w: var(--small);
+}
+.gallery-medium{
+    --w: var(--medium);
+}
+.gallery-large{
+    --w: var(--large);
+}
+[class*="gallery"] img{
+    width: 100%;
+    height: calc(100% - 3rem);
+    padding: 1rem;
+    background-color: rgb(var(--light));
+    object-fit: contain;
+}
+[class*="gallery"] figure{
+    border-radius: .25rem;
+    padding: .5rem;
+    background-color: rgb(var(--secondary), .5);
+}
+figcaption{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.colspan-2{
+    grid-column: span 2;
+}
+.rowspan-2{
+    grid-row: span 2;
+}
+
 @media screen and (min-width: 768px){
     main > section{
         --width: 360px;
