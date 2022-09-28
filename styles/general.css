@@ -15,6 +15,9 @@ figure,
 ul.menu{
     padding: 0;
 }
+iframe{
+    border: 0;
+}
 /* Estilos */
 nav a,
 footer a{
@@ -30,9 +33,9 @@ nav{
 }
 /* Altura minima */
 #header,
-main,
+section,
 #footer{
-    min-height: calc(100vh - 5rem);
+    min-height: min( 720px, calc(100vh - 5rem));
 }
 /* Layout */
 body{

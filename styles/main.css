@@ -4,6 +4,7 @@ section,
     --max: 1rem;
     padding: 1rem var(--max);
 }
+/* Secciones */
 main > section{
     --first_color: var(--dark);
     --second_color: var(--secondary);
@@ -20,6 +21,7 @@ main > section:nth-child(even){
     --second_color: var(--secondary);
 }
 
+/* Galeria de Imagenes */
 [class*="gallery"]{
     display: grid;
     grid-template-columns: repeat(

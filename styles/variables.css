@@ -34,7 +34,7 @@
 .btn.danger{
     --color: var(--danger);
 }
-
+/* Flexbox */
 [class*="flex"]{
     display: flex;
     flex-wrap: wrap;
@@ -42,4 +42,42 @@
 }
 .flex-end{
     justify-content: flex-end;
+}
+[class*="p-"]{
+    position: var(--p)
+}
+/* Position */
+.p-relative{
+    --p: relative;
+}
+.p-absolute{
+    --p: absolute;
+}
+.p-fixed{
+    --p: fixed;
+}
+.p-sticky{
+    --p: sticky;
+}
+.z-n1{
+    z-index: -1;
+}
+.z-1{
+    z-index: 1;
+}
+.z-2{
+    z-index: 2;
+}
+.cover{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+}
+.dark{
+    color: rgb(var(--light));
+}
+.light{
+    color: rgb(var(--dark));
 }

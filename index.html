@@ -32,7 +32,7 @@
         </div>
     </header>
     <!-- Navegacion Principal -->
-    <nav id="nav">
+    <nav id="nav" class="z-2">
         <a href="#" class="logo"></a>
         <button class="menu open"></button>
         <ul class="menu">
@@ -44,10 +44,13 @@
     </nav>
     <!-- Contenido Principal -->
     <main>
-        <section id="home">
-            <header class="header">
+        <section id="home" class="p-relative">
+            <header class="header p-relative z-1 dark">
                 <h2>Home</h2>
             </header>
+            <iframe class="p-absolute cover"
+                src="https://www.youtube.com/embed/iYrcUanZ2dM" title="TERMINATOR ALL TRAILERS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
         </section>
         <section id="network">
             <header class="header">
@@ -84,7 +87,11 @@
         </section>
     </main>
     <!-- Pie de Pagina Principal -->
-    <footer id="footer">
+    <footer id="footer" class="p-relative">
+        <iframe class="p-absolute cover"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.1584398210068!2d-58.49169480160628!3d-34.59614780488749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7ea0f0fef21%3A0xd5dc9df1585a5b8d!2sSKYNET%20DIGITALS!5e0!3m2!1ses-419!2sar!4v1664324209156!5m2!1ses-419!2sar" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         <p class="copy">&copy;1984-2022 All rights reserved</p>
     </footer>
     <!-- Scripts JS -->
