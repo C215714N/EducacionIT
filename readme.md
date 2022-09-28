@@ -15,6 +15,12 @@ Esto es una guia practica para los alumnos del curso de CCNA 1
 1. [Enrutamiento Estatico](#enrutamiento-estatico)
 1. [Configuracion IPv6](#configuracion-ipv6)
 
+## Ejercicios
+* [Sistema Binario](./ejercicios/binary-decimal.md)
+* [Sistema Hexadecimal](./ejercicios/hexadecimal.md)
+* [Capa de Red](./ejercicios/ip.md)
+* [Subneting](./ejercicios/subnetting.md)
+
 ## configuracion inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
 
