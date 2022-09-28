@@ -26,8 +26,8 @@
                 The Endoskeleton Brain Chip is the operating system behind these monstrous killing machines, reimagined here in a collectible format that features LED light-up functions and a Cyberdyne Systems display stand. This collectible set has been designed so that the machines are interlocked, with the Endoskeleton Brain Chip stand controlling the Arm’s movement functions.
             </p>
             <div class="flex-end">
-                <button class="btn success">sign in</button>
-                <button class="btn danger">sign up</button>
+                <a href="#signin" class="btn success">sign in</a>
+                <a href="#signup" class="btn danger">sign up</a>
             </div>
         </div>
     </header>
@@ -83,6 +83,24 @@
         <section id="access">
             <header class="header">
                 <h2>Access</h2>
+                <div class="dual-form">
+                    <form class="flex-column active" id="signin">
+                        <label for="">usuario</label>
+                        <input type="text">
+                        <label for="">password</label>
+                        <input type="password">
+                    </form>
+                    <form class="flex-column" id="signup">
+                        <label for="">username</label>
+                        <input type="text">
+                        <label for="">email</label>
+                        <input type="email">
+                        <label for="">phone</label>
+                        <input type="tel">
+                    </form>
+                    <button>Sign Up</button>
+                    <button>Log In</button>
+                </div>
             </header>
         </section>
     </main>
