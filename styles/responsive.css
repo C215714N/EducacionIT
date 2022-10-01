@@ -1,19 +1,245 @@
 /* Content-First | Mobile First*/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto');
     /* Reglas Generales */
-
+    :root{
+        /* Colores */
+        --primary: #448;
+        --secondary: #c36;
+        --light: #eee;
+        --dark: #333;
+        --success: #284;
+        --warning: #da3;
+        --danger: #c33;
+        --info: #36d;
+        --linear-grad: linear-gradient(
+            to right,
+            var(--primary),
+            var(--secondary)
+        );
+        /* Tamaños */
+        --small: 200px;
+        --medium: 400px;
+        --large: 600px;
+        /* Tipografia */
+        --min-font: 2rem;
+        --max-font: 5rem;
+        --font: 'Raleway', 'Poppins', 'Roboto', sans-serif;
+        
+    }    
+    *{
+        box-sizing: border-box;
+        font-family: var(--font);
+        scroll-behavior: smooth;
+    }
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    .menu{
+        margin: 0;
+    }
+    /* Rellenos */
+    .menu{
+        padding: 0;
+    }
+    /* Estilos */
+    .menu{
+        list-style: none;
+    }
+    /* Diseño de la Pagina */
+    body{
+        display: grid;
+        overflow-x: hidden;
+        grid-template-areas: 
+            'header'
+            'main'
+            'footer'
+            'nav';
+    }
+    #header{
+        grid-area: header;
+    }
+    #nav{
+        grid-area: nav;
+    }
+    #footer{
+        grid-area: footer;
+    }
+    main{
+        grid-area: main;
+    }
+    /* Textos Simulados */
+    .content h2::after{
+        content: 'Encabezado de Seccion';
+    }
+    .content h3::after{
+        content: 'Encabezado de Articulo';
+    }
+    .content p::before{
+        content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestias, voluptates inventore quis corrupti aliquam quia at iste, reprehenderit totam nam blanditiis accusamus recusandae adipisci rem? Tenetur cupiditate, consectetur consequuntur itaque accusamus perferendis. Iure laborum aut vero pariatur nisi enim ipsum possimus aliquam nemo numquam, ea blanditiis assumenda reiciendis recusandae.'
+    }
+    .btn{
+        --color: var(--light);
+        --bg-color: var(--dark);
+        margin: 1rem .5rem;
+        border-radius: .25rem;
+        border: 2px solid var(--color);
+        color: var(--color);
+        background-color: var(--bg-color);
+    }
+    .btn:hover{
+        color: var(--bg-color);
+        background-color: var(--color);
+    }
+    .success{
+        --color: var(--success);
+        --bg-color: var(--light)
+    }
+    .danger{
+        --color: var(--danger);
+        --bg-color: var(--warning)
+    }
     /* Cabecera */
-
+    .header{
+        width: 100%;
+    }
     /* Navegacion */
-
+    nav{      
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        position: sticky;
+        bottom: 0;  
+        background: var(--linear-grad);
+    }
+    nav .logo::before{
+        content: 'CSS'
+    }
+    nav .btn.open::before{
+        content: '\2630';
+    }
+    nav .logo,
+    nav .btn{
+        display: none;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem .5rem;
+        color: var(--light);
+        text-decoration: none;
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .menu a::before{
+        font-size: 2rem;
+        line-height: 1;
+    }
+    .menu a.active,
+    .menu a:hover{
+        text-shadow: 0 0 .5rem var(--light);
+    }
+    .menu [title="inicio"]::before{
+        content: '🏠'
+    }
+    .menu [title="acerca"]::before{
+        content: '🌐';
+    }
+    .menu [title="contacto"]::before{
+        content: '🧑‍💼';
+    }
     /* Contenido */
-
+    main{
+        margin: auto;
+        padding: 1rem;
+    }
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin: 2rem 0;
+        border-radius: .25rem;
+        padding: 1rem;
+        box-shadow: 0 0 .5rem var(--dark);
+    }
+    article{
+        flex: 1 0 min(100%, 300px);
+    }
     /* Pie de Pagina */
 
 /* Medium Devices */
 @media screen and (min-width: 768px){
-
+    /* Layout */
+    body{
+        grid-template-columns: auto 8fr;
+        grid-template-areas: 
+        'nav header'
+        'nav main'
+        'nav footer';
+    }
+    nav{
+        justify-content: flex-start;
+        align-items: flex-start;
+        top: 0;
+        max-height: 100vh;
+    }
+    nav .logo,
+    nav .btn{
+        display: block;
+    }
+    .menu{
+        width: 100%;
+        margin-top: auto;
+        flex-direction: column;
+    }
+    .menu a{
+        width: 3rem;
+    }
+    .menu.active a{
+        width: 100%;
+    }
+    .menu a{
+        overflow: hidden;
+        flex-direction: row;
+        gap: .5rem;
+    }
+    /* Contenido */
+    main{
+        max-width: 720px;
+    }
 }
 /* Extra Large Devices */
 @media screen and (min-width: 1200px){
-
+    body{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'nav'
+        'header'
+        'main'
+        'footer';
+    }
+    nav .btn.open{
+        display: none;
+    }
+    nav{
+        width: 100%;
+        justify-content: space-between;
+        padding: .5rem calc(50vw - 660px)
+    }
+    .menu,
+    .menu a{
+        flex-direction: row;
+        width: auto;
+    }
+    /*  */
+    main{
+        max-width: 1320px
+    }
 }
