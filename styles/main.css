@@ -1,3 +1,4 @@
+/* Content-First - Mobile First */
 /* Reglas Generales */
     @import url('https://fonts.googleapis.com/css2?family=Raleway');
     
@@ -146,26 +147,20 @@
     }
     section > .header{
         position: sticky;
-        top: 2rem;
+        top: 4rem;
     }
 /* Contenido */
     main{
-        /* display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: .5rem; */
+        display: grid;
+        padding: 1rem;  
+        gap: .5rem;
         margin: auto;
-        max-width: 1320px;
     }
-    /* aside{
+    aside{
         grid-row: 1;
-        position: sticky;
-        top: 2rem;
-        max-height: calc(100vh - 2rem);
         overflow: auto;
+        max-height: 200px;
     }
-    section{
-        grid-column: 2;
-    } */
 /* Ejemplos */
     .example{
         display: flex;
@@ -458,8 +453,7 @@
         margin: 1rem auto;
         border-radius: .25rem;
         padding: 3rem 1.5rem;
-        display: flex;
-        flex-direction: column;
+        display: grid;
         color:#eee;
         background:
             rgba(17, 34, 68, .5) 
@@ -468,6 +462,8 @@
         opacity: .9;
     }
     label{
+        max-height: 0;
+        overflow: hidden;
         margin: .5rem 0 .2rem;
     }
     input,
@@ -587,3 +583,111 @@
     .github{
         background-image: url('../assets/icon/github.svg');
     }
+/* Small Devices - Smartphones */
+@media screen and (min-width: 576px){
+    #header{
+        min-height: min(100vh, 640px);
+        display: grid;
+        align-content: center;
+        padding: 1rem;
+    }
+}
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px) {
+    nav .btn{
+        display: none;
+    }
+    .menu{
+        max-height: 640px;
+        width: auto;
+        display: flex;
+        gap: .5rem;
+    }
+    section > .header{
+        top: 2rem;
+    }
+    main{
+        max-width: 720px;
+    }
+    label{
+        max-height: 2rem;
+    }
+}
+/* Large Devices - Laptops */
+@media screen and (min-width: 992px){
+    main{
+        max-width: 1320px;
+        grid-template-columns: 1fr 3fr;
+    }
+    aside{
+        position: sticky;
+        top: 2rem;
+        max-height: calc(100vh - 2rem);
+    }
+    section{
+        grid-column: 2;
+    }
+}
+/* Large Devices - Desktop */
+@media screen and (min-width: 1200px){
+    #contact{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'Heading    Heading'
+            'lblName    lblPhone'
+            'cmdName    cmdPhone'
+            'vldName    vldPhone'
+            'lblEmail   lblEmail'
+            'cmdEmail   cmdEmail'
+            'vldEmail   vldEmail'
+            'lblText    lblText'
+            'cmdText    cmdText'
+            '.          button';
+        gap: 0 .5rem;
+    }
+    /* Textos de Sugerencia */
+        label[for="contact_name"]{
+            grid-area: lblName;
+        }
+        label[for="contact_email"]{
+            grid-area: lblEmail;
+        }
+        label[for="contact_phone"]{
+            grid-area: lblPhone;
+        }
+        label[for="contact_consult"]{
+            grid-area: lblText;
+        }
+    /* Campos de Formulario */
+        #contact_name{
+            grid-area: cmdName;
+        }
+        #contact_email{
+            grid-area: cmdEmail;
+        }
+        #contact_phone{
+            grid-area: cmdPhone;
+        }
+        #contact_consult{
+            grid-area: cmdText;
+        }
+    /* Validacion */
+        #contact_name + .valid{
+            grid-area: vldName;
+        }
+        #contact_email + .valid{
+            grid-area: vldEmail;
+        }
+        #contact_phone + .valid{
+            grid-area: vldPhone;
+        }
+    #contact .btn{
+        grid-area: button;
+    }
+}
+/* Extra Extra Large - HD Desktop */
+@media screen and (min-width: 1400px){
+    nav{
+        padding: 1rem calc(50vw - 660px);
+    }
+}
