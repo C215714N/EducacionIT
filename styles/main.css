@@ -691,3 +691,29 @@
         padding: 1rem calc(50vw - 660px);
     }
 }
+/* Modo predefinido por el usuario */
+@media screen and (prefers-color-scheme: light){
+    .example{
+        color: #333;
+        background-color: #eee;
+    }
+}
+@media screen and (prefers-color-scheme: dark){
+    .example{
+        color: #eee;
+        background-color: #333;
+    }
+}
+
+/* Diseño de Impresion */
+@media print {
+    #header,
+    nav,
+    aside,
+    #footer{
+        display: none;
+    }
+    .header{
+        page-break-before: always;
+    }
+}
