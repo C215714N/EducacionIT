@@ -66,6 +66,9 @@ a[href="#prototypes"]::before{
 a[href="#access"]::before{
     content: '👍';
 }
+a[href="more.html"]::before{
+    content: '➕';
+}
 /* Small Devices - Smartphones */
 @media screen and (min-width: 576px){
     nav button.menu,
