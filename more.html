@@ -10,42 +10,82 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <nav>
-        <a href="#">Skynet</a>
-        <button></button>
-        <ul>
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#network">Network</a></li>
-            <li><a href="index.html#prototypes">Prototypes</a></li>
-            <li><a href="index.html#access">Access</a></li>
-            <li><a href="More#">More</a></li>
+    <nav class="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | sticky-top | p-3">
+        <a class="navbar-brand" href="#">Skynet</a>
+        <button class="navbar-toggler navbar-toggler-icon | border-0 fs-3"
+            data-bs-target=".navbar-nav"
+            data-bs-toggle="collapse">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse">
+            <li><a class="nav-link" href="index.html#home">Home</a></li>
+            <li><a class="nav-link" href="index.html#network">Network</a></li>
+            <li><a class="nav-link" href="index.html#prototypes">Prototypes</a></li>
+            <li><a class="nav-link disabled" href="index.html#access">Access</a></li>
+            <li><a class="nav-link active" href="#">More</a></li>
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header>
-        <div>
-            <h1>Skynet</h1>
-            <p>Neural Net-Based Artificial Intelligence</p>
+    <header class="text-center | text-light bg-secondary bg-gradient">
+        <div class="p-3">
+            <h1 class="display-1 | fw-bold text-uppercase">Skynet</h1>
+            <p class="h1 | fw-light text-lowercase">Neural Net-Based Artificial Intelligence</p>
         </div>
     </header>
     <!-- Contenido -->
-    <main>
-        <section>
-            <img src="assets/prototypes/terminator_arm.png" 
+    <main class="container">
+        <section class="row | my-4 px-2">
+            <img class="col-12 col-md-5" 
+                src="assets/prototypes/terminator_arm.png" 
                 alt="Terminator T-800 Arm">
-            <p>
+            <p class="col-md-7">
                 The Endoskeleton Brain Chip is the operating system behind these monstrous killing machines, reimagined here in a collectible format that features LED light-up functions and a Cyberdyne Systems display stand. This collectible set has been designed so that the machines are interlocked, with the Endoskeleton Brain Chip stand controlling the Arm’s movement functions.
             </p>
-            <a href="#signin">sign in</a>
-            <a href="#signup">sign up</a>
+            <a class="col-md offset-md-5 | btn btn-outline-success" href="#signin">sign in</a>
+            <a class="col-md | ms-2 | btn btn-outline-danger" href="#signup">sign up</a>
         </section>
         <section id="network">
             <header>
                 <h2>Network</h2>
             </header>
-            <iframe
-                src="https://www.youtube.com/embed/iYrcUanZ2dM" title="TERMINATOR ALL TRAILERS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
+            <figure class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.youtube.com/embed/iYrcUanZ2dM" title="TERMINATOR ALL TRAILERS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <figcaption class="top-100 | text-center | text-light">Terminator Trailers</figcaption>
+            </figure>
+        </section>
+        <section>
+            <header>
+                <h2>Sistema de Grillas</h2>
+            </header>
+            <p>
+                Bootstrap ofrece un sistema grillas responsive, utilizando flexbox y clases que definen el tamaño de cada columna dentro del contenedor. Para ello debemos utilizar la clase <strong>row</strong> en el elemento padre, que implementa un display flex, y un padding horizontal para adaptar el contenido.
+            </p>
+            <div class="row">
+                <div class="border | text-light bg-secondary | col">col-1</div>
+                <div class="border | text-light bg-secondary | col">col-2</div>
+                <div class="border | text-light bg-secondary | col">col-3</div>
+                <div class="border | text-light bg-secondary | col">col-4</div>
+                <div class="border | text-light bg-secondary | col">col-5</div>
+                <div class="border | text-light bg-secondary | col">col-6</div>
+                <div class="border | text-light bg-secondary | col">col-7</div>
+                <div class="border | text-light bg-secondary | col">col-8</div>
+                <div class="border | text-light bg-secondary | col">col-9</div>
+                <div class="border | text-light bg-secondary | col">col-10</div>
+                <div class="border | text-light bg-secondary | col">col-11</div>
+                <div class="border | text-light bg-secondary | col">col-12</div>
+            </div>
+            <p>
+                para definir el tamaño de cada columna simplemente debemos utilizar la clase <strong>col-n</strong> donde n representa 1 de las 12 columnas de bootstrap, para saber el porcentaje exacto de cada columna debemos realizar la siguiente operacion <em>porcentaje(columna / total)</em> y en caso de modificarlo podemos utilizar los breakpoints
+            </p>
+            <div class="row">
+                <div class="border text-light bg-secondary | col-md-6">col</div>
+                <div class="border text-light bg-secondary | col-md-6 col-lg-3">col</div>
+                <div class="border text-light bg-secondary | col-md-6 col-lg-3">col</div>
+                <div class="border text-light bg-secondary | col-md-6 col-lg-3">col</div>
+                <div class="border text-light bg-secondary | col-md-6">col</div>
+                <div class="border text-light bg-secondary | col-md-6 col-lg-3">col</div>
+            </div>
         </section>
     </main>
     <!-- Pie de Pagina -->
