@@ -7,6 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'segoe ui', 'calibri', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee;
+            background-color: #d69; 
+            /*  EXPLICACION:
+                html 140 color names 
+                RGB (red, green, blue) | 16.777.216
+                DECIMAL: rgb(221, 102, 153)
+                HEX: #dd6699
+            */
+            text-align: center;
+        }
+        /* Selectores Especificos ( padre hijo )*/
+        nav ul{
+            padding: 5px;
+            list-style: none;
+            background-color: #c48;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline;
+            padding: 8px;
+        }
+        /* :pseudoclass (Instancia o caracteristica de un elemento) */
+        nav li:hover{
+            background-color: #b24;
+        }
+        /* Selectores de clase (.class) */
+        .gallery{
+            padding: 8px;
+            text-align: center;
+            background-color: #e8d;
+        }
+        .gallery img{
+            width: 100%;
+            max-width: 300px;
+        }
+        .example{
+            padding: 20px;
+            background-color: #fcd;
+        }
+        .example img{
+            width: 100%;
+            max-width: 200px;
+        }
+    </style>
 </head>
 <!-- CUERPO DEL DOCUMENTO
         Parte Visible: Textos / Imagenes / Hipervinculos -->
