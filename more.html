@@ -7,10 +7,12 @@
     <title>Enter the Bootstrap</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
     <!-- Navegacion -->
-    <nav class="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | sticky-top | p-3">
+    <nav class="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | sticky-top | py-1 px-3">
         <a class="navbar-brand" href="#">Skynet</a>
         <button class="navbar-toggler navbar-toggler-icon | border-0 fs-3"
             data-bs-target=".navbar-nav"
@@ -25,8 +27,74 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header class="text-center | text-light bg-secondary bg-gradient">
-        <div class="p-3">
+    <header id="header" class="carousel slide | text-center | text-light bg-secondary bg-gradient">
+        <!-- Carousel Interno -->
+        <ol class="carousel-inner | list-unstyled">
+            <li class="carousel-item active">
+                <img class="w-100 vh-100 | d-sm-none"
+                    src="assets/bg/header-sm-01.jpg" alt="Terminator">
+                <img class="w-100 vh-100 | d-none d-sm-block"
+                    src="assets/bg/header-lg-01.jpg" alt="Terminator">
+                <p class="carousel-caption h1 text-uppercase"><strong>Terminator</strong></p>
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 vh-100 | d-sm-none"
+                    src="assets/bg/header-sm-02.jpg" alt="Judgement Day">
+                <img class="w-100 vh-100 | d-none d-sm-block"
+                    src="assets/bg/header-lg-02.jpg" alt="Judgement Day">
+                <p class="carousel-caption h1 text-uppercase"><strong>Judgement Day</strong></p>
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 vh-100 | d-sm-none"
+                    src="assets/bg/header-sm-03.jpg" alt="Rise of the Machines">
+                <img class="w-100 vh-100 | d-none d-sm-block"
+                    src="assets/bg/header-lg-03.jpg" alt="Rise of the Machines">
+                <p class="carousel-caption h1 text-uppercase"><strong>Rise of the Machines</strong></p>
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 vh-100 | d-sm-none" 
+                    src="assets/bg/header-sm-04.jpg" alt="Salvation">
+                <img class="w-100 vh-100 | d-none d-sm-block" 
+                    src="assets/bg/header-lg-04.jpg" alt="Salvation">
+                <p class="carousel-caption h1 text-uppercase"><strong>Salvation</strong></p>
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 vh-100 | d-sm-none" 
+                    src="assets/bg/header-sm-05.jpg" alt="Genysis">
+                <img class="w-100 vh-100 | d-none d-sm-block" 
+                    src="assets/bg/header-lg-05.jpg" alt="Genysis">
+                <p class="carousel-caption h1 text-uppercase"><strong>Genysis</strong></p>
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 vh-100 | d-sm-none" 
+                    src="assets/bg/header-sm-06.jpg" alt="Dark Fate">
+                <img class="w-100 vh-100 | d-none d-sm-block" 
+                    src="assets/bg/header-lg-06.jpg" alt="Dark Fate">
+                <p class="carousel-caption h1 text-uppercase"><strong>Dark Fate</strong></p>
+            </li>
+        </ol>
+        <!-- Controles -->
+        <button class="carousel-control-prev"
+            data-bs-target="#header"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next"
+            data-bs-target="#header"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button data-bs-target="#header" class="active" data-bs-slide-to="0"></button>
+            <button data-bs-target="#header" data-bs-slide-to="1"></button>
+            <button data-bs-target="#header" data-bs-slide-to="2"></button>
+            <button data-bs-target="#header" data-bs-slide-to="3"></button>
+            <button data-bs-target="#header" data-bs-slide-to="4"></button>
+            <button data-bs-target="#header" data-bs-slide-to="5"></button>
+        </div>
+        <!-- Encabezado -->
+        <div class="position-absolute top-50 start-50 translate-middle">
             <h1 class="display-1 | fw-bold text-uppercase">Skynet</h1>
             <p class="h1 | fw-light text-lowercase">Neural Net-Based Artificial Intelligence</p>
         </div>
@@ -40,8 +108,8 @@
             <p class="col-md-7">
                 The Endoskeleton Brain Chip is the operating system behind these monstrous killing machines, reimagined here in a collectible format that features LED light-up functions and a Cyberdyne Systems display stand. This collectible set has been designed so that the machines are interlocked, with the Endoskeleton Brain Chip stand controlling the Arm’s movement functions.
             </p>
-            <a class="col-md offset-md-5 | btn btn-outline-success" href="#signin">sign in</a>
-            <a class="col-md | ms-2 | btn btn-outline-danger" href="#signup">sign up</a>
+            <a class="col-md offset-md-5 | mb-2 mb-md-0  | btn btn-outline-success" href="#signin">sign in</a>
+            <a class="col-md | ms-md-2 | btn btn-outline-danger" href="#signup">sign up</a>
         </section>
         <section id="network">
             <header>
@@ -90,10 +158,15 @@
     </main>
     <!-- Pie de Pagina -->
     <footer>
+        <!-- Mapa de contacto -->
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.1584398210068!2d-58.49169480160628!3d-34.59614780488749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7ea0f0fef21%3A0xd5dc9df1585a5b8d!2sSKYNET%20DIGITALS!5e0!3m2!1ses-419!2sar!4v1664324209156!5m2!1ses-419!2sar" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Formulario de contacto -->
+
+        <!-- Redes sociales -->
+        
         <p>&copy;1984-2022 All rights reserved</p>
     </footer>
 
