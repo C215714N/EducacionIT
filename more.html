@@ -155,18 +155,76 @@
                 <div class="border text-light bg-secondary | col-md-6 col-lg-3">col</div>
             </div>
         </section>
+        <section class="row p-3">
+            <h2>Tipos de Diseño</h2>
+            <article class="card | col-lg">
+                <h3 class="card-header">Fluid Design</h3>
+                <p class="card-body">
+                    utiliza porcentajes, el diseño de adapta al contenedor para mantener las proporciones, pero los contenidos se estiran demasiado en pantallas grandes y se contraen en pantallas pequeñas. Una solucion es el <strong>Liquid Design</strong> que implica el uso de maximos y minimos, pero se generan espacios demasiados innecesarios.
+                </p>
+            </article>
+            <article class="card | my-3 my-lg-0 mx-lg-3 | col-lg">
+                <h3 class="card-header">Adaptive Design</h3>
+                <p class="card-body">
+                    utiliza herramientas que detectan el tamaño de la ventana donde se reproduce la pagina y realizan un redireccionamiento, es ideal para clientes con bajo presupuesto. Consiste en el diseño de una pagina por cada tamaño de pantalla al que apuntemos, pero los contenidos estan duplicados y son independientes.
+                </p>
+            </article>
+            <article class="card | col-lg">
+                <h3 class="card-header">Responsive</h3>
+                <p class="card-body">
+                    utiliza el concepto de <strong>one web for all</strong> que consiste en diseñar a partir de la vista mobile y luego ir integrando las diferentes caracteristicas del sitio segun cada tamaño de pantalla, los contenidos se van adaptando gracias a la implementacion de multimedia flexible y un sistema de grilla basado en porcentajes.
+                </p>
+            </article>
+        </section>
     </main>
     <!-- Pie de Pagina -->
-    <footer>
+    <footer class="position-relative pt-5">
         <!-- Mapa de contacto -->
-        <iframe
+        <iframe id="map" class="position-absolute top-0 start-0 w-100 h-100 | opacity-50"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.1584398210068!2d-58.49169480160628!3d-34.59614780488749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7ea0f0fef21%3A0xd5dc9df1585a5b8d!2sSKYNET%20DIGITALS!5e0!3m2!1ses-419!2sar!4v1664324209156!5m2!1ses-419!2sar" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         <!-- Formulario de contacto -->
-
+        <form action="" id="contact" class="position-relative | mx-auto mb-3 rounded py-5 px-3 | col-md-6 col-xl-4 | bg-light shadow-lg">
+            <h2>Dejanos tu Consulta</h2>
+            <fieldset class="form-floating my-2">
+                <input id="contact_name"
+                    name="name"
+                    class="form-control" 
+                    name="name"
+                    type="text"
+                    maxlength="50"
+                    placeholder="Ingrese su Nombre"
+                    pattern="[A-Z a-z]{3,50}"
+                    required>
+                <label for="contact_name">Ingrese su Nombre</label>
+                <div class="invalid-feedback">
+                    Ingrese su nombre solamente con letras, colocando entre 2 y 50 caracteres
+                </div>
+                <div class="valid-feedback">
+                    El nombre ingresado ha sido verificado, esperemos que no le moleste que lo llamemos asi
+                </div>
+            </fieldset>
+            <fieldset class="form-floating my-2">
+                <input id="contact_email"
+                    class="form-control"
+                    name="email"
+                    type="email"
+                    minlength="8"
+                    placeholder="Ingrese su Correo"
+                    required>
+                <label for="">Ingrese su Correo</label>
+                <div class="invalid-feedback">
+                    Ingrese una direccion de correo que respete el formato "usuario@servidor" que posea al menos 8 caracteres
+                </div>
+                <div class="valid-feedback">
+                    La direccion de correo ha sido validada, tenga en cuenta que nos contactaremos a la brevedad
+                </div>
+            </fieldset>
+            <button class="d-block mt-2 ms-auto btn btn-success">Enviar</button>
+        </form>
         <!-- Redes sociales -->
-        <div class="d-flex justify-content-center gap-2">
+        <div class="position-relative | d-flex justify-content-center gap-2">
             <a href="https://facebook.com" 
                 target="_blank"
                 class="py-2 px-3 btn btn-outline-primary">facebook</a>
@@ -183,10 +241,24 @@
                 target="_blank"
                 class="py-2 px-3 btn btn-outline-dark">github</a>
         </div>
-        <p>&copy;1984-2022 All rights reserved</p>
+        <p class="position-relative | my-4 p-3 | text-light bg-dark bg-gradient">&copy;1984-2022 All rights reserved</p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- scripts JS -->
+    <script>
+        let d = document
+        forms = d.querySelectorAll('form');
+        document.addEventListener('input', (e) => {
+            if (e.target.checkValidity() ) {
+                e.target.classList.add('is-valid');
+                e.target.classList.remove('is-invalid');
+            } else{
+                e.target.classList.add('is-invalid')
+                e.target.classList.remove('is-valid')
+            }
+        } )
+    </script>
 </body>
 </html>
