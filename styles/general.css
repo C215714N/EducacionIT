@@ -63,3 +63,20 @@ nav a,
 footer a{
     text-decoration: none;
 }
+/* 
+    SELECTORES
+    tipo                ejemplo                     valor
+    tag                 p{}                         1
+    pseudoelement       ::before                    1
+    class               .example                    10
+    pseudoclass         :hover                      10
+    attribute           [href="#"]                  10
+    id                  #contact                    100
+    regla important     width: 100% !important;     1000
+    estilo inline       <p style="width: 100%">     10000
+
+    Selector de Atributo
+    [ atributo$="Termina con"]
+    [ atributo^="Empieza con"]
+    [ atributo*="Contiene"]
+*/
