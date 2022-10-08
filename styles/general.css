@@ -1,0 +1,42 @@
+/* Variables */
+:root{
+    /* Colores */
+    --first: 204, 51, 51;
+    --second: 236, 170, 51;
+    --light: 236, 236, 236;
+    --dark: 51, 51, 51;
+    /* Tipografia */
+    --font-text: 'Poppins', 'Raleway', 'Calibri', sans-serif;
+    --font-header: 'Lobster', 'FoodFont';
+    /* Tamaños */
+    --small: 200px;
+    --medium: 400px;
+    --large: 600px;
+}
+/* Estilo General */
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--font-text);
+}
+/* Estructura Principal */
+body{
+    display: grid;
+    grid-template-areas: 
+        'nav'
+        'header'
+        'main'
+        'footer';
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
