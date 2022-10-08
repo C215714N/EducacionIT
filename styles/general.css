@@ -40,3 +40,26 @@ main{
 #footer{
     grid-area: footer;
 }
+/* Reinicio de estilos */
+body,
+h1,
+h2,
+h3,
+h4,
+.menu{
+    margin: 0;
+}
+.menu,
+.unstyled{
+    padding: 0;
+}
+.menu,
+.example,
+.unstyled{
+    list-style: none;
+}
+header a,
+nav a,
+footer a{
+    text-decoration: none;
+}

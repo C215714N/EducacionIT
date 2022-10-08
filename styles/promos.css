@@ -1,0 +1,40 @@
+/* Galeria de Promos */
+[class*="gallery"]{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
+    /* EXPLICACION:
+        repeat(cantidad, tamaño): repite una determinada cantidad de veces el valor de tamaño especificado.
+        
+        auto-fill: rellena con la cantidad de celdas que entren en el espacio.
+        auto-fit: estira las celdas que entren hasta cubrir todo el espacio.
+
+        minmax(min, max): define el valor de la celda utilizando como base las medidas de minimo y maximo
+    */
+    gap: 1rem;
+}
+/* Tamaños de Bloques */
+[class*="-small"]{
+    --size: var(--small);
+}
+[class*="-medium"]{
+    --size: var(--medium);
+}
+[class*="-large"]{
+    --size: var(--large);
+}
+[class*="gallery"] video{
+    width: calc(100% + 2rem);
+    margin: -1rem;
+}
+/* Estilos de Promos */
+[class*="gallery"] li{
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: rgb(var(--light));
+    box-shadow: -.25rem .25rem .25rem rgb(var(--dark),.3);
+    overflow: hidden;
+}
+[class*="gallery"] strong{
+    display: block;
+    font: bold 1.25rem var(--font-header);
+}
