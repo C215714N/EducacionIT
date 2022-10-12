@@ -22,7 +22,32 @@
         <p>html y css</p>
     </header>
     <!-- Contenido -->
-    
+    <main>
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el intercambio de datos entre cliente y servidor, para implementarlos dentro de nuestras paginas debemos utilizar la etiqueta <strong>&lt;form></strong> y solamente se procesaran para el envio, los datos que se encuentren dentro de los elementos de la misma. A diferencia de otros comportamientos de la pagina, la repuesta brindada por el servidor variara segun el tipo de formulario que utilicemos.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como Funcionan?</h3>
+                </header>
+                <p>
+                    Dentro de la <em>etiqueta mencionada anteriormente</em> debemos colocar al menos <em>2 atributos</em>, <strong>action="..."</strong> que determina que sucedera con los datos una vez realizado el envio y donde generalmente se utiliza un script en lenguaje de backend (ej: php); y <strong>method="..."</strong> que indica como se debe procesar el envio de los datos, entre los valores mas comunes se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo cuya prioridad radica en la respuesta del servidor, es menos confiable ya que los datos figuran en la barra de direcciones y se envian en texto plano, pero es mucho mas rapido. Los formularios que utilizan este metodo son los <em>Buscadores</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> metodo cuya prioridad radica en la seguridad de los datos del usuario, ya que cifra los mismos antes de realizar el envio y la informacion no se visualiza en la barra de direcciones, por eso es mas lento. Los formularios que utilizan estos metodos son <em>Registro, Acceso y Contacto</em>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
@@ -31,7 +56,7 @@
         <section class="social">
             <a href="https://facebook.com/">facebook</a>
             <a href="https://instagram.com/">instagram</a>
-            <a href="https://whatsapp.com/">whatsapp</a>
+            <a href="https://api.whatsapp.com/send?phone=110303456&text=Buenas,%20mi%20consulta%20es..." target="_blank">whatsapp</a>
             <a href="https://github.com/c215714n/EducacionIT/tree/html-x12" target="_blank">GitHub</a>
         </section>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
