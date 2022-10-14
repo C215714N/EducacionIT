@@ -1,0 +1,86 @@
+/* Variables */
+    :root{
+        /* Colores */
+        --first: #124;
+        --second: #248;
+        --light: #eee;
+        --dark: #333;
+        /* Tamaños */
+        --small: 200px;
+        --medium: 400px;
+        --large: 600px;
+        /* Tipografia */
+        --font: 'awesome font', 'Roboto', 'Raleway', sans-serif;
+    }
+/* Importacion de Tipografia */
+@font-face{
+    font-family: 'awesome font';
+    src: url('../assets/fonts/myfont.ttf');
+}
+/* Reglas de Utilidad */
+*{
+    font-family: var(--font);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Reinicios de Estilos */
+/* Margenes */
+body,
+h1,
+h2,
+h3,
+h4,
+header p,
+.menu{
+    margin: 0;
+}
+/* Rellenos */
+.menu{
+    padding: 0;
+}
+/* Bordes */
+iframe{
+    border: 0;
+}
+/* Estilos */
+:is(
+    header, 
+    nav, 
+    footer
+) a{
+    text-decoration: none;
+}
+.menu{
+    list-style: none;
+}
+/* Planificacion */
+body{
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer'
+        'nav';
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+@media screen and (min-width: 768px){
+    body{
+        grid-template-areas: 
+            'nav'
+            'header'
+            'main'
+            'footer'
+        ;
+    }
+}
