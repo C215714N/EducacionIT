@@ -1,0 +1,87 @@
+// Variables: Declaraciones de valores
+    //Colores
+    @color: rgb(var(--light));
+    @bg-color: rgb(var(--first));
+    // Breakpoints
+    @sm: 576px;
+    @md: 768px;
+    @lg: 992px;
+    @xl: 1200px;
+// Nesting: Anidacion de estilos
+nav{
+    .normalize(@p:.5rem);
+    .flexbox(@justify: space-between; @align: center);
+    background-color: @bg-color;
+    a{
+        color: @color;
+    }
+    // Menu de Navegacion
+    .menu{
+        &:extend(.unstyled);
+        &:extend(.zeroise);
+        width: 100%;
+        @media screen and (min-width: @md){
+            .flexbox(@gap: 1rem);
+            width: auto;
+        }
+    }
+    // Boton
+    .btn{
+        .normalize(@p: .5rem 1rem; @b: 1px solid);
+        color: @color;
+        background-color: transparent;
+        &:hover{
+            color: @bg-color;
+            background-color: @color;
+        }
+        &.menu-{
+            &close{ 
+                .icon('\00d7'); 
+            }
+            &open{ 
+                .icon('\2630'); 
+            }
+        }
+    }
+}
+
+// Mixins: Estilos que funcionan como atributos
+/*Reinicio de Estilos */
+    .zeroise{
+        .normalize;
+    }
+    /* Remover Estilos */
+    .unstyled{
+        text-decoration: none;
+        list-style: none;
+    }
+// Mixins Parametricos: Estilos que reciben argumentos (Funciones)
+    // Atributos de Caja
+    .normalize(@m:0; @p:0; @b:0){
+        margin: @m;
+        border: @b;
+        padding: @p;
+    }
+    // PseudoElements
+    .icon(@content){
+        &::before{
+            content: @content;
+            font-size: 1.2rem;
+        }
+    }
+    // Flexbox
+    .flexbox(
+        @direction: row;
+        @justify: flex-start;
+        @align: stretch;
+        @gap: 0;
+        @wrap: wrap;
+        @display: flex
+    ){
+        display: @display;
+        justify-content: @justify;
+        align-items: @align;
+        flex-direction: @direction;
+        flex-wrap: @wrap;
+        gap: @gap;
+    }

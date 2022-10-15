@@ -1,0 +1,61 @@
+nav {
+  margin: 0;
+  border: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+  background-color: rgb(var(--first));
+}
+nav a {
+  color: rgb(var(--light));
+}
+nav .menu {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  nav .menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: auto;
+  }
+}
+nav .btn {
+  margin: 0;
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  color: rgb(var(--light));
+  background-color: transparent;
+}
+nav .btn:hover {
+  color: rgb(var(--first));
+  background-color: rgb(var(--light));
+}
+nav .btn.menu-close::before {
+  content: '\00d7';
+  font-size: 1.2rem;
+}
+nav .btn.menu-open::before {
+  content: '\2630';
+  font-size: 1.2rem;
+}
+/*Reinicio de Estilos */
+.zeroise,
+nav .menu {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+/* Remover Estilos */
+.unstyled,
+nav .menu {
+  text-decoration: none;
+  list-style: none;
+}
