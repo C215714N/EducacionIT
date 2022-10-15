@@ -1,0 +1,71 @@
+#header{
+    .position(relative);
+    min-height: ~'min(640px, calc(100vh - 3rem))';
+    display: grid;
+    align-content: center;
+    text-align: center;
+    // Encabezado
+    .header{
+    }
+    // Galeria
+    .slide{
+        li{
+            .bg-colors(5);
+            &:extend(.cover);
+            opacity: 0;
+            &.active{
+                opacity: 1;
+            }
+        }
+    }
+    // Controles
+    button{
+        .stylize(var(--first); transparent; none; border);
+        height: 100%;
+        font-size: 1.5rem;
+        &.icon{
+            &-prev{
+                .position(absolute);
+            }
+            &-next{
+                .position(absolute; @row: right);
+            }
+        }
+    }
+}
+// Mixins
+.cover{
+    .position(absolute, @z: -1);
+    width: 100%;
+    height: 100%;
+}
+// Mixins Parametricos
+.stylize(@c; @bg; @b; @ba){
+    @{ba}: @b;
+    color: @c;
+    background-color: @bg;
+}
+.position(
+    @p: relative;
+    @x: 0; 
+    @y: 0;  
+    @z: 0;
+    @row: left; 
+    @col: top 
+){
+    position: @p;
+    @{row}: @x;
+    @{col}: @y;
+    z-index: @z;
+}
+// Mixins Recursivos
+.bg-colors(@total: 0; @i:1) when (@i <= @total){
+    &:nth-child(@{i}){
+        background: linear-gradient(
+            to right,
+            hsl(@i * 30, 50%, 50%),
+            hsl(@i * 60, 50%, 50%)
+        );  
+    }
+    .bg-colors(@total; @i + 1);
+}
