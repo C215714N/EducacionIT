@@ -84,3 +84,28 @@ main{
         ;
     }
 }
+/* Componentes */
+.btn{
+    min-width: 1.8rem;
+    min-height: 1.5rem;
+    border-radius: .25rem;
+    border: 1px solid var(--color);
+    color: var(--color);
+    background-color: var(--bg);
+}
+.btn:hover{
+    color: var(--bg);
+    background-color: var(--color);
+}
+.btn-light{
+    --color: var(--light);
+    --bg: var(--dark);
+}
+.btn-dark{
+    --color: var(--dark);
+    --bg: var(--light);
+}
+.btn-primary{
+    --color: var(--first);
+    --bg: var(--light);
+}
