@@ -1,14 +1,17 @@
 // Variables: Declaraciones de valores
     //Colores
     @color: rgb(var(--light));
-    @bg-color: rgb(var(--first));
+    @bg-color: rgb(var(--first), .5);
     // Breakpoints
     @sm: 576px;
     @md: 768px;
     @lg: 992px;
     @xl: 1200px;
+    // Columnas
+    @col: 24;
 // Nesting: Anidacion de estilos
 nav{
+    &:extend(.col-12);
     .normalize(@p:.5rem);
     .flexbox(@justify: space-between; @align: center);
     background-color: @bg-color;
@@ -24,8 +27,11 @@ nav{
             .flexbox(@gap: 1rem);
             width: auto;
         }
+        li{
+            .bg-colors;
+        }
     }
-    // Boton
+    // Boton Menu Hamburguesa
     .btn{
         .normalize(@p: .5rem 1rem; @b: 1px solid);
         color: @color;
@@ -34,6 +40,7 @@ nav{
             color: @bg-color;
             background-color: @color;
         }
+        // Pseudoclases Iconos
         &.menu-{
             &close{ 
                 .icon('\00d7'); 
@@ -41,6 +48,10 @@ nav{
             &open{ 
                 .icon('\2630'); 
             }
+            
+        }
+        @media screen and (min-width: @md){
+            display: none;
         }
     }
 }
@@ -85,3 +96,20 @@ nav{
         flex-wrap: @wrap;
         gap: @gap;
     }
+
+// Mixins Recursivos: Estilos que se repiten en base a una condicion (Bucles)
+.bg-colors(@i: 1) when (@i <= 5){
+    &:nth-child(@{i}):hover{
+        text-shadow: 0 0 .5rem hsl(@i * 72, 100%, 50%);
+    }
+    .bg-colors(@i + 1);
+}
+
+/* sistema de grillas */
+.grid(@i: 1) when (@i <= @col){ //Condicion
+    .col-@{i}{ // Cuerpo
+        width: percentage( (@i / @col) );
+    }
+    .grid(@i + 1); //Repeticion
+}
+.grid; //Invocacion
