@@ -11,7 +11,14 @@ Esto es una guia practica para los alumnos del curso de CCNA 1
 ## Tabla de Contenidos
 1. [configuracion incial](#configuracion-inicial)
 1. [configuracion de acceso remoto](#configuracion-de-acceso-remoto)
-1. [Verificaciones de Ajustes](#verificaciones-de-ajustes)
+1. [Verificacion de Ajustes](#verificacion-de-ajustes)
+1. [Enrutamiento Estatico](#enrutamiento-estatico)
+
+## Ejercicios
+* [Sistema Binario](./ejercicios/binary-decimal.md)
+* [Sistema Hexadecimal](./ejercicios/hexadecimal.md)
+* [Capa de Red](./ejercicios/ip.md)
+* [Subneting](./ejercicios/subnetting.md)
 
 ## configuracion inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
@@ -42,7 +49,7 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
 
-## Verificaciones de Ajustes
+## Verificacion de Ajustes
 Cuando establecemos la configuracion de los dispositivos de internetworks debemos verificar el funcionamiento de las interfaces, redes y dispositivos a los que se conecte dentro de la topologia. La misma dependera del tipo de dispositivo que estemos administrando.
 
 1. switch# (administracion general)
@@ -58,3 +65,14 @@ Cuando establecemos la configuracion de los dispositivos de internetworks debemo
 	* __show arp__: Tabla de direcciones IP aprendidas con sus MAC correspondientes
 	* __show ip interfaces brief__: Interfaces del dispositivo con su configuracion capa 3 resumida
 	* __show ip route__: Tabla de rutas a las que esta conectado o se puede acceder
+
+## Enrutamiento Estatico
+Al configurar las redes dentro de la topologia debemos indicar al router como llegar a las redes vecinas, ya que los dispositivos de interconexion solamente reconocen las redes configuradas y que se encuentren conectadas directamente.
+
+1. router(config-if)# (Configuracion de la Red Local)
+	* __interface `gigabitEthernet 0/0`__ Accedemos al submodo de configuracion de Interfaz
+	* __ip address `192.168.0.1 255.255.255.0`__ Direccion IP de la interfaz para configurar la red
+2. router(config)# (Definicion de rutas Estaticas)
+	* __ip route `<network>` `<subnet mask>` `<next hop>`__ Definicion de Ruta estatica a una red remota
+	* __ip route `192.168.10.0` `255.255.255.0` `10.0.0.1`__ Ruta estatica a la red "192.168.10.0" a traves de 10.0.0.1
+	* __ip route `0.0.0.0` `0.0.0.0` `172.20.0.2`__ Ruta predeterminada para cuando no existan coincidencias de paquetes
