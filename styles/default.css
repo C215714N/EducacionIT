@@ -57,3 +57,41 @@
 /* Pie de pagina */
 
     /* Formulario de Contacto */
+    #contact{
+        max-width: 540px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        border-radius: 8px;
+        padding: 16px; /* top right bottom left */
+        color: #224;
+        background-color: #caf;
+        box-shadow: -8px 8px 4px rgba(68, 68, 136, .5);
+    }
+    label{
+        margin-top: 4px;
+    }
+    input,
+    textarea,
+    select,
+    button{
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid #448;
+        padding: 4px 8px;
+        font-size: 16px;
+    }
+    textarea{
+        resize: vertical;
+        min-height: 80px;
+    }
+    form button{
+        margin-top: 4px;
+        margin-left: auto;
+        padding: 8px 16px;
+        background-color: transparent;
+    }
+    form button:hover{
+        color: #caf;
+        background-color: #448;
+    }
