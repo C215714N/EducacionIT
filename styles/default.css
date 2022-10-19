@@ -26,8 +26,30 @@
     footer a{
         text-decoration: none;
     }
+    .menu,
+    .unstyled{
+        list-style: none;
+    }
 /* Navegacion */
-
+    nav{
+        padding: 8px;
+        background-color: #caf;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+    .menu a{
+        color: #248;
+        font-weight: bold;
+        text-shadow: 0 0 8px #eac; /* -x+ -y+ blur color*/
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #66c;
+        text-shadow: 0 0 16px #eee;
+    }
 /* Cabecera */
 
 /* Contenido */
