@@ -70,6 +70,80 @@
                 </ul>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Son elementos graficos y audiovisuales que podemos utilizar dentro de nuestra pagina. Antiguamente era necesario utilizar plugins o herramientas de terceros para incorporarlos, especialmente en el caso de los elementos de tipo video, pero los navegadores actuales los soportan de manera nativa. Aun asi todavia se siguen implementando herramientas que permiten la carga asincrona de este tipo de contenido.
+            </p>
+            <section>
+                <head>
+                    <h3>¿Contenido Embebido?</h3>
+                </head>
+                <p>
+                    Corresponde a una categoria web que indica que dicho contenido fue compartido con autorizacion del autor original. Este tipo de contenido se incorpora normalmente utilizando la etiqueta <strong>&lt;iframe></strong> que permite mostrar contenido de otra web en una ventana flotante, sin afectar los tiempos de carga.
+                </p>
+                <div class="example">
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="John Frusciante - Carvel"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Video con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/lNg6Gfraas0" 
+                            title="PINOCHO - Original VS Remake" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe
+                        src="https://www.youtube.com/embed/xbT1vrsNUT0" 
+                        title="Nosferatu - A symphony of Horror"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                        <figcaption>Dominio Publico</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="//www.slideshare.net/slideshow/embed_code/key/N99OEOmKr35PsJ" 
+                            allowfullscreen> 
+                        </iframe> 
+                        <figcaption style="margin-bottom:5px"> 
+                            <strong>HTML5</strong> from 
+                            <a href="//www.slideshare.net/HatemMahmoud" target="_blank">
+                                Hatem Mahmoud
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    Como se menciona mas arriba, actualmente los navegadores soportan este tipo de contenido de forma nativa, gracias a la <em>API de reproduccion</em> que utiliza las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente.
+                </p>
+                <div>
+                    <figure>
+                        <video src="" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="">link</a>
+                            </p>
+                        </video>
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
