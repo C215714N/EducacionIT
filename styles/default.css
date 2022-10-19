@@ -15,7 +15,9 @@
         margin: 0;
     }
     /* Bordes */
-
+    iframe{
+        border: 0;
+    }
     /* Rellenos */
     .menu{
         padding: 0;
@@ -94,4 +96,11 @@
     form button:hover{
         color: #caf;
         background-color: #448;
+    }
+    /* Redes sociales */
+
+    /* Mapa de Contacto */
+    #footer iframe{
+        width: 100%;
+        min-height: 320px;
     }
