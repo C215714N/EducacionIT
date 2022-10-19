@@ -53,7 +53,21 @@
         text-shadow: 0 0 16px #eee;
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%,320px) 16px;
+        text-align: center;
+        text-shadow: 0 0 8px #333;
+        background-image: url('../assets/bg/osx-monterrey-light.jpg');
+    }
+    .header{
+        padding: 16px;
+        color: #fcd;
+        background-color: #85a;
+    }
+    header{
+        color: #85a;
+        border-bottom: 2px solid #85a;
+    }
 /* Contenido */
 
 /* Pie de pagina */
