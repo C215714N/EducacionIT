@@ -7,7 +7,7 @@ Para poder establecer una comunicacion, los Hosts deben poseer una direccion IP 
 |__ip address__|192|168|0|56|
 |__subnet mask__|255|255|255|0|
 |__network__|192|168|0|0|
-|__broadcast__|192|168|0|0|
+|__broadcast__|192|168|0|255|
 
 Cuando se envian datos a otros hosts, si la direccion de destino se encuentra en la __misma Red__, la direccion MAC de destino sera la del __dispositivo receptor__; en cambio, si se encuentra en __otra red__, utilizara como destino la __direccion MAC de la puerta de enlace__.
 
