@@ -1,0 +1,89 @@
+// Variables: Valores que se almacenan en la memoria
+    @primary: var(--first);
+    @secondary: var(--second);
+    @light: var(--light);
+    @dark: var(--dark);
+    @n: none;
+
+// Nesting: Estilos que se anidan dentro de otros
+#header{
+    .position(relative);
+    .flexbox(column; center; center);
+    color: @light;
+    min-height: min(100vh, 640px);
+    // Encabezado Principal
+    .header{
+        .normalize(@p: 1rem);
+    }
+    // Galeria
+    .slide{
+        width: 100%;
+        li{
+            &:extend(.cover);
+            opacity: 0;
+            &.active{
+                opacity: 1;
+                background-color: @dark;
+            }
+        }
+            
+    }
+    // Controles
+    button{
+        &:extend(.unstyled);
+        &:extend(.zeroise);
+        &.icon{
+            &-prev::before{
+                content: '<';
+            }
+            &-next::before{
+                content: '>';
+            }
+        }
+    }
+}
+
+// Mixins: Estilos que se utilizan como atributos
+.zeroise{
+    .normalize;
+}
+.unstyled{
+    outline: @n;
+    text-decoration: @n;
+    list-style: @n;
+}
+.cover{
+    .position(absolute; @z: -1);
+    width: 100%;
+    height: 100%;
+}
+// Mixins Parametricos: Estilos que reciben argumentos
+// Atributos de Caja
+.normalize(@m: 0; @p: 0; @b: 0){
+    margin: @m;
+    border: @b;
+    padding: @p;
+}
+// Atributos Flexbox
+.flexbox(
+    @fd: row;
+    @jc: flex-start;
+    @ai: stretch;
+    @g: 0;
+    @fw: wrap;
+    @d: flex
+){
+    display: @d;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+    flex-wrap: @fw;
+    gap: @g;
+}
+// Atributos de Position
+.position(@p: relative; @x:0; @y:0; @x-axis: left; @y-axis: top; @z: 0){
+    position: @p;
+    @{x-axis}: @x;
+    @{y-axis}: @y;
+    z-index: @z;
+}
