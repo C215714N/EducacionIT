@@ -13,6 +13,7 @@
   font-size: min( calc( 0.5rem + 2vw), 5rem );
   text-shadow: 0 0 min( calc( 0.5rem/2 + 2vw/2), calc(5rem/2) ) var(--color);
   color: rgb(var(--light));
+  cursor: pointer;
 }
 #header .slide li {
   opacity: 0;
@@ -50,7 +51,7 @@
   transition: all 0.5s ease-out;
 }
 #header .indicators button.active {
-  min-width: 3rem;
+  padding: 0.5rem 1.5rem;
 }
 #header button {
   border: none;
