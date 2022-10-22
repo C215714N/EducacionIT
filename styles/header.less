@@ -20,10 +20,10 @@
         width: 100%;
         li{
             &:extend(.cover);
+            .bg-colors(5);
             opacity: 0;
             &.active{
                 opacity: 1;
-                background-color: @dark;
             }
         }
             
@@ -42,7 +42,6 @@
         }
     }
 }
-
 // Mixins: Estilos que se utilizan como atributos
 .zeroise{
     .normalize;
@@ -81,9 +80,28 @@
     gap: @g;
 }
 // Atributos de Position
-.position(@p: relative; @x:0; @y:0; @x-axis: left; @y-axis: top; @z: 0){
+.position(
+    @p: relative; 
+    @x:0; 
+    @y:0; 
+    @x-axis: left; 
+    @y-axis: top; 
+    @z: 0
+){
     position: @p;
     @{x-axis}: @x;
     @{y-axis}: @y;
     z-index: @z;
+}
+// Mixins Recursivos: Estilos que se repiten en base a una condicion
+.bg-colors(@max: 5; @i: 1) when (@i <= @max){
+    &:nth-child(@{i}n){
+        background-color: hsl(@i * (360 / @max), 50%, 50%);
+        background-image: linear-gradient(
+            to top right,
+            hsl(@i * (360 / @max), 50%, 50%),
+            hsl(@i * (360 / @max / 2), 50%, 50%)
+        )
+    }
+    .bg-colors(@max; @i + 1);
 }

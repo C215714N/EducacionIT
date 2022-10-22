@@ -23,9 +23,28 @@
 #header .slide li {
   opacity: 0;
 }
+#header .slide li:nth-child(1n) {
+  background-color: hsl(72, 50%, 50%);
+  background-image: linear-gradient(to top right, hsl(72, 50%, 50%), hsl(36, 50%, 50%));
+}
+#header .slide li:nth-child(2n) {
+  background-color: hsl(144, 50%, 50%);
+  background-image: linear-gradient(to top right, hsl(144, 50%, 50%), hsl(72, 50%, 50%));
+}
+#header .slide li:nth-child(3n) {
+  background-color: hsl(216, 50%, 50%);
+  background-image: linear-gradient(to top right, hsl(216, 50%, 50%), hsl(108, 50%, 50%));
+}
+#header .slide li:nth-child(4n) {
+  background-color: hsl(288, 50%, 50%);
+  background-image: linear-gradient(to top right, hsl(288, 50%, 50%), hsl(144, 50%, 50%));
+}
+#header .slide li:nth-child(5n) {
+  background-color: hsl(0, 50%, 50%);
+  background-image: linear-gradient(to top right, hsl(0, 50%, 50%), hsl(180, 50%, 50%));
+}
 #header .slide li.active {
   opacity: 1;
-  background-color: var(--dark);
 }
 #header button.icon-prev::before {
   content: '<';
