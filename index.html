@@ -129,12 +129,67 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Mapa del sitio -->
-
+        <iframe class="map cover"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.059460488857!2d-58.377320122782514!3d-34.60265791125809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1666453470222!5m2!1ses-419!2sar" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <button class="map icon-max"></button>
         <!-- Formulario Consultas -->
-
+        <form action="" id="contact">
+            <h2>Realiza tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text" 
+                maxlength="50"
+                pattern="[a-z A-Z]{3,50}"
+                required>
+            <div class="valid">
+                Ingrese su nombre solamente con letras, el mismo debe poseer entre 3 y 50 caracteres
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email" 
+                minlength="8" 
+                required>
+            <div class="valid">
+                Ingrese una direccion valida con al menos 8 caracteres, que respete el formato "usuario@servidor"
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                name="consult" 
+                id="contact_consult" 
+                minlength="20" 
+                maxlength="200" 
+                required></textarea>
+            <button class="btn">enviar</button>
+        </form>
         <!-- Redes sociales -->
         <section class="social">
-            <a href="http://Github.com/c215714n/EducacionIT/tree/mav-s10">Github</a>
+            <a class="facebook"
+                href="https://Facebook.com/" 
+                title="Seguinos en Facebook"
+                target="_blank">Facebook</a>
+            <a class="instagram"
+                href="https://Instagram.com/" 
+                title="Seguinos en Instagram"
+                target="_blank">Instagram</a>
+            <a class="twitter"
+                href="https://Twitter.com/" 
+                title="Seguinos en Twitter"
+                target="_blank">Twitter</a>
+            <a class="whatsapp"
+                href="https://api.whatsapp.com/send?phone=110303456&text=Buenas%20necesito%20realizar%20una%20consulta" 
+                title="Mensajeanos por Whatsapp"
+                target="_blank">Whatsapp</a>
+            <a class="github"
+                href="http://Github.com/c215714n/EducacionIT/tree/mav-s10" 
+                title="Clona el repo de Github"
+                target="_blank">Github</a>
         </section>
         <p class="link">&copy;2022 Todos los derechos reservados</p>
     </footer>
