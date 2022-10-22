@@ -8,6 +8,12 @@
   align-content: center;
   text-align: center;
 }
+#header .header {
+  --color: rgb(var(--dark));
+  font-size: min( calc( 0.5rem + 2vw), 5rem );
+  text-shadow: 0 0 min( calc( 0.5rem/2 + 2vw/2), calc(5rem/2) ) var(--color);
+  color: rgb(var(--light));
+}
 #header .slide li {
   opacity: 0;
 }

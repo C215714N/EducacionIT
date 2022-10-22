@@ -1,4 +1,4 @@
-#header{
+#header{ 
     .position(relative);
     min-height: ~'min(640px, calc(100vh - 3rem))';
     display: grid;
@@ -6,6 +6,9 @@
     text-align: center;
     // Encabezado
     .header{
+        --color: rgb(var(--dark));
+        .font;
+        color: rgb(var(--light));
     }
     // Galeria
     .slide{
@@ -44,6 +47,10 @@
     @{ba}: @b;
     color: @c;
     background-color: @bg;
+}
+.font(@min:.5rem ; @mid:2vw ; @max: 5rem){
+    font-size: ~'min( calc( @{min} + @{mid}), @{max} )';
+    text-shadow: 0 0 ~'min( calc( @{min}/2 + @{mid}/2), calc(@{max}/2) )' var(--color);
 }
 .position(
     @p: relative;
