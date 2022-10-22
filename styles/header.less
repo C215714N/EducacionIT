@@ -3,6 +3,7 @@
     @secondary: var(--second);
     @light: var(--light);
     @dark: var(--dark);
+    @col: 24;
     @n: none;
     @path: '../assets/bg';
     @backgrounds: 
@@ -11,17 +12,18 @@
         'osx-high-sierra',
         'osx-mavericks',
         'osx-yosemite';
-
+    @positions: relative, absolute, fixed, sticky,  static;
 // Nesting: Estilos que se anidan dentro de otros
 #header{
-    .position(relative);
     .flexbox(column; center; center);
+    &:extend(.p-relative);
     min-height: min(100vh, 640px);
     overflow: hidden;
     color: @light;
     // Encabezado Principal
     .header{
         .normalize(@p: 1rem);
+        .font;
     }
     // Galeria
     .slide{
@@ -48,13 +50,24 @@
     button{
         &:extend(.unstyled);
         &:extend(.zeroise);
+        &.control{
+            .position(absolute; @x-axis:bottom);
+            .font;
+            &:extend(.col-6);
+            color: @light;
+            background-color: transparent;
+        }
         &.icon{
-            &-prev::before{
+            &-prev{
+                left: 0;
+                &::before{
                 content: '<';
-            }
-            &-next::before{
+            } }
+            &-next {
+                right: 0;
+                &::before{
                 content: '>';
-            }
+            } }
         }
     }
 }
@@ -109,6 +122,10 @@
     @{y-axis}: @y;
     z-index: @z;
 }
+.font(@min: .5rem; @mid: 2vw; @max: 5rem){
+    font-size: ~'min( calc(@{min} + @{mid}), @{max})';
+    text-shadow: 0 0 ~'min( calc(@{min}/2 + @{mid}/2), calc(@{max}/2))' @dark;
+}
 // Mixins Recursivos: Estilos que se repiten en base a una condicion
 .bg-colors(@max: 5; @i: 1) when (@i <= @max){
     &:nth-child(@{i}n){
@@ -128,3 +145,21 @@
     }
     .bg-images(@bg; @i + 1);
 }
+/* Atributos de Posicion*/
+.positionClass(@i: 1) when (@i <= length(@positions)){
+    @pos: extract(@positions, @i);
+    .p-@{pos}{
+        position: @pos;
+    }
+    .positionClass(@i + 1);
+}
+.positionClass;
+
+/* Sistema de Grillas */
+.grid (@i: 1) when (@i <= @col){
+    .col-@{i}{
+        width: percentage( (@i / @col) );
+    }
+    .grid(@i + 1);
+}
+.grid;

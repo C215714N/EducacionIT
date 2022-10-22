@@ -1,8 +1,4 @@
 #header {
-  position: relative;
-  left: 0;
-  top: 0;
-  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +13,8 @@
   margin: 0;
   border: 0;
   padding: 1rem;
+  font-size: min( calc(0.5rem + 2vw), 5rem);
+  text-shadow: 0 0 min( calc(0.5rem/2 + 2vw/2), calc(5rem/2)) var(--dark);
 }
 #header .slide {
   width: 100%;
@@ -89,8 +87,24 @@
 #header .slide li.active + li {
   left: 100%;
 }
+#header button.control {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  z-index: 0;
+  font-size: min( calc(0.5rem + 2vw), 5rem);
+  text-shadow: 0 0 min( calc(0.5rem/2 + 2vw/2), calc(5rem/2)) var(--dark);
+  color: var(--light);
+  background-color: transparent;
+}
+#header button.icon-prev {
+  left: 0;
+}
 #header button.icon-prev::before {
   content: '<';
+}
+#header button.icon-next {
+  right: 0;
 }
 #header button.icon-next::before {
   content: '>';
@@ -115,4 +129,95 @@
   z-index: -1;
   width: 100%;
   height: 100%;
+}
+/* Atributos de Posicion*/
+.p-relative,
+#header {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.p-fixed {
+  position: fixed;
+}
+.p-sticky {
+  position: sticky;
+}
+.p-static {
+  position: static;
+}
+/* Sistema de Grillas */
+.col-1 {
+  width: 4.16666667%;
+}
+.col-2 {
+  width: 8.33333333%;
+}
+.col-3 {
+  width: 12.5%;
+}
+.col-4 {
+  width: 16.66666667%;
+}
+.col-5 {
+  width: 20.83333333%;
+}
+.col-6,
+#header button.control {
+  width: 25%;
+}
+.col-7 {
+  width: 29.16666667%;
+}
+.col-8 {
+  width: 33.33333333%;
+}
+.col-9 {
+  width: 37.5%;
+}
+.col-10 {
+  width: 41.66666667%;
+}
+.col-11 {
+  width: 45.83333333%;
+}
+.col-12 {
+  width: 50%;
+}
+.col-13 {
+  width: 54.16666667%;
+}
+.col-14 {
+  width: 58.33333333%;
+}
+.col-15 {
+  width: 62.5%;
+}
+.col-16 {
+  width: 66.66666667%;
+}
+.col-17 {
+  width: 70.83333333%;
+}
+.col-18 {
+  width: 75%;
+}
+.col-19 {
+  width: 79.16666667%;
+}
+.col-20 {
+  width: 83.33333333%;
+}
+.col-21 {
+  width: 87.5%;
+}
+.col-22 {
+  width: 91.66666667%;
+}
+.col-23 {
+  width: 95.83333333%;
+}
+.col-24 {
+  width: 100%;
 }
