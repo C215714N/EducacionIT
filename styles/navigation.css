@@ -11,7 +11,8 @@ nav{
     background: linear-gradient(
         var(--first),
         var(--second)
-    )
+    );
+    opacity: .6;
 }
 nav a{
     color: var(--light)
@@ -42,6 +43,7 @@ nav a:hover{
 @media screen and (min-width: 768px){
     nav{
         justify-content: flex-start;
+        opacity: 1;
         gap: 50%;
     }
     nav .btn[class*="menu-"]{

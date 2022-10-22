@@ -4,13 +4,21 @@
     @light: var(--light);
     @dark: var(--dark);
     @n: none;
+    @path: '../assets/bg';
+    @backgrounds: 
+        'osx-sierra',
+        'osx-el-capitan',
+        'osx-high-sierra',
+        'osx-mavericks',
+        'osx-yosemite';
 
 // Nesting: Estilos que se anidan dentro de otros
 #header{
     .position(relative);
     .flexbox(column; center; center);
-    color: @light;
     min-height: min(100vh, 640px);
+    overflow: hidden;
+    color: @light;
     // Encabezado Principal
     .header{
         .normalize(@p: 1rem);
@@ -20,10 +28,18 @@
         width: 100%;
         li{
             &:extend(.cover);
-            .bg-colors(5);
+            background: var(--color) var(--bg) center/cover;
+            .bg-colors(10);
+            .bg-images(@backgrounds);
             opacity: 0;
+            left: -100%;
+            transition: all .5s linear;
             &.active{
                 opacity: 1;
+                left: 0;
+                & + li{
+                    left: 100%;
+                }
             }
         }
             
@@ -96,12 +112,19 @@
 // Mixins Recursivos: Estilos que se repiten en base a una condicion
 .bg-colors(@max: 5; @i: 1) when (@i <= @max){
     &:nth-child(@{i}n){
-        background-color: hsl(@i * (360 / @max), 50%, 50%);
-        background-image: linear-gradient(
+        --color: hsl(@i * (360 / @max), 50%, 50%);
+        --bg: linear-gradient(
             to top right,
             hsl(@i * (360 / @max), 50%, 50%),
             hsl(@i * (360 / @max / 2), 50%, 50%)
-        )
+        );
     }
     .bg-colors(@max; @i + 1);
+}
+.bg-images(@bg; @i: 1) when (@i <= length(@bg)){
+    @img: extract(@bg, @i);
+    &:nth-child(@{i}){
+        --bg: url('@{path}/@{img}.jpg');
+    }
+    .bg-images(@bg; @i + 1);
 }

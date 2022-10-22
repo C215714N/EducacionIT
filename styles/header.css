@@ -9,8 +9,9 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0;
-  color: var(--light);
   min-height: min(100vh, 640px);
+  overflow: hidden;
+  color: var(--light);
 }
 #header .header {
   margin: 0;
@@ -21,30 +22,72 @@
   width: 100%;
 }
 #header .slide li {
+  background: var(--color) var(--bg) center / cover;
   opacity: 0;
+  left: -100%;
+  transition: all 0.5s linear;
 }
 #header .slide li:nth-child(1n) {
-  background-color: hsl(72, 50%, 50%);
-  background-image: linear-gradient(to top right, hsl(72, 50%, 50%), hsl(36, 50%, 50%));
+  --color: hsl(36, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(36, 50%, 50%), hsl(18, 50%, 50%));
 }
 #header .slide li:nth-child(2n) {
-  background-color: hsl(144, 50%, 50%);
-  background-image: linear-gradient(to top right, hsl(144, 50%, 50%), hsl(72, 50%, 50%));
+  --color: hsl(72, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(72, 50%, 50%), hsl(36, 50%, 50%));
 }
 #header .slide li:nth-child(3n) {
-  background-color: hsl(216, 50%, 50%);
-  background-image: linear-gradient(to top right, hsl(216, 50%, 50%), hsl(108, 50%, 50%));
+  --color: hsl(108, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(108, 50%, 50%), hsl(54, 50%, 50%));
 }
 #header .slide li:nth-child(4n) {
-  background-color: hsl(288, 50%, 50%);
-  background-image: linear-gradient(to top right, hsl(288, 50%, 50%), hsl(144, 50%, 50%));
+  --color: hsl(144, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(144, 50%, 50%), hsl(72, 50%, 50%));
 }
 #header .slide li:nth-child(5n) {
-  background-color: hsl(0, 50%, 50%);
-  background-image: linear-gradient(to top right, hsl(0, 50%, 50%), hsl(180, 50%, 50%));
+  --color: hsl(180, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(180, 50%, 50%), hsl(90, 50%, 50%));
+}
+#header .slide li:nth-child(6n) {
+  --color: hsl(216, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(216, 50%, 50%), hsl(108, 50%, 50%));
+}
+#header .slide li:nth-child(7n) {
+  --color: hsl(252, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(252, 50%, 50%), hsl(126, 50%, 50%));
+}
+#header .slide li:nth-child(8n) {
+  --color: hsl(288, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(288, 50%, 50%), hsl(144, 50%, 50%));
+}
+#header .slide li:nth-child(9n) {
+  --color: hsl(324, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(324, 50%, 50%), hsl(162, 50%, 50%));
+}
+#header .slide li:nth-child(10n) {
+  --color: hsl(0, 50%, 50%);
+  --bg: linear-gradient(to top right, hsl(0, 50%, 50%), hsl(180, 50%, 50%));
+}
+#header .slide li:nth-child(1) {
+  --bg: url('../assets/bg/osx-sierra.jpg');
+}
+#header .slide li:nth-child(2) {
+  --bg: url('../assets/bg/osx-el-capitan.jpg');
+}
+#header .slide li:nth-child(3) {
+  --bg: url('../assets/bg/osx-high-sierra.jpg');
+}
+#header .slide li:nth-child(4) {
+  --bg: url('../assets/bg/osx-mavericks.jpg');
+}
+#header .slide li:nth-child(5) {
+  --bg: url('../assets/bg/osx-yosemite.jpg');
 }
 #header .slide li.active {
   opacity: 1;
+  left: 0;
+}
+#header .slide li.active + li {
+  left: 100%;
 }
 #header button.icon-prev::before {
   content: '<';
