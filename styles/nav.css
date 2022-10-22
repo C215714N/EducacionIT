@@ -1,7 +1,7 @@
 nav {
   margin: 0;
   border: 0;
-  padding: 0.5rem;
+  padding: 0.5rem max(.5rem, calc(50vw - 660px));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +15,12 @@ nav a {
 }
 nav .menu {
   width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+nav .menu.active {
+  max-height: max(640px, 100vh);
 }
 @media screen and (min-width: 768px) {
   nav .menu {
@@ -25,6 +31,7 @@ nav .menu {
     flex-wrap: wrap;
     gap: 1rem;
     width: auto;
+    max-height: 640px;
   }
 }
 nav .menu li:nth-child(1):hover {
@@ -45,7 +52,8 @@ nav .menu li:nth-child(5):hover {
 nav .btn {
   margin: 0;
   border: 1px solid;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
+  min-width: 2.5rem;
   color: rgb(var(--light));
   background-color: transparent;
 }

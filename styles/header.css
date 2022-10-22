@@ -37,10 +37,12 @@
 }
 #header button {
   border: none;
-  color: var(--first);
+  color: var(--light);
   background-color: transparent;
+  font-size: min( calc( 1rem + 2vw), 8rem );
+  text-shadow: 0 0 min( calc( 1rem/2 + 2vw/2), calc(8rem/2) ) var(--color);
+  width: 25%;
   height: 100%;
-  font-size: 1.5rem;
 }
 #header button.icon-prev {
   position: absolute;

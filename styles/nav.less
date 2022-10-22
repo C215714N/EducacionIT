@@ -7,11 +7,14 @@
     @md: 768px;
     @lg: 992px;
     @xl: 1200px;
+    @xxl: 1400px;
     // Columnas
     @col: 24;
 // Nesting: Anidacion de estilos
 nav{
-    .normalize(@p:.5rem);
+    .normalize(
+        @p:.5rem ~'max(.5rem, calc(50vw - 660px))'
+    );
     .flexbox(@justify: space-between; @align: center);
     background-color: @bg-color;
     a{
@@ -22,9 +25,16 @@ nav{
         &:extend(.unstyled);
         &:extend(.zeroise);
         width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .25s ease;
+        &.active{
+            max-height: max(640px, 100vh);
+        }
         @media screen and (min-width: @md){
             .flexbox(@gap: 1rem);
             width: auto;
+            max-height: 640px;
         }
         li{
             .bg-colors;
@@ -32,7 +42,8 @@ nav{
     }
     // Boton Menu Hamburguesa
     .btn{
-        .normalize(@p: .5rem 1rem; @b: 1px solid);
+        .normalize(@p: .2rem .5rem; @b: 1px solid);
+        min-width: 2.5rem;
         color: @color;
         background-color: transparent;
         &:hover{
