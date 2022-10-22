@@ -16,23 +16,40 @@
             .bg-colors(5);
             &:extend(.cover);
             opacity: 0;
+            transition: all 1s ease;
             &.active{
                 opacity: 1;
             }
         }
     }
     // Controles
+    .indicators{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        button{
+            padding: .5rem;
+            .stylize(#333, rgb(var(--light)), .5rem, border-radius);
+            transition: all .5s ease-out;
+            &.active{
+                min-width: 3rem
+            }
+        }
+    }
     button{
         .stylize(var(--light); transparent; none; border);
         .font(@min: 1rem; @max: 8rem);
-        width: 25%;
-        height: 100%;
-        &.icon{
-            &-prev{
-                .position(absolute);
-            }
-            &-next{
-                .position(absolute; @row: right);
+        &.controls{
+            width: 25%;
+            height: 100%;
+            &.icon{
+                &-prev{
+                    .position(absolute);
+                }
+                &-next{
+                    .position(absolute; @row: right);
+                }
             }
         }
     }

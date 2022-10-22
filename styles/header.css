@@ -16,6 +16,7 @@
 }
 #header .slide li {
   opacity: 0;
+  transition: all 1s ease;
 }
 #header .slide li:nth-child(1) {
   background: linear-gradient(to right, hsl(30, 50%, 50%), hsl(60, 50%, 50%));
@@ -35,22 +36,40 @@
 #header .slide li.active {
   opacity: 1;
 }
+#header .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+#header .indicators button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #333;
+  background-color: rgb(var(--light));
+  transition: all 0.5s ease-out;
+}
+#header .indicators button.active {
+  min-width: 3rem;
+}
 #header button {
   border: none;
   color: var(--light);
   background-color: transparent;
   font-size: min( calc( 1rem + 2vw), 8rem );
   text-shadow: 0 0 min( calc( 1rem/2 + 2vw/2), calc(8rem/2) ) var(--color);
+}
+#header button.controls {
   width: 25%;
   height: 100%;
 }
-#header button.icon-prev {
+#header button.controls.icon-prev {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 0;
 }
-#header button.icon-next {
+#header button.controls.icon-next {
   position: absolute;
   right: 0;
   top: 0;
