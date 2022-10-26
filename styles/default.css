@@ -10,6 +10,7 @@
     h1,
     h2,
     h3,
+    figure,
     header p,
     .menu,
     #header{
@@ -30,6 +31,7 @@
         text-decoration: none;
     }
     .menu,
+    .example,
     .unstyled{
         list-style: none;
     }
@@ -86,6 +88,18 @@
         padding: 16px;
         box-shadow: 0 0 4px #999;
         overflow: hidden;
+    }
+    /* Ejemplos */
+    .example{
+        max-width: 720px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 8px auto;
+        border-left: 4px solid #e6c;
+        padding: 16px;
+        background-color: #eee;
+        line-height: 1.5;
     }
 /* Pie de pagina */
 
