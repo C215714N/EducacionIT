@@ -11,7 +11,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -57,9 +58,14 @@
         padding: min(20%,320px) 16px;
         text-align: center;
         text-shadow: 0 0 8px #333;
+        background-color: #e6c;
         background-image: url('../assets/bg/osx-monterrey-light.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .header{
+        margin: -16px -16px 16px;
         padding: 16px;
         color: #fcd;
         background-color: #85a;
