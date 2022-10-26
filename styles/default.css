@@ -105,6 +105,46 @@
         flex-wrap: nowrap;
         overflow: auto;
     }
+    /* Contenido Multimedia */
+
+    /* Tablas */
+    table caption,
+    th,
+    td{
+        padding: 8px 16px;
+    }
+    table caption{
+        border-radius: 8px 8px 0 0;
+    }
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic caption,
+    .classic td,
+    .classic th{
+        border: 2px solid #85a;
+    }
+    .classic caption{
+        border-bottom: none;
+        color: #85a;
+        font-weight: bold;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color:rgb(65, 65, 136, .5);
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #284;
+    }
+    .semantic tfoot{
+        background-color: #248;
+    }
 /* Pie de pagina */
 
     /* Formulario de Contacto */
