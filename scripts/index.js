@@ -5,6 +5,7 @@ const menuList = d.querySelector('nav .menu');
 const prev = d.querySelector('.control.icon-prev');
 const next = d.querySelector('.control.icon-next');
 const gallery = d.querySelectorAll('.slide li');
+const indicators = d.querySelectorAll('.indicators button');
 
 menuBtn.addEventListener('click', (e) => {
     if ( menuList.classList.toggle('active') ) {
@@ -13,21 +14,30 @@ menuBtn.addEventListener('click', (e) => {
         e.target.classList.replace('menu-close', 'menu-open')
     }
 })
+window.setInterval(() => next.click(), 30000);
+prev.addEventListener('click', () => {
+    getItem('prev', gallery)
+    getItem('prev', indicators)
+})
+next.addEventListener('click', () => { 
+    getItem('next', gallery)
+    getItem('next', indicators)
+})
+indicators.forEach( (btn, i) => btn.addEventListener( 'click', () => {
+    getItem(i, gallery)
+    getItem(i, indicators)
+}))
 
-prev.addEventListener('click', () => getItem('prev'))
-next.addEventListener('click', () => getItem('next'))
-
-function getItem(type) {
+function getItem(type, array) {
     let nextElement;
-    for(let img of gallery){
+    for(let img of array){
         if(img.classList.contains('active')){
             img.classList.remove('active');
-            if (type == 'next'){
-                nextElement = img.nextElementSibling || img.parentNode.firstElementChild
-            }
-            else if (type == 'prev'){
-                nextElement = img.previousElementSibling || img.parentNode.lastElementChild
-            }
+            nextElement = (type == 'next' ?
+            img.nextElementSibling || img.parentNode.firstElementChild :
+            type == 'prev' ?
+            img.previousElementSibling || img.parentNode.lastElementChild :
+            array[type])
         }
     }
     nextElement.classList.add('active')
