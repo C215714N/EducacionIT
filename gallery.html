@@ -11,14 +11,49 @@
     <header>
         <h1>Fundamentos Web</h1>
         <p>html y css</p>
+        <!-- Navegacion: Links mas importantes -->
+        <nav>
+            <ul>
+                <li><!-- Ruta Relativa | Interna -->
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li><!-- Ruta ancla | refresh (#) -->
+                    <a href="#">Galeria</a>
+                </li>
+                <li><!-- Ruta ancla | Marcador (#id) -->
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!-- Contenido: Relevante para el Usuario -->
     <main>
-
+        <!-- Seccion: Contenido Contextualizado -->
+        <section>
+            <h2>Contenido Multimedia</h2>
+            <p>
+                Las paginas web soportan todo tipo de elementos, utilizando la etiqueta correspondiente para identificar el mismo. Entre ellos se encuentran las imagenes, audios y videos, etc. Para incorporarlos debemos colocar dentro de la etiqueta pertinente un atributo llamado <em>src</em> que indica donde se encuentra el recurso a utilizar.
+            </p>
+            <!-- Articulo: Contenido Independiente -->
+            <article>
+                <h3>Formatos de Imagen</h3>
+                <p>
+                    Los archivos de imagen se clasifican en <strong>mapa de bits (raster)</strong> que consisten en una grilla de pixeles que puede representar campos de profundidad, pero se ve limitada por una cantidad finita de puntos; y <strong>vectoriales</strong> que corresponden a graficos generados por computadora, compuestos de lineas y curvas que se utilizan para la creacion de elemento iconograficos.
+                    Los Formatos mas comunes soportados por los navegadores web son:
+                </p>
+                <ul>
+                    <li>png (portable network graphics): admite transparencia pero no comprime datos</li>
+                    <li>jpg (joint photographics expert group) formato ligero comunmente utilizado en fotografias</li>
+                    <li>gif (graphics interchange format) admite compresion e interpolacion de imagenes (animacion)</li>
+                    <li>webp (web picture) formato exclusivamente diseñado para comparticion en la web</li>
+                    <li>svg (scalable vector graphics) formato vectorial utilizado para iconos</li>
+                </ul>
+            </article>
+        </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        <p>&copy;2022 Todos los derechos reservados</p>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
