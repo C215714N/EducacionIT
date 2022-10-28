@@ -40,7 +40,7 @@
             <li><a href="#">Link 1</a></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+            <li><a href="#contact">Contacto</a></li>
             <li><a href="#">Recomendaciones</a>
                 <ul class="submenu">
                     <li>
@@ -84,8 +84,74 @@
         
     </main>
     <!-- Pie de Pagina -->
-    <footer id="footer">
-        <p>&copy;2022 Todos los derechos reservados</p>
+    <footer id="footer">    
+        <!-- Mapa de contacto -->
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.069937068758!2d-58.37812478548698!3d-34.602392980459804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1666999244194!5m2!1ses-419!2sar"
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <!-- Formulario de Contacto -->
+        <form id="contact">
+            <h2>Hacenos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                type="text" 
+                id="contact_name" 
+                name="name" 
+                pattern="[a-z A-Z]{3,50}"
+                placeholder="Cristian Racedo"
+                maxlength="50"
+                autofocus
+                required>
+            <p class="validation">
+                Ingrese su nombre solamente con letras, el mismo debe poseer entre 3 y 50 caracteres
+            </p>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email"
+                type="email" 
+                placeholder="cristiandracedo@hotmail.com"
+                minlength="8"
+                required>
+            <p class="validation">
+                Ingrese un correo de al menos 8 caracteres que respete el formato "usuario@servidor"
+            </p>
+            <label for="contact_consult">Ingrese su consulta</label>
+            <textarea 
+                name="consult" 
+                id="contact_consult" 
+                placeholder="Buenas, mi consulta es..."
+                minlength="20" 
+                maxlenght="200"></textarea>
+            <button class="btn btn-success">enviar</button>
+        </form>
+        <!-- Redes sociales -->
+        <section class="social">
+            <h2>Redes sociales</h2>
+            <a href="https://facebook.com" 
+                class="facebook"
+                title="seguinos en facebook"
+                target="_blank">
+            </a>
+            <a href="https://twitter.com" 
+                class="twitter"
+                title="seguinos en twitter"
+                target="_blank">
+            </a>
+            <a href="https://github.com" 
+                class="github"
+                title="clona el repo de github"
+                target="_blank">
+            </a>
+            <a href="https://linkedin.com" 
+                class="linkedin"
+                title="mandanos un whatsapp"
+                target="_blank">
+            </a>
+        </section>
+        <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
     <!-- Scripts JS -->
     <script src="scripts/index.js" type="module"></script>
