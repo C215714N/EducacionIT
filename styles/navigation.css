@@ -8,11 +8,7 @@ nav{
     flex-wrap: wrap-reverse;
     gap: .5rem;
     padding: .5rem;
-    background: linear-gradient(
-        var(--first),
-        var(--second)
-    );
-    opacity: .6;
+    opacity: .8;
 }
 nav a{
     color: var(--light)
@@ -20,6 +16,14 @@ nav a{
 nav a:hover{
     --light: #ccc;
     text-shadow: 0 0 .5rem var(--light);
+}
+nav,
+.submenu,
+.subitems{
+    background: linear-gradient(
+        var(--first),
+        var(--second)
+    );
 }
 .logo::before{
     content: 'css';
@@ -40,6 +44,45 @@ nav a:hover{
 .menu.active{
     max-height: 640px;
 }
+nav li{
+    position: relative;
+}
+.menu > li:last-child{
+    display: none;
+}
+.submenu,
+.subitems{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: var(--first);
+}
+.submenu{
+    top: 100%;
+    left: 0;
+}
+.subitems{
+    top: 0;
+    left: 100%;
+}
+.menu li:hover > .subitems,
+.menu li:hover > .submenu{
+    display: block;
+}
+:is(
+    .subitems,
+    .submenu
+) a{
+    display: block;
+    min-width: 6rem;
+    padding: .25rem .5rem;
+}
+:is(
+    .subitems,
+    .submenu
+) a:hover{
+    background-color: #36c;
+}
 @media screen and (min-width: 768px){
     nav{
         justify-content: flex-start;
@@ -52,12 +95,16 @@ nav a:hover{
     .logo,
     .menu{
         width: auto;
+        overflow: visible;
     }
     .menu{
         max-height: 640px;
         transform: translateX(-55%);
         display: flex;
         gap: .5rem;
+    }
+    .menu > li:last-child{
+        display: block;
     }
 }
 @media screen and (min-width:1400px){
