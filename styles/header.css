@@ -87,6 +87,27 @@
 #header .slide li.active + li {
   left: 100%;
 }
+#header .indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0;
+}
+#header .indicators button {
+  margin: 0.2rem;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--light);
+  box-shadow: 0 0 0.5rem var(--dark);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+#header .indicators button.active {
+  padding: 0.5rem 1.5rem;
+}
 #header button.control {
   position: absolute;
   bottom: 0;

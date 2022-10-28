@@ -46,6 +46,21 @@
         }
             
     }
+    // Indicadores
+    .indicators{
+        .flexbox(@jc: center);
+        button{
+            .normalize(.2rem; .5rem);
+            border-radius: .5rem;
+            background-color: @light;
+            box-shadow: 0 0 .5rem @dark;
+            transition: all .2s ease-out;
+            cursor: pointer;
+            &.active{
+                padding: .5rem 1.5rem;
+            }
+        }
+    }
     // Controles
     button{
         &:extend(.unstyled);
