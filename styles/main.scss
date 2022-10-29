@@ -1,0 +1,40 @@
+@use 'footer';
+$position: static, absolute, fixed, relative, sticky;
+$directions: height, width, top, right, bottom, left;
+
+@each $p in $position{
+    .p-#{$p}{
+        position: $p
+} }
+@each $d in $directions{
+    @for $i from 0 through 5{
+        .#{$d}-#{$i * 20}{
+            #{$d}: $i * 20%;
+} } }
+// Mixins
+main{
+    @include footer.normalize(1rem auto, .5rem);
+    @extend .container;
+    li{
+        @extend .p-relative;
+        &::before{
+            content: '';
+            @extend 
+                .p-absolute, 
+                .top-0, 
+                .left-0, 
+                .width-100, 
+                .height-100;
+            transition: all .5s ease;
+            background:
+                linear-gradient(
+                    rgb(var(--first),.5),
+                    rgb(var(--second),.3)
+                )
+        }
+        &.active::before,
+        &:hover::before{
+            @extend .height-0;
+        }
+    }
+}
