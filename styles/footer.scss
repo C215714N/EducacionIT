@@ -1,0 +1,75 @@
+// Variables
+    $primary: var(--first);
+    $secondary: var(--second);
+    $colors: 
+        primary #448,
+        secondary #c36,
+        light #eee,
+        dark #333,
+        danger #c33,
+        warning #da3,
+        success #3c6,
+        info #36d;
+    $path: '../assets/icon';
+    $social: 
+        facebook,
+        github,
+        instagram,
+        linkedin,
+        twitter,
+        whatsapp,
+        youtube;
+// Mixins 
+@mixin normalize($m:0, $p:0, $b:0, $ba: border, $ma: margin, $pa: padding){
+    #{$ma}: $m;
+    #{$ba}: $b;
+    #{$pa}: $p;
+}
+
+// Loops
+/* Redes sociales */
+@each $ico in $social{ 
+    .#{$ico}{
+        --bg: url('#{$path}/#{$ico}.svg');
+} }
+/*Colores de Atributos*/
+@each $name, $value in $colors{
+    .bg-#{$name}{
+        background-color: $value;
+    }
+}
+// Componentes
+.icon{
+    --light: #ccc;
+    @include normalize(.25rem, 1.5rem, .5rem, border-radius);
+    background: var(--light) var(--bg) center/2rem no-repeat;
+    &:hover{
+        --light: #eee;
+        background-size: 2.5rem;
+        box-shadow: 0 .2rem .5rem #333;
+    }
+}
+
+// Nesting
+#footer{
+    @include normalize(0, 1rem, relative, position);
+    .map{
+
+    }
+    #contact{
+        @include normalize(1rem auto, 1.5rem 1rem, .5rem, border-radius);
+        display: grid;
+        background-color: rgb(var(--light), .9);
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        a{
+            @extend .icon;
+        }
+    }
+    .link{
+
+    }
+}

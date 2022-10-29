@@ -1,0 +1,94 @@
+/* Redes sociales */
+.facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  --bg: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.whatsapp {
+  --bg: url("../assets/icon/whatsapp.svg");
+}
+
+.youtube {
+  --bg: url("../assets/icon/youtube.svg");
+}
+
+/*Colores de Atributos*/
+.bg-primary {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-info {
+  background-color: #36d;
+}
+
+.icon, #footer .social a {
+  --light: #ccc;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background: var(--light) var(--bg) center/2rem no-repeat;
+}
+.icon:hover, #footer .social a:hover {
+  --light: #eee;
+  background-size: 2.5rem;
+  box-shadow: 0 0.2rem 0.5rem #333;
+}
+
+#footer {
+  margin: 0;
+  position: relative;
+  padding: 1rem;
+}
+#footer #contact {
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  display: grid;
+  background-color: rgb(var(--light), 0.9);
+}
+#footer .social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=footer.css.map */
