@@ -27,7 +27,7 @@
   --bg: url("../assets/icon/youtube.svg");
 }
 
-/*Colores de Atributos*/
+/* Colores de Atributos */
 .text-primary, #footer #contact .btn:hover {
   color: #448;
 }
@@ -44,7 +44,10 @@
   color: #333;
 }
 
-.text-danger {
+.text-danger, #footer #contact input:not(:placeholder-shown):invalid + .valid,
+#footer #contact textarea:not(:placeholder-shown):invalid + .valid,
+#footer #contact select:not(:placeholder-shown):invalid + .valid,
+#footer #contact button:not(:placeholder-shown):invalid + .valid {
   color: #c33;
 }
 
@@ -52,8 +55,11 @@
   color: #da3;
 }
 
-.text-success {
-  color: #3c6;
+.text-success, #footer #contact input:valid + .valid,
+#footer #contact textarea:valid + .valid,
+#footer #contact select:valid + .valid,
+#footer #contact button:valid + .valid {
+  color: #284;
 }
 
 .text-info {
@@ -85,7 +91,7 @@
 }
 
 .bg-success {
-  background-color: #3c6;
+  background-color: #284;
 }
 
 .bg-info {
@@ -108,7 +114,10 @@
   border-color: #333;
 }
 
-.border-danger {
+.border-danger, #footer #contact input:not(:placeholder-shown):invalid,
+#footer #contact textarea:not(:placeholder-shown):invalid,
+#footer #contact select:not(:placeholder-shown):invalid,
+#footer #contact button:not(:placeholder-shown):invalid {
   border-color: #c33;
 }
 
@@ -116,15 +125,18 @@
   border-color: #da3;
 }
 
-.border-success {
-  border-color: #3c6;
+.border-success, #footer #contact input:valid,
+#footer #contact textarea:valid,
+#footer #contact select:valid,
+#footer #contact button:valid {
+  border-color: #284;
 }
 
 .border-info {
   border-color: #36d;
 }
 
-.shadow-primary {
+.shadow-primary, #footer #contact .btn:hover, #footer #contact .btn {
   --shadow: #448;
 }
 
@@ -136,11 +148,17 @@
   --shadow: #eee;
 }
 
-.shadow-dark {
+.shadow-dark, #footer #contact input:focus,
+#footer #contact textarea:focus,
+#footer #contact select:focus,
+#footer #contact button:focus {
   --shadow: #333;
 }
 
-.shadow-danger {
+.shadow-danger, #footer #contact input:not(:placeholder-shown):invalid,
+#footer #contact textarea:not(:placeholder-shown):invalid,
+#footer #contact select:not(:placeholder-shown):invalid,
+#footer #contact button:not(:placeholder-shown):invalid {
   --shadow: #c33;
 }
 
@@ -148,8 +166,11 @@
   --shadow: #da3;
 }
 
-.shadow-success {
-  --shadow: #3c6;
+.shadow-success, #footer #contact input:valid,
+#footer #contact textarea:valid,
+#footer #contact select:valid,
+#footer #contact button:valid {
+  --shadow: #284;
 }
 
 .shadow-info {
@@ -181,14 +202,406 @@
 }
 
 .shade-success {
-  --shade: #3c6;
+  --shade: #284;
 }
 
 .shade-info {
   --shade: #36d;
 }
 
-.icon, #footer .social a {
+/* Sistema de Grillas Responsive */
+@media screen and (min-width: 576px) {
+  .container,
+.container-sm {
+    max-width: 540px;
+  }
+  .col-sm-1 {
+    width: 4.1666666667%;
+  }
+  .col-sm-2 {
+    width: 8.3333333333%;
+  }
+  .col-sm-3 {
+    width: 12.5%;
+  }
+  .col-sm-4 {
+    width: 16.6666666667%;
+  }
+  .col-sm-5 {
+    width: 20.8333333333%;
+  }
+  .col-sm-6 {
+    width: 25%;
+  }
+  .col-sm-7 {
+    width: 29.1666666667%;
+  }
+  .col-sm-8 {
+    width: 33.3333333333%;
+  }
+  .col-sm-9 {
+    width: 37.5%;
+  }
+  .col-sm-10 {
+    width: 41.6666666667%;
+  }
+  .col-sm-11 {
+    width: 45.8333333333%;
+  }
+  .col-sm-12 {
+    width: 50%;
+  }
+  .col-sm-13 {
+    width: 54.1666666667%;
+  }
+  .col-sm-14 {
+    width: 58.3333333333%;
+  }
+  .col-sm-15 {
+    width: 62.5%;
+  }
+  .col-sm-16 {
+    width: 66.6666666667%;
+  }
+  .col-sm-17 {
+    width: 70.8333333333%;
+  }
+  .col-sm-18 {
+    width: 75%;
+  }
+  .col-sm-19 {
+    width: 79.1666666667%;
+  }
+  .col-sm-20 {
+    width: 83.3333333333%;
+  }
+  .col-sm-21 {
+    width: 87.5%;
+  }
+  .col-sm-22, #footer #contact {
+    width: 91.6666666667%;
+  }
+  .col-sm-23 {
+    width: 95.8333333333%;
+  }
+  .col-sm-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container,
+.container-md,
+#footer #contact {
+    max-width: 720px;
+  }
+  .col-md-1 {
+    width: 4.1666666667%;
+  }
+  .col-md-2 {
+    width: 8.3333333333%;
+  }
+  .col-md-3 {
+    width: 12.5%;
+  }
+  .col-md-4 {
+    width: 16.6666666667%;
+  }
+  .col-md-5 {
+    width: 20.8333333333%;
+  }
+  .col-md-6 {
+    width: 25%;
+  }
+  .col-md-7 {
+    width: 29.1666666667%;
+  }
+  .col-md-8 {
+    width: 33.3333333333%;
+  }
+  .col-md-9 {
+    width: 37.5%;
+  }
+  .col-md-10 {
+    width: 41.6666666667%;
+  }
+  .col-md-11 {
+    width: 45.8333333333%;
+  }
+  .col-md-12 {
+    width: 50%;
+  }
+  .col-md-13 {
+    width: 54.1666666667%;
+  }
+  .col-md-14 {
+    width: 58.3333333333%;
+  }
+  .col-md-15 {
+    width: 62.5%;
+  }
+  .col-md-16 {
+    width: 66.6666666667%;
+  }
+  .col-md-17 {
+    width: 70.8333333333%;
+  }
+  .col-md-18, #footer #contact {
+    width: 75%;
+  }
+  .col-md-19 {
+    width: 79.1666666667%;
+  }
+  .col-md-20 {
+    width: 83.3333333333%;
+  }
+  .col-md-21 {
+    width: 87.5%;
+  }
+  .col-md-22 {
+    width: 91.6666666667%;
+  }
+  .col-md-23 {
+    width: 95.8333333333%;
+  }
+  .col-md-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container,
+.container-lg {
+    max-width: 960px;
+  }
+  .col-lg-1 {
+    width: 4.1666666667%;
+  }
+  .col-lg-2 {
+    width: 8.3333333333%;
+  }
+  .col-lg-3 {
+    width: 12.5%;
+  }
+  .col-lg-4 {
+    width: 16.6666666667%;
+  }
+  .col-lg-5 {
+    width: 20.8333333333%;
+  }
+  .col-lg-6 {
+    width: 25%;
+  }
+  .col-lg-7 {
+    width: 29.1666666667%;
+  }
+  .col-lg-8 {
+    width: 33.3333333333%;
+  }
+  .col-lg-9 {
+    width: 37.5%;
+  }
+  .col-lg-10 {
+    width: 41.6666666667%;
+  }
+  .col-lg-11 {
+    width: 45.8333333333%;
+  }
+  .col-lg-12, #footer #contact {
+    width: 50%;
+  }
+  .col-lg-13 {
+    width: 54.1666666667%;
+  }
+  .col-lg-14 {
+    width: 58.3333333333%;
+  }
+  .col-lg-15 {
+    width: 62.5%;
+  }
+  .col-lg-16 {
+    width: 66.6666666667%;
+  }
+  .col-lg-17 {
+    width: 70.8333333333%;
+  }
+  .col-lg-18 {
+    width: 75%;
+  }
+  .col-lg-19 {
+    width: 79.1666666667%;
+  }
+  .col-lg-20 {
+    width: 83.3333333333%;
+  }
+  .col-lg-21 {
+    width: 87.5%;
+  }
+  .col-lg-22 {
+    width: 91.6666666667%;
+  }
+  .col-lg-23 {
+    width: 95.8333333333%;
+  }
+  .col-lg-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container,
+.container-xl {
+    max-width: 1140px;
+  }
+  .col-xl-1 {
+    width: 4.1666666667%;
+  }
+  .col-xl-2 {
+    width: 8.3333333333%;
+  }
+  .col-xl-3 {
+    width: 12.5%;
+  }
+  .col-xl-4 {
+    width: 16.6666666667%;
+  }
+  .col-xl-5 {
+    width: 20.8333333333%;
+  }
+  .col-xl-6 {
+    width: 25%;
+  }
+  .col-xl-7 {
+    width: 29.1666666667%;
+  }
+  .col-xl-8 {
+    width: 33.3333333333%;
+  }
+  .col-xl-9 {
+    width: 37.5%;
+  }
+  .col-xl-10, #footer #contact {
+    width: 41.6666666667%;
+  }
+  .col-xl-11 {
+    width: 45.8333333333%;
+  }
+  .col-xl-12 {
+    width: 50%;
+  }
+  .col-xl-13 {
+    width: 54.1666666667%;
+  }
+  .col-xl-14 {
+    width: 58.3333333333%;
+  }
+  .col-xl-15 {
+    width: 62.5%;
+  }
+  .col-xl-16 {
+    width: 66.6666666667%;
+  }
+  .col-xl-17 {
+    width: 70.8333333333%;
+  }
+  .col-xl-18 {
+    width: 75%;
+  }
+  .col-xl-19 {
+    width: 79.1666666667%;
+  }
+  .col-xl-20 {
+    width: 83.3333333333%;
+  }
+  .col-xl-21 {
+    width: 87.5%;
+  }
+  .col-xl-22 {
+    width: 91.6666666667%;
+  }
+  .col-xl-23 {
+    width: 95.8333333333%;
+  }
+  .col-xl-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container,
+.container-xxl {
+    max-width: 1320px;
+  }
+  .col-xxl-1 {
+    width: 4.1666666667%;
+  }
+  .col-xxl-2 {
+    width: 8.3333333333%;
+  }
+  .col-xxl-3 {
+    width: 12.5%;
+  }
+  .col-xxl-4 {
+    width: 16.6666666667%;
+  }
+  .col-xxl-5 {
+    width: 20.8333333333%;
+  }
+  .col-xxl-6 {
+    width: 25%;
+  }
+  .col-xxl-7 {
+    width: 29.1666666667%;
+  }
+  .col-xxl-8, #footer #contact {
+    width: 33.3333333333%;
+  }
+  .col-xxl-9 {
+    width: 37.5%;
+  }
+  .col-xxl-10 {
+    width: 41.6666666667%;
+  }
+  .col-xxl-11 {
+    width: 45.8333333333%;
+  }
+  .col-xxl-12 {
+    width: 50%;
+  }
+  .col-xxl-13 {
+    width: 54.1666666667%;
+  }
+  .col-xxl-14 {
+    width: 58.3333333333%;
+  }
+  .col-xxl-15 {
+    width: 62.5%;
+  }
+  .col-xxl-16 {
+    width: 66.6666666667%;
+  }
+  .col-xxl-17 {
+    width: 70.8333333333%;
+  }
+  .col-xxl-18 {
+    width: 75%;
+  }
+  .col-xxl-19 {
+    width: 79.1666666667%;
+  }
+  .col-xxl-20 {
+    width: 83.3333333333%;
+  }
+  .col-xxl-21 {
+    width: 87.5%;
+  }
+  .col-xxl-22 {
+    width: 91.6666666667%;
+  }
+  .col-xxl-23 {
+    width: 95.8333333333%;
+  }
+  .col-xxl-24 {
+    width: 100%;
+  }
+}
+#footer .social a {
   --light: #ccc;
   margin: 0.5rem;
   border-radius: 0.5rem;
@@ -196,7 +609,7 @@
   background: var(--light) var(--bg) center/2.25rem no-repeat;
   transition: all 0.25s ease;
 }
-.icon:hover, #footer .social a:hover {
+#footer .social a:hover {
   --light: #fefefe;
   box-shadow: 0 0.2rem 0.5rem #333;
   transform: scale(1.25) translateY(-0.5rem) rotate(360deg);
@@ -206,13 +619,64 @@
   margin: 0;
   position: relative;
   padding: 1rem;
+  background-color: rgba(var(--dark), 0.5);
+}
+#footer .map.cover.active, #footer .map.cover.active + button.map {
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+}
+#footer .map.icon-max::before {
+  content: "+";
+}
+#footer .map.icon-min::before {
+  content: "-";
+}
+#footer .map:is(button) {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 #footer #contact {
-  margin: 1rem auto;
+  margin: 3rem auto 1rem;
   border-radius: 0.5rem;
   padding: 1.5rem 1rem;
   display: grid;
   background-color: rgb(var(--light), 0.9);
+}
+#footer #contact input,
+#footer #contact textarea,
+#footer #contact select,
+#footer #contact button {
+  border-radius: 0.25rem;
+  border: 1.5px solid;
+  padding: 0.25rem 0.5rem;
+  outline: none;
+  box-shadow: 0 0 0.5rem var(--shadow);
+  transition: all 0.5s ease-out;
+}
+#footer #contact input:focus,
+#footer #contact textarea:focus,
+#footer #contact select:focus,
+#footer #contact button:focus {
+  transform: scale(1.05);
+}
+#footer #contact input:focus + .valid,
+#footer #contact textarea:focus + .valid,
+#footer #contact select:focus + .valid,
+#footer #contact button:focus + .valid {
+  max-height: 640px;
+}
+#footer #contact .btn {
+  margin: 0.2rem 0 0.5rem auto;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
+#footer #contact .valid {
+  margin: 0.25rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease-out;
 }
 #footer .social {
   display: flex;

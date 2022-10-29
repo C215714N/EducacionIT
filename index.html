@@ -134,7 +134,7 @@
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <button class="map icon-max"></button>
+        <button class="btn map icon-max" title="ver/ocultar mapa"></button>
         <!-- Formulario Consultas -->
         <form action="" id="contact">
             <h2>Realiza tu Consulta</h2>
@@ -145,6 +145,7 @@
                 type="text" 
                 maxlength="50"
                 pattern="[a-z A-Z]{3,50}"
+                placeholder="Cristian Racedo"
                 required>
             <div class="valid">
                 Ingrese su nombre solamente con letras, el mismo debe poseer entre 3 y 50 caracteres
@@ -155,6 +156,7 @@
                 name="email" 
                 type="email" 
                 minlength="8" 
+                placeholder="cristiandracedo@hotmail.com"
                 required>
             <div class="valid">
                 Ingrese una direccion valida con al menos 8 caracteres, que respete el formato "usuario@servidor"
@@ -165,6 +167,7 @@
                 id="contact_consult" 
                 minlength="20" 
                 maxlength="200" 
+                placeholder="Buenas, mi consulta es..."
                 required></textarea>
             <button class="btn">enviar</button>
         </form>

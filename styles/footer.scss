@@ -14,7 +14,7 @@
         dark #333,
         danger #c33,
         warning #da3,
-        success #3c6,
+        success #284,
         info #36d;
     $path: '../assets/icon';
     $social: 
@@ -25,6 +25,13 @@
         twitter,
         whatsapp,
         youtube;
+    $col: 24;
+    $media:
+        sm  576px   540px,  
+        md  768px   720px,
+        lg  992px   960px,
+        xl  1200px  1140px,
+        xxl 1400px  1320px;
 // Mixins 
 @mixin normalize($m:0, $p:0, $b:0, $ba: border, $ma: margin, $pa: padding){
     #{$ma}: $m;
@@ -38,14 +45,26 @@
     .#{$ico}{
         --bg: url('#{$path}/#{$ico}.svg');
 } }
-/*Colores de Atributos*/
+/* Colores de Atributos */
 @each $prop, $attr in $attributes{
     @each $name, $value in $colors{
     .#{$prop}-#{$name}{ 
         #{$attr}: $value;
 } } }
-// Componentes
-.icon{
+/* Sistema de Grillas Responsive */
+@each $vn, $vw, $max in $media{
+@media screen and (min-width: $vw){
+    .container,
+    .container-#{$vn}{
+        max-width: $max;
+    }
+    @for $i from 1 through $col{
+    .col-#{$vn}-#{$i}{
+        width: percentage($i/$col);
+} } } }
+
+// Componentes Ocultos
+%icon{
     --light: #ccc;
     @include normalize(.5rem, 1.5rem, .5rem, border-radius);
     background: var(--light) var(--bg) center/2.25rem no-repeat;
@@ -63,18 +82,73 @@
 // Nesting
 #footer{
     @include normalize(0, 1rem, relative, position);
+    background-color: rgba(var(--dark), .5);
     .map{
-
+        &.cover{
+            &.active,
+            &.active + button.map{
+                position: fixed;
+                z-index: 2;
+                opacity: .9;
+            }
+        }
+        &.icon{
+            &-max::before{
+                content: '+'
+            }
+            &-min::before{
+                content: '-'
+            }
+        }
+        &:is(button){
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
     }
     #contact{
-        @include normalize(1rem auto, 1.5rem 1rem, .5rem, border-radius);
+        @include normalize(3rem auto 1rem, 1.5rem 1rem, .5rem, border-radius);
+        @extend 
+            .container-md, 
+            .col-sm-22, 
+            .col-md-18, 
+            .col-lg-12, 
+            .col-xl-10, 
+            .col-xxl-8;
         display: grid;
         background-color: rgb(var(--light), .9);
-        .btn{
-            @extend .text-light,.border-primary, .bg-primary;
-            &:hover{
-                @extend .text-primary, .bg-light;
+        input,
+        textarea,
+        select,
+        button{
+            @include normalize(.25rem, .25rem .5rem, 1.5px solid, $ma:border-radius);
+            outline: none;
+            box-shadow: 0 0 .5rem var(--shadow);
+            transition: all .5s ease-out;
+            &:focus{
+                @extend .shadow-dark;
+                transform: scale(1.05);
+                & + .valid{ max-height: 640px; }
             }
+            &:valid{
+                @extend .border-success, .shadow-success;
+                & + .valid{ @extend .text-success; }
+            }
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger, .shadow-danger;
+                & + .valid{ @extend .text-danger; }
+            }
+        }
+        .btn{
+            @include normalize(.2rem 0 .5rem auto, .5rem 1rem, uppercase, text-transform);
+            @extend .text-light,.border-primary, .bg-primary, .shadow-primary;
+            &:hover{
+                @extend .text-primary, .bg-light, .shadow-primary;
+            }
+        }
+        .valid{
+            @include normalize(.25rem, 0, hidden, overflow, $pa: max-height);
+            transition: all .5s ease-out;
         }
     }
     .social{
@@ -82,7 +156,7 @@
         justify-content: center;
         flex-wrap: wrap;
         a{
-            @extend .icon;
+            @extend %icon;
         }
     }
     .link{
