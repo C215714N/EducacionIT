@@ -94,16 +94,22 @@
         }
         &.icon{
             &-max::before{
-                content: '+'
+                content: '+';
             }
             &-min::before{
-                content: '-'
+                content: '-';
             }
         }
         &:is(button){
+            @extend  .text-info, .bg-light, .border-info;
+            min-width: 2rem;
+            font-size: 1.25rem;
             position: absolute;
             top: 1rem;
             right: 1rem;
+            &:hover{
+                @extend .text-light, .bg-info;
+            }
         }
     }
     #contact{

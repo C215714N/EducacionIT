@@ -36,7 +36,7 @@
   color: #c36;
 }
 
-.text-light, #footer #contact .btn {
+.text-light, #footer #contact .btn, #footer .map:is(button):hover {
   color: #eee;
 }
 
@@ -62,7 +62,7 @@
   color: #284;
 }
 
-.text-info {
+.text-info, #footer .map:is(button) {
   color: #36d;
 }
 
@@ -74,7 +74,7 @@
   background-color: #c36;
 }
 
-.bg-light, #footer #contact .btn:hover {
+.bg-light, #footer #contact .btn:hover, #footer .map:is(button) {
   background-color: #eee;
 }
 
@@ -94,7 +94,7 @@
   background-color: #284;
 }
 
-.bg-info {
+.bg-info, #footer .map:is(button):hover {
   background-color: #36d;
 }
 
@@ -132,7 +132,7 @@
   border-color: #284;
 }
 
-.border-info {
+.border-info, #footer .map:is(button) {
   border-color: #36d;
 }
 
@@ -633,6 +633,8 @@
   content: "-";
 }
 #footer .map:is(button) {
+  min-width: 2rem;
+  font-size: 1.25rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
