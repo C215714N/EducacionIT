@@ -28,7 +28,39 @@
 }
 
 /*Colores de Atributos*/
-.bg-primary {
+.text-primary, #footer #contact .btn:hover {
+  color: #448;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-light, #footer #contact .btn {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-info {
+  color: #36d;
+}
+
+.bg-primary, #footer #contact .btn {
   background-color: #448;
 }
 
@@ -36,7 +68,7 @@
   background-color: #c36;
 }
 
-.bg-light {
+.bg-light, #footer #contact .btn:hover {
   background-color: #eee;
 }
 
@@ -60,17 +92,114 @@
   background-color: #36d;
 }
 
+.border-primary, #footer #contact .btn {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark {
+  border-color: #333;
+}
+
+.border-danger {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success {
+  border-color: #3c6;
+}
+
+.border-info {
+  border-color: #36d;
+}
+
+.shadow-primary {
+  --shadow: #448;
+}
+
+.shadow-secondary {
+  --shadow: #c36;
+}
+
+.shadow-light {
+  --shadow: #eee;
+}
+
+.shadow-dark {
+  --shadow: #333;
+}
+
+.shadow-danger {
+  --shadow: #c33;
+}
+
+.shadow-warning {
+  --shadow: #da3;
+}
+
+.shadow-success {
+  --shadow: #3c6;
+}
+
+.shadow-info {
+  --shadow: #36d;
+}
+
+.shade-primary {
+  --shade: #448;
+}
+
+.shade-secondary {
+  --shade: #c36;
+}
+
+.shade-light {
+  --shade: #eee;
+}
+
+.shade-dark {
+  --shade: #333;
+}
+
+.shade-danger {
+  --shade: #c33;
+}
+
+.shade-warning {
+  --shade: #da3;
+}
+
+.shade-success {
+  --shade: #3c6;
+}
+
+.shade-info {
+  --shade: #36d;
+}
+
 .icon, #footer .social a {
   --light: #ccc;
-  margin: 0.25rem;
+  margin: 0.5rem;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  background: var(--light) var(--bg) center/2rem no-repeat;
+  background: var(--light) var(--bg) center/2.25rem no-repeat;
+  transition: all 0.25s ease;
 }
 .icon:hover, #footer .social a:hover {
-  --light: #eee;
-  background-size: 2.5rem;
+  --light: #fefefe;
   box-shadow: 0 0.2rem 0.5rem #333;
+  transform: scale(1.25) translateY(-0.5rem) rotate(360deg);
 }
 
 #footer {

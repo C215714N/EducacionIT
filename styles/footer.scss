@@ -1,6 +1,12 @@
 // Variables
     $primary: var(--first);
     $secondary: var(--second);
+    $attributes:
+        text color,
+        bg background-color,
+        border border-color,
+        shadow --shadow,
+        shade --shade;
     $colors: 
         primary #448,
         secondary #c36,
@@ -33,20 +39,24 @@
         --bg: url('#{$path}/#{$ico}.svg');
 } }
 /*Colores de Atributos*/
-@each $name, $value in $colors{
-    .bg-#{$name}{
-        background-color: $value;
-    }
-}
+@each $prop, $attr in $attributes{
+    @each $name, $value in $colors{
+    .#{$prop}-#{$name}{ 
+        #{$attr}: $value;
+} } }
 // Componentes
 .icon{
     --light: #ccc;
-    @include normalize(.25rem, 1.5rem, .5rem, border-radius);
-    background: var(--light) var(--bg) center/2rem no-repeat;
+    @include normalize(.5rem, 1.5rem, .5rem, border-radius);
+    background: var(--light) var(--bg) center/2.25rem no-repeat;
+    transition: all .25s ease;
     &:hover{
-        --light: #eee;
-        background-size: 2.5rem;
+        --light: #fefefe;
         box-shadow: 0 .2rem .5rem #333;
+        transform: 
+            scale(1.25)
+            translateY(-.5rem)
+            rotate(360deg);
     }
 }
 
@@ -60,6 +70,12 @@
         @include normalize(1rem auto, 1.5rem 1rem, .5rem, border-radius);
         display: grid;
         background-color: rgb(var(--light), .9);
+        .btn{
+            @extend .text-light,.border-primary, .bg-primary;
+            &:hover{
+                @extend .text-primary, .bg-light;
+            }
+        }
     }
     .social{
         display: flex;
