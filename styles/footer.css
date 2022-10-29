@@ -1,4 +1,70 @@
-.bg-primary {
+/* social media*/
+.facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  --bg: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.whatsapp {
+  --bg: url("../assets/icon/whatsapp.svg");
+}
+
+.youtube {
+  --bg: url("../assets/icon/youtube.svg");
+}
+
+/* Properties */
+.text-primary, #footer #contact .btn {
+  color: #448;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-light, #footer #contact .btn:hover {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-success, #footer #contact textarea:focus:valid + .validation,
+#footer #contact select:focus:valid + .validation,
+#footer #contact input:focus:valid + .validation {
+  color: #3c6;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-danger, #footer #contact textarea:focus:not(:placeholder-shown):invalid + .validation,
+#footer #contact select:focus:not(:placeholder-shown):invalid + .validation,
+#footer #contact input:focus:not(:placeholder-shown):invalid + .validation {
+  color: #c33;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.bg-primary, #footer #contact .btn:hover {
   background-color: #448;
 }
 
@@ -6,7 +72,7 @@
   background-color: #c36;
 }
 
-.bg-light {
+.bg-light, #footer #contact {
   background-color: #eee;
 }
 
@@ -30,6 +96,498 @@
   background-color: #36c;
 }
 
+.border-primary, #footer #contact .btn {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark {
+  border-color: #333;
+}
+
+.border-success, #footer #contact textarea:focus:valid,
+#footer #contact select:focus:valid,
+#footer #contact input:focus:valid {
+  border-color: #3c6;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-danger, #footer #contact textarea:focus:not(:placeholder-shown):invalid,
+#footer #contact select:focus:not(:placeholder-shown):invalid,
+#footer #contact input:focus:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+.shadow-primary {
+  --shadow: #448;
+}
+
+.shadow-secondary {
+  --shadow: #c36;
+}
+
+.shadow-light {
+  --shadow: #eee;
+}
+
+.shadow-dark {
+  --shadow: #333;
+}
+
+.shadow-success {
+  --shadow: #3c6;
+}
+
+.shadow-warning {
+  --shadow: #da3;
+}
+
+.shadow-danger {
+  --shadow: #c33;
+}
+
+.shadow-info {
+  --shadow: #36c;
+}
+
+.shade-primary {
+  --shade: #448;
+}
+
+.shade-secondary {
+  --shade: #c36;
+}
+
+.shade-light {
+  --shade: #eee;
+}
+
+.shade-dark {
+  --shade: #333;
+}
+
+.shade-success {
+  --shade: #3c6;
+}
+
+.shade-warning {
+  --shade: #da3;
+}
+
+.shade-danger {
+  --shade: #c33;
+}
+
+.shade-info {
+  --shade: #36c;
+}
+
+/* Responsive Grid System */
+@media screen and (min-width: 576px) {
+  .container,
+.container-sm,
+#footer #contact {
+    max-width: 540px;
+  }
+  .col-sm-1 {
+    width: 4.1666666667%;
+  }
+  .col-sm-2 {
+    width: 8.3333333333%;
+  }
+  .col-sm-3 {
+    width: 12.5%;
+  }
+  .col-sm-4 {
+    width: 16.6666666667%;
+  }
+  .col-sm-5 {
+    width: 20.8333333333%;
+  }
+  .col-sm-6 {
+    width: 25%;
+  }
+  .col-sm-7 {
+    width: 29.1666666667%;
+  }
+  .col-sm-8 {
+    width: 33.3333333333%;
+  }
+  .col-sm-9 {
+    width: 37.5%;
+  }
+  .col-sm-10 {
+    width: 41.6666666667%;
+  }
+  .col-sm-11 {
+    width: 45.8333333333%;
+  }
+  .col-sm-12 {
+    width: 50%;
+  }
+  .col-sm-13 {
+    width: 54.1666666667%;
+  }
+  .col-sm-14 {
+    width: 58.3333333333%;
+  }
+  .col-sm-15 {
+    width: 62.5%;
+  }
+  .col-sm-16 {
+    width: 66.6666666667%;
+  }
+  .col-sm-17 {
+    width: 70.8333333333%;
+  }
+  .col-sm-18 {
+    width: 75%;
+  }
+  .col-sm-19 {
+    width: 79.1666666667%;
+  }
+  .col-sm-20 {
+    width: 83.3333333333%;
+  }
+  .col-sm-21 {
+    width: 87.5%;
+  }
+  .col-sm-22 {
+    width: 91.6666666667%;
+  }
+  .col-sm-23 {
+    width: 95.8333333333%;
+  }
+  .col-sm-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container,
+.container-md {
+    max-width: 720px;
+  }
+  .col-md-1 {
+    width: 4.1666666667%;
+  }
+  .col-md-2 {
+    width: 8.3333333333%;
+  }
+  .col-md-3 {
+    width: 12.5%;
+  }
+  .col-md-4 {
+    width: 16.6666666667%;
+  }
+  .col-md-5 {
+    width: 20.8333333333%;
+  }
+  .col-md-6 {
+    width: 25%;
+  }
+  .col-md-7 {
+    width: 29.1666666667%;
+  }
+  .col-md-8 {
+    width: 33.3333333333%;
+  }
+  .col-md-9 {
+    width: 37.5%;
+  }
+  .col-md-10 {
+    width: 41.6666666667%;
+  }
+  .col-md-11 {
+    width: 45.8333333333%;
+  }
+  .col-md-12 {
+    width: 50%;
+  }
+  .col-md-13 {
+    width: 54.1666666667%;
+  }
+  .col-md-14 {
+    width: 58.3333333333%;
+  }
+  .col-md-15 {
+    width: 62.5%;
+  }
+  .col-md-16 {
+    width: 66.6666666667%;
+  }
+  .col-md-17 {
+    width: 70.8333333333%;
+  }
+  .col-md-18 {
+    width: 75%;
+  }
+  .col-md-19 {
+    width: 79.1666666667%;
+  }
+  .col-md-20 {
+    width: 83.3333333333%;
+  }
+  .col-md-21 {
+    width: 87.5%;
+  }
+  .col-md-22 {
+    width: 91.6666666667%;
+  }
+  .col-md-23 {
+    width: 95.8333333333%;
+  }
+  .col-md-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container,
+.container-lg {
+    max-width: 960px;
+  }
+  .col-lg-1 {
+    width: 4.1666666667%;
+  }
+  .col-lg-2 {
+    width: 8.3333333333%;
+  }
+  .col-lg-3 {
+    width: 12.5%;
+  }
+  .col-lg-4 {
+    width: 16.6666666667%;
+  }
+  .col-lg-5 {
+    width: 20.8333333333%;
+  }
+  .col-lg-6 {
+    width: 25%;
+  }
+  .col-lg-7 {
+    width: 29.1666666667%;
+  }
+  .col-lg-8 {
+    width: 33.3333333333%;
+  }
+  .col-lg-9 {
+    width: 37.5%;
+  }
+  .col-lg-10 {
+    width: 41.6666666667%;
+  }
+  .col-lg-11 {
+    width: 45.8333333333%;
+  }
+  .col-lg-12 {
+    width: 50%;
+  }
+  .col-lg-13 {
+    width: 54.1666666667%;
+  }
+  .col-lg-14 {
+    width: 58.3333333333%;
+  }
+  .col-lg-15 {
+    width: 62.5%;
+  }
+  .col-lg-16 {
+    width: 66.6666666667%;
+  }
+  .col-lg-17 {
+    width: 70.8333333333%;
+  }
+  .col-lg-18 {
+    width: 75%;
+  }
+  .col-lg-19 {
+    width: 79.1666666667%;
+  }
+  .col-lg-20 {
+    width: 83.3333333333%;
+  }
+  .col-lg-21 {
+    width: 87.5%;
+  }
+  .col-lg-22 {
+    width: 91.6666666667%;
+  }
+  .col-lg-23 {
+    width: 95.8333333333%;
+  }
+  .col-lg-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container,
+.container-xl {
+    max-width: 1140px;
+  }
+  .col-xl-1 {
+    width: 4.1666666667%;
+  }
+  .col-xl-2 {
+    width: 8.3333333333%;
+  }
+  .col-xl-3 {
+    width: 12.5%;
+  }
+  .col-xl-4 {
+    width: 16.6666666667%;
+  }
+  .col-xl-5 {
+    width: 20.8333333333%;
+  }
+  .col-xl-6 {
+    width: 25%;
+  }
+  .col-xl-7 {
+    width: 29.1666666667%;
+  }
+  .col-xl-8 {
+    width: 33.3333333333%;
+  }
+  .col-xl-9 {
+    width: 37.5%;
+  }
+  .col-xl-10 {
+    width: 41.6666666667%;
+  }
+  .col-xl-11 {
+    width: 45.8333333333%;
+  }
+  .col-xl-12 {
+    width: 50%;
+  }
+  .col-xl-13 {
+    width: 54.1666666667%;
+  }
+  .col-xl-14 {
+    width: 58.3333333333%;
+  }
+  .col-xl-15 {
+    width: 62.5%;
+  }
+  .col-xl-16 {
+    width: 66.6666666667%;
+  }
+  .col-xl-17 {
+    width: 70.8333333333%;
+  }
+  .col-xl-18 {
+    width: 75%;
+  }
+  .col-xl-19 {
+    width: 79.1666666667%;
+  }
+  .col-xl-20 {
+    width: 83.3333333333%;
+  }
+  .col-xl-21 {
+    width: 87.5%;
+  }
+  .col-xl-22 {
+    width: 91.6666666667%;
+  }
+  .col-xl-23 {
+    width: 95.8333333333%;
+  }
+  .col-xl-24 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container,
+.container-xxl {
+    max-width: 1320px;
+  }
+  .col-xxl-1 {
+    width: 4.1666666667%;
+  }
+  .col-xxl-2 {
+    width: 8.3333333333%;
+  }
+  .col-xxl-3 {
+    width: 12.5%;
+  }
+  .col-xxl-4 {
+    width: 16.6666666667%;
+  }
+  .col-xxl-5 {
+    width: 20.8333333333%;
+  }
+  .col-xxl-6 {
+    width: 25%;
+  }
+  .col-xxl-7 {
+    width: 29.1666666667%;
+  }
+  .col-xxl-8 {
+    width: 33.3333333333%;
+  }
+  .col-xxl-9 {
+    width: 37.5%;
+  }
+  .col-xxl-10 {
+    width: 41.6666666667%;
+  }
+  .col-xxl-11 {
+    width: 45.8333333333%;
+  }
+  .col-xxl-12 {
+    width: 50%;
+  }
+  .col-xxl-13 {
+    width: 54.1666666667%;
+  }
+  .col-xxl-14 {
+    width: 58.3333333333%;
+  }
+  .col-xxl-15 {
+    width: 62.5%;
+  }
+  .col-xxl-16 {
+    width: 66.6666666667%;
+  }
+  .col-xxl-17 {
+    width: 70.8333333333%;
+  }
+  .col-xxl-18 {
+    width: 75%;
+  }
+  .col-xxl-19 {
+    width: 79.1666666667%;
+  }
+  .col-xxl-20 {
+    width: 83.3333333333%;
+  }
+  .col-xxl-21 {
+    width: 87.5%;
+  }
+  .col-xxl-22 {
+    width: 91.6666666667%;
+  }
+  .col-xxl-23 {
+    width: 95.8333333333%;
+  }
+  .col-xxl-24 {
+    width: 100%;
+  }
+}
 .icon, #footer .social a {
   --light: #ccc;
   margin: 0.25rem;
@@ -37,11 +595,14 @@
   padding: 0.5rem;
   min-width: 3rem;
   min-height: 3rem;
-  background-color: var(--light);
+  background: var(--light) var(--bg) center/2rem no-repeat;
+  transition: all 0.25s ease-out;
 }
 .icon:hover, #footer .social a:hover {
   --light: #eee;
+  background-size: 2.25rem;
   box-shadow: 0 0 0.5rem var(--dark);
+  transform: rotate(360deg) translateY(-0.5rem);
 }
 
 .center, #footer .social, #footer #contact {
@@ -60,26 +621,34 @@
   padding: 1rem;
 }
 #footer #contact {
-  max-width: 720px;
-  background-color: var(--light);
+  display: grid;
 }
-#footer #contact textarea:focus + .valid,
-#footer #contact select:focus + .valid,
-#footer #contact input:focus + .valid {
+#footer #contact textarea,
+#footer #contact select,
+#footer #contact input {
+  outline: none;
+  border: 1px solid;
+  padding: 0.25rem 0.5rem;
+}
+#footer #contact textarea:focus + .validation,
+#footer #contact select:focus + .validation,
+#footer #contact input:focus + .validation {
   display: block;
 }
-#footer #contact textarea:focus:valid,
-#footer #contact select:focus:valid,
-#footer #contact input:focus:valid {
-  color: green;
+#footer #contact label {
+  margin-top: 0.5rem;
 }
-#footer #contact textarea:focus:invalid,
-#footer #contact select:focus:invalid,
-#footer #contact input:focus:invalid {
-  color: red;
-}
-#footer #contact .valid {
+#footer #contact .validation {
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 0.25rem;
   display: none;
+}
+#footer #contact .btn {
+  margin: 0.25rem 0 0.5rem auto;
+  border: 1px solid;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
 }
 #footer .social {
   max-width: 640px;

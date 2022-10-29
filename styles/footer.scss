@@ -11,7 +11,27 @@
         warning #da3,
         danger  #c33,
         info #36c;
-    
+    $attributes: 
+        text color,
+        bg background-color,
+        border border-color,
+        shadow --shadow,
+        shade --shade;
+    $path: '../assets/icon';
+    $social: 
+        'facebook',
+        'github',
+        'instagram',
+        'linkedin',
+        'twitter',
+        'whatsapp',
+        'youtube';
+    $media: 
+        sm  576px   540px,
+        md  768px   720px,
+        lg  992px   960px,
+        xl  1200px  1140px,
+        xxl 1400px  1320px;
 // Mixins
 @mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma: margin, $pa:padding){
     #{$ma}:$m;
@@ -19,22 +39,42 @@
     #{$pa}:$p;
 }
 // Loops
-@each $cn,$cv in $colors{
-    .bg-#{$cn}{
-        background-color: $cv;
-    }
+/* social media*/
+@each $ico in $social{
+    .#{$ico}{ --bg: url('#{$path}/#{$ico}.svg');} 
 }
-
+/* Properties */ 
+@each $prop, $attr in $attributes{
+    @each $name, $value in $colors{
+    .#{$prop}-#{$name}{ #{$attr}: $value } 
+} }
+/* Responsive Grid System */
+@each $vn, $vw, $max in $media{
+@media screen and (min-width: $vw){
+    .container,
+    .container-#{$vn}{
+        max-width: $max;
+    }
+    @for $i from 1 through $col{
+        .col-#{$vn}-#{$i}{
+            width: percentage($i / $col);
+    } }
+} }
 // Componentes
 .icon{
     --light: #ccc;
     @include normalize(.25rem, .5rem, .5rem, border-radius);
     min-width: 3rem;
     min-height: 3rem;
-    background-color: var(--light);
+    background: var(--light) var(--bg) center/2rem no-repeat;
+    transition: all .25s ease-out;
     &:hover{
         --light: #eee;
+        background-size: 2.25rem;
         box-shadow: 0 0 .5rem var(--dark);
+        transform: 
+            rotate(360deg)
+            translateY(-.5rem);
     }
 }
 .center{
@@ -55,26 +95,40 @@
 
     }
     #contact{
-        @extend .center, .shadow;
-        max-width: 720px;
-        background-color: var(--light);
+        @extend .container-sm, .center, .shadow, .bg-light;
+        display: grid;
         textarea,
         select,
         input{
+            @include normalize(none, .25rem .5rem, 1px solid, $ma: outline);
             &:focus{
-                & + .valid{
+                & + .validation{
                     display: block;
                 }
                 &:valid{
-                    color: green;
+                    @extend .border-success;
+                    & + .validation{ @extend .text-success; }
                 }
-                &:invalid{
-                    color: red;
+                &:not(:placeholder-shown):invalid{
+                    @extend .border-danger;
+                    & + .validation{ @extend .text-danger; }
                 }
             }
         }
-        .valid{
+        label{
+            margin-top: .5rem;
+        }
+        .validation{
+            @include normalize(0, .25rem,.8rem, font-size);
             display: none;
+        }
+        .btn{
+            @include normalize(.25rem 0 .5rem auto, .25rem 1rem, 1px solid);
+            @extend .text-primary, .border-primary;
+            text-transform: uppercase;
+            &:hover{
+                @extend .text-light, .bg-primary;
+            }
         }
     }
     .social{
