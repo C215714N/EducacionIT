@@ -1,0 +1,94 @@
+.bg-primary {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.icon, #footer .social a {
+  --light: #ccc;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  background-color: var(--light);
+}
+.icon:hover, #footer .social a:hover {
+  --light: #eee;
+  box-shadow: 0 0 0.5rem var(--dark);
+}
+
+.center, #footer .social, #footer #contact {
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.shadow, #footer #contact {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+#footer {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+}
+#footer #contact {
+  max-width: 720px;
+  background-color: var(--light);
+}
+#footer #contact textarea:focus + .valid,
+#footer #contact select:focus + .valid,
+#footer #contact input:focus + .valid {
+  display: block;
+}
+#footer #contact textarea:focus:valid,
+#footer #contact select:focus:valid,
+#footer #contact input:focus:valid {
+  color: green;
+}
+#footer #contact textarea:focus:invalid,
+#footer #contact select:focus:invalid,
+#footer #contact input:focus:invalid {
+  color: red;
+}
+#footer #contact .valid {
+  display: none;
+}
+#footer .social {
+  max-width: 640px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#footer .social h2 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=footer.css.map */

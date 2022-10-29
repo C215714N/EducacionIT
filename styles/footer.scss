@@ -1,0 +1,96 @@
+// Variables
+    $primary: var(--first);
+    $secondary: var(--second);
+    $col: 24;
+    $colors: 
+        primary #448,
+        secondary #c36,
+        light #eee,
+        dark #333,
+        success  #3c6,
+        warning #da3,
+        danger  #c33,
+        info #36c;
+    
+// Mixins
+@mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma: margin, $pa:padding){
+    #{$ma}:$m;
+    #{$ba}:$b;
+    #{$pa}:$p;
+}
+// Loops
+@each $cn,$cv in $colors{
+    .bg-#{$cn}{
+        background-color: $cv;
+    }
+}
+
+// Componentes
+.icon{
+    --light: #ccc;
+    @include normalize(.25rem, .5rem, .5rem, border-radius);
+    min-width: 3rem;
+    min-height: 3rem;
+    background-color: var(--light);
+    &:hover{
+        --light: #eee;
+        box-shadow: 0 0 .5rem var(--dark);
+    }
+}
+.center{
+    @include normalize(1rem auto, 1rem, .5rem, border-radius);
+}
+.shadow{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.12), 
+                0 8px 8px rgba(0,0,0,0.12),
+                0 16px 16px rgba(0,0,0,0.12);
+    
+}
+// Nesting
+#footer{
+    @include normalize($p:1rem);
+    .map{
+
+    }
+    #contact{
+        @extend .center, .shadow;
+        max-width: 720px;
+        background-color: var(--light);
+        textarea,
+        select,
+        input{
+            &:focus{
+                & + .valid{
+                    display: block;
+                }
+                &:valid{
+                    color: green;
+                }
+                &:invalid{
+                    color: red;
+                }
+            }
+        }
+        .valid{
+            display: none;
+        }
+    }
+    .social{
+        @extend .center;
+        max-width: 640px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h2{
+            width: 100%;
+        }
+        a{
+            @extend .icon;
+        }
+    }
+    .copy{
+
+    }
+}
