@@ -9,7 +9,10 @@
     gallery = d.querySelectorAll('.slide li'),
     indicators = d.querySelectorAll('.indicators button'),
     prev = d.querySelector('.icon-prev'),
-    next = d.querySelector('.icon-next')
+    next = d.querySelector('.icon-next'),
+    // Pie de Pagina
+    mapButton = d.querySelector('#footer .btn.map'),
+    mapFrame = d.querySelector('#footer iframe.map')
     ;
 
 // Menu Hamburguesa
@@ -36,6 +39,14 @@ indicators.forEach( (btn, i) => {
         getItem(indicators, i)
     } )
 } )
+
+// Alternar vista de mapa
+mapButton.addEventListener('click', (e) => toggle({
+    tag: mapFrame,
+    trigger: e.target,
+    a: 'icon-max',
+    b: 'icon-min'
+} ) )
 
 // Funciones
 // Alternar Clases
