@@ -11,6 +11,57 @@
             margin: 0;
             font-family: 'century gothic', 'segoe ui', 'calibri', sans-serif;
         }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee;
+            background-color: #3c6; /* RGB: 16.777.216 colores */
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #284;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :Pseudoclass Instancia o caracteristica de un elemento */
+        nav li:hover{
+            background-color: #3a8;
+        }
+        /*Selector de Clases (.class) */
+        .gallery{
+            margin: 8px;
+            padding: 16px;
+            background-color: #aea;
+            text-align: center;
+        }
+        .gallery img{
+            width: 100%;
+            max-width: 320px;
+        }
+        .gallery a{
+            color: #284;
+            text-decoration: none;
+        }
+        .gallery a:hover{
+            color: #142;
+            font-weight: bold;
+        }
+        /* Selector de Id (#id) */
+        #contact{
+            font-weight: bolder;
+            text-shadow: 0 0 8px #142; /* -x+ -y+ blur color */
+        }
     </style>
 </head>
 <body>
