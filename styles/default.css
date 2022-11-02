@@ -95,11 +95,15 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin: 8px auto;
+        margin: 8px auto 24px;
+        border-radius: 0 4px 4px 0; 
+        /* top-lelft top-right bottom-right bottom-left*/
         border-left: 4px solid #e6c;
         padding: 16px;
         background-color: #eee;
         line-height: 1.5;
+        box-shadow: -4px 4px 8px 5px rgb(136, 85, 170, .5);
+        /* -x+ -y+ blur spread color*/
     }
     .overflow-auto{
         flex-wrap: nowrap;
