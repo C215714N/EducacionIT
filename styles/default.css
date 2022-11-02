@@ -63,7 +63,7 @@
         background-color: #e6c;
         background-image: url('../assets/bg/osx-monterrey-light.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top center;
         background-attachment: fixed;
     }
     .header{
@@ -150,7 +150,14 @@
         background-color: #248;
     }
 /* Pie de pagina */
-
+    #footer{
+        padding: 128px 0 0px;
+        background-color: #224;
+        background-image: url('../assets/bg/osx-monterrey-dark.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
     /* Formulario de Contacto */
     #contact{
         max-width: 540px;
@@ -237,4 +244,17 @@
     #footer iframe{
         width: 100%;
         min-height: 320px;
+    }
+    /* Derechos de autor */
+    .copy{
+        margin: 0;
+        padding: 8px 16px;
+        color: #ccc;
+        font-size: 20px;
+        text-align: center;
+    }
+    .copy:hover{
+        cursor: pointer;
+        color: #eee;
+        text-shadow: 0 0 8px #eee;
     }
