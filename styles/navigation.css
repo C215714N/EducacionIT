@@ -87,7 +87,6 @@ nav li{
     nav{
         justify-content: flex-start;
         opacity: 1;
-        gap: 50%;
     }
     nav .btn[class*="menu-"]{
         display: none;
@@ -99,7 +98,6 @@ nav li{
     }
     .menu{
         max-height: 640px;
-        transform: translateX(-55%);
         display: flex;
         gap: .5rem;
     }
@@ -110,5 +108,9 @@ nav li{
 @media screen and (min-width:1400px){
     nav{
         padding: .5rem calc(50vw - 660px);
+        justify-content: space-evenly;
+    }
+    .menu{
+        transform: translate(-8rem);
     }
 }
