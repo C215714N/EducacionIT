@@ -1,3 +1,4 @@
+/* Contenedor de Ejemplos */
 .example{
     position: relative;
     margin: 1rem;
@@ -12,20 +13,22 @@
     bottom: 0;
     width: .25rem;
     background: linear-gradient(var(--first), var(--light), var(--second));
-
 }
+/* Caja de Ejemplos */
 .box{
+    min-width: min(100%, 10rem);
     border-radius: .5rem;
-    padding: .5rem 1.5rem;
+    padding: 1.5rem 2.5rem;
     color: var(--light);
     background-color: var(--first);
     opacity: .8;
     box-shadow: -.2rem .2rem .2rem var(--dark);
     transition: all 2s ease 1s;
 }
+/* Transicion de cambios */
 [class*="transform-"]{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: .5rem;
@@ -34,6 +37,7 @@
 [class*="transform-"]:hover .box{
     transform: translate(0,0)
 }
+/* Transformaciones 2d */
 .transform-2d :first-child{
     transform: translate(-20%, -.5rem);
 }
@@ -49,8 +53,8 @@
 .transform-2d :last-child{
     transform: skewY(30deg);
 }
+/* Transformaciones 3d */
 .transform-3d{
-    min-height: 300px;
     perspective: 300px;
     perspective-origin: top center;
 }
