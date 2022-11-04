@@ -65,7 +65,26 @@
                 type="email"
                 minlength="8"
                 required>
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura HTML</option>
+                <option value="css">Diseño Grafico CSS</option>
+                <option value="js">Logica Programacion JS</option>
+            </select>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                minlength="30"
+                maxlength="200"
+                required></textarea>
             <input type="submit">
+            <div>
+                <input id="i_do" name="contract" type="checkbox">
+                <label for="i_do">Acepto el Contrato</label>
+                <input id="i_dont"name="contract" type="checkbox">
+                <label for="i_dont">Deseo recibir correos</label>
+            </div>
         </form>
         <!-- Redes sociales -->
 
