@@ -82,7 +82,50 @@
     </nav>
     <!-- Contenido -->
     <main>
-        
+        <section>
+            <header>
+                <h2 id="home">Inicio</h2>
+            </header>
+        </section>
+        <section>
+            <header>
+                <h2 id="preprocessor">Preprocesadores</h2>
+            </header>
+        </section>
+        <section>
+            <header>
+                <h2 id="transform">Transformaciones</h2>
+            </header>
+            <p>
+                Efectos que podemos aplicar de manera combinada sobre las etiquetas, funcionan de manera similar a los atributos de <em>position, width, height, entre otros</em>; pero a diferencia de estos los valores se colocan sin comas dentro del atributo <strong>transform</strong>
+            </p>
+            <h3>Transformaciones 2D</h3>
+            <p>
+                Son las mas simples de aplicar, solamente debemos colar los valores en el elemento a modificar y aplican los cambios tomando en cuenta los ejes <em>X e Y</em> y un atributo llamado <em>transform-origin</em>
+            </p>
+            <div class="example transform-2d">
+                <div class="box">translate(x,y)</div>
+                <div class="box">scale(uX,uY)</div>
+                <div class="box">rotate(deg)</div>
+                <div class="box">skewX(deg)</div>
+                <div class="box">skewY(deg)</div>
+            </div>
+            <h3>Transformaciones 3D</h3>
+            <p>
+                A diferencia de los casos anteriores, en este tipo de transformaciones se utiliza de referencia al elemento padre, que debe poseer los atributos <em>perspective y perspective-origin</em> que indican la distancia y el angulo.
+            </p>
+            <div class="example transform-3d">
+                <div class="box">translateZ(d)</div>
+                <div class="box">rotateX(deg)</div>
+                <div class="box">rotateY(deg)</div>
+                <div class="box">perspective</div>
+            </div>
+        </section>
+        <section>
+            <header>
+                <h2 id="animation">Animaciones</h2>
+            </header>
+        </section>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">    
