@@ -47,7 +47,26 @@
         <!-- Mapa de Contacto -->
 
         <!-- Formulario de Contacto -->
-
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                pattern="[A-Za-z]{3,50}"
+                title="Utilice solamente letras"
+                maxlength="50"
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                required>
+            <input type="submit">
+        </form>
         <!-- Redes sociales -->
 
         <!-- Derechos de autor -->
