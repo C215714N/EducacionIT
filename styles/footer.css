@@ -27,6 +27,230 @@
   --bg: url("../assets/icon/youtube.svg");
 }
 
+/* Transitions */
+.ease-1 {
+  transition: all 0.25s ease;
+}
+
+.ease-2 {
+  transition: all 0.5s ease;
+}
+
+.ease-3 {
+  transition: all 0.75s ease;
+}
+
+.ease-4 {
+  transition: all 1s ease;
+}
+
+.ease-5 {
+  transition: all 1.25s ease;
+}
+
+.ease-6 {
+  transition: all 1.5s ease;
+}
+
+.ease-7 {
+  transition: all 1.75s ease;
+}
+
+.ease-8 {
+  transition: all 2s ease;
+}
+
+.ease-9 {
+  transition: all 2.25s ease;
+}
+
+.ease-10 {
+  transition: all 2.5s ease;
+}
+
+.ease-in-1 {
+  transition: all 0.25s ease-in;
+}
+
+.ease-in-2 {
+  transition: all 0.5s ease-in;
+}
+
+.ease-in-3 {
+  transition: all 0.75s ease-in;
+}
+
+.ease-in-4 {
+  transition: all 1s ease-in;
+}
+
+.ease-in-5 {
+  transition: all 1.25s ease-in;
+}
+
+.ease-in-6 {
+  transition: all 1.5s ease-in;
+}
+
+.ease-in-7 {
+  transition: all 1.75s ease-in;
+}
+
+.ease-in-8 {
+  transition: all 2s ease-in;
+}
+
+.ease-in-9 {
+  transition: all 2.25s ease-in;
+}
+
+.ease-in-10 {
+  transition: all 2.5s ease-in;
+}
+
+.ease-out-1 {
+  transition: all 0.25s ease-out;
+}
+
+.ease-out-2 {
+  transition: all 0.5s ease-out;
+}
+
+.ease-out-3 {
+  transition: all 0.75s ease-out;
+}
+
+.ease-out-4 {
+  transition: all 1s ease-out;
+}
+
+.ease-out-5 {
+  transition: all 1.25s ease-out;
+}
+
+.ease-out-6 {
+  transition: all 1.5s ease-out;
+}
+
+.ease-out-7 {
+  transition: all 1.75s ease-out;
+}
+
+.ease-out-8 {
+  transition: all 2s ease-out;
+}
+
+.ease-out-9 {
+  transition: all 2.25s ease-out;
+}
+
+.ease-out-10 {
+  transition: all 2.5s ease-out;
+}
+
+.ease-in-out-1 {
+  transition: all 0.25s ease-in-out;
+}
+
+.ease-in-out-2, #footer #contact textarea,
+#footer #contact select,
+#footer #contact input {
+  transition: all 0.5s ease-in-out;
+}
+
+.ease-in-out-3 {
+  transition: all 0.75s ease-in-out;
+}
+
+.ease-in-out-4 {
+  transition: all 1s ease-in-out;
+}
+
+.ease-in-out-5 {
+  transition: all 1.25s ease-in-out;
+}
+
+.ease-in-out-6 {
+  transition: all 1.5s ease-in-out;
+}
+
+.ease-in-out-7 {
+  transition: all 1.75s ease-in-out;
+}
+
+.ease-in-out-8 {
+  transition: all 2s ease-in-out;
+}
+
+.ease-in-out-9 {
+  transition: all 2.25s ease-in-out;
+}
+
+.ease-in-out-10 {
+  transition: all 2.5s ease-in-out;
+}
+
+.linear-1 {
+  transition: all 0.25s linear;
+}
+
+.linear-2 {
+  transition: all 0.5s linear;
+}
+
+.linear-3, #footer #contact .validation {
+  transition: all 0.75s linear;
+}
+
+.linear-4 {
+  transition: all 1s linear;
+}
+
+.linear-5 {
+  transition: all 1.25s linear;
+}
+
+.linear-6 {
+  transition: all 1.5s linear;
+}
+
+.linear-7 {
+  transition: all 1.75s linear;
+}
+
+.linear-8 {
+  transition: all 2s linear;
+}
+
+.linear-9 {
+  transition: all 2.25s linear;
+}
+
+.linear-10 {
+  transition: all 2.5s linear;
+}
+
+/* Borders */
+.radius-1 {
+  border-radius: 0.25rem;
+}
+
+.radius-2 {
+  border-radius: 0.5rem;
+}
+
+.radius-3 {
+  border-radius: 0.75rem;
+}
+
+.radius-4 {
+  border-radius: 1rem;
+}
+
+.radius-5 {
+  border-radius: 1.25rem;
+}
+
 /* Properties */
 .text-primary, #footer #contact .btn {
   color: #448;
@@ -633,7 +857,7 @@
 #footer #contact textarea:focus + .validation,
 #footer #contact select:focus + .validation,
 #footer #contact input:focus + .validation {
-  display: block;
+  max-height: 300px;
 }
 #footer #contact label {
   margin-top: 0.5rem;
@@ -641,8 +865,9 @@
 #footer #contact .validation {
   margin: 0;
   font-size: 0.8rem;
-  padding: 0.25rem;
-  display: none;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 #footer #contact .btn {
   margin: 0.25rem 0 0.5rem auto;

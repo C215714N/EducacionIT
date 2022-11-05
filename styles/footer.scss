@@ -32,16 +32,32 @@
         lg  992px   960px,
         xl  1200px  1140px,
         xxl 1400px  1320px;
+    $timings: ease, ease-in, ease-out, ease-in-out, linear;
 // Mixins
 @mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma: margin, $pa:padding){
     #{$ma}:$m;
     #{$ba}:$b;
     #{$pa}:$p;
 }
+@mixin transition($duration, $timing, $prop: all){
+    transition: $prop $duration $timing;
+}
 // Loops
 /* social media*/
 @each $ico in $social{
     .#{$ico}{ --bg: url('#{$path}/#{$ico}.svg');} 
+}
+/* Transitions */
+@each $t in $timings{
+@for $i from 1 through 10{
+    .#{$t}-#{$i}{
+        @include transition($i * .25s, $t);
+} } }
+/* Borders */
+@for $i from 1 through 5{
+    .radius-#{$i}{
+        border-radius: $i * .25rem;
+    }
 }
 /* Properties */ 
 @each $prop, $attr in $attributes{
@@ -92,7 +108,7 @@
 #footer{
     @include normalize($p:1rem);
     .map{
-
+        
     }
     #contact{
         @extend .container-sm, .center, .shadow, .bg-light;
@@ -101,9 +117,10 @@
         select,
         input{
             @include normalize(none, .25rem .5rem, 1px solid, $ma: outline);
+            @extend .ease-in-out-2;
             &:focus{
                 & + .validation{
-                    display: block;
+                    max-height: 300px;
                 }
                 &:valid{
                     @extend .border-success;
@@ -119,8 +136,10 @@
             margin-top: .5rem;
         }
         .validation{
-            @include normalize(0, .25rem,.8rem, font-size);
-            display: none;
+            @include normalize(0, 0,.8rem, font-size);
+            @extend .linear-3;
+            max-height: 0;
+            overflow: hidden
         }
         .btn{
             @include normalize(.25rem 0 .5rem auto, .25rem 1rem, 1px solid);
