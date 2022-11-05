@@ -26,3 +26,15 @@
         transform: skew(-30deg, 10deg);
     }
 }
+@keyframes shake{
+    from{
+        transform: 
+            translateX(.25rem)
+            rotate(-5deg);
+    }
+    to{
+        transform:
+        translateX(.25rem)
+        rotate(5deg);
+    }
+}

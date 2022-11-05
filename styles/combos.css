@@ -1,0 +1,11 @@
+.numbers{
+    counter-reset: numbers;
+}
+.counter::before{
+    content: 'Combo ' counter(numbers) ": ";
+    counter-increment: numbers;
+}
+li:hover .counter{
+    transform-origin: 10rem;
+    animation: shake .25s linear alternate-reverse infinite;
+}
