@@ -5,7 +5,10 @@
     content: 'Combo ' counter(numbers) ": ";
     counter-increment: numbers;
 }
-li:hover .counter{
+li:hover :is(
+    .counter,
+    svg
+){
     transform-origin: 10rem;
     animation: shake .25s linear alternate-reverse infinite;
 }
