@@ -1,0 +1,28 @@
+/* Logo Navegacion */
+.logo{
+    transform: skewY(-15deg);
+    animation: ready 1s ease-in alternate infinite;
+    /* name duration timing direction count */
+}
+
+/* Presentacion Encabezado */
+#header h1{
+    animation: appear 1s ease-out;
+    /* name duration timing */
+}
+
+/* Animaciones */
+@keyframes appear{
+    from{
+        transform:
+            translateX(-300vw)
+            skew(90deg);
+    }
+}
+@keyframes ready{
+    to{
+        letter-spacing: .2rem;
+        text-shadow: 0 0 .5rem rgb(var(--dark));
+        transform: skew(-30deg, 10deg);
+    }
+}
