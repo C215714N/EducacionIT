@@ -1,0 +1,54 @@
+@use 'sass:math';
+$functions: lineal 2s, cuadratica 4s, trigonometrica 6s, exponencial 8s, racional 10s;
+
+.functions{
+    div{
+        margin: .5rem;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        background-color: #36c;
+        box-shadow: 
+            -.5rem .5rem #eee3 inset, 
+            -.5rem .5rem .5rem #333;
+    }       
+}
+@each $f, $d in $functions{
+    .#{$f}{
+        animation: $f 5s linear $d alternate infinite;
+    }
+    @keyframes #{$f}{
+    @for $i from 0 through 100{
+            $x: 0;
+            $y: 0;
+            @if $f == 'lineal' {
+                $x: $i;
+                $y: ($x / 2) * 1vmin;
+            }
+            @else if $f == 'cuadratica' {
+                $x: ($i - 50) / 5;
+                $y: math.pow($x , 2) * 1vmin;
+            }
+            @else if $f == 'trigonometrica' {
+                $x: $i;
+                $y: math.sin($x) * 5vmin;
+            }
+            @else if $f == 'exponencial' {
+                $x: $i / 2;
+                $y: math.pow(1.1, $x) * 1vmin;
+            }
+            @else if $f == 'racional'{
+                $x: $i - 50;
+                @if $x == 0 {
+                    $y: 1vmin
+                }
+                @else{
+                    $y: (100/$x) * 1vmin;
+                }
+            }
+            #{$i * 1%}{
+                transform: translate($i * .5vw , $y)
+            }
+        }
+    }
+}

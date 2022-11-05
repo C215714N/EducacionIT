@@ -7,10 +7,14 @@
 }
 li:hover :is(
     .counter,
-    svg
+    svg,
+    .shake
 ){
     transform-origin: 10rem;
-    animation: shake .25s linear alternate-reverse infinite;
+    animation: shake .15s linear alternate-reverse infinite;
+}
+.shake{
+    animation-delay: .1s;
 }
 svg > rect{
     transform-origin: bottom center;
