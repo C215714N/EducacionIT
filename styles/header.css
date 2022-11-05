@@ -15,6 +15,10 @@
   padding: 1rem;
   font-size: min( calc(0.5rem + 2vw), 5rem);
   text-shadow: 0 0 min( calc(0.5rem/2 + 2vw/2), calc(5rem/2)) var(--dark);
+  perspective: 5vw;
+}
+#header .header h1 {
+  transform: scale(1.2) rotateX(5deg);
 }
 #header .slide {
   width: 100%;
