@@ -9,6 +9,9 @@ nav {
   flex-wrap: wrap;
   gap: 0;
   background-color: rgb(var(--first), 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 nav a {
   color: rgb(var(--light));
