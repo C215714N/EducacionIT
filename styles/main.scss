@@ -2,6 +2,11 @@
 $position: static, absolute, fixed, relative, sticky;
 $directions: height, width, top, right, bottom, left;
 
+@for $i from 0 to 360{
+    .rotate-#{$i}{
+        transform: rotate($i + deg);
+} }
+
 @each $p in $position{
     .p-#{$p}{
         position: $p
