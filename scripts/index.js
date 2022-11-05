@@ -2,6 +2,7 @@
 const d = document;
 const menuBtn = d.querySelector('nav .btn');
 const menuList = d.querySelector('nav .menu');
+const links = menuList.querySelectorAll('li');
 const prev = d.querySelector('.control.icon-prev');
 const next = d.querySelector('.control.icon-next');
 const gallery = d.querySelectorAll('.slide li');
@@ -42,4 +43,14 @@ function getItem(type, array) {
     }
     nextElement.classList.add('active')
 }
+
+links.forEach( item => {
+    item.addEventListener('mouseover', () => {
+        let audio = d.createElement('audio');
+        audio.src = 'assets/audio/whatsapp.mp3';
+        audio.play();
+        item.appendChild(audio);
+        setInterval(() => item.removeChild(audio), 2000);
+    })
+} )
 // Autor: Cristian Racedo

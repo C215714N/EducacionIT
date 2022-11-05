@@ -11,7 +11,8 @@ nav{
     opacity: .8;
 }
 nav a{
-    color: var(--light)
+    color: var(--light);
+    transition: all .5s ease-in;
 }
 nav a:hover{
     --light: #ccc;
@@ -46,6 +47,7 @@ nav,
 }
 nav li{
     position: relative;
+    padding:.25rem;
 }
 .menu > li:last-child{
     display: none;
@@ -83,10 +85,39 @@ nav li{
 ) a:hover{
     background-color: #36c;
 }
+/* Efectos del Menu */
+.menu li::before,
+.menu li::after{
+    content: '';
+    position: absolute;
+    width: .2rem;
+    height: .1rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: all .25s ease-in;
+    background: linear-gradient(to right, 
+    transparent 1%, 
+    var(--light),
+    transparent);
+}
+.menu li::before{
+    bottom: 0;
+    left: 0;
+}
+.menu li::after{
+    top: 0;
+    right: 0;
+}
+.menu li:hover::after,
+.menu li:hover::before{
+    width: 100%;
+    opacity: 1;
+}
 @media screen and (min-width: 768px){
     nav{
         justify-content: flex-start;
         opacity: 1;
+        top: 0;
     }
     nav .btn[class*="menu-"]{
         display: none;
