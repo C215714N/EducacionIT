@@ -1,6 +1,27 @@
+/* Declaraciones */
+    :root{
+        /* Colores */
+        --first: #86c;
+        --second: #448;
+        --light: #eee;
+        --gray: #ccc;
+        --dark: #333;
+        --danger: #c33;
+        --warning: #da3;
+        --success: #3c6;
+        --info: #48e;
+        /* Tipografia */
+        --font: 'Ubuntu', 'Century Gothic', sans-serif;
+        --fs: 1rem;
+        --icon: 1.75rem;
+        /* Tamaños */
+        --small: 200px;
+        --medium: 400px;
+        --large: 600px;
+    }
 *{
     box-sizing: border-box;
-    font-family: 'Ubuntu', 'Century Gothic', sans-serif;
+    font-family: var(--font);
     scroll-behavior: smooth;
 }
 /* Margenes */
