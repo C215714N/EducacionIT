@@ -1,0 +1,57 @@
+/* Reglas Generales */
+*{
+    font-family: 'Raleway', 'calibri', sans-serif;
+    scroll-behavior: smooth;
+}
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    header p,
+    .menu{
+        margin: 0;
+    }
+    /* Estilos */
+    .menu,
+    .example{
+        list-style: none;
+    }
+    header a,
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+/* Navegacion */
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #3a6;
+}
+.menu a{
+    color: #ccc;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu a.active,
+.menu a:hover{
+    color:#eee;
+    text-shadow: 0 0 8px #eee; /* -x+ -y+ blur color*/
+}
+/* Cabecera */
+
+/* Contenido */
+
+/* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+        padding: 16px;
+    }
