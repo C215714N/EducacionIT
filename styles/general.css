@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', 'Century Gothic', sans-serif;
+    scroll-behavior: smooth;
+}
+/* Margenes */
+
+/* Bordes */
+
+/* Rellenos */
+
+/* Estilos */
+
+/* Estructura Web */
+body{
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer'
+        'nav';
+}
+#header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+nav{
+    grid-area: nav;
+}
+@media screen and (min-width: 768px){
+    body{
+        grid-template-areas: 
+            'nav'
+            'header'
+            'main'
+            'footer';
+    }
+}
