@@ -4,13 +4,34 @@
     scroll-behavior: smooth;
 }
 /* Margenes */
-
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.nav{
+    margin: 0;
+}
 /* Bordes */
 
 /* Rellenos */
-
+.menu,
+.nav,
+.nav ul{
+    padding: 0;
+}
 /* Estilos */
-
+.nav li,
+.menu li,
+.example li,
+.unstyled{
+    list-style-type: none;
+}
+nav a,
+footer a{
+    text-decoration: none;
+}
 /* Estructura Web */
 body{
     display: grid;
