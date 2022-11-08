@@ -34,11 +34,36 @@
                 <header>
                     <h3>¿Como funcionan?</h3>
                 </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos colocarle por lo menos <em>2 atributos</em>, entre ellos se encuentran <strong>action="..."</strong> que indica lo que debe suceder tras realizar el envio del formulario, normalmente se utiliza un script en lenguaje de servidor; y <strong>method="..."</strong> que indica como se va a realizar el mismo, entre los metodos mas comunes se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo poco seguro cuya prioridad radica en la respuesta del servidor, los datos pernacen visibles en la barra de direcciones y se utiliza principalmente en <em>Buscadores</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> Metodo seguro ya que se encriptan los datos antes de realizar el envio y son visibles dentro de la etiqueta, se utiliza en formularios de <em>Resgistro, Inicio de sesion, Contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
                     <h3>¿Como estan compuestos?</h3>
                 </header>
+                <p>
+                    Dentro del formulario podemos utilizar cualquiera de las etiquetas conocidas, pero entre las utilizadas destacan las <strong>Etiquetas (LABEL)</strong> que indican que debe escribir/seleccionar el usuario y facilitan la accesibilidad; y por otro lado estan los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los elementos donde el usuario puede ingresar/marcar las opciones indicadas por los label, entre los atributos mas comunes de los campos se encuentran los siguientes:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> valor que identifica al campo de formulario, permite la recoleccion de los datos ingresados y determinar el grupo de pertenencia de los campos.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> atributo que debe figurar en los campos de tipo input e indica cual es el tipo de dato valido, en caso de las otras etiquetas viene implicito.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> atributo que indica el valor del campo, este es implicito cuando el usuario completa con sus datos, pero debe figurar cuando selecciona algun valor.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
@@ -82,8 +107,6 @@
             <div>
                 <input id="i_do" name="contract" type="checkbox">
                 <label for="i_do">Acepto el Contrato</label>
-                <input id="i_dont"name="contract" type="checkbox">
-                <label for="i_dont">Deseo recibir correos</label>
             </div>
         </form>
         <!-- Redes sociales -->
