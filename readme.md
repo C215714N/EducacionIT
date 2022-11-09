@@ -3,9 +3,9 @@
 Esto es una guia practica del curso de EducacionIT, cuyas clases se dictan los dias miercoles de 15hs a 18hs
 
 ## Tabla de contenidos
-* Funciones Numericas
-* Funciones de Texto
-* Funciones de Fecha
+* [Funciones de Texto](#funciones-de-texto)
+* [Funciones Numericas](#funciones-numericas)
+* [Funciones de Fecha](#funciones-de-fecha)
 
 ## FUNCIONES DE TEXTO
 *	__CONCATENAR(`val`,`val`)__		combina los valores en una cadena de texto
