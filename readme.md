@@ -15,6 +15,7 @@ Esto es una guia practica del curso de EducacionIT, cuyas clases se dictan los d
 *	__DERECHA(`val`, `n`)__		extrae __n__ cant. de caracteres de un texto desde el final
 *	__EXTRAE(`val`, `n`, `p`)__	extrae __n__ cant. de caracteres de un texto desde la posicion __p__
 *	__ENCONTRAR(`val`, `text`)__	obtiene la posicion de un valor deseado en el texto especificado
+* __LARGO(`text`)__ devuelve la cantidad de caracteres que posee el texto seleccionado
 
 ## FUNCIONES NUMERICAS
 *	__MAX(`range`)__		obtiene el valor mas alto de toda la columna
