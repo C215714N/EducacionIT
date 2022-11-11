@@ -51,7 +51,8 @@ links.forEach( item => {
         audio.autoplay = true;
         item.appendChild(audio);
         audio.click();
-        audio.play()
+        audio.volume = 1;
+        audio.play();
         setTimeout(() => item.removeChild(audio), 3000);
     })
 } )
