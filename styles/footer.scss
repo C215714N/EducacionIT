@@ -113,6 +113,9 @@
     #contact{
         @extend .container-sm, .center, .shadow, .bg-light;
         display: grid;
+        textarea{
+            resize: vertical;
+        }
         textarea,
         select,
         input{

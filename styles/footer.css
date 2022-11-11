@@ -847,6 +847,9 @@
 #footer #contact {
   display: grid;
 }
+#footer #contact textarea {
+  resize: vertical;
+}
 #footer #contact textarea,
 #footer #contact select,
 #footer #contact input {
