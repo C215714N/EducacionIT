@@ -55,3 +55,47 @@
         margin: auto;
         padding: 16px;
     }
+    /* Redes sociales */
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: 8px;
+        padding: 16px;
+    }
+    .social a{
+        min-width: 64px;
+        min-height: 64px;
+        border-radius: 8px;
+        background-color: #ccc;
+        background-position: center;
+        background-size: 36px;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 2px 8px #333; /* -x+ -y+ blur color */
+    }
+    /* Iconos redes sociales */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
+    }
