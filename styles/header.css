@@ -19,6 +19,11 @@
 }
 #header .header h1 {
   transform: scale(1.2) rotateX(5deg);
+  animation: appear 5s ease-out;
+}
+#header .header p {
+  animation: appear 5s ease-out 1.5s;
+  animation-fill-mode: backwards;
 }
 #header .slide {
   width: 100%;
