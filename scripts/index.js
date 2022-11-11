@@ -47,10 +47,12 @@ function getItem(type, array) {
 links.forEach( item => {
     item.addEventListener('mouseover', () => {
         let audio = d.createElement('audio');
-        audio.src = 'assets/audio/whatsapp.mp3';
-        audio.play();
+        audio.src = 'assets/media/sound.mp3';
+        audio.autoplay = true;
         item.appendChild(audio);
-        setInterval(() => item.removeChild(audio), 2000);
+        audio.click();
+        audio.play()
+        setTimeout(() => item.removeChild(audio), 3000);
     })
 } )
 // Autor: Cristian Racedo
