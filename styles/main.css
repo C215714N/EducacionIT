@@ -1,0 +1,25 @@
+/* Contenedor de Ejemplos */
+.example{
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--light);
+}
+main{
+    max-width: 960px;
+    margin: auto;
+    padding: 1rem;
+}
+.example::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: .25rem;
+    background: linear-gradient(var(--first), var(--light), var(--second));
+}
+.example:hover{
+    animation: zoom .5s linear .5s alternate-reverse 5;
+    /* name duration timing delay direction iteration */
+}
