@@ -1,0 +1,14 @@
+@keyframes appear{
+    from{
+        transform: 
+            translateY(100vh)
+            scale(2);
+    }
+}
+@keyframes zoom{
+    to{
+        transform: 
+            scale(1.1);
+        opacity: .8;
+    }
+}
