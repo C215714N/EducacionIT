@@ -106,9 +106,10 @@
 }
 // Nesting
 #footer{
-    @include normalize($p:1rem);
-    .map{
-        
+    @include normalize(0,1rem, grid, display);
+    .map{ 
+        @include normalize(1rem auto, .5rem, .1rem solid var(--first), $pa: border-radius);
+        @extend .col-sm-22, .col-lg-12, .col-xxl-6;
     }
     #contact{
         @extend .container-sm, .center, .shadow, .bg-light;
@@ -149,7 +150,9 @@
             @extend .text-primary, .border-primary;
             text-transform: uppercase;
             &:hover{
-                @extend .text-light, .bg-primary;
+                @extend .text-light, .bg-primary;            
+                animation: moveit .5s linear alternate infinite;
+
             }
         }
     }
