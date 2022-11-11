@@ -129,7 +129,23 @@
                 <h2 id="animation">Animaciones</h2>
             </header>
             <p>
-                Consisten en la generacion de fotogramas clave a partir de ciertas reglas que indican como debe verse un elemento de principio a fin. A diferencia de las transiciones, no necesitan un gatillador, se pueden ejecutar indefinidamente y pueden tener multiples variantes.
+                Consisten en la generacion de fotogramas clave a partir de ciertas reglas que indican como debe verse un elemento de principio a fin. A diferencia de las transiciones, no necesitan un gatillador, se pueden ejecutar indefinidamente y pueden tener multiples variantes. Cuando los implementamos debemos utilizar la regla <strong>@keyframes</strong> para definir el nombre de nuestra animacion y  y luego sus dentro de la misma, sus fotogramas.
+            </p>
+            <h3>Animation-Timing-Function</h3>
+            <p>
+                Podemos utilizar este atributo para indicar como debe reproducirse la animacion, significando la palabra <em>ease</em> lento para la parte que corresponde, tambien podemos utilizar <em>linear</em> para indicar que es constante o cubic-bezier(x1,y1,x2,y2) donde x indica el tiempo e y indica la progresion.
+            </p>
+            <ul class="example unstyled timing loading">
+                <li class="load"></li>
+                <li class="load"></li>
+                <li class="load"></li>
+                <li class="load"></li>
+                <li class="load"></li>
+                <li class="load"></li>
+            </ul>
+            <h3>Animation-Direction</h3>
+            <p>
+                Este atributo permite controlar la direccion de la animacion, pudiendo variar entre los valores de <strong>from{}</strong> y <strong>to{}</strong>, para utilizar valores como alternate y alternate-reverse, es necesario que la misma se ejecute por los menos 2 veces utilizando el atributo <strong>animation-iteration-count</strong>
             </p>
         </section>
     </main>

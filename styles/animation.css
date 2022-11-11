@@ -1,3 +1,57 @@
+.loading{
+    display: flex;
+    gap: .5rem;
+}
+.load{
+    text-align: center;
+}
+.load::before{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: .5rem solid;
+    border-color: #cde #8ac #38a #248;
+    animation: loading 2s infinite;
+}
+/* Timing Function */
+.loading .load:nth-child(1)::before{
+    animation-timing-function: ease;
+}
+.loading .load:nth-child(2)::before{
+    animation-timing-function: ease-in;
+}
+.loading .load:nth-child(3)::before{
+    animation-timing-function: ease-out;
+}
+.loading .load:nth-child(4)::before{
+    animation-timing-function: ease-in-out;
+}
+.loading .load:nth-child(5)::before{
+    animation-timing-function: linear;
+}
+.loading .load:nth-child(6)::before{
+    animation-timing-function: cubic-bezier(0,1,1,0);
+}
+.loading .load:nth-child(1)::after{
+    content: 'ease';
+}
+.loading .load:nth-child(2)::after{
+    content: 'ease-in';
+}
+.loading .load:nth-child(3)::after{
+    content: 'ease-out';
+}
+.loading .load:nth-child(4)::after{
+    content: 'ease-in-out';
+}
+.loading .load:nth-child(5)::after{
+    content: 'linear';
+}
+.loading .load:nth-child(6)::after{
+    content: 'cubic-bezier(0,1,1,0)';
+}
 @keyframes appear{
     from{
         transform: 
@@ -10,5 +64,22 @@
         transform: 
             scale(1.1);
         opacity: .8;
+    }
+}
+@keyframes moveit{
+    from{
+        transform: 
+        rotate(-10deg)
+        translate(-.5rem);
+    }
+    to{
+        transform: 
+        rotate(10deg)
+        translate(.5rem);
+    }
+}
+@keyframes loading{
+    to{
+        transform: rotate(360deg);
     }
 }
