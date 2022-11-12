@@ -1,0 +1,56 @@
+@use 'sass:math';
+$functions: lineal, cuadratica, trigonometrica, exponencial, racional;
+
+.functions{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    animation: rotate 60s linear infinite;
+    div{
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem;
+        border-radius: 50%;
+        box-shadow: -.5rem .5rem #eee3 inset, -.5rem .5rem .5rem #333;
+        @for $i from 1 through length($functions){
+            &:nth-child(#{$i}n){
+                background: radial-gradient(
+                    circle at top right,
+                    hsl($i * 30, 50%, 50%),
+                    hsl($i * 60, 50%, 50%)
+                );
+                animation: nth($functions, $i) 5s linear $i * .5s alternate infinite;
+} } } }
+
+@each $f in $functions{
+    @keyframes #{$f}{
+        @for $i from 0 through 100{
+            $y: 0;
+            @if $f == 'lineal'{
+                $x: $i;
+                $y: math.div($i,2);
+            } 
+            @else if $f == 'cuadratica'{
+                $x: math.div($i - 50, 4);
+                $y: math.pow($x, 2);
+            } 
+            @else if $f == 'trigonometrica'{
+                $x: $i;
+                $y: math.sin($x) * 5;
+            }
+            @else if $f == 'exponencial'{
+                $x: $i;
+                $x: math.pow(1.1, $x);
+            }
+            @else {
+                $x: $i - 50;
+                @if $x == 0{ $y: 1; }
+                @else{ $y: math.div(100, $x); }
+            }
+            #{$i}%{
+                transform: translate($i * 1vw, $y * 1vh);
+            }
+        }
+    }
+}
