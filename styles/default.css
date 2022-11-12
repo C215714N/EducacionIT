@@ -56,7 +56,41 @@
     }
 
 /* Navigation */
+    nav{
+        padding: 1rem;
+        background-color: #224;
+        background-image: linear-gradient(
+            to right,
+            #36c, 
+            #224
+        ); /* COLORES 
+            HTML    RGB             HEX
+            red     255, 0, 0       f00
+            green   0, 255, 0       0f0
+            blue    0, 0, 255       00f
+            cyan    0, 255, 255     0ff
+            magenta 255, 0, 255     f0f
+            yellow  255, 255, 0     ff0
+            black   0, 0, 0         000
+            white   255, 255, 255   fff
+            gray    128, 128, 128   888
+        */
+    }
+    nav a{
+        color: #eee;
+    }
+    /* UNIDADES 
+        Absolutas
+            distancia: cm, mm, m, in
+            tipografia: pt(1/72in), pc(1/6in)
+            hibrida: px(1/96in) depende de la resolucion
+        Relativas
+            tamaño: % del contenedor
+            tipografia: em(ancho "M"), ex(alto "x"), ch(ancho "0"), %
+            hibrida: rem(ROOT em) su referente es <HTML>
+        Flexibles
 
+    */
 /* Content */
 
 /* Footer */
