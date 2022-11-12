@@ -80,15 +80,17 @@
         color: #eee;
     }
     /* UNIDADES 
-        Absolutas
+        Absolutas: Son aquellas que siempre valen lo mismo indistintamente del medio en el que se reproduzcan. Se utilizan principalmente para establecer limites.
             distancia: cm, mm, m, in
             tipografia: pt(1/72in), pc(1/6in)
             hibrida: px(1/96in) depende de la resolucion
-        Relativas
+
+        Relativas: Son aquellas toman como referente a otro elemento, siendo este generalmente su contenedor. Se utilizan para definir tamaños de caja y tipografias
             tamaño: % del contenedor
             tipografia: em(ancho "M"), ex(alto "x"), ch(ancho "0"), %
             hibrida: rem(ROOT em) su referente es <HTML>
-        Flexibles
+
+        Flexibles: Son aquellas que basan su tamaño en las dimensiones del viewport (ventana del navegador). Se utilizan principalmente para tipografia flexible y establecer alturas.
 
     */
 /* Content */
