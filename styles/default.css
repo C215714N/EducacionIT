@@ -1,0 +1,25 @@
+/* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Raleway&family=Ubuntu');
+/* Fantasy Fonts */
+    @font-face {
+        src: url('../assets/font/karmatic.ttf');
+        font-family: 'lcd';
+        /* Formatos compatibles
+            otf (open type font)
+            ttf (true type font)
+            eot (extended open type)
+            woff (web open font file)
+            svg (scalable vector graphics)
+        */
+    }
+/* General Rules */
+    * {
+        scroll-behavior: smooth;
+        font-family: 'Roboto', 'Raleway', 'Ubuntu', sans-serif;
+    }
+/* Headers */
+    h1,
+    .title{
+        font-family: 'lcd';
+        font-weight: lighter;
+    }
