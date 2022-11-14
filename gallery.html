@@ -5,6 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'segoe ui', 'calibri', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 20px;
+            text-align: center;
+            color: #eee; /*RGB => dec: 0-255 || hex: 0-F*/
+            background-color: #248; /* total: 16.777.216 */
+        }
+        /* Selectores Especificos (padre > hijo) */
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: #124;
+        }
+        nav a,
+        footer a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :Pseudoclases (Instancia o caracteristica de una etiqueta) */
+        nav li:hover{
+            background-color: #36c;
+        }
+        /* .Class (Estilos que pueden corresponderse a varios elementos)*/
+        .example{
+            margin: 8px;
+            padding: 16px;
+            text-align: center;
+            background-color: #48e;
+        }
+        .example img{
+            max-width: 480px;
+            width: 100%;
+        }
+        .description{
+            margin: 16px;
+            padding: 24px;
+            color: #124;
+            background-color: #ccc;
+            overflow: hidden;
+            /* Desbordamiento */
+        }
+        .description img{
+            max-width: 200px;
+            width: 100%;
+            float: right;
+            /* Disposicion a un costado */
+        }
+        /* #id (Identificador Unico) */
+        #contact{
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
@@ -42,27 +106,27 @@
             <li>
                 <strong>Nombrar los archivos con minusculas</strong> ya que los servidores son <em>caseSensitive</em> y de esta forma reducimos el margen de error al momento de implementar dichos elementos dentro de la pagina.
             </li>
-            <div class="example">
-                <img src="assets/img/jjba-starplatinum-01.jpg" 
-                    alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
-                <img src="assets/img/jjba-starplatinum-02.jpg" 
-                    alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
-                <img src="assets/img/jjba-starplatinum-03.jpg" 
-                    alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
-                <img src="assets/img/jjba-starplatinum-04.jpg" 
-                    alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
-            </div>
-            <p class="description">
-                <img src="assets/img/usm-scorpion-02.jpg" alt="Ultimate Spider-Man Scorpion">
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae id sunt exercitationem fugiat obcaecati nobis commodi necessitatibus beatae quidem, laboriosam doloremque fuga porro in, laudantium esse et blanditiis. Aspernatur cupiditate praesentium dolorem incidunt ullam animi. Quas, ipsum minima nulla soluta iure quia perferendis quo corporis quos dignissimos facilis exercitationem?
-            </p>
-            <p class="description">
-                <img src="assets/img/usm-scorpion-04.jpg" alt="Ultimate Spider-Man Scorpion">
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae id sunt exercitationem fugiat obcaecati nobis commodi necessitatibus beatae quidem, laboriosam doloremque fuga porro in, laudantium esse et blanditiis. Aspernatur cupiditate praesentium dolorem incidunt ullam animi. Quas, ipsum minima nulla soluta iure quia perferendis quo corporis quos dignissimos facilis exercitationem?
-            </p>
         </ul>
+        <div class="example">
+            <img src="assets/img/jjba-starplatinum-01.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
+            <img src="assets/img/jjba-starplatinum-02.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
+            <img src="assets/img/jjba-starplatinum-03.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
+            <img src="assets/img/jjba-starplatinum-04.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure - Star Platinum">
+        </div>
+        <p class="description">
+            <img src="assets/img/usm-scorpion-02.jpg" alt="Ultimate Spider-Man Scorpion">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae id sunt exercitationem fugiat obcaecati nobis commodi necessitatibus beatae quidem, laboriosam doloremque fuga porro in, laudantium esse et blanditiis. Aspernatur cupiditate praesentium dolorem incidunt ullam animi. Quas, ipsum minima nulla soluta iure quia perferendis quo corporis quos dignissimos facilis exercitationem?
+        </p>
+        <p class="description">
+            <img src="assets/img/usm-scorpion-04.jpg" alt="Ultimate Spider-Man Scorpion">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae id sunt exercitationem fugiat obcaecati nobis commodi necessitatibus beatae quidem, laboriosam doloremque fuga porro in, laudantium esse et blanditiis. Aspernatur cupiditate praesentium dolorem incidunt ullam animi. Quas, ipsum minima nulla soluta iure quia perferendis quo corporis quos dignissimos facilis exercitationem?
+        </p>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
