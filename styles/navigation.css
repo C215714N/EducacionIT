@@ -17,9 +17,12 @@ nav a{
     --color: var(--gray);
     color: var(--color);
     text-shadow: 0 0 .5rem var(--color);
+    filter: grayscale(100%);
 }
+nav a.active,
 nav a:hover{
     --color: var(--light);
+    filter: grayscale(30%);
 }
 .nav{
     display: flex;
