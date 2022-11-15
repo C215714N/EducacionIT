@@ -8,20 +8,24 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: unset;
-  max-height: unset;
-  width: 100%;
-  height: 100vh;
   color: var(--light);
   background: var(--first) linear-gradient(var(--first), var(--dark));
 }
+@media screen and (min-width: 992px) {
+  #header {
+    max-width: unset;
+    max-height: unset;
+    width: 100%;
+    height: 100vh;
+  }
+}
 #header .portrait {
   margin: 0.5rem;
-  border: 0.25rem solid var(--second);
+  border: 0.2rem solid var(--second);
   padding: 1rem;
   border-radius: 50%;
   background-color: var(--light);
-  overflow: hidden;
+  opacity: 0.8;
 }
 #header .header {
   margin: 0;
@@ -31,7 +35,7 @@
   max-height: unset;
   width: 100%;
   height: auto;
-  font-size: min(calc(2vw + 0.5rem), 5rem / 2);
+  font-size: min(calc(2vw + 0.5rem), 2.5rem);
   text-shadow: 0 0 0.5rem var(--dark);
 }
 .zeroise {
@@ -59,6 +63,6 @@
 #header .portrait {
   max-width: 20rem;
   max-height: 20rem;
-  width: 100%;
-  height: 100%;
+  width: calc(100vw - 2rem);
+  height: calc(100vw - 2rem);
 }

@@ -1,25 +1,36 @@
 // Variables: Valores que se almacenan en la memoria y pueden cambiar
+    // Colores
     @color: var(--light);
     @bg: var(--first);
     @gradient: linear-gradient(var(--first), var(--dark));
+    // Tamaños para tipografia
     @min: .5rem;
     @mid: 2vw;
     @max: 5rem;
+    // Tamaños de cajas
+    @full: calc(100vw - 2rem);
+    // Tamaños de pantalla
+    @sm: 576px;
+    @md: 768px;
+    @lg: 992px;
+    @xl: 1200px;
 
 // Nesting: Anidacion de selectores y reglas que compila selectores especificos
 #header{  
     .position;
     .flexbox(@ai: center);
-    .sizes(@h:100vh);
     color: @color;
     background: @bg @gradient;
+    @media screen and (min-width: @lg){
+        .sizes(@h: 100vh);
+    }
     // Imagen Estilos Retrato
     .portrait{
-        .normalize(.5rem; 1rem; .25rem solid var(--second));
+        .normalize(.5rem; 1rem; .2rem solid var(--second));
         &:extend(.r-portrait);
         border-radius: 50%;
         background-color: @color;
-        overflow: hidden;
+        opacity: .8;
     }
     // Cabecera Introduccion
     .header{
@@ -45,7 +56,7 @@
     object-fit: cover;
 }
 .r-portrait{
-    .sizes(@max * 4; @max * 4);
+    .sizes(@max * 4; @max * 4; @full; @full);
 }
 
 // Mixins Parametricos: Estilos que reciben argumentos para aplicar reglas
@@ -83,3 +94,4 @@
     font-size: ~'min(calc(@{mid} + @{min}), @{max})';
 }
 
+// Mixins Recursivos: Estilos que se repiten en base a una condicion
