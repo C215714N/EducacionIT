@@ -7,13 +7,45 @@
     @min: .5rem;
     @mid: 2vw;
     @max: 5rem;
-    // Tamaños de cajas
+    // Dimensiones
     @full: calc(100vw - 2rem);
-    // Tamaños de pantalla
+    @responsive: ~'min(calc(100vw - 660px), 1rem)';
+    @col: 24;
+    // Tamaños de Pantalla
     @sm: 576px;
     @md: 768px;
     @lg: 992px;
     @xl: 1200px;
+    // Imagenes
+    @path: '../assets/bg';
+    @osx: 
+        'osx-catalina-night.jpg',
+        'osx-catalina.jpg',
+        'osx-el-capitan.jpg',
+        'osx-high-sierra.jpg',
+        'osx-leopard.jpg',
+        'osx-lion.jpg',
+        'osx-mavericks.jpg',
+        'osx-mojave-night.jpg',
+        'osx-mojave.jpg',
+        'osx-monterrey-dark.jpg',
+        'osx-monterrey-light.jpg',
+        'osx-mountain-lion.jpg',
+        'osx-sierra.jpg',
+        'osx-snow-leopard.jpg',
+        'osx-tiger.jpg',
+        'osx-yosemite.jpg';;
+    @ubuntu:
+        'ubuntu-artful-aardvark.jpg',
+        'ubuntu-bionic-beaver.jpg',
+        'ubuntu-cosmic-cuttlefish.jpg',
+        'ubuntu-disco-dingo.jpg',
+        'ubuntu-eoan-ermine.jpg',
+        'ubuntu-focal-fossa.jpg',
+        'ubuntu-groovy-gorilla.jpg',
+        'ubuntu-hisurte-hippo.jpg',
+        'ubuntu-impish-Indri.jpg',
+        'ubuntu-jammy-jellyfish.jpg';
 
 // Nesting: Anidacion de selectores y reglas que compila selectores especificos
 #header{  
@@ -38,6 +70,24 @@
         .sizes(@max * 8; @h: auto);
         .fontsize(@min, @max / 2, @mid);
         text-shadow: 0 0 .5rem var(--dark);
+    }
+}
+main{
+    section{
+        min-height: 100vh;
+        .colors(4);
+        .header{
+            .normalize(1rem, .5rem @responsive);
+            background: var(--bg);
+        } 
+    } 
+    .osx-bg{
+        background: var(--bg) center/cover;
+        .bg(@osx);
+    }
+    .ubuntu-bg{
+        background: var(--bg) center/cover;
+        .bg(@ubuntu);
     }
 }
 
@@ -95,3 +145,30 @@
 }
 
 // Mixins Recursivos: Estilos que se repiten en base a una condicion
+/* Sistema de Grillas */
+.grid(@i:1) when(@i <= @col){
+    .col-@{i}{
+        width: percentage( (@i/@col) );
+    }
+    .grid(@i + 1);
+}
+.grid;
+// Colores de Cabeceras
+.colors(@total; @i: 1) when (@i <= @total){
+    &:nth-child(@{i}n){
+        --bg: radial-gradient(
+            circle at top left,
+            hsl(@i * (270/@total), 50%, 60%),
+            hsl(@i * (90/@total), 50%, 40%)
+        );
+    }
+    .colors(@total, @i + 1);
+}
+// Imagenes Galeria
+.bg(@array; @i: 1) when (@i <= length(@array)){
+    @img: extract(@array, @i);
+    &:nth-child(@{i}n){
+        --bg: url('@{path}/@{img}');
+    }
+    .bg(@array; @i + 1);
+}
