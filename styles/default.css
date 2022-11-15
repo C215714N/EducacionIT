@@ -10,7 +10,8 @@
     h3,
     h4,
     header p,
-    .menu{
+    .menu,
+    .example figure{
         margin: 0;
     }
     /* Estilos */
@@ -64,13 +65,43 @@
     }
 /* Contenido */
     main{
-        margin: auto;
+        max-width: 960px;
+        margin: 16px auto;
         padding: 16px;
+    }
+    article{
+        margin: 24px 0;
+        border-radius: 8px;
+        padding: 16px;
+        overflow: hidden;
+        box-shadow: -2px 2px 8px #3a6; /*-x+ -y+ blur color*/
     }
     iframe{
         width: 100%;
         border: none;
         min-height: 320px;
+    }
+    /* Ejemplos */
+    .example{
+        max-width: 720px;
+        margin: auto;
+        border-left: 4px solid #3a6;
+        padding: 16px 24px;
+        line-height: 1.5;
+        background-color: #efe;
+    }
+    .row{
+        display: flex;
+        overflow: auto;
+        gap: 16px;
+    }
+    .example figure{
+        min-width: 480px;
+    }
+    video{
+        width: 100%;
+        height: 320px;
+        background-color: #000;
     }
 /* Pie de Pagina */
 
