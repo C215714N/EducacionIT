@@ -42,8 +42,31 @@
     text-shadow: 0 0 8px #eee; /* -x+ -y+ blur color*/
 }
 /* Cabecera */
-
+    #header{
+        margin: 0;
+        padding: min(20%, 240px) 16px; /* top right */
+        text-align: center;
+        text-shadow: -2px 2px 8px #333;
+        background-image: url('../assets/bg/osx-mavericks.jpg');
+        background-position: top center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .header{
+        margin: -16px -16px 16px; /* top right bottom left*/
+        padding: 16px;
+        color: #eee;
+        background-color: #3a6;
+    }
+    header{
+        color: #3a6;
+        border-bottom: 2px solid;
+    }
 /* Contenido */
+    main{
+        margin: auto;
+        padding: 16px;
+    }
     iframe{
         width: 100%;
         border: none;
