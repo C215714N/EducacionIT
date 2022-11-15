@@ -86,7 +86,7 @@
                 <p>
                     Categoria web que se utiliza para identificar a todo elemento que se incropora desde un sitio externo y que fue compartido con autorizacion del autor original. Para incorporar este tipo de elementos se suele utilizar la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido, es decir que no afecta los tiempos de carga de nuestra pagina.
                 </p>
-                <div class="example">
+                <div class="example row">
                     <figure>
                         <iframe 
                             src="https://www.youtube.com/embed/zJBzHQawsjs" 
@@ -128,13 +128,13 @@
                 </div>
             </section>
             <section>
-                <header class="header">
-                    <h2>¿Multimedia sin Plugins?</h2>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
                 </header>
                 <p>
-                    Como se menciona al principio, actualmente podemos incorporar este tipo de elementos sin necesidad de instalar algun complemento, para ello debemos solamente colocar la etiqueta <strong>&lt;audio> o &lt;video></strong> e indicar un recurso compatible con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Debemos tener en cuenta que para que el usuario pueda reproducir este material debemos colocar el atributo <em>controls</em>.
+                    Como se menciona al principio, actualmente podemos incorporar estos elementos sin necesidad de instalar algun complemento, ya que solamente colocar la etiqueta <strong>&lt;audio> o &lt;video></strong> e indicar un recurso compatible con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Debemos tener en cuenta que para que el usuario pueda reproducir este material debemos colocar el atributo <em>controls</em>.
                 </p>
-                <div class="example">
+                <div class="example row">
                     <figure>
                         <video src="assets/media/californication.ogv" controls>
                             <p>
@@ -151,6 +151,64 @@
                         </video>
                         <figcaption>Red Hot Chili Peppers - Wet Sand (2006)</figcaption>
                     </figure>
+                </div>
+            </section>
+        </article>
+        <!-- Contenido Tablas HTML -->
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten organizar la informacion de manera tabular, deben utilizar cuando los datos se corresponden a una estructura determinada. Para incorporarlas solamente debemos utilizar la etiqueta <strong>&lt;table></strong> y dentro de las misma los elementos que forman parte de su estructura, respetando el <em>modelo de cajas.</em>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen estructura semantica?</h3>
+                </header>
+                <p>
+                    Dentro de la etiqueta mencionada anteriormente, debemos colocar las <em>filas con la etiqueta &lt;tr> (Table Row) </em> y dentro de las mismas las <em>celdas de contenido o encabezado utilizando &lt;th>(Table Heading) y &lt;td> (Table Division)</em>. Pero a partir de la version 5, se incorporo la estructura semantica, que se compone de los siguientes elementos:
+                </p>
+                <ul>
+                    <li>
+                        <strong>THEAD: </strong> Cabecera de tabla que contiene la fila de encabezados.
+                    </li>
+                    <li>
+                        <strong>TBODY: </strong> Cuerpo de tabla que contiene los datos y puede poseer encabezados.
+                    </li>
+                    <li>
+                        <strong>TFOOT: </strong> Pie de tabla que contiene datos complementarios al cuerpo.
+                    </li>
+                </ul>
+                <div class="example row">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo -->
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d477714n</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </section>
         </article>
