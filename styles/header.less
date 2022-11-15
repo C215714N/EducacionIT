@@ -1,0 +1,85 @@
+// Variables: Valores que se almacenan en la memoria y pueden cambiar
+    @color: var(--light);
+    @bg: var(--first);
+    @gradient: linear-gradient(var(--first), var(--dark));
+    @min: .5rem;
+    @mid: 2vw;
+    @max: 5rem;
+
+// Nesting: Anidacion de selectores y reglas que compila selectores especificos
+#header{  
+    .position;
+    .flexbox(@ai: center);
+    .sizes(@h:100vh);
+    color: @color;
+    background: @bg @gradient;
+    // Imagen Estilos Retrato
+    .portrait{
+        .normalize(.5rem; 1rem; .25rem solid var(--second));
+        &:extend(.r-portrait);
+        border-radius: 50%;
+        background-color: @color;
+        overflow: hidden;
+    }
+    // Cabecera Introduccion
+    .header{
+        .normalize(@p: 1rem);
+        .sizes(@max * 8; @h: auto);
+        .fontsize(@min, @max / 2, @mid);
+        text-shadow: 0 0 .5rem var(--dark);
+    }
+}
+
+// Mixins: Selectores que se aplican como reglas de estilo;
+.zeroise{
+    .normalize;
+}
+.unstyled{
+    list-style: none;
+    text-decoration: none;
+}
+.cover{
+    .position(absolute; @z: -1);
+    .sizes;
+    opacity: .5;
+    object-fit: cover;
+}
+.r-portrait{
+    .sizes(@max * 4; @max * 4);
+}
+
+// Mixins Parametricos: Estilos que reciben argumentos para aplicar reglas
+.normalize(@m: 0; @p: 0; @b: 0){
+    margin: @m;
+    border: @b;
+    padding: @p;
+}
+.flexbox(
+    @fd: row;  
+    @jc: center;
+    @ai: stretch;
+    @fw: wrap;
+    @d: flex
+){
+    display: @d;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+    flex-wrap: @fw;
+}
+.position(@p:relative; @x:0; @y:0; @z:0; @x-axis:left; @y-axis:top){
+    position: @p;
+    @{x-axis}: @x;
+    @{y-axis}: @y;
+    z-index: @z;
+}
+.sizes(@wmax: unset; @hmax: unset; @w: 100%; @h: 100%){
+    max-width: @wmax;
+    max-height: @hmax;
+    width: @w;
+    height: @h;
+}
+.fontsize(@min; @max; @mid){
+    font-size: ~'min(calc(@{mid} + @{min}), @{max})';
+}
+
