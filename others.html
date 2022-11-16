@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="#" class="active">Otros temas</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera de Pagina -->
+    <header id="header" class="header">
+        <h1>Fundamentos Web</h1>
+        <p>html y css</p>
+    </header>
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Articulo: Contenido Independiente -->
+        <article>
+            <header>
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el intercambio de datos entre cliente y servidor, para implementarlos dentro de una pagina web debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de esta los elementos que forman parte de los mismos. Se debe tener en cuenta que solamente se utilizara para el envio los elementos que formen parte del formulario, es decir, que cualquier elemento fuera de la etiqueta sera ignorado.
+            </p>
+            <!-- Seccion: Contenido Contextualizado -->
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    A la etiqueta mencionada anteriormente, debemos colocarle por lo menos 2 atributos, estos son <strong>action="..."</strong> que indica lo que debe suceder tras realizar el envio, normalmente se utiliza un archivo en lenguaje de backend (ej: php); y <strong>method="..."</strong> que indica como se realizara el envio y quien tiene prioridad, entre los metodos mas comunes se encuentran los siguientes:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong>metodo poco seguro ya que la informacion permanece visible en la barra de direcciones, pero cuya prioridad radica en la respuesta del servidor y por eso es mas rapido. <em>Se utiliza en Buscadores</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong>metodo seguro que cifra los datos antes y despues del envio ya que en este caso la prioridad radica en la proteccion de los datos del usuario. Se utiliza para formularios de <em>registro, incio de sesion y contacto.</em>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como se componen?</h3>
+                </header>
+            </section>
+        </article>
+    </main>
+    <!-- Pie de Pagina -->
+    <footer id="footer">
+        <!-- Formulario de Contacto -->
+        <form id="contact" action="" method="GET">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text">
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email">
+            <input type="submit">
+        </form>
+    </footer>
+</body>
+</html>
