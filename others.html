@@ -58,7 +58,7 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="" method="GET">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
@@ -70,6 +70,16 @@
                 id="contact_email"
                 name="email"
                 type="email">
+            <label for="contact_subject">Seleccione el asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura HTML</option>
+                <option value="css">Diseño Grafico CSS</option>
+                <option value="js">Logica JS</option>
+            </select>
+            <label for="contact_consult">Escriba su consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"></textarea>
             <input type="submit">
         </form>
     </footer>
