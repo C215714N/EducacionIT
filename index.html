@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos HTML</title>
 </head>
-<body>
+<body style="font-family: century gothic, calibri, segoe ui, sans-serif">
     <!-- Encabezado Principal (Heading 1) -->
     <h1>Desarrollo Web</h1>
     <!-- Parrafo (paragraph) -->
@@ -23,11 +23,60 @@
         <li>Tablas y Acceso FTP</li>
     </ol>
     <h2>Desarrollo FrontEnd</h2>
+    <p>
+        Se conoce con este nombre al desarrollo del lado del cliente (navegador) y se corresponde con aquellas caracteristicas que este puede reproducir, sin necesidad de la intervencion del servidor, como por ejemplo la estructura, el diseño de ui / ux y algunas funcionalidades relacionadas a esto.
+        <!-- Salto de Linea (Break) | huerfana -->
+        <br>
+        Dentro de los lenguaje que el navegador puede interpretar de manera independiente se encuentran los siguientes:
+    </p>
     <!-- Lista Desordenada (Unordered List) -->
     <ul>
         <li>HTML</li>
         <li>CSS</li>
         <li>JS</li>
     </ul>
+    <!-- Encabezado Nivel 3 (Heading 3) -->
+    <h3>HTML (HyperText Markup Language)</h3>
+    <p>
+        Lenguaje de marcado de Hipertexto (Estructura) que utiliza etiquetas para definir la jerarquia de la pagina y la funcion que cumple cada uno de los elementos de la misma y debemos tener en cuenta que el orden de los factores altera el producto.
+
+        Las etiquetas se pueden clasificar segun sus caracteristicas, que pueden ser:
+    </p>
+    <ul>
+        <li>
+            <!-- Importante (Strong) -->
+            <strong>De Bloque: </strong>
+            Son aquellas que ocupan todo el ancho de su contenedor, generan salto de linea y se les puede definir tamaño.
+            <!-- Enfasis (emphasys) -->
+            <em>Funcionan principalmente como contenedores</em>
+        </li>
+        <li>
+            <strong>De Linea: </strong>
+            Son aquellas que ocupan lo que mida su contenido, comparten espacio con otros elementos de su tipo y su tamaño es automatico.
+            <em>Funcionan principalmente como contenido</em>
+        </li>
+    </ul>
+    <!-- Capa (Division) | Elemento Presentacional (Bloque) -->
+    <div style="color: whitesmoke; background-color: darkslateblue; padding: 50px; max-width: 380px; ">
+        <h3>CSS (Cascading StyleSheets)</h3>
+        <p>
+            <!-- Expandir (span) | Elemento presentacional (Linea) -->
+            <span style="color: gold; font-size: 32px">L</span>as hojas de estilo en cascada Corresponden a un lenguaje de diseño grafico, que utiliza selectores y reglas para definir el aspecto de los elementos de la pagina web. En este caso el orden de los factores no altera el producto y algunas de los atributos mas comunes que se pueden modificar con este lenguaje son:
+        </p>
+        <ul>
+            <li>
+                <strong style="color: lightgreen;">margin: </strong>distancia que existe entre las etiquetas y siempre aplica el de mayor tamaño.
+            </li>
+            <li>
+                <strong>border: </strong>linea que rodea a las etiquetas y por defecto su valor es cero.
+            </li>
+            <li>
+                <strong>padding: </strong>relleno o espacio que existe entre el borde de una etiqueta y su contenido.
+            </li>
+            <li>
+                <strong>content: </strong>Elementos que se encuentran dentro de una etiqueta, que poseen ancho y alto.
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
