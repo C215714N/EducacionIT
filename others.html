@@ -53,6 +53,20 @@
                 <header>
                     <h3>¿Como se componen?</h3>
                 </header>
+                <p>
+                    Dentro de un formulario podemos utilizar cualquiera de las etiquetas que existen, pero destacan 2 principalmente, los <strong>rotulos (LABEL)</strong> que se utilizan para identificar lo que debe Seleccionar/escribir el usuario y facilitan la accesibilidad; y los <strong>campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los elementos donde el usuario podra seleccionar o escribir datos, estos deben poseer al menos los siguientes atributos:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> valor con el que se identifica al campo o grupo de campos de formulario.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> valor utilizado en los <em>&lt;input></em> que indica que tipo de dato es admitido por el control.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> valor del campo que debe figurar en caso que el usuario seleccione alguna opcion.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
@@ -65,12 +79,17 @@
             <input 
                 id="contact_name"
                 name="name"
-                type="text">
+                minlength="3"
+                maxlength="50"
+                type="text"
+                required>
             <label for="contact_email">Ingrese su Correo</label>
             <input 
                 id="contact_email"
                 name="email"
-                type="email">
+                minlength="8"
+                type="email"
+                required>
             <label for="contact_subject">Seleccione el asunto</label>
             <select id="contact_subject" name="subject">
                 <option value="html">Estructura HTML</option>
@@ -80,7 +99,10 @@
             <label for="contact_consult">Escriba su consulta</label>
             <textarea 
                 id="contact_consult" 
-                name="consult"></textarea>
+                name="consult"
+                minlength="30"
+                maxlength="1000"
+                required></textarea>
             <input type="submit">
         </form>
     </footer>
