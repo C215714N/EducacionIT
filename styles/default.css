@@ -24,7 +24,22 @@
         text-decoration: none;
     }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8px;
+        gap: 16px;
+        background-color: #248;
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #fff;
+        text-shadow: 0 0 4px; /* -x+ -y+ blur color*/
+    }
 /* Cabecera */
 
 /* Contenido */
