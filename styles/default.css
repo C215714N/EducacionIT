@@ -10,7 +10,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }    
     /* Estilos */
@@ -41,9 +42,37 @@
         text-shadow: 0 0 4px; /* -x+ -y+ blur color*/
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 16px;
+        background-position: center;
+        background-image: url('../assets/bg/osx-big-sur-night.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        text-shadow: 0 0 4px #eef;
+    }
+    .header{
+        margin: -16px -16px 16px; /*top right bottom left*/
+        padding: 16px;
+        color: #eee;
+        background-color: #248;
+    }
+    header{
+        color: #248;
+        border-bottom: 2px solid; /*width style color*/
+    }
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: 16px auto;
+        padding: 8px;
+    }
+    article{
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #ccd;
+        overflow: hidden;
+    }
 /* Pie de Pagina */
     /* Formulario de Contacto */
     #contact{
