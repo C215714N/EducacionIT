@@ -1,0 +1,29 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .light{
+            fill:transparent;
+            stroke: #eee;
+            stroke-width: 1rem;
+        }
+        .stroke{
+            fill:transparent;
+            stroke:#248; 
+            stroke-width: 1rem;
+        }
+    </style>
+    <polygon 
+        style="fill:#0ff"
+        points="0,75 0,225 150,300 150,150"/>
+    <polygon 
+        style="fill:#ff0"
+        points="150,0 0,75 150,150 300,75"/>
+    <polyline class="light" points="155,285 15,215 15,90"
+        />
+    <polygon 
+        style="fill:#f0f"
+        points="300,75 300,225 150,300 150,150"/>
+    <polyline class="stroke" points="150,300 0,225 0,75 310,225"/>
+    <polyline class="light" points="0,60 310,210"/>
+    <polyline class="stroke" points="150,160 295,100 295,85 150,25 150,225"/>
+    <polyline class="light" points="135,225 135,0 310,75 160,140"/>
+</svg>
