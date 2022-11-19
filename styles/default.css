@@ -52,6 +52,7 @@
     nav,
     .flex,
     .social,
+    #header,
     .menu{
         display: flex;
     }
@@ -64,7 +65,36 @@
         font-family: 'lcd';
         font-weight: lighter;
     }
-
+    #header{
+        min-height: min(720px,100vh);
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        color: #eee;
+        text-shadow: 0 0 .5rem #333;
+        padding: 1rem max(1rem, calc(50vw - 480px));
+        font-size: min(calc(2vw + .5rem), 2rem);
+        background-color: #224;
+        background-image: radial-gradient(
+            circle,
+            rgba(17, 34, 68, .8) 30%,
+            rgba(238,238,238,.8) 33%,
+            rgba(51,102,204,.8),
+            rgba(34,34,68,.8)
+        );
+    }
+    img.logo{
+        width: 100%;
+        padding: .5rem;
+        background-color: #eee;
+        clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    }
+    #header > * {
+        flex-grow: 1; /*Crecimiento dentro del contenedor flex*/
+        flex-shrink: 0; /*Reduccion dentro del contenedor flex*/
+        flex-basis: min(100%, 300px); /* Tamaño Base dentro del contenedor flex*/
+    }
 /* Navigation */
     nav{
         justify-content: space-between;
@@ -117,7 +147,8 @@
             hibrida: rem(ROOT em) su referente es <HTML>
 
         Flexibles: Son aquellas que basan su tamaño en las dimensiones del viewport (ventana del navegador). Se utilizan principalmente para tipografia flexible y establecer alturas.
-
+            tamaño: vh, vw;
+            dimension: vmin, vmax; 
     */
 /* Content */
 
