@@ -137,6 +137,15 @@
         height: 4rem;
         border-radius: .5rem;
         background-color: #ccc;
+        background-position: center;
+        background-size: 2.25rem;
+        background-repeat: no-repeat;
+        transition: all .25s ease;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 3rem;
+        box-shadow: 0 .2rem .4rem #333;
     }
     /* Social media icons */
     .facebook{
