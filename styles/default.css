@@ -51,6 +51,7 @@
     /* Layout */
     nav,
     .flex,
+    .social,
     .menu{
         display: flex;
     }
@@ -122,3 +123,19 @@
 
 /* Footer */
 
+    /* Social Media */
+    .social{
+        max-width: 720px;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: .5rem;
+        margin: auto;
+        padding: 1rem;
+    }
+    .social a{
+        width: 4rem;
+        height: 4rem;
+        border-radius: .5rem;
+        background-color: #ccc;
+    }
+    
