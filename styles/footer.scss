@@ -28,9 +28,14 @@
         shade       --shade,
         shadow      --shadow,
         deco        text-decoration-color;
-        
     // Tamaños 
     $col: 24;
+    $media: 
+        sm    576px   540px,
+        md    768px   720px,
+        lg    992px   960px,
+        xl   1200px  1140px,
+        xxl  1400px  1320px;
 // Mixin: Estilos que reciben parametros y se anidan
 @mixin normalize($m:0, $p:0, $b:0, $ba:border, $ma:margin, $pa:padding){
     #{$ma}:$m;
@@ -49,8 +54,13 @@
         #{$attr}: $cval;
 } } }
 
-/* Sistema de Grillas -responsive- */
-
+/* Sistema de Grillas responsive */
+@each $vn, $vw, $vmax in $media{
+@media screen and (min-width: $vw){
+    .container, .container-#{$vn}{ max-width: $vmax; }
+@for $i from 1 through $col{
+    .col-#{$vn}-#{$i}{ width: percentage($i/$col); }
+} } }
 // Styles:
 .icon{
     @include normalize(.25rem, inline-block, .5rem, border-radius, $pa: display);
@@ -68,8 +78,8 @@
 }
 .gradient{
     background-image: linear-gradient(
-        rgba(255,255,255, .5),
-        rgba(51,51,51, .5)
+        rgba(236,236,236, .3),
+        rgba(51,51,51, .3)
     )
 }
 // Nesting: Anidacion de estilos para la creacion de selectores
@@ -79,8 +89,13 @@
     }
     #contact{
         @include normalize(1rem auto, 1.5rem 1rem, .5rem, border-radius);
-        @extend .bg-light, .gradient, .text-primary;
+        @extend .container-md, .col-sm-20, .col-md-16, .col-lg-12, .bg-light, .gradient, .text-primary;
         display: grid;
+        input,
+        textarea,
+        select{
+            
+        }
     }
     .valid{
         
