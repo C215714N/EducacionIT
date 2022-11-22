@@ -16,7 +16,7 @@
         light       #eee,
         dark        #333,
         midgray     #666,
-        success     #3c6,
+        success     #284,
         warning     #da3,
         danger      #c33,
         info        #36c;
@@ -61,19 +61,22 @@
 @for $i from 1 through $col{
     .col-#{$vn}-#{$i}{ width: percentage($i/$col); }
 } } }
-// Styles:
-.icon{
-    @include normalize(.25rem, inline-block, .5rem, border-radius, $pa: display);
+// Hidden Styles: Estilos que no aparecen en la compilacion
+%icon{
     --color: #ccc;
     --position: center;
-    --size: 2.5rem;
+    --size: 2.25rem;
+    @include normalize(1rem .25rem, inline-block, .5rem, border-radius, $pa: display);
     min-width: 4rem;
     min-height: 4rem;
     background: var(--color) var(--bg) var(--position)/var(--size) no-repeat;
     &:hover{
         --color: #eee;
-        --size: 3.25rem;
+        --size: 3rem;
         box-shadow: 0 .25rem .5rem #333;
+        transform: 
+            translateY(-.25rem)
+            scale(1.1);
     }
 }
 .gradient{
@@ -81,6 +84,15 @@
         rgba(236,236,236, .3),
         rgba(51,51,51, .3)
     )
+}
+.hidden{
+    max-height: 0;
+    overflow: hidden;
+}
+.show{
+    max-height: 100vh;
+    font-weight: bold;
+    padding: .5rem;
 }
 // Nesting: Anidacion de estilos para la creacion de selectores
 #footer{
@@ -91,22 +103,41 @@
         @include normalize(1rem auto, 1.5rem 1rem, .5rem, border-radius);
         @extend .container-md, .col-sm-20, .col-md-16, .col-lg-12, .bg-light, .gradient, .text-primary;
         display: grid;
+        label{
+            margin-top: .5rem;
+        }
         input,
         textarea,
         select{
-            
+            @include normalize(none, .5rem 1rem, 1.5px solid,$ma: outline);
+            font-size: 1rem;
+            &:focus{
+                @extend .shadow-primary;
+                box-shadow: 0 .2rem .5rem var(--shadow);
+                & + .valid{ @extend .show; }
+            }
+            &:valid{
+                @extend .border-success, .shadow-success;
+                & + .valid{ @extend .text-success; }
+            }
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger, .shadow-danger;
+                & + .valid{ @extend .text-danger; }
+            }
+        }
+        .btn{
+            @include normalize(.5rem 0 1rem auto, .5rem 1rem, uppercase, text-transform);
         }
     }
-    .valid{
-        
-    }
+    .valid{ @extend .hidden; }
     .social{
+        text-align: center;
         a{
-            @extend .icon;
+            @extend %icon;
         }
     }
     .copy{
         @include normalize($p: 1rem);
-        @extend .bg-primary, .gradient;
+        @extend .text-light, .bg-primary, .gradient;
     }
 }
