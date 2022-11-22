@@ -55,25 +55,25 @@
     <!-- Contenido: Relevante para el usuario -->
     <main>
         <!-- Sobre mi -->
-        <section>
+        <section id="about">
             <header class="header">
                 <h2>Sobre mi</h2>
             </header>
         </section>
         <!-- Estudios -->
-        <section>
+        <section id="study">
             <header class="header">
                 <h2>Estudios</h2>
             </header>
         </section>
         <!-- Trabajos -->
-        <section>
+        <section id="jobs">
             <header class="header">
                 <h2>Trabajos</h2>
             </header>
         </section>
         <!-- Proyectos -->  
-        <section>
+        <section id="projects">
             <header class="header">
                 <h2>Proyectos</h2>
             </header>
@@ -82,8 +82,52 @@
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form action="" id="contact">
+        <form id="contact" action="">
             <h2>Consulta lo que necesites</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text" 
+                placeholder="Cristian Racedo"
+                minlength="3" 
+                maxlength="50"
+                required>
+            <div class="valid">
+                Coloque entre 3 y 50 caracteres utilizando solamente letras
+            </div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email"
+                type="email" 
+                placeholder="Cristiandracedo@hotmail.com"
+                minlength="8" 
+                required>
+            <div class="valid">
+                Utilice una direccion de al menos 8 caracteres con el formato "usuario@servidor"
+            </div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone" 
+                name="phone"
+                type="phone" 
+                placeholder="(5411)0303-4567"
+                minlength="6"
+                maxlength="20"
+                required>
+            <div class="valid">
+                Coloque la caracteristica entre parentesis y un guion cada 3 a 6 digitos
+            </div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                placeholder="Buenas, necesito realizar una consulta..."
+                minlength="30" 
+                maxlength="1000" 
+                required></textarea>
+            <button class="btn">Enviar</button>
         </form>
         <p class="copy">&copy;2022 Todos los derechos reservados</p>
     </footer>
