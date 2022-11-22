@@ -1,0 +1,317 @@
+/* Iconos Redes sociales */
+.facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+.instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.linkedin {
+  --bg: url("../assets/icon/linkedin.svg");
+}
+
+.twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.whatsapp {
+  --bg: url("../assets/icon/whatsapp.svg");
+}
+
+.youtube {
+  --bg: url("../assets/icon/youtube.svg");
+}
+
+/* Atributos Colores */
+.text-primary, #footer #contact {
+  color: #448;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-light {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-midgray {
+  color: #666;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.bg-primary, #footer .copy {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-light, #footer #contact {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-midgray {
+  background-color: #666;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark {
+  border-color: #333;
+}
+
+.border-midgray {
+  border-color: #666;
+}
+
+.border-success {
+  border-color: #3c6;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-danger {
+  border-color: #c33;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+.outline-primary {
+  outline-color: #448;
+}
+
+.outline-secondary {
+  outline-color: #c36;
+}
+
+.outline-light {
+  outline-color: #eee;
+}
+
+.outline-dark {
+  outline-color: #333;
+}
+
+.outline-midgray {
+  outline-color: #666;
+}
+
+.outline-success {
+  outline-color: #3c6;
+}
+
+.outline-warning {
+  outline-color: #da3;
+}
+
+.outline-danger {
+  outline-color: #c33;
+}
+
+.outline-info {
+  outline-color: #36c;
+}
+
+.shade-primary {
+  --shade: #448;
+}
+
+.shade-secondary {
+  --shade: #c36;
+}
+
+.shade-light {
+  --shade: #eee;
+}
+
+.shade-dark {
+  --shade: #333;
+}
+
+.shade-midgray {
+  --shade: #666;
+}
+
+.shade-success {
+  --shade: #3c6;
+}
+
+.shade-warning {
+  --shade: #da3;
+}
+
+.shade-danger {
+  --shade: #c33;
+}
+
+.shade-info {
+  --shade: #36c;
+}
+
+.shadow-primary {
+  --shadow: #448;
+}
+
+.shadow-secondary {
+  --shadow: #c36;
+}
+
+.shadow-light {
+  --shadow: #eee;
+}
+
+.shadow-dark {
+  --shadow: #333;
+}
+
+.shadow-midgray {
+  --shadow: #666;
+}
+
+.shadow-success {
+  --shadow: #3c6;
+}
+
+.shadow-warning {
+  --shadow: #da3;
+}
+
+.shadow-danger {
+  --shadow: #c33;
+}
+
+.shadow-info {
+  --shadow: #36c;
+}
+
+.deco-primary {
+  text-decoration-color: #448;
+}
+
+.deco-secondary {
+  text-decoration-color: #c36;
+}
+
+.deco-light {
+  text-decoration-color: #eee;
+}
+
+.deco-dark {
+  text-decoration-color: #333;
+}
+
+.deco-midgray {
+  text-decoration-color: #666;
+}
+
+.deco-success {
+  text-decoration-color: #3c6;
+}
+
+.deco-warning {
+  text-decoration-color: #da3;
+}
+
+.deco-danger {
+  text-decoration-color: #c33;
+}
+
+.deco-info {
+  text-decoration-color: #36c;
+}
+
+/* Sistema de Grillas -responsive- */
+.icon, #footer .social a {
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  --color: #ccc;
+  --position: center;
+  --size: 2.5rem;
+  min-width: 4rem;
+  min-height: 4rem;
+  background: var(--color) var(--bg) var(--position)/var(--size) no-repeat;
+}
+.icon:hover, #footer .social a:hover {
+  --color: #eee;
+  --size: 3.25rem;
+  box-shadow: 0 0.25rem 0.5rem #333;
+}
+
+.gradient, #footer .copy, #footer #contact {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(51, 51, 51, 0.5));
+}
+
+#footer #contact {
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  display: grid;
+}
+#footer .copy {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=footer.css.map */
