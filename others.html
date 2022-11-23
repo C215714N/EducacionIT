@@ -109,14 +109,154 @@
                             src="//www.slideshare.net/slideshow/embed_code/key/EB5XtBlwMu6AsA" 
                             allowfullscreen>
                         </iframe> 
-                        <figcaption> 
-                            <strong> 
+                        <figcaption>
                                 <a href="//www.slideshare.net/AhmedAbdelzaherkhafagy/html5-10467474" title="HTML5 " target="_blank">HTML5 </a> from 
                             <strong>
                                 <a href="//www.slideshare.net/AhmedAbdelzaherkhafagy" target="_blank">Ana AbdElzaher</a>
                             </strong>
                         </figcaption>
                     </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin plugins?</h3>
+                </header>
+                <p>
+                    Como se menciona al principio del articulo, los navegadores actuales poseen una <em>API (Aplication Programming Interface) de reproduccion</em> a la cual podemos acceder utilizando las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4 .webm, .ogv</em> respectivamente. Podemos verificar si nuestro navegador es compatible con estos elementos en el sitio <a href="https://caniuse.com" target="_blank">can i use</a>
+                </p>
+                <div class="example row">
+                    <figure>
+                        <video src="assets/media/californication.ogv" controls>
+                            <p>
+                                Lo sentimos pero tu Navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/californication.ogv">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Californication (1999)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" autoplay muted loop controls>
+                            <p>
+                                Lo sentimos pero tu Navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.webm">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand (2006)</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son elementos que permiten organizar la informacion de manera tabular y deben utilizarse cuando los datos deben respetar cierta estructura. Para incorporarlas dentro de la pagina simplemente basta con utilizar la etiqueta <strong>&lt;table></strong> y dentro de la misma los elementos que la componen <em>respetando el modelo de cajas</em>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen Estructura Semantica?</h3>
+                </header>
+                <p>
+                    Dentro de la etiqueta mencionada anteriormente debemos colocar los contenedores de fila <strong>&lt;tr> (Table row)</strong> y dentro de los mismos las celdas de encabezado y datos con las etiquetas <strong>&lt;th> (encabezado de tabla) y &lt;td> (table division)</strong>. Pero ademas la tabla se encuentra divida en las siguientes estructuras:
+                </p>
+                <ul>
+                    <li>
+                        <strong>THEAD: </strong>Cabecera de tabla que contiene los titulos.
+                    </li>
+                    <li>
+                        <strong>TBODY: </strong>Cuerpo de tabla que contiene los datos.
+                    </li>
+                    <li>
+                        <strong>TFOOT: </strong>Pie de tabla que contiene informacion complementaria.
+                    </li>
+                </ul>
+                <div class="example row">
+                    <table class="classic">
+                        <caption>Tabla de Usuarios</caption>
+                        <!-- Cabecera -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo -->
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d477714n</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <table class="modern semantic">
+                        <caption>Rutina Semanal</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Turno</th>
+                                <th>Lu</th>
+                                <th>Ma</th>
+                                <th>Mi</th>
+                                <th>Ju</th>
+                                <th>Vi</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <th>ma</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>ta</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>no</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla -->
+                        <tfoot> 
+                            <tr>
+                                <th>Total</th>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </section>
         </article>

@@ -15,6 +15,10 @@
     #header{
         margin: 0;
     }    
+    /* Bordes */
+    iframe{
+        border: 0;
+    }
     /* Estilos */
     .menu,
     .unstyled,
@@ -89,6 +93,58 @@
         display: flex;
         gap: 8px;
         overflow: auto;
+    }
+    .example iframe{
+        width: 640px;
+    }
+    .example video{
+        max-height: 360px;
+    }
+    iframe{
+        width: 100%;
+        min-height: 360px;
+    }
+    /* Tablas */
+    table caption,
+    th,
+    td{
+        padding: 8px 16px;
+    }
+    table caption{
+        border-radius: 8px 8px 0 0;
+    }
+    /* Classic */
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: 2px solid #248;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    /* Modern */
+    .modern{
+        text-shadow: 0 0 8px #333;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(34, 68, 136, .5);
+    }
+    /* Semantic */
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #3c6;
+    }
+    .semantic tfoot{
+        background-color: #36c;
     }
 /* Pie de Pagina */
     /* Formulario de Contacto */
