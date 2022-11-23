@@ -5,6 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS Interno -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'segoe ui', 'calibri', 'century gothic', sans-serif;
+        }
+        img{
+            max-width: 320px;
+            width: 100%;
+        }
+        /* Selectores Multiples (,)*/
+        header, 
+        footer{
+            padding: 8px;
+            color: #eee;
+            background-color: #248;
+            text-align: center;
+        }
+        /* Selectores especificos (padre hijo)*/
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: #124;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :Pseudoclases (Instancia o caracteristica de una etiqueta) */
+        nav li:hover{ /*al pasar el mouse*/
+            background-color: #36c;
+        }
+        /* .Class (atributo que sirve como clasificacion definida por el desarrollador) */
+        .box{
+            margin: 24px;
+            border-radius: 8px;
+            padding: 16px 32px; /*top right bottom left*/
+            background-color: #ccc;
+        }
+        /* #id (atributo que identifica al elemento como unico) */
+        #contact{
+            font-weight: bold;
+        }
+        /* Overflow y float */
+        .float{
+            padding: 16px;
+            color: #eee;
+            background-color: #36c;
+            overflow: hidden;
+        }
+        .float img{
+            float: left;
+            margin-right: 16px;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
@@ -52,6 +112,19 @@
             <img src="assets/img/jjba-d4c-04.jpg" 
                 alt="Dibujo JoJo's Bizarre Adventure D4C">
         </div>
+        <h2>Imágenes y Texto</h2>
+        <p class="float">
+            <img src="assets/bg/osx-big-sur-dark.jpg" 
+                alt="Imagen de fondo OSX Big Sur">
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quos quas error eius nulla esse dolorum quae aut tenetur sunt, fuga ipsam unde, illum, repellat suscipit perspiciatis! Doloremque, iste asperiores tempora ab facilis qui omnis deserunt ea quo laudantium voluptatibus, dolor aspernatur? Corrupti dolorem et distinctio, odio maxime totam magni?
+        </p>
+        <p class="float">
+            <img src="assets/bg/osx-big-sur-light.jpg" 
+            alt="Imagen de fondo OSX Big Sur">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis, itaque illum neque culpa vel adipisci? Alias quibusdam adipisci pariatur, iure facilis fugiat minima eaque animi ut temporibus vitae officiis esse ratione natus quam provident voluptatum commodi, perspiciatis quia officia iusto! Rerum nulla iure eveniet laborum nihil obcaecati odit unde error est similique ex voluptate nam, enim reiciendis vero, atque, mollitia labore placeat! Animi a perspiciatis earum velit qui suscipit quisquam, nisi corrupti. Excepturi quas adipisci pariatur molestias minima vero?
+        </p>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
