@@ -11,6 +11,7 @@
     h3,
     header p,
     .menu,
+    .example figure,
     #header{
         margin: 0;
     }    
@@ -83,6 +84,11 @@
         line-height: 1.5;
         background-color: #eee;
         box-shadow: 2px 2px 8px #ccc;
+    }
+    .row{
+        display: flex;
+        gap: 8px;
+        overflow: auto;
     }
 /* Pie de Pagina */
     /* Formulario de Contacto */
