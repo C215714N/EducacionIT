@@ -11,14 +11,58 @@
     <header>
         <h1>Fundamentos Web</h1>
         <p>html y css</p>
+        <!-- Navegacion: Links mas importantes -->
+        <nav>
+            <UL>
+                <li><!-- Ruta Relativa | Interna -->
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li><!-- Ruta Ancla | Marcador (refresh) -->
+                    <a href="#">Galeria</a>
+                </li>
+                <li><!-- Ruta Ancla | Marcador (#id)-->
+                    <a href="#contact">Contacto</a>
+                </li>
+            </UL>
+        </nav>
     </header>
     <!-- Contenido Principal: Relevante para el usuario -->
     <main>
-
+        <h2>Reglas de Nomenclatura</h2>
+        <ul class="box">
+            <li>
+                <strong>Evitar el uso de caracteres especiales</strong> como por ejemplo <em>espacios</em> ya que se traducen al <em>conjunto %20</em> y por lo tanto no se encontrarian dichos archivos.
+            </li>
+            <li>
+                <strong>Utilizar nombres descriptivos</strong> como por ejemplo <em>background.jpg</em> ya que facilita su implementacion a diferencia de nombres automatizados como <em>2022-11-22-2241100.jpg</em>
+            </li>
+            <li>
+                <strong>Nombrar los archivos solamente con minusculas</strong> ya que los servidores son <em>caseSensitive</em> y distinguen entre mayusculas y minusculas. Ademas, de esta manera se reduce el margen de error.
+            </li>
+        </ul>
+        <h2>implementacion de Imagenes</h2>
+        <div>
+            <!-- src (fuente) | alt (texto alternativo)-->
+            <img src="assets/img/jjba-d4c-01.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure D4C">
+            <img src="assets/img/jjba-d4c-02.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure D4C">
+            <img src="assets/img/jjba-d4c-03.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure D4C">
+            <img src="assets/img/jjba-d4c-04.jpg" 
+                alt="Dibujo JoJo's Bizarre Adventure D4C">
+        </div>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        <p>&copy;2022 Todos los derechos reservados</p>
+        <div class="box">
+            <!-- Ruta Externa | Absoluta -->
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://github.com/c215714n/EducacionIT/tree/html-mj22" target="_blank">GitHub</a>
+        </div>
+        <p id="contact">&copy;2022 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
