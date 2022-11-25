@@ -28,16 +28,44 @@
             <header class="header">
                 <h2>Formularios HTML</h2>
             </header>
+            <p>
+                Son herramientas que permiten el <strong>intercambio de datos entre cliente y servidor</strong>, para utilizarlos dentro de la pagina debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma los elementos que seran procesados para el envio correspondiente. No se tomaran en cuenta los elementos que se encuentren fuera del mismo.
+            </p>
             <!-- Seccion: Contenido Contextualizado -->
             <section>
                 <header>
                     <h3>¿Como funcionan?</h3>
                 </header>
+                <p>
+                    A la etiqueta mencionada anteriormente debemos colocarle por lo menos 2 atributos, estos son <strong>action="..."</strong> para indicar que sucede cuando el usuario envia el Formulario y <strong>method="..."</strong> para indicar quien posee la prioridad en el intercambio de datos. Los metodos mas comunes para el envio son los siguientes:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> Metodo poco seguro, donde la prioridad radica en la respuesta del servidor, los datos figuran en la barra de direcciones y <em>se utiliza en los buscadores</em>.
+                    </li>
+                    <li>
+                        <strong>POST: </strong> Metodo confiable que prioriza la seguridad de los datos ya que cifra los mismos antes de realizar el envio y <em>se utiliza en formularios de registro, acceso, contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
                     <h3>¿Cual es su estructura?</h3>
                 </header>
+                <p>
+                    Dentro de los formularios, podemos colocar cualquiera de las etiquetas implementadas con anterioridad, pero por sobre todas es necesarios colocar 2 tipos de elementos, por un lado se encuentran los <strong>rotulos (LABEL)</strong> que guian al usuario al momento de completar el formulario; y los <strong>campos (INPUT / TEXTAREA / SELECT)</strong> que permiten al usuario seleccionar o completar con sus datos, algunos de sus atributos son:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> atributo que sirve para identificar el campo de formulario y su valor puede ser compartido.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> atributo utilizado en la etiqueta <em>input</em> que indica el tipo de dato a ingresar/seleccionar.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> atributo que indicar el valor del campo y que solamente se debe colocar cuando el usuario selecciona, ya que en otros casos este es implicito.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
