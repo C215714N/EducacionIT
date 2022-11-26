@@ -35,12 +35,58 @@
     </nav>
     <!-- Main: Content for visitors -->
     <main>
-        
+        <!-- about -->
+
+        <!-- studies -->
+
+        <!-- jobs -->
+
+        <!-- projects -->
+
     </main>
     <!-- Footer: -->
     <footer id="footer">
+        <!-- contact -->
         <form action="" id="contact">
-
+            <h2>Contact Us</h2>
+            <label for="contact_name">Write your Name</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                maxlength="50"
+                placeholder="Cristian Racedo"
+                pattern="[A-Z a-z]{3,50}"
+                required>
+            <div class="validation">
+                put a valid name, only with letters and spaces, more than 3 chars and less than 50.
+            </div>
+            <label for="contact_email">write your email</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="cristiandracedo@hotmail.com"
+                required>
+            <div class="validation">
+                put a valid email, with more than 8 chars respecting this structure "user@domain".
+            </div>
+            <label for="contact_subject">select your subject</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">HTML Structure</option>
+                <option value="css">CSS Design</option>
+                <option value="js">JS Development</option>
+            </select>
+            <label for="contact_consult">write your consult</label>
+            <textarea 
+                id="contact_consult"
+                name="consult" 
+                minlength="30"
+                maxlength="1000"
+                placeholder="Hi, i want to ask something about..."
+                required></textarea>
+            <button class="btn">Enviar</button>
         </form>
         <section class="social">
             <a class="linkedin" 
@@ -69,7 +115,7 @@
                 target="_blank"> 
             </a>
         </section>
-        <p class="copy">&copy;2022 Todos los derechos reservados</p>
+        <p class="copy">&copy;2022 Todos los derechos reservados </p>
     </footer>
     <!-- Scripts JS -->
 
