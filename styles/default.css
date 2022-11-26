@@ -163,7 +163,69 @@
             dimension: vmin, vmax; 
     */
 /* Content */
+    section > p:first-of-type::first-letter{
+        float: left;
+        margin-right: .25rem;
+        line-height: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .auto{
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr));
+        gap: 1rem;
+        padding: 1rem;
+        /*  EXPLICACION:
+            repeat(cantidad, valor) crea la cantidad de columnas especificadas con el tamaño indicado
+            
+            - auto-fill: rellena con la cantidad de celdas posibles, siempre respetando el tamaño
+            - auto-fit: coloca la celdas para que cubran todo el espacio del contenedor, adaptando el tamaño,
 
+            minmax(a,b) establece los tamaños minimos y maximos
+        */
+    }
+    .card{
+        border-radius: .25rem;
+        padding: 1rem;
+        background: linear-gradient(#eee, transparent);
+        box-shadow: -.2rem .2rem .25rem .2rem #66c4;
+        overflow: hidden;
+    }
+    .card header{
+        margin: -1rem -1rem 1rem;
+        padding: 1rem;
+        color: #eee;
+        text-shadow: 0 0 .5rem #333;
+    }
+    .card:nth-child(odd) header{
+        background-color: #c36;
+    }
+    .card:nth-child(even) header{
+        background-color: #448;
+    }
+    .card:first-child header{
+        background-color: #d82;
+    }
+    .card:last-child header{
+        background-color: #333;
+    }
+/* About */
+/*  
+        Psedoclases: Instancia o caracteristica de un elemento
+            :hover cuando flotamos el mouse por encima
+            :focus  cuando enfocamos el elemento para una accion
+            :first-of-type corresponde a la primera aparicion de la etiqueta
+            :last-of-type corresponde a la ultima aparicion de la etiqueta
+            :first-child cuando corresponde al primer hijo de un contenedor
+            :nth-child() numero de hijo contando desde el principio
+            :nth-last-child() numero de hijo contando desde el final
+            :last-child cuando corresponde al ultimo hijo de un contenedor
+    
+        PseudoElementos: Parte o elemento dentro de una etiqueta
+            ::before contenido antes del contenido
+            ::after contenido despues del contenido
+            ::first-letter Primera letra de un contenedor
+            ::first-line primera linea de un contenedor
+    */
 /* Footer */
     /* Contact Form */
         #contact{
