@@ -37,10 +37,13 @@
         margin: 0;
     }
     .menu,
+    .years, 
+    .years ul,
     .unstyled{
         padding: 0;
     }
     .menu li,
+    .years li,
     .unstyled{
         list-style: none;
     }
@@ -228,6 +231,24 @@
     }
     .card:last-child header{
         background: linear-gradient(#666 ,#333);
+    }
+    /* Counters */
+    .years{
+        counter-reset: year;
+    }
+    .years ul{
+        counter-reset: months;
+    }
+    .years li{
+        counter-increment: year;
+    }
+    .years li li{
+        counter-increment: months;
+    }
+    .years li::before{
+        content: 
+            'job ' counter(year) ' - '
+            'period ' counter(months) ': ';
     }
 /* About */
 /*  
