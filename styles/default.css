@@ -102,11 +102,6 @@
         background-color: #eee;
         clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     }
-    #header > * {
-        flex-grow: 1; /*Crecimiento dentro del contenedor flex*/
-        flex-shrink: 0; /*Reduccion dentro del contenedor flex*/
-        flex-basis: min(100%, 300px); /* Tamaño Base dentro del contenedor flex*/
-    }
 /* Navigation */
     nav{
         justify-content: space-between;
@@ -163,6 +158,10 @@
             dimension: vmin, vmax; 
     */
 /* Content */
+    main{
+        max-width: 1320px;
+        margin: auto;
+    }
     section > p:first-of-type::first-letter{
         float: left;
         margin-right: .25rem;
@@ -172,6 +171,7 @@
     }
     .auto{
         grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr));
+        flex-wrap: wrap;
         gap: 1rem;
         padding: 1rem;
         /*  EXPLICACION:
@@ -183,6 +183,27 @@
             minmax(a,b) establece los tamaños minimos y maximos
         */
     }
+    .auto > *{
+        flex: 1 0 min(100%, 300px);
+    }
+    .auto img{
+        width: 100%;
+        height: 100%;
+        border-radius: .25rem;
+        border: .5rem solid #333;
+        background-color: #333;
+        object-fit: cover;
+    }
+    .flex.auto img{
+        max-width: 300px;
+    }
+    .masonry img:nth-child(odd){
+        grid-row: span 2;
+    }
+    .masonry img:nth-child(even){
+        grid-column: span 2;
+    }
+    /* Presentation Cards */
     .card{
         border-radius: .25rem;
         padding: 1rem;
@@ -197,16 +218,16 @@
         text-shadow: 0 0 .5rem #333;
     }
     .card:nth-child(odd) header{
-        background-color: #c36;
+        background: radial-gradient(circle at left,#c36, #448);
     }
     .card:nth-child(even) header{
-        background-color: #448;
+        background: radial-gradient(circle at left,#448, #36c);
     }
     .card:first-child header{
-        background-color: #d82;
+        background: linear-gradient(#ea2, #d62);
     }
     .card:last-child header{
-        background-color: #333;
+        background: linear-gradient(#666 ,#333);
     }
 /* About */
 /*  
