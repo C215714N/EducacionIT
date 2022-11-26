@@ -1,29 +1,21 @@
-<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .light{
-            fill:transparent;
-            stroke: #eee;
-            stroke-width: 1rem;
+<svg xmlns="http://www.w3.org/2000/svg" width="940px" height="942px">
+  <style>
+    .light {
+        fill:#FEFEFE;
         }
-        .stroke{
-            fill:transparent;
-            stroke:#248; 
-            stroke-width: 1rem;
+    .dark {
+        fill:#3E4095;
         }
-    </style>
-    <polygon 
-        style="fill:#0ff"
-        points="0,75 0,225 150,300 150,150"/>
-    <polygon 
-        style="fill:#ff0"
-        points="150,0 0,75 150,150 300,75"/>
-    <polyline class="light" points="155,285 15,215 15,90"
-        />
-    <polygon 
-        style="fill:#f0f"
-        points="300,75 300,225 150,300 150,150"/>
-    <polyline class="stroke" points="150,300 0,225 0,75 310,225"/>
-    <polyline class="light" points="0,60 310,210"/>
-    <polyline class="stroke" points="150,160 295,100 295,85 150,25 150,225"/>
-    <polyline class="light" points="135,225 135,0 310,75 160,140"/>
+  </style>
+    <polygon fill="cyan" points="0,235 0,705 470,940 470,470 "/>
+    <polygon fill="yellow" points="470,0 0,235 470,470 940,235 "/>
+    <polygon fill="magenta" points="940,235 940,705 470,940 470,470 "/>
+    <path class="light" d="M51.36 209.32l416.87 209.42 -0.12 50.92 -470 -235 51.36 -25.18zm418.4 659.43l-401.25 -202.97 0 -327.67 51.36 25.77 0 276.71 350.73 173.75 -0.84 54.41z"/>
+    <polygon class="dark" points="0,235 470,470 470,538.64 68.51,338.11 68.51,665.78 470,868.25 470,942.36 0.15,703.65 "/>
+    <polygon class="dark" points="470,470 940,235 936.08,303.77 470,538.64 "/>
+    <polygon class="dark" points="470,42.99 863.72,243.78 862.17,298.16 470,101.13 "/>
+    <polygon class="dark" points="520.12,27.02 470,0 467.61,759.02 520.45,730.89 "/>
+    <polygon class="light" points="423.85,23.43 470,0 940,235 520.32,454.5 520.3,411.3 858.4,239.13 470,46.1 470.68,758.14 423.55,727.28 "/>
+    <polygon class="dark" points="514.33,459.38 940,646.02 940,703.5 515.81,517.53 "/>
+    <polygon class="light" points="518.9,517.27 940,703.5 892.29,726.35 520.14,565.91 "/>
 </svg>
