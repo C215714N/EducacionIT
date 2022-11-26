@@ -60,6 +60,16 @@
     .grid{
         display: grid;
     }
+/* Components */
+    .btn{
+        color: #36c;
+        border: .1rem solid #36c;
+        background-color: transparent;
+    }
+    .btn:hover{
+        color: #eee;
+        background-color: #36c;
+    }
 /* Headers */
     h1,
     .title{
@@ -197,11 +207,11 @@
             max-height: 640px;
             padding: .25rem .2rem;
         }
-        #contact :valid{
+        #contact :not(button):valid{
             border-color: #284;
             box-shadow: 0 0 .2rem #3c6;
         }
-        #contact :valid + .validation{
+        #contact :not(button):valid + .validation{
             color: #284;
         }
         #contact :not(:placeholder-shown):invalid{
