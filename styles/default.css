@@ -31,3 +31,37 @@ nav a:hover{
 .menu-open::before{
     content: '\2630'
 }
+.menu-close::before{
+    content: '\00D7';
+}
+
+/* Pie de pagina */
+#footer{
+    position: relative;
+    min-height: min(100vh, 640px);
+}
+/* Mapa de contacto */
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.map-open::before{
+    content: '+'
+}
+.map-close::before{
+    content: '-';
+}
+#map{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+#map.map-close,
+.map.active{
+    position: fixed;
+    opacity: .9;
+}
