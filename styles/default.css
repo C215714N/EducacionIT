@@ -1,0 +1,33 @@
+/*  */
+
+/* Navegacion */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+    background: linear-gradient(#3c6, #36c)
+}
+nav a{
+    color: #ccc;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #eee;
+}
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all .5s linear;
+}
+.menu.active{
+    max-height: 640px;
+}
+.menu-open::before{
+    content: '\2630'
+}
