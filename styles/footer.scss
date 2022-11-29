@@ -9,6 +9,8 @@
         'twitter',
         'whatsapp',
         'youtube';
+    $position: static, relative, absolute, sticky, fixed;
+    $p_type: top, left, right, bottom;
     // Atributos
     $colors: 
         primary     #448,
@@ -42,18 +44,29 @@
     #{$ba}:$b;
     #{$pa}:$p;
 }
+@mixin pseudo($val){
+    &::before{ content: $val; }
+}
 // Loops: Estilos que se repiten en base a una condicion
 /* Iconos Redes sociales */
 @each $icon in $social{
     .#{$icon}{ --bg: url('#{$path}/#{$icon}.svg'); } 
 }
+/* Posiciones de Elementos*/
+@each $p in $position{
+    .p-#{$p}{ position: $p; }
+}
+@each $p in $p_type{
+@for $i from 0 through 20{
+    .#{$p}-#{$i * 5}{
+        #{$p}: $i * 5%;
+} } }
 /* Atributos Colores */
 @each $prop, $attr in $attributes{
 @each $cname, $cval in $colors{
     .#{$prop}-#{$cname}{
         #{$attr}: $cval;
 } } }
-
 /* Sistema de Grillas responsive */
 @each $vn, $vw, $vmax in $media{
 @media screen and (min-width: $vw){
@@ -96,8 +109,27 @@
 }
 // Nesting: Anidacion de estilos para la creacion de selectores
 #footer{
+    @include normalize($p: 5rem 0 0);
     .map{
-
+        @include normalize;
+        &.active{ 
+            @extend .p-fixed; 
+            opacity: .9;
+            z-index: 1;
+        }
+        &-open{
+            @include pseudo('+');
+            @extend .p-absolute;
+            z-index: 0;
+        }
+        &-close{
+            @include pseudo('-');
+            @extend .p-fixed;
+        }
+        & + .btn{
+            font-size: 1.5rem;
+            min-width: 2.5rem;
+        }
     }
     #contact{
         @include normalize(1rem auto, 1.5rem 1rem, .5rem, border-radius);
