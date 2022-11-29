@@ -159,6 +159,7 @@
         }
         .btn{
             @include normalize(.5rem 0 1rem auto, .5rem 1rem, uppercase, text-transform);
+            z-index: 0;
         }
     }
     .valid{ @extend .hidden; }
