@@ -34,14 +34,24 @@ function setDate(){
 }
 setDate();
 
-const navBar = (limit) => {
+const navBar = (limit = []) => {
     let nav = d.createElement('nav');
     let ul = d.createElement('ul');
     ul.className = 'menu';
-    for(let i = 0; i < limit; i++){
-        ul.innerHTML+= `<li><a href="#theme_${i + 1}">Tema ${i + 1}</a></li>`;
+    for(let link of limit){
+        ul.innerHTML+= `<li><a>${link}</a></li>`;
     }
     nav.appendChild(ul)
     header.appendChild(nav)
 }
-navBar(5);
+navBar(['home','about','gallery','products','services','contact']);
+
+document.addEventListener('click', (event) => {
+    let point = event.target.tagName
+    if (point == 'A'){
+        event.preventDefault();
+        window.location.hash = event.target.innerHTML;
+    } else if (point == 'HEADER' || point == 'FOOTER'){
+        alert('muchas gracias por contactarse')
+    }
+})
