@@ -1,0 +1,89 @@
+main{
+    margin: 1rem auto;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+/* redimensionado dinamico */
+.auto{
+    flex-wrap: wrap;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--m)), 1fr));
+    /* EXPLICACION:
+        repeat(n,m) => repite el valor "m" una "n" cantidad de veces
+        - autofill: rellena con celdas manteniendo su tamaño original
+        - autofit: estira las celdas hasta cubrir el tamaño del contenedor
+        minmax(a,b) determina los valores minimo y maximo de las celdas
+    */
+}
+.auto > * {
+    flex: 1 0 min(100%, var(--m));/* grow shrink basis */
+}
+.small{
+    --m: var(--small);
+}
+.medium{
+    --m: var(--medium);
+}
+.large{
+    --m: var(--large);
+}
+/* Tarjetas de presentacion */
+.card{
+    border-radius: .5rem;
+    padding: 1.5rem 2rem;
+    overflow: hidden;
+    transform: scale(.98);
+    transition: all .2s ease-out;
+    opacity: .8;
+}
+.card:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+.card-header{
+    margin: -1.5rem -2rem 1rem;
+    padding: 1.5rem 2rem;
+    background-color: #ccc8;
+    perspective: 6rem;
+    text-align: center;
+}
+.card-title{
+    display: inline-block;
+    transition: all .5s ease-in;
+    transform: 
+        translateZ(2rem)
+        rotateX(30deg);
+}
+.card-header:hover .card-title{
+    transform: 
+        translateZ(4rem)
+        rotateX(30deg);
+}
+.card p{
+    color: var(--gray);
+    text-shadow: 0 0 .5rem var(--dark);
+}
+.card-footer{
+    margin: 1.5rem -2rem -1.5rem;
+    padding: 1.5rem 2rem;
+    background-color: #3338;
+}
+.card a{
+    display: inline-block;
+    border-bottom: 1px solid var(--info);
+    padding: .25rem;
+    color: var(--info);
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.card a:hover{
+    transform: 
+        scale(1.2)
+        translate(10%, -10%)
+        rotate(-15deg);
+    text-shadow: 0 0 .25rem var(--first);
+}
