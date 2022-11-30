@@ -72,7 +72,7 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="" method="POST">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Contactanos</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
@@ -90,6 +90,20 @@
                 minlength="8"
                 placeholder="CristianDRacedo@hotmail.com"
                 required>
+            <label for="contact_subject">Seleccione el asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Diseño Grafico con CSS</option>
+                <option value="js">Programacion con JS</option>
+            </select>
+            <label for="contact_consult">Escriba su consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="30"
+                maxlength="1000"
+                placeholder="Buenas, mi consulta es la siguiente:"
+                required></textarea>
             <input type="submit">
         </form>
         <!-- Redes sociales -->
