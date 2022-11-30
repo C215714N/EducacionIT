@@ -24,7 +24,23 @@
         text-decoration: none;
     }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px;
+        color: #ccc;
+        background-color: #248;
+    }
+    .menu a{
+        color: #ccc;
+        font-weight: bold;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 8px; /* x y blur color */
+    }
 /* Cabecera */
 
 /* Contenido */
