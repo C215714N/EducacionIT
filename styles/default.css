@@ -37,4 +37,36 @@
         display: flex;
         flex-direction: column;
         margin: auto;
+        padding: 16px;
+    }
+    label{
+        margin-top: 8px;
+    }
+    input,
+    textarea,
+    select{
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid #248;
+        padding: 4px 8px; /* top right bottom left */
+        font-size: 16px;
+    }
+    textarea{
+        min-height: 80px;
+        resize: vertical;
+    }
+    .btn{
+        color: #248;
+        background-color: transparent;
+    }
+    .btn:hover{
+        color: #eee;
+        background-color: #248;
+    }
+    #contact .btn{
+        padding: 8px 16px;
+        margin: 4px 0 8px auto;
+    }
+    #contact :focus{
+        box-shadow: 0 0 4px #36c; /* -x+ -y+ blur color */
     }
