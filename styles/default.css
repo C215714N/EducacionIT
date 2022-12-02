@@ -42,7 +42,23 @@
         text-shadow: 0 0 8px; /* x y blur color */
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 16px; /* top right bottom left */
+        text-align: center;
+        text-shadow: 0 0 8px #000; /* -x+ -y+ blur color */
+        background-image: url('../assets/bg/osx-mojave-night.jpg');
+        background-position: top center;
+        background-size: cover;
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #36c;
+    }
+    header{
+        color: #248;
+        border-bottom: 2px solid; /* width style color */
+    }
 /* Contenido */
 
 /* Pie de Pagina */
