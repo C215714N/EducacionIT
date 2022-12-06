@@ -26,11 +26,15 @@
     prev.forEach( b => b.addEventListener('click', () => {
         setElement(gallery,'prev')
         setElement(indicators,'prev')
-    } ))
+    } ) )
     next.forEach( b => b.addEventListener('click', () => {
         setElement(gallery,'next')
         setElement(indicators,'next')
-    } ))
+    } ) )
+    indicators.forEach( (btn, i) => { btn.addEventListener('click', () => {
+        setElement(gallery,i)
+        setElement(indicators,i)
+    } ) } )
 // Funciones
     function toggler(object){
         const { target, btn, val } = object;
@@ -41,13 +45,11 @@
     }
 
     function getElement(array){
-        let newItem;
         for(el of array){
-            if(el.classList.contains(className)){
-                el.classList.remove(className)
-                newItem = el;
+        if(el.classList.contains(className)){
+            el.classList.remove(className)
+            return el;
         } }
-        return newItem;
     }
 
     function setElement(array, type){
@@ -56,8 +58,8 @@
             type == 'prev' ? 
             (el.previousElementSibling || el.parentNode.lastElementChild) :
             type == 'next' ? 
-            (el.nextElementSibling || el.parentNode.firstElementChild) :
-            (el)
+            (el.nextElementSibling || el.parentNode.firstElementChild) : 
+            (array[type])
         )
         newItem.classList.add(className)
     }
