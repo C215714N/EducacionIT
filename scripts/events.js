@@ -24,4 +24,3 @@ function toggle(obj) {
     obj.btn.classList.replace(obj.val[1],obj.val[0]) :
     obj.btn.classList.replace(obj.val[0],obj.val[1])
 }
-
