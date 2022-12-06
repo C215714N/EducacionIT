@@ -65,6 +65,75 @@ nav a:hover{
     background-color: #ccc;
     padding: 1rem;
 }
+/* Galerias */
+.carrousel{
+    position: relative;
+    min-height: min(100vh, 640px);
+}
+.carrousel ul{
+    list-style: none;
+    padding: 0;
+}
+.carrousel button{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    border: none;
+    padding: 15%;
+    color: #eee;
+    background-color: transparent;
+    font-size: 3rem;
+    opacity: .3;
+}
+.carrousel button:hover{
+    opacity: .7;
+}
+.carrousel .next{
+    right: 0;
+}
+.carrousel .item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+}
+.carrousel .item.active{
+    opacity: 1;
+}
+.carrousel .item:nth-child(1n){
+    background-image: url('../assets/bg/ubuntu-artful-aardvark.jpg');
+}
+.carrousel .item:nth-child(2n){
+    background-image: url('../assets/bg/ubuntu-bionic-beaver.jpg');
+}
+.carrousel .item:nth-child(3n){
+    background-image: url('../assets/bg/ubuntu-cosmic-cuttlefish.jpg');
+}
+.carrousel .item:nth-child(4n){
+    background-image: url('../assets/bg/ubuntu-disco-dingo.jpg');
+}
+.carrousel .item:nth-child(5n){
+    background-image: url('../assets/bg/ubuntu-eoan-ermine.jpg');
+}
+.carrousel .item:nth-child(6n){
+    background-image: url('../assets/bg/ubuntu-focal-fossa.jpg');
+}
+.carrousel .item:nth-child(7n){
+    background-image: url('../assets/bg/ubuntu-groovy-gorilla.jpg');
+}
+.carrousel .item:nth-child(8n){
+    background-image: url('../assets/bg/ubuntu-hisurte-hippo.jpg');
+}
+.carrousel .item:nth-child(9n){
+    background-image: url('../assets/bg/ubuntu-impish-Indri.jpg');
+}
+.carrousel .item:nth-child(10n){
+    background-image: url(' ets/bg/ubuntu-jammy-jellyfish.jpg');
+}
 
 /* Pie de pagina */
 #footer{
