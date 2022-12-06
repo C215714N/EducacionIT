@@ -1167,12 +1167,13 @@
   min-width: 4rem;
   min-height: 4rem;
   background: var(--color) var(--bg) var(--position)/var(--size) no-repeat;
+  transition: all 0.25s ease-in;
 }
 #footer .social a:hover {
   --color: #eee;
   --size: 3rem;
   box-shadow: 0 0.25rem 0.5rem #333;
-  transform: translateY(-0.25rem) scale(1.1);
+  transform: translateY(-0.25rem) rotate(360deg) scale(1.1);
 }
 
 .gradient, #footer .copy, #footer #contact {
@@ -1235,6 +1236,7 @@
   border: 1.5px solid;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  transition: all 0.5s ease-in 0s;
 }
 #footer #contact input:focus,
 #footer #contact textarea:focus,
@@ -1246,6 +1248,9 @@
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   z-index: 0;
+}
+#footer .valid {
+  transition: all 0.5s ease-out 0s;
 }
 #footer .social {
   text-align: center;

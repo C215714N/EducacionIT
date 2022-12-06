@@ -47,6 +47,9 @@
 @mixin pseudo($val){
     &::before{ content: $val; }
 }
+@mixin transition($duration:.5s, $timing: ease, $delay: 0s, $prop: all){
+    transition: $prop $duration $timing $delay;
+}
 // Loops: Estilos que se repiten en base a una condicion
 /* Iconos Redes sociales */
 @each $icon in $social{
@@ -83,12 +86,14 @@
     min-width: 4rem;
     min-height: 4rem;
     background: var(--color) var(--bg) var(--position)/var(--size) no-repeat;
+    transition: all .25s ease-in;
     &:hover{
         --color: #eee;
         --size: 3rem;
         box-shadow: 0 .25rem .5rem #333;
         transform: 
             translateY(-.25rem)
+            rotate(360deg)
             scale(1.1);
     }
 }
@@ -143,6 +148,7 @@
         select{
             @include normalize(none, .5rem 1rem, 1.5px solid,$ma: outline);
             font-size: 1rem;
+            @include transition($timing: ease-in);
             &:focus{
                 @extend .shadow-primary;
                 box-shadow: 0 .2rem .5rem var(--shadow);
@@ -162,7 +168,10 @@
             z-index: 0;
         }
     }
-    .valid{ @extend .hidden; }
+    .valid{ 
+        @include transition($timing: ease-out);
+        @extend .hidden; 
+    }
     .social{
         text-align: center;
         a{
