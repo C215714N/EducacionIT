@@ -14,21 +14,32 @@
     opacity: .3;
     transition: all .5s ease-in-out;
 }
+.gallery .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--light);
+    text-shadow: 
+        0 0 .5rem var(--light),
+        0 0 .5rem var(--dark);
+    text-transform: uppercase;
+}
 .indicators{
     position: absolute;
     bottom: 3rem;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
 }
 .indicators button{
     border-radius: 1.5rem;
-    padding: .75rem;
+    padding: .5rem;
     background-color: var(--light);
     opacity: .5;
     transition: all .5s ease-in;
 }
 .indicators .active{
-    padding: .75rem 2.5rem;
+    padding: .5rem 1.5rem;
 }
 .indicators button:hover,
 [class*="gallery-"]:hover{
