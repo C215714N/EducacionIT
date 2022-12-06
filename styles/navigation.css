@@ -15,6 +15,7 @@ nav{
     )
 }
 nav a{
+    display: block;
     --color: var(--gray);
     color: var(--color);
     text-shadow: 0 0 .5rem var(--color);
@@ -24,6 +25,9 @@ nav a.active,
 nav a:hover{
     --color: var(--light);
     filter: grayscale(30%);
+}
+nav a:hover{
+    animation: expand .5s ease;
 }
 .nav{
     display: flex;
@@ -47,6 +51,14 @@ nav a:hover{
     left: 0;
     opacity: .95;
 }
+nav a::before{
+    display: inline-block;
+    transform-origin: bottom center;
+}
+nav a:hover::before{
+    animation: move .5s linear alternate infinite;
+    /* name duration timing delay direction count */
+}
 @media screen and (min-width: 768px){
     .menu{
         position: static;
@@ -66,8 +78,10 @@ nav a:hover{
     .menu,
     .menu.active{
         display: flex;
+        gap: 1.2rem;
         width: auto;
         max-height: 640px;
+        overflow: visible;
     }
 }
 @media screen and (min-width: 1400px){

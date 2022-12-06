@@ -1,16 +1,4 @@
 /* Aparicion de elementos */
-@keyframes appearFromTop {
-    from{
-        transform: translate(0, -50%);
-        opacity: 0;
-    }
-}
-@keyframes appearFromBottom{
-    from{
-        transform: translate(0, 50%);
-        opacity: 0;
-    }
-}
 @keyframes appearFromLeft {
     from{
         transform: translate(-50%);
@@ -24,3 +12,24 @@
     }
 }
 
+/* Agrandar iconos */
+@keyframes expand { 
+    to{
+        transform: scale(1.2);
+    }
+}
+
+/* Animacion de salto */
+@keyframes move {
+    from{
+        transform: 
+            rotate(-30deg)
+            translateY(-.5rem);
+    }
+    to{
+        transform: 
+            rotate(30deg)
+            translateY(-.5rem);
+    }
+    
+}
