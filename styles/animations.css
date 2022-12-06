@@ -1,0 +1,26 @@
+/* Aparicion de elementos */
+@keyframes appearFromTop {
+    from{
+        transform: translate(0, -50%);
+        opacity: 0;
+    }
+}
+@keyframes appearFromBottom{
+    from{
+        transform: translate(0, 50%);
+        opacity: 0;
+    }
+}
+@keyframes appearFromLeft {
+    from{
+        transform: translate(-50%);
+        opacity: 0;
+    }
+}
+@keyframes appearFromRight{
+    from{
+        transform: translate(50%);
+        opacity: 0;
+    }
+}
+
