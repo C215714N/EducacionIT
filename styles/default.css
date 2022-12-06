@@ -49,6 +49,9 @@ nav a:hover{
 .auto > * {
     flex: 1 0 min(100%, var(--size));
 }
+.w-100{
+    width: 100%;
+}
 .small{
     --size: 200px;
 }
@@ -104,35 +107,75 @@ nav a:hover{
 .carrousel .item.active{
     opacity: 1;
 }
-.carrousel .item:nth-child(1n){
+.carrousel .item{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: #eee;
+    font-size: 3rem;
+    text-shadow: 0 0 .5rem #333;
+}
+/* Imagenes OSX */
+.osx .item:nth-child(1n){
+    background-image: url('../assets/bg/osx-big-sur.jpg');
+}
+.osx .item:nth-child(2n){
+    background-image: url('../assets/bg/osx-catalina.jpg');
+}
+.osx .item:nth-child(3n){
+    background-image: url('../assets/bg/osx-el-capitan.jpg');
+}
+.osx .item:nth-child(4n){
+    background-image: url('../assets/bg/osx-high-sierra.jpg');
+}
+.osx .item:nth-child(5n){
+    background-image: url('../assets/bg/osx-mojave-night.jpg');
+}
+.osx .item:nth-child(6n){
+    background-image: url('../assets/bg/osx-mavericks.jpg');
+}
+.osx .item:nth-child(7n){
+    background-image: url('../assets/bg/osx-mountain-lion.jpg');
+}
+.osx .item:nth-child(8n){
+    background-image: url('../assets/bg/osx-sierra.jpg');
+}
+.osx .item:nth-child(9n){
+    background-image: url('../assets/bg/osx-snow-leopard.jpg');
+}
+.osx .item:nth-child(10n){
+    background-image: url('../assets/bg/osx-mountain-lion.jpg');
+}
+/* Imagenes Ubuntu */
+.ubuntu .item:nth-child(1n){
     background-image: url('../assets/bg/ubuntu-artful-aardvark.jpg');
 }
-.carrousel .item:nth-child(2n){
+.ubuntu .item:nth-child(2n){
     background-image: url('../assets/bg/ubuntu-bionic-beaver.jpg');
 }
-.carrousel .item:nth-child(3n){
+.ubuntu .item:nth-child(3n){
     background-image: url('../assets/bg/ubuntu-cosmic-cuttlefish.jpg');
 }
-.carrousel .item:nth-child(4n){
+.ubuntu .item:nth-child(4n){
     background-image: url('../assets/bg/ubuntu-disco-dingo.jpg');
 }
-.carrousel .item:nth-child(5n){
+.ubuntu .item:nth-child(5n){
     background-image: url('../assets/bg/ubuntu-eoan-ermine.jpg');
 }
-.carrousel .item:nth-child(6n){
+.ubuntu .item:nth-child(6n){
     background-image: url('../assets/bg/ubuntu-focal-fossa.jpg');
 }
-.carrousel .item:nth-child(7n){
+.ubuntu .item:nth-child(7n){
     background-image: url('../assets/bg/ubuntu-groovy-gorilla.jpg');
 }
-.carrousel .item:nth-child(8n){
+.ubuntu .item:nth-child(8n){
     background-image: url('../assets/bg/ubuntu-hisurte-hippo.jpg');
 }
-.carrousel .item:nth-child(9n){
+.ubuntu .item:nth-child(9n){
     background-image: url('../assets/bg/ubuntu-impish-Indri.jpg');
 }
-.carrousel .item:nth-child(10n){
-    background-image: url(' ets/bg/ubuntu-jammy-jellyfish.jpg');
+.ubuntu .item:nth-child(10n){
+    background-image: url('../assets/bg/ubuntu-jammy-jellyfish.jpg');
 }
 
 /* Pie de pagina */
@@ -164,4 +207,16 @@ nav a:hover{
 .map.active{
     position: fixed;
     opacity: .9;
+}
+
+@media screen and (min-width: 768px){
+    nav .btn{
+        display: none;
+    }
+    nav .menu{
+        display: flex;
+        gap: 1rem;
+        width: auto;
+        max-height: 640px;
+    }
 }
