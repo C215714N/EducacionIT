@@ -34,6 +34,37 @@ nav a:hover{
 .menu-close::before{
     content: '\00D7';
 }
+/* Contenido */
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.auto{
+    flex-wrap: wrap;
+    gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
+}
+.auto > * {
+    flex: 1 0 min(100%, var(--size));
+}
+.small{
+    --size: 200px;
+}
+.medium{
+    --size: 400px;
+}
+.large{
+    --size: 600px;
+}
+
+/* Tarjetas */
+.card{
+    border-radius: .5rem;
+    background-color: #ccc;
+    padding: 1rem;
+}
 
 /* Pie de pagina */
 #footer{
