@@ -1,0 +1,15 @@
+#about{
+    .bg-colors;
+    background-image: linear-gradient(
+        to right,
+        var(--gradient);
+    );
+    background-size: 600%;
+    background-position: -600%;
+    animation: translate 360s linear infinite;
+    // color image position / size repeat
+}
+.bg-colors(@i: 0) when (@i <= 6){
+    --gradient+: hsl(@i * 60, 50%, 50%);
+    .bg-colors(@i + 1);
+}

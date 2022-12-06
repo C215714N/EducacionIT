@@ -18,6 +18,12 @@
         transform: scale(1.2);
     }
 }
+/* Desplazamiento de Fondo */
+@keyframes translate{
+    to{
+        background-position: 0%;
+    }
+}
 
 /* Animacion de salto */
 @keyframes move {

@@ -38,13 +38,13 @@
   max-height: unset;
   width: 100%;
   height: auto;
-  font-size: min(calc(2vw + 0.5rem), 2.5rem);
+  font-size: min(calc(2vw + 0.5rem), 5rem / 2);
   text-shadow: 0 0 0.5rem var(--dark);
   animation: appearFromRight 2s ease-out 0.5s;
   animation-fill-mode: backwards;
 }
 main section {
-  min-height: 100vh;
+  min-height: min(100vh, 640px);
   padding: 1rem;
 }
 main section:nth-child(1n) {
@@ -249,4 +249,11 @@ main .ubuntu-bg:nth-child(10n) {
 }
 .col-24 {
   width: 100%;
+}
+#about {
+  --gradient: hsl(0, 50%, 50%), hsl(60, 50%, 50%), hsl(120, 50%, 50%), hsl(180, 50%, 50%), hsl(240, 50%, 50%), hsl(300, 50%, 50%), hsl(0, 50%, 50%);
+  background-image: linear-gradient(to right, var(--gradient));
+  background-size: 600%;
+  background-position: -600%;
+  animation: translate 360s linear infinite;
 }
