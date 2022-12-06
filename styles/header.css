@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   color: var(--light);
   background: var(--first) linear-gradient(var(--first), var(--dark));
+  overflow: hidden;
 }
 @media screen and (min-width: 992px) {
   #header {
@@ -26,6 +27,8 @@
   border-radius: 50%;
   background-color: var(--light);
   opacity: 0.8;
+  animation: appearFromLeft 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
 }
 #header .header {
   margin: 0;
@@ -37,6 +40,8 @@
   height: auto;
   font-size: min(calc(2vw + 0.5rem), 2.5rem);
   text-shadow: 0 0 0.5rem var(--dark);
+  animation: appearFromRight 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
 }
 main section {
   min-height: 100vh;

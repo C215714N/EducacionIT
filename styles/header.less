@@ -53,6 +53,7 @@
     .flexbox(@ai: center);
     color: @color;
     background: @bg @gradient;
+    overflow: hidden;
     @media screen and (min-width: @lg){
         .sizes(@h: 100vh);
     }
@@ -63,6 +64,8 @@
         border-radius: 50%;
         background-color: @color;
         opacity: .8;
+        animation: appearFromLeft 2s ease-out .5s;
+        animation-fill-mode: backwards;
     }
     // Cabecera Introduccion
     .header{
@@ -70,6 +73,8 @@
         .sizes(@max * 8; @h: auto);
         .fontsize(@min, @max / 2, @mid);
         text-shadow: 0 0 .5rem var(--dark);
+        animation: appearFromRight 2s ease-out .5s;
+        animation-fill-mode: backwards;
     }
 }
 main{
