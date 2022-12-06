@@ -40,6 +40,7 @@
 }
 main section {
   min-height: 100vh;
+  padding: 1rem;
 }
 main section:nth-child(1n) {
   --bg: radial-gradient(circle at top left, hsl(67.5, 50%, 60%), hsl(22.5, 50%, 40%));
@@ -54,7 +55,7 @@ main section:nth-child(4n) {
   --bg: radial-gradient(circle at top left, hsl(270, 50%, 60%), hsl(90, 50%, 40%));
 }
 main section .header {
-  margin: 1rem;
+  margin: -1rem -1rem 1rem;
   border: 0;
   padding: 0.5rem min(calc(100vw - 660px), 1rem);
   background: var(--bg);
