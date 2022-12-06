@@ -1,0 +1,54 @@
+@use 'sass:math';
+$functions: lineal, cuadratica, trigonometrica, exponencial, limite;
+.container{
+    overflow: hidden;
+}
+.rotate{
+    animation: rotate 60s linear infinite;
+}
+.bubble{
+    width: 2rem;
+    height: 2rem;
+    margin: .5rem;
+    border-radius: math.div(100%, 2);
+    box-shadow: 
+        -.25rem .25rem #eee5 inset,
+        -.25rem .25rem .5rem var(--dark);
+    @for $i from 1 through length($functions){
+        &:nth-child(#{$i}n){
+            animation: nth($functions, $i) $i * .5s + 2s linear .5s * $i alternate infinite;
+            background: radial-gradient(circle at top left, 
+                hsl($i * 60, 50%, 50%),
+                hsl($i * 90, 60%, 40%)
+            )
+        }
+    }
+}
+@each $f in $functions{
+    @keyframes #{$f}{
+    @for $i from 0 through 100{
+        $y: 0;
+        @if $f == lineal{
+            $y: math.div($i, 2);
+        } @else if $f == cuadratica {
+            $x: math.div($i - 50, 2);
+            $y: math.pow($x, 2);
+        } @else if $f == trigonometrica {
+            $y: math.sin($i) * 5;
+        } @else if $f == exponencial {
+            $x: math.div($i, 2);
+            $y: math.pow(1.1, $x);
+        } @else if $f == limite {
+            $x: $i - 50;
+            @if $x == 0 {
+                $y: 1;
+            } @else {
+                $y: math.div(1000, $x);
+            }
+        }
+        #{$i}%{
+            transform: translate($i * 1vw, $y * 1vh)
+        }
+    }
+    }
+}

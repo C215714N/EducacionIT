@@ -24,6 +24,12 @@
         background-position: 0%;
     }
 }
+/* Rotation */
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
 
 /* Animacion de salto */
 @keyframes move {
@@ -39,3 +45,4 @@
     }
     
 }
+
