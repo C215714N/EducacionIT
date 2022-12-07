@@ -11,7 +11,8 @@
     h3,
     header p,
     .menu,
-    .unstyled{
+    .unstyled,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -57,6 +58,7 @@
         background-attachment: fixed;
     }
     .header{
+        margin: -16px -16px 16px;
         padding: 16px;
         color: #eee;
         background-color: #36c;
@@ -66,7 +68,18 @@
         border-bottom: 2px solid; /* width style color */
     }
 /* Contenido */
-
+    main{
+        max-width: 960px;
+        margin: 16px auto;
+        padding: 16px;
+    }
+    article{
+        margin: 24px 0;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #999;
+        overflow: hidden;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
