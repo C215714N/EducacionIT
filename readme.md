@@ -4,6 +4,7 @@ La siquiente es una guia teorico-practica realizada con la finalidad de profundi
 
 ## Tabla de contenidos
 1. [tipos de datos](tipos-de-datos)
+1. [constructores](constructores)
 
 ## Tipos de datos
 Hacen referencia a la minima porcion de información que se trabaja, también se puede considerar como el rango de valores que puede tomar una variable durante la ejecución del programa. 
@@ -21,3 +22,16 @@ Si bien javascript utiliza tipado dinamico, es decir que se puede modificar la c
 * __Array__: Objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación.
 * __Object__: Estructura que contiene datos e instrucciones para trabajar, es usado para guardar una colección de datos definidos y entidades más complejas.
 * __Function__: fragmento de código que puede ser llamado por otro código o por sí mismo, o por una variable que haga referencia a la función
+
+## Constructores
+Una variable es un contenedor para un valor, como un número que va a ser utilizado en una suma, o una cadena de texto como parte de una oración. Pero los valores que estas contienen pueden cambiar.
+
+Podemos declarar variables utilizando cualquiera de las _instrucciones var, let y const_. Cada una posee su propias caracteristicas, como se muestran en la tabla que aparece a continuacion:
+
+| __inicializador__ | var 	| let 	| const |
+|---------------|-------|-------|-------|
+| __Alcance__ 	| global <td colspan="2">local</td>
+| __Redeclarable__	| si 	| no	| no 	|
+| __Redefinible__ 	| si 	| si 	| no 	|
+
+
