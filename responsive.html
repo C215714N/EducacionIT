@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <video class="cover" src="assets/media/wet-sand.mp4" autoplay muted loop>
+            <p>
+                Lo sentimos, pero tu navegador no es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+            </p>
+        </video>
+        <h1>Cristian Racedo</h1>
+        <p>FullStack Web Developer</p>
+    </header>
+    <!-- navigation -->
+    <nav id="nav">
+        <a class="logo" href="#">CR</a>
+        <button class="btn menu-open"></button>
+        <ul class="menu">
+            <li><a href="#header">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#studies">studies</a></li>
+            <li><a href="#jobs">jobs</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#" class="active">Responsive</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- about -->
+        <section id="about" class="card">
+            <header class="header">
+                <h2>about</h2>
+            </header>
+        </section>
+        <!-- studies -->
+        <section id="studies" class="card">
+            <header class="header">
+                <h2>studies</h2>
+            </header>
+        </section>
+        <!-- jobs -->
+        <section id="jobs" class="card">
+            <header class="header">
+                <h2>jobs</h2>
+            </header>
+        </section>
+        <!-- projects -->
+        <section id="projects" class="card">
+            <header class="header">
+                <h2>projects</h2>
+            </header>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="footer">
+        <!-- location -->
+        <iframe class="cover map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.069937068758!2d-58.37812478548698!3d-34.602392980459804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1670696725077!5m2!1ses-419!2sar"
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <button class="btn map-open" title="agrandar / achicar mapa"></button>
+        <!-- contact -->
+        <form action="" id="contact">
+            <h2>Contact Us</h2>
+            <label for="contact_name">Write your Name</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                maxlength="50"
+                placeholder="Cristian Racedo"
+                pattern="[A-Z a-z]{3,50}"
+                required>
+            <div class="validation">
+                put a valid name, only with letters and spaces, more than 3 chars and less than 50.
+            </div>
+            <label for="contact_email">write your email</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="cristiandracedo@hotmail.com"
+                required>
+            <div class="validation">
+                put a valid email, with more than 8 chars respecting this structure "user@domain".
+            </div>
+            <label for="contact_subject">select your subject</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">HTML Structure</option>
+                <option value="css">CSS Design</option>
+                <option value="js">JS Development</option>
+            </select>
+            <label for="contact_consult">write your consult</label>
+            <textarea 
+                id="contact_consult"
+                name="consult" 
+                minlength="30"
+                maxlength="1000"
+                placeholder="Hi, i want to ask something about..."
+                required></textarea>
+            <button class="btn">Enviar</button>
+        </form>
+        <!-- social media -->
+        <section class="social">
+            <a class="linkedin" 
+                title="follow in linkedin"
+                href="https://linkedin.com" 
+                target="_blank">
+            </a>
+            <a class="facebook" 
+                title="follow in facebook"
+                href="https://facebook.com" 
+                target="_blank">
+            </a>
+            <a class="instagram" 
+                title="follow in instagram"
+                href="https://instagram.com" 
+                target="_blank"> 
+            </a>
+            <a class="twitter" 
+                title="follow in twitter"
+                href="https://twitter.com" 
+                target="_blank"> 
+            </a>
+            <a class="github" 
+                title="fork in github"
+                href="https://github.com/c215714n/EducacionIT/tree/css-s15" 
+                target="_blank"> 
+            </a>
+        </section>
+        <!-- copyright -->
+        <p class="copy">&copy;2022 Todos los derechos reservados </p>
+    </footer>
+    <!-- Scripts JS -->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
