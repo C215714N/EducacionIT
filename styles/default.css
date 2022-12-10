@@ -83,6 +83,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        object-fit: cover;
     }
 /* Headers */
     h1,
@@ -100,6 +101,7 @@
         text-shadow: -.5rem .5rem #333;
     }
     #header{
+        position: relative;
         min-height: min(720px,100vh);
         justify-content: center;
         align-items: center;
@@ -109,13 +111,13 @@
         text-shadow: 0 0 .5rem #333;
         padding: 1rem max(1rem, calc(50vw - 480px));
         font-size: min(calc(2vw + .5rem), 2rem);
-        background-color: #224;
+        background-color: #2243;
         background-image: radial-gradient(
             circle,
-            rgba(17, 34, 68, .8) 30%,
-            rgba(238,238,238,.8) 33%,
-            rgba(51,102,204,.8),
-            rgba(34,34,68,.8)
+            rgba(17, 34, 68, .3) 30%,
+            rgba(238,238,238,.3) 33%,
+            rgba(51,102,204,.3),
+            rgba(34,34,68,.3)
         );
     }
     img.logo{
@@ -127,6 +129,12 @@
     }
 /* Navigation */
     nav{
+        position: sticky;
+        /* 
+            El elemento sigue ocupando lugar dentro del flow y se posiciona con respecto a su ancestro, siempre y cuando se cumpla una determinada condicion.
+        */
+        top: 0;
+        z-index: 1;
         justify-content: space-between;
         gap: .5rem;
         padding: 1rem;
@@ -185,6 +193,19 @@
         max-width: 1320px;
         margin: auto;
     }
+    section{
+        margin: 1.5rem 0;
+    }
+    section .header{
+        position: sticky;
+        top: -1rem;
+    }
+    section:nth-child(odd){
+        background: linear-gradient(transparent, #ccc);
+    }
+    section:nth-child(even){
+        background: linear-gradient(#eee, transparent);
+    }
     section > p:first-of-type::first-letter{
         float: left;
         margin-right: .25rem;
@@ -193,7 +214,7 @@
         font-weight: bold;
     }
     .auto{
-        grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,280px),1fr));
         flex-wrap: wrap;
         gap: 1rem;
         padding: 1rem;
@@ -270,7 +291,35 @@
             'job ' counter(year) ' - '
             'period ' counter(months) ': ';
     }
-/* About */
+    /* Context Menu */
+    .submenu{
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        background: linear-gradient(#eee, #ddd);
+    }
+    .submenu li{
+        position: relative;
+        padding: 1rem;
+    }
+    .submenu ul{
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(#ddd, #ccc);
+        min-width: 10rem;
+    }
+    .submenu li:hover{
+        background: linear-gradient(#aaa, #888);
+    }
+    .submenu li:hover > ul {
+        display: block;
+    }
+    .submenu ul ul{
+        top: 0;
+        left: 100%;
+    }
 /*  
         Psedoclases: Instancia o caracteristica de un elemento
             :hover cuando flotamos el mouse por encima
@@ -288,9 +337,17 @@
             ::first-letter Primera letra de un contenedor
             ::first-line primera linea de un contenedor
     */
+#projects{
+    max-height: 100vh;
+    overflow: auto;
+}
+#jobs{
+    overflow: visible;
+}
 /* Footer */
     #footer{
         position: relative;
+        padding: .5rem;
         background: rgba(236,236,236,.5)
             linear-gradient(
                 hsla(240, 50%, 80%, .5),
@@ -322,7 +379,7 @@
         /* 
             El elemento se ubica con respecto a la ventana del navegador, tu tamaño es igual a lo que mida su contenido y deja de ocupar lugar dentro del flow.
         */
-        z-index: 0;
+        z-index: 1;
         opacity: .9;
     }
     /* Contact Form */

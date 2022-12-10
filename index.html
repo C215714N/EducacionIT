@@ -15,6 +15,11 @@
 <body>
     <!-- Header: Introduction -->
     <header id="header" class="auto">
+        <video class="cover" src="assets/media/wet-sand.mp4" autoplay muted loop>
+            <p>
+                Lo sentimos, pero tu navegador NO es compatible con este elemento, podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+            </p>
+        </video>
         <img src="assets/icon/cr.svg" alt="C215714N Picture" class="logo">
         <div class="header">
             <h1>Cristian Racedo</h1>
@@ -36,7 +41,7 @@
     <!-- Main: Content for visitors -->
     <main>
         <!-- about -->
-        <section id="about">
+        <section id="about" class="card">
             <header class="header">
                 <h2>About</h2>
             </header>
@@ -52,7 +57,7 @@
             </div>
         </section>
         <!-- studies -->
-        <section id="studies">
+        <section id="studies" class="card">
             <header class="header">
                 <h2>studies</h2>
             </header>
@@ -149,17 +154,37 @@
             </div>
         </section>
         <!-- jobs -->
-        <section>
+        <section id="jobs" class="card">
             <header class="header">
                 <h2>jobs</h2>
             </header>
-            <ul class="years">
+            <ul class="years submenu">
                 <li>
                     <strong>IADE</strong>
                     <ul>
-                        <li>office</li>
-                        <li>graphics design</li>
-                        <li>web design</li>
+                        <li>office
+                            <ul>
+                                <li>word</li>
+                                <li>excel</li>
+                                <li>access</li>
+                                <li>power point</li>
+                            </ul>
+                        </li>
+                        <li>graphics design
+                            <ul>
+                                <li>photoshop</li>
+                                <li>illustrator</li>
+                                <li>indesign</li>
+                            </ul>
+                        </li>
+                        <li>web design
+                            <ul>
+                                <li>frontpage</li>
+                                <li>fireworks</li>
+                                <li>flash</li>
+                                <li>dreamweaver</li>
+                            </ul>
+                        </li>
                         <li>pc technician</li>
                     </ul>
                 </li>
@@ -193,7 +218,7 @@
             </ul>
         </section>
         <!-- projects -->
-        <section>
+        <section id="projects" class="card">
             <header class="header">
                 <h2>projects</h2>
             </header>
