@@ -73,6 +73,17 @@
         color: #eee;
         background-color: #36c;
     }
+    .cover{
+        position: absolute;
+        /* 
+            El elemento se ubica con respecto al primer ancestro que no tenga posicion estatica (valor predeterminado). Pasa a medir lo mismo que su contenido y no ocupa lugar dentro del flow
+        */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
 /* Headers */
     h1,
     .title{
@@ -278,6 +289,35 @@
             ::first-line primera linea de un contenedor
     */
 /* Footer */
+    #footer{
+        position: relative;
+        background: rgba(236,236,236,.5)
+            linear-gradient(
+                hsla(240, 50%, 80%, .5),
+                hsla(240, 50%, 90%, .5)
+            )
+    }
+    /* Location Map */
+    [class*="map-"]{
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+    }
+    .map-open::before{
+        content: '+'
+    }
+    .map-close::before{
+        content: '-';
+    }
+    .map.active,
+    .btn.map-close{
+        position: fixed;
+        /* 
+            El elemento se ubica con respecto a la ventana del navegador, tu tamaño es igual a lo que mida su contenido y deja de ocupar lugar dentro del flow.
+        */
+        z-index: 0;
+        opacity: .9;
+    }
     /* Contact Form */
         #contact{
             flex-direction: column;
