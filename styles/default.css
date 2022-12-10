@@ -78,6 +78,15 @@
     .title{
         font-family: 'lcd';
         font-weight: lighter;
+        position: relative;
+        /* 
+            El elemento es su propio referente y cambiara su posicionamiento en base a si mismo. Sigue ocupando su espacio original dentro del Flow.
+        */
+    }
+    .header:hover > :is(h1, .title){
+        bottom: .5rem;
+        left: .5rem; 
+        text-shadow: -.5rem .5rem #333;
     }
     #header{
         min-height: min(720px,100vh);
@@ -343,6 +352,9 @@
         background-size: 2.25rem;
         background-repeat: no-repeat;
         transition: all .25s ease;
+    }
+    .social:hover a{
+        bottom: .5rem;
     }
     .social a:hover{
         background-color: #eee;
