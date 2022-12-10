@@ -1,0 +1,91 @@
+/* Declarations */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto&family=Raleway');
+
+@font-face {
+    font-family: 'lcd';
+    src: url('../assets/font/karmatic.ttf');
+}
+/* General Rules */
+:root{
+    /* colors */
+    --first: #448;
+    --second: #36c;
+    --light: #eee;
+    --dark: #333;
+    --success: #284;
+    --warning: #da3;
+    --danger: #c33;
+    /* sizes */
+    --small: 200px;
+    --medium: 400px;
+    --large: 600px;
+    /* fonts */
+    --title: 'lcd';
+    --font: 'Ubuntu', 'Raleway', 'Century Gothic', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--font);
+}
+/* margins */
+body,
+h1,
+h2,
+h3,
+h4,
+.menu{
+    margin: 0;
+}
+/* paddings */
+.menu{
+    padding: 0;
+}
+/* styles */
+.menu{
+    list-style: none;
+}
+:is(
+    header,
+    nav,
+    footer
+) a{
+    text-decoration: none;
+}
+/* displays */
+nav,
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+/* Content First (Mobile First) */
+nav{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+    background: linear-gradient(to right, var(--first), var(--second))
+}
+nav a{
+    display: block;
+    padding: .5rem;
+    color: var(--light)
+}
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+}
+.menu.active{
+    max-height: 640px;
+}
+/* Small Devices */
+
+/* Medium Devices */
+
+/* Large Devices */
+
+/* Extra Large Devices */
