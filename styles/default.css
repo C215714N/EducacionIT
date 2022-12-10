@@ -302,9 +302,16 @@
         position: absolute;
         top: .5rem;
         right: .5rem;
+        color: #eee;
+    }
+    .map-open{
+        background-color: #2848;
     }
     .map-open::before{
         content: '+'
+    }
+    .map-close{
+        background-color: #c33a;
     }
     .map-close::before{
         content: '-';
