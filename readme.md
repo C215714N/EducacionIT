@@ -30,8 +30,8 @@ Una variable es un contenedor para un valor, como un número que va a ser utiliz
 Podemos declarar variables utilizando cualquiera de las _instrucciones var, let y const_. Cada una posee su propias caracteristicas, como se muestran en la tabla que aparece a continuacion:
 
 | __inicializador__ | var 	| let 	| const |
-|---------------|-------|-------|-------|
-| __Alcance__ 	| global <td colspan="2">local</td>
+|-------------------|-------|-------|-------|
+| __Alcance__ 	    | global| local | local |
 | __Redeclarable__	| si 	| no	| no 	|
 | __Redefinible__ 	| si 	| si 	| no 	|
 
