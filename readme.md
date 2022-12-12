@@ -97,3 +97,20 @@ En otras palabras: el HTML DOM es un estándar sobre cómo obtener, cambiar, agr
 |querySelector(`selector`)| Devuelve el primer elemento que coincide con un selector CSS
 |querySelectorAll(`selector`)| Devuelve una lista de nodos que coinciden con un selector CSS
 |addEventListener(`event`,`function`)| Adjunta un controlador de eventos al documento|
+
+## Ejercicios
+
+### Objeto Window
+
+1. Crear una pagina con un boton que devuelva _por consola_ las dimensiones del navegador `(ancho x alto)`
+1. Agregar un Boton que al ser presionado muestre la `direccion URL` del navegador en un _mensaje de alerta_.
+1. Desde _la consola_ acceder a las propiedades `vendor`, `appName` y `appVersion` del objeto navigator.
+
+### Objeto Document
+
+1. En una pagina en blanco, definir un titulo a eleccion para la pestaña del navegador y luego crear un nodo __H1__ cuyo contenido sea la propiedad _title_ definida en el mismo documento.
+2. Agregar 5 parrafos que posean las siguiente caracteristicas:
+    * utilizar los id "texto-uno", "texto-dos", "texto-final".
+    * tres parrafos deben el atributo class="texto-destacado"
+3. Almacenar los parrafos en __variables__ utilizando los metodos _getElementById()_, _getElementsByClassName_ y _getElementsByTagName()_ con los nombres _varConId_, _varConClass_ y _varConTag_.
+4. Cambiar el contenido de algunos parrafos por la cantidad de elementos que posea cada variable utilizando la propiedad __length__
