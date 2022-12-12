@@ -108,9 +108,9 @@ En otras palabras: el HTML DOM es un estándar sobre cómo obtener, cambiar, agr
 
 ### Objeto Document
 
-1. En una pagina en blanco, definir un titulo a eleccion para la pestaña del navegador y luego crear un nodo __H1__ cuyo contenido sea la propiedad _title_ definida en el mismo documento.
+1. En una pagina en blanco, definir un titulo a eleccion para la pestaña del navegador y luego crear un nodo __H1__ cuyo contenido sea la propiedad `_title_` definida en el mismo documento.
 2. Agregar 5 parrafos que posean las siguiente caracteristicas:
-    * utilizar los id "texto-uno", "texto-dos", "texto-final".
-    * tres parrafos deben el atributo class="texto-destacado"
-3. Almacenar los parrafos en __variables__ utilizando los metodos _getElementById()_, _getElementsByClassName_ y _getElementsByTagName()_ con los nombres _varConId_, _varConClass_ y _varConTag_.
-4. Cambiar el contenido de algunos parrafos por la cantidad de elementos que posea cada variable utilizando la propiedad __length__
+    * utilizar los id `"texto-uno"`, `"texto-dos"`, `"texto-final"`.
+    * tres parrafos deben el atributo `class="texto-destacado"`
+3. Almacenar los parrafos en __variables__ utilizando los metodos `_getElementById()_`, `_getElementsByClassName_` y `_getElementsByTagName()`_ con los nombres _varConId_, _varConClass_ y _varConTag_.
+4. Cambiar el contenido de algunos parrafos por la __cantidad de elementos__ que posea cada variable utilizando la propiedad `length`
