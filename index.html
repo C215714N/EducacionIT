@@ -94,6 +94,38 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.069937068758!2d-58.37812478548698!3d-34.602392980459804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1669731795061!5m2!1ses-419!2sar" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Contacto -->
+        <form id="contact">
+            <h2>Dejanos tu consulta</h2>
+            <label for="">Ingrese su nombre</label>
+            <input 
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z]{3,}"
+                required>
+            <div class="validation">
+
+            </div>
+            <label for="">Ingrese su telefono</label>
+            <input 
+                type="tel"
+                maxlength="20"
+                pattern="(\d{6,20})|(\+*)[\(]\d{2,5}[\)](\d{2,6}[\-]){1,4}\d{4}"
+                required>
+            <div class="validation">
+                
+            </div>
+            <label for="">Ingrese su correo</label>
+            <input 
+                type="email"
+                minlength="8"
+                pattern="[\w\-\_\.]*@[\w\-\_].[\w]{2,5}"
+                required>
+            <div class="validation">
+
+            </div>
+            <button class="btn">Enviar</button>
+        </form>
         <p class="copy">Todos los derechos reservados</p>
     </footer>
     <!-- Contenido JS -->
@@ -101,6 +133,7 @@
     <script src="scripts/events.js"></script>
     <script src="scripts/callback.js"></script>
     <script src="scripts/links.js"></script>
+    <script src="scripts/regexp.js"></script>
     <!-- EMMET
         el>hijo
         el+hermano

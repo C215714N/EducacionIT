@@ -6,6 +6,7 @@ La siquiente es una guia teorico-practica realizada con la finalidad de profundi
 1. [tipos de datos](tipos-de-datos)
 1. [constructores](constructores)
 1. [modelo de objetos](modelo-de-objetos)
+1. [modelo orientado a eventos]()
 
 ## Tipos de datos
 Hacen referencia a la minima porcion de información que se trabaja, también se puede considerar como el rango de valores que puede tomar una variable durante la ejecución del programa. 
@@ -109,8 +110,8 @@ En otras palabras: el HTML DOM es un estándar sobre cómo obtener, cambiar, agr
 ### Objeto Document
 
 1. En una pagina en blanco, definir un titulo a eleccion para la pestaña del navegador y luego crear un nodo __H1__ cuyo contenido sea la propiedad `_title_` definida en el mismo documento.
-2. Agregar 5 parrafos que posean las siguiente caracteristicas:
-    * utilizar los id `"texto-uno"`, `"texto-dos"`, `"texto-final"`.
-    * tres parrafos deben el atributo `class="texto-destacado"`
+2. Agregar 5 parrafos al documento HTML que posean las siguientes caracteristicas:
+    * atributo id `"texto-uno"`, `"texto-dos"`, `"texto-final"`.
+    * atributo class `"texto-destacado"` para tres
 3. Almacenar los parrafos en __variables__ utilizando los metodos `_getElementById()_`, `_getElementsByClassName_` y `_getElementsByTagName()`_ con los nombres _varConId_, _varConClass_ y _varConTag_.
 4. Cambiar el contenido de algunos parrafos por la __cantidad de elementos__ que posea cada variable utilizando la propiedad `length`
