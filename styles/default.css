@@ -177,6 +177,25 @@ nav a:hover{
 .ubuntu .item:nth-child(10n){
     background-image: url('../assets/bg/ubuntu-jammy-jellyfish.jpg');
 }
+/* Selected */
+#selected{
+    display: inline-block;
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+}
+.selected{
+    background-color: #da3;
+}
+.special{
+    background-color: #3c6;
+}
+
+.left-negative{
+    left: -30%;
+}
+.left-none{
+    left: 0;
+}
 
 /* Pie de pagina */
 #footer{
