@@ -146,6 +146,114 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten organizar la informacion de manera tabular y se utilizan cuando los datos deben respetar determinada estructura. Para implementarlas dentro de la pagin simplemente utilizamos la etiqueta <strong>&lt;table></strong> y dentro de la misma su contenido respetando el modelo de cajas.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen carga semantica?</h3>
+                </header>
+                <p>
+                    Dentro de la etiqueta mencionada anteriormente debemos colocar los contenedores de filas <strong>&lt;tr> (Table Row)</strong> y dentro los mismos las celdas <strong>&lt;th> (Table Heading) y &lt;td> (Table Division)</strong>; pero a partir de la ultima version de HTML se incorpo una estructura semantica compuesta por los siguientes elementos:
+                </p>
+                <ul>
+                    <li><strong>THEAD: </strong> Cabecera de tabla que contiene las celdas de encabezado.</li>
+                    <li><strong>TBODY: </strong> Cuerpo de tabla que contiene los datos de la misma.</li>
+                    <li><strong>TFOOT: </strong> Pie de tabla que contiene informacion complementaria.</li>
+                </ul>
+                <div class="example row">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de tabla -->
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>CristianDRacedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>d477714n</td>
+                                <td>CristianDRacedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de tabla -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="modern">
+                        <caption>Rutina semanal</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Turno</th>
+                                <th>Lu</th>
+                                <th>Ma</th>
+                                <th>Mi</th>
+                                <th>Ju</th>
+                                <th>Vi</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <th>ma</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>ta</th>
+                                <td></td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>no</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de tabla -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
