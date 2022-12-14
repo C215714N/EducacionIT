@@ -160,7 +160,7 @@
                 <p>
                     Dentro de la etiqueta mencionada anteriormente debemos colocar los contenedores de filas <strong>&lt;tr> (Table Row)</strong> y dentro los mismos las celdas <strong>&lt;th> (Table Heading) y &lt;td> (Table Division)</strong>; pero a partir de la ultima version de HTML se incorpo una estructura semantica compuesta por los siguientes elementos:
                 </p>
-                <ul>
+                <ul class="example">
                     <li><strong>THEAD: </strong> Cabecera de tabla que contiene las celdas de encabezado.</li>
                     <li><strong>TBODY: </strong> Cuerpo de tabla que contiene los datos de la misma.</li>
                     <li><strong>TFOOT: </strong> Pie de tabla que contiene informacion complementaria.</li>
@@ -250,6 +250,118 @@
                                 <td>1</td>
                             </tr>
                         </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Expansion de filas y columnas?</h3>
+                </header>
+                <p>
+                    Al igual que cualquier herramienta que utilice tablas, HTML permite la combinacion de columnas y filas mediante el uso de los atributos <strong>rowspan="..." y colspan="..."</strong> respectivamente, colocando dentro de los mismos la cantidad total de celdas a ocupar. Cabe destacar que el contenido siempre se desplaza a la derecha.
+                </p>
+                <div class="example row">
+                    <table class="modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Cant</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>3</td>
+                                <td>32800</td>
+                                <td>98400</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>1</td>
+                                <td>8400</td>
+                                <td>8400</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>2</td>
+                                <td>6200</td>
+                                <td>12400</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">Total</th>
+                                <td>119200</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="classic modern">
+                        <caption>Desarrolladores</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">FrontEnd</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">BackEnd</td>
+                                <td>SQL</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                            </tr>
+                            <tr>
+                                <td>JAVA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="classic">
+                        <tr>
+                            <td colspan="4">1-1</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">2-1</td>
+                            <td colspan="2">2-2</td>
+                            <td rowspan="3">2-3</td>
+                        </tr>
+                        <tr>
+                            <td>3-1</td>
+                            <td>3-2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">4-1</td>
+                            <td rowspan="2">4-2</td>
+                        </tr>
+                        <tr>
+                            <td>5-1</td>
+                            <td>5-2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">6-1</td>
+                            <td colspan="2">6-2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">7-1</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">8-1</td>
+                            <td>8-2</td>
+                            <td>8-3</td>
+                        </tr>
                     </table>
                 </div>
             </section>
