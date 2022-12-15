@@ -105,7 +105,7 @@
                 pattern="[A-Z a-z]{3,}"
                 required>
             <div class="validation">
-
+                Ingrese un nombre con al menos 3 caracteres utilizando solamente mayusculas o minusculas.
             </div>
             <label for="">Ingrese su telefono</label>
             <input 
@@ -114,16 +114,16 @@
                 pattern="(\d{6,20})|(\+*)[\(]\d{2,5}[\)](\d{2,6}[\-]){1,4}\d{4}"
                 required>
             <div class="validation">
-                
+                Coloque la caracteristica entre parentesis, colocando un guion cada 2 a 6 digitos.
             </div>
             <label for="">Ingrese su correo</label>
             <input 
                 type="email"
                 minlength="8"
-                pattern="[\w\-\_\.]*@[\w\-\_].[\w]{2,5}"
+                pattern="\w{2,}@\w{2,}(\.[a-zA-Z]{2,})+"
                 required>
             <div class="validation">
-
+                Coloque un correo de al menos 8 caracteres con el siguiente formato "usuario@servidor"
             </div>
             <button class="btn">Enviar</button>
         </form>
