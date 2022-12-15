@@ -1,24 +1,31 @@
 /* Reglas Generales */
-    body,
-    h1,
-    h2,
-    h3,
-    header p{
-        margin: 0;
-    }
-    iframe{
-        border: 0;
-    }
-    .menu{
-        padding: 0;
-    }
-    :is(
-        header,
-        nav,
-        footer
-    ) a{
-        text-decoration: none;
-    }
+body,
+h1,
+h2,
+h3,
+header p,
+.menu {
+    margin: 0;
+}
+iframe,
+.carrousel button {
+    border: 0;
+}
+.menu,
+.carrousel ul{
+    padding: 0;
+}
+:is(
+    header,
+    nav,
+    footer
+) a {
+    text-decoration: none;
+}
+.menu,
+.carrousel ul{
+    list-style: none;
+}
 /* Navegacion */
 nav{
     display: flex;
@@ -30,7 +37,6 @@ nav{
 }
 nav a{
     color: #ccc;
-    text-decoration: none;
 }
 nav a:hover{
     color: #eee;
@@ -39,7 +45,6 @@ nav a:hover{
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    list-style: none;
     transition: all .5s linear;
 }
 .menu.active{
@@ -90,15 +95,10 @@ nav a:hover{
     position: relative;
     min-height: min(100vh, 640px);
 }
-.carrousel ul{
-    list-style: none;
-    padding: 0;
-}
 .carrousel button{
     position: absolute;
     top:0;
     bottom: 0;
-    border: none;
     padding: 15%;
     color: #eee;
     background-color: transparent;
