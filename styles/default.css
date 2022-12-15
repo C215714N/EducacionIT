@@ -1,5 +1,24 @@
-/*  */
-
+/* Reglas Generales */
+    body,
+    h1,
+    h2,
+    h3,
+    header p{
+        margin: 0;
+    }
+    iframe{
+        border: 0;
+    }
+    .menu{
+        padding: 0;
+    }
+    :is(
+        header,
+        nav,
+        footer
+    ) a{
+        text-decoration: none;
+    }
 /* Navegacion */
 nav{
     display: flex;
@@ -20,8 +39,6 @@ nav a:hover{
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
     list-style: none;
     transition: all .5s linear;
 }
@@ -227,6 +244,7 @@ nav a:hover{
 .map.active{
     position: fixed;
     opacity: .9;
+    z-index: 1;
 }
 
 @media screen and (min-width: 768px){
