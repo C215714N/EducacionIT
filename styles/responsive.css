@@ -65,6 +65,7 @@ nav a,
 .block{
     display: block;
 }
+aside,
 .logo,
 nav .btn,
 .menu > :is(
@@ -168,11 +169,41 @@ aside{
     }
 /* Images */
 .cover{
-    width: 100%;
+    top: 0;
+    left: 0;
     height: 100%;
+    width: 100%;
     z-index: -1;
     object-fit: cover;
 }
+/* Cards */
+    .card{
+        margin: .5rem;
+        padding: .5rem;
+        border-radius: .25rem;
+        overflow: hidden;
+        box-shadow: 0 0 .5rem var(--dark);
+    }
+/* Responsive Content */
+    .gallery{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        flex-wrap: wrap;
+    }
+    .gallery > *{
+        flex: 1 0 min(100%, 300px);
+    }
+    .grid.gallery img{
+        width: 100%;
+    }
+    .small{
+        --size: var(--small);
+    }
+    .medium{
+        --size: var(--medium);
+    }
+    .large{
+        --size: var(--large);
+    }
 /* Content First (Mobile First) */
 /* Header */
 #header{
@@ -241,7 +272,12 @@ nav a{
     max-height: 640px;
 }
 /* Footer */
-
+/* Map */
+    .map.active,
+    .map-close{
+        z-index: 1;
+        opacity: .9;
+    }
 /* Forms */
     #contact{
         gap: .25rem;
@@ -250,6 +286,7 @@ nav a{
         border-radius: .5rem;
         padding: 1.5rem;
         background-color: var(--light);
+        box-shadow: -.2rem .2rem .5rem var(--dark);
     }
     input,
     textarea,
@@ -299,6 +336,10 @@ nav a{
     ){
         display: block;
     }
+    /* Layout */
+    main{
+        max-width: 540px;
+    }
 }
 /* Medium Devices */
 @media screen and (min-width: 768px){
@@ -310,6 +351,9 @@ nav a{
             'main'
             'footer'
         ;
+    }
+    main{
+        max-width: 720px;
     }
     /* Navigation */
     .logo,
@@ -329,12 +373,16 @@ nav a{
 @media screen and (min-width: 992px){
     /* Layout */
     body{
+        grid-template-columns: 3fr 1fr;
         grid-template-areas: 
             'header header'
             'nav    nav'
             'main   aside'
             'footer footer'
         ;
+    }
+    main{
+        max-width: 960px;
     }
     /* Navigation */
     nav .btn{
@@ -347,3 +395,8 @@ nav a{
     }
 }
 /* Extra Large Devices */
+@media screen and (min-width: 1400px){
+    main{
+        max-width: 1320px;
+    }
+}
