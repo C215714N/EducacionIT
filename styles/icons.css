@@ -1,8 +1,9 @@
+/* Icons */
 .icon-home::before{
     content: '🏠';
 }
 .icon-about::before{
-    content: '🌁';
+    content: '📰';
 }
 .icon-gallery::before{
     content: '📷';
@@ -21,4 +22,23 @@
 }
 .icon-projects::before{
     content: '💻';
+}
+/* Buttons */
+.media-open::before{
+    content: '\25f9';
+}
+.media-close::before{
+    content:'\25fa';
+}
+.menu-open::before{
+    content: '\2630';
+}
+.menu-close::before{
+    content: '\26cc';
+}
+.map-open::before{
+    content: '✖️';
+}
+.map-close::before{
+    content: '➖';
 }
