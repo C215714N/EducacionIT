@@ -41,6 +41,10 @@ header p,
 .menu{
     margin: 0;
 }
+/* bordes */
+iframe{
+    border: 0;
+}
 /* paddings */
 .menu{
     padding: 0;
@@ -78,6 +82,7 @@ nav,
 }
 body,
 #header,
+#contact,
 .grid{
     display: grid;
 }
@@ -97,6 +102,7 @@ body,
 .sticky{
     position: sticky;
 }
+.map.active,
 .map-close,
 .fixed{
     position: fixed;
@@ -234,6 +240,56 @@ nav a{
 .menu.active{
     max-height: 640px;
 }
+/* Footer */
+
+/* Forms */
+    #contact{
+        gap: .25rem;
+        max-width: 540px;
+        margin: 5rem auto 1rem;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        background-color: var(--light);
+    }
+    input,
+    textarea,
+    select{
+        --color: var(--dark);
+        outline: none;
+        border-radius: .25rem;
+        border: 1px solid var(--color);
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
+    textarea{
+        min-height: 3rem;
+        resize: vertical;
+    }
+    #contact button{
+        margin-left: auto;
+        padding: .25rem 1rem;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+    }
+    /* Validation */
+    .validation{
+        max-height: 0;
+        overflow: hidden;
+        font-size: .8rem;
+        color: var(--color)
+    }
+    #contact :focus + .validation{
+        max-height: 640px;
+        padding: 0 .25rem;
+    }
+    :valid + .validation,
+    #contact :not(.btn):valid{
+        --color: var(--success);
+    }
+    :not(:placeholder-shown):invalid + .validation,
+    #contact :not(.btn, :placeholder-shown):invalid{
+        --color: var(--danger)
+    }
 /* Small Devices */
 @media screen and (min-width: 576px){
     /* Display */
