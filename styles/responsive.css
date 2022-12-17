@@ -58,10 +58,35 @@ nav,
 .flex{
     display: flex;
 }
+body,
 .grid{
     display: grid;
 }
+/* Layout */
+body{
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer'
+        'nav';
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+aside{
+    grid-area: aside; 
+}
+#footer{
+    grid-area: footer;
+}
 /* Content First (Mobile First) */
+/* Navigation */
 nav{
     justify-content: space-between;
     align-items: center;
@@ -83,9 +108,30 @@ nav a{
     max-height: 640px;
 }
 /* Small Devices */
+@media screen and (min-width: 576px){
 
+}
 /* Medium Devices */
-
+@media screen and (min-width: 768px){
+    /* Layout */
+    body{
+        grid-template-areas: 
+            'nav'
+            'header'
+            'main'
+            'footer'
+        ;
+    }
+}
 /* Large Devices */
-
+@media screen and (min-width: 992px){
+    body{
+        grid-template-areas: 
+            'header header'
+            'nav    nav'
+            'main   aside'
+            'footer footer'
+        ;
+    }
+}
 /* Extra Large Devices */
