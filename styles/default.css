@@ -1,4 +1,9 @@
 /* Reglas Generales */
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', 'Century Gothic', sans-serif;
+}
 body,
 h1,
 h2,
@@ -218,6 +223,7 @@ nav a:hover{
 #footer{
     position: relative;
     min-height: min(100vh, 640px);
+    padding-top: 5rem;
 }
 /* Mapa de contacto */
 .cover{
@@ -246,7 +252,30 @@ nav a:hover{
     opacity: .9;
     z-index: 1;
 }
-
+/* Formulario de Contacto */
+#contact{
+    max-width: 540px;
+    display: grid;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(#eee, #ccc);
+}
+#contact label{
+    margin-top: .5rem;
+    padding: .25rem;
+}
+input,
+textarea,
+select,
+button
+{
+    font-size: 1rem;
+    padding: .25rem .5rem;
+}
+.validation{
+    max-height: 0;
+    overflow: hidden;
+}
 @media screen and (min-width: 768px){
     nav .btn{
         display: none;
