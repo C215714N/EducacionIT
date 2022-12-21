@@ -6,7 +6,7 @@ La siquiente es una guia teorico-practica realizada con la finalidad de profundi
 1. [tipos de datos](tipos-de-datos)
 1. [constructores](constructores)
 1. [modelo de objetos](modelo-de-objetos)
-1. [modelo orientado a eventos]()
+1. [API de Eventos](api-de-eventos)
 
 ## Tipos de datos
 Hacen referencia a la minima porcion de información que se trabaja, también se puede considerar como el rango de valores que puede tomar una variable durante la ejecución del programa. 
@@ -99,6 +99,41 @@ En otras palabras: el HTML DOM es un estándar sobre cómo obtener, cambiar, agr
 |querySelectorAll(`selector`)| Devuelve una lista de nodos que coinciden con un selector CSS
 |addEventListener(`event`,`function`)| Adjunta un controlador de eventos al documento|
 
+## API de Eventos
+
+Los eventos pueden representar cualquier cosa, como por ejemplo, interacciones básicas del usuario para notificar sobre lo que sucede en el modelo de representación.
+
+Correponden a objetos que se envían para notificar al código los cambios que hayan ocurrido. Cada evento  se basa en la __interfaz Event__, y puede tener _campos y/o funciones personalizadas_ adicionales para obtener más información. 
+
+|Evento|Descripcion|
+|-|-|
+|_DOMContentLoaded_|El documento termino de cargar todo su contenido|
+|_load_| Se ha cargado correctament el contenido de un elemento HTML|
+|_progress_| Se esta descargando contenido Multimedia|
+|_mouseover_| Se ha posicionado el cursor sobre un elemento HTML|
+|_mouseout_| Se ha alejado el cursor de un elemento HTML|
+|_click_| Un elemento ha sido pulsado con el dispositivo señalador|
+|_contextmenu_| Se hizo click con el boton secundario del dispositivo señalador|
+|_scroll_| Se esta utilizando la Barra de desplazamiento de un elemento |
+|_focus_| Se ha enfocado un elemento HTML|
+|_blur_| Se ha perdido el foco de un elemento HTML|
+|_input_| El valor de un campo de formulario ha cambiado|
+|_keydown_| Se ha pulsado una tecla|
+|_keypress_| Se esta presionando una tecla|
+|_keyup_| Se ha soltado la tecla presionada|
+|_submit_| Se ha realizado el envio de un formulario HTML|
+
+### Propagacion de Eventos
+
+Una de las intenciones de JavaScript con la creación del patrón de propagación de eventos era facilitar la captura de eventos de una fuente, el elemento padre, en lugar de configurar un controlador de eventos en cada elemento secundario interno. Hay tres fases por las que pasa la propagación de eventos
+
+<img style="border-radius: .5rem; width: 100%;"
+    src="https://frontend.turing.edu/lessons/module-1/assets/images/propagation-diagram.png" />
+
+1. __capture phase:__ El evento empieza con la propagacion del evento padre, el objeto de window y luego baja por los demás elementos internos.
+1. __target phase:__ La segunda fase corresponde cuando se llega al elemento sobre el que se realizo la accion, identificado como _event.target_
+1. __bubbling phase:__ El evento se propaga hasta llegar nuevamente al elemento padre superior, aunque el evento no se vuelve a ser llamado.
+
 ## Ejercicios
 
 ### Objeto Window
@@ -110,8 +145,39 @@ En otras palabras: el HTML DOM es un estándar sobre cómo obtener, cambiar, agr
 ### Objeto Document
 
 1. En una pagina en blanco, definir un titulo a eleccion para la pestaña del navegador y luego crear un nodo __H1__ cuyo contenido sea la propiedad `_title_` definida en el mismo documento.
-2. Agregar 5 parrafos al documento HTML que posean las siguientes caracteristicas:
+1. Agregar 5 parrafos al documento HTML que posean las siguientes caracteristicas:
     * atributo id `"texto-uno"`, `"texto-dos"`, `"texto-final"`.
     * atributo class `"texto-destacado"` para tres
-3. Almacenar los parrafos en __variables__ utilizando los metodos `_getElementById()_`, `_getElementsByClassName_` y `_getElementsByTagName()`_ con los nombres _varConId_, _varConClass_ y _varConTag_.
+1. Almacenar los parrafos en __variables__ utilizando los metodos `_getElementById()_`, `_getElementsByClassName_` y `_getElementsByTagName()`_ con los nombres _varConId_, _varConClass_ y _varConTag_.
 4. Cambiar el contenido de algunos parrafos por la __cantidad de elementos__ que posea cada variable utilizando la propiedad `length`
+
+### API de Eventos
+
+1. Crear en una pagina nueva la siguiente estructura de nodos HTML utilizando las etiquetas que considere mas adecuadas y posean los textos:
+
+    ```
+    * Peliculas
+        * Accion
+            * Top Gun
+            * Bullet Train
+            * Woman King
+        * Animacion
+            * Pinocchio
+            * Lightyear
+            * Red
+        * Ciencia Ficcion
+            * Avatar the Way of Water
+            * Jurassic World Dominion
+        * Comedia
+            * Everything Everywhere All at Once
+            * Triangle of Sadness
+            * Weird
+        * Drama
+            * the Fablemans
+            * Elvis
+            * Blonde
+        * Suspenso
+    ```
+2. Agregar un escuchador de eventos aprovechando la _propagacion_ para que cuando se realice __click__ sobre alguno de los hijos, este cambie su color.
+3. Agregar un __input__ con atributo _type="password"_ con un parrafo debajo, que muestre el contenido del mismo al realizar el evento correspondiente:
+
