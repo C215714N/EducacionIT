@@ -44,12 +44,18 @@ function AJAX(req){
 }
 
 // Botones de Accion
-const ajaxButtons = d.querySelectorAll('.local-doc')
+const ajaxButtons = d.querySelector('#xhr')
 const xhrResponse = d.getElementById('xhrResponse')
 
-ajaxButtons.forEach( btn => {
-    btn.addEventListener('click', () => AJAX({
-        url: `assets/docs/${btn.id}.txt`,
-        callBack: (res) => xhrResponse.innerHTML = res
-    }))
+ajaxButtons.addEventListener('click', (e) => {
+    if (e.target.classList.contains('ajax')){
+        AJAX({
+            url: `${e.target.attributes['data-target'].value}/${e.target.id}${e.target.attributes['format'].value}`,
+            callBack: (res) => {
+                e.target.classList.contains('local-doc') ?
+                    xhrResponse.innerHTML = res :
+                    console.log(res)
+            }
+        })
+    }
 });
