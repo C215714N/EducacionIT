@@ -21,6 +21,35 @@ console.log('action 5') // se ejecuta segundo
  * action 2
  */
 
-
 // AJAX (Asynchronous Javascript AND XML)
+function AJAX(req){
+    // 0 - Instancia de la clase XHR
+    const xhr = new XMLHttpRequest;
+    // 1 - Carga de la solicitud
+    xhr.open(req.method || 'get', req.url);
+    // 2 - envio la solicitud
+    xhr.send();
+    // 4 - solicitud finalizada
+    xhr.addEventListener('readystatechange', () => {
+        if(xhr.readyState == 4 && xhr.status == 200){
+            req.callBack(xhr.response)
+        }
+        if(xhr.status == 404){
+            req.callBack(`
+                <h2>Error 404:</h2>
+                <p>Archivo No Encontrado</p>`
+            )
+        }
+    })
+}
 
+// Botones de Accion
+const ajaxButtons = d.querySelectorAll('.local-doc')
+const xhrResponse = d.getElementById('xhrResponse')
+
+ajaxButtons.forEach( btn => {
+    btn.addEventListener('click', () => AJAX({
+        url: `assets/docs/${btn.id}.txt`,
+        callBack: (res) => xhrResponse.innerHTML = res
+    }))
+});

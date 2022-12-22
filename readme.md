@@ -7,6 +7,7 @@ La siquiente es una guia teorico-practica realizada con la finalidad de profundi
 1. [constructores](constructores)
 1. [modelo de objetos](modelo-de-objetos)
 1. [API de Eventos](api-de-eventos)
+1. [Expresiones Regulares](expresiones-regulares)
 
 ## Tipos de datos
 Hacen referencia a la minima porcion de información que se trabaja, también se puede considerar como el rango de valores que puede tomar una variable durante la ejecución del programa. 
@@ -133,6 +134,32 @@ Una de las intenciones de JavaScript con la creación del patrón de propagació
 1. __capture phase:__ El evento empieza con la propagacion del evento padre, el objeto de window y luego baja por los demás elementos internos.
 1. __target phase:__ La segunda fase corresponde cuando se llega al elemento sobre el que se realizo la accion, identificado como _event.target_
 1. __bubbling phase:__ El evento se propaga hasta llegar nuevamente al elemento padre superior, aunque el evento no se vuelve a ser llamado.
+
+## Expresiones Regulares
+
+Son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos.
+
+| clase | coincidencia | opuesto |
+|-|-|-|
+| __\w__    | palabras | __\W__
+| __\d__    | digitios | __\D__
+| __\s__    | espacios | __\S__
+| __[ABC]__ | conjunto | __[^ABC]__
+
+| cuantificador | coincidencia|
+|-|-|
+| __?__    | cero o una repeticion
+| __+__    | una o mas repeticiones
+| __*__    | cero o mas repeticiones
+| __\|__    | alternacion de caracteres
+| __{n,m}__ | min. y max. de repeticiones
+
+| posicion | coincidencia |
+|-|-|
+| __^__    | principio de una linea
+| __$__    | final de una linea
+| __\b__    | perimetro de una cadena
+| __\B__    | no esta en el perimetro
 
 ## Ejercicios
 
