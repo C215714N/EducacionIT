@@ -71,11 +71,15 @@ cristian = {
         saludar(){
             return 'Hola'
         }
-        saludar(boolean muchos){
-            return muchos ? 'Hola a todos' : 'Hola'
-        }
         saludar(string persona){
             return 'Hola' + persona + '¿como estas?'
         }
+        saludar(string persona, boolean muchos){
+            return muchos ? 'Hola a todos' : 'Hola'
+        }
     }
 ```
+
+## UML (Unified Model Language)
+
+Es un lenguaje utilizado para la definicion de clases, mediante la realizacion de un mapa conceptual de las definiciones dentro de nuestro sistema. Existen herramientas que permiten la realizacion de estos diagramas como [starUML](https://staruml.io)
