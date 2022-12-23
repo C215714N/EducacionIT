@@ -1,17 +1,33 @@
+/*  Ejemplo JavaScript
+
+    class User{
+    // Propiedades Publicas
+    // Se definen cuando se crea el objeto
+    // No se pueden modificar directamente
+    // Solamente son accesibles mediante metodos
+        #userName;
+        #userEmail;
+        #userPass;
+    
+    // Metodos Publicos
+    // acctiones que involucran al objeto
+    // getters: funcion utilizada para devolver un valor
+    // setters: funcion utilizada para cambiar un valor
+        setUserName(string user){
+            this.userName = user;
+        }
+        getUserName(){
+            return this.userName
+        }
+    }
+*/
+
+// Ejemplo C#
 class User {
-    /*  Propiedades Publicas
-        Se definen cuando se crea el objeto
-        No se pueden modificar directamente
-        Solamente son accesibles mediante metodos
-    */
     private string userName;
     private string userEmail;
     private string userPass;
-    /*  Metodos Publicos
-        acctiones que involucran al objeto
-        getters: funcion utilizada para devolver un valor
-        setters: funcion utilizada para cambiar un valor
-    */
+
     public void setUserName(string user){
         this.userName = user;
     }
