@@ -32,13 +32,25 @@ function AJAX(req){
     // 4 - solicitud finalizada
     xhr.addEventListener('readystatechange', () => {
         if(xhr.readyState == 4 && xhr.status == 200){
-            req.callBack(xhr.response)
+            const response = (
+                req.type = 'json' ?
+                JSON.parse(xhr.response) :
+                req.type = 'blob' ?
+                URL.createObjectURL(xhr.response) :
+                xhr.response
+            )
+            req.callBack(response)
         }
         if(xhr.status == 404){
             req.callBack(`
                 <h2>Error 404:</h2>
                 <p>Archivo No Encontrado</p>`
             )
+        }
+    })
+    xhr.addEventListener('progress', (e) => {
+        if(e.lengthComputable){
+            console.log(`${e.loaded} de ${e.total}`)
         }
     })
 }
@@ -49,13 +61,95 @@ const xhrResponse = d.getElementById('xhrResponse')
 
 ajaxButtons.addEventListener('click', (e) => {
     if (e.target.classList.contains('ajax')){
+        const url = e.target.attributes['data-target'].value
+        const id = e.target.id
         AJAX({
-            url: `${e.target.attributes['data-target'].value}/${e.target.id}${e.target.attributes['format'].value}`,
+            url: `${url}/${id}${e.target.attributes['format'].value}`,
             callBack: (res) => {
-                e.target.classList.contains('local-doc') ?
-                    xhrResponse.innerHTML = res :
-                    console.log(res)
+                if (e.target.classList.contains('local-doc')) {
+                    xhrResponse.innerHTML = res
+                }
+                else {
+                    xhrResponse.innerHTML = '';
+                    let ul = d.createElement('ul')
+                    res.forEach(r => {
+                        ul.innerHTML += `<li id="element_${r.id}">${r.name || r.title}</li>`
+                    })
+                    xhrResponse.appendChild(ul);
+                }
             }
         })
     }
 });
+
+const server = 'https://jsonplaceholder.typicode.com';
+// callback HELL || Pyramid of DOOM
+// AJAX({
+//     url: `${server}/users`,
+//     callBack: (allUsers) => {
+//         allUsers.forEach(user => {
+//             AJAX({
+//                 url:`${server}/posts?userId=${user.id}`,
+//                 callBack: (userPosts) => {
+//                     userPosts.forEach(post => {
+//                         AJAX({
+//                             url: `${server}/comments?postId=${post.id}`,
+//                             callBack: (userComments) => {
+//                                 userComments.forEach(comment => {
+//                                     console.log(
+//                                         `usuario: ${user.name}
+//                                         posts N°: ${post.id}
+//                                         publicacion: ${post.title}
+//                                         comment N°: ${comment.id}
+//                                         comentario: ${comment.name }
+//                                         `
+//                                     )
+//                                 })
+//                             }
+//                         })
+//                     })
+//                 }
+//             })
+//         })
+//     }
+// })
+
+function getUsers(){
+    AJAX({
+        url: `${server}/users`,
+        callBack: (allUsers) => getPosts(allUsers) 
+} ) }
+
+function getPosts(allUsers){
+    allUsers.forEach(user => {
+        const 
+            userId = user.id,
+            userName = user.name
+        AJAX({
+            url:`${server}/posts?userId=${userId}`,
+            callBack: (userPosts) => getComments(userPosts, userId, userName)   
+}) } ) }
+
+function getComments(userPosts, userName){
+    userPosts.forEach(post => {
+        const
+            postId = post.id,
+            title = post.title
+        AJAX({
+            url: `${server}/comments?postId=${postId}`,
+            callBack: (userComments) => response(userComments, userName, postId, title)
+    })})
+}
+
+function response(userComments, userName, postId, title){
+    userComments.forEach(comment => 
+        console.log(
+            `usuario: ${userName}
+            posts N°: ${postId}
+            publicacion: ${title}
+            comment N°: ${comment.id}
+            comentario: ${comment.name }
+            `
+        )
+    )
+}
