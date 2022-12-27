@@ -79,46 +79,51 @@
             <button class="prev">&lt;</button>
             <button class="next">&gt;</button>
         </section>
-        <section id="xhr">
-            <button class="ajax local-doc" 
-                data-target="assets/docs"
-                format=".txt"
-                id="ajax">AJAX
-            </button>
-            <button class="ajax local-doc" 
-                data-target="assets/docs"
-                format=".txt"
-                id="rest">REST
-            </button>
-            <button class="ajax local-doc" 
-                data-target="assets/docs"
-                format=".txt"
-                id="spa">SPA
-            </button>
-            <button class="ajax local-doc" 
-                data-target="assets/docs"
-                format=".txt"
-                id="error">ERROR
-            </button>
-            <div id="xhrResponse">
+        <section id="xhr" class="flex auto">
+            <fieldset>
+                <legend>LocalHost</legend>
+                <button class="ajax local-doc" 
+                    data-target="assets/docs"
+                    format=".txt"
+                    id="ajax">AJAX
+                </button>
+                <button class="ajax local-doc" 
+                    data-target="assets/docs"
+                    format=".txt"
+                    id="rest">REST
+                </button>
+                <button class="ajax local-doc" 
+                    data-target="assets/docs"
+                    format=".txt"
+                    id="spa">SPA
+                </button>
+                <button class="ajax local-doc" 
+                    data-target="assets/docs"
+                    format=".txt"
+                    id="error">ERROR
+                </button>
+            </fieldset>
+            <fieldset>
+                <legend>JSONplaceholder</legend>
+                <button class="ajax remote" 
+                    data-target="https://jsonplaceholder.typicode.com"
+                    format="" 
+                    id="users">Usuarios
+                </button>
+                <button class="ajax remote" 
+                    data-target="https://jsonplaceholder.typicode.com"
+                    format="" 
+                    id="posts">Publicaciones
+                </button>
+                <button class="ajax remote" 
+                    data-target="https://jsonplaceholder.typicode.com"
+                    format="" 
+                    id="todos">Para hacer
+                </button>
+            </fieldset>
+            <div id="xhrResponse" class="w-100">
 
             </div>
-
-            <button class="ajax remote" 
-                data-target="https://jsonplaceholder.typicode.com"
-                format="" 
-                id="users">users
-            </button>
-            <button class="ajax remote" 
-                data-target="https://jsonplaceholder.typicode.com"
-                format="" 
-                id="posts">posts
-            </button>
-            <button class="ajax remote" 
-                data-target="https://jsonplaceholder.typicode.com"
-                format="" 
-                id="todos">todos
-            </button>
         </section>
         <div class="links">
             <a href="#">Linkedin</a>
