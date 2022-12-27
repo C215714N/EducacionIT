@@ -1,0 +1,13 @@
+<h3>AJAX (Asynchronous JavaScript And XML)</h3>
+
+<p>
+    Estructura de comunicacion que define como debe realizarse la comunicacion entre Cliente y Servidor, surge para facilitar la comunicacion entre FrontEnd y Backend. Se incorpora informacion de las cabeceras y se procesa utilizando una instancia de la clase XMLHttpRequest(), que mediante Callback retorna los valores resultantes de la peticion que se traducen como:
+</p>
+
+<ul>
+    <li><strong>0:</strong> instancia de XMLHttpRequest</li>
+    <li><strong>1:</strong> Solicitud cargada</li>
+    <li><strong>2:</strong> Solicitud Enviada</li>
+    <li><strong>3:</strong> Descarga de Respuesta</li>
+    <li><strong>4:</strong> Comunicacion finalizada</li>
+</ul>
