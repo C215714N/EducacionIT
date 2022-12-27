@@ -84,35 +84,35 @@ ajaxButtons.addEventListener('click', (e) => {
 
 const server = 'https://jsonplaceholder.typicode.com';
 // callback HELL || Pyramid of DOOM
-// AJAX({
-//     url: `${server}/users`,
-//     callBack: (allUsers) => {
-//         allUsers.forEach(user => {
-//             AJAX({
-//                 url:`${server}/posts?userId=${user.id}`,
-//                 callBack: (userPosts) => {
-//                     userPosts.forEach(post => {
-//                         AJAX({
-//                             url: `${server}/comments?postId=${post.id}`,
-//                             callBack: (userComments) => {
-//                                 userComments.forEach(comment => {
-//                                     console.log(
-//                                         `usuario: ${user.name}
-//                                         posts N°: ${post.id}
-//                                         publicacion: ${post.title}
-//                                         comment N°: ${comment.id}
-//                                         comentario: ${comment.name }
-//                                         `
-//                                     )
-//                                 })
-//                             }
-//                         })
-//                     })
-//                 }
-//             })
-//         })
-//     }
-// })
+AJAX({
+    url: `${server}/users`,
+    callBack: (allUsers) => {
+        allUsers.forEach(user => {
+            AJAX({
+                url:`${server}/posts?userId=${user.id}`,
+                callBack: (userPosts) => {
+                    userPosts.forEach(post => {
+                        AJAX({
+                            url: `${server}/comments?postId=${post.id}`,
+                            callBack: (userComments) => {
+                                userComments.forEach(comment => {
+                                    console.log(
+                                        `usuario: ${user.name}
+                                        posts N°: ${post.id}
+                                        publicacion: ${post.title}
+                                        comment N°: ${comment.id}
+                                        comentario: ${comment.name }
+                                        `
+                                    )
+                                })
+                            }
+                        })
+                    })
+                }
+            })
+        })
+    }
+})
 
 function getUsers(){
     AJAX({
