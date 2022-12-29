@@ -83,3 +83,23 @@ function usersTable(users){
     })
     root.appendChild(table);
 }
+/** Mensaje de error 
+ *  100: Informacion
+ *  200: Respuesta Exitosa
+ *  300: Redireccionamiento
+ *  400: Error de Cliente
+ *  500: Error de Servidor
+*/
+// Resultado No encontrado
+function renderError(error){
+    const errorMessage = d.createElement('div')
+    Object.assign(errorMessage, {
+        className: 'card',
+        id: 'error_message',
+        innerHTML: `
+            <h2 class="card-header">Lo sentimos, hubo un problema</h2>
+            <p class="card-body">Error: ${error}</p>`
+    })
+    root.appendChild(errorMessage);
+}
+
