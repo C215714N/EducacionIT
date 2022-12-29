@@ -87,16 +87,19 @@ const server = 'https://jsonplaceholder.typicode.com';
 // callback HELL || Pyramid of DOOM
 AJAX({
     url: `${server}/users`,
+    responseType: 'json',
     // Consultamos todos los usuarios
     callBack: (allUsers) => {
         allUsers.forEach(user => {
             AJAX({
                 url:`${server}/posts?userId=${user.id}`,
+                responseType: 'json',
                 // Consultamos las publicaciones de cada usuario 
                 callBack: (userPosts) => {
                     userPosts.forEach(post => {
                         AJAX({
                             url: `${server}/comments?postId=${post.id}`,
+                            responseType: 'json',
                             // Consultamos los comentarios de cada publicacion
                             callBack: (userComments) => {
                                 userComments.forEach(comment => {
