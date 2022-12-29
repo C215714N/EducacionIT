@@ -33,9 +33,9 @@ function AJAX(req){
     xhr.addEventListener('readystatechange', () => {
         if(xhr.readyState == 4 && xhr.status == 200){
             const response = (
-                req.type = 'json' ?
+                req.responseType == 'json' ?
                 JSON.parse(xhr.response) :
-                req.type = 'blob' ?
+                req.responseType == 'blob' ?
                 URL.createObjectURL(xhr.response) :
                 xhr.response
             )
@@ -50,7 +50,7 @@ function AJAX(req){
     })
     xhr.addEventListener('progress', (e) => {
         if(e.lengthComputable){
-            console.log(`${e.loaded} de ${e.total}`)
+            req.callBack(e.loaded / e.total);
         }
     })
 }
@@ -61,10 +61,11 @@ const xhrResponse = d.getElementById('xhrResponse')
 
 ajaxButtons.addEventListener('click', (e) => {
     if (e.target.classList.contains('ajax')){
-        const url = e.target.attributes['data-target'].value
-        const id = e.target.id
+        const url = e.target.attributes['data-target'].value;
+        const id = e.target.id;
         AJAX({
             url: `${url}/${id}${e.target.attributes['format'].value}`,
+            responseType: e.target.classList.contains('remote') ? 'json': '',
             callBack: (res) => {
                 if (e.target.classList.contains('local-doc')) {
                     xhrResponse.innerHTML = res
@@ -86,14 +87,17 @@ const server = 'https://jsonplaceholder.typicode.com';
 // callback HELL || Pyramid of DOOM
 AJAX({
     url: `${server}/users`,
+    // Consultamos todos los usuarios
     callBack: (allUsers) => {
         allUsers.forEach(user => {
             AJAX({
                 url:`${server}/posts?userId=${user.id}`,
+                // Consultamos las publicaciones de cada usuario 
                 callBack: (userPosts) => {
                     userPosts.forEach(post => {
                         AJAX({
                             url: `${server}/comments?postId=${post.id}`,
+                            // Consultamos los comentarios de cada publicacion
                             callBack: (userComments) => {
                                 userComments.forEach(comment => {
                                     console.log(
@@ -118,7 +122,7 @@ function getUsers(){
     AJAX({
         url: `${server}/users`,
         callBack: (allUsers) => getPosts(allUsers) 
-} ) }
+}) }
 
 function getPosts(allUsers){
     allUsers.forEach(user => {
@@ -138,8 +142,7 @@ function getComments(userPosts, userName){
         AJAX({
             url: `${server}/comments?postId=${postId}`,
             callBack: (userComments) => response(userComments, userName, postId, title)
-    })})
-}
+}) } ) }
 
 function response(userComments, userName, postId, title){
     userComments.forEach(comment => 
