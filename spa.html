@@ -10,19 +10,25 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <nav>
-        <a href="">SPA</a>
-        <button></button>
-        <ul>
-            <li><a href="#users">Usuarios</a></li>
-            <li><a href="#posts">Publicaciones</a></li>
-            <li><a href="#profile">Perfil</a></li>
+    <nav class="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | sticky-top px-3 py-2">
+        <a href="#" class="navbar-brand">SPA</a>
+        <button class="navbar-toggler navbar-toggler-icon | border-0"
+            data-bs-target=".navbar-nav"
+            data-bs-toggle="collapse">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse">
+            <li><a class="nav-link" href="#users" fetch-type="server">Usuarios</a></li>
+            <li><a class="nav-link" href="#posts" fetch-type="server">Publicaciones</a></li>
+            <li><a class="nav-link" href="#albums" fetch-type="server">Albumes</a></li>
+            <li><a class="nav-link" href="#profile" fetch-type="server">Perfil</a></li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
 
     <!-- Contenido -->
+    <main id="root" class="container table-responsive p-3">
 
+    </main>
     <!-- Pie de Pagina -->
 
     <!-- Bootstrap JS -->
