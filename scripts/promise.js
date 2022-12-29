@@ -102,4 +102,28 @@ function renderError(error){
     })
     root.appendChild(errorMessage);
 }
-
+/** API de Eventos
+ *  Metodos
+ *  preventDefault(): evita el comportamiento por defecto (generalmente refresh)
+ *  stopPropagation(): evita la fase de captura de eventos
+ */
+// Acciones del usuario
+d.addEventListener('click', async(e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    // Acciones para los hipervinculos
+    if (e.target.tagName == 'A'){
+        root.innerHTML = '';
+        // Solicitudes al servidor BACKEND
+        if(e.target.attributes['fetch-type'].value == 'server'){
+            const page = e.target.href.split('#')[1];
+            const results = await fetchData({url: `${server}/${page}`})
+            // Elemento a renderizar por enlace
+            page == 'users' ?
+                usersTable(results) :
+            page == 'posts' ?
+                console.log(results) :
+                console.log(results)
+        }
+    }
+})
