@@ -1,7 +1,7 @@
 /*  Ejemplo JavaScript
 
     class User{
-    // Propiedades Publicas
+    // Propiedades Privadas
     // Se definen cuando se crea el objeto
     // No se pueden modificar directamente
     // Solamente son accesibles mediante metodos
