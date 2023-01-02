@@ -205,6 +205,17 @@ Son patrones que se utilizan para hacer coincidir combinaciones de caracteres en
             * Blonde
         * Suspenso
     ```
-2. Agregar un escuchador de eventos aprovechando la _propagacion_ para que cuando se realice __click__ sobre alguno de los hijos, este cambie su color.
-3. Agregar un __input__ con atributo _type="password"_ con un parrafo debajo, que muestre el contenido del mismo al realizar el evento correspondiente:
+1. Agregar un escuchador de eventos aprovechando la _propagacion_ para que cuando se realice __click__ sobre alguno de los hijos, este cambie su color.
+1. Agregar un __input__ con atributo _type="password"_ con un parrafo debajo, que muestre el contenido del mismo al realizar el evento correspondiente.
 
+### Expresiones Regulares
+
+1. Realize una expresion regular que solamente valide numeros pares
+1. Crear una expresion para validar el siguiente CP `B1636FDA`:
+    * Un caracter alfabetico para identificar la provincia
+    * Cuatro digitos para identificar las subdivisiones
+    * Tres caracteres alfabeticos para identificar manzana
+1. Utilizar una expresion que verifique si es un color HEXADECIMAL:
+    * Debe empezar con un simbolo numeral
+    * Debe contener en total 6 caracteres alfanumericos
+    * Solo Se permiten letras de la A a la F y numeros entre 0 y 9
