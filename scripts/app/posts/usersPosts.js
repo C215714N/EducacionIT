@@ -4,14 +4,7 @@
  *  usersComments: busca y devuelve los comentarios por publicacion
  *  userComment: plantilla de comentario
  */
-import {root} from "../global.js";
 import usersComments from "./usersComments.js";
-
-function usersPosts(data){
-    let content = '';
-    data.map(d => content += userPost(d))
-    root.innerHTML = content;
-}
 
 function userPost(data){
     return `
@@ -28,4 +21,4 @@ function userPost(data){
         </article>`
 }
 
-export default usersPosts;
+export default userPost;
