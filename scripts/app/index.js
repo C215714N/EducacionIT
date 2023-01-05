@@ -1,7 +1,9 @@
 import {d, server} from "./global.js";
 import fetchData from "./fetchData.js";
 import usersTable from "./users/usersTable.js";
-import usersPosts from "./posts/usersPosts.js";
+import userPost from "./posts/usersPosts.js";
+import userAlbum from "./albums/usersAlbums.js";
+import mapContent from "./mapContent.js";
 
 d.addEventListener('DOMContentLoaded', () => {
 /** API de Eventos
@@ -23,8 +25,8 @@ d.addEventListener('click', async(e) => {
             page == 'users' ?
                 usersTable(results) :
             page == 'posts' ?
-                usersPosts(results) :
-                console.log(results)
+                mapContent(results, root, userPost) :
+                mapContent(results, root, userAlbum)
         }
     }
 } )
