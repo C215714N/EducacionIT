@@ -5,6 +5,7 @@
  *  userComment: plantilla de comentario
  */
 import {root} from "../global.js";
+import usersComments from "./usersComments.js";
 
 function usersPosts(data){
     let content = '';
@@ -21,7 +22,7 @@ function userPost(data){
             <p class="card-body"> 
                 ${data.body} 
             </p>
-            <footer id="footer_${data.id}" class="card-footer">
+            <footer id="footer_${data.id}" class="card-footer d-grid gap-3">
                 ${ usersComments(data.id) }
             </footer>
         </article>`

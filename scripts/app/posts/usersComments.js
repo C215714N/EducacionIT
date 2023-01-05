@@ -1,8 +1,10 @@
-import {d} from "../global.js";
+import {d, server} from "../global.js";
+import fetchData from "../fetchData.js";
 
 const userComment = (data) =>
-    `<div class="alert alert-light shadow | col-md-10 | mx-auto">
-        <addres>
+    `<div class="bg-light shadow-lg | col-md-10 | mx-auto rounded-top rounded-start p-3">
+        <img class="bg-secondary float-start me-2 rounded-circle p-2" alt=${data.id}>
+        <addres class="d-grid">
             <strong>${data.name}: </strong>
             <a class="link-info" href="mailto:${data.email}">
                 ${data.email.toLowerCase()}
