@@ -9,13 +9,78 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <form action="">
-        <label for="">Ingrese su telefono</label>
-        <input type="phone">
-        <p class="validation">
+    <nav>
+        <a href="#">POO</a>
+        <button></button>
+        <ul>
+            <li><a href="#profile">Perfil</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#posts">Publicaciones</a></li>
+        </ul>
+        <ul>
+            <li><a href="#signUp">Registrarse</a></li>
+            <li><a href="#signIn">Iniciar Sesion</a></li>
+        </ul>
+    </nav>
+        <form class="hidden" id="signIn">
+            <label for="name">Ingrese su Nombre</label>
+            <input id="name" type="text">
+            <p class="validation">
+
+            </p>
+
+            <label for="userName">Ingrese su Nombre de Usuario</label>
+            <input id="userName" type="text">
+            <p class="validation">
+
+            </p>
+
+            <label for="email">Ingrese su Correo</label>
+            <input id="email" type="email">
+            <p class="validation">
+
+            </p>
             
-        </p>
-    </form>
+            <label for="firstPass">Ingrese una constraseña</label>
+            <input id="firstPass" type="password">
+            <label for="secondPass">Repita la contraseña</label>
+            <input id="secondPass" type="password">
+
+            <fieldset>
+                <legend>Direccion</legend>
+                <label for="street">Calle</label>
+                <input id="street" type="text">
+                <label for="city">Ciudad</label>
+                <input id="city" type="text">
+                <label for="zipcode">CP</label>
+                <input id="zipcode" type="number">
+            </fieldset>
+
+            <label for="phone">Ingrese su telefono</label>
+            <input id="phone" type="tel">
+            <p class="validation">
+                
+            </p>
+            <label for="website">Ingrese su Pagina Web</label>
+            <input id="website" type="url">
+
+            <fieldset>
+                <legend>Compañia</legend>
+                <label for="companyName">Nombre</label>
+                <input id="companyName" type="text">
+                <label for="catchphrase">Slogan</label>
+                <input id="catchphrase" type="text">
+                <label for="bs">Descripcion</label>
+                <input id="bs" type="text">
+            </fieldset>
+        </form>
+        <form class="hidden" id="signUp">
+            <label for="userAccount">Ingrese su nombre de usuario o correo</label>
+            <input  id="userAccount" type="text">
+            <label for="password">Ingrese su contraseña</label>
+            <input id="password" type="password">
+        </form>
+    </section>
     <!-- Scripts JS -->
     <script src="scripts/index.js"></script>
 </body>

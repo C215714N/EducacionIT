@@ -24,7 +24,7 @@ class UserData{
         let keys = Object.keys(property);
         keys.map(k => this[k] = property[k])
     }
-    phoneValidation(phone){
+    phoneValidation(phone, callback){
         const regexp = /^\+|\(\d{2,6}\)(\d{2,4}\-){1,4}\d{4}/;
         if( regexp.test(phone)){
             this.phone = phone;
@@ -33,13 +33,13 @@ class UserData{
             callback('ingrese un numero telefonico valido');
         }
     }
-    webValidation(web){
+    webValidation(web, callback){
         const regexp = /^([a-zA-Z_\-]{2,}\.){1,3}[A-Za-z]{2,6}$/
         if(regexp.test(web)){
             this.website = web;
-            alert('felicitaciones, se ha actualizado el nombre del sitio web');
+            callback('felicitaciones, se ha actualizado el nombre del sitio web');
         } else {
-            alert('el nombre del sitio no cumple con los requisitos para ser validado');
+            callback('el nombre del sitio no cumple con los requisitos para ser validado');
         }
     }
 }
