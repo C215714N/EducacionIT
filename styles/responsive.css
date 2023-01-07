@@ -78,6 +78,7 @@ nav .btn,
 nav,
 .menu,
 .menu a,
+.social,
 .flex{
     display: flex;
 }
@@ -111,6 +112,7 @@ body,
 }
 .map.active,
 .map-close,
+.float,
 .fixed{
     position: fixed;
 }
@@ -302,6 +304,21 @@ main{
 .slide.active{
     display: grid;
 }
+.slide:nth-child(1n){
+    background-color: hsl(0, 50%,50%);
+}
+.slide:nth-child(2n){
+    background-color: hsl(60, 50%,50%);
+}
+.slide:nth-child(3n){
+    background-color: hsl(120, 50%,50%);
+}
+.slide:nth-child(4n){
+    background-color: hsl(180, 50%,50%);
+}
+.slide:nth-child(5n){
+    background-color: hsl(240, 50%,50%);
+}
 .carrousel button[class*="icon-"]{
     top: 0;
     bottom: 0;
@@ -388,6 +405,57 @@ main{
     #contact :not(.btn, :placeholder-shown):invalid{
         --color: var(--danger)
     }
+    /* social media */
+    .social{
+        --color: #ccc;
+        --pos: center;
+        --size: 2.5rem;
+        --repeat: no-repeat;
+        padding: 1rem;
+        justify-content: center;
+        gap: .5rem;
+    }
+    .social a{
+        width: 4rem;
+        height: 4rem;
+        border-radius: .25rem;
+        background: 
+            var(--color)
+            var(--bg) 
+            var(--pos)/var(--size)
+            var(--repeat);
+    }
+    .social a:hover{
+        --color: var(--light);
+        --size: 3rem;
+        box-shadow: 0 0 .5rem var(--dark);
+    }
+    .float{
+        right: 1rem;
+        bottom: 6rem;
+    }
+    /* social media icons */
+    .facebook{
+        --bg: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        --bg: url('../assets/icon/instagram.svg');
+    }
+    .whatsapp{
+        --bg: url('../assets/icon/whatsapp.svg');
+    }
+    .youtube{
+        --bg: url('../assets/icon/youtube.svg');
+    }
+    .twitter{
+        --bg: url('../assets/icon/twitter.svg');
+    }
+    .linkedin{
+        --bg: url('../assets/icon/linkedin.svg');
+    }
+    .github{
+        --bg: url('../assets/icon/github.svg');
+    }
 /* Small Devices */
 @media screen and (min-width: 576px){
     /* Display */
@@ -428,6 +496,10 @@ main{
     }
     .menu a{
         flex-direction: row;
+    }
+    /* social media */
+    .float{
+        bottom: 1rem;
     }
 }
 /* Large Devices */
