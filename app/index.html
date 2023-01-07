@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <a href="#">POO</a>
         <button></button>
@@ -22,7 +23,8 @@
             <li><a href="#signIn">Iniciar Sesion</a></li>
         </ul>
     </nav>
-        <form class="hidden" id="signIn">
+    <!-- Registro -->
+        <form class="hidden" id="signUp">
             <label for="name">Ingrese su Nombre</label>
             <input id="name" type="text">
             <p class="validation">
@@ -43,8 +45,14 @@
             
             <label for="firstPass">Ingrese una constraseña</label>
             <input id="firstPass" type="password">
+            <p class="validation">
+
+            </p>
             <label for="secondPass">Repita la contraseña</label>
             <input id="secondPass" type="password">
+            <p class="validation">
+
+            </p>
 
             <fieldset>
                 <legend>Direccion</legend>
@@ -63,7 +71,9 @@
             </p>
             <label for="website">Ingrese su Pagina Web</label>
             <input id="website" type="url">
+            <p class="validation">
 
+            </p>
             <fieldset>
                 <legend>Compañia</legend>
                 <label for="companyName">Nombre</label>
@@ -73,12 +83,16 @@
                 <label for="bs">Descripcion</label>
                 <input id="bs" type="text">
             </fieldset>
+            <button>Cancelar</button>
+            <button>Aceptar</button>
         </form>
-        <form class="hidden" id="signUp">
+    <!-- Iniciar sesion -->
+        <form class="hidden" id="signIn">
             <label for="userAccount">Ingrese su nombre de usuario o correo</label>
             <input  id="userAccount" type="text">
             <label for="password">Ingrese su contraseña</label>
             <input id="password" type="password">
+            <button>Aceptar</button>
         </form>
     </section>
     <!-- Scripts JS -->
