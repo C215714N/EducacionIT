@@ -271,6 +271,10 @@ nav a{
 .menu.active{
     max-height: 640px;
 }
+/* Content */
+main{
+    padding-left: min(1rem, calc(50vw - 660px));
+}
 /* Footer */
 /* Map */
     .map.active,
@@ -384,6 +388,11 @@ nav a{
     main{
         max-width: 960px;
     }
+    aside{
+        display: block;
+        max-width: 320px;
+        margin-right: calc(50vw - 660px);
+    }
     /* Navigation */
     nav .btn{
         display: none;
@@ -396,7 +405,11 @@ nav a{
 }
 /* Extra Large Devices */
 @media screen and (min-width: 1400px){
+    nav{
+        padding: .5rem calc(50vw - 660px);
+    }
     main{
-        max-width: 1320px;
+        max-width: 1000px;
+        margin-left: calc(50vw - 660px);
     }
 }
