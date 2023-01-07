@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <a href=""></a>
+        <button></button>
+        <ul>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 4</a></li>
+            <li><a href="">Link 5</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Bootstrap</h1>
+        <p>Responsive Web Design</p>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Introduccion</h2>
+            <p>
+                Framework de CSS que facilita la implementacion de estilos mediante la utilizacion de clases y determinados atributos dentro de la estructura HTML de nuestro sitio web. 
+                
+                Para incorporarlo a nuestros proyectos podemos copiar los links del <em>CDN (Content Distribution Network)</em> y utilizarlo online o descargar los recursos desde el sitio web de <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>.
+                
+                Cuando agregamos la hoja de estilos de Bootstrap a nuestro proyecto, se impone por encima de nuestros estilos. Esto se debe a que muchas de las reglas del CSS utilizan el atributo <strong>!important</strong>
+            </p>
+        </section>
+        <section>
+            <h2>Implementacion</h2>
+            <p>
+                Bootstrap utiliza la <strong>Metodologia BEM (Block Element Modifier)</strong> para asignar nombres a las diferentes clases. Esta metodologia consiste en identificar el nombre de un elemento contenedor (Bloque) y a cada uno de sus hijos nombre como parte del mismo(Element), asi como tambien utilizar variantes para estilos alternativos (Modifier)
+            </p>
+            <div class="card m-3">
+                <h3 class="card-header">Utilities</h3>
+                <p class="card-body">
+                    son clases generales que permiten la implemetacion de alguna propiedad css, como por ejemplo margin, padding o border. En la mayoria de los casos simplemente debemos colocar la o las letras que componen dicho atributo y luego un valor referencia en boostrap, normalmente expresado en rem.
+                </p>
+                <div class="card-footer">
+                    <h4>Ejemplos: (Margenes y Padding)</h4>
+                    <ul class="list-unstyled | d-flex justify-content-evenly flex-wrap">
+                        <li>m-0: 0</li>
+                        <li>m-1: .25rem</li>
+                        <li>m-2: .5rem</li>
+                        <li>m-3: 1rem</li>
+                        <li>m-4: 1.5rem</li>
+                        <li>m-5: 3rem</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card m-3">
+                <h3 class="card-header">Helpers</h3>
+                <p class="card-body">
+                    son clases que predefinen ciertas caractericas de algunos elementos, sin llegar a tratarse como componentes. Nomalmente se las asocia con alguna variable definida por el framework, siendo los casos mas comunes los colores. Tambien funcionan para quitar estilos predeterminados y definir alguna caractericas como un estilo particular de bordes.
+                </p>
+                <div class="card-footer">
+                    <h4>Ejemplos: (Colores de Fondo)</h4>
+                    <ul class="list-unstyled | d-flex justify-content-evenly flex-wrap">
+                        <li class="py-2 px-3 rounded | bg-primary">primary</li>
+                        <li class="py-2 px-3 rounded | bg-secondary">secondary</li>
+                        <li class="py-2 px-3 rounded | bg-light">light</li>
+                        <li class="py-2 px-3 rounded | bg-dark">dark</li>
+                        <li class="py-2 px-3 rounded | bg-danger">danger</li>
+                        <li class="py-2 px-3 rounded | bg-warning">warning</li>
+                        <li class="py-2 px-3 rounded | bg-success">success</li>
+                        <li class="py-2 px-3 rounded | bg-info">info</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card m-3">
+                <h3 class="card-header">Components</h3>
+                <p>
+                    son clases que abarcan bloques contenedores y extienden su nombre a traves de sus elementos hijos, siguiendo la metodologia BEM, facilita el entendimiento de como funcionan dichos elementos y cuales son sus caracteristicas.
+                </p>
+                <div class="card-footer">
+                    <h4>Ejemplos: (Lista Agrupada)</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item active">Block</li>
+                        <li class="list-group-item">Element</li>
+                        <li class="list-group-item">Modifier</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Sistema de Grillas Responsive</h2>
+            <table class="table table-dark table-striped">
+                <caption>Breakpoints</caption>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>width</th>
+                        <th>max</th>
+                        <th>device</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xs</td>
+                        <td>&lt;576px</td>
+                        <td>100%</td>
+                        <td>smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td>&GreaterEqual;576px & &lt;768px</td>
+                        <td>540px</td>
+                        <td>smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>&GreaterEqual;768px & &lt;992px</td>
+                        <td>720px</td>
+                        <td>tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>&GreaterEqual;992px & &lt;1200px</td>
+                        <td>960px</td>
+                        <td>netbooks</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>&GreaterEqual;1200px & &lt;1400px</td>
+                        <td>1140px</td>
+                        <td>desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>&GreaterEqual;1400px</td>
+                        <td>1320px</td>
+                        <td>smartTv</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <p class="border border-dark p-2 | col-4 col-md-6">col-1</p>
+                <p class="border border-dark p-2 | col-4 col-md-6">col-2</p>
+                <p class="border border-dark p-2 | col-4 col-lg-6">col-3</p>
+                <p class="border border-dark p-2 | col-4 col-lg-6">col-4</p>
+                <p class="border border-dark p-2 | col-4">col-5</p>
+                <p class="border border-dark p-2 | col-4">col-6</p>
+                <p class="border border-dark p-2 | col-4">col-7</p>
+                <p class="border border-dark p-2 | col-4 col-lg-3">col-8</p>
+                <p class="border border-dark p-2 | col-4 col-lg-3">col-9</p>
+                <p class="border border-dark p-2 | col-4 col-lg-3">col-10</p>
+                <p class="border border-dark p-2 | col-4 col-lg-3">col-11</p>
+                <p class="border border-dark p-2 | col-4 col-lg">col-12</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;2023 Todos los derechos reservados</p>
+    </footer>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
