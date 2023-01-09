@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .hidden{
+            display: none;
+        }
+        .small{
+            font-size: .8rem;
+        }
+        .center{
+            max-width: 540px;
+            margin: 1rem auto;
+            border-radius: .25rem;
+            padding: 1.5rem 2.5rem;
+            box-shadow: 0 0 .5rem #999;
+        }
+        a{
+            color: #48f;
+            text-decoration: none;
+        }
+        .btn{
+            display: block;
+            border: none;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            margin-left: auto;
+        }
+        .primary{
+            color: #eee;
+            background-color: #36c;
+        }
+        .form-control{
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: .25rem;
+            border-bottom: .1rem solid #999;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form class="center">
+        <h2>Iniciar sesion</h2>
+        <label class="hidden">Correo electronico</label>
+        <input type="text" class="form-control" placeholder="Correo electronico, telefono o Skype">
+        <p class="small">¿No tiene cuenta? <a href="account.html">Cree una</a></p>
+        <a href="#" class="small">iniciar sesion con Windows Hello o una llave de seguridad</a>
+        <button class="btn primary">Siguiente</button>
+    </form>
+</body>
+</html>
