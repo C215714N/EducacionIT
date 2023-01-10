@@ -1,4 +1,4 @@
-import {d, server} from "./global.js";
+import {d, w, server} from "./global.js";
 import fetchData from "./fetchData.js";
 import usersTable from "./users/usersTable.js";
 import userPost from "./posts/usersPosts.js";
@@ -31,3 +31,6 @@ d.addEventListener('click', async(e) => {
     }
 } )
 } )
+
+
+w.onbeforeunload = () => 'no me quiero ir señor navegador'

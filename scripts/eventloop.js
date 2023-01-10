@@ -102,16 +102,14 @@ AJAX({
                             responseType: 'json',
                             // Consultamos los comentarios de cada publicacion
                             callBack: (userComments) => {
-                                userComments.forEach(comment => {
-                                    console.log(
+                                userComments.forEach(comment => 
                                         `usuario: ${user.name}
                                         posts N°: ${post.id}
                                         publicacion: ${post.title}
                                         comment N°: ${comment.id}
                                         comentario: ${comment.name }
                                         `
-                                    )
-                                })
+                                )
                             }
                         })
                     })
@@ -149,13 +147,12 @@ function getComments(userPosts, userName){
 
 function response(userComments, userName, postId, title){
     userComments.forEach(comment => 
-        console.log(
+        
             `usuario: ${userName}
             posts N°: ${postId}
             publicacion: ${title}
             comment N°: ${comment.id}
             comentario: ${comment.name }
             `
-        )
     )
 }
