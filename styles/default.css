@@ -33,6 +33,9 @@ iframe,
 }
 /* Navegacion */
 nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,6 +92,27 @@ nav a:hover{
     --size: 600px;
 }
 
+section{
+    padding: 1.5rem max(1rem, calc(50vw - 660px));
+}
+#dnd{
+    width: 3rem;
+    height: 3rem;
+}
+.board{
+    width: 10rem;
+    height: 10rem;
+    border: .1rem solid #333;
+}
+.board td{
+    padding: 1rem;
+}
+.board tr:nth-child(odd) td:nth-child(odd){
+    background-color: #333;
+}
+.board tr:nth-child(even) td:nth-child(even){
+    background-color: #333;
+}
 /* Tarjetas */
 .card{
     border-radius: .5rem;
@@ -212,12 +236,6 @@ nav a:hover{
     background-color: #3c6;
 }
 
-.left-negative{
-    left: -30%;
-}
-.left-none{
-    left: 0;
-}
 
 /* Pie de pagina */
 #footer{
