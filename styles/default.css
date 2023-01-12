@@ -36,8 +36,6 @@ nav{
     position: sticky;
     top: 0;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: .5rem;
@@ -79,6 +77,35 @@ nav a:hover{
 .auto > * {
     flex: 1 0 min(100%, var(--size));
 }
+/* Flexbox */
+.wrap{
+    flex-wrap: wrap;
+}
+.wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+.jc-center{
+    justify-content: center;
+}
+.jc-around{
+    justify-content: space-around;
+}
+.jc-between{
+    justify-content: space-between
+}
+.jc-evenly{
+    justify-content: space-evenly;
+}
+.ai-start{
+    align-items: flex-start;
+}
+.ai-center{
+    align-items: center;
+}
+.ai-end{
+    align-items: flex-end;
+}
+/* Tamaños */
 .w-100{
     width: 100%;
 }
@@ -96,28 +123,49 @@ section{
     padding: 1.5rem max(1rem, calc(50vw - 660px));
 }
 /* Tablero de Damas */
+#checkers{
+    max-width: 720px;
+    margin: auto;
+}
 .board{
+    min-height: min(80vmin, var(--size));
+    min-width: min(80vmin, var(--size));
     margin: auto;
     border-collapse: collapse;
     border: .1rem solid #333;
 }
 .board td{
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
 }
-.board tr:nth-child(odd) td:nth-child(odd){
-    background-color: #333;
-}
+.board tr:nth-child(odd) td:nth-child(odd),
 .board tr:nth-child(even) td:nth-child(even){
-    background-color: #333;
+    background-color: #ca8;
+}
+.board tr:nth-child(even) td:nth-child(odd),
+.board tr:nth-child(odd) td:nth-child(even){
+    background-color: #842;
 }
 .board img{
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 85%;
+    height: 85%;
+    margin:auto;
 }
 /* Caja de Fichas */
 .box{
-    max-width: var(--size)
+    max-width: var(--size);
+    max-width: 540px;
+    margin: 1rem;
+    border-radius: .25rem;
+    padding: 1rem;
+    background: linear-gradient(
+        #c83a,
+        #842a
+    )
+}
+.box img{
+    width: 2rem;
 }
 /* Tarjetas */
 .card{
@@ -309,5 +357,12 @@ button
         gap: 1rem;
         width: auto;
         max-height: 640px;
+    }
+    .board td{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .box img{
+        width: 4rem;
     }
 }
