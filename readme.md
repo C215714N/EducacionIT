@@ -90,3 +90,5 @@ El protocolo de Internet version 6 viene desactivado de manera predeterminada, p
 	* __ipv6 unicast-routing__ Habilita el enrutamiento IPv6
 	* __ipv6 route `2001:db8:acad::/64` `3000::1`__ Enrutamiento estatico IPv6
 	* __ipv6 route `::/0` `3000::1`__ Ruta predeterminada IPv6
+
+## DCHPv4
