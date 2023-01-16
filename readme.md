@@ -3,11 +3,16 @@
 La siquiente es una guia teorico-practica realizada con la finalidad de profundizar sobre los temas tratados en clase
 
 ## Tabla de contenidos
-1. [tipos de datos](tipos-de-datos)
-1. [constructores](constructores)
-1. [modelo de objetos](modelo-de-objetos)
-1. [API de Eventos](api-de-eventos)
-1. [Expresiones Regulares](expresiones-regulares)
+1. [Tipos de datos](#tipos-de-datos)
+1. [Constructores](#constructores)
+1. [Modelo de Objetos](#modelo-de-objetos)
+    1. [Browser Object Model](#bom-(browser-object-model))
+    1. [Document Object Model](#dom-(document-object-model))
+1. [API de Eventos](#api-de-eventos)
+1. [Expresiones Regulares](#expresiones-regulares)
+1. [Programacion Asincrona](#programacion-asincrona)
+    1. [callback](#callback)
+    1. [promise](#promise)
 
 ## Tipos de datos
 Hacen referencia a la minima porcion de información que se trabaja, también se puede considerar como el rango de valores que puede tomar una variable durante la ejecución del programa. 
@@ -128,7 +133,7 @@ Correponden a objetos que se envían para notificar al código los cambios que h
 
 Una de las intenciones de JavaScript con la creación del patrón de propagación de eventos era facilitar la captura de eventos de una fuente, el elemento padre, en lugar de configurar un controlador de eventos en cada elemento secundario interno. Hay tres fases por las que pasa la propagación de eventos
 
-<img style="border-radius: .5rem; width: 100%;"
+<img style="display:block; width: 100%; max-width: 320px; margin: auto; border-radius:.5rem;"
     src="https://frontend.turing.edu/lessons/module-1/assets/images/propagation-diagram.png" />
 
 1. __capture phase:__ El evento empieza con la propagacion del evento padre, el objeto de window y luego baja por los demás elementos internos.
@@ -137,7 +142,11 @@ Una de las intenciones de JavaScript con la creación del patrón de propagació
 
 ## Expresiones Regulares
 
-Son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos.
+Son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Los patrones simples se construyen con caracteres para los que deseas encontrar una coincidencia directa, estos pueden pertenecer a los siguientes tipos:
+
+### Caracteres
+
+Son valores reservados que se utilizan para distinguir entre diferentes tipos de caracteres o su opuesto en caso que se escriba en mayusculas o se incorpore el signo de potencia dentro del selector.
 
 | clase | coincidencia | opuesto |
 |-|-|-|
@@ -146,20 +155,69 @@ Son patrones que se utilizan para hacer coincidir combinaciones de caracteres en
 | __\s__    | espacios | __\S__
 | __[ABC]__ | conjunto | __[^ABC]__
 
+### Cuantificadores
+
+Correponde a signos que indican grupos y rangos de caracteres de la expresion, se utilizan inmediatamente despues de la referencia. Tambien indican la cantidad de repeticiones que deben coincidir.
+
 | cuantificador | coincidencia|
 |-|-|
-| __?__    | cero o una repeticion
-| __+__    | una o mas repeticiones
-| __*__    | cero o mas repeticiones
+| __?__     | cero o una repeticion
+| __+__     | una o mas repeticiones
+| __*__     | cero o mas repeticiones
 | __\|__    | alternacion de caracteres
 | __{n,m}__ | min. y max. de repeticiones
 
-| posicion | coincidencia |
+### Ascerciones
+
+Establecen los límites que indican el comienzo y el final de líneas y palabras de la expresion. Asi como otros patrones que indican de alguna manera que el reconocimiento es posible.
+
+| posicion  | coincidencia |
 |-|-|
-| __^__    | principio de una linea
-| __$__    | final de una linea
+| __^__     | principio de una linea
+| __$__     | final de una linea
 | __\b__    | perimetro de una cadena
 | __\B__    | no esta en el perimetro
+
+## Programacion Asincrona
+
+El término asíncrono se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado
+
+### callback
+
+Es una función que se pasa a otra función como un argumento y que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción. Los callbacks aseguran que una función se ejecute despues de que se resuelva una tarea, para ello es necesario pasarla como parámetro y luego llamarla de vuelta después de que haya ocurrido algo o se haya completado alguna tarea. 
+
+* __cbFn:__ funcion invocada (callBack)
+* __args:__ argumentos de la funcion (callback)
+* __el:__   elemento del array (iteracion)
+* __i:__    indice del array (iteracion)
+* __Arr:__  array de referencia (iteracion)
+* __acc:__  variable acumuladora (iteracion)
+* __dy:__   retraso en milisegundos (tiempo)
+
+| funcion | parametros | descripcion
+|-|-|-|
+| __forEach__(`cbFn`)     | `el`, `i`, `Arr`  | ejecuta una funcion callback por cada elemento dentro de un array
+| __filter__(`cbFn`)      | `el`, `i`, `Arr`  | ejecuta una funcion que devuelve cada elemento que coincida
+| __find__(`cbFn`)        | `el`, `i`, `Arr`  | encuentra el primer elemento que devuelva la funcion callback
+| __map__(`cbFn`)         | `el`, `i`, `Arr`  | genera un array nuevo a partir del resultado de la funcion
+| __findIndex__(`cbFn`)   | `el`, `i`, `Arr`  | devuelve el indice del primer elemento que corresponda
+| __reduce__(`cbFn`)      | `acc`, `el`       | sumariza todos los valores de un array en una valor acumulado
+| __setInterval__(`cbFn`, `dy`) | `args` | ejecuta una funcion callback cada cierto periodo de tiempo
+| __setTimeout__(`cbFn`, `dy`)  | `args` | ejecuta una funcion despues de transcurrido cierto lapso de tiempo
+
+A pesar de ser una forma flexible y potente de controlar la asincronía, que permite realizar múltiples posibilidades, las funciones callbacks tienen ciertas desventajas evidentes. En primer lugar, el código creado con las funciones es algo caótico y tener que pasar un __NULL__ como parámetro en algunas funciones es poco elegante.
+
+### promise
+
+Es un proxy de un valor que no se conoce necesariamente y le permite asociar controladores con el valor eventual de éxito o el motivo de falla de una acción asíncrona. Esto permite a los métodos asíncronos que en lugar de devolver inmediatamente el valor final, devuelvan la promesa que proporciona el valor, en algún momento futuro.
+
+* __pending:__ la operacion esta pendiente, estado inicial.
+* __fulfilled:__ la operación se completó con éxito.
+* __rejected:__ la operación falló por algun motivo.
+
+### 
+
+---
 
 ## Ejercicios
 
