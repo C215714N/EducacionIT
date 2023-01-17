@@ -21,14 +21,17 @@ class Clock {
         this.min = m,
         this.sec = s;
     }
+    // Metodos Propios
     adjustTime(value){
         return value < 10 ? '0'+ value : value
     }
+    autoTime(key, value = 1){
+        this.setTime(key, this[key] + value)
+    }
+    // Getters
     getTime(){
-        let h = this.adjustTime(this.hr)
-        let m = this.adjustTime(this.min)
-        let s = this.adjustTime(this.sec)
-        return `${h}:${m}:${s}`
+        let t = ['hr','min','sec'].map(t => this.adjustTime(this[t]))
+        return `${t[0]}:${t[1]}:${t[2]}`
     }
     getHours(){
         return this.hr
@@ -39,22 +42,30 @@ class Clock {
     getSecond(){
         return this.sec;
     }
+    // Setters
     setTime(key, value){
+        // Valor Maximo de Tiempo (Hr, Min, Sec)
         (value >= 60 && key != 'hr') ||
         (value >= 24 && key == 'hr') ?
-        this[key] = 0 :
-        this[key] = value;
+            this[key] = 0 :
+        // Valor Minimo de Tiempo (Min, Sec)
+        (value < 0  && key != 'hr') ?
+            this[key] = 59 :
+        // Valor Minimo Tiempo (Hr)
+        (value <0 && key == 'hr') ?
+            this[key] = 23 :
+        // Valor actual de Tiempo
+            this[key] = value;
     }
 }
 
 let Cron = new Clock(0,0,0)
 let runTimer = setInterval(()=>{
-    Cron.setTime('sec', Cron.getSecond() + 1)
-    
+        Cron.autoTime('sec')
     if (Cron.getSecond() == 0) 
-        Cron.setTime('min', Cron.getMinutes() + 1)
+        Cron.autoTime('min')
     if (Cron.getMinutes() == 0 && Cron.getSecond() == 0) 
-        Cron.setTime('hr', Cron.getHours('hr') + 1)
+        Cron.autoTime('hr')
 
-    console.log(Cron)
-}, 1)
+    console.log(Cron.getTime())
+}, 1000 )
