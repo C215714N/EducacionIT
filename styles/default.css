@@ -9,6 +9,7 @@ h1,
 h2,
 h3,
 header p,
+.copy,
 .menu {
     margin: 0;
 }
@@ -35,7 +36,7 @@ iframe,
 nav{
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     align-items: center;
     flex-wrap: wrap;
     padding: .5rem;
@@ -289,13 +290,20 @@ section{
 .special{
     background-color: #3c6;
 }
-
-
 /* Pie de pagina */
 #footer{
     position: relative;
     min-height: min(100vh, 640px);
     padding-top: 5rem;
+}
+.copy{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: #eee;
+    background: linear-gradient(#3c6, #36c);
 }
 /* Mapa de contacto */
 .cover{
@@ -322,7 +330,7 @@ section{
 .map.active{
     position: fixed;
     opacity: .9;
-    z-index: 1;
+    z-index: 2;
 }
 /* Formulario de Contacto */
 #contact{
