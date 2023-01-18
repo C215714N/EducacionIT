@@ -1,10 +1,18 @@
 nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem;
     background: linear-gradient(to right, #36c, #248);
+}
+nav .btn{
+    position: relative;
+    z-index: 1;
 }
 nav a{
     color: #ccc;
@@ -16,13 +24,19 @@ nav a:hover{
     filter: grayscale(30%);
 }
 .menu{
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    position: fixed;
+    top:0;
+    left: -100%;
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    list-style: none;
+    height: 100%;
+    background: linear-gradient(#36c, #248);
+    opacity: .9;
 }
 .menu.active{
-    max-height: 100vh;
+    left: 0;
 }
 
 @media screen and (min-width: 768px){
@@ -30,10 +44,13 @@ nav a:hover{
         display: none;
     }
     .menu{
+        position: static;
         display: flex;
         gap: .5rem;
         width: auto;
         max-height: 640px;
+        background: none;
+        opacity: 1;
     }
 }
 
