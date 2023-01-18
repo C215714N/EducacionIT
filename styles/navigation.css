@@ -8,12 +8,16 @@ nav{
 }
 nav a{
     color: #ccc;
-    text-decoration: none;
+    filter: grayscale(90%);
+}
+nav a.active,
+nav a:hover{
+    text-shadow: 0 0 .5rem #eee;
+    filter: grayscale(30%);
 }
 .menu{
     width: 100%;
     max-height: 0;
-    margin: 0;
     overflow: hidden;
     list-style: none;
 }
