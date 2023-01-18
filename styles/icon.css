@@ -1,0 +1,38 @@
+[class*="icon-"]::before{
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: .25rem;
+}
+.icon-open::before{
+    content: '\2630';
+}
+.icon-close::before{
+    content: '\26cc';
+}
+.icon-pen::before{
+    content: '✒️'
+}
+.icon-home::before{
+    content: '🏠';
+}
+.icon-about::before{
+    content: '📰';
+}
+.icon-promo::before{
+    content: '🏷️';
+}
+.icon-store::before{
+    content: '🏪';
+}
+.icon-contact::before{
+    content: '🧑‍💼';
+}
+.icon-check::before{
+    content: '✔️'
+}
+.icon-plus::before{
+    content: '✖️'
+}
+.icon-less::before{
+    content: '➖'
+}
