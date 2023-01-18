@@ -8,3 +8,68 @@
     scroll-behavior: smooth;
     font-family: 'Roboto', 'Century Gothic', sans-serif;
 }
+/* Reinicios de estilos */
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.list-unstyled{
+    margin: 0;
+}
+.menu,
+.list-unstyled{
+    padding: 0;
+}
+.menu,
+.list-unstyled{
+    list-style: none;
+}
+:is(
+    header,
+    nav,
+    footer
+) a{
+    text-decoration: none;
+}
+/* Disposicion de la Pagina */
+body{
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer'
+        'nav'
+    ;
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+@media screen and (min-width: 768px){
+    body{
+        grid-template-areas: 
+            'nav'
+            'header'
+            'main'
+            'footer';
+    }
+}
+@media screen and (min-width: 1200px){
+    body{
+        grid-template-areas: 
+            'header'
+            'nav'
+            'main'
+            'footer';
+    }
+}
