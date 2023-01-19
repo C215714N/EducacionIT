@@ -1,4 +1,8 @@
 /* Reglas Generales */
+@font-face {
+    font-family: 'clock';
+    src: url('../assets/font/digital.ttf');
+}
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -10,6 +14,7 @@ h2,
 h3,
 header p,
 .copy,
+.timer,
 .menu {
     margin: 0;
 }
@@ -290,6 +295,51 @@ section{
 .special{
     background-color: #3c6;
 }
+/* Cronometro */
+    .cron{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+        grid-template-areas: 
+        'dd dd dd start'
+        'hh mm ss pause'
+        'hh mm ss stop';
+        gap: .5rem;
+        max-width: 540px;
+        margin: auto;
+    }
+    .cron :is(
+        input,
+        button
+    ){
+        width: 100%;
+    }
+    .timer{
+        flex-basis: 100%;
+        font-family: 'clock';
+        font-size: min(calc(10vw + 1rem), 5rem);
+        padding: .5rem max(.25rem, calc(50vw - 270px));
+    }
+    #input_dd{
+        grid-area: dd;
+    }
+    #input_hh{
+        grid-area: hh;
+    }
+    #input_mm{
+        grid-area: mm;
+    }
+    #input_ss{
+        grid-area: ss;
+    }
+    #button_start{
+        grid-area: start;
+    }
+    #button_pause{
+        grid-area: pause;
+    }
+    #button_stop{
+        grid-area: stop;
+    }
 /* Pie de pagina */
 #footer{
     position: relative;
