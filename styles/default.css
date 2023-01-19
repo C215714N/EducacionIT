@@ -135,7 +135,7 @@ nav a:hover{
     width: 100%;
 }
 .xs{
-    --size: 125px;
+    --size: 100px;
 }
 .small{
     --size: 200px;
@@ -321,50 +321,47 @@ section{
     .cron{
         max-width: 540px;
         margin: auto;
+        font-size: 2rem;
     }
-    .cron :is(
-        input,
-        button
-    ){
+    .btn{
+        max-width: 4.5rem;
+        outline: none;
+        border: none;
+        font-size: 2rem;
+    }
+    /* Cronometro: Reloj */
+    .clock{
+        min-width: min(100%, 150px);
         width: 100%;
+        border-radius: .5rem;
+        padding: .5rem;
+        color: #3c6;
+        text-shadow: 0 0 .25rem #284;
+        background: linear-gradient(#333A, #111D);
+        font-family: 'clock';
     }
     .timer{
-        font-family: 'clock';
-        font-size: min(calc(10vw + 1rem), 5rem);
-        width: 100%;
-        max-width: 540px;
         margin: auto;
-        border-radius: .5rem;
+        padding: 1.5rem .5rem 1rem;
         text-align: center;
-        text-shadow: 0 0 .25rem #284;
-        color: #3c6;
-        background: linear-gradient(#3338, #333);
+        box-shadow: 0 .25rem .5rem .5rem #333 inset;
+        font-size: min(calc(5vw + 2rem), 5rem);
     }
     .timer::before{
-        content: 'Days - hh:mm:ss';
+        content: 'Months/Days - hh:mm:ss';
         display: block;
         font-size: .5em;
     }
-    #input_dd{
-        grid-area: dd;
+    /* Cronometro: Campos */
+    [id*="input_"]{
+        border-bottom: 2px solid;
+        color: #021;
+        font-family: 'clock';
     }
-    #input_hh{
-        grid-area: hh;
-    }
-    #input_mm{
-        grid-area: mm;
-    }
-    #input_ss{
-        grid-area: ss;
-    }
-    #button_start{
-        grid-area: start;
-    }
-    #button_pause{
-        grid-area: pause;
-    }
-    #button_stop{
-        grid-area: stop;
+    /* Cronometro: Botones */
+    [id*="button_"]:hover{
+        background: #021;
+        box-shadow: 0 0 .5rem #eee8 inset;
     }
 /* Pie de pagina */
 #footer{
