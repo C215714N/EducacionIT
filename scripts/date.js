@@ -14,24 +14,28 @@ let clock = setInterval(
 
 //#Clase y Objeto Cronometro
 class Clock {
-    constructor(d, h, m, s){
-        this.dd = d;
-        this.hh = h;
-        this.mm = m,
-        this.ss = s;
+    constructor(M, d, h, m, s){
+        this.MM = M || 0;
+        this.dd = d || 0;
+        this.hh = h || 0;
+        this.mm = m || 0,
+        this.ss = s || 0;
     }
     // Metodos Propios
     adjustTime(value){
-        return value < 10 ? '0'+ value : value
+        return value < 10 ? '0'+ value : value;
     }
     autoTime(key, value = 1){
-        const newVal = parseInt(this[key]) + value || 0
-        this.setTime(key, newVal)
+        const newVal = parseInt(this[key]) + value || 0;
+        this.setTime(key, newVal);
     }
     // Getters
+    getKeys(){
+        return Object.keys(this);
+    }
     getTime(){
-        let t = ['dd','hh','mm','ss'].map(t => this.adjustTime(this[t]))
-        return `${t[0]} - ${t[1]}:${t[2]}:${t[3]}`
+        let t = this.getKeys().map(t => this.adjustTime(this[t]));
+        return `${t[0]}/${t[1]} - ${t[2]}:${t[3]}:${t[4]}`;
     }
     getUnit(key){
         return this.adjustTime(this[key]);
@@ -53,11 +57,11 @@ class Clock {
             this[key] = value;
     }
 }
-const Cron = new Clock(0,0,0,0)
+const Cron = new Clock()
 //#endregion
 //#Cronometro
 function clockStart(callback){ 
-    // Iniciar el Intervalor (Cronometro)
+    // Iniciar el Intervalo (Cronometro)
     let runTimer = setInterval(()=>{
         // Incremento Segundos
         Cron.autoTime('ss')
@@ -78,8 +82,8 @@ function clockStart(callback){
     // Reiniciar el Intervalo  (Cronometro)
     clockStop = () => {
         clockPause();
-        ['dd','hh','mm','ss'].map(t => Cron.setTime(t, 0))
-        callback()
+        Cron.getKeys().map(t => Cron.setTime(t, 0));
+        callback();
     }
 }
 //#endregion
@@ -92,8 +96,8 @@ function clockSection () {
         className: 'grid auto jc-center',
         innerHTML: `
             <h2>Seccion de Relojes</h2>
-            <p class="timer">${Cron.getTime()}</p>
-            <div id="actionButtons" class="cron flex auto xs"></div>`
+            <p class="clock timer w-100">${Cron.getTime()}</p>
+            <div id="actionButtons" class="cron flex auto xs jc-center"></div>`
     } )
     main.appendChild(section);
     actionButtons();
@@ -103,7 +107,7 @@ function clockSection () {
 function actionButtons(){
     const container = d.getElementById('actionButtons');
     const controls = {
-        input: ['dd','hh','mm','ss'],
+        input: Cron.getKeys(),
         button: ['start', 'pause', 'stop']
     }
     Object.keys(controls).forEach( c => {
@@ -113,6 +117,7 @@ function actionButtons(){
             Object.assign(item, {
                 id: `${c}_${id}`,
                 placeholder: id,
+                className: (c == 'button' ? 'clock btn' : 'time btn'),
                 maxLength: 2,
                 innerHTML: id.toUpperCase(),
                 onclick: (e) => customAction(e),
@@ -131,8 +136,11 @@ function customAction(e){
     if (e.target.id.includes('button_')){
         id = id.replace(id[0], id[0].toUpperCase());
         // Modificador del Texto Boton Start
+        let start = d.getElementById('button_start');
         if (id == 'Pause'){
-            d.getElementById('button_start').innerHTML = 'CONTINUE'
+            start.innerHTML = 'CONTINUE'
+        } else if (id == 'Stop'){
+            start.innerHTML = start.id.split('_')[1].toUpperCase();
         }
         e.target.innerHTML = id.toUpperCase();
         // Consultar funcion por Nombre
