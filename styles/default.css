@@ -111,9 +111,31 @@ nav a:hover{
 .ai-end{
     align-items: flex-end;
 }
+/* CSS Grid */
+.ac-start{
+    align-content: flex-start;
+}
+.ac-center{
+    align-content: center;
+}
+.ac-end{
+    align-content: flex-end;
+}
+.ac-around{
+    align-content: space-around;
+}
+.ac-between{
+    align-content: space-between
+}
+.ac-evenly{
+    align-content: space-evenly;
+}
 /* Tamaños */
 .w-100{
     width: 100%;
+}
+.xs{
+    --size: 125px;
 }
 .small{
     --size: 200px;
@@ -297,13 +319,6 @@ section{
 }
 /* Cronometro */
     .cron{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 3fr;
-        grid-template-areas: 
-        'dd dd dd start'
-        'hh mm ss pause'
-        'hh mm ss stop';
-        gap: .5rem;
         max-width: 540px;
         margin: auto;
     }
@@ -314,10 +329,21 @@ section{
         width: 100%;
     }
     .timer{
-        flex-basis: 100%;
         font-family: 'clock';
         font-size: min(calc(10vw + 1rem), 5rem);
-        padding: .5rem max(.25rem, calc(50vw - 270px));
+        width: 100%;
+        max-width: 540px;
+        margin: auto;
+        border-radius: .5rem;
+        text-align: center;
+        text-shadow: 0 0 .25rem #284;
+        color: #3c6;
+        background: linear-gradient(#3338, #333);
+    }
+    .timer::before{
+        content: 'Days - hh:mm:ss';
+        display: block;
+        font-size: .5em;
     }
     #input_dd{
         grid-area: dd;

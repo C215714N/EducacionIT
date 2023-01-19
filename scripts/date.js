@@ -89,11 +89,11 @@ function clockSection () {
     const section = d.createElement('section');
     Object.assign(section, {
         id: 'clockSection',
-        className: 'flex auto small',
+        className: 'grid auto jc-center',
         innerHTML: `
             <h2>Seccion de Relojes</h2>
             <p class="timer">${Cron.getTime()}</p>
-            <div id="actionButtons" class="cron"></div>`
+            <div id="actionButtons" class="cron flex auto xs"></div>`
     } )
     main.appendChild(section);
     actionButtons();
