@@ -2,7 +2,8 @@
 @primary: #448;
 @light: #eee;
 @dark: #333;
-@p: relative;
+@path: '../assets/bg';
+@header: 'city', 'electro', 'home';
 
 // Nesting: Anidacion de selectores para lograr una mayor especificidad
 #header{
@@ -10,9 +11,11 @@
     @dark: #3338;
     .flexbox(column);
     .normalize(1.5rem 1rem);
+    .font;
     min-height: ~'min(100vh, 640px)';
     color: @light;
     background: linear-gradient(@primary, @dark);
+    text-shadow: 0 0 .5rem darken(@dark, 20%);
     h1{
         font-family: 'techno';
     }
@@ -27,6 +30,8 @@
         &:extend(.unstyled);
         .item{
             &:extend(.cover);
+            .colors;
+            .bg(@header);
             opacity: 0;
             background: var(--bg) center/cover;
             &.active{
@@ -93,4 +98,24 @@
     z-index: @z;
     
 }
-
+.font(@min: .5rem; @mid: 2vw; @max: 5rem){
+    font-size: ~'min(calc(@{mid} + @{min}), @{max})';
+}
+// Mixin recursivo: Estilos que se repiten en base a una condicion
+.colors(@limit: 6; @i: 1) when(@i <= @limit){
+    &:nth-child(@{i}n){
+        --bg: linear-gradient(
+            to top right,
+            hsl(@i * 60, 50%, 50%),
+            hsl(@i * 45, 50%, 50%)
+        );
+    }
+    .colors(@limit; @i + 1);
+}
+.bg(@images; @i: 1) when(@i <= length(@images)){
+    @img: extract(@images, @i);
+    &:nth-child(@{i}){
+        --bg: url('@{path}/@{img}.jpg');
+    }
+    .bg(@images; @i + 1);
+}

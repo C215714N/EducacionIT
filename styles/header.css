@@ -7,9 +7,11 @@
   margin: 0;
   border: 0;
   padding: 1.5rem 1rem;
+  font-size: min(calc(2vw + 0.5rem), 5rem);
   min-height: min(100vh, 640px);
   color: #eee;
   background: linear-gradient(#4488, #3338);
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.53333333);
 }
 #header h1 {
   font-family: 'techno';
@@ -23,6 +25,33 @@
 .gallery .slide .item {
   opacity: 0;
   background: var(--bg) center / cover;
+}
+.gallery .slide .item:nth-child(1n) {
+  --bg: linear-gradient(to top right, hsl(60, 50%, 50%), hsl(45, 50%, 50%));
+}
+.gallery .slide .item:nth-child(2n) {
+  --bg: linear-gradient(to top right, hsl(120, 50%, 50%), hsl(90, 50%, 50%));
+}
+.gallery .slide .item:nth-child(3n) {
+  --bg: linear-gradient(to top right, hsl(180, 50%, 50%), hsl(135, 50%, 50%));
+}
+.gallery .slide .item:nth-child(4n) {
+  --bg: linear-gradient(to top right, hsl(240, 50%, 50%), hsl(180, 50%, 50%));
+}
+.gallery .slide .item:nth-child(5n) {
+  --bg: linear-gradient(to top right, hsl(300, 50%, 50%), hsl(225, 50%, 50%));
+}
+.gallery .slide .item:nth-child(6n) {
+  --bg: linear-gradient(to top right, hsl(0, 50%, 50%), hsl(270, 50%, 50%));
+}
+.gallery .slide .item:nth-child(1) {
+  --bg: url('../assets/bg/city.jpg');
+}
+.gallery .slide .item:nth-child(2) {
+  --bg: url('../assets/bg/electro.jpg');
+}
+.gallery .slide .item:nth-child(3) {
+  --bg: url('../assets/bg/home.jpg');
 }
 .gallery .slide .item.active {
   opacity: 1;
