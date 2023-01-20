@@ -1,12 +1,24 @@
 #header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  border: 0;
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
   color: #eee;
   background: linear-gradient(#448, #333);
 }
 #header h1 {
   font-family: 'techno';
 }
-.gallery .slide {
-  position: absolute;
+.gallery {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .zeroise,
 #header p,
@@ -20,7 +32,12 @@
   list-style: none;
   text-decoration: none;
 }
-.position,
-.gallery {
-  position: relative;
+.cover,
+.gallery .slide .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }

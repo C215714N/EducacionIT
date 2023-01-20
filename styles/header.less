@@ -6,6 +6,9 @@
 
 // Nesting: Anidacion de selectores para lograr una mayor especificidad
 #header{
+    .flexbox(column);
+    .normalize(1.5rem 1rem);
+    min-height: min(100vh, 640px);
     color: @light;
     background: linear-gradient(@primary, @dark);
     h1{
@@ -16,14 +19,12 @@
     }
 }
 .gallery{
-    @p: absolute;
-    &:extend(.position);
+    .position;
     .slide{
         &:extend(.zeroise);
         &:extend(.unstyled);
-        .position;
         .item{
-
+            &:extend(.cover);
         }
     }
     button{
@@ -33,14 +34,40 @@
 
 // Mixin: Estilos que se utilizan como atributos dentro de un selector
 .zeroise{
-    margin: 0;
-    border: 0;
-    padding: 0;
+    .normalize;
 }
 .unstyled{
     list-style: none;
     text-decoration: none;
 }
-.position{
-    position: @p
+.cover{
+    .position(absolute; @z: -1);
+    width: 100%;
+    height: 100%;
+}
+// Mixin parametrico: Estilos que requieren argumentos para aplicarse
+.normalize(@p: 0; @m: 0; @b: 0){
+    margin: @m;
+    border: @b;
+    padding: @p;
+}
+.flexbox(
+    @fd: row;
+    @jc: center;
+    @ai: center;
+    @fw: wrap;
+    @d: flex
+){
+    display: @d;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+    flex-wrap: @fw;
+}
+.position(@p: relative; @x: 0; @y: 0; @z: 0; @v: top; @h: left){
+    position: @p;
+    @{v}: @y;
+    @{h}: @x;
+    z-index: @z;
+    
 }
