@@ -6,9 +6,11 @@
 
 // Nesting: Anidacion de selectores para lograr una mayor especificidad
 #header{
+    @primary: #4488;
+    @dark: #3338;
     .flexbox(column);
     .normalize(1.5rem 1rem);
-    min-height: min(100vh, 640px);
+    min-height: ~'min(100vh, 640px)';
     color: @light;
     background: linear-gradient(@primary, @dark);
     h1{
@@ -25,10 +27,30 @@
         &:extend(.unstyled);
         .item{
             &:extend(.cover);
+            opacity: 0;
+            background: var(--bg) center/cover;
+            &.active{
+                opacity: 1;
+            }
         }
     }
     button{
-
+        .position(absolute; @h: bottom);
+        .normalize(1rem 10vw);
+        color: @light;
+        background-color: transparent;
+        opacity: .3;
+        &:hover{
+            opacity: .7;
+        }
+        &.icon-{
+            &prev{
+                left: 0;
+            }
+            &next{
+                right: 0;
+            }
+        }
     }
 }
 
@@ -71,3 +93,4 @@
     z-index: @z;
     
 }
+

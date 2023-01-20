@@ -7,9 +7,9 @@
   margin: 0;
   border: 0;
   padding: 1.5rem 1rem;
-  min-height: 100vh;
+  min-height: min(100vh, 640px);
   color: #eee;
-  background: linear-gradient(#448, #333);
+  background: linear-gradient(#4488, #3338);
 }
 #header h1 {
   font-family: 'techno';
@@ -19,6 +19,34 @@
   top: 0;
   left: 0;
   z-index: 0;
+}
+.gallery .slide .item {
+  opacity: 0;
+  background: var(--bg) center / cover;
+}
+.gallery .slide .item.active {
+  opacity: 1;
+}
+.gallery button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  margin: 0;
+  border: 0;
+  padding: 1rem 10vw;
+  color: #eee;
+  background-color: transparent;
+  opacity: 0.3;
+}
+.gallery button:hover {
+  opacity: 0.7;
+}
+.gallery button.icon-prev {
+  left: 0;
+}
+.gallery button.icon-next {
+  right: 0;
 }
 .zeroise,
 #header p,
