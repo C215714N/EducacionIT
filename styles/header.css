@@ -1,0 +1,26 @@
+#header {
+  color: #eee;
+  background: linear-gradient(#448, #333);
+}
+#header h1 {
+  font-family: 'techno';
+}
+.gallery .slide {
+  position: absolute;
+}
+.zeroise,
+#header p,
+.gallery .slide {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.unstyled,
+.gallery .slide {
+  list-style: none;
+  text-decoration: none;
+}
+.position,
+.gallery {
+  position: relative;
+}

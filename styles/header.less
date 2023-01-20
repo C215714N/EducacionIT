@@ -1,0 +1,46 @@
+// Variable: Espacio reservado en memoria cuyo valor puede cambiar
+@primary: #448;
+@light: #eee;
+@dark: #333;
+@p: relative;
+
+// Nesting: Anidacion de selectores para lograr una mayor especificidad
+#header{
+    color: @light;
+    background: linear-gradient(@primary, @dark);
+    h1{
+        font-family: 'techno';
+    }
+    p{
+        &:extend(.zeroise);
+    }
+}
+.gallery{
+    @p: absolute;
+    &:extend(.position);
+    .slide{
+        &:extend(.zeroise);
+        &:extend(.unstyled);
+        .position;
+        .item{
+
+        }
+    }
+    button{
+
+    }
+}
+
+// Mixin: Estilos que se utilizan como atributos dentro de un selector
+.zeroise{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.unstyled{
+    list-style: none;
+    text-decoration: none;
+}
+.position{
+    position: @p
+}
