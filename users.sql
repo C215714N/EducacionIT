@@ -37,6 +37,9 @@ DESCRIBE users;
 	insertar / eliminar / actualizar / consultar
     registros (filas)
 */
+# reinicio de tabla (eliminar registros)
+TRUNCATE users; -- vuelve el contador a 0
+
 # Carga selectiva de datos
 INSERT INTO users(username, userpass)
 VALUES ('cristian', 'root');
@@ -55,5 +58,13 @@ VALUES	('Maria', 'pass'),
 # consulta general de datos
 SELECT * FROM users;
 
-# reinicio de tabla (eliminar registros)
-TRUNCATE users; -- vuelve el contador a 0
+# actualizacion de roles
+## definicion de usuarios (pacientes)
+UPDATE users
+SET employee = 0 -- valor de actualizacion
+WHERE id BETWEEN 3 AND 7; -- condicion: entre 3 y 7 inclusive
+
+## definicion de usuarios (empleados)
+UPDATE users
+SET employee = 1 -- valor de actualizacion
+WHERE username IN('Maria','c215714n!#','admin'); -- condicion: cuyo nombre de usuario sea igual
