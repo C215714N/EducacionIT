@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    /* EXPLICACION: 
+        content-box:
+            content-width = width
+            final-width = width + padding + border
+    
+        border-box:
+            final-width = width
+            content-width = width - padding - border
+    */
+    font-family: 'Poppins', 'Montserrat', 'Century Gothic', sans-serif;
+    scroll-behavior: smooth;
+}
+/* Reinicio de Estilos */
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.m-0{
+    margin: 0;
+}
+
+iframe,
+.b-0{
+    border: 0;
+}
+
+.menu,
+.p-0{
+    padding: 0;
+}
+
+.menu,
+.list-unstyled{
+    list-style: none;
+}
+
+nav a,
+header a,
+footer a,
+.link{
+    text-decoration: none;
+}
