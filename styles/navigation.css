@@ -1,0 +1,38 @@
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem; /*root EM (Ancho de M en la Raiz HTML)*/
+    background-color: #e75;
+}
+#nav a{
+    color: #eee;
+    text-shadow: 0 0 .5rem #333;
+}
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+}
+.menu.active{
+    max-height: 640px;
+}
+/* Tablets */
+@media screen and (min-width: 768px){
+    #nav .btn{
+        display: none;
+    }
+    .menu{
+        width: auto;
+        max-height: 640px;
+        display: flex;
+        gap: .5rem;
+    }
+}
+/* HD Desktop */
+@media screen and (min-width: 1400px){
+    #nav{
+        padding: 1rem calc(50vw - 660px);
+    }
+}
