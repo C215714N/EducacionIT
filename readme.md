@@ -2,9 +2,9 @@
 
 ## Tabla de contenidos
 * [Funciones Basicas](#funciones-basicas)
-    *[Texto](#texto)
-    *[Numericas](#numericas)
-    *[Fecha y Hora](#fecha-y-hora)
+    * [Texto](#texto)
+    * [Numericas](#numericas)
+    * [Fecha y Hora](#fecha-y-hora)
 * [Funciones Logicas](#funciones-logicas)
     * [Tablas de la Verdad](#tablas-de-la-verdad)
 * [Funciones de Bases de datos](#funciones-de-bases-de-datos)
