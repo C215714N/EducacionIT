@@ -2,10 +2,17 @@
 
 ## Tabla de contenidos
 * [Funciones Basicas](#funciones-basicas)
+    *[Texto](#texto)
+    *[Numericas](#numericas)
+    *[Fecha y Hora](#fecha-y-hora)
+* [Funciones Logicas](#funciones-logicas)
+    * [Tablas de la Verdad](#tablas-de-la-verdad)
 
 ## Funciones Basicas
 
 ### Texto
+
+Son aquellas que permiten trabajar con los valores de la celda procesandolos como cadenas de texto, indistintamente de su contenido, y pueden utilizarse para dar formato a las celdas, asi como tambien para extraer o concatenar valores.
 
 | Funcion | Descripcion|
 |-|-|
@@ -21,6 +28,7 @@
 
 ### Numericas
 
+Son aquellas que se utilizan para trabajan con numeros racionales, ignorando en la mayoria de los casos cualquier valor que no sea operativo, y se organizan en diferentes categorias como operativas, estadisticas, trigonometricas, etc.
 
 | Funcion | Descripcion|
 |-|-|
@@ -37,6 +45,7 @@
 
 ### Fecha y Hora
 
+Son aquellas que facilitan la operatoria con los valores almacenados en la base de datos de fechas, debido a que la computadora utiliza numeros racionales para obtener las fechas utilizando el entero para los dias y los decimales para las horas.
 
 | Funcion | Descripcion|
 |-|-|
@@ -50,3 +59,31 @@
 |__SEGUNDO(`fecha`)__| extrae los segundos de la fecha especificada|
 |__TEXTO(`fecha`,`"dddd"`)__| devuelve el nombre del dia de la fecha|
 |__TEXTO(`fecha`,`"mmmm"`)__| devuelve el nombre del mes de la fecha|
+
+## Funciones Logicas
+
+Son aquellas que realizan la evaluacion valores _(condiciones)_ y permiten el uso de los operadores __"Y (AND, &)"__, __"O (OR, |)"__ y __"XO (XOR, ^)"__, determinando el resultado dependiendo del cumplimiento o incumplimiento de la condicion.
+
+## Tablas de la verdad
+Cuando utilizamos funciones logicas el resultado dependera de las proposiciones y conjuntamente los operadores utilizados __"Y, O, u XO"__. A continuacion se exponen las tablas de la verdad correspondientes para cada operador en base a dos condiciones (__p__ y __q__)
+
+<div style="display:flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem;">
+
+|Y|p (F)|p (V)|
+|-|-|-|
+|__q (F)__|F|F|
+|__q (V)__|F|V|
+
+
+|O|p (F)|p (V)|
+|-|-|-|
+|__q (F)__|F|V|
+|__q (V)__|V|V|
+
+
+|XO|p (F)|p (V)|
+|-|-|-|
+|__q (F)__|F|V|
+|__q (V)__|V|F|
+
+</div>
