@@ -324,7 +324,6 @@ section{
         font-size: 2rem;
     }
     .btn{
-        max-width: 4.5rem;
         outline: none;
         border: none;
         font-size: 2rem;
@@ -339,6 +338,9 @@ section{
         text-shadow: 0 0 .25rem #284;
         background: linear-gradient(#333A, #111D);
         font-family: 'clock';
+    }
+    .clock.btn{
+        max-width: 4.5rem;
     }
     .timer{
         margin: auto;
