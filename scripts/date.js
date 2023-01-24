@@ -77,6 +77,9 @@ function clockStart(callback){
         // Incremento por Dia
         if (Cron.getUnit('ss') == 0 && Cron.getUnit('mm') == 0 && Cron.getUnit('hh') == 0)
             Cron.autoTime('dd')
+        // Incremento Mensual
+        if (Cron.getUnit('ss') == 0 && Cron.getUnit('mm') == 0 && Cron.getUnit('hh') == 0 && Cron.getUnit('dd'))
+            Cron.autoTime('MM')
         // Asignacion de Valor
         callback();
     }, 1000 )
@@ -120,7 +123,7 @@ function actionButtons(){
             Object.assign(item, {
                 id: `${c}_${id}`,
                 placeholder: id,
-                className: (c == 'button' ? 'clock btn' : 'time btn'),
+                className: c == 'button' ? 'clock btn numbers' : 'time btn',
                 maxLength: 2,
                 innerHTML: id.toUpperCase(),
                 onclick: (e) => customAction(e),
@@ -128,6 +131,7 @@ function actionButtons(){
             } )
             controls[c][i] = item;
             container.appendChild(controls[c][i]);
+            getInputs();
         }
     })
 }
@@ -161,6 +165,18 @@ function showTime(){
 function clearInputs(){
     const inputs = d.querySelectorAll('#clockSection [id*="input_"]');
     inputs.forEach(input => input.value = '');
+}
+function getInputs(){
+    const inputs = d.querySelectorAll('#clockSection [id*="input_"]');
+    inputs.forEach(input => limitValues(input))
+}
+function limitValues(element){
+    const type = element.id.split('_')[1];
+    Object.assign(element, {
+        min: 0,
+        max: type == 'MM' ? 99 : type == 'dd' ? 29 : type == 'hh' ? 23 : 59,
+        type: 'number'
+    } )
 }
 //#endregion
 clockSection();
