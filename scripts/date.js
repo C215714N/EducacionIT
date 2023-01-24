@@ -53,6 +53,9 @@ class Clock {
         // Valor Minimo Tiempo (hh)
         (value < 0 && key == 'hh') ?
             this[key] = 23 :
+        // Valor Minimo Tiempo (dd)
+        (value < 0 && key == 'dd') ?
+            this[key] = 29 :
         // Valor actual de Tiempo
             this[key] = value;
     }
@@ -141,6 +144,7 @@ function customAction(e){
             start.innerHTML = 'CONTINUE'
         } else if (id == 'Stop'){
             start.innerHTML = start.id.split('_')[1].toUpperCase();
+            clearInputs();
         }
         e.target.innerHTML = id.toUpperCase();
         // Consultar funcion por Nombre
@@ -153,6 +157,10 @@ function customAction(e){
 function showTime(){
     const p = d.querySelector('#clockSection p')
     p.innerHTML = Cron.getTime()
+}
+function clearInputs(){
+    const inputs = d.querySelectorAll('#clockSection [id*="input_"]');
+    inputs.forEach(input => input.value = '');
 }
 //#endregion
 clockSection();
