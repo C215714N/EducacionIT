@@ -7,6 +7,7 @@
     *[Fecha y Hora](#fecha-y-hora)
 * [Funciones Logicas](#funciones-logicas)
     * [Tablas de la Verdad](#tablas-de-la-verdad)
+* [Funciones de Bases de datos](#funciones-de-bases-de-datos)
 
 ## Funciones Basicas
 
@@ -64,7 +65,17 @@ Son aquellas que facilitan la operatoria con los valores almacenados en la base 
 
 Son aquellas que realizan la evaluacion valores _(condiciones)_ y permiten el uso de los operadores __"Y (AND, &)"__, __"O (OR, |)"__ y __"XO (XOR, ^)"__, determinando el resultado dependiendo del cumplimiento o incumplimiento de la condicion.
 
+|Funcion|Descripcion|
+|-|-|
+|__SI(`prueba logica`, `valor V`, `valor F`)__| Comprueba si se cumple una condición y devuelve un valor si es VERDADERO y otro si es FALSO|
+|__SI.ERROR(`valor`, `valor Error`)__| Devuelve un valor si la expresión es un error y otro valor si no lo es|
+|__CONTAR.SI(`rango`, `criterio`)__| Cuenta las celdas que cumplen el criterio establecido|
+|__CONTAR.SI.CONJUNTO(`rango 1`, `criterio 1`, `...`)__| Cuenta las celdas que cumplen todos y cada uno de los criterios establecidos|
+|__SUMAR.SI(`rango`, `criterio`, `rango suma`)__| Suma los valores de las celdas que cumplen con el criterio establecido|
+|__SUMAR.SI.CONJUNTO(`rango suma`, `rango 1`, `criterio 1`, `...`)__| Suma todas las celdas que cumplent todos los criterios |
+
 ## Tablas de la verdad
+
 Cuando utilizamos funciones logicas el resultado dependera de las proposiciones y conjuntamente los operadores utilizados __"Y, O, u XO"__. A continuacion se exponen las tablas de la verdad correspondientes para cada operador en base a dos condiciones (__p__ y __q__)
 
 <div style="display:flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem;">
@@ -74,12 +85,10 @@ Cuando utilizamos funciones logicas el resultado dependera de las proposiciones 
 |__q (F)__|F|F|
 |__q (V)__|F|V|
 
-
 |O|p (F)|p (V)|
 |-|-|-|
 |__q (F)__|F|V|
 |__q (V)__|V|V|
-
 
 |XO|p (F)|p (V)|
 |-|-|-|
@@ -87,3 +96,19 @@ Cuando utilizamos funciones logicas el resultado dependera de las proposiciones 
 |__q (V)__|V|F|
 
 </div>
+
+## Funciones de Bases de Datos
+
+Son aquellas que permiten la creación, modificación y depuración de los datos en una base de datos EXCEL, mediante operaciones matemáticas que se cumplen de manera automática según las especificaciones del usuario y los parametros de la misma, siendo estos los siguientes: 
+    
+* __base de datos:__ rango de celdas que contienen los datos a analizar
+* __nombre de campo:__ celda que especifica el titulo de la columna
+* __criterios:__ rango de condiciones que coincide con los campos de la base de datos
+
+|Funcion| Descripcion|
+|-|-|
+|__DBSUMA()__| Suma aquellas celdas que cumplan los criterios especificados |
+|__DBCONTAR()__| Cuenta solamente las celdas con numeros que cumplan los criterios|
+|__DBPROMEDIO()__| Devuelve el promedio de las celdas que cumplan los criterios|
+|__DBMIN()__| obtiene el valor mas bajo de la base de datos, que cumpla las condiciones|
+|__DBMAX()__| obtiene el valor mas alto de la base de datos, que cumpla las condiciones|
