@@ -1,0 +1,255 @@
+/* Iconos redes sociales */
+.icon-facebook {
+  --bg: url("../assets/icon/facebook.svg");
+}
+
+.icon-instagram {
+  --bg: url("../assets/icon/instagram.svg");
+}
+
+.icon-twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.icon-github {
+  --bg: url("../assets/icon/github.svg");
+}
+
+.icon-linkedin {
+  --bg: url("../assets/icon/linkedin.svg");
+}
+
+.icon-twitter {
+  --bg: url("../assets/icon/twitter.svg");
+}
+
+.icon-whatsapp {
+  --bg: url("../assets/icon/whatsapp.svg");
+}
+
+.icon-youtube {
+  --bg: url("../assets/icon/youtube.svg");
+}
+
+/* Colores y Atributos */
+.text-primary {
+  color: #248;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-light {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-danger {
+  color: #c33;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-success {
+  color: #3c6;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.bg-primary {
+  background-color: #248;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.border-primary {
+  border-color: #248;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark {
+  border-color: #333;
+}
+
+.border-danger {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success {
+  border-color: #3c6;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+.outline-primary {
+  outline-color: #248;
+}
+
+.outline-secondary {
+  outline-color: #c36;
+}
+
+.outline-light {
+  outline-color: #eee;
+}
+
+.outline-dark {
+  outline-color: #333;
+}
+
+.outline-danger {
+  outline-color: #c33;
+}
+
+.outline-warning {
+  outline-color: #da3;
+}
+
+.outline-success {
+  outline-color: #3c6;
+}
+
+.outline-info {
+  outline-color: #36c;
+}
+
+.shade-primary {
+  --shade: #248;
+}
+
+.shade-secondary {
+  --shade: #c36;
+}
+
+.shade-light {
+  --shade: #eee;
+}
+
+.shade-dark {
+  --shade: #333;
+}
+
+.shade-danger {
+  --shade: #c33;
+}
+
+.shade-warning {
+  --shade: #da3;
+}
+
+.shade-success {
+  --shade: #3c6;
+}
+
+.shade-info {
+  --shade: #36c;
+}
+
+.shadow-primary {
+  --shadow: #248;
+}
+
+.shadow-secondary {
+  --shadow: #c36;
+}
+
+.shadow-light {
+  --shadow: #eee;
+}
+
+.shadow-dark {
+  --shadow: #333;
+}
+
+.shadow-danger {
+  --shadow: #c33;
+}
+
+.shadow-warning {
+  --shadow: #da3;
+}
+
+.shadow-success {
+  --shadow: #3c6;
+}
+
+.shadow-info {
+  --shadow: #36c;
+}
+
+/*Componentes*/
+.icon, #footer .social a {
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  background: #ccc var(--bg) center/2.5rem no-repeat;
+  transition: all 0.25s ease;
+}
+.icon:hover, #footer .social a:hover {
+  background-color: #eee;
+  background-size: 3rem;
+  box-shadow: 0 0.25rem 0.5rem #333;
+}
+
+#footer {
+  margin: 0;
+  border: 0;
+  padding: 5rem 0 1rem;
+}
+#footer .icon-copy {
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+}
+#footer .social {
+  display: flex;
+}

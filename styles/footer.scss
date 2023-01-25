@@ -1,0 +1,76 @@
+// Variables: valores que se almacenan temporalmente en memoria
+$path: '../assets/icon';
+$social: 
+    'facebook', 
+    'instagram',
+    'twitter',
+    'github',
+    'linkedin',
+    'twitter',
+    'whatsapp',
+    'youtube';
+$colors:
+    primary     #248,
+    secondary   #c36,
+    light       #eee,
+    dark        #333,
+    danger      #c33,
+    warning     #da3,
+    success     #3c6,
+    info        #36c;
+$attributes:
+    text     color,
+    bg       background-color,
+    border   border-color,
+    outline  outline-color,
+    shade    --shade,
+    shadow   --shadow;
+
+// Mixins: Estilos que se declaran y se implementan como atributos
+@mixin normalize($p: 0, $m: 0, $b: 0, 
+    $ba: border, $ma: margin, $pa: padding){
+    #{$ma}: $m;
+    #{$ba}: $b;
+    #{$pa}: $p;
+}
+// Loops: Repeticion de reglas en base a una condicion
+/* Iconos redes sociales */
+@each $icon in $social{
+    .icon-#{$icon}{
+        --bg: url('#{$path}/#{$icon}.svg');
+} }
+/* Colores y Atributos */
+@each $prop, $attr in $attributes{
+@each $color, $value in $colors{
+    .#{$prop}-#{$color}{
+        #{$attr}: $value;
+} } }
+
+// Styles
+/*Componentes*/
+.icon{
+    @include normalize(.5rem, .5rem, .25rem, border-radius);
+    width: 4rem;
+    height: 4rem;
+    background: #ccc var(--bg) center/2.5rem no-repeat;
+    transition: all .25s ease;
+    &:hover{
+        background-color: #eee;
+        background-size: 3rem;
+        box-shadow: 0 .25rem .5rem #333;
+    }
+}
+
+// Nesting: Capcapidad de utilizar un selector dentro de otro
+#footer{
+    @include normalize(5rem 0 1rem);
+    .icon-copy{
+        @include normalize(1rem);
+    }
+    .social{
+        display: flex;
+        a{
+            @extend .icon;
+        }
+    }
+}
