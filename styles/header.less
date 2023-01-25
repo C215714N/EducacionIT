@@ -6,12 +6,15 @@
 @header: 'city', 'electro', 'home';
 
 // Nesting: Anidacion de selectores para lograr una mayor especificidad
+/* Cabecera Principal */
 #header{
     @primary: #4488;
     @dark: #3338;
+    // Aplica el mixin de flexbox pasando el argumento "flex-direction: column"
     .flexbox(column);
     .normalize(1.5rem 1rem);
     .font;
+    // Expresion literal (evita que LESS procese la misma)
     min-height: ~'min(100vh, 640px)';
     color: @light;
     background: linear-gradient(@primary, @dark);
@@ -20,11 +23,14 @@
         font-family: 'techno';
     }
     p{
+        // Agrega el elemento a la lista de selectores de la clase .zeroise
         &:extend(.zeroise);
     }
 }
+/* Galeria de Imagenes */
 .gallery{
     .position;
+    // Contenedor de Fondos
     .slide{
         &:extend(.zeroise);
         &:extend(.unstyled);
@@ -39,6 +45,7 @@
             }
         }
     }
+    // Controles de la galeria
     button{
         .position(absolute; @h: bottom);
         .normalize(1rem 10vw);
