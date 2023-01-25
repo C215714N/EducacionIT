@@ -2,6 +2,9 @@
 const
     d = document,
     cN = 'active',
+    // Galeria
+    slides = d.querySelectorAll('.gallery .item'),
+    controls = d.querySelectorAll('.gallery [class*="icon-"]'),
     // Navegacion
     menuButton = d.querySelector('nav .btn'),
     menuList = d.querySelector('nav .menu')
@@ -13,7 +16,35 @@ const
         btn.classList.replace(val[0], val[1]) :
         btn.classList.replace(val[1], val[0])
     }
+    function getItem(object){
+        const { array, className } = object;
+        for (el of array){
+            if(el.classList.contains(className)){
+                el.classList.remove(className);
+                return el;
+    } } }
+    function setItem(object){
+        const { array, className, type, callback } = object;
+        let item = callback(object);
+        item = (
+            type == 'next' ?
+            ( item.nextElementSibling || item.parentNode.firstElementChild ) :
+            type === 'prev' ?
+            ( item.previousElementSibling || item.parentNode.lastElementChild ) :
+            array[type]
+        )
+        item.classList.add(className);
+    }
 // Eventos
+    // Galeria
+    controls.forEach( btn => btn.addEventListener('click', () => {
+        setItem( {
+            array: slides,
+            className: cN,
+            type: btn.className.split('-')[1],
+            callback: getItem
+        } )
+    } ) )
     // Navegacion 
     menuButton.addEventListener( 'click', (e) => toggle( {
         target: menuList,

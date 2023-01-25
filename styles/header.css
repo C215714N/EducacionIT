@@ -11,8 +11,8 @@
   font-size: min(calc(2vw + 0.5rem), 5rem);
   min-height: min(100vh, 640px);
   color: #eee;
-  background: linear-gradient(#4488, #3338);
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.53333333);
+  background: linear-gradient(#448, #333);
+  text-shadow: 0 0 0.5rem #000000;
 }
 #header h1 {
   font-family: 'techno';
@@ -71,7 +71,7 @@
   opacity: 0.3;
 }
 .gallery button:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .gallery button.icon-prev {
   left: 0;
