@@ -32,3 +32,20 @@ h3{
             vmax => % del valor mas alto
     */
 }
+/* JERARQUIA
+    tags  =   1
+    class =  10
+    id    = 100
+
+    CSS
+    .header { color: green }             10
+    #header { color: blue }             100
+    header { color: red }                 1
+    header.header{ color: black }        11
+    header#header{ color: whitesmoke }  101
+    
+    HTML
+    <header id="header" class="header">
+
+    </header>
+*/
