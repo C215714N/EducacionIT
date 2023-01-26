@@ -1,0 +1,34 @@
+#header{
+    font-size: min(calc(2vw + 1rem), 3rem);
+    /* Funciones CSS 
+        min(a, b) => determina el valor mas chico
+        calc(args) => indica al navegador una operacion
+    */
+}
+h1,
+h2,
+h3{
+    width: 100%;
+    font-family: 'resto';
+    /* 
+        ABSOLUTA: limitantes
+            cm => unidad metrica
+            in => pulgadas (2.54cm)
+            pt => 1/76 pulgadas
+            pc => 1/6 pulgadas
+            px => 1/96 pulgadas puntos en pantalla
+
+        RELATIVA: tamaños y tipografia
+            % => fuente del contenedor
+            ch => ancho del caracter "0"
+            em => ancho del caracter "M"
+            ex => alto del caracter "x"
+            rem => ancho de "M" en el root (HTML)
+
+        FLEXIBLE: altos y tipografia flexible
+            vw => % ancho del viewport
+            vh => % alto del viewport
+            vmin => % del valor mas bajo
+            vmax => % del valor mas alto
+    */
+}
