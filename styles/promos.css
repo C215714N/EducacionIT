@@ -1,0 +1,22 @@
+/* box */
+#promos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: .5rem;
+}
+#promos .box{
+    flex: 1 0 min(100%,200px);
+    /*  ATRIBUTOS FLEXBOX
+        flex-grow: define si el elemento debe ocupar el espacio restante
+        flex-shrink: define si debe reducir su tamaño para que otros entren
+        flex-basis: tamaño base para los elementos dentro del contenedor
+    */
+}
+.box{
+    background-color: #333;
+    border-radius: .5rem;
+    min-height: 200px;
+}
