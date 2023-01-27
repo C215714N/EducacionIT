@@ -39,6 +39,58 @@
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
+        <!-- Mapa de Contacto -->
+
+        <!-- Formulario de Contacto -->
+        <form action="" id="contact">
+            <h2>Realice su consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                type="text"
+                id="contact_name"
+                name="name"
+                maxlength="50"
+                pattern="[A-Z a-z]{2,50}"
+                placeholder="Nombre(*): Cristian Racedo" 
+                required>
+            <p class="validation">
+                Utilice un nombre que posea entre 2 y 50 caracteres, ingresando solamente letras.
+            </p>
+            <label for="contact_email">Ingrese su </label>
+            <input 
+                type="email"
+                id="contact_email"
+                name="email"
+                minlength="8"
+                placeholder="Correo(*): CristianDRacedo@hotmail.com"
+                required>
+            <p class="validation">
+                Coloque una direccion de al menos 8 caracteres, respetando el formato "usuario@servidor".
+            </p>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                type="tel"
+                id="contact_phone"
+                name="phone"
+                minlength="8"
+                maxlength="25"
+                pattern="[\(]\d{2,6}[\)](\d{2,6}[\-]){1,4}\d{4}"
+                placeholder="Telefono(*): (5411)030-3456"
+                required>
+            <p class="validation">
+                Ponga la caracteristica entre parentesis y utilice un guion cada 2 a 6 digitos.
+            </p>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="consult"
+                minlength="20"
+                maxlength="1000"
+                placeholder="Consulta(*): Buenas, mi consulta es"
+                required></textarea>
+            <button class="btn">Enviar</button>
+        </form>
+        <!-- Redes sociales -->
         <div class="social">
             <a href="https://facebook.com/" 
                 class="icon-facebook" 
