@@ -90,6 +90,7 @@ $breakpoints:
 // Nesting: Capcapidad de utilizar un selector dentro de otro
 #footer{
     @include normalize(5rem 0 1rem);
+    position: relative;
     #contact{
         @include normalize(1.5rem, 1rem auto, .25rem, border-radius);
         @extend .container-md, .col-md-20, .col-lg-16, .col-xl-12;
@@ -142,9 +143,17 @@ $breakpoints:
     }
     .icon-copy{
         @include normalize(1rem);
+        @extend .text-light, .bg-primary;
+        text-align: center;
+        opacity: .8;
+        transition: opacity .5s ease-out .2s;
+        &:hover{
+            opacity: 1;
+        }
     }
     .social{
         display: flex;
+        justify-content: center;
         a{
             @extend .icon;
         }

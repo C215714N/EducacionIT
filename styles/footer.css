@@ -40,7 +40,7 @@
   color: #c36;
 }
 
-.text-light, #footer #contact .btn:hover {
+.text-light, #footer .icon-copy, #footer #contact .btn:hover {
   color: #eee;
 }
 
@@ -68,7 +68,7 @@
   color: #36c;
 }
 
-.bg-primary {
+.bg-primary, #footer .icon-copy {
   background-color: #248;
 }
 
@@ -909,6 +909,7 @@
   margin: 0;
   border: 0;
   padding: 5rem 0 1rem;
+  position: relative;
 }
 #footer #contact {
   margin: 1rem auto;
@@ -954,7 +955,14 @@
   margin: 0;
   border: 0;
   padding: 1rem;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.5s ease-out 0.2s;
+}
+#footer .icon-copy:hover {
+  opacity: 1;
 }
 #footer .social {
   display: flex;
+  justify-content: center;
 }
