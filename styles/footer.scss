@@ -16,7 +16,7 @@ $colors:
     dark        #333,
     danger      #c33,
     warning     #da3,
-    success     #3c6,
+    success     #284,
     info        #36c;
 $attributes:
     text     color,
@@ -25,6 +25,13 @@ $attributes:
     outline  outline-color,
     shade    --shade,
     shadow   --shadow;
+$col: 24;
+$breakpoints:
+    sm   576px   540px,
+    md   768px   720px,
+    lg   992px   960px,
+    xl  1200px  1140px,
+    xxl 1400px  1320px;
 
 // Mixins: Estilos que se declaran y se implementan como atributos
 @mixin normalize($p: 0, $m: 0, $b: 0, 
@@ -45,7 +52,26 @@ $attributes:
     .#{$prop}-#{$color}{
         #{$attr}: $value;
 } } }
-
+/* Bordes*/
+@for $i from 0 through 5{
+    .border-#{$i}{
+        border: $i * 1px solid;
+    }
+    .rounded-#{$i}{
+        border-radius: $i * .25rem;
+    }
+}
+/* Sistema de Grillas Responsive */
+@for $i from 1 through $col{
+    .col-#{$i}{
+        width: percentage($i / $col);
+} }
+@each $vn, $vw, $max in $breakpoints{
+@media screen and (min-width: $vw){
+    .container, .container-#{$vn}{ max-width: $max; }
+@for $i from 1 through $col {
+    .col-#{$vn}-#{$i}{ width: percentage($i / $col) }
+} } }
 // Styles
 /*Componentes*/
 .icon{
@@ -64,6 +90,56 @@ $attributes:
 // Nesting: Capcapidad de utilizar un selector dentro de otro
 #footer{
     @include normalize(5rem 0 1rem);
+    #contact{
+        @include normalize(1.5rem, 1rem auto, .25rem, border-radius);
+        @extend .container-md, .col-md-20, .col-lg-16, .col-xl-12;
+        display: grid;
+        gap: .25rem;
+        background: linear-gradient(nth(nth($colors, 3), 2), #ccc);
+        box-shadow: -.2rem .2rem .5rem .25rem #999;
+        // Rotulos
+        label{
+            margin-top: .5rem
+        }
+        // Campos de formularios
+        textarea{
+            min-height: 3rem;
+            resize: vertical;
+        }
+        input,
+        textarea,
+        select{
+            @include normalize(.5rem 1rem, none, .25rem, border-radius, outline);
+            @extend .border-1, .border-info;
+            font-size: 1rem;
+            // Seleccion de campo
+            &:focus{
+                @extend .border-dark;
+                & + .validation{ max-height: 640px; }
+            }
+            // Formato valido
+            &:valid{
+                @extend .border-success;
+                & + .validation{ @extend .text-success; }
+            }
+            // Formato invalido (si tiene contenido)
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger;
+                & + .validation{ @extend .text-danger; }
+            }
+        }
+        .validation{
+            @include normalize($b: hidden, $ba: overflow, $pa: max-height);
+            font-size: .9rem
+        }
+        .btn{
+            @include normalize(.5rem 1rem, uppercase, 1px solid, $ma: text-transform);
+            @extend .border-1, .rounded-1, .border-dark;
+            &:hover{
+                @extend .text-light, .bg-dark, ;
+            }
+        }
+    }
     .icon-copy{
         @include normalize(1rem);
     }
