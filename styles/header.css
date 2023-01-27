@@ -1,4 +1,41 @@
 #header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: min(640px, 100vh);
+    /* MEDIDAS
+        ANCHO: definido por el contendor
+        ALTO: definido por el contenido
+    */
+    color: floralwhite; /* html 140 valores */
+    text-shadow: 0 0 .5rem rgb(51,51,51);/*x y blur color*/
+    background-color: #E88; /* rgb 16.777.216 colores  dec: 0-255 | hex: 00-FF */
+    background-image: 
+        url('../assets/foods/wine.svg'),
+        url('../assets/foods/pizza.svg'),
+        linear-gradient(
+            /*forma y direccion*/
+            30deg, 
+            /*colores*/
+            hsl(30,60%,60%), /* hsl (tono, saturacion, brillo)*/
+            hsl(0,60%,40%)
+        );
+    background-position: center;
+    background-size: 
+        contain, /* se ajusta la imagen para que entre */
+        clamp(150px, 100%, 500px), /* establece el tamaño utilizando un minimo y maximo como referencia*/
+        cover; /* se estira la imagen para que cubra todo */
+    background-repeat: no-repeat;
+
+    /* Propiedades de Fondo (background)
+        COLOR: valor pleno (html | RGB dec y #hex | hsl)
+        IMAGE: imagen desde archivo o gradiente
+        POSITION: coordenadas de creacion (x y)
+        SIZE: tamaño para la imagen (width height)
+        REPEAT: define como debe repetirse el fondo
+        ATTACHMENT:
+    */
     font-size: min(calc(2vw + 1rem), 3rem);
     /* Funciones CSS 
         min(a, b) => determina el valor mas chico
@@ -10,7 +47,7 @@ h2,
 h3{
     width: 100%;
     font-family: 'resto';
-    /* 
+    /* Unidades de Medida
         ABSOLUTA: limitantes
             cm => unidad metrica
             in => pulgadas (2.54cm)
@@ -43,9 +80,14 @@ h3{
     header { color: red }                 1
     header.header{ color: black }        11
     header#header{ color: whitesmoke }  101
+    .header#header{ color: darkgrey }   110
     
     HTML
     <header id="header" class="header">
-
+        darkgrey
+        <div class="header">
+            Green
+            <h1>Soy un titulo (Whitesmoke)</h1>
+        </div>
     </header>
 */
