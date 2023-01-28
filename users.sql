@@ -58,6 +58,11 @@ VALUES	('Maria', 'pass'),
 # consulta general de datos
 SELECT * FROM users;
 
+DELETE FROM users
+WHERE username = 'nek';
+INSERT INTO users(username, userpass)
+VALUES ('nek','lauranonce');
+
 # actualizacion de roles
 ## definicion de usuarios (pacientes)
 UPDATE users

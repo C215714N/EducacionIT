@@ -16,7 +16,7 @@ TO 'administrator'@'localhost'; -- usuario asignado
 DROP USER IF EXISTS 'employee'@'localhost';
 CREATE USER 'employee'@'localhost'
 IDENTIFIED BY 'pass';
-## Permisos (Solo Lectura)
+## Permisos (Manipulacion de Datos)
 GRANT SELECT, INSERT, UPDATE 
 ON hospital_business.*
 TO 'employee'@'localhost';
@@ -29,3 +29,11 @@ IDENTIFIED BY '1234';
 GRANT SELECT 
 ON hospital_business.*
 TO 'invited'@'localhost';
+
+/* Usuario Desarrollador */
+DROP USER IF EXISTS 'c215714n'@'localhost';
+CREATE USER 'c215714n'@'localhost'
+IDENTIFIED BY 'vtodyosmd48w58qh';
+GRANT CREATE, DROP, ALTER
+ON hospital_business.*
+TO 'c215714n'@'localhost';

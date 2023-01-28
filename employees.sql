@@ -66,6 +66,13 @@ INSERT INTO employees(userId, start_date)
 SELECT id, CURRENT_DATE() 
 FROM users WHERE employee = 1;
 
-
 # Consultas Generales
 SELECT * FROM employees;
+
+UPDATE employees
+SET chargeId = 4
+WHERE chargeId IS NULL;
+
+UPDATE employees
+SET professionId = RAND() * 15
+WHERE professionId IS NULL;
