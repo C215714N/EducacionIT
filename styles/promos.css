@@ -2,13 +2,13 @@
 #promos{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     padding: 1rem;
     gap: .5rem;
 }
 #promos .box{
-    flex: 1 0 min(100%,200px);
+    flex: 1 0 min(100%, 320px);
     /*  ATRIBUTOS FLEXBOX
         flex-grow: define si el elemento debe ocupar el espacio restante
         flex-shrink: define si debe reducir su tamaño para que otros entren
@@ -16,7 +16,36 @@
     */
 }
 .box{
-    background-color: #333;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #eca;
     border-radius: .5rem;
-    min-height: 200px;
+    overflow: hidden;
+}
+
+.box img{
+    width: calc(100% + 2rem);
+    height: 200px;
+    margin: -1rem -1rem 0;
+    padding: 1rem;
+    background: #333 url('../assets/bg/header-background.jpg') center/cover no-repeat;
+    /* Backgound: color image position/size repeat */
+}
+.box ul{
+    width: 100%;
+    align-self: flex-end;
+}
+
+.box li{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+main{
+    margin: auto;
+    max-width: 1320px;
 }
