@@ -76,3 +76,11 @@ WHERE chargeId IS NULL;
 UPDATE employees
 SET professionId = RAND() * 15
 WHERE professionId IS NULL;
+
+## Todos los datos de usuarios, sean empleados o no
+SELECT 
+	e.userId,
+    first_name,
+    last_name
+FROM employees AS e
+RIGHT JOIN users_data AS ud ON e.userId = ud.userId;

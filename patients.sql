@@ -48,7 +48,27 @@ CREATE TABLE patient_history(
 INSERT INTO patients(userId)
 SELECT id FROM users WHERE employee = 0;
 
-SELECT * FROM patients;
+# carga de patologias
+INSERT INTO pathologies(description)
+VALUES  ('cefalea'),('dolor estomacal'),('fiebre'),('gastroenteritis'),('anemia'),('faringitis'),('presion alta'),('presion baja'),
+		('hemorragia'),('fractura expuesta'),('fisura'),('luxacion'),('desgarro'),('dolor lumbar'),('problemas respiratorios'),('taquicardia'),
+		('bradicardia'),('peritonitis'),('apendicitis'),('pancreatitis'),('traumatismo'),('hematoma'),('contusion'),('indeterminado');
+
+# carga de tipos de atencion
+INSERT INTO attentions(description)
+VALUES ('turno'),('guardia'),('emergencia'),('consulta'),('cirugia');
+
+INSERT INTO patient_history 
+	SET	patientId = CEIL(RAND() * 4),
+	pathologyId = CEIL( RAND() * 24 ),
+	attention = CEIL( RAND() * 5 );
+SELECT * FROM patient_history;
+
+# Usuarios que no son empleados y no existen en la tabla pacientes
+SELECT * FROM users
+WHERE employee = true 
+AND id NOT IN(SELECT userId FROM patients);
+
 # actualizacion insegura (no especifica valor unico)
 UPDATE patients 
 SET	weight = RAND() * 60 + 60, -- peso aleatorio entre 60kg y 120kg
@@ -59,3 +79,22 @@ UPDATE patients
 SET bloodtype = CEIL(RAND() * 4), -- valor entre 0 y 4 (redondeado hacia arriba)
     bloodrh = FLOOR(RAND() + 1) -- valor entre 1 y 2 (redondeado hacia abajo)
 WHERE bloodtype IS NULL; -- actualiza solamente si no esta definido
+
+/* Consulta con funciones */
+# ultimas 5 patologias ingresadas
+SELECT * FROM pathologies
+ORDER BY id DESC -- define el orden de salida
+LIMIT 5 -- cuantos resultados deben mostrarse
+OFFSET 0; -- a partir la la posicion indicada
+
+# Conteo de patologias
+SELECT COUNT(id) AS count FROM pathologies;
+
+# pacientes posean o no datos cargados
+SELECT 
+	# patients
+    p.userId,
+    # datos de usuario
+    first_name, last_name
+FROM patients AS p
+LEFT JOIN users_data AS ud ON ud.userId = p.userId
