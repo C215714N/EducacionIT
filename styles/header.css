@@ -18,23 +18,29 @@
             /*forma y direccion*/
             30deg, 
             /*colores*/
-            hsl(30,60%,60%), /* hsl (tono, saturacion, brillo)*/
-            hsl(0,60%,40%)
-        );
+            hsla(30,60%,60%, .6), /* hsl (tono, saturacion, brillo)*/
+            hsla(0,60%,40%, .6)
+        ),
+        url('../assets/bg/header-background.jpg');
     background-position: center;
     background-size: 
         contain, /* se ajusta la imagen para que entre */
         clamp(150px, 100%, 500px), /* establece el tamaño utilizando un minimo y maximo como referencia*/
+        cover,
         cover; /* se estira la imagen para que cubra todo */
     background-repeat: no-repeat;
-
+    background-attachment: 
+        scroll,
+        scroll,
+        fixed,
+        fixed;
     /* Propiedades de Fondo (background)
         COLOR: valor pleno (html | RGB dec y #hex | hsl)
         IMAGE: imagen desde archivo o gradiente
         POSITION: coordenadas de creacion (x y)
         SIZE: tamaño para la imagen (width height)
         REPEAT: define como debe repetirse el fondo
-        ATTACHMENT:
+        ATTACHMENT: define de donde se dibuja el fondo
     */
     font-size: min(calc(2vw + 1rem), 3rem);
     /* Funciones CSS 
