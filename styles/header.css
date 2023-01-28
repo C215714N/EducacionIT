@@ -12,8 +12,6 @@
     text-shadow: 0 0 .5rem rgb(51,51,51);/*x y blur color*/
     background-color: #E88; /* rgb 16.777.216 colores  dec: 0-255 | hex: 00-FF */
     background-image: 
-        url('../assets/foods/wine.svg'),
-        url('../assets/foods/pizza.svg'),
         linear-gradient(
             /*forma y direccion*/
             30deg, 
@@ -21,18 +19,20 @@
             hsla(30,60%,60%, .6), /* hsl (tono, saturacion, brillo)*/
             hsla(0,60%,40%, .6)
         ),
+        url('../assets/foods/wine.svg'),
+        url('../assets/foods/pizza.svg'),
         url('../assets/bg/header-background.jpg');
     background-position: center;
     background-size: 
+        cover,/* se estira la imagen para que cubra todo */
         contain, /* se ajusta la imagen para que entre */
         clamp(150px, 100%, 500px), /* establece el tamaño utilizando un minimo y maximo como referencia*/
-        cover,
-        cover; /* se estira la imagen para que cubra todo */
+        cover; 
     background-repeat: no-repeat;
     background-attachment: 
-        scroll,
-        scroll,
         fixed,
+        scroll,
+        scroll,
         fixed;
     /* Propiedades de Fondo (background)
         COLOR: valor pleno (html | RGB dec y #hex | hsl)
