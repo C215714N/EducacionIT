@@ -14,22 +14,55 @@
 
 /* Redes sociales */
 .social{
+    --dark: #ccc;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: .5rem;
     padding: .5rem;
 }
-
 .social a{
     min-width: 4rem;
     min-height: 4rem;
     border-radius: .5rem;
-    background-color: #ccc;
+    /* color image position/size repeat */
+    background: var(--dark) var(--bg) center/2.5rem no-repeat;
 }
 .social a:hover{
-    background-color: #eee;
+    background: var(--light) var(--bg) center/3rem no-repeat;
     box-shadow: 0 .25rem .5rem #333;
 }
-
+    /* Iconos redes sociales */
+    .facebook{
+        --bg: url('../assets/icons/facebook.svg');
+    }
+    .instagram{
+        --bg: url('../assets/icons/instagram.svg');
+    }
+    .twitter{
+        --bg: url('../assets/icons/twitter.svg');
+    }
+    .whatsapp{
+        --bg: url('../assets/icons/whatsapp.svg');
+    }
+    .youtube{
+        --bg: url('../assets/icons/youtube.svg');
+    }
+    .linkedin{
+        --bg: url('../assets/icons/linkedin.svg');
+    }
+    .github{
+        --bg: url('../assets/icons/github.svg');
+    }
 /* Derechos de autor */
+.copy{
+    padding: 1rem;
+    text-align: center;
+    color: var(--light);
+    background-color: var(--dark);
+    opacity: .5;
+    transition: all .5s linear; /*property duration delay timing*/
+}
+.copy:hover{
+    opacity: .8;
+}
