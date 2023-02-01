@@ -1,0 +1,35 @@
+#footer{
+    padding: 5rem 0 1rem; /* top right bottom left */
+    background: radial-gradient(
+        /* forma y direccion */
+        circle at center,
+        /*colores*/
+        hsla(30,60%,60%, .8), /* hsl (tono, saturacion, brillo)*/
+        hsla(0,60%,40%, .8)
+    );
+}
+/* Mapa de contacto */
+
+/* Formulario */
+
+/* Redes sociales */
+.social{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.social a{
+    min-width: 4rem;
+    min-height: 4rem;
+    border-radius: .5rem;
+    background-color: #ccc;
+}
+.social a:hover{
+    background-color: #eee;
+    box-shadow: 0 .25rem .5rem #333;
+}
+
+/* Derechos de autor */
