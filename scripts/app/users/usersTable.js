@@ -7,11 +7,13 @@ import { d } from "../global.js";
 import userLogin from "./userLogin.js";
 import usersTableHeadings from "./usersTableHeading.js";
 import usersTableRows from "./usersTableRow.js";
+import Storage from "../storage.js";
 
 function usersTable(users){
+    const theme = Storage({key: 'mode', type: true, action: 'LOAD'});
     const table = d.createElement('table');
     Object.assign(table, {
-        className: 'table table-dark table-striped',
+        className: `table table-${ theme == "CUSTOM" ? 'warning' : theme} table-striped`,
         id: 'users_table',
         innerHTML: `
             ${ usersTableHeadings() } 
