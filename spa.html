@@ -17,11 +17,19 @@
             data-bs-toggle="collapse">
         </button>
         <ul class="navbar-nav navbar-collapse collapse">
-            <li><a class="nav-link" href="index.html">Inicio</a></li>
+            <li><a class="nav-link" href="index.html" fetch-type="local">Inicio</a></li>
             <li><a class="nav-link" href="#users" fetch-type="server">Usuarios</a></li>
             <li><a class="nav-link" href="#posts" fetch-type="server">Publicaciones</a></li>
             <li><a class="nav-link" href="#albums" fetch-type="server">Albumes</a></li>
-            <li><a class="nav-link" href="#profile" fetch-type="server">Perfil</a></li>
+            <li><a class="nav-link" href="#profile" fetch-type="storage">Perfil</a></li>
+            <li class="dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" fetch-type="storage">Modo </a>
+                <ul class="dropdown-menu">
+                        <li> <a class="dropdown-item" fetch-type="storage" href="#light-mode">light</a></li>
+                        <li> <a class="dropdown-item" fetch-type="storage" href="#dark-mode">dark</a></li>
+                        <li> <a class="dropdown-item" fetch-type="storage" href="#custom-mode">user theme</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
