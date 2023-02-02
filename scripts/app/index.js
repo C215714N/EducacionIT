@@ -6,8 +6,16 @@ import usersTable from "./users/usersTable.js";
 import userPost from "./posts/usersPosts.js";
 import userAlbum from "./albums/usersAlbums.js";
 import mapContent from "./mapContent.js";
+import userLogin from "./users/userLogin.js";
 
 d.addEventListener('DOMContentLoaded', () => {
+    let callback, params;
+    let mode = Storage({
+        key: 'mode',
+        type: 1,
+        action: 'LOAD',
+    })
+    modeSelect({ mode } );
 /** API de Eventos
  *  Metodos
  *  preventDefault(): evita el comportamiento por defecto (generalmente refresh)
@@ -18,8 +26,9 @@ d.addEventListener('click', async(e) => {
     e.stopPropagation();
     // Acciones para los hipervinculos
     if (e.target.tagName == 'A'){
-        const link = ( e.target.innerText.toUpperCase() )
-        const type = link == "MODO";
+        const link = ( e.target.href.split('#')[1].toUpperCase())
+        const type = link.includes("MODE") || link.includes("FAVS");
+
         type ? null : 
         e.target.href.includes('mailto') ?
         window.open(): 
@@ -39,18 +48,29 @@ d.addEventListener('click', async(e) => {
         }
         // Solicitudes al Storage del Navegador
         else if(fetchtype == 'storage'){
-            const key = ( type ? 'modeSelect' : 'userProfile' )
-            const callback = ( type ? modeSelect : 'userProfile' )
+            const key = ( type ? 'mode' : 'currentUser' )
+            callback = ( type ? modeSelect : userLogin )
             // Consulta de datos
-            let loaded = await Storage( {
-                type,
-                key,
-                action: 1
-            } )
-
-            await loaded && key == 'userProfile' ? 
-                console.log(link) : 
-                callback({ mode: loaded} )
+            switch(key){
+                case 'mode':
+                    Storage({
+                        key, 
+                        value: link.split('-')[0].toUpperCase(),
+                        type: true,
+                        action: 'SAVE',
+                    });
+                    params = {mode: link.split('-')[0].toUpperCase()}
+                break;  
+                case 'currentUser':
+                    params = Storage({
+                        key,
+                        type: false,
+                        action: 'LOAD'
+                    })
+                    console.log(params);
+                break;
+            }
+            callback(params);
         }
     }
 } )
