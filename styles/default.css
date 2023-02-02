@@ -449,3 +449,19 @@ button
         width: 4rem;
     }
 }
+
+@media screen and (prefers-color-scheme: light){
+    body,
+    #contact{
+        color: #333;
+        background: linear-gradient(#eee, #ccc);
+    }
+}
+
+@media screen and (prefers-color-scheme: dark){
+    body,
+    #contact{
+        color: #eee;
+        background: linear-gradient(#444, #222);
+    }
+}
