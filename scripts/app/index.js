@@ -1,5 +1,7 @@
-import {d, w, server} from "./global.js";
+import {d, w, server, root} from "./global.js";
 import fetchData from "./fetchData.js";
+import Storage from "./storage.js";
+import modeSelect from "./config/modeSelect.js";
 import usersTable from "./users/usersTable.js";
 import userPost from "./posts/usersPosts.js";
 import userAlbum from "./albums/usersAlbums.js";
@@ -16,9 +18,16 @@ d.addEventListener('click', async(e) => {
     e.stopPropagation();
     // Acciones para los hipervinculos
     if (e.target.tagName == 'A'){
-        e.target.href.includes('mailto') ? window.open() : root.innerHTML = '';
+        const link = ( e.target.innerText.toUpperCase() )
+        const type = link == "MODO";
+        type ? null : 
+        e.target.href.includes('mailto') ?
+        window.open(): 
+        root.innerHTML = '';
+
         // Solicitudes al servidor BACKEND
-        if(e.target.attributes['fetch-type'].value == 'server'){
+        let fetchtype = e.target.attributes['fetch-type'].value || false;
+        if(fetchtype == 'server'){
             const page = e.target.href.split('#')[1];
             const results = await fetchData({url: `${server}/${page}`})
             // Elemento a renderizar por enlace
@@ -28,9 +37,23 @@ d.addEventListener('click', async(e) => {
                 mapContent(results, root, userPost) :
                 mapContent(results, root, userAlbum)
         }
+        // Solicitudes al Storage del Navegador
+        else if(fetchtype == 'storage'){
+            const key = ( type ? 'modeSelect' : 'userProfile' )
+            const callback = ( type ? modeSelect : 'userProfile' )
+            // Consulta de datos
+            let loaded = await Storage( {
+                type,
+                key,
+                action: 1
+            } )
+
+            await loaded && key == 'userProfile' ? 
+                console.log(link) : 
+                callback({ mode: loaded} )
+        }
     }
 } )
 } )
-
 
 w.onbeforeunload = () => 'no me quiero ir señor navegador'

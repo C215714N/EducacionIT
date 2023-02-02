@@ -123,7 +123,7 @@ function actionButtons(){
             Object.assign(item, {
                 id: `${c}_${id}`,
                 placeholder: id,
-                className: c == 'button' ? 'clock btn numbers' : 'time btn',
+                className: c == 'button' ? 'clock btn' : 'time btn',
                 maxLength: 2,
                 innerHTML: id.toUpperCase(),
                 onclick: (e) => customAction(e),
