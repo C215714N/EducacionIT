@@ -62,3 +62,61 @@ footer a,
 .link{
     text-decoration: none;
 }
+
+/* Visualizacion */
+.flex{
+    display: flex;
+}
+body,
+.grid{
+    display: grid;
+}
+
+/* Disposicion de elementos */
+body{
+    grid-template-areas:
+        'header'
+        'main'
+        'footer'
+        'nav';
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+#footer{
+    grid-area: footer;
+}
+main{
+    grid-area: main;
+}
+aside{
+    grid-area: aside;
+    display: none;
+}
+/* Tablets */
+@media screen and (min-width: 768px){
+    body{
+        grid-template-areas: 
+            'header' 
+            'nav' 
+            'main' 
+            'footer';
+    }
+}
+/* Desktop */
+@media screen and (min-width: 992px){
+    body{
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+            'nav    nav' 
+            'header header' 
+            'main   aside' 
+            'footer footer';
+    }
+    aside{
+        display: block;
+    }
+}
