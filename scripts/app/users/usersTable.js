@@ -4,6 +4,7 @@
  *  usersTableRows: devuelve las celdas de cada fila 
 */
 import { d } from "../global.js";
+import userLogin from "./userLogin.js";
 import usersTableHeadings from "./usersTableHeading.js";
 import usersTableRows from "./usersTableRow.js";
 
@@ -19,6 +20,7 @@ function usersTable(users){
             </tbody>`
     })
     root.appendChild(table);
+    userLogin();
 }
 
 export default usersTable;
