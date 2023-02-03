@@ -34,6 +34,11 @@ header p,
     text-decoration: none;
 }
 /* Disposicion de la Pagina */
+main{
+    max-width: 1320px;
+    margin: auto;
+    padding: 1rem;
+}
 body{
     display: grid;
     grid-template-areas:

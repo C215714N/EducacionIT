@@ -13,9 +13,11 @@
   color: #eee;
   background-image: linear-gradient(#6668 70%, #448);
   text-shadow: 0 0 0.5rem #000000;
+  perspective: 300px;
 }
 #header h1 {
   font-family: 'techno';
+  transform: rotateX(15deg);
 }
 /* Galeria de Imagenes */
 .gallery {
