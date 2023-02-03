@@ -236,6 +236,27 @@
   --shadow: #36c;
 }
 
+/* posiciones */
+.p-static {
+  position: static;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute, #footer .map.btn, .back {
+  position: absolute;
+}
+
+.p-sticky {
+  position: sticky;
+}
+
+.p-fixed, .front, #footer .map.active, #footer .map + .icon-less {
+  position: fixed;
+}
+
 /* Bordes*/
 .border-0 {
   border: 0px solid;
@@ -905,12 +926,27 @@
   box-shadow: 0 0.25rem 0.5rem #333;
 }
 
+.front, #footer .map.active, #footer .map + .icon-less {
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.back {
+  z-index: -1;
+  opacity: 1;
+}
+
 #footer {
   margin: 0;
   border: 0;
   padding: 5rem 0 1rem;
   position: relative;
   background: radial-gradient(circle at center, #4488, #3338);
+}
+#footer .map.btn {
+  margin: 1.5rem 1rem;
+  top: 0;
+  right: 0;
 }
 #footer #contact {
   margin: 1rem auto;

@@ -25,6 +25,7 @@ $attributes:
     outline  outline-color,
     shade    --shade,
     shadow   --shadow;
+$position: static, relative, absolute, sticky, fixed;
 $col: 24;
 $breakpoints:
     sm   576px   540px,
@@ -52,6 +53,12 @@ $breakpoints:
     .#{$prop}-#{$color}{
         #{$attr}: $value;
 } } }
+/* posiciones */
+@each $p in $position{
+    .p-#{$p}{
+        position: $p;
+    }
+}
 /* Bordes*/
 @for $i from 0 through 5{
     .border-#{$i}{
@@ -86,6 +93,16 @@ $breakpoints:
         box-shadow: 0 .25rem .5rem #333;
     }
 }
+.front{
+    @extend .p-fixed;
+    z-index: 2;
+    opacity: .8;
+}
+.back{
+    @extend .p-absolute;
+    z-index: -1;
+    opacity: 1;
+}
 
 // Nesting: Capcapidad de utilizar un selector dentro de otro
 #footer{
@@ -96,6 +113,16 @@ $breakpoints:
         #4488,
         #3338
     );
+    .map{
+        &.active,
+        & + .icon-less{
+            @extend .front;
+        }
+        &.btn{
+            @include normalize($m: 1.5rem 1rem, $ba: top, $pa: right);
+            @extend .p-absolute;
+        }
+    }
     #contact{
         @include normalize(1.5rem, 1rem auto, .25rem, border-radius);
         @extend .container-md, .col-md-20, .col-lg-16, .col-xl-12;
