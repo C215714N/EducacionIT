@@ -1,0 +1,65 @@
+/* Visualizacion general */
+.card,
+.prices li,
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.auto{
+    grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+    /* EXPLICACION:
+        repeat(cant, tamaño)
+        - auto-fill: rellena con la cantidad de elementos necesarios segun el espacio disponible
+        - auto-fit: estira los elementos segun el espacio disponible para que ocupen todo el contenedor
+
+        minmax(a,b): establece los tamaños minimo y maximo para las columnas del contenedor GRID.
+     */
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.auto > * {
+    flex: 1 0 min(100%, var(--size));
+    /* EXPLICACION:
+        flex-grow: indica si el elemento dentro del contenedor flex puede agrandarse
+        flex-shrink: indica si el elemento puede reducir su tamaño en caso de ser necesario
+        flex-basis: define el tamaño base para los elementos dentro del contenedor flex
+    */
+}
+.small{
+    --size: min(100%, 240px);
+}
+.medium{
+    --size: min(100%, 360px);
+}
+.large{
+    --size: min(100%, 480px);
+}
+/* Productos */
+.card{
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem #ccc;
+}
+.card img{
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.heading{
+    display: block;
+    font-size: calc(1.2vw + .5rem);
+}
+.prices{
+    width: 100%;
+    padding-top: 1.5rem;
+    align-self: flex-end;
+}
+.prices li{
+    justify-content: space-between;
+    align-self: flex-end;
+}
