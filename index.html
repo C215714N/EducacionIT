@@ -225,7 +225,107 @@
         </iframe>
         <button class="btn icon-plus"></button>
         <!-- Formulario de Contacto -->
-
+        <form id="contact" action="">
+            <h2>Estamos a su servicio</h2>
+            <!-- Campo Nombre -->
+            <label for="contact_name">Ingrese su nombre</label>
+            <input 
+                id="contact_name" 
+                name="name"
+                type="text"
+                maxlength="50"
+                placeholder="Nombre (*): Cristian Racedo"
+                pattern="[A-Z a-z]{2,50}"
+                required>
+            <p class="validate">
+                Escriba entre 2 y 50 caracteres utilizando solamente letras
+            </p>
+            <!-- Campo Correo -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="Correo (*): CristianDRacedo@hotmail.com"
+                required>
+            <p class="validate">
+                Utilice una direccion que respete la estructura "usuario@servidor" con al menos 8 caracteres
+            </p>
+            <!-- Campo Compañia -->
+            <label for="contact_company">Coloque el nombre de su Empresa</label>
+            <input 
+                id="contact_company" 
+                name="company"
+                type="text" 
+                minlength="2"
+                maxlength="100"
+                placeholder="Compañia: Restaurant CSS">
+            <p class="validate">
+                Ingrese el nombre de la empresa a la que representa, en caso de ser necesario.
+            </p>
+            <!-- Campo Telefono -->
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                type="tel"
+                name="phone"
+                placeholder="Telefono(*): (54911)030-3456"
+                pattern="([0-9]{6,18})|([\(]\d{2,6}[\)](\d{2,6}[\-]){1,3}\d{4})"
+                required>
+            <p class="validate">
+                coloque la caracteristica entre parentesis y un guion cada 2 a 6 digitos o coloque solamente numeros
+            </p>
+            <!-- Campo Descuento -->
+            <label for="contact_discount">Seleccione un descuento</label>
+            <select name="" id="contact_discount">
+                <option value="0.1">10%</option>
+                <option value="0.2">20%</option>
+                <option value="0.3">30%</option>
+                <option value="0.4">40%</option>
+                <option value="0.5">50%</option>
+                <option value="false" selected>Ninguno</option>
+            </select>
+            <p class="validate">
+                Seleccione el descuento en caso de ser necesario
+            </p>
+            <label for="contact_code">Escriba su Codigo</label>
+            <input 
+                type="text" 
+                id="contact_code" 
+                name="code" 
+                placeholder="ABCD-1234-WXYZ-4R"
+                pattern="(\w{4}[\-]){3}\w{2}">
+            <p class="validate">
+                Escriba su codigo separado con guiones como se muestra en el cupon
+            </p>
+            <label for="contact_consult">Escriba su consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="consult"
+                minlength="20"
+                maxlength="1000"
+                placeholder="Consulta(*): Buenas, mi consulta es..."
+                required></textarea>
+            <p class="validate">
+                Detalle su consulta lo mas pueda utilizando entre 20 caracteres minimo y 1000 caracteres como maximo
+            </p>
+            <button class="btn">Enviar</button>
+            <ul class="list-unstyled">
+                <li>
+                    <input id="contact_terms" name="terms" type="checkbox" value="0">
+                    <label for="contact_terms">acepto las bases y condiciones</label>
+                </li>
+                <li>
+                    <input id="contact_news" name="terms" type="checkbox" value="1">
+                    <label for="contact_news">suscribirse a nuestro newsletter</label>
+                </li>
+                <li>
+                    <input id="contact_offers" name="terms" type="checkbox" value="2">
+                    <label for="contact_">avisarme sobre nuevas ofertas</label>
+                </li>
+            </ul>
+        </form>
         <!-- Redes sociales -->
         <div class="social">
             <a class="instagram"
