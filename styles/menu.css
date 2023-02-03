@@ -1,0 +1,26 @@
+.auto{
+    grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+    /* EXPLICACION:
+        repeat(cantidad,tamaño)
+        - auto-fill: encaja los elementos segun el espacio disponible.
+        - auto-fit: estira los elementos segun el espacio disponible.
+
+        minmax(min,max): determina el valor minimo y maximo de columna
+        min(a,b): calcula el valor menor de las opciones
+    */
+    gap: 1rem;
+}
+.small{
+    --size: var(--small);
+}
+.medium{
+    --size: var(--medium);
+}
+.large{
+    --size: var(--large);
+}
+
+#menu img{
+    padding: 0;
+    object-fit: cover;
+}
