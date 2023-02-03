@@ -15,8 +15,8 @@
     // Expresion literal (evita que LESS procese la misma)
     min-height: ~'min(100vh, 640px)';
     color: @light;
-    background: linear-gradient(@primary, @dark);
-    text-shadow: 0 0 .5rem darken(@dark, 20%);
+    background-image: linear-gradient(#6668 70%, @primary);
+    text-shadow: 0 0 .5rem darken(@dark, 100%);
     h1{
         font-family: 'techno';
     }
@@ -96,7 +96,7 @@
     align-items: @ai;
     flex-wrap: @fw;
 }
-.position(@p: relative; @x: 0; @y: 0; @z: 0; @v: top; @h: left){
+.position(@p: relative; @x: 0; @y: 0; @z: unset; @v: top; @h: left){
     position: @p;
     @{v}: @y;
     @{h}: @x;

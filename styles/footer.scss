@@ -91,6 +91,11 @@ $breakpoints:
 #footer{
     @include normalize(5rem 0 1rem);
     position: relative;
+    background: radial-gradient(
+        circle at center,
+        #4488,
+        #3338
+    );
     #contact{
         @include normalize(1.5rem, 1rem auto, .25rem, border-radius);
         @extend .container-md, .col-md-20, .col-lg-16, .col-xl-12;

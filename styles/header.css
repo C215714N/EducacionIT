@@ -11,7 +11,7 @@
   font-size: min(calc(2vw + 0.5rem), 5rem);
   min-height: min(100vh, 640px);
   color: #eee;
-  background: linear-gradient(#448, #333);
+  background-image: linear-gradient(#6668 70%, #448);
   text-shadow: 0 0 0.5rem #000000;
 }
 #header h1 {
@@ -22,7 +22,7 @@
   position: relative;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: unset;
 }
 .gallery .slide .item {
   opacity: 0;
@@ -62,7 +62,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: unset;
   margin: 0;
   border: 0;
   padding: 1rem 10vw;
