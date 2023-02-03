@@ -93,12 +93,13 @@ $breakpoints:
         box-shadow: 0 .25rem .5rem #333;
     }
 }
-.front{
+// Clases ocultas
+%front{
     @extend .p-fixed;
     z-index: 2;
     opacity: .8;
 }
-.back{
+%back{
     @extend .p-absolute;
     z-index: -1;
     opacity: 1;
@@ -116,7 +117,7 @@ $breakpoints:
     .map{
         &.active,
         & + .icon-less{
-            @extend .front;
+            @extend %front;
         }
         &.btn{
             @include normalize($m: 1.5rem 1rem, $ba: top, $pa: right);
