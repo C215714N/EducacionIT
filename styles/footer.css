@@ -1,4 +1,5 @@
 #footer{
+    position: relative;
     padding: 5rem 0 1rem; /* top right bottom left */
     background: radial-gradient(
         /* forma y direccion */
@@ -9,14 +10,37 @@
     );
 }
 /* Mapa de contacto */
-
+    .cover{
+        position: absolute;
+        /*  Su referente es primer ancestro no STATIC
+            si no existe utiliza al elemento raiz
+            su ubicacion es la predeterminada
+            permanece fuera del FLOW
+        */
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    .btn.map{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    .icon-plus::before{
+        content: '+'
+    }
+    .icon-less::before{
+        content: '-'
+    }
 /* Formulario */
 #contact{
     max-width: 720px;
     display: grid;
     margin: auto;
     border-radius: .5rem;
-    padding: 1.5rem 1rem 1rem;
+    padding: 1.5rem 2rem 1rem;
     background: linear-gradient(#eeea, #eee8);
 }
 .validate{
@@ -45,6 +69,11 @@ textarea{
     min-height: 5rem;
 }
 .btn{
+    position: relative;
+    /*  El elemento es su propio referente 
+        se desplaza con respecto a si misma
+        Permanece dentro del FLOW
+    */
     border-radius: .25rem;
     color: var(--color);
     border: 1px solid var(--dark);
@@ -53,13 +82,17 @@ textarea{
     text-transform: uppercase;
 }
 #contact .btn{
-    margin: .2rem 0 .5rem auto;
     --color: var(--dark);
     --bg: transparent;
+    margin: .5rem 0 .5rem auto;
+    padding: .5rem 1rem;
 }
 #contact .btn:hover{
-    --color: var(--light);
-    --bg: var(--dark)
+    --color: var(--dark);
+    --bg: var(--light);
+    top: .5rem;
+    left: .5rem;
+    box-shadow: -.5rem -.5rem  var(--dark);
 }
     /* validacion */
     form :focus + .validate{
@@ -83,6 +116,7 @@ textarea{
     padding: .5rem;
 }
 .social a{
+    position: relative;
     min-width: 4rem;
     min-height: 4rem;
     border-radius: .5rem;
@@ -90,6 +124,7 @@ textarea{
     background: var(--dark) var(--bg) center/2.5rem no-repeat;
 }
 .social a:hover{
+    bottom: .25rem;
     background: var(--light) var(--bg) center/3rem no-repeat;
     box-shadow: 0 .25rem .5rem #333;
 }

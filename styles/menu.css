@@ -11,13 +11,13 @@
     gap: 1rem;
 }
 .small{
-    --size: var(--small);
+    --size: min(100%, var(--small));
 }
 .medium{
-    --size: var(--medium);
+    --size: min(100%, var(--medium));
 }
 .large{
-    --size: var(--large);
+    --size: min(100%, var(--large));
 }
 
 #menu img{
