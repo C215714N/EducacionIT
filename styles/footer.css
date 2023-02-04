@@ -11,7 +11,68 @@
 /* Mapa de contacto */
 
 /* Formulario */
-
+#contact{
+    max-width: 720px;
+    display: grid;
+    margin: auto;
+    border-radius: .5rem;
+    padding: 1.5rem 1rem 1rem;
+    background: linear-gradient(#eeea, #eee8);
+}
+.validate{
+    --color: var(dark);
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: .8rem;
+    color: var(--color);
+}
+label{
+    margin-top: .5rem;
+}
+input,
+textarea,
+select{
+    --color: var(--dark);
+    outline: none;
+    border-radius: .25rem;
+    border: .1rem solid var(--color);
+    padding: .25rem .5rem;
+    box-shadow: 0 0 .25rem var(--color);
+}
+textarea{
+    resize: vertical;
+    min-height: 5rem;
+}
+.btn{
+    border-radius: .25rem;
+    color: var(--color);
+    border: 1px solid var(--dark);
+    background-color: var(--bg);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+#contact .btn{
+    margin: .2rem 0 .5rem auto;
+    --color: var(--dark);
+    --bg: transparent;
+}
+#contact .btn:hover{
+    --color: var(--light);
+    --bg: var(--dark)
+}
+    /* validacion */
+    form :focus + .validate{
+        max-height: 320px;
+    }
+    form :not(:placeholder-shown, .btn):valid,
+    form :not(:placeholder-shown, .btn):valid + .validate{
+        --color: var(--success);
+    }
+    form :not(:placeholder-shown):invalid,
+    form :not(:placeholder-shown):invalid + .validate{
+        --color: var(--danger);
+    }
 /* Redes sociales */
 .social{
     --dark: #ccc;
