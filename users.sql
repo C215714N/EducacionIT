@@ -55,6 +55,13 @@ VALUES	('Maria', 'pass'),
         ('c215714n!#','vtodyosm'),
         ('admin','d48w58qj');
 
+
+INSERT INTO users(username, userpass, employee)
+VALUES	('Pepe', 'pipo', false),
+		('d4c','acdc', true),
+        ('rem','l0s1n6', true),
+        ('opm','h3r0',false);
+        
 # consulta general de datos
 SELECT * FROM users;
 
@@ -73,3 +80,24 @@ WHERE id BETWEEN 3 AND 7; -- condicion: entre 3 y 7 inclusive
 UPDATE users
 SET employee = 1 -- valor de actualizacion
 WHERE username IN('Maria','c215714n!#','admin'); -- condicion: cuyo nombre de usuario sea igual
+
+## Usuarios que No tengan cargados sus Datos
+SELECT
+	# usuarios
+    u.id, u.username,
+    # campo personalizado
+    CASE
+		WHEN employee = TRUE THEN 'empleado'
+        ELSE 'paciente'
+    END AS kind,
+    # datos de usuario
+    ud.first_name, ud.last_name, ud.uid,
+    ud.email, ud.phone
+FROM users AS u
+LEFT JOIN users_data AS ud ON u.id = ud.userId
+WHERE ud.userId IS NULL;
+/*
+	INNER JOIN: solamente los registros coincidentes de ambas tablas
+    OUTTER JOIN: todos los registros de una tabla y los coincidentes de otra (LEFT, RIGHT)
+    CROSS JOIN: los registros de ambas tablas combinados (referencias cruzadas)
+*/

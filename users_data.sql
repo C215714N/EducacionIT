@@ -99,6 +99,54 @@ SET 	userId = (SELECT id FROM users WHERE username = 'maria'), -- subconsulta
         doctype = (SELECT id FROM doctypes WHERE doctype = 'pasaporte'),
         uid = 'MACTCU 1293-8412-3843-1234',
         email = 'mda_candelaria.calzadilla_u@gmail.com';
+        
+## Carga de Multiples datos con subconsultas
+SELECT * FROM users;
+INSERT INTO users_data(userId, first_name, last_name, uid)
+VALUES
+	((SELECT id FROM users WHERE username = 'nek'),'Laura','Pausini','30-71036844-5'),
+    ((SELECT id FROM users WHERE username = 'Damian'),'Damian','Dam','24-31336213-9'),
+    ((SELECT id FROM users WHERE username = 'R4m1r0'),'ALFREDO','RAMIRO','11096095'),
+    ((SELECT id FROM users WHERE username = 'admin'),'Juana','D\'Arc','27-01038972-6'),
+    ((SELECT id FROM users WHERE username = 'c215714n!#'),'Cristian Jesus','Espindola','29833801');
+/* Cadenas de Texto
+	"string" => las comillas dobles permitenn usar comillas simples sin problemas
+    'string' => las comillas simples permiten usar comillas dobles sin problemas
+    \" \' => la contrabarra permite escapar caracteres en caso de ser necesario
+*/   
+## Actualizacion de datos de Usuario
+UPDATE users_data
+SET email = CONCAT( LEFT(first_name, 1), '.', last_name, '@gmail.com' )
+WHERE email IS NULL; -- solo actualiza los registros donde no exista el valor
+
+UPDATE users_data
+SET nationality = CEIL(RAND() * 18)
+WHERE nationality IS NULL;
+
+## Actualizacion de genero por casos (segune la finalizacion del nombre)
+UPDATE users_data
+SET gender = 
+	CASE
+		WHEN (first_name LIKE '%a' OR first_name LIKE '%io') THEN 'F' -- si a => F
+		WHEN (first_name LIKE '%o' OR first_name LIKE '%ian') THEN 'M' -- si ^a & b => M
+        ELSE 'O' -- si ^a & ^b => O
+	END
+WHERE gender IS NULL; -- condicion para realizar la actualizacion
+
+## Actualizacion de tipos de documentos (segun el largo del uid)
+UPDATE users_data
+SET doctype = 
+	CASE
+		WHEN LENGTH(uid) <= 7 AND gender = 'M' THEN 7 -- le
+        WHEN LENGTH(uid) <= 7 AND gender = 'F' THEN 6 -- lc
+        WHEN LENGTH(uid) <= 9 THEN 3 -- du
+        WHEN LENGTH(uid) <= 13 AND nationality IN(1) THEN 1 -- cuil
+        WHEN LENGTH(uid) <= 13 THEN 5 -- rut
+        WHEN LENGTH(uid) <= 16 THEN 4 -- cedula
+        ELSE 2 -- pasaporte
+	END
+WHERE doctype IS NULL;
+
 # CONSULTAS
 ## datos de usuario
 SELECT * FROM users_data;
@@ -113,3 +161,9 @@ WHERE nationality LIKE "p%"; -- % cualquier cantidad de caracteres
 
 SELECT * FROM nationalities
 WHERE nationality LIKE "paname_a"; -- _ 1 caracter cualquiera
+
+## nombre completo y datos de contacto
+SELECT 
+	CONCAT_WS(' ', last_name,second_last_name, '-', first_name, second_name) AS fullname, -- valores vacios (NOT NULL)
+	CONCAT('phone: ', phone, ' - correo: ', email) AS info -- datos inexistentes (NULL)
+FROM users_data;
