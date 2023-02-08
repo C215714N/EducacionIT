@@ -15,6 +15,8 @@ nav .btn{
     z-index: 1;
 }
 nav a{
+    position: relative;
+    display: block;
     color: #ccc;
     filter: grayscale(90%);
 }
@@ -22,6 +24,7 @@ nav a.active,
 nav a:hover{
     text-shadow: 0 0 .5rem #eee;
     filter: grayscale(30%);
+    transform: scale(1.2);
 }
 .menu{
     display: grid;
@@ -39,7 +42,25 @@ nav a:hover{
 .menu.active{
     left: 0;
 }
-
+.menu a:hover::before{
+    transform-origin: bottom center;
+    animation: clickme .5s linear alternate infinite;
+}
+.menu a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .1rem;
+    background: linear-gradient(to right,transparent,#eee);
+    opacity: 0;
+    transition: all .25s ease-out;
+}
+.menu a:hover::after{
+    width: 100%;
+    opacity: .9;
+}
 @media screen and (min-width: 768px){
     nav button{
         display: none;
