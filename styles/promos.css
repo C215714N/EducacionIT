@@ -5,9 +5,13 @@
     padding: 1.5rem;
     overflow: auto;
 }
+.scroll:hover li{
+    animation-play-state: paused;
+}
 .scroll li{
     flex: 1 0 var(--size);
     animation: scroll 60s linear infinite;
+    animation-play-state: running;
 }
 .scroll li:hover img{
     transform: scale(1.2);
