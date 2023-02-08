@@ -4,7 +4,8 @@
 var d = document,
     cN = 'active',
     // Galeria
-slides = d.querySelectorAll('.gallery .item'),
+heading = d.querySelector('#header h1'),
+    slides = d.querySelectorAll('.gallery .item'),
     controls = d.querySelectorAll('.gallery [class*="icon-"]'),
     // Navegacion
 menuButton = d.querySelector('nav .btn'),
@@ -62,8 +63,13 @@ function setItem(object) {
   item = type == 'next' ? item.nextElementSibling || item.parentNode.firstElementChild : type === 'prev' ? item.previousElementSibling || item.parentNode.lastElementChild : array[type];
   item.classList.add(className);
 } // Eventos
-// Galeria
 
+
+heading.addEventListener('click', function () {
+  slides.forEach(function (item) {
+    return item.classList.toggle('show');
+  });
+}); // Galeria
 
 controls.forEach(function (btn) {
   return btn.addEventListener('click', function () {

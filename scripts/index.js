@@ -3,6 +3,7 @@ const
     d = document,
     cN = 'active',
     // Galeria
+    heading = d.querySelector('#header h1'),
     slides = d.querySelectorAll('.gallery .item'),
     controls = d.querySelectorAll('.gallery [class*="icon-"]'),
     // Navegacion
@@ -39,6 +40,9 @@ const
         item.classList.add(className);
     }
 // Eventos
+    heading.addEventListener('click', () => {
+        slides.forEach(item => item.classList.toggle('show'));
+    })
     // Galeria
     controls.forEach( btn => btn.addEventListener('click', () => {
         setItem( {
