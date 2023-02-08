@@ -18,6 +18,11 @@
 #header h1 {
   font-family: 'techno';
   transform: rotateX(15deg);
+  animation: intro 2.5s ease-out;
+}
+#header p {
+  animation: appear 1s ease-in 2.4s;
+  animation-fill-mode: backwards;
 }
 /* Galeria de Imagenes */
 .gallery {
@@ -29,6 +34,7 @@
 .gallery .slide .item {
   opacity: 0;
   background: var(--bg) center / cover;
+  transition: all 0.5s ease;
 }
 .gallery .slide .item:nth-child(1n) {
   --bg: linear-gradient(to top right, hsl(60, 50%, 50%), hsl(45, 50%, 50%));
@@ -58,7 +64,11 @@
   --bg: url('../assets/bg/home.jpg');
 }
 .gallery .slide .item.active {
-  opacity: 1;
+  opacity: 0.5;
+}
+.gallery .slide .item.active.show {
+  animation: show 0.5s linear;
+  animation-fill-mode: forwards;
 }
 .gallery button {
   position: absolute;

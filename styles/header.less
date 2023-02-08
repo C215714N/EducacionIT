@@ -22,10 +22,13 @@
         font-family: 'techno';
         transform: 
             rotateX(15deg);
+        animation: intro 2.5s ease-out;
     }
     p{
         // Agrega el elemento a la lista de selectores de la clase .zeroise
         &:extend(.zeroise);
+        animation: appear 1s ease-in 2.4s;
+        animation-fill-mode: backwards;
     }
 }
 /* Galeria de Imagenes */
@@ -41,8 +44,13 @@
             .bg(@header);
             opacity: 0;
             background: var(--bg) center/cover;
+            transition: all .5s ease;
             &.active{
-                opacity: 1;
+                opacity: .5;
+                &.show{
+                    animation: show .5s linear;
+                    animation-fill-mode: forwards;
+                }
             }
         }
     }
