@@ -102,3 +102,12 @@
   width: 100%;
   height: 100%;
 }
+.header {
+  --bg: hsl(0, 50%, 50%), hsl(60, 50%, 50%), hsl(120, 50%, 50%), hsl(180, 50%, 50%), hsl(240, 50%, 50%), hsl(300, 50%, 50%), hsl(0, 50%, 50%);
+  margin: 5rem 0 3rem;
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  color: #eee;
+  background: linear-gradient(to right, var(--bg)) left / 500%;
+  animation: headings 360s linear infinite;
+}
