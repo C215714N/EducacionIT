@@ -1,0 +1,31 @@
+.scroll{
+    align-items: center;
+    min-height: min(100vh, 480px);
+    gap: 2.5rem;
+    padding: 1.5rem;
+    overflow: auto;
+}
+.scroll li{
+    flex: 1 0 var(--size);
+    animation: scroll 10s linear infinite;
+}
+.scroll li:hover img{
+    transform: scale(1.2);
+}
+.scroll img{
+    width: 100%;
+    transition: all .5s ease;
+}
+::-webkit-scrollbar{
+    border-radius: .5rem;
+    background: radial-gradient(#eee, transparent);
+}
+::-webkit-scrollbar-thumb{
+    -webkit-appearance: none;
+    border-radius: .5rem;
+    background: radial-gradient(
+        ellipse at top left,
+        #eee,
+        transparent
+    );
+}
