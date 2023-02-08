@@ -1,8 +1,17 @@
 #nav{
+    position: sticky;
+    /*  El elemento es su propio referente 
+        se fija dentro de su contenedor
+        cuando se cumple una condicion
+        Permanece dentro del FLOW hasta entonces
+    */
+    top: 0;
+    bottom: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: 1rem; /*root EM (Ancho de M en la Raiz HTML)*/
     background-color: #e75;
 }
@@ -11,14 +20,34 @@
     text-shadow: 0 0 .5rem #333;
 }
 .menu{
+    position: fixed;
+    /*  Su referente es el viewport (VENTANA)
+        no se visualizara correctamente
+        en caso de no poseer coordenadas
+        permanece fuera del FLOW
+    */
+    top: 0;
+    left: -100%;
     width: 100%;
-    max-height: 0;
+    height: 100%;
     overflow: hidden;
+    background: linear-gradient(
+        #e75A,
+        #c33A
+    );
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    opacity: .5;
+    transition: all .5s ease;
 }
 .menu.active{
-    max-height: 640px;
+    left: 0;
+    opacity: 1;
 }
 .btn{
+    position: relative;
+    z-index: 1;
     border: none;
     background-color: transparent;
 }
@@ -28,10 +57,13 @@
         display: none;
     }
     .menu{
+        position: static;
         width: auto;
         max-height: 640px;
         display: flex;
         gap: .5rem;
+        opacity: 1;
+        background-image: unset;
     }
 }
 /* HD Desktop */
