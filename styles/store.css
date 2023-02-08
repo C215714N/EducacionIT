@@ -111,14 +111,14 @@
 /* Transformaciones: 
     2d: son aquellas que utilizan los ejes horizontal (X) y vertical (Y) para cambiar la apariencia o ubicacion de la etiqueta afectada.
 
-    translate(dX,dY): desplaza la etiqueta relativamente
-    scale(uX, uY): escala la etiqueta en unidades
-    rotate(deg): gira la etiqueta en sentido horario
-    skew(degX, degY): sesga la etiqueta segun el eje
+    * translate(dX,dY): desplaza la etiqueta relativamente
+    * scale(uX, uY): escala la etiqueta en unidades
+    * rotate(deg): gira la etiqueta en sentido horario
+    * skew(degX, degY): sesga la etiqueta segun el eje
 
     3d: son aquellas que requieren de una perspectiva, para determinar el punto de fuga que debe utilizarse. Esto implica la implementacion de un eje de profundidad (Z)
 
-    rotateX(deg): gira el elemento sobre su eje horizontal
-    rotateY(deg): gira el elemento sobre su eje vertical
-    translateZ(dZ): desplaza el elemento sobre el eje de profundidad
+    * rotateX(deg): gira el elemento sobre su eje horizontal
+    * rotateY(deg): gira el elemento sobre su eje vertical
+    * translateZ(dZ): desplaza el elemento sobre el eje de profundidad
 */

@@ -1,0 +1,14 @@
+/* Animaciones */
+@keyframes headings {
+  from {
+    background-position: -500%;
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translate(400%);
+  }
+  to {
+    transform: translate(-1000%);
+  }
+}
