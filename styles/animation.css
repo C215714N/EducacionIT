@@ -1,6 +1,6 @@
 /* Animaciones */
 @keyframes headings {
-  from {
+  to {
     background-position: -500%;
   }
 }
@@ -10,5 +10,13 @@
   }
   to {
     transform: translate(-1000%);
+  }
+}
+@keyframes clickme {
+  from {
+    transform: rotate(-15deg) translateY(-0.25rem);
+  }
+  to {
+    transform: rotate(15deg) translateY(-0.25rem);
   }
 }

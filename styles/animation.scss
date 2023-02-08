@@ -1,4 +1,10 @@
 /* Animaciones */
+@keyframes headings {
+    to{
+        background-position: -500%;
+    }
+}
+
 @keyframes scroll {
     from{
         transform: translate(400%)
@@ -8,8 +14,15 @@
     }
 }
 
-@keyframes headings {
+@keyframes clickme{
+    from{
+        transform: 
+            rotate(-15deg)
+            translateY(-.25rem);
+    }
     to{
-        background-position: -500%;
+        transform: 
+            rotate(15deg)
+            translateY(-.25rem);
     }
 }
