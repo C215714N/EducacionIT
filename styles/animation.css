@@ -1,4 +1,15 @@
 /* Animaciones */
+@keyframes intro {
+  from {
+    transform: scale(3) translateZ(10rem) translateY(10vh);
+  }
+}
+@keyframes appear {
+  from {
+    transform: translateX(-5vw);
+    opacity: 0;
+  }
+}
 @keyframes headings {
   to {
     background-position: -500%;
@@ -18,5 +29,15 @@
   }
   to {
     transform: rotate(15deg) translateY(-0.25rem);
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    border: 5rem solid #333;
+  }
+  100% {
+    opacity: 1;
+    border: 0;
   }
 }
