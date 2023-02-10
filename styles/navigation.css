@@ -51,6 +51,12 @@
     border: none;
     background-color: transparent;
 }
+.icon-open::before{
+    content: '\2630'
+}
+.icon-close::before{
+    content: '\26cc'
+}
 /* Tablets */
 @media screen and (min-width: 768px){
     #nav .btn{
