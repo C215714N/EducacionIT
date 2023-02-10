@@ -21,11 +21,8 @@
 }
 
 @keyframes scroll {
-    from{
-        transform: translate(400%)
-    }
     to{
-        transform: translate(-1000%);
+        transform: translate(calc(var(--size) * -11 + 2.5rem * 10));
     }
 }
 
