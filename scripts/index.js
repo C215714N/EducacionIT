@@ -9,6 +9,8 @@ const
     // Navegacion
     menuButton = d.querySelector('nav .btn'),
     menuList = d.querySelector('nav .menu'),
+    // Scroll
+    images = d.querySelectorAll('#promos li'),
     // Mapa de Contacto
     mapButton = d.querySelector('#footer .btn.map'),
     mapFrame = d.querySelector('#footer iframe.map')
@@ -39,6 +41,11 @@ const
         )
         item.classList.add(className);
     }
+    function shadowClone(element){
+        let container = d.querySelector(element);
+        container.innerHTML += container.innerHTML
+    }
+    shadowClone('#promos ul', images);
 // Eventos
     heading.addEventListener('click', () => {
         slides.forEach(item => item.classList.toggle('show'));

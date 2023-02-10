@@ -10,6 +10,8 @@ heading = d.querySelector('#header h1'),
     // Navegacion
 menuButton = d.querySelector('nav .btn'),
     menuList = d.querySelector('nav .menu'),
+    // Scroll
+images = d.querySelectorAll('#promos li'),
     // Mapa de Contacto
 mapButton = d.querySelector('#footer .btn.map'),
     mapFrame = d.querySelector('#footer iframe.map'); // Funciones
@@ -62,8 +64,14 @@ function setItem(object) {
   var item = callback(object);
   item = type == 'next' ? item.nextElementSibling || item.parentNode.firstElementChild : type === 'prev' ? item.previousElementSibling || item.parentNode.lastElementChild : array[type];
   item.classList.add(className);
-} // Eventos
+}
 
+function shadowClone(element) {
+  var container = d.querySelector(element);
+  container.innerHTML += container.innerHTML;
+}
+
+shadowClone('#promos ul', images); // Eventos
 
 heading.addEventListener('click', function () {
   slides.forEach(function (item) {
