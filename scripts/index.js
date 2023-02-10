@@ -18,14 +18,19 @@ function toggle(object){
     btn.classList.replace(list[0], list[1]) :
     btn.classList.replace(list[1], list[0])
 }
+function remove(object){
+    const { el, className } = object;
+    el.classList.remove(className);
+}
 
 // Eventos
 d.onclick = (e) => {
     let btn = e.target, target, list;
-    const action = btn.attributes['action'].value;
+    const action = btn.attributes['action-js'].value;
     const type = btn.classList;
-
+    // verificacion de propiedad action-js
     if(action == 'toggle'){
+        // Verificacion de clases
         if (type.contains('nav-toggle')){
             btn = menuButton;
             target = menuList;
@@ -35,6 +40,7 @@ d.onclick = (e) => {
             target = mapFrame;
             list = ['icon-plus', 'icon-less'];
         }
+        // Ejecucion de funcion alternadora
         toggle({
             btn,
             target,
@@ -42,7 +48,7 @@ d.onclick = (e) => {
             list,
         })
     }
-    else if(action == 'select'){
+    if(action == 'select'){
         console.log(e)
     }
     else{
@@ -51,5 +57,5 @@ d.onclick = (e) => {
 }
 
 nav.onmouseleave = () => setTimeout( 
-    () => menuList.classList.remove('active'), 15000 
+    () => remove({ el: menuList, className }), 15000 
 )
