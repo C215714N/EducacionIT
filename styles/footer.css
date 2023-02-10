@@ -34,6 +34,16 @@
     .icon-less::before{
         content: '-'
     }
+    .map.active,
+    .map.btn.icon-less{
+        position: fixed;
+        /*  Su referente es el viewport (Ventana)
+            no se muestra si su posicion no esta definida
+            Queda anclado a la ventana y fuera del FLOW
+            independiente a la posicion del scroll
+    */ 
+        z-index: 2;
+    }
 /* Formulario */
 #contact{
     max-width: 720px;
