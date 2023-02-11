@@ -1,0 +1,91 @@
+// Declaraciones
+// String: cadena de texto
+$col: 24;
+$path: '../assets/foods';
+// Array: Lista de valores
+$images: 'cheese', 'pizza', 'ravioli', 'soup', 'spaghetti', 'wine', 'yogurt';
+// Object: Matriz de valores
+$attributes:
+    text        color,
+    bg          background-color,
+    border      border-color;
+$colors: 
+    primary     #448,
+    secondary   #c36,
+    light       #eee,
+    dark        #333,
+    danger      #c33,
+    warning     #da3,
+    success     #3c6,
+    info        #36c;
+
+// Mixin: estilos que reciben argumentos para luego ser aplicados
+@mixin normalize($p:0, $m:0, $b:0){
+    margin: $m;
+    border: $b;
+    padding: $p;
+}
+@mixin bg-colors($limit){
+@for $i from 1 through $limit{
+    &:nth-child(#{$i}n){
+    background: hsl($i * 54, 50%, 50%) linear-gradient(
+        hsl($i * 54, 50%, 60%),
+        hsl($i * 30, 50%, 40%)
+    ) } 
+} }
+
+// Bucles: estilos que se repiten en base a una condicion
+/* Sistema de grillas */
+@for $i from 1 through $col{
+    .col-#{$i}{
+        width: percentage($i / $col);
+} }
+/* iconos de fondo */
+@each $icon in $images{
+    .icon-#{$icon}{
+        background-image: url('#{$path}/#{$icon}.svg') !important;
+} }
+/* Atributos con colores */
+// extrae los nombres y atributos (resuelve ultimo)
+@each $prop, $attr in $attributes{
+// extrae los colores y valores (resuelve primero)
+@each $name, $value in $colors{
+    .#{$prop}-#{$name}{
+        #{$attr}: $value;
+} } }
+/* Helpers: classes que se utilizan para redefinir atributos */
+.zeroise{
+    @include normalize;
+}
+
+
+// Nesting: anidacion de selectores para mayor especificidad
+.gallery{
+/* Galeria de Imagenes */
+    @include normalize(1rem 2rem, auto, 1px solid); // incorporacion del Mixin
+    position: relative;
+    min-height: min(100vh, 320px);
+    .slides{
+    /* Contenedor de Imagenes */
+        @extend .zeroise;
+        .item{
+        /* Caja de Imagen */
+            // incorporacion del mixin con bucle
+            @include bg-colors(6); 
+            // extension de selector css
+            @extend .zeroise; 
+            opacity: 0;
+            // Selector "&" de elemento padre (item)
+            &.active{
+                opacity: 1;
+            }
+        }
+    }
+    .select{
+        /* Botones de accion */
+        @include normalize(.5rem 1rem);
+        // extension de clase a compilar
+        @extend .col-8;
+        background-color: transparent;
+    }
+}
