@@ -1,3 +1,6 @@
+/* DML (Data Definition Language)
+
+*/
 CREATE TABLE providers(
 	id INT AUTO_INCREMENT,
     description VARCHAR(50),
@@ -11,6 +14,7 @@ CREATE TABLE category(
     PRIMARY KEY(id),
     UNIQUE KEY(description)
 );
+RENAME TABLE category TO categories;
 
 CREATE TABLE products(
 	id INT AUTO_INCREMENT,
@@ -47,4 +51,41 @@ CREATE TABLE sales_detail(
     PRIMARY KEY(id),
     FOREIGN KEY(product) REFERENCES products(id),
     FOREIGN KEY (sale) REFERENCES sales(id)
-)
+);
+
+/* DML (Data Manipulation Language)
+*/
+## Carga de Proveedores
+INSERT INTO providers(description)
+VALUES 	('Bago'),('Bayer'),('Pfiser'),('Elea'),('Moderna'),
+		('Sandoz'),('Biontech'),('Merryl Linch'),('J&J'),('Sanofi');
+        
+## Carga de Categorias
+INSERT INTO categories(description)
+VALUES ('medicamento'),('descartable'),('instrumental'),('otro');
+
+## Carga de Productos
+INSERT INTO products(description, price, stock)
+VALUES 	('aspirina', 600, 4500),
+		('te descongestivo', 200,8590),
+        ('morfina',1200,2734),
+        ('diazepan',599, 1729),
+        ('tegretol',937,5278),
+        ('metoclopramida',2499.99,5273),
+        ('cloroformo',5200,12930),
+        ('sildenafilo',3295.50, 19283),
+        ('paracetamol',859.99,2348),
+        ('acetaminofen',6000,5484),
+        ('agua oxigenada',300,28302);
+## Ventas
+SELECT * FROM sales_detail;
+INSERT INTO sales
+SET	userId = (SELECT id FROM users WHERE username = 'cristian');
+
+## Detalle de Venta
+INSERT INTO sales_detail(sale, product, quantity)
+VALUES 	(1, CEIL(RAND() * 11), RAND() * 10);
+
+UPDATE sales_detail
+SET price = (SELECT price FROM products WHERE id = product) -- relacion uno a varios
+WHERE price IS NULL; -- el precio no debe existir
