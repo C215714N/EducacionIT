@@ -1,0 +1,43 @@
+/* Fotogramas */
+@keyframes intro {
+  from {
+    transform: translateZ(10vh) scale(10);
+    opacity: 0;
+    letter-spacing: 2vw;
+  }
+}
+@keyframes translate {
+  to {
+    background-position: 0%;
+  }
+}
+@keyframes remark {
+  to {
+    text-shadow: 0 0 0.5rem #eee;
+  }
+}
+@keyframes jump {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+@keyframes around {
+  0% {
+    transform: translate(0, 0) skew(15deg);
+  }
+  25% {
+    transform: translate(100vw, 0) skew(-15deg);
+  }
+  50% {
+    transform: translate(-100vw, 0) skew(-15deg);
+  }
+  75% {
+    transform: translate(3rem, 0) skew(15deg);
+  }
+  100% {
+    transform: translate(0, 0) skew(0);
+  }
+}
