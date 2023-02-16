@@ -6,6 +6,13 @@ const
     nav = d.getElementById('nav'),
     menuButton = d.querySelector('#nav .btn'),
     menuList = d.querySelector('#nav .menu'),
+    // Galeria
+    prev = d.querySelector('.gallery .icon-prev'),
+    next = d.querySelector('.gallery .icon-next'),
+    gallery = [
+        d.querySelectorAll('.gallery .item'), 
+        d.querySelectorAll('.gallery .controls .btn')
+    ],
     // Mapa de contacto
     mapFrame = d.querySelector('iframe.map')
 ;
@@ -22,8 +29,39 @@ function remove(object){
     const { el, className } = object;
     el.classList.remove(className);
 }
+function getItem(object){
+    const { array, className } = object;
+    for (let el of array){
+        if (el.classList.contains(className)){
+            el.classList.remove(className);
+            return el;
+} } }
+
+function setItem(object){
+    let item = getItem(object);
+    item = (
+        object.type == 'next' ?
+        ( item.nextElementSibling || item.parentNode.firstElementChild ) :
+        object.type == 'prev' ?
+        ( item.previousElementSibling || item.parentNode.lastElementChild ) :
+        item[object.type]
+    );
+    item.classList.add(className);
+}
 
 // Eventos
+prev.addEventListener('click', () => gallery.forEach((array) => setItem({
+    type: 'prev',
+    array,
+    className
+})) );
+
+next.addEventListener('click', () => gallery.forEach((array) => setItem({
+    type: 'next',
+    array,
+    className
+})));
+
 d.onclick = (e) => {
     let btn = e.target, target, list;
     const action = btn.attributes['action-js'].value;
@@ -59,3 +97,18 @@ d.onclick = (e) => {
 nav.onmouseleave = () => setTimeout( 
     () => remove({ el: menuList, className }), 15000 
 )
+/*
+    PRIMITIVOS
+    string = 'cristian'
+    number = 31
+    boolean = true
+
+    OBJETO
+    object = { name: 'cristian', age: 31, teacher: true }
+    array = ['cristian', 31, true, ['a', 'b', 'c'] ]
+
+    object[name] // cristian
+    array[0] // cristian
+    array[3][2] // c
+    array[3][0] // a
+*/

@@ -18,12 +18,18 @@ $colors:
     warning     #da3,
     success     #3c6,
     info        #36c;
-
+$position: static, relative, absolute, fixed, sticky;
+$properties: width, height, top, right, bottom, left;
 // Mixin: estilos que reciben argumentos para luego ser aplicados
 @mixin normalize($p:0, $m:0, $b:0){
     margin: $m;
     border: $b;
     padding: $p;
+}
+@mixin pseudo($content){
+    &::before{
+        content: $content;
+    }
 }
 @mixin bg-colors($limit){
 @for $i from 1 through $limit{
@@ -44,7 +50,22 @@ $colors:
 @each $icon in $images{
     .icon-#{$icon}{
         background-image: url('#{$path}/#{$icon}.svg') !important;
+        background-position: center !important;
 } }
+/* posiciones de elementos*/
+@each $p in $position{
+    .p-#{$p}{
+        position: $p;
+    }
+}
+@each $p in $properties{
+@for $i from 0 through 20{
+    %#{$p}-n#{$i * 5}{
+        #{$p}: $i * -5%;
+    }
+    %#{$p}-#{$i * 5}{
+        #{$p}: $i * 5%;
+} } }
 /* Atributos con colores */
 // extrae los nombres y atributos (resuelve ultimo)
 @each $prop, $attr in $attributes{
@@ -58,13 +79,13 @@ $colors:
     @include normalize;
 }
 
-
 // Nesting: anidacion de selectores para mayor especificidad
 .gallery{
 /* Galeria de Imagenes */
     @include normalize(1rem 2rem, auto, 1px solid); // incorporacion del Mixin
-    position: relative;
+    @extend .p-relative;
     min-height: min(100vh, 320px);
+    overflow: hidden;
     .slides{
     /* Contenedor de Imagenes */
         @extend .zeroise;
@@ -73,11 +94,30 @@ $colors:
             // incorporacion del mixin con bucle
             @include bg-colors(6); 
             // extension de selector css
-            @extend .zeroise; 
+            @extend .zeroise, %width-0, %left-100; 
+            display: grid;
+            justify-content: center;
+            align-content: end;
             opacity: 0;
+            transition: all .5s linear;
             // Selector "&" de elemento padre (item)
             &.active{
+                @extend %width-100, %left-0;
                 opacity: 1;
+                & ~ .item{
+                    @extend %left-100;
+            }}
+        }
+    }
+    // Controles
+    .controls{
+        @extend .p-absolute, %bottom-15, %left-0, %right-0;
+        text-align: center;
+        .btn{
+            @include normalize(.5rem, 0 .25rem, 1px solid);
+            border-radius: .5rem;
+            &.active{
+                background-color: #333;
             }
         }
     }
@@ -85,7 +125,17 @@ $colors:
         /* Botones de accion */
         @include normalize(.5rem 1rem);
         // extension de clase a compilar
-        @extend .col-8;
+        @extend .p-absolute, %top-0, %bottom-0, .col-8;
+        font-size: min(10vw, 3rem);
         background-color: transparent;
+        // Botones
+        &.icon-prev{
+            @include pseudo('<');
+            @extend %left-0;
+        }
+        &.icon-next{
+            @include pseudo('>');
+            @extend %right-0;
+        }
     }
 }
