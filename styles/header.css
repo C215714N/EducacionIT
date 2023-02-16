@@ -9,6 +9,7 @@
         ALTO: definido por el contenido
     */
     color: floralwhite; /* html 140 valores */
+    overflow: hidden;
     text-shadow: 0 0 .5rem rgb(51,51,51);/*x y blur color*/
     background-color: #E88; /* rgb 16.777.216 colores  dec: 0-255 | hex: 00-FF */
     background-image: 
@@ -47,6 +48,8 @@
         min(a, b) => determina el valor mas chico
         calc(args) => indica al navegador una operacion
     */
+    perspective-origin: center;
+    perspective: 10rem;
 }
 h1,
 h2,
@@ -74,6 +77,33 @@ h3{
             vmin => % del valor mas bajo
             vmax => % del valor mas alto
     */
+}
+h1{
+    transform: rotateX(15deg);
+    animation: intro 6s ease-out .5s;
+    /* name duration timing delay direction count */
+    animation-fill-mode: backwards;
+}
+#header p{
+    animation: intro 4.5s ease-out 2s;
+    animation-fill-mode: backwards;
+}
+
+main h2{
+    width: 100%;
+    margin: .5rem 0;
+    border-radius: .5rem;
+    padding: 1rem 2.5rem;
+    color: #eee;
+    background: linear-gradient(
+        to right,
+        hsl(0, 50%, 50%),
+        hsl(30, 50%, 50%),
+        hsl(60, 50%, 50%),
+        hsl(30, 50%, 50%),
+        hsl(0, 50%, 50%)
+    ) 500%/500%;
+    animation: translate 360s linear infinite;
 }
 /* JERARQUIA
     tags  =   1
