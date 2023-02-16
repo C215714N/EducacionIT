@@ -138,6 +138,8 @@ textarea{
     bottom: .25rem;
     background: var(--light) var(--bg) center/3rem no-repeat;
     box-shadow: 0 .25rem .5rem #333;
+    transform-origin: bottom center;
+    animation: jump .25s ease-in alternate infinite;
 }
     /* Iconos redes sociales */
     .facebook{
