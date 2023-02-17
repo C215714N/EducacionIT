@@ -4,7 +4,8 @@
 .slide{
     align-items: flex-end;
     gap: 2rem;
-    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
     background-image: linear-gradient(
         transparent 15%,
         #e75 15%,
@@ -20,4 +21,9 @@
 .item img{
     width: 100%;
     min-height: min(100vh, 480px);
+}
+
+#home .item:hover img{
+    transform-origin: bottom center;
+    animation: jump .5s alternate infinite;
 }
