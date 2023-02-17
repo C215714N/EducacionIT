@@ -1,0 +1,51 @@
+/* CONTADORES
+    main{ counter-reset: seccion;} // Declaracion y reinicio
+    section{ counter-increment: seccion; } // Incremento de valor
+    section h2::before{ content: counter(seccion); } // Utilizacion
+*/
+
+/* Declaracion */
+.counter{
+    counter-reset: first;
+    padding-left: 3.5rem;
+}
+.counter ul{
+    counter-reset: second;
+}
+.counter ul ul{
+    counter-reset: third;
+}
+/* Incremento */
+.counter li{
+    counter-increment: first;
+    color: #333;
+}
+.counter li li{
+    counter-increment: second;
+    color: #666;
+}
+.counter li li li{
+    counter-increment: third;
+    color: #999;
+}
+/* Implementacion */
+.counter li::marker{
+    content: 
+        counter(first) '.'
+        counter(second) '.'
+        counter(third) ' - ';
+    font: bold 1.1rem 'Raleway';
+}
+
+.title{
+    position: relative;
+}
+.title::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -3.5rem;
+    width: calc(100% + 3.5rem);
+    height: 2px;
+    background: linear-gradient(to right, #c338, #a753);
+}
