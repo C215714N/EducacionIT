@@ -24,3 +24,10 @@
     padding: 0;
     object-fit: cover;
 }
+#menu .box li{
+    font-size: .8rem;
+    border-bottom: 2px dotted;
+}
+.box li:hover{
+    background-color: var(--warning);
+}
