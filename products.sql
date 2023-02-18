@@ -82,6 +82,11 @@ SELECT * FROM sales_detail;
 INSERT INTO sales
 SET	userId = (SELECT id FROM users WHERE username = 'cristian');
 
+INSERT INTO sales_detail
+SET sale = RAND() * 7 + 1,
+	product = RAND() * 10 + 1,
+	quantity = RAND() * 3;
+
 ## Detalle de Venta
 INSERT INTO sales_detail(sale, product, quantity)
 VALUES 	(1, CEIL(RAND() * 11), RAND() * 10);
@@ -90,8 +95,20 @@ UPDATE sales_detail
 SET price = (SELECT price FROM products WHERE id = product) -- relacion uno a varios
 WHERE price IS NULL; -- el precio no debe existir
 
-/* Consulta por Agrupacion */
+## Actualizacion de precios
+UPDATE products 
+SET price = price * 1.21;
+
+## Actualizacion de Totales por venta
 SELECT * FROM sales;
+UPDATE sales AS s
+SET total = (
+	SELECT SUM(quantity * price) -- valor calculado
+    FROM sales_detail AS sd -- tabla relacional
+	WHERE sd.sale = s.id -- mismo numero de venta
+) 	WHERE price IS NULL; -- cuando actualizamos el resultado debe ser una unica celda
+
+/* Consulta por Agrupacion */
 ## Total de facturas emitidas por usuario
 SELECT 
 	userId,
@@ -100,7 +117,7 @@ SELECT
 FROM sales
 GROUP BY userId; -- ejecuta las funciones separando en grupos
 
-## Total de productos vendidos
+## Total de productos vendidos por ticket
 SELECT 
 	sale,
     description,
@@ -110,18 +127,54 @@ SELECT
 FROM sales_detail AS sd
 JOIN products AS p ON p.id = sd.product;
 
+## Recaudacion por venta
 SELECT
 	sale,
     SUM(quantity * price) AS total
 FROM sales_detail
-GROUP BY sale;
+WHERE quantity >= 5
+GROUP BY sale
+HAVING total >= 10000;
 
 SELECT 
-	p.userId,
-    weight,
-    height,
-    COUNT(s.userId) AS tickets
-FROM sales AS s
-RIGHT JOIN patients AS p ON p.userId = s.userId
-GROUP BY s.userId
-ORDER BY tickets;
+	sale,
+    GROUP_CONCAT(description) AS articles,
+    COUNT(description) AS products,
+    SUM(quantity * sd.price) AS total
+FROM sales_detail AS sd
+JOIN products AS p ON p.id = sd.product
+GROUP BY sale;
+
+## Estadisticas por Venta
+SELECT 
+	sale,
+	MIN(price) AS cheapest,
+    MAX(price) AS most_expensive,
+    ROUND(AVG(price), 2) AS average,
+    COUNT(price) AS articles,
+    SUM(price * quantity) AS total
+FROM sales_detail
+GROUP BY sale;
+
+## Impuesto y precio de credito
+SELECT
+	id,
+    total,
+    ROUND(total * 0.105, 2) AS tax,
+    ROUND(total * 1.30 ) AS credit
+FROM sales;
+
+## Productos vendidos
+SELECT
+	product,
+    SUM(quantity) AS sold
+FROM sales_detail
+GROUP BY product;
+
+SELECT * FROM sales_detail;
+## Actualizacion del Stock
+UPDATE products AS p
+SET stock = CASE
+	WHEN (SELECT SUM(quantity) AS total FROM sales_detail AS sd WHERE product = p.id) IS NULL THEN stock -- verificamos que el producto haya sido vendido
+    ELSE stock - (SELECT SUM(quantity) AS total FROM sales_detail AS sd WHERE product = p.id) -- restamos del stock si esto es correcto
+END;
