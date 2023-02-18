@@ -89,3 +89,39 @@ VALUES 	(1, CEIL(RAND() * 11), RAND() * 10);
 UPDATE sales_detail
 SET price = (SELECT price FROM products WHERE id = product) -- relacion uno a varios
 WHERE price IS NULL; -- el precio no debe existir
+
+/* Consulta por Agrupacion */
+SELECT * FROM sales;
+## Total de facturas emitidas por usuario
+SELECT 
+	userId,
+	COUNT(userId) AS total,
+    GROUP_CONCAT(id) AS tickets
+FROM sales
+GROUP BY userId; -- ejecuta las funciones separando en grupos
+
+## Total de productos vendidos
+SELECT 
+	sale,
+    description,
+    quantity,
+    sd.price,
+    quantity * sd.price AS total
+FROM sales_detail AS sd
+JOIN products AS p ON p.id = sd.product;
+
+SELECT
+	sale,
+    SUM(quantity * price) AS total
+FROM sales_detail
+GROUP BY sale;
+
+SELECT 
+	p.userId,
+    weight,
+    height,
+    COUNT(s.userId) AS tickets
+FROM sales AS s
+RIGHT JOIN patients AS p ON p.userId = s.userId
+GROUP BY s.userId
+ORDER BY tickets;
