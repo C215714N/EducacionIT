@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+$functions: lineal, cuadratica, trigonometrica, exponencial, radical;
+// Reglas Keyframes
+@each $f in $functions{
+    .#{$f}{
+        animation: $f 30s linear alternate infinite;
+    }
+@keyframes #{$f}{
+    @for $i from 0 through 100{
+    $x: ($i - 50);
+    $y: 0;
+    // Condicionales
+    @if $f == lineal{
+        // y = ax + b
+        $y: $i / 2;
+    }
+    @else if $f == cuadratica{
+        // y = ax^2 + bx + c
+        $y: math.pow($x, 2) / 25;
+    }
+    @else if $f == trigonometrica{
+        // y = sin(x)
+        $y: math.sin($i) * 10;
+    }
+    @else if $f == exponencial{
+        // y = n^x
+        $y: math.pow(1.024, $i) * 10;
+    }
+    @else if $f == radical{
+        // y = n/x
+        @if $x == 0{
+            $y: 1;
+        }
+        @else{
+            $y: (1 / $x) * 100;
+        }
+
+    }
+    // Porcentaje de la animacion
+    #{$i * 1%}{
+        transform: translate($i * .5vw, $y * 1vh);
+    } }
+} }
