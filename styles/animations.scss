@@ -1,4 +1,6 @@
 /* Fotogramas */
+@use 'functions.scss';
+
 @keyframes intro {
     from{
         transform: 
@@ -11,6 +13,11 @@
 @keyframes translate{
     to{
         background-position: 0%;
+    }
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
     }
 }
 @keyframes remark{
