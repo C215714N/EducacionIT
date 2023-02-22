@@ -3,7 +3,12 @@
     section{ counter-increment: seccion; } // Incremento de valor
     section h2::before{ content: counter(seccion); } // Utilizacion
 */
-
+aside{
+    border-radius: .25rem;
+    padding: 1rem;
+    box-shadow: 0 0 .5rem #333;
+    background-color: #eca;
+}
 /* Declaracion */
 .counter{
     counter-reset: first;
