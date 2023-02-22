@@ -85,8 +85,10 @@ body{
     grid-template-areas:
         'header'
         'main'
+        'extra'
         'footer'
         'nav';
+    gap: 1rem;
 }
 #header{
     grid-area: header;
@@ -104,13 +106,17 @@ aside{
     grid-area: aside;
     display: none;
 }
+#extra{
+    grid-area: extra;
+}
 /* Tablets */
 @media screen and (min-width: 768px){
     body{
         grid-template-areas: 
             'header' 
             'nav' 
-            'main' 
+            'main'
+            'extra'
             'footer';
     }
 }
@@ -122,9 +128,22 @@ aside{
             'nav    nav' 
             'header header' 
             'main   aside' 
+            'extra  extra'
             'footer footer';
     }
     aside{
         display: block;
+    }
+}
+@media screen and (min-width: 1400px){
+    body{
+        grid-template-columns: 6fr 4fr;
+    }
+    main{
+        max-width: 960px;
+        margin-left: calc(50vw - 660px)
+    }
+    aside{
+        margin-right: calc(50vw - 660px);
     }
 }
