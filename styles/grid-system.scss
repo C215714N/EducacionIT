@@ -1,0 +1,19 @@
+$columns: 12;
+$breakpoints:
+//  vname  vwidth  vmax 
+    sm      576px   540px,
+    md      768px   720px,
+    lg      992px   960px,
+    xl     1200px  1140px,
+    xxl    1400px  1320px;
+
+@each $vname, $vwidth, $vmax in $breakpoints{
+@media screen and (min-width: $vwidth){
+    .container, .container-#{$vname}{
+        max-width: $vmax;
+    }
+    @for $i from 1 through $columns{
+    .col-#{$vname}-#{$i}{
+        width: percentage($i / $columns);
+    } }
+} }
