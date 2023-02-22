@@ -9,6 +9,22 @@ aside{
     box-shadow: 0 0 .5rem #333;
     background-color: #eca;
 }
+/* Estilo disponible para Chrome */
+aside ::-webkit-scrollbar{
+    width: .5rem;
+    background-color: transparent;
+}
+aside ::-webkit-scrollbar-thumb{
+    width: .25rem;
+    border-radius: .5rem;
+    background: radial-gradient(ellipse at top left, #eca, #c33);
+}
+.counter{
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 4rem);
+    overflow: auto;
+}
 /* Declaracion */
 .counter{
     counter-reset: first;

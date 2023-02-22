@@ -39,6 +39,6 @@ $functions: lineal, cuadratica, trigonometrica, exponencial, radical;
     }
     // Porcentaje de la animacion
     #{$i * 1%}{
-        transform: translate($i * .5vw, $y * 1vh);
+        transform: translate($i * 1vw, $y * 1vh);
     } }
 } }
