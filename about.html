@@ -6,17 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
     <title>Restaurant CSS</title>
     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <style>
+        .card img{
+            max-height: 200px;
+        }
+    </style>
+    <!-- 
+        BEM (Block Element Modifier)
+
+        UTILITIES: clases que atributos basicos que se utilizan para modificar el aspecto de las etiquetas (1 atributo)
+
+        HELPERS: clases que se utilizan para modificar algunos aspectos predeterminados de ciertos elementos (varios attributos)
+
+        COMPONENTS: clases de contenedores que poseen una jerarquia interna y cada uno de sus elementos posee un nombre de clase relacionado con el bloque.
+
+    -->
 </head>
 <body>
     <!-- Navegacion -->
-
+    <nav>
+        <a href="#">CSS</a>
+        <button></button>
+        <ul>
+            <li><a href="#home">inicio</a></li>
+            <li><a href="#">acerca</a></li>
+            <li><a href="#promos">promos</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#contacto">contacto</a></li>
+        </ul>
+    </nav>
     <!-- Cabecera -->
-
+    <header id="header" 
+        class="
+            vh-100 | d-grid align-content-center | py-3 px-2 | text-light bg-dark">
+        <div class="text-center text-uppercase">
+            <h1 class="display-1 fw-bold">Restaurant CSS</h1>
+            <p class="h1">Comida Siempre Saludable</p>
+        </div>
+    </header>
     <!-- Contenido -->
-
+    <main class="container">
+        <section id="promos" class="row gap-2 | p-5">
+            <h2>Promociones</h2>
+            <div class="card | col-lg | p-0">
+                <div class="card-header">
+                    <img class="w-100" src="assets/foods/pizza.svg" alt="pizza">
+                    <h3>pizza familiar</h3>
+                </div>
+                <p class="card-body">
+                    La mejor seleccion de quesos para su paladar a un precio increible, preparada para ser cortada en 24 porciones de 60cm de largo.
+                </p>
+                <ul class="card-footer | list-unstyled">
+                    <li><strong>ARS: </strong>$ 2400.00</li>
+                    <li><strong>USD:</strong>$ 6.00</li>
+                    <li><strong>EUR:</strong>$ 5.00</li>
+                </ul>
+            </div>
+            <div class="card | col-lg | p-0">
+                <div class="card-header">
+                    <img class="w-100" src="assets/foods/ravioli.svg" alt="ravioles">
+                    <h3>degustacion de ravioles</h3>
+                </div>
+                <p class="card-body">
+                    Realizados con una receta que tiene mas de 300 años, tradicional de la toscana. Una degustacion que le hara sentir que recorre el mundo sentado en su mesa.
+                </p>
+                <ul class="card-footer | list-unstyled">
+                    <li><strong>ARS:</strong>$ 3600.00</li>
+                    <li><strong>USD:</strong>$ 9.00</li>
+                    <li><strong>EUR:</strong>$ 7.75</li>
+                </ul>
+            </div>
+            <div class="w-100"></div>
+            <div class="card | col-lg | p-0">
+                <div class="card-header">
+                    <img class="w-100" src="assets/foods/spaghetti.svg" alt="fideos">
+                    <h3>spaghetti de la casa</h3>
+                </div>
+                <p class="card-body">
+                    Bañados en una salsa de tinta de pulpo, con camarones, un receta casera que no puede perderse si esta de visita, satisfaccion garantizada.
+                </p>
+                <ul class="card-footer | list-unstyled">
+                    <li><strong>ARS:</strong>$ 2000.00</li>
+                    <li><strong>USD:</strong>$ 5.00</li>
+                    <li><strong>EUR:</strong>$ 4.00</li>
+                </ul>
+            </div>
+            <div class="card | col-lg | p-0">
+                <div class="card-header">
+                    <img class="w-100" src="assets/foods/yogurt.svg" alt="yogurt">
+                    <h3>yogurt a la atenea</h3>
+                </div>
+                <p class="card-body">
+                    Como dice su nombre, un postre que dara guerra y traera justicia a su paladar, realizado con una fina seleccion de lacteos de cabra y cordero, esta receta a pasado de generacion en generacion desde la era del mito.
+                </p>
+                <ul class="card-footer | list-unstyled">
+                    <li><strong>ARS:</strong>$ 800.00</li>
+                    <li><strong>USD:</strong>$ 2.00</li>
+                    <li><strong>EUR:</strong>$ 1.50</li>
+                </ul>
+            </div>
+            <div class="card | col-lg | p-0">
+                <div class="card-header">
+                    <img class="w-100" src="assets/foods/soup.svg" alt="sopa">
+                    <h3>otra vez sopa</h3>
+                </div>
+                <p class="card-body">
+                    Rememorando aquellos dias de la infancia, cuando todo era mas simple, traemos esta receta que no podra dejar de probar. Lo llevara a esos momentos donde no tenia tantas preocupaciones. Especialidad de la casa.
+                </p>
+                <ul class="card-footer | list-unstyled">
+                    <li><strong>ARS:</strong>$ 1200.00</li>
+                    <li><strong>USD:</strong>$ 3.00</li>
+                    <li><strong>EUR:</strong>$ 2.60</li>
+                </ul>
+            </div>
+        </section>
+    </main>
     <!-- Pie de Pagina -->
-
+    <footer>
+        <p>&copy;2023 Todos los derechos reservados</p>
+    </footer>
     <!-- Bootstrap JS -->
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
