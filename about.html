@@ -26,21 +26,24 @@
 </head>
 <body>
     <!-- Navegacion -->
-    <nav>
-        <a href="#">CSS</a>
-        <button></button>
-        <ul>
-            <li><a href="#home">inicio</a></li>
-            <li><a href="#">acerca</a></li>
-            <li><a href="#promos">promos</a></li>
-            <li><a href="#menu">menu</a></li>
-            <li><a href="#contacto">contacto</a></li>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark bg-gradient | p-2 | sticky-top">
+        <a class="navbar-brand" href="#">CSS</a>
+        <button class="navbar-toggler navbar-toggler-icon | border-0"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-nav">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse">
+            <li><a class="nav-link" href="/index.html">inicio</a></li>
+            <li><a class="nav-link active" href="#">acerca</a></li>
+            <li><a class="nav-link" href="#promos">promos</a></li>
+            <li><a class="nav-link disabled" href="#menu">menu</a></li>
+            <li><a class="nav-link" href="#contacto">contacto</a></li>
         </ul>
     </nav>
     <!-- Cabecera -->
     <header id="header" 
         class="
-            vh-100 | d-grid align-content-center | py-3 px-2 | text-light bg-dark">
+            vh-100 | d-grid align-content-center | py-3 px-2 | text-light bg-secondary bg-gradient">
         <div class="text-center text-uppercase">
             <h1 class="display-1 fw-bold">Restaurant CSS</h1>
             <p class="h1">Comida Siempre Saludable</p>
