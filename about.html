@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundamentos Web</title>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
     <header>
         <h1>Fundamentos Web</h1>
         <p>html y css</p>
+        <!-- Navegacion: Links mas importantes -->
+        <nav>
+            <ul>
+                <li><!-- Ruta Relativa (Interna) -->
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li><!-- Ruta Ancla (Marcador) | refresh(#) -->
+                    <a href="#">Acerca</a>
+                </li>
+                <li><!-- Ruta Ancla (Marcador) | desplazamiento(#id)-->
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!-- Contenido: Relevante para el Usuario -->
     <main>
@@ -18,6 +32,7 @@
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
+        <p id="contact">Soy el Contacto</p>
         <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
 </body>
