@@ -28,7 +28,38 @@
     </header>
     <!-- Contenido: Relevante para el Usuario -->
     <main>
+        <h2>Contenido Multimedia</h2>
+        <p>
+            Hace referencia a todo tipo de elemento audiovisual que podemos incorporar dentro de nuestra pagina web, mediante el uso de etiquetas.
+        </p>
 
+        <h3>Imágenes</h3>
+        <p>
+            Antes de incorporar este tipo de archivos debemos tener en cuenta los formatos soportados por el navegador, ademas de algunas reglas para su correcta implementacion.
+        </p>
+        <div class="box">
+            <h4>Formatos</h4>
+            <ul>
+                <li>JPG (Joint Photographics Experts Group): admite compresion, admite hasta 16.777.216 colores</li>
+                <li>PNG (Portable Networks Graphics): admite transparencia, pero no utiliza compresion</li>
+                <li>WEBP (Web Picture): Formato desarrollado para la compaticion de contenidos</li>
+                <li>SVG (Scalable Vector Graphics): imagenes calculadas matematicamente mediante lineas y curvas</li>
+            </ul>
+        </div>
+        <ul>
+            <li>
+                <!-- Texto destacado - Importante  -->
+                <strong>Evitar el uso de caracteres especiales</strong> ya que estos no se procesan correctamente y si por ejemplo nuestra imagen se llama 
+                <!-- Texto Enfatizado (emphasis) -->
+                <em>"foto 01.jpg"</em> el navegador interpretara "foto%2001.jpg", por este motivo <em>se recomienda utilizar guiones (_-)</em>
+            </li>
+            <li>
+                <strong>Utilizar nombres descriptivos</strong> como por ejemplo "background.jpg", para facilitar la implementacion de los archivos y evitar nombres simples como <em>"foto_01.jpg"</em> o automatizados como <em>"2023-04-13-2055100.jpg"</em>
+            </li>
+            <li>
+                <strong>Implementar nombres solamente en minusculas</strong> debido a que los servidores son <em>caseSensitive</em> y no es lo mismo "foto.jpg", "Foto.jpg", "FOTO.jpg". De esta manera reducimos el margen de error.
+            </li>
+        </ul>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
