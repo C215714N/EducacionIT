@@ -11,8 +11,8 @@ USE escuelait; -- seleccion
 # Creacion Tabla Usuarios
 CREATE TABLE users(
 	id INT AUTO_INCREMENT, -- numero entero (4.294.967.296)
-    username VARCHAR(20), -- texto variable
-    userpass VARCHAR(20), -- entre 0 y 20
+    username VARCHAR(20), -- texto variable - admite cualquier valor
+    userpass VARCHAR(20), -- entre 0 y 20 caracteres
     # Restricciones
     PRIMARY KEY(id), -- campo relacional(clave principal - unico)
     UNIQUE KEY(username) -- campo unico (local)
