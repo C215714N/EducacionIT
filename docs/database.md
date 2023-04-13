@@ -1,6 +1,7 @@
 # DATABASE (SCHEMA)
 
-Una base de datos es una estructura cuya finalidad es almacenar y organizar informacion. Esta compuesta por tablas y sus elementos son los siguientes.
+Una base de datos es una estructura cuya finalidad es almacenar y organizar informacion. 
+Esta compuesta por tablas y sus elementos son los siguientes.
   
 * __Campo (Columnas):__ conjunto de datos del mismo tipo
 * __Registro (Filas):__ conjunto de datos relacionados entre si
@@ -15,6 +16,9 @@ Una base de datos es una estructura cuya finalidad es almacenar y organizar info
 
 
 ## Database Engine (MySQL)
+
+Un motor de base de datos es una herramienta encargada de recopilar, interpretar y ejecutar las instrucciones SQL brindadas por el usuario, para la correcta manipulacion de los datos.
+
 * _SQL_ es desarrollado por __IBM__
 * __ORACLE__ adquiere los derechos
     * _MySQL_ Workbench (8.0.32)
