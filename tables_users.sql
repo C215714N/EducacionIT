@@ -20,3 +20,28 @@ CREATE TABLE users(
 
 # detalle de tabla
 DESCRIBE users;
+
+/* DML (Data Manipulation Language)
+	Insertar / Editar / Eliminar / Consultar Registros
+    Manipulacion de datos
+*/
+
+# Carga Completa de Usuario
+INSERT INTO users
+VALUES (
+	0, 			-- campo id
+    "c215714n", -- campo username
+    "admin"		-- campo userpass
+);
+# Carga Selectiva de datos Usuario
+INSERT INTO users(username, userpass)
+VALUES ("cristian","1234");
+
+# Carga Multiple de Usuario
+INSERT INTO users(userpass, username)
+VALUES	("4lph4","alejandra"),
+		("b3t4","brian"),
+        ("g4mm4","carlos");
+
+# Consulta Completa de usuarios
+SELECT * FROM users;
