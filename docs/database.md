@@ -61,3 +61,5 @@ El lenguaje de control de datos brinda seguridad al momento de administrar la ba
 |GRANT | otorgar permisos |
 |REVOKE | quitar permisos |
 |FLUSH PRIVILEGES | refrescar permisos |
+
+[volver al inicio](../readme.md)
