@@ -12,3 +12,5 @@ ___
 ## Tabla de Contenidos
 
 * [Bases de Datos](./docs/database.md)
+* [Tipos de datos](./docs/tipos-datos.md)
+* [Operadores](./docs/operadores.md)
