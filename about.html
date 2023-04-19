@@ -15,8 +15,73 @@
         header,
         footer{
             padding: 20px;
-            color: whitesmoke;
-            background-color: #248;
+            color: whitesmoke; /* color HTML (140 valores)*/
+            background-color: #248; /* #RRGGBB (00 - ff)*/
+            text-align: center;
+        }
+        /* Selector especifico (padre hijo) */
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: rgb(51, 102, 204); /* RGB(0 - 255) */
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* Pseudoclases: Instancia o caracteristica de un elemento */
+        nav li:hover{
+            background-color: #224;
+        }
+        /* Selector de Clase (.class) */
+        .box{
+            padding: 24px;
+            color: #333;
+            background-color: #eee;
+            text-align: center;
+        }
+        .box img{
+            max-width: 640px;
+            width: 100%;
+        }
+        .box ul{
+            text-align: left;
+        }
+        /* Selector de Id (#id)*/
+        #contact{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* imagenes y texto */
+        .square{
+            overflow: hidden;
+            margin: 8px;
+            border-radius: 8px;
+            padding: 24px;
+            color: #eee;
+            background-color: #333;
+        }
+        .square img{
+            float: left;
+            margin-right: 16px;
+            max-width: 280px;
+            width: 100%;
+        }
+        /* Redes sociales */
+        .social a{
+            margin: 2px;
+            border-radius: 8px;
+            padding: 8px;
+            color: #248;
+            background-color: #ccc;
+            text-decoration: none;
+        }
+        .social a:hover{ /*paso el mouse por encima*/
+            background-color: #eee;
         }
     </style>
 </head>
@@ -99,6 +164,13 @@
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
         <p id="contact">Soy el Contacto</p>
+        <div class="social">
+            <!-- Ruta Absoluta | Externo -->
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://youtube.com/" target="_blank">YouTube</a>
+            <a href="https://github.com/c215714n/EducacionIT/tree/html-mj19" target="_blank">GitHub</a>
+        </div>
         <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
 </body>
