@@ -50,3 +50,12 @@ CREATE TABLE books_rent_detail(
     FOREIGN KEY(ticket) REFERENCES books_rent(id),
     FOREIGN KEY(book) REFERENCES books(id)
 );
+
+INSERT INTO books(description, stock, price)
+VALUES 	("El Fantasma de Canterville",150,3999.99),
+		("100 años de soledad", 200, 5400),
+		("El ultimo de los mohicanos",320,1999.99),
+		("El principito", 230, 6300),
+		("Dracula", 3000, 1288);
+    
+SELECT * FROM books;
