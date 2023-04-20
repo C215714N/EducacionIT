@@ -43,3 +43,16 @@ SELECT * FROM users_data;
 # Consulta por Nombre de Usuario
 SELECT username, id FROM users
 WHERE username = "cristian";
+
+# Busqueda por campo unico
+SELECT * FROM users_data
+WHERE uid = "20-35336446-5";
+
+# Busqueda por relacion (subconsulta)
+SELECT * FROM users_data
+WHERE userId = (SELECT id FROM users WHERE username = "alejandra");
+
+# Funcion de texto
+SELECT CONCAT("sr/a: ", last_name, ", ", first_name) AS fullname -- concatenacion y alias
+FROM users_data
+ORDER BY fullname;
