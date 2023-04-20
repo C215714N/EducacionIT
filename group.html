@@ -30,7 +30,51 @@
         <!-- Mapa de Contacto -->
 
         <!-- Formulario de Contacto -->
-        
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu Consulta</h2>
+            <!-- Campo Nombre (text) -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                minlength="3"
+                maxlength="50"
+                type="text"
+                required>
+            <!-- Campo Correo (email) -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input
+                id="contact_email"
+                name="email"
+                minlength="8"
+                type="email"
+                required>
+            <!-- Campo Telefono (tel) -->
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="phone"
+                minlength="6"
+                maxlength="20"
+                type="tel">
+            <!-- Campo Seleccion consulta (select) -->
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura del Sitio</option>
+                <option value="css">Diseño del Sitio</option>
+                <option value="js">Logica del sitio</option>
+            </select>
+            <!-- Campo Consulta (textarea) -->
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="20"
+                maxlength="1000"
+                required></textarea>
+            <!-- Boton enviar -->
+            <input type="submit" value="ENVIAR">
+        </form>
         <!-- Redes sociales -->
 
         <!-- Derechos de Autor -->
