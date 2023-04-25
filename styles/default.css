@@ -20,4 +20,18 @@
         max-width: 540px;
         margin: auto;
     }
+    label{
+        margin-top: 8px;
+    }
+    input,
+    textarea,
+    select{
+        border: 1px solid #333; /* width style color */
+        padding: 4px 8px; /* top right bottom left */
+        font-size: 16px;
+    }
+    textarea{
+        resize: vertical;
+        min-height: 80px;
+    }
     /* Redes sociales */
