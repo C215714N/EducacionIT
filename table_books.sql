@@ -94,11 +94,17 @@ VALUES 	(4,""), -- alejandra
        
 # Tabla Detalle de Alquiler
 INSERT INTO books_rent_detail(ticket, book)
-VALUES 
-	-- Libros de Alejandra
-        (1,4), 
-        (1,2), 
-        (1,8), 
-        (1,5),
-
-
+VALUES  -- Libros de Alejandra
+        (1,4), -- El principito
+        (1,2), -- 100 Años de Soledad
+        (1,8), -- El 10% de la felicidad
+        (1,5), -- Dracula
+        -- Libros de C215714n
+        (2, 4), -- El principito
+        (2, 10), -- El 1% de la solucion
+		(2, 1); -- El fantasma de Canterville
+	
+## Actualizacion de precios (Alejandra - ticket 1)
+UPDATE books_rent_detail -- accedo a todos los campos
+SET price = (SELECT price FROM books WHERE id = book) -- busco el libro por id
+WHERE price IS NULL; -- siempre que no haya precio cargado

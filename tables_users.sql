@@ -45,3 +45,6 @@ VALUES	("4lph4","alejandra"),
 
 # Consulta Completa de usuarios
 SELECT * FROM users;
+# Consulta especifica de USUARIOS
+SELECT * FROM users
+WHERE id IN(1,4,6);
