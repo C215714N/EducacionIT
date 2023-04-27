@@ -26,16 +26,20 @@
     <!-- Contenido -->
     <main>
         <article>
-            <h2>Formularios HTML</h2>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
             <p>
                 Son herramientas que permiten el <strong>intercambio de datos en Cliente y Servidor</strong>, trabajan mediante peticiones y para incorporarlos dentro de la pagina web debemos utilizar la etiqueta <em>&lt;form></em>. Cuando realizamos el envio, solamente se procesara el contenido que se encuentre dentro de la etiqueta.
             </p>
             <section>
-                <h3>¿Como funcionan?</h3>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
                 <p>
                     <em>A la etiqueta mencionada anteriormente</em> debemos colocarle al menos 2 atributos, estos son <strong>action="..."</strong> que indica lo que debe ocurrir cuando se realice el envio (normalmente una accion determinada por el Servidor); y <strong>method="..."</strong> que define como deben procesarse los datos para el envio, entre los valores mas comunes se encuentran los siguientes valores:
                 </p>
-                <ul>
+                <ul class="example">
                     <li>
                         <strong>GET:</strong> Metodo que prioriza la respuesta del servidor, envia los datos en texto plano y los mismos pueden visualizarse desde la barra de direcciones. Se utiliza normalmente para <em>Buscadores</em> debido a que es bastante rapido.
                     </li>
@@ -45,11 +49,13 @@
                 </ul>
             </section>
             <section>
-                <h3>¿Como se componen?</h3>
+                <header>
+                    <h3>¿Como se componen?</h3>
+                </header>
                 <p>
                     Los formularios se componen de dos elementos principales, Las <strong>Etiquetas(LABEL)</strong> que funcionan a modo de rotulo para que el usuario sepa que informacion debe completar o seleccionar; y los <strong>Campos (INPUT/TEXTAREA/SELECT)</strong> que correponden a los controles del mismo, que poseen los siguientes atributos:
                 </p>
-                <ul>
+                <ul class="example">
                     <li><strong>name: </strong> atributo necesario que indica como debe identificarse el elemento cuando se realiza el envio, especialmenete para que su valor pueda ser procesado por el servidor.</li>
                     <li><strong>type: </strong> atributo que indica el tipo de valor a ingresar o seleccionar en el campo de formulario, se utiliza en la etiqueta INPUT, ya que existen diferentes tipos.</li>
                     <li><strong>value: </strong> corresponde al valor ingresado o seleccionado en el campo, es obligatorio en caso de utilizar un campo de seleccion, ya que de lo contrario este figuraria vacio.</li>
@@ -60,7 +66,7 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Mapa de Contacto -->
-
+        
         <!-- Formulario de Contacto -->
         <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu Consulta</h2>
