@@ -35,3 +35,46 @@
         min-height: 80px;
     }
     /* Redes sociales */
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse; /* apilacion inversa */
+        gap: 8px;
+        padding: 16px;
+    }
+    .social a{
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        background-color: #ccc; /* hex:00-ff rgb(0-255) colorHTML */
+        background-position: center; /* x y | top bottom center left right */
+        background-size: 32px; /* width height | cover contain */
+        background-repeat: no-repeat; /* repeat repeat-x repeat-y no-repeat*/
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 2px 8px #333; /* -x+ -y+ blur color*/
+    }
+    /* Iconos redes sociales */
+    .facebook{
+        background-image: url("../assets/icon/facebook.svg");
+    }
+    .instagram{
+        background-image: url("../assets/icon/instagram.svg");
+    }
+    .twitter{
+        background-image: url("../assets/icon/twitter.svg");
+    }
+    .linkedin{
+        background-image: url("../assets/icon/linkedin.svg");
+    }
+    .whatsapp{
+        background-image: url("../assets/icon/whatsapp.svg");
+    }
+    .youtube{
+        background-image: url("../assets/icon/youtube.svg");
+    }
+    .github{
+        background-image: url("../assets/icon/github.svg");
+    }
