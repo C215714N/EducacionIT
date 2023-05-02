@@ -9,12 +9,12 @@ Cuando una de las premisas es verdadera, todo el enunciado se considera verdader
 
 |OR|C1V|C1F|
 |--|--|--|
-|__C2F__|V|F|
+|__C2F__|V|V|
 |__C2F__|V|F|
 
 Cuando una de las premisas es verdadera, la siguiente debe ser falsa para considerarse un enunciado verdadero
 
 |XOR|C1V|C1F|
 |--|--|--|
-|__C2V__|V|V|
 |__C2V__|F|V|
+|__C2F__|V|F|
