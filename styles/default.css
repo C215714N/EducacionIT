@@ -1,3 +1,5 @@
+/* Importaciones */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Raleway&family=Open+Sans');
 /* Reglas Generales */
 * {
     scroll-behavior: smooth;
@@ -8,7 +10,8 @@ body,
 h1,
 h2,
 h3,
-.menu{
+.menu,
+#header{
     margin: 0;
 }
 .menu{
@@ -28,7 +31,7 @@ h3,
     gap: 8px;
     padding: 8px;
     background-color: #d83;
-    font-size: 24px;
+    font-size: 20px;
 }
 .menu a{
     color: #ccc;
@@ -39,9 +42,37 @@ h3,
     text-shadow: 0 0 4px; /* x y blur color*/
 }
 /* Cabecera */
-
+#header{
+    padding: min(20%, 320px) 8px; /* top right bottom left */
+    text-align: center;
+    background-image: url('../assets/bg/osx-mojave.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 8px;
+}
+.header{
+    margin: -16px -16px 8px;
+    padding: 16px;
+    color: #eee;
+    background-color: #a62;
+}
+header{
+    color: #a62;
+    border-bottom: 2px solid; /* width style color*/
+}
 /* Contenido */
-
+main{
+    max-width: 1320px;
+    margin: 16px auto;
+    padding: 8px;
+}
+article{
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 0 8px #999;
+    overflow: hidden;
+}
 /* Pie de Pagina */
 
     /* Mapa */
