@@ -18,7 +18,7 @@ CREATE TABLE books_by_genres(
     PRIMARY KEY(id),
     UNIQUE KEY(book, genre),
     FOREIGN KEY(book) REFERENCES books(id),
-    FOREIGN KEY(genre) REFERENCES genre(id)
+    FOREIGN KEY(genre) REFERENCES literary_genres(id)
 );
 
 CREATE TABLE books_by_publishers(
@@ -29,7 +29,7 @@ CREATE TABLE books_by_publishers(
     PRIMARY KEY(id),
     UNIQUE KEY(book, publisher),
     FOREIGN KEY(book) REFERENCES books(id),
-    FOREIGN KEY(publisher) REFERENCES publisher(id)
+    FOREIGN KEY(publisher) REFERENCES publishers(id)
 );
 
 CREATE TABLE books_by_years(
