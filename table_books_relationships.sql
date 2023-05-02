@@ -51,3 +51,23 @@ CREATE TABLE books_by_editions(
     FOREIGN KEY(book) REFERENCES books(id)
 );
 
+# Migracion de datos a tabla AÑOS (insert => select)
+INSERT INTO books_by_years(book, year) -- carga de datos
+## Consulta de obtencion de datos
+SELECT id, edition FROM books -- carga todos los datos consultados
+WHERE length(edition) = 4; -- cantidad de digitos/caracteres
+
+INSERT INTO books_by_years(book,year)
+VALUES ((SELECT id FROM books WHERE description = "el fantasma de canterville"), 1887);
+
+SELECT edition, count(*), group_concat(description) FROM books
+GROUP BY edition;
+
+SELECT 
+	ticket, 
+    Count(*) AS cantidad, 
+	group_concat(book) AS libros_alquilados,
+    SUM(price) AS total
+FROM books_rent_detail
+GROUP BY ticket
+HAVING total >= 12000;
