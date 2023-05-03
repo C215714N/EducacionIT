@@ -5,6 +5,7 @@
 programas, administracion de cuentas y otras configuraciones.
 
 ### Directivas de Contraseñas
+
 | Directiva | Descripcion |
 |-|-|
 | __Vigencia Minima__ | período de tiempo, en días, en que puede usarse una contraseña antes de que el usuario pueda cambiarla.  |
@@ -31,6 +32,7 @@ programas, administracion de cuentas y otras configuraciones.
 | __Opciones de Seguridad__ | permiten configurar el comportamiento del equipo local, y si se configuran los valores de un __objeto de directiva de grupo__, estos se aplican a todos los dispositivos que están sujetos a ese __GPO__. |
 
 ### Firewall de Windows
+
 |Reglas | Descripcion |
 |-|-|
 | __Entrada__ | controlan el tráfico que se permite o bloquea desde fuentes externas, como las conexiones de Internet. |
@@ -45,6 +47,7 @@ programas, administracion de cuentas y otras configuraciones.
 | __Reglas Adicionales__ | permite definir reglas que bloquean o permiten el acceso al software en base a _certificados, Hash, ruta de acceso o zona de red_ |
 
 ### Directivas de control de Aplicaciones
+
 | Aplicacion | Descripcion |
 |-|-|
 | __Ejecutables__ | define reglas para archivos con extensiones como __.exe y .com__ asociadas a una aplicación. Dado que todas las reglas predeterminadas se basan en rutas de acceso de carpeta, se permitirán todos los archivos de esas rutas de acceso. |
