@@ -74,6 +74,57 @@ article{
     box-shadow: 0 0 8px #999;
     overflow: hidden;
 }
+/* Tablas HTML */
+.overflow{
+    display: flex;
+    overflow: auto;
+    padding: 8px;
+    gap: 8px;
+}
+table caption,
+th, 
+td{
+    padding: 8px;
+}
+td{
+    width: 100px;
+}
+table caption{
+    border-radius: 8px 8px 0 0;
+}
+/* Tabla Clasica */
+.classic{
+    border-collapse: collapse;
+}
+.classic caption,
+.classic th,
+.classic td{
+    border: 1px solid #a62;
+}
+.classic caption{
+    border-bottom: none;
+}
+/* Tabla moderna */
+.modern,
+.modern caption,
+.modern tr,
+.modern td{
+    color: #eee;
+    background-color: rgba(202, 102, 34, .5);
+}
+/* Tabla Semantica */
+.semantyc{
+    text-align: right;
+}
+.semantyc thead{
+    background-color: #c33;
+}
+.semantyc tbody{
+    background-color: #3c6;
+}
+.semantyc tfoot{
+    background-color: #248;
+}
 /* Pie de Pagina */
 
     /* Mapa */

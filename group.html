@@ -89,8 +89,9 @@
                         <strong>TFOOT:</strong> pie de tabla que contiene informacion complementaria al cuerpo de la misma, es opcional y posee tanto celdas de encabezado, como celdas de contenido.
                     </li>
                 </ul>
-                <div>
+                <div class="overflow">
                     <table class="classic">
+                        <caption>Usuarios</caption>
                         <!-- Cabecera -->
                         <thead>
                             <tr>
@@ -115,19 +116,170 @@
                             <td>2</td>
                         </tfoot>
                     </table>
+                    <table class="modern">
+                        <caption>Rutina semanal</caption>
+                        <thead>
+                            <tr>
+                                <th>Turno</th>
+                                <th>L</th>
+                                <th>M</th>
+                                <th>X</th>
+                                <th>J</th>
+                                <th>V</th>
+                                <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>m</th>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>t</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>n</th>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>total</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </section>
             <section>
                 <header>
                     <h3>¿Celdas Combinadas?</h3>
                 </header>
+                <p>
+                    Cuando necesitamos expandir una fila o una columna podemos utilizar en las etiquetas correspondientes los atributos <strong>rowspan="..."</strong> y <strong>colspan="..."</strong> respectivamente. Debemos tener en cuenta que al hacer esto las celdas afectadas, desplazaran a las demas celdas a la derecha
+                </p>
+                <div class="overflow">
+                    <table class="semantyc modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Cant.</th>
+                                <th>Precio U.</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>3</td>
+                                <td>35800</td>
+                                <td>107400</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>1</td>
+                                <td>56300</td>
+                                <td>56300</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>2</td>
+                                <td>8950</td>
+                                <td>17900</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">Total</th>
+                                <td>181600</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="modern classic">
+                        <caption>Desarrolladores</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">FrontEnd</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">BackEnd</td>
+                                <td>SQL</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                            </tr>
+                            <tr>
+                                <td>JAVA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="classic">
+                        <tr>
+                            <td rowspan="3">1-1</td>
+                            <td colspan="2">1-2</td>
+                        </tr>
+                        <tr>
+                            <td>2-1</td>
+                            <td>2-2</td>
+                            
+                        </tr>
+                        <tr>
+                            <td rowspan="3">3-1</td>
+                            <td>3-2</td>
+                        </tr>
+                        <tr>
+                            <td>4-1</td>
+                            <td>4-2</td>
+                        </tr>
+                        <tr>
+                            <td>5-1</td>
+                            <td rowspan="2">5-2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">6-1</td>
+                        </tr>
+                    </table>
+                </div>
             </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
-        <!-- Mapa de Contacto -->
-
         <!-- Formulario de Contacto -->
         <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu Consulta</h2>
@@ -197,6 +349,12 @@
                 title="seguinos en github">
             </a>
         </div>
+        <!-- Mapa de Contacto -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0701119751975!2d-58.378511025066445!3d-34.60238855742663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1683244588109!5m2!1ses-419!2sar" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <!-- Derechos de Autor -->
         <p>&copy;2023 Todos los derechos reservados | Cristian Racedo & compañia</p>
     </footer>
