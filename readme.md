@@ -4,5 +4,6 @@ Esto es una guia teorico-practica para los alumnos de la capacitacion CCNA1 que 
 
 ## Programas 
 
-* [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US)
+* [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US) 
 * [Wireshark](https://wireshark.org)
+* [PuTTY](https://putty.org/)
