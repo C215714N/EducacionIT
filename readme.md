@@ -7,3 +7,4 @@ Esto es una guia teorico-practica para los alumnos de la capacitacion CCNA1 que 
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US) 
 * [Wireshark](https://wireshark.org)
 * [PuTTY](https://putty.org/)
+* [Driver Identifie](https://www.driveridentifier.com/blog/?p=149)
