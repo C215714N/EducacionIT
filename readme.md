@@ -11,3 +11,4 @@ Esto es una guia para los alumnos que cursan los dias _Lunes y Miercoles de 10hs
 
 * [Directivas de seguridad](./secpol.md)
 * [Visor de Eventos](./eventvwr.md)
+* [Registro de Windows](./regedit.md)
