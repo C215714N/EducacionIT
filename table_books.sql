@@ -104,7 +104,44 @@ VALUES  -- Libros de Alejandra
         (2, 10), -- El 1% de la solucion
 		(2, 1); -- El fantasma de Canterville
 	
-## Actualizacion de precios (Alejandra - ticket 1)
+## Actualizacion de precios General
 UPDATE books_rent_detail -- accedo a todos los campos
-SET price = (SELECT price FROM books WHERE id = book) -- busco el libro por id
-WHERE price IS NULL; -- siempre que no haya precio cargado
+SET price = (SELECT price FROM books WHERE books.id = books_rent_detail.book) -- busco el libro por id
+WHERE price IS NULL OR price = 0; -- siempre que no haya precio cargado
+    
+/* Actualizacion Stock y Precio*/
+UPDATE books
+SET stock = ROUND(RAND() * 1000) -- un numero entero entre 0 y 1000 (asignacion)
+WHERE stock = 0; -- condicion que el stock sea 0 (comparacion)
+
+UPDATE books
+SET price = RAND() * 4000 + 2000 -- un numero entre 2000 y 6000
+WHERE price = 0; -- codicion donde el precio sea 0 (comparacion)
+
+## calcular el precio de alquiler por dia
+SELECT 
+	ticket,
+    COUNT(book) AS libros_alquilados,
+    ROUND(SUM(price) * 0.05, 2) AS total
+FROM books_rent_detail
+GROUP BY ticket;
+
+## Actualizacion fecha de retorno
+UPDATE books_rent
+SET return_date = "2023-04-28 15:30"
+WHERE id = 1;
+
+UPDATE books_rent
+SET total = ROUND(
+	DATEDIFF(return_date, rent_date) * (
+		SELECT SUM(price) * 0.05 
+		FROM books_rent_detail 
+		WHERE books_rent_detail.ticket = books_rent.id 
+	), 2)
+WHERE total IS NULL OR total = 0;
+
+UPDATE books_rent_detail
+SET returned = 1
+WHERE ticket IN(1,2);
+
+SELECT * FROM books_rent_detail;
