@@ -14,6 +14,9 @@ h3,
 #header{
     margin: 0;
 }
+iframe{
+    border: 0;
+}
 .menu{
     padding: 0;
 }
@@ -128,7 +131,10 @@ table caption{
 /* Pie de Pagina */
 
     /* Mapa */
-
+    iframe{
+        width: 100%;
+        min-height: 280px;
+    }
     /* Formulario */
     #contact{
         display: flex;

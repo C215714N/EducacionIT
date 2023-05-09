@@ -14,7 +14,7 @@
     <!-- Navegacion -->
     <nav>
         <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li><a href="about.html">Acerca</a></li>
             <li><a href="#" class="active">Grupo</a></li>
             <li><a href="#contact">Contacto</a></li>
@@ -274,6 +274,61 @@
                             <td colspan="2">6-1</td>
                         </tr>
                     </table>
+                </div>
+            </section>
+        </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Son elementos graficos y audiovisuales que podemos incorporar dentro de una pagina web, <em>a partir de HTML5</em> cada uno de estos posee su propia etiqueta. Este tipo de elementos facilita la interpretacion de contenido y permite exponer datos de una forma mas visual. Cabe destacar que antiguamente se utilizaban <strong>plugins o complementos de terceros</strong> para reproducir este tipo de contenidos, pero en la actualidad los navegadores los reproducen nativamente.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Contenido Embebido?</h3>
+                </header>
+                <p>
+                    <em>Como se menciono anteriormente</em> antiguamente se necesitaba algun elemento externo para incorporar este tipo de contenido en la web. Actualmente podemos <em>traer elementos que se encuentren en otro sitios</em> utilizando la etiqueta <strong>&lt;iframe></strong>. A esto se le asigna la categoria <strong>EMBED</strong> que indica que dicho recurso fue compartido con permiso del publicador original del material.
+                </p>
+                <div class="example overflow">
+                    <iframe
+                        src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                        title="John Frusciante - Carvel"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                    <iframe 
+                        src="https://www.youtube.com/embed/szEjSfULWg4" 
+                        title="La CAIDA de THE OFFICE - #TeLoResumo" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                    <iframe 
+                        src="https://www.slideshare.net/slideshow/embed_code/key/N99OEOmKr35PsJ?startSlide=1" 
+                        title="HTML5 - Hatem Mahmoud"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    <em>Asi como se menciona al principio</em>, actualmente podemos incorporar este tipo de elementos, simplemente utilizando las etiquetas <strong>&lt;audio> y &lt;video></strong>. Estas con compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4 .webm, .ogv</em> respectivamente, ademas soportan atributos como <em>autoplay, muted, loop</em> para poder reproducir en contenido al cargar el sitio, silencia el elemento y repetir al finalizar.
+                </p>
+                <div class="example overflow">
+                    <video src="assets/media/wet-sand.webm" controls>
+                        <p>
+                            Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                        </p>
+                    </video>
+                    <video src="assets/media/by-the-way.ogv" autoplay muted loop>
+                        <p>
+                            Lo sentimos, pero tu navegador no es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/by-the-way.mp4">link</a>
+                        </p>
+                    </video>
                 </div>
             </section>
         </article>
