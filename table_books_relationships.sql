@@ -1,6 +1,8 @@
 /* 	DDL Data Manipulation Languages
 	Tablas Relacionales
 */
+
+## Libros por autores
 CREATE TABLE books_by_authors(
 	id INT AUTO_INCREMENT,
     book INT,
@@ -11,6 +13,7 @@ CREATE TABLE books_by_authors(
     FOREIGN KEY(author) REFERENCES authors(id)
 );
 
+## Libros por genero literario
 CREATE TABLE books_by_genres(
 	id INT AUTO_INCREMENT,
     book INT,
@@ -21,6 +24,7 @@ CREATE TABLE books_by_genres(
     FOREIGN KEY(genre) REFERENCES literary_genres(id)
 );
 
+## libros por editoriales
 CREATE TABLE books_by_publishers(
 	id INT AUTO_INCREMENT,
     book INT,
@@ -32,6 +36,7 @@ CREATE TABLE books_by_publishers(
     FOREIGN KEY(publisher) REFERENCES publishers(id)
 );
 
+## libros por año de lanzamiento
 CREATE TABLE books_by_years(
 	id INT AUTO_INCREMENT,
     book INT,
@@ -41,6 +46,7 @@ CREATE TABLE books_by_years(
     FOREIGN KEY(book) REFERENCES books(id)
 );
 
+## libros por numero de edicion
 CREATE TABLE books_by_editions(
 	id INT AUTO_INCREMENT,
     book INT,
@@ -57,12 +63,15 @@ INSERT INTO books_by_years(book, year) -- carga de datos
 SELECT id, edition FROM books -- carga todos los datos consultados
 WHERE length(edition) = 4; -- cantidad de digitos/caracteres
 
+# Insercion de datos con subconsulta
 INSERT INTO books_by_years(book,year)
 VALUES ((SELECT id FROM books WHERE description = "el fantasma de canterville"), 1887);
 
+# Funciones de seleccion por grupos
 SELECT edition, count(*), group_concat(description) FROM books
 GROUP BY edition;
 
+# campos calculados y condicion sobre los mismos
 SELECT 
 	ticket, 
     Count(*) AS cantidad, 
@@ -71,3 +80,36 @@ SELECT
 FROM books_rent_detail
 GROUP BY ticket
 HAVING total >= 12000;
+
+/* 
+	CONSULTAS
+*/
+
+INSERT INTO authors(description)
+VALUES  ('Pedro Sifontes'), ('Carlos Sabino'), ('Thomas L. Friedman'),
+        ('Robert Lawrence Stine'), ('Mary Shelley'), ('Oscar Wilde'),
+        ('Karl Marx'), ('Bram Stoker'), ('Friedrich Engels'),
+        ('Jose Hernandez'), ('Gabriel Garcia Marquez'), ('Miguel de Cervantes'),
+        ('Joanne K. Rowling​'), ('Julio Cortazar'), ('John Ronald Reuel Tolkien');
+
+### Insercion de datos con consulta y subconsulta
+INSERT INTO books_by_authors(book, author) -- agregamos a la tabla
+SELECT id, ( -- lista de resultados
+	SELECT id FROM authors -- busco el la tabla autores
+    WHERE description LIKE "%Sifontes%" -- id del autor cuyo apellido sea Sifontes
+) FROM books WHERE description LIKE "%la felicidad"; -- todos libros del autor
+
+## Carga simple por asignacion (asociacion)
+INSERT INTO books_by_authors
+SET book = (SELECT id FROM books WHERE description LIKE "DR_CULA"),
+	author = (SELECT id FROM authors WHERE description LIKE "%Bram%" AND description LIKE "%Stoker%");
+    
+/* Actualizacion Stock y Precio*/
+UPDATE books
+SET stock = ROUND(RAND() * 1000) -- un numero entero entre 0 y 1000 (asignacion)
+WHERE stock = 0; -- condicion que el stock sea 0 (comparacion)
+
+UPDATE books
+SET price = RAND() * 4000 + 2000 -- un numero entre 2000 y 6000
+WHERE price = 0; -- codicion donde el precio sea 0 (comparacion)
+
