@@ -103,13 +103,4 @@ SELECT id, ( -- lista de resultados
 INSERT INTO books_by_authors
 SET book = (SELECT id FROM books WHERE description LIKE "DR_CULA"),
 	author = (SELECT id FROM authors WHERE description LIKE "%Bram%" AND description LIKE "%Stoker%");
-    
-/* Actualizacion Stock y Precio*/
-UPDATE books
-SET stock = ROUND(RAND() * 1000) -- un numero entero entre 0 y 1000 (asignacion)
-WHERE stock = 0; -- condicion que el stock sea 0 (comparacion)
-
-UPDATE books
-SET price = RAND() * 4000 + 2000 -- un numero entre 2000 y 6000
-WHERE price = 0; -- codicion donde el precio sea 0 (comparacion)
 

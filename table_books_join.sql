@@ -1,11 +1,30 @@
-## INNER JOIN (Muestra los elementos en comun)
+/* DDL - Data Definition Language */
 ## eliminacion Columna ediction
-ALTER TABLE books
-DROP column edition;
+ALTER TABLE books -- tabla a modificar
+DROP column edition; -- columna a eliminar
+
+/* DML - Data Manipulation Language */
+## Insercion de nuevos usuarios
+INSERT INTO users(username, userpass)
+VALUES ('p3p3','jañsdlk'),('ju4n','2134c'),('l4ur4','dsfa2'),('c4m1l4','asld');
+
+## Actualizacion de telefonos
+UPDATE users_data
+SET phone = CONCAT(11, ROUND(RAND() * 89999999 + 10000000)); -- numeros aleatorios entre 1100000000 1199999999
+
+
+## CROSS JOIN (Muestra la combinacion de registros)
+SELECT u.username, b.description -- campos de ambas tablas
+FROM users AS u -- todos los registros de usuarios
+JOIN books AS b -- todos los registros de libros
+WHERE description LIKE "%\%%" AND username LIKE "%c%"
+ORDER BY username;
+
+## INNER JOIN (Muestra los elementos en comun)
 #### Todos los libros que posean año de publicacion
 SELECT 
 	b.id, description, stock, price, -- campos de tabla libros
-    year -- campos de tabla libros por año
+	year -- campos de tabla libros por año
 FROM books AS b
 JOIN books_by_years AS bby ON b.id = bby.book -- relacion entre tablas
 ORDER BY b.id;
@@ -29,9 +48,6 @@ JOIN books_rent_detail AS bd ON bd.ticket = br.id
 JOIN books AS b ON bd.book = b.id;
 
 ## OUTTER JOIN (Muestra todos los elementos de una tabla y solamente los que se relacionan de la otra)
-INSERT INTO users(username, userpass)
-VALUES ('p3p3','jañsdlk'),('ju4n','2134c'),('l4ur4','dsfa2'),('c4m1l4','asld');
-
 ### Usuarios que no hayan cargado sus datos
 SELECT username, u.id FROM users AS u -- todos los registros de usuarios
 LEFT JOIN users_data AS ud ON ud.userId = u.id -- datos que coincidan solamente
@@ -42,17 +58,28 @@ SELECT
 	u.id, username,
     -- tabla datos de usuario
     uid, -- cuil / documento / ruc / cedula 
-	CONCAT(last_name, " ", first_name) AS fullname,
-    CONCAT("tel: ", phone, " - correo: ", email) AS user_data
+	CONCAT(last_name, " ", first_name) AS fullname, -- apellido y nombre
+    CONCAT("tel: ", phone, " - correo: ", email) AS user_data -- datos de contacto (si existen)
 FROM users AS u
 RIGHT JOIN users_data AS ud ON ud.userId = u.id;
 
-## CROSS JOIN (Muestra la combinacion de registros)
 SELECT 
-	u.username,
-    b.description
-FROM users AS u
-JOIN books AS b
-WHERE description LIKE "%\%%" 
-AND username LIKE "%c%"
-ORDER BY username;
+	b.id,
+	b.description AS libro,
+    a.description AS autor
+FROM books AS b
+LEFT JOIN books_by_authors AS bba ON bba.book = b.id
+LEFT JOIN authors AS a ON a.id = bba.author
+HAVING autor IS NULL;
+
+SELECT 
+	ticket,
+    price * 0.05,
+    rent_date,
+    total AS valor_general,
+    a.description
+FROM books_rent_detail AS brd
+LEFT JOIN books_rent AS br ON br.id = brd.ticket
+LEFT JOIN books_by_authors AS bba ON bba.book = brd.book
+LEFT JOIN authors AS a ON a.id = bba.author;
+
