@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos HTML</title>
 </head>
-<body>
+<body style="font-family: Century Gothic, Calibri, sans-serif;">
     <!-- Encabezado Principal (Heading 1) -->
     <h1>Fundamentos Web</h1>
     <!-- Parrafos (Paragraph) -->
@@ -34,5 +34,47 @@
         <li>CSS</li>
         <li>JS</li>
     </ul>
+
+    <!-- Encabezado Nivel 3 (Heading 3) -->
+    <h3>HTML (HyperText Markup Language)</h3>
+    <p>
+        El Lenguaje de marcado de Hipertexto se utiliza para definir la estructura de una pagina web mediante etiquetas de identifican a cada uno de los elementos elementos de la pagina, asi como tambien, la funcion que cumplen. En este caso el orden de los factores altera el producto.
+        <!-- Salto de Linea (break) | huerfana -->
+        <br>
+        Este y muchos otros lenguajes que se utilizan en la web son definidos por la         
+        <!-- Strong (Contenido importante) -->
+        <strong>W3C (World Wide Web Consortium)</strong>, asi como tambien el 
+        <!-- Emphasys (Contenido Enfatizo) -->
+        <em>WHATWG (Web Hypertext Application Technology Working Group)</em> se encarga de definir las buenas practicas
+    </p>
+    <ul>
+        <li>
+            <strong>Elementos de Bloque</strong>
+            son aquellos que ocupan todo el ancho de su contenedor,
+            se les puede dar tamaño y generan salto de linea,
+            <em>Funcionan principalmente como contenedores</em>
+        </li>
+        <li>
+            <strong>Elementos de Linea</strong>
+            son aquellos que ocupan el ancho de su contenido,
+            su tamaño es automatico y comparten linea con otros elementos de su tipo,
+            <em>Funcionan principalmente como contenido</em>
+        </li>
+    </ul>
+    <!-- Capa (Division) | Elemento Presentacional -->
+    <div style="color:whitesmoke; background-color: darkslateblue; padding: 24px; max-width: 360px;">
+        <h3>CSS (Cascading StyleSheets)</h3>
+        <p>
+            Las hojas de estilo en cascada corresponden a un lenguaje de diseño grafico, que se utiliza para definir el aspecto de los elementos de la pagina. Utiliza selectores y reglas para afectar la estructura, en este caso, el orden de los factores no altera el producto.
+        </p>
+        <ul>
+            <li>
+                <strong>inline</strong> utilizamos el atributo style para definir las reglas css, tiene mayor prioridad pero es mas dificil de mantener.
+            </li>
+            <li>
+                <strong>inblock</strong> puede ser interno o externo y utiliza selectores que indican al navegador a que etiquetas les corresponde cada regla.
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
