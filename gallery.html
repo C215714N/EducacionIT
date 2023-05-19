@@ -28,6 +28,24 @@
     </header>
     <!-- Contenido Principal: Relevante para el usuario -->
     <main>
+        <h2>Imágenes</h2>
+        <p>
+            son elementos graficos que podemos incorporar en nuestra pagina web, los utilizamos con la etiqueta <strong>IMG</strong> y dentro de la misma debemos colocar por lo menos 2 atributos <em>src="..."</em> que indica donde se encuentra dicho recurso y <em>alt="..."</em> que muestra un texto alternativo en caso que la imagen no cargue, tambien facilita la accesibilidad.
+        </p>
+        <p>
+            Cuando utilizamos este tipo de elementos debemos tener en cuenta algunos criterios, con respecto a los nombres de los archivos, que nos evitaran futuros problemas y facilitaran la implementacion del contenido.
+        </p>
+        <ul>
+            <li>
+                <strong>Evitar el uso de caracteres especiales</strong> como el espacio, ya que el navegador los codifica y por lo tanto un archivo llamado <em>"foto 01.jpg"</em> se identificara como <em>"foto%2001.jpg"</em>. Una alternativa es <strong>el uso de guiones (_-)</strong>
+            </li>
+            <li>
+                <strong>Utilizar nombres descriptivos</strong> como <em>"background.jpg"</em> o <em>"perritos_jugando.jpg"</em> y evitar nombres automatizados como <em>"2023-05-19-2015100.jpg"</em> o genericos como <em>"foto_01.jpg"</em>
+            </li>
+            <li>
+                <strong>Nombrar los archivos solamente con minusculas</strong> para reducir el margen de error, debido a que los servidores son <em>caseSensitive</em> y por lo tanto, los siguientes, se consideran archivos diferentes <em>"background.jpg", "BACKGROUND.jpg", "Background.jpg"</em>
+            </li>
+        </ul>
         
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
