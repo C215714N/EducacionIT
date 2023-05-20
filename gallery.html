@@ -7,7 +7,76 @@
     <title>Fundamentos Web</title>
     <!-- Estilos CSS En Bloque -->
     <style>
-        
+        /* Selectores Generales */
+        body {
+            margin: 0; /*distancia con respecto a otras etiquetas*/
+            font-family: 'Calibri', 'Century Gothic', sans-serif;
+        }
+        main{
+            max-width: 960px;
+            margin: auto; /* calcula el margen sobre la distancia sobrante*/
+        }
+        h2{
+            border-bottom: 2px solid #224; /*width style color*/
+        }
+        img{
+            width: 100%;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer {
+            padding: 16px; /* relleno entre el borde y el contenido */
+            color: #eee; /*HEX: #rrggbb (00 - FF) */
+            background-color: #448; /* RGB(0 - 255) - 16.777.216 */
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav a{
+            color: rgb(204, 204, 204);
+            text-decoration: none;
+        }
+        nav ul{
+            padding: 0;
+            list-style: none;
+            background-color: #224;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :Pseudoclases instancia o caracteristica de un elemento */
+        nav li:hover{
+            background-color: #66c;
+        }
+        /* Selector de Clase (.class) */
+        .box{
+            padding: 24px;
+            background-color: #ccc;
+            text-align: center;
+        }
+        .box img{
+            max-width: 320px;
+        }
+        .float img{
+            max-width: 240px;
+        }
+        /* Selectores de Id (#id) */
+        #contact{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* Imagenes y Texto */
+        .float{
+            overflow: hidden;
+            border-radius: 8px;
+            padding: 24px;
+            color: #eee;
+            background-color: #333;
+        }
+        .float img{
+            float: left;
+            margin-right: 16px;
+        }
     </style>
 </head>
 <body>
