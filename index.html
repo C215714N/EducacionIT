@@ -95,6 +95,37 @@
                 </tbody>
             </table>
         </section>
+        <section>
+            <header>
+                <h2>Sistema de Grillas</h2>
+            </header>
+            <p>
+                Desde sus comienzos, bootstrap ofrece una reticula responsive de <strong>12 columnas basadas en porcentajes</strong>, que se aplican sobre los elementos de la pagina utilizando las clases <em>row</em> para el contendor de nuestra grilla y <em>col-n (n es un numero entre 1 y 12)</em> para indicar la cantidad de columnas que debe ocupar un elemento, es decir, que porcentaje de su contenedor.
+            </p>
+            <ul class="row | list-unstyled m-0">
+                <li class="col-1 | border">1</li>
+                <li class="col-8 | border">8</li>
+                <li class="col-3 | border">3</li>
+                <li class="col-2 | border">2</li>
+                <li class="col-4 | border">4</li>
+                <li class="col-6 | border">6</li>
+                <li class="col-5 | border">5</li>
+                <li class="col-7 | border">7</li>
+            </ul>
+            <p>
+                Si bien, podemos especificar un tamaño fijo para las columnas dentro de un contenedor, tambien podemos omitir esto utilizando la clase <strong>col</strong> e incluso adaptar la grilla utilizando los breakpoints previamente mencionados. Por ejemplo, si necesito que una columna ocupe la mitad del contenedor en pantallas medianas y un cuarto del mismo en pantallas extra grandes, utilizariamos las clases <strong>col-md-6 col-xl-3</strong>
+            </p>
+            <ul class="row | list-unstyled">
+                <li class="col-md-6 col-xl-3 | border">col-md-6 col-xl-3</li>
+                <li class="col-md-6 | border">col-md-6</li>
+                <li class="col-lg-3 | border">col-lg-3</li>
+                <li class="col-sm-6 col-lg-9 | border">col-sm-6 col-lg-9</li>
+                <li class="col-sm-3 | border">col-sm-3</li>
+                <li class="col-sm offset-md-4 | border">col-sm</li>
+                <li class="col-md | border">col-md</li>
+                <li class="col-lg | border">col-lg</li>
+            </ul>
+        </section>
     </main>
     <!-- Pie de pagina -->
     <footer id="footer">
