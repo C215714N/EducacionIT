@@ -45,57 +45,55 @@
             <p>
                 Una de las caracteristicas principales de este framework radica en el uso de <strong>puntos de quiebre de pantalla</strong>, es decir, unidades o tamaños en los que nuestros estilos pueden verse dispuestos a modificaciones. Para implementarlos debemos agregar a las clases las siglas que corresponde a dicho punto de quiebre, de lo contrario los estilos corresponden a todos los tamaños de pantalla.
             </p>
-            <div>
-                <table>
-                    <caption>breakpoints</caption>
-                    <thead>
-                        <tr>
-                            <th>name</th>
-                            <th>device-width</th>
-                            <th>max-width</th>
-                            <th>device</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>xs</td>
-                            <td>&lt;576px</td>
-                            <td>100%</td>
-                            <td>smartwatch</td>
-                        </tr>
-                        <tr>
-                            <td>sm</td>
-                            <td>&GreaterEqual;576px & &lt;768px</td>
-                            <td>540px</td>
-                            <td>smartphone</td>
-                        </tr>
-                        <tr>
-                            <td>md</td>
-                            <td>&GreaterEqual;768px & &lt;992px</td>
-                            <td>720px</td>
-                            <td>tablets</td>
-                        </tr>
-                        <tr>
-                            <td>lg</td>
-                            <td>&GreaterEqual;992px & &lt;1200px</td>
-                            <td>960px</td>
-                            <td>laptop</td>
-                        </tr>
-                        <tr>
-                            <td>xl</td>
-                            <td>&GreaterEqual;1200px & &lt;1400px</td>
-                            <td>1140px</td>
-                            <td>hd desktop</td>
-                        </tr>
-                        <tr>
-                            <td>xxl</td>
-                            <td>&GreaterEqual;1400px</td>
-                            <td>1320px</td>
-                            <td>smart Tv</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table class="table table-striped table-dark">
+                <caption>breakpoints</caption>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>device-width</th>
+                        <th>max-width</th>
+                        <th class="d-none d-sm-block">device</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xs</td>
+                        <td>&lt;576px</td>
+                        <td>100%</td>
+                        <td class="d-none d-sm-block">smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td>&GreaterEqual;576px &lt;768px</td>
+                        <td>540px</td>
+                        <td class="d-none d-sm-block">smartphone</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>&GreaterEqual;768px &lt;992px</td>
+                        <td>720px</td>
+                        <td class="d-none d-sm-block">tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>&GreaterEqual;992px &lt;1200px</td>
+                        <td>960px</td>
+                        <td class="d-none d-sm-block">laptop</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>&GreaterEqual;1200px &lt;1400px</td>
+                        <td>1140px</td>
+                        <td class="d-none d-sm-block">hd desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>&GreaterEqual;1400px</td>
+                        <td>1320px</td>
+                        <td class="d-none d-sm-block">smart Tv</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <!-- Pie de pagina -->
