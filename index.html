@@ -21,13 +21,82 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header id="header">
+    <header id="header" class="header">
         <h1>Bootstrap</h1>
         <p>Responsive Web Design</p>
     </header>
     <!-- Contenido Principal -->
-    <main>
-
+    <main class="container">
+        <section>
+            <header class="header">
+                <h2>Introduccion a Bootstrap</h2>
+            </header>
+            <p class="my-2 mx-5 p-3 bg-primary">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate exercitationem id accusantium rem provident quidem tenetur molestias odit possimus odio eum facere omnis vitae fugit quos, sapiente consequatur quasi minus.
+            </p>
+            <p class="m-2 p-3 fs-5 bg-secondary">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo exercitationem, impedit minima molestias dolor laboriosam? Eum, temporibus, labore quasi voluptates quibusdam quas illo perferendis est nisi laboriosam dolorem atque sint?
+            </p>
+        </section>
+        <section>
+            <header>
+                <h2>Breakpoints</h2>
+            </header>
+            <p>
+                Una de las caracteristicas principales de este framework radica en el uso de <strong>puntos de quiebre de pantalla</strong>, es decir, unidades o tamaños en los que nuestros estilos pueden verse dispuestos a modificaciones. Para implementarlos debemos agregar a las clases las siglas que corresponde a dicho punto de quiebre, de lo contrario los estilos corresponden a todos los tamaños de pantalla.
+            </p>
+            <div>
+                <table>
+                    <caption>breakpoints</caption>
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>device-width</th>
+                            <th>max-width</th>
+                            <th>device</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>xs</td>
+                            <td>&lt;576px</td>
+                            <td>100%</td>
+                            <td>smartwatch</td>
+                        </tr>
+                        <tr>
+                            <td>sm</td>
+                            <td>&GreaterEqual;576px & &lt;768px</td>
+                            <td>540px</td>
+                            <td>smartphone</td>
+                        </tr>
+                        <tr>
+                            <td>md</td>
+                            <td>&GreaterEqual;768px & &lt;992px</td>
+                            <td>720px</td>
+                            <td>tablets</td>
+                        </tr>
+                        <tr>
+                            <td>lg</td>
+                            <td>&GreaterEqual;992px & &lt;1200px</td>
+                            <td>960px</td>
+                            <td>laptop</td>
+                        </tr>
+                        <tr>
+                            <td>xl</td>
+                            <td>&GreaterEqual;1200px & &lt;1400px</td>
+                            <td>1140px</td>
+                            <td>hd desktop</td>
+                        </tr>
+                        <tr>
+                            <td>xxl</td>
+                            <td>&GreaterEqual;1400px</td>
+                            <td>1320px</td>
+                            <td>smart Tv</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
     <!-- Pie de pagina -->
     <footer id="footer">
@@ -70,8 +139,7 @@
         <p class="under"></p>
     -->
 
-    <!-- 
-        Ejemplo: EMMET
+    <!-- Ejemplo: EMMET
         (nav#nav>a{Bootstrap}+button.btn+ul>li*4>a{Link $})+(header#header>h1{Bootstrap}+p{Responsive Web Design})+(main)+(footer>(.social>a*4[target="_blank"])+p{&copy;2023 Todos los derechos reservados}) 
     -->
 </body>
