@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,5 +32,52 @@
         <li>CSS</li>
         <li>JS</li>
     </ul>
+    <h3>HTML (HyperText Markup Language)</h3>
+    <p>
+        Lenguaje de marcado de hipertexto que utiliza etiquetas para identicar la funcion que cumple cada uno de los elementos de la pagina.
+        <!-- Salto de Linea (Break) -->
+        <br>
+        Las etiquetas poseen atributos que podemos indicar dentro de las mismas y cuando utilizamos las mismas dentro de la pagina, el orden de los factores altera el producto.
+    </p>
+    <p>
+        Existen diferentes tipo de etiquetas, la mayoria posee carga semantica, es decir, especifican el tipo de elemento que estamos estamos incorporando; pero existen algunas que se utilizan en funcion del diseño, a estas estas etiquetas se las conoce como presentacionales.
+
+        Ambos grupos se pueden catalogar de la siguiente manera:
+    </p>
+    <ul>
+        <li>
+            <!-- Importante (strong) -->
+            <strong>Etiquetas de Bloque</strong>
+            son aquellas que ocupan todo el ancho de su contenedor, 
+            se les puede dar tamaño y generan salto de linea.
+            <!-- Enfasis (emphasys) -->
+            <em>Funcionan principalmente como contenedores.</em>
+        </li>
+        <li>
+            <strong>Etiquetas de Linea</strong>
+            son aquellas que comparten espacio con otras de su tipo,
+            su tamaño es automatico y por defecto no se modifica.
+            <em>Funcionan principalmente como contenido</em>
+        </li>
+    </ul>
+    <!-- Capa (Division) | Bloque -->
+    <div>
+        <h3>CSS (Cascading StyleSheets)</h3>
+        <p>
+            <!-- Expandir (Span) | Linea -->
+            <span>L</span>as hojas de estilo en cascada corresponden a un lenguaje de diseño grafico, que utiliza <em>selectores y reglas</em> para definir la apariencia y representacion de las etiquetas que componen la pagina web.
+        </p>
+        <p>
+            En el caso de css, el orden de los factores no altera el producto, pero debemos tener en cuenta que el navegador dara mayor o menor prioridad al estilo segun como se implemente dentro de la pagina web.
+        </p>
+        <ul>
+            <li>
+                <strong>en linea</strong> el codigo se escribe dentro de la etiqueta html utilizando el atributo <em>style="..."</em>. Es el estilo con mayor prioridad, pero es mucho mas dificil de mantener.
+            </li>
+            <li>
+                <strong>en bloque</strong> el codigo se escribe separado del html, ya sea utilizando la etiqueta <em>style</em> o en un archivo css. Es mas facil de implementar, pero tiene menor prioridad comparado con el anterior.
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
