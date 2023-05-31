@@ -163,6 +163,41 @@
     </main>
     <!-- Pie de pagina -->
     <footer id="footer">
+        <!-- Mapa de Contacto -->
+
+        <!-- Formulario de Contacto -->
+        <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input class="form-control" 
+                id="contact_name" 
+                name="name"
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z]{3,50}"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
+            
+            <label for="contact_email">Ingrese su Correo</label>
+            <input class="form-control"
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): CristianDRacedo@hotmail.com"
+                required>
+
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea class="form-control"
+                id="contact_consult" 
+                name="consult"
+                minlength="30"
+                maxlength="1500"
+                placeholder="Consulta(*): Buenas, necesito un presupuesto"
+                required></textarea>
+
+            <button class="btn btn-outline-dark">enviar</button>
+        </form>
         <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
     <!-- Bootstrap JS -->
