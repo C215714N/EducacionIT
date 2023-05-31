@@ -169,8 +169,7 @@
         <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3 | was-validated">
             <!-- Nombre -->
             <h2>Dejanos tu consulta</h2>
-            <fieldset>
-                <label for="contact_name">Ingrese su Nombre</label>
+            <fieldset class="form-floating">
                 <input class="form-control" 
                     id="contact_name" 
                     name="name"
@@ -178,7 +177,8 @@
                     maxlength="50"
                     pattern="[A-Z a-z]{3,50}"
                     placeholder="Nombre(*): Cristian Racedo"
-                    required>
+                    required>                
+                <label for="contact_name">Ingrese su Nombre</label>
                 <p class="invalid-feedback">
                     Utilice solamente letras, entre 3 y 50 caracteres
                 </p>
@@ -187,8 +187,7 @@
                 </p>
             </fieldset>
             <!-- Correo -->
-            <fieldset>
-                <label for="contact_email">Ingrese su Correo</label>
+            <fieldset class="form-floating">
                 <input class="form-control"
                     id="contact_email"
                     name="email"
@@ -196,6 +195,7 @@
                     minlength="8"
                     placeholder="Correo(*): CristianDRacedo@hotmail.com"
                     required>
+                <label for="contact_email">Ingrese su Correo</label>
                 <p class="invalid-feedback">
                     ingrese al menos 8 caracteres respetando la estructura "usuario@servidor"
                 </p>
@@ -204,8 +204,7 @@
                 </p>
             </fieldset>
             <!-- Textarea -->
-            <fieldset>
-                <label for="contact_consult">Ingrese su Consulta</label>
+            <fieldset class="form-floating">
                 <textarea class="form-control"
                     id="contact_consult" 
                     name="consult"
@@ -213,6 +212,7 @@
                     maxlength="1500"
                     placeholder="Consulta(*): Buenas, necesito un presupuesto"
                     required></textarea>
+                <label for="contact_consult">Ingrese su Consulta</label>
                 <p class="invalid-feedback">
                     su consulta debe poseer como minimo 30 caracteres y maximo 1500
                 </p>
@@ -220,7 +220,7 @@
                     responderemos tu consulta a la brevedad
                 </p>
             </fieldset>
-            <button class="btn btn-outline-dark">enviar</button>
+            <button class="btn btn-outline-dark | d-block ms-auto text-uppercase">enviar</button>
         </form>
         <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
