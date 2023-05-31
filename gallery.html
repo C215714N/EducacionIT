@@ -5,11 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS -->
+    <style>
+        /* Selectores Generales */
+        body{
+            font-family: 'segoe ui','century gothic', sans-serif;
+            margin: 0;
+        }
+        img{
+            width: 100%;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 24px;
+            color: #eee;
+            background-color: #a22; /* RGB(0-255) - HEX #rrggbb */
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #822;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* Psedoclases: Instancia o caracteristica de un elemento */
+        nav li:hover{ /* al pasar el mouse por encima */
+            background-color: #c33;
+        }
+        /* clases (.class) */
+        .box{
+            padding: 24px;
+            background-color: #eca;
+        }
+        div.box{
+            text-align: center;
+        }
+        .box img{
+            max-width: 320px;
+        }
+        /* id (#id) */
+        #contact{
+            color: #ccc;
+            font-weight: bold;
+        }
+        /* Imagenes y Texto */
+        .float{
+            margin: 8px;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #ccc;
+            overflow: hidden;
+        }
+        .float img{
+            max-width: 240px;
+            margin-right: 16px;
+            float: left;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera: Contenido Introductorio -->
     <header>
-        <h1>Fundamentos Web</h1>
+        <h1 >Fundamentos Web</h1>
         <p>HTML y CSS</p>
         <!-- Navegacion: Links mas Importantes -->
         <nav>
@@ -63,11 +130,11 @@
             <img src="assets/img/jjba-kingcrimson-04.jpg" alt="Dibujo JoJo's Bizarre Adventure King Crimson">
         </div>
         <h3>Imágenes y Texto</h3>
-        <p>
+        <p class="float">
             <img src="assets/bg/osx-big-sur-light.jpg" alt="Imagen de Fondo OS X Big Sur Light">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, vel. Itaque numquam omnis obcaecati totam perferendis molestiae blanditiis provident, quasi in illo rerum iste quo consequatur esse a dolores nobis, autem, necessitatibus unde molestias. Quibusdam et ipsum, perspiciatis est laboriosam pariatur reprehenderit! Ducimus inventore aut expedita maxime omnis doloribus autem quibusdam, deserunt, repellat quo ea, corrupti veritatis non ex ipsum saepe ullam exercitationem recusandae ratione! Dolorem modi recusandae eum nihil, pariatur totam quos est commodi, omnis qui culpa, iusto nam. Ipsa repellat rerum accusantium neque vel error mollitia accusamus, magni, est a itaque earum veniam nihil temporibus unde blanditiis beatae!
         </p>
-        <p>
+        <p class="float">
             <img src="assets/bg/osx-big-sur-dark.jpg" alt="Imagen de Fondo OS X Big Sur Dark">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim distinctio iusto pariatur, labore corrupti voluptate aspernatur deleniti quae consequuntur maiores totam placeat modi delectus cumque explicabo facilis optio sed sequi, ab harum cum magnam molestiae asperiores. A voluptatibus reprehenderit neque delectus molestiae maiores et numquam. Eum impedit dolores deleniti reprehenderit veritatis dolorem, sit dignissimos. Aliquam nobis fugiat aperiam commodi accusantium, architecto harum consectetur vitae excepturi perspiciatis quos fuga eligendi cumque, tempore porro suscipit sed unde, eos quod nisi ab. At accusantium repellendus saepe ducimus quod veniam perferendis eius quisquam, quam veritatis fugiat provident dolor exercitationem debitis eaque, molestiae placeat est!
         </p>
