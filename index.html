@@ -164,38 +164,62 @@
     <!-- Pie de pagina -->
     <footer id="footer">
         <!-- Mapa de Contacto -->
-
+        ~
         <!-- Formulario de Contacto -->
-        <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3">
+        <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3 | was-validated">
+            <!-- Nombre -->
             <h2>Dejanos tu consulta</h2>
-            <label for="contact_name">Ingrese su Nombre</label>
-            <input class="form-control" 
-                id="contact_name" 
-                name="name"
-                type="text"
-                maxlength="50"
-                pattern="[A-Z a-z]{3,50}"
-                placeholder="Nombre(*): Cristian Racedo"
-                required>
-            
-            <label for="contact_email">Ingrese su Correo</label>
-            <input class="form-control"
-                id="contact_email"
-                name="email"
-                type="email"
-                minlength="8"
-                placeholder="Correo(*): CristianDRacedo@hotmail.com"
-                required>
-
-            <label for="contact_consult">Ingrese su Consulta</label>
-            <textarea class="form-control"
-                id="contact_consult" 
-                name="consult"
-                minlength="30"
-                maxlength="1500"
-                placeholder="Consulta(*): Buenas, necesito un presupuesto"
-                required></textarea>
-
+            <fieldset>
+                <label for="contact_name">Ingrese su Nombre</label>
+                <input class="form-control" 
+                    id="contact_name" 
+                    name="name"
+                    type="text"
+                    maxlength="50"
+                    pattern="[A-Z a-z]{3,50}"
+                    placeholder="Nombre(*): Cristian Racedo"
+                    required>
+                <p class="invalid-feedback">
+                    Utilice solamente letras, entre 3 y 50 caracteres
+                </p>
+                <p class="valid-feedback">
+                    Felicitaciones, su nombre ha sido validado
+                </p>
+            </fieldset>
+            <!-- Correo -->
+            <fieldset>
+                <label for="contact_email">Ingrese su Correo</label>
+                <input class="form-control"
+                    id="contact_email"
+                    name="email"
+                    type="email"
+                    minlength="8"
+                    placeholder="Correo(*): CristianDRacedo@hotmail.com"
+                    required>
+                <p class="invalid-feedback">
+                    ingrese al menos 8 caracteres respetando la estructura "usuario@servidor"
+                </p>
+                <p class="valid-feedback">
+                    Muchas gracias, la direccion de correo ha sido verificada
+                </p>
+            </fieldset>
+            <!-- Textarea -->
+            <fieldset>
+                <label for="contact_consult">Ingrese su Consulta</label>
+                <textarea class="form-control"
+                    id="contact_consult" 
+                    name="consult"
+                    minlength="30"
+                    maxlength="1500"
+                    placeholder="Consulta(*): Buenas, necesito un presupuesto"
+                    required></textarea>
+                <p class="invalid-feedback">
+                    su consulta debe poseer como minimo 30 caracteres y maximo 1500
+                </p>
+                <p class="valid-feedback">
+                    responderemos tu consulta a la brevedad
+                </p>
+            </fieldset>
             <button class="btn btn-outline-dark">enviar</button>
         </form>
         <p>&copy;2023 Todos los derechos reservados</p>
