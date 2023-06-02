@@ -29,13 +29,24 @@
                 <h2>Formularios HTML</h2>
             </header>
             <p>
-                Son herramientas que permiten el intercambio de datos entre cliente y servidor
+                Son herramientas que permiten el intercambio de datos entre cliente y servidor. Para implementarlos dentro de la pagina debemos utilizar la etiqueta <strong>&lt;form></strong> y dentro de la misma colocar los elementos que se procesaran cuando se realice el envio de los datos.
             </p>
             <!-- Seccion: Contenido que depende del contexto -->
             <section>
                 <header>
                     <h3>¿Cómo funcionan?</h3>
                 </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos colocarle al menos 2 atributos, <strong>action="..."</strong> que indica que sucede al momento de realizar el envio y <strong>method="..."</strong> que especifica como deben procesarse los datos que seran enviados, para este ultimo los valores mas comunes son:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET</strong>: Metodo que prioriza la respuesta del servidor, ya que envia los datos en texto plano y los mismos permanecen visibles en la barra de direcciones. Se utiliza <em>principalmente en formulario de Busqueda</em>
+                    </li>
+                    <li>
+                        <strong>POST</strong>: Metodo que prioriza la seguridad de los datos, debido a que cifra los mismos antes de realizar el envio y por lo tanto es mas lento. Se utiliza en formularios de <em>registro, acceso, contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
@@ -45,6 +56,31 @@
         </article>
     </main>
     <!-- Pie de Pagina -->
+    <footer>
+        <!-- formulario de Contacto -->
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu Consulta</h2>
+            <!-- Campo Nombre -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text">
+            <!-- Campo Correo -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email">
+            <!-- Boton Enviar -->
+            <input type="submit">
+        </form>
+        <!-- Redes Sociales -->
 
+        <!-- Mapa de Contacto -->
+
+        <!-- Derechos de Autor -->
+        <p>&copy;2023 Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
