@@ -29,13 +29,24 @@
                 <h2>Formularios HTML</h2>
             </header>
             <p>
-                Son herramientas que permiten el intercambio de datos entre cliente y servidor
+                Son herramientas que permiten el intercambio de datos entre cliente y servidor. Para incorporarlos dentro de la pagina solamente debemos utilizar la etiqueta <strong>&lt;form></strong> y dentro de la misma colocar los elementos que seran procesados para el envio de los datos.
             </p>
             <!-- Seccion: Contenido que depende del contexto -->
             <section>
                 <header>
                     <h3>¿Como funcionan?</h3>
                 </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos colocarle al menos 2 atributos. <strong>action="..."</strong> que indica lo que debe suceder cuando se realiza el envio; y <strong>method="..."</strong> que especifica como se realiza el mismo. Los valores mas comunes de method son los siguientes:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET:</strong> la prioridad radica en la respuesta del servidor, los datos se envian en texto plano y la informacion es visible desde la barra de direcciones. Este metodo <em>se utiliza en buscadores.</em>
+                    </li>
+                    <li>
+                        <strong>POST:</strong> la prioridad es proteger los datos enviados, por eso se cifran antes de realizar el envio, y por lo tanto es mas lento. Este metodo se utiliza en formularios de <em>registro, acceso, contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
