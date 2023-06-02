@@ -57,7 +57,53 @@
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
+        <!-- formulario de contacto -->
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu Consulta</h2>
+            <!-- Campo Nombre -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                minlength="2"
+                maxlength="50"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
+            <!-- Campo Email -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): CristianDRacedo@hotmail.com"
+                required>
+            <!-- Campo de Seleccion de Asunto -->
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Diseño Grafico con CSS</option>
+                <option value="js">Funcionalidad/Logica con JS</option>
+            </select>
+            <!-- Campo de Consulta -->
+            <label for="contact_consult"></label>
+            <textarea 
+                id="contact_consult"
+                name="consult"
+                minlength="30"
+                maxlength="1500"
+                placeholder="Consulta(*): Buenas, necesito un presupuesto..."
+                required></textarea>
+            <!-- Boton Enviar -->
+            <input type="submit" value="ENVIAR">
+        </form>
+        <!-- Redes sociales -->
 
+        <!-- Mapa de Contacto -->
+
+        <!-- Derechos de autor -->
+        <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
