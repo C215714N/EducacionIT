@@ -58,20 +58,43 @@
     <!-- Pie de Pagina -->
     <footer>
         <!-- formulario de Contacto -->
-        <form id="contact" action="" method="">
+        <form id="contact" action="scripts/contact.php" method="POST" onsubmit="alert('gracias por enviar su consulta')">
             <h2>Dejanos tu Consulta</h2>
             <!-- Campo Nombre -->
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
                 id="contact_name"
                 name="name"
-                type="text">
+                type="text"
+                minlength="2"
+                maxlength="50"
+                placeholder="Nombre(*): Cristian Racedo"
+                required>
             <!-- Campo Correo -->
             <label for="contact_email">Ingrese su Correo</label>
             <input 
                 id="contact_email"
                 name="email"
-                type="email">
+                type="email"
+                minlength="8"
+                placeholder="Correo(*): CristianDRacedo@hotmail.com"
+                required>
+            <!-- Campo de Seleccion de Asunto -->
+            <label for="contact_subject">Elija el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Diseño Grafico con CSS</option>
+                <option value="js">Logica/Funcionalidad con JS</option>
+            </select>
+            <!-- Campo de Consulta -->
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="consult"
+                minlength="30"
+                maxlength="1500"
+                placeholder="Consulta(*): Buenas, necesito un presupuesto..."
+                required></textarea>
             <!-- Boton Enviar -->
             <input type="submit">
         </form>
