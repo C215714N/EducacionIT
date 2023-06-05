@@ -24,9 +24,56 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header id="header" class="header">
-        <h1>Bootstrap</h1>
-        <p>Responsive Web Design</p>
+    <header id="header" class="carousel slide | bg-dark bg-gradient">
+        <!-- Indicadores Carousel -->
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#header" data-bs-slide-to="0"></button>
+            <button data-bs-target="#header" data-bs-slide-to="1"></button>
+            <button data-bs-target="#header" data-bs-slide-to="2"></button>
+        </div>
+        <!-- Galeria Carousel -->
+        <ul class="carousel-inner | list-unstyled">
+            <li class="carousel-item active">
+                <img class="w-100 d-none d-lg-block | opacity-75"  
+                    src="assets/bg/ubuntu-focal-fossa.jpg" 
+                    alt="Imagen de Fondo Linux Focal Fossa">
+                <img class="w-100 d-lg-none | opacity-75" 
+                    src="assets/bg/osx-mavericks.jpg" 
+                    alt="Imagen de Fondo OS X Mavericks">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 d-none d-lg-block | opacity-75"  
+                    src="assets/bg/ubuntu-groovy-gorilla.jpg" 
+                    alt="Imagen de Fondo Linux Groovy Gorilla">
+                <img class="w-100 d-lg-none | opacity-75" 
+                    src="assets/bg/osx-mojave-night.jpg" 
+                    alt="Imagen de Fondo OS X Mojave Night">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100 d-none d-lg-block | opacity-75"  
+                    src="assets/bg/ubuntu-hisurte-hippo.jpg" 
+                    alt="Imagen de Fondo Linux Hisurte Hippo">
+                <img class="w-100 d-lg-none | opacity-75" 
+                    src="assets/bg/osx-el-capitan.jpg" 
+                    alt="Imagen de Fondo OS X El Capitan">
+            </li>
+        </ul>
+        <!-- Controles Carousel -->
+        <button class="carousel-control-prev"
+            data-bs-slide="prev"
+            data-bs-target="#header">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next"
+            data-bs-slide="next"
+            data-bs-target="#header">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <!-- Encabezado Principal -->
+        <div class="position-absolute top-50 start-50 translate-middle | text-uppercase text-center text-light ">
+            <h1 class="display-1 fw-bold">Bootstrap</h1>
+            <p class="h1">Responsive Web Design</p>
+        </div>
     </header>
     <!-- Contenido Principal -->
     <main class="container">
