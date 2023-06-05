@@ -13,6 +13,8 @@ Esto es una guia teorico-practica para los alumnos de la capacitacion CCNA1 que 
 ## Tabla de contenidos
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
+* [Verificacion de Topologia](#verificacion-de-topologia)
+* [Enrutamiento Estatico](#enrutamiento-estatico)
 
 ## configuracion inicial
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
