@@ -166,10 +166,10 @@
         <!-- Mapa de Contacto -->
         ~
         <!-- Formulario de Contacto -->
-        <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3 | was-validated">
+        <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3">
             <!-- Nombre -->
             <h2>Dejanos tu consulta</h2>
-            <fieldset class="form-floating">
+            <fieldset class="form-floating my-2">
                 <input class="form-control" 
                     id="contact_name" 
                     name="name"
@@ -187,7 +187,7 @@
                 </p>
             </fieldset>
             <!-- Correo -->
-            <fieldset class="form-floating">
+            <fieldset class="form-floating my-2">
                 <input class="form-control"
                     id="contact_email"
                     name="email"
@@ -204,7 +204,7 @@
                 </p>
             </fieldset>
             <!-- Textarea -->
-            <fieldset class="form-floating">
+            <fieldset class="form-floating my-2">
                 <textarea class="form-control"
                     id="contact_consult" 
                     name="consult"
@@ -226,6 +226,36 @@
     </footer>
     <!-- Bootstrap JS -->
     <script src="scripts/bootstrap.bundle.js"></script>
+    <script type="text/javascript">
+        const controls = document.querySelectorAll('.form-control');
+        const isText = /^\D{1,}$/
+
+        function check(action, element, className){
+            switch (action){
+                case 'ADD':
+                    element.classList.add(className);
+                break;
+                case 'REMOVE':
+                    element.classList.remove(className)
+                break;
+                case 'REPLACE':
+                    element.classList.add(className[0])
+                    element.classList.remove(className[1])
+                break;
+            }
+        }
+        
+        controls.forEach( control => control.addEventListener('input', (e) => {
+            const feedback = ['is-valid', 'is-invalid'];
+            if(e.target.value.length >= 3){
+                control.checkValidity() ? 
+                    check('REPLACE', control, feedback) : 
+                    check('REPLACE', control, feedback.reverse())
+            } else {
+                feedback.forEach(cN => check('REMOVE', control, cN));
+            }
+        }))
+    </script>
     <!-- EMMET 
         # padre>hijo
         ul>li
