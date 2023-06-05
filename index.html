@@ -162,11 +162,15 @@
         </section>
     </main>
     <!-- Pie de pagina -->
-    <footer id="footer">
+    <footer id="footer" class="position-relative bg-dark bg-gradient | pt-5 pb-3">
         <!-- Mapa de Contacto -->
-        ~
+        <iframe class="position-absolute top-0 w-100 h-100 | opacity-50"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0701119751975!2d-58.378511025066445!3d-34.60238855742663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1685972606074!5m2!1ses-419!2sar" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <!-- Formulario de Contacto -->
-        <form class="container | col-md-8 col-lg-6 col-xxl-4 | shadow-lg | rounded pt-5 px-4 pb-3">
+        <form class="container | col-md-8 col-lg-6 col-xxl-4 | position-relative bg-light shadow-lg | rounded pt-5 px-4 pb-3">
             <!-- Nombre -->
             <h2>Dejanos tu consulta</h2>
             <fieldset class="form-floating my-2">
@@ -222,7 +226,7 @@
             </fieldset>
             <button class="btn btn-outline-dark | d-block ms-auto text-uppercase">enviar</button>
         </form>
-        <p>&copy;2023 Todos los derechos reservados</p>
+        <p class="position-relative w-100 | btn btn-dark | my-3 rounded-0 p-3">&copy;2023 Todos los derechos reservados</p>
     </footer>
     <!-- Bootstrap JS -->
     <script src="scripts/bootstrap.bundle.js"></script>
