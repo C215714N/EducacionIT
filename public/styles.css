@@ -1,7 +1,19 @@
 @charset 'UTF-8' ;
 
+/* Paletas de colores : https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c */
+
+:root {
+    --c_red600 :        #ef476f ;
+    --c_yellow600 :     #ffd166 ;
+    --c_green600 :      #06d6a0 ;
+    --c_green800 :      #118ab2 ;
+    --c_green900 :      #073b4c ;
+
+    --fontBase :        16px ;
+}
+
 html {
-  font-size : 16px ;
+  font-size :           var( --fontBase ) ;
   font-weight : 400 ;
   line-height : 1.5 ;
 
@@ -9,24 +21,70 @@ html {
   font-family: 'Lato', sans-serif;
 } 
 
+.Body {
+    max-width :                 1400px ;
+
+    display :           grid ;
+    grid-template-rows :        15vh 65vh 20vh ;
+    grid-template-columns :     repeat( 6, 1fr ) ;
+    grid-template-areas: 
+        ". Header Header Header Header Header"
+        "Aside Main Main Main Main Main"
+        "Aside Footer Footer Footer Footer Footer"
+        ;
+}
+
 /* Comienzo Header */
 .Header {
+    grid-area: Header ;
+
+    background-color :  var( --c_red600 ) ;
 }
 
 .Header .section {
+    height :            100% ;
+    width :             100% ;
 }
 
-.Header .section .article {}
+.Header .section .article {
+    height :            100% ;
+    width :             100% ;
+}
+
+.Header .section .article .navbar {
+    height :            inherit ;
+    width :             inherit;
+
+    display :           flex ;
+    flex-direction :    row ;
+    flex-wrap :         nowrap ;
+    justify-content :   space-around ;
+    align-items :       center ;
+}
+
+.Header .section .article .navbar .navbar__menu {
+    display :           inline-flex ;
+    flex-direction :    row ;
+    gap :               2rem ;
+}
 
 /* Comienzo Aside */
-.Aside {}
+.Aside {
+    grid-area :         Aside ;
+
+    background-color :  var( --c_yellow600 ) ;
+}
 
 .section {}
 
 .section .article {}
 
 /* Comienzo Main */
-.Main {}
+.Main {
+    grid-area :         Main ;
+
+    background-color :  var( --c_green600 ) ;
+}
 
 .Main .section {}
 
@@ -34,7 +92,11 @@ html {
 
 
 /* Comienzo Footer */
-.Footer {}
+.Footer {
+    grid-area :         Footer ;
+
+    background-color :  var( --c_green900 );
+}
 
 .Footer .section {}
 
