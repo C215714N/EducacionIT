@@ -1,0 +1,37 @@
+@charset 'UFT-8';
+
+html {
+    font-size :     18px ;
+    font-weight :   400 ;
+    line-height :   1.5 ;
+}
+
+/* Comienzo Body */
+.Body {
+    max-width : 1400px ;
+
+    background-color: red ;
+}
+
+/* Comienzo del Header */
+.Header {}
+
+
+/* Comienzo Aside */
+.Aside {}
+
+
+/* Comienzo Main */
+.Main {}
+
+
+/* Comienzo Footer */
+.Footer {}
+
+
+/* MediaQuery */
+@media screen and ( max-width : 375px ){
+    .Body {
+        background-color: green ;
+    }
+}
