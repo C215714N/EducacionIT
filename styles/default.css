@@ -24,7 +24,39 @@
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
-
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+        border-radius: 8px;
+        padding: 24px; /* top right bottom left*/
+        background-color: #eee;
+        box-shadow: -4px 4px 16px #999; /* -x+ -y+ blur color*/
+    }
+    label{
+        margin-top: 8px;
+    }
+    input,
+    textarea,
+    select{
+        font-size: 16px;
+        padding: 8px 16px; /* top right bottom left*/
+    }
+    textarea{
+        resize: vertical;
+        min-height: 80px;
+    }
+    .btn{
+        cursor: pointer;
+        border: 1px solid #448;
+        color: #eee;
+        background-color: #448;
+        font-weight: bold;
+    }
+    .btn:hover{
+        background-color: #66c;
+    }
     /* Redes Sociales */
 
     /* Mapa de Contacto */
