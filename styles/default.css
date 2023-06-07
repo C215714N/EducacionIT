@@ -8,15 +8,37 @@
     h1,
     h2,
     h3,
-    header p{
+    header p,
+    .menu{
         margin: 0;
     }
     /* Rellenos */
 
     /* Estilos */
-
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+    .menu,
+    .example{
+        list-style: none;
+    }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px;
+        background-color: #448;
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a:hover,
+    .menu a.active{
+        color: #fff;
+        text-shadow: 0 0 4px;
+    }
 /* Cabecera */
 
 /* Contenido */
