@@ -52,6 +52,20 @@
                 <header>
                     <h3>¿Como estan compuestos?</h3>
                 </header>
+                <p>
+                    Dentro de un formulario podemos colocar cualquier etiqueta existente, pero hay 2 elementos fundamentales, por un lado estan las <strong>Etiquetas (LABEL)</strong> que indican que debe completar o seleccionar el usuario y ademas facilitan la accesibilidad; y por el otro estan los <strong> campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los elementos con los que debe interactuar el usuario, estos poseen las siguientes caracteristicas.
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> corresponde al nombre que el se identificaran los valores enviados, si varios campos corresponden a la misma opcion, pueden compartir dicho valor.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> corresponde al tipo de dato que se debe ingresar o seleccionar en el campo de formulario, es necesario utilizarlo en la etiquetas input.
+                    </li>
+                    <li>    
+                        <strong>value="..."</strong> corresponde al dato ingresado por el usuario y es implicito, en caso que este seleccione, debe figurar como atributo de la etiqueta en cuestion.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
@@ -87,7 +101,7 @@
                 <option value="js">Funcionalidad/Logica con JS</option>
             </select>
             <!-- Campo de Consulta -->
-            <label for="contact_consult"></label>
+            <label for="contact_consult">Ingrese su Consulta</label>
             <textarea 
                 id="contact_consult"
                 name="consult"
