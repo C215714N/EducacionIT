@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Web Design</title>
-    <!-- Bootstrap CSS -->
-    <link href="styles/bootstrap.css" rel="stylesheet">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
     <!-- Navegacion -->
     <nav id="nav" class="navbar navbar-dark navbar-expand-lg | bg-dark bg-gradient | sticky-top | px-2">
-        <a href="#" class="navbar-brand">Bootstrap</a>
+        <a href="#" class="navbar-brand | bi-bootstrap"> Bootstrap</a>
         <button class="navbar-toggler navbar-toggler-icon | border-0 | fs-3"
             data-bs-target=".navbar-nav"
             data-bs-toggle="collapse">
@@ -24,7 +24,7 @@
         </ul>
     </nav>
     <!-- Cabecera -->
-    <header id="header" class="carousel slide | bg-dark bg-gradient">
+    <header id="header" class="carousel slide">
         <!-- Indicadores Carousel -->
         <div class="carousel-indicators">
             <button class="active" data-bs-target="#header" data-bs-slide-to="0"></button>
@@ -62,12 +62,12 @@
         <button class="carousel-control-prev"
             data-bs-slide="prev"
             data-bs-target="#header">
-            <span class="carousel-control-prev-icon"></span>
+            <span class="h1 | bi-chevron-left"></span>
         </button>
         <button class="carousel-control-next"
             data-bs-slide="next"
             data-bs-target="#header">
-            <span class="carousel-control-next-icon"></span>
+            <span class="h1 | bi-chevron-right"></span>
         </button>
         <!-- Encabezado Principal -->
         <div class="position-absolute top-50 start-50 translate-middle | text-uppercase text-center text-light ">
@@ -207,6 +207,138 @@
                 </article>
             </div>
         </section>
+        <section class="row py-3">
+            <h2>Tipos de Medidas</h2>
+            <div class="col-lg-8 me-2">
+                <article class="row | border rounded p-3">
+                    <img src="assets/icon/square.svg" alt="" class="col-6 col-sm-4 | m-auto m-md-1">
+                    <div class="col-md">
+                        <h3>Unidades Absolutas</h3>
+                        <p>
+                            Son aquellas cuyo valor es independiente al medio en el que se reproduce, es decir, que siempre miden lo mismo. Se utilizan normalmente para establecer limites a los tamaños de las cajas y de esta manera evitar tamaños demasiado grandes o chicos.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Distancia: 
+                                <span class="badge rounded-pill bg-primary" title="0.1cm">mm</span>
+                                <span class="badge rounded-pill bg-primary" title="10mm">cm</span>
+                                <span class="badge rounded-pill bg-primary" title="2.54cm">in</span>
+                            </li>
+                            <li class="list-group-item">
+                                Tipografia:
+                                <span class="badge rounded-pill bg-primary" title="1/6in">pc</span>
+                                <span class="badge rounded-pill bg-primary" title="1/72in">pt</span>
+                            </li>
+                            <li class="list-group-item">
+                                Hibridas: <span class="badge rounded-pill bg-primary" title="1/96in">px</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="row | my-2 border rounded p-3">
+                    <img src="assets/icon/hexagon.svg" alt="" class="col-6 col-sm-4 m-auto m-md-1">
+                    <div class="col-md">
+                        <h3>Unidades Relativas</h3>
+                        <p>
+                            Son aquellas que dependen de otro elemento para establecer su tamaño y por lo tanto, no siempre miden lo mismo. Se utilizan principalmente para definir los tamaños de caja, asi como tambien el tamaño de las tipografias utilizadas.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Tamaño:
+                                <span class="badge rounded-pill bg-primary" title="ancho del contenedor">%</span>
+                            </li>
+                            <li class="list-group-item">Tipografia:
+                                <span class="badge rounded-pill bg-primary" title="ancho de M">em</span>
+                                <span class="badge rounded-pill bg-primary" title="alto de x">ex</span>
+                                <span class="badge rounded-pill bg-primary" title="tamaño del caracter 0">ch</span>
+                            </li>
+                            <li class="list-group-item">Hibridas:
+                                <span class="badge rounded-pill bg-primary" title="ancho de M en el root">rem</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="row | border rounded p-3">
+                    <img src="assets/icon/box.svg" alt="" class="col-6 col-sm-4 m-auto m-sm-1">
+                    <div class="col-md">
+                        <h3>Unidades Flexibles</h3>
+                        <p>
+                            Son aquellas que basan su tamaño en las dimensiones de la ventana donde se visualiza la pagina web. Se utilizan para implementar tipografia adaptable o definir las alturas de caja de algunos elementos.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Dimension
+                                <span class="badge rounded-pill bg-primary" title="lado menor">vmin</span>
+                                <span class="badge rounded-pill bg-primary" title="lado mayor">vmax</span>
+                            </li>
+                            <li class="list-group-item">
+                                Disposicion
+                                <span class="badge rounded-pill bg-primary" title="ancho del viewport">vw</span>
+                                <span class="badge rounded-pill bg-primary" title="alto de la viewport">vh</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            <!-- Componentes Bootstrap -->
+            <aside class="col-lg">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong class="d-block h4">Breadcrumbs</strong>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">Bootstrap</li>
+                            <li class="breadcrumb-item">Componentes</li>
+                            <li class="breadcrumb-item">Breadcrumbs</li>
+                        </ol>
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="d-block h4">Spinners</strong>
+                        <div class="spinner-border text-primary"></div>
+                        <div class="spinner-grow text-primary"></div>
+                        <div class="spinner-border text-secondary"></div>
+                        <div class="spinner-grow text-secondary"></div>
+                        <div class="spinner-border text-info"></div>
+                        <div class="spinner-grow text-info"></div>
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="d-block h4">Progress Bar</strong>
+                        <div class="progress">
+                            <div class="progress-bar col-4">25%</div>
+                        </div>
+                        <div class="progress my-2">
+                            <div class="progress-bar progress-bar-striped col-6">50%</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated col-8">75%</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="d-block h4">Placeholder</strong>
+                        <div class="placeholder-glow">
+                            <div class="placeholder placeholder-sm col-7"></div>
+                            <div class="placeholder placeholder-sm col-4"></div>
+                            <div class="placeholder placeholder-lg col-5"></div>
+                            <div class="placeholder placeholder-lg col-6"></div>
+                            <div class="placeholder col-8"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <strong class="d-block h4">Alerts</strong>
+                        <div class="alert alert-warning alert-dismissible fade show">
+                            ¡¡Cuidado, esto es una Advertencia!!
+                            <button class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            ¡¡Te dije que tuvieras cuidado, ahora estas en Peligro!!
+                            <button class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show">
+                            ¡¡Olvidalo, todo fue un simulacro. Falsa alarma!!
+                            <button class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+        </section>
     </main>
     <!-- Pie de pagina -->
     <footer id="footer" class="position-relative bg-dark bg-gradient | pt-5 pb-3">
@@ -273,40 +405,11 @@
             </fieldset>
             <button class="btn btn-outline-dark | d-block ms-auto text-uppercase">enviar</button>
         </form>
-        <p class="position-relative w-100 | btn btn-dark | my-3 rounded-0 p-3">&copy;2023 Todos los derechos reservados</p>
+        <p style="background-color: var(--bs-indigo)" class="position-relative w-100 | btn | my-3 rounded-0 p-3">&copy;2023 Todos los derechos reservados</p>
     </footer>
     <!-- Bootstrap JS -->
     <script src="scripts/bootstrap.bundle.js"></script>
-    <script type="text/javascript">
-        const controls = document.querySelectorAll('.form-control');
-        const isText = /^\D{1,}$/
-
-        function check(action, element, className){
-            switch (action){
-                case 'ADD':
-                    element.classList.add(className);
-                break;
-                case 'REMOVE':
-                    element.classList.remove(className)
-                break;
-                case 'REPLACE':
-                    element.classList.add(className[0])
-                    element.classList.remove(className[1])
-                break;
-            }
-        }
-        
-        controls.forEach( control => control.addEventListener('input', (e) => {
-            const feedback = ['is-valid', 'is-invalid'];
-            if(e.target.value.length >= 3){
-                control.checkValidity() ? 
-                    check('REPLACE', control, feedback) : 
-                    check('REPLACE', control, feedback.reverse())
-            } else {
-                feedback.forEach(cN => check('REMOVE', control, cN));
-            }
-        }))
-    </script>
+    <script src="scripts/main.js"></script>
     <!-- EMMET 
         # padre>hijo
         ul>li

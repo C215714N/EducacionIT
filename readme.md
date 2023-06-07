@@ -36,8 +36,8 @@ Bootstrap implementa la metodologia __BEM (Block Element Modifier)__ que consist
 ### Ventajas
 * __Especificidad__: Usa un selector único para cada regla, permitiendo menos repeticiones.
 * __Independencia__: Los bloques se pueden mover a cualquier, sin afectar los estilos.
-* __Reutitdzación__: Es posible reciclar áreas de código desde un proyecto hacia otro.
-* __Simptdcidad__: Las convenciones brindan un control absoluto sobre la estructura.
+* __Reutilización__: Es posible reciclar áreas de código desde un proyecto hacia otro.
+* __Simplicidad__: Las convenciones brindan un control absoluto sobre la estructura.
 
 ### Desventajas
 * __Clases Largas__: En ocasiones podemos encontrarnos cadenas bastante extensas.
@@ -79,14 +79,14 @@ Bootstrap implementa la metodologia __BEM (Block Element Modifier)__ que consist
         <tr>
             <td>border</td>
             <td style="display: flex; flex-wrap: wrap; gap:.25rem">
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #0d6efd">bg-primary</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #6c757d">bg-secondary</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #198754">bg-success</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #0dcaf0">bg-info</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #ffc107">bg-warning</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #dc3545">bg-danger</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #f8f9fa">bg-light</span>
-                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #212529">dark</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #0d6efd">border-primary</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #6c757d">border-secondary</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #198754">border-success</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #0dcaf0">border-info</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #ffc107">border-warning</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #dc3545">border-danger</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #f8f9fa">border-light</span>
+                <span style="padding:.5rem; border-radius:.375rem; border:1px solid; color: #212529">border-dark</span>
             </td>
         </tr>
     </tbody>
