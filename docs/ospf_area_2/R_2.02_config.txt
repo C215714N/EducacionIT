@@ -1,0 +1,90 @@
+hostname R-AREA-1.02
+!
+ip dhcp excluded-address 10.0.2.0 10.0.2.5
+ip dhcp excluded-address 10.0.2.64 10.0.2.69
+ip dhcp excluded-address 10.0.2.128 10.0.2.133
+!
+ip dhcp pool 2.0
+ network 10.0.2.0 255.255.255.192
+ default-router 10.0.2.1
+ dns-server 8.8.8.8
+ domain-name AREA-2.0
+!
+ip dhcp pool 2.64
+ network 10.0.2.64 255.255.255.192
+ default-router 10.0.2.65
+ dns-server 8.8.8.8
+ domain-name AREA-2.64
+!
+ip dhcp pool 2.128
+ network 10.0.2.128 255.255.255.192
+ default-router 10.0.2.129
+ dns-server 8.8.8.8
+ domain-name AREA-2.128
+!
+ipv6 unicast-routing
+!
+ipv6 dhcp pool AREA-2.0-IPv6
+ address prefix 2000:A2EA:2:1::/112 lifetime 172800 86400
+ dns-server 2800:3F0:4002::8
+ domain-name AREA-2.0-IPv6
+!
+ipv6 dhcp pool AREA-2.40-IPv6
+ address prefix 2000:A2EA:2:1::40:0/112 lifetime 172800 86400
+ dns-server 2800:3F0:4002::8
+ domain-name AREA-2.40-IPv6
+!
+ipv6 dhcp pool AREA-2.80-IPv6
+ address prefix 2000:A2EA:2:1::80:0/112 lifetime 172800 86400
+ dns-server 2800:3F0:4002::8
+ domain-name AREA-2.80-IPv6
+!
+interface Loopback1
+ ip address 1.1.1.2 255.255.255.0
+!
+interface GigabitEthernet0/0
+ ip address 10.0.2.1 255.255.255.192
+ ipv6 address FE80::1 link-local
+ ipv6 address 2000:A2EA:2:1::1/112
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 enable
+ ipv6 ospf 1 area 2
+ ipv6 dhcp server AREA-2.0-IPv6
+!
+interface GigabitEthernet0/1
+ ip address 10.0.2.65 255.255.255.192
+ ipv6 address FE80::41 link-local
+ ipv6 address 2000:A2EA:2:1::41:1/112
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 enable
+ ipv6 ospf 1 area 2
+ ipv6 dhcp server AREA-2.40-IPv6
+!
+interface GigabitEthernet0/2
+ ip address 10.0.2.129 255.255.255.192
+ ipv6 address FE80::81 link-local
+ ipv6 address 2000:A2EA:1:1::81:1/112
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 enable
+ ipv6 ospf 1 area 2
+ ipv6 dhcp server AREA-2.80-IPv6
+!
+interface GigabitEthernet0/3/0
+ ip address 10.0.2.194 255.255.255.252
+ ipv6 address FE80::C2 link-local
+ ipv6 address 2000:A2EA:2:1::C2/126
+ ipv6 enable
+ ipv6 ospf 1 area 2
+!
+router ospf 1
+ router-id 2.2.2.2
+ network 10.0.1.192 0.0.0.3 area 2
+ network 10.0.2.0 0.0.0.255 area 2
+ auto-cost reference-bandwidth 10000
+!
+ipv6 router ospf 1
+ router-id 2.2.2.2
+ auto-cost reference-bandwidth 10000

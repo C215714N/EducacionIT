@@ -1,0 +1,33 @@
+hostname R-AREA-3.01
+!
+ipv6 unicast-routing
+!
+interface Loopback1
+ ip address 3.3.1.1 255.255.255.0
+!
+interface Port-channel1
+ ip address 10.0.0.7 255.255.255.240
+!
+interface GigabitEthernet0/0/0
+ channel-group 1
+NO SHUTDOWN
+!
+interface GigabitEthernet0/1/0
+ channel-group 1
+NO SHUTDOWN
+!
+interface GigabitEthernet0/3/0
+ ip address 10.0.3.193 255.255.255.252
+ ipv6 address FE80::C1 link-local
+ ipv6 address 2000:A2EA:3:1::C1/126
+ ipv6 ospf 1 area 3
+!
+router ospf 1
+ router-id 7.7.7.7
+ network 10.0.3.192 0.0.0.3 area 3
+ network 10.0.0.0 0.0.0.15 area 0
+ auto-cost reference-bandwidth 10000
+!
+ipv6 router ospf 1
+ router-id 3.3.1.1
+ auto-cost reference-bandwidth 10000
