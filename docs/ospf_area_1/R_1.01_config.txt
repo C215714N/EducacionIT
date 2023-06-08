@@ -1,0 +1,39 @@
+hostname R-AREA-1.01
+!
+ipv6 unicast-routing
+!
+interface Loopback1
+ ip address 1.1.1.1 255.255.255.0
+!
+interface Port-channel1
+ ip address 10.0.0.5 255.255.255.240
+!
+interface GigabitEthernet0/0/0
+ channel-group 1 mode on
+!
+interface GigabitEthernet0/1/0
+ channel-group 1 mode on
+!
+interface GigabitEthernet0/2/0
+ ip address 10.0.1.193 255.255.255.252
+ ipv6 address FE80::C1 link-local
+ ipv6 address 2000:A2EA:1:1::C1/126
+ ipv6 enable
+ ipv6 ospf 1 area 1
+!
+interface GigabitEthernet0/3/0
+ ip address 10.0.1.197 255.255.255.252
+ ipv6 address FE80::C5 link-local
+ ipv6 address 2000:A2EA:1:1::C5/126
+ ipv6 ospf 1 area 1
+!
+router ospf 1
+ router-id 5.5.5.5
+ network 10.0.1.192 0.0.0.3 area 1
+ network 10.0.1.196 0.0.0.3 area 1
+ network 10.0.0.0 0.0.0.15 area 0
+ auto-cost reference-bandwidth 10000
+!
+ipv6 router ospf 1
+ router-id 1.1.1.1
+ auto-cost reference-bandwidth 10000
