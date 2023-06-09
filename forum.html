@@ -75,6 +75,125 @@
                 </ul>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son Elementos que permiten organizar la informacion de manera tabular y deben ser utilizadas cuando necesitamos estructuras los datos de cierta manera. 
+                
+                Para incorporarlas dentro de la pagina simplemente debemos utilizar la etiqueta <strong>&lt;table></strong>y dentro de la misma, una estructura de elementos respentando el modelo de cajas.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen Estructura Semantica?</h3>
+                </header>
+                <p>
+                    <em>Dentro de la etiqueta principal, mencionada anteriormente,</em> debemos colocar <strong>las filas (table row)</strong> y dentro de las estas, <strong>las Celdas (table division)</strong> utilizando las etiquetas <strong>&lt;tr> y &lt;td></strong> respectivamente; pero tambien podemos especificar que parte de la tabla estamos completando, utilizando la siguiente estructura de etiquetas:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD:</strong> Cabecera de tabla que contiene la fila de encabezados, creados con la etiqueta <em>&lt;th> (table heading)</em>
+                    </li>
+                    <li>
+                        <strong>TBODY:</strong> Cuerpo de tabla que contiene los datos y generalmente esta compuesto por varias filas.
+                    </li>
+                    <li>
+                        <strong>TFOOT:</strong> Pie de Tabla que posee informacion complementaria, como totales, porcentajes o promedios y es opcional.
+                    </li>
+                </ul>
+                <div class="container">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <td>c215714n</td>
+                                <td>CristianDRacedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Cristian</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="modern">
+                        <!-- cabecera de tabla -->
+                        <thead>
+                            <tr>
+                                <th>Turno</th>
+                                <th>Lu</th>
+                                <th>Ma</th>
+                                <th>Mi</th>
+                                <th>Ju</th>
+                                <th>Vi</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <!-- cuerpo de tabla -->
+                        <tbody>
+                            <tr>
+                                <th>m</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>t</th>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>n</th>
+                                <td>x</td>
+                                <td></td>
+                                <td></td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>total</th>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Combinacion de Celdas?</h3>
+                </header>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
