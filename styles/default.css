@@ -1,4 +1,5 @@
 /* Estilos Generales */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Raleway');
 * {
     scroll-behavior: smooth;
     font-family: 'Ubuntu', 'Raleway', 'Century Gothic', sans-serif;
@@ -40,7 +41,23 @@
         text-shadow: 0 0 4px;
     }
 /* Cabecera */
-
+    #header{
+        padding: min(30%, 280px) 16px; /* top right bottom left */
+        text-align: center;
+        text-shadow: 0 0 8px #333;
+        background-image: url('../assets/bg/osx-monterrey-dark.jpg');
+        background-position: center; /*x y | top left right bottom center*/
+        background-size: cover; /*width height | contain cover*/
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #448;
+    }
+    header{
+        border-bottom: 2px solid; /* width style color*/
+        color: #448;
+    }
 /* Contenido */
 
 /* Pie de Pagina */
