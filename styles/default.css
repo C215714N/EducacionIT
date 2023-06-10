@@ -61,6 +61,26 @@
     }
 /* Contenido */
 
+    /* Tablas */
+    table caption,
+    th,
+    td{
+        padding: 8px;
+    }
+    table caption{
+        border-radius: 8px 8px 0 0; /* tl tr br bl */ 
+    }
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: 2px solid #448;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto*/
