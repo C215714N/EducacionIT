@@ -42,7 +42,23 @@
         text-shadow: 0 0 4px; /* -x+ -y+ blur color*/
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 280px) 16px;
+        text-align: center;
+        text-shadow: 0 0 4px #333;
+        background-image: url('../assets/bg/osx-yosemite.jpg');
+        background-position: center; /* x y | top bottom left right center*/
+        background-size: cover; /* width height | contain cover*/
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #448;
+    }
+    header{
+        color: #448;
+        border-bottom: 2px solid;
+    }
 /* Contenido */
 
 /* Pie de Pagina */
