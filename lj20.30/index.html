@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetador Avanzado</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&family=Open+Sans&family=Ubuntu">
+</head>
+<body>
+    <!-- Cabecera Principal -->
+    <header id="header" class="header">
+        <h1>Maquetador Web</h1>
+        <p>HTML | CSS | JS | SASS</p>
+    </header>
+    <!-- Contenido Principal -->
+    <main>
+
+    </main>
+    <!-- Pie de Pagina -->
+    <footer id="footer">
+        <form action="">
+            <h2>Dejanos tu consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name" 
+                name="name" 
+                type="text"
+                pattern=""
+                required>
+            <p class="validate">
+                Escriba entre 3 y 50 caracteres utilizando solamente letras
+            </p>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email" 
+                required>
+            <p class="validate">
+                Escriba 8 caracteres minimo, respetando el formato "usuario@servidor"
+            </p>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                required></textarea>
+            <button>Enviar</button>
+        </form>
+        <div class="social">
+            <a class="facebook" 
+                href="https://facebook.com" 
+                title="Seguinos en Facebook"
+                target="_blank">
+            </a>
+            <a class="instagram" 
+                href="https://instagram.com" 
+                title="Seguinos en Instagram"
+                target="_blank">
+            </a>
+            <a class="telegram" 
+                href="https://telegram.org" 
+                title="Mensajeanos por Telegram"
+                target="_blank">
+            </a>
+            <a class="whatsapp" 
+                href="https://api.whatsapp.com/send?phone=110303456&text=Buenos%20dias,%20mi%20consulta%20es..." 
+                title="Mensajeanos por Whatsapp"
+                target="_blank">
+            </a>
+        </div>
+        <p>&copy;2023 Todos los derechos reservados</p>
+    </footer>
+    <!-- 
+        EMMET
+
+        padre>hijo
+        ul>li    
+        <ul>
+            <li></li>
+        </ul>
+
+        elemento+hermano
+        h1+p
+        <h1></h1>
+        <p></p>
+
+        elemento[atributos]
+        a[target="_blank"]
+        <a href="" target="_blank"></a>
+
+        elemento{contenido}
+        p{texto}
+        <p>texto</p>
+
+        expresion matematica
+        (ul>li*3{link})+(div>p*2)
+        <ul>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ul>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+    -->
+</body>
+</html>
