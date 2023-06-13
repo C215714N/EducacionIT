@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquetador Avanzado</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&family=Open+Sans&family=Ubuntu">
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
     <!-- Cabecera Principal -->
@@ -19,14 +19,15 @@
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
-        <form action="">
+        <form id="contact" action="">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
                 id="contact_name" 
                 name="name" 
                 type="text"
-                pattern=""
+                maxlength="50"
+                pattern="[A-Z a-z]{3,50}"
                 required>
             <p class="validate">
                 Escriba entre 3 y 50 caracteres utilizando solamente letras
@@ -35,7 +36,8 @@
             <input 
                 id="contact_email" 
                 name="email" 
-                type="email" 
+                type="email"
+                minlength="8"
                 required>
             <p class="validate">
                 Escriba 8 caracteres minimo, respetando el formato "usuario@servidor"
@@ -44,6 +46,8 @@
             <textarea 
                 id="contact_consult" 
                 name="consult" 
+                minlength="30"
+                maxlength="1500"
                 required></textarea>
             <button>Enviar</button>
         </form>

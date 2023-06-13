@@ -1,0 +1,31 @@
+#contact{
+    display: grid;
+    max-width: 540px;
+    margin: auto;
+}
+
+.validate{
+    overflow: hidden;
+    max-height: 0;
+    margin: .25rem 0 .5rem;
+}
+
+input,
+textarea,
+select{
+    border-radius: .25rem;
+    border: 1px solid #333;
+    padding: .4rem .5rem;
+    font-size: 1rem;
+}
+
+form :focus + .validate{
+    max-height: 3rem;
+}
+form :is(input, textarea, select):valid{
+    border-color: #284;
+}
+
+form :valid + .validate{
+    color: #284;
+}
