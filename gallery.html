@@ -5,6 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'Calibri','Century Gothic', sans-serif;
+        }
+        img{
+            width: 100%;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee;
+            background-color: #36c;
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: #248;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :Pseudoelementos - Instancia o caracteristica de un elemento */
+        nav li:hover{ /* pasar el mouse por encima */
+            background-color: #124;
+        }
+        /* Selectores de Clase (.class) */
+        .box{
+            margin: 16px;
+            padding: 8px;
+            background-color: #ccc;
+            text-align: center;
+        }
+        /* Selectores de Id (#id) */
+        #contact{
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* Imagenes y Texto */
+        .box img{
+            max-width: 320px;
+        }
+        .float img{
+            max-width: 240px;
+            margin-right: 8px;
+            float: left;
+        }
+        .float{
+            overflow: hidden;
+            margin: 8px;
+            border-radius: 8px;
+            padding: 16px;
+            color: #eee;
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
