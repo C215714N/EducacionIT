@@ -193,6 +193,108 @@
                 <header>
                     <h3>¿Combinacion de Celdas?</h3>
                 </header>
+                <p>
+                    En ciertas ocasiones, puede que necesitemos crear una tabla cuyas celdas ocupen mas de una fila o una columna, para ello podemos utilizar los atributos <strong>colspan="..."</strong> y <strong>rowpan="..."</strong> para indicar que una celda debe ocupar x cantidad de columnas o filas respectivamente. solamente debemmos tener en cuenta que todo contenido posterior sera desplazado hacia la derecha.
+                </p>
+                <div class="example container">
+                    <table class="modern semantyc">
+                        <caption>Venta de Productos</caption>
+                        <!-- cabecera de tabla -->
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Cant</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <!-- cuerpo de tabla -->
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>3</td>
+                                <td>36500</td>
+                                <td>109500</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>1</td>
+                                <td>25400</td>
+                                <td>25400</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>2</td>
+                                <td>8600</td>
+                                <td>17200</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td colspan="3">152100</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="classic modern">
+                        <caption>Desarrolladores</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguajes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">FrontEnd</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">BackEnd</td>
+                                <td>SQL</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                            </tr>
+                            <tr>
+                                <td>JAVA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="classic">
+                        <tr>
+                            <td rowspan="4">1-1</td>
+                            <td colspan="3">1-2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">2-1</td>
+                            <td rowspan="3">2-2</td>
+                        </tr>
+                        <tr>
+                            <td>3-1</td>
+                            <td>3-2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">4-1</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">5-1</td>
+                            <td colspan="2">5-2</td>
+                        </tr>
+                        <tr>
+                            <td>6-1</td>
+                            <td colspan="2">6-2</td>
+                            <td>6-3</td>
+                        </tr>
+                    </table>
+                </div>
             </section>
         </article>
     </main>
