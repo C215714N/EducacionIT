@@ -59,7 +59,14 @@
         color: #448;
     }
 /* Contenido */
+    /* Ejemplos */
 
+    .container{
+        display: flex;
+        gap: 8px;
+        padding: 16px;
+        overflow: auto;
+    }
     /* Tablas */
     th,
     td,
@@ -79,6 +86,13 @@
     }
     .classic caption{
         border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5);
     }
 /* Pie de Pagina */
 
