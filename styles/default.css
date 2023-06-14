@@ -140,7 +140,48 @@
         background-color: #66c;
     }
     /* Redes Sociales */
-
+    .social{
+        display: flex;
+        justify-content: center;
+        margin: 16px;
+        gap: 8px;
+    }
+    .social a{
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        background-color: #ccc;
+        background-position: center;
+        background-size: 36px;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 4px 8px #333; /*-x+ -y+ blur color*/
+    }
+    /* Iconos Redes sociales */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
+    }
     /* Mapa de Contacto */
 
     /* Derechos de Autor */
