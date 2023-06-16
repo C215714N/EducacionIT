@@ -1,0 +1,68 @@
+hostname R-AREA-4.02
+!
+ip dhcp excluded-address 10.0.4.0 10.0.4.5
+ip dhcp excluded-address 10.0.4.32 10.0.4.37
+!
+ip dhcp pool 4.0
+ network 10.0.4.0 255.255.255.224
+ default-router 10.0.4.1
+ dns-server 8.8.8.8
+ domain-name AREA-4.0
+!
+ip dhcp pool 4.32
+ network 10.0.4.32 255.255.255.224
+ default-router 10.0.4.33
+ dns-server 8.8.8.8
+ domain-name AREA-4.32
+!
+ipv6 unicast-routing
+!
+ipv6 dhcp pool AREA-4.0-IPv6
+ address prefix 2000:A2EA:4:1::/112 lifetime 172800 86400
+ dns-server 2800:3F0:4002::8
+ domain-name AREA-4.0-IPv6
+!
+ipv6 dhcp pool AREA-4.20-IPv6
+ address prefix 2000:A2EA:4:1::20:0/112 lifetime 172800 86400
+ dns-server 2800:3F0:4002::8
+ domain-name AREA-4.20-IPv6
+!
+interface Loopback1
+ ip address 4.4.4.2 255.255.255.0
+!
+interface GigabitEthernet0/0
+ ip address 10.0.4.1 255.255.255.224
+ ipv6 address FE80::1 link-local
+ ipv6 address 2000:A2EA:4:1::1/112
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 enable
+ ipv6 ospf 1 area 4
+ ipv6 dhcp server AREA-4.0-IPv6
+!
+interface GigabitEthernet0/1
+ ip address 10.0.4.33 255.255.255.224
+ ipv6 address FE80::21 link-local
+ ipv6 address 2000:A2EA:4:1::21:1/112
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 enable
+ ipv6 ospf 1 area 4
+ ipv6 dhcp server AREA-4.20-IPv6
+!
+interface GigabitEthernet0/2
+ ip address 10.0.4.226 255.255.255.252
+ ipv6 address FE80::E2 link-local
+ ipv6 address 2000:A2EA:4:1::E2/126
+ ipv6 enable
+ ipv6 ospf 1 area 4
+!
+router ospf 1
+ router-id 4.4.2.2
+ network 10.0.4.224 0.0.0.3 area 4
+ network 10.0.4.0 0.0.0.63 area 4
+ auto-cost reference-bandwidth 10000
+!
+ipv6 router ospf 1
+ router-id 4.4.2.2
+ auto-cost reference-bandwidth 10000
