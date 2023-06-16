@@ -302,7 +302,7 @@
                 <h2>Contenido Multimedia</h2>
             </header>
             <p>
-                Se conoce con este nombre a todo elemento audiovisual, que podemos incorporar dentro de una pagina. Actualmente los podemos utilizar de forma nativa, sin necesidad de instalar algun plugin o complemento de terceros, es decir, que se los navegadores actuales poseen una API de reproduccion integrada.
+                Se conoce con este nombre a todo elemento audiovisual, que podemos incorporar dentro de una pagina. Actualmente los podemos utilizar de forma nativa, sin necesidad de instalar algun plugin o complemento de terceros, es decir, que los navegadores actuales poseen una API de reproduccion integrada. Igualmente, si necesitamos corroborar la compatibilidad con este tipo de etiquetas, podemos visitar el sitio <a href="https://caniuse.com" target="_blank">Can I Use</a>
             </p>
             <section>
                 <header>
@@ -349,6 +349,34 @@
                             Ana AbdElzaher</a>
                         </strong>
                     </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    Como se menciona anteriormente los navegadores actuales permiten la reproduccion de este tipo de contenido de forma nativa. Para utilizarlos debemos colocar las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Tambien podemos especificar algunos atributos como <em>autoplay, muted, loop y controls</em>
+                </p>
+                <div class="example container">
+                    <figure>
+                        <video src="assets/media/scar-tissue.webm" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador No es compatible con este elemento, podes descargar el contenido desde el siguiente 
+                                <a href="assets/media/scar-tissue.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Scar Tissue (Californication - 1999)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos, pero tu navegador No es compatible con este elemento, podes descargar el contenido desde el siguiente 
+                                <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand (Stadium Arcadium - 2006)</figcaption>
                     </figure>
                 </div>
             </section>
