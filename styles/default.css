@@ -81,6 +81,22 @@
     .classic caption{
         border-bottom: none;
     }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(68, 68, 136, .5);
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #3c6;
+    }
+    .semantic tfoot{
+        background-color: #248;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto*/
