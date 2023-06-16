@@ -16,6 +16,19 @@
     scroll-behavior: smooth;
     font-family: var(--font);
 }
+/* Fuente de Fantasia */
+@font-face {
+    src: url('../assets/font/deathstar.otf');
+    /* Formatos
+        eot (ethernet open type)
+        ttf (true type font)
+        otf (open type font)
+        woff (web open font file)
+        svg (scalable vector graphics)
+    */
+    font-family: 'Star Wars';
+}
+
 /* Margenes */
 body, 
 h1,
