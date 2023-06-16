@@ -60,7 +60,21 @@
         border-bottom: 2px solid;
     }
 /* Contenido */
-
+    
+    /* Ejemplos */
+    .example{
+        max-width: 960px;
+        margin: 8px auto 16px; /*top right bottom left*/
+        border-left: 4px solid #448;
+        padding: 16px;
+        background-color: #eee;
+    }
+    .container{
+        display: flex;
+        gap: 8px;
+        padding: 16px;
+        overflow: auto;
+    }
     /* Tablas */
     table caption,
     th,
