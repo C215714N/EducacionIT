@@ -192,6 +192,48 @@
                 <header>
                     <h3>¿Celdas Combinadas?</h3>
                 </header>
+                <p>
+                    En algunos casos, puede que necesitemos que una celda ocupe mas de una fila o una columna, para ello debemos colocar dentro de la misma los atributos <strong>rowspan="..." y colspan="..."</strong> respectivamente, con el valor total de celdas a ocupar. Cabe destacar que todo contenido posterior, a la celda expandida, se desplazara hacia la derecha.
+                </p>
+                <div class="example container">
+                    <table class="semantic modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Cant.</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>3</td>
+                                <td>36800</td>
+                                <td>110400</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>1</td>
+                                <td>12500</td>
+                                <td>12500</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>2</td>
+                                <td>5600</td>
+                                <td>11200</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">Total</th>
+                                <td>134100</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </section>
         </article>
     </main>
