@@ -1,6 +1,6 @@
 #contact{
     display: grid;
-    max-width: 540px;
+    max-width: var(--sm);
     margin: auto;
 }
 
@@ -14,7 +14,7 @@ input,
 textarea,
 select{
     border-radius: .25rem;
-    border: 1px solid #333;
+    border: 1px solid var(--dark);
     padding: .4rem .5rem;
     font-size: 1rem;
 }
@@ -23,9 +23,9 @@ form :focus + .validate{
     max-height: 3rem;
 }
 form :is(input, textarea, select):valid{
-    border-color: #284;
+    border-color: var(--success);
 }
 
 form :valid + .validate{
-    color: #284;
+    color: var(--success);
 }
