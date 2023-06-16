@@ -297,6 +297,62 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Se conoce con este nombre a todo elemento audiovisual, que podemos incorporar dentro de una pagina. Actualmente los podemos utilizar de forma nativa, sin necesidad de instalar algun plugin o complemento de terceros, es decir, que se los navegadores actuales poseen una API de reproduccion integrada.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Contenido Embebido?</h3>
+                </header>
+                <p>
+                    Se conoce con este nombre a una categoria web que indica a los motores de busqueda que dicho contenido fue incorporado con autorizacion del autor original. Normalmente cuando incorporamos este tipo de contenido, utilizamos la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido, para mostrar dentro de nuestra pagina material de otro sitio.
+                </p>
+                <div class="example container">
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="Carvel - John Frusciante" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Video con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/aRaBJqp-rvU" 
+                            title="Marvel Fase 4 - TeLoResumo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/xbT1vrsNUT0" 
+                            title="Nosferatu 1922" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Patrimonio Publico</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                        src="https://www.slideshare.net/slideshow/embed_code/key/EB5XtBlwMu6AsA?startSlide=1" allowfullscreen>
+                    </iframe>
+                    <figcaption>
+                        HTML5 from 
+                        <strong>
+                            <a href="https://www.slideshare.net/AhmedAbdelzaherkhafagy" target="_blank">
+                            Ana AbdElzaher</a>
+                        </strong>
+                    </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
@@ -365,7 +421,11 @@
             </a>
         </div>
         <!-- Mapa de Contacto -->
-
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0701119751975!2d-58.378511025066445!3d-34.60238855742663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1686936520385!5m2!1ses-419!2sar"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <!-- Derechos de autor -->
         <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
