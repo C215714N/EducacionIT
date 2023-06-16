@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    /* Explicacion:
+    REFERENCE CONFIG:
+        width: 500px;
+        border: 2px solid #333;
+        padding: 30px;
+
+    CONTENT-BOX:
+        content-width: width (500px)
+        final-width: width + padding + border (564px)
+    BORDER-BOX:
+        final-width: width (500px)
+        content-width: width - padding - border (436px)  
+    */
+    scroll-behavior: smooth;
+    font-family: var(--font);
+}
+/* Margenes */
+body, 
+h1,
+h2,
+h3,
+header p{
+    margin: 0;
+}
+/* Bordes */
+input,
+textarea,
+select{
+    outline: 0;
+}
+iframe{
+    border: 0;
+}
+/* Rellenos */
+.menu{
+    padding: 0;
+}
