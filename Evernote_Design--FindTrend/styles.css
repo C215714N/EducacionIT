@@ -1,6 +1,18 @@
 @charset 'UTF-8' ;
 
-/* Paletas de colores : https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c */
+/* Paletas de colores : https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c 
+*/
+
+/* 
+    Medidas Absolutas: Son aquellas que siempre representan el mismo valor, independientemente del tamaño de la ventana en la que se visualicen.
+    * distancia: cm, in, mm, m
+    * tipografia: pt, pc
+    * hibrida: pixeles (1/96in == 0.035mm)
+
+    Medidas Relativas:
+
+    Medidas Flexibles:
+*/
 
 :root {
     --c_black :         #000 ;
