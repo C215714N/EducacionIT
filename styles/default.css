@@ -9,13 +9,16 @@
     h2,
     h3,
     header p,
+    figure,
     .menu{
         margin: 0;
     }
     /* Rellenos */
 
     /* Bordes */
-
+    iframe{
+        border: 0;
+    }
     /* Estilos */
     .menu,
     .example{
@@ -110,6 +113,21 @@
     }
     .semantic tfoot{
         background-color: #248;
+    }
+    /* Multimedia */
+    iframe, video{
+        width: 100%;
+        height: calc(100% - 16px);
+        min-height: 270px;
+        object-fit: cover;
+    }
+    figure{
+        min-width: min(100%, 480px);
+        /* ratio    width       height 
+            4:3     1.33(h)     75%(w)
+            16:9    1.78(h)     56.25%(w)
+            16:10   1.6(h)      62.5%(w)
+        */
     }
 /* Pie de Pagina */
 
