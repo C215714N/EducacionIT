@@ -3,6 +3,7 @@
 * {
     scroll-behavior: smooth;
     font-family: 'Ubuntu', 'Raleway', 'Century Gothic', sans-serif;
+    font-size: 1rem;
 }
     /* Margenes */
     body,
@@ -11,7 +12,8 @@
     h3,
     header p,
     figure,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -53,6 +55,7 @@
         background-size: cover; /*width height | contain cover*/
     }
     .header{
+        margin: -1rem -1rem 1.5rem; /*top right bottom left*/
         padding: 16px;
         color: #eee;
         background-color: #448;
@@ -66,6 +69,13 @@
         max-width: 1140px;
         margin: auto;
         padding: 8px;
+    }
+    article{
+        margin: 1rem 0; /* root EM (Ancho de M en la Raiz HTML) */
+        border-radius: .5rem;
+        padding: 1rem; /* permite mantener la proporcion con el texto*/
+        box-shadow: 0 0 4px #999;
+        overflow: hidden;
     }
     /* Ejemplos */
     .example{
