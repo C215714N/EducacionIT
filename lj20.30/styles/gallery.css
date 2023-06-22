@@ -1,0 +1,45 @@
+.gallery{
+    display: var(--display);
+    padding: .5rem;
+    gap: .5rem;
+}
+.item{
+    width: 100%;
+    border-radius: .5rem;
+    border: .5rem solid var(--grey);
+    padding: 1rem;
+}
+.gallery.flex .item{
+    flex: 1 1 min(100%, var(--size));
+    /* Explicacion:
+        GROW: capacidad de expansion en flexbox;
+        SHRINK: capacidad de reduccion en flexbox;
+        BASIS: Tamaño base dentro de flexbox;
+    */
+}
+.gallery.grid{
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(min(var(--size), 100%), 1fr)
+    );
+    /* Explicacion
+        REPEAT( Cantidad, Tamaño): Repite una valor x cantidad de veces
+        - auto-fill: rellena el espacio con celdas manteniendo su tamaño
+        - auto-fit: estira las celdas hasta cubrir el tamaño del contenedor
+        MINMAX(a,b): determina el valor mas bajo y alto para la celda
+        - %: medida calculada en base al ancho del contenedor
+        - px: representacion de puntos en pantalla
+        - fr: en base al espacio disponible del contenedor
+    */
+}
+/* Estilo Ladrillo */
+.masonry > :nth-child(even){
+    grid-column: span 2;
+}
+.masonry > :nth-child(odd){
+    grid-row: span 2;
+}
+.masonry .item{
+    height: 100%;
+    object-fit: cover;
+}
