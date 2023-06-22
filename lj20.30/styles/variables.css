@@ -25,3 +25,21 @@
     --font: 'Ubuntu', 'Raleway', 'Century Gothic', 'Calibri', sans-serif;
     --main: 'Star Wars', sans-serif;
 }
+
+.flex{
+    --display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.grid{
+    --display: grid;
+}
+.small{
+    --size: var(--small);
+}
+.medium{
+    --size: var(--medium);
+}
+.large{
+    --size: var(--large)
+}   
