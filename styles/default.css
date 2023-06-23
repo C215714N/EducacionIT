@@ -10,7 +10,8 @@
     h3,
     header p,
     figure,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Rellenos */
@@ -54,6 +55,7 @@
         background-size: cover; /* width height | contain cover*/
     }
     .header{
+        margin: -1rem -1rem 1rem;
         padding: 16px;
         color: #eee;
         background-color: #448;
