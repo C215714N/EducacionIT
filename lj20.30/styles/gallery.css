@@ -10,7 +10,7 @@
     padding: 1rem;
 }
 .gallery.flex .item{
-    flex: 1 1 min(100%, var(--size));
+    flex: 1 1 var(--size);
     /* Explicacion:
         GROW: capacidad de expansion en flexbox;
         SHRINK: capacidad de reduccion en flexbox;
