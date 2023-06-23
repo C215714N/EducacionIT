@@ -1,5 +1,29 @@
 /* Estilos Generales */
+*{
+    font-family: 'Ubuntu', 'Raleway', 'Segoe ui', sans-serif;
+    scroll-behavior: smooth;
+}
+    /* Margenes */
+    body,
+    h1,
+    h2,
+    h3,
+    header p{
+        margin: 0;
+    }
+    /* Bordes */
 
+    /* Rellenos */
+
+    /* Estilos */
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
+    .example,
+    .menu{
+        list-style: none;
+    }
 /* Navegacion */
 
 /* Cabecera */
