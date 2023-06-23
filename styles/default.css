@@ -63,7 +63,18 @@
         border-bottom: 2px solid;
     }
 /* Contenido */
-    
+    main{
+        max-width: 1140px;
+        margin: 1rem auto; /* root EM (Ancho de "M" en la raiz HTML) */
+        padding: .5rem;
+    }
+    article{
+        margin: 1rem 0;
+        border-radius: .5rem;
+        padding: 1rem;
+        box-shadow: 0 0 .5rem #999;
+        overflow: hidden;
+    }
     /* Ejemplos */
     .example{
         max-width: 960px;
