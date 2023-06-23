@@ -43,3 +43,42 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* Pseudoclases: Instancia o caracteristica de un elemento */
+.item:first-child .header{ /* primer hijo */
+    background-image: linear-gradient(
+        var(--warning),
+        var(--danger)
+    );
+}
+.item:last-child .header{ /* ultimo hijo */
+    background-image: linear-gradient(
+        -30deg,
+        var(--grey),
+        var(--dark)
+    );
+}
+.item:nth-child(3) .header{ /* tercer hijo*/
+    background-image: radial-gradient(
+        circle at top right,
+        var(--warning),
+        var(--light) 20%,
+        var(--warning),
+        #ca3
+    );
+}
+.item:nth-last-child(2) .header{ /* penultimo hijo*/
+    background-image: conic-gradient(
+        var(--info),
+        var(--second),
+        var(--first),
+        #448
+    );
+}
+:nth-child(even) .header{ /* hijos pares */
+    background-image: linear-gradient(
+        to top right,
+        var(--info),
+        var(--first)
+    );
+}
