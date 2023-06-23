@@ -53,8 +53,19 @@
                     <h3>¿Como estan Compuestos?</h3>
                 </header>
                 <p>
-
+                    Dentro de los formularios podemos utilizar cualquier etiqueta conocida, pero exitens 2 tipos de etiquetas necesarias para el envio del mismo, las <strong>Etiquetas (LABEL)</strong> que indican al usuario lo que debe ingresar o seleccionar y tambien facilitan la accesibilidad; y los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los controles del formulario, aquellos con lo que el usuario interactua y que poseen algunos de los siguientes atributos.
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> corresponde al nombre con el que se identifica el campo, es necesario para la extraccion de los datos. En caso de opciones multiples el nombre es compartido.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> indica el tipo de valor que se puede ingresar o seleccionar, limita el campo para su completado. Es obligatorio cuando utilizamos la etiqueta <em>&lt;input></em>
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> hace referencia al dato ingresado, por defecto es implicito, pero si el usuario selecciona una opcion debe figurar dentro del campo de formulario.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
