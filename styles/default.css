@@ -179,8 +179,35 @@
         color: #eee;
         background-color: #448;
     }
-    /* Mapa de Contacto */
-
+    /* Ejemplo de WIX */
+    .banner{
+        display: flex;
+        list-style: none;
+        padding: 4rem 1rem;
+        color: #333;
+        font-weight: bold;
+        background-color: #ec3;
+        text-align: center;
+    }
+    .banner li{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-height: 1rem;
+        padding: 1.5rem;
+    }
+    .big{
+        display: block;
+        width: 100%;
+        margin-top: -3rem;
+        font-size: 3rem;
+        color: #eee;
+    }
+    .border{
+        border: .1rem solid #eee;
+        border-top: none;
+        border-bottom: none;
+    }
     /* Redes Sociales */
     .social{
         display: flex;
