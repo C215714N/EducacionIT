@@ -182,5 +182,47 @@
     /* Mapa de Contacto */
 
     /* Redes Sociales */
-
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: .5rem;
+        padding: 1rem;
+    }
+    .social a{
+        width: 4rem;
+        height: 4rem;
+        border-radius: .5rem;
+        background-color: #ccc;
+        background-position: center;
+        background-size: 2.5rem;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 3.25rem;
+        box-shadow: 0 .2rem .5rem #333; /* -x+ -y+ blur color*/
+    }
+    /* Iconos Redes sociales */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
+    }
     /* Derechos de Autor */
