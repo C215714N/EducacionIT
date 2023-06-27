@@ -40,6 +40,27 @@
         margin: auto;
         padding: 16px;
     }
+    label{
+        margin-top: 8px;
+    }
+    input,
+    textarea,
+    select{
+        padding: 4px 8px; /* top right bottom left*/
+        font-size: 16px;
+    }
+    textarea{
+        min-height: 80px;
+        resize: vertical;
+    }
+    .btn{
+        border: 1px solid #448;
+        color: #eee;
+        background-color: #448;
+    }
+    .btn:hover{
+        background-color: #66c;
+    }
     /* Redes sociales */
 
     /* Mapa de Contacto */
