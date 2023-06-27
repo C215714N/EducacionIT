@@ -8,7 +8,8 @@
     h1,
     h2,
     h3,
-    header p{
+    header p,
+    .menu{
         margin: 0;
     }
     /* Bordes */
@@ -25,7 +26,21 @@
         list-style: none;
     }
 /* Navegacion */
-
+.menu{
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    gap: 16px;
+    background-color: #448;
+}
+.menu a{
+    color: #aaa;
+}
+.menu a.active,
+.menu a:hover{
+    color: #fff;
+    text-shadow: 0 0 8px; /* -x+ -y+ blur color */
+}
 /* Cabecera */
 
 /* Contenido Principal */
@@ -54,7 +69,7 @@
         resize: vertical;
     }
     .btn{
-        border: 1px solid #448;
+        border: 1px solid #448; /* width style color */
         color: #eee;
         background-color: #448;
     }
