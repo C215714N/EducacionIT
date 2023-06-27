@@ -89,6 +89,14 @@
         height: 64px;
         border-radius: 8px;
         background-color: #ccc;
+        background-position: center; /*x y | top bottom right left center*/
+        background-size: 36px; /*width height | cover contain*/
+        background-repeat: no-repeat; /*repeat repeat-x repeat-y no-repeat*/
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+        box-shadow: 0 4px 8px #333; /*-x+ -y+ blur color*/
     }
     /* Iconos redes sociales */
     .facebook{
