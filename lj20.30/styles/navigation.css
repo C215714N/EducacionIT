@@ -71,6 +71,7 @@ nav a{
     .menu{
         display: flex;
         width: auto;
+        max-height: 100vh;
         gap: .5rem;
     }
 }
@@ -78,5 +79,8 @@ nav a{
 @media screen and (min-width: 1200px){
     #nav{
         padding: 1rem calc(50vw - 570px);
+    }
+    .menu{
+        overflow: visible;
     }
 }
