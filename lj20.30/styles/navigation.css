@@ -1,8 +1,14 @@
 #nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    /*  STICKY: 
+        El elemento permanece dentro del Flow, ocupando su lugar dentro de la pagina, hasta que cumple la condicion de alguno de los atributos complementarios a position (TOP, RIGHT, BOTTOM, LEFT). El elemento permanece anclado a la direccion indicada mientras se visualice su contenedor.
+    */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: 1rem;
     background-image: linear-gradient(
         var(--first),
@@ -25,6 +31,9 @@ nav a{
     max-height: 100vh;
 }
 /* Iconos */
+[class*="menu-"]::before{ /* si dentro del atributo existe dicho valor */
+    filter: sepia(80%); /* filtro de color */
+}
 .menu-open::before{
     content: '⭕';
 }
@@ -53,4 +62,21 @@ nav a{
 }
 .btn-dark{
     --color: var(--dark);
+}
+/* Pantallas Medianas */
+@media screen and (min-width: 768px){
+    #nav .btn{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: auto;
+        gap: .5rem;
+    }
+}
+/* Pantallas Extra Grandes */
+@media screen and (min-width: 1200px){
+    #nav{
+        padding: 1rem calc(50vw - 570px);
+    }
 }
