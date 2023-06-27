@@ -77,7 +77,41 @@
         background-color: #66c;
     }
     /* Redes sociales */
-
+    .social{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: 8px;
+        padding: 16px;
+    }
+    .social a{
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        background-color: #ccc;
+    }
+    /* Iconos redes sociales */
+    .facebook{
+        background-image: url('../assets/icon/facebook.svg');
+    }
+    .instagram{
+        background-image: url('../assets/icon/instagram.svg');
+    }
+    .twitter{
+        background-image: url('../assets/icon/twitter.svg');
+    }
+    .linkedin{
+        background-image: url('../assets/icon/linkedin.svg');
+    }
+    .youtube{
+        background-image: url('../assets/icon/youtube.svg');
+    }
+    .github{
+        background-image: url('../assets/icon/github.svg');
+    }
+    .whatsapp{
+        background-image: url('../assets/icon/whatsapp.svg');
+    }
     /* Mapa de Contacto */
 
     /* Derechos de Autor */
