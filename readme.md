@@ -46,3 +46,21 @@ __Access Control List__ corresponde a una serie de reglas que determinan si un r
     * __ip access-group `<1-199>` in__: asigna la lista de acceso para que analice el trafico entrante de la interfaz
     * __ip access-group `<1-199>` out__: asigna la lista de acceso para que analice el trafico saliente de la interfaz
     * __ip access-class `<WORD>`__: asigna una lista de control acceso nombrada a la lineas VTY y consola
+
+## NAT
+
+__Network Address Translation__ es un mecanismo utilizado por los routers para cambiar paquetes entre dos redes que asignan mutuamente direcciones incompatibles y se implementa generalmente para la comunicacion de redes privadas con redes publicas. Surge como una solucion al problema de agotamiento de direcciones en IPv4 y puede implementarse de diferentes maneras como _estatica_, cuando la traduccion se realiza individualmente, _dinamica_, cuando se asigna una lista de direcciones a traducir, y con _sobrecarga_ donde ademas se asocia un numero de puerto para seguir la comunicacion.
+
+1. router(config)# __(definicion de direcciones publicas)__
+    * __ip nat inside source static `<private ip>` `<public ip>`__: define de manera estatica la direccion que debe asignarse a la ip de tipo privada
+    * __ip nat pool `<WORD>` `<start ip>` `<end ip>` netmask `<netmask>`__: define de manera dinamica lista de direcciones publicas con su respectiva mascara
+2. router(config)# __(asociacion dinamica de direcciones)__
+    * __ip nat inside source list `<WORD>` pool `<WORD>`__: define la lista de acceso a utilizar, asociandola con la lista de direcciones NAT
+    * __ip nat inside source list `<WORD>` pool `<WORD>` overload__: habilita la sobrecarga de puertos para optimizar la asignacion de direcciones
+    * __ip nat inside source list `<WORD>` interface `<interface-id>` overload__: habilita la sobrecarga de puertos indicando la interfaz de salida 
+3. router(config-if)# __(asignacion de direcciones)__
+    * __ip nat inside__: define la interfaz de trafico entrante que debera coincidir con la lista de direcciones LAN privadas
+    * __ip nat outside__: define la interfaz de trafico saliente donde debera reemplazar las direcciones de origen con las WAN Publicas
+4. router# __(verificacion de configuracion y traducciones)__
+    * __show ip nat translations__: muestra la lista de paquetes, protocolos y puertos utilizados en las comunicaciones donde intervino NAT
+    * __show ip nat statistics__: muestra un resumen de las estadisticas y configuracion NAT del dispositivo
