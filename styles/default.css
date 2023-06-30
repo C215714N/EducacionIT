@@ -61,6 +61,42 @@ header{
 }
 /* Contenido Principal */
 
+    /* Tablas HTML */
+    table caption,
+    table td,
+    table th{
+        padding: 8px;
+    }
+    table caption{
+        border-radius: 8px 8px 0 0; /* TL TR BR BL */
+    }
+    .classic{
+        border-collapse: collapse;
+    }
+    .classic caption,
+    .classic th,
+    .classic td{
+        border: 2px solid #448;
+    }
+    .classic caption{
+        border-bottom: none;
+    }
+    .modern,
+    .modern caption,
+    .modern tr,
+    .modern td{
+        color: #eee;
+        background-color: rgba(68,68,136,.5); /* Hex: #448*/
+    }
+    .semantic thead{
+        background-color: #c33;
+    }
+    .semantic tbody{
+        background-color: #3c6;
+    }
+    .semantic tfoot{
+        background-color: #248;
+    }
 /* Pie de Pagina */
 
     /* Formulario */
