@@ -1,0 +1,42 @@
+#footer{
+    position: relative;
+    /* RELATIVE:
+        El elemento ocupa su lugar predeterminado dentro del flujo del documento y define su posicion en base a si mismo, es decir que puede desplazarse hacia alguna direccion, pero sigue ocupando su espacio original. Es efectivo cuando necesitamos mover un elemento de lugar sin afectar al resto de la pagina y cuando necesitamos definir una etiqueta como referente.
+    */
+    padding: 7rem 1rem 0;
+    background: linear-gradient(
+        rgb(236,236,236, .5),
+        rgb(51,51,51,.5)
+    );
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* ABSOLUTE:
+        El elemento deja de pertenecer al flujo del documento y se ubica con respecto al primer ancestro cuya posicion no sea "static". Se le puede definir tamaño y su posicion, en caso que no se indique, es la predeterminada.
+    */
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.map.active,
+.map.active + button{
+    position: fixed;
+    /* FIXED:
+        El elemento deja de formar parte del flujo del documento, es decir que no ocupa lugar en el espacio, y establece su posicion con respecto a al viewport (ventana). Se utiliza principalmente si necesitamos fijar un elemento en pantalla.
+    */
+    z-index: 1;
+    opacity: .95;
+}
+button[class*="map-"]{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.map-open::before{
+    content: '↗️';
+}
+.map-close::before{
+    content: '↙️'
+}
