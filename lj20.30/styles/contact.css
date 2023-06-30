@@ -21,6 +21,10 @@ select{
     padding: .4rem .5rem;
     font-size: 1rem;
 }
+textarea{
+    resize: vertical;
+    min-height: 5rem;
+}
 
 form :focus + .validate{
     max-height: 3rem;
@@ -31,4 +35,24 @@ form :is(input, textarea, select):valid{
 
 form :valid + .validate{
     color: var(--success);
+}
+#contact button{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0; /* top right bottom left */
+    border-radius: .25rem;
+    border: 1px solid var(--first);
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--first)
+}
+#contact button:hover{
+    top: -.5rem;
+    left: .5rem;
+    box-shadow: -.5rem .5rem var(--dark); /* -x+ -y+ blur color */
+}
+#contact button:active{
+    color: var(--light);
+    background-color: var(--first);
 }
