@@ -187,6 +187,54 @@
                     </table>
                 </div>
             </section>
+            <section>
+                <header>
+                    <h3>¿Celdas combinadas?</h3>
+                </header>
+                <p>
+                    En ciertas ocasiones podemos necesitar que una celda ocupe mas de una columna o mas de una fila, para ello debemos utilizar los atributos <strong>colspan="..."</strong> y <strong>rowspan="..."</strong> respectivamente, indicando la cantidad total de celdas a ocupar. Cabe destacar que todo contenido posterior sera desplazado hacia la derecha.
+                </p>
+                <div class="example container">
+                    <table class="semantic modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Cant.</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>3</td>
+                                <td>45800</td>
+                                <td>137400</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>1</td>
+                                <td>10500</td>
+                                <td>10500</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>2</td>
+                                <td>8700</td>
+                                <td>17400</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td colspan="3">165300</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    
+                </div>
+            </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
