@@ -1,8 +1,13 @@
 #header{
-    margin: 0;
+    position: relative;
     padding: min(20%, 240px) 1rem;
     font-size: min(calc(.5rem + 2vw), 3rem);
     text-align: center;
+    text-shadow: 0 0 .5rem var(--dark);
+    background: linear-gradient(
+        #36c8,
+        #2488
+    );
 }
 .header{
     margin: -1rem -1rem 1rem;
