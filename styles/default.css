@@ -60,7 +60,14 @@ header{
     border-bottom: 2px solid;
 }
 /* Contenido Principal */
+    /* Secciones de Ejemplos */
 
+    .container{
+        display: flex;
+        gap: 16px;
+        padding: 8px;
+        overflow: auto;
+    }
     /* Tablas HTML */
     table caption,
     table td,
