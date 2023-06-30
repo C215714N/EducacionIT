@@ -70,6 +70,67 @@
                 </ul>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son elementos que permiten organizar la informacion de manera tabular y que se utilizan cuando los datos deben presentarse de una manera determinada. Para incorporarlas dentro de la pagina, simplemente, debemos colocar la etiqueta <strong>&lt;table></strong> y de las mismas colocaremos las filas y las columnas respetando el <em>modelo de cajas</em>.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Poseen Carga Semantica?</h3>
+                </header>
+                <p>
+                    Dentro de la etiqueta <em>mencionada anteriormente</em> debemos colocar las etiquetas <strong>&lt;tr> (Table Row)</strong> para definir las filas contenedoras y dentro de las mismas, las etiquetas <strong>&lt;td> (Table Division)</strong> que representa las celdas de contenido. A partir de HTML5 se incorporo un conjunto de etiquetas que corresponde a una estructura semantica, que facilita a los motores de busqueda la identificacion del contenido, ademas que amplia la forma en la que podemos diseñar las tablas.
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>THEAD</strong> corresponde a la cabera de tabla y contiene la fila de encabezados, que se representan con las etiquetas <em>&lt;th> (Table Heading)</em>
+                    </li>
+                    <li>
+                        <strong>TBODY</strong> corresponde al cuerpo de tabla donde se encuentran los datos a representar y normalmente suele estar compuesto por varias filas.
+                    </li>
+                    <li>
+                        <strong>TFOOT</strong> corresponde al pie de tabla y posee datos complementarios al conteido, como totales, promedios, maximos, minimos, etc...
+                    </li>
+                </ul>
+                <div class="example">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <td>C215714N</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>D477714N</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Cristian</td>
+                                <td>cristiandracedo@ymail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla (opcional) -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>3</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
