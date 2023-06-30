@@ -5,6 +5,7 @@
     /*  STICKY: 
         El elemento permanece dentro del Flow, ocupando su lugar dentro de la pagina, hasta que cumple la condicion de alguno de los atributos complementarios a position (TOP, RIGHT, BOTTOM, LEFT). El elemento permanece anclado a la direccion indicada mientras se visualice su contenedor.
     */
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
