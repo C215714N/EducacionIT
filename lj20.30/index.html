@@ -34,7 +34,7 @@
     </nav>
     <!-- Contenido Principal -->
     <main>
-        <section>
+        <article>
             <header class="header">
                 <h2>Galerias</h2>
             </header>
@@ -100,7 +100,61 @@
                     </article>
                 </div>
             </section>
-        </section>
+        </article>
+        <article>
+            <header class="header">
+                <h2>Preprocesadores</h2>
+            </header>
+            <p>
+                Son herramientas que se utilizan para agilizar la creacion de hojas de estilos, mediante el uso de algun lenguaje de programacion y caracteristicas propias del mismo como el uso de condicionales y bucles. Las mismas normalmente son compiladas, para luego crear el css correspondiente.
+            </p>
+            <section>
+                <header>
+                    <h3>SASS</h3>
+                </header>
+                <p>
+                    <strong>Syntactically Awesome Style Sheets</strong> Es un Preprocesador que utiliza <em>Ruby</em> como lenguaje compilador y, al igual que este, el codigo de nuestro archivo <em>sass</em> o <em>scss</em> debe estar correctamente organizado, ya que no se pueden utilizar elementos que no hayan sido declarados previamente.
+                </p>
+                <p>
+                    Podemos acceder a la documentacion de este preprocesador, muy popular, desde el <a href="https://sass-lang.com/" target="_blank">sitio oficial de SASS</a>, donde figuran sus caracteristicas, ejemplos, registro de cambios, etc. Cabe mencionar que entre sus caracteristicas principales se encuentran las siguientes:
+                </p>
+                <ul>
+                    <li>Variables</li>
+                    <li>Nesting</li>
+                    <li>Mixins</li>
+                    <li>Condicionales</li>
+                    <li>Bucles</li>
+                </ul>
+                <h4>Plantilla de colores</h4>
+                <ul class="l-none p-0">
+                    <li class="p-3 | text-light bg-primary">primary</li>
+                    <li class="p-3 | text-light bg-secondary">secondary</li>
+                    <li class="p-3 | bg-light">light</li>
+                    <li class="p-3 | text-light bg-grey">grey</li>
+                    <li class="p-3 | text-light bg-dark">dark</li>
+                    <li class="p-3 | text-light bg-info">info</li>
+                    <li class="p-3 | text-light bg-danger">danger</li>
+                    <li class="p-3 | bg-warning">warning</li>
+                    <li class="p-3 | bg-success">success</li>
+                    <li class="p-3 | bg-transparent">transparent</li>
+                </ul>
+                <h4>Sistem de Grillas Responsive</h4>
+                <div class="row">
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 1</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 2</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 3</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 4</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 5</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 6</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 7</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 8</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 9</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 10</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 11</div>
+                    <div class="b-1 b-solid border-primary p-3 | col-24 col-md-12 col-lg-8 col-xxl-6">columna 12</div>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
@@ -112,7 +166,7 @@
         </iframe>
         <button class="btn btn-dark map-open" title="ver/ocultar mapa"></button>
         <!-- Formulario de Contacto -->
-        <form id="contact" action="">
+        <form id="contact" action="" class="col-22 col-md-18 col-lg-12 col-xl-8">
             <h2>Dejanos tu consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
