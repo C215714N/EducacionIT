@@ -302,9 +302,73 @@
                     <h3>¿Contenido Embebido?</h3>
                 </header>
                 <p>
-                    Este nombre corresponde a una categoria web que indica que <em> el elemento utilizado fue compartido con autorizacion del publicador original</em>. Para ello, normalmente se utiliza la etiqueta <strong>&lt;iframe</strong> que permite la carga asincrona de contenido, es decir, que no afecta a los tiempos de carga de nuestro sitio y permite mostrar, dentro de una ventana, contenido externo. Podemos reconocer este tipo de elementos gracias a las palabras <em>compartir, embeber, codigo de insercion, etc...</em>
+                    Este nombre corresponde a una categoria web que indica que <em> el elemento utilizado fue compartido con autorizacion del publicador original</em>. Para ello, normalmente se utiliza la etiqueta <strong>&lt;iframe</strong> que permite la carga asincrona de contenido, es decir, que no afecta a los tiempos de carga de nuestro sitio y permite mostrar, dentro de una ventana, contenido externo. Podemos reconocer este tipo de elementos gracias a las palabras <em>compartir, embeber, codigo de insercion, incorporar, incrustar, etc...</em>
                 </p>
-                
+                <div class="example container">
+                    <!-- Contenedor de elementos graficos -->
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="Carvel - John Frusciante"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                        <!-- Rotulo o Epigrafe -->
+                        <figcaption>Contenido con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe
+                        src="https://www.youtube.com/embed/P4eobKkR5-c" 
+                        title="Succession - #TeLoResumo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe
+                            src="https://www.youtube.com/embed/xbT1vrsNUT0" 
+                            title="Nosferatu - 1922"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Dominio Publico</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.slideshare.net/slideshow/embed_code/key/N99OEOmKr35PsJ?startSlide=1" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>
+                            HTML5 from <a href="https://www.slideshare.net/HatemMahmoud" target="_blank">Hatem Mahmoud</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    <em>Como se indica mas arriba</em>, ya no es necesario instalar complementos en el navegador para este tipo de contenidos, ya que los navegadores actuales incluyen una <strong>API de reproduccion</strong> y para utilizarla simplemente debemos colocar las etiquetas <strong>&lt;audio y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Estas etiquetas tambien soportan atributos como <em>autoplay muted loop y controls</em>
+                </p>
+                <div class="example container">
+                    <figure>
+                        <video src="assets/media/scar-tissue.webm" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador No es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/scar-tissue.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Scar Tissue - Californication (1999)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos, pero tu navegador No es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand - Stadium Arcadium (2006)</figcaption>
+                    </figure>
+                </div>
             </section>
         </article>
     </main>
