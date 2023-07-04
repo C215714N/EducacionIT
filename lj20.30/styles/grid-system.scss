@@ -1,0 +1,93 @@
+// Variables: Espacio reservado en memoria cuyo valor puede cambiar
+    $col: 24; 
+    $limit: 10;
+// Array: Almacena multiples valores identificados por indices numericos
+    $borders: solid, double, dotted, dashed, groove; 
+    $lists: none, disc, decimal, decimal-leading-zero, hiragana, katakana, arabic-indic, lower-greek, upper-greek, lower-roman, upper-roman;
+// Object (Nested Array): Matriz de datos que se pueden extraer individualmente
+    $mediaQueries: 
+        sm  576px,
+        md  768px,
+        lg  992px,
+        xl  1200px,
+        xxl 1400px;
+    $colors: 
+        primary   var(--first),
+        secondary var(--second),
+        grey    var(--grey),
+        light     var(--light),
+        dark      var(--dark),
+        info      var(--info),
+        warning   var(--warning),
+        success   var(--success),
+        danger    var(--danger),
+        none      transparent;
+    $attributes: 
+        text    color,
+        bg      background-color,
+        border  border-color;
+    $properties: 
+        m margin,
+        b border-width,
+        p padding;
+// Mixins: Estilos que reciben parametros y se utilizan como atributos
+    @mixin flexbox($fd: row, $jc: center, $ai: stretch, $fw: wrap, $d: flex){
+        display: $d;
+        flex-direction: $fd;
+        justify-content: $jc;
+        align-items: $ai;
+        flex-wrap: $fw;
+    }
+    .row{
+        @include flexbox;
+    }
+    .row-start{
+        @include flexbox($jc: start);
+    }
+    .row-end{
+        @include flexbox($jc: end);
+    }
+    .infinite-row{
+        @include flexbox($fw: nowrap);
+    }
+    .column{
+        @include flexbox(column);
+    }
+// Loops: Estilos que se repiten en base a una condicion
+    // @for = se repite en base a un rango numerico incluyendo el max o no
+    // @each = itera cada uno de los elementos dentro de un array/object
+    /* Tamaños de elementos */
+    @each $prop, $attr in $properties{
+        @for $i from 0 through $limit{
+            .#{$prop}-#{$i}{
+                #{$attr}: $i * .25rem;
+    }   }   }
+    /* Estilos de Borde */
+    @each $style in $borders{
+        .b-#{$style}{
+            border-style: $style;
+    }   }
+    /* Estilos de Lista */
+    @each $style in $lists{
+        .l-#{$style}{
+            list-style-type: $style;
+    }   }
+    /* Colores por Atributos */
+    @each $prop, $attr in $attributes{
+        @each $color, $value in $colors{
+            .#{$prop}-#{$color}{
+                #{$attr}: $value;
+    }   }   }
+    /* Sistema de Grillas General */
+    @for $i from 1 through $col{
+        .col-#{$i}{
+            width: percentage($i / $col); 
+    }   }
+    /* Sistema de Grillas Responsive */
+    @each $screen, $size in $mediaQueries{
+    @media screen and (min-width: $size){
+        @for $i from 1 through $col{
+            .col-#{$screen}-#{$i}{
+                width: percentage($i / $col);
+}   }   }   }
+// Nesting: Selectores que se utilizan dentro de otros para mayor especificidad
