@@ -127,6 +127,23 @@ header{
     .semantic tfoot{
         background-color: #248;
     }
+    /* Contenido Multimedia */
+    figure{
+        min-width: min(640px, 100%);
+        min-height: 360px;
+    }
+    iframe,
+    video{
+        width: 100%;
+        height: calc(100% - 1rem);
+        object-fit: cover; /* como se representa el elemento */
+    }
+    /* Relacion de Aspecto 
+        ratio       width       height          ejemplo:
+        4:3         1.33(h)     75%(w)          640x480
+        16:9        1.78(h)     56.25%(w)       640x360
+        16:10       1.6(h)      62.5%(w)        640x400
+    */
 /* Pie de Pagina */
 
     /* Formulario */
