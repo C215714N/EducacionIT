@@ -1,0 +1,113 @@
+// Rutas
+$src: '../assets';
+$bg: '#{$src}/bg';
+$ico: '#{$src}/icon';
+
+// Imagenes
+$social:
+    "cr",
+    "facebook",
+    "github",
+    "instagram",
+    "linkedin",
+    "twitter",
+    "telegram",
+    "whatsapp",
+    "youtube";
+$menu:
+    "open",
+    "close",
+    "expand",
+    "shrink";
+
+$linux:
+    "artful-aardvark",
+    "bionic-beaver",
+    "cosmic-cuttlefish",
+    "disco-dingo",
+    "eoan-ermine",
+    "focal-fossa",
+    "groovy-gorilla",
+    "hisurte-hippo",
+    "impish-Indri",
+    "jammy-jellyfish";
+
+$macos: 
+    "big-sur-dark",
+    "big-sur-light",
+    "big-sur-night",
+    "big-sur",
+    "catalina-night",
+    "catalina",
+    "el-capitan",
+    "high-sierra",
+    "leopard",
+    "lion",
+    "mavericks",
+    "mojave-night",
+    "mojave",
+    "monterrey-dark",
+    "monterrey-light",
+    "mountain-lion",
+    "sierra",
+    "snow-leopard",
+    "tiger",
+    "yosemite";
+
+// Mixin Estilos de Caja
+@mixin normalize($p: 0, $m: 0, $b: 0, $ba: border, $ma: margin, $pa: padding){
+    #{$ma}: $m;
+    #{$ba}: $b;
+    #{$pa}: $p;
+}
+
+// Mixin creacion de clases Iconos
+@mixin classNames(
+    $array, 
+    $class: "", 
+    $prop: background-image, 
+    $path: $bg,
+    $format:".jpg",
+    $extra: ""
+    ){
+    @each $item in $array{
+    .#{$class}#{$item}{
+        #{$prop}: url("#{$path}/#{$extra}#{$item}#{$format}");
+} } }
+
+// Implementacion de Mixins Iconos
+/* Redes sociales */
+@include classNames($social,"",--icon, $ico,".svg");
+/* Imagenes de Fondo Ubuntu */
+@include classNames($linux, bg-,--img, $extra: "ubuntu-");
+/* Imagenes de Fondo Mac OS X*/
+@include classNames($macos, bg-,--img, $extra: "osx-");
+
+// Nesting: Anidacion de estilos
+.icon{
+    --color: #ccc;
+    --position: center;
+    --size: 2.5rem;
+    @include normalize(2rem, .25rem, .5rem, border-radius);
+    position: relative;
+    background: var(--color) var(--icon) var(--position)/var(--size) no-repeat;
+    &:hover{
+        --size: 3rem;
+        transform: rotate(360deg);
+        transition: all .5s linear; 
+        /* efecto que completa las etapas intermedias entre un estado A y su estado B, es necesario que exista un gatillador*/
+    }
+    &:active{
+        --color: var(--light);
+        bottom: .5rem;
+        box-shadow: 0 .5rem .5rem var(--dark);
+    }
+}
+
+.social{
+    @include normalize(1rem, flex, center, justify-content, display);
+    // Extension de estilos
+    a{
+        @extend .icon;
+    }
+}
