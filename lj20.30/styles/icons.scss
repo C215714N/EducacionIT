@@ -111,3 +111,66 @@ $macos:
         @extend .icon;
     }
 }
+
+.slider{
+    position: relative;
+    width: 100%;
+    min-height: min(100vh, 640px);
+    .item{
+        @include normalize($b:none, $ba: list-style);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        background: var(--light) var(--img) center/cover no-repeat;
+        &.active{
+            z-index: 0;
+            opacity: 1;
+        }
+    }
+    button[class*="icon"]{
+        @include normalize(1rem, transparent, $ma: background-color);
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        width: 20%;
+        height: 100%;
+        z-index: 1;
+        font-size: 5vw;
+        color: var(--light);
+        opacity: .3;
+        &.icon-prev{
+            left: 0;
+        }
+        &.icon-next{
+            right: 0;
+        }
+        &:hover{
+            opacity: .7;
+        }
+    }
+    .controls{
+        position: absolute;
+        bottom: 1.5rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        button{
+            @include normalize(.5rem,1rem, $ma: border-radius);
+            border-radius: 1rem;
+            opacity: .5;
+            &.active{
+                width: 3rem;
+            }
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+}
