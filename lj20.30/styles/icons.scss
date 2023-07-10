@@ -60,7 +60,10 @@ $macos:
     #{$ba}: $b;
     #{$pa}: $p;
 }
-
+// Mixin Transiciones
+@mixin transition($t: 1s, $tf: ease, $dy: 0s, $prop: all){
+    transition: $prop $t $tf $dy;
+}
 // Mixin creacion de clases Iconos
 @mixin classNames(
     $array, 
@@ -93,9 +96,13 @@ $macos:
     background: var(--color) var(--icon) var(--position)/var(--size) no-repeat;
     &:hover{
         --size: 3rem;
+        @include transition (.3s, linear, .6s);
         transform: rotate(360deg);
-        transition: all .5s linear; 
-        /* efecto que completa las etapas intermedias entre un estado A y su estado B, es necesario que exista un gatillador*/
+        /*  EXPLICACION: 
+            efecto que completa las etapas intermedias entre un estado A y su estado B, es necesario que exista un gatillador
+        
+            Atributos: property duration timing-function delay
+        */
     }
     &:active{
         --color: var(--light);
@@ -111,13 +118,13 @@ $macos:
         @extend .icon;
     }
 }
-
 .slider{
     position: relative;
     width: 100%;
     min-height: min(100vh, 640px);
     .item{
         @include normalize($b:none, $ba: list-style);
+        @include transition($tf: ease-out);
         position: absolute;
         top: 0;
         left: 0;
@@ -125,7 +132,7 @@ $macos:
         height: 100%;
         z-index: -1;
         opacity: 0;
-        background: var(--light) var(--img) center/cover no-repeat;
+        background: var(--light) var(--img) top center/cover no-repeat;
         &.active{
             z-index: 0;
             opacity: 1;
@@ -163,10 +170,11 @@ $macos:
         gap: .5rem;
         button{
             @include normalize(.5rem,1rem, $ma: border-radius);
+            @include transition(.5s, ease-in);
             border-radius: 1rem;
             opacity: .5;
             &.active{
-                width: 3rem;
+                padding: .5rem 1.5rem;
             }
             &:hover{
                 opacity: .8;
