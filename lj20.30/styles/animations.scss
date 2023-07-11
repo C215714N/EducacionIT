@@ -1,0 +1,12 @@
+@keyframes appear{
+    from{
+        transform: 
+            translateY(50vh)
+            translateZ(50vh);
+    }
+}
+@keyframes slide{
+    to{
+        background-position: 0;
+    }
+}
