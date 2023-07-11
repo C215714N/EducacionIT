@@ -6,6 +6,7 @@ Esto es una guia para los alumnos de la capacitacion CCNA3 que cursan los dias m
 1. [Open Shortest Path First](#protocolo-ospf)
 1. [Access Control List](#acl)
 1. [Network Address Translation](#nat)
+1. [Point to Point Protocol](#ppp)
 
 ## Protocolo OSPF
 
@@ -64,3 +65,19 @@ __Network Address Translation__ es un mecanismo utilizado por los routers para c
 4. router# __(verificacion de configuracion y traducciones)__
     * __show ip nat translations__: muestra la lista de paquetes, protocolos y puertos utilizados en las comunicaciones donde intervino NAT
     * __show ip nat statistics__: muestra un resumen de las estadisticas y configuracion NAT del dispositivo
+
+## PPP
+__Point to Point Protocol__ funciona a nivel de enlace de datos y es utilizado para establecer una _conexión directa entre dos nodos_ de red, permitiendo conectar routers directamente sin ningún equipo u otro dispositivo de red entre ambos. Cuando configuramos este protocolo se establecen dos subcapas LCP y NDP
+
+1. router(config-if)# __(Protocolo Punto a Punto)__
+    * __encapsulation `ppp`__: define el metodo de encapsulamiento a nivel de capa 2
+    * __ppp quality `<percentage>`__: determina el porcentaje de calidad de comunicacion.
+1. router (config-if)# __(Definicion de Credenciales)__
+    * __hostname `R1`__: esteblece el nombre de host para la conexion punto a punto.
+    * __username `R2` password `Abc123!`__: define un usuario con el nombre del host remoto.
+1. router (config-if)# __(Protocolo de Autenticacion por contraseña)__
+    * __ppp authentication `pap`__: establece pap como metodo de autenticacion
+    * __ppp pap sent-username `R1` password `Abc123!`__: establece las credenciales que seran validadas por el host remoto.
+1. router(config-if)# __(Protocolo de Autenticacion por desafio mutuo)__
+    * __ppp authentication `chap`__: establece chap como metodo de autenticacion
+    * __ppp authenticacion `chap` `pap`__: define los metodos de autenticacion principal y secundario en caso que no funcione.
