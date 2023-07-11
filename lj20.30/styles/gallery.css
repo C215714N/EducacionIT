@@ -75,7 +75,7 @@
         #448
     );
 }
-:nth-child(even) .header{ /* hijos pares */
+.item:nth-child(even) .header{ /* hijos pares */
     background-image: linear-gradient(
         to top right,
         var(--info),

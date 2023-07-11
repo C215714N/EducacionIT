@@ -4,18 +4,51 @@
     font-size: min(calc(.5rem + 2vw), 3rem);
     text-align: center;
     text-shadow: 0 0 .5rem var(--dark);
+    overflow: hidden;
     background: linear-gradient(
         #36c8,
         #2488
     );
+    perspective: 15rem;
+    perspective-origin: center;
+    /* Perspectiva: Define un punto de fuga a donde tienden las lineas imaginarias de los elementos */
 }
 .header{
     margin: -1rem -1rem 1rem;
     padding: 1rem;
     color: var(--light);
-    background-color: var(--first);
+    background: linear-gradient(
+        to right,
+        hsl(0, 50%, 50%),
+        hsl(60, 50%, 50%),
+        hsl(120, 50%, 50%),
+        hsl(180, 50%, 50%),
+        hsl(240, 50%, 50%),
+        hsl(300, 50%, 50%),
+        hsl(0, 50%, 50%)
+    ) -500%/500%;
+    animation: slide 600s linear;
 }
 header{
     color: var(--first);
     border-bottom: .1rem solid;
+}
+h1{
+    font-family: var(--main);
+    letter-spacing: .2rem;
+    transform: rotateX(30deg);
+    /* Transformaciones: 
+        2d (Ancho y Alto - sin referente)
+        translate(x,y) - distancia
+        scale(ux,uy) - tamaño
+        rotate(deg) - giro
+        skew(xdeg, ydeg) - sesgado
+
+        3d (x, y, z - con perspectiva)
+        rotateX(deg) - grados
+        rotateY(deg) - grados
+        translateZ(z) - distancia
+    */
+    animation: appear 10s linear;
+    /* name duration delay timing count */
 }
