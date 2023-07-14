@@ -26,6 +26,38 @@ $attributes:
     border: .5rem solid;
     border-color: #ace #8ac #48a #248;
 }
+.window{
+    content: '';
+    position: absolute;
+    top: .25rem;
+    height: 1rem;
+    border-radius: .25rem;
+    border: 1px solid #333;
+    background-color: #eee;
+}
+.race > .a-item{
+    --sec: 5s;
+    --i: infinite;
+    position: relative;
+    width: 5rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem 2rem 2rem .5rem / 50% 20% 10% 50%;
+    background: radial-gradient(
+        circle at top right,
+        #eee,
+        #248
+    );
+    &::before{
+        @extend .window;
+        right: 1rem;
+        width: 1rem;
+    }
+    &::after{
+        @extend .window;
+        left: 1rem;
+        width: .5rem;
+    }
+}
 
 /* Fotogramas de animacion */
 @keyframes appear{
@@ -38,15 +70,27 @@ $attributes:
 }
 @keyframes slide{
     /* como termina la animacion - HASTA*/
-    to{
-        background-position: 0;
-    }
+    to{ background-position: 0; }
 }
 @keyframes loading{
-    from{
-        transform: rotate(0deg);
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+@keyframes race{
+    0%{
+        transform:
+            translate(-10vw)
+            skew(15deg)
     }
-    to{
-        transform: rotate(360deg)
+    50%{
+        transform:
+            translate(50vw)
+            skew(30deg);
+    }
+    100%{
+        transform: 
+            translate(100vw)
+            skew(5deg)
+        ;
     }
 }
