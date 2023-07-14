@@ -12,7 +12,7 @@ Aqui dejo una lista de algunos editores que pueden utilizar para trabajar y algu
 |--|--|
 | [Visual Studio Code](https://code.visualstudio.com) | Perfecto para quienes empiezan en el mundo del desarrollo, instalas y listo para trabajar. |
 | [Sublime Text](https://sublimetext.com) | Amigable con los desarrolladores, su interfaz es sencilla pero requiere ciertas nociones. |
-| [Atom](https://atom.io) | Ideal para quienes utilizan un sistema de control de versiones, sus pantallas divididas son muy utiles. |
+| [Atom](https://atom.io) | Sus pantallas divididas son muy utiles para quienes utilizan sistemas de control de versiones. |
 | [notepad++](https://notepad-plus-plus.org/) | Editor minimalista que requiere de poco espacio y bastante personalizable. |
 | [Brackets](https://brackets.io) | Desarrollado con Javascript y pensado para ser utilizado por diseñadores web. |
 | [VIM](https://www.vim.org/) | Para desarrolladores hardcore capaces de abandonar la GUI y concentrarse en el codigo. |
