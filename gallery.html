@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos En BLOQUE -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'segoe ui', 'calibri', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee;
+            background-color: #284; /* DEC:rgb(34,136,68) | HEX:#rrggbb */
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: #142;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :pseudoclases (instancia o caracteristica de un elemento) */
+        nav li:hover{ /*al pasar el mouse por encima*/
+            background-color: #3c6;
+        }
+        /* Selectores de Clases (.class) */
+        .box{
+            margin: 16px;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            background-color: #aec;
+        }
+        .box img{
+            max-width: 360px;
+            width: 100%;
+        }
+        p.box{
+            text-align: left;
+            color: #eee;
+            background-color: #333;
+            overflow: hidden;
+        }
+        p.box img{
+            float: left;
+            margin-right: 16px;
+        }
+        /* Selectores de Id (#id) */
+        #contact{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
@@ -59,14 +120,14 @@
         </ul>
         <h2>Imágenes y Texto</h2>
         <p class="box">
-            <img style="width: 300px;" src="assets/bg/osx-monterrey-light.jpg" alt="Fondo de Pantalla OSX Monterrey">
+            <img src="assets/bg/osx-monterrey-light.jpg" alt="Fondo de Pantalla OSX Monterrey">
 
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, ipsum iure quae dolor facilis neque fugiat quidem odit tenetur molestias ducimus unde excepturi vel eligendi magnam quisquam nihil. Aperiam tempore aliquam atque earum fugiat sint itaque reprehenderit voluptatum ducimus neque delectus, voluptas veritatis, libero a at eveniet unde commodi animi est voluptatem minima? Perspiciatis incidunt minus voluptate illum deleniti eligendi cum laboriosam, veritatis ipsa adipisci suscipit. 
             
             Nam mollitia aliquam error ab quibusdam rerum dolor commodi sapiente, sequi doloribus asperiores officia animi illum vitae veritatis accusamus vero eos natus, atque dolorum in, dolore consectetur minus! Est cupiditate vel delectus quae quis.
         </p>
         <p class="box">
-            <img style="width: 300px;" src="assets/bg/osx-monterrey-dark.jpg" alt="Fondo de Pantalla OSX Monterrey">
+            <img src="assets/bg/osx-monterrey-dark.jpg" alt="Fondo de Pantalla OSX Monterrey">
 
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum consequatur perferendis porro corporis. Error sed ad natus quae? Aperiam earum blanditiis enim possimus laboriosam eaque illo obcaecati, magnam, cupiditate facilis, iste laborum. Inventore nemo ipsum eius odit ea ducimus alias laboriosam animi, illo repellendus qui cupiditate aperiam nesciunt officiis tenetur, iure quia nihil architecto harum. Commodi magni quam laborum fugit quidem. Quidem deleniti ratione voluptatem quibusdam consectetur dignissimos ex corrupti itaque beatae ipsam, temporibus est dolorum in repellat, nobis totam illum nisi! Inventore, ullam doloribus modi illo quis voluptate beatae tempore voluptatum corporis nihil, consequatur odit neque est dolorum dolorem!
         </p>
