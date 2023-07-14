@@ -197,20 +197,19 @@
                     Corresponden a cambios que podemos realizar sobre las etiquetas sin afectar el flujo del documento y existen diferentes tipos, uno de estos son las <strong>transformaciones 2d</strong> que no dependen de ningun contexto, simplemente podemos escalar, desplazar, sesgar y rotar una etiqueta a partir de un punto de origen que se especifica en la misma. Cabe mencionar que dentro del atributo transform se pueden aplicar mas de un efecto simultaneamente.
                 </p>
                 <div class="transform-2d flex small">
-                    <div class="box translate">translate(dX,dY)</div>
-                    <div class="box scale">scale(uX, uY)</div>
-                    <div class="box rotate">rotate(deg)</div>
-                    <div class="box skewX">skewX(deg)</div>
-                    <div class="box skewY">skewY(deg)</div>
+                    <div class="translate box">translate(dX,dY)</div>
+                    <div class="scale box">scale(uX, uY)</div>
+                    <div class="rotate box">rotate(deg)</div>
+                    <div class="skew box">skewX(degX, degY)</div>
                 </div>
                 <p>
                     Tambien existen las <strong>transformaciones 3d</strong> para las cuales es necesario indicar un punto de fuga o <em>perspectiva</em> en uno de los elementos padre para que funcionen dichas modifcaciones, caso contrario estariamos aplicando transformaciones bidimensionales con otros nombres. Incluso a dichos efectos le podemos aplicar una transicion, es decir, que el navegador rellene los espacios intermedios entre un estado A y un estado B.
                 </p>
                 <div class="transform-3d flex small">
-                    <div class="box translateZ">translateZ(d)</div>
-                    <div class="box rotateX">rotateX(deg)</div>
-                    <div class="box rotateY">rotateY(deg)</div>
-                    <div class="box perspective">perspective</div>
+                    <div class="translateZ box">translateZ(d)</div>
+                    <div class="rotateX box">rotateX(deg)</div>
+                    <div class="rotateY box">rotateY(deg)</div>
+                    <div class="perspective box">perspective</div>
                 </div>
             </section>
         </article>
