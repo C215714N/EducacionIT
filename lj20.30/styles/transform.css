@@ -1,0 +1,76 @@
+/* Contenedor de Transformaciones */
+[class^="transform"]{
+    /* El atributo class Posee un valor que empieza con transform */
+    display: var(--display);
+    align-items: center;
+    min-height: 20rem;
+    gap: .5rem;
+    margin: 1rem .5rem;
+    padding: 1rem;
+    background-color: var(--light);
+    overflow: visible;
+}
+[class^="transform"]:hover .box{
+    transform: translate(0,0);
+}
+[class$="box"]{
+    /* El atributos class posee un valor que termine box */
+    flex: 1 0 min(100%, var(--size));
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    color: var(--light);
+    background: radial-gradient(
+        circle at top left,
+        var(--second) 30%,
+        var(--first)
+    );
+    box-shadow: 0 0 .5rem var(--dark);
+    transition: all 2s 1s ease;
+}
+/* Transformaciones 2D */
+.translate{
+    transform: 
+        /* translateX(3rem) - Eje Horizontal */
+        /* translateY(1rem) - Eje Vertical */
+        translate(-1.5rem, 1rem); /* (dX,dY) */
+}
+.scale{
+    transform: 
+        /* scaleX(1.2) - Unidades de Ancho */
+        /* scaleY(1.2) - Unidades de Alto */
+        scale(1.2); /* Ambos valores por defecto (uX, uY) */
+}
+.rotate{
+    transform: 
+        rotate(-15deg); /* Grados - sentido Horario */
+    /* transform-origin: center; - Punto de origen predeterminado */
+}
+.skewX{
+    transform: 
+        /* skewX(30deg) Grados Eje Horizontal */
+        /* skewY(15deg) Grados Eje Vertical */
+        skew(30deg, 15deg); /*(degX, degY)*/
+}
+/* Transformaciones 3D */
+[class*="3d"]{
+    perspective: 10rem;
+    perspective-origin: center;
+}
+.translateZ{
+    transform: 
+        translateZ(5rem); /* Distancia - Eje de Profundidad */
+}
+.rotateX{
+    transform: 
+        rotateX(15deg); /* Grados - Eje Horizontal */
+}
+.rotateY{
+    transform: 
+        rotateY(15deg); /* Grados - Eje Vertical */
+}
+.perspective{
+    transform: 
+        translateZ(1rem)
+        rotateX(15deg)
+        rotateY(30deg);
+}
