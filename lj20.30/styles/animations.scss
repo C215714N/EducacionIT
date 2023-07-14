@@ -1,4 +1,35 @@
+// Declaraciones
+$attributes: 
+    --name (loading, slide, race, appear, expand),
+    --timing (ease, ease-in, ease-in, ease-out, ease-in-out, linear), 
+    --dir (normal, reverse, alternate, alternate-reverse), 
+    --fill (normal, backwards, forwards);
+
+@each $prop, $values in $attributes{
+    /* Valores variable #{$prop}*/
+@each $v in $values{
+    .#{$v}{ #{$prop}: #{$v}; }
+}}
+.animation{
+    .a-item{
+        animation: var(--name) var(--sec) var(--timing) var(--i);
+        animation-direction: var(--dir);
+        animation-fill-mode: var(--fill);
+    }
+}
+.loading > .a-item{
+    --sec: 1s;
+    --i: infinite;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: .5rem solid;
+    border-color: #ace #8ac #48a #248;
+}
+
+/* Fotogramas de animacion */
 @keyframes appear{
+    /* como empieza la animacion - DESDE */
     from{
         transform: 
             translateY(50vh)
@@ -6,7 +37,16 @@
     }
 }
 @keyframes slide{
+    /* como termina la animacion - HASTA*/
     to{
         background-position: 0;
+    }
+}
+@keyframes loading{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)
     }
 }
