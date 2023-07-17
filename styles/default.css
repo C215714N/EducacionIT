@@ -5,14 +5,39 @@
     scroll-behavior: smooth;
 }
     /* Margenes */
+    body,
     h1,
     h2,
     h3,
-    header p{
+    header p,
+    .menu{
         margin: 0;
     }
+    /* Estilos */
+    .menu,
+    .example{
+        list-style: none;
+    }
+    nav a,
+    footer a{
+        text-decoration: none;
+    }
 /* Navegacion */
-
+    .menu{
+        display: flex;
+        justify-content: center; /*distribucion en el EJE PRINCIPAL*/
+        gap: 8px;
+        padding: 8px;
+        background-color: #284;
+    }
+    .menu a{
+        color: #ccc;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #eee;
+        text-shadow: 0 0 4px; /* -x+ -y+ blur color */
+    }
 /* Cabecera */
 
 /* Contenido Principal */
