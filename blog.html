@@ -47,7 +47,7 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <!-- Campo de Nombre -->
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
@@ -56,6 +56,7 @@
                 type="text"
                 minlength="3"
                 maxlength="50"
+                placeholder="Nombre: Cristian Racedo"
                 required>
             <!-- Campo de Correo -->
             <label for="contact_email">Ingrese su Correo</label>
@@ -64,9 +65,26 @@
                 name="email"
                 type="email"
                 minlength="8"
+                placeholder="Correo: cristiandracedo@hotmail.com"
                 required>
+            <!-- Campo de Asunto -->
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Diseño Grafico con CSS</option>
+                <option value="js">Logica con JavaScript</option>
+            </select>
+            <!-- Campo de Consulta -->
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="30"
+                maxlength="3000"
+                placeholder="Consulta: Buenas, mi consulta es..."
+                required></textarea>
             <!-- Boton Enviar -->
-            <input type="submit">
+            <input class="btn" type="submit" value="ENVIAR">
         </form>
         <!-- Redes sociales -->
 
