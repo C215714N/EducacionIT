@@ -60,7 +60,7 @@ En un formulario encontraremos campos que indican que valores podemos ingresar. 
 |radio|(O) masculino ( ) femenino|
 |checkbox|[X] Español [X] Ingles [ ] Portugües |
 |textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
-|select| <select>   <option> html</option> <br> <option>css</option> <br> <option>js</option> </select> |
+|select| seleccione un lenguaje <br> html <br> css <br> js |
 
 ___
 
