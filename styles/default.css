@@ -39,7 +39,20 @@
         text-shadow: 0 0 4px; /* -x+ -y+ blur color */
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 16px; /*top right bottom left*/
+        text-align: center;
+        background-color: #333;
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #284;
+    }
+    header{
+        border-bottom: 2px solid; /*width style color*/
+        color: #284;
+    }
 /* Contenido Principal */
 
 /* Pie de Pagina */
