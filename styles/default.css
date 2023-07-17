@@ -18,3 +18,28 @@
 /* Contenido Principal */
 
 /* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+    }
+    input,
+    textarea,
+    select{
+        padding: 8px;
+        font-size: 16px;
+    }
+    .btn{
+        margin-top: 4px;
+        border-radius: 4px;
+        border: 1px solid; /* width style color */
+        color: #eee;
+        background-color: #284;
+    }
+    .btn:hover{
+        color: #eee;
+        background-color: #3c6;
+    }
