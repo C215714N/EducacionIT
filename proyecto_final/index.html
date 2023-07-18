@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- Cabecera de Pagina -->
+    <header id="header">
+        <h1>Gran Hotel Maquetacion</h1>
+        <p>El Diseño y la Estructura que usted merece</p>
+        <ul class="gallery">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button class="icon-prev"></button>
+        <button class="icon-next"></button>
+        <div class="controls">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </header>    
+    <!-- Navegacion -->
+    <nav>
+        <a href="#" class="icon-brand"></a>
+        <button class="btn icon-open"></button>
+        <ul class="menu">
+            <li><a href="#" class="icon-">Inicio</a></li>
+            <li><a href="#about" class="icon-about">Acerca</a></li>
+            <li><a href="#rooms" class="icon-room">Cuartos</a></li>
+            <li><a href="#resto" class="icon-resto">Resto</a></li>
+            <li><a href="#promos" class="icon-promo">Promos</a></li>
+            <li><a href="#footer" class="icon-contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Contenido Principal -->
+    <main>
+        <section id="about">
+            <h2>Acerca</h2>
+        </section>
+        <section id="rooms">
+            <h2>Cuartos</h2>
+        </section>
+        <section id="resto">
+            <h2>Resto</h2>
+        </section>
+        <section id="promos">
+            <h2>Promos</h2>
+        </section>
+    </main>
+    <!-- Pie de Pagina -->
+    <footer id="footer">
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0701119751975!2d-58.378511025066445!3d-34.60238855742663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1688082248847!5m2!1ses-419!2sar" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <button class="icon-expand" title="ver/ocultar mapa"></button>
+        </div>
+        <form class="contact" action="">
+            <h2>Contacto</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text" 
+                required>
+            <p class="feedback">coloque entre 3 y 50 caracteres, utilizando solamente letras y espacios</p>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email" 
+                required>
+            <p class="feedback">coloque al menos 8 caracteres respetando la estructura "usuario@servidor"</p>
+            <label for="contact_phone">Ingrese su telefono</label>
+            <input 
+                id="contact_phone"
+                name="phone"
+                type="tel" 
+                required>
+            <p class="feedback">utilice solamente numeros o el formato de ejemplo "(5411)0303-4567"</p>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea  
+                id="contact_consult"
+                name="consult"></textarea>
+            <button class="btn">enviar</button>
+        </form>
+        <div class="social">
+            <a class="icon-facebook" 
+                href="https://facebook.com" 
+                title="Seguinos en Facebook"
+                target="_blank">
+            </a>
+            <a class="icon-instagram" 
+                href="https://instagram.com" 
+                title="Seguinos en Instagram"
+                target="_blank">
+            </a>
+            <a class="icon-telegram" 
+                href="https://telegram.org" 
+                title="Mensajeanos por Telegram"
+                target="_blank">
+            </a>
+            <a class="icon-whatsapp" 
+                href="https://api.whatsapp.com/send?phone=110303456&text=Buenos%20dias,%20mi%20consulta%20es..." 
+                title="Mensajeanos por Whatsapp"
+                target="_blank">
+            </a>
+        </div>
+        <p class="copy">&copy;2023 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
