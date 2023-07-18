@@ -1,0 +1,5 @@
+@each $class, $attributes in $array{
+@each $prop, $values in $attributes{
+@each $val in $values{
+    .#{$class}-#{$val}{ #{$prop}: $val; }
+} } }

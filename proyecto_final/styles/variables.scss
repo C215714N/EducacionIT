@@ -1,0 +1,70 @@
+// Tamaños de Pantalla
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$breakpoints:
+    sm  $sm 540px,
+    md  $md 720px,
+    lg  $lg 960px,
+    xl  $xl 1140px,
+    xxl $xxl 1360px;
+
+// Attributos predefinidos
+$display: none, inline, block, inline-block, flex, grid;
+$position: static, relative, absolute, sticky, fixed;
+$distribution: start, center, end, space-between, space-around, space-evenly;
+$decoration: none, underline, line-through;
+
+$array:
+    d (display: ($display)),
+    justify (justify-content: ($distribution)),
+    align (align-items: ($distribution)),
+    p (position: ($position)),
+    text (text-decoration: ($decoration));
+
+// Atributos con colores
+$colors: 
+    primary     
+    secondary
+    light   #eee,
+    dark    #333,
+    info    #36c,
+    warning #da3,
+    danger  #c33,
+    success #284;
+
+$properties: 
+    text color,
+    bg   background-color,
+    b    border-color,
+    shade --shade,
+    shadow --shadow;
+
+// Attributos con tamaños
+$limit: 10;
+$value: .25rem;
+
+$attributes:
+    m margin,
+    b border-width,
+    p padding,
+    o outline-width;
+
+// Iconos
+$icons: 
+    open 🪟,
+    home 🏠,
+    about 📰,
+    resto 🍱,
+    room 🚪,
+    contact 🧑‍💼,
+    promo 💵,
+    close ❌,
+    accept ✔️,
+    expand ↗️,
+    shrink ↙️,
+    plus ✖️,
+    less ➖;

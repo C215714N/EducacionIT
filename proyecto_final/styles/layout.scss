@@ -1,0 +1,48 @@
+*{
+    font-family: 'Ubuntu', 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    @extend .m-0, .d-grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer'
+        'nav';
+    @media screen and (min-width: $md){
+        grid-template-areas: 
+        'nav header' 
+        'nav main' 
+        'nav footer';
+    }
+    @media screen and (min-width: $lg){
+        grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'footer';
+    }
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+.section{
+    min-height: min(100vh, 640px);
+    background: linear-gradient(
+        15deg,
+        #fff8,
+        #eeee
+    );
+}
+section{
+    @extend .section;
+}

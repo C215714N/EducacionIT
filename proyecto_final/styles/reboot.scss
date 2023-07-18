@@ -1,0 +1,5 @@
+@each $class, $prop in $attributes{
+    @for $i from 0 through $limit{
+        .#{$class}-#{$i}{
+            #{$prop}: $i * $value; 
+} } }

@@ -1,0 +1,41 @@
+#nav{
+    @extend .d-flex, .justify-center, .p-sticky;
+    background-color: #448;
+    bottom: 0;
+    li{
+        &:first-child,
+        &:last-child{
+            @extend .d-none;
+        }
+    }
+    a{
+        @extend .d-grid, .justify-center, .text-none;
+        color: #eee;
+        text-align: center;
+        font-size: 1rem;
+        &::before{
+            transform-origin: center bottom;
+        }
+    }
+    // Menu Hamburguesa
+    button,
+    .brand{
+        @extend .d-none;
+    }
+    // Iconos
+    .menu{
+        @extend .d-flex, .justify-space-evenly, .p-0;
+        gap: .5rem;
+        list-style: none;
+        @media screen and (min-width: $md){
+            position: sticky;
+            top: 0;
+            flex-direction: column;
+            justify-content: start;
+            max-height: 100vh;
+        }
+        @media screen and (min-width: $lg){
+            flex-direction: row;
+        }
+    }
+}
