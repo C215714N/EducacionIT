@@ -81,7 +81,7 @@
                     <h3>¿Poseen Estructura Semantica?</h3>
                 </header>
                 <p>
-                    <em>A la etiqueta mencionada anteriormente</em> la dividiremos en filas <strong>&lt;>tr> (Table Row)</strong> y dentro de la misma colocaremos las celdas <strong>&lt;td> (Table Division)</strong>, pero antes debemos identificar las partes principales que componen a la misma con las siguientes etiquetas
+                    <em>A la etiqueta mencionada anteriormente</em> la dividiremos en filas <strong>&lt;tr>(Table Row)</strong> y dentro de la misma colocaremos las celdas <strong>&lt;td> (Table Division)</strong>, pero antes debemos identificar las partes principales que componen a la misma con las siguientes etiquetas
                 </p>
                 <ul class="example">
                     <li>
@@ -94,7 +94,93 @@
                         <strong>TFOOT:</strong> Pie de tabla que posee datos complementarios al cuerpo, como promedios, totales, maximos, minimos, etc.
                     </li>
                 </ul>
-                
+                <div class="example">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera de tabla -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <td>C215714N</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>D477714N</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla  -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>10</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="modern">
+                        <caption>Rutina Semanal</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Turno</th>
+                                <th>Lu</th>
+                                <th>Ma</th>
+                                <th>Mi</th>
+                                <th>Ju</th>
+                                <th>Vi</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <th>ma</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                            </tr>
+                            <tr>
+                                <th>ta</th>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>no</th>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                                <td>x</td>
+                                <td>x</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </section>
         </article>
     </main>
