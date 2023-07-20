@@ -62,6 +62,24 @@ En un formulario encontraremos campos que indican que valores podemos ingresar. 
 |textarea | Descripcion del Perfil profesional <br> Experiencia Laboral y Habilidades|
 |select| seleccione un lenguaje <br> html <br> css <br> js |
 
+## Tablas 
+Conjunto estructurado de datos distribuidos en filas y columnas __(tabulados)__, que permite buscar con rapidez y facilidad valores entre diferentes tipos de datos que indiquen algún tipo de conexión.
+
+Cuando se hace correctamente, incluso las personas ciegas pueden interpretar los datos de una tabla HTML, ya que debe mejorar la experiencia de los usuarios videntes e invidentes por igual.
+
+
+<div style="display: flex; gap: 1rem;">
+<figure style="margin: 0; display: grid;">
+   <img src="assets/docs/table.svg" alt="tabla HTML">
+   <figcaption>Estructura clasica</figcaption>
+</figure>
+<figure style="margin: 0; display: grid;">
+   <img src="assets/docs/table_structure.svg" alt="tabla Semantica">
+   <figcaption>Estructura Semantica</figcaption>
+</figure>
+</div>
+
+
 ___
 
 ## Actividades
