@@ -10,7 +10,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Estilos */
@@ -50,6 +51,7 @@
         background-size: cover; /* w h | contain cover*/
     }
     .header{
+        margin: -1rem;
         padding: 16px;
         color: #eee;
         background-color: #284;
@@ -59,6 +61,19 @@
         color: #284;
     }
 /* Contenido Principal */
+    main{
+        max-width: 1140px; /*Limite Pantallas XL*/
+        margin: 1rem auto; /* root EM (Ancho de "M" en la Raiz HTML)*/ 
+        padding: .5rem;
+    }
+    article{
+        margin: 1.5rem 0;
+        border-radius: .5rem;
+        padding: 1rem;
+        box-shadow: -.2rem .2rem .25rem #999; /*-x+ -y+ blur color*/
+        overflow: hidden;
+    }
+    /* Secciones de Ejemplos */
     .example{
         max-width: 960px;
         margin: 16px auto;

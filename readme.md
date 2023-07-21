@@ -70,11 +70,11 @@ Cuando se hace correctamente, incluso las personas ciegas pueden interpretar los
 
 <div style="display: flex; gap: 1rem;">
 <figure style="margin: 0;">
-   <img style="display:block;"src="assets/docs/table.svg" alt="tabla HTML">
+   <img src="assets/docs/table.svg" alt="tabla HTML">
    <figcaption style="display:block;">Estructura clasica</figcaption>
 </figure>
 <figure style="margin: 0;">
-   <img style="display:block;"src="assets/docs/table_structure.svg" alt="tabla Semantica">
+   <img src="assets/docs/table_structure.svg" alt="tabla Semantica">
    <figcaption style="display:block;">Estructura Semantica</figcaption>
 </figure>
 </div>
