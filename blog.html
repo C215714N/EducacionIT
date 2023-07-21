@@ -297,7 +297,7 @@
                 <h2>Contenido Multimedia</h2>
             </header>
             <p>
-                Se conoce con este nombre a todo elemento audiovisual que podemos incorporar en nuestra pagina. Antiguamente era necesario instalar algun complemento o plugin de terceros como el famoso <em>flash player</em>, pero en la actualidad los navegadores brindan soporte a este tipo de elementos.
+                Se conoce con este nombre a todo elemento audiovisual que podemos incorporar en nuestra pagina. Antiguamente era necesario instalar algun complemento o plugin de terceros como el famoso <em>flash player</em>, pero en la actualidad los navegadores brindan soporte a este tipo de elementos. Tambien podemos corroborar la compatibilidad de nuestro navegador con dichos elementos desde el sitio <a href="https://caniuse.com" target="_blank">Can I Use</a>
             </p>
             <section>
                 <header>
@@ -349,6 +349,27 @@
                 <header>
                     <h3>¿Multimedia Sin Plugins?</h3>
                 </header>
+                <p>
+                    <em>Como se menciona anteriormente</em> los navegadores actuales cuenta con una <strong>API de Reproduccion</strong> a la que podemos acceder si utilizamos las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Estos elementos admiten atributos como <em>autoplay, muted, loop, controls, etc...</em>
+                </p>
+                <div class="container example">
+                    <figure>
+                        <video src="assets/media/by-the-way.ogv" controls>
+                            <p>
+                                Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/by-the-way.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>By the Way - By the Way(2002)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" autoplay muted loop controls>
+                            <p>
+                                Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand - Stadium Arcadium (2006)</figcaption>
+                    </figure>
+                </div>
             </section>
         </article>
     </main>
