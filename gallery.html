@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS InBlock -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'segoe ui', 'calibri', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header, 
+        footer{
+            padding: 16px;
+            color: #eee; /* DEC: rgb(236,236,236) | HEX: #rrggbb */
+            background-color: teal;
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav ul{
+            list-style: none;
+            padding: 0;
+            background-color: #255;
+        }
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :pseudoelementos (caracteristica o instancia de un elemento) */
+        nav li:hover{ /*al pasar el mouse*/
+            background-color: #488;
+        }
+        /* Selectores de Clase (.class) */
+        .box{
+            margin: 16px;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #8cc;
+        }
+        div.box{
+            text-align: center;
+        }
+        .box img{
+            width: 100%; /* porcentaje del Contenedor */
+            max-width: 280px;
+        }
+        /* Selectores de ID (#id) */
+        #contact{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* Imagenes y Texto */
+        p.box img{
+            float: left;
+            margin-right: 8px;
+        }
+        p.box{
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
