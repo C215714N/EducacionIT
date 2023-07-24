@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    /* EXPLICACION:
+        Atributo que determina como se calculan las dimensiones de las etiquetas en la pagina web.
+
+        EJEMPLO:
+        .box{
+            width: 300px;
+            border: 2px solid;
+            padding: 20px;
+        }
+
+        CONTENT-BOX (default):
+            content-width   = width (300px);
+            final-width     = width + padding + border (344px);
+
+        BORDER-BOX:
+            final-width     = width (300px);
+            content-width   = width - padding - border (256px);
+    */
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', 'Raleway', 'Calibri', sans-serif;
+}
