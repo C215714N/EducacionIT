@@ -1,0 +1,52 @@
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+}
+.social a{
+    width: 4rem;
+    height: 4rem;
+    border-radius: .5rem;
+    /* Atributos de Fondo */
+    background-color: #ccc;
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    /* Atributos de Transicion */
+    transition-property: all;
+    transition-duration: .25s;
+    transition-timing-function: linear;
+    transition-delay: .1s;
+}
+.social a:hover{
+    background-color: #eee;
+    background-size: 3.25rem;
+    box-shadow: 0 .2rem .5rem #333;
+}
+/* Iconos redes sociales */
+.linkedin{
+    background-image: url('../assets/icon/linkedin.svg');
+}
+.telegram{
+    background-image: url('../assets/icon/telegram.svg');
+}
+.whatsapp{
+    background-image: url('../assets/icon/whatsapp.svg');
+}
+.github{
+    background-image: url('../assets/icon/github.svg');
+}
+.facebook{
+    background-image: url('../assets/icon/facebook.svg');
+}
+.instagram{
+    background-image: url('../assets/icon/instagram.svg');
+}
+.twitter{
+    background-image: url('../assets/icon/twitter.svg');
+}
+.youtube{
+    background-image: url('../assets/icon/youtube.svg');
+}
