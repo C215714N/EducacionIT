@@ -48,7 +48,44 @@
         </div>
         <!-- Formularios de Contacto -->
         <form action="" id="contact">
-
+            <h2>Deja tu Consulta</h2>
+            <!-- Campo Nombre -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text" 
+                required>
+            <div class="validation">
+                utilice entre 3 y 50 caracteres, que sean solamente letras.
+            </div>
+            <!-- Campo Correo -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email" 
+                required>
+            <div class="validation">
+                coloque una direccion de al menos 8 caracteres respetando el formato "usuario@servidor"
+            </div>
+            <!-- Campo Telefono -->
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="phone"
+                type="tel" 
+                required>
+            <div class="validation">
+                coloque su numero telefonico sin espacios ni simbolos, utilizando solamente numeros
+            </div>
+            <!-- Campo Consulta -->
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult"
+                name="consult" 
+                required></textarea>
+            <button class="btn">enviar</button>
         </form>
         <!-- Redes Sociales -->
         <div class="social">
