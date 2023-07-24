@@ -54,7 +54,9 @@
             <input 
                 id="contact_name"
                 name="name"
-                type="text" 
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z]{3,50}"
                 required>
             <div class="validation">
                 utilice entre 3 y 50 caracteres, que sean solamente letras.
@@ -65,6 +67,7 @@
                 id="contact_email"
                 name="email"
                 type="email" 
+                minlength="8"
                 required>
             <div class="validation">
                 coloque una direccion de al menos 8 caracteres respetando el formato "usuario@servidor"
@@ -75,6 +78,7 @@
                 id="contact_phone"
                 name="phone"
                 type="tel" 
+                pattern="[0-9]{6,20}"
                 required>
             <div class="validation">
                 coloque su numero telefonico sin espacios ni simbolos, utilizando solamente numeros
@@ -84,12 +88,33 @@
             <textarea 
                 id="contact_consult"
                 name="consult" 
+                minlength="30"
+                maxlength="1500"
                 required></textarea>
             <button class="btn">enviar</button>
         </form>
         <!-- Redes Sociales -->
         <div class="social">
-
+            <a  class="linkedin"
+                href="https://linkedin.com/in/profile" 
+                target="_blank" 
+                title="seguime en linkedin">
+            </a>
+            <a  class="telegram"
+                href="https://telegram.org"
+                target="_blank" 
+                title="mensajeame por telegram">
+            </a>
+            <a  class="whatsapp"
+                href="https://api.whatsapp.com/send?phone=541103034567&text=buenas,%20mi%20consulta%20es" 
+                target="_blank" 
+                title="mensajeame por whatsapp">
+            </a>
+            <a  class="github"
+                href="https://github.com/c215714n/EducacionIT/tree/f-pescar-css-lxv14" 
+                target="_blank" 
+                title="mira los repos de github">
+            </a>
         </div>
         <!-- Derechos de Autor -->
         <p class="copy">&copy;2023 Todos los derechos reservados</p>
