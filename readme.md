@@ -3,12 +3,14 @@
 Esto es una guia para los alumnos de la capacitacion CCNA3 que cursan los dias martes y jueves de 10hs a 12hs, donde podran realizar actividades y repasar los contenidos vistos en clase.
 
 ## Tabla de Contenidos
-1. [Open Shortest Path First](#protocolo-ospf)
+1. [Open Shortest Path First](#ospf)
 1. [Access Control List](#acl)
 1. [Network Address Translation](#nat)
 1. [Point to Point Protocol](#ppp)
+1. [Enhaced Internal Gateway Routing protocol](#eigrp)
+1. [Internet Protocol Secure](#ipsec)
 
-## Protocolo OSPF
+## OSPF
 
 __Open Shortest Path First__ es un protocolo de red es estandar abierto para enrutamiento jerarquico tipo _Internal Gateway Protocol (IGP)_, que usa el algoritmo _Dijkstra_, para calcular la ruta mas corta entre dos nodos y selecciona la de menor costo para incorporarla a la tabla de enrutamiento. Por defecto el ancho de banda referencial es de `100.000Kbps` y si la interfaz es `FastEthernet`, el resultado es `metrica = 1`. Para determinar el costo de las rutas aprendidas este protocolo realiza el siguiente calculo $\dfrac{Ref BW}{Link Speed}$ 
 
@@ -81,3 +83,25 @@ __Point to Point Protocol__ funciona a nivel de enlace de datos y es utilizado p
 1. router(config-if)# __(Protocolo de Autenticacion por desafio mutuo)__
     * __ppp authentication `chap`__: establece chap como metodo de autenticacion
     * __ppp authenticacion `chap` `pap`__: define los metodos de autenticacion principal y secundario en caso que no funcione.
+
+## EIGRP
+
+__Enhanced Interior Gateway Routing Protocol__ es un protocolo de enrutamiento de tipo _vector distancia_ propietario de __CISCO__, que mejora las propiedades de convergencia y opera con mayor eficiencia que IGRP. Se considera un protocolo avanzado que se basa en las características normalmente asociadas con los protocolos del estado de enlace. Al igual que en su version anterior el calculo de la metrica es el siguiente 
+
+$256 * (K1 * bw + \dfrac{K2 * bw}{256 - load} + K3 * dy) * \dfrac{K5}{rel + K4}$ 
+
+Pero teniendo en cuenta que, de manera predeterminada, los unicos valores habilitados son _k1 y k3_, el calculo del protocolo se representaria de la siguiente forma $256 * (BandWidth + Delay)$
+
+
+1. router(config-router)# __(configuracion protocolo EIGRP)__
+    * __router ospf `<autonomous system>`__: ingresa al submodo de configuracion de EIGRP
+    * __eigrp router-id `<ip address>`__: establece un numero identificador para el router en formato IP 
+    * __network `<network>` `<wildcard>`__: declara la red que pertenece a la topologia que utiliza EIGRP
+2. router# __(verificacion configuracion EIGRP)__
+    * __show ip eigrp traffic__: muestra las estadisticas de los mensajes de EIGRP organizados por sistema autonomo.
+    * __show ip eigrp neighbors__: muestra los dispositivos de la topologia que utilizan EIGRP
+    * __show ip eigrp topology__: muestra la tabla de la topologia generada con EIGRP
+    * __show ip route eigrp__: muestra las rutas aprendidas a traves del protocolo EIGRP.
+3. router(config-router)#: __(actualizacion de ajustes)__
+    * __passive interface `<interface-id>`__: evita el envio de paquetes EIGRP en las interfaces especificadas
+    * __auto-summary__: habilita la sumarizacion de subredes para simplificar rutas.
