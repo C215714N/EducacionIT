@@ -6,3 +6,5 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US)
 * [Wireshark](https://wireshark.org)
+* [PuTTY](https://putty.org/)
+* [Driver Identifier](https://www.driveridentifier.com/files/driveridentifier_portable.exe)
