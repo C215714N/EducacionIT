@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height: 100vh;
+            background: linear-gradient(
+                    -45deg,
+                    hsl(300, 50%, 90%) 25%,
+                    hsl(180, 50%, 90%),
+                    hsl(180, 30%, 90%),
+                    hsl(180, 50%, 90%),
+                    hsl(300, 50%, 90%) 75%
+            ) center/cover no-repeat;
+        }
+        form{
+            display: grid;
+            margin: 5rem auto;
+            max-width: 540px;
+            padding: 3rem;
+            color: #999;
+            background-color: #fafafa;
+        }
+        h1{
+            display: flex;
+            gap:.25rem;
+            font-size: 1.5rem;
+        }
+        label{
+            font-size: 2rem;
+            color: #151515;
+        }
+        input{
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #151515;
+            background-color: transparent;
+            font-size: 1rem;
+            padding: .5rem 0;
+        }
+        a{
+            text-decoration: none;
+            color: #36c
+        }
+        a:hover{
+            color: #84c;
+            text-decoration: underline;
+        }
+        .dark,
+        .dark:hover{
+            text-decoration: none;
+            color: #333;
+            border-radius: 50%;
+            border: 1px solid;
+            padding: .1rem .25rem;
+            font-size: .8rem;
+        }
+        .btn{
+            margin-left: auto;
+            border: none;
+            padding: .5rem 1.5rem;
+            color: #eee;
+            background-color: #36c;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>
+            <svg width="2.1rem" height="2.1rem">
+                <rect x="0" y="0" width="1rem" height="1rem"
+                fill="#c33"/>
+                <rect x="1.1rem" y="0" width="1rem" height="1rem"
+                fill="#3c6"/>
+                <rect x="0" y="1.1rem" width="1rem" height="1rem"
+                fill="#36c"/>
+                <rect x="1.1rem" y="1.1rem" width="1rem" height="1rem"
+                fill="#ea3"/>
+            </svg>
+            Microsoft
+        </h1>
+        <label for="">Sign in</label>
+        <input 
+            type="text"
+            placeholder="Email,phone, or Skype">
+        <p>
+            No account? <a href="">Create one!</a>
+        </p>
+        <p>
+            <a href="">Sign in with Windows Hello or a security key</a>
+            <a class="dark" href="">?</a>
+        </p>
+        <button class="btn">Next</button>
+    </form>
+</body>
+</html>
