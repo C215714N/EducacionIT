@@ -7,6 +7,7 @@
     align-content: center;
     /* Tipografia */
     font-size: min(calc(2vw + .8rem), 3rem);
+    text-shadow: 0 0 .25rem #333;
     /* EXPLICACION:
         En las ultima version de CSS se incorporaron metodos que permiten realizar operaciones aritmeticas, que facilitan el desarrollo de un sitio responsive.
 
@@ -18,8 +19,8 @@
     background-color: #333;
     background-image:
         linear-gradient(
-            hsla(320, 50%, 20%, .5),
-            hsla(320, 50%, 30%, .5)
+            hsla(250, 50%, 20%, .5),
+            hsla(250, 50%, 30%, .5)
         ),
         url('../assets/bg/dev-mobile.png'),
         url('../assets/bg/dev-screen.png'),
