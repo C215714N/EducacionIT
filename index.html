@@ -18,7 +18,7 @@
     <nav>
         <a href="#">CR</a>
         <button class="btn"></button>
-        <ul>
+        <ul class="menu">
             <li><a href="#home">Inicio</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#projects">Proyectos</a></li>
@@ -57,6 +57,7 @@
                 type="text"
                 maxlength="50"
                 pattern="[A-Z a-z]{3,50}"
+                placeholder="Ingrese su Nombre"
                 required>
             <div class="validation">
                 utilice entre 3 y 50 caracteres, que sean solamente letras.
@@ -68,6 +69,7 @@
                 name="email"
                 type="email" 
                 minlength="8"
+                placeholder="Ingrese su Correo"
                 required>
             <div class="validation">
                 coloque una direccion de al menos 8 caracteres respetando el formato "usuario@servidor"
@@ -79,6 +81,7 @@
                 name="phone"
                 type="tel" 
                 pattern="[0-9]{6,20}"
+                placeholder="Ingrese su telefono"
                 required>
             <div class="validation">
                 coloque su numero telefonico sin espacios ni simbolos, utilizando solamente numeros
@@ -90,6 +93,7 @@
                 name="consult" 
                 minlength="30"
                 maxlength="1500"
+                placeholder="Ingrese su consulta"
                 required></textarea>
             <button class="btn">enviar</button>
         </form>

@@ -21,3 +21,30 @@
     scroll-behavior: smooth;
     font-family: 'Ubuntu', 'Raleway', 'Calibri', sans-serif;
 }
+/* Margenes */
+body,
+h1,
+h2,
+h3,
+header p,
+.list-unstyled,
+.menu{
+    margin: 0;
+}
+/* Bordes */
+iframe{
+    border: 0;
+}
+/* Rellenos */
+.list-unstyled,
+.menu{
+    padding: 0;
+}
+/* Estilos */
+.list-unstyled,
+.menu{
+    list-style: none;
+}
+:is(nav, .social, .example) a{
+    text-decoration: none;
+}
