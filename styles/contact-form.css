@@ -1,0 +1,53 @@
+#contact{
+    display: flex;
+    max-width: 720px;
+    flex-direction: column;
+    gap: .25rem;
+    margin: 1rem auto;
+    border-radius: .25rem;
+    padding: 1.5rem;
+    box-shadow: -.2rem .2rem .5rem #ccc;
+    /* Gradiente: tipo(direccion o forma [opcional], colores) */
+    background-image: radial-gradient(
+        circle at top right,
+        hsl(0, 0%, 85%), /* tono,   saturacion, brillo */
+        hsl(180, 0%, 95%)/* 0-360,  0%-100%,    0%-100% */
+    );
+}
+input,
+textarea,
+select,
+button{
+    padding: .5rem;
+    font-size: 1rem;
+}
+label,
+.validation{
+    max-height: 0;
+    overflow: hidden;
+}
+:focus + .validation{
+    max-height: 300px;
+}
+/* Validacion visual */
+    :focus:valid{
+        outline-color: #3c6;
+    }
+    :valid + .validation{
+        color: #3c6;
+    }
+    :not(:placeholder-shown):focus:invalid{
+        outline-color: #c33;
+    }
+    :not(:placeholder-shown):invalid + .validation{
+        color: #c33;
+    }
+/* Transiciones */
+    input,
+    textarea,
+    select,
+    button,
+    .validation{
+        transition: all .5s ease-out;
+        /* transition: property duration timing-function delay) */
+    }
