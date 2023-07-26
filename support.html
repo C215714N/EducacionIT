@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web</title>
+</head>
+<body>
+    <!-- Navegacion -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="#" class="active">Soporte Wiki IT</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Cabecera de Pagina -->
+    <header id="header" class="header">
+        <h1>Fundamentos Web</h1>
+        <p>html & css</p>
+    </header>
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Articulo: Contenido Independiente -->
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el <em>intercambio de datos entre cliente y servidor</em>, para utilizarlos dentro de la pagina solamente debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma los elementos que seran procesados durante el envio del mismo.
+            </p>
+            <!-- Seccion: Contenido Contextualizado -->
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em>
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como estan compuestos?</h3>
+                </header>
+            </section>
+        </article>
+    </main>
+    <!-- Pie de Pagina -->
+    <footer>
+        <!-- Formulario de Contacto -->
+        <form id="contact" action="" method="">
+            <h2>Dejanos tu Consulta</h2>
+            <!-- Campo Nombre -->
+            <label for="contact_Name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                minlength="3"
+                maxlength="50"
+                required>
+            <!-- Campo Correo -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                required>
+            <!-- Campo Asunto -->
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Diseño Grafico con CSS</option>
+                <option value="js">Logica con JavaScript</option>
+            </select>
+            <!-- Campo Consulta -->
+            <label for="contact_consult"></label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                minlength="30" 
+                maxlength="1500"
+                required></textarea>
+            <input type="submit">
+        </form>
+        <!-- Redes sociales -->
+
+        <!-- Mapa de contacto -->
+
+        <!-- Derechos de Autor -->
+        <p class="copy">&copy;2023 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
