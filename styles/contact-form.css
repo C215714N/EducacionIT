@@ -7,11 +7,11 @@
     border-radius: .25rem;
     padding: 1.5rem;
     box-shadow: -.2rem .2rem .5rem #ccc;
-    /* Gradiente: tipo(direccion o forma [opcional], colores) */
+    /* GRADIENTE: tipo(direccion o forma [opcional], colores) */
     background-image: radial-gradient(
         circle at top right,
-        hsl(0, 0%, 85%), /* tono,   saturacion, brillo */
-        hsl(180, 0%, 95%)/* 0-360,  0%-100%,    0%-100% */
+        hsl(320, 50%, 85%), /* tono,   saturacion, brillo */
+        hsl(320, 50%, 95%)  /* 0-360,  0%-100%,    0%-100% */
     );
 }
 input,
@@ -49,5 +49,5 @@ label,
     button,
     .validation{
         transition: all .5s ease-out;
-        /* transition: property duration timing-function delay) */
+        /* TRANSITION: property duration timing-function delay) */
     }

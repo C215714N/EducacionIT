@@ -12,12 +12,11 @@ nav{
             hsl(280, 50%, 30%),
             hsl(320, 50%, 80%)
         );
-    /* bg: color image position/size repeat */
+    /* BACKGROUND: color image position/size repeat */
     padding: 1rem;
 }
 nav a{
     color: #eee;
-    text-decoration: none;
     text-shadow: 0 0 .25rem #333;
 }
 .menu{
@@ -44,7 +43,7 @@ nav:hover .menu{
         display: flex;
         gap: .5rem;
         width: auto;
-        max-height: 100vh; /*vh (viewport height)*/
+        max-height: 100vh; /*vh (viewport height) = altura de la ventana*/
     }
 }
 /* Large Devices (Desktop) */
@@ -57,6 +56,6 @@ nav:hover .menu{
 @media screen and (min-width: 1400px){
     nav{
         flex-direction: row;
-        padding: 1rem calc(50vw - 660px); /*vw (viewport width)*/
+        padding: 1rem calc(50vw - 660px); /*vw (viewport width) = ancho de la ventana*/
     }
 }
