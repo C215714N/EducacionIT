@@ -1,0 +1,451 @@
+@charset "UTF-8";
+.m-0, body {
+  margin: 0rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 0.75rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
+}
+
+.m-7 {
+  margin: 1.75rem;
+}
+
+.m-8 {
+  margin: 2rem;
+}
+
+.m-9 {
+  margin: 2.25rem;
+}
+
+.m-10 {
+  margin: 2.5rem;
+}
+
+.b-0 {
+  border-width: 0rem;
+}
+
+.b-1 {
+  border-width: 0.25rem;
+}
+
+.b-2 {
+  border-width: 0.5rem;
+}
+
+.b-3 {
+  border-width: 0.75rem;
+}
+
+.b-4 {
+  border-width: 1rem;
+}
+
+.b-5 {
+  border-width: 1.25rem;
+}
+
+.b-6 {
+  border-width: 1.5rem;
+}
+
+.b-7 {
+  border-width: 1.75rem;
+}
+
+.b-8 {
+  border-width: 2rem;
+}
+
+.b-9 {
+  border-width: 2.25rem;
+}
+
+.b-10 {
+  border-width: 2.5rem;
+}
+
+.p-0, #nav .menu {
+  padding: 0rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.o-0 {
+  outline-width: 0rem;
+}
+
+.o-1 {
+  outline-width: 0.25rem;
+}
+
+.o-2 {
+  outline-width: 0.5rem;
+}
+
+.o-3 {
+  outline-width: 0.75rem;
+}
+
+.o-4 {
+  outline-width: 1rem;
+}
+
+.o-5 {
+  outline-width: 1.25rem;
+}
+
+.o-6 {
+  outline-width: 1.5rem;
+}
+
+.o-7 {
+  outline-width: 1.75rem;
+}
+
+.o-8 {
+  outline-width: 2rem;
+}
+
+.o-9 {
+  outline-width: 2.25rem;
+}
+
+.o-10 {
+  outline-width: 2.5rem;
+}
+
+.d-none, #nav button,
+#nav .brand, #nav li:first-child, #nav li:last-child {
+  display: none;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-block, [class*=icon-] {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex, #nav .menu, #nav {
+  display: flex;
+}
+
+.d-grid, .contact, #nav a, body {
+  display: grid;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-center, #nav {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-space-between, #nav a {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-evenly, #nav .menu {
+  justify-content: space-evenly;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.align-space-between, #nav a {
+  align-items: space-between;
+}
+
+.align-space-around {
+  align-items: space-around;
+}
+
+.align-space-evenly {
+  align-items: space-evenly;
+}
+
+.p-static {
+  position: static;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-sticky, #nav {
+  position: sticky;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.text-none, #nav a {
+  text-decoration: none;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+[class*=icon-] {
+  filter: grayscale(90%);
+}
+[class*=icon-]:hover::before {
+  animation: jump 0.5s linear alternate infinite;
+}
+
+.icon-open::before {
+  content: "🪟";
+}
+
+.icon-home::before {
+  content: "🏠";
+}
+
+.icon-about::before {
+  content: "📰";
+}
+
+.icon-resto::before {
+  content: "🍱";
+}
+
+.icon-room::before {
+  content: "🚪";
+}
+
+.icon-contact::before {
+  content: "🧑‍💼";
+}
+
+.icon-promo::before {
+  content: "💵";
+}
+
+.icon-close::before {
+  content: "❌";
+}
+
+.icon-accept::before {
+  content: "✔️";
+}
+
+.icon-expand::before {
+  content: "↗️";
+}
+
+.icon-shrink::before {
+  content: "↙️";
+}
+
+.icon-plus::before {
+  content: "✖️";
+}
+
+.icon-less::before {
+  content: "➖";
+}
+
+@keyframes jump {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+* {
+  font-family: "Ubuntu", "Raleway", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  grid-template-areas: "header" "main" "footer" "nav";
+}
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-areas: "nav header" "nav main" "nav footer";
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    grid-template-areas: "header" "nav" "main" "footer";
+  }
+}
+
+#header {
+  grid-area: header;
+}
+
+#nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+.section, section {
+  min-height: min(100vh, 640px);
+  background: linear-gradient(15deg, #fff8, #eeee);
+}
+
+#nav {
+  background-color: #448;
+  top: 0;
+  bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  #nav {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    max-height: 100vh;
+    max-width: 3rem;
+    overflow: hidden;
+  }
+  #nav.active {
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #nav li:first-child, #nav li:last-child {
+    display: block;
+  }
+}
+#nav a {
+  color: #eee;
+  text-align: left;
+  font-size: 1rem;
+}
+#nav a::before {
+  min-width: 3rem;
+  font-size: 2rem;
+  transform-origin: center bottom;
+}
+@media screen and (min-width: 768px) {
+  #nav a {
+    display: flex;
+    align-items: end;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  #nav button,
+#nav .brand {
+    display: block;
+  }
+}
+#nav .menu {
+  gap: 0.5rem;
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  #nav .menu {
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  #nav .menu {
+    flex-direction: row;
+  }
+}
