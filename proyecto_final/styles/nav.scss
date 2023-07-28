@@ -1,26 +1,51 @@
 #nav{
     @extend .d-flex, .justify-center, .p-sticky;
     background-color: #448;
+    top: 0;
     bottom: 0;
+    @media screen and (min-width: $md){
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        max-height: 100vh;
+        max-width: 3rem;
+        overflow: hidden;
+        &.active{
+            max-width: 300px;
+        }
+    }
     li{
         &:first-child,
         &:last-child{
             @extend .d-none;
+            @media screen and (min-width: $md){
+                display: block;
+            }
         }
     }
     a{
-        @extend .d-grid, .justify-center, .text-none;
+        @extend .d-grid, .justify-space-between, .align-space-between, .text-none;
         color: #eee;
-        text-align: center;
+        text-align: left;
         font-size: 1rem;
         &::before{
+            min-width: 3rem;
+            font-size: 2rem;
             transform-origin: center bottom;
+        }
+        @media screen and (min-width: $md){
+            display: flex;
+            align-items: end;
+            text-align: left;
         }
     }
     // Menu Hamburguesa
     button,
     .brand{
         @extend .d-none;
+        @media screen and (min-width: $md) {
+            display: block;
+        }
     }
     // Iconos
     .menu{
@@ -31,8 +56,6 @@
             position: sticky;
             top: 0;
             flex-direction: column;
-            justify-content: start;
-            max-height: 100vh;
         }
         @media screen and (min-width: $lg){
             flex-direction: row;
