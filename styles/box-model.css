@@ -1,0 +1,52 @@
+/* Modelos de Caja */
+    .flex{
+        display: flex;
+    }
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .grid{
+        display: grid;
+    }
+    .flex,
+    .grid{
+        gap: 1rem;
+        padding: 1rem;
+    }
+/* Tamaños de Contenido */
+.small{
+    --size: 240px;
+}
+.medium{
+    --size: 360px;
+}
+.large{
+    --size: 480px;
+}
+/* Implementacion de Variables */
+.flex > * {
+    flex: 1 0 min(100%, var(--size));
+    /* EXPLICACION:
+        propiedad que administra las caractisticas de flex del contenido
+        GROW: determina si el elemento se puede agrandar para abarcar mas espacio en caso que sobre lugar.
+        SHRINK: determina si el elemento se puede achicar para permitir que otros elementos entren en la fila o columna.
+        BASIS: establece el tamaño minimo que debe ocupar el elemento en cuestion.
+    */
+}
+.grid-2{
+    grid-template-columns: 3fr 1fr;
+    /* determina la cantidad de columnas en base a los tamaños aplicados */
+}
+.grid-3{
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.auto{
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)),1fr));
+    /* EXPLICACION:
+        repeat(cantidad, tamaño): funcion que permite la repeticion de un valor una X cantidad de veces.
+        - auto-fill: rellena con la cantidad de columnas necesarias
+        - auto-fit: rellena y estira las columnas hasta cubrir el contenedor
+
+        minmax(a,b): establece los tamaños minimo y maximo respectivamente
+    */
+}
