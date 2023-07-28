@@ -31,16 +31,16 @@ label,
 }
 /* Validacion visual */
     :focus:valid{
-        outline-color: #3c6;
+        outline-color: var(--success);
     }
     :valid + .validation{
-        color: #3c6;
+        color: var(--success);
     }
     :not(:placeholder-shown):focus:invalid{
-        outline-color: #c33;
+        outline-color: var(--danger);
     }
     :not(:placeholder-shown):invalid + .validation{
-        color: #c33;
+        color: var(--danger);
     }
 /* Transiciones */
     input,
