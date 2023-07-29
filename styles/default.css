@@ -29,3 +29,23 @@
 /* Contenido */
 
 /* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+        padding: 16px;
+    }
+    input,
+    textarea,
+    select{
+        padding: 8px;
+        font-size: 16px;
+    }
+    textarea{
+        min-height: 80px;
+        resize: vertical;
+    }
+    
