@@ -38,6 +38,14 @@
                 <p>
                     <em>A la etiqueta mencionada anteriormente</em> debemos especificarle por lo menos 2 atributos, que son <strong>action="..."</strong> el cual indica que debe suceder al momento de enviar el Formulario, utilizandose normalmente un script en lenguaje de servidor; y <strong>method="..."</strong> que especifica la manera en la que se va a realizar el envio del mismo y cuyos valores son predefinidos.
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET: </strong> metodo que prioriza la respuesta del servidor, los datos permanecen visibles en la barra de direcciones y se envian en texto plano. <em>Se utiliza principalmente en buscadores.</em>
+                    </li>
+                    <li>
+                        <strong>POST: </strong> metodo cuya prioridad radica en la proteccion de los datos del usuario, ya que estos se cifran antes de realizar el envio. <em>Se utiliza en formularios de Registro, Acceso, Contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
@@ -46,13 +54,18 @@
                 <p>
                     Dentro de un formulario podemos colocar cualquier etiqueta, pero existen 2 elementos necesarios, estos son las <strong>Etiquetas (LABEL)</strong> que se utilizan para guiar al usuario al momento de completar el mismo; y los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que permiten al usuario seleccionar o escribir datos, estos poseen diferentes atributos.
                 </p>
+                <ul class="example">
+                    <li><strong>name="..."</strong> especifica el nombre con el que se va a identificar el dato enviado a traves del formulario.</li>
+                    <li><strong>type="..."</strong> indica el tipo de dato admitido por el campo de formulario, en el caso de los input es practicamente obligatorio.</li>
+                    <li><strong>value="..."</strong> correponde al valor ingresado en campo, y en caso que este sea seleccionado, debe figurar de manera explicita.</li>
+                </ul>
             </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
     <footer>
         <!-- Formulario de Contacto -->
-        <form id="contact" action="" method="">
+        <form id="contact" action="scripts/contact.php" method="POST">
             <h2>Dejanos tu Consulta</h2>
             <!-- Campo Nombre -->
             <label for="contact_Name">Ingrese su Nombre</label>
