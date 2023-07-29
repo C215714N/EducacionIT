@@ -38,6 +38,9 @@
         margin: auto;
         padding: 16px;
     }
+    label{
+        margin-top: 4px;
+    }
     input,
     textarea,
     select{
@@ -48,4 +51,15 @@
         min-height: 80px;
         resize: vertical;
     }
-    
+    .btn{
+        border: 1px solid #124; /* width style color */
+        color: #eee;
+        background-color: #124;
+    }
+    .btn:hover{
+        background-color: #248;
+    }
+    .btn:focus{
+        background-color: #36c;
+        box-shadow: -2px 2px 8px #333; /* -x+ -y+ blur color */
+    }
