@@ -29,9 +29,32 @@ nav .btn{
      */
 }
 nav a{
+    position: relative;
     color: #eee;
     text-shadow: 0 0 .25rem #333;
 }
+.menu a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    border-radius: .25rem;
+    width: .2rem;
+    height: .2rem;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--light)
+    );
+    opacity: 0;
+    transition: all .25s linear;
+}
+.menu a.active::after,
+.menu a:hover::after{
+    width: 100%;
+    opacity: .9;
+}
+
 .menu{
     position: fixed;
     /* POSICION FIJA:
