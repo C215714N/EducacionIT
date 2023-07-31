@@ -3,6 +3,7 @@
 Continuacion de la guia practica para los alumnos que finalizaron el curso de __Fundamentos Web__, y comienzan con __Maquetacion Web con HTML y CSS__ donde se recopilara informacion sobre los contenidos vistos durante las clases, ademas de ejercicios practicos y consejos a tener en cuenta al momento de poner en practica los temas.
 
 ## Background
+
 Esta propiedad se utiliza para definir los valores individuales del fondo de una etiqueta. Se puede usar para definir los valores de una o de todas las siguientes propiedades.
 
 | Background | Descripcion |
@@ -29,9 +30,11 @@ __El Módulo de Caja Flexible__ fue diseñado como un _modelo unidimensional de 
 __CSS Grid layout__ contiene funciones de diseño dirigidas a los _desarrolladores de aplicaciones web_. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir __dividir una página en áreas o regiones principales__, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
 
 | Grid | Descripcion |
+|--|--|
 |__grid-template-columns__ | Propiedad que especifica el número y ancho de las columnas en un diseño de cuadrícula, en una lista separada por espacios |
 |__grid-template-rows__ | Propiedad que especifica el número y las alturas de las filas en un diseño de cuadrícula, donde cada valor especifica la altura de las filas |
 |__grid-template-areas__ | Propiedad que especifica áreas dentro del diseño de cuadrícula, donde cada área está definida por apóstrofes |
+
 
 ## Ejercicios
 
