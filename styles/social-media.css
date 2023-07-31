@@ -7,6 +7,7 @@
     padding: 1rem;
 }
 .social a{
+    position: relative;
     width: 4rem;
     height: 4rem;
     border-radius: .5rem;
@@ -22,6 +23,7 @@
     transition-delay: .2s;
 }
 .social a:hover{
+    bottom: .5rem;
     background-color: #eee;
     background-size: 3.25rem;
     box-shadow: 0 .2rem .5rem #333;
