@@ -35,6 +35,17 @@ __CSS Grid layout__ contiene funciones de diseño dirigidas a los _desarrollador
 |__grid-template-rows__ | Propiedad que especifica el número y las alturas de las filas en un diseño de cuadrícula, donde cada valor especifica la altura de las filas |
 |__grid-template-areas__ | Propiedad que especifica áreas dentro del diseño de cuadrícula, donde cada área está definida por apóstrofes |
 
+## Position
+
+Esta propiedad especifica cómo un elemento es posicionado en el documento. Las propiedades _top, right, bottom, y left_ determinan la ubicación final de los elementos posicionados. Sin embargo, estas propiedades no funcionarán a menos que la propiedad __position__ se establezca primero.
+
+| Position | Descripcion |
+|--|--|
+| __static__ | El elemento no está posicionado de ninguna manera especial, ya que siempre se posiciona de acuerdo con el flujo normal de la página
+| __relative__ | El elemento se posiciona respecto al flujo normal de la pagina, y se coloca en relación a si mismo. El resto del contenido no se ajustará para encajar en ningún espacio dejado por el elemento. |
+| __absolute__ | El elemento es removido del flujo normal de la pagina y se coloca en relación con el ancestro posicionado más cercano; sin embargo, si no posee ancestro con posición, utiliza al elemento raiz.
+| __fixed__ | El elemento es removido del flujo normal de la pagina y se coloca en relación con la ventana, permaneciendo en el mismo lugar, incluso si se desplaza la página.
+| __sticky__ | El elemento es posicionado de acuerdo al flujo normal de la pagina y luego es desplazado con relación a su ancestro que se desplace más cercano, en función al desplazamiento del usuario.
 
 ## Ejercicios
 
