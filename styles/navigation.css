@@ -1,5 +1,12 @@
 /* Small Devices (Mobile) */
 nav{
+    position: sticky;
+    /* POSICION PEGAJOSA:
+        El elemento ocupa lugar dentro del FLOW, pero deja de formar parte del mismo cuando se cumple determinada condicion. A diferencia del resto, el elemento no se desplaza, sino que establece dicha condicion con sus atributos (top, left, right, bottom)
+    */
+    top: 0;
+    bottom: 0;
+    z-index: 1; /*  */
     /* Atributos de Flexbox */
     display: flex;
     justify-content: space-between;
@@ -15,21 +22,39 @@ nav{
     /* BACKGROUND: color image position/size repeat */
     padding: 1rem;
 }
+nav .btn{
+    z-index: 1;
+    /* EXPLICACION:
+        correponde al indice de superposicion por capas, el nivel en donde se va a dibujar el elemento y como se va a ubicar en caso de superposicion, por defecto el valor es 0.
+     */
+}
 nav a{
     color: #eee;
     text-shadow: 0 0 .25rem #333;
 }
 .menu{
-    /* Atributos de Tamaño */
+    position: fixed;
+    /* POSICION FIJA:
+        El elemento deja de formar parte del FLOW, pero a diferencia de Absolute, utiliza como referente al VIEWPORT. Cabe destacar que si no especifica la posicion, este permanecera fuera de la ventana.
+    */
+    top: 0;
+    left: -100%;
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
+    height: 100%;
+    background-image: linear-gradient(
+        hsl(280, 50%, 30%, .8),
+        hsl(320, 50%, 40%, .8)
+    );
+    /* Disposicion de elementos */
+    display: grid;
+    justify-content: center;
+    align-content: space-evenly;
+    font-size: 1.25rem;
     /* transicion */
-    transition: all .5s ease-in;
+    transition: all .5s ease-out;
 }
-.menu.active,
-nav:hover .menu{
-    max-height: 100vh;
+.menu.active{
+    left: 0;
 }
 /* Medium Devices (Tablet) */
 @media screen and (min-width: 768px){
@@ -40,6 +65,11 @@ nav:hover .menu{
         display: none;
     }
     .menu{
+        position: static;
+        background-image: none;
+        /* POSICION ESTATICA 
+            El elemento ocupa un lugar predeterminado dentro del FLOW y su posicion es inalterable. Es el valor utilizado por defecto.
+        */
         display: flex;
         gap: .5rem;
         width: auto;
