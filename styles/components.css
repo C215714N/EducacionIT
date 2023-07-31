@@ -11,9 +11,6 @@
     transition: all 1s ease;
 }
 .btn:hover{
-    left: .5rem;
-    top: .5rem;
-    box-shadow: -.5rem -.5rem  var(--dark);
     background-image: linear-gradient(
         #eeea,
         transparent
@@ -27,6 +24,14 @@
 }
 .btn-info{
     --bg: var(--info);
+}
+.btn-light{
+    --color: var(--dark);
+    --bg: var(--light);
+}
+.btn-warning{
+    --color: var(--dark);
+    --bg: var(--warning);
 }
 /* Caja de Fondo */
 .cover{
