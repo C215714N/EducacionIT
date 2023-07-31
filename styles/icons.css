@@ -1,0 +1,37 @@
+[class*="icon-"]::before{
+    font-size: 3rem;
+    filter: grayscale(100%);
+}
+[class*="icon-"]:hover::before{
+    filter: grayscale(70%);
+}
+.icon-home::before{
+    content: '🏠'
+}
+.icon-menu::before{
+    content: '🍔';
+    font-size: 1.2rem;
+}
+.icon-portfolio::before{
+    content: '💼'
+}
+.icon-projects::before{
+    content: '📽️'
+}
+.icon-contact::before{
+    content: '🧑‍💼'
+}
+.icon-news::before{
+    content: '📰'
+}
+.icon-plus::before{
+    content: '➕'
+}
+.icon-less::before{
+    content: '➖'
+}
+@media screen and (min-width: 768px){
+    [class*="icon-"]::before{
+        font-size: 1.5rem;
+    }
+}
