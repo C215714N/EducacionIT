@@ -1,0 +1,42 @@
+/* Botones */
+.btn{
+    --color: var(--light);
+    position: relative;
+    /* POSICION RELATIVA:
+        El elemento se ubica dentro del FLOW, ocupando un lugar en el espacio y puede alterar su posicion, cambiando su ubicacion con respecto a si mismo.
+    */
+    border: none;
+    color: var(--color);
+    background-color: var(--bg);
+    transition: all 1s ease;
+}
+.btn:hover{
+    left: .5rem;
+    top: .5rem;
+    box-shadow: -.5rem -.5rem  var(--dark);
+    background-image: linear-gradient(
+        #eeea,
+        transparent
+    );
+}
+.btn-success{
+    --bg: var(--success);
+}
+.btn-danger{
+    --bg: var(--danger);
+}
+.btn-info{
+    --bg: var(--info);
+}
+/* Caja de Fondo */
+.cover{
+    position: absolute;
+    /* POSICION ABSOLUTA:
+        El elemento deja de formar parte del FLOW, por lo tanto no ocupa lugar en el espacio, pero puede establecer su ubicacion con respecto al primer ancestro que NO sea STATIC.
+    */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
