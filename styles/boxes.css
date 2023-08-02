@@ -1,0 +1,44 @@
+[class^="box-"]{
+    position: relative;
+    margin: 1rem 0;
+    background-color: var(--dark);
+}
+.box-4x3{
+    /* RELACION DE ASPECTO width = 1.33(Height) Height = 75%(Width) */
+    padding-top: 75%;
+}
+.box-16x9{
+    /* RELACION DE ASPECTO width = 1.78(Height) Height = 56.25%(Width) */
+    padding-top: 56.25%;
+}
+.box-16x10{
+    /* RELACION DE ASPECTO width = 1.6(Height) Height: 62.5%(Width) */
+    padding-top: 62.5%;
+}
+[class*="box-"] .cover{
+    z-index: 0;
+}
+.important{
+    color: var(--light);
+    font-size: min( calc(2vw + 1rem), 8rem);
+}
+.adjust-middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* x , y*/
+}
+.rainbow{
+    background: linear-gradient(
+        to right,
+        hsl(0,50%,50%),
+        hsl(60,50%,50%),
+        hsl(120,50%,50%),
+        hsl(180,50%,50%),
+        hsl(240,50%,50%),
+        hsl(300,50%,50%),
+        hsl(360,50%,50%)
+    ) -500%/500%;
+    /* BACKGROUND: color image position/size repeat */
+    animation: bg-move 300s linear infinite;
+}
