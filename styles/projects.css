@@ -1,0 +1,25 @@
+.loading{
+    width: 4rem;
+    height: 4rem;
+    border: .5rem solid;
+    border-radius: 50%;
+    border-color: #def #ace #36c #248;
+    animation: loading 1s infinite;
+    /* name duration timing delay count direction */
+}
+/* Funcion de tiempo */
+.ease{
+    animation-timing-function: ease;
+}
+.ease-in{
+    animation-timing-function: ease-in;
+}
+.ease-out{
+    animation-timing-function: ease-out;
+}
+.ease-in-out{
+    animation-timing-function: ease-in-out;
+}
+.linear{
+    animation-timing-function: linear;
+}
