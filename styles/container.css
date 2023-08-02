@@ -3,6 +3,7 @@
     padding: 1rem;
     box-shadow: 0 0 .5rem #999;
     overflow: hidden;
+    transition: all .5s ease;
 }
 
 .card-header{
@@ -39,3 +40,13 @@
             0 0 .25rem #c368, 
             -.2rem .2rem .2rem #333;
     }
+.flex,
+.grid{
+    perspective: 30rem;
+    perspective-origin: top center;
+}
+.card:hover{
+    transform: 
+        rotateX(5deg)
+        scale(1.2);
+}

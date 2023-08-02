@@ -8,3 +8,26 @@
         transform: rotate(360deg); /* sentido horario */
     }
 }
+@keyframes appear{
+    from{
+        transform:
+            translateZ(-1000vh)
+            rotate(-3600deg)
+    }
+    to{
+        transform:
+            translateZ(0)
+            rotate(0deg)
+    }
+}
+@keyframes beat{
+    0%{
+        transform: scale(.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
