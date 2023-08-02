@@ -98,3 +98,6 @@ Esta propiedad especifica cómo un elemento es posicionado en el documento. Las 
         "article  main    aside"
         "footer   footer  footer"
         ```
+2. Crear una galeria de elementos que se adapte segun el tamaño de la ventana y colocarla dentro de la seccion principal.
+3. Fijar la barra de navegacion a la parte superior o inferior de su contenedor, segun corresponda.
+4. Crear un botton flotante de contacto (whatsapp, correo, telegram) y colocarlo a un costado de la pagina.
