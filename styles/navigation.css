@@ -54,7 +54,9 @@ nav a{
     width: 100%;
     opacity: .9;
 }
-
+.menu li:hover{
+    animation: beat 1s ease-out alternate infinite;
+}
 .menu{
     position: fixed;
     /* POSICION FIJA:
