@@ -28,7 +28,25 @@
 
 /* Contenido */
     
+    /* Secciones de Ejemplos */
+        .example{
+            max-width: 720px;
+            margin: 8px auto;
+            border-left: 4px solid #248;
+            padding: 16px;
+            line-height: 1.5;
+            background-color: #eee;
+        }
+        .container{
+            display: flex;
+            gap: 8px;
+            overflow: auto;
+        }
     /* Tablas */
+    th,
+    td{
+        width: 150px
+    }
     table caption,
     th,
     td{
