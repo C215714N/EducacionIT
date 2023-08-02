@@ -44,6 +44,9 @@
         fixed;
     /* transition */
     transition: background 15s linear 2s;
+    /* Perspectiva */
+    perspective: 3rem;
+    perspective-origin: center;
 }
 #header:hover{
     background-position: 
@@ -51,4 +54,10 @@
     top left,
     bottom center,
     top center;
+}
+h1{
+    font-family: 'Middle Earth';
+    animation: appear 2s 2s ease-out;
+    animation-fill-mode: backwards;
+    transform: rotateX(5deg)
 }
