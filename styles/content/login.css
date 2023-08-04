@@ -1,0 +1,61 @@
+.bg-body{
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom right,
+        hsl(300, 50%, 80%),
+        hsl(270, 50%, 80%),
+        hsl(300, 50%, 80%)
+    );
+}
+#root{
+    width: min(100%, 720px);
+    padding: 1rem;
+    color: var(--dark);
+}
+#root header{
+    font-size: 1rem;
+}
+#root h1{
+    animation: none;
+}
+#root p{
+    margin: .25rem
+}
+#root img{
+    width: 100%;
+    max-width: 160px;
+    margin: 1rem auto;
+}
+/* Formulario */
+    #root form{
+        align-items: start;
+        gap: 1rem;
+    }
+    #root form > *{
+        flex: 1 0 min(100%, 240px);
+    }
+    #root label{
+        display: none;
+    }
+    #root input {
+        width: 100%;
+        margin: .25rem 0 .5rem;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid var(--dark);
+        background-color: transparent;
+    }
+    #root button{
+        display: block;
+        margin-top: .25rem;
+        margin-left: auto;
+    }
+/* Pseudoelemento: Motor del Navegador */ 
+    input:hover::-moz-placeholder{ 
+        /* Compatibilidad: Mozilla Firefox */
+        color: var(--dark);
+    }
+    /* Compatibilidad: safari / chrome / edge */
+    input:hover::-webkit-input-placeholder{
+        color: var(--dark);
+    }
