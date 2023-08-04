@@ -38,6 +38,8 @@ h3,
 header p,
 .adjust-middle,
 .list-unstyled,
+.content-table,
+.content-table :is(ul, ol),
 .menu{
     margin: 0;
 }
@@ -47,11 +49,15 @@ iframe{
 }
 /* Rellenos */
 .list-unstyled,
+.content-table,
+.content-table :is(ul, ol),
 .menu{
     padding: 0;
 }
 /* Estilos */
 .list-unstyled,
+.content-table,
+.content-table :is(ul, ol),
 .menu{
     list-style: none;
 }
