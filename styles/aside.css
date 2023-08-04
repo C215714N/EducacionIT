@@ -1,0 +1,53 @@
+.content-table,
+.content-table :is(ul, ol){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Definicion de Contadores */
+.content-table{
+    counter-reset: first
+}
+.content-table li{
+    counter-reset: second;
+}
+.content-table li li{
+    counter-reset: third;
+}
+.content-table li li li{
+    counter-reset: fourth;
+}
+/* Incremento de Contadores */
+.content-table li{
+    counter-increment: first;
+}
+.content-table li li{
+    counter-increment: second;
+}
+.content-table li li li{
+    counter-increment: third;
+}
+.content-table li li li li{
+    counter-increment: fourth;
+}
+/* Implementacion de Contadores */
+.content-table li::before{
+    content: 
+        counter(first) '.'
+        counter(second)'.'
+        counter(third) ' - '
+}
+/* Estilos tabla de contenido */
+.content-table{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.content-table li{
+    color: #214;
+}
+.content-table li li{
+    color: #95A;
+}
+.content-table li li li{
+    color: #C9F;
+}
