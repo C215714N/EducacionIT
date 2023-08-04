@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body class="bg-body">
+    <div id="root" class="adjust-middle">
+        <header>
+            <h1>Cristian Racedo</h1>
+            <p>te da la bienvenida</p>
+        </header>
+        <form class="d-flex wrap" action="index.html">
+            <img 
+                src="assets/icon/cr.svg" 
+                alt="Logotipo Cristian Racedo">
+            <div>
+                <h2>Iniciar sesion</h2>
+                <!-- Campo Usuario -->
+                <label for="">Ingrese su Nombre o Correo</label>
+                <input 
+                    type="text"
+                    placeholder="Nombre o Correo"
+                    required>
+                <!-- Campo Contraseña -->
+                <label for="">Ingrese su Contraseña</label>
+                <input 
+                    type="password"
+                    placeholder="Contraseña"
+                    required>
+                <button class="btn btn-info">Aceptar</button>
+                <!-- Recuperacion contraseña -->
+                <p>¿Olvidaste tu Contraseña? 
+                    <a href="recovery.html">reestablecer</a>
+                </p>
+                <!-- Registro de usuario -->
+                <p>¿No estas registrado?
+                    <a href="signin.html">registrate</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
