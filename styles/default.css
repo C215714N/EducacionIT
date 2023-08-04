@@ -23,9 +23,26 @@
         text-decoration: none;
     }
 /* Navegacion */
-
+    
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 16px; /* top right bottom left*/
+        text-align: center;
+        text-shadow: 0 0 4px #333; /* -x+ -y+ blur color */
+        /* Propiedades de Fondo */
+        background-image: url('../assets/bg/osx-catalina-night.jpg');
+        background-position: top center; /* x y | top bottom left right center*/
+        background-size: cover; /* width height | cover contain */
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #248;
+    }
+    header{
+        border-bottom: 2px solid; /* width style color*/
+        color: #124;
+    }
 /* Contenido */
     .right{
         text-align: right;
