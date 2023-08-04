@@ -1,22 +1,22 @@
 /* Reglas Generales */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Raleway&family=Open+Sans');
-@import url('general.css');
-@import url('family.css');
-@import url('layout.css');
-@import url('components.css');
-@import url('animations.css');
+@import url('content/general.css');
+@import url('content/family.css');
+@import url('content/layout.css');
+@import url('components/components.css');
+@import url('components/animations.css');
 /* Cabecera */
-@import url('header.css');
+@import url('content/header.css');
 /* Navegacion */
-@import url('icons.css');
-@import url('navigation.css');
+@import url('components/icons.css');
+@import url('content/navigation.css');
 /* Contenido */
-@import url('container.css');
-@import url('box-model.css');
-@import url('boxes.css');
-@import url('projects.css');
-@import url('aside.css');
+@import url('components/container.css');
+@import url('helpers/box-model.css');
+@import url('components/boxes.css');
+@import url('helpers/projects.css');
+@import url('components/aside.css');
 /* Pie de Pagina */
-@import url('footer.css');
-@import url('contact-form.css');
-@import url('social-media.css');
+@import url('content/footer.css');
+@import url('content/contact-form.css');
+@import url('components/social-media.css');
