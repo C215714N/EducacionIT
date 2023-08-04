@@ -5,6 +5,7 @@ body{
         'main'
         'footer'
         'nav';
+    overflow-x: hidden;
 }
 #header{
     grid-area: header;
@@ -53,8 +54,13 @@ main{
         display: grid;
         grid-template-areas: '. aside';
     }
-    aside{
+    #aside{
         grid-area: aside;
+        position: sticky;
+        top: 4.5rem;
+        height: calc(100vh - 4.5rem);
+        padding: .5rem 1rem;
+        overflow: auto;
     }
     section{
         grid-column: 1;
