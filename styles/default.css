@@ -8,7 +8,8 @@
     h1,
     h2,
     h3,
-    header p{
+    header p,
+    .menu{
         margin: 0;
     }
     /* Bordes */
@@ -23,7 +24,22 @@
         text-decoration: none;
     }
 /* Navegacion */
-    
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        padding: 8px;
+        background-color: #124;
+    }
+    .menu a{
+        color: #ccc;
+        font-weight: bold;
+    }
+    .menu a.active,
+    .menu a:hover{
+        color: #fff;
+        text-shadow: 0 0 4px;
+    }
 /* Cabecera */
     #header{
         padding: min(20%, 240px) 16px; /* top right bottom left*/
