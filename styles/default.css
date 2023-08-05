@@ -60,6 +60,19 @@
         color: #124;
     }
 /* Contenido */
+    main{
+        max-width: 960px;
+        margin: 8px auto;
+        padding: 16px;
+    }
+    .card,
+    article{
+        margin: 24px 0;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: -2px 2px 8px #999;
+        overflow: hidden;
+    }
     .right{
         text-align: right;
     }
