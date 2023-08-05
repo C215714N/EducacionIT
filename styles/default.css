@@ -9,7 +9,8 @@
     h2,
     h3,
     header p,
-    .menu{
+    .menu,
+    #header{
         margin: 0;
     }
     /* Bordes */
@@ -51,6 +52,7 @@
         background-size: cover; /* width height | cover contain */
     }
     .header{
+        margin: -16px -16px 0;
         padding: 16px;
         color: #eee;
         background-color: #248;
