@@ -132,6 +132,19 @@
     .semantic tfoot{
         background-color: #36c;
     }
+    /* Contenido Multimedia */
+    .example figure{
+        margin: 0;
+        min-width: min(640px, 90%);
+        min-height: 360px;
+    }
+    .example video,
+    .example iframe{
+        width: 100%;
+        height: calc(100% - 24px);
+        background-color: #333;
+        object-fit: contain;
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
