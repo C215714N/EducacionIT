@@ -79,6 +79,23 @@ Atributo que permite conseguir _un efecto suavizado entre un estado inicial y un
 | __transition-timing-function__ |	Ritmo de la transicion, determina cuando es mas lenta o rapida
 | __transition-delay__ | Tiempo de espera _en segundos_ , para que se ejecute la transicion | 
 
+### Animaciones
+
+Son efectos visuales que se aplican mediante una linea de tiempo y a diferencia de las transiciones, pueden ser automaticas. Aunque tambien podemos asociar un evento a la ejecucion de las mismas. para su implementacion debemos asignarles un nombre y utiliza la regla __@keyframes__. Al igual que las transiciones, estas tambien pueden distribuirse en funcion del tiempo gracias al atributo _animation-timing-function_
+
+| Animation | Descripcion |
+|--|--|    
+|__@keyframes__ | Regla que especifica como debe suceder la animacion, incluye selectores como __from{}__ y __to{}__ aunque tambien admite selectores basados en _porcentajes_|
+|__animation-name__ | Espefica la regla @keyframes que corresponde a la animacion que debe ser ejecutada |
+|__animation-duration__ | Especifica cuando debe durar el ciclo de la animacion |
+|__animation-timing-function__ | Determina la curva de animacion con valores predefinidos como _ease, ease-in, ease-out, ease-in-out, linear_ donde ease indica cual sera la parte lenta. |
+|__animation-delay__ | Tiempo que demora en iniciar la animacion |
+|__animation-iteration-count__ | Establece el numero de repeticiones que deben suceder antes que la animacion finalice, se puede utilizar _infinite_ para que la misma no finalice |
+|__animation-direction__ | Especifica el sentido en el que debe reproducirse la animacion, admitiendo valores como _normal, reverse_ y en ciclos con _alternate, alternate-reverse_ |
+|__animation-fill-mode__ | Determina el estilo del elemento antes de la animacion, despues de la misma y ambas. Admite valores como _normal, forwards y backwards_ |
+|__animation-play-state__ | Determina el estado de reproduccion de la animacion, por defecto se encuentra en modo _running_, pero podemos detenerlo utilizando _paused_ |
+
+
 ## Ejercicios
 
 ### Planificacion del Diseño
