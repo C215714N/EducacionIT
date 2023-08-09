@@ -1,0 +1,50 @@
+// Declaraciones
+// Variables: Dato almacenado en Memoria
+$limit: 10;
+// Array: Lista de Valores en Memoria
+$color-values: 
+    primary #448,
+    secondary #c36,
+    light  #eee,
+    dark #333,
+    danger #c33,
+    warning #da3,
+    success #3c6,
+    info #36c;
+$color-attributes:
+    text    color,
+    bg      background-color,
+    outline outline-color,
+    border  border-color,
+    shadow  --shadow,
+    shade   --shade
+;
+$size-attributes:
+    m   margin,
+    o   outline-width,
+    b   border-width,
+    p   padding,
+    fs  font-size,
+    fw  font-weight
+;
+
+// Bucles: Estilos que repiten en base a una condicion
+/* Tamaños por Atributos */
+@each $prop, $attr in $size-attributes{
+@for $i from 0 through $limit{
+    $unit: 0;
+    // Condicional: Evalua si cumple y aplica en consecuencia
+    @if $prop == fw { $unit: $i * 100 } 
+    @else if $prop == fs { $unit: $i * .5rem + .5rem}
+    @else { $unit: $i * .25rem }
+    // Implementacion de los estilos
+    .#{$prop}-#{$i}{
+        #{$attr}: $unit;
+} } }
+
+/* Sistema de Colores por Atributo */
+@each $prop, $attr in $color-attributes{
+@each $name, $value in $color-values{
+    .#{$prop}-#{$name}{
+        #{$attr}: $value;
+} } }
