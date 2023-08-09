@@ -1,0 +1,57 @@
+// Declaraciones
+$functions: 
+    lineal,  // ax + b
+    cuadratica, // ax^2 + bx + c
+    trigonometrica, // sin(x)
+    exponencial, // n^x
+    limite // n/x => limite
+;
+
+@mixin gradient($type: linear, $dir: 0deg, $colors: (#224 25%, #eee 40%, #248)){
+    background: #{$type}-gradient($dir, $colors)
+}  
+.min-vh100{
+    min-height: min(100vh, 720px);
+    overflow: hidden;
+    position: relative;
+}
+.sea{
+    animation: sea 10s linear alternate infinite;
+    @include gradient;
+    width: 100%;
+    height: 100%;
+    .bubble{
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem;
+        border-radius: 50%;
+        background-color: #36c;
+        box-shadow: 
+            -.25rem .25rem .5rem #333,
+            -.5rem .5rem .1rem  #eee5 inset;
+        @for $i from 1 through length($functions){
+            &:nth-child(#{$i}n){
+                @include gradient(
+                    radial,
+                    circle at top right, ( 
+                        hsl($i * 30deg, 50%, 50%),
+                        hsl($i * 60deg, 50%, 50%) 
+                ) );
+                animation: nth($functions, $i) 10s linear $i * .25s alternate infinite;
+            }
+        }
+    }
+}
+
+@keyframes sea{
+@for $i from 0 through 100{
+    #{$i}%{
+    @include gradient($dir: ($i * 30 / 100) - 15deg);
+} } }
+
+@each $f in $functions{
+@keyframes $f{
+    0%{
+        width: 0;
+    }
+} }
