@@ -284,7 +284,7 @@
                 <h2>Contenido Multimedia</h2>
             </header>
             <p>
-                Se conoce con este nombre a todo elemento audiovisual que se puede incorporar dentro de una pagina. En la actualidad los navegadores brindan soporte de manera nativa y son capaces de reproducir este tipo de contenido sin necesidad de instalar algun <em>plugin o complementos</em> de terceros.
+                Se conoce con este nombre a todo elemento audiovisual que se puede incorporar en la pagina. Actualmente los navegadores brindan soporte de manera nativa y son capaces de reproducir este tipo de contenido sin necesidad de instalar algun <em>plugin o complementos</em> de terceros. Podemos verificar la compatibilidad del navegador desde el sitio <a href="https://caniuse.com" target="_blank">Can I Use</a>
             </p>
             <section>
                 <header>
@@ -330,6 +330,32 @@
                         <figcaption>HTML5 from 
                             <a href="https://www.slideshare.net/HatemMahmoud" target="_blank">Hatem Mahmoud</a>
                         </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    Como se menciona anteriormente, podemos incorporar este material utilizando la <em>API de reproduccion integrada</em> al navegador. La misma se utiliza mediante las etiquetas <strong>&lt;audio> y &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Incluso podemos utilizar atributos como <em>autoplay, muted, loop y controls</em>
+                </p>
+                <div class="example container">
+                    <figure>
+                        <video src="./assets/media/by-the-way.ogv" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="./assets/media/by-the-way.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>By the Way - By the Way(2002)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="./assets/media/californication.mp4" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos, pero tu navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="./assets/media/californication.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Californication - Californication (1999)</figcaption>
                     </figure>
                 </div>
             </section>
