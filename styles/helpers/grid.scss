@@ -1,0 +1,30 @@
+// Declaraciones
+// Variables: Dato almacenado en Memoria
+$col: 24;
+// Array: Lista de Valores en Memoria
+$media:
+    sm  576px   540px,
+    md  768px   720px,
+    lg  992px   960px,
+    xl  1200px  1140px,
+    xxl 1400px  1320px
+;
+// Bucles: Estilos que repiten en base a una condicion
+/* Sistema de Grillas */
+@for $i from 1 through $col{
+    .col-#{$i}{
+        width: percentage($i / $col);
+} }
+/* Sistema de Grillas Responsive*/
+@each $vname, $vwidth, $vmax in $media{
+/* Dispositivos #{$vname} */
+@media screen and (min-width: $vwidth){
+    .container,
+    .container-#{$vname}{
+        max-width: $vmax;
+    }
+    @for $i from 1 through $col{
+    .col-#{$vname}-#{$i}{
+        width: percentage($i / $col);
+    } }
+} }
