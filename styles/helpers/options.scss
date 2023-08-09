@@ -8,6 +8,28 @@
     position: $p;
     z-index: $z;
 }
+@mixin flexbox( 
+    $dir: row,
+    $justify: center,
+    $align: stretch,
+    $wrap: nowrap,
+    $d: flex
+){
+    display: $d; 
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+@mixin normalize($p:0, $m:0, $b:0, $ba: border, $ma: margin, $pa: padding){
+    #{$ma}: $m;
+    #{$ba}: $b;
+    #{$pa}: $p;
+}
+// Clases de Utilidad
+.zeroise{ @include normalize; } // Quitar margin padding y border
+.column{ @include flexbox(column); } // Flexbox en columna
+.row{ @include flexbox; } // Flexbox en fila justificado al centro
 
 // Nesting: Anidacion de selectores para la creacion de estilos especificos
 .display-box{
@@ -21,8 +43,8 @@
     );
     .list{
         @include position(absolute);
+        @include normalize(.5rem, .25rem, 1px solid var(--dark), $ma: border-radius);
         list-style: none;
-        padding: .5rem;
         // Selector de Elemento Padre
         &-block{        
             top: 100%;
@@ -33,4 +55,10 @@
             left: 100%;
         }
     }
+}
+.gallery{
+    @extend .zeroise;
+    .images{ @extend .zeroise; }
+    .controls{ @extend .zeroise; }
+    .buttons{ @extend .zeroise; }
 }
