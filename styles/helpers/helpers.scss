@@ -1,6 +1,7 @@
 // Declaraciones
 // Variables: Dato almacenado en Memoria
 $limit: 10;
+$styles: solid, dotted, dashed, groove, none;
 // Array: Lista de Valores en Memoria
 $color-values: 
     primary #448,
@@ -23,6 +24,7 @@ $size-attributes:
     m   margin,
     o   outline-width,
     b   border-width,
+    br  border-radius,
     p   padding,
     fs  font-size,
     fw  font-weight
@@ -41,6 +43,12 @@ $size-attributes:
     .#{$prop}-#{$i}{
         #{$attr}: $unit;
 } } }
+
+/* Estilos de Bordes */
+@each $s in $styles{
+    .b-#{$s}{
+        border-style: $s;
+} }
 
 /* Sistema de Colores por Atributo */
 @each $prop, $attr in $color-attributes{
