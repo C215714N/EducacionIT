@@ -1,0 +1,41 @@
+$path: '../../assets/icon';
+$icons: car, wheel, clock, tower, building;
+
+.bg-icon{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+@each $ico in $icons{
+    .#{$ico}{
+        @extend .bg-icon;
+        background-image: url('#{$path}/#{$ico}.svg');
+} }
+
+.car{
+    animation: translate 5s linear infinite;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    .wheel{
+        width: 2rem;
+        position: absolute;
+        top: 100%;
+        transform: translateY(-50%);
+        &.left{
+            left: 10%;
+        }
+        &.right{
+            right: 10%;
+        }
+    }
+}
+@keyframes translate {
+    from{
+        transform: translate(-10vw, -10vh);
+    }
+    to{
+        transform: 
+        translate(min(100vw, 960px), min(10vh, 240px))
+        rotate(-60deg);
+    }
+}
