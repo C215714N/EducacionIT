@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50">
+    <style>
+        *{
+            stroke-linejoin: round;
+            stroke-width: 2px;
+        }
+        .paint{
+            fill: #36c;
+            stroke: #36c
+        }
+        .wheel{
+            fill: #fff;
+            stroke: #fff;
+        }
+        .top{
+            fill: #124;
+        }
+        .door{
+            stroke: #124;
+            stroke-width: .5px;
+        }
+    </style>
+    <g>
+        <rect class="paint" x="5" y="25" width="90" height="25" />
+        <polygon class="paint" points="45,25 95,25 75,5 45,5" />
+    </g>
+    <g>
+        <ellipse class="top" cx="25" cy="50" rx="15" ry="12"/>
+        <ellipse class="top" cx="75" cy="50" rx="15" ry="12"/>
+        <circle class="wheel" cx="25" cy="60" r="15" />
+        <circle class="wheel" cx="75" cy="60" r="15" />
+    </g>
+    <polygon class="wheel" points="50,7.5 70,7.5 85,22.5 50,22.5"/>
+    <line class="door" x1="48" y1="30" x2="48" y2="80"/>
+</svg>
