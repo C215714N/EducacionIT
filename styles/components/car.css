@@ -1,0 +1,92 @@
+.bg-icon, .building, .tower, .clock, .wheel, .car {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.car {
+  background-image: url("../../assets/icon/car.svg");
+}
+
+.wheel {
+  background-image: url("../../assets/icon/wheel.svg");
+}
+
+.clock {
+  background-image: url("../../assets/icon/clock.svg");
+}
+
+.tower {
+  background-image: url("../../assets/icon/tower.svg");
+}
+
+.building {
+  background-image: url("../../assets/icon/building.svg");
+}
+
+.car {
+  animation: translate 5s linear infinite;
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+.car:nth-child(1) {
+  filter: hue-rotate(36deg);
+  animation-timing-function: cubic-bezier(0.1224597547, 0.7100749077, 0.383966301, 0.1389926617);
+}
+.car:nth-child(2) {
+  filter: hue-rotate(72deg);
+  animation-timing-function: cubic-bezier(0.3235198754, 0.3277755395, 0.6663716639, 0.0320634773);
+}
+.car:nth-child(3) {
+  filter: hue-rotate(108deg);
+  animation-timing-function: cubic-bezier(0.2746681722, 0.8339837283, 0.4292209143, 0.9021892987);
+}
+.car:nth-child(4) {
+  filter: hue-rotate(144deg);
+  animation-timing-function: cubic-bezier(0.0762009519, 0.5759339145, 0.6592197605, 0.5975286529);
+}
+.car:nth-child(5) {
+  filter: hue-rotate(180deg);
+  animation-timing-function: cubic-bezier(0.1681271727, 0.277620428, 0.3347910911, 0.5030886617);
+}
+.car:nth-child(6) {
+  filter: hue-rotate(216deg);
+  animation-timing-function: cubic-bezier(0.9851278984, 0.4156478624, 0.6802436376, 0.9139092181);
+}
+.car:nth-child(7) {
+  filter: hue-rotate(252deg);
+  animation-timing-function: cubic-bezier(0.277180409, 0.8297226062, 0.9080455876, 0.7280625731);
+}
+.car:nth-child(8) {
+  filter: hue-rotate(288deg);
+  animation-timing-function: cubic-bezier(0.930130356, 0.0004044014, 0.619517498, 0.5838776883);
+}
+.car:nth-child(9) {
+  filter: hue-rotate(324deg);
+  animation-timing-function: cubic-bezier(0.9487289133, 0.5919019571, 0.5326114804, 0.7905438942);
+}
+.car:nth-child(10) {
+  filter: hue-rotate(360deg);
+  animation-timing-function: cubic-bezier(0.5437045728, 0.3543938485, 0.4512563506, 0.1278004691);
+}
+.car .wheel {
+  width: 2rem;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+}
+.car .wheel.left {
+  left: 10%;
+}
+.car .wheel.right {
+  right: 10%;
+}
+
+@keyframes translate {
+  from {
+    transform: translate(-10vw, -10vh);
+  }
+  to {
+    transform: translate(min(100vw, 960px), min(5vh, 120px)) rotate(-60deg);
+  }
+}
