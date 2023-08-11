@@ -1,3 +1,5 @@
+@use "sass:math";
+$childs: 10;
 $path: '../../assets/icon';
 $icons: car, wheel, clock, tower, building;
 
@@ -16,6 +18,11 @@ $icons: car, wheel, clock, tower, building;
     position: relative;
     width: 100px;
     height: 50px;
+    @for $i from 1 through $childs{
+        &:nth-child(#{$i}){
+            filter: hue-rotate(#{360/$childs * $i}deg);
+            animation-timing-function: cubic-bezier(math.random(), math.random(), math.random(), math.random());
+    } }
     .wheel{
         width: 2rem;
         position: absolute;
@@ -35,7 +42,7 @@ $icons: car, wheel, clock, tower, building;
     }
     to{
         transform: 
-        translate(min(100vw, 960px), min(10vh, 240px))
+        translate(min(100vw, 960px), min(5vh, 120px))
         rotate(-60deg);
     }
 }
