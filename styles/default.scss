@@ -1,0 +1,63 @@
+// Importaciones
+@use "sass:string"; // Funciones de Texto
+@use "sass:math"; // Funciones Matematicas
+
+// Declaraciones
+$media-screen:
+    '' 0,
+    -sm 576px,
+    -md 768px,
+    -lg 992px,
+    -xl 1200px,
+    -xxl 1400px,
+;
+$grid-areas: '#header', '#root', '#footer', '#nav';
+$areas: 
+    ('header' 'main' 'footer' 'nav', 0), 
+    ('nav' 'header' 'main' 'footer',  768px);
+$colors:
+    first   var(--bs-indigo),
+    second  var(--bs-gray-100),
+    third   var(--bs-gray-900),
+;
+$color-props:
+    text    color,
+    bg      background-color,
+    border  border-color,
+    shadow  --shadow,
+    shade   --shade
+;
+// Mixins
+// Implementacion de Media Queries por Tamaño
+@mixin media($class, $attr, $value, $size: 0){
+    @if $size < 576px{
+        #{$class}{ #{$attr}: $value; } }
+    @else {
+    @media screen and (min-width: $size){
+        #{$class}{ #{$attr}: $value; }   
+    } }
+}
+@for $i from 1 through length($grid-areas){
+    $area: nth(nth($areas, 1), 1); // Obtengo la lista de areas
+    $n: string.unquote(nth($area, $i)); //Extraigo el nombre sin comillas
+    @include media(nth($grid-areas, $i), grid-area, $n, 0)
+}
+@each $area, $size in $areas{
+    @include media(body, grid-template-areas, $area, $size);
+}
+
+@each $vn, $vw in $media-screen{
+@each $prop, $attr in $color-props{
+@each $name, $value in $colors{
+    @include media('.'+$prop+$vn+'-'+$name, $attr, $value, $vw);
+} } }
+// Nesting
+#nav{
+    @extend .bg-third;
+    a{
+        @extend .text-second;
+    }
+}
+#footer{
+    @extend .text-second, .bg-third;
+}
