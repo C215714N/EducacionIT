@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostromo</title>
+</head>
+<body>
+    <nav id="nav">
+        <ul class="menu">
+            <li><a href="#header" class="icon-home">Inicio</a></li>
+            <li><a href="#about" class="icon-about">Acerca</a></li>
+            <li><a href="#product" class="icon-product">Productos</a></li>
+            <li><a href="#service" class="icon-service">Servicios</a></li>
+            <li><a href="#contact" class="icon-contact">Contacto</a></li>
+            <li><a href="session.html" class="icon-account">Session</a></li>
+        </ul>
+    </nav>
+    <header id="header" class="gallery">
+        <h1>El 8vo Pasajero</h1>
+        <p>En el espacio nadie puede oirte gritar</p>
+        <ul class="galery-list">
+            <li class="gallery-item"></li>
+            <li class="gallery-item"></li>
+            <li class="gallery-item"></li>
+            <li class="gallery-item"></li>
+        </ul>
+        <button class="icon-prev"></button>
+        <button class="icon-next"></button>
+    </header>
+    <main id="root">
+        <section id="about">
+            <h2 class="header">Acerca</h2>
+            <img src="" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nobis ullam vel amet quod quae dolorem? Totam magni, similique sed saepe, vero amet perferendis doloremque deserunt earum ipsum dolor odit nobis! Non, enim rem iusto, esse similique voluptatum omnis dolorem, veritatis aperiam dolores quaerat iste neque quibusdam ducimus eaque in?</p>
+        </section>
+        <section id="product">
+            <h2 class="header">Productos</h2>
+            <img src="" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores assumenda cumque qui necessitatibus, deserunt, quae consequatur consectetur molestias ad maxime? Beatae cumque quos atque maxime cum libero. Dolor corporis enim odio accusantium voluptatibus facilis culpa sed? Reiciendis, inventore aspernatur rem necessitatibus error distinctio ipsum recusandae, consequuntur, voluptatibus dolorum soluta.</p>
+        </section>
+        <section id="service">
+            <h2 class="header">Servicios</h2>
+            <img src="" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore id sequi eum a tempora quia molestias delectus quam soluta, voluptate odio neque consectetur voluptates iure doloremque assumenda. Fugit voluptate suscipit ut voluptatum alias fugiat perferendis odit recusandae earum, quam eum animi atque commodi ullam facilis quis magni dolorum! In, minima!</p>
+        </section>
+        <section id="extra">
+            <h2 class="header">Extra</h2>
+            <img src="" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda modi magnam possimus perferendis blanditiis aut. Assumenda, velit iusto quidem voluptate sed veritatis tempora. Laborum libero et, hic iusto voluptates sapiente quia deserunt voluptas exercitationem temporibus odit ut omnis quis mollitia velit iure, pariatur ab consequatur modi quidem repudiandae. Illum, consectetur?</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <form action="" id="contact">
+            <h2>Dejanos tu Consulta</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text" 
+                minlength="3" 
+                maxlength="50" 
+                required>
+            <div class="validation">complete el campo utilizando solamente letras, entre 3 y 50 caracteres</div>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email" 
+                minlength="8" 
+                required>
+            <div class="validation">complete el campo utilizando una direccion de al menos 8 caracteres</div>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone"
+                name="phone"
+                type="tel" 
+                minlength="6" 
+                maxlength="20" 
+                required>
+            <div class="validation">complete el campo utilizando entre 6 y 20 digitos, solamente</div>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult" 
+                required></textarea>
+            <button>enviar</button>
+        </form>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111975203!2d-58.37851102511433!3d-34.60238855742649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1692035773208!5m2!1ses-419!2sar" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="social">
+            <a class="icon-linkedin" 
+                href="https://linkedin.com/in/username" 
+                targer="_blank" 
+                title="seguinos en Linkedin">
+            </a>
+            <a class="icon-facebook" 
+                href="https://facebook.com/username" 
+                targer="_blank" 
+                title="seguinos en Facebook">
+            </a>
+            <a class="icon-whatsapp" 
+                href="https://api.whatsapp.com/send?phone=1103034567&text=Hola%20Nostromo" 
+                targer="_blank" 
+                title="Mensajeanos por Whatsapp">
+            </a>
+            <a class="icon-github" 
+                href="https://github.com/c215714n/EducacionIT/tree/f-pescar-mav-lxv14" 
+                targer="_blank" 
+                title="Clona el repo de Github">
+            </a>
+        </div>
+        <p class="icon-copy">Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
