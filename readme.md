@@ -12,6 +12,7 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 ## Tabla de contenidos
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
+* [Verificacion de Topologia](#verificacion-de-topologia)
 
 ## Configuracion Inicial
 
@@ -43,3 +44,20 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Verificacion de Topologia
+Cuando establecemos la configuracion de los dispositivos de internetworks debemos verificar el funcionamiento de las interfaces, redes y dispositivos a los que se conecte dentro de la topologia. La misma dependera del tipo de dispositivo que estemos administrando.
+
+1. switch# (administracion general)
+	* __show version__: Informacion del Sistema Operativo y version
+	* __show flash__: Lista de archivos de la memoria FLASH
+	* __show running-config__: Configuracion actual almacenada en la RAM
+	* __show startup-config__: Configuracion de inicio almacenada en la NVRAM
+1. switch# (administracion del conmutador)
+	* __show interfaces status__: Interfaces del dispositivo con su configuracion capa 2 resumida
+	* __show interfaces `<interface id>`__: Detalle el funcionamiento de la interfaz seleccionada
+	* __show mac address-table__: Tabla de direcciones MAC registradas por interfaz
+1. router# (administracion del enrutador)
+	* __show arp__: Tabla de direcciones IP aprendidas con sus MAC correspondientes
+	* __show ip interfaces brief__: Interfaces del dispositivo con su configuracion capa 3 resumida
+	* __show ip route__: Tabla de rutas a las que esta conectado o se puede acceder
