@@ -3,6 +3,29 @@
 @use "sass:math"; // Funciones Matematicas
 
 // Declaraciones
+$path: "../assets/bg";
+$linux-bg:
+    "artful-aardvark",
+    "bionic-beaver",
+    "cosmic-cuttlefish",
+    "disco-dingo",
+    "eoan-ermine",
+    "focal-fossa",
+    "groovy-gorilla",
+    "hisurte-hippo",
+    "impish-Indri",
+    "jammy-jellyfish",
+;
+$social:
+    "cr",
+    "facebook",
+    "github",
+    "instagram",
+    "linkedin",
+    "twitter",
+    "whatsapp",
+    "youtube",
+;
 $media-screen:
     '' 0,
     -sm 576px,
@@ -45,19 +68,66 @@ $color-props:
 @each $area, $size in $areas{
     @include media(body, grid-template-areas, $area, $size);
 }
-
 @each $vn, $vw in $media-screen{
 @each $prop, $attr in $color-props{
 @each $name, $value in $colors{
     @include media('.'+$prop+$vn+'-'+$name, $attr, $value, $vw);
 } } }
 // Nesting
+#header{
+
+}
 #nav{
     @extend .bg-third;
     a{
         @extend .text-second;
     }
 }
+#root{
+
+}
 #footer{
     @extend .text-second, .bg-third;
+    padding: 0 calc(50vw - 660px);
+    .map{
+        min-height: 320px;
+    }
+}
+
+.gallery{
+    position: relative;
+    min-height: min(640px, 100vh);
+    &-item{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color) var(--bg) center/cover;
+        opacity: 0;
+        &.active{
+            opacity: 1;
+        }
+        @for $i from 1 through length($linux-bg){
+            &:nth-child(#{$i}n){
+                --color: hsl(#{$i * 30deg}, 50%, 50%);
+                --bg: url("#{$path}/ubuntu-#{nth($linux-bg, $i)}.jpg");
+            }
+        }
+    }
+    button{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        border: none;
+        background-color: transparent;
+        &.icon-prev{
+            left: 0;
+            padding: 3rem;
+        }
+        &.icon-next{
+            right: 0;
+            padding: 3rem;
+        }
+    }
 }
