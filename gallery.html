@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Estilos CSS -->
+    <style>
+        /* Selectores Generales  */
+        body{
+            margin: 0;
+            font-family: "segoe ui", "calibri", sans-serif;
+        }
+        img{
+            width: 100%;
+            max-width: 240px;
+        }
+        /* Selectores Compuestos (,) */
+        header, 
+        footer{
+            padding: 24px;
+            color: rgb(51,51,51); /* DEC: 0-255 | HEX: #333333 */
+            background-color: #3a9; /* HEX: 00-FF | rgb(51, 170, 153) */
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav a{
+            color: #111;
+            text-decoration: none;
+        }
+        nav ul{
+            padding: 0;
+            background-color: #176;
+            list-style: none;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* :pseudoclase (Instancia o caracteristica de un elemento) */
+        nav li:hover{
+            background-color: #4ca;
+        }
+        /* Selector de Clases (.class) */
+        .box{
+            margin: 16px;
+            border-radius: 8px;
+            padding: 24px;
+            background-color: #9ed;
+        }
+        div.box{
+            text-align: center;
+        }
+        /* Selector de Id (#id) */
+        #contact{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* Overflow y Float */
+        p.box img{
+            float: left;
+            margin-right: 8px;
+        }
+        p.box{
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
@@ -61,14 +122,14 @@
             </li>
         </ul>
         <h2>Imágenes y Texto</h2>
-        <p>
+        <p class="box">
             <img src="./assets/bg/osx-big-sur-dark.jpg" alt="Fondo de Pantalla OSX Big Sur Light">
 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nulla facilis impedit necessitatibus, ducimus libero amet dignissimos pariatur incidunt quisquam itaque unde optio quaerat labore quos corporis autem quod ipsam maxime repellendus sint, quam perspiciatis. Eum quia laborum, minima molestiae provident ad hic minus assumenda in nostrum. Maiores, quos deserunt.
             
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus eos hic numquam doloremque quis facere earum iusto aspernatur nulla porro, voluptatibus iste! Accusantium culpa natus dolore in, quis qui velit?
         </p>
-        <p>
+        <p class="box">
             <img src="./assets/bg/osx-big-sur-light.jpg" alt="Fondo de Pantalla OSX Big Sur Light">
 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas similique dolor, asperiores a pariatur assumenda! Dignissimos, rerum nulla. Enim ex optio molestiae harum nemo illum, sed perspiciatis rerum necessitatibus!
