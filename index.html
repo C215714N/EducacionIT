@@ -12,8 +12,8 @@
     <nav>
         <ul>
             <li><a href="object_window.html">Objeto Window</a></li>
-            <li><a href="">Objeto Document</a></li>
-            <li><a href="">Operadores</a></li>
+            <li><a href="object_document.html">Objeto Document</a></li>
+            <li><a href="operators.html">Operadores</a></li>
         </ul>
     </nav>
     <p>
@@ -38,33 +38,6 @@
         const saludo = "Hola, mi nombre es " + nombre + " y tengo " + edad + " anos"; // Concatenacion
         
         console.log(saludo);
-
-        /* Operadores */
-        let a,b;
-        a = window.prompt('ingrese un numero');
-        b = window.prompt('ingrese otro numero');
-        // Operadores aritmeticos
-        console.log( "suma: "  +  (parseInt(a) + parseInt(b)))
-        console.log( "resta: "  +  (a - b))
-        console.log( "producto: "  +  (a * b))
-        console.log( "division: "  +  (a / b))
-        console.log( "residuo: "  +  (a % b))
-        console.log( "potencia: " +  (a ** b))
-
-        // Operadores logicos
-        console.log( "a es mayor que b: "  +  (a > b))
-        console.log( "a es menor que b: "  +  (a < b))
-        console.log( "a es igual que b: "  +  (a == b))
-        console.log("a es igual y del mismo tipo que b: " + (a === b))
-
-        // Operadores unarios
-        let c = a;
-        ++c
-        console.log("el numero posterior a A es: " + (c))
-        c = a;
-        --c
-        console.log("el numerio anterior a A es: " + (c))
-        console.log("resta: " + (a+=b) )
     </script>
 </body>
 </html>
