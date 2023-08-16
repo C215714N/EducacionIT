@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Operadores */
+        let a,b,c;
+        a = window.prompt('ingrese un numero');
+        b = window.prompt('ingrese otro numero');
+        // Operadores aritmeticos
+        console.log( "suma: "  +  (parseInt(a) + parseInt(b)))
+        console.log( "resta: "  +  (a - b))
+        console.log( "producto: "  +  (a * b))
+        console.log( "division: "  +  (a / b))
+        console.log( "residuo: "  +  (a % b))
+        console.log( "potencia: " +  (a ** b))
+
+        // Operadores logicos
+        console.log( "a es mayor que b: "  +  (a > b))
+        console.log( "a es menor que b: "  +  (a < b))
+        console.log( "a es igual que b: "  +  (a == b))
+        console.log("a es igual y del mismo tipo que b: " + (a === b))
+
+        // Operadores unarios
+        c = a; // Asigna el valor de A
+        c++ // Suma 1 al valor de C
+        console.log("el numero posterior a A es: " + (c))
+        c = a; // Reasigna el valor de A
+        c-- //Resta 1 al valor de C
+        console.log("el numerio anterior a A es: " + (c))
+    </script>
+</body>
+</html>
