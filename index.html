@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <header>
+        <h1>Javascript</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="object_window.html">Objeto Window</a></li>
+            <li><a href="">Objeto Document</a></li>
+            <li><a href="">Operadores</a></li>
+        </ul>
+    </nav>
+    <p>
+        Es un lenguaje de programacion multiparadigma que es Interpretado por el navegador. Admite todas las caracteristicas de cualquier lenguaje de programacion, como el uso de variables, condicionales, bucles, funciones,etc.
+    </p>
+    <p>
+        Javascript utiliza 2 objetos principales, con lo que vamos a estar trabajando, nos referimos al BOM (Browser Object Model) y al DOM (Document Object Model). Estas son dos estructuras jerarquicas en forma de arbol que identifican los elementos que componen a cada uno de esos Objetos.
+    </p>
+    <script>
+        // Atributo / Propiedad => caracteristica de un elemento que posee un valor y puede ser modificada.
+        // Funcion / Metodo => Bloque de codigo que ejecuta determinada tarea y puede ser invocado.
+        // Eventos => acciones realizadas por el usuario que desencadenan la ejecucion de una funcion.
+
+        /* Variables: Espacio en memoria que almacena un valor */
+        // Redeclarable y reasignable
+        var nombre = "cristian"; //dato de tipo string
+        /* Parte del estandar ES6 */
+        // No redeclarable pero si reasignable
+        let edad = 32;   //dato de tipo number
+        // No redeclarable ni reasignable
+        const instructor = true; //dato de tipo boolean
+        const saludo = "Hola, mi nombre es " + nombre + " y tengo " + edad + " anos"; // Concatenacion
+        
+        console.log(saludo);
+
+        /* Operadores */
+        let a,b;
+        a = window.prompt('ingrese un numero');
+        b = window.prompt('ingrese otro numero');
+        // Operadores aritmeticos
+        console.log( "suma: "  +  (parseInt(a) + parseInt(b)))
+        console.log( "resta: "  +  (a - b))
+        console.log( "producto: "  +  (a * b))
+        console.log( "division: "  +  (a / b))
+        console.log( "residuo: "  +  (a % b))
+        console.log( "potencia: " +  (a ** b))
+
+        // Operadores logicos
+        console.log( "a es mayor que b: "  +  (a > b))
+        console.log( "a es menor que b: "  +  (a < b))
+        console.log( "a es igual que b: "  +  (a == b))
+        console.log("a es igual y del mismo tipo que b: " + (a === b))
+
+        // Operadores unarios
+        let c = a;
+        ++c
+        console.log("el numero posterior a A es: " + (c))
+        c = a;
+        --c
+        console.log("el numerio anterior a A es: " + (c))
+        console.log("resta: " + (a+=b) )
+    </script>
+</body>
+</html>
