@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Promedio</title>
+</head>
+<body>
+
+    <script>
+    /* Tipos de datos
+        primitivos: no mutables
+            string: cadena de texto
+            number: numero entero o decimal
+            boolean: true o false
+
+        Objetos: mutables
+            array: lista de valores
+            object: coleccion de propiedades y metodos
+            function: bloque de codigo ejecutable
+    */
+        let message = window.confirm("¿desea calcular el promedio de sus notas?");
+        if (message) {
+            let  
+                notas = [], // array
+                promedio, 
+                situacion = "desaprobado",
+                requerido = 7;
+
+            notas[0] = parseInt(window.prompt('ingrese la primer nota'));
+            notas[1] = parseInt(window.prompt('ingrese la segunda nota'));
+            notas[2] = parseInt(window.prompt('ingrese la tercer nota'));
+
+            promedio = (notas[0] + notas[1] + notas[2]) / notas.length
+
+            // Condicion para aprobar nota >= 7
+            if (promedio >= requerido){ 
+                situacion = "APROBADO"
+            }
+
+            document.write(
+                "<ul>" +
+                    "<li> Nota 1: " + notas[0] + "</li>" +
+                    "<li> Nota 2: " + notas[1] + "</li>" +
+                    "<li> Nota 3: " + notas[2] + "</li>" +
+                    "<li> Promedio: " + promedio + "</li>" +
+                    "<li> Situacion: " + situacion + "</li>"+
+                "</ul>" 
+            );
+        }
+
+        message = window.confirm("¿queres realizar una cuenta?")
+        if (message){
+            let a, b, operacion;
+
+            a = parseInt(window.prompt('ingrese un numero'));
+            b = parseInt(window.prompt('ingrese otro numero'));
+            operacion = (window.prompt('elija la opcion correspondiente: \n1)suma \n2)resta \n3)producto'));
+
+            if(operacion.toUpperCase() == "SUMA" || operacion == 1){
+                alert("la suma es: " + (a + b))
+            }
+            if(operacion.toUpperCase() == "RESTA" || operacion == 2){
+                alert("la resta es: " + (a - b))
+            }
+            if(operacion.toUpperCase() == "PRODUCTO" || operacion == 3){
+                alert("el producto es: " + (a * b))
+            }
+            else{
+                alert("opcion incorrecta, muchas gracias")
+            }
+        }
+    </script>
+</body>
+</html>
