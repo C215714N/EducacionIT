@@ -52,7 +52,29 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-
+        <form id="contact" action="" method="">
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input
+                id="contact_name"
+                name="name"
+                type="text"
+                minlength="3"
+                maxlength="50"
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                required>
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Diseño Grafico con CSS</option>
+                <option value="js">Logica con JavaScript</option>
+            </select>
+            <input type="submit">
+        </form>
         <!-- Redes sociales -->
 
         <!-- Mapa de Contacto -->
