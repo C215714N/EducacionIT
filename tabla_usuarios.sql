@@ -1,4 +1,4 @@
-/* DML (Data Manipulation Language)
+/* DDL (Data Definition Language)
 	Crear / Eliminar / Modificar
     DB / Tablas
 */
@@ -19,5 +19,18 @@ CREATE TABLE users(
     UNIQUE KEY(username) -- Clave Unica (Local)
 );
 
+/* DML (Data Manipulation Language) */
 # Consulta de Usuarios
 SELECT * FROM users;
+
+## Carga Completa de Datos (Ordinal)
+INSERT INTO users 
+VALUES(0,'c215714n','root');
+
+## Carga Parcial de Datos (selectiva)
+INSERT INTO users(username, userpass)
+VALUES ("cristian","pass");
+
+## Carga de multiples registros
+INSERT INTO users(username)
+VALUES ('Messi'),('Waldo'),('Roman'),('Bob');
