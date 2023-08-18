@@ -25,10 +25,10 @@
 // Bucle WHILE (Funciona "mientras" se cumpla la condicion)
     let i = 0;
     // Condicion que debe cumpirse
-    while (i < listItems.length){
+    while (i < list.length){
         // Codigo a implementar
-        listItems[i].style.backgroundColor = "hsl(" + (i * 30 + deg) + ", 50%, 50%)";
-        listItems[i].innerHTML = "Tema: " + listItems[i].innerHTML;
+        list[i].style.backgroundColor = "hsl(" + (i * 30 + deg) + ", 50%, 50%)";
+        list[i].innerHTML = "Tema: " + listItems[i].innerHTML;
         // Movemos el iterador
         i++;
     }
