@@ -30,4 +30,24 @@ VALUES
 ('Roberto','Pantalones Cuadrados', 7, 'A1356021','1986-07-14', 3,'sponge_sqrpnts@gmail.com', 7),
 ('Juan Roman','Riquelme', 2,'20-26752869-2', '1978-06-24', 1, 'Riquelme_feliz10@gmail.com', 6);
 
+## Carga por subconsulta
+INSERT INTO users_data(firstname, lastname, birthdate, gender, userId)
+VALUES (
+	'Cristian Damian',
+    'Racedo',
+    '1991-04-18',
+    4,
+    # Obtiene el id del Usuario Cristian antes de realizar la carga
+    (SELECT user_id FROM users WHERE username = "c215714n") -- subconsulta
+);
+
+### Muestra todos los datos cargados
 SELECT * FROM users_data;
+
+### Muestra apellido, nombre y correo
+SELECT lastname, firstname, email FROM users_data;
+
+### Muestra al datos de quien haya nacido el 24 de junio de 1987
+SELECT * FROM users_data
+WHERE birthdate = '1987-06-24';
+
