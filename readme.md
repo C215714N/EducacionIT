@@ -145,7 +145,7 @@ i = 0,
 byte = 8;
 while ( i < byte ){
   dec = 2**i;
-  console.log("bit " + i " value is " + dec);
+  console.log("bit " + i + " value is " + dec);
   i++;
 }
 ```
