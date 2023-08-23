@@ -1,4 +1,4 @@
-/*
+/* DDL - Data Control Language
 	Usuarios -> Datos
 	Alumnos -> Curso -> Profesor
     Profesores -> Materia
@@ -22,6 +22,15 @@ CREATE TABLE users_data(
     UNIQUE KEY(userId), -- 1 registro de datos por cada usuario
     FOREIGN KEY(userId) REFERENCES users(user_id) -- Clave Foranea
 );
+# modificacion de estructura de tabla
+ALTER TABLE users_data -- tabla afectada
+MODIFY id_type ENUM('CI','CUIT','CUIL','DNI','DNIE','LC','LE','PA','RUC'); -- indico la columna y cambiamos el tipo de dato
+# Muestra la estructura en forma de tabla
+DESCRIBE users_data;
+
+/* DML - Data Manipulation Language */
+## Limpieza de registros
+TRUNCATE users_data; -- elimina todos los datos y reinicia los contadores
 
 ## Carga de Datos de Usuarios Existentes
 INSERT INTO users_data(firstname, lastname, id_type, uid, birthdate, gender, email, userId)
@@ -29,7 +38,7 @@ VALUES
 ('Lionel', 'Messi', 3, '33016244','1987-06-24', 1, 'lionel@messi.com', 4),
 ('Roberto','Pantalones Cuadrados', 7, 'A1356021','1986-07-14', 3,'sponge_sqrpnts@gmail.com', 7),
 ('Juan Roman','Riquelme', 2,'20-26752869-2', '1978-06-24', 1, 'Riquelme_feliz10@gmail.com', 6);
-
+ 
 ## Carga por subconsulta
 INSERT INTO users_data(firstname, lastname, birthdate, gender, userId)
 VALUES (
