@@ -37,16 +37,35 @@
                     <h3>¿Como funcionan?</h3>
                 </header>
                 <p>
-                    <em>A la etiqueta mencionada anteriormente </em> debemos colocarle por al menos 2 atributos, estos son <strong>action="..."</strong> que indica lo que debe suceder al realizar el envio del mismo; y <strong>method="..."</strong> que especifica como se debe realizar el intercambio de datos.
+                    <em>A la etiqueta mencionada anteriormente </em> debemos colocarle por al menos 2 atributos, estos son <strong>action="..."</strong> que indica lo que debe suceder al realizar el envio del mismo, utilizandose normalmente un <em>script en lenguaje de servidor (ej: PHP)</em>; y <strong>method="..."</strong> que especifica como se debe realizar el intercambio de datos, utilizando alguno de los valores predefinidos.
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET:</strong> Metodo que prioriza la respuesta del servidor, envia los datos en texto plano y estos permanecen visibles en la url. Se utilizan principalmente en <em>formularios de busqueda.</em>
+                    </li>
+                    <li>
+                        <strong>POST:</strong> Metodo cuya prioridad el la seguridad de los datos, ya que cifra los mismos antes de realizar el envio. Se utiliza en formularios de <em>Registro, Acceso, Contacto, etc...</em>
+                    </li>
+                </ul>
             </section>
             <section>
                 <header>
                     <h3>¿Como estan compuestos?</h3>
                 </header>
                 <p>
-                    Dentro de un formulario, podemos colocar cualquier etiqueta existente, pero destacan 2 tipos de elementos, <strong>las Etiquetas (LABEL)</strong> que se utilizar para guiar al usuario al momento de completar el formulario; y <strong>los Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los controles del mismo y seran utilizados por el usuario.
+                    Dentro de un formulario, podemos colocar cualquier etiqueta existente, pero destacan 2 tipos de elementos, <strong>las Etiquetas (LABEL)</strong> que se utilizar para guiar al usuario al momento de completar el formulario; y <strong>los Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los controles del mismo y seran utilizados por el usuario. los campos poseen los siguientes atributos segun su tipo.
                 </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> corresponde al nombre con el que se identifica al campo de formulario. Es necesario para la captura de datos y debe ser compartido en caso que varios campos correspondan a la misma opcion.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> corresponde al tipo de dato que se debe utilizar, en el caso del <em>INPUT</em> es obligatorio en caso de requerir un valor distinto a texto plano, mientras que en los otros campos es implicito.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> corresponde al dato en si mismo y usualmente es definido por el usuario cuando escribe en el campo de formulario. En caso de seleccionar debe ser explicito dentro de los atributos del campo.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
