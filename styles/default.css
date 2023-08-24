@@ -36,6 +36,26 @@
         max-width: 540px;
         margin: auto;
     }
+    input,
+    textarea,
+    select{
+        margin-bottom: 8px;
+        padding: 8px; /* top right bottom left */
+        font-size: 16px;
+    }
+    textarea{
+        resize: vertical;
+        min-height: 64px;
+    }
+    .btn{
+        border-radius: 4px;
+        border: 1px solid #333; /* width style color */
+        color: #eee;
+        background-color: #333;
+    }
+    .btn:hover{
+        background-color: #666;
+    }
     /* Redes Sociales */
 
     /* Mapa de Contacto */
