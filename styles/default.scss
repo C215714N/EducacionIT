@@ -1,0 +1,96 @@
+$icons: 
+    toggle "☰",
+    prev "<",
+    next ">",
+    copy "©",
+;
+$boxes: 
+    m margin,
+    g gap,
+    br border-radius,
+    b border-width,
+    p padding,
+    o outline-width;
+@each $name, $icon in $icons{
+    .icon-#{$name}::before{
+        content: $icon;
+} }
+@each $prop, $attr in $boxes{
+    @for $i from 0 through 10{
+        .#{$prop}-#{$i}{
+            #{$attr}: #{$i * 0.25}rem;
+}}}
+
+body{
+    @extend .m-0;
+}
+.unstyled{
+    @extend .m-0, .p-0;
+    list-style: none;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    @extend .m-0;
+}
+.gallery{
+    position: relative;
+    min-height: min(100vh, 640px);
+    &-list{
+        @extend .unstyled;
+    }
+    &-item{
+        @extend .cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        &.active{
+            opacity: 1;
+        }
+        img{
+            @extend .cover;
+            object-fit: cover;
+        }
+    }
+    button{
+        @extend .p-7, .b-0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        color: #eee;
+        background-color: transparent;
+        font-size: min(calc(5vw + .5rem), 5rem);
+        opacity: .5;
+        &:hover{
+            opacity: .8;
+        }
+        &.icon{
+            &-prev{
+                left: 0;
+            }
+            &-next{
+                right: 0;
+            }
+        }
+    }
+    .controls{
+        @extend .p-2, .g-2;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        button{
+            @extend .p-3, .br-3;
+            position: static;
+            background-color: #ccc;
+            &.active{
+                padding: .75rem 2.25rem;
+            }
+        }
+    }
+}
