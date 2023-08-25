@@ -14,10 +14,12 @@ const
     delFirstButton = d.createElement('button'),
     delLastButton = d.createElement('button');
 /* Metodos de Array
-    array.push() -> agrega un elemento al final del array
-    array.unshift() -> agrega un elemento al inicio del array
+    array.push('elemento') -> agrega un elemento al final del array
+    array.unshift('elemento') -> agrega un elemento al inicio del array
     array.pop() -> elimina el ultimo elemento del array
     array.shift() -> elimina el primer elemento del array
+    array.slice(start, end) -> devuelve un nuevo array con los elementos seleccionados
+    array.splice(indice, cantidad) -> modifica el array original, extrayendo elementos y/o agregando nuevos elementos
 */
 
 delFirstButton.innerText= 'Eliminar Primero';
