@@ -53,6 +53,23 @@ VALUES (
 ### Muestra todos los datos cargados
 SELECT * FROM users_data;
 
+## Apellidos o Nombres que cumplan alguna condicion (Incluyente)
+SELECT * FROM users_data
+WHERE firstname LIKE "R%" -- El nombre empieza con R
+OR firstname LIKE "% R%" -- El Segundo, tercer, o N° nombre Empieza con R
+OR lastname LIKE "R%" -- El apellido Empieza con R
+OR lastname LIKE "% R%"; -- El segundo, tercero o N° apellido Empieza con R
+
+## Apellidos y nombres que cumplan todas las condiciones (Excluyente)
+SELECT * FROM users_data
+WHERE firstname LIKE "%n" -- El ultimo nombre termina con N
+AND lastname LIKE "R%"; -- El apellido Empieza con R
+
+## Apellidos y nombres que cumplan una condicion y la otra no (Excluyente)
+SELECT * FROM users_data
+WHERE firstname LIKE "%o%" -- nombre posee la letra O
+XOR lastname LIKE "%a%"; -- apellido posee la letra A
+
 ### Muestra apellido, nombre y correo
 SELECT lastname, firstname, email FROM users_data;
 

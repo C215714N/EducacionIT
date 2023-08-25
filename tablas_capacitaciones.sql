@@ -56,7 +56,7 @@ VALUES
     ('GEOGRAFIA',''), -- 9
     ('CCNA1','Fundamentos de Redes'), -- 10
     ('CCNA2','Enrutamiento y Conmutacion'), -- 11
-    ('CCNA3','Redes Empresariales'); -- 
+    ('CCNA3','Redes Empresariales'); -- 12
 
 # Carga por asignacion (Simple)
 ## Profesor Messi
@@ -68,9 +68,33 @@ INSERT INTO teachers
 SET user = (SELECT user_id FROM users WHERE username = "Cristian"), -- subconsulta (id de usuario)
 	signed = "2018-11-08 7:35:59"; -- "YYYY-MM-DD,HH:mm:ss"
 
+# Asignacion de Cursos por Profesor
+INSERT INTO courses_assignment(teacher, course, day)
+VALUES
+-- Cristian
+	( teacher,
+     (SELECT id FROM courses WHERE name ), -- MySQL
+     "M,V"
+    ),
+-- Messi
+	(
+    
+    );
+
 ## Consulta de Profesores
 SELECT * FROM teachers;
 
 ## Profesores que ingresaron despues del 1/1/20
 SELECT * FROM teachers
 WHERE signed >= "2020-01-01";
+
+## Cursos cuyo nombre empieza con M
+SELECT * FROM courses WHERE name LIKE "M%"; -- % ninguno, uno o cualquier cantidad de caracteres
+## Cursos que terminan en IA
+SELECT * FROM courses WHERE name LIKE "%IA"; -- % cualquier cantidad de caracteres al princip
+## Cursos que contengan las siglas SQL
+SELECT * FROM courses WHERE name LIKE "%SQL%"; -- % cualquier cantidad al principio o al final
+## Cursos cuya segunda letra sea I
+SELECT * FROM courses WHERE name LIKE "_I%"; -- _ Un caracter cualquiera al inicio
+## Cursos cuya penultima letra sea C
+SELECT * FROM courses WHERE name LIKE "%C_" -- _ Un caracter cualquier al final
