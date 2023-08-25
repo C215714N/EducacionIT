@@ -58,8 +58,12 @@ function createGallery(array, element){
 function addButtons(n, element){
     for(let i = 0; i < n; i++){
         let button = d.createElement('button');
+        if(i == 0) button.setAttribute('class', 'active');
         button.onclick = function(){
-            console.log('soy el boton n' + i)
+            const list = galleryList.querySelectorAll('li');
+            const buttons = controls.querySelectorAll('button');
+            setActiveElement(i, list)
+            setActiveElement(i, buttons)
         }
         element.append(button)
     }
@@ -75,9 +79,45 @@ function addLinks(array, element){
     }
 }
 
+function getActiveElement(array, className){
+for (let element of array){
+if (element.classList.contains(className)){
+    element.classList.remove(className);
+    return element;
+} } }
+function setActiveElement(type, array, className = "active"){
+    let element = getActiveElement(array, className);
+    switch(type){
+        case 'next':
+            element = element.nextElementSibling || array[0]
+        break;
+        case 'prev':
+            element = element.previousElementSibling ?? array[array.length - 1]
+        break;
+        default:
+            element = array[type]
+    }
+    element.classList.add(className);
+}
+
 createGallery(images, galleryList);
 addButtons(images.length, controls);
 addLinks(links, navigation);
 addLinks(socialLinks, social);
 copy.prepend(today.getFullYear()+' ');
+
 /* Eventos */
+next.onclick = function(){
+    const list = galleryList.querySelectorAll('li');
+    const buttons = controls.querySelectorAll('button');
+
+    setActiveElement('next', list)
+    setActiveElement('next', buttons)
+}
+prev.onclick = function(){
+    const list = galleryList.querySelectorAll('li');
+    const buttons = controls.querySelectorAll('button');
+
+    setActiveElement('prev', list)
+    setActiveElement('prev', buttons)
+}

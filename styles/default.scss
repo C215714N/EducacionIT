@@ -65,6 +65,7 @@ h1{
         background-color: transparent;
         font-size: min(calc(5vw + .5rem), 5rem);
         opacity: .5;
+        transition: all 1s ease;
         &:hover{
             opacity: .8;
         }
