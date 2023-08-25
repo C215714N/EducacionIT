@@ -164,3 +164,29 @@ do {
 } while (dec >= 1);
 console.log("binary value of " + value + " is " + bin);
 ```
+
+### Sentencia for
+
+Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+
+```
+bin = '11001000';
+dec = 0;
+for(i = 0; i < bin.length; i++){
+  if(reverse(bin)[i] == 1){
+    dec += 2**i;
+} }
+console.log('decimal value of ' + bin + ' is ' + dec);
+```
+
+### Sentencia for of
+
+Ejecuta un bloque de código para cada elemento de un objeto iterable, como los String, Array, objetos e iterables definidos por el usuario.
+
+```
+units = ['Kilo','Mega','Giga','Tera','Peta','Exa','Zeta','Yota','Bronto','Geop','Sagan'];
+for (u of units){
+  i = units.indexOf(u) - 1;
+  console.log('1' + u + 'Byte is equal to 1000' + (units[i] || '') + Bytes');
+}
+```
