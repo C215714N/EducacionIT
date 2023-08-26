@@ -6,3 +6,5 @@ Esto es una guia teorico practica para los alumnos de la capacitacion __ccna 1__
 
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL)
 * [Wireshark](https://www.wireshark.org/download.html)
+* [PuTTY](https://putty.org/)
+* [Driver Identifier](https://www.driveridentifier.com/files/driveridentifier_portable.exe)
