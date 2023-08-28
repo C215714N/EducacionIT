@@ -15,6 +15,7 @@ $icons:
     expand  "⤢",
     shrink  "↙",
 ;
+$sizes: small 240px, medium 360px, large 480px, xlarge 640px;
 $boxes: 
     m margin,
     g gap,
@@ -22,6 +23,15 @@ $boxes:
     b border-width,
     p padding,
     o outline-width;
+
+$display: inline, inline-block, block, flex, grid, table;
+
+@each $d in $display{ .d-#{$d}{ display: #{$d}; } }
+@each $name, $value in $sizes{
+    .#{$name}{
+        --size: #{$value};
+    }
+}
 @each $name, $icon in $icons{
     .icon-#{$name}::before{
         content: $icon;
@@ -121,6 +131,32 @@ h1{
             }
         }
     }
+
+    // Galeria alternativa
+    &-alt{
+        @extend .g-2;
+        .box-item{
+            @extend .br-2, .p-0;
+            overflow: hidden;
+            position: relative;
+            transition: all .5s ease;
+            &.active{
+                position: fixed;
+                z-index: 1;
+                animation: appear 1s ease;
+                animation-fill-mode: forwards;
+            }
+        }
+        img{
+            @extend .cover;
+            object-fit: contain;
+        }
+        button{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
 }
 .header{
     position: relative;
@@ -186,5 +222,29 @@ h1{
             top: 1rem;
             right: 1rem;
         }
+    }
+}
+
+.auto{
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
+    & > *{
+        flex: 1 0 min(100%, var(--size));
+    }
+}
+
+@keyframes appear{
+    from{
+        top: 0;
+        left: 0;
+        transform: 
+            scale(0.001)
+            translate(0,0);
+    }
+    to{
+        top: 50%;
+        left: 50%;
+        transform: 
+            scale(1) 
+            translate(-50%, -50%);
     }
 }
