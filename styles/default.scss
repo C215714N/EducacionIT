@@ -162,3 +162,28 @@ h1{
         }
     }
 }
+
+#footer{
+    position: relative;
+    min-height: min(100vh, 320px);
+    .map{
+        iframe{
+            @extend .cover, .b-0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &.active,
+            & + .icon-shrink{
+                position: fixed;
+                opacity: .9;
+                z-index: 1;
+            }
+        }
+        button{
+            @extend .br-3, .b-0, .p-3;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+}
