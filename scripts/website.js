@@ -8,6 +8,7 @@ const
     next = d.querySelector('#header .icon-next'),
     // Navegacion
     navigation = d.querySelector('#nav .navigation'),
+    navButton = d.querySelector('#nav button'),
     // Contenido
     root = d.getElementById('root'),
     // Pie de Pagina
@@ -87,7 +88,8 @@ if (element.classList.contains(className)){
 } } }
 function setActiveElement(type, array, className = "active"){
     let element = getActiveElement(array, className), 
-    n = (typeof type == "string" ? type.toUpperCase() : type);
+    n = typeof type == "string" ? type.toUpperCase() : type;
+
     switch(n){
         case 'NEXT':
             element = element.nextElementSibling ?? array[0]
@@ -100,6 +102,12 @@ function setActiveElement(type, array, className = "active"){
     }
     element.classList.add(className);
 }
+
+const toggle = (target, btn, [a,b]) =>
+    target.classList.toggle('active') ?
+    btn.classList.replace(a,b) :
+    btn.classList.replace(b,a)
+
 createGallery(images, galleryList);
 addButtons(images.length, controls);
 addLinks(links, navigation);
@@ -107,6 +115,7 @@ addLinks(socialLinks, social);
 copy.prepend(today.getFullYear()+' ');
 
 /* Eventos */
+// Galeria
 next.onclick = function(){
     const list = galleryList.querySelectorAll('li');
     const buttons = controls.querySelectorAll('button');
@@ -121,3 +130,17 @@ prev.onclick = function(){
     setActiveElement('prev', list)
     setActiveElement('prev', buttons)
 }
+
+// Navegacion
+navButton.onclick = () => toggle(
+    navigation, 
+    navButton, 
+    ['icon-toggle', 'icon-close'])
+
+
+// if(condicion){
+//     // codigo
+// }
+// else {
+//   // codigo
+// }
