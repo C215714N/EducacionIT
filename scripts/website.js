@@ -86,12 +86,13 @@ if (element.classList.contains(className)){
     return element;
 } } }
 function setActiveElement(type, array, className = "active"){
-    let element = getActiveElement(array, className);
-    switch(type){
-        case 'next':
-            element = element.nextElementSibling || array[0]
+    let element = getActiveElement(array, className), 
+    n = (typeof type == "string" ? type.toUpperCase() : type);
+    switch(n){
+        case 'NEXT':
+            element = element.nextElementSibling ?? array[0]
         break;
-        case 'prev':
+        case 'PREV':
             element = element.previousElementSibling ?? array[array.length - 1]
         break;
         default:
@@ -99,7 +100,6 @@ function setActiveElement(type, array, className = "active"){
     }
     element.classList.add(className);
 }
-
 createGallery(images, galleryList);
 addButtons(images.length, controls);
 addLinks(links, navigation);
