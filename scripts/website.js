@@ -14,6 +14,8 @@ const
     // Pie de Pagina
     social = d.querySelector('#footer .social'),
     copy = d.querySelector('#footer .icon-copy'),
+    mapFrame = d.querySelector('.map iframe'),
+    mapButton = d.querySelector('.map button'),
 /* Declaraciones Globales  */
     // Galeria
     path = "assets/bg/",
@@ -132,15 +134,15 @@ prev.onclick = function(){
 }
 
 // Navegacion
-navButton.onclick = () => toggle(
+navButton.onclick = (event) => toggle(
     navigation, 
-    navButton, 
-    ['icon-toggle', 'icon-close'])
+    event.target, 
+    ['icon-toggle', 'icon-close']
+)
 
-
-// if(condicion){
-//     // codigo
-// }
-// else {
-//   // codigo
-// }
+// Mapa
+mapButton.onclick = (event) => toggle(
+    mapFrame,
+    event.target,
+    ['icon-expand', 'icon-shrink']
+)
