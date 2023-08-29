@@ -82,7 +82,7 @@
                 <p>
                     Se conoce con este nombre a <em>una categoria web</em> que indica que un <strong>elemento fue compartido con autorizacion del publicador original</strong>. En la direccion o su contenido encontraremos la palabra <em>embed</em> y los podremos incorporar gracias a la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido.
                 </p>
-                <div class="example">
+                <div class="container example">
                     <figure>
                         <iframe
                             src="https://www.youtube.com/embed/zJBzHQawsjs" 
@@ -118,6 +118,40 @@
                         <figcaption>
                             HTML5 from <a href="https://www.slideshare.net/HatemMahmoud" target="_blank">Hatem Mahmoud</a>
                         </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    <em>Como se hace referencia al principio</em> los navegadores incluyen una <strong>API de reproduccion</strong> a la que podemos acceder si utilizamos las etiquetas <strong>&lt;audio> o &lt;video></strong> que son compatibles con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Tambien podemos utilizar atributos como <em>autoplay, muted, loop y controls</em>
+                </p>
+                <div class="example container">
+                    <figure>
+                        <video src="./assets/media/scar-tissue.webm" controls>
+                            <p>
+                                Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="./assets/media/scar-tissue.mp4">Link</a>
+                            </p>
+                        </video>
+                        <figcaption>Scar Tissue (Californication 1999)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="./assets/media/by-the-way.ogv" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="./assets/media/by-the-way.mp4">Link</a>
+                            </p>
+                        </video>
+                        <figcaption>By the Way (By the Way 2002)</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="./assets/media/wet-sand.mp4" controls>
+                            <p>
+                                Lo sentimos, pero tu Navegador NO es compatible con este elemento. Podes descargar el contenido desde el siguiente <a href="./assets/media/wet-sand.mp4">Link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand (Stadium Arcadium 2006)</figcaption>
                     </figure>
                 </div>
             </section>
