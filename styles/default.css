@@ -33,7 +33,7 @@
         justify-content: center;
         gap: 16px;
         padding: 8px;
-        background-color: #333;
+        background-color: #224;
     }
     .menu a{
         color: #aaa;
@@ -44,14 +44,29 @@
         text-shadow: 0 0 4px; /* -x+ -y+ blur color */
     }
 /* Cabecera */
-
+    #header{
+        padding: min(20%, 240px) 16px; /* top right bottom left*/
+        text-align: center;
+        background-image: url('../assets/bg/osx-mojave-night.jpg');
+        background-position: center; /* x y | top bottom right left center */
+        background-size: cover; /* width height | contain cover */
+    }
+    .header{
+        padding: 16px;
+        color: #eee;
+        background-color: #224;
+    }
+    header{
+        color: #224;
+        border-bottom: 2px solid;
+    }
 /* Contenido */
     
     /* Seccion de Ejemplo */
     .example{
         max-width: 720px;
         margin: 16px auto;
-        border-left: 4px solid #333; /* width style color */
+        border-left: 4px solid #224; /* width style color */
         padding: 16px;
         background-color: #eee;
         line-height: 1.5;
@@ -100,13 +115,16 @@
     }
     .btn{
         border-radius: 4px;
-        border: 1px solid #333; /* width style color */
+        border: 1px solid #224; /* width style color */
         color: #eee;
-        background-color: #333;
+        background-color: #224;
     }
     .btn:hover{
-        background-color: #666;
+        background-color: #668;
     }
     /* Redes Sociales */
 
     /* Mapa de Contacto */
+    #footer iframe{
+        min-height: 320px;
+    }
