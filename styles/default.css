@@ -10,10 +10,16 @@
     h2,
     h3,
     header p,
+    .example figure,
     .menu{
         margin: 0;
     }
+    /* Bordes */
+    iframe{
+        border: 0;
+    }
     /* Estilos */
+    .example,
     .menu{
         list-style: none;
     }
@@ -40,7 +46,38 @@
 /* Cabecera */
 
 /* Contenido */
-
+    
+    /* Seccion de Ejemplo */
+    .example{
+        max-width: 720px;
+        margin: 16px auto;
+        border-left: 4px solid #333; /* width style color */
+        padding: 16px;
+        background-color: #eee;
+        line-height: 1.5;
+    }
+    .container{
+        display: flex;
+        gap: 8px;
+        overflow: auto;
+    }
+    /* Contenido Multimedia */
+    iframe,
+    video{
+        width: 100%;
+        height: calc(100% - 16px);
+        background-color: black;
+        object-fit: cover;
+    }
+    figure{
+        min-width: min(100%, 640px);
+        min-height: 376px;
+        /*  ratio   width       height      example
+            4:3     1.33(h)     75%(w)      640x480
+            16:9    1.78(h)     56.25%(w)   640x360
+            16:10   1.6(h)      62.5%(w)    640x400
+        */
+    }
 /* Pie de Pagina */
 
     /* Formulario de Contacto */
