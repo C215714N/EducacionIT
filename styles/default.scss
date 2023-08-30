@@ -1,3 +1,13 @@
+$social: 
+    facebook,
+    instagram,
+    twitter,
+    youtube,
+    github,
+    linkedin,
+    whatsapp,
+    telegram,
+;
 $icons: 
     toggle  "☰",
     close   "×",
@@ -26,24 +36,46 @@ $boxes:
 
 $display: inline, inline-block, block, flex, grid, table;
 
+// Atributos y valores
 @each $d in $display{ .d-#{$d}{ display: #{$d}; } }
-@each $name, $value in $sizes{
-    .#{$name}{
-        --size: #{$value};
+// Variables de Tamaño
+@each $name, $value in $sizes{ .#{$name}{ --size: #{$value}; }}
+// Iconos con Pseudoelementos
+@each $name, $icon in $icons{ 
+    .icon-#{$name}::before{ 
+        content: $icon; 
+} }
+// Iconos con Background
+.icon{
+    @extend .br-2;
+    --color: #ccc;
+    --size: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--color) var(--bg) center/var(--size) no-repeat;
+    &:hover{
+        --color: #eee;
+        --size: 3rem;
+        box-shadow: 0 0 .5rem #666;
     }
 }
-@each $name, $icon in $icons{
-    .icon-#{$name}::before{
-        content: $icon;
+@each $ico in $social{ 
+    .#{$ico}{ --bg: url("../assets/icon/#{$ico}.svg"); 
 } }
+
+// Attributos de Tamaños
 @each $prop, $attr in $boxes{
     @for $i from 0 through 10{
         .#{$prop}-#{$i}{
             #{$attr}: #{$i * 0.25}rem;
-}}}
+} } }
+
+/* Reglas Generales */
 *{
     box-sizing: border-box;
+    font-family: 'Raleway', 'Century Gothic', sans-serif;
 }
+/* Layout */
 body{
     @extend .m-0;
     display: grid;
@@ -61,17 +93,23 @@ body{
         grid-area: footer;
     }
 }
+/* Reboot */
 .unstyled{
     @extend .m-0, .p-0;
     list-style: none;
 }
+/* Utilities */
 .cover{
     width: 100%;
     height: 100%;
 }
-h1{
-    @extend .m-0;
+.auto{
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
+    & > *{
+        flex: 1 0 min(100%, var(--size));
+    }
 }
+/* Components */
 .gallery{
     position: relative;
     min-height: min(100vh, 640px);
@@ -134,17 +172,26 @@ h1{
 
     // Galeria alternativa
     &-alt{
-        @extend .g-2;
+        @extend .g-2, .p-4;
         .box-item{
             @extend .br-2, .p-0;
             overflow: hidden;
             position: relative;
             transition: all .5s ease;
             &.active{
+                @extend .br-0;
+                width: 100%;
+                height: 100%;
                 position: fixed;
+                top: 0;
+                left: 0;
                 z-index: 1;
-                animation: appear 1s ease;
+                animation: appear .5s ease-out;
                 animation-fill-mode: forwards;
+                background-color: #333c;
+                & img{
+                    padding: 6.25% 6.25%;
+                }
             }
         }
         img{
@@ -158,6 +205,7 @@ h1{
         }
     }
 }
+/* Cabeceras */ 
 .header{
     position: relative;
     z-index: 1;
@@ -172,7 +220,10 @@ h1{
         transform: translate(-50%, -50%);
     }
 }
-
+h1{
+    @extend .m-0;
+}
+/* Navegacion */
 #nav{
     @extend .p-3;
     position: sticky;
@@ -203,16 +254,18 @@ h1{
 #footer{
     position: relative;
     min-height: min(100vh, 320px);
+    background-color: #333;
     .map{
         iframe{
             @extend .cover, .b-0;
             position: absolute;
             top: 0;
             left: 0;
+            opacity: .3;
             &.active,
             & + .icon-shrink{
                 position: fixed;
-                opacity: .9;
+                opacity: .975;
                 z-index: 1;
             }
         }
@@ -223,28 +276,17 @@ h1{
             right: 1rem;
         }
     }
-}
-
-.auto{
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
-    & > *{
-        flex: 1 0 min(100%, var(--size));
+    .social{
+        @extend .g-3,.p-4;
+        position: relative;
+        max-width: calc(100% - 6rem);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        a{ @extend .icon; }
     }
 }
 
-@keyframes appear{
-    from{
-        top: 0;
-        left: 0;
-        transform: 
-            scale(0.001)
-            translate(0,0);
-    }
-    to{
-        top: 50%;
-        left: 50%;
-        transform: 
-            scale(1) 
-            translate(-50%, -50%);
-    }
-}
+/* Animations */
+@keyframes appear{ from{ transform: scale(0.001); } }
