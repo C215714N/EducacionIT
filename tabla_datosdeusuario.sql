@@ -77,3 +77,36 @@ SELECT lastname, firstname, email FROM users_data;
 SELECT * FROM users_data
 WHERE birthdate = '1987-06-24';
 
+## Usuarios, Edades y Documentacion de quienes tengan mas de 21 años
+SELECT 
+	CONCAT("sr/a: ", lastname, ", ", firstname) AS user, -- union de cadenas de texto
+    ROUND( ( DATEDIFF( CURRENT_DATE(), birthdate) / 365 )) AS age, -- calculo de la edad Años = (dias / 365)
+    CONCAT_WS(": ", id_type, uid) AS identity -- une cadenas de texto utilizando siempre el mismo separador
+FROM users_data
+HAVING age >= 21;
+
+## Extraccion de elementos de CUIT
+SELECT 
+ 	LEFT(uid, 2) AS verifier, -- extrae caracteres de un texto de izquierda a derecha
+    SUBSTRING(uid, 4, 8) AS document, -- extrae a partir de una posicion la cantidad de caracteres solicitados
+    RIGHT(uid, 1) AS validator -- extrae caracteres de un texto de derecha a izquierda
+FROM users_data
+WHERE id_type IN("CUIT","CUIL"); -- id_type es CUIL o CUIT
+
+
+# Actualizacion de datos de usuario
+## Cristian Racedo
+UPDATE users_data
+SET id_type = 2, -- CUIT
+	uid = "20-35336446-5",
+    email = "cristiandracedo@hotmail.com"
+WHERE userId = (SELECT user_id FROM users WHERE username = 'c215714n');
+
+# Actualizacion Masiva por casos
+UPDATE users_data
+SET id_type = 
+CASE
+	WHEN uid = "A1356021" THEN "PA" -- Pasaporte para Bob Esponja
+    WHEN id_type = "" THEN 2 -- CUIT para Riquelme
+    ELSE id_type -- El resto mantiene su tipo de documentacion
+END;
