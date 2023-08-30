@@ -91,8 +91,10 @@ SELECT
     SUBSTRING(uid, 4, 8) AS document, -- extrae a partir de una posicion la cantidad de caracteres solicitados
     RIGHT(uid, 1) AS validator -- extrae caracteres de un texto de derecha a izquierda
 FROM users_data
-WHERE id_type IN("CUIT","CUIL"); -- id_type es CUIL o CUIT
+WHERE id_type IN("CUIT","CUIL"); -- es valor es A o B
 
+SELECT * FROM users_data
+WHERE birthdate BETWEEN "1986-01-01" AND "1996-01-01"; -- entre A y B
 
 # Actualizacion de datos de usuario
 ## Cristian Racedo
