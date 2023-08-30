@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+body{
+    perspective-origin: top center;
+    perspective: 300px;
+}
+#root{
+    display: grid;
+    grid-template-areas: 
+        "result     result     result"
+        "action     action     simbols"
+        "numbers    numbers    simbols";
+    transform: rotateX(15deg);
+    max-width: 540px;
+    margin: 1rem auto;
+    border-radius: .5rem;
+    padding: 1.5rem 2rem 2.5rem;
+    background: linear-gradient(to bottom right, #666, #333)
+}
+input,
+button{
+    margin: .125rem;
+    padding: .5rem .25rem;
+    background: radial-gradient(
+        circle at top left,
+        #eee,
+        #ccc
+    );
+    opacity: .7;
+    transition: all .25s ease;
+}
+:is(input,button):hover{
+    opacity: 1;
+}
+#result{
+    grid-area: result;
+}
+#actions{
+    display: flex;
+    grid-area: action;
+}
+#actions > button {
+    width: 50%
+}
+#simbols{
+    display: flex;
+    flex-direction: column;
+    grid-area: simbols;
+}
+#numbers{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    grid-area: numbers;
+}
+#numbers > input{
+    flex: 1 0 calc(33.3% - .25rem);
+}
+#numbers > input:first-child{
+    flex: 1 0 calc(100% - .25rem)
+}
