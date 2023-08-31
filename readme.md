@@ -13,6 +13,7 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
 * [Verificacion de Topologia](#verificacion-de-topologia)
+* [Enrutamiento Estatico](#enrutamiento-estatico)
 
 ## Configuracion Inicial
 
@@ -61,3 +62,15 @@ Cuando establecemos la configuracion de los dispositivos de internetworks debemo
 	* __show arp__: Tabla de direcciones IP aprendidas con sus MAC correspondientes
 	* __show ip interfaces brief__: Interfaces del dispositivo con su configuracion capa 3 resumida
 	* __show ip route__: Tabla de rutas a las que esta conectado o se puede acceder
+
+
+## Enrutamiento Estatico
+Al configurar las redes dentro de la topologia debemos indicar al router como llegar a las redes vecinas, ya que los dispositivos de interconexion solamente reconocen las redes configuradas y que se encuentren conectadas directamente.
+
+1. router(config-if)# (Configuracion de la Red Local)
+	* __interface `gigabitEthernet 0/0`__ Accedemos al submodo de configuracion de Interfaz
+	* __ip address `192.168.0.1 255.255.255.0`__ Direccion IP de la interfaz para configurar la red
+2. router(config)# (Definicion de rutas Estaticas)
+	* __ip route `<network>` `<subnet mask>` `<next hop>`__ Definicion de Ruta estatica a una red remota
+	* __ip route `192.168.10.0` `255.255.255.0` `10.0.0.1`__ Ruta estatica a la red "192.168.10.0" a traves de 10.0.0.1
+	* __ip route `0.0.0.0` `0.0.0.0` `172.20.0.2`__ Ruta predeterminada para cuando no existan coincidencias de paquetes
