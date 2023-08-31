@@ -269,6 +269,53 @@
                     </table>
                 </div>
             </section>
+            <section>
+                <header>
+                    <h3>¿Celdas Combinadas?</h3>
+                </header>
+                <p>
+                    En ocasiones puede que necesitemos que una celda ocupe mas de una fila o una columna, para ello podemos utilizar los atributos <strong>rowspan="..."</strong> y <strong>colspan="..."</strong> respectivamente, indicando la cantidad total de celdas a ocupar. Cabe destacar que todo elemento posterior sera desplazado hacia la derecha.
+                </p>
+                <div class="example container">
+                    <table class="semantic modern">
+                        <caption>Venta de Productos</caption>
+                        <thead>
+                            <tr>
+                                <th>Articulo</th>
+                                <th>Cant.</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monitor</td>
+                                <td>3</td>
+                                <td class="text-end">53800</td>
+                                <td class="text-end">161400</td>
+                            </tr>
+                            <tr>
+                                <td>Gabinete</td>
+                                <td>1</td>
+                                <td class="text-end">23500</td>
+                                <td class="text-end">23500</td>
+                            </tr>
+                            <tr>
+                                <td>Gamepad</td>
+                                <td>2</td>
+                                <td class="text-end">21600</td>
+                                <td class="text-end">43200</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td colspan="3" class="text-end">228100</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
