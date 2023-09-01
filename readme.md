@@ -14,3 +14,4 @@ Esto es una guia para los alumnos de la capacitacion __MySQL__ que cursan los di
 * [Bases de Datos](docs/database.md)
 * [Tipos de Datos](docs/datatypes.md)
 * [Operadores](docs/operators.md)
+* [Funciones](docs/functions.md)
