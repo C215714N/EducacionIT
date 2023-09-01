@@ -24,3 +24,12 @@ Los objetos son, generalmente, elementos que representan alguna entidad de la vi
 * __Objeto__: Instancia de una clase, consiste en un elemento creado a partir de un molde o plantilla.
 * __Propiedades__: Atributos o caracteristicas clave del objeto, a las cuales les corresponde un valor.
 * __Metodos__: Acciones o funciones propias del objeto, que pueden ser invocadas en caso de ser necesario.
+
+### Caracteristicas
+
+![](assets/oop_fundamentals.jpg)
+
+* __Abstraccion__: Capacidad para distinguir las caracteristicas principales de cada elemento a utilizar.
+* __Encapsulamiento__: Capacidad para aislar las caracteristicas de los diferentes objetos.
+* __Herencia__: Capacidad de transmitir sus caracteristicas a otras instancias o clases.
+* __Polimorfismo__: Capacadidad de adaptar las caracteristicas y funcionalidades segun sea necesario.
