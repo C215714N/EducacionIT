@@ -112,3 +112,9 @@ CASE
     WHEN id_type = "" THEN 2 -- CUIT para Riquelme
     ELSE id_type -- El resto mantiene su tipo de documentacion
 END;
+
+# Actualizacion Id Usuarios
+UPDATE users_data
+SET userId = (SELECT user_id FROM users WHERE username = firstname)
+WHERE userId IS NULL;
+
