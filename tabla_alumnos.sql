@@ -6,6 +6,17 @@ CREATE TABLE students (
     PRIMARY KEY(id),
     FOREIGN KEY(userId) REFERENCES users(user_id)
 );
+# Tabla Calificaciones
+CREATE TABLE exams (
+	id INT AUTO_INCREMENT,
+    student INT,
+    course INT,
+    note DECIMAL(4,2), -- (n,d) n cantidad total de digitos | d cantidad de decimales
+    module INT,
+    PRIMARY KEY(id),
+    FOREIGN KEY(student) REFERENCES students(id),
+    FOREIGN KEY(course) REFERENCES courses(id)    
+);
 
 /* Data Manipulation Language */
 ## Carga de Alumnos
@@ -25,8 +36,14 @@ SELECT * FROM courses AS c, courses_assignment AS ca -- invoco 2 o mas tablas si
 WHERE c.id = ca.course; -- defino la relacion entre ambas (evitar duplicidad)
 
 ## Carga aleatoria de datos
-
+SELECT * FROM exams;
+INSERT INTO exams
+SET student = CEIL(RAND() * 10), -- redondear para arriba
+    course = FLOOR(RAND() * 4 + 1), -- redondear para abajo
+    note = RAND() * 7 + 3, -- numero aleatorio entre 3 y 10
+    module = ROUND(RAND() * 5); -- redondear segun corresponda
     
+SELECT * FROM exams;
 # Estadisticas 
 ## Total de alumnos
 SELECT COUNT(userId) AS total_students 
