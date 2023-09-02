@@ -23,6 +23,12 @@ CREATE TABLE users(
 # Consulta de Usuarios
 SELECT * FROM users;
 
+# consulta ordenada con limites
+SELECT * FROM users -- consulta regular 
+ORDER BY username -- criterio ordinal (ASC por defecto | DESC valor opcional)
+LIMIT  5 -- cantidad de resultados a mostrar
+OFFSET 5; -- a partir del numero de resultado especificado
+
 ## Carga Completa de Datos (Ordinal)
 INSERT INTO users 
 VALUES(0,'c215714n','root');
