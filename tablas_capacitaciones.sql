@@ -40,6 +40,11 @@ CREATE TABLE courses_detail(
     UNIQUE KEY(student, course),
     FOREIGN KEY(course) REFERENCES courses_assignment(id)
 );
+## Recrea los argumentos utilizados para crear la tabla
+SHOW CREATE TABLE courses_detail;
+## Agregar Restricciones a detalle de cursos
+ALTER TABLE courses_detail -- tabla a modificar
+ADD CONSTRAINT FOREIGN KEY(student) REFERENCES students(id); -- restriccion a utilizar
 
 /* DML - Data Manipulation Language */
 ## Carga de Multiples Capacitaciones
