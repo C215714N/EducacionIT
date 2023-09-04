@@ -4,14 +4,14 @@ class Persona:
         self.apellido = apellido
         self.edad = edad
     
-    def setEdad(edad):
-        this.edad = edad
+    def setEdad(self, edad):
+        self.edad = edad
     
-    def saludar()
-        return "buenos dias, mi nombre es " + this.nombre
+    def saludar(self)
+        return "buenos dias, mi nombre es " + self.nombre
     
-    def presentarse():
-        return "¿que tal? mi nombre es " + this.nombre + " y tengo " + this.edad + " años"
+    def presentarse(self):
+        return "¿que tal? mi nombre es " + self.nombre + " y tengo " + self.edad + " años"
     
     def despedirse ():
         return "hasta la proxima"

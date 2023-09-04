@@ -1,6 +1,6 @@
 class Persona{
-    private string nombre;
-    private string apellido;
+    private String nombre;
+    private String apellido;
     private int edad;
 
     public void Pesona(string nombre,string apellido, int edad){
@@ -11,13 +11,13 @@ class Persona{
     public void setEdad(edad){
         this.edad = edad;
     }
-    public string saludar(){
+    public String saludar(){
         return "buenos dias, mi nombre es " + this.nombre
     }
-    public string presentarse(){
+    public String presentarse(){
         return "¿que tal? mi nombre es " + this.nombre + " y tengo " + this.edad + " años";
     }
-    public string despedirse (){
+    public String despedirse (){
         return "hasta la proxima"
     }
 }

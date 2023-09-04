@@ -9,13 +9,13 @@ class Persona{
         $this -> edad = $edad;
     }
     public function saludar(){
-        return "buenos dias, mi nombre es " + $this-> nombre
+        return "buenos dias, mi nombre es " + $this-> nombre;
     }
     public function presentarse(){
         return "¿que tal? mi nombre es " + $this -> nombre + " y tengo " + $this -> edad + " años";
     }
     public function despedirse (){
-        return "hasta la proxima"
+        return "hasta la proxima";
     }
 }
 
