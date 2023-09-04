@@ -2,14 +2,14 @@
 
 ```mermaid
 graph TD;
-    Banco-->Sucursales;
-    Sucursales-->Empleados;
-    Clientes-->Persona-->Cuentas;
-    Clientes-->Empresa-->Cuentas;
-    Clientes-->Cuentas;
-    Cuentas-->CajaAhorro;
-    Cuentas-->CuentaCorriente;
-    Empleados-->AgenteCuenta-->Clientes;
-    Empleados-->GerenteComercial-->Empleados;
-    Empleados-->GerenteSucursal-->Sucursal;
+    Banco-->Sucursal;
+    Sucursal-->Empleado;
+    Cliente-->Persona-->Cuenta;
+    Cliente-->Empresa-->Cuenta;
+    Cliente-->Cuenta;
+    Cuenta-->CajaAhorro;
+    Cuenta-->CuentaCorriente;
+    Empleado-->AgenteCuenta-->Cliente;
+    Empleado-->GerenteComercial-->Empleado;
+    Empleado-->GerenteSucursal-->Sucursal;
 ```
