@@ -35,3 +35,11 @@ let Persona = {
 * __Encapsulacion__ Capacidad de encerrar las caracteristicas para que solo sean accesibles mediante metodos
 * __Herencia__ Capacidad de transmitir todas las propiedades y metodos a futuras instancias.
 * __Polimorfismo__ Capacidad de adaptarse a las diferentes necesidades presentadas
+
+## Metodos predeterminados
+
+
+* __Getters__: Se utilizan para devolver el valor de alguna de las propiedades del Objeto.
+* __Setters__: Se utilizan para modificar el valor de alguna de las propiedades del objeto.
+* __Constructor__: Permite su inicializacion de la clase y suele llamarse igual que esta.
+* __Destructor__: Elimina el objeto con el objetivo de liberar espacio en memoria.
