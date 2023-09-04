@@ -33,3 +33,10 @@ Los objetos son, generalmente, elementos que representan alguna entidad de la vi
 * __Encapsulamiento__: Capacidad para aislar las caracteristicas de los diferentes objetos.
 * __Herencia__: Capacidad de transmitir sus caracteristicas a otras instancias o clases.
 * __Polimorfismo__: Capacadidad de adaptar las caracteristicas y funcionalidades segun sea necesario.
+
+## Metodos Predeterminados
+
+* __constructor__ Inicilializa la clase, permitiendo definir los valores iniciales de las propiedades. Normalmente se llama igual que la clase.
+* __destructor__ Metodo implementado para liberar espacio en memoria, al igual que el contructor recibe el nombre la clase pero con un _~_ al comienzo
+* __setters__ Funciones que se utilizan para definir alguno de los valores de las propiedades del objeto.
+* __getters__ Funciones que se utilizan para obtener alguno de los valores de las propiedades del objeto.
