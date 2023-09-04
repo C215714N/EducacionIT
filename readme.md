@@ -2,6 +2,14 @@
 
 Esto es una guia para los alumnos del curso de __programacion orientada a objetos__ que cursan los dias _lunes miercoles y viernes de 9:30hs a 12:30hs_ donde prodran revisar los contenidos vistos en clase.
 
+## Nota del Instructor
+
+en caso de clonar el respositorio colocar el parametro _-b_ para indicar la rama que desean descargar y el parametro _--single-branch_ para que solamente descargue el recurso solicitado.
+
+```
+git clone -b f_pescar-oop-lxv9.30 --single-branch https://github.com/c215714n/EducacionIT
+```
+
 ## ¿Que es un paradigma?
 
 Cuando utilizamos este terminos nos referimos a un modelo de soluciones probadas, que deberiamos utilizar al llevar a cabo determinadas practicas.
@@ -15,7 +23,6 @@ let Persona = {
     edad: 32
 }
 ```
-
 
 * __OBJETO__: Entidad compuesta por atributos clave, valores y metodos que representa uno de los elementos a utilizar.
 * __PROPIEDADES__: Atributos que podemos identificar del objeto a las que les corresponden diferentes valores.
