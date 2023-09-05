@@ -158,6 +158,7 @@
         flex-direction: column;
         max-width: 540px;
         margin: auto;
+        padding: .5rem;
     }
     input,
     textarea,
@@ -183,6 +184,7 @@
     .social{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap-reverse;
         gap: .5rem;
         padding: 1rem;
     }
