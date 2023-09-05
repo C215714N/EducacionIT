@@ -191,6 +191,14 @@
         height: 4rem;
         border-radius: .5rem;
         background-color: #ccc;
+        background-position: center;
+        background-size: 2.5rem;
+        background-repeat: no-repeat;
+    }
+    .social a:hover{
+        background-color: #eee;
+        background-size: 3rem;
+        box-shadow: 0 .25rem .5rem #333;
     }
     /* Iconos redes sociales */
     .facebook{
