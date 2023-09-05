@@ -11,6 +11,7 @@
     h3,
     header p,
     .example figure,
+    #header,
     .menu{
         margin: 0;
     }
@@ -55,6 +56,7 @@
         background-size: cover; /* width height | contain cover */
     }
     .header{
+        margin: -1rem -1rem 0; /* top right bottom left*/
         padding: 16px;
         color: #eee;
         background-color: #224;
@@ -64,7 +66,19 @@
         border-bottom: 2px solid;
     }
 /* Contenido */
-    
+    main{
+        max-width: 1320px;
+        margin: auto;
+        padding: .5rem; /* Root EM (Ancho de "M" en la raiz <HTML>) default: 16px */
+    }
+    .card,
+    article{
+        margin: 1.5rem 0;
+        padding: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 .25rem #999;
+        overflow: hidden;
+    }
     /* Seccion de Ejemplo */
     .example{
         max-width: 720px;
