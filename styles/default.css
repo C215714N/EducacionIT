@@ -1,0 +1,126 @@
+/* Mobile First */
+    /* Importaciones */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Open+Sans&family=Raleway');
+/* Reglas generales */
+    *{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family: 'Ubuntu', 'Segoe ui', sans-serif;
+    }
+/* Reinicios */
+    body,
+    h1,
+    h2,
+    h3,
+    header p,
+    footer p,
+    .menu{
+        margin: 0;
+    }
+    .menu{
+        padding: 0;
+    }
+    .menu{
+        list-style: none;
+    }
+    :is(
+        nav, 
+        footer
+    ) a{
+        text-decoration: none;
+    }
+/* Navegacion */
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        gap: .5rem;
+        padding: 1rem;
+        background: linear-gradient(
+            #eee,
+            #ccc
+        );
+    }
+    nav a{
+        color: #333;
+    }
+/* Cabecera */
+    header{
+        padding: min(20%, 240px) 1rem;
+        text-align: center;
+        background: radial-gradient(
+            circle at center,
+            #eee,
+            #333
+        );
+        font-size: min(calc(2vw + .5rem), 5rem);
+    }
+/* Contenido */
+    main{
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    main > form{
+        display: none;
+        margin: 1rem;
+        border-radius: .25rem;
+        padding: 1.5rem 2rem 1rem;
+        box-shadow: -.2rem .2rem .5rem #999;
+    }
+    form:target{
+        display: block;
+    }
+    input,
+    textarea,
+    select{
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    button{
+        border-radius: .25rem;
+        border: 1px solid #333;
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #333;
+        background-color: transparent;
+    }
+    button:hover{
+        color: #eee;
+        background-color: #333;
+    }
+/* Pie de Pagina */
+footer p{
+    padding: 1rem;
+    text-align: center;
+    background-color: #ccc8;
+}
+/* Small Devices - Smartphones */
+@media screen and (min-width: 576px){
+    main{
+        max-width: 540px;
+    }
+}
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px){
+    .menu{
+        display: flex;
+        gap: .5rem;
+    }
+    main{
+        max-width: 720px;
+    }
+}
+/* Large Devices - Desktop */
+@media screen and (min-width: 992px){
+    main{
+        max-width: 960px;
+    }
+}
+/* Extra Large Devices - Large Desktop */
+@media screen and (min-width: 1200px){
+    main{
+        max-width: 1140px;
+    }
+}
