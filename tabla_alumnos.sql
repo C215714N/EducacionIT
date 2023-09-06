@@ -36,7 +36,6 @@ SELECT * FROM courses AS c, courses_assignment AS ca -- invoco 2 o mas tablas si
 WHERE c.id = ca.course; -- defino la relacion entre ambas (evitar duplicidad)
 
 ## Carga aleatoria de datos
-SELECT * FROM exams;
 INSERT INTO exams
 SET student = CEIL(RAND() * 10), -- redondear para arriba
     course = FLOOR(RAND() * 4 + 1), -- redondear para abajo
@@ -48,11 +47,37 @@ SELECT * FROM exams;
 ## Total de alumnos
 SELECT COUNT(userId) AS total_students 
 FROM students;
-    
 ## Cantidad de Alumnos por Curso
 SELECT 
 	course,
 	COUNT(student) AS total -- cuenta los valores de la columna
 FROM courses_detail
 GROUP BY course -- criterio de agrupacion
-ORDER BY course
+ORDER BY course;
+# ESTADISTICAS
+SELECT * FROM exams;
+## Rendimiento General
+SELECT 
+	COUNT(note) AS exams, -- cantidad de evaluaciones
+    ROUND(AVG(note), 2) AS average, -- promedio de la columna notas
+	MIN(note) AS lowest, -- valor mas bajo de notas
+    MAX(note) AS highest -- valor mas alto de notas
+FROM exams;
+## Rendimiento por capacitacion
+SELECT 
+	course, module,
+	COUNT(note) AS exams, 
+	ROUND(AVG(note), 2) AS average,
+	MIN(note) AS lowest, 
+    MAX(note) AS highest
+FROM exams
+GROUP BY course; -- agrupado por curso
+## Rendimiento general por alumno
+SELECT * FROM exams;
+SELECT 
+	student,
+    COUNT(course) AS courses,
+    ROUND(AVG(note), 2) AS average,
+    GROUP_CONCAT("  ", course,".",module,": ", note) AS notes
+FROM exams
+GROUP BY student;
