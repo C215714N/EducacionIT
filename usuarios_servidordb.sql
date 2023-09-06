@@ -36,3 +36,9 @@ IDENTIFIED BY '000'; -- contraseña
 GRANT SELECT
 ON escuelait.*
 TO 'guest'@'localhost';
+
+# Reparacion Base de datos Servidor
+SHOW DATABASES; -- verificamos los esquemas del servidor
+USE mysql; -- Seleccionamos la db principal
+SHOW TABLES; -- verificamos las tablas de la base de datos
+REPAIR TABLE db; -- reconstruye indices y elimina datos corruptos
