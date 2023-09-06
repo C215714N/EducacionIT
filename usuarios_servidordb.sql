@@ -41,4 +41,4 @@ TO 'guest'@'localhost';
 SHOW DATABASES; -- verificamos los esquemas del servidor
 USE mysql; -- Seleccionamos la db principal
 SHOW TABLES; -- verificamos las tablas de la base de datos
-REPAIR TABLE db; -- reconstruye indices y elimina datos corruptos
+REPAIR TABLE db, global_priv; -- reconstruye indices y elimina datos corruptos
