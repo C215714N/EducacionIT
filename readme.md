@@ -43,3 +43,49 @@ let Persona = {
 * __Setters__: Se utilizan para modificar el valor de alguna de las propiedades del objeto.
 * __Constructor__: Permite su inicializacion de la clase y suele llamarse igual que esta.
 * __Destructor__: Elimina el objeto con el objetivo de liberar espacio en memoria.
+
+## Tipos de clases
+
+* __Superclase__ Molde de referencia a partir del cual se crean otras clases que heredan sus propiedades y metodos.
+* __Subclase__ Molde que se crea a partir de otra clase para 
+implementar metodos y propiedades exclusivos.
+* __Abstract class__ Molde que no es instanciado, debido que suele ser demasiado general.
+
+```
+// Superclass (Abstract)
+class Persona{
+    String nombre;
+    String apellido;
+    String tipoId;
+    String genero;
+    Int numeroId;
+}
+// Subclass de Persona
+class Alumno extends Persona{
+    String Carrera;
+    Array[] capacitaciones;
+    Array[] horarios;
+    Array[] notas;
+
+    inscribirse()
+    examen()
+    recursar()
+}
+// Superclass de AgenteRRHH
+class Empleado extends Persona{
+    Float sueldo;
+    String cargo;
+    String categoria;
+    Array[] cargaHoraria;
+
+    solicitarLicencia()
+    presentarInforme()
+    solicitarInsumos()
+} 
+// Subclass de Empleado
+class AgenteRRHH extends Empleado{
+
+    contratarEmpleado();
+    despedirEmpleado();
+}
+```
