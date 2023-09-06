@@ -2,10 +2,10 @@
 
 ```mermaid
 graph TD;
+hospital-->paciente
 hospital-->empleado;
 hospital-->articulo;
 hospital-->especialidad;
-hospital-->paciente
 empleado-->medico;
 empleado-->administrativo;
 medico-->seguimiento;
