@@ -40,3 +40,64 @@ Los objetos son, generalmente, elementos que representan alguna entidad de la vi
 * __destructor__ Metodo implementado para liberar espacio en memoria, al igual que el contructor recibe el nombre la clase pero con un _~_ al comienzo
 * __setters__ Funciones que se utilizan para definir alguno de los valores de las propiedades del objeto.
 * __getters__ Funciones que se utilizan para obtener alguno de los valores de las propiedades del objeto.
+
+## Tipos de clases
+
+* __abstract class__: Molde que no posee instancias, debido a que sus propiedades y metodos son generales.
+* __superclass__: Molde que se utiliza como referencia para crear otras clases que heredan sus metodos y propiedades.
+* __subclass__: Molde que utiliza una clase padre como referente y ademas posee sus propios metodos y propiedades.
+
+```
+// Superclase (Abstracta -> no instanciable)
+class Persona{
+    string nombre;
+    string apellido;
+    Date fechaNac;
+    string genero;
+    string tipoId;
+    string numeroId;
+}
+// Subclase de Persona
+class Empleado extends Persona{
+    string actividad;
+    string cargo;
+    float salario;
+    array horarios;
+}
+// Superclase de Paciente (Padre) | Subclase de Persona
+class Usuario extends Persona{
+    string categoria;
+    string calle;
+    int numero;
+    string correo;
+    boolean activo;
+}
+// Subclase de Usuario (Hijo)
+class Paciente extends Usuario{
+    String grupoSanguineo;
+    float estatura;
+    float peso;
+    array alergias;
+    array patologias;
+}
+```
+
+```
+const paciente = new Paciente(
+    nombre,
+    apellido,
+    fechaNac,
+    genero,
+    tipoId,
+    numeroId,
+    categoria,
+    calle,
+    numero,
+    correo,
+    grupoSanguineo,
+    estatura,
+    peso,
+    alergias,
+    patologias
+)
+```
