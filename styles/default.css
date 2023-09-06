@@ -1,0 +1,129 @@
+/* Mobile First - Content First */
+/* Importaciones */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Raleway&family=Open+Sans');
+/* Estilos Generales */
+    * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family: 'Raleway', 'Century Gothic', sans-serif;
+    }
+/* Reinicios */
+    body,
+    h1,
+    h2,
+    h3,
+    :is(
+        header,
+        footer
+    ) p,
+    .menu{
+        margin: 0;
+    }
+    .menu{
+        padding: 0;
+    }
+/* Estilos Generales */
+    .menu{
+        list-style: none;
+    }
+    :is(
+        nav, 
+        footer
+    ) a{
+        text-decoration: none;
+    }
+/* Navegacion */
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding: 1rem;
+        background: linear-gradient(
+            #eee,
+            #eeea
+        );
+    }
+    nav a{
+        color: #333;
+        font-weight: bold;
+    }
+    .menu{
+        display: flex;
+        gap: .5rem;
+    }
+/* Cabecera */
+    header{
+        padding: min(20%, 240px) max(30%, 50px);
+        font-size: min(calc(2vw + .5rem), 5rem);
+        background: radial-gradient(
+            circle at center,
+            #eee,
+            #666
+        );
+        text-align: center;
+    }
+/* Contenido */
+    main{
+        margin: auto;
+        padding: 1rem;
+    }
+    main > form{
+        display: none;
+        margin: 1rem 0;
+        border-radius: .25rem;
+        padding: 1.5rem 2rem 1rem;
+        box-shadow: -.2rem .2rem .5rem #999;
+    }
+    form:target{
+        display: block;
+        background-color: #eee;
+    }
+    input,
+    textarea,
+    select{
+        padding: .5rem;
+    }
+    button{
+        --color: #333;
+        --bg: transparent;
+        border-radius: .25rem;
+        border: 1px solid var(--color);
+        padding: .5rem 1rem;
+        color: var(--color);
+        background-color: var(--bg);
+        text-transform: uppercase;
+    }
+    button:hover{
+        --color: #eee;
+        --bg: #333;
+    }
+/* Pie de Pagina */
+    footer p{
+        padding: 1rem;
+        text-align: center;
+        background-color: #eee;
+    }
+/* Small Devices - Smartphones */
+@media screen and (min-width: 576px){
+    main{
+        max-width: 540px;
+    }
+}
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px){
+    main{
+        max-width: 720px;
+    }
+}
+/* Large Devices - Desktop */
+@media screen and (min-width: 992px){
+    main{
+        max-width: 960px;
+    }
+}
+/* Extra Large Devices - HD Desktop */
+@media screen and (min-width: 1200px){
+    main{
+        max-width: 1140px;
+    }
+}
