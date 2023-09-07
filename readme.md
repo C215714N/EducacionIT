@@ -9,6 +9,12 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 * [PuTTY](https://putty.org/)
 * [Driver Identifier](https://www.driveridentifier.com/files/driveridentifier_portable.exe)
 
+## Ejercicios
+
+* [Sistema Binario](./ejercicios/binary-decimal.md)
+* [Sistema Hexadecimal](./ejercicios/hexadecimal.md)
+* [Subneting](./ejercicios/subnetting.md)
+
 ## Tabla de contenidos
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
