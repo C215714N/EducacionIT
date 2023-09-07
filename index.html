@@ -22,17 +22,67 @@
         <!-- Gestion de Pacientes -->
         <form id="patient">
             <h2>Pacientes</h2>
-            <button type="button">agregar</button>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        required>
+                    <input 
+                        type="text" 
+                        name="apellido" 
+                        required>
+                    <input 
+                        type="date" 
+                        name="fechaNac" 
+                        required>
+                    <select name="genero">
+                        <option value="m">Masculino</option>
+                        <option value="f">Femenino</option>
+                        <option value="nb">No Binario</option>
+                        <option value="pnd">Prefiero No Decirlo</option>
+                    </select>
+                    <select name="tipoId" id="">
+                        <option value="DNI">DNI</option>
+                        <option value="DNIE">DNIE</option>
+                        <option value="LC">LC</option>
+                        <option value="LE">LE</option>
+                        <option value="CI">CI</option>
+                        <option value="PA">PA</option>
+                    </select>
+                    <input 
+                        type="text" 
+                        name="numeroId" 
+                        required>
+            </fieldset>
+            <fieldset>
+                <legend>Datos Clinicos</legend>
+                <select name="grupoSanguineo">
+                    <option value="0+">0+</option>
+                    <option value="0-">0-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <input type="number" name="peso">
+                <input type="number" name="estatura">
+                <textarea name="alergias"></textarea>
+                <textarea name="enfermedades"></textarea>
+            </fieldset>
+            <button >agregar</button>
         </form>
         <!-- Gestion de Empleados -->
         <form id="employee">
             <h2>Empleados</h2>
-            <button type="button">agregar</button>
+            <button >agregar</button>
         </form>
         <!-- Gestion de Turnos -->
         <form id="turn">
             <h2>Turnos</h2>
-            <button type="button">agregar</button>
+            <button >agregar</button>
         </form>
     </main>
     <footer>
