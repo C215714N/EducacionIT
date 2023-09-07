@@ -24,7 +24,7 @@ class Persona{
     }
     // Setters
     set(key, value){
-        return this[key] = value;
+        eval(`this[key] = value`);
     }
 }
 class Cliente extends Persona{
@@ -34,8 +34,8 @@ class Cliente extends Persona{
 
     constructor(cc, tc, c, ...args){
         super(...args);
-        this.#codigoCliente = cc;
-        this.#tipoCliente   = tc;
+        this.#codigoCliente = cc ?? control.cliente++;
+        this.#tipoCliente   = tc ?? 'individuo';
         this.#cuentas       = c;
     }
     #ok(){ return "Operacion realizada exitosamente"; }
@@ -66,8 +66,8 @@ class Cuenta{
     #tipoCuenta;
     #saldo;
     constructor(nc, tc, s){
-        this.#numeroCuenta = nc;
-        this.#tipoCuenta = tc;
+        this.#numeroCuenta = nc ?? control.cuenta++;
+        this.#tipoCuenta = tc ?? "caja de ahorro";
         this.#saldo = s ?? 0;
     }
     depositar(monto){
@@ -82,32 +82,43 @@ class Cuenta{
         }
     }
 }
+const 
+    d = document,
+    control = {
+        cliente: 0,
+        empleado: 0,
+        cuenta: 0,
+        operacion: 0
+    },
+    clientes = [],
+    frmCliente = d.getElementById('client'),
+    frmCuenta = d.getElementById('account'),
+    frmEmpleado = d.getElementById('employee');
 
-const c = new Cliente(
-    1, // codigoCliente
-    "individuo", // tipoCuenta
-    [], // Cuentas
-    // Datos de Persona
-    "cristian", 
-    "racedo",
-    "1990-04-18",
-    "dni",
-    "35336446",
-    "m",
-    [
-        {   
-            contacto: "cristian",
-            email: "cristiandracedo@hotmail.com",
-            telefono: "11-0303-4567"
-        },
-        {
-            contacto: "damian",
-            email: "cristiandracedo@gmail.com",
-            telefono: "11-0303-4567"
-        }
-    ]
-);
+frmCliente.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const c = new Cliente(
+        null, // codigoCliente
+        null, // tipoCuenta
+        [], // Cuentas
+        // Datos de Persona
+        e.target.nombre.value,
+        e.target.apellido.value,
+        e.target.fechaNac.value,
+        e.target.tipoDoc.value,
+        e.target.numDoc.value,
+        e.target.genero.value,
+        // Datos de Contacto
+        [ { 
+            contacto: e.target.contacto.value,
+            email: e.target.email.value,
+            telefono: e.target.telefono.value
+        } ]
+    );
+    clientes.push(c);
+    c.abrirCuenta("");
+    frmCliente.reset();
+} )
 
-c.abrirCuenta("");
-c.abrirCuenta(312, "empresa", 10000);
 
+// c.abrirCuenta(312, "empresa", 10000);
