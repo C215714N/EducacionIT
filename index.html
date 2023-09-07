@@ -21,18 +21,57 @@
     <main>
         <!-- Clientes -->
         <form id="client" action="">
-            <h2>Area de Clientes</h2>
-            <button type="button">agregar</button>
+            <h2 class="w-100">Area de Clientes</h2>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <input class="w-50"
+                    type="text" 
+                    name="nombre" 
+                    required>
+                <input class="w-50"
+                    type="text" 
+                    name="apellido" 
+                    required>
+                <input class="w-25"
+                    type="date" 
+                    name="fechaNac" 
+                    required>
+                <select class="w-25" name="tipoDoc">
+                    <option value="DNI">DNI</option>
+                    <option value="DNIE">DNIE</option>
+                    <option value="LE">LE</option>
+                    <option value="LC">LC</option>
+                    <option value="CI">CI</option>
+                    <option value="PA">PA</option>
+                </select>
+                <input class="w-50"
+                    type="tel" 
+                    name="numDoc" 
+                    required>
+                <select class="w-25" name="genero">
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="NB">No Binario</option>
+                    <option value="O">Otro</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                <input type="text" name="contacto">
+                <input type="email" name="email">
+                <input type="tel" name="telefono">
+            </fieldset>
+            <button>agregar</button>
         </form>
         <!-- Empleados -->
         <form id="employee" action="">
             <h2>Sector de Empleados</h2>
-            <button type="button">agregar</button>
+            <button>agregar</button>
         </form>
         <!-- Cuentas -->
         <form id="account" action="">
             <h2>Movimientos de Cuenta</h2>
-            <button type="button">agregar</button>
+            <button>agregar</button>
         </form>
     </main>
     <footer>
