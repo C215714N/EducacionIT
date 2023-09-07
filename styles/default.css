@@ -29,6 +29,19 @@
     ) a{
         text-decoration: none;
     }
+/* tamaños */
+    .w-25{
+        width: calc(25% - .5rem);
+    }
+    .w-50{
+        width: calc(50% - .25rem);
+    }
+    .w-75{
+        width: calc(75% - .25rem);
+    }
+    .w-100{
+        width: 100%;
+    }
 /* Navegacion */
     nav{
         position: sticky;
@@ -71,9 +84,19 @@
     form:target{
         display: block;
     }
+    fieldset{
+        margin: 1rem 0;
+        border-radius: .25rem;
+        padding: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .25rem;
+    }
     input,
     textarea,
     select{
+        width: 100%;
+        flex: 1 1 auto;
         padding: .5rem;
         font-size: 1rem;
     }
