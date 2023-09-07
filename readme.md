@@ -16,6 +16,7 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 * [Subneting](./ejercicios/subnetting.md)
 
 ## Tabla de contenidos
+
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
 * [Verificacion de Topologia](#verificacion-de-topologia)
@@ -53,6 +54,7 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __no shutdown__: enciende la interfaz seleccionada.
 
 ## Verificacion de Topologia
+
 Cuando establecemos la configuracion de los dispositivos de internetworks debemos verificar el funcionamiento de las interfaces, redes y dispositivos a los que se conecte dentro de la topologia. La misma dependera del tipo de dispositivo que estemos administrando.
 
 1. switch# (administracion general)
@@ -71,6 +73,7 @@ Cuando establecemos la configuracion de los dispositivos de internetworks debemo
 
 
 ## Enrutamiento Estatico
+
 Al configurar las redes dentro de la topologia debemos indicar al router como llegar a las redes vecinas, ya que los dispositivos de interconexion solamente reconocen las redes configuradas y que se encuentren conectadas directamente.
 
 1. router(config-if)# (Configuracion de la Red Local)
