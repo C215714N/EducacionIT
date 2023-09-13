@@ -52,3 +52,50 @@ SET name = "Frankenstein",
     stock = 275,
     price = 3500.00;
     
+INSERT INTO books
+SET name = "Moby Dick",
+	description = "La historia de la obsesiva persecución de una ballena por el Capitán Ahab se ha convertido en ítem imprescindible de la cultura universal. El lector no encontrará obra más filosófica, tratado sobre el mar más erudito y, algo no menos importante, novela de aventuras más épica que la presente.",
+    author = (SELECT id FROM authors WHERE name = "HERMAN MELVILLE"),
+    stock = 428,
+    price = 2999.99;
+    
+INSERT INTO literary_genres(name)
+VALUES 
+	("Accion"),
+	("Aventura"),
+	("Biografico"),
+	("Catastrofe"),
+	("Ciencia Ficcion"),
+	("Cosmos"),
+	("Comedia"),
+	("Documental"),
+	("Drama"),
+	("Fantasia"),
+	("Suspenso"),
+	("Psicologia"),
+	("Terror");
+    
+## Insercion dinamica de datos
+INSERT INTO books_by_genres(book,genre)
+VALUES	( (SELECT id FROM books WHERE name = "Frankenstein"),
+          (SELECT id FROM literary_genres WHERE name = "Terror") ),
+		( (SELECT id FROM books WHERE name = "Frankenstein"),
+            (SELECT id FROM literary_genres WHERE name = "Ciencia Ficcion")	);
+## Insercion parcialmente dinamica
+INSERT INTO books_by_genres(book, genre)
+VALUES 	( 2, (SELECT id FROM literary_genres WHERE name = "drama") ),
+		( 2, (SELECT id FROM literary_genres WHERE name = "fantasia") );
+        
+## Libros y generos asociados
+SELECT * FROM books_by_genres;        
+## Libros con todos sus generos literarios
+SELECT  
+	b.name AS book, -- nombre del libro
+    stock, -- cantidad total de libros
+    price, -- precio unitario
+    GROUP_CONCAT(lg.name) AS genres -- agrupacion de generos del libro
+FROM books_by_genres AS bg -- tabla base
+JOIN books AS b ON b.id = bg.book -- tabla de union
+JOIN literary_genres AS lg ON lg.id = bg.genre -- tabla de union
+GROUP BY book; -- agrupado por nombre de libro
+
