@@ -37,3 +37,59 @@ CREATE TABLE accounting_details(
 );
 
 /* DML - Data Manipulation Language */
+## Insercion de Generos
+INSERT INTO payments(name)
+VALUES 	("efectivo"),
+		("tarjeta credito"),
+        ("tarjeta debito"),
+        ("credito personal"),
+        ("pago virtual"),
+        ("transferencia"),
+        ("deposito"),
+		("cheque");
+## Creacion de comprobantes
+INSERT INTO accounting(ticket, payment_type, user)
+VALUES	(1, CEIL(RAND() * 8), FLOOR(RAND() * 9 + 10)),
+		(2, CEIL(RAND() * 8), FLOOR(RAND() * 9 + 10)),
+		(3, CEIL(RAND() * 8), FLOOR(RAND() * 9 + 10));
+## Detalle de compra
+INSERT INTO accounting_details(ticket, product, quantity)
+VALUES 
+-- comprobante de Elwyn.Skiles
+	(1, 2, FLOOR(RAND() * 10)),
+    (1, 4, FLOOR(RAND() * 10)),
+    (1, 3, FLOOR(RAND() * 10)),
+    (1, 1, FLOOR(RAND() * 10)),
+-- comprobante de Samantha
+	(2, 5, FLOOR(RAND() * 10)),
+    (2, 3, FLOOR(RAND() * 10)),
+    (2, 2, FLOOR(RAND() * 10));
+
+# ACTUALIZACION DE TABLAS
+## precios unitario por producto
+UPDATE accounting_details
+SET price = (SELECT price FROM books WHERE id = product)
+WHERE price IS NULL;
+
+## precios totales por comprobante
+UPDATE accounting AS a
+SET total = ( SELECT SUM(price * quantity) 
+    FROM accounting_details AS ad 
+	WHERE ad.ticket = a.ticket )	
+WHERE total IS NULL;
+
+# CONSULTAS GENERALES
+SELECT * FROM accounting;
+## Total por producto
+SELECT 
+	ticket,
+    product,
+    quantity,
+    price * quantity AS total
+FROM accounting_details;
+
+SELECT 
+	ticket,
+    SUM(price * quantity) AS total
+FROM accounting_details
+GROUP BY ticket;
