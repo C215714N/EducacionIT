@@ -59,6 +59,12 @@ SET name = "Moby Dick",
     stock = 428,
     price = 2999.99;
     
+INSERT INTO books (name, description, author, stock, price)
+VALUES	("Los miserables", "Jean Valjean, un ex convicto al que encerraron durante veinte años por robar un pedazo de pan, se convierte en un hombre ejemplar que lucha contra la miseria y la injusticia y que empeña su vida en cuidar a la hija de una mujer que ha debido prostituirse para salvar a la niña. Así, Jean Valjean se ve obligado a cambiar varias veces de nombre, es apresado, se fuga y reaparece. Al mismo tiempo, debe eludir al comisario Javert, un policía inflexible que lo persigue convencido de que tiene cuentas pendientes con la justicia.", (SELECT id FROM authors WHERE name = "Victor Hugo"), 382, 2216.00),
+		("Oliver Twist", "",7,283,2392),
+		("La tienda de antigüedades","",7,492,1298),
+        ("La pequeña Dorrit","",7, 527,2810);
+        
 INSERT INTO literary_genres(name)
 VALUES 
 	("Accion"),
@@ -99,3 +105,6 @@ JOIN books AS b ON b.id = bg.book -- tabla de union
 JOIN literary_genres AS lg ON lg.id = bg.genre -- tabla de union
 GROUP BY book; -- agrupado por nombre de libro
 
+# Aumento del 20% al precio de los libros
+UPDATE books
+SET price = price * 1.2; -- precio (100%) + 20%
