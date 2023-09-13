@@ -1,0 +1,221 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"escuelait"},
+{"type":"table","name":"accounting","database":"escuelait","data":
+[
+{"id":"1","Ticket":"1","debit":"0","credit":"1","payment_type":"5","payment_number":"1","user":"14","total":"51755.97","detail":null,"date":"2023-09-12 21:49:21"},
+{"id":"2","Ticket":"2","debit":"0","credit":"1","payment_type":"6","payment_number":"1","user":"10","total":"6715.19","detail":null,"date":"2023-09-12 21:49:21"},
+{"id":"3","Ticket":"3","debit":"0","credit":"1","payment_type":"2","payment_number":"1","user":"14","total":null,"detail":null,"date":"2023-09-12 21:49:21"}
+]
+}
+,{"type":"table","name":"accounting_details","database":"escuelait","data":
+[
+{"id":"1","ticket":"1","product":"2","quantity":"3","price":"2999.99"},
+{"id":"2","ticket":"1","product":"4","quantity":"9","price":"2392.00"},
+{"id":"3","ticket":"1","product":"3","quantity":"8","price":"2216.00"},
+{"id":"4","ticket":"1","product":"1","quantity":"1","price":"3500.00"},
+{"id":"5","ticket":"2","product":"5","quantity":"2","price":"1557.60"},
+{"id":"6","ticket":"2","product":"3","quantity":"0","price":"2659.20"},
+{"id":"7","ticket":"2","product":"2","quantity":"1","price":"3599.99"}
+]
+}
+,{"type":"table","name":"authors","database":"escuelait","data":
+[
+{"id":"1","name":"MIGUEL DE CERVANTES","birthdate":"1547-01-01"},
+{"id":"2","name":"MARQUÉS DE SADE","birthdate":"1740-01-01"},
+{"id":"3","name":"GOETHE","birthdate":"1749-01-01"},
+{"id":"4","name":"JANE AUSTEN","birthdate":"1775-01-01"},
+{"id":"5","name":"MARY SHELLEY","birthdate":"1797-01-01"},
+{"id":"6","name":"VICTOR HUGO","birthdate":"1802-01-01"},
+{"id":"7","name":"CHARLES DICKENS","birthdate":"1812-01-01"},
+{"id":"8","name":"HERMAN MELVILLE","birthdate":"1819-01-01"}
+]
+}
+,{"type":"table","name":"books","database":"escuelait","data":
+[
+{"id":"1","name":"Frankenstein","description":"La novela narra la historia de Víctor Frankenstein, un joven suizo, estudiante de medicina en Ingolstadt, obsesionado por conocer \"los secretos del cielo y la tierra\". En su afán por desentrañar \"la misteriosa alma del hombre\", Víctor crea un cuerpo a partir de la unión de distintas partes de cadáveres diseccionados.","author":"5","stock":"275","price":"4200.00"},
+{"id":"2","name":"Moby Dick","description":"La historia de la obsesiva persecución de una ballena por el Capitán Ahab se ha convertido en ítem imprescindible de la cultura universal. El lector no encontrará obra más filosófica, tratado sobre el mar más erudito y, algo no menos importante, novela de aventuras más épica que la presente.","author":"8","stock":"428","price":"3599.99"},
+{"id":"3","name":"Los miserables","description":"Jean Valjean, un ex convicto al que encerraron durante veinte años por robar un pedazo de pan, se convierte en un hombre ejemplar que lucha contra la miseria y la injusticia y que empeña su vida en cuidar a la hija de una mujer que ha debido prostituirse para salvar a la niña. Así, Jean Valjean se ve obligado a cambiar varias veces de nombre, es apresado, se fuga y reaparece. Al mismo tiempo, debe eludir al comisario Javert, un policía inflexible que lo persigue convencido de que tiene cuentas pendientes con la justicia.","author":"6","stock":"382","price":"2659.20"},
+{"id":"4","name":"Oliver Twist","description":"","author":"7","stock":"283","price":"2870.40"},
+{"id":"5","name":"La tienda de antigüedades","description":"","author":"7","stock":"492","price":"1557.60"},
+{"id":"6","name":"La pequeña Dorrit","description":"","author":"7","stock":"527","price":"3372.00"}
+]
+}
+,{"type":"table","name":"books_by_genres","database":"escuelait","data":
+[
+{"id":"2","book":"1","genre":"5"},
+{"id":"1","book":"1","genre":"13"},
+{"id":"7","book":"2","genre":"9"},
+{"id":"8","book":"2","genre":"10"}
+]
+}
+,{"type":"table","name":"contacts","database":"escuelait","data":
+[
+
+]
+}
+,{"type":"table","name":"courses","database":"escuelait","data":
+[
+{"id":"1","name":"MySQL","description":"Introduccion a Bases de Datos Relaciones"},
+{"id":"2","name":"MATEMATICAS","description":"Operaciones artimeticologicas"},
+{"id":"3","name":"NTICs","description":"Nuevas Tecnologias de la Informatica y la Comunicacion"},
+{"id":"4","name":"FISICA","description":"velocidad, aceleracion, gravedad, mru y mruv"},
+{"id":"5","name":"QUIMICA","description":"formulas soluciones, acidos, anion, cation"},
+{"id":"6","name":"BIOLOGIA","description":""},
+{"id":"7","name":"HTML5","description":"Fundamentos Web con HTML y CSS"},
+{"id":"8","name":"SOCIALES","description":"Presidencias, Revoluciones y Movimientos sociales"},
+{"id":"9","name":"GEOGRAFIA","description":"Paises y capitales del Mundo, fallas geograficas y Climas"},
+{"id":"10","name":"CCNA1","description":"Fundamentos de Redes"},
+{"id":"11","name":"CCNA2","description":"Enrutamiento y Conmutacion"},
+{"id":"12","name":"CCNA3","description":"Redes Empresariales"}
+]
+}
+,{"type":"table","name":"courses_assignment","database":"escuelait","data":
+[
+{"id":"1","course":"1","teacher":"1","start_date":"2023-07-18","end_date":"2023-09-01","day":"M,V","start_time":"10:00:00","end_time":"12:00:00"},
+{"id":"2","course":"7","teacher":"1","start_date":"2023-07-18","end_date":"2023-08-22","day":"M,J","start_time":"20:00:00","end_time":"22:00:00"},
+{"id":"3","course":"4","teacher":"2","start_date":"2023-07-12","end_date":"2023-08-09","day":"X,V","start_time":"10:00:00","end_time":"12:00:00"},
+{"id":"4","course":"6","teacher":"2","start_date":"2023-07-27","end_date":"2023-08-24","day":"L,J","start_time":"14:00:00","end_time":"16:00:00"}
+]
+}
+,{"type":"table","name":"courses_detail","database":"escuelait","data":
+[
+{"id":"12","student":"1","course":"2"},
+{"id":"17","student":"1","course":"3"},
+{"id":"5","student":"1","course":"4"},
+{"id":"8","student":"2","course":"1"},
+{"id":"19","student":"2","course":"3"},
+{"id":"4","student":"2","course":"4"},
+{"id":"9","student":"3","course":"1"},
+{"id":"20","student":"4","course":"3"},
+{"id":"6","student":"5","course":"1"},
+{"id":"13","student":"6","course":"2"},
+{"id":"3","student":"6","course":"4"},
+{"id":"7","student":"7","course":"1"},
+{"id":"15","student":"7","course":"2"},
+{"id":"10","student":"8","course":"1"},
+{"id":"11","student":"8","course":"2"},
+{"id":"2","student":"8","course":"4"},
+{"id":"16","student":"9","course":"3"},
+{"id":"14","student":"10","course":"2"},
+{"id":"18","student":"10","course":"3"},
+{"id":"1","student":"10","course":"4"}
+]
+}
+,{"type":"table","name":"exams","database":"escuelait","data":
+[
+{"id":"1","student":"2","course":"2","note":"7.52","module":"5"},
+{"id":"2","student":"1","course":"1","note":"9.98","module":"2"},
+{"id":"3","student":"6","course":"4","note":"6.13","module":"4"},
+{"id":"4","student":"6","course":"2","note":"6.50","module":"1"},
+{"id":"5","student":"6","course":"1","note":"6.58","module":"3"},
+{"id":"6","student":"10","course":"2","note":"9.73","module":"3"},
+{"id":"7","student":"5","course":"2","note":"4.02","module":"4"},
+{"id":"8","student":"6","course":"3","note":"3.19","module":"2"},
+{"id":"9","student":"2","course":"2","note":"5.64","module":"4"},
+{"id":"10","student":"10","course":"1","note":"4.37","module":"2"},
+{"id":"11","student":"4","course":"4","note":"7.89","module":"1"},
+{"id":"12","student":"8","course":"1","note":"7.87","module":"5"},
+{"id":"13","student":"6","course":"1","note":"9.70","module":"2"},
+{"id":"14","student":"9","course":"2","note":"8.82","module":"2"},
+{"id":"15","student":"1","course":"1","note":"8.56","module":"2"},
+{"id":"16","student":"5","course":"2","note":"8.78","module":"2"},
+{"id":"17","student":"3","course":"1","note":"8.29","module":"3"},
+{"id":"18","student":"4","course":"2","note":"7.05","module":"4"},
+{"id":"19","student":"6","course":"4","note":"5.73","module":"1"},
+{"id":"20","student":"9","course":"1","note":"7.74","module":"3"},
+{"id":"21","student":"3","course":"1","note":"9.58","module":"2"},
+{"id":"22","student":"10","course":"3","note":"7.02","module":"4"},
+{"id":"23","student":"4","course":"2","note":"9.83","module":"3"},
+{"id":"24","student":"2","course":"4","note":"3.67","module":"4"},
+{"id":"25","student":"5","course":"1","note":"9.51","module":"2"},
+{"id":"26","student":"6","course":"1","note":"5.78","module":"2"},
+{"id":"27","student":"10","course":"2","note":"3.59","module":"1"},
+{"id":"28","student":"3","course":"2","note":"9.23","module":"2"}
+]
+}
+,{"type":"table","name":"literary_genres","database":"escuelait","data":
+[
+{"id":"1","name":"Accion"},
+{"id":"2","name":"Aventura"},
+{"id":"3","name":"Biografico"},
+{"id":"4","name":"Catastrofe"},
+{"id":"5","name":"Ciencia Ficcion"},
+{"id":"7","name":"Comedia"},
+{"id":"6","name":"Cosmos"},
+{"id":"8","name":"Documental"},
+{"id":"9","name":"Drama"},
+{"id":"10","name":"Fantasia"},
+{"id":"12","name":"Psicologia"},
+{"id":"11","name":"Suspenso"},
+{"id":"13","name":"Terror"}
+]
+}
+,{"type":"table","name":"payments","database":"escuelait","data":
+[
+{"id":"8","name":"cheque"},
+{"id":"4","name":"credito personal"},
+{"id":"7","name":"deposito"},
+{"id":"1","name":"efectivo"},
+{"id":"5","name":"pago virtual"},
+{"id":"2","name":"tarjeta credito"},
+{"id":"3","name":"tarjeta debito"},
+{"id":"6","name":"transferencia"}
+]
+}
+,{"type":"table","name":"students","database":"escuelait","data":
+[
+{"id":"1","userId":"13","active":"1"},
+{"id":"2","userId":"8","active":"1"},
+{"id":"3","userId":"15","active":"1"},
+{"id":"4","userId":"12","active":"1"},
+{"id":"5","userId":"9","active":"1"},
+{"id":"6","userId":"11","active":"1"},
+{"id":"7","userId":"10","active":"1"},
+{"id":"8","userId":"17","active":"1"},
+{"id":"9","userId":"14","active":"1"},
+{"id":"10","userId":"16","active":"1"}
+]
+}
+,{"type":"table","name":"teachers","database":"escuelait","data":
+[
+{"id":"1","user":"2","signed":"2018-11-08 07:35:59","active":"1"},
+{"id":"2","user":"4","signed":"2023-08-22 22:07:10","active":"1"}
+]
+}
+,{"type":"table","name":"users","database":"escuelait","data":
+[
+{"user_id":"1","username":"c215714n","userpass":"root"},
+{"user_id":"2","username":"cristian","userpass":"pass"},
+{"user_id":"4","username":"Messi","userpass":"e7745"},
+{"user_id":"5","username":"Waldo","userpass":"Wa7974"},
+{"user_id":"6","username":"Roman","userpass":"m7845"},
+{"user_id":"7","username":"Bob","userpass":"o9354"},
+{"user_id":"8","username":"Bret","userpass":"B7547"},
+{"user_id":"9","username":"Antonette","userpass":"t2217"},
+{"user_id":"10","username":"Samantha","userpass":"a2588"},
+{"user_id":"11","username":"Karianne","userpass":"ri5216"},
+{"user_id":"12","username":"Kamren","userpass":"a7407"},
+{"user_id":"13","username":"Leopoldo_Corkery","userpass":"po3753"},
+{"user_id":"14","username":"Elwyn.Skiles","userpass":"w3255"},
+{"user_id":"15","username":"Maxime_Nienow","userpass":"axi8077"},
+{"user_id":"16","username":"Delphine","userpass":"l2372"},
+{"user_id":"17","username":"Moriah.Stanton","userpass":".S9669"},
+{"user_id":"19","username":"d477714n","userpass":"root4ccess"}
+]
+}
+,{"type":"table","name":"users_data","database":"escuelait","data":
+[
+{"id":"1","firstname":"Lionel","lastname":"Messi","birthdate":"1987-06-24","gender":"M","id_type":"DNI","uid":"33016244","address":null,"email":"lionel@messi.com","userId":"4"},
+{"id":"2","firstname":"Roberto","lastname":"Pantalones Cuadrados","birthdate":"1986-07-14","gender":"O","id_type":"PA","uid":"A1356021","address":null,"email":"sponge_sqrpnts@gmail.com","userId":"7"},
+{"id":"3","firstname":"Juan Roman","lastname":"Riquelme","birthdate":"1978-06-24","gender":"M","id_type":"CUIT","uid":"20-26752869-2","address":null,"email":"Riquelme_feliz10@gmail.com","userId":"6"},
+{"id":"4","firstname":"Cristian Damian","lastname":"Racedo","birthdate":"1991-04-18","gender":"PnD","id_type":"CUIT","uid":"20-35336446-5","address":null,"email":"cristiandracedo@hotmail.com","userId":"1"},
+{"id":"5","firstname":"Bret","lastname":"Leanne Graham","birthdate":null,"gender":null,"id_type":"PA","uid":"1-770-736-8031","address":"Kulas LightApt. 556,Gwenborough","email":"Sincere@april.biz","userId":"8"},
+{"id":"6","firstname":"Antonette","lastname":"Ervin Howell","birthdate":null,"gender":null,"id_type":"PA","uid":"010-692-6593 x09125","address":"Victor Plains Suite 879, Wisokyburgh","email":"Shanna@melissa.tv","userId":"9"},
+{"id":"7","firstname":"Samantha","lastname":"Clementine Bauch","birthdate":null,"gender":null,"id_type":"PA","uid":"1-463-123-4447","address":"Douglas Extension Suite 847","email":"Nathan@yesenia.net","userId":"10"},
+{"id":"8","firstname":"Karianne","lastname":"Patricia Lebsack","birthdate":null,"gender":null,"id_type":"PA","uid":"493-170-9623 x156","address":"Hoeger Mall Apt. 692, South Elvis","email":"Julianne.OConner@kory.org","userId":"11"},
+{"id":"9","firstname":"Kamren","lastname":"Chelsey Dietrich","birthdate":null,"gender":null,"id_type":"PA","uid":"(254)954-1289","address":"Skiles Walks Suite 351, Roscoeview","email":"Lucio_Hettinger@annie.ca","userId":"12"},
+{"id":"10","firstname":"Leopoldo_Corkery","lastname":"Mrs. Dennis Schulist","birthdate":null,"gender":null,"id_type":"PA","uid":"1-477-935-8478 x6430","address":"Norberto Crossing Apt. 950m, South Christy","email":"Karley_Dach@jasper.info","userId":"13"}
+]
+}
+]
