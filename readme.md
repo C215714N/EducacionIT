@@ -14,6 +14,7 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 * [Sistema Binario](./ejercicios/binary-decimal.md)
 * [Sistema Hexadecimal](./ejercicios/hexadecimal.md)
 * [Subneting](./ejercicios/subnetting.md)
+* [Capa de Red](./ejercicios/ip.md)
 
 ## Tabla de contenidos
 
