@@ -5,5 +5,7 @@ Esto es una guia para los alumnos del capacitacion __ccna 1__ que cursan los dia
 ## Programas
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US)
 * [Wireshark](https://www.wireshark.org/)
+* [PuTTY](https://putty.org/)
+* [Driver Identifier](https://www.driveridentifier.com/blog/?p=149)
 
 
