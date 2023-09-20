@@ -9,6 +9,10 @@ Esto es una guia para los alumnos de la capacitacion de CCNA1 que cursan los dia
 * [PuTTY](https://putty.org/)
 * [Driver Identifier](https://www.driveridentifier.com/files/driveridentifier_portable.exe)
 
+## Documentacion
+* [Subnetting IPv4](./docs/ipv4_subnetting.pdf)
+* [Operacion AND](./docs/ip-and.md)
+
 ## Ejercicios
 
 * [Sistema Binario](./ejercicios/binary-decimal.md)
