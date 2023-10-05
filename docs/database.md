@@ -1,44 +1,54 @@
-DATABASE (SCHEMA) (
-    Estructura utilizada para almacenar datos,
-    Organiza la informacion en tablas.
+## DATABASE (SCHEMA)
 
-    TABLAS (
-        Campo(Columna) => Conjunto de datos del mismo tipo
-        Registro(Fila) => Conjunto de datos que guardan relacion
-        Dato(Celda) => Minima porcion de informacion
-    )
+Estructura que facilita la organizacion de datos y donde estos se almacenan en __Tablas__
 
-    TIPOS:
-    **RELACIONAL**
-    JERAQUICA
-    TRANSACCIONAL
-    ORIENTADA A OBJETOS
-    ETC...
-)
+* __Campo(Columna)__ Conjunto de datos del mismo tipo
+* __Registro(Fila)__ Conjunto de datos que guardan relacion
+* __Dato(Celda)__ Minima porcion de informacion
 
-ENGINE (MYSQL) (
-    IBM Desarrolla SQL
-    ORACLE Adquiere la Licencia (
-        MySQL Workbench (8.0.3)
-        Oracle SQL Server
-    )
-    COMUNIDAD Desarrolla MariaDB (10.4)
-)
+### TIPOS
 
-SQL(Structure Query Language)(
-    DDL(Data Definition Language)
-    * CREATE    crear db/tablas/usuarios
-    * DROP      eliminar db/tablas/usuarios
-    * ALTER     modificar tablas
+* **RELACIONAL**
+* JERAQUICA
+* TRANSACCIONAL
+* ORIENTADA A OBJETOS
+* ETC...
 
-    DML(Data Manipulation Language)
-    * INSERT    agregar registros 
-    * DELETE    eliminar registros
-    * UPDATE    actualizar registros
-    * SELECT    consultar registros
+### ENGINE (MYSQL)
+* IBM Desarrolla SQL
+* ORACLE Adquiere la Licencia
+    * __MySQL Workbench (8.0.3)__
+    * Oracle SQL Server
+* COMUNIDAD Desarrolla __MariaDB (10.4)__
 
-    DCL(Data Control Language)
-    * GRANT     otorgar permisos
-    * REVOKE    quitar permisos
-    * FLUSH PRIVILEGES  refrescar privilegios
-)
+## SQL(Structure Query Language)
+
+Lenguaje de consulta estructurada cuya sintaxis se encuentra dividida en diferentes sublenguajes segun su funcion, entre ellos estan DDL para la creacion de estructuras como la base de datos y las tablas, DML para la insercion y manipulacion de registros y DCL para la gestion de permisos de conexion y control por usuario.
+
+### DDL(Data Definition Language)
+
+| Comando | Descripcion |
+|--|--|
+| CREATE | crear db/tablas/usuarios
+| DROP   | eliminar db/tablas/usuarios
+| ALTER  | modificar tablas
+
+### DML(Data Manipulation Language)
+
+| Comando | Descripcion |
+|--|--|
+| INSERT | agregar registros 
+| DELETE | eliminar registros
+| UPDATE | actualizar registros
+| SELECT | consultar registros
+
+### DCL(Data Control Language)
+
+| Comando | Descripcion |
+|--|--|
+| GRANT   | otorgar permisos
+| REVOKE  | quitar permisos
+| FLUSH PRIVILEGES| refrescar privilegios
+
+
+[volver](../readme.md)
