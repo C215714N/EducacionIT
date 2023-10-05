@@ -16,6 +16,15 @@ CREATE TABLE users(
 );
 DESCRIBE users; -- muestra la estructura de la tabla
 
+## Modificacion de Estructura
+ALTER TABLE users -- tabla afectada
+MODIFY active BOOLEAN DEFAULT true, -- definimos un valor predeterminado
+ADD COLUMN email VARCHAR(100) AFTER username; -- agregamos una nueva columna
+
+## Restriccion Clave Unica
+ALTER TABLE users
+ADD CONSTRAINT UNIQUE KEY(email); -- el correo no se debe repetir
+
 /* DML - Data Manipulation Language */
 # Insercion de Datos
 ## Carga Completa de registro
@@ -25,6 +34,7 @@ INSERT INTO users VALUES (
     "r00t", 	-- contraseña (admite comillas dobles o simples)
     true 		-- estado (activo/inactivo)
 );
+
 ## Carga Selectiva de Registro
 INSERT INTO users(active, username, password) -- determinamos el orden
 VALUES (true, 'Cristian','1234'); -- debemos respetar la cantidad de datos
