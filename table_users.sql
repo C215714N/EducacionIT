@@ -15,3 +15,26 @@ CREATE TABLE users(
     UNIQUE KEY(username) -- clave unica (local)
 );
 DESCRIBE users; -- muestra la estructura de la tabla
+
+/* DML - Data Manipulation Language */
+# Insercion de Datos
+## Carga Completa de registro
+INSERT INTO users VALUES (
+	0, 			-- id (0 no es una valor aplicable)
+    'c215714n', -- nombre de usuario (cadena de texto)
+    "r00t", 	-- contraseña (admite comillas dobles o simples)
+    true 		-- estado (activo/inactivo)
+);
+## Carga Selectiva de Registro
+INSERT INTO users(active, username, password) -- determinamos el orden
+VALUES (true, 'Cristian','1234'); -- debemos respetar la cantidad de datos
+
+## Carga Multiple de Registros
+INSERT INTO users(username, password)
+VALUES 	('lucia','p1mp1'),
+		('joaquin','n3l4'),
+        ('leandro','alber38'),
+        ('joaquin1','g4l4n');
+
+# Consulta de los usuarios
+SELECT * FROM users;
