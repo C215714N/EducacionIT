@@ -14,3 +14,4 @@ Esto es una guia para los alumnos de la capacitacion de MySQL que cursan los dia
 ## Tabla de Contenidos
 
 * [Base de Datos](./docs/database.md)
+* [Tipos de datos](./docs/datatypes.md)
