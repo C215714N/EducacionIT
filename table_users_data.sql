@@ -1,6 +1,5 @@
 /* DDL - Data Definition Language */ 
-
-/*
+/*	Mapa de Relaciones 
 	usuarios -> datos
     usuarios -> carritos (favoritos)
     usuarios -> publicaciones
@@ -28,5 +27,20 @@ CREATE TABLE users_data(
     FOREIGN KEY(user) REFERENCES users(id) -- Clave Foranea campo(local) => tabla_relacional(key)
 );
 
-
 /* DML - Data Manipulation Language */
+# Carga de Datos
+INSERT INTO users_data(user, lastname, firstname, id_type, id_number, gender, birthdate)
+VALUES 
+	(1,'Racedo', 'Cristian', 1, '35336446', 1, '1991-04-18'), -- C215714n
+	(6,'Fernandez','Leandro','CUIL','20-12983294-2', 1, '2008-10-05'), -- Leandro
+    (4,'Galan','Lucia',3,'27-08369065-3',2,'1961-05-23'), -- Lucia
+    (5,'Galan','Joaquin','CUIL','20-10809452-5',1,'1953-07-21'); -- Joaquin
+    
+# Consulta condicional
+## Consulta por numero de documentacion
+SELECT * FROM users_data
+WHERE id_number = '35336446';
+
+## Subconsulta de Numero de Usuario
+SELECT * FROM users_data
+WHERE user = (SELECT id FROM users WHERE username = 'c215714n');
