@@ -48,3 +48,11 @@ VALUES 	('lucia','p1mp1'),
 
 # Consulta de los usuarios
 SELECT * FROM users;
+
+## Registro cuyo nombre de usuario sea C215714N
+SELECT * FROM users -- tabla
+WHERE username = "c215714n"; -- condicion 
+
+## Registros que no posean situacion definida (NULL)
+SELECT * FROM users 
+WHERE active IS NULL;
