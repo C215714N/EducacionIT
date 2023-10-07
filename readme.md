@@ -12,3 +12,12 @@ Esto es una guia para los alumnos que cursan los dias _Lunes y Miercoles de 10hs
 * [Directivas de seguridad](./secpol.md)
 * [Visor de Eventos](./eventvwr.md)
 * [Registro de Windows](./regedit.md)
+
+## Enlaces Externos
+
+* [UACMe](https://github.com/hfiref0x/UACME)
+* [COMahawk](https://github.com/apt69/COMahawk)
+* [WES-NG](https://github.com/bitsadmin/wesng)
+* [LOLBAS](https://lolbas-project.github.io/)
+* [Exploit-DB](https://www.exploit-db.com/)
+* [Mitre](https://github.com/wietze/mitre-eu-2020)

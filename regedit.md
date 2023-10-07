@@ -3,15 +3,26 @@
 * __Comando:__ regedit
 * __descripcion:__ base de datos jerarquica que almacena información necesaria para la configuracion del sistema operativo, los usuarios, aplicaciones y dispositivos de hardware.
 
-### CLAVES PRINCIPALES
+### ESTRUCTURA PRINCIPAL
 
-| Clave | abreviatura | Descripcion|
+| Clave | Abrev. | Descripcion|
 |--|--|--|
-|  __HKEY_CLASSES_ROOT__ | __HKCR__| esta clave almacena la informacion que _garantiza la apertura del programa indicado al abrir un archivo_ en el Explorador de Windows.
-|  __HKEY_CURRENT_USER__ | __HKCU__ | esta clave contiene la _raiz de la informacion asociada al perfil del usuario_ que ha iniciado sesión, como carpetas, colores de pantalla y la configuración de Panel de control.
-|  __HKEY_LOCAL_MACHINE__ | __HKLM__ | esta clave contiene _información de configuración específica del equipo_ aplicable para cualquier usuario.
-|  __HKEY_USERS__ | __HKU__ | esta clave contiene _los perfiles de usuario_ que se encuentran cargados en el equipo actualmente.
-| __HKEY_CURRENT_CONFIG__ | __HKCC__ | Esta clave contiene _información sobre el perfil de hardware_ utilizado por el equipo local al iniciar el sistema operativo.
+|  __HKEY_CLASSES_ROOT__ | __HKCR__| Almacena informacion que _garantiza la apertura del programa indicado al abrir un archivo_ en el Explorador.
+|  __HKEY_CURRENT_USER__ | __HKCU__ | Posee la _raiz de la informacion del perfil del usuario_ que inicio sesión, como carpetas o Panel de control.
+|  __HKEY_LOCAL_MACHINE__ | __HKLM__ | Continene _información de configuración específica del equipo_ aplicable para cualquier usuario.
+|  __HKEY_USERS__ | __HKU__ | Almacena _los perfiles de usuario_ que se encuentran cargados en el equipo actualmente.
+| __HKEY_CURRENT_CONFIG__ | __HKCC__ | Incluye _información sobre el perfil de hardware_ utilizado por el equipo local al iniciar el sistema.
+
+### SUBARBOL DE ARCHIVOS
+
+| Subclave | Descripcion
+|--|--|
+| __HKLM\SAM__ | Información sobre las bases de datos del Administrador de cuentas de seguridad para dominios. Dentro de cada base de datos hay alias de grupo, usuarios, cuentas de invitado y cuentas de administrador. |
+| __HKLM\SECURITY__ | Almacena las directivas de seguridad del usuario actual. Está vinculado a la base de datos de seguridad del dominio donde el usuario inició sesión o a la sección de registro en la computadora local. |
+| __HKLM\SOFTWARE__ | Esta organizado alfabéticamente por el proveedor del software y es donde cada programa escribe datos en el registro para que la próxima vez que se abra la aplicación, su configuración específica se aplique automáticamente. |
+| __HKLM\SYSTEM__ | Contains information stored in the about the computer's system configuration. |
+| __HKU\\.DEFAULT__ | Informacion predeterminada utilizada por la _Cuenta Local del Sistema_, no por una cuenta de usuario normal. Cualquier cambio realizado se reflejara automáticamente en la subclave __HKEY_USERS\S-1-5-18__. |
+| __HKLM\HARDWARE__ | Contiene datos relacionados con el BIOS, los procesadores y otros dispositivos de hardware. No se almacena como un archivo, porque se vuelve a crear cada vez que se inicia el sistema. |
 
 ### VALORES DE REGISTRO
 
