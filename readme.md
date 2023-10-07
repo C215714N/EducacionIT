@@ -13,6 +13,7 @@ Esto es una guia teorico practica para los alumnos de la capacitacion __ccna 1__
 
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
+* [Enrutamiento Estatico](#enrutamiento-estatico)
 
 ## Configuracion Inicial
 
@@ -44,3 +45,15 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Enrutamiento Estatico
+
+Al configurar las redes dentro de la topologia debemos indicar al router como llegar a las redes vecinas, ya que los dispositivos de interconexion solamente reconocen las redes configuradas y que se encuentren conectadas directamente.
+
+1. router(config-if)# (Configuracion de la Red Local)
+	* __interface `gigabitEthernet 0/0`__ Accedemos al submodo de configuracion de Interfaz
+	* __ip address `192.168.0.1 255.255.255.0`__ Direccion IP de la interfaz para configurar la red
+2. router(config)# (Definicion de rutas Estaticas)
+	* __ip route `<network>` `<subnet mask>` `<next hop>`__ Definicion de Ruta estatica a una red remota
+	* __ip route `192.168.10.0` `255.255.255.0` `10.0.0.1`__ Ruta estatica a la red "192.168.10.0" a traves de 10.0.0.1
+	* __ip route `0.0.0.0` `0.0.0.0` `172.20.0.2`__ Ruta predeterminada para cuando no existan coincidencias de paquetes
