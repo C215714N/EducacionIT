@@ -15,3 +15,5 @@ Esto es una guia para los alumnos de la capacitacion de MySQL que cursan los dia
 
 * [Base de Datos](./docs/database.md)
 * [Tipos de datos](./docs/datatypes.md)
+* [Operadores](./docs/operators.md)
+* [Funciones](./docs/functions.md)
