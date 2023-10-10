@@ -37,6 +37,7 @@ VALUES
     (5,'Galan','Joaquin','CUIL','20-10809452-5',1,'1953-07-21'); -- Joaquin
     
 # Consulta condicional
+SELECT * FROM users_data;
 ## Consulta por numero de documentacion
 SELECT * FROM users_data
 WHERE id_number = '35336446';
