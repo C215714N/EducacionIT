@@ -54,3 +54,22 @@ VALUES	('notebook'),		('netbook'),	('ultrabook'),
         ('lavarropas'), 	('secarropas'), ('plancha'),
         ('neumaticos'),		('lampara'),	('motor'),
 		('pintura'),		('estereo'), 	('limpiaparabrisas');
+        
+# Carga de Relaciones (producto => Categoria)
+
+# Consultas
+## Categorias que terminan en "ica"
+SELECT * FROM categories
+WHERE name LIKE "%ca"; -- % (ninguno, uno o mas caracteres)
+
+## Categoria que empieza con in, luego sigue otra letra, una u y el resto
+SELECT * FROM categories
+WHERE name LIKE "in_u%"; -- _ (un caracter cualquiera)
+
+## Productos que empiecen con "mesa "
+SELECT * FROM products 
+WHERE name LIKE "mesa%"; -- % (ninguno, uno o mas caracteres)
+
+## Productos que terminan en "ropas"
+SELECT * FROM products 
+WHERE name LIKE "%ropas"; -- % (ninguno, uno o mas caracteres)
