@@ -54,7 +54,8 @@ VALUES	('notebook'),		('netbook'),	('ultrabook'),
         ('lavarropas'), 	('secarropas'), ('plancha'),
         ('neumaticos'),		('lampara'),	('motor'),
 		('pintura'),		('estereo'), 	('limpiaparabrisas');
-        
+INSERT INTO products(name) 
+VALUES ('aspiradora'),		('escoba'),		('acondicionador');
 # Carga de Relaciones (producto => Categoria)
 
 # Consultas
@@ -73,3 +74,17 @@ WHERE name LIKE "mesa%"; -- % (ninguno, uno o mas caracteres)
 ## Productos que terminan en "ropas"
 SELECT * FROM products 
 WHERE name LIKE "%ropas"; -- % (ninguno, uno o mas caracteres)
+
+## Consultas con limitantes
+SELECT * FROM products -- consulta de datos
+ORDER BY id DESC -- orden de los resultados (ASC / DESC)
+LIMIT 10 -- cantidad de resultados a mostrar (limite)
+OFFSET 0; -- a partir del registro especificado (desplazamiento )
+
+# Funciones SQL
+## Cantidad de Registros en Productos
+SELECT 
+	COUNT(id) AS total, -- campo calculado (no existe en tabla)
+    MAX(id) AS highest, -- funcion(parametro)
+    MIN(id) AS lowest -- alias (apodo) => identificador
+FROM products;
