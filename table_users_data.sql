@@ -45,3 +45,16 @@ WHERE id_number = '35336446';
 ## Subconsulta de Numero de Usuario
 SELECT * FROM users_data
 WHERE user = (SELECT id FROM users WHERE username = 'c215714n');
+
+# consulta por casos y funciones de calculo
+SELECT 
+	user,
+    lastname,
+    firstname,
+    ROUND(DATEDIFF(CURRENT_DATE(), birthdate) / 365) AS age, -- diferencia entre fechas expresada en dias
+    CASE
+		WHEN birthdate >= "2005-01-01" THEN 'joven' -- si A
+        WHEN birthdate >= "1963-01-01" THEN 'adulto' -- si !A & B
+        ELSE 'adulto mayor' -- si !A & !B
+    END AS rango_etario
+ FROM users_data;
