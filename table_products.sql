@@ -56,7 +56,31 @@ VALUES	('notebook'),		('netbook'),	('ultrabook'),
 		('pintura'),		('estereo'), 	('limpiaparabrisas');
 INSERT INTO products(name) 
 VALUES ('aspiradora'),		('escoba'),		('acondicionador');
+
 # Carga de Relaciones (producto => Categoria)
+## Carga por asignacion
+INSERT INTO product_categories 
+SET	product = (SELECT id FROM products WHERE name = 'Tablet'),
+	category = (SELECT id FROM categories WHERE name = 'tecnologia');
+
+## Carga por consulta
+SELECT * FROM products;
+INSERT INTO product_categories(product, category)
+SELECT id, -- codigo de producto
+# seleccion por casos (codigo de tecnologia)
+CASE
+	-- si termina con BOOK la categoria es TECNOLOGIA
+	WHEN name LIKE "%book" THEN (SELECT id FROM categories WHERE name = 'tecnologia') -- subconculta categoria
+    -- si empieza con MESA la categoria es MUEBLES
+	WHEN name LIKE "mesa%" THEN (SELECT id FROM categories WHERE name = 'muebles') -- retorna 1 valor unico
+    -- si termina con R la categoria es HOGAR
+	WHEN name LIKE "%ropas" THEN 9
+    -- si Termina con S la categoria es TECNOLOGIA
+	WHEN name LIKE "%s" THEN 2 
+    -- sino la categoria es MODA
+	ELSE (SELECT id FROM categories WHERE name = 'moda')
+END
+FROM products;
 
 # Consultas
 ## Categorias que terminan en "ica"
@@ -79,7 +103,7 @@ WHERE name LIKE "%ropas"; -- % (ninguno, uno o mas caracteres)
 SELECT * FROM products -- consulta de datos
 ORDER BY id DESC -- orden de los resultados (ASC / DESC)
 LIMIT 10 -- cantidad de resultados a mostrar (limite)
-OFFSET 0; -- a partir del registro especificado (desplazamiento )
+OFFSET 0; -- a partir del registro especificado (desplazamiento)
 
 # Funciones SQL
 ## Cantidad de Registros en Productos
