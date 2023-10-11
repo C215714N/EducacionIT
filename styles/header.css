@@ -1,0 +1,19 @@
+#header{
+/* Id: Prioridad 100 */
+    padding: min(20%, 240px) 1rem;
+    background-image: linear-gradient(
+        rgba(255,255,255, .3),
+        hsla(0, 0%, 0%, .3)
+    );
+}
+.header{
+/* Clase: Prioridad 10 */
+    padding: 1rem; /* root EM (Ancho de "M" en la raiz) */
+    color: #eef;
+    background-color: #402;
+}
+header{
+/* Etiqueta: Prioridad 1 */
+    border-bottom: 2px solid;
+    color: #402;
+}
