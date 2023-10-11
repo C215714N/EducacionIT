@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    /* EXPLICACION:
+        CONTENT-BOX
+        - content-width =  width
+        - final-width   =  width + padding + border
+
+        BORDER-BOX
+        - final-width   =  width
+        - content-width =  width - padding - border
+    */
+    font-family: 'Consolas', 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
