@@ -91,6 +91,10 @@ WHERE name LIKE "%ca"; -- % (ninguno, uno o mas caracteres)
 SELECT * FROM categories
 WHERE name LIKE "in_u%"; -- _ (un caracter cualquiera)
 
+## Categorias que correspondan a los valores indicados
+SELECT * FROM categories 
+WHERE id IN(2, 4, 8, 9); -- teconologia, moda, muebles, hogar
+
 ## Productos que empiecen con "mesa "
 SELECT * FROM products 
 WHERE name LIKE "mesa%"; -- % (ninguno, uno o mas caracteres)
@@ -104,6 +108,23 @@ SELECT * FROM products -- consulta de datos
 ORDER BY id DESC -- orden de los resultados (ASC / DESC)
 LIMIT 10 -- cantidad de resultados a mostrar (limite)
 OFFSET 0; -- a partir del registro especificado (desplazamiento)
+SELECT * FROM product_categories;
+
+# ACTUALIZACION DE VALORES
+SELECT * FROM product_categories;
+## Actualizacion Categoria Herramientas
+UPDATE product_categories -- tabla afectada
+SET category = 11 -- valor de actualizacion
+WHERE product BETWEEN 10 AND 14 -- rango de valores
+AND category = 4;
+
+## Actualizacion Dinamica Categoria Muebles
+UPDATE product_categories -- Tabla afectada
+SET category = ( -- valor de actualizacion
+	SELECT id FROM categories WHERE name = "muebles") -- 8
+WHERE product IN( -- condicion para actualizar
+	SELECT id FROM products WHERE name IN('sillas', 'comoda','esquinero','placard','aparador'))
+AND category = 4;
 
 # Funciones SQL
 ## Cantidad de Registros en Productos
