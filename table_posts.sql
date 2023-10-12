@@ -1,4 +1,5 @@
 /* DDL - Data Definition Language */
+# Tabla publicaciones de usuario
 CREATE TABLE posts(
 	id INT AUTO_INCREMENT,
     title VARCHAR(50) NOT NULL,
@@ -11,4 +12,16 @@ CREATE TABLE posts(
     PRIMARY KEY(id),
     FOREIGN KEY(user) REFERENCES users(id),
     FOREIGN KEY(product) REFERENCES products(id)
+);
+# Tabla ventas por pulicacion
+CREATE TABLE sales(
+	id INT AUTO_INCREMENT,
+    post INT,
+    price DECIMAL(16,4),
+    quantity INT,
+    user INT,
+    sale_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    FOREIGN KEY(post) REFERENCES posts(id),
+    FOREIGN KEY(user) REFERENCES users(id)
 );
