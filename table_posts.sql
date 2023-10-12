@@ -25,3 +25,24 @@ CREATE TABLE sales(
     FOREIGN KEY(post) REFERENCES posts(id),
     FOREIGN KEY(user) REFERENCES users(id)
 );
+
+/* DML - Data Manipulation Language */
+# Tabla Publicaciones de usuarios
+## Carga Multiple de Publicaciones
+INSERT INTO posts(title, user, product, price, stock)
+VALUES
+	("Mesa Ratona de Coleccion", 4, 22, 50000, 6), -- Galan Lucia
+    ("Sommier Queen Size", 4, 24, 125999.99, 2), -- Galan Lucia
+    ("Tablet Galaxy Tab10", 5, 21, 155320, 10), -- Galan Joaquin
+    ("Zapatillas Pimpi Edicion Limitada", 4, 4, 35780, 2000), -- Galan Lucia
+    ("Aire Split Inverter 3000 Frigorias", 6, 27, 359999.99, 10), -- Fernandez Leandro
+    ("Smart Tv 59 Pulgadas",6, 26, 236800, 50), -- Fernandez Leandro
+    ("Acondicionador Pega la Vuelta", 5, 45,3900,5400); -- Galan Joaquin
+
+# Tabla Ventas por publicacion
+
+
+# Consultas
+## Publicaciones del mes de Septiembre
+SELECT * FROM posts
+WHERE post_date BETWEEN '2023-09-01' AND '2023-09-30'; -- rango de numeros
