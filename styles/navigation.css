@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    list-style: none;
+    padding: 1rem;
+    background:
+        #204
+        radial-gradient(
+            circle at top right,
+            rgb(68,0,136),
+            hsl(270, 50%, 10%)
+        ); 
+    /* SHORTHAND: color image position/size repeat */
+}
+.navbar a{
+    color: #ccd;
+    text-transform: uppercase;
+}
+.navbar a.active,
+.navbar a:hover{
+    color: white;
+    text-shadow: 0 0 .5rem #804;
+}
