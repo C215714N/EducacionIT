@@ -1,0 +1,29 @@
+form{
+    display: flex;
+    padding: 1.5rem;
+}
+.column{
+    flex-direction: column;
+    max-width: 540px;
+    margin: auto;
+}
+label{
+    margin: .5rem 0 .2rem; /*top right bottom left*/
+}
+input,
+textarea,
+select,
+button{
+    outline: none;
+    border-radius: .25rem;
+    border: .1rem solid;
+    padding: .5rem;
+    font-size: 1rem;
+}
+textarea{
+    min-height: 5rem;
+    resize: vertical;
+}
+.validation{
+    display: none;
+}
