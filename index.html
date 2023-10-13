@@ -60,7 +60,7 @@
                 <h2>Pedidos</h2>
                 <p>devolver Ordenes</p>
             </header>
-            <form>
+            <form class="column">
                 <!-- Campo Nombre -->
                 <label for="fullname">Ingrese su Nombre Completo</label>
                 <input 
@@ -68,7 +68,7 @@
                     name="fullname"
                     type="text"
                     placeholder="Nombre Completo: Homero Simpson"
-                    pattern="[A-Z a-z]{5, 50}"
+                    pattern="[A-Z a-z]{5,50}"
                     maxlength="50"
                     required>
                 <p class="validation">
@@ -94,7 +94,7 @@
                     name="phone"
                     type="tel"
                     placeholder="Telefono: (5411)1234-5678"
-                    pattern="([0-9]{6,20})|(\(\d{2,6}\)(\d{2,6}\-){1,3}\d{4})"
+                    pattern="\d{6,20}|[\(]\d{2,6}[\)](\d{2,6}[\-]){1,3}\d{4}$"
                     minlength="6"
                     required>
                 <p class="validation">

@@ -26,4 +26,33 @@ textarea{
 }
 .validation{
     display: none;
+    margin: .2rem;
+    font-weight: bold;
+}
+/* Validacion */
+:focus + .validation{
+    display: block;
+}
+:not(button):valid{
+    border-color: #3c6;
+}
+:not(button):valid + .validation{
+    color: #284;
+}
+:not(button, :placeholder-shown):invalid{
+    border-color: #c33;
+}
+:not(button, :placeholder-shown):invalid + .validation{
+    color: #822;
+}
+/* Boton */
+form button{
+    color: #eee;
+    border: none;
+    background-color: #204;
+    text-transform: uppercase;
+}
+form button:hover{
+    background-color: #408;
+    box-shadow: 0 0 .5rem #204;
 }
