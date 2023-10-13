@@ -15,7 +15,7 @@
     <!-- Navegacion Principal -->
     <nav>
         <ul class="navbar">
-            <li><a href="#">inicio</a></li>
+            <li><a class="active" href="#">inicio</a></li>
             <li><a href="#menu">menu</a></li>
             <li><a href="#about">nosotros</a></li>
             <li><a href="#delivery">pedidos</a></li>
@@ -60,6 +60,65 @@
                 <h2>Pedidos</h2>
                 <p>devolver Ordenes</p>
             </header>
+            <form>
+                <!-- Campo Nombre -->
+                <label for="fullname">Ingrese su Nombre Completo</label>
+                <input 
+                    id="fullname" 
+                    name="fullname"
+                    type="text"
+                    placeholder="Nombre Completo: Homero Simpson"
+                    pattern="[A-Z a-z]{5, 50}"
+                    maxlength="50"
+                    required>
+                <p class="validation">
+                    Utilice solamente letras y espacios, entre 5 y maximo 50 caracteres
+                </p>
+                <!-- Campo Direccion -->
+                <label for="address">Ingrese su Direccion</label>
+                <input 
+                    id="address"
+                    name="address"
+                    type="text"
+                    placeholder="Direccion: Avenida Siempreviva 123, Sprinfield, EEUU"
+                    minlength="6"
+                    maxlength="150"
+                    required>
+                <p class="validation">
+                    coloque una direccion valida utilizando entre 6 y 150 caracteres
+                </p>
+                <!-- Campo Telefono -->
+                <label for="phone">Ingrese su Telefono</label>
+                <input 
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Telefono: (5411)1234-5678"
+                    pattern="([0-9]{6,20})|(\(\d{2,6}\)(\d{2,6}\-){1,3}\d{4})"
+                    minlength="6"
+                    required>
+                <p class="validation">
+                    Coloque la caracteristica entre parentesis y un guion cada 2 o 6 digitos.
+                </p>
+                <!-- Campo Categoria -->
+                <label for="category">Seleccione la Categoria</label>
+                <select id="category" name="category">
+                    <option value="1">Entrada</option>
+                    <option value="2" selected>Plato Principal</option>
+                    <option value="3">Bebida</option>
+                    <option value="4">Postre</option>
+                </select>
+                <!-- Campo Detalle -->
+                <label for="order">Detalle su pedido</label>
+                <textarea 
+                    id="order" 
+                    name="order"
+                    placeholder="Detalle: 1 KrustyBurguer con queso, 1 Buzz Cola de 1.5L, 12 Donas de chocolate, 6 Latas de Cerveza Duff"
+                    minlength="20"
+                    maxlength="500"
+                    required></textarea>
+                <button>Realizar Pedido</button>
+            </form>
         </section>
     </main>
     <!-- Pie de Pagina -->
