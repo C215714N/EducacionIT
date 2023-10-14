@@ -15,6 +15,11 @@ Esto es una guia teorico practica para los alumnos de la capacitacion __ccna 1__
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
 * [Enrutamiento Estatico](#enrutamiento-estatico)
 
+## Ejercicios
+
+* [Sistema Binario](./ejercicios/binary-decimal.md)
+* [Subneting](./ejercicios/subnetting.md)
+
 ## Configuracion Inicial
 
 Cuando configuramos un dispositivo de internetworks por primera vez, debemos hacerlo utilizando el *cable de consola (RS-232)* ya que se se encuentra por fuera de la banda de red y solamente podemos acceder a su configuracion utilizando este elemento.
