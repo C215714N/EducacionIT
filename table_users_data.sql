@@ -58,3 +58,8 @@ SELECT
         ELSE 'adulto mayor' -- si !A & !B
     END AS rango_etario
  FROM users_data;
+
+# Actualizacion de usuarios importados
+UPDATE users_data -- tabla afectada
+SET user = ( SELECT id FROM users WHERE username = firstname) -- id que coincide con el nombre
+WHERE user IS NULL; -- si el usuario no esta definido
