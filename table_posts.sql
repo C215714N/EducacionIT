@@ -79,6 +79,23 @@ SELECT
 FROM sales
 GROUP BY user; -- agrupado por usuario
 
+## Detalle de Compra
+SELECT * FROM sales;
+SELECT 
+	c.username AS customer,
+	p.id,
+    p.title,
+    cat.name AS category,
+    s.price * s.quantity AS total,
+    s.sale_date,
+    u.username AS publisher
+FROM sales AS s 
+JOIN posts AS p ON p.id = s.post
+JOIN users AS c ON c.id = s.user
+JOIN users AS u ON u.id = p.user
+JOIN product_categories AS pc ON pc.product = p.product
+JOIN categories AS cat ON cat.id = pc.category;
+
 # Actualizacion de Precios en ventas
 UPDATE sales
 SET price = (SELECT price FROM posts WHERE id = post)
