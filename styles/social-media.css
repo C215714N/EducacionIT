@@ -1,0 +1,42 @@
+.social{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: .5rem;
+    padding: 1rem;
+}
+.social a{
+    border-radius: .5rem;
+    padding: 2rem;
+    background-color: #ccc;
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+}
+.social a:hover{
+    background-color: #eee;
+    background-size: 3rem;
+    box-shadow: 0 .25rem .5rem #333; /* -x+ -y+ blur color*/
+}
+/* Iconos redes sociales */
+.facebook{
+    background-image: url('../assets/icon/facebook.svg')
+}
+.instagram{
+    background-image: url('../assets/icon/instagram.svg')
+}
+.twitter{
+    background-image: url('../assets/icon/twitter.svg')
+}
+.github{
+    background-image: url('../assets/icon/github.svg')
+}
+.linkedin{
+    background-image: url('../assets/icon/linkedin.svg')
+}
+.youtube{
+    background-image: url('../assets/icon/youtube.svg')
+}
+.whatsapp{
+    background-image: url('../assets/icon/whatsapp.svg')
+}
