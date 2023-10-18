@@ -2,3 +2,33 @@ main{
     max-width: 1320px;
     margin: auto;
 }
+
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.auto{
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: .5rem;
+}
+.auto > *{
+    flex: 1 0 min(100%, var(--size));
+    /* Propiedades Elementos FLEX
+    GROW: aumento de tamaño en relacion al espacio disponible
+    SHRINK reduccion de tamaño respecto al espacio disponible
+    BASIS tamaño base para los elementos flexibles 
+    */
+}
+/* Variables de Tamaño */
+.small{
+    --size: var(--small);
+}
+.medium{
+    --size: var(--medium);
+}
+.large{
+    --size: var(--large);
+}

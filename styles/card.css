@@ -5,7 +5,7 @@
     overflow: hidden;
     background-image: linear-gradient(
         to bottom right,
-        #eee,
+        var(--light),
         #fff
     )
 }
@@ -17,7 +17,7 @@
 .card img{
     display: block;
     width: calc(100% + 2rem);
-    min-height: 240px;
+    height: var(--small);
     margin: -1rem -1rem .5rem; /* top right bottom left*/
     background-color: #333;
     background-image: radial-gradient(
@@ -25,4 +25,5 @@
         #8245,
         #201E
     );
+    object-fit: contain; /* como se dibuja la imagen */
 }
