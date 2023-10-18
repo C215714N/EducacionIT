@@ -18,11 +18,19 @@ h1,
 h2,
 h3,
 header p,
+.unstyled,
 .navbar{
     margin: 0;
+}
+/* Rellenos */
+.unstyled{
+    padding: 0;
 }
 /* Estilos */
 nav a,
 .social a{
     text-decoration: none;
+}
+.unstyled{
+    list-style: none;
 }
