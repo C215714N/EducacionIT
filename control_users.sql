@@ -16,7 +16,7 @@ IDENTIFIED BY 'p455'; -- credenciales (contraseña)
 ### Permisos
 GRANT SELECT, INSERT, UPDATE -- lectura, escritura, actualizacion
 ON smsapp.* -- sobre todas las tablas
-TO 'admin'@'localhost'; -- para el usuario
+TO 'user'@'localhost'; -- para el usuario
 
 ## Usuario Invitado
 DROP USER IF EXISTS 'guest'@'localhost'; -- Eliminamos el usuario si existe
@@ -25,4 +25,4 @@ IDENTIFIED BY '1234'; -- credenciales (contraseña)
 ### Permisos
 GRANT SELECT -- control Total
 ON smsapp.* -- sobre todas las tablas de la DB
-TO 'admin'@'localhost'; -- para el usuario
+TO 'guest'@'localhost'; -- para el usuario
