@@ -136,3 +136,23 @@ JOIN categories AS cat ON cat.id = pc.category;
 UPDATE sales
 SET price = (SELECT price FROM posts WHERE id = post)
 WHERE price IS NULL;
+
+### AUMENTO DE PRECIOS EN UN 20%
+UPDATE posts
+SET price = price * 1.2; -- nuevo precio es el 120% del total
+
+### Recuento de Ventas realizadas
+SELECT
+	post,
+    SUM(quantity) AS bought,
+    SUM(s.price * quantity) AS money,
+    s.price
+FROM sales AS s
+JOIN posts AS p ON p.id = s.post
+GROUP BY post
+ORDER BY bought DESC;
+
+### Actualizacion de STOCK
+UPDATE posts AS p
+SET stock = (SELECT SUM(quantity) FROM sales WHERE post = p.id) -- suma de cantidades vendidas
+WHERE p.id IN(SELECT DISTINCT post FROM sales); -- id de publicacion en ventas (sin repetir)

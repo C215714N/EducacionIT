@@ -46,7 +46,7 @@ WHERE id_number = '35336446';
 SELECT * FROM users_data
 WHERE user = (SELECT id FROM users WHERE username = 'c215714n');
 
-# consulta por casos y funciones de calculo
+## consulta por casos y funciones de calculo
 SELECT 
 	user,
     lastname,
