@@ -26,3 +26,5 @@ IDENTIFIED BY '1234'; -- credenciales (contraseña)
 GRANT SELECT -- control Total
 ON smsapp.* -- sobre todas las tablas de la DB
 TO 'guest'@'localhost'; -- para el usuario
+
+FLUSH PRIVILEGES;
