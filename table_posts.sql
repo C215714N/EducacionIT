@@ -46,11 +46,47 @@ VALUES
     ("Smart Tv 59 Pulgadas",6, 26, 236800, 50), -- Fernandez Leandro
     ("Acondicionador Pega la Vuelta", 5, 45,3900,5400); -- Galan Joaquin
 
+## Creacion de Publicaciones Aleatorias
+INSERT INTO posts(user, product)
+VALUES ( -- RAND genera un numero flotante entre 0 y 1
+	ROUND(RAND() * 3 + 3), -- indicamos a partir de que usuario empezamos
+    CEIL(RAND() * 28) -- multiplicamos por la cantidad de productos
+);
+### Actualizacion de Valores
+UPDATE posts
+SET	title = CONCAT((SELECT name FROM products WHERE id = product), -- nombre del producto
+	" publicado por ", (SELECT username FROM users WHERE id = user)), -- nombre de usuario
+	price = RAND() * 65000 + 10000, -- entre 10000 y 750000
+    stock = ROUND(RAND() * 100 + 100) -- entre 100 y 200 unidades
+WHERE title = "";
+
 # Tabla Ventas por publicacion
 INSERT INTO sales(post, user, quantity)
 VALUES 
 	(4,1,2),(6,1,3),(7,1,2),(1,1,1), -- Racedo Cristian
     (3,6,5),(2,6,1),(4,6,10); -- Fernandez Leandro
+
+## Ventas Aleatorias
+INSERT INTO sales(post, user)
+VALUES (
+	CEIL(RAND() * 17), -- publicacion elegida de las 17
+    CEIL(RAND() * 9 + 8) -- usuarios con id entre 8 y 17
+);
+### Actualizacion de precios
+UPDATE sales
+SET price = (SELECT price FROM posts WHERE id = post)
+WHERE price IS NULL;
+
+### Acualizacion de Cantidades
+UPDATE sales
+SET quantity = 
+CASE -- actualizacion por casos (condiciones para establecer el valor)
+	WHEN price > 100000 THEN ROUND(RAND() * 2 + 1) -- si supera los 100mil entre 1 y 3
+	WHEN price > 50000 THEN ROUND(RAND() * 5 + 1) -- si supera los 50mil entre 1 y 6
+	WHEN price > 10000 THEN ROUND(RAND() * 8 + 1) -- si supera los 10mill entre 1 y 9
+	ELSE ROUND(RAND() * 10 + 5) -- para todo lo demas entre 5 y 15
+END -- fin del analisis de casos
+WHERE quantity IS NULL; -- condicion para actualizar
 
 # Consultas
 ## Publicaciones del mes de Septiembre
