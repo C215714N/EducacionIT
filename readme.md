@@ -16,6 +16,7 @@ Esto es una guia para los alumnos del capacitacion __ccna 1__ que cursan los dia
 
 ## Ejercicios
 * [Sistema Binario](ejercicios/binary-decimal.md)
+* [Sistema Hexadecimal](ejercicios/hexadecimal.md)
 
 ## Configuracion Inicial
 
