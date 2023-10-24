@@ -24,15 +24,15 @@ $icons: car, wheel, clock, tower, building;
             animation-timing-function: cubic-bezier(math.random(), math.random(), math.random(), math.random());
     } }
     .wheel{
-        width: 2rem;
+        width: 1.5rem;
         position: absolute;
         top: 100%;
         transform: translateY(-50%);
         &.left{
-            left: 10%;
+            left: 12%;
         }
         &.right{
-            right: 10%;
+            right: 12%;
         }
     }
 }

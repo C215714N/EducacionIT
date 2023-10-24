@@ -31,55 +31,55 @@
 }
 .car:nth-child(1) {
   filter: hue-rotate(36deg);
-  animation-timing-function: cubic-bezier(0.1224597547, 0.7100749077, 0.383966301, 0.1389926617);
+  animation-timing-function: cubic-bezier(0.7906894117, 0.2552316957, 0.3909758251, 0.7887598186);
 }
 .car:nth-child(2) {
   filter: hue-rotate(72deg);
-  animation-timing-function: cubic-bezier(0.3235198754, 0.3277755395, 0.6663716639, 0.0320634773);
+  animation-timing-function: cubic-bezier(0.8196077283, 0.1700997922, 0.4841446288, 0.7887992382);
 }
 .car:nth-child(3) {
   filter: hue-rotate(108deg);
-  animation-timing-function: cubic-bezier(0.2746681722, 0.8339837283, 0.4292209143, 0.9021892987);
+  animation-timing-function: cubic-bezier(0.2713169627, 0.190018428, 0.6701536022, 0.7000864931);
 }
 .car:nth-child(4) {
   filter: hue-rotate(144deg);
-  animation-timing-function: cubic-bezier(0.0762009519, 0.5759339145, 0.6592197605, 0.5975286529);
+  animation-timing-function: cubic-bezier(0.2847891421, 0.1525780237, 0.4807516434, 0.2640578894);
 }
 .car:nth-child(5) {
   filter: hue-rotate(180deg);
-  animation-timing-function: cubic-bezier(0.1681271727, 0.277620428, 0.3347910911, 0.5030886617);
+  animation-timing-function: cubic-bezier(0.293661099, 0.341240851, 0.9961035119, 0.6756120942);
 }
 .car:nth-child(6) {
   filter: hue-rotate(216deg);
-  animation-timing-function: cubic-bezier(0.9851278984, 0.4156478624, 0.6802436376, 0.9139092181);
+  animation-timing-function: cubic-bezier(0.1058352928, 0.0249984449, 0.4695123906, 0.9970421202);
 }
 .car:nth-child(7) {
   filter: hue-rotate(252deg);
-  animation-timing-function: cubic-bezier(0.277180409, 0.8297226062, 0.9080455876, 0.7280625731);
+  animation-timing-function: cubic-bezier(0.4988946762, 0.4966839001, 0.8667723972, 0.9187807189);
 }
 .car:nth-child(8) {
   filter: hue-rotate(288deg);
-  animation-timing-function: cubic-bezier(0.930130356, 0.0004044014, 0.619517498, 0.5838776883);
+  animation-timing-function: cubic-bezier(0.814963455, 0.0528759863, 0.5167891203, 0.4769803229);
 }
 .car:nth-child(9) {
   filter: hue-rotate(324deg);
-  animation-timing-function: cubic-bezier(0.9487289133, 0.5919019571, 0.5326114804, 0.7905438942);
+  animation-timing-function: cubic-bezier(0.8980785011, 0.2684377194, 0.7084239815, 0.1296342392);
 }
 .car:nth-child(10) {
   filter: hue-rotate(360deg);
-  animation-timing-function: cubic-bezier(0.5437045728, 0.3543938485, 0.4512563506, 0.1278004691);
+  animation-timing-function: cubic-bezier(0.4501037069, 0.617744318, 0.8931902692, 0.2937568658);
 }
 .car .wheel {
-  width: 2rem;
+  width: 1.5rem;
   position: absolute;
   top: 100%;
   transform: translateY(-50%);
 }
 .car .wheel.left {
-  left: 10%;
+  left: 12%;
 }
 .car .wheel.right {
-  right: 10%;
+  right: 12%;
 }
 
 @keyframes translate {
