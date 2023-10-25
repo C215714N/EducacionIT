@@ -30,14 +30,23 @@
             <p>
                 Es un <strong>Framework de CSS</strong> desarrollado por el equipo de twitter, que facilita la implementacion de un <em>diseño web responsive</em>. 
                 
-                Utiliza la <strong>Metodologia BEM (Block Element Modifier)</strong> para las clases definidas en su hoja de estilos y las mismas se organizar segun su funcion en el sitio web.
+                Utiliza la <strong>Metodologia BEM (Block Element Modifier)</strong> para las clases definidas en su hoja de estilos y las mismas se organizan segun su funcion en el sitio web.
 
                 Los tipos de clases que podemos encontran se dividen en 3 categorias:
             </p>
-            <ul class="list-unstyled">
-                <li>Helpers</li>
-                <li>Utilities</li>
-                <li>Components</li>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Helpers: </strong>
+                    clases que modifican alguna caracteristica de otro elemento previamente definido. Su objetivo es ofrecer valores alternativos.
+                </li>
+                <li class="list-group-item">
+                    <strong>Utilities: </strong>
+                    clases que afectan algun atributo en particular y suelen tener la regla <em>!important</em> al final del valor.
+                </li>
+                <li class="list-group-item active">
+                    <strong>Components: </strong>
+                    clases que definen y se aplican a una estructura de elementos, aqui podemos ver reflejada la metodologia <em>BEM (Block Element Modifier)</em>
+                </li>
             </ul>
         </section>
     </main>
