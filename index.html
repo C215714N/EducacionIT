@@ -13,9 +13,11 @@
         <a href="#">BS</a>
         <button></button>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#intro">Inicio</a></li>
+            <li><a href="#start">Caracteristicas</a></li>
+            <li><a href="#grid">Sistema de Grillas</a></li>
+            <li><a href="#break">Puntos de quiebre</a></li>
+            <li><a href="#social">Enlaces Externos</a></li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
@@ -25,7 +27,7 @@
     </header>
     <!-- Contenido Principal -->
     <main class="container">
-        <section>
+        <section id="intro" class="pt-5">
             <h2>Introduccion a Bootstrap</h2>
             <p>
                 Es un <strong>Framework de CSS</strong> desarrollado por el equipo de twitter, que facilita la implementacion de un <em>diseño web responsive</em>. 
@@ -49,7 +51,7 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section id="start" class="pt-5">
             <h2>Caracteristicas Basicas</h2>
             <p>
                 Como se comenta anteriormente, este framework utiliza la metodologia BEM que consiste en identificar los contenedores <strong>principales (Bloques)</strong> que definen a los componentes y a partir de ahi crear clases para cada <strong>Contenido (Elemento)</strong> que este relacionado con este. A la vez, tambien se pueden alterar los diseños predeterminados, definiendo una clase que indique el <em>elemento afectado y su valor alternativo (Modificador)</em>
@@ -103,7 +105,7 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <section id="grid" class="pt-5">
             <h2>Sistema de grillas</h2>
             <p>
                 Una de las caracteristicas principales, por las cuales este framework se hizo popular, fue por su sistema de grillas flexible. Este utiliza 12 columnas basadas en porcentajes, que facilitan la distribucion de los elementos hijos.
@@ -132,7 +134,7 @@
                 <li class="border | offset-4 col-5">offset-4</li>
             </ul>
         </section>
-        <section>
+        <section id="break" class="pt-5">
             <h2>Puntos de Quiebre (Breakpoints)</h2>
             <p>
                 Debido a que Bootstrap es un framework que se centra en el <strong>diseño responsive</strong>, es necesario definir los puntos de quiebre que nos permitiran modificar el diseño de nuestro sitio web segun el <em>ancho de la ventana del navegador (viewport).</em> Estos se implementan, al igual que el resto de clases, en la hoja de estilos y para utilizarlos simplemente debemos agregar las letras que corresponden al estilos que queremos aplicar.
@@ -192,9 +194,6 @@
                 Cuando necesitamos realizar algun cambio, como la aparicion de elementos o diferenciar tamaños, podemos implementar las clases, mencionadas anteriormente, que afectan a la mayoria de elementos. 
                 
                 Por ejemplo: en la tabla anterior, las celdas de la ultima columna tienen la clase <em>d-none</em>, pero si estas abriendo esto desde una pantalla que sea mayor a 576px aplica la clase <em>d-sm-block</em>, mostrando el contenido de la misma.
-            </p>
-            <p>
-
             </p>
         </section>
     </main>
