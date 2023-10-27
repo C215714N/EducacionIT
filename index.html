@@ -132,6 +132,71 @@
                 <li class="border | offset-4 col-5">offset-4</li>
             </ul>
         </section>
+        <section>
+            <h2>Puntos de Quiebre (Breakpoints)</h2>
+            <p>
+                Debido a que Bootstrap es un framework que se centra en el <strong>diseño responsive</strong>, es necesario definir los puntos de quiebre que nos permitiran modificar el diseño de nuestro sitio web segun el <em>ancho de la ventana del navegador (viewport).</em> Estos se implementan, al igual que el resto de clases, en la hoja de estilos y para utilizarlos simplemente debemos agregar las letras que corresponden al estilos que queremos aplicar.
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>class</th>
+                        <th>viewport</th>
+                        <th>max-width</th>
+                        <th class="d-none d-sm-block">devices</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>&lt;576px</td>
+                        <td>100%</td>
+                        <td class="d-none d-sm-block">smartwatch</td>
+                    </tr>
+                    <tr>
+                        <td>sm</td>
+                        <td>&GreaterEqual;576px</td>
+                        <td>540px</td>
+                        <td class="d-none d-sm-block">smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>&GreaterEqual;768px</td>
+                        <td>720px</td>
+                        <td class="d-none d-sm-block">tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>&GreaterEqual;992px</td>
+                        <td>960px</td>
+                        <td class="d-none d-sm-block">netbooks</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>&GreaterEqual;1200px</td>
+                        <td>1140px</td>
+                        <td class="d-none d-sm-block">Desktop</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>&GreaterEqual;1400px</td>
+                        <td>1320px</td>
+                        <td class="d-none d-sm-block">Smart Tv</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                En el caso de dispositivos pequeños, no es necesario utilizar alguna clase, ya que este framework esta pensado para diseñar nuestro proyecto a partir de la vista de dispositivo movil (mobile first). Por lo tanto, si no definimos algun punto de quiebre, el diseño se vera igual para todos los tamaños de ventana.
+            </p>
+            <p>
+                Cuando necesitamos realizar algun cambio, como la aparicion de elementos o diferenciar tamaños, podemos implementar las clases, mencionadas anteriormente, que afectan a la mayoria de elementos. 
+                
+                Por ejemplo: en la tabla anterior, las celdas de la ultima columna tienen la clase <em>d-none</em>, pero si estas abriendo esto desde una pantalla que sea mayor a 576px aplica la clase <em>d-sm-block</em>, mostrando el contenido de la misma.
+            </p>
+            <p>
+
+            </p>
+        </section>
     </main>
     <!-- Pie de Pagina -->
     <footer>
