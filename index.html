@@ -9,26 +9,30 @@
 </head>
 <body>
     <!-- Navegacion Principal -->
-    <nav>
-        <a href="#">BS</a>
-        <button></button>
-        <ul>
-            <li><a href="#intro">Inicio</a></li>
-            <li><a href="#start">Caracteristicas</a></li>
-            <li><a href="#grid">Sistema de Grillas</a></li>
-            <li><a href="#break">Puntos de quiebre</a></li>
-            <li><a href="#social">Enlaces Externos</a></li>
+    <nav class="navbar navbar-expand-md navbar-dark | bg-dark bg-gradient | sticky-top px-3">
+        <a class="navbar-brand" href="#">BS</a>
+        <button class="navbar-toggler navbar-toggler-icon | border-0"
+            data-bs-target=".navbar-nav"
+            data-bs-toggle="collapse">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse align-items-start">
+            <li><a class="nav-link" href="#intro">Inicio</a></li>
+            <li><a class="nav-link" href="#start">Caracteristicas</a></li>
+            <li><a class="nav-link" href="#grid">Sistema de Grillas</a></li>
+            <li><a class="nav-link" href="#break">Puntos de quiebre</a></li>
+            <li><a class="nav-link" href="#social">Enlaces Externos</a></li>
+            <li><a class="nav-link" href="#contact">Contacto</a></li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
-    <header class="p-5 text-center">
-        <h1>Bootstrap</h1>
-        <p>Responsive Web Design</p>
+    <header class="py-5 text-center">
+        <h1 class="display-1 fw-bold text-uppercase">Boot<wbr>strap</h1>
+        <p class="h1 fw-light fst-italic">Responsive Web Design</p>
     </header>
     <!-- Contenido Principal -->
     <main class="container">
         <section id="intro" class="pt-5">
-            <h2>Introduccion a Bootstrap</h2>
+            <h2 class="pt-3">Introduccion a Bootstrap</h2>
             <p>
                 Es un <strong>Framework de CSS</strong> desarrollado por el equipo de twitter, que facilita la implementacion de un <em>diseño web responsive</em>. 
                 
@@ -52,7 +56,7 @@
             </ul>
         </section>
         <section id="start" class="pt-5">
-            <h2>Caracteristicas Basicas</h2>
+            <h2 class="pt-3">Caracteristicas Basicas</h2>
             <p>
                 Como se comenta anteriormente, este framework utiliza la metodologia BEM que consiste en identificar los contenedores <strong>principales (Bloques)</strong> que definen a los componentes y a partir de ahi crear clases para cada <strong>Contenido (Elemento)</strong> que este relacionado con este. A la vez, tambien se pueden alterar los diseños predeterminados, definiendo una clase que indique el <em>elemento afectado y su valor alternativo (Modificador)</em>
             </p>
@@ -105,8 +109,8 @@
                 </ul>
             </div>
         </section>
-        <section id="grid" class="pt-5">
-            <h2>Sistema de grillas</h2>
+        <section id="grid"  class="pt-5">
+            <h2 class="pt-3">Sistema de grillas</h2>
             <p>
                 Una de las caracteristicas principales, por las cuales este framework se hizo popular, fue por su sistema de grillas flexible. Este utiliza 12 columnas basadas en porcentajes, que facilitan la distribucion de los elementos hijos.
                 Para implementarlo es necesario utilizar la clase <strong>row</strong> que aplica un display flex y la clase <strong>col-n</strong> en los elementos hijos para definir el ancho del elemento en la grilla.
@@ -135,7 +139,7 @@
             </ul>
         </section>
         <section id="break" class="pt-5">
-            <h2>Puntos de Quiebre (Breakpoints)</h2>
+            <h2 class="pt-3">Puntos de Quiebre (Breakpoints)</h2>
             <p>
                 Debido a que Bootstrap es un framework que se centra en el <strong>diseño responsive</strong>, es necesario definir los puntos de quiebre que nos permitiran modificar el diseño de nuestro sitio web segun el <em>ancho de la ventana del navegador (viewport).</em> Estos se implementan, al igual que el resto de clases, en la hoja de estilos y para utilizarlos simplemente debemos agregar las letras que corresponden al estilos que queremos aplicar.
             </p>
