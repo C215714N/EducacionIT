@@ -31,6 +31,7 @@ Cuando configuramos un dispositivo de internetworks por primera vez, debemos hac
 	* __configure terminal__: accede al modo de configuracion global
 3. Switch(config)# (modo configuracion global)
 	* __hostname `<name>`__: define el nombre del dispositivo
+	* __enable secret `<passwort>`__: establece una contraseña al modo privilegiado
 	* __banner motd `#message#`__: establece el mensaje de acceso necesario para cuestiones legales
 
 ## Configuracion de Acceso Remoto
