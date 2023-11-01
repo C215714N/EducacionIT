@@ -25,9 +25,43 @@
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
-    <header class="py-5 text-center">
-        <h1 class="display-1 fw-bold text-uppercase">Boot<wbr>strap</h1>
-        <p class="h1 fw-light fst-italic">Responsive Web Design</p>
+    <header id="header" class="carousel carousel-fade bg-light">
+        <!-- Galeria Introductoria -->
+        <ul class="carousel-inner | list-unstyled">
+            <li class="carousel-item active">
+                <img class="w-100" src="assets/bg/osx-mojave.jpg" alt="OS X Mojave">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100" src="assets/bg/osx-el-capitan.jpg" alt="OS X El Capitan">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100" src="assets/bg/osx-yosemite.jpg" alt="OS X Yosemite">
+            </li>
+            <li class="carousel-item">
+                <img class="w-100" src="assets/bg/osx-mojave-night.jpg" alt="OS X Mojave Night">
+            </li>
+        </ul>
+        <!-- Indicadores de Galeria -->
+        <div class="carousel-indicators">
+            <button data-bs-target="#header" data-bs-slide-to="0" class="active"></button>
+            <button data-bs-target="#header" data-bs-slide-to="1"></button>
+            <button data-bs-target="#header" data-bs-slide-to="2"></button>
+            <button data-bs-target="#header" data-bs-slide-to="3"></button>
+        </div>
+        <!-- Controles de la Galeria -->
+        <button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y" 
+            data-bs-target="#header"
+            data-bs-slide="prev">
+        </button>
+        <button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y" 
+            data-bs-target="#header"
+            data-bs-slide="next">
+        </button>
+        <!-- Encabezado Principal -->
+        <div class="position-absolute start-50 top-50 z-1 translate-middle | text-light">
+            <h1 class="display-1 fw-bold text-uppercase">Boot<wbr>strap</h1>
+            <p class="h1 fw-light fst-italic">Responsive Web Design</p>
+        </div>
     </header>
     <!-- Contenido Principal -->
     <main class="container">
