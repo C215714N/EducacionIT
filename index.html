@@ -245,11 +245,10 @@
         <!-- Mapa de Contacto -->
         
         <!-- Formulario de Contacto -->
-        <form id="contact" class="container | d-grid gap-2 p-4 | mx-auto col-md-8 col-xl-6  col-xxl-4 | was-validated">
+        <form id="contact" class="container | d-grid gap-2 p-4 | mx-auto col-md-8 col-xl-6 col-xxl-4">
             <h2>Dejanos tu Consulta</h2>
             <!-- Campo Nombre -->
-            <fieldset>
-                <label for="contact_name" class="d-none d-md-block">Ingrese su Nombre</label>
+            <fieldset class="form-floating">
                 <input class="form-control" 
                     id="contact_name"
                     type="text"
@@ -258,6 +257,7 @@
                     pattern="[A-Z a-z ñÑ]{3,}"
                     placeholder="Nombre: Cristian Racedo"
                     required>
+                <label for="contact_name">Ingrese su Nombre</label>
                 <p class="invalid-feedback | m-0">
                     Escriba un nombre con al menos 3 caracteres utilizando solamente letras
                 </p>
@@ -266,8 +266,7 @@
                 </p>
             </fieldset>
             <!-- Campo Correo -->
-            <fieldset>
-                <label for="contact_email">Ingrese su Correo</label>
+            <fieldset class="form-floating">
                 <input class="form-control"
                     id="contact_email"
                     name="email"
@@ -275,6 +274,7 @@
                     minlength="8"
                     placeholder="Correo: cristiandracedo@hotmail.com"
                     required>
+                <label for="contact_email">Ingrese su Correo</label>
                 <p class="invalid-feedback | m-0">
                     Utilice una direccion valida de al menos 8 caracteres cuya estructura sea <strong>usuario@servidor</strong>
                 </p>
@@ -283,8 +283,7 @@
                 </p>
             </fieldset>
             <!-- Campo Consulta -->
-            <fieldset>
-                <label for="contact_consult">Ingrese su Consulta</label>
+            <fieldset class="form-floating">
                 <textarea class="form-control"
                     id="contact_consult" 
                     name="consult"
@@ -292,6 +291,7 @@
                     maxlength="1500"
                     placeholder="Consulta: Buenas, necesito un presupuesto."
                     required></textarea>
+                <label for="contact_consult">Ingrese su Consulta</label>
                 <p class="invalid-feedback | m-0">
                     Escriba una consulta con al menos 30 caracteres
                 </p>
@@ -332,5 +332,6 @@
         <p>&copy;2023 Todos los derechos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
