@@ -14,11 +14,13 @@ Esto es una guia para los alumnos del capacitacion __ccna 1__ que cursan los dia
 * [Configuracion Acceso Remoto](#configuracion-de-acceso-remoto)
 * [Verificacion de Topologia](#verificacion-de-topologia)
 * [Enrutamiento Estatico](#enrutamiento-estatico)
+* [Operacion AND](docs/ip-and.md) 
 
 ## Ejercicios
 
 * [Sistema Binario](ejercicios/binary-decimal.md)
 * [Sistema Hexadecimal](ejercicios/hexadecimal.md)
+* [Subnetting](ejercicios/subnetting.md)
 
 ## Configuracion Inicial
 
