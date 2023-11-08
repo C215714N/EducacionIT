@@ -27,7 +27,11 @@ img{
 .xx-large{
     --size: var(--xx-large);
 }
-
+textarea.form-control,
+.form-floating > textarea.form-control{
+    height: unset;
+    min-height: calc(var(--size) / 2);
+}
 /* Sombreado de Textos */
 header {
     text-shadow: 
