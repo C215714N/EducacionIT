@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=3">
     <title>Responsive Web Design</title>
     <!-- Estilos BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
     <!-- Navegacion Principal -->
     <nav class="navbar navbar-dark | bg-dark bg-gradient | sticky-top px-3">
         <a class="navbar-brand" href="#">BS</a>
-        <button class="navbar-toggler navbar-toggler-icon | border-0"
+        <button class="navbar-toggler | bi-list fs-2"
             data-bs-target=".offcanvas"
             data-bs-toggle="offcanvas">
         </button>
-        <ul class="offcanvas navbar-nav bg-dark offcanvas-start | p-4">
-            <li><a class="nav-link" href="#intro">Inicio</a></li>
-            <li><a class="nav-link" href="#start">Caracteristicas</a></li>
-            <li><a class="nav-link" href="#grid">Sistema de Grillas</a></li>
-            <li><a class="nav-link" href="#break">Puntos de quiebre</a></li>
-            <li><a class="nav-link" href="#social">Enlaces Externos</a></li>
-            <li><a class="nav-link" href="#contact">Contacto</a></li>
+        <ul class="offcanvas navbar-nav bg-dark offcanvas-start | p-4 fs-5">
+            <li><a class="nav-link | bi-house" href="#intro"> Inicio</a></li>
+            <li><a class="nav-link | bi-list-columns-reverse" href="#start"> Caracteristicas</a></li>
+            <li><a class="nav-link | bi-table" href="#grid"> Sistema de Grillas</a></li>
+            <li><a class="nav-link | bi-display" href="#break"> Puntos de quiebre</a></li>
+            <li><a class="nav-link | bi-link-45deg" href="#social"> Enlaces Externos</a></li>
+            <li><a class="nav-link | bi-person-fill" href="#contact"> Contacto</a></li>
         </ul>
     </nav>
     <!-- Cabecera de Pagina -->
@@ -55,11 +53,11 @@
             <button data-bs-target="#header" data-bs-slide-to="3"></button>
         </div>
         <!-- Controles de la Galeria -->
-        <button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y" 
+        <button class="carousel-control-prev | top-50 translate-middle-y | bi-chevron-left fs-1" 
             data-bs-target="#header"
             data-bs-slide="prev">
         </button>
-        <button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y" 
+        <button class="carousel-control-next | top-50 translate-middle-y | bi-chevron-right fs-1" 
             data-bs-target="#header"
             data-bs-slide="next">
         </button>
@@ -307,36 +305,31 @@
             <button class="btn btn-success | text-uppercase">enviar</button>
         </form>
         <!-- Redes Sociales -->
-        <div id="social" class="container | d-flex flex-wrap-reverse justify-content-center gap-3 my-4 mx-auto rounded p-3 | position-relative bg-light opacity-75 | col-md-8 col-xl-6 col-xxl-4">
-            <a  class="btn btn-outline-primary" 
+        <div id="social" class="container | d-flex flex-wrap-reverse justify-content-center gap-3 my-4 mx-auto rounded p-3 | position-relative | col-md-8 col-xl-6 col-xxl-4">
+            <a  class="btn btn-primary | bi-facebook | fs-2 px-3" 
                 href="https://facebook.com" 
                 target="_blank">
-                Facebook
             </a>
-            <a  class="btn btn-outline-danger" 
+            <a  class="btn btn-danger | bi-instagram | fs-2 px-3" 
                 href="https://instagram.com" 
                 target="_blank">
-                Instagram
             </a>
-            <a  class="btn btn-outline-info" 
+            <a  class="btn btn-info | bi-twitter | fs-2 px-3" 
                 href="https://twitter.com" 
                 target="_blank">
-                Twitter
             </a>
-            <a  class="btn btn-outline-success" 
+            <a  class="btn btn-success | bi-whatsapp | fs-2 px-3" 
                 href="https://whatsapp.com" 
                 target="_blank">
-                Whatsapp
             </a>
-            <a  class="btn btn-outline-dark" 
+            <a  class="btn btn-dark | bi-github | fs-2 px-3" 
                 href="https://github.com/c215714n/EducacionIT/tree/rwd-xv10" 
                 target="_blank">
-                GitHub
             </a>
         </div>
         <p class="d-block position-relative | btn btn-dark | mx-auto rounded-0 mb-0 | bg-gradient">&copy;2023 Todos los derechos reservados</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="scripts/bootstrap.bundle.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
