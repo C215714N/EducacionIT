@@ -6,17 +6,18 @@
     <title>Responsive Web Design</title>
     <!-- Estilos BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
     <!-- Navegacion Principal -->
-    <nav class="navbar navbar-expand-md navbar-dark | bg-dark bg-gradient | sticky-top px-3">
+    <nav class="navbar navbar-dark | bg-dark bg-gradient | sticky-top px-3">
         <a class="navbar-brand" href="#">BS</a>
         <button class="navbar-toggler navbar-toggler-icon | border-0"
-            data-bs-target=".navbar-nav"
-            data-bs-toggle="collapse">
+            data-bs-target=".offcanvas"
+            data-bs-toggle="offcanvas">
         </button>
-        <ul class="navbar-nav navbar-collapse collapse align-items-start">
+        <ul class="offcanvas navbar-nav bg-dark offcanvas-start | p-4">
             <li><a class="nav-link" href="#intro">Inicio</a></li>
             <li><a class="nav-link" href="#start">Caracteristicas</a></li>
             <li><a class="nav-link" href="#grid">Sistema de Grillas</a></li>
@@ -241,7 +242,7 @@
         </section>
     </main>
     <!-- Pie de Pagina -->
-    <footer class="position-relative | bg-secondary bg-gradient pt-5 pb-3">
+    <footer class="position-relative | bg-secondary bg-gradient pt-5">
         <!-- Mapa de Contacto -->
         <iframe class="w-100 h-100 | position-absolute top-0 start-0 | opacity-50"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111975203!2d-58.37851102511433!3d-34.60238855742649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1699450476148!5m2!1ses-419!2sar" 
@@ -333,7 +334,7 @@
                 GitHub
             </a>
         </div>
-        <p class="d-block position-relative | btn btn-dark | mx-auto rounded-0 bg-gradient">&copy;2023 Todos los derechos reservados</p>
+        <p class="d-block position-relative | btn btn-dark | mx-auto rounded-0 mb-0 | bg-gradient">&copy;2023 Todos los derechos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="scripts/index.js"></script>
