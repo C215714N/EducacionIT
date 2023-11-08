@@ -1,8 +1,34 @@
-.carousel img{
-    max-height: 540px;
-    object-fit: cover;
+/* Declaraciones */
+:root{
+    --small: 240px;
+    --medium: 360px;
+    --large: 480px;
+    --x-large: 600px;
+    --xx-large: 720px;
 }
 
+/* Altura de Imagenes */
+img{
+    max-height: min(calc(100vh - 3.5rem), var(--size));
+    object-fit: cover;
+}
+.small{
+    --size: var(--small);
+}
+.medium{
+    --size: var(--medium);
+}
+.large{
+    --size: var(--large);
+}
+.x-large{
+    --size: var(--x-large);
+}
+.xx-large{
+    --size: var(--xx-large);
+}
+
+/* Sombreado de Textos */
 header {
     text-shadow: 
         0 0 .25rem,

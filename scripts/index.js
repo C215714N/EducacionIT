@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 // Declaraciones
 const formControls = document.querySelectorAll('.form-control');
 
@@ -13,6 +14,8 @@ const handleValidation = (target, a, b) =>
     changes({classes:[b,a], target});
 
 // Eventos
-formControls.forEach(control => {
-    control.addEventListener('input', (e) => handleValidation(e.target, "is-invalid", "is-valid"))
-} )
+    formControls.forEach(control => {
+        control.addEventListener('input', (e) => handleValidation(e.target, "is-invalid", "is-valid"))
+    } )
+
+})
