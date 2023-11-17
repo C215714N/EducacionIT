@@ -40,3 +40,12 @@ header {
         0 0 .25rem,
         0 0 .5rem #333;
 }
+main h2{
+    border-radius: .25rem;
+    padding: 1rem;
+    color: var(--bs-light);
+    background-color: var(--bs-dark);
+}
+main h3{
+    border-bottom: 2px solid;
+}
