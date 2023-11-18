@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            margin: 0;
+        }
+        .blue{
+            color: #36c;
+        }
+        .red{
+            color: #c33;
+        }
+        .yellow{
+            color: #ea3;
+        }
+        .green{
+            color: #284
+        }
+        .big{
+            font-size: 1.5rem;
+        }
+        header{
+            text-align: center;
+        }
+        form{
+            display: grid;
+            gap: 1rem;
+            max-width: 420px;
+            margin: 1rem auto;
+            border-radius: .5rem;
+            padding: 1rem 2rem;
+            box-shadow: 0 0 .5rem #999;
+        }
+        h1{
+            font-size: 1rem;
+        }
+        a{
+            color: #36c;
+            text-decoration: none;
+        }
+        input{
+            width: 100%;
+            padding: .5rem;
+            outline: none;
+            border-radius: .25rem;
+            border-style: solid;
+            border-color: #999;
+        }
+        input:focus{
+            border-color: #36c;
+        }
+        p{
+            font-size: .8rem;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn{
+            padding: 1rem;
+            border-radius: .5rem;
+            border: none;
+            background-color: transparent;
+        }
+        .btn-blue{
+            color: #eee;
+            background-color: #36c;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <header>
+            <h1>
+                <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+            </h1>
+            <p>
+                <span class="big">Acceder</span> 
+                <br>
+                <span>Ir a Gmail</span>
+            </p>
+        </header>
+        <input type="text">
+        <a href="#">¿Olvidaste el correo electrónico?</a>
+        <p>¿Esta no es tu computadora? Usa el modo de invitado para navegar de forma privada. <a href="#">Más información</a></p>
+        <div class="buttons">
+            <button class="btn">Crear Cuenta</button>
+            <button class="btn btn-blue">Siguiente</button>
+        </div>
+    </form>
+</body>
+</html>
