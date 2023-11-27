@@ -58,4 +58,3 @@ Cuando trabajamos en una red previamente configurada y no disponemos de document
 3. switch(config-if)# __(verificacion de vecinos)__
 	* __show cdp neighbors__: Muestra los dispositivos identificados mediante CDP
 	* __show lldp neighbors__: Muestra los dispositivos identificados meidante LLDP
-
