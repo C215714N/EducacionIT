@@ -1,0 +1,119 @@
+hostname ML-DIST-01
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet1/0/1
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/4
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/5
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/6
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/9
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/10
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/11
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/12
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/13
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/14
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/15
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/16
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/17
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/18
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/19
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/20
+ switchport trunk allowed vlan 11,21,31,41,51,61
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/22
+ switchport access vlan 31
+!
+interface GigabitEthernet1/0/23
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/24
+ switchport access vlan 11
+!
+interface Vlan11
+ mac-address 000b.beee.5b01
+ ip address 10.0.1.2 255.255.255.0
+!
+interface Vlan21
+ mac-address 000b.beee.5b02
+ ip address 10.0.2.2 255.255.255.0
+!
+interface Vlan31
+ mac-address 000b.beee.5b03
+ ip address 10.0.3.2 255.255.255.0
+!
+interface Vlan41
+ mac-address 000b.beee.5b04
+ ip address 10.0.4.2 255.255.255.0
+!
+interface Vlan51
+ mac-address 000b.beee.5b05
+ ip address 10.0.5.2 255.255.255.0
+!
+interface Vlan61
+ mac-address 000b.beee.5b06
+ ip address 10.0.6.2 255.255.255.0
+!
+end
+
