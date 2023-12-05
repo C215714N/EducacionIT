@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'century gothic';
+        }
+        .blue{
+            color: #36c;
+        }
+        .red{
+            color: #c33;
+        }
+        .yellow{
+            color: #ec3;
+        }
+        .green{
+            color: #3c6
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .5rem;
+        }
+        nav.flex{
+            justify-content: flex-end;
+            padding: .5rem;
+        }
+        .form-control{
+            max-width: 540px;
+            width: 100%;
+            border: 1px solid #999;
+            border-radius: 1rem;
+            padding: .5rem;
+        }
+        h1{
+            text-align:center;
+        }
+        form button{
+            border-radius: .25rem;
+            background-color: #eee;
+            border: none;
+            padding: .5rem;
+        }
+        form button:hover{
+            box-shadow: 0 0 .25rem #999;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex">
+        <a href="">Gmail</a>
+        <a href="">Imágenes</a>
+    </nav>
+    <h1>
+        <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+    </h1>
+    <form class="flex">
+        <input class="form-control" type="text">
+        <button>Buscar con Google</button>
+        <button>Voy a tener Suerte</button>
+    </form>
+</body>
+</html>
