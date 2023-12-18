@@ -1,0 +1,104 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R-DHCPv6
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+ipv6 dhcp pool DHCPv6-STATELESS
+ dns-server 2800:3F0:8888:8844::1
+ domain-name DHCP-STATELESS
+!
+ipv6 dhcp pool DHCPv6-STATEFUL
+ prefix-delegation pool DHCPv6-STATEFUL lifetime 2592000 604800
+ address prefix 2000:db6:acad:2::/112 lifetime 172800 86400
+ dns-server 2800:3F0:8888:8844::1
+ domain-name DHCP-STATEFUL
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FTX1524BCU6-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2000:DB6:ACAD::1/64
+ ipv6 enable
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2000:DB6:ACAD:1::1/64
+ ipv6 nd other-config-flag
+ ipv6 dhcp server DHCPv6-STATELESS
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2000:DB6:ACAD:2::1/112
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 dhcp server DHCPv6-STATEFUL
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
