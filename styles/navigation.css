@@ -1,0 +1,22 @@
+/* Small Devices (Mobile) */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.menu{
+    width: 100%;
+}
+/* Medium Devices (Tablets) */
+@media screen and (min-width: 768px){
+    nav .icon-toggle{
+        display: none;
+    }
+    .menu{
+        width: auto;
+        display: flex;
+        gap: .5rem;
+    }
+}
