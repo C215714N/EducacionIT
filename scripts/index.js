@@ -1,5 +1,15 @@
-// Declaraciones
+//#Declaraciones
+const d = document;
+const menuBtn = d.querySelector('nav .icon-toggle');
+const menuLst = d.querySelector('nav .menu');
 
-// Funciones
+//#Declaraciones
+//#Funciones
+function toggle(element, className="active"){
+    element.classList.toggle(className)
+}
 
-// Eventos
+//#Funciones
+//#Eventos
+menuBtn.onclick = () => toggle(menuLst)
+//#Eventos
