@@ -5,9 +5,34 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: .5rem;
+    background-color: #3a9;
+    background-image: linear-gradient(
+        hsl(200, 50%, 60%),
+        hsl(270, 50%, 30%)
+    )
+    /* Color HTML   RGB             HEX     HSL
+        red         (255,0,0)       #F00    (0, 100%, 50%)
+        green       (0,255,0)       #0F0    (120, 100%, 50%)
+        blue        (0,0,255)       #00F    (240, 100%, 50%)
+        cyan        (0,255,255)     #0FF    (180, 100%, 50%)
+        magenta     (255,0,255)     #F0F    (300, 100%, 50%)
+        yellow      (255,255,0)     #FF0    (60, 100%, 50%)
+        black       (0,0,0)         #000    (0, 0%, 0%)
+        white       (255,255,255)   #FFF    (0, 0%, 100%)
+        grey        (136,136,136)   #888    (0, 0%, 50%)
+    
+    */
+}
+nav a{
+    color: #eee;
 }
 .menu{
     width: 100%;
+    max-height: 0;
+    overflow: hidden;
+}
+.menu.active{
+    max-height: 100vh;
 }
 /* Medium Devices (Tablets) */
 @media screen and (min-width: 768px){
@@ -16,6 +41,7 @@ nav{
     }
     .menu{
         width: auto;
+        max-height: 100vh;
         display: flex;
         gap: .5rem;
     }
