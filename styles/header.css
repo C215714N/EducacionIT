@@ -16,6 +16,24 @@
         )
 
     */
+    background-image: 
+        radial-gradient(
+            circle at top right,
+            hsla(20, 50%, 60%, .7),
+            hsla(260, 50%, 40%, .7)
+        ),
+        url('../assets/icon/cr.svg'),
+        url('../assets/bg/osx-mountain-lion.jpg');
+    background-position: center;
+    background-size: 
+        contain,
+        clamp(5rem, 50%, 240px), /*(min,size,max)*/
+        cover;
+    background-repeat: no-repeat;
+    background-attachment: 
+        scroll,
+        scroll,
+        fixed;
 }
 .header{
     padding: .5rem;
