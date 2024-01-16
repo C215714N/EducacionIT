@@ -113,7 +113,52 @@
         <!-- Mapa de Contacto -->
 
         <!-- Formulario de Contacto -->
-
+        <form action="" id="contact">
+            <h2>Consultas</h2>
+            <label for="contactName">Ingrese su Nombre Completo</label>
+            <input 
+                id="contactName" 
+                name="name" 
+                type="text"
+                maxlength="100"
+                pattern="[A-Z a-z]{6,100}"
+                placeholder="Nombre: Cristian Racedo"
+                required>
+            <p class="validation">
+                Coloque entre 6 y 100 caracteres utilizando solamente letras.
+            </p>
+            <label for="contactPhone">Ingrese su Telefono</label>
+            <input 
+                id="contactPhone" 
+                name="phone" 
+                type="tel"
+                pattern="\d{6,20}|([\(]\d{2,6}[\)](\d{2,6}[\-]){1,3}\d{4})"
+                placeholder="Telefono: (5411)0303-4567"
+                required>
+            <p class="validation">
+                Utilice solamente numeros o el formato que se muestra en el ejemplo: (5411)0303-4567
+            </p>
+            <label for="contactEmail">Ingrese su correo</label>
+            <input 
+                id="contactEmail" 
+                name="email" 
+                type="email"
+                minlength="8"
+                placeholder="Correo: CristianDRacedo@hotmail.com"
+                required>
+            <p class="validation">
+                Escriba una direccion de al menos 8 caracteres respetando el formato "usuario@servidor".
+            </p>
+            <label for="contactConsult">Ingrese su Consulta</label>
+            <textarea 
+                name="consult" 
+                id="contactConsult" 
+                minlength="30" 
+                maxlength="1500"
+                placeholder="Consulta: Buenas, mi consulta es..."
+                required="required"></textarea>
+            <button class="btn">enviar</button>
+        </form>
         <!-- Redes Sociales -->
         <div class="social">
             <a class="icon-facebook" 
