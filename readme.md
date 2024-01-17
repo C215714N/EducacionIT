@@ -5,6 +5,7 @@ Esto es una guia para los alumnos de la capacitacion __Maquetado con SASS__ que 
 ## Tabla de Contenidos
 
 * [Estructura Semántica](#estructura-semántica)
+* [Jerarquia CSS](#jerarquia-css)
 * [Background](#background)
 
 ## Estructura Semántica
@@ -21,6 +22,17 @@ HTML5 incorpora nuevos elementos que permiten a los motores de busqueda interpre
 | __aside__ | Contenido tangencial que se relaciona indirectamente con sus elementos hermanos, se utiliza para publicidad o sugerencias de contenido |
 | __footer__ | Pie de Pagina o Contenido complementario de la pagina, se utiliza para mostrar informacion de contacto, redes sociales, mapa del sitio y derechos de autor |
 
+## Jerarquia CSS
+
+Cada una de las reglas aplicadas con CSS posee una __prioridad segun el tipo de selector utilizado__, es fundamental que las mismas esten _organizadas para facilitar la comprension del diseño_ y no superponer o repetir reglas de forma innecesaria.
+
+| Selector | Descripcion  | Prioridad | Ejemplo |
+|--|--|--:|--|
+| __tag__ | Selector que afecta a todas la etiquetas del mismo nombre, cuya prioridad es la mas baja | 001 | __header__{ _color: #F00;_ } |
+| __class__ | Selector que afecta a todos los elementos que pertenezcan a la misma clase | 010 | __.header__{ _color: #0F0;_ } |
+| __id__ | Selector que afecta a los elemento cuyo id sea el indicado (atributo unico) | 100 | __#header__{ _color: #00F;_ } | 
+| __!important__ | Regla que aumenta la prioridad del selector para el atributo especidicado | +1000 | h1{ ___color: #F0F_ !important__; } |
+| __inline style__ | Valor correspondiente al _estilo unico_ de la etiqueta html, cuya prioridad es la mas alta | +10000 | &lt;h1 __style="_color:#0FF_"__> |
 
 ## Background
 
