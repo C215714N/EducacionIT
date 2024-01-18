@@ -1,0 +1,16 @@
+.grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,320px), 1fr));
+    /* 
+        Repeat(cantidad, tamaño): repite un valor segun la cantidad de veces indicadas.
+        AUTO-FILL: rellena el espacio con la cantidad de columnas necesarias
+        AUTO-FIT: ajusta las columnas para que ocupen el espacio disponible
+        minmax(MIN, MAX) Indica los limites de tamaño de las celdas
+    */
+}
+.grid img{
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    object-fit: cover;
+}
