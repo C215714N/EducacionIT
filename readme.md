@@ -9,7 +9,6 @@ Esto es una guia para los alumnos de la capacitacion __Maquetado con SASS__ que 
 * [Tipos de Unidades](#tipos-de-unidades)
 * [Background](#background)
 * [Flexbox](#flexbox)
-* [CSS Grid](#css-grid)
 
 ## Estructura Semántica
 
@@ -59,3 +58,37 @@ Esta propiedad se utiliza para definir los valores individuales del fondo de una
 | __background-position__ | Propiedad que define donde inicia la imagen, admite las palabras clave _top center bottom left y right_ |
 | __background-size__ | Propiedad que especifica el tamaño de las imágenes, admite valores y palabras clave como _cover y contain_ |
 | __background-repeat__ | Propiedad que define como se repiten los fondos, puede ser  sobre el _eje horizontal, vertical, ambos o ninguno_ |
+
+## Flexbox
+
+__El Módulo de Caja Flexible__ fue diseñado como un _modelo unidimensional de layout_, y como un método que pueda ayudar a _distribuir el espacio entre los ítems de una interfaz_ y mejorar las capacidades de alineación. Para crear un contenedor flex, establecemos la propiedad display del contenedor como __flex__ o __inline-flex__. Tan pronto como hacemos esto, __los hijos directos de este se vuelven ítems flex__.
+
+### Propiedades Contenedor Flex
+
+| Propiedad |Descripcion|
+|--|--|
+| __justify-Content__ | propiedad usada para alinear los ítems en _el eje principal_. El valor inicial es __flex-start__ que alineará los ítems al inicio del margen del contenedor |
+| __align-items__ | propiedad que alinea los ítems sobre el _eje cruzado_. El valor inicial es __stretch__ y haciendo que los ítems ajusten sus dimensiones para llenar el contenedor |
+| __flex-direction__ | propiedad que permite cambiar la dirección de los ítems. El valor __row-reverse__ mantiene el despliegue a lo largo de la fila, pero el inicio y final quedarán invertido |
+| __flex-wrap__ | propiedad especifica si los elementos son obligados a permanecer en una misma línea o pueden fluir en varias líneas, permite controlar la dirección de apilamiento |
+
+### Valores de Alineacion y Distribucion
+
+| Valor | Descripcion |
+|--|--|
+| __flex-start__ | ubica los elementos al inico del _contendor flex_ |
+| __center__ | ubica los elementos en el centro del _contenedor flex_ |
+| __flex-end__ | ubica los elementos al final del _contenedor flex_ |
+| __space-around__ | separa los elementos sumando las distancias intermedias sobre el _eje principal_ |
+| __space-between__ | separa los elementos ubicando al primero y al ultimo a los extremos del _eje principal_ |
+| __space-evenly__ | separa los elementos de manera totalmente equitativa sobre el _eje principal_ |
+| __baseline__ | alinea las etiquetas sobre el _eje cruzado_ en funcion del tamaño de la tipografia |
+
+### Propiedades Items Flex
+
+| Propiedad | Descripcion |
+|--|--|
+| __flex-grow__ | propiedad que determina cuanto espacio restante del contenedor flex debe ocupar un item |
+| __flex-shrink__ | propiedad que determina cuanto se encogerán los items para rellenar el contenedor flex |
+| __flex-basis__ | propiedad que determina el tamaño de una caja de contenidos dentro del contenedor flex |
+| __align-self__ | propiedad que alinea los items flexibles reemplazando el valor de align-items |
