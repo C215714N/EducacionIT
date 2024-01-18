@@ -37,7 +37,8 @@
     text-shadow: 0 0 .5rem #333; /*-x+ -y+ blur color*/
 }
 .header{
-    padding: .5rem;
+    margin: -1rem -1rem .5rem; /* top right bottom left */
+    padding: 1rem;
     color: #eee;
     background-color: #448;
 }
