@@ -1,0 +1,19 @@
+#promos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+#promos > header{
+    width: calc(100% + 2rem);
+}
+#promos img{
+    width: 100%;
+}
+#promos article{
+    flex: 1 0 min(100%, 320px);
+    /* 
+        FLEX-GROW: indica si un elemento puede crecer para ocupar el espacio sobrante dentro del contenedor.
+        FLEX-SHRINK: indica si un elemento puede reducir su tamaño para que entre otro dentro de la misma fila.
+        FLEX-BASIS: indica el tamaño inicial del elemento dentro del contenedor flex.
+    */
+}
