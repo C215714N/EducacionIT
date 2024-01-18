@@ -5,3 +5,46 @@
     margin: auto;
     padding: 1.5rem;
 }
+label{
+    margin: .5rem .25rem .25rem;
+}
+input,
+textarea,
+select{
+    outline: none;
+    border: .1rem solid #333;
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+.validation{
+    max-height: 0;
+    overflow: hidden;
+    color: #666;
+}
+/* Validacion */
+form :focus{
+    box-shadow: 0 0 .5rem #333;
+}
+form :focus + .validation{
+    max-height: 600px;
+    padding: .5rem;
+}
+form :not(button):valid{
+    border-color: #3c6;
+    box-shadow: 0 0 .5rem #3c6;
+}
+form :valid + .validation{
+    color: #284;
+}
+form :not(:placeholder-shown):invalid{
+    border-color: #c33;
+    box-shadow: 0 0 .5rem #c33;
+}
+form :not(:placeholder-shown):invalid + .validation{
+    color: #c33;
+}
+/* 
+    :pseudoclase = instancia o caracteristica de un selector
+    ::pseudoelementos = parte o elemento dentro de una etiqueta
+*/
