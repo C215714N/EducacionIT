@@ -17,6 +17,10 @@ select{
     padding: .5rem 1rem;
     font-size: 1rem;
 }
+textarea{
+    min-height: 5rem;
+    resize: vertical;
+}
 .validation{
     max-height: 0;
     overflow: hidden;
