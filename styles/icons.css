@@ -1,0 +1,16 @@
+.btn,
+.btn[class*="icon-"]{
+    padding: .5rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    border-radius: .25rem;
+    color: #448;
+    background-color: #eee;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn:hover,
+.btn[class*="icon-"]:hover{
+    color: #eee;
+    background-color: #448;
+}
