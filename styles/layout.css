@@ -1,0 +1,39 @@
+body{
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer'
+        'nav';
+}
+#header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+/* Small Devices (Tablets) */
+@media screen and (min-width: 576px){
+    body{
+        grid-template-areas: 
+            'nav header header'
+            'nav main main'
+            'nav footer footer';
+    }
+}
+/* Medium Devices (Tablets) */
+@media screen and (min-width: 768px){
+    body{
+        grid-template-areas: 
+            'nav'
+            'header'
+            'main'
+            'footer';
+    }
+}
