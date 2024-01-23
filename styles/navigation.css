@@ -23,12 +23,14 @@ nav{
     
     */
     position: sticky;
+    top:0;
+    bottom:0;
 }
 nav a{
     display: block;
     position: relative;
     left: 0;
-    padding: .5rem 1rem;
+    padding: .5rem;
     color: #eee;
     opacity: .7;
     transition: all .5s ease;
@@ -48,14 +50,26 @@ nav a:hover{
 .menu.active{
     max-height: 100vh;
 }
-/* Medium Devices (Tablets) */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 576px){
+    nav{
+        max-height: 100vh;
+    }
     nav .icon-toggle{
         display: none;
     }
     .menu{
-        width: auto;
         max-height: 100vh;
+        margin-bottom: auto;
+    }
+    nav > a{
+        margin-top: auto;
+    }
+}
+/* Medium Devices (Tablets) */
+@media screen and (min-width: 768px){
+    
+    .menu{
+        width: auto;
         display: flex;
         gap: .5rem;
     }
