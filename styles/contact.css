@@ -3,7 +3,13 @@
     flex-direction: column;
     max-width: 540px;
     margin: auto;
+    border-radius: .25rem;
     padding: 1.5rem;
+    background: radial-gradient(
+        circle at top right, 
+        #eee,
+        #ddd
+    );
 }
 label{
     margin: .5rem .25rem .25rem;
