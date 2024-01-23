@@ -1,7 +1,7 @@
 /* Small Devices (Mobile) */
 nav{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
     padding: .5rem;
@@ -9,7 +9,7 @@ nav{
     background-image: linear-gradient(
         hsl(200, 50%, 60%),
         hsl(270, 50%, 30%)
-    )
+    );
     /* Color HTML   RGB             HEX     HSL
         red         (255,0,0)       #F00    (0, 100%, 50%)
         green       (0,255,0)       #0F0    (120, 100%, 50%)
@@ -22,14 +22,28 @@ nav{
         grey        (136,136,136)   #888    (0, 0%, 50%)
     
     */
+    position: sticky;
 }
 nav a{
+    display: block;
+    position: relative;
+    left: 0;
+    padding: .5rem 1rem;
     color: #eee;
+    opacity: .7;
+    transition: all .5s ease;
+}
+nav a:hover{
+    left: 1rem;
+    opacity: 1;
+    text-shadow: 0 0 .25rem #eee;
 }
 .menu{
     width: 100%;
     max-height: 0;
     overflow: hidden;
+    transition: all .5s linear;
+    /* property duration timing delay */
 }
 .menu.active{
     max-height: 100vh;
