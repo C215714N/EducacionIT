@@ -9,6 +9,7 @@ Esto es una guia para los alumnos de la capacitacion __Maquetado con SASS__ que 
 * [Tipos de Unidades](#tipos-de-unidades)
 * [Background](#background)
 * [Flexbox](#flexbox)
+* [CSS Grid](#css-grid)
 
 ## Estructura Semántica
 
@@ -92,3 +93,24 @@ __El Módulo de Caja Flexible__ fue diseñado como un _modelo unidimensional de 
 | __flex-shrink__ | propiedad que determina cuanto se encogerán los items para rellenar el contenedor flex |
 | __flex-basis__ | propiedad que determina el tamaño de una caja de contenidos dentro del contenedor flex |
 | __align-self__ | propiedad que alinea los items flexibles reemplazando el valor de align-items |
+
+## CSS Grid
+
+__CSS Grid layout__ contiene funciones de diseño dirigidas a los _desarrolladores de aplicaciones web_ y se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir __dividir una página en áreas o regiones principales__, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
+
+### Propiedades contenedor Grid
+
+| Propiedad | Descripcion  |
+|--|--|
+| __grid-template-columns__ | Propiedad que especifica el número y ancho de las columnas en un diseño de cuadrícula, en una lista separada por espacios |
+| __grid-template-rows__ | Propiedad que especifica el número y las alturas de las filas en un diseño de cuadrícula, donde cada valor especifica la altura de las filas |
+| __grid-template-areas__ | Propiedad que especifica áreas dentro del diseño de cuadrícula, donde cada área está definida por apóstrofes |
+| __grid-gap / gap__ | Propiedad que especifica el distanciamiento entre las celdas (calles) indicando el valor para las filas y columnas respecticamente |
+
+### Propiedades Item Grid
+
+| Propiedad | Descripcion |
+|--|--|
+| __grid-column__ | Propiedad que especifica el tamaño y la ubicación de un elemento de la cuadrícula dentro de una columna, especificando el borde de inicio y fin en línea de su cuadrícula |
+| __grid-row__ | Propiedad que especifica el tamaño y la ubicación de un elemento de la cuadrícula dentro de una fila, especificando el borde de inicio y fin en línea de su cuadrícula, por defecto es automatico |
+| __grid-area__ | Propiedad que especifica el tamaño y la ubicación de un elemento, especificando así los bordes de las filas y columnas a la que pertenece o el repectivo nombre de su area |
