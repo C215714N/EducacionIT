@@ -10,6 +10,7 @@ Esto es una guia para los alumnos de la capacitacion __Maquetado con SASS__ que 
 * [Background](#background)
 * [Flexbox](#flexbox)
 * [CSS Grid](#css-grid)
+* [Position](#position)
 
 ## Estructura Semántica
 
@@ -114,3 +115,15 @@ __CSS Grid layout__ contiene funciones de diseño dirigidas a los _desarrollador
 | __grid-column__ | Propiedad que especifica el tamaño y la ubicación de un elemento de la cuadrícula dentro de una columna, especificando el borde de inicio y fin en línea de su cuadrícula |
 | __grid-row__ | Propiedad que especifica el tamaño y la ubicación de un elemento de la cuadrícula dentro de una fila, especificando el borde de inicio y fin en línea de su cuadrícula, por defecto es automatico |
 | __grid-area__ | Propiedad que especifica el tamaño y la ubicación de un elemento, especificando así los bordes de las filas y columnas a la que pertenece o el repectivo nombre de su area |
+
+## Position
+
+Propiedad que especifica cómo un elemento es ubicado en el documento, se puede utilizar para modificar la posición donde aparecerá y las propiedades __top, right, bottom, y left__ determinan la ubicación final del mismo.
+
+| Valor | Descripcion |
+|--|--|
+| __static__ | El elemento es posicionado de acuerdo al flujo normal del documento, ocupando su espacio predeterminado. Es el valor predeterminado |
+| __relative__ | El elemento es posicionado de acuerdo al flujo del documento, es desplazado en relación a sí mismo. No afecta la posición de ningún otro elemento |
+| __absolute__ | El elemento es removido del flujo normal del documento y es posicionado en relacion a su ancestro posicionado más cercano |
+| __fixed__ | El elemento es removido del flujo normal del documento y es posicionado en relación al bloque contenedor inicial establecido por el viewport |
+| __sticky__ | El elemento es posicionado de acuerdo al flujo del documento, luego es desplazado con relación a su ancestro que se desplace más cercano y su bloque contenedor |
