@@ -23,5 +23,6 @@ button.map{
 .active + button.map{
     position: fixed;
     z-index: 2;
+    opacity: .95;
     /* El ELEMENTO se ubica con respecto a la ventana y al igual que absolute, deja de formar parte del flujo de la pagina, es decir que no forma parte del contenido de la misma. */
 }
