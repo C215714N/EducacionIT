@@ -12,11 +12,16 @@
     background-position: center;
     background-size: 2.5rem;
     background-repeat: no-repeat;
+    transition: all .25s ease-in;
 }
 .social [class*="icon-"]:hover{
     background-color: #eee;
     background-size: 3.25rem;
     box-shadow: 0 .5rem .5rem #333;
+    transform: 
+        translate(0,-.75rem)
+        rotate(720deg)
+    ;
 }
 .social :last-child{
     position: fixed;
