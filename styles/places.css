@@ -3,12 +3,6 @@
     gap: .25rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%,320px), 1fr));
     padding: 2rem 0;
-    /* 
-        Repeat(cantidad, tamaño): repite un valor segun la cantidad de veces indicadas.
-        AUTO-FILL: rellena el espacio con la cantidad de columnas necesarias
-        AUTO-FIT: ajusta las columnas para que ocupen el espacio disponible
-        minmax(MIN, MAX) Indica los limites de tamaño de las celdas
-    */
 }
 .grid article{
     border-radius: .5rem;
@@ -27,7 +21,6 @@
     transform: scale(1.2);
     z-index: 1;
 }
-
 .grid img{
     width: 100%;
     height: calc(100% - 1.5rem);

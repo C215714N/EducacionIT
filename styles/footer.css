@@ -10,7 +10,6 @@
 }
 .map{
     position: absolute;
-    /* El ELEMENTO se ubica con respecto a su ancestro mas cercano cuya posicion no sea Static y lo utiliza como referente  */
 }
 iframe.map{
     z-index: -1;
@@ -24,5 +23,4 @@ button.map{
     position: fixed;
     z-index: 2;
     opacity: .95;
-    /* El ELEMENTO se ubica con respecto a la ventana y al igual que absolute, deja de formar parte del flujo de la pagina, es decir que no forma parte del contenido de la misma. */
 }
