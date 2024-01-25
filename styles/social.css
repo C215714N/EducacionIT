@@ -18,6 +18,20 @@
     background-size: 3.25rem;
     box-shadow: 0 .5rem .5rem #333;
 }
+.social :last-child{
+    position: fixed;
+    bottom: 4.5rem;
+    right: .5rem;
+    opacity: .5;
+}
+.social :last-child:hover{
+    opacity: .8;
+}
+@media screen and (min-width: 768px){
+    .social :last-child{
+        bottom: .5rem;
+    }
+}
 /* Iconos Redes Sociales */
 .icon-facebook{
     background-image: url('../assets/icon/facebook.svg');
