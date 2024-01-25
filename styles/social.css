@@ -5,7 +5,7 @@
     gap: .5rem;
     padding: 1rem;
 }
-[class*="icon-"]{
+.social [class*="icon-"]{
     border-radius: .5rem;
     padding: 2rem;
     background-color: #ccc;
@@ -13,7 +13,7 @@
     background-size: 2.5rem;
     background-repeat: no-repeat;
 }
-[class*="icon-"]:hover{
+.social [class*="icon-"]:hover{
     background-color: #eee;
     background-size: 3.25rem;
     box-shadow: 0 .5rem .5rem #333;

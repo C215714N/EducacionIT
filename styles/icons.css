@@ -1,5 +1,4 @@
-.btn,
-.btn[class*="icon-"]{
+.btn{
     padding: .5rem;
     min-width: 2rem;
     min-height: 2rem;
@@ -9,8 +8,58 @@
     text-transform: uppercase;
     font-weight: bold;
 }
-.btn:hover,
-.btn[class*="icon-"]:hover{
+.btn:hover{
     color: #eee;
     background-color: #448;
+}
+/* Comportamiento General */
+[class*="icon-"]::before{
+    font-size: 1.5rem;
+    filter: grayscale(100%)
+}
+[class*="icon-"]:hover::before{
+    filter: grayscale(60%)
+}
+/* Iconos personalizados */
+.icon-toggle::before{
+    content: "\2630"
+}
+.icon-close::before{
+    content: "❌"
+}
+.icon-max::before{
+    content: "➕"
+}
+.icon-min::before{
+    content: "➖"
+}
+.icon-home::before{
+    content: "🏠";
+}
+.icon-about::before{
+    content: "📰";
+}
+.icon-places::before{
+    content: "🏞️";
+}
+.icon-promos::before{
+    content: "💸"
+}
+.icon-contact::before{
+    content: "🤵";
+}
+.icon-gallery::before{
+    content: "🖼️";
+}
+.icon-prev::before{
+    content: "◀️";
+}
+.icon-next::before{
+    content: "▶️";
+}
+.icon-products::before{
+    content: "📦";
+}
+.icon-services::before{
+    content: "🛻";
 }
