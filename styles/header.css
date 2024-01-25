@@ -2,20 +2,6 @@
     padding: min(20%, 240px) 1rem;
     text-align: center;
     font-size: min(3rem, calc(3vw + .5rem));
-    /* 
-        Unidades Absolutas: Establecer limites (
-            px = (hibrida) => puntos en pantalla (depende de la resolucion) oficialmente equivale a 1/96"
-        )
-        Unidades Relativas: Tamaños de tipografias y cajas (
-            % => porcentaje de la caja contenedora o tipografia, 
-            rem = (Root EM) => Ancho de "M" en la raiz HTML
-        )
-        Unidades Flexibles: Alturas y tipografia adaptable (
-            vw (viewport width) => ancho de la ventana
-            vh (viewport height) => alto de la ventana
-        )
-
-    */
     background-image: 
         radial-gradient(
             circle at top right,
@@ -35,6 +21,9 @@
         scroll,
         fixed;
     text-shadow: 0 0 .5rem #333; /*-x+ -y+ blur color*/
+    overflow: hidden;
+    perspective: 10rem; /*profundidad*/
+    perspective-origin: center; /*punto de fuga*/
 }
 .header{
     margin: -1rem -1rem .5rem; /* top right bottom left */
@@ -46,16 +35,18 @@ header{
     color: #448;
     border-bottom: 2px solid;
 }
-/* 
-    Selector      valor
-    etiqueta      1
-    .class        10
-    #id           100
-    !important    1000
-    inlineCSS     10000
-
-    EJEMPLOS
-    nav .menu => 11
-    #header h1.title => 111
-    .navbar .nav-item => 20
-*/
+/* Animaciones Cabecera */
+h1{
+    animation: intro 5s 2s linear;
+    animation-fill-mode: backwards;
+    /* name duration timing*/
+    transform: 
+        translateZ(3rem)
+        rotateX(15deg);
+}
+h1 + p{
+    animation: entrance 5s linear;
+    animation-fill-mode: forwards;
+    transform: translateX(-100vw);
+    opacity: .5;
+}
