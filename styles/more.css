@@ -1,0 +1,58 @@
+/* Declaraciones */
+/* etiqueta raiz (HTML) */
+:root{
+    /* Colores */
+    --fst: #448;
+    --snd: #c36;
+    --light: #eee;
+    --dark: #333;
+    /* Tamaños */
+    --small: 240px;
+    --medium: 360px;
+    --large: 480px;
+}
+/* Flexbox */
+.flex{
+    display: flex;
+}
+.flex > * {
+    flex: 1 0 min(100%, var(--size));
+}
+/* Fila */
+.row{
+    gap: 1rem;
+    overflow: auto;
+}
+/* Css Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(min(100%, var(--size)), 1fr)
+    );
+}
+/* filas y columnas */
+.masonry > :nth-child(odd){
+    grid-column: span 2;
+    color: var(--light);
+    background-color: var(--dark);
+}
+.masonry > :nth-child(even){
+    grid-row: span 2;
+    color: var(--dark);
+    background-color: var(--light);
+
+}
+/* Tamaños */
+.small{
+    --size: var(--small);
+}
+.medium{
+    --size: var(--medium);
+}
+.large{
+    --size: var(--large)
+}
+.w-100{
+    width: 100%;
+}

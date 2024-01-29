@@ -11,7 +11,8 @@ Esto es una guia para los alumnos de la capacitacion __Maquetado con SASS__ que 
 * [Flexbox](#flexbox)
 * [CSS Grid](#css-grid)
 * [Position](#position)
-* [Selectores Especiales](#selectores-css)
+* [Selectores Especiales](#selectores-especiales)
+* [Transformaciones](#transformaciones)
 
 ## Estructura Semántica
 
@@ -172,9 +173,12 @@ Parte o elemento dentro de una etiqueta que, a diferencia de las pseudoclases, n
 
 | selector | Descripcion |
 |--|--|
-| __:before__ | permite agregar elementos antes del contenido de la etiqueta |
-| __:after__ | permite agregar elementos despues del contenido de la etiqueta |
-| __:first-line__ | corresponde a la primera línea de un elemento de bloque |
-| __:first-letter__ | corresponde a la primera letra del contenido un elemento de bloque |
-| __:placeholder__ | representa al _texto provisional_ en una etiqueta __input__ o __textarea__. |
-| __:marker__ | corresponde a la _caja de marcadores_ de un __elemento de la lista__ |
+| __::before__ | permite agregar elementos antes del contenido de la etiqueta |
+| __::after__ | permite agregar elementos despues del contenido de la etiqueta |
+| __::first-line__ | corresponde a la primera línea de un elemento de bloque |
+| __::first-letter__ | corresponde a la primera letra del contenido un elemento de bloque |
+| __::placeholder__ | representa al _texto provisional_ en una etiqueta __input__ o __textarea__. |
+| __::marker__ | corresponde a la _caja de marcadores_ de un __elemento de la lista__ |
+
+## Transformaciones
+
