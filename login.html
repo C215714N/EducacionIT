@@ -8,40 +8,71 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Turismo IT</h1>
-        <p>La mejor eleccion que puede tomar</p>
+    <header class="p-5 | text-center text-light bg-dark">
+        <h1 class="display-1 fw-bold">Bienvenido a Turismo IT</h1>
+        <p class="fs-1">La mejor eleccion que puede tomar</p>
     </header>
-    <main>
-
+    <main class="container">
+        <form class="was-validated | col-md-8 col-lg-6 | mx-auto my-3 rounded p-4 | shadow-lg">
+            <h2>Iniciar Sesion</h2>
+            <!-- Nombre de Usuario -->
+            <fieldset class="form-floating">
+                <input class="form-control"
+                    id="username" 
+                    name="username"
+                    type="text"
+                    minlength="4"
+                    maxlength="12"
+                    placeholder="Usuario: C215714n!#"
+                    required>
+                <label for="username">Ingrese su usuario</label>
+                <p class="invalid-feedback">Ingrese entre 4 y 12 caracteres </p>
+                <p class="valid-feedback">El usuario ha sido validado</p>
+            </fieldset>
+            <!-- Contraseña -->
+            <fieldset class="form-floating">
+                <input class="form-control"
+                    id="password" 
+                    name="password"
+                    type="password"
+                    minlength="8"
+                    maxlength="30"
+                    placeholder="Contraseña: VtodyosmD48w58qh!#"
+                    required>
+                <label for="password">Ingrese su Contraseña</label>
+                <p class="invalid-feedback">Ingrese una contraseña valida </p>
+                <p class="valid-feedback">La contraseña ha sido verificada</p>
+            </fieldset>
+            <button class="btn btn-success | d-block | ms-auto">Ingresar</button>
+        </form>
     </main>
     <footer>
-        <div>
-            <a class="" 
+        <div class="d-flex justify-content-center flex-wrap gap-2 | p-3">
+            <a class="btn btn-primary" 
                 href="https://facebook.com/" 
                 target="_blank" 
                 title="seguinos en facebook">
                 facebook
             </a>
-            <a class="" 
+            <a class="btn btn-danger" 
                 href="https://instagram.com/" 
                 target="_blank" 
                 title="seguinos en instagram">
                 instagram
             </a>
-            <a class="" 
+            <a class="btn btn-info" 
                 href="https://twitter.com/" 
                 target="_blank" 
                 title="seguinos en twitter">
                 twitter
             </a>
-            <a class="" 
+            <a class="btn btn-dark" 
                 href="https://github.com/c215714n/EducacionIT/tree/mav-lx20"
                 target="_blank" 
                 title="accede al repo de github">
                 github
             </a>
-            <a class="" 
+            <a class="btn btn-success" 
                 href="https://api.whatsapp.com/send?phone=1103034567&text=Buenas,%20mi%20consulta%20es%20..." 
                 target="_blank" 
                 title="mensajeanos por whatsapp">
