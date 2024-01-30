@@ -180,5 +180,29 @@ Parte o elemento dentro de una etiqueta que, a diferencia de las pseudoclases, n
 | __::placeholder__ | representa al _texto provisional_ en una etiqueta __input__ o __textarea__. |
 | __::marker__ | corresponde a la _caja de marcadores_ de un __elemento de la lista__ |
 
-## Transformaciones
+## Transform 
 
+Propiedad que permite manipular el sistema de coordenadas de un elemento usando las funciones de transformación y pueden aplicarse simultaneamente.
+
+### Funciones Bidimensionales
+
+Corresponden a cambios que podemos realizar sobre un elemento como transladar, mover, rotar o sesgar; sin afectar el flujo del documento y no dependen de ningun contexto. La propiedad __transform-origin__ permite modificar el _origen de las transformaciones_ de un elemento.
+
+
+| Funcion | Descripcion | Ejemplo |
+|--|--|--|
+| __translate__ | Desplaza al elemento sobre los ejes X,Y. Si no se indica se asume que es 0 | __translate(_1rem,-.5rem_)__ |
+| __scale__ | Escalado de un elemento, que puede especificarse para los ejes X,Y | __scale(_1.5_)__ |
+| __rotate__ | Rotación de un elemento en sentido horario, expresada en grados | __rotate(_15deg_)__ |
+| __skew__ | Sesga el elemento a lo largo de los ejes X,Y por los ángulos especificados | __skew(_15deg, 30deg_)__ |
+
+### Funciones Tridimensionales
+
+Para poder implementar este tipo de cambios debemos definir la propiedad de __perspective__ qué indica cuan lejos está el objeto del usuario y la propiedad de __perspective-origin__ la cual indica desde qué posición el usuario mira el elemento posicionado. Al definir estas propiedades, son los _elementos hijos_ los que obtienen la vista en perspectiva y por lo tanto a quienes podemos aplicar las funciones de transformacion.
+
+| Funcion | Descripcion | Ejemplo |
+|--|--|--|
+| __translateZ__ | Mueve el elemento a través del eje Z en el espacio tridimensional | __translateZ(_5rem_)__ |
+| __rotateX__ | Rotación de un elemento sobre el eje X para crear una perspectiva | __rotateX(_30deg_)__ |
+| __rotateY__ | Rotación de un elemento sobre el eje Y para crear una perspectiva | __rotateY(_15deg_)__ |
+| __perspective__ | Distancia entre el usuario y el plano tridimensional | __perspective(_2rem_)__ |
