@@ -188,7 +188,6 @@ Propiedad que permite manipular el sistema de coordenadas de un elemento usando 
 
 Corresponden a cambios que podemos realizar sobre un elemento como transladar, mover, rotar o sesgar; sin afectar el flujo del documento y no dependen de ningun contexto. La propiedad __transform-origin__ permite modificar el _origen de las transformaciones_ de un elemento.
 
-
 | Funcion | Descripcion | Ejemplo |
 |--|--|--|
 | __translate__ | Desplaza al elemento sobre los ejes X,Y. Si no se indica se asume que es 0 | __translate(_1rem,-.5rem_)__ |
@@ -206,3 +205,14 @@ Para poder implementar este tipo de cambios debemos definir la propiedad de __pe
 | __rotateX__ | Rotación de un elemento sobre el eje X para crear una perspectiva | __rotateX(_30deg_)__ |
 | __rotateY__ | Rotación de un elemento sobre el eje Y para crear una perspectiva | __rotateY(_15deg_)__ |
 | __perspective__ | Distancia entre el usuario y el plano tridimensional | __perspective(_2rem_)__ |
+
+## Transition
+
+Conjunto de propiedades que proporcionan una forma de controlar la velocidad de la animación al cambiar las propiedades entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando pseudo-clases como _:hover_, _:active_, _:focus_, etc; o aplicado _dinámicamente usando JavaScript_ y en lugar de que los cambios de propiedad surtan efecto inmediatamente, puede hacer que los cambios se realicen durante un período de tiempo determinado.
+
+| Propiedad | Descripcion |
+|--|--|
+| __transition-property__ | Nombres de las propiedades en las que debe aplicarse la transición |
+| __transition-duration__ | Tiempo que debe tardar una animación de transición en completarse |
+| __transition-timing-function__ | Establece cómo se calculan los valores intermedios de la transición. |
+| __transition-delay__ | Tiempo de espera entre un cambio de atributo y el comienzo de la transicion |
