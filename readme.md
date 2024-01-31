@@ -12,7 +12,9 @@ Esto es una guia para los alumnos de la capacitacion __Maquetado con SASS__ que 
 * [CSS Grid](#css-grid)
 * [Position](#position)
 * [Selectores Especiales](#selectores-especiales)
-* [Transformaciones](#transformaciones)
+* [Transform](#transform)
+* [Transition](#transition)
+* [Animation](#animation)
 
 ## Estructura Semántica
 
@@ -216,3 +218,31 @@ Conjunto de propiedades que proporcionan una forma de controlar la velocidad de 
 | __transition-duration__ | Tiempo que debe tardar una animación de transición en completarse |
 | __transition-timing-function__ | Establece cómo se calculan los valores intermedios de la transición. |
 | __transition-delay__ | Tiempo de espera entre un cambio de atributo y el comienzo de la transicion |
+
+## Animation
+
+Conjunto de propiedades que permiten a un elemento cambiar gradualmente de un estilo a otro, se pueden cambiar tantas propiedades como sean necesarias, asi como tambien, la cantidad de veces que se requiera. Para utilizar la animación CSS, primero se deben especificar algunos fotogramas clave para la animación utilizando la regla __@keyframes__, indicando los estilos que tendrá el elemento en determinados momentos.
+
+| Propiedad | Descripcion |
+|--|--|
+| __animation-name__ | Lista de animaciones que se deben aplicar al elemento seleccionado |
+| __animation-duration__ | Tiempo que tarda la animación en completar un ciclo  |
+| __animation-timing-function__ | Indica como debe avanzar sobre la duración de cada ciclo |
+| __animation-delay__ | Tiempo de retardo que debe transcurrir antes de comenzar la animación |
+| __animation-direction__ | Establece el sentido de reproduccion, de inicio a fin o viceversa |
+| __animation-iteration-count__ | Cantidad de veces que un ciclo de animación debe ser ejecutado antes de detenerse |
+| __animation-fill-mode__ | Manera en la que se aplican los estilos, estableciendo persistencia y estado final |
+| __animation-play-state__ | Determina si una animación se encuentra en ejecución o pausada |
+
+### Timing-function
+
+Una timing function definida dentro de un keyframe afecta a ese keyframe. Si no está definida para el keyframe, se aplica la timing function para la animación en general. A menudo, es conveniente usar la propiedad abreviada animation para ajustar las propiedades de animación una sola vez.
+
+| Valor | Descripcion |
+|--|--|
+| __ease__ | Animacion con inicio lento, luego rápido y finaliza lentamente |
+| __linear__ | Especifica una animación con una _velocidad constante_ |
+| __ease-in__ | Especifica una animación con un __inicio lento__ |
+| __ease-out__ | Especifica una animación con un __final lento__ |
+| __ease-in-out__ | Especifica una animación con un __inicio y un final lentos__ |
+| __cúbic-bezier(x1,y1,x2,y2)__ | Permite definir valores de _progreso_ en funcion del _tiempo_ |
