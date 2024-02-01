@@ -1,0 +1,141 @@
+// VARIABLES: Valores reservados que pueden cambiar
+$cols: 24;
+$ext: "svg";
+$path: "../assets";
+// ARRAY: Lista de Valores
+$social: 
+    "facebook",
+    "instagram",
+    "tiktok",
+    "pinterest",
+    "twitter",
+    "linkedin",
+    "telegram",
+    "whatsapp",
+    "github",
+    "youtube";
+// OBJETO/MATRIZ: Lista compuesta
+$shadows: 
+    shadow      box,
+    shade       text;
+$properties: 
+    text        color,
+    bg          background-color,
+    border      border-color,
+    outline     outline-color,
+    shadow      --shadow,
+    shade       --shade;
+$colors: 
+    primary     #448,
+    secondary   #c36,
+    light       #eee,
+    dark        #333,
+    danger      #c33,
+    warning     #da3,
+    success     #3c6,
+    info        #36c,
+    none        transparent;
+
+// MIXINS: Estilos que se aplican como Funciones
+@mixin normalize($p:0, $m:0, $b:0){
+    margin: $m;
+    border: $b;
+    padding: $p;
+}
+@mixin flexbox(
+    $jc: center,
+    $ai: stretch,
+    $fd: row,
+    $fw: wrap,
+    $d: flex
+){
+    display: $d;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;    
+}
+/*Reinicios*/
+.zeroise{
+    @include normalize;
+}
+.unstyled{
+    list-style: none;
+    text-decoration: none;
+}
+/* Estilos flexbox */
+.row{
+    @include flexbox($ai: center);
+}
+.column{
+    @include flexbox($fd: column);
+}
+
+// BUCLES: Estilos que se repiten en base a una condicion
+/* Iconos Redes sociales */
+@each $icon in $social{
+.icon-#{$icon}{
+    background-image: url("#{$path}/icon/#{$icon}.#{$ext}");
+}}
+/* Sistema de Grillas */
+@for $i from 1 through $cols{
+.col-#{$i}{
+    width: percentage($i/$cols);
+}}
+/* Atributos de Color */
+@each $prop, $attr in $properties{
+@each $name, $value in $colors{
+    .#{$prop}-#{$name}{ 
+        #{$attr}: $value;
+}}}
+/* Estilos de Sombras */
+@each $class, $type in $shadows{
+.#{$class}{
+    --blur: .5rem;
+    #{$type}-shadow: 0 0 var(--blur) var(--shadow);
+    &-sm{ --blur: .25rem; }
+    &-lg{ --blur: 1rem; }
+}}
+
+
+// NESTING: Anidacion de Estilos para mayor especificidad
+/* Cabecera de Pagina*/
+header{
+    @include normalize(1.5rem);
+}
+/* Navegacion Principal */
+nav{
+    a{
+        @extend .unstyled;
+    }
+    ul{
+        @extend .zeroise, .unstyled;
+    }
+}
+/* Contenido Principal */
+
+/* Pie de Pagina */
+footer{
+    #contact{
+        @extend .column, .col-18;
+        @include normalize(1.5rem 1rem, 3rem auto);
+        input,
+        textarea,
+        select{
+            &:focus{
+                @extend .border-dark;
+            &:valid{
+                @extend .border-success;
+                & + .validation{ @extend .text-success; }
+            }
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger;
+                & + .validation{ @extend .text-danger; }
+            }
+            }
+        }
+    }
+    .copy{
+        @include normalize($m: .5rem -1rem 0);
+    }
+}
