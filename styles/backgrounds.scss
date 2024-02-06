@@ -97,7 +97,6 @@ $bg-names:
             .item, &.item{ 
                 @extend %item;
                 background-image: $bg; 
-        }}
-        .bg-#{$img}{ background-image: $bg; }
+        } }
     } }
 }

@@ -1,0 +1,66 @@
+@use 'sass:math';
+// Declaraciones
+$functions: lineal, cuadratica, trigonometrica, exponencial, radical;
+// Nesting
+.rotation{
+    animation: rotation 60s linear infinite;
+}
+.sea{
+    min-height: calc(100vh - 5rem);
+    background: linear-gradient(#36c, #124);
+    overflow: hidden;
+    .bubble{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        box-shadow: 
+            -.25rem .25rem .5rem #333,
+            .5rem -.5rem .2rem #eee8 inset
+        ;
+        @for $i from 1 through length($functions){
+            &:nth-child(#{$i}n){
+                animation: nth($functions, $i) 5s linear $i * .5s alternate infinite;
+                background-image: radial-gradient(
+                    circle at top left,
+                    hsl($i * 30, 50%, 80%),
+                    hsl($i * 60, 50%, 30%)
+                );
+            }
+        }
+    }
+}
+
+@keyframes rotation{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@each $f in $functions{
+    @keyframes #{$f}{
+        @for $i from 0 through 100{
+            $x: $i - 50;
+            $y: 0;
+            // Condicionales
+            @if $f == lineal { 
+                $y: $x / 2; 
+            }
+            @else if $f == cuadratica { 
+                $y: math.pow($x, 2) / 25;
+            }
+            @else if $f == trigonometrica { 
+                $y: math.sin($x) * 5;
+            }
+            @else if $f == exponencial{ 
+                $y: math.pow(1.15, $x);
+            }
+            @else if $f == radical{
+                @if $x != 0 { $y: math.div(10,$x); }
+            }
+            // Fotogramas
+            #{$i * 1%}{
+                transform:
+                    translate($i * 1vw, $y * 1vh);
+            }
+        }
+    }
+}
