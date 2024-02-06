@@ -1,3 +1,6 @@
+// Declaraciones
+$folder: '../assets/bg';
+$ext: 'jpg';
 $windows-bg:
     "1",
     "10",
@@ -46,3 +49,55 @@ $osx-bg:
     "tiger",
     "yosemite",
 ;
+$bg-names: 
+    "windows" $windows-bg, 
+    "ubuntu"  $ubuntu-bg, 
+    "osx"     $osx-bg;
+// Mixin
+@mixin box(
+    $d: grid, 
+    $val: repeat(auto-fit, minmax(280px, 1fr)), 
+    $attr: grid-template-columns){
+    display: $d;
+    #{$attr}: $val;
+}
+.row{
+    @include box(flex, .5rem, gap);
+    .item{
+        flex: 1 0 320px;
+    }
+}
+.flex-row{
+    @include box(flex, auto, overflow);
+    flex-wrap: nowrap;
+}
+.grid{
+    @include box;
+    gap: .5rem;
+}
+// Estilos Invisibles
+%unstyled{
+    list-style-type: none;
+    padding: 0;
+}
+%item{
+    min-width: 320px;
+    min-height: 240px;
+    background-size: cover;
+    background-position: center
+}
+// Bucle de Imagenes de fondo
+@each $name, $array in $bg-names{
+    .#{$name}-backgrounds{
+        @extend %unstyled;
+    @for $i from 1 through length($array){
+        $img: nth($array, $i);
+        $bg: url('#{$folder}/#{$name}-#{$img}.#{$ext}');
+        :nth-child(#{$i}n){
+            .item, &.item{ 
+                @extend %item;
+                background-image: $bg; 
+        }}
+        .bg-#{$img}{ background-image: $bg; }
+    } }
+}

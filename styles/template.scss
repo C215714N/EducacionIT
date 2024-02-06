@@ -97,7 +97,6 @@ $colors:
     &-lg{ --blur: 1rem; }
 }}
 
-
 // NESTING: Anidacion de Estilos para mayor especificidad
 /* Cabecera de Pagina*/
 header{
@@ -113,7 +112,7 @@ nav{
     }
 }
 /* Contenido Principal */
-
+@import 'backgrounds';
 /* Pie de Pagina */
 footer{
     #contact{

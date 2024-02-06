@@ -1,0 +1,813 @@
+/*Reinicios*/
+.zeroise, nav ul {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.unstyled, nav ul, nav a {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Estilos flexbox */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column, footer #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* Iconos Redes sociales */
+.icon-facebook {
+  background-image: url("../assets/icon/facebook.svg");
+}
+
+.icon-instagram {
+  background-image: url("../assets/icon/instagram.svg");
+}
+
+.icon-tiktok {
+  background-image: url("../assets/icon/tiktok.svg");
+}
+
+.icon-pinterest {
+  background-image: url("../assets/icon/pinterest.svg");
+}
+
+.icon-twitter {
+  background-image: url("../assets/icon/twitter.svg");
+}
+
+.icon-linkedin {
+  background-image: url("../assets/icon/linkedin.svg");
+}
+
+.icon-telegram {
+  background-image: url("../assets/icon/telegram.svg");
+}
+
+.icon-whatsapp {
+  background-image: url("../assets/icon/whatsapp.svg");
+}
+
+.icon-github {
+  background-image: url("../assets/icon/github.svg");
+}
+
+.icon-youtube {
+  background-image: url("../assets/icon/youtube.svg");
+}
+
+/* Sistema de Grillas */
+.col-1 {
+  width: 4.1666666667%;
+}
+
+.col-2 {
+  width: 8.3333333333%;
+}
+
+.col-3 {
+  width: 12.5%;
+}
+
+.col-4 {
+  width: 16.6666666667%;
+}
+
+.col-5 {
+  width: 20.8333333333%;
+}
+
+.col-6 {
+  width: 25%;
+}
+
+.col-7 {
+  width: 29.1666666667%;
+}
+
+.col-8 {
+  width: 33.3333333333%;
+}
+
+.col-9 {
+  width: 37.5%;
+}
+
+.col-10 {
+  width: 41.6666666667%;
+}
+
+.col-11 {
+  width: 45.8333333333%;
+}
+
+.col-12 {
+  width: 50%;
+}
+
+.col-13 {
+  width: 54.1666666667%;
+}
+
+.col-14 {
+  width: 58.3333333333%;
+}
+
+.col-15 {
+  width: 62.5%;
+}
+
+.col-16 {
+  width: 66.6666666667%;
+}
+
+.col-17 {
+  width: 70.8333333333%;
+}
+
+.col-18, footer #contact {
+  width: 75%;
+}
+
+.col-19 {
+  width: 79.1666666667%;
+}
+
+.col-20 {
+  width: 83.3333333333%;
+}
+
+.col-21 {
+  width: 87.5%;
+}
+
+.col-22 {
+  width: 91.6666666667%;
+}
+
+.col-23 {
+  width: 95.8333333333%;
+}
+
+.col-24 {
+  width: 100%;
+}
+
+/* Atributos de Color */
+.text-primary {
+  color: #448;
+}
+
+.text-secondary {
+  color: #c36;
+}
+
+.text-light {
+  color: #eee;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-danger, footer #contact input:focus:not(:placeholder-shown):invalid + .validation,
+footer #contact textarea:focus:not(:placeholder-shown):invalid + .validation,
+footer #contact select:focus:not(:placeholder-shown):invalid + .validation {
+  color: #c33;
+}
+
+.text-warning {
+  color: #da3;
+}
+
+.text-success, footer #contact input:focus:valid + .validation,
+footer #contact textarea:focus:valid + .validation,
+footer #contact select:focus:valid + .validation {
+  color: #3c6;
+}
+
+.text-info {
+  color: #36c;
+}
+
+.text-none {
+  color: transparent;
+}
+
+.bg-primary {
+  background-color: #448;
+}
+
+.bg-secondary {
+  background-color: #c36;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-danger {
+  background-color: #c33;
+}
+
+.bg-warning {
+  background-color: #da3;
+}
+
+.bg-success {
+  background-color: #3c6;
+}
+
+.bg-info {
+  background-color: #36c;
+}
+
+.bg-none {
+  background-color: transparent;
+}
+
+.border-primary {
+  border-color: #448;
+}
+
+.border-secondary {
+  border-color: #c36;
+}
+
+.border-light {
+  border-color: #eee;
+}
+
+.border-dark, footer #contact input:focus,
+footer #contact textarea:focus,
+footer #contact select:focus {
+  border-color: #333;
+}
+
+.border-danger, footer #contact input:focus:not(:placeholder-shown):invalid,
+footer #contact textarea:focus:not(:placeholder-shown):invalid,
+footer #contact select:focus:not(:placeholder-shown):invalid {
+  border-color: #c33;
+}
+
+.border-warning {
+  border-color: #da3;
+}
+
+.border-success, footer #contact input:focus:valid,
+footer #contact textarea:focus:valid,
+footer #contact select:focus:valid {
+  border-color: #3c6;
+}
+
+.border-info {
+  border-color: #36c;
+}
+
+.border-none {
+  border-color: transparent;
+}
+
+.outline-primary {
+  outline-color: #448;
+}
+
+.outline-secondary {
+  outline-color: #c36;
+}
+
+.outline-light {
+  outline-color: #eee;
+}
+
+.outline-dark {
+  outline-color: #333;
+}
+
+.outline-danger {
+  outline-color: #c33;
+}
+
+.outline-warning {
+  outline-color: #da3;
+}
+
+.outline-success {
+  outline-color: #3c6;
+}
+
+.outline-info {
+  outline-color: #36c;
+}
+
+.outline-none {
+  outline-color: transparent;
+}
+
+.shadow-primary {
+  --shadow: #448;
+}
+
+.shadow-secondary {
+  --shadow: #c36;
+}
+
+.shadow-light {
+  --shadow: #eee;
+}
+
+.shadow-dark {
+  --shadow: #333;
+}
+
+.shadow-danger {
+  --shadow: #c33;
+}
+
+.shadow-warning {
+  --shadow: #da3;
+}
+
+.shadow-success {
+  --shadow: #3c6;
+}
+
+.shadow-info {
+  --shadow: #36c;
+}
+
+.shadow-none {
+  --shadow: transparent;
+}
+
+.shade-primary {
+  --shade: #448;
+}
+
+.shade-secondary {
+  --shade: #c36;
+}
+
+.shade-light {
+  --shade: #eee;
+}
+
+.shade-dark {
+  --shade: #333;
+}
+
+.shade-danger {
+  --shade: #c33;
+}
+
+.shade-warning {
+  --shade: #da3;
+}
+
+.shade-success {
+  --shade: #3c6;
+}
+
+.shade-info {
+  --shade: #36c;
+}
+
+.shade-none {
+  --shade: transparent;
+}
+
+/* Estilos de Sombras */
+.shadow {
+  --blur: .5rem;
+  box-shadow: 0 0 var(--blur) var(--shadow);
+}
+
+.shadow-sm {
+  --blur: .25rem;
+}
+
+.shadow-lg {
+  --blur: 1rem;
+}
+
+.shade {
+  --blur: .5rem;
+  text-shadow: 0 0 var(--blur) var(--shadow);
+}
+
+.shade-sm {
+  --blur: .25rem;
+}
+
+.shade-lg {
+  --blur: 1rem;
+}
+
+/* Cabecera de Pagina*/
+header {
+  margin: 0;
+  border: 0;
+  padding: 1.5rem;
+}
+
+/* Navegacion Principal */
+/* Contenido Principal */
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.row .item {
+  flex: 1 0 320px;
+}
+
+.flex-row {
+  display: flex;
+  overflow: auto;
+  flex-wrap: nowrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: .5rem;
+}
+
+.osx-backgrounds, .ubuntu-backgrounds, .windows-backgrounds {
+  list-style-type: none;
+  padding: 0;
+}
+
+.osx-backgrounds :nth-child(20n) .item, .osx-backgrounds :nth-child(20n).item, .osx-backgrounds :nth-child(19n) .item, .osx-backgrounds :nth-child(19n).item, .osx-backgrounds :nth-child(18n) .item, .osx-backgrounds :nth-child(18n).item, .osx-backgrounds :nth-child(17n) .item, .osx-backgrounds :nth-child(17n).item, .osx-backgrounds :nth-child(16n) .item, .osx-backgrounds :nth-child(16n).item, .osx-backgrounds :nth-child(15n) .item, .osx-backgrounds :nth-child(15n).item, .osx-backgrounds :nth-child(14n) .item, .osx-backgrounds :nth-child(14n).item, .osx-backgrounds :nth-child(13n) .item, .osx-backgrounds :nth-child(13n).item, .osx-backgrounds :nth-child(12n) .item, .osx-backgrounds :nth-child(12n).item, .osx-backgrounds :nth-child(11n) .item, .osx-backgrounds :nth-child(11n).item, .osx-backgrounds :nth-child(10n) .item, .osx-backgrounds :nth-child(10n).item, .osx-backgrounds :nth-child(9n) .item, .osx-backgrounds :nth-child(9n).item, .osx-backgrounds :nth-child(8n) .item, .osx-backgrounds :nth-child(8n).item, .osx-backgrounds :nth-child(7n) .item, .osx-backgrounds :nth-child(7n).item, .osx-backgrounds :nth-child(6n) .item, .osx-backgrounds :nth-child(6n).item, .osx-backgrounds :nth-child(5n) .item, .osx-backgrounds :nth-child(5n).item, .osx-backgrounds :nth-child(4n) .item, .osx-backgrounds :nth-child(4n).item, .osx-backgrounds :nth-child(3n) .item, .osx-backgrounds :nth-child(3n).item, .osx-backgrounds :nth-child(2n) .item, .osx-backgrounds :nth-child(2n).item, .osx-backgrounds :nth-child(1n) .item, .osx-backgrounds :nth-child(1n).item, .ubuntu-backgrounds :nth-child(10n) .item, .ubuntu-backgrounds :nth-child(10n).item, .ubuntu-backgrounds :nth-child(9n) .item, .ubuntu-backgrounds :nth-child(9n).item, .ubuntu-backgrounds :nth-child(8n) .item, .ubuntu-backgrounds :nth-child(8n).item, .ubuntu-backgrounds :nth-child(7n) .item, .ubuntu-backgrounds :nth-child(7n).item, .ubuntu-backgrounds :nth-child(6n) .item, .ubuntu-backgrounds :nth-child(6n).item, .ubuntu-backgrounds :nth-child(5n) .item, .ubuntu-backgrounds :nth-child(5n).item, .ubuntu-backgrounds :nth-child(4n) .item, .ubuntu-backgrounds :nth-child(4n).item, .ubuntu-backgrounds :nth-child(3n) .item, .ubuntu-backgrounds :nth-child(3n).item, .ubuntu-backgrounds :nth-child(2n) .item, .ubuntu-backgrounds :nth-child(2n).item, .ubuntu-backgrounds :nth-child(1n) .item, .ubuntu-backgrounds :nth-child(1n).item, .windows-backgrounds :nth-child(12n) .item, .windows-backgrounds :nth-child(12n).item, .windows-backgrounds :nth-child(11n) .item, .windows-backgrounds :nth-child(11n).item, .windows-backgrounds :nth-child(10n) .item, .windows-backgrounds :nth-child(10n).item, .windows-backgrounds :nth-child(9n) .item, .windows-backgrounds :nth-child(9n).item, .windows-backgrounds :nth-child(8n) .item, .windows-backgrounds :nth-child(8n).item, .windows-backgrounds :nth-child(7n) .item, .windows-backgrounds :nth-child(7n).item, .windows-backgrounds :nth-child(6n) .item, .windows-backgrounds :nth-child(6n).item, .windows-backgrounds :nth-child(5n) .item, .windows-backgrounds :nth-child(5n).item, .windows-backgrounds :nth-child(4n) .item, .windows-backgrounds :nth-child(4n).item, .windows-backgrounds :nth-child(3n) .item, .windows-backgrounds :nth-child(3n).item, .windows-backgrounds :nth-child(2n) .item, .windows-backgrounds :nth-child(2n).item, .windows-backgrounds :nth-child(1n) .item, .windows-backgrounds :nth-child(1n).item {
+  min-width: 320px;
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+.windows-backgrounds :nth-child(1n) .item, .windows-backgrounds :nth-child(1n).item {
+  background-image: url("../assets/bg/windows-1.jpg");
+}
+
+.windows-backgrounds .bg-1 {
+  background-image: url("../assets/bg/windows-1.jpg");
+}
+
+.windows-backgrounds :nth-child(2n) .item, .windows-backgrounds :nth-child(2n).item {
+  background-image: url("../assets/bg/windows-10.jpg");
+}
+
+.windows-backgrounds .bg-10 {
+  background-image: url("../assets/bg/windows-10.jpg");
+}
+
+.windows-backgrounds :nth-child(3n) .item, .windows-backgrounds :nth-child(3n).item {
+  background-image: url("../assets/bg/windows-11.jpg");
+}
+
+.windows-backgrounds .bg-11 {
+  background-image: url("../assets/bg/windows-11.jpg");
+}
+
+.windows-backgrounds :nth-child(4n) .item, .windows-backgrounds :nth-child(4n).item {
+  background-image: url("../assets/bg/windows-3.1.jpg");
+}
+
+.windows-backgrounds .bg-3.1 {
+  background-image: url("../assets/bg/windows-3.1.jpg");
+}
+
+.windows-backgrounds :nth-child(5n) .item, .windows-backgrounds :nth-child(5n).item {
+  background-image: url("../assets/bg/windows-7.jpg");
+}
+
+.windows-backgrounds .bg-7 {
+  background-image: url("../assets/bg/windows-7.jpg");
+}
+
+.windows-backgrounds :nth-child(6n) .item, .windows-backgrounds :nth-child(6n).item {
+  background-image: url("../assets/bg/windows-8.1.jpg");
+}
+
+.windows-backgrounds .bg-8.1 {
+  background-image: url("../assets/bg/windows-8.1.jpg");
+}
+
+.windows-backgrounds :nth-child(7n) .item, .windows-backgrounds :nth-child(7n).item {
+  background-image: url("../assets/bg/windows-8.jpg");
+}
+
+.windows-backgrounds .bg-8 {
+  background-image: url("../assets/bg/windows-8.jpg");
+}
+
+.windows-backgrounds :nth-child(8n) .item, .windows-backgrounds :nth-child(8n).item {
+  background-image: url("../assets/bg/windows-95.jpg");
+}
+
+.windows-backgrounds .bg-95 {
+  background-image: url("../assets/bg/windows-95.jpg");
+}
+
+.windows-backgrounds :nth-child(9n) .item, .windows-backgrounds :nth-child(9n).item {
+  background-image: url("../assets/bg/windows-98-se.jpg");
+}
+
+.windows-backgrounds .bg-98-se {
+  background-image: url("../assets/bg/windows-98-se.jpg");
+}
+
+.windows-backgrounds :nth-child(10n) .item, .windows-backgrounds :nth-child(10n).item {
+  background-image: url("../assets/bg/windows-me.jpg");
+}
+
+.windows-backgrounds .bg-me {
+  background-image: url("../assets/bg/windows-me.jpg");
+}
+
+.windows-backgrounds :nth-child(11n) .item, .windows-backgrounds :nth-child(11n).item {
+  background-image: url("../assets/bg/windows-vista.jpg");
+}
+
+.windows-backgrounds .bg-vista {
+  background-image: url("../assets/bg/windows-vista.jpg");
+}
+
+.windows-backgrounds :nth-child(12n) .item, .windows-backgrounds :nth-child(12n).item {
+  background-image: url("../assets/bg/windows-xp.jpg");
+}
+
+.windows-backgrounds .bg-xp {
+  background-image: url("../assets/bg/windows-xp.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(1n) .item, .ubuntu-backgrounds :nth-child(1n).item {
+  background-image: url("../assets/bg/ubuntu-artful-aardvark.jpg");
+}
+
+.ubuntu-backgrounds .bg-artful-aardvark {
+  background-image: url("../assets/bg/ubuntu-artful-aardvark.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(2n) .item, .ubuntu-backgrounds :nth-child(2n).item {
+  background-image: url("../assets/bg/ubuntu-bionic-beaver.jpg");
+}
+
+.ubuntu-backgrounds .bg-bionic-beaver {
+  background-image: url("../assets/bg/ubuntu-bionic-beaver.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(3n) .item, .ubuntu-backgrounds :nth-child(3n).item {
+  background-image: url("../assets/bg/ubuntu-cosmic-cuttlefish.jpg");
+}
+
+.ubuntu-backgrounds .bg-cosmic-cuttlefish {
+  background-image: url("../assets/bg/ubuntu-cosmic-cuttlefish.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(4n) .item, .ubuntu-backgrounds :nth-child(4n).item {
+  background-image: url("../assets/bg/ubuntu-disco-dingo.jpg");
+}
+
+.ubuntu-backgrounds .bg-disco-dingo {
+  background-image: url("../assets/bg/ubuntu-disco-dingo.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(5n) .item, .ubuntu-backgrounds :nth-child(5n).item {
+  background-image: url("../assets/bg/ubuntu-eoan-ermine.jpg");
+}
+
+.ubuntu-backgrounds .bg-eoan-ermine {
+  background-image: url("../assets/bg/ubuntu-eoan-ermine.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(6n) .item, .ubuntu-backgrounds :nth-child(6n).item {
+  background-image: url("../assets/bg/ubuntu-focal-fossa.jpg");
+}
+
+.ubuntu-backgrounds .bg-focal-fossa {
+  background-image: url("../assets/bg/ubuntu-focal-fossa.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(7n) .item, .ubuntu-backgrounds :nth-child(7n).item {
+  background-image: url("../assets/bg/ubuntu-groovy-gorilla.jpg");
+}
+
+.ubuntu-backgrounds .bg-groovy-gorilla {
+  background-image: url("../assets/bg/ubuntu-groovy-gorilla.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(8n) .item, .ubuntu-backgrounds :nth-child(8n).item {
+  background-image: url("../assets/bg/ubuntu-hisurte-hippo.jpg");
+}
+
+.ubuntu-backgrounds .bg-hisurte-hippo {
+  background-image: url("../assets/bg/ubuntu-hisurte-hippo.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(9n) .item, .ubuntu-backgrounds :nth-child(9n).item {
+  background-image: url("../assets/bg/ubuntu-impish-Indri.jpg");
+}
+
+.ubuntu-backgrounds .bg-impish-Indri {
+  background-image: url("../assets/bg/ubuntu-impish-Indri.jpg");
+}
+
+.ubuntu-backgrounds :nth-child(10n) .item, .ubuntu-backgrounds :nth-child(10n).item {
+  background-image: url("../assets/bg/ubuntu-jammy-jellyfish.jpg");
+}
+
+.ubuntu-backgrounds .bg-jammy-jellyfish {
+  background-image: url("../assets/bg/ubuntu-jammy-jellyfish.jpg");
+}
+
+.osx-backgrounds :nth-child(1n) .item, .osx-backgrounds :nth-child(1n).item {
+  background-image: url("../assets/bg/osx-big-sur-dark.jpg");
+}
+
+.osx-backgrounds .bg-big-sur-dark {
+  background-image: url("../assets/bg/osx-big-sur-dark.jpg");
+}
+
+.osx-backgrounds :nth-child(2n) .item, .osx-backgrounds :nth-child(2n).item {
+  background-image: url("../assets/bg/osx-big-sur-light.jpg");
+}
+
+.osx-backgrounds .bg-big-sur-light {
+  background-image: url("../assets/bg/osx-big-sur-light.jpg");
+}
+
+.osx-backgrounds :nth-child(3n) .item, .osx-backgrounds :nth-child(3n).item {
+  background-image: url("../assets/bg/osx-big-sur-night.jpg");
+}
+
+.osx-backgrounds .bg-big-sur-night {
+  background-image: url("../assets/bg/osx-big-sur-night.jpg");
+}
+
+.osx-backgrounds :nth-child(4n) .item, .osx-backgrounds :nth-child(4n).item {
+  background-image: url("../assets/bg/osx-big-sur.jpg");
+}
+
+.osx-backgrounds .bg-big-sur {
+  background-image: url("../assets/bg/osx-big-sur.jpg");
+}
+
+.osx-backgrounds :nth-child(5n) .item, .osx-backgrounds :nth-child(5n).item {
+  background-image: url("../assets/bg/osx-catalina-night.jpg");
+}
+
+.osx-backgrounds .bg-catalina-night {
+  background-image: url("../assets/bg/osx-catalina-night.jpg");
+}
+
+.osx-backgrounds :nth-child(6n) .item, .osx-backgrounds :nth-child(6n).item {
+  background-image: url("../assets/bg/osx-catalina.jpg");
+}
+
+.osx-backgrounds .bg-catalina {
+  background-image: url("../assets/bg/osx-catalina.jpg");
+}
+
+.osx-backgrounds :nth-child(7n) .item, .osx-backgrounds :nth-child(7n).item {
+  background-image: url("../assets/bg/osx-el-capitan.jpg");
+}
+
+.osx-backgrounds .bg-el-capitan {
+  background-image: url("../assets/bg/osx-el-capitan.jpg");
+}
+
+.osx-backgrounds :nth-child(8n) .item, .osx-backgrounds :nth-child(8n).item {
+  background-image: url("../assets/bg/osx-high-sierra.jpg");
+}
+
+.osx-backgrounds .bg-high-sierra {
+  background-image: url("../assets/bg/osx-high-sierra.jpg");
+}
+
+.osx-backgrounds :nth-child(9n) .item, .osx-backgrounds :nth-child(9n).item {
+  background-image: url("../assets/bg/osx-leopard.jpg");
+}
+
+.osx-backgrounds .bg-leopard {
+  background-image: url("../assets/bg/osx-leopard.jpg");
+}
+
+.osx-backgrounds :nth-child(10n) .item, .osx-backgrounds :nth-child(10n).item {
+  background-image: url("../assets/bg/osx-lion.jpg");
+}
+
+.osx-backgrounds .bg-lion {
+  background-image: url("../assets/bg/osx-lion.jpg");
+}
+
+.osx-backgrounds :nth-child(11n) .item, .osx-backgrounds :nth-child(11n).item {
+  background-image: url("../assets/bg/osx-mavericks.jpg");
+}
+
+.osx-backgrounds .bg-mavericks {
+  background-image: url("../assets/bg/osx-mavericks.jpg");
+}
+
+.osx-backgrounds :nth-child(12n) .item, .osx-backgrounds :nth-child(12n).item {
+  background-image: url("../assets/bg/osx-mojave-night.jpg");
+}
+
+.osx-backgrounds .bg-mojave-night {
+  background-image: url("../assets/bg/osx-mojave-night.jpg");
+}
+
+.osx-backgrounds :nth-child(13n) .item, .osx-backgrounds :nth-child(13n).item {
+  background-image: url("../assets/bg/osx-mojave.jpg");
+}
+
+.osx-backgrounds .bg-mojave {
+  background-image: url("../assets/bg/osx-mojave.jpg");
+}
+
+.osx-backgrounds :nth-child(14n) .item, .osx-backgrounds :nth-child(14n).item {
+  background-image: url("../assets/bg/osx-monterrey-dark.jpg");
+}
+
+.osx-backgrounds .bg-monterrey-dark {
+  background-image: url("../assets/bg/osx-monterrey-dark.jpg");
+}
+
+.osx-backgrounds :nth-child(15n) .item, .osx-backgrounds :nth-child(15n).item {
+  background-image: url("../assets/bg/osx-monterrey-light.jpg");
+}
+
+.osx-backgrounds .bg-monterrey-light {
+  background-image: url("../assets/bg/osx-monterrey-light.jpg");
+}
+
+.osx-backgrounds :nth-child(16n) .item, .osx-backgrounds :nth-child(16n).item {
+  background-image: url("../assets/bg/osx-mountain-lion.jpg");
+}
+
+.osx-backgrounds .bg-mountain-lion {
+  background-image: url("../assets/bg/osx-mountain-lion.jpg");
+}
+
+.osx-backgrounds :nth-child(17n) .item, .osx-backgrounds :nth-child(17n).item {
+  background-image: url("../assets/bg/osx-sierra.jpg");
+}
+
+.osx-backgrounds .bg-sierra {
+  background-image: url("../assets/bg/osx-sierra.jpg");
+}
+
+.osx-backgrounds :nth-child(18n) .item, .osx-backgrounds :nth-child(18n).item {
+  background-image: url("../assets/bg/osx-snow-leopard.jpg");
+}
+
+.osx-backgrounds .bg-snow-leopard {
+  background-image: url("../assets/bg/osx-snow-leopard.jpg");
+}
+
+.osx-backgrounds :nth-child(19n) .item, .osx-backgrounds :nth-child(19n).item {
+  background-image: url("../assets/bg/osx-tiger.jpg");
+}
+
+.osx-backgrounds .bg-tiger {
+  background-image: url("../assets/bg/osx-tiger.jpg");
+}
+
+.osx-backgrounds :nth-child(20n) .item, .osx-backgrounds :nth-child(20n).item {
+  background-image: url("../assets/bg/osx-yosemite.jpg");
+}
+
+.osx-backgrounds .bg-yosemite {
+  background-image: url("../assets/bg/osx-yosemite.jpg");
+}
+
+/* Pie de Pagina */
+footer #contact {
+  margin: 3rem auto;
+  border: 0;
+  padding: 1.5rem 1rem;
+}
+
+footer .copy {
+  margin: 0.5rem -1rem 0;
+  border: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=template.css.map */
