@@ -53,3 +53,5 @@ Si una solicitud ARP llega a un __router con un Proxy ARP activado__, este respo
 |__NONE__ | Estado ficticio que se usa al crear una entrada en la tabla o luego de intentar borrarla antes que se libere |
 |__INCOMPLETE__ | La línea aun no ha sido validada o resuelta |
 |__PROBE__ | Se está probando la mac address |
+
+[volver](../readme.md)
