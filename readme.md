@@ -9,6 +9,7 @@ Esto es una guia para los alumnos de la capacitacion __CCNA 2__ que cursan los d
 
 * [Configuracion Inicial](#configuracion-inicial)
 * [Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
+* [Identificacion de Dispositivos](#identificacion-de-dispositivos)
 
 ## Configuracion Inicial
 
@@ -40,3 +41,17 @@ Una vez finalizada la configuracion inicial, podremos acceder al dispositivo uti
 	* __interface `<vlan 1>`__: submodo de configuracion de interfaz (VLAN 1)
 	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
 	* __no shutdown__: enciende la interfaz seleccionada.
+
+## Identificacion de Dispositivos
+
+Cuando trabajamos en una red previamente configurada y no disponemos de documentacion o simplemente necesitamos corroborar que dispositivos estan conectados en las diferentes interfaces de red, disponemos de __protocolos de CAPA 2__ que permiten a los dispositivos de internetworks intercambiar informacion utilizando tramas que se envian periodicamente, _compartiendo la informacion del enlace_.
+
+1. switch(config)# __(Protocolos nivel de capa 2)__
+	* __cdp run__: Habilita Cisco Discovery Protocol
+	* __lldp run__: Habilita Link Layer Discovery Protocol
+2. switch(config-if)# __(Configuracion LLDP)__
+	* __lldp transmit__: Habilita el envio de tramas LLDP (compartir datos)
+	* __lldp receive__: Habilita la recepcion de tramas LLDP (procesar datos)
+3. switch(config-if)# __(verificacion de vecinos)__
+	* __show cdp neighbors__: Muestra los dispositivos identificados mediante CDP
+	* __show lldp neighbors__: Muestra los dispositivos identificados meidante LLDP
