@@ -1,0 +1,35 @@
+hostname R4
+!
+license boot module c2900 technology-package securityk9
+!
+crypto isakmp policy 10
+ encr 3des
+ hash md5
+ group 2
+ lifetime 3600
+!
+crypto isakmp key CISCO address 191.96.24.18
+!
+crypto ipsec transform-set TS_VPN esp-3des esp-md5-hmac
+!
+crypto map CRYPTOMAP 10 ipsec-isakmp 
+ set peer 191.96.24.18
+ set transform-set TS_VPN 
+ match address VPN_ACL
+!
+spanning-tree mode pvst
+!
+interface Serial0/1/1
+ ip address 191.96.24.17 255.255.255.252
+ ip nat outside
+ clock rate 2000000
+ crypto map CRYPTOMAP
+!
+ip access-list extended VPN_ACL
+ permit ip 10.0.1.0 0.0.0.255 10.0.2.0 0.0.0.255
+ip access-list extended NAT_LAN
+ deny ip 10.0.1.0 0.0.0.255 10.0.2.0 0.0.0.255
+ permit ip 10.0.1.0 0.0.0.255 any
+!
+end
+

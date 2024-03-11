@@ -1,0 +1,25 @@
+crypto isakmp policy 10
+encr 3des
+hash md5
+authentication pre-share
+group 2
+crypto isakmp key PASS address 8.8.0.2
+
+crypto ipsec transform-set TS_VPN esp-3des esp-md5-hmac
+
+crypto map CRYPTOMAP 10 ipsec-isakmp
+set peer 8.8.0.2
+set transform-set TS_VPN
+match address VPN
+
+interface gi0/0
+ip address 8.8.8.8 255.255.255.240
+ip nat outside
+crypto map CRYPTOMAP
+
+ip access-list extended NAT
+deny ip 192.168.0.0 0.0.0.255 192.168.1.0 0.0.0.255
+permit ip 192.168.0.0 0.0.0.255 any
+
+ip access-list extended VPN
+permit ip 192.168.0.0 0.0.0.255 192.168.1.0 0.0.0.255
