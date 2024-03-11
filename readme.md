@@ -105,3 +105,25 @@ Pero teniendo en cuenta que, de manera predeterminada, los unicos valores habili
 3. router(config-router)#: __(actualizacion de ajustes)__
     * __passive interface `<interface-id>`__: evita el envio de paquetes EIGRP en las interfaces especificadas
     * __auto-summary__: habilita la sumarizacion de subredes para simplificar rutas.
+
+## IPSec
+__internet protocol security__ es un conjunto de protocolos cuya función es asegurar las comunicaciones sobre el Protocolo de Internet autenticando y/o cifrando cada paquete IP en un flujo de datos. También incluye protocolos para el establecimiento de claves de cifrado como __internet security authentication key message protocol__, protocolo criptográfico que constituye la base para el intercambio de claves IKE utilizado en el marco de IPsec para autenticar entidades, así como para establecer y gestionar asociaciones de seguridad.
+
+1. router(config-isakmp)# __fase 1: intercambio de credenciales__
+    * __crypto isakmp policy `10`__: Ingresa al submodo de configuracion de prioridad para la suite de proteccion ISAKMP
+    * __encryption `3des`__: Define el tipo de encriptacion a utilizar
+    * __hash `md5`__: Selecciona el metodo utilizado para validar la informacion
+    * __authentication `pre-share`__: Establece el tipo de autenticacion por clave previamente compartida
+    * __group `2`__: Grupo del algoritmo Diffie-Hellman para el establecimiento de una clave secreta
+1. router(config-crypto-map)# __fase 2: asociacion de seguridad__
+    * __crypto map `<WORD>` 10 ipsec-isakmp__ Ingresa al submodo de configuracion de mapa criptografico ISAKMP
+    * __set peer `<public ip>`__: Establece la direccion publica del host remoto con el que establecera el tunel
+    * __set transform-set `<WORD>`__: Valida el grupo de autenticacion establecido en el transform-set
+    * __match address `<access-list>`__: Selecciona la lista de control de acceso para las coincidencias
+1. router(config-if)# __implementacion IPsec VPN__
+    * __crypto isakmp key `<password>` address `<peer>`__: Define la contraseña y la IP Publica del Host Remoto
+    * __crypto ipsec transform-set `<WORD>` `esp-3des` `esp-md5-hmac`__ Establece el codigo de autenticacion basado en hash
+    * __ip access-list extended `<access-list>`__: accedemos al submodo de configuracion de acl
+    * __permit ip `192.168.1.0 0.0.0.255` `192.168.0.0 0.0.0.255`__ define una regla que permite el trafico de origen y destino entre las redes privadas
+    * __interface `<interface id>`__: Ingresa al submodo de configuracion de interfaz
+    * __crypto map `<WORD>`__: Selecciona el mapa criptografico a aplicar
