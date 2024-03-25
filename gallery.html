@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    <!-- Etiqueta Codigo CSS -->
+    <style>
+        /* Selectores Generales */
+        body{
+            margin: 0;
+            font-family: 'calibri', 'century gothic', sans-serif;
+        }
+        /* Selectores Multiples (,) */
+        header,
+        footer{
+            padding: 16px;
+            color: #eee;
+            background-color: #263;
+            text-align: center;
+        }
+        /* Selectores Especificos (padre hijo) */
+        nav a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #266;
+        }
+        nav li{
+            display: inline-block;
+            padding: 8px;
+        }
+        /* Pseudoclases */
+    </style>
 </head>
 <body>
     <!-- Cabecera de Pagina: Contenido Introductorio -->
@@ -12,16 +44,50 @@
         <p>html &amp; css</p>
         <!-- Navegacion Principal: Links mas Importantes -->
         <nav>
-            
+            <ul>
+                <!-- Ruta Relativa (Interna) -->
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <!-- Ruta Ancla (Marcador) -->
+                <li>
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <!-- Contenido Principal: Relevante para el usuario -->
     <main>
+        <h2>Imágenes en la web</h2>
+        <p>
+            Podemos incorporar este tipo de elementos dentro de nuestras paginas gracias a la etiqueta <strong>&lt;img></strong>, en la cual debemos completar los atributos <em>src</em> y <em>alt</em> que indican la ubicacion del recurso y un texto alternativo en caso que este no pueda ser encontrado.
+        </p>
+        <div class="box">
+            <img src="assets/img/jjba-silverchariot-01.jpg" alt="Dibujo JJBA Silver Chariot">
+            <img src="assets/img/jjba-silverchariot-02.jpg" alt="Dibujo JJBA Silver Chariot">
+            <img src="assets/img/jjba-silverchariot-03.jpg" alt="Dibujo JJBA Silver Chariot">
+            <img src="assets/img/jjba-silverchariot-04.jpg" alt="Dibujo JJBA Silver Chariot">
+        </div>
+        <h2>Formatos de Imagen</h2>
+        <p>
+            Segun lo que necesitemos representar podemos utilizar distintos tipos de imagenes, entre los formatos o extensiones mas comunes, soportadas, se encuentran:
+        </p>
+        <ul>
+            <li><strong>JPG</strong> (Joint Photographics Experts Group) Formato de imagen ligero que admite compresion y soporta 16.777.216 colores, comunmente utilizado para galerias</li>
+            <li><strong>PNG</strong> (Portable Network Graphics) Formato de imagen que no admite compresion, pero soporta la implementacion de un canal alpha (transparencia).</li>
+            <li><strong>GIF</strong> (Graphics Interchange Format) Formato ligero que soporta 256 colores y permite la interpolacion de imagenes (animacion).</li>
+            <li><strong>WEBP</strong> (Web Picture) Formato de Imagen desarrollado por Google, pensado para la comparticion de contenido.</li>
+            <li><strong>SVG</strong> (Scalable Vector Graphics) Formato de Imagen vectorial, compuesto de lineas y curvas, ideal para iconos y logotipos. No depende de la resolucion.</li>
+        </ul>
+        <p class="box">
+            <img src="assets/bg/osx-big-sur-dark.jpg" alt="Fondo de Pantalla Big Sur">
 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, minus sunt cum reiciendis enim porro quaerat sit facere accusamus neque optio dignissimos voluptate aliquid commodi, amet quasi animi odit officia atque cumque minima? Possimus ipsam sint placeat est recusandae voluptatem harum, facere ad sapiente dolorem quia, quibusdam animi repellendus quaerat. Sit quasi assumenda laborum. Numquam consectetur sunt labore voluptatibus totam minima modi nulla, repellat quis deleniti ipsum odit nobis possimus placeat vel iure pariatur laudantium ullam assumenda earum quae similique praesentium suscipit. Suscipit sint obcaecati quas at, quia iure ipsum nihil aspernatur eligendi ea assumenda, officiis est, autem pariatur veritatis.
+        </p>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-
+        <p id="contact">Soy el contacto</p>
         <p>&copy; Todos los derechos reservados</p>
     </footer>
 </body>
