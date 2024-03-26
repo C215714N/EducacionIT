@@ -61,3 +61,25 @@ Una vez definida la estructura de la pagina debemos pasar implementar el diseño
     * **inblock**: Es mas general que el anterior, pero los cambios aplicados solo funcionan dentro de la pagina, _e.g `div{ color: darkblue; }`_ pudiendo afectar a mas de una etiqueta a la vez, debido al selector.
 * **_estilo externo_** Es aquel que se implementa en un archivo aparte y asi utilizarlo en diferentes paginas, para poder vincularlo se coloca en la cabecera de pagina una etiqueta como la siguiente _`<link rel="stylesheet" href="styles.css">`_ indicando la ubicacion de la hoja de estilos.
 
+___
+
+## Actividades
+
+En este apartado se podran realizar diferentes ejercicios relacionados con los temas dictados en clase, organizados por contenido y donde se pondra a prueba su experiencia en el mundo del desarrollo web.
+
+### Conceptos Basicos
+1. Realizar el tipo de lista que corresponda y ordenar, en caso que sea necesario, los siguientes elementos:
+   * "edad media(3300 A.C. – 476 D.C)",  "edad antigua (476 – 1492)", "edad contemporanea (1789 – actualidad)", "edad moderna (1492 – 1789)"
+   * "Futbol", "Tenis", "Rugbi", "Golf", "Beisbol", "Baloncesto", "Handball"
+   * "Argentina", "Chile", "Bolivia", "Brasil", "Uruguay", "Paraguay"
+   * "Casper Ruud(4960pts)", "Novak Djokovic (7595pts)", "Carlos Alcaraz (7675pts)", "Daniil Mendeleev (5890pts)", "Stefanos Tsitsipas(4670pts)"
+
+### Estructura de un sitio
+1. Crear una sitio web de al menos 3 paginas utilizando la estructura semantica.
+2. En cada pagina debe haber un menu de navegacion permita desplazarnos entre las mismas, como por ejemplo:
+   * [inicio](index.html)
+   * [nosotros](about.html)
+   * [galeria](gallery.html)
+3. Diferenciar el `<header>` y `<footer>` utilizando un `color` y `background-color` a eleccion
+4. Agregar hipervinculos de las redes sociales a eleccion e informacion de copyright
+5. Colocar contenido dentro de las diferentes paginas a eleccion.
