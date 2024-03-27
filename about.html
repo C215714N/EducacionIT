@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Web</title>
+    
 </head>
 <body>
     <!-- Navegacion -->
@@ -22,17 +23,83 @@
     </header>
     <!-- Contenido Principal -->
     <main>
-
+        <!-- Articulo: Contenido Independiente -->
+        <article>
+            <header class="header">
+                <h2>Formularios HTML</h2>
+            </header>
+            <p>
+                Son herramientas que permiten el <em>intercambio de datos entre cliente y servidor</em>, para utilizarlos dentro de la pagina simplemente debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma los elementos que seran procesados para el envio de los datos.
+            </p>
+            <!-- Seccion: Contenido Contextualizado -->
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos especificarle por lo menos 2 atributos, que son <strong>action="..."</strong> el cual indica que debe suceder al enviar el formulario; y <strong>method="..."</strong> que indica como se debe realizar el intercambio de los datos.
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET:</strong> metodo cuya prioridad radica en la respuesta del servidor, ya que los datos se envian en texto plano y permanecen visibles en la barra de direcciones. <em>Se utiliza principalmente en Buscadores</em>
+                    </li>
+                    <li>
+                        <strong>POST:</strong> metodo cuya prioridad esta en proteger los datos enviados por el usuario, ya que cifra los mismos antes de realizar el envio. Se utiliza en formularios de <em>registro, acceso, contacto, etc...</em>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como estan compuestos?</h3>
+                </header>
+                <p>
+                    Dentro del formulario podemos colocar cualquier etiqueta, pero necesariamente vamos a utilizar <strong>Etiquetas (LABEL)</strong> que funcionan a modo de rotulo, para que el usuario sepa como debe completar el mismo; y los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que permiten al asuario seleccionar o completar con sus datos.
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>name="..."</strong> corresponde al nombre con el que identificara el campo, este puede ser compartido en caso de selecciones de opcion.
+                    </li>
+                    <li>
+                        <strong>type="..."</strong> corresponde al tipo de dato admitido por el campo de formulario, en caso de los input es obligatorio.
+                    </li>
+                    <li>
+                        <strong>value="..."</strong> corresponde al valor que sera enviado al utilizar el formulario y es obligatorio en caso que el usuario seleccione.
+                    </li>
+                </ul>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form action="" method="GET">
+        <form id="contact" action="" method="GET">
             <h2>Hacenos tu Consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
-            <input id="contact_name" type="text">
+            <input 
+                id="contact_name"
+                name="name" 
+                type="text"
+                minlength="3"
+                maxlength="50">
             <label for="contact_email">Ingrese su Correo</label>
-            <input id="contact_email" type="email">
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email"
+                minlength="8">
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura HTML</option>
+                <option value="css">Estilos con CSS</option>
+                <option value="js">Logica con JS</option>
+            </select>
+            <label for="contact_consult">Ingrese su Consulta</label>
+            <textarea
+                id="contact_consult"
+                name="consult"
+                minlength="30"
+                maxlength="1500"></textarea>
+            <input type="submit">
         </form>
         <!-- Redes Sociales -->
 
