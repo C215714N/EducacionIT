@@ -72,7 +72,7 @@
     <!-- Pie de Pagina -->
     <footer id="footer">
         <!-- Formulario de Contacto -->
-        <form id="contact" action="" method="GET">
+        <form id="contact" action="scripts/contact.php" method="POST" onsubmit="alert('gracias por enviar tu consulta')">
             <h2>Hacenos tu Consulta</h2>
             <label for="contact_name">Ingrese su Nombre</label>
             <input 
@@ -80,13 +80,17 @@
                 name="name" 
                 type="text"
                 minlength="3"
-                maxlength="50">
+                maxlength="50"
+                placeholder="Nombre*: Cristian Racedo"
+                required>
             <label for="contact_email">Ingrese su Correo</label>
             <input 
                 id="contact_email" 
                 name="email" 
                 type="email"
-                minlength="8">
+                minlength="8"
+                placeholder="Correo*: Cristiandracedo@hotmail.com"
+                required>
             <label for="contact_subject">Seleccione el Asunto</label>
             <select id="contact_subject" name="subject">
                 <option value="html">Estructura HTML</option>
@@ -98,7 +102,9 @@
                 id="contact_consult"
                 name="consult"
                 minlength="30"
-                maxlength="1500"></textarea>
+                maxlength="1500"
+                placeholder="Consulta*: Buenas, necesito hacer una consulta sobre..."
+                required></textarea>
             <input type="submit">
         </form>
         <!-- Redes Sociales -->
