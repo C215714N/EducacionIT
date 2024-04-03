@@ -1,3 +1,5 @@
+/* Importacion */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Raleway');
 /* Estilos Generales */
 *{
     font-family: 'Roboto', 'Century Gothic', sans-serif;
@@ -26,7 +28,23 @@ nav a,
     list-style: none;
 }
 /* Navegacion */
-
+.menu{
+    display: flex; /*Modelo Unidimensional*/
+    justify-content: center; /*eje principal*/
+    align-items: center; /*eje secundario*/
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: .5rem;
+    background-color: #124;
+}
+.menu a{
+    color: #ccc;
+}
+.menu a.active,
+.menu a:hover{
+    color: #eee;
+    text-shadow: 0 0 .5rem;
+}
 /* Cabeceras */
 
 /* Contenido */
