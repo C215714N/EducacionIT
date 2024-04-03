@@ -1,5 +1,30 @@
 /* Estilos Generales */
-
+*{
+    font-family: 'Roboto', 'Century Gothic', sans-serif;
+    scroll-behavior: smooth;
+}
+/* Reinicio de Estilos */
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.m-0{
+    margin: 0;
+}
+.menu,
+.p-0{
+    padding: 0;
+}
+nav a,
+.social a{
+    text-decoration: none;
+}
+.menu,
+.unstyled{
+    list-style: none;
+}
 /* Navegacion */
 
 /* Cabeceras */
@@ -7,7 +32,17 @@
 /* Contenido */
 
 /* Pie de Pagina */
-
+#footer{
+    color: #eee;
+    background-color: #248;
+    /* 
+        a) #cad
+        b) #aae
+        c) #333
+        d) #336
+        e) #ff204e
+    */
+}
 /* Formulario de Contacto */
 #contact{
     display: flex;
