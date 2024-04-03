@@ -46,7 +46,18 @@ nav a,
     text-shadow: 0 0 .5rem;
 }
 /* Cabeceras */
-
+#header{
+    padding: min(20%, 240px) 1rem;
+}
+.header{
+    padding: 1rem;
+    color: #eee;
+    background-color: #248;
+}
+header{
+    color: #248;
+    border-bottom: 2px solid;
+}
 /* Contenido */
 
 /* Pie de Pagina */
