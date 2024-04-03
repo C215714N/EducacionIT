@@ -15,3 +15,18 @@
     max-width: 540px;
     margin: auto;
 }
+label{
+    margin-top: .5rem;
+}
+input,
+select,
+textarea,
+button{
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #333; /* size style color*/
+    padding: .5rem; /* REM (Root EM): Ancho de "M" en la Raiz */
+}
+#contact :focus{
+    box-shadow: 0 0 8px #333; /* -x+ -y+ (blur) (color)*/
+}
