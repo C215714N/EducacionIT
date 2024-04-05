@@ -116,6 +116,11 @@ button{
     background-size: 2.5rem;
     background-repeat: no-repeat;
 }
+.social a:hover{
+    background-color: #eee;
+    background-size: 3.25rem;
+    box-shadow: 0 .25rem .25rem #333; /* -x+ -y+ blur color*/
+}
     /* Iconos redes sociales */
     .facebook{
         background-image: url('../assets/icon/facebook.svg');
