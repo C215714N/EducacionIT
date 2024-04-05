@@ -68,6 +68,77 @@
                 </ul>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Contenido Multimedia</h2>
+            </header>
+            <p>
+                Se identifica con este nombre a todo elemento audiovisual que podemos utilizar dentro de una pagina web. Antiguamente para poder implementar este tipo de elemtos era necesaria la instalacion de algun <em>plugin o complemento de terceros</em>, debido a que los navegadores no brindaban soporte nativo. Pero con la ultima actualizacion de HTML, los navegadores incluyen <strong>APIs de reproduccion de contenido.</strong>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Contenido Embebido?</h3>
+                </header>
+                <p>
+                    Se conoce con este nombre a una <strong>categoria web</strong> que identifica a un <em>elemento que fue compartido con autorizacion del publicador original.</em> Normalmente podemos incrustar contenido gracias a la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido.
+                </p>
+                <div class="example container">
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/zJBzHQawsjs" 
+                            title="Carvel - John Frusciante"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Video con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/PP4IzEcYbeQ?si=UAaHx-0p1ezx89qf" title="Mi homenaje a Akira Toriyama - TeLoResumo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.slideshare.net/slideshow/embed_code/key/9lt1QS1rVOLyIG?startSlide=1" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>
+                            <strong>HTML</strong> from 
+                            <strong><a href="https://es.slideshare.net/FionnaLpez" target="_blank">FionnaLpez</a></strong>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Multimedia sin Plugins?</h3>
+                </header>
+                <p>
+                    <em>Como se menciona anteriormente</em>, hoy en dia, los navegadores permiten agregar este tipo de contenido gracias a las etiquetas <strong>&lt;audio> y &lt;video></strong> que soportan los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Ademas podemos especificar atributos como <em>controls, autoplay, muted, loop, etc...</em> segun sea necesario.
+                </p>
+                <div class="example container">
+                    <figure>
+                        <video src="assets/media/californication.mp4" controls>
+                            <p>
+                                Lo sentimos, pero tu navegador no es compatible con este elemento. Podes acceder al contenido desde el siguiente <a href="assets/media/californication.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Californication (1999) - Red Hot Chili Peppers</figcaption>
+                    </figure>
+                    <figure>
+                        <video src="assets/media/wet-sand.webm" controls autoplay muted loop>
+                            <p>
+                                Lo sentimos, pero tu navegador no es compatible con este elemento. Podes acceder al contenido desde el siguiente <a href="assets/media/wet-sand.mp4">link</a>
+                            </p>
+                        </video>
+                        <figcaption>Wet Sand (2006) - Stadium Arcadium</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
