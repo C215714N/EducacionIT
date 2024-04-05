@@ -48,6 +48,10 @@ nav a,
 /* Cabeceras */
 #header{
     padding: min(20%, 240px) 1rem;
+    background-image: url('../assets/bg/osx-mojave-night.jpg');
+    background-position: top center; /*top bottom right left center | x y */
+    background-size: cover; /* contain cover | x y*/
+    text-align: center;
 }
 .header{
     padding: 1rem;
@@ -91,6 +95,7 @@ button{
     border-radius: 4px;
     border: 1px solid #333; /* size style color*/
     padding: .5rem; /* REM (Root EM): Ancho de "M" en la Raiz */
+    font-size: 1rem;
 }
 #contact :focus{
     box-shadow: 0 0 8px #333; /* -x+ -y+ (blur) (color)*/
