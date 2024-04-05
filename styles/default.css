@@ -15,6 +15,9 @@ header p,
 .m-0{
     margin: 0;
 }
+iframe{
+    border: 0;
+}
 .menu,
 .p-0{
     padding: 0;
@@ -66,7 +69,7 @@ header{
 
 /* Pie de Pagina */
 #footer{
-    padding: 1rem;
+    padding: 1rem 0;
     color: #eee;
     background-color: #248;
     /* 
@@ -76,6 +79,10 @@ header{
         d) #336
         e) #ff204e
     */
+}
+#footer iframe{
+    width: 100%;
+    min-height: 320px;
 }
 /* Formulario de Contacto */
 #contact{
