@@ -13,6 +13,7 @@ h3,
 header p,
 .menu,
 .example figure,
+#header,
 .m-0{
     margin: 0;
 }
@@ -58,6 +59,7 @@ nav a,
     text-align: center;
 }
 .header{
+    margin: -1rem -1rem 1rem;
     padding: 1rem;
     color: #eee;
     background-color: #248;
@@ -67,7 +69,18 @@ header{
     border-bottom: 2px solid;
 }
 /* Contenido */
-
+    main{
+        max-width: 1140px;
+        margin: auto;
+        padding: 1rem;
+    }
+    article{
+        margin: 1.5rem 0;
+        border-radius: .5rem;
+        padding: 1rem;
+        box-shadow: -.25rem .25rem .5rem #999;
+        overflow: hidden;
+    }
     /* Seccion de Ejemplos */
     .example{
         max-width: 720px;
