@@ -139,6 +139,63 @@
                 </div>
             </section>
         </article>
+        <article>
+            <header class="header">
+                <h2>Tablas HTML</h2>
+            </header>
+            <p>
+                Son elementos que permiten mostrar informacion de manera tabular, para utilizarlas simplemente debemos colocar la etiqueta <strong>&lt;table></strong> y dentro de la misma los elementos que la conforman respetando <em>el modelo de cajas.</em>
+            </p>
+            <section>
+                <header>
+                    <h3>¿Estructura Semantica?</h3>
+                </header>
+                <p>
+                    <em>Dentro del contenedor, mencionado anteriormente,</em> debemos colocar las <strong>filas (Table Row)</strong> y dentro de las mismas las <strong>celdas (Table Division)</strong>, donde colocaremos la informacion. A partir de la ultima version de HTML, se incorporaron elementos semanticos que facilitan la interpretacion de las partes de la tabla.
+                </p>
+                <ul class="example unstyled">
+                    <li><strong>THEAD:</strong> Cabecera de tabla, contiene los encabezados de la misma. Estos se representan con la etiqueta <em>&lt;th> (Table Heading).</em></li>
+                    <li><strong>TBODY:</strong> Cuerpo de tabla, contiene los datos a representar, tambien puede contener encabezados si se trata de una tabla de referencias cruzadas.</li>
+                    <li><strong>TFOOT:</strong> Pie de Tabla, contenido complementario al cuerpo. Puede contener totales, promedios, maximos, minimos, etc. A diferencia del resto, no es obligatorio.</li>
+                </ul>
+                <div class="example">
+                    <table class="classic">
+                        <caption>Usuarios</caption>
+                        <!-- Cabecera de Tabla -->
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de Tabla -->
+                        <tbody>
+                            <tr>
+                                <td>C215714N</td>
+                                <td>cristiandracedo@hotmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>D477714N</td>
+                                <td>cristiandracedo@gmail.com</td>
+                            </tr>
+                        </tbody>
+                        <!-- Pie de Tabla -->
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Celdas Combinadas?</h3> 
+                </header>
+            </section>
+        </article>
     </main>
     <!-- Pie de Pagina -->
     <footer id="footer">
