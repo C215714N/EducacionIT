@@ -12,6 +12,7 @@ h2,
 h3,
 header p,
 .menu,
+.example figure,
 .m-0{
     margin: 0;
 }
@@ -67,6 +68,38 @@ header{
 }
 /* Contenido */
 
+    /* Seccion de Ejemplos */
+    .example{
+        max-width: 720px;
+        margin: 1rem auto;
+        border-left: 4px solid #248;
+        padding: 1rem;
+        background-color: #ccc;
+        line-height: 1.5;
+    }
+    .container{
+        display: flex;
+        gap: .5rem;
+        overflow: auto;
+    }
+    /* Contenido Multimedia */
+    figure{
+        min-width: min(95%, 640px);
+        min-height: 360px;
+    }
+    iframe,
+    video{
+        width: 100%;
+        height: calc(100% - 1rem);
+        background-color: #000;
+        object-fit: cover;
+    }
+    /* Aspect-radio     width       height
+        4:3             1.33(h)     75,00%(w)   640x480
+        16:9            1.78(h)     56.25%(w)   640x360
+        16:10           1.6(h)      62.50%(w)   640x400
+        21:9            2.33(h)     42,80%(w)   640x274
+    */
 /* Pie de Pagina */
 #footer{
     padding: 1rem 0;
