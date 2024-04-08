@@ -114,6 +114,10 @@ header{
         21:9            2.33(h)     42,80%(w)   640x274
     */
     /* Tablas */
+    table{
+        width: 100%;
+        max-width: 640px;
+    }
     table caption{
         border-radius: .25rem .25rem 0 0; /* top-left top-right bottom-right bottom-left */
     }
