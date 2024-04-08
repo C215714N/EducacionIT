@@ -253,7 +253,7 @@
                 <p>
                     A veces necesitaremos que una celda ocupe mas de una fila o una columna, para ello debemos utilizar los atributos <strong>rowspan y colspan</strong> respectivamente. Tambien debemos considerar que todo contenido posterior a dicha celda sera desplazada hacia la derecha.
                 </p>
-                <div class="example">
+                <div class="example container">
                     <table class="modern semantic">
                         <caption>Venta de Productos</caption>
                         <thead>
@@ -290,6 +290,37 @@
                                 <td>217800</td>
                             </tr>
                         </tfoot>
+                    </table>
+                    <table class="modern">
+                        <caption>Desarrolladores</caption>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Lenguaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">FrontEnd</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">BackEnd</td>
+                                <td>SQL</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                            </tr>
+                            <tr>
+                                <td>JAVA</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </section>
