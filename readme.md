@@ -90,3 +90,12 @@ Los dispositivos administrables por defecto vienen con el protocolo de arbol de 
 3. switch(config)# __(mas configuraciones)__
     * __vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
     * __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
+
+## Protocolo spanning-tree
+
+Los dispositivos administrables por defecto vienen con el __protocolo de arbol de expansion__ activado, que se utiliza para _prevenir los bucles a nivel de capa 2_. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion global)__
+	* __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge.
+	* __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia.
+2. switch# __(verificacion de la configuracion)__
