@@ -12,6 +12,8 @@ Esto es una guia para los alumnos de la capacitacion __CCNA 2__ que cursan los d
 * [Identificacion de Dispositivos](#identificacion-de-dispositivos)
 * [Configuracion de VLANs](#configuracion-de-vlans)
 * [Servidor de VLANs](#servidor-de-vlans)
+* [Protocolo Spanning-Tree](#protocolo-spanning-tree)
+* [Configuracion EtherChannel](#configuracion-etherchannel)
 
 ## Configuracion Inicial
 
@@ -99,3 +101,20 @@ Los dispositivos administrables por defecto vienen con el __protocolo de arbol d
 	* __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge.
 	* __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia.
 2. switch# __(verificacion de la configuracion)__
+
+## Configuracion Etherchannel
+
+Tecnologia que permite agrupar multiples enlaces redundantes de una misma conexion para que funcionen como uno solo y cuyo ancho de banda final se convierte en la sumatoria de estos. La cantidad maxima de interfaces que se pueden utilizar por grupo es de 8.
+
+1. switch(config)# __(asignacion de enlaces)__
+    * __interface `port-channel <1-48>`__ Submodo de configuracion de Etherchannel
+    * __interface range `<GigabitEthernet 1/0/1-8>`__ Accede al modo de configuracion de rango
+    * __channel-group `<1-48>` mode `<on>`__ Habilitar Etherchannel incondicionalmente
+2. switch(config-if-range)# __(Port aggregation Protocol)__
+    * __channel-protocol `<PAgP>`__ Prepara la interfaz para funcionar con PAgP (Protocolo propietario de CISCO)
+    * __mode `<auto>`__ Habilita PAgP cuando se detecta un dispositivo compatible
+    * __mode `<desirable>`__ Implementa PAgP incondicionalmente
+3. switch(config-if-range)# __(Link aggregation Control Protocol)__
+    * __channel-protocol `<LACP>`__ Prepara la interfaz para funcionar con LACP (Protocolo de Estandar abierto)
+    * __mode `<passive>`__ Habilita LACP cuando se detecta un dispositivo compatible
+    * __mode `<active>`__ Implementa LACP incondicionalmente
