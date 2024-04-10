@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <!-- Etiqueta para codigo -->
+    <script type="text/Javascript">
+        /* 
+            Variables: Espacio reservado en la memoria cuyo valor puede cambiar
+            comando     redeclarable       reasignable
+            var         si                  si
+            let         no                  si
+            const       no                  no
+        */
+        var nombreApp = "Educacion IT"; // Ocupa espacio en memoria por cada declaracion
+        let nombreInstructor = "Cristian Racedo"; // Puede cambiar su valor, pero ocupa un solo espacio en memoria
+        const Capacitacion = "Javascript desde Cero"; // Es inmutable y no se puede volver a declarar
+
+        // Registro para El Desarrollador (mensaje por Consola)
+        console.log("Bienvenido al Curso de " + Capacitacion + ", Mi nombre es " + nombreInstructor + " y soy instructor de " + nombreApp);
+
+        // Notificacion para El Usuario (ventana Emergente)
+        window.alert(nombreInstructor + " te da la Bienvenida");
+    </script>
+</head>
+<body>
+    <h1>Introduccion a Javascript</h1>
+</body>
+</html>
