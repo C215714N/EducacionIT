@@ -39,6 +39,38 @@ Si bien a las variables se les puede reasignar su valor, entre los tipos de dato
 | float | decimal | 32.9 |
 | boolean | binario | true |
 
+## Operadores
+
+### Aritmeticos
+
+| signo | representacion| ejemplo | salida |
+|-------|---------------|---------|--------|
+ __+__	|suma           | 4 + 6   | 10
+ __-__	|resta          | 15 - 10 | 5
+ __*__	|multiplicacion |  3 * 8  | 24
+ __/__	|division       |  10 / 5 | 2
+ __%__	|modulo (resto) |  13 % 2 | 1
+ __**__ | potencia      | 2 ** 3  | 8
+
+### Comparacion
+
+| signo   |representacion|ejemplo | salida |
+|---------|--------------|--------|--------|
+  __==__  |es igual a    | 10 = 5 | false
+  __>__	  |mayor que     | 20 > 2 | true
+  __>=__  |mayor o igual | 5 >= 5 | true
+  __<__	  |menor que     | 10 < 10| false
+  __<=__  |menor o igual | 8 <= 20| true
+  __!=__  |no es igual   | 3 != 7 | true
+
+### Logicos
+
+| signo | representacion | ejemplo        | salida |
+|-------|----------------|----------------|--------|
+__&&__	| si "a" y "b"   | 2<0 && 5>1     | false
+__||__ 	| si "a" o "b"   | 2<0 || 5>1     | true
+__??__	| si no "a" 	 | 2<0 ?? 5>1     | false
+
 ## Comandos
 
 ### Entrada y Salida
