@@ -152,3 +152,15 @@ switch(instrument){
     console.log('percussion');
 }
 ```
+
+## Ejercicios
+
+### Condicionales
+
+Desarrolla los siguientes algoritmos utilizando las __sentencias if o switch__, segun corresponda. Recorda __declarar variables__ para _almacenar los valores_ ingresados por el usuario o almacenar los _resultados de cada proceso_.
+
+1. Un script que solicite al usuario __ingresar 2 numeros__, y que luego indique, con una ventana emergente o en el documento, __cual es mayor y cual es menor__.
+  
+1. Un script que pregunte al usuario si __es mayor de edad (18 años)__, y luego le pregunte su __año de nacimiento__ para corroborar si _se cumple premisa anterior_.
+
+1. Un script que indique al usuario en que __estacion del año__ se encuentra, teniendo en cuenta que este debe __ingresar el numero o nombre del mes__ correpondiente.
