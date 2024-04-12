@@ -38,3 +38,17 @@ Si bien a las variables se les puede reasignar su valor, entre los tipos de dato
 | number | entero | 18 |
 | float | decimal | 32.9 |
 | boolean | binario | true |
+
+## Comandos
+
+### Entrada y Salida
+
+Son aquellos que nos permiten establecer una comunicacion con el usuario final, ya sea mediante la __solicitud de valores__ o mediante la __notificacion en pantalla__ o por __consola__ de los valores resultantes de alguna operacion.
+
+| Comando | Implementacion |
+|----------|-----|
+| alert(`message`) | Muestra un mensaje en pantalla |
+| prompt(`message`) | Mensaje que solicita al usuario que ingrese datos |
+| confirm(`message`) | Mensaje de confirmacion de tipo _boolean_ |
+| write(`message`) | Metodo para escribir en el documento HTML |
+| console.log(`message`) | Mensaje de salida que se muestra en la consola |
