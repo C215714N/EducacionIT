@@ -68,8 +68,8 @@ Si bien a las variables se les puede reasignar su valor, entre los tipos de dato
 | signo | representacion | ejemplo        | salida |
 |-------|----------------|----------------|--------|
 __&&__	| si "a" y "b"   | 2<0 && 5>1     | false
-__||__ 	| si "a" o "b"   | 2<0 || 5>1     | true
-__??__	| si no "a" 	 | 2<0 ?? 5>1     | false
+__\|\|__ 	| si "a" o "b"   | 2<0 \|\| 5>1     | true
+__??__	| si no "a" 	   | 2<0 ?? 5>1     | false
 
 ## Comandos
 
