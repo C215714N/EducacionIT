@@ -73,6 +73,7 @@ __Network Address Translation__ es un mecanismo utilizado por los routers para c
     * __show ip nat statistics__: muestra un resumen de las estadisticas y configuracion NAT del dispositivo
 
 ## IPSec
+
 __internet protocol security__ es un conjunto de protocolos cuya función es asegurar las comunicaciones sobre el Protocolo de Internet autenticando y/o cifrando cada paquete IP en un flujo de datos. También incluye protocolos para el establecimiento de claves de cifrado como __internet security authentication key message protocol__, protocolo criptográfico que constituye la base para el intercambio de claves IKE utilizado en el marco de IPsec para autenticar entidades, así como para establecer y gestionar asociaciones de seguridad.
 
 1. router(config-isakmp)# __fase 1: intercambio de credenciales__
@@ -86,9 +87,10 @@ __internet protocol security__ es un conjunto de protocolos cuya función es ase
     * __set peer `<public ip>`__: Establece la direccion publica del host remoto con el que establecera el tunel
     * __set transform-set `<WORD>`__: Valida el grupo de autenticacion establecido en el transform-set
     * __match address `<access-list>`__: Selecciona la lista de control de acceso para las coincidencias
-1. router(config-if)# __implementacion IPsec VPN__
+1. router(config)#
     * __crypto isakmp key `<password>` address `<peer>`__: Define la contraseña y la IP Publica del Host Remoto
     * __crypto ipsec transform-set `<WORD>` `esp-3des` `esp-md5-hmac`__ Establece el codigo de autenticacion basado en hash
+1. router(config-if)# __implementacion IPsec VPN__
     * __ip access-list extended `<access-list>`__: accedemos al submodo de configuracion de acl
     * __permit ip `192.168.1.0 0.0.0.255` `192.168.0.0 0.0.0.255`__ define una regla que permite el trafico de origen y destino entre las redes privadas
     * __interface `<interface id>`__: Ingresa al submodo de configuracion de interfaz
