@@ -85,6 +85,18 @@ Son aquellos que nos permiten establecer una comunicacion con el usuario final, 
 | write(`message`) | Metodo para escribir en el documento HTML |
 | console.log(`message`) | Mensaje de salida que se muestra en la consola |
 
+### Captura de elementos
+
+Cuando trabajamos con un __documento HTML__ en ocasiones sera necesario acceder a algun __nodo de la pagina__, por lo tanto estos metodos nos permitiran asociar dichos elementos a una variable para su posterior manipulacion.
+
+| Comando | Implementacion |
+|----------|-----|
+| getElementById(`'Id'`) | Devuelve el primer elemento con Id que aparezca en la pagina, segun corresponda |
+| getElementsByClassName(`'Class'`) | Devuelve una lista de elementos que concuerden con el nombre de la Clase
+| getElementsByTagName(`'Tag'`) | Devuelve una lista de elementos que correspondan con el tipo de etiqueta
+| querySelector(`'Selector'`) | Devuelve el primer elemento que coincida con el selector cuya sintaxis es similar a css
+|  querySelectorAll(`'Selector'`)| Devuelve una lista de elementos que correspondan con el selector
+
 ## Condicionales
 
 En ciertas ocasiones deberemos generar una bifurcacion en nuestro codigo, donde se llevara a cabo una accion segun el resultado de una condicion, ya sea que se cumpla o no.
@@ -150,6 +162,65 @@ switch(instrument){
   break;
   default:
     console.log('percussion');
+}
+```
+
+## Bucles
+
+En ocasiones deberemos repetir una tarea reiterada cantidad de veces en nuestro codigo en base en una condición. Podemos crear ciclos definiendo un criterio que debe cumplirse y solamente se finalizara la ejecucion del mismo cuando dicho criterio ya no pueda cumplirse.
+
+### Sentencia While
+
+Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar el codigo del cuerpo.
+
+```js
+i = 0, 
+byte = 8;
+while ( i < byte ){
+  dec = 2**i;
+  console.log(`bit ${i} value is ${dec}`);
+  i++;
+}
+```
+
+### Sentencia Do While
+
+Crea un bucle que evalúa la condición para seguir ejecutándose luego de haber ejecutado el código dentro de su cuerpo, es decir, que el codigo siempre se ejecuta por lo menos una vez.
+
+```js
+dec = 200;
+bin = '';
+value = dec;
+do {
+  bin = (dec % 2) + bin;
+  dec = Math.floor(dec / 2);
+} while (dec >= 1);
+console.log(`binary value of ${value} is ${bin}`);
+```
+
+### Sentencia for
+
+Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+
+```js
+bin = '11001000';
+dec = 0;
+for(i = 0; i < bin.length; i++){
+  if(bin.split("").reverse().join("")[i] == 1){
+    dec += 2**i;
+} }
+console.log(`decimal value of ${bin} is ${dec}`);
+```
+
+### Sentencia for of
+
+Ejecuta un bloque de código para cada elemento de un objeto iterable, como los String, Array, objetos e iterables definidos por el usuario.
+
+```js
+units = ['Kilo','Mega','Giga','Tera','Peta','Exa','Zeta','Yota','Bronto','Geop','Sangan'];
+for (u of units){
+  i = units.indexOf(u) - 1;
+  console.log(`1 ${u}Byte is equal to 1000${units[i] || ''} Bytes`);
 }
 ```
 
