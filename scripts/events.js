@@ -10,9 +10,14 @@ const perimetro = (b,h) => b * 2 + h * 2;
 function result (calculo, base, altura){
     let valor;
     const resultado = document.getElementById("resultado");
-    if (calculo == 1) valor = perimetro(base, altura);
-    if (calculo == 2) valor = superficie(base, altura);
-    resultado.value = valor;
+    if (base >= 0 && altura >= 0){
+        if (calculo == 1) valor = perimetro(base, altura);
+        if (calculo == 2) valor = superficie(base, altura);
+        resultado.value = valor;
+    }
+    else {
+        resultado.value = "Solo Numeros positivos";
+    }
 }
 
 // Eventos
