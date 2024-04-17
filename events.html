@@ -8,8 +8,12 @@
 </head>
 <body>
     <nav class="nav"></nav>
+    <ul>
+        <li><a href="#geometria">Geometria</a></li>
+        <li><a href="#tareas">Tareas</a></li>
+    </ul>
     <main>
-        <section class="flex-column sm m-auto">
+        <section id="geometria" class="flex-column sm m-auto">
             <h2>Geometria</h2>
             <label for="calculo">Elija el Calculo</label>
             <select class="control-geometria" name="calculo" id="calculo">
@@ -32,8 +36,17 @@
                 value="0">
             <input class="control-geometria" type="text" disabled id="resultado">
         </section>
+        <section id="tareas" class="flex-column xl m-auto">
+            <div class="flex-row">
+                <input class="xl w-100" type="text">
+                <button>Agregar</button>
+            </div>
+            <ul>
+            </ul>
+        </section>
     </main>
     <!-- Scripts -->
     <script src="scripts/events.js"></script>
+    <script src="scripts/todo.js"></script>
 </body>
 </html>
