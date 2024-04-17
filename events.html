@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eventos</title>
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
     <nav class="nav"></nav>
     <main>
-        <section>
+        <section class="flex-column sm m-auto">
             <h2>Geometria</h2>
             <label for="calculo">Elija el Calculo</label>
-            <select name="calculo" id="calculo">
+            <select class="control-geometria" name="calculo" id="calculo">
                 <option value="1">Perimetro</option>
                 <option value="2">Superficie</option>
             </select>
             <label for="base">Base</label>
-            <input class="control-superficie"
+            <input class="control-geometria"
                 id="base"
                 name="base"  
                 type="number" 
                 min="0"
                 value="0">
             <label for="altura">Altura</label>
-            <input class="control-superficie"
+            <input class="control-geometria"
                 id="altura"  
                 name="altura"
                 type="number" 
                 min="0"
                 value="0">
-            <input type="text" disabled id="resultado">
+            <input class="control-geometria" type="text" disabled id="resultado">
         </section>
     </main>
     <!-- Scripts -->
