@@ -32,8 +32,17 @@ select{
 .flex-row{
     flex-direction: row;
 }
-
+#geometria,
+#tareas{
+    display: none;
+}
+:is(#geometria, #tareas):target{
+    display: flex;
+}
 /* Cajas */
+.w-100{
+    width: 100%;
+}
 .sm{
     max-width: 320px;
 }
