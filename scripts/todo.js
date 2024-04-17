@@ -18,5 +18,6 @@ agregarTarea.addEventListener("click", () => {
         for(let elemento of tareas){
             listaTareas.innerHTML+=`<li>${elemento}</li>`
         }
+        textoTarea.focus();
     }
 })

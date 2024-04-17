@@ -5,6 +5,7 @@ if (confirm('¿Desea crear la lista de alumnos?')){
     let cantidad = 0;
     // Asignamos un nuevo valor a cantidad
     cantidad = prompt('¿Cuantos alumnos deseas cargar?');
+    totalStudents.innerHTML = "La cantidad de Alumnos Ingresados es de <strong>" + cantidad + "</strong>"
     // Mientras se cumpla la condicion (se ejecuta el codigo)
     while (cantidad > 0){
         // Creamos una etiqueta
@@ -16,5 +17,4 @@ if (confirm('¿Desea crear la lista de alumnos?')){
         // Descuenta 1 de la cantidad
         cantidad--
     }
-    totalStudents.innerHTML = "La cantidad de Alumnos Ingresados es de <strong>" + cantidad + "</strong>"
 }
