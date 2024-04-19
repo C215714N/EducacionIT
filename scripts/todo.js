@@ -4,17 +4,23 @@ const textoTarea = d.querySelector("#tareas input");
 const listaTareas = d.querySelector("#tareas ul");
 const agregarTarea = d.querySelector("#tareas button");
 
-const tareas = [];
+const tareas = []; // tareas[0], tareas["1"]
+const current = { index: null, edit: false}; // current["index"], current.edit
 
 // Funciones
 const crearLista = () => {
     listaTareas.innerHTML = "";
     for(let elemento of tareas){
         listaTareas.innerHTML+=`
-        <li>
-            ${elemento}
+        <li class="flex-row justify-between">
+            <span>
+                <input type="checkbox" ${elemento.estado ? "checked": ""}>
+                ${elemento.contenido ?? elemento}
+            </span>
+            <div>
             <button class="btn-edit">Editar</button>
             <button class="btn-delete">Eliminar</button>
+            <div>
         </li>`
     }
     editarTareas();
@@ -22,7 +28,12 @@ const crearLista = () => {
 }
 const editarTareas = () => {
     const buttons = d.querySelectorAll("#tareas .btn-edit");
-    console.log(buttons);
+    buttons.forEach( (btn, i)  => 
+    btn.addEventListener( 'click', () => {
+        current.edit = true;
+        current["index"] = i;
+        textoTarea.value = tareas[i];
+    } ) )
 }
 const eliminarTareas = () => {
     const buttons = d.querySelectorAll("#tareas .btn-delete");
@@ -36,17 +47,39 @@ const eliminarTareas = () => {
         crearLista();
     } ) );
 }
+const validarTarea = () => {
+    const valor = textoTarea.value;
+    if (current.edit){
+        tareas[current.index] = valor;
+        current.edit = false;
+    }
+    else tareas.push({contenido: valor, estado: false});
+    textoTarea.value = "";
+    textoTarea.focus();
+}
+const verificarTarea = () => {
+    const checkbuttons = d.querySelectorAll('#tareas input[type="checkbox"]')
+    checkbuttons.forEach( (chk, i) => 
+    chk.addEventListener( "input", () => {
+        tareas[i].estado = chk.checked;
+        console.log(tareas[i]);
+    } ) )
 
+    const spans = d.querySelectorAll("#tareas li span");
+    spans.forEach((item,i) => 
+        item.addEventListener("click", () =>{
+            item.classList.toggle("check");
+        })
+    )
+}
 // Eventos
+d.addEventListener('DOMContentLoaded', () => crearLista());
 textoTarea.addEventListener("keyup", (event) => {
     if (event.keyCode == 13) agregarTarea.click()
 })
 agregarTarea.addEventListener("click", () => {
-    const valor = textoTarea.value;
-    if (valor.length > 3){
-        tareas.push(valor);
-        textoTarea.value = "";
+    if (textoTarea.value.length > 3){
+        validarTarea();
         crearLista();
-        textoTarea.focus();
     }
 })

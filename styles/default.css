@@ -50,6 +50,10 @@ select{
 .btn-delete:hover{
     background-color: #c33;
 }
+.check{
+    text-decoration: line-through;
+    background-color: #ea3;
+}
 /* Flexbox */
 [class*="flex-"]{
     display: flex;
@@ -61,6 +65,19 @@ select{
 .flex-row{
     flex-direction: row;
 }
+.justify-center{
+    justify-content:center ;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+/*  */
 #geometria,
 #tareas{
     display: none;
