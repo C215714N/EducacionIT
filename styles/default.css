@@ -79,10 +79,12 @@ select{
 }
 /*  */
 #geometria,
-#tareas{
+#tareas,
+#calculadora{
     display: none;
 }
-:is(#geometria, #tareas):target{
+:is(#geometria, #tareas,
+#calculadora):target{
     display: flex;
 }
 /* Cajas */
