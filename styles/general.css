@@ -1,0 +1,31 @@
+/* Selector Universal (Todas las etiquetas) */
+*{
+    box-sizing: border-box;
+    /* EXPLICACION:
+        CONTENT-BOX
+            content-width:  width
+            final-width:    width + padding + border
+        BORDER-BOX
+            final-width:    width
+            content-width:  width - padding - border
+    */
+    scroll-behavior: smooth;
+    font-family: 'Raleway', 'Montserrat', 'segoe ui', sans-serif;
+}
+/* Reinicio de Estilos */
+body,
+h1,
+h2,
+h3,
+header p,
+.m-0{
+    margin: 0;
+}
+.menu,
+.p-0{
+    padding: 0;
+}
+nav a,
+.social a{
+    text-decoration: none;
+}
