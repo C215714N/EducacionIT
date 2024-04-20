@@ -18,6 +18,16 @@ header p,
 .nav li{
     list-style: none;
 }
+/* Rellenos */
+.p-1{
+    padding: .1rem .25rem;
+}
+.p-2{
+    padding: .25rem .5rem;
+}
+.p-3{
+    padding: .5rem 1rem;
+}
 /* Formularios */
 input,
 textarea,
@@ -77,14 +87,12 @@ select{
 .justify-evenly{
     justify-content: space-evenly;
 }
-/*  */
-#geometria,
-#tareas,
-#calculadora{
+/* Contenido Principal */
+[id^="app-"]{
     display: none;
+    padding: 1.5rem 1rem;
 }
-:is(#geometria, #tareas,
-#calculadora):target{
+[id^="app-"]:target{
     display: flex;
 }
 /* Cajas */

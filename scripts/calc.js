@@ -7,15 +7,13 @@ const calc = {
     b: "",
     result: ""
 }
-const calculator = d.getElementById('calculadora');
+const calculator = d.getElementById('app-calculadora');
 
 // Funciones
-const numbers = () => {
-    const container = d.createElement("div");
-    for(let i = 9; i >= 0; i--){
-        container.innerHTML+= `<button>${i}</button>`;
-    }
-    calculator.appendChild(container);
+const numbers = (start=0,end=9,step=1) => {
+    const array = [];
+    for(let i = start; i <= end; i=i+step) array.push(i);
+    return array;
 }
 const renderElements = (array) =>{
     const container = d.createElement("div");
@@ -23,5 +21,5 @@ const renderElements = (array) =>{
     calculator.appendChild(container);
 }
 renderElements(actions);
-numbers();
+renderElements(numbers());
 renderElements(symbols);

@@ -1,8 +1,8 @@
 // Declaraciones
 const d = document;
-const textoTarea = d.querySelector("#tareas input");
-const listaTareas = d.querySelector("#tareas ul");
-const agregarTarea = d.querySelector("#tareas button");
+const textoTarea = d.querySelector("#app-tareas input");
+const listaTareas = d.querySelector("#app-tareas ul");
+const agregarTarea = d.querySelector("#app-tareas button");
 
 const tareas = []; // tareas[0], tareas["1"]
 const current = { index: null, edit: false}; // current["index"], current.edit
@@ -12,7 +12,7 @@ const crearLista = () => {
     listaTareas.innerHTML = "";
     for(let elemento of tareas){
         listaTareas.innerHTML+=`
-        <li class="flex-row justify-between">
+        <li class="flex-row justify-between p-2">
             <span>
                 <input type="checkbox" ${elemento.estado ? "checked": ""}>
                 ${elemento.contenido ?? elemento}
@@ -27,16 +27,16 @@ const crearLista = () => {
     eliminarTareas();
 }
 const editarTareas = () => {
-    const buttons = d.querySelectorAll("#tareas .btn-edit");
+    const buttons = d.querySelectorAll("#app-tareas .btn-edit");
     buttons.forEach( (btn, i)  => 
     btn.addEventListener( 'click', () => {
         current.edit = true;
         current["index"] = i;
-        textoTarea.value = tareas[i];
+        textoTarea.value = tareas[i].contenido ?? tareas[i];
     } ) )
 }
 const eliminarTareas = () => {
-    const buttons = d.querySelectorAll("#tareas .btn-delete");
+    const buttons = d.querySelectorAll("#app-tareas .btn-delete");
     // Recorremos el Array de Botones y extraemos cada elemento
     buttons.forEach( (btn,i) => 
     // Por cada boton asignamos una accion al evento Click
@@ -45,6 +45,7 @@ const eliminarTareas = () => {
         // Eliminamos de Tareas el elemento con el Indice Actual
         if(seguro) tareas.splice(i,1);
         crearLista();
+        current.edit = false;
     } ) );
 }
 const validarTarea = () => {
@@ -58,14 +59,14 @@ const validarTarea = () => {
     textoTarea.focus();
 }
 const verificarTarea = () => {
-    const checkbuttons = d.querySelectorAll('#tareas input[type="checkbox"]')
+    const checkbuttons = d.querySelectorAll('#app-tareas input[type="checkbox"]')
     checkbuttons.forEach( (chk, i) => 
     chk.addEventListener( "input", () => {
         tareas[i].estado = chk.checked;
         console.log(tareas[i]);
     } ) )
 
-    const spans = d.querySelectorAll("#tareas li span");
+    const spans = d.querySelectorAll("#app-tareas li span");
     spans.forEach((item,i) => 
         item.addEventListener("click", () =>{
             item.classList.toggle("check");

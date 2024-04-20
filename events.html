@@ -9,12 +9,12 @@
 <body>
     <nav class="nav"></nav>
     <ul class="nav flex-row">
-        <li><a href="#geometria">Geometria</a></li>
-        <li><a href="#tareas">Tareas</a></li>
-        <li><a href="#calculadora">Calculadora</a></li>
+        <li><a href="#app-geometria">Geometria</a></li>
+        <li><a href="#app-tareas">Tareas</a></li>
+        <li><a href="#app-calculadora">Calculadora</a></li>
     </ul>
     <main>
-        <section id="geometria" class="flex-column sm m-auto">
+        <section id="app-geometria" class="flex flex-column sm m-auto">
             <h2>Geometria</h2>
             <label for="calculo">Elija el Calculo</label>
             <select class="control-geometria" name="calculo" id="calculo">
@@ -37,7 +37,7 @@
                 value="0">
             <input class="control-geometria" type="text" disabled id="resultado">
         </section>
-        <section id="tareas" class="flex-column xl m-auto">
+        <section id="app-tareas" class="flex flex-column xl m-auto">
             <div class="flex-row">
                 <input class="xl w-100" type="text">
                 <button>Agregar</button>
@@ -45,7 +45,7 @@
             <ul>
             </ul>
         </section>
-        <section id="calculadora"></section>
+        <section id="app-calculadora" class="flex"></section>
     </main>
     <!-- Scripts -->
     <script src="scripts/for.js"></script>
