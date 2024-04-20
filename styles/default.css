@@ -75,6 +75,12 @@ select{
 .flex-row{
     flex-direction: row;
 }
+.flex-column-reverse{
+    flex-direction: column-reverse;
+}
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
 .justify-center{
     justify-content:center ;
 }
@@ -87,6 +93,9 @@ select{
 .justify-evenly{
     justify-content: space-evenly;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}
 /* Contenido Principal */
 [id^="app-"]{
     display: none;
@@ -94,6 +103,36 @@ select{
 }
 [id^="app-"]:target{
     display: flex;
+}
+/* Calculadora */
+#app-calculadora{
+    display: grid;
+    grid-template-areas: 
+        "actions symbols" 
+        "numbers symbols";
+}
+#actions{
+    grid-area: actions;
+    display: flex;
+}
+#actions > *{
+    flex: 1 0 50%;
+}
+#symbols{
+    grid-area: symbols;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#numbers{
+    grid-area: numbers;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+#numbers > *{
+    flex: 1 0 33.3%;
+}
+#numbers button:first-child{
+    flex-basis: 100%;
 }
 /* Cajas */
 .w-100{
