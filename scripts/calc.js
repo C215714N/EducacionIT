@@ -28,24 +28,24 @@ const getNumber = () => calc.operator == "" ? "a" : "b";
 const setNumber = () => {
     const numbers = d.querySelectorAll("#numbers button");
     const input = getInput();
-    
     // Asignar numero con Botones
     numbers.forEach( n => n.addEventListener('click', () => {
         limpiar();
-        calc.operator == "" ?
-        (calc.a+= n.innerText, input.value = calc.a) :
-        (calc.b+= n.innerText, input.value = calc.b)
+        const i = getNumber();
+        calc[i] += n.innerText;
+        input.value = calc[i]
     }))
     // Asignar numero con Input
     input.addEventListener('input', (e) => {
         limpiar();
-        calc.operator == "" ? calc.a = e.target.value : calc.b = e.target.value
+        const i = getNumber();
+        calc[i] = e.target.value;
     })
 }
 const setOperator = () => {
     const symbols = d.querySelectorAll("#symbols button");
     const input = getInput();
-
+    // Identificar operacion a realizar
     symbols.forEach( s => s.addEventListener('click', () => {
         const op = s.innerText;
         op != "=" ? 
@@ -59,7 +59,7 @@ const setOperator = () => {
 const setAction = () => {
     const actions = d.querySelectorAll("#actions button");
     const input = getInput();
-
+    // Identificar accion de borrado
     actions.forEach(a => a.addEventListener('click', () => {
         switch(a.innerText){
             case "CE":
@@ -92,12 +92,16 @@ const calcInput = () => {
     calculator.appendChild(input);
 }
 //# Funciones
-// Renderizado
-calcInput();
-renderElements(numbers(),"numbers");
-renderElements(symbols,"symbols");
-renderElements(actions,"actions");
-// Eventos
-setNumber();
-setOperator();
-setAction();
+//# Eventos 
+d.addEventListener('DOMContentLoaded', () => {
+    // Renderizado
+    calcInput();
+    renderElements(numbers(),"numbers");
+    renderElements(symbols,"symbols");
+    renderElements(actions,"actions");
+    // Eventos
+    setNumber();
+    setOperator();
+    setAction();
+})
+//# Eventos
