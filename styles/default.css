@@ -97,6 +97,10 @@ select{
     flex-wrap: wrap;
 }
 /* Contenido Principal */
+main{
+    perspective: 15rem;
+    perspective-origin: top center;
+}
 [id^="app-"]{
     display: none;
     padding: 1.5rem 1rem;
@@ -111,9 +115,28 @@ select{
         "viewer  viewer"
         "actions symbols" 
         "numbers symbols";
+    border-radius: .5rem;
+    gap: .2rem;
+    background: linear-gradient(#ccc, #999);
+    transform: rotateX(15deg);
+    box-shadow: 0 .25rem .5rem #333;
 }
 #app-calculadora > div {
     display: flex;
+    gap: .2rem;
+}
+#app-calculadora input{
+    text-align: right;
+}
+#app-calculadora button{
+    border: none;
+    background: linear-gradient(#eee, #ccc)
+}
+#app-calculadora button:hover{
+    background-image: linear-gradient(#ccc, #999);
+}
+#app-calculadora button:focus{
+    box-shadow: 0 .1rem .25rem #666;
 }
 #viewer{
     grid-area: viewer;
@@ -122,7 +145,7 @@ select{
     grid-area: actions;
 }
 #actions > *{
-    flex: 1 0 50%;
+    flex: 1 0 calc(50% - .2rem);
 }
 #symbols{
     grid-area: symbols;
@@ -133,7 +156,7 @@ select{
     flex-wrap: wrap-reverse;
 }
 #numbers > *{
-    flex: 1 0 33.3%;
+    flex: 1 0 30%;
 }
 #numbers button:first-child{
     flex-basis: 100%;
