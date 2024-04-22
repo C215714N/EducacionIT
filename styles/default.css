@@ -105,27 +105,31 @@ select{
     display: flex;
 }
 /* Calculadora */
-#app-calculadora{
+#app-calculadora:target{
     display: grid;
     grid-template-areas: 
+        "viewer  viewer"
         "actions symbols" 
         "numbers symbols";
 }
+#app-calculadora > div {
+    display: flex;
+}
+#viewer{
+    grid-area: viewer;
+}
 #actions{
     grid-area: actions;
-    display: flex;
 }
 #actions > *{
     flex: 1 0 50%;
 }
 #symbols{
     grid-area: symbols;
-    display: flex;
     flex-direction: column-reverse;
 }
 #numbers{
     grid-area: numbers;
-    display: flex;
     flex-wrap: wrap-reverse;
 }
 #numbers > *{
