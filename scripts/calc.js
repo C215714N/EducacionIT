@@ -20,6 +20,18 @@ const renderElements = (array, id) =>{
     array.forEach(btn => container.innerHTML+= `<button>${btn}</button>`)
     calculator.appendChild(container);
 }
-renderElements(actions,"actions");
+const calcInput = () => {
+    const input = d.createElement('input');
+    Object.assign(input, {
+        id: "viewer",
+        className: "control",
+        type: "number",
+        placeholder: "realice un calculo"
+    });
+    calculator.appendChild(input);
+}
+
+calcInput();
 renderElements(numbers(),"numbers");
 renderElements(symbols,"symbols");
+renderElements(actions,"actions");
