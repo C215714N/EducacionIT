@@ -22,9 +22,12 @@ const limpiar = () => {
         calc.b = "";
         calc.result = "";
 } }
+const getInput = () => d.querySelector("#app-calculadora input");
+const getNumber = () => calc.operator == "" ? "a" : "b";
+
 const setNumber = () => {
     const numbers = d.querySelectorAll("#numbers button");
-    const input = d.querySelector("#app-calculadora input");
+    const input = getInput();
     
     // Asignar numero con Botones
     numbers.forEach( n => n.addEventListener('click', () => {
@@ -41,7 +44,7 @@ const setNumber = () => {
 }
 const setOperator = () => {
     const symbols = d.querySelectorAll("#symbols button");
-    const input = d.querySelector("#app-calculadora input");
+    const input = getInput();
 
     symbols.forEach( s => s.addEventListener('click', () => {
         const op = s.innerText;
@@ -51,6 +54,24 @@ const setOperator = () => {
             input.value = calc.result,
             calc.result = "recalc"
         )
+    }))
+}
+const setAction = () => {
+    const actions = d.querySelectorAll("#actions button");
+    const input = getInput();
+
+    actions.forEach(a => a.addEventListener('click', () => {
+        switch(a.innerText){
+            case "CE":
+                const i = getNumber();
+                calc[i] = calc[i].toString().slice(0,-1);
+                input.value = calc[i];
+            break;
+            default:
+                calc.result = "recalc";
+                limpiar();
+                input.value = "";
+        }
     }))
 }
 // Renderizado
@@ -79,3 +100,4 @@ renderElements(actions,"actions");
 // Eventos
 setNumber();
 setOperator();
+setAction();
