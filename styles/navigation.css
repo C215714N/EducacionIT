@@ -9,6 +9,15 @@ nav{
 .menu{
     width: 100%;
 }
+nav a{
+    color: #ddd;
+}
+.menu a.active,
+.menu a:hover{
+    color: #eee;
+    text-shadow: 0 0 .2rem; /* -x+ -y+ blur color */
+}
+/* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
     nav button{
         display: none;
@@ -17,5 +26,16 @@ nav{
         display: flex;
         width: auto;
         gap: .5rem;
+    }
+}
+/* XXL Devices - Smart TV */
+@media screen and (min-width: 1400px){
+    nav{
+        padding: .5rem calc(50vw - 660px); /*top right bottom left*/
+    }
+}
+@media print {
+    nav{
+        display: none;
     }
 }
