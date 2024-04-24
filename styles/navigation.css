@@ -1,0 +1,21 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+    background-color: #e82;
+}
+.menu{
+    width: 100%;
+}
+@media screen and (min-width: 768px){
+    nav button{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: auto;
+        gap: .5rem;
+    }
+}
