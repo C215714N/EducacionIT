@@ -224,6 +224,53 @@ for (u of units){
 }
 ```
 
+## Eventos
+
+Corresponden a las acciones, normalmente realizadas por el usuario, que desencadenan la ejecucion de codigo mediante el envio de una señal. Estas acciones normalmente se asocian a los diferentes elementos que se encuentran en la pagina, programa o aplicacion que se esta ejecutando y entre los mas comunes se encuentran los siguientes:
+
+| Nombre | Descripcion |
+|--|--|
+| __click__ | Se hace clic con el boton primario del ratón |
+| __scroll__ | Se mueve la barra de desplazamiento |
+| __keydown__ | Se comienza a presionar una tecla |
+| __keypress__ | Se mantiene presionada una tecla |
+| __keyup__ | Se levanta el dedo de la tecla |
+| __submit__ | Se envía un formulario |
+| __load__ | Se ha terminado de cargar la página |
+| __focus__ | Un input recibe el foco |
+| __blur__ | Un input pierde el foco |
+| __animationstart__ | Empieza una animación |
+| __animationend__ | Termina una animación |
+| __transitionstart__ | Empieza una transición |
+| __transitionend__ | Termina una transición |
+| __contextmenu__ | Se hace clic con el boton secundario del ratón |
+| __mouseenter__ | Entra el cursor del ratón en el elemento |
+| __mouseleave__ | Sale el cursor del ratón en el elemento |
+| __mousemove__ | Se mueve el cursor del ratón |
+
+## Array
+
+Es una __estructura de datos__ que puede almacenar una _colección ordenada_ de elementos. Corresponde a una __variable estructurada__ formada de un número _"n"_ de variables simples del mismo tipo que son denominadas los componentes o elementos del array.
+
+| Método	| Descripción |
+|--|--|
+| __length__	| Devuelve la cantidad de elementos del Array |
+| __push(`element`)__	| Agrega un elemento al final del array y devuelve la longitud |
+| __pop()__	| Elimina el último elemento del array y lo devuelve |
+| __shift()__	| Elimina el primer elemento del array y lo devuelve |
+| __unshift(`element`)__	| Agrega un elemento al inicio del array y devuelve la nueva longitud |
+| __concat(`array`)__	| Combina el array actual con otro array y devuelve un nuevo array |
+| __slice(`start`,`end`)__	| Devuelve una copia de una parte del array, especificada por el inicio y el fin |
+| __splice(`start`,`count`,`items`)__	| Cambia el contenido de un array eliminando elementos existentes |
+| __indexOf(`element`)__	| Devuelve el índice de la primera ocurrencia de un elemento o -1 si no se encuentra |
+| __lastIndexOf(`element`)__	| Devuelve el índice de la última ocurrencia de un elemento o -1 si no se encuentra |
+| __forEach(`callback`)__	| Ejecuta una función proporcionada una vez por cada elemento del array |
+| __map(`callback`)__	| Crea un nuevo array con los resultados de llamar a una función para cada elemento del array |
+| __filter(`callback`)__	| Crea un nuevo array con todos los elementos que cumplan con la condición de la función |
+| __reduce(`callback`, `initialValue`)__	| Aplica una función a un acumulador y a cada elemento del array para reducirlo a un único valor |
+| __sort(`compareFunction`)__	| Ordena los elementos del array modificandolo |
+| __reverse()__	| Invierte el orden de los elementos del array modificandolo |
+
 ## Ejercicios
 
 ### Condicionales
