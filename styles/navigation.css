@@ -4,7 +4,11 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     padding: .5rem;
-    background-color: #e82;
+    background: #e82 linear-gradient(
+        hsl(30,80%,50%), /*HEX: #ee8822 | DEC: rgb(238,136,34)*/
+        hsl(15,50%,30%)  /*HEX: #883322 | DEC: rgb(136,51,34)*/
+    );
+    /* SHORTHAND: color image position/size repeat */
 }
 .menu{
     width: 100%;
