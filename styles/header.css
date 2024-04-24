@@ -1,0 +1,36 @@
+#header{
+    padding: min(20vw, 240px) 1rem;
+    font-size: min(calc(2vw + .8rem), 5rem);
+    text-align: center;
+    text-shadow: 0 0 .25rem #333;
+    /* Background */
+    background-image: 
+        linear-gradient(#e828, #8328),
+        url("../assets/icon/wine.svg"),
+        url("../assets/bg/header-background.jpg");
+    background-position: center; /* top bottom left right center | x y */
+    background-size: cover, contain; /* cover contain | width height */
+    background-repeat: no-repeat;
+    background-attachment: fixed, scroll;
+}
+h1{
+    font-family: 'Campana';
+}
+.header{
+    padding: 1rem;
+    color: #eee;
+    background-color: #e82;
+}
+header{
+    border-bottom: .1rem solid; /* size style color */
+    padding: .25rem;
+    color: #e82;
+}
+/* 
+    Jerarquia CSS               valor
+    tag                             1
+    .class                         10
+    #id                           100
+    !important                   1000
+    <tag style="color: blue">   10000
+*/
