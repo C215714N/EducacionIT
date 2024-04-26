@@ -60,18 +60,21 @@
                     placeholder="ABC-1234-5678-9">
                 <label for="order">Seleccione su Tipo de Pedido</label>
                 <select name="order" id="order" required>
+                    <option value="0" selected disabled hidden>No lo pienses mas</option>
                     <option value="1">Ven Conmigo</option>
                     <option value="2">Pronta Entrega</option>
                     <option value="3">Esperar Paciente</option>
                 </select>
                 <label for="menu">Seleccione su Opcion del Menu</label>
                 <select name="menu" id="menu" required multiple>
-                    <option value="0" disabled hidden>Arme su pedido</option>
+                    <option class="message" value="0" selected disabled></option>
                 </select>
                 <label for="description">Detalle su como quiere su orden</label>
                 <textarea 
                     name="description" 
                     id="description"
+                    minlength="20"
+                    maxlength="150"
                     placeholder="cocido pero no quemado, a punto pero no crudo, tostado pero crujiente..."></textarea>
                 <button>Enviar</button>
             </form>
