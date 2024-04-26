@@ -2,7 +2,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: .5rem;
     background: #e82 linear-gradient(
         hsl(30,80%,50%), /*HEX: #ee8822 | DEC: rgb(238,136,34)*/
@@ -49,3 +49,14 @@ nav a{
         display: none;
     }
 }
+
+/* 
+    | size | desde  | hasta  | ejemplo      |
+    |------|--------|--------|--------------|
+    | xs   | 0      | 576px  | smartwatch   |
+    | sm   | 576px  | 768px  | smartphones  | 
+    | md   | 768px  | 992px  | tablets      |
+    | lg   | 992px  | 1200px | netbooks     |
+    | xl   | 1200px | 1400px | desktop      |
+    | xxl  | 1400px |        | Full HD      |
+*/
