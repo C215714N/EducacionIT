@@ -46,6 +46,35 @@
                 <h2>Delivery</h2>
                 <p>Si lo pide lo llevamos y si no existe <strong>lo desarrollamos</strong></p>
             </header>
+            <form method="post">
+                <label for="name">Ingrese su Nombre</label>
+                <input id="name" 
+                    name="name" 
+                    type="text"
+                    placeholder="Juan Perez(*)"
+                    required>
+                <label for="ticket">Ingrese su Cupon de Descuento</label>
+                <input id="ticket"
+                    name="ticket"
+                    type="text"
+                    placeholder="ABC-1234-5678-9">
+                <label for="order">Seleccione su Tipo de Pedido</label>
+                <select name="order" id="order" required>
+                    <option value="1">Ven Conmigo</option>
+                    <option value="2">Pronta Entrega</option>
+                    <option value="3">Esperar Paciente</option>
+                </select>
+                <label for="menu">Seleccione su Opcion del Menu</label>
+                <select name="menu" id="menu" required multiple>
+                    <option value="0" disabled hidden>Arme su pedido</option>
+                </select>
+                <label for="description">Detalle su como quiere su orden</label>
+                <textarea 
+                    name="description" 
+                    id="description"
+                    placeholder="cocido pero no quemado, a punto pero no crudo, tostado pero crujiente..."></textarea>
+                <button>Enviar</button>
+            </form>
         </section>
         <aside>
             <header class="header">
