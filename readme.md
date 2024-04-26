@@ -17,7 +17,7 @@ La programacion orientada a objetos (POO) consiste en la identificacion de facto
 
 Si bien existen multiples caracteristicas en la programacion orientada a objetos, 4 destacan por encima del resto.
 
-![Cuatro Pilares](./assets/pillar_men.jpg)
+![Cuatro Pilares de POO](./assets/poo_pillars.jpg)
 
 * __ABSTRACCION__ consiste en identificar las caracteristicas principales de los objetos del sistema.
 * __HERENCIA__ capacidad para transmitir o pasar las caracteristicas a los elementos hijos.
@@ -26,12 +26,10 @@ Si bien existen multiples caracteristicas en la programacion orientada a objetos
 
 Segun el lenguaje la sintaxis puede variar, pero en definitiva una clase de establece de la siguiente manera, con sus propiedades y metodos correspondientes.
 
-```sh
+```
 class Person {
-    ## Propiedades
     String nombre;
     Integer edad;
-    ## Metodos
     String saludar(){
         return "hola, mi nombre es " + this.nombre
     }
@@ -42,7 +40,7 @@ class Person {
 ```
 Luego para poder crear instancias de la clase podemos almacenar los objetos en variables definiendo, cada vez, uno nuevo de la clase instanciada.
 
-```sh
+```c´´
 usuario = new Person()
 usuario.nombre = "cristian"
 usuario.edad = 33
