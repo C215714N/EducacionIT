@@ -1,0 +1,13 @@
+.card{
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: -.2rem .2rem 1rem #dcc;
+    overflow: hidden;
+    background-color: #fefefe;
+}
+.card .header{
+    margin: -1rem -1rem .5rem;
+}
+aside.card{
+    min-height: calc(100vh - 3rem);
+}
