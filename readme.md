@@ -55,3 +55,24 @@ A continuacion se muestra una lista de archivos con ejemplos similares a lo expu
 * [JavaScript](./examples/Person.js)
 * [PHP](./examples/Person.php)
 * [Python](./examples/Person.py)
+
+## Tipos de relaciones
+
+Al diseñar un diagrama de Clases, es común identificar conexiones directas o indirectas entre ellas, dependiendo de los objetos que se deriven de su instancia.
+
+
+1. __uno a uno:__ Cada instancia de una clase está vinculada a exactamente una instancia de otra clase. Es una relación directa y única entre dos clases.
+1. __uno a varios:__ Cada instancia de una clase está vinculada a una o más instancias de otra, pero cada instancia de esta última se vincula a solo una de la primera.
+1. __varios a varios:__ Múltiples instancias de una clase están asociadas con múltiples instancias de otra clase, necesitando de una asociacion intermedia.
+
+Las relaciones entre clases son las __conexiones y asociaciones__ que existen entre distintas _clases dentro de un sistema_. Estas relaciones describen cómo las clases interactúan entre sí y pueden tomar diversas formas.
+
+Son fundamentales para el __diseño de sistemas orientados a objetos__, ya que permiten definir la _estructura y el comportamiento_ del software de manera __modular, cohesiva y reutilizable__.
+
+| Categoria | Descripcion |
+|--|--|
+| __Asociación__ | Corresponde a una Relación básica entre clases.$^1$ $^2$ $^3$ |
+| __Agregación__ | Una clase contiene otras, que pueden existir de manera independiente.$^2$ $^3$ |
+| __Composición__ | Una clase contiene otras, que no pueden existir independientemente. $^2$ $^3$ |
+| __Herencia__ | Una clase hereda atributos y métodos de otra clase |
+| __Dependencia__ | Una clase depende de otra, temporal o permanentemente |
