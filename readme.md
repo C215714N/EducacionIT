@@ -51,15 +51,17 @@ A continuacion se muestra una lista de archivos con ejemplos similares a lo expu
 * [Objetos](./examples/object.md)
 * [C#](./examples/Person.cs)
 * [C++](./examples/Person.cpp)
+* [GO](./examples/Person.go)
 * [Java](./examples/Person.java)
 * [JavaScript](./examples/Person.js)
+* [Perl](./example/Person.pl)
 * [PHP](./examples/Person.php)
 * [Python](./examples/Person.py)
+* [Ruby](./examples/Person.rb)
 
 ## Tipos de relaciones
 
 Al diseñar un diagrama de Clases, es común identificar conexiones directas o indirectas entre ellas, dependiendo de los objetos que se deriven de su instancia.
-
 
 1. __uno a uno:__ Cada instancia de una clase está vinculada a exactamente una instancia de otra clase. Es una relación directa y única entre dos clases.
 1. __uno a varios:__ Cada instancia de una clase está vinculada a una o más instancias de otra, pero cada instancia de esta última se vincula a solo una de la primera.
