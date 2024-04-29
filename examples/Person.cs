@@ -1,18 +1,21 @@
 public class Persona{
     // Propiedades
-    private string Nombre;
-    private string Apellido;
-    private int Edad;
+    private string nombre;
+    private string apellido;
+    private int edad;
     // Metodos
     // Constructor
     public Persona(string nombre, string apellido, int edad){
-        Nombre = nombre;
-        Apellido = apellido;
-        Edad = edad;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
     }
     // Getters
     public string getNombreCompleto(){
-        return Nombre + " " + Apellido;
+        return nombre + " " + apellido;
+    }
+    public int getEdad(){
+        return edad;
     }
     // Setters
     public void setNombreCompleto (string nombre, string apellido){
@@ -23,8 +26,8 @@ public class Persona{
         if (edad >= 0 && edad <= 125) this.edad = edad;
     }
 }
-
-Persona usuario = new Persona("Cristian", "Racedo", 33);
-usuario.edad; // 33
-usuario.setEdad(25);
-usuario.edad; // 25
+// Instancia
+Persona usuario = new Persona("Cristian", "Racedo", 25);
+usuario.getEdad(); // 25
+usuario.setEdad(33);
+usuario.getEdad(); // 33

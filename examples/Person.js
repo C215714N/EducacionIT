@@ -26,8 +26,8 @@ class Persona{
         if (edad >= 0 && edad <= 125) this.#edad = edad;
     }
 }
-
-const usuario = new Persona("Cristian", "Racedo", 33);
-usuario.getEdad(); // 33
-usuario.setEdad(25);
+// Instancia
+const usuario = new Persona("Cristian", "Racedo", 25);
 usuario.getEdad(); // 25
+usuario.setEdad(33);
+usuario.getEdad(); // 33

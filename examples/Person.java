@@ -19,15 +19,17 @@ class Persona{
     }
     /// Setters
     public void setNombreCompleto (String nombre, String apellido){
-        if (nombre.length >=3) this.nombre = nombre;
-        if (apellido.length >= 3) this.apellido = apellido;
+        if (nombre.length() >=3) this.nombre = nombre;
+        if (apellido.length() >= 3) this.apellido = apellido;
     }
     public void setEdad (Integer edad){
         if (edad >= 0 && edad <= 125) this.edad = edad;
     }
 }
-
-Persona usuario = new Persona("Cristian", "Racedo", 33);
-usuario.getEdad(); // 33
-usuario.setEdad(25);
-usuario.getEdad(); // 25
+// Instancia
+public static void main(String[] args) {
+    Persona usuario = new Persona("Cristian", "Racedo", 25);
+    System.out.println(usuario.getEdad()); // 25
+    usuario.setEdad(33);
+    System.out.println(usuario.getEdad()); // 33
+}

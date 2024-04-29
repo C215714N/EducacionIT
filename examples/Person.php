@@ -15,6 +15,9 @@ class Persona {
     public function getNombreCompleto(){
         return $this->$nombre + " " + $this->$apellido;
     }
+    public function getEdad(){
+        return $this->$edad;
+    }
     // Setters
     public function setNombreCompleto ($nombre, $apellido){
         if (strlen($nombre) >=3) $this->$nombre = $nombre;
@@ -24,9 +27,9 @@ class Persona {
         if ($edad >= 0 && $edad <= 125) $this->$edad = $edad;
     }
 }
-
-$usuario = new Persona("Cristian", "Racedo", 33);
-$usuario->$edad; // 33
-$usuario->setEdad(25);
-$usuario->$edad; // 25
+// Instancia
+$usuario = new Persona("Cristian", "Racedo", 25);
+$usuario->getEdad(); // 25
+$usuario->setEdad(33);
+$usuario->getEdad(); // 33
 ?>
