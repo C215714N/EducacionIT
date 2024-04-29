@@ -73,8 +73,8 @@ Son fundamentales para el __diseño de sistemas orientados a objetos__, ya que p
 
 | Categoria | Descripcion |
 |--|--|
-| __Asociación__ | Corresponde a una Relación básica entre clases.$^1$ $^2$ $^3$ |
-| __Agregación__ | Una clase contiene otras, que pueden existir de manera independiente.$^2$ $^3$ |
+| __Asociación__ | Corresponde a una Relación básica entre clases. $^1$ $^2$ $^3$ |
+| __Agregación__ | Una clase contiene otras, que pueden existir de manera independiente. $^2$ $^3$ |
 | __Composición__ | Una clase contiene otras, que no pueden existir independientemente. $^2$ $^3$ |
 | __Herencia__ | Una clase hereda atributos y métodos de otra clase |
 | __Dependencia__ | Una clase depende de otra, temporal o permanentemente |
