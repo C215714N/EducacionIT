@@ -78,4 +78,13 @@ classDiagram
     Caballo <|-- Pony
     Caballo <|-- Bagual
     Caballo <|-- Criollo
+
+    class Perro{
+        + ladrar()
+        + morder()
+    }
+    class Gato{
+        + maullar()
+        + rasguñar()
+    }
 ```
