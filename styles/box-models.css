@@ -1,0 +1,87 @@
+/* Flexbox */
+[class*="flex-"],
+.flex{
+    display: flex;
+}
+[class*="flex"].auto > *{
+    flex: 1 0 min(100%, var(--size));
+    /* SHORTHAND:
+        FLEX-GROW:      determina si un elemento puede expandir su tamaño
+        FLEX-SHRINK:    determina si el elemento puede reducir su tamaño
+        FLEX-BASIS:     establece el tamaño base para el elemento flex
+    */
+}
+/* direction */
+    .flex-r{
+        flex-direction: row;
+    }
+    .flex-row-r{
+        flex-direction: row-reverse;
+    }
+    .flex-col{
+        flex-direction: column;
+    }
+    .flex-col-r{
+        flex-direction: column-reverse;
+    }
+/* Wrap */
+    .flex-wrap{
+        flex-wrap: wrap;
+    }
+    .flex-wrap-r{
+        flex-wrap: wrap-reverse;
+    }
+/* Justify-Content */
+    .justify-start{
+        justify-content: start;
+    }
+    .justify-center{
+        justify-content: center;
+    }
+    .justify-end{
+        justify-content: end;
+    }
+    .justify-around{
+        justify-content: space-around;
+    }
+    .justify-between{
+        justify-content: space-between;
+    }
+    .justify-evenly{
+        justify-content: space-evenly;
+    }
+/* Align-Items */
+    .align-start{
+        align-items: start;
+    }
+    .align-center{
+        align-items: center;
+    }
+    .align-end{
+        align-items: end;
+    }
+    .align-baseline{
+        align-items: baseline;
+    }
+/* CSS-Grid */
+[class*="grid-"],
+.grid{
+    display: grid;
+}
+[class*="grid"].auto{
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,var(--size)),1fr));
+    /* EXPLICACION:
+        repeat(n, valor): repite un valor n cantidad de veces
+        - AUTO-FILL: rellena el espacio disponible con celdas.
+        - AUTO-FIT: estira las celdas hasta ocupar el espacio.
+        
+        minmax(a,b): determina un tamaño min y maxi para las celdas
+    */
+}
+/* Column Row */
+.masonry :nth-child(even){
+    grid-column: span 2;
+}
+.masonry :nth-child(odd){
+    grid-row: span 2;
+}
