@@ -8,6 +8,8 @@
 .card .header{
     margin: -1rem -1rem .5rem;
 }
-aside.card{
-    min-height: calc(100vh - 3rem);
+@media screen and (min-width: 1200px){
+    aside.card{
+        min-height: calc(100vh - 3rem);
+    }
 }
