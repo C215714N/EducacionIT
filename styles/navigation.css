@@ -18,12 +18,33 @@ nav{
     /* SHORTHAND: color image position/size repeat */
 }
 .menu{
+    position: fixed;
+    /* EXPLICACION
+        FIXED: El elemento deja de formar parte del flow, es decir, que ya no ocupa lugar en el espacio. Se ubica con respecto al viewport (ventana del navegador) y debe tener sus atributos definidos para ser visualizado.
+    */
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: -1;
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
+    background: linear-gradient(
+        var(--main),
+        var(--alt)
+    );
+    opacity: .9;
+    transition: all .5s ease;
+    /* SHORTHAND 
+        -PROPERTY: a que atributo le corresponde
+        -DURATION: cuanto dura la transicion
+        -TIMING-FUNCTION: como se lleva a cabo
+        -DELAY: retraso para que se ejecute
+    */
 }
 .menu.active{
-    max-height: 100vh;
+    left: 0;
 }
 nav a{
     color: #ddd;
@@ -39,10 +60,15 @@ nav a{
         display: none;
     }
     .menu{
+        position: static;
+        /* EXPLICACION
+            STATIC: Corresponde al valor predeterminado para cualquier elemento de la pagina, su posicion no puede ser cambiada y el elemento ocupa su lugar por defecto.
+         */
         display: flex;
         width: auto;
         max-height: 600px;
         gap: .5rem;
+        background-image: none;
     }
 }
 /* XXL Devices - Smart TV */
