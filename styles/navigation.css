@@ -1,4 +1,11 @@
 nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    /* EXPLICACION
+        STICKY: El elemento ocupa su posicion predeterminada, hasta que se cumple una condicion dada por alguno de sus atributos (TOP, RIGHT, BOTTOM, LEFT) haciendo que deje de formar parte del flow, siempre y cuando siga dentro de su contenedor
+    */
     display: flex;
     justify-content: space-between;
     align-items: center;

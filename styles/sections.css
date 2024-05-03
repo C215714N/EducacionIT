@@ -10,6 +10,8 @@
 }
 @media screen and (min-width: 1200px){
     aside.card{
-        min-height: calc(100vh - 3rem);
+        position: sticky;
+        top: 2.5rem;
+        height: calc(100vh - 3rem);
     }
 }

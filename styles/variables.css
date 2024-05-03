@@ -14,6 +14,7 @@
     /* Tipografia */
     --font: 'Raleway', 'Montserrat', 'segoe ui', sans-serif;
 }
+/* Tamaños */
 .xs{
     --size: var(--xs);
 }
@@ -31,4 +32,38 @@
 }
 .xxl{
     --size: var(--xxl);
+}
+/* Colores */
+.btn{
+    --color: var(--light);
+    --bg: var(--main);
+    position: relative;
+    /* EXPLICACION:
+        RELATIVE: El elemento se ubica dentro del flow con respecto a si mismo. Sigue ocupando su espacio original y no afecta a los elementos hermanos, tambien funciona como referente.
+    */
+    border-radius: .5rem;
+    border: .1rem solid var(--bg);
+    padding: .5rem 1rem;
+    color: var(--color);
+    background-color: var(--bg);
+}
+.btn:hover{
+    color: var(--bg);
+    background-color: var(--color);
+}
+.btn-success{
+    --bg: #3c6;
+}
+.btn-danger{
+    --bg: #c33;
+}
+.btn-info{
+    --bg: #36c;
+}
+.btn-dark{
+    --bg: var(--dark);
+}
+.btn-light{
+    --color: var(--dark);
+    --bg: var(--light);
 }
