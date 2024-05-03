@@ -1,0 +1,21 @@
+#promos div{
+    gap: 1.5rem
+}
+#promos img{
+    margin: .5rem 0; 
+    padding: 1rem;
+    width: 100%;
+    height: var(--size);
+    border-radius: .5rem;
+    object-fit: contain;
+    background: radial-gradient(
+        circle at top right,
+        var(--main),
+        var(--dark)
+    );
+}
+#promos button:hover{
+    bottom: .5rem;
+    left: .5rem;
+    box-shadow: -.2rem .2rem .2rem var(--dark);
+}
