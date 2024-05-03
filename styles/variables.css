@@ -1,0 +1,34 @@
+/* Declaraciones Globales */
+:root{
+    /* Colores */
+    --main: #e82;
+    --light: #eee;
+    --dark: #333;
+    /* Tamaños */
+    --xs: 60px;
+    --sm: 120px;
+    --md: 240px;
+    --lg: 360px;
+    --xl: 480px;
+    --xxl: 640px;
+    /* Tipografia */
+    --font: 'Raleway', 'Montserrat', 'segoe ui', sans-serif;
+}
+.xs{
+    --size: var(--xs);
+}
+.sm{
+    --size: var(--sm);
+}
+.md{
+    --size: var(--md);
+}
+.lg{
+    --size: var(--lg);
+}
+.xl{
+    --size: var(--xl);
+}
+.xxl{
+    --size: var(--xxl);
+}

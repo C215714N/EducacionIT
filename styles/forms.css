@@ -29,10 +29,10 @@ textarea{
 }
 /* Comportamiento */
 form :focus{
-    border-color: #e82;
+    border-color: var(--main);
     box-shadow: 
-        0 0 .25rem #e82, 
-        0 0 .5rem #e82 inset;
+        0 0 .25rem var(--main), 
+        0 0 .5rem var(--main) inset;
 }
 form .message::before{
     content: 'Mantenga el dedo sobre la opcion para seleccion multiple';
