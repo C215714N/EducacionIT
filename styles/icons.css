@@ -1,0 +1,40 @@
+[class*="icon-"]{
+    position: relative;
+}
+[class*="icon-"]::before{
+    font-size: 1.5em;
+    padding: .25em;
+}
+/* Menu Principal */
+.icon-home::before{
+    content: "🏠";
+}
+.icon-about::before{
+    content: "📰";
+}
+.icon-promos::before{
+    content: "🆓";
+}
+.icon-service::before{
+    content: "📒";
+}
+.icon-delivery::before{
+    content: "🛵";
+}
+.icon-contact::before{
+    content: "📱";
+}
+/* Menu Hamburguesa */
+.icon-menu::before{
+    content: "\2630";
+}
+.icon-close::before{
+    content: "\00D7";
+}
+/* Mapa de Contacto */
+.icon-max::before{
+    content: "➕"
+}
+.icon-min::before{
+    content: "➖";
+}

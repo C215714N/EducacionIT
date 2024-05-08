@@ -46,13 +46,25 @@ nav{
 .menu.active{
     left: 0;
 }
+/* Menu Principal */
 nav a{
+    display: flex;
+    align-items: center;
     color: #ddd;
 }
 .menu a.active,
 .menu a:hover{
     color: #eee;
     text-shadow: 0 0 .2rem; /* -x+ -y+ blur color */
+}
+/* Iconos del Menu */
+.menu a::before{
+    filter: sepia(90%);
+    transition: all .5s ease-out;
+}
+.menu a.active::before,
+.menu a:hover::before{
+    filter: grayscale(30%);
 }
 /* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
