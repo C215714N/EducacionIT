@@ -46,3 +46,35 @@ Esta propiedad especifica cómo un elemento es posicionado en el documento. Las 
 | __absolute__ | El elemento es removido del flujo normal de la pagina y se coloca en relación con el ancestro posicionado más cercano; sin embargo, si no posee ancestro con posición, utiliza al elemento raiz.
 | __fixed__ | El elemento es removido del flujo normal de la pagina y se coloca en relación con la ventana, permaneciendo en el mismo lugar, incluso si se desplaza la página.
 | __sticky__ | El elemento es posicionado de acuerdo al flujo normal de la pagina y luego es desplazado con relación a su ancestro que se desplace más cercano, en función al desplazamiento del usuario.
+
+## Efectos Visuales
+
+css posee muchas caracteristicas que, antiguamente, hubiesen requerido el uso de programas como los de __paquete de Abobe__ _Photoshop, Illustrator o Flash(Animate)_ para implementarlas dentro de una pagina web. Nos referimos a la modificacion del aspecto de las etiquetas, asi como tambien el uso de animaciones.
+
+### Transformaciones
+
+Corresponden a valores que podemos aplicar sobre las etiquetas sin afectar el flujo del documento; pueden ser __transformaciones 2d__ que no dependen de ningun contexto o __transformaciones 3d__ donde es necesario definir una _perspectiva_ en alguno de los elementos padre. Cabe mencionar que dentro del atributo transform se pueden aplicar mas de un efecto simultaneamente.
+
+| Transform | Descripcion |
+|--|--|        
+| __translate(`x`,`y`)__ | Desplazamiento relativo del elemento sobre los ejes horizontal y vertical, se pueden definir individualmente con los valores _trasnlateX_ y _translateY_ |
+| __scale(`x`,`y`)__ | Escala del elemento, si se utiliza un solo valor modifica ambos ejes, aunque tambien pueden definirse individualmente con los valores _scaleX_ y _scaleY_|
+| __rotate(`deg`)__ | Rotacion del elemento que, por defecto, se realiza en _sentido horario_ y admite cualquier angulo expresado en __grados__ o la palabra reservada _turn_. |
+| __skew(`x`,`y`)__ | Sesgado del elemento que permite su inclinacion modificando los __grados__ de sus _angulos interiores_. Se puede definir con los valores _skewX_ y _skewY_ |
+| __translateZ(`z`)__ | Desplazamiento sobre el _eje de profundidad_, se necesita definir una perspectiva para su funcionamiento porque, caso contrario, no habria cambios en el elemento.
+| __rotateX(`deg`)__ | Rotacion sobre el eje horizontal que necesita la definicion de un __punto de fuga__ ya que de lo contrario, se aplicaria una transformacion de escala vertical. |
+| __rotateY(`deg`)__ | Rotacion sobre el eje vertical que necesita la definicion de un __punto de fuga__ ya que de lo contrario, se aplicaria una transformacion de escala horizontal. |
+| __perspective__ | Define la distancia entre el usuario y el eje Z, y su relacion en inversamente proporcional con los elementos hijos, _a menor valor la transformacion es mas notoria_. |
+| __transform-origin__ | Define el punto al partir del cual se aplican las transformaciones sobre el elemento, admite valores como _top right bottom left y center_ y coordenadas sobre los ejes _x y_|
+| __perspective-origin__ | Establece el punto de vista del usuario, es decir, el _punto de fuga_ para las transformaciones de cualquier elemento hijo que utilice el __eje de profundidad__ |
+
+### Transiciones
+
+Atributo que permite conseguir _un efecto suavizado entre un estado inicial y un estado final_ al realizar una acción, pero solamente es aplicable a las propiedades que son cuantificables y para que se efectue correctamente, debemos tener un estado inicial y un estado final, caso contrario, el navegador podría no saber uno de esos estados y por lo tanto, no podría efectuar la transición.
+
+| Transition | Descripcion |
+|--|--|
+| __transition-property__ |	Propiedad CSS afectada, admite palabras clave como __all__ y __none__ |
+| __transition-duration__ |	Tiempo que tardara la transicion _expresado en segundos_ | 
+| __transition-timing-function__ |	Ritmo de la transicion, determina cuando es mas lenta o rapida
+| __transition-delay__ | Tiempo de espera _en segundos_ , para que se ejecute la transicion | 
