@@ -7,6 +7,21 @@ const mapFrame = document.querySelector('iframe.map');
 function toggle(element, className = "active"){
     return element.classList.toggle(className);
 }
+function swap(element,[a,b]){
+    element.classList.replace(a,b);
+}
+function alt({target, button, list:[a,b]}){
+    if (toggle(target)) swap(button,[a,b])
+    else swap(button,[b,a])
+}
 // Eventos
-menuBtn.onclick = () => toggle(menuList);
-mapBtn.onclick = () => toggle(mapFrame);
+menuBtn.onclick = () => alt({
+    target: menuList,
+    button: menuBtn,
+    list: ["icon-menu","icon-close"],
+});
+mapBtn.onclick = (e) => alt({
+    target: mapFrame,
+    button: e.target,
+    list: ["icon-max", "icon-min"],
+});

@@ -66,6 +66,10 @@ nav a{
 .menu a:hover::before{
     filter: grayscale(30%);
 }
+nav button::before{
+    font-weight: bold;
+    filter:grayscale(100%);
+}
 /* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
     nav button{
