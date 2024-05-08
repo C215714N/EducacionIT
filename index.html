@@ -115,6 +115,12 @@
                     type="text"
                     placeholder="Juan Perez(*)"
                     required>
+                <label for="address">Ingrese su Direccion</label>
+                <input id="address" 
+                    name="address" 
+                    type="text"
+                    placeholder="Calle False 123 (*)"
+                    required>
                 <label for="ticket">Ingrese su Cupon de Descuento</label>
                 <input id="ticket"
                     name="ticket"
@@ -212,6 +218,33 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <button class="map btn icon-max"></button>
+        <!-- Formulario de Contacto -->
+        <form action="" id="contact">
+            <h2>Dejanos tu Sugerencia</h2>
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input id="contact_name" 
+                name="name" 
+                type="text" 
+                required>
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email" 
+                name="email" 
+                type="email" 
+                required>
+            <label for="contact_phone">Ingrese su Telefono</label>
+            <input 
+                id="contact_phone" 
+                name="phone" 
+                type="tel" 
+                required>
+            <label for="contact_consult">Detalle su Sugerencia</label>
+            <textarea 
+                id="contact_consult"
+                name="consult" 
+                required></textarea>
+            <button class="btn">Confirmar</button>
+        </form>
         <!-- Derechos de Autor -->
         <p>&copy;2024 Todos los derechos reserados</p>
     </footer>
