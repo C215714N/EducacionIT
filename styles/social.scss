@@ -1,0 +1,76 @@
+// variables: espacio reservado en memoria cuyo valor puede cambiar
+//// Colores
+$dark: var(--dark);
+$grey: #ccc;
+$light: var(--light);
+//// Tamaños
+$box: 4rem;
+$bg: $box * 2/3;
+//// Iconos
+$path: "../assets/icon";
+$social: "facebook", "instagram", "twitter", "whatsapp", "github", "youtube", "linkedin", "titktok", "snapchat", "myspace", "pinterest", "outlook";
+$ext: "svg";
+// Mixin: selectores que se utilizan como atributos y pueden recibir parametros para su implementacion
+@mixin box($p: 0, $m: 0, $b: 0){
+    margin: $m;
+    border: $b;
+    padding: $p;
+}
+// Selector Oculto: no se muestra en el archivo compilado, pero si lo hacen sus extensiones de selector.
+%icon{
+    width: $box;
+    height: $box;
+    border-radius: .25rem;
+    transition: all .25s linear;
+    &:hover{
+        transform: 
+            translateY(-.5rem)
+            rotate(360deg);
+    }
+}
+// Nesting: anidacion de estilos para generar selectores especificos
+/* Redes Sociales */
+.social{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    // Implementacion del Mixin box
+    @include box(1rem, .5rem);
+    // Hipervinculo dentro del elemento con clase Social
+    a{
+        // Extension de selector %icon
+        @extend %icon;
+        background-color: $grey;
+        background-size: $bg;
+        background-position: center;
+        background-repeat: no-repeat;
+        // Al pasar el mouse sobre el link dentro de .social
+        &:hover{
+            background-color: $light;
+            background-size: $bg + .5rem;
+            box-shadow: 0 .25rem .5rem $dark;
+        }
+        // Al seleccionar el link dentro de .social
+        &:active{
+            box-shadow: 0 .25rem 1rem $light;
+        }
+        // Ultimo hijo de tipo link dentro de .social
+        &:last-child{
+            position: fixed;
+            right: .5rem;
+            bottom: 4rem;
+            opacity: .5;
+            // Al pasar el mouse por encima
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+}
+// Bucles: estilos que se repiten dada una condicion
+/* Iconos redes sociales */
+@each $icon in $social{
+    .#{$icon}{
+        background-image: url("#{$path}/#{$icon}.#{$ext}");
+    }
+}
