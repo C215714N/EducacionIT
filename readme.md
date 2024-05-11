@@ -13,6 +13,8 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [Configuracion de Acceso Remoto](#configuracion-de-acceso-remoto)
 * [Verificacion de la Topologia](#verificacion-de-topologia)
 * [Identificacion de Dispositivos](#identificacion-de-dispositivos)
+* [Configuracion de VLANs](#configuracion-de-vlans)
+* [Protocolo Spanning-Tree](#protocolo-spanning-tree)
 
 ## Configuracion Inicial
 
@@ -76,3 +78,33 @@ Cuando trabajamos en una red previamente configurada y no disponemos de document
 3. switch(config-if)# __(verificacion de vecinos)__
 	* __show cdp neighbors__: Muestra los dispositivos identificados mediante CDP
 	* __show lldp neighbors__: Muestra los dispositivos identificados meidante LLDP
+
+## Configuracion de VLANs
+
+Las Redes de area Local Virtuales son una segmentacion del dominio de difusion capa 2 que se implementan para la separacion de dominios de Red, optimizacion de recursos y reduccion de costos de enlace, pero que a la vez agregan mayor complejidad a la topologia debido a que se pierde la comunicacion entre nodos y es necesario el enrutamiento para que esta se produzca entre segmentos.
+
+1. switch(config)# __(vlan de datos)__
+	* __vlan `<vlan-id>`__: submodo de configuracion de vlan
+	* __name `<vlan>`__: establece el nombre de la vlan
+2. switch(config)# __(vlan de administracion)__
+	* __interface vlan `<vlan-id>`__: submodo de configuracion de interfaz (VLAN)
+	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
+3. switch(config)# __(definicion de enlaces)__
+	* __interface `<fa0/1>`__: submodo de configuracion de interfaz (FastEthernet 0/1)
+	* __switchport acces vlan `<vlan-id>`__: configura la interfaz en modo de acceso
+	* __switchport mode trunk__: configura la interfaz en modo troncal
+4. switch# __(verificacion de VLANs)__
+	* __show vlan brief__: muestra las vlans configuradas con sus respectivas interfaces
+	* __show interfaces trunk__ devuelve la configuracion de los enlaces troncales
+
+## Protocolo spanning-tree
+
+Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion global)__
+    * __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge entre los dispositivos que utilizan este protocolo.
+    * __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia, debido a que se omiten las etapas de escucha y aprendizaje.
+2. switch# __(verificacion spanning-tree)__
+	* __show spanning-tree__: muestra la configuracion indicando el Bridge-Id del dispositivo y el Root-Bridge de cada VLAN
+	* __show spanning-tree summary__ indica el estado de las interfaces fisicas (block, learning, listening, forwarding) de cada VLAN
+	* __show spanning-tree detail__: devuelve la configuracion aplicada en cada interfaz fisica del dispositivo (cost, identifier, priority)
