@@ -1,0 +1,113 @@
+// Variables
+//// Botones
+$w: 100%;
+$h: min(calc(100vh - 5rem), 640px);
+//// Imagenes de Fondo
+$path: "../assets/bg";
+$backgrounds: 
+    "coffee-beans",
+    "grilled-beef",
+    "grilled-chicken",
+    "header-background",
+    "homemade-pizza",
+    "indian-condiments",
+    "salami-pizza",
+    "shrimps-vegetables",
+    "spaghetti-pesto",
+    "spaghetti-tomato",
+    "tomato-salad",
+    "vegan-salad",
+    "vegetables";
+$ext: "jpg";
+// Mixin
+@mixin position($p:relative, $x:0, $y:0, $z:0, $x-axis: left, $y-axis: top){
+    position: $p;
+    #{$x-axis}: $x;
+    #{$y-axis}: $y;
+    z-index: $z;
+}
+@mixin pseudo($p){
+    &::before{
+        content: "#{$p}";
+    }
+}
+// Estilos de Utilidad
+%container{
+    @include position(relative);
+    min-height: $h;
+}
+%cover{
+    @include position(absolute, $z:-1);
+    width: $w;
+    height: $w;
+}
+%button{
+    cursor: pointer;
+    border: none;
+    color: var(--light);
+    font: bold calc(.8rem + 5vw) amarillo, sans-serif;
+    opacity: .3;
+    &:hover{
+        opacity: .7;
+    }
+    &-big{
+        width: $w / 4;
+        height: 100%;
+        background-color: transparent;
+    }
+}
+%linear{
+    transition: all .5s ease;
+}
+// Nesting
+/* Estructura para Galeria */
+.gallery{
+    @extend %container;
+    &-item{
+        @extend %cover, %linear;
+        background-size:cover;
+        background-position: center right;
+        opacity: 0;
+        &.active{
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+    [class*="control-"]{
+        @extend %button, %button-big, %linear;
+    }
+    .control{
+        @include position(absolute,$w / 4, $z:1, $y-axis: bottom);
+        width: $w / 2;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .25rem;
+        padding: .5rem;
+        &-prev{
+            @include pseudo("<");
+            @include position(absolute, $z:1);
+        }
+        &-next{
+            @include pseudo(">");
+            @include position(absolute,$z:1, $x-axis: right);
+        }
+        button{
+            @extend %button, %linear;
+            border-radius: .5rem;
+            &.active{
+                padding: .25rem .75rem;
+            }
+        }
+    }
+}
+// Bucles
+/* Imagenes para galerias */
+@for $i from 1 through length($backgrounds) {
+    $bg: nth($backgrounds, $i);
+    .#{$bg},
+    .gallery-item:nth-child(#{$i}n),
+    .bg:nth-child(#{$i}n){
+        background-image: url("#{$path}/#{$bg}.#{$ext}");
+    }
+}
