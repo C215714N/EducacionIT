@@ -1,0 +1,24 @@
+$cols: 24;
+$media: 
+    sm    576px   540px,
+    md    768px   720px,
+    lg    992px   960px,
+    xl   1200px  1140px,
+    xxl  1400px  1320px,
+;
+/* Sistema de Grillas Responsive*/
+@for $i from 1 through $cols{
+    .col-#{$i}{
+        width: percentage($i / $cols);
+} }
+@each $vn, $vw, $vmax in $media{
+/* Sistema de Grillas #{$vn} devices */
+    @media screen and (min-width: $vw){
+        .container, .container-#{$vn}{
+            max-width: $vmax;
+        }
+    @for $i from 1 through $cols{
+        .col-#{$vn}-#{$i}{
+            width: percentage($i / $cols);
+        }
+} } }
