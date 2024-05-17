@@ -1,0 +1,77 @@
+// Variables de Utilidad
+$a: align;
+$b: block;
+$c: content;
+$d: direction;
+$e: ease;
+$f: flex;
+$g: grid;
+$i: inline;
+$j: justify;
+$n: none;
+$r: reverse;
+$t: timing-function;
+$w: wrap;
+$bg: background;
+$sp: space;
+$media:
+    ""      0,
+    -sm     576px,
+    -md     768px,
+    -lg     992px,
+    -xl     1200px,
+    -xxl    1400px;
+// Atributos compartidos
+$display: $n, $b, $i, #{$i}-#{$b}, $f, #{$i}-#{$f}, $g, #{$i}-#{$g}, table, row, cell;
+$border: $n, solid, double, dotted, dashed, groove, ridge;
+$list: $n, disc, circle, square, decimal, decimal-leading-zero, upper-roman, lower-roman, lower-greek, lower-alpha, upper-alpha, lower-latin, upper-latin, armenian, georgian, hiragana, katakana;
+$content: start, end, center, #{$sp}-around, #{$sp}-between, #{$sp}-evenly, baseline;
+$size: cover, contain;
+$x: left right;
+$y: top bottom;
+$direction: join(join($x, $y), center);
+$timing: $e, #{$e}-in, #{$e}-out, #{$e}-in-out, linear;
+$blend: normal, multiply, screen, color, color-burn, color-dodge, overlay, luminosity, saturation, lighten, darken;
+// Objecto de Propiedades
+$array: (
+    // Atributos Generales
+    display:            (d: $display),
+    border-style:       (border: $border),
+    outline-style:      (outline: $border),
+    list-style:         (list: $list),
+    // Background
+    #{$bg}-size:        (bg: $size),
+    #{$bg}-position:    (bg: $direction),
+    #{$bg}-repeat:      (bg: (repeat, repeat-x, repeat-y, no-repeat)),
+    #{$bg}-attachment:  (bg: (scroll, fixed)),
+    #{$bg}-blend-mode:  (bg: $blend),
+    mix-blend-mode:     (blend: $blend),
+    object-fit:         (object: $size),
+    // Flexbox y CSS Grid
+    #{$j}-#{$c}:        (justify-c: $content),
+    #{$j}-items:        (justify-i: $content),
+    #{$a}-#{$c}:        (align-c: $content),
+    #{$a}-items:        (align-i: $content),
+    #{$f}-#{$w}:        (#{$f}: (#{$w}, no#{$w}, #{$w}-#{$r})),
+    #{$f}-#{$d}:        (#{$f}: (row, column, row-#{$r}, column-#{$r})),
+    // Position
+    position:           (p: (static, relative, absolute, fixed, sticky)),
+    // Transition y Animation
+    transition-#{$t}:   (transition: $timing),
+    animation-#{$t}:    (animation: $timing),
+);
+// Iteracion de Propiedades
+@mixin properties($array, $size){
+@each $attr, $values in $array{
+@each $prop, $val in $values{
+@each $v in $val{
+    .#{$prop}#{$size}-#{$v}{
+        #{$attr}: $v;
+    }
+} } } }
+@mixin media($vname, $vsize){
+@media screen and (min-width: $vsize){
+    @include properties($array, $vname);
+}}
+@include properties($array, "");
+@each $vn, $vs in $media{ @include media($vn, $vs); }
