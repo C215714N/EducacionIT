@@ -8,9 +8,14 @@ $properties:
     br  border-radius,
     b   border,
     p   padding,  
+    g   gap,
     bg  background-size,
     fs  font-size,
     lh  line-height,
+    time-t transition-duration,
+    delay-t transition-delay,
+    time-a animation-duration,
+    delay-a animation-delay,
 ;
 @function setSize($prop, $value){
     @if $prop == "w" or 
@@ -28,6 +33,12 @@ $properties:
     @if $prop == "fs" or 
         $prop == "lh"{ 
         @return $value * .5rem; 
+    }
+    @if $prop == "delay-a" or 
+        $prop == "time-a"
+        $prop == "delay-t" or 
+        $prop == "time-t"{
+        @return $value * .25s;
     }
     @return $value * .1rem;
 }
