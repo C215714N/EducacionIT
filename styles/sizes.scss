@@ -1,0 +1,39 @@
+$stock: 25;
+$properties: 
+    w   width,
+    mh  min-height,
+    h   height,  
+    m   margin,
+    o   outline,
+    br  border-radius,
+    b   border,
+    p   padding,  
+    bg  background-size,
+    fs  font-size,
+    lh  line-height,
+;
+@function setSize($prop, $value){
+    @if $prop == "w" or 
+        $prop == "mh" or 
+        $prop == "h" { 
+        @return $value * 4vmin; 
+    }
+    @if $prop == "b" or 
+        $prop == "o" { 
+        @return $value * 1px;
+    }
+    @if $prop == "bg"{ 
+        @return $value * 4%; 
+    }
+    @if $prop == "fs" or 
+        $prop == "lh"{ 
+        @return $value * .5rem; 
+    }
+    @return $value * .1rem;
+}
+@each $prop, $attr in $properties{
+@for $i from 0 through $stock{
+    .#{$prop}-#{$i}{
+        #{$attr}: setSize($prop, $i);
+    }
+} }
