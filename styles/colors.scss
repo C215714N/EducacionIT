@@ -1,0 +1,44 @@
+$colors:
+    primary     #448,
+    secondary   #c36,
+    light       #ddd,
+    dark        #333,
+    success     #3c6,
+    warning     #ea3,
+    danger      #c33,
+    info        #36c,
+;
+$properties:
+    text        color,
+    bg          background-color,
+    border      border-color,
+    outline     outline-color,
+    line        text-decoration-color,
+    em          text-emphasis-color,
+    col         column-rule-color,
+    input       accent-color,
+    shadow      --shadow,
+    shade       --shade,
+;
+$variants: 
+    subtle      25%,
+    emphasis    15%,
+    opaque        d,        
+    middle        8,
+    transparent   2,
+;
+@function setColor($prop, $color, $value){
+    @if $prop == "subtle"{ @return lighten($color, $value); }
+    @if $prop == "emphasis"{ @return darken ($color, $value); }
+    @return #{$color}#{$value};
+}
+@each $prop, $attr in $properties{
+/* valores para #{$attr} */
+@each $cn, $cv in $colors{
+    .#{$prop}-#{$cn}{
+        #{$attr}: $cv;
+    @each $var, $val in $variants{
+        &-#{$var}{
+            #{$attr}: setColor($var, $cv, $val);
+    } } }
+} }
