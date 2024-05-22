@@ -39,6 +39,10 @@ $array: (
     border-style:       (border: $border),
     outline-style:      (outline: $border),
     list-style:         (list: $list),
+    text-align:         (text: join($x, center)),
+    text-decoration:    (text: ($n, underline, line-through)),
+    font-weight:        (text: (lighter, light, normal, bold, bolder)),
+    font-style:         (text: (normal, italic, oblique)),
     // Background
     #{$bg}-size:        (bg: $size),
     #{$bg}-position:    (bg: $direction),
