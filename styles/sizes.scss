@@ -16,6 +16,10 @@ $properties:
     delay-t transition-delay,
     time-a animation-duration,
     delay-a animation-delay,
+    start left,
+    end right,
+    top top,
+    bottom bottom,
 ;
 @function setSize($prop, $value){
     @if $prop == "w" or 
@@ -34,13 +38,18 @@ $properties:
         $prop == "lh"{ 
         @return $value * .5rem; 
     }
+    @if $prop == "m" or 
+        $prop == "p" or
+        $prop == "g" {
+        @return $value * .25rem;
+    }
     @if $prop == "delay-a" or 
-        $prop == "time-a"
+        $prop == "time-a"  or
         $prop == "delay-t" or 
         $prop == "time-t"{
         @return $value * .25s;
     }
-    @return $value * .1rem;
+    @return $value;
 }
 @each $prop, $attr in $properties{
 @for $i from 0 through $stock{
@@ -48,3 +57,7 @@ $properties:
         #{$attr}: setSize($prop, $i);
     }
 } }
+
+.m-auto{
+    margin: auto;
+}
