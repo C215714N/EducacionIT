@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header id="header" class="header">
-        <h1>IT Resto</h1>
-        <p>
+    <header class="px-3 py-4 | text-light bg-dark bg-gradient | text-center">
+        <h1 class="display-1 | fw-bold text-uppercase">IT Resto</h1>
+        <p class="h1 fw-lighter">
             Programando su Paladar para <br>
             <strong>la mejor experiencia digital</strong>
         </p>
     </header>
-    <main>
-        <form id="login">
+    <main class="container">
+        <form id="login" class="col-md-8 col-lg-6 | my-5 mx-auto py-4 px-3 | shadow-lg" action="index.html">
             <h2>Iniciar Sesion</h2>
             <label for="username">Ingrese su Usuario o Correo</label>
-            <input id="username" type="text" required>
+            <input class="form-control" id="username" type="text" required>
             <label for="password">Ingrese su Contraseña</label>
-            <input id="password" type="password" required>
+            <input class="form-control" id="password" type="password" required>
             <p> ¿No tenes cuenta?
-                <a href="">registrate</a>
+                <a href="signin.html">registrate</a>
             </p>    
-            <button>ingresar</button>
+            <button class="btn btn-outline-primary | d-block ms-auto">ingresar</button>
         </form>
     </main>
-    <footer>
+    <footer class="p-3 text-light bg-secondary bg-gradient">
         <p>&copy;2024 Todos los derechos reservados</p>
     </footer>
 </body>
