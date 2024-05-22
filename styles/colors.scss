@@ -29,7 +29,7 @@ $variants:
 ;
 @function setColor($prop, $color, $value){
     @if $prop == "subtle"{ @return lighten($color, $value); }
-    @if $prop == "emphasis"{ @return darken ($color, $value); }
+    @if $prop == "emphasis"{ @return darken($color, $value); }
     @return #{$color}#{$value};
 }
 @each $prop, $attr in $properties{
