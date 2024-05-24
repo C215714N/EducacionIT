@@ -56,6 +56,8 @@ nav a{
 .menu a:hover{
     color: #eee;
     text-shadow: 0 0 .2rem; /* -x+ -y+ blur color */
+    animation: glow 1s linear alternate infinite;
+    /* SHORTHAND: name duration delay timing direction count*/
 }
 /* Iconos del Menu */
 .menu a::before{
@@ -66,9 +68,17 @@ nav a{
 .menu a:hover::before{
     filter: grayscale(30%);
 }
+.menu a:hover::before{
+    transform-origin: bottom center;
+    animation: bounce .5s linear infinite;
+}
 nav button::before{
     font-weight: bold;
     filter:grayscale(100%);
+}
+/* Animaciones de links */
+.menu a:hover{
+    animation: glow 1s linear alternate infinite;
 }
 /* Medium Devices - Tablets */
 @media screen and (min-width: 768px){
