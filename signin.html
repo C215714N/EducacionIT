@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="">IT</a>
+        <button></button>
+        <ul>
+            <li><a href="login.html">Iniciar Sesion</a></li>
+            <li><a href="#">Registrarse</a></li>
+            <li><a href="/">Pagina Principal</a></li>
+        </ul>
+    </nav>
+    <header class="px-3 py-4 | text-light bg-dark bg-gradient | text-center">
+        <h1 class="display-1 | fw-bold text-uppercase">IT Resto</h1>
+        <p class="h1 fw-lighter">
+            Programando su Paladar para <br>
+            <strong>la mejor experiencia digital</strong>
+        </p>
+    </header>
+    <main class="container">
+        <form id="login" class="col-md-8 col-lg-6 | my-5 mx-auto py-4 px-3 | shadow-lg | was-validated" action="index.html">
+            <h2>Registro</h2>
+            <fieldset class="form-floating">
+                <input class="form-control" 
+                    type="text"
+                    minlength="6"
+                    maxlength="12"
+                    pattern="[A-Za-z0-9]{4,8}[\-]\d{2,4}"
+                    placeholder=""
+                    required>
+                <label for="">Escriba un Nombre de Usuario</label>
+                <p class="invalid-feedback">
+                    ingrese por lo menos 4 letras y/o numeros, luego un guion y un numero de 2 a 4 digitos al final
+                </p>
+                <p class="valid-feedback">
+                    felicitaciones, el nombre ha sido validado
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <input class="form-control" 
+                    type="text"
+                    minlength="4"
+                    maxlength="100"
+                    pattern="[A-Z a-z]{4,100}"
+                    placeholder=""
+                    required>
+                <label for="">Ingrese su Nombre Completo</label>
+                <p class="invalid-feedback">
+                    Escribe tu nombre y apellido con espacios de por medio, sin utilizar ningun utilizar tildes o apostrofes.
+                </p>
+                <p class="valid-feedback">
+                    Felicitaciones, su nombre ha sido verificado
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <input class="form-control" 
+                    minlength="8"
+                    type="email"
+                    placeholder=""
+                    required>
+                <label for="">Coloque su correo electronico</label>
+                <p class="invalid-feedback">
+                    Ingrese una direccion que respete el siguiente ejemplo "usuario@servidor"
+                </p>
+                <p class="valid-feedback">
+                    muchas gracias por ingresar una direccion de correo valida
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <input class="form-control" 
+                    type="password"
+                    minlength="6"
+                    maxlength="20"
+                    placeholder=""
+                    required>
+                <label for="">Escriba la contraseña que desea utilizar</label>
+                <p class="invalid-feedback">
+                    Ingrese una contraseña que posea entre 6 y 20 caracteres que posea numeros, mayusculas y minusculas.
+                </p>
+                <p class="valid-feedback">
+                    La contraseña ha cumplido con los requisitos de seguridad
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <input class="form-control" 
+                    type="password"
+                    minlength="6"
+                    maxlength="20"
+                    placeholder=""
+                    required>
+                <label for="">Repita la contraseña ingresada anteriormente</label>
+                <p class="invalid-feedback">
+                    Recuerde que la contraseña debe coincidir con la ingresada anteriormente.
+                </p>
+                <p class="valid-feedback">
+                    Las contraseñas han sido verificadas
+                </p>
+            </fieldset>
+            <p>
+                ¿tenes cuenta?
+                <a href="login.html">Ingresa</a>
+            </p>
+            <button class="d-block ms-auto | btn btn-outline-success">registrarse</button>
+        </form>
+    </main>
+    <footer class="p-3 text-light bg-secondary bg-gradient">
+        <p class="m-0 text-center">&copy;2024 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
