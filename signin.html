@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="">IT</a>
-        <button></button>
-        <ul>
-            <li><a href="login.html">Iniciar Sesion</a></li>
-            <li><a href="#">Registrarse</a></li>
-            <li><a href="/">Pagina Principal</a></li>
+    <nav class="navbar navbar-dark navbar-expand-md bg-secondary bg-gradient | sticky-top p-3">
+        <a class="navbar-brand" href="#">IT</a>
+        <button class="navbar-toggler navbar-toggler-icon | border-0"
+        data-bs-target=".navbar-nav"
+        data-bs-toggle="collapse">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse">
+            <li><a class="nav-link" href="login.html">Iniciar Sesion</a></li>
+            <li><a class="nav-link active" href="#">Registrarse</a></li>
+            <li><a class="nav-link disabled" href="/">Pagina Principal</a></li>
         </ul>
     </nav>
     <header class="px-3 py-4 | text-light bg-dark bg-gradient | text-center">
@@ -112,5 +116,7 @@
     <footer class="p-3 text-light bg-secondary bg-gradient">
         <p class="m-0 text-center">&copy;2024 Todos los derechos reservados</p>
     </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
