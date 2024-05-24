@@ -1,0 +1,12 @@
+@keyframes heading {
+    from{
+        transform: scale(10) translateZ(30vh);
+        opacity: .1;
+    }
+}
+@keyframes subtitle {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
