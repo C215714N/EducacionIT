@@ -14,11 +14,12 @@ Esto es una guia para los alumnos de la capacitacion de __redes con Linux__ que 
 * [Sistema de Archivos](docs/fs.md)
 * [Mascara de Usuario](docs/umask.md)
 * __Aplicacion__
-    * [DHCP](./docs/dhcp.md)
+    * [DHCP](docs/dhcp.md)
+    * [SSH](docs/ssh.md)
 * __Transporte__
-    * [TCP](./docs/tcp.md)
+    * [TCP](docs/tcp.md)
 * __Internet__
-    * [IP](./docs/ip.md)
-    * [AND](./docs/ip-and.md)
+    * [IP](docs/ip.md)
+    * [AND](docs/ip-and.md)
 * __Acceso a Red__
-    * [ARP](./docs/arp.md)
+    * [ARP](docs/arp.md)
