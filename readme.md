@@ -17,6 +17,7 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [Protocolo Spanning-Tree](#protocolo-spanning-tree)
 * [Servidor de VLANs](#servidor-de-vlans)
 * [Configuracion Etherchannel](#configuracion-etherchannel)
+* [Protocolo de Enrutamiento Redundante](#protocolo-de-enrutamiento-redundante)
 
 ## Configuracion Inicial
 
@@ -142,3 +143,16 @@ Tecnologia que permite agrupar multiples enlaces redundantes de una misma conexi
     * __channel-protocol `<LACP>`__ Prepara la interfaz para funcionar con LACP (Protocolo de Estandar abierto)
     * __mode `<passive>`__ Habilita LACP cuando se detecta un dispositivo compatible
     * __mode `<active>`__ Implementa LACP incondicionalmente
+
+## Protocolo de Enrutamiento redundante
+
+__Hot Standby Router Protocol__ es un protocolo propietario de Cisco que busca asegurar la disponibilidad del servicio de puerta de enlace al hacer partícipes de este servicio a varios routers. Se utiliza en un grupo de routers para seleccionar un dispositivo activo y un dispositivo de respaldo. El dispositivo activo es aquel que se utiliza para enrutar paquetes, y el dispositivo de respaldo es el que toma el control cuando falla el dispositivo activo o cuando se cumplen condiciones previamente establecidas
+
+1. router(config-if)# __(configuracion de interfaz)__
+	* __ip address `<192.168.0.2> <255.255.255.0>`__ establece la direccion de la interfaz
+	* __standby ip `<192.168.0.1>`__ define la direccion del router virtual HSRP.
+	* __standby track `<gigabitEthernet 0/0>`__ realiza seguimiento de la interfaz de salida
+	* __standby preempt__ reduce la prioridad cuando la interfaz de salida falla
+2. router# __(verificacion de la configuracion)__
+	* __show standby__ muestra la configuracion hsrp implementada
+	* __show standby brief__ resumen que muestra los dispositivos activo y de respaldo
