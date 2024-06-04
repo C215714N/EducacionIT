@@ -16,6 +16,8 @@ Esto es una guia para los alumnos de la capacitacion __CCNA 2__ que cursan los d
 * [Configuracion EtherChannel](#configuracion-etherchannel)
 * [Protocolo de Enrutamiento Redundante](#protocolo-de-enrutamiento-redundante)
 * [Direccionamiento IPv6 con servicio de DHCP](#direccionamiento-ipv6-con-servicio-de-dhcp)
+* [Seguridad de Puertos](#seguridad-de-puertos)
+* [Inspeccion de Paquetes ARP](#inspeccion-de-paquetes-arp)
 
 ## Configuracion Inicial
 
@@ -102,7 +104,10 @@ Los dispositivos administrables por defecto vienen con el __protocolo de arbol d
 1. switch(config)# __(configuracion global)__
 	* __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge.
 	* __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia.
-2. switch# __(verificacion de la configuracion)__
+2. switch# __(verificacion spanning-tree)__
+	* __show spanning-tree__: muestra la configuracion indicando el Bridge-Id del dispositivo y el Root-Bridge de cada VLAN
+	* __show spanning-tree summary__ indica el estado de las interfaces fisicas (block, learning, listening, forwarding) de cada VLAN
+	* __show spanning-tree detail__: devuelve la configuracion aplicada en cada interfaz fisica del dispositivo (cost, identifier, priority)
 
 ## Configuracion Etherchannel
 
@@ -154,3 +159,25 @@ Es un protocolo cliente-servidor que proporciona una configuración administrada
 	* __ipv6 dhcp server `<pool-name>`__ Configura la interfaz para funcionar como servidor de dhcp
 	* __ipv6 nd other-config-flag__ Habilita el envio de configuracion de Dominio y servidor mediante dhcp (stateless)
 	* __ipv6 nd managed-config-flag__ Habilita la configuracion de prefijo por parte del servidor dhcp (stateful)
+
+## Seguridad de Puertos
+
+Herrmianta que limita la cantidad de direcciones MAC válidas permitidas en las interfaces del dispositivo. Se permite el acceso a las direcciones MAC de los dispositivos legítimos, mientras que otras direcciones MAC se rechazan. La seguridad de puertos se puede configurar para permitir una o más direcciones. Entre las medidades de seguridad que se pueden tomar se encuentran _protect_, _restrict_ y _shutdown_.
+
+1. switch(config-if)# __(habilitacion port-security)__
+	* __switchport mode access__ configura el puerto en modo de acceso, permitiendo que un dispositivo se conectade directamente.
+	* __switchport port-security__ Habilita la seguridad de puertos en la interfaz seleccionada
+2. switch(config-if)# __(configuracion port-security)__
+	* __switchport port-security maximum `<max-addresses>`__ Define la cantidad maxima de direcciones que pueden aprenderse en la interfaz
+	* __switchport port-security violation `<action>`__ Medida de seguridad cuando se excede la cantidad maxima de direcciones
+3. switch# __(verificacion port-security)__
+	* __show port-security interface `<FastEthernet 0/1>`__ muestra la configuración y estado de port-security en la interfaz.
+	* __show port-security address__ muestra las direcciones aprendidas y la información relacionada con el port-security.
+
+## Inspeccion de paquetes ARP
+
+Configuracion que aumenta la seguridad del tráfico al inspeccionar los paquetes que se encuentran en interfaces definidas como no confiables en la página Configuración de la Interfaz. Cuando un paquete llega a una interfaz no confiable, la inspección ARP observa la dirección IP de origen y la dirección MAC del paquete.
+
+* __ip arp inspection vlan `<vlan-id>`__ Habilita la inspección ARP en una VLAN especificada
+* __ip arp inspection src-mac dst-mac ip__ valida las direcciones MAC de origen y destino, junto con las direcciones IP
+* __ip arp inspection trust__ Configura la interfaz como confiable, indicando que las entradas en la interfaz
