@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fakeb00k.com</title>
+    <style>
+        form{
+            display: grid;
+            max-width: 720px;
+            margin: auto;
+            border-radius: .5rem;
+            background-color: #eee;
+            box-shadow: -.25rem .25rem .5rem #999;
+        }
+        .form-control{
+            outline: none;
+            border: 1px solid #333;
+            border-radius: .25rem;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+        }
+        .btn{
+            border: none;
+            padding: .5rem;
+            border-radius: .5rem;
+            color: #eee;
+            background-color: var(--bg);
+        }
+        .btn-green{
+            --bg: #6c6;
+        }
+        .btn-blue{
+            --bg: #36c;
+        }
+        h1,h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a Facebook</h1>
+    <form action="">
+        <h2>iniciar sesion</h2>
+        <label for="">Usuario</label>
+        <input class="form-control" type="text">
+        <label for="">Contraseña</label>
+        <input class="form-control" type="password">
+        <div>
+            <button class="btn btn-green">iniciar sesion</button>
+            <button class="btn btn-blue">crear cuenta</button>
+        </div>
+    </form>
+</body>
+</html>
