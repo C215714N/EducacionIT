@@ -26,7 +26,7 @@ Si bien existen multiples caracteristicas en la programacion orientada a objetos
 
 Segun el lenguaje la sintaxis puede variar, pero en definitiva una clase de establece de la siguiente manera, con sus propiedades y metodos correspondientes.
 
-```
+```c#
 class Person {
     String nombre;
     Integer edad;
@@ -40,7 +40,7 @@ class Person {
 ```
 Luego para poder crear instancias de la clase podemos almacenar los objetos en variables definiendo, cada vez, uno nuevo de la clase instanciada.
 
-```c´´
+```c#
 usuario = new Person()
 usuario.nombre = "cristian"
 usuario.edad = 33
@@ -54,7 +54,7 @@ A continuacion se muestra una lista de archivos con ejemplos similares a lo expu
 * [GO](./examples/Person.go)
 * [Java](./examples/Person.java)
 * [JavaScript](./examples/Person.js)
-* [Perl](./example/Person.pl)
+* [Perl](./examples/Person.pl)
 * [PHP](./examples/Person.php)
 * [Python](./examples/Person.py)
 * [Ruby](./examples/Person.rb)
@@ -78,3 +78,106 @@ Son fundamentales para el __diseño de sistemas orientados a objetos__, ya que p
 | __Composición__ | Una clase contiene otras, que no pueden existir independientemente. $^2$ $^3$ |
 | __Herencia__ | Una clase hereda atributos y métodos de otra clase |
 | __Dependencia__ | Una clase depende de otra, temporal o permanentemente |
+
+## Propiedades y Metodos
+
+### Tipos de clases
+* __SuperClases__: Clases que se utilizan para definir caracteristicas principales, que seran heredadas por otras clases.
+* __SubClases__: Clases que heredan las caracteristicas de otra y agregan propiedades individuales;
+
+```c#
+// Superclase (define las propiedades principales)
+class Usuario{
+    string nombre;
+    string apellido;
+    string cuil;
+    array phone;
+    array email;
+}
+// Subclase de Usuario (polimorfismo)
+class Empleado extends Usuario{
+    string cargo;
+    float salario;
+    string sector;
+}
+// Subclase de Usuario (herencia)
+class Cliente extends Usuario{
+    string tipo;
+    array tarjetas;
+    array cuentas;
+}
+// Objeto Cliente Hereda las caracteristicas de la clase Usuario y agregas las propias
+Objeto = new Cliente(
+    'cristian',
+    'racedo',
+    '20-35336446-5',
+    ['11-0303-4567','4244-4424'],
+    ['cristiandracedo@hotmail.com'],
+    'Individuo',
+    ['visa credito','visa debito'],
+    ['caja ahorro pesos','cuenta corriente pesos']
+);
+```
+
+### Propiedades
+
+* __Privado__: Aquel atributo que solamente puede ser modificado mediante los metodos de la clase.
+* __Publico__: Aquel atributo al que podemos acceder y modificar tanto dentro como desde fuera de la clase.
+
+### Metodos
+
+* __constructor__: Metodo que se utiliza para definir los valores iniciales
+
+```js
+class Usuario{
+    constructor(nombre, apellido, email){
+        this.nombre = nombre;
+        this.apellido = apellido,
+        this.email = email;
+    }
+}
+```
+
+* __argumentos__: Una superclase puede pasar sus propiedades a una subclase mediante metodos como _super(arguments)_, que utiliza los valores predeteminados de la clase Padre. 
+
+```js
+class Empleado extends Usuario{
+    #cargo;
+    #sucursal;
+    #sector;
+    #turno;
+
+    constructor(cargo, sucursal, sector, turno){
+        super(arguments); // utiliza las propiedades de la superclase;
+        this.#cargo = cargo;
+        this.#sucursal = sucursal;
+        this.#sector = sector;
+        this.#turno = turno;
+    }
+}
+Empleado = new Empleado("supervisor","Lomas de Zamora",'7g','Tarde')
+```
+
+* __get__: Metodo utilizado para que la funcion retorne un valor
+* __set__: Metodo utilizado para modificar algun estado de las propiedades.
+
+```js
+    // Metodos get (consultar o ver valores)
+    getCargo(){
+        return cargo
+    }
+    getSucursal(){
+        return sucursal
+    }
+    // Metodos set (definir o modificar valores)
+    setCargo(puesto){
+        this.#cargo = puesto
+    }
+    setSucursal(codigo){
+        if (codigo >= 1 && codigo <= 5){
+            this.#sucursal = codigo
+        } else {
+            alert('sucursal no existente')
+        }
+    }
+```
