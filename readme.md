@@ -181,3 +181,7 @@ Empleado = new Empleado("supervisor","Lomas de Zamora",'7g','Tarde')
         }
     }
 ```
+
+## UML (Unified Model Language)
+
+Es un lenguaje utilizado para la definicion de clases, mediante la realizacion de un mapa conceptual de las definiciones dentro de nuestro sistema. Existen herramientas que permiten la realizacion de estos diagramas como [starUML](https://staruml.io)
