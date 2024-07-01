@@ -9,3 +9,4 @@ Esto es una guia para los alumnos de la capacitacion de __planillas de calculo a
     * [Numericas](./docs/functions.md#numericas)
     * [Fecha y Hora](./docs/functions.md#fecha-y-hora)
 * [Funciones Logicas](./docs/logic.md)
+    * [Tablas de La verdad](./docs/logic.md#tablas-de-la-verdad)
