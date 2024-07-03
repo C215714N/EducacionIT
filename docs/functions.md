@@ -47,3 +47,5 @@ Son aquellas que facilitan la operatoria con los valores almacenados en la base 
 |__SEGUNDO(`fecha`)__| extrae los segundos de la fecha especificada|
 |__TEXTO(`fecha`,`"dddd"`)__| devuelve el nombre del dia de la fecha|
 |__TEXTO(`fecha`,`"mmmm"`)__| devuelve el nombre del mes de la fecha|
+
+[Volver](../readme.md)

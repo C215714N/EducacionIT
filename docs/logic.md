@@ -16,7 +16,7 @@ Son aquellas que realizan la evaluacion valores _(condiciones)_ y permiten el us
 
 Cuando utilizamos funciones logicas el resultado dependera de las proposiciones y conjuntamente los operadores utilizados __"Y, O, u XO"__. A continuacion se exponen las tablas de la verdad correspondientes para cada operador en base a dos condiciones (__p__ y __q__)
 
-<div style="display:flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem;">
+<div> <!-- .element: style="display:flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem;" -->
 
 |Y|p (F)|p (V)|
 |-|-|-|
@@ -32,5 +32,6 @@ Cuando utilizamos funciones logicas el resultado dependera de las proposiciones 
 |-|-|-|
 |__q (F)__|F|V|
 |__q (V)__|V|F|
-
 </div>
+
+[Volver](../readme.md)
