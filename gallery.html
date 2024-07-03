@@ -6,6 +6,45 @@
     <title>Fundamentos Web</title>
 </head>
 <body>
-    
+    <!-- Cabecera de Pagina: Introduccion -->
+    <header>
+        <h1>Fundamentos Web</h1>
+        <p>html y css</p>
+        <!-- Navegacion Principal: Links mas Importantes -->
+        <nav>
+            <ul>
+                <li>
+                    <!-- Ruta Relativa | Interna -->
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <!-- Ruta Ancla | Marcador (recarga) -->
+                    <a href="#">Galeria</a>
+                </li>
+                <li>
+                    <!-- Ruta Ancla | Marcador (#id) -->
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido Principal: Relevante para el usuario -->
+    <main>
+        <h2>Imágenes</h2>
+        <p>
+            Son elementos graficos que podemos utilizar dentro de nuestra pagina web. Para incorporarlos simplemente debemos colocar la etiqueta <strong>&lt;img></strong> y dentro de la misma completar los atributos <em>src</em> y <em>alt</em> que se utilizan para indicar donde se encuentra la imagen y dar una descripcion de la misma, en caso que no se encuentre.
+        </p>
+        <div class="box">
+            <img src="./assets/img/jjba-d4c-01.jpg" alt="Dibujo JoJo's Bizarre Adventure - D4C">
+            <img src="./assets/img/jjba-d4c-02.jpg" alt="Dibujo JoJo's Bizarre Adventure - D4C">
+            <img src="./assets/img/jjba-d4c-03.jpg" alt="Dibujo JoJo's Bizarre Adventure - D4C">
+            <img src="./assets/img/jjba-d4c-04.jpg" alt="Dibujo JoJo's Bizarre Adventure - D4C">
+
+        </div>
+    </main>
+    <!-- Pie de Pagina: Complementario -->
+    <footer>
+        <p id="contact">&copy;2024 Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
