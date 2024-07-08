@@ -31,3 +31,33 @@ header p,
 /* Contenido */
 
 /* Pie de Pagina */
+
+    /* Formulario de Contacto */
+    #contact{
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        margin: auto;
+        padding: 1rem;
+    }
+    label{
+        margin-top: .5rem;
+    }
+    input,
+    textarea,
+    select{
+        outline: none;
+        border-radius: .25rem;
+        border: 1px solid; /* SHORTHAND: width style color */
+        padding: .5rem;
+        font-size: 1rem; /*Root EM (Ancho de "M" en la raiz)*/
+    }
+    textarea{
+        min-height: 4rem;
+        resize: vertical;
+    }
+    #contact :focus{
+        box-shadow: 0 0 .5rem #333; /* -x+ -y+ (blur) (color) */
+    }
+
+    /* Redes sociales */
