@@ -22,9 +22,33 @@
             <header class="header">
                 <h2>Formularios HTML</h2>
             </header>
-        
+            <p>
+                Son herramientas que permiten el <strong> intercambio de datos entre cliente y servidor</strong>, para implementarlos dentro de la pagina debemos colocar la etiqueta <strong>&lt;form></strong> y dentro de la misma los elementos que seran procesados para el envio. 
+                
+                Cabe destacar que, por defecto, hasta que el usuario no presione un boton que ejecute dicha accion, ningun dato sera enviado al servidor; tampoco se consideraran elementos que no se encuentran dentro de la etiqueta.
+            </p>
+            <section>
+                <header>
+                    <h3>¿Como funcionan?</h3>
+                </header>
+                <p>
+                    <em>A la etiqueta mencionada anteriormente</em> debemos especificarle por lo menos <strong>2 atributos</strong>, estos son <em>action="..."</em> que indica que debe suceder cuando el usuario realiza el envio del formulario; y <em>method="..."</em> el cual indica como debe realizarse dicho envio, entre los valores que podemos utilizar se encuentran:
+                </p>
+                <ul class="example">
+                    <li>
+                        <strong>GET</strong> metodo que prioriza la respuesta del servidor, muestra los datos enviados en la URL y los envia en texto plano. Este metodo es ideal para <em>buscadores</em>.
+                    </li>
+                    <li>
+                        <strong>POST</strong> metodo cuya prioridad es garantizar la seguridad de los datos enviados por el usuario, debido a que cifra los mismos antes de realizar el envio. Este metodo se utiliza en mayoria de formularios como <em>contacto, registro, inicio de sesion, etc...</em>.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>¿Como estan compuestos?</h3>
+                </header>
+            </section>
         </article>
-
     </main>
     <!-- Pie de Pagina -->
     <footer>
