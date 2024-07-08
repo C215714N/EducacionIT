@@ -47,13 +47,65 @@
                 <header>
                     <h3>¿Como estan compuestos?</h3>
                 </header>
+                <p>
+                    Dentro de un formulario podemos colocar cualquier elemento HTML existente, pero existen <strong>2 elementos necesarios</strong>, estos son <strong>las etiquetas (LABEL)</strong> que funcionan a modo de rotulos, indicando al usuario lo que debe seleccionar o completar; y los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los controles donde el usuario debe ingresar/seleccionar los datos.
+                </p>
+                <ul>
+                    <li>
+                        <strong>name</strong> identificar los campos de formulario que corresponden a la misma opcion
+                    </li>
+                    <li>
+                        <strong>type</strong> identifica el tipo de valor que se debe colocar dentro del campo, obligatorio para los input.
+                    </li>
+                    <li>
+                        <strong>value</strong> corresponde al dato que sera enviado, es obligatorio en caso que el usuario seleccione.
+                    </li>
+                </ul>
             </section>
         </article>
     </main>
     <!-- Pie de Pagina -->
     <footer>
         <!-- Formulario de Contacto -->
-
+        <form id="contact" action="">
+            <h2>Dejanos tu consulta</h2>
+            <!-- Nombre completo -->
+            <label for="contact_name">Ingrese su Nombre</label>
+            <input 
+                id="contact_name"
+                name="name"
+                type="text"
+                maxlength="50"
+                placeholder="Cristian Racedo"
+                required>
+            <!-- Correo Electronico -->
+            <label for="contact_email">Ingrese su Correo</label>
+            <input 
+                id="contact_email"
+                name="email"
+                type="email"
+                minlength="8"
+                placeholder="cristiandracedo@hotmail.com"
+                required>
+            <!-- Seleccion de Asunto -->
+            <label for="contact_subject">Seleccione el Asunto</label>
+            <select id="contact_subject" name="subject">
+                <option value="html">Estructura con HTML</option>
+                <option value="css">Estilos con CSS</option>
+                <option value="js">Logica con JS</option>
+            </select>
+            <!-- Campo de Consulta -->
+            <label for="contact_consult">Escriba su Consulta</label>
+            <textarea 
+                id="contact_consult" 
+                name="consult"
+                minlength="30"
+                maxlength="1500"
+                placeholder="Buenas, quisiera realizar una consulta sobre el siguiente contenido..."
+                required></textarea>
+            <!-- Boton enviar -->
+            <input type="submit">
+        </form>
         <!-- Redes sociales -->
 
         <!-- Mapa de Contacto -->
