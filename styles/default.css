@@ -25,7 +25,21 @@ header p,
     text-decoration: none;
 }
 /* Navegacion */
-
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding: .5rem;
+    background-color: hsl(270,50%,30%); /* Tono (color), Saturacion (intensidad), Luminosidad (brillo)*/
+}
+.menu a{
+    color: #ccc;
+}
+.menu a.active,
+.menu a:hover{
+    color: white;
+    text-shadow: 0 0 .5rem; /* -x+ -y+ blur */
+}
 /* Cabecera */
 
 /* Contenido */
