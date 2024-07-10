@@ -8,6 +8,7 @@
 body,
 h1,
 h2,
+h3,
 header p,
 .unstyled,
 .menu{
@@ -41,7 +42,26 @@ header p,
     text-shadow: 0 0 .5rem; /* -x+ -y+ blur */
 }
 /* Cabecera */
-
+#header{
+    padding: min(20%, 240px) 1rem; /* top right bottom left*/
+    text-align: center;
+    text-shadow: 0 0 .25rem #333;
+    /* Propiedades de Fondo */
+    background-color: transparent;
+    background-image: url("../assets/bg/osx-leopard.jpg");
+    background-position: center bottom; /* x y | top bottom right left center*/
+    background-size: cover; /* width height | cover contain */
+    background-repeat: no-repeat;
+}
+.header{
+    padding: 1rem;
+    color: #eee;
+    background-color: #448;
+}
+header{
+    color: #448;
+    border-bottom: .1rem solid;
+}
 /* Contenido */
 
 /* Pie de Pagina */
