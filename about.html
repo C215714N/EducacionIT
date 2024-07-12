@@ -39,7 +39,7 @@
                 <p>
                     <em>A la etiqueta mencionada anteriormente</em> debemos especificarle por lo menos <strong>2 atributos</strong>, estos son <em>action="..."</em> que indica que debe suceder cuando el usuario realiza el envio del formulario; y <em>method="..."</em> el cual indica como debe realizarse dicho envio, entre los valores que podemos utilizar se encuentran:
                 </p>
-                <ul class="example">
+                <ul class="example unstyled">
                     <li>
                         <strong>GET</strong> metodo que prioriza la respuesta del servidor, muestra los datos enviados en la URL y los envia en texto plano. Este metodo es ideal para <em>buscadores</em>.
                     </li>
@@ -55,7 +55,7 @@
                 <p>
                     Dentro de un formulario podemos colocar cualquier elemento HTML existente, pero existen <strong>2 elementos necesarios</strong>, estos son <strong>las etiquetas (LABEL)</strong> que funcionan a modo de rotulos, indicando al usuario lo que debe seleccionar o completar; y los <strong>Campos (INPUT / TEXTAREA / SELECT)</strong> que corresponden a los controles donde el usuario debe ingresar/seleccionar los datos.
                 </p>
-                <ul>
+                <ul class="example unstyled">
                     <li>
                         <strong>name</strong> identificar los campos de formulario que corresponden a la misma opcion
                     </li>
@@ -82,7 +82,7 @@
                 <p>
                     <em>Como se menciona anteriormente</em>, los navegadores soportan este tipo de elementos de forma nativa, gracias a la API de reproduccion, que podemos utilizar con las etiquetas <strong>&lt;audio> y &lt;video></strong>; siendo compatible con los formatos <em>.mp3, .wav, .ogg y .mp4, .webm, .ogv</em> respectivamente. Ademas podemos especificar atributos como <em>controls, autoplay, muted, loop, etc...</em> segun sea necesario.
                 </p>
-                <div class="example">
+                <div class="example container">
                     <figure>
                         <video src="assets/media/wet-sand.webm" controls>
                             <p>
@@ -108,9 +108,8 @@
                 <p>
                     Se conoce con este nombre a una <strong>categoria web</strong> que identifica a un <em>elemento que fue compartido con autorizacion del publicador original.</em> Normalmente podemos incrustar contenido gracias a la etiqueta <strong>&lt;iframe></strong> que permite la carga asincrona de contenido.
                 </p>
-                <div class="example">
+                <div class="example container">
                     <figure>
-                        <!-- inline-frame (Marco flotante) -->
                         <iframe 
                             src="https://www.youtube.com/embed/zJBzHQawsjs" 
                             title="Carvel - John Frusciante"
@@ -119,6 +118,25 @@
                             allowfullscreen>
                         </iframe>
                         <figcaption>Video Con Copyright</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.youtube.com/embed/b4KUF5A1yKs?si=j-0uV1kK3Nd1ySiq" 
+                            title="El mejor año de la historia del Cine - TeLoResumo" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Licencia Creative Commons</figcaption>
+                    </figure>
+                    <figure>
+                        <iframe 
+                            src="https://www.slideshare.net/slideshow/embed_code/key/kcxhxMYzbdinEx?startSlide=1"  
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>
+                            HTML from <strong><a href="https://es.slideshare.net/SEbazcaRdOnA" target="_blank">SeBas Cardona</a></strong>
+                        </figcaption>
                     </figure>
                 </div>
             </section>
@@ -169,7 +187,11 @@
         <!-- Redes sociales -->
 
         <!-- Mapa de Contacto -->
-
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.070111975206!2d-58.378511025212944!3d-34.60238855742641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1720805030525!5m2!1ses-419!2sar" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <!-- Derechos de autor -->
         
     </footer>
