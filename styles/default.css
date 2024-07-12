@@ -12,7 +12,8 @@ h3,
 header p,
 .unstyled,
 .example figure,
-.menu{
+.menu,
+#header{
     margin: 0;
 }
 .unstyled{
@@ -25,6 +26,14 @@ header p,
 .unstyled,
 .menu a{
     text-decoration: none;
+}
+/* Unidades estandarizadas */
+main,
+article,
+.header,
+.example,
+#contact{
+    padding: 1rem;
 }
 /* Navegacion */
 .menu{
@@ -55,7 +64,7 @@ header p,
     background-repeat: no-repeat;
 }
 .header{
-    padding: 1rem;
+    margin: -1rem -1rem 1rem;
     color: #eee;
     background-color: #448;
 }
@@ -64,11 +73,21 @@ header{
     border-bottom: .1rem solid;
 }
 /* Contenido */
+main{
+    max-width: 960px;
+    margin: auto;
+}
+article{
+    margin: 1.5rem 0;
+    border-radius: .25rem;
+    box-shadow: -.25rem .25rem .5rem #ccc;
+    overflow: hidden;
+}
+/* Secciones de Ejemplos */
 .example{
     max-width: 720px;
     margin: .5rem auto;
     border-left: .25rem solid #448;
-    padding: 1rem;
     line-height: 1.5;
     background-color: #eee;
 }
@@ -105,7 +124,6 @@ header{
         flex-direction: column;
         max-width: 540px;
         margin: auto;
-        padding: 1rem;
     }
     label{
         margin-top: .5rem;
