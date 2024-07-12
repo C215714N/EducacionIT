@@ -11,6 +11,7 @@ h2,
 h3,
 header p,
 .unstyled,
+.example figure,
 .menu{
     margin: 0;
 }
@@ -63,9 +64,41 @@ header{
     border-bottom: .1rem solid;
 }
 /* Contenido */
-
+.example{
+    max-width: 720px;
+    margin: .5rem auto;
+    border-left: .25rem solid #448;
+    padding: 1rem;
+    line-height: 1.5;
+    background-color: #eee;
+}
+.container{
+    display: flex;
+    gap: .5rem;
+    overflow: auto;
+}
+/* Videos */
+    video,
+    iframe{
+        width: 100%;
+        border: none;
+        height: calc(100% - 1.5rem);
+        object-fit: cover;
+    }
+    .example figure{
+        min-width: min(90%, 640px);
+        height: 360px;
+    }
+    /* 
+        aspect-ratio     height      width
+        4:3             75%(w)      1.33(h)
+        16:9            56.25%(w)   1.77(h)
+        16:10           62.5%(w)    1.6(h)
+    */
 /* Pie de Pagina */
-
+    footer iframe{
+        min-height: 320px;
+    }
     /* Formulario de Contacto */
     #contact{
         display: flex;
