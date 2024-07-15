@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaraciones</title>
+    <script>
+        /* VARIABLES: Espacio reservado en memoria para almacenar datos y cuyo valor puede cambiar.
+
+            Reglas de Nomenclatura:
+            - puede poseer mayusculas, minusculas, numeros y los simbolos $ _
+            - NO pueden empezar con numeros ni contener espacios
+            - Evitar utilizar palabras reservadas (var, let, const, if, switch, do, while, loop, for)
+            - utilizar camelCase, es decir, empezar con minusculas y luego 1 Mayuscula por cada Palabra
+        */
+        
+        // var: redeclarable y redefinible (nivel de funcion)
+        var nombre; // declaro
+        var nombre = "c215714n"; // redeclaro y defino
+        var nombre = "Cristian Racedo"; //redeclaro y redefino
+        // let: no redeclarable y redefinible (nivel de bloque)
+        let edad = 18; // declaro y asigno
+        edad = 33; // reasigno
+        // const: no redeclarable y no rederefinible (nivel de bloque)
+        const esInstructor = true // declaro y asigno
+        
+        /*
+            TIPOS DE DATOS
+            INMUTABLES (Primitivos)
+            - string: cadenas de texto (cualquier caracter)
+            - number: numero entero o decimal
+            - boolean: admite true o false | 1 o 0
+            - isNaN: indica que en un valor numerico invalido
+            - undefined: valor no definido
+            - null: sin valor almacenado intencionalmente
+            MUTABLES 
+            - Function: bloque ejecutable function miFn(){...}
+            - Array: lista de valores separados por coma [a,b,c]
+            - Object: elemento compuesto de claves y valores {nombre:"cristian",edad:33}
+        */
+        document.write("Buenas, mi nombre es "+ nombre);
+        document.write(" Tengo "+ edad +" años")
+        /*
+            esInstructor  es VERDADERO
+            - SI: " y soy instructor"
+            - NO: " y soy alumno";
+        */
+        // condicion
+        if(esInstructor){
+            // que pasa si se cumple
+            document.write(" y soy el instructor ");
+        }
+        else{
+            // que pasa si NO se cumple
+            document.write(" y soy alumno ");
+        }
+        document.write("del curso de JavaScript");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
