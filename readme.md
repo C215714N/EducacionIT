@@ -37,6 +37,16 @@ Si bien a las variables se les puede reasignar su valor, entre los tipos de dato
 | string | cadenas de texto |
 | number | numero entero o decimal |
 | boolean | admite true o false |
-| isNaN | valor numerico invalido |
 | undefined | valor no definido |
 | null | sin valor almacenado |
+| NaN | valor numerico invalido |
+
+### Datos Complejos
+
+Los objetos en JavaScript son colecciones de pares clave-valor, donde las claves son cadenas (o símbolos) y los valores pueden ser cualquier tipo de datos, incluidos otros objetos.
+
+| Tipo | Descripcion |
+|--|--|
+| array | almacenan múltiples valores en una única variable |
+| object | coleccion de datos organizados en pares clave-valor |
+| function | elemento que recibe parametros y retorna un valor |

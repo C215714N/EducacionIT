@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Declaraciones</title>
     <script>
+    {
         /* VARIABLES: Espacio reservado en memoria para almacenar datos y cuyo valor puede cambiar.
 
             Reglas de Nomenclatura:
@@ -38,13 +39,9 @@
             - Array: lista de valores separados por coma [a,b,c]
             - Object: elemento compuesto de claves y valores {nombre:"cristian",edad:33}
         */
+        document.write("<p>")
         document.write("Buenas, mi nombre es "+ nombre);
         document.write(" Tengo "+ edad +" años")
-        /*
-            esInstructor  es VERDADERO
-            - SI: " y soy instructor"
-            - NO: " y soy alumno";
-        */
         // condicion
         if(esInstructor){
             // que pasa si se cumple
@@ -55,9 +52,26 @@
             document.write(" y soy alumno ");
         }
         document.write("del curso de JavaScript");
+        document.write("</p>")
+    }
+    {
+        /*
+            // Salida de Datos
+            alert("¡¡Bienvenido al Sitio !!");
+            // Mensaje de Confirmacion
+            confirm("¿Deseas hacer algunas cuentas?");
+            // Entrada de Datos
+            prompt("¿cual es tu edad?");
+        */
+        const currentYear = new Date().getFullYear();
+        const birthYear = parseInt(prompt("¿En que año naciste?"))
+        console.log(currentYear - birthYear)
+    }
     </script>
 </head>
 <body>
-    
+    <nav>
+        <a href="../">Volver al Inicio</a>
+    </nav>
 </body>
 </html>
