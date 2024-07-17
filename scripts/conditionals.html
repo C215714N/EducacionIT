@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+    {   // La mentira mas grande de internet
+        const answer = confirm("Bievenido al departamento de seguridad\nConfirme si ha cometido un delito y desea confesarlo");
+        if (!answer){
+            alert("Ha cometido un delito y no desea confersarlo, enseguida enviaremos patrullas por usted");
+        }
+    }
+    {   // CALCULADORA DE PROMEDIOS
+        alert("bienvenido a calcuProm");
+        // Ingreso de Datos (ENTRADA)
+        let mensaje;
+        const nota1=parseInt(prompt("ingrese nota 1"));
+        const nota2=parseInt(prompt("ingrese nota 2"));
+        const nota3=parseInt(prompt("ingrese nota 3"));
+        // Proceso (ALGORITMO)
+        let promedio = (nota1+nota2+nota3) / 3;
+        if (promedio > 10){
+            mensaje = "las notas deben ser numeros entre 1 y 10\n revisa los valores ingresados";
+        }
+        else if(promedio >= 7){
+            mensaje = "felicitaciones, aprobaste con " + promedio;
+        }
+        else if (promedio >= 4){
+            mensaje = "lo vas a hacer mejor, la proxima. Te sacaste un "+promedio;
+        }
+        else if (promedio >= 0) {
+            mensaje = "¿te acordas como me llamo? porque tu promedio fue "+promedio;
+        }
+        else {
+            mensaje="esta aplicacion acepta solamente digitos y valores entre 1 y 10. \n intenta nuevamente";
+        }
+        // Egreso de Datos (SALIDA)
+        alert(mensaje)
+    }
+    </script>
+</body>
+</html>
