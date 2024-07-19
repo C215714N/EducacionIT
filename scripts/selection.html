@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    {
+        let mensaje = "Es un instrumento de";
+        const ask = prompt("Escribe el nombre de un instrumento musical").toLowerCase();
+        
+        switch(ask){
+            case "guitarra":
+            case "bajo":
+            case "contrabajo":
+            case "ukelele":
+            case "violin":
+                mensaje += " Cuerda"
+            break;
+            case "flauta":
+            case "saxofon":
+            case "trompeta":
+            case "armonica":
+                mensaje += " Viento"
+            break;
+            case "bateria":
+            case "bombo":
+            case "tambor":
+            case "pandereta":
+            case "xilofon":
+                mensaje += " Percusion"
+            break;
+            default:
+                mensaje += "sconocido"
+        }
+        alert(mensaje)
+    }
+    </script>
+</body>
+</html>
