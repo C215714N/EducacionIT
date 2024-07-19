@@ -7,12 +7,53 @@
 </head>
 <body>
     <script>
-        let intentos = 0;
-        while(intentos < 3){
-            alert("mmm... ¿seguro que sos mayor de edad?");
-            ++intentos
+        // {
+        //     let intentos = 0;
+        //     while(intentos < 3){
+        //         alert("mmm... ¿seguro que sos mayor de edad?");
+        //         ++intentos
+        //     }
+        //     alert("esta bien, me convenciste");
+        // }
+        let option, monto, saldo = 1000.00;
+        do{
+            let mensaje = "operacion exitosa, su saldo actual es de $";
+            option = (prompt("Bienvenido a PhishingBank\nElija una de las siguientes opciones:\n1) Consultar\n2)Depositar\n3)Extrar\n4)Salir")).toUpperCase();
+            switch(option){
+                case "1":
+                case "CONSULTAR":
+                    mensaje="Tu saldo actual es de $"+saldo;
+                break;
+                case "2":
+                case "DEPOSITAR":
+                    monto = parseFloat(prompt("¿cuanto vas a depositar?"));
+                    if(monto > 0) {
+                        saldo += monto
+                        mensaje+=saldo
+                    }
+                    else mensaje = "El valor ingresado no es valido, vuelve a intentar";
+                break;
+                case "3":
+                case "EXTRAER":
+                    monto = parseFloat(prompt("utilizando digitos ¿Cuanto desea retirar?"));
+                    if (monto >= 0 && monto <= saldo) {
+                        saldo-= monto;
+                        mensaje+=saldo
+                    }
+                    else mensaje="lo sentimos, solo puede retirar desde $0 hasta"+saldo;
+                break;
+                case "4":
+                case "SALIR":
+                    mensaje="Muchas gracias por usar nuestro servicio"
+                    option = 4;
+                break;
+                default:
+                    mensaje="Lo sentimos, pero esa no es una opcion valida"
+            }
+            alert(mensaje)
         }
-        alert("esta bien, me convenciste");
+        while(option != 4);
+
     </script>
 </body>
 </html>
