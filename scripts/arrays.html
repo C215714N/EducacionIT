@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-blue{
+            padding: 1.5rem;
+            color: #eee;
+            background-color: #248;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Alumnos</h1>
+    <ul id="lista"></ul>
+    <ul id="lenguajes" class="bg-blue"></ul>
+    <p id="total" class="bg-blue"></p>
+    <script>
+        // Capturadores de elementos Unicos (object)
+        const lista = document.getElementById("lista");
+        const listaLenguajes = document.getElementById("lenguajes");
+        const total = document.getElementById('total');
+        // Capturadores de Collecciones (arrays)
+        const classBgBlue = document.getElementsByClassName("bg-blue");
+        const allTagsLi = document.getElementsByTagName("li");
+
+        const cantidad = prompt("¿cuantos elementos deseas cargar?")
+        for(let i = 0; i < cantidad; i++){
+            const alumno = prompt("Ingresa el nombre del Alumno");// captura el nombre
+            const li = document.createElement('li'); // Creamos un li
+            li.innerText=alumno; // Indicamos su contenido
+            lista.appendChild(li); // Anidamos el elemento a la lista
+        }
+        const lenguajes = ["html","css","js","php","python","java","ruby"];
+        for(let i = 0; i < lenguajes.length; i++){
+            listaLenguajes.innerHTML += "<li>" + lenguajes[i] +"</li>";
+        }
+        total.innerText = "En total hay " + lenguajes.length + " elementos en la lista de lenguajes";
+
+        // 
+        console.log("en total hay "+ allTagsLi.length+" etiquetas li");
+        console.log("existen "+classBgBlue.length+" elementos con clase bg-blue");
+        
+        // Selectores similares a CSS (si existen en el DOM)
+        const lisInsideBgBlue = document.querySelectorAll(".bg-blue li")
+        const firstLiInsideBgBlue = document.querySelector(".bg-blue li")
+    </script>
+</body>
+</html>

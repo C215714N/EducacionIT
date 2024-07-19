@@ -18,7 +18,7 @@
         let option, monto, saldo = 1000.00;
         do{
             let mensaje = "operacion exitosa, su saldo actual es de $";
-            option = (prompt("Bienvenido a PhishingBank\nElija una de las siguientes opciones:\n1) Consultar\n2)Depositar\n3)Extrar\n4)Salir")).toUpperCase();
+            option = (prompt("Bienvenido a PhishingBank\nElija una de las siguientes opciones:\n1) Consultar\n2)Depositar\n3)Extrar\n4)Salir"))?.toUpperCase();
             switch(option){
                 case "1":
                 case "CONSULTAR":
@@ -28,8 +28,8 @@
                 case "DEPOSITAR":
                     monto = parseFloat(prompt("¿cuanto vas a depositar?"));
                     if(monto > 0) {
-                        saldo += monto
-                        mensaje+=saldo
+                        saldo += monto;
+                        mensaje+=saldo;
                     }
                     else mensaje = "El valor ingresado no es valido, vuelve a intentar";
                 break;
