@@ -82,3 +82,103 @@ Los objetos en JavaScript son colecciones de pares clave-valor, donde las claves
 __&&__	| si "a" y "b"   | 2<0 && 5>1     | false
 __\|\|__ 	| si "a" o "b"   | 2<0 \|\| 5>1     | true
 __??__	| si no "a" 	   | 2<0 ?? 5>1     | false
+
+
+## Comandos
+
+### Entrada y Salida
+
+Son aquellos que nos permiten establecer una comunicacion con el usuario final, ya sea mediante la __solicitud de valores__ o mediante la __notificacion en pantalla__ o por __consola__ de los valores resultantes de alguna operacion.
+
+| Comando | Implementacion |
+|----------|-----|
+| alert(`message`) | Muestra un mensaje en pantalla |
+| prompt(`message`) | Mensaje que solicita al usuario que ingrese datos |
+| confirm(`message`) | Mensaje de confirmacion de tipo _boolean_ |
+| write(`message`) | Metodo para escribir en el documento HTML |
+| console.log(`message`) | Mensaje de salida que se muestra en la consola |
+
+### Captura de elementos
+
+Cuando trabajamos con un __documento HTML__ en ocasiones sera necesario acceder a algun __nodo de la pagina__, por lo tanto estos metodos nos permitiran asociar dichos elementos a una variable para su posterior manipulacion.
+
+| Comando | Implementacion |
+|----------|-----|
+| getElementById(`'Id'`) | Devuelve el primer elemento con Id que aparezca en la pagina, segun corresponda |
+| getElementsByClassName(`'Class'`) | Devuelve una lista de elementos que concuerden con el nombre de la Clase
+| getElementsByTagName(`'Tag'`) | Devuelve una lista de elementos que correspondan con el tipo de etiqueta
+| querySelector(`'Selector'`) | Devuelve el primer elemento que coincida con el selector cuya sintaxis es similar a css
+| querySelectorAll(`'Selector'`) | Devuelve una lista de elementos que correspondan con el selector
+
+## Condicionales
+
+En ciertas ocasiones deberemos generar una bifurcacion en nuestro codigo, donde se llevara a cabo una accion segun el resultado de una condicion, ya sea que se cumpla o no.
+
+### Sentencia if
+
+Para ejecutar varias sentencias en una cláusula, use una __sentencia block ({ ... })__ para agruparlas. Generalmente, es una buena práctica usar siempre sentencias block, especialmente en código que incluya sentencias if anidadas:
+
+```js
+if ( test >= 7) {
+  console.log('pass');
+} else {
+  console.log('fail');
+}
+```
+
+Cualquier valor diferente de __undefined__, null, 0, NaN, o la cadena vacía (""), y cualquier objeto, incluso un objeto Boolean cuyo valor es false, se evalúa como verdadero en una sentencia condicional.
+
+```js
+if (speed >= 90) {
+  console.log('fast');
+} else if (speed >= 40){
+  console.log('regular');
+} else {
+  console.log('slow');
+}
+```
+### Sentencia Switch
+
+Es una instrucción de __flujo de control__ que prueba el valor de una expresión contra varios casos. La computadora revisará la sentencia switch y __verificará la igualdad estricta === entre el  case y la expresión__.
+
+```js
+switch(language){
+case 'english':
+    console.log('welcome to the javascript course');
+  break;
+  case 'spanish':
+    console.log('bienvenido al curso de javascript');
+  break;
+  case 'french':
+    console.log('bienvenue dans le cours javascript');
+  break;
+  case 'portuguese':
+    console.log('bem vindo ao curso de javascript');
+  break;
+}
+```
+
+Podemos establecer multiples casos para un mismo resultando, evitando colocar la clausula _break_ al final de cada bloque.
+Si ninguno de los casos coincide con la expresión, se ejecutará la __cláusula predeterminada__.
+
+```js
+switch (vehicle) {
+  case 'car':
+  case 'truck':
+  case 'bus':
+   console.log("Gasoline or diesel");
+  break;
+  case 'skate':
+  case 'bike':
+    console.log("human-powered");
+  break;
+  case 'hoverboard':
+  case 'hibryd car':
+  case 'ebike':
+    console.log("Electricity");
+  break;
+  default:
+    console.log("Fuel type unknown");
+  break;
+}
+```
