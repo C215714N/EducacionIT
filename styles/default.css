@@ -1,3 +1,9 @@
+.app{
+    display: none;
+}
+.app:target{
+    display: block;
+}
 .flex{
     display: flex;
     gap: .25rem;
