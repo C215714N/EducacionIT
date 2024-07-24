@@ -1,9 +1,11 @@
+{
 // Declaraciones
 const tareas = ["html", "css", "js"];
 const textoTarea = document.getElementById("textoTarea");
 const botonAgregarTarea = document.getElementById("agregarTarea");
 const listaTareas = document.getElementById("listaTareas");
-
+let editTask = false;
+let selected = null;
 /**
  * Metodos de ARRAY
  * AGREGAR ELEMENTOS
@@ -25,8 +27,8 @@ function crearLista(){
         listaTareas.innerHTML += `
         <li class="flex center">
             <span class="tarea">${tareas[i]}</span>
-            <button class="btn btn-primary" 
-                onclick="editarTarea(${i})">
+            <button class="btn btn-primary"
+                onclick="elegirTarea(${i})">
                 Editar
             </button>
             <button class="btn btn-danger" 
@@ -39,7 +41,8 @@ function crearLista(){
 function agregarTarea(text){
     if(text.length >= 3){
         tareas.push(text)
-        return "la tarea se agrego existosamente"
+        textoTarea.value = '';
+        crearLista()
     }
     else return "debe ingresar como minimo 3 caracteres"
 }
@@ -48,16 +51,31 @@ function eliminarTarea(index){
     if(deleteTask) tareas.splice(index,1)
     crearLista()
 }
-
 function editarTarea(index){
-    const editedTask = prompt("Escribe el nuevo valor para la tarea\n"+tareas[index])
-    if (editedTask) tareas[index] = editedTask
-    crearLista()
-}
-
-botonAgregarTarea.addEventListener("click", function(){
-    alert(agregarTarea(textoTarea.value));
+    tareas[index] = textoTarea.value
+    editTask = false;
+    selected = null;
+    textoTarea.value = ""
     crearLista();
+}
+function elegirTarea(index){
+    const listaTareas = document.querySelectorAll("span.tarea");
+    listaTareas[index].classList.toggle("selected")
+    for (let i = 0; i < listaTareas.length; i++){
+        if (i!=index) listaTareas[i].classList.remove("selected")
+        else listaTareas[i].classList.add("selected")
+    }
+    editTask = true;
+    selected = index;
+    textoTarea.value = tareas[index];
+}
+// Accion confirmar agregar o editar
+botonAgregarTarea.addEventListener("click", function(){
+    if (editTask) editarTarea(selected)
+    else agregarTarea(textoTarea.value)
 })
-
+textoTarea.onkeyup = function(event){
+    if(event.key == "Enter") botonAgregarTarea.click()
+}
 crearLista()
+}
