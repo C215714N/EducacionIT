@@ -1,5 +1,5 @@
 // Declaraciones
-const tareas = [];
+const tareas = ["html", "css", "js"];
 const textoTarea = document.getElementById("textoTarea");
 const botonAgregarTarea = document.getElementById("agregarTarea");
 const listaTareas = document.getElementById("listaTareas");
@@ -31,6 +31,10 @@ function agregarTarea(text){
         return "la tarea se agrego existosamente"
     }
     else return "debe ingresar como minimo 3 caracteres"
+}
+function eliminarTarea(index){
+    const deleteTask = confirm("¿desea eliminar la tarea seleccionada?\n"+tareas[index]);
+    if(deleteTask) tareas.splice(index,1)
 }
 
 botonAgregarTarea.addEventListener("click", function(){
