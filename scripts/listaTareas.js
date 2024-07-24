@@ -37,6 +37,11 @@ function eliminarTarea(index){
     if(deleteTask) tareas.splice(index,1)
 }
 
+function editarTarea(index){
+    const editedTask = prompt("Escribe el nuevo valor para la tarea\n"+tareas[index])
+    if (editedTask) tareas[index] = editedTask
+}
+
 botonAgregarTarea.addEventListener("click", function(){
     alert(agregarTarea(textoTarea.value));
     crearLista();
