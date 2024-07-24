@@ -1,0 +1,35 @@
+.flex{
+    display: flex;
+    gap: .25rem;
+    margin: .25rem 0;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.tarea{
+    width: 50%;
+    padding: .25rem;
+    border-bottom: 1px solid #ccca;
+}
+.btn{
+    border: 1px solid;
+    border-radius: .25rem;
+    padding: .5rem;
+    background-color: transparent;
+}
+.btn:hover{
+    color: #eee;
+}
+.btn-primary{
+    color: #36c;
+}
+.btn-primary:hover{
+    background-color: #36c;
+}
+.btn-danger{
+    color: #c33;
+}
+.btn-danger:hover{
+    background-color: #c33;
+}

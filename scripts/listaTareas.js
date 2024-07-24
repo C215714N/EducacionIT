@@ -21,8 +21,19 @@ const listaTareas = document.getElementById("listaTareas");
 // Funciones Nombradas
 function crearLista(){
     listaTareas.innerHTML='';
-    for(let t of tareas){
-        listaTareas.innerHTML += "<li>"+t+"</li>"
+    for(let i = 0; i < tareas.length; i++){
+        listaTareas.innerHTML += `
+        <li class="flex center">
+            <span class="tarea">${tareas[i]}</span>
+            <button class="btn btn-primary" 
+                onclick="editarTarea(${i})">
+                Editar
+            </button>
+            <button class="btn btn-danger" 
+                onclick="eliminarTarea(${i})">
+                Eliminar
+            </button>
+        </li>`
     }
 }
 function agregarTarea(text){
@@ -35,11 +46,13 @@ function agregarTarea(text){
 function eliminarTarea(index){
     const deleteTask = confirm("¿desea eliminar la tarea seleccionada?\n"+tareas[index]);
     if(deleteTask) tareas.splice(index,1)
+    crearLista()
 }
 
 function editarTarea(index){
     const editedTask = prompt("Escribe el nuevo valor para la tarea\n"+tareas[index])
     if (editedTask) tareas[index] = editedTask
+    crearLista()
 }
 
 botonAgregarTarea.addEventListener("click", function(){
