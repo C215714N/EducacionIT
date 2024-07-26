@@ -43,7 +43,7 @@
 .btn-danger:hover{
     background-color: #c33;
 }
-#calculadora{
+#calculadora:target{
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -53,6 +53,9 @@
 #calculadora :is(input, div:first-of-type){
     width: 100%;
     flex-basis: 100%;
+}
+#calculadora button:hover{
+    background-color: #666;
 }
 .app div{
     flex: 1 0 33%;

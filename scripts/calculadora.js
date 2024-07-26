@@ -1,6 +1,6 @@
 const root = document.getElementById("calculadora");
 const operations = ["+", "-", "*", "/"];
-const actions = ["CE", "C", "="];
+const actions = [["CE", "C", "="],["clearElement","resetCalc","calcResult"]];
 const calc = {}
 // Renderizado
 function renderInput (){
@@ -54,32 +54,22 @@ const calcResult = () => {
     return calc.n1;
 }
 const setAction = (value) => {
-    switch(value){
-        // Modificar Numeradores
-        case "=":   return calcResult();
-        case "CE":  return clearElement();
-        case "C":   return resetCalc();
-        // Cambiar Signos
-        case "+":  case "-": case "*": case "/":   
-            return setOperation(value)            
-        // Indicar Digitos
-        default:    return setDigit(value);
-    }
+    for(let i = 0; i < actions[1].length; i++) if (value == actions[0][i]) return eval(`${actions[1][i]}()`)
+    for(let op of operations) if(value == op) return setOperation(value)
+    return setDigit(value)
 }
 const showNumber = (element, x) => element.value = x
 // manipulacion de eventos
 function callActions(){
+    const input = root.querySelector("input");
     const buttons = root.querySelectorAll("button");
     buttons.forEach((btn) => btn.addEventListener("click",(e) => {
-        const input = root.querySelector("input");
-        let x = setAction(e.target.innerText)
-        showNumber(input, x);
-    })
-)}
+        showNumber(input, setAction(e.target.innerText));
+    }))
+    input.addEventListener("input", () => calc.operation ? calc.n2 = input.value : calc.n1 = input.value )
+}
 // Invocacion
 resetCalc();
 renderInput();
-renderButtons(actions);
-renderButtons(operations);
-renderButtons(numbers().reverse());
+[actions[0],operations,numbers().reverse()].forEach(array => renderButtons(array));
 callActions();
