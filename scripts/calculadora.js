@@ -1,12 +1,8 @@
 const root = document.getElementById("calculadora");
 const operations = ["+", "-", "*", "/"];
 const actions = ["CE", "C", "="];
-const calc = {
-    n1: "", 
-    n2: "",
-    result: "",
-    operation: "",
-}
+const calc = {}
+// Renderizado
 function renderInput (){
     // Objeto
     const input = document.createElement('input');
@@ -36,54 +32,70 @@ function numbers(start=0, end=10, step=1){
     }
     return numbersArray;
 }
+// Control de Objetos
+function resetCalc(){
+    Object.assign(calc,{
+        n1: "",
+        n2: "",
+        operation: ""
+    })
+    return calc.n1;
+}
+function clearElement(){
+    if (calc.operation) return calc.n2 = "";
+    else return calc.n1 = "";
+}
+function setDigit(value){
+    if(calc.operation) return calc.n2+=value;
+    else return calc.n1+=value;
+}
+function setOperation(value){
+    calc.operation = value;
+    calc.n2 = "";
+    return calc.n1
+}
+function calcResult(){
+    if (calc.operation) 
+    calc.n1 = eval(`${calc.n1}${calc.operation}${calc.n2}`);
+    return calc.n1;
+}
+function showNumber(element, x){
+    element.value = x
+}
+// manipulacion de eventos
 function callActions(){
     const buttons = root.querySelectorAll("button");
     buttons.forEach((btn) =>{
         btn.addEventListener("click",(e) => {
+            let x = calc.n1;
             const input = root.querySelector("input");
             const value = e.target.innerText;
             switch(value){
                 case "=":
-                    if (calc.operation) 
-                    calc.n1 = (eval(`${calc.n1} ${calc.operation} ${calc.n2}`))
-                    input.value = calc.n1
+                    x = calcResult();
                 break;
                 case "CE":
-                    if (calc.operation){
-                        calc.n2 = "";
-                        input.value = calc.n2
-                    }
-                    else{
-                        calc.n1 = "";
-                        input.value = calc.n1
-                    }
+                    x = clearElement();
                 break;
-                case "C":
-                    calc.n1 = "";
-                    calc.n2 = "";
-                    calc.operation="";
-                    input.value = calc.n1;
+                case "C": 
+                    x = resetCalc();
                 break;
                 case "+":
                 case "-":
                 case "*":
                 case "/":
-                    calc.operation = value;
+                    x = setOperation(value)
                 break;
                 default:
-                    if(calc.operation) {
-                        calc.n2+=value;
-                        input.value = calc.n2
-                    }
-                    else {
-                        calc.n1+=value;
-                        input.value = calc.n1;
-                    }
+                    x = setDigit(value);
             }
+            showNumber(input, x);
+            console.log(calc)
         })
     })
 }
 // Invocacion
+resetCalc();
 renderInput();
 renderButtons(actions);
 renderButtons(operations);
