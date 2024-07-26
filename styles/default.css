@@ -43,3 +43,33 @@
 .btn-danger:hover{
     background-color: #c33;
 }
+#calculadora{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin: auto;
+}
+#calculadora :is(input, div:first-of-type){
+    width: 100%;
+    flex-basis: 100%;
+}
+.app div{
+    flex: 1 0 33%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.app div:last-child :last-child{
+    flex-basis: 100%;
+}
+.app div:nth-last-child(2){
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 0%;
+}
+.app div:first-of-type{
+    flex-basis: 100%;
+}
+.app div > * {
+    flex: 1 0 min(33%, 100%);
+}
