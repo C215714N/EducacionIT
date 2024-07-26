@@ -33,7 +33,7 @@ function numbers(start=0, end=10, step=1){
     return numbersArray;
 }
 // Control de Objetos
-function resetCalc(){
+const resetCalc = () => {
     Object.assign(calc,{
         n1: "",
         n2: "",
@@ -41,59 +41,41 @@ function resetCalc(){
     })
     return calc.n1;
 }
-function clearElement(){
-    if (calc.operation) return calc.n2 = "";
-    else return calc.n1 = "";
-}
-function setDigit(value){
-    if(calc.operation) return calc.n2+=value;
-    else return calc.n1+=value;
-}
-function setOperation(value){
+const clearElement = () => calc.operation ? calc.n2 = "" : calc.n1 = "";
+const setDigit = (value) => calc.operation ? calc.n2+=value : calc.n1+=value;
+const setOperation = (value) => {
     calc.operation = value;
     calc.n2 = "";
     return calc.n1
 }
-function calcResult(){
-    if (calc.operation) 
-    calc.n1 = eval(`${calc.n1}${calc.operation}${calc.n2}`);
+const calcResult = () => {
+    if (calc.operation)
+    calc.n1 = eval(`${calc.n1}${calc.operation}${calc.n2}`)
     return calc.n1;
 }
-function showNumber(element, x){
-    element.value = x
+const setAction = (value) => {
+    switch(value){
+        // Modificar Numeradores
+        case "=":   return calcResult();
+        case "CE":  return clearElement();
+        case "C":   return resetCalc();
+        // Cambiar Signos
+        case "+":  case "-": case "*": case "/":   
+            return setOperation(value)            
+        // Indicar Digitos
+        default:    return setDigit(value);
+    }
 }
+const showNumber = (element, x) => element.value = x
 // manipulacion de eventos
 function callActions(){
     const buttons = root.querySelectorAll("button");
-    buttons.forEach((btn) =>{
-        btn.addEventListener("click",(e) => {
-            let x = calc.n1;
-            const input = root.querySelector("input");
-            const value = e.target.innerText;
-            switch(value){
-                case "=":
-                    x = calcResult();
-                break;
-                case "CE":
-                    x = clearElement();
-                break;
-                case "C": 
-                    x = resetCalc();
-                break;
-                case "+":
-                case "-":
-                case "*":
-                case "/":
-                    x = setOperation(value)
-                break;
-                default:
-                    x = setDigit(value);
-            }
-            showNumber(input, x);
-            console.log(calc)
-        })
+    buttons.forEach((btn) => btn.addEventListener("click",(e) => {
+        const input = root.querySelector("input");
+        let x = setAction(e.target.innerText)
+        showNumber(input, x);
     })
-}
+)}
 // Invocacion
 resetCalc();
 renderInput();
