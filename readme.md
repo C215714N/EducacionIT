@@ -9,7 +9,7 @@ Hace refencia a un __modelo de resolucion de problemas__, basado en la _identifi
 * __Propiedad__: Atributos o caracteristicas que definen al objeto.
 * __Metodo__: Acciones o funciones que puede ejecutar dicho objeto.
 
-## Definicion de una clase
+### Definicion de una Clase
 
 Normalmente se utiliza la palabra reservada __class__ seguido del nombre de la misma, _empezando en Mayusculas_. En algunos casos debemos definir las propiedades y sus respectivos tipos de datos; pero siempre sera necesario definir los metodos que pueden ejecutar los hijos de dicha clase.
 
@@ -27,9 +27,9 @@ class Person {
     }
 }
 ```
-## Instancia de una clase
+### Instancia de una Clase
 
-Regularmente vamos a trabajar con una o mas instancias de una clase, y debemos definir los valores iniciales para las propiedades
+Regularmente vamos a trabajar con una o mas instancias de una clase, y debemos definir los _valores iniciales_ para las propiedades; aunque tambien podemos hacerlos depues. Para ello utilizaremos la palabre new seguido del nombre de la clase y preferentemente utilizaremos los metodos para actualizar los valores de cada propiedad. 
 
 ```java
 user = new Person(); // instancia de una clase
