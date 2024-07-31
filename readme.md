@@ -36,3 +36,22 @@ user = new Person(); // instancia de una clase
 user.name = "Cristian"; // asignacion directa
 user.actualizarEdad(33) // ejecucion del metodo
 ```
+
+## Pilares de POO
+
+![Pilares de POO (Programacion Orientada a Objetos)](assets/poo_pillars.jpg)
+
+* __ABSTRACCION__: Capacidad para identificar los actores principales de un sistema.
+* __HERENCIA__: Capacidad de transmitir propiedades y metodos a clases hijas y objetos instanciados.
+* __ENCAPSULACION__: Capacidad para aislar caracteristicas privadas y que sean accesibles unicamente a traves de metodos.
+* __POLIMORFISMO__: Capacidad de modificar y adaptar tanto propiedades y metodos como sea necesario.
+
+### Ejemplos
+
+* [Estructuras de Datos](./examples/object.md)
+* [C++](./examples/Person.cpp)
+* [C#](./examples/Person.cs)
+* [Java](./examples/Person.java)
+* [JavaScript](./examples/Person.js)
+* [PHP](./examples/Person.php)
+* [Python](./examples/Person.py)
