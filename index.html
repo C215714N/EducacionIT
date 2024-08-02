@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#login">Iniciar Sesion</a></li>
+            <li><a href="#signin">Registrarse</a></li>
+        </ul>
+    </nav>
+    <!-- Registro de Usuario -->
+    <form id="signin" class="form">
+        <h2>Registrate</h2>
+        <label for="user">ingrese un nombre de usuario</label>
+        <input id="user" name="user" type="text">
+        <label for="email">ingrese un correo</label>
+        <input id="email" name="email" type="email">
+        <label for="pass1">escriba su contraseña</label>
+        <input id="pass1" name="pass" type="password">
+        <label for="pass2">repita la contraseña</label>
+        <input id="pass2" name="pass" type="password">
+        <button>Aceptar</button>
+    </form>
+    <!-- Autenticacion de Usuario -->
+    <form id="login" class="form">
+        <h2>Iniciar Sesion</h2>
+        <label for="username">ingrese su usuario o correo</label>
+        <input id="username" name="user" type="text">
+        <label for="password">escriba la contraseña</label>
+        <input id="password" name="pass" type="password">
+        <button>Ingresar</button>
+    </form>
+</body>
+</html>
