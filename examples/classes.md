@@ -1,40 +1,41 @@
 ```mermaid
+
 classDiagram
     Store <|-- User
     User <|-- Admin
     User <|-- Client
     User <|-- Post
     User <|-- Chart
-    Store{
-        -String name
-        -Array users
-        -Object contact
-    }
-    User{
-        -String usuario
-        -String correo
-        -String password
-        -Array posts
-    }
-    Admin{
-        +changeStatus()
-        +changePass()
-    }
-    Client{
-        +changeStatus()
-        +upgrade()
-    }
-    Post{
-        -Collection Product
-        -Array comments
-    }
-    Product{
-        -String name
-        -Array categories
-        -Long price
-        -Object description
-    }
-    Chart{
-        -publicaciones
-    }
+    
+    class Store
+    Store: - String name
+    Store: - Array users
+    Store: -Object contact
+
+    class User
+    User: -String usuario
+    User: -String correo
+    User: -String password
+    User: -Array posts
+    
+    class Admin
+    Admin: +changeStatus()
+    Admin: +changePass()
+    
+    class Client
+    Client: +changeStatus()
+    Client: +upgrade()
+    
+    class Post
+    Post: -Collection Product
+    Post: -Array comments
+    
+    class Product
+    Product: -String name
+    Product: -Array categories
+    Product: -Long price
+    Product: -Object description
+    
+    class Chart
+    Chart: -publicaciones
 ```
