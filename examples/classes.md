@@ -18,13 +18,12 @@ User
     - Array posts
 
 Admin
-    + changeStatus(user)
-    + changeStatus(user, status)
-    + changePass(user, password)
+    +changeStatus()
+    +changePass()
 
 Client
-    + changeStatus()
-    + upgrade()
+    +changeStatus()
+    +upgrade()
 
 Post
     - ProductCollection products
