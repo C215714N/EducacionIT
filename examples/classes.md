@@ -6,6 +6,7 @@ classDiagram
     User <|-- Client
     User <|-- Post
     User <|-- Chart
+    Post <|-- Product
     
     class Store
     Store: - String name
