@@ -6,36 +6,36 @@ classDiagram
     User <|-- Post
     User <|-- Chart
 
-Store{
-    - String name
-    - Array users
-    - Object contact
-}
-User{
-    - String usuario
-    - String correo
-    - String password
-    - Array posts
-}
-Admin{
-    +changeStatus()
-    +changePass()
-}
-Client{
-    +changeStatus()
-    +upgrade()
-}
-Post{
-    - ProductCollection products
-    - Array comments
-}
-Product{
-    - String name
-    - Array categories
-    - Long price
-    - Object description
-}
-Chart{
-    - publicaciones
-}
+    Store{
+        - String name
+        - Array users
+        - Object contact
+    }
+    User{
+        - String usuario
+        - String correo
+        - String password
+        - Array posts
+    }
+    Admin{
+        +changeStatus()
+        +changePass()
+    }
+    Client{
+        +changeStatus()
+        +upgrade()
+    }
+    Post{
+        - Collection Product
+        - Array comments
+    }
+    Product{
+        - String name
+        - Array categories
+        - Long price
+        - Object description
+    }
+    Chart{
+        - publicaciones
+    }
 ```
