@@ -7,7 +7,8 @@ classDiagram
     User <|-- Post
     User <|-- Chart
     Post <|-- Product
-    
+    Chart <|-- Post
+
     class Store
     Store: - String name
     Store: - Array users
