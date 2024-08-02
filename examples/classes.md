@@ -1,17 +1,40 @@
+```mermaid
+classDiagram
+    Store <|-- User
+    User <|-- Admin
+    User <|-- Client
+    User <|-- Post
+    User <|-- Chart
+
 Store
-    - String nombre
-    - Array clientes
-    - Array publicaciones
-    - Array categorias
+    - String name
+    - Array users
+    - Object contact
+
+User
+    - String usuario
+    - String correo
+    - String password
+    - Array posts
+
+Admin
+    +
+    +
 
 Client
-    - usuario
-    - correo
-    - password
-    - publicaciones: []
+    +
+    +
 
 Post
-    - categoria
+    - ProductCollection products
+    - Array comments
+
+Product
+    - String name
+    - Array categories
+    - Long price
+    - Object description
 
 Chart
     - publicaciones
+```
