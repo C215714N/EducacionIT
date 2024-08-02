@@ -17,23 +17,50 @@
     <form id="signin" class="form">
         <h2>Registrate</h2>
         <label for="user">ingrese un nombre de usuario</label>
-        <input id="user" name="user" type="text">
+        <input id="user" 
+            name="user" 
+            type="text" 
+            autocomplete="true"
+            required>
         <label for="email">ingrese un correo</label>
-        <input id="email" name="email" type="email">
+        <input id="email" 
+            name="email" 
+            type="email" 
+            autocomplete="true"
+            required>
         <label for="pass1">escriba su contraseña</label>
-        <input id="pass1" name="pass" type="password">
+        <input id="pass1" 
+            name="pass" 
+            type="password"
+            pattern="[A-Za-z0-9!#]{4,20}"
+            maxlength="20"
+            autocomplete="true" 
+            required>
         <label for="pass2">repita la contraseña</label>
-        <input id="pass2" name="pass" type="password">
+        <input id="pass2" 
+            name="pass" type="password" 
+            maxlength="20"
+            autocomplete="true" 
+            required>
         <button>Aceptar</button>
     </form>
     <!-- Autenticacion de Usuario -->
     <form id="login" class="form">
         <h2>Iniciar Sesion</h2>
         <label for="username">ingrese su usuario o correo</label>
-        <input id="username" name="user" type="text">
+        <input id="username" 
+            name="user" 
+            type="text"
+            autocomplete="true"
+            required>
         <label for="password">escriba la contraseña</label>
-        <input id="password" name="pass" type="password">
+        <input id="password" 
+            name="pass" 
+            type="password" 
+            autocomplete="true"
+            required>
         <button>Ingresar</button>
     </form>
+    <script src="app/index.js"></script>
 </body>
 </html>
