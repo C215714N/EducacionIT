@@ -1,0 +1,30 @@
+* {
+    font-family: "Raleway", "Open Sans", "calibri", sans-serif;
+    scroll-behavior: smooth;
+}
+/* Reinicio de Estilos */
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.list-unstyled{
+    margin: 0;
+}
+iframe {
+    border: 0;
+}
+.menu,
+.list-unstyled{
+    padding: 0;
+}
+/* Listas */
+.menu,
+.list-unstyled{
+    list-style: none
+}
+/* Hipervinculos */
+:is(nav, footer) a{
+    text-decoration: none;
+}
