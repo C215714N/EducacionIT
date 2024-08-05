@@ -1,0 +1,18 @@
+#header{
+    text-align: center;
+    font-size: min(5rem, calc(.8rem + 2vw));
+    /* tipografia flexible 
+        DIMENSION
+        vw (viewport width) 
+        vh (viewport height)
+        RELACION DE ASPECTO
+        vmin (viewport minimum)
+        vmax (viewport maximum)
+    */
+}
+h1,
+h2{
+    font-family: "Jedi", sans-serif;
+    font-weight: lighter;
+    color: #fc3;
+}
