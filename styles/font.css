@@ -1,0 +1,16 @@
+/* Definicion de Tipografia */
+@font-face {
+    src: url("../assets/font/starwars.ttf");
+    /*  FORMATOS DE TIPOGRAFIA
+        EOT   (Ethernet Open Type)
+        TTF   (True Type Font)
+        OTF   (Open Type Font)
+        WOFF  (Web Open Font File)
+        SVG   (Scalable Vector Graphics)
+    */
+    font-family: "Jedi";
+}
+@font-face {
+    src: url("../assets/font/galaxy.woff");
+    font-family: "Galaxy";
+}
