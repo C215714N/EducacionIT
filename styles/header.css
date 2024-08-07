@@ -25,32 +25,21 @@
             - relacion: vmin | vmax
     */
     color: #fc3;
-    background-image: 
+    background-color: #124;
+    background: 
         linear-gradient(
             hsl(240, 20%, 80%,.3),
             hsl(240, 20%, 50%,.3),
-            hsl(240, 20%, 30%,.3) /* HSL (Hue, Saturation, Lightness)*/
+            hsl(240, 20%, 30%,.3)
         ),
-        url("../assets/bg/fighter.png"),
-        url("../assets/bg/x-wing.png"),
-        url("../assets/bg/milleniumfalcon.png"),
-        url("../assets/bg/death_star.png"),
-        url("../assets/bg/hyperspace.jpg");
-    background-position:
-        center, 
-        top left,
-        bottom center,
-        top right,
-        50% 20%,
-        center;
-    background-size: 
-        cover,
-        20%,
-        10rem,
-        25vw,
-        25%,
-        cover;
+        url("../assets/bg/fighter.png") top left/clamp(4rem,20%,320px),
+        url("../assets/bg/x-wing.png") bottom center/clamp(10rem, 25%,540px),
+        url("../assets/bg/milleniumfalcon.png") top right/clamp(5rem,25%,720px),
+        url("../assets/bg/death_star.png") 50% 20%/clamp(10rem,25%, 2000px) fixed,
+        url("../assets/bg/hyperspace.jpg") center/cover fixed;
     background-repeat: no-repeat;
+    /* SHORTHAND
+        Background: color image position/size repeat attachment */
     text-shadow: 0 0 .25rem #333;
 }
 h1,
