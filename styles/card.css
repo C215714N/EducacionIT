@@ -1,0 +1,37 @@
+.card{
+    margin: .5rem;
+    border-radius: .25rem;
+    padding: 1rem;
+    box-shadow: 0 0 .25rem #ccc;
+    overflow: hidden;
+}
+/* Secciones */
+.card-header,
+.card-footer{
+    display: block;
+    padding: .5rem 1rem;
+    box-shadow: 0 0 .2rem #ccc;
+    font-family: 'galaxy', sans-serif;
+}
+.card-header{
+    margin: .5rem;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+.card-footer{
+    text-align: right;
+}
+.card .card-header{
+    margin: -1rem -1rem 1rem;
+}
+.card .card-footer{
+    margin: 1rem -1rem -1rem;
+}
+/* Elementos ocultos */
+.card .hidden{
+    max-height: 2.5rem;
+    overflow: hidden;
+}
+.card:hover .hidden{
+    max-height: 100vh;
+}
