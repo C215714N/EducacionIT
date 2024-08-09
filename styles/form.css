@@ -1,0 +1,48 @@
+label{
+    margin: .5rem .25rem 0;
+}
+input,
+textarea,
+select{
+    border-radius: .25rem;
+    border: .1rem solid #999;
+    padding: .25rem .5rem;
+    font-size: 1rem;
+}
+textarea{
+    min-height: 4rem;
+    resize: vertical;
+}
+/* Validacion */
+.validate{
+    margin: .25rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-out;
+}
+form :focus + .validate{
+    max-height: 100vh;
+}
+/* Cumple los requisitos */
+.valid,
+:is(input,textarea):valid{
+    outline-color: #3c6;
+}
+.valid-feedback,
+:valid + .validate{
+    color: #284;
+}
+/* No cumple los requisitos */
+.invalid,
+:not(:placeholder-shown):invalid{
+    outline-color: #c33;
+}
+.invalid-feedback,
+:not(:placeholder-shown):invalid + .validate{
+    color: #c33;
+}
+/* Formulario de Registro */
+#signin{
+    display: grid;
+    padding: 1.5rem 1rem;
+}
