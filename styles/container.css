@@ -1,0 +1,21 @@
+.d-flex,
+.container{
+    display: flex;
+}
+.flex-wrap,
+.container{
+    flex-wrap: wrap;
+}
+.container > *{
+    flex: 1 0 min(100%, 240px);
+    /* SHORTHAND
+        GROW: determina si un elemento puede crecer para ocupar mas espacio
+        SHRINK: permite reducir el tamaño de un elemento para que entren otros dentro del eje principal
+        BASIS: Establece el tamaño inicial para los hijos de un contenedor flex pisando la propiedad "width"
+    */
+}
+main{
+    margin: auto;
+    padding: 1rem;
+    max-width: 1320px;
+}
