@@ -133,13 +133,15 @@
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer id="footer">
         <!-- Formulario de Registro -->
-        <form action="" id="signin">
+        <form action="" id="signin" class="card">
             <label for="username">Escriba su Nombre de Usuario</label>
             <input 
                 id="username" 
                 name="username" 
                 type="text"
                 placeholder="username: c215714n"
+                pattern="[A-Za-z0-9]{4,20}"
+                maxlength="20"
                 required>
             <p class="validate">
                 Ingrese entre 4 y 20 caracteres utilizando solamente numeros y letras, sin espacios. 
@@ -150,6 +152,7 @@
                 name="email" 
                 type="email"
                 placeholder="email: cristiandracedo@hotmail.com"
+                minlength="8"
                 required>
             <p class="validate">
                 Ingrese una direccion valida, de al menos 8 caracteres, con el formato "usuario@servidor"
@@ -160,16 +163,23 @@
                 name="phone" 
                 type="tel"
                 placeholder="phone: (5411)0303-4567"
+                pattern="([0-9]{6,20})|([\(]\d{2,5}[\)]\d{4}[\-]\d{4})"
+                minlength="10"
                 required>
-            <p></p>
+            <p class="validate">
+                Escriba la caracteristica entre parentesis y un guion cada 4 digitos, como en el ejemplo: (5411)0303-4567.
+                Aunque tambien puede escribir solamente numeros
+            </p>
             <label for="pass1">Escriba su Contraseña</label>
             <input 
                 id="pass1" 
                 name="password" 
                 type="password"
                 placeholder="password: Abcde12345!#"
+                minlength="8"
+                pattern="((?=[A-Z])(?=[a-z])(?=\d)){8,}"
                 required>
-            <p>
+            <p class="validate">
                 Ingrese una contraseña de al menos 8 caracteres incluyendo mayusculas, minusculas, numeros y simbolos.
             </p>
             <label for="pass2">Repita la contraseña</label>
@@ -178,8 +188,9 @@
                 name="password" 
                 type="password"
                 placeholder="repeat: Abcde12345!#"
+                minlength="8"
                 required>
-            <p>
+            <p class="validate">
                 Las contraseñas deben ser identicas.
             </p>
             <label for="char">Elija un lado de la Fuerza</label>

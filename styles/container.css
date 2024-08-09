@@ -6,6 +6,14 @@
 .container{
     flex-wrap: wrap;
 }
+.justify-center,
+.container{
+    justify-content: center;
+}
+.align-start,
+.container{
+    align-items: start;
+}
 .container > *{
     flex: 1 0 min(100%, 240px);
     /* SHORTHAND
