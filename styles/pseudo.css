@@ -1,0 +1,24 @@
+/* :pseudoclase Instancia o caracteristica de un elemento (Estado) */
+article{
+    opacity: .9;
+}
+article:hover{
+    opacity: 1;
+}
+article:first-of-type{
+    background-color: #eee;
+}
+article:last-child{
+    background-color: #ccc;
+}
+/* ::pseudoelemento Parte o elemento dentro de otro elemento */
+article .hidden::first-letter{
+    float: left;
+    padding: 0 .25rem;
+    line-height: 1;
+    font-size: 2.25rem;
+}
+article .hidden::first-line{
+    font-weight: bold;
+    color: #448;
+}
