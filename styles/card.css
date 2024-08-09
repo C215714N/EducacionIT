@@ -2,7 +2,7 @@
     margin: .5rem;
     border-radius: .25rem;
     padding: 1rem;
-    box-shadow: 0 0 .25rem #ccc;
+    box-shadow: 0 0 .5rem #aaa;
     overflow: hidden;
 }
 /* Secciones */
@@ -28,10 +28,14 @@
     margin: 1rem -1rem -1rem;
 }
 /* Elementos ocultos */
-.card .hidden{
-    max-height: 2.5rem;
+.hidden{
     overflow: hidden;
+    transition: all 2s ease;
 }
-.card:hover .hidden{
+.card .hidden{ 
+    max-height: 2.5rem;
+}
+.card:target .hidden{
+    color: #333;
     max-height: 100vh;
 }
