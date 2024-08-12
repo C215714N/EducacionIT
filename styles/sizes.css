@@ -1,0 +1,29 @@
+/* Tamaños de Caja */
+.w-25{
+    width: 25%;
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%
+}
+/* Tamaños referencias */
+.xs{ /* extra pequeño */
+    --size: 120px; 
+}
+.sm{ /* pequeño */
+    --size: 180px; 
+}
+.md{ /* mediano */
+    --size: 240px;
+}
+.lg{ /* grande */ 
+    --size: 300px; 
+}
+.xl{ /* extra grande*/
+    --size: 360px; 
+}
