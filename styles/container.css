@@ -1,3 +1,4 @@
+/* Estilos Flexbox */
 .d-flex,
 .container{
     display: flex;
@@ -22,6 +23,39 @@
         BASIS: Establece el tamaño inicial para los hijos de un contenedor flex pisando la propiedad "width"
     */
 }
+/* Estilos CSS Grid */
+.d-grid{
+    display: grid;
+}
+/* Columnas fijas */
+.cols-2{
+    grid-template-columns: 1fr 1fr; 
+}
+.cols-3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* Columnas Automaticas */
+.auto-cols{
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--size)),1fr));
+    /* EXPLICACION 
+        * repeat(cantidad, valor) repite x cantidad de veces una valor aplicable
+        - auto-fill: determina la cantidad de columnas que pueden entrar en base al tamaño
+        - auto-fit:  encaja una cantidad de columnas que ocupen todo el tamaño del contenedor
+        * minmax(min, max) establece los limites para el tamaño de una celda
+
+    */
+}
+.gap{
+    gap: .5rem;
+}
+.img-cover{
+    height: 100%;
+    object-fit: cover;
+    border: .5rem solid #ccc;
+    border-radius: .5rem;
+}
+
+/* Diseño Contenido en General */
 main{
     margin: auto;
     padding: 1rem;
