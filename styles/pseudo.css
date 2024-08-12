@@ -18,7 +18,12 @@ article .hidden::first-letter{
     line-height: 1;
     font-size: 2.25rem;
 }
-article .hidden::first-line{
-    font-weight: bold;
+/* Selectores de Atributo */
+[id^="episode"] strong::before{ /*empieza con*/
+    content: "Episodio "
+}
+[id^="episode"] .hidden::before{
+    content: "Hace mucho tiempo en una galaxia muy, muy lejana...";
     color: #448;
+    font-weight: bold;
 }

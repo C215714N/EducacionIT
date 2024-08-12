@@ -49,12 +49,12 @@
     gap: .5rem;
 }
 .img-cover{
+    display: block;
     height: 100%;
     object-fit: cover;
     border: .5rem solid #ccc;
     border-radius: .5rem;
 }
-
 /* Diseño Contenido en General */
 main{
     margin: auto;
