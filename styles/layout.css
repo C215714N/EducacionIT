@@ -1,0 +1,41 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        "nav";
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+#main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+/* Pantallas Medianas - Tablets */
+@media screen and (width >= 768px){
+    body{
+        grid-template-areas: 
+            "nav"
+            "header"
+            "main"
+            "footer";
+    }
+}
+
+/* Pantallas Grandes - Desktop */
+@media screen and (width >= 1200px){
+    body{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+}
