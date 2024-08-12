@@ -1,0 +1,33 @@
+/* Tabla de contenido */
+/* Contadores */
+.content-table{
+    counter-reset: first;
+    font-weight: bold;
+}
+.content-table :is(ul,ol){
+    counter-reset: second;
+}
+.content-table :is(ul,ol) :is(ul,ol){
+    counter-reset: third;
+}
+/* Incrementos */
+.content-table > li{
+    counter-increment: first;
+    color: #112;
+    border-top: 1px solid;
+}
+.content-table li li{
+    counter-increment: second;
+    color: #336;
+}
+.content-table li li li{
+    counter-increment: third;
+    color: #558;
+}
+/* Implementacion */
+.content-table li::before{
+    content: 
+        counter(first) "."
+        counter(second) "."
+        counter(third) " - ";
+}

@@ -25,12 +25,14 @@ iframe {
     border: 0;
 }
 .menu,
+.content-table :is(ul,ol),
 .list-unstyled{
     padding: 0;
 }
 /* Listas */
 .menu,
 .card,
+.content-table li,
 .list-unstyled{
     list-style: none
 }

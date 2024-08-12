@@ -27,3 +27,12 @@ article .hidden::first-letter{
     color: #448;
     font-weight: bold;
 }
+[id^="episode"] .hidden::after{
+    content: "gracias por leer y que la fuerza te acompañe. Saluda atte. LG";
+    display: block;
+    margin-top: .5rem;
+}
+/* No aplica si el div tiene clase hidden  */
+[id^="episode"] div::after{
+    content: "by George Lucas";
+}
