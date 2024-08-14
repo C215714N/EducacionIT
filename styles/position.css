@@ -1,0 +1,33 @@
+/* STATIC: El elemento nunca cambia su ubicacion original, fluye con el resto del contenido y ocupa lugar en el espacio */
+.p-static{
+    position: static; /* predeterminado */
+}
+/* RELATIVE: El elemento se ubica con respecto a si mismo, puede cambiar su posicion y mantiene su lugar original */
+.p-relative{
+    position: relative;
+}
+/* ABSOLUTE: El elemento se ubica con respecto a su ancestro mas proximo que NO sea static y no ocupa lugar en el espacio */
+.p-absolute{
+    position: absolute;
+}
+/* FIXED: El elemento se ubica con respecto a la ventana y a diferencia de absolute, debe tener referencia de posicion. */
+.p-fixed{
+    position: fixed;
+}
+/* STICKY: El elemento ocupa su posicion original y pertenece al flujo de la pagina, hasta cumplir determinada condicion. */
+.p-sticky{
+    position: sticky;
+}
+/* Z-INDEX: Indice de superposicion, y funciona de manera similar a las capas en photoshop */
+.z-n1{
+    z-index: -1;
+}
+.z-0{
+    z-index: 0;
+}
+.z-1{
+    z-index: 1;
+}
+.z-2{
+    z-index: 2;
+}
