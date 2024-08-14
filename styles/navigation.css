@@ -39,6 +39,9 @@ nav button{
 .menu.active{
     left: 0;
 }
+.menu li:is(:first-child,:last-child){
+    display: none;
+}
 /* Medium Devices (Tablets)*/
 @media screen and (width >= 768px){
     nav button{
@@ -50,6 +53,11 @@ nav button{
         gap: .5rem;
         width: auto;
         background-image: unset;
+    }
+}
+@media screen and (width >= 992px){
+    .menu li:is(:first-child, :last-child){
+        display: block;
     }
 }
 /* Diseño de Impresion */

@@ -1,0 +1,43 @@
+[class*="icon"]{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+[class*="icon-"]::before{
+    display: block;
+    font-size: 1.5em;
+    filter: grayscale(90%);
+}
+[class*="icon-"]:hover::before{
+    filter: grayscale(50%);
+}
+.icon-home::before{
+    content: '🏠';
+}
+.icon-sagas::before{
+    content: '🎦'
+}
+.icon-chronology::before{
+    content: '⌚';
+}
+.icon-character::before{
+    content: '👩‍🚀'
+}
+.icon-factions::before{
+    content: '🔱'
+}
+.icon-vehicle::before{
+    content: '🚀';
+}
+.icon-location::before{
+    content: '🌍';
+}
+.icon-location:hover::before{
+    filter: 
+        grayscale(50%) 
+        hue-rotate(180deg);
+}
+.icon-register::before{
+    content: '📒'
+}
