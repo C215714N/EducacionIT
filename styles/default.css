@@ -1,21 +1,22 @@
 /* Importaciones */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway");
-@import url("font.css");
-@import url("icon.css");
+@import url("global/font.css");
+@import url("global/icon.css");
 /* Reglas generales */
-@import url("general.css");
-@import url("sizes.css");
-@import url("container.css");
-@import url("layout.css");
+@import url("global/general.css");
+@import url("global/sizes.css");
+@import url("global/container.css");
+@import url("global/layout.css");
 /* Cabecera */
-@import url("header.css");
+@import url("content/header.css");
 /* Navegacion */
-@import url("navigation.css");
+@import url("content/navigation.css");
 /* Contenido */
-@import url("position.css");
-@import url("pseudo.css");
-@import url("card.css");
-@import url("aside.css");
+@import url("content/position.css");
+@import url("content/pseudo.css");
+/* Principal */
+@import url("content/card.css");
+@import url("content/aside.css");
 /* Pie de Pagina */
-@import url("form.css");
-@import url("map.css");
+@import url("content/form.css");
+@import url("content/map.css");
