@@ -41,10 +41,15 @@
     /* SHORTHAND
         Background: color image position/size repeat attachment */
     text-shadow: 0 0 .25rem #333;
+    /* Perspectiva */
+    perspective: 30rem;
+    perspective-origin: top center;
 }
 h1,
 h2{
     font-family: "Jedi", sans-serif;
     font-weight: lighter;
     line-height: 1;
+    transform:
+        rotateX(30deg);
 }
