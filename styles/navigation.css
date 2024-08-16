@@ -59,6 +59,10 @@ nav button{
     .menu li:is(:first-child, :last-child){
         display: block;
     }
+    .menu [class*="icon-"]{
+        flex-direction: row;
+        font-size: .95rem;
+    }
 }
 /* Diseño de Impresion */
 @media print{
