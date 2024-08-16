@@ -1,0 +1,63 @@
+// Declaraciones
+$path: "/assets/ico";
+$format: svg;
+$social: 
+    cr,
+    facebook,
+    github,
+    instagram,
+    linkedin,
+    twitter,
+    whatsapp,
+    youtube,
+;
+// Transiciones
+@mixin transition($t:linear, $s:.5s, $d:0s, $p:all){
+    transition: $p $s $d $t;
+}
+/* Estilo de Iconos*/
+.icon{
+    --color: #ccc;
+    --position: center;
+    --size: 2.5rem;
+    --repeat: no-repeat;
+    background: 
+        var(--color) var(--bg) var(--position)/var(--size) var(--repeat);   
+    &:hover{
+        --color: #fff;
+        --size: 3.25rem;
+        box-shadow: 0 .25rem .5rem #333;
+    }
+    // Variantes de color
+    &-dark{
+        --color: #333;
+    }
+    &-primary{
+        --color: #448;
+    }
+    // Iconos redes sociales
+    @each $ico in $social{
+        &-#{$ico}{
+            --bg: url("#{$path}/#{$ico}.#{$format}");
+        }
+    }
+}
+/* Contenedor Redes sociales*/
+.social{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: .5rem;
+    a{
+        @include transition(ease-in);
+        @extend .icon;
+        width: 4rem;
+        height: 4rem;
+        border-radius: .25rem;
+        &:hover{
+            transform: 
+                translate(-.25rem, -.25rem)
+                rotate(360deg);
+        }
+    }
+}
