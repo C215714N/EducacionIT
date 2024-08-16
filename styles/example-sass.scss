@@ -1,0 +1,70 @@
+/* Syntactically Awesome StyleSheets*/
+// Variables: Dato que se almacena en la memoria y cuyo valor puede cambiar.
+$color: #eee;
+$bg: #448;
+$md: 768px;
+// Mixin: Estilos que reciben parametros y se utilizan como atributos
+@mixin boxModel($p:0, $m:0, $b:0){
+    margin: $m;
+    border: $b;
+    padding: $p;
+}
+// Nesting: Anidacion de selectores como si fuesen atributos (especificidad)
+.social{
+    @include boxModel(.5rem, 1rem auto, .1rem solid);
+    color: $color;
+    background-color: $bg;
+    a{
+        @include boxModel(1rem, 0, 1px solid);
+        @media screen and (width >= $md){
+            &:last-child{
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    }
+    &-icon{
+        border-radius: .5rem;
+    }
+    .icon{
+        font-size: 1rem;
+    }
+}
+// Extend: Selectores que se adhieren, como elementos de lista, a un selector referente
+.reset{
+    @include boxModel;
+}
+body{
+    @extend .reset;
+    .list-unstyled{ @extend .reset; }
+    .menu{ @extend .reset; }
+}
+// Loops: Estilos que se repiten dada una condicion
+$cols: 24;
+@for $i from 0 through $cols {
+    .col-#{$i}{
+        width: percentage($i / $cols)
+    }
+}
+$social: 
+    facebook, 
+    instagram, 
+    twitter, 
+    tiktok, 
+    whatsapp, 
+    youtube, 
+    github, 
+    x, 
+    snapchat, 
+    google, 
+    gmail, 
+    pinterest,
+    dribble,
+    deviantart,
+;
+@each $icon in $social{
+    .icon-#{$icon}{
+        --bg: url("/assets/ico/#{$icon}.svg");
+    }
+}
