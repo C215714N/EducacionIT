@@ -42,7 +42,6 @@
         - auto-fill: determina la cantidad de columnas que pueden entrar en base al tamaño
         - auto-fit:  encaja una cantidad de columnas que ocupen todo el tamaño del contenedor
         * minmax(min, max) establece los limites para el tamaño de una celda
-
     */
 }
 .gap{
@@ -54,6 +53,11 @@
     object-fit: cover;
     border: .5rem solid #ccc;
     border-radius: .5rem;
+    transition: all .25s ease-out;
+}
+.img-cover:hover{
+    position: relative;
+    transform: scale(1.1) skewY(-5deg);
 }
 /* Diseño Contenido en General */
 main{
