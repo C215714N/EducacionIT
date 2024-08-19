@@ -1,0 +1,75 @@
+$positions: static, relative, absolute, fixed, sticky;
+
+@mixin pseudo($c:''){ &::before{ content: "#{$c}"; } }
+@each $p in $positions{ %p-#{$p}{ position: $p; } }
+// Clases ocultas (No salen en la compilacion)
+.btn{
+    border: none;
+    background-color: transparent;
+    opacity: .3;
+    color: #eee;
+    font-size: calc(2vw + .8rem);
+    &:hover{
+        opacity: .7;
+    }
+    &-circle{
+        border-radius: 1rem;
+        border: none;
+        padding: .5rem;
+        box-shadow: -.25rem .25rem .5rem #333;
+        opacity: .5;
+    }
+}
+%transition{ transition: all .5s linear; }
+%btn{
+    top: 0;
+    height: 100%;
+}
+%cover{
+    @extend %btn;
+    left: 0;
+    width: 100%;
+}
+// Metodologia BEM (Block Element Modifier)
+.gallery{ // Bloque Contenedor
+    @extend %p-relative;
+    min-height: min(100vh, 480px);
+    &-item{ // Elemento dentro de la Galeria
+        @extend %p-absolute, %cover, %transition;
+        opacity: 0;
+        &-opaque, // Clase modificadora
+        &.active{ opacity: 1; }
+        img{ @extend %cover; }
+    }
+    &-controls{
+        @extend %p-absolute, %transition;
+        width: 100%;
+        padding: 1rem 20%;
+        bottom: .5rem;
+        text-align: center;
+        button{
+            @extend %transition, .btn-circle;
+            &.active{
+                padding: .5rem 1.5rem;
+                opacity: .8;
+    }   }   }
+    & > button{
+        @extend %p-absolute, %transition, %btn, .btn;
+        width: 20%;
+        line-height: min(100vh, 480px);
+        &.icon{
+            &-prev{
+                @include pseudo("<");
+                left: 0; }
+            &-next{
+                @include pseudo(">");
+                right: 0; }
+    }   }
+    // simulacion de fondos
+    @for $i from 1 through 6{
+        .bg:nth-child(#{$i}n){
+            background-image: linear-gradient(
+            hsl($i * 30, 50%, 60%),
+            hsl($i * 60, 50%, 40%)
+    );  }   }
+}
