@@ -11,26 +11,24 @@ const
 const toggle = (element, className = "active") => {
     return element.classList.toggle(className)
 }
-const setActiveItem = (array, type, className='active') => {
-    // Encontrar el elemento activo
-    let newItem;
-    for(let i = 0; i < array.length; i++){
-        if(array[i].classList.contains(className)){
-            toggle(array[i]) // Quitar la clase active
-            // Determinar el siguiente elemento
-            switch(type){
-            case 'next':
-                newItem = (i < array.length - 1) ? array[i + 1] : array[0]
-            break;
-            case 'prev':
-                newItem = (i > 0) ? array[i - 1] : array[array.length - 1];
-            break;
-            default:
-                newItem = array[type]
-            }
-        }
+const getActiveItem = (array, className='active') => {
+    for(let item of array) // Buscamos el elemento
+    if(item.classList.contains(className)){
+        toggle(item) // Removemos la clase
+        return item
     }
-    toggle(newItem) // Agregar la clase active
+}
+const setActiveItem = (array, type, className='active') => {
+    const item = getActiveItem(array, className)
+    // Identificamos al siguiente elemento
+    const newItem = (
+        type === 'next' ? 
+        (item.nextElementSibling) : 
+        type === "prev" ? 
+        (item.previousElementSibling) : 
+        array[type]
+    )
+    toggle(newItem); // Agregamos la clase
 }
 /* Eventos */
 navBtn.addEventListener('click', () => toggle(navMenu))
@@ -45,13 +43,13 @@ galleries.forEach(gallery => {
     buttons.forEach(button => {
         const btn = gallery.querySelector(`.icon-${button}`);
         btn.addEventListener('click', () => {
-            setActiveItem(items, button)
-            setActiveItem(controls, button)
+            setActiveItem(items, button);
+            setActiveItem(controls, button);
         })
     })
     // Botones de control
     controls.forEach((ctrl,i) => ctrl.addEventListener('click', () => {
-        setActiveItem(items, i)
-        setActiveItem(controls, i)
+        setActiveItem(items,i);
+        setActiveItem(controls,i);
     }))
 })
