@@ -8,6 +8,8 @@ Esto es una guia para los alumnos de la capacitacion __Maquetacion con SASS__ qu
 * [Planificacion del Diseño](docs/design.md)
 * [Implementacion del Diseño](docs/layout.md)
 * [Selectores Especiales](docs/css.md)
+* [Efectos Visuales](docs/effects.md)
+* [Preprocesadores](docs/sass.md)
 
 ## Ejercicios 
 
