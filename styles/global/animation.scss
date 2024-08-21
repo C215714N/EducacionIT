@@ -1,0 +1,31 @@
+@keyframes intro{
+    from{ // Como debe iniciar mi animacion
+        transform: rotateX(15deg) translateZ(10rem);
+    }
+}
+@keyframes subtitle{
+    to{ // Como debe finalizar mi animacion
+        margin-top: calc(2vw + 2.5rem);
+        transform: 
+            rotateX(-3deg) 
+            skew(0) 
+            translateX(0);
+    }
+}
+@keyframes bounce{
+    0%{ // Animacion con fotogramas
+        transform: rotate(0) translateY(0);
+    }
+    25%{
+        transform: rotate(-15deg) translateY(-.25rem);
+    }
+    50%{
+        transform: rotate(0) translateY(0);
+    }
+    75%{
+        transform: rotate(15deg) translateY(-.25rem);
+    }
+    100%{
+        transform: rotate(0) translateY(0);
+    }
+}
