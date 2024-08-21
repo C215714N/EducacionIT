@@ -35,6 +35,7 @@ nav button{
 .menu a:hover{
     color: #ff6;
     text-shadow: 0 0 .2rem #fca;
+    animation: glow .5s linear alternate infinite;
 }
 .menu.active{
     left: 0;

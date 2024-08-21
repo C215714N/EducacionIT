@@ -50,6 +50,7 @@
         margin-top: 1.5rem;
         padding: .5rem;
         text-decoration: none;
+        animation: fade 5s ease-in 2s backwards;
         &::before{
             @extend %pseudo;
             left: 0;
