@@ -5,7 +5,8 @@ const
     navMenu = d.querySelector('#nav .menu'),
     mapBtn = d.querySelector('#footer button.map'),
     mapFrame = d.querySelector('#footer iframe.map'),
-    galleries = d.querySelectorAll('.gallery')
+    galleries = d.querySelectorAll('.gallery'),
+    sound = d.createElement('audio')
 ;
 /* Funciones */
 const toggle = (element, className = "active") => {
@@ -18,14 +19,17 @@ const getActiveItem = (array, className='active') => {
         return item
     }
 }
+const parent = (el, type) => el.parentNode[type+"ElementChild"];
+const getFirst = (el) => parent(el,"first");
+const getLast = (el) => parent(el,"last");
+
 const setActiveItem = (array, type, className='active') => {
     const item = getActiveItem(array, className)
-    // Identificamos al siguiente elemento
-    const newItem = (
+    const newItem = (// Identificamos al siguiente elemento
         type === 'next' ? 
-        (item.nextElementSibling) : 
+        (item.nextElementSibling || getFirst(item)) : 
         type === "prev" ? 
-        (item.previousElementSibling) : 
+        (item.previousElementSibling || getLast(item)) : 
         array[type]
     )
     toggle(newItem); // Agregamos la clase
@@ -38,7 +42,6 @@ galleries.forEach(gallery => {
     const buttons = ['prev', 'next']
     const items = gallery.querySelectorAll('.gallery-item')
     const controls = gallery.querySelectorAll('.gallery-controls button')
-
     // Botones de direccion
     buttons.forEach(button => {
         const btn = gallery.querySelector(`.icon-${button}`);
