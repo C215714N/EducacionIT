@@ -1,0 +1,55 @@
+// Declaraciones
+$functions: lineal, cuadratica, trigonometrica, exponencial, limite;
+$ships: 
+    "a-wing",
+    "b-wing-prototype",
+    "ghost",
+    "interdictor-star-destroyer",
+    "phantom-fathead",
+    "resistance-x-wing",
+    "tie-fighter",
+    "u-wing",
+    "x-wing",
+    "y-wing-fighter",
+    "zeta-class-cargo"
+;
+// Estructura
+.giant-size{
+    height: 100vh;
+    background: url("/assets/bg/hyperspace.jpg") center/cover;
+    overflow: hidden;
+    .rotate{
+        animation: rotate 360s linear;
+        display: flex;
+        flex-wrap: wrap;
+        .ship{
+            flex: 1 0 min(320px, 100%);
+            width: 5rem;
+            height: 5rem;
+            background: var(--bg) center/contain no-repeat;
+            @for $i from 1 through length($ships){
+                $s: nth($ships, $i);
+                &:nth-child(#{$i}n){
+                    --bg: url("/assets/ship/#{$s}.webp");
+                }
+            }
+            @for $i from 1 through length($functions){
+                $f: nth($functions, $i);
+                &:nth-child(#{$i}n){
+                    animation: $f 2s linear $i *.5s alternate infinite;
+                }
+            }
+        }
+    }
+}
+
+// Animaciones
+@each $f in $functions{
+@keyframes #{$f}{
+    @for $i from 0 through 100{
+        $x: $i;
+        $y: $i / 2;
+        #{$i}%{
+            transform: translate($x * 1vw, $y * 1vh);
+    }}
+}}
