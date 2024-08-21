@@ -7,6 +7,8 @@ Esto es una guia para los alumnos de la capacitacion __Network Hacking__ que cur
 * [Oracle VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Wireshark](https://www.wireshark.org/download.html)
 * [Nmap](https://nmap.org/download)
+* [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
+* [OpenVPN](https://openvpn.net/community-downloads/)
 
 ## Tabla de Contenidos
 
@@ -17,5 +19,8 @@ Esto es una guia para los alumnos de la capacitacion __Network Hacking__ que cur
     * [Internet](./docs/network.md)
     * [Acceso a la Red](./docs/datalink.md)
 * [Operacion AND](./docs/ip-and.md)
-* [Network Mapper](./docs/nmap.md)
-* [IP Tables](./docs/iptables.md)
+* Analisis de Red
+    * [Network Mapper](./docs/nmap.md)
+    * [Network Firewall](./docs/netfirewall.md)
+    * [IP Tables](./docs/iptables.md)
+* [VLAN](./docs/vlan.md)

@@ -68,3 +68,5 @@ iptables es una herramienta poderosa y flexible, pero puede ser compleja. Es imp
    * __iptables -A `OUTPUT` --dport `80` -m `string` --string `".exe"` --algo `bm` -j `DROP`__: Bloquea descargas de ejecutables
    * __service iptables `save`__: Guardar la configuración en distros Red Hat/CentOS
    * __iptables-save > `/etc/iptables/rules.v4`__: Guardar la configuración en distros Debian/Ubuntu
+
+[volver](../readme.md)

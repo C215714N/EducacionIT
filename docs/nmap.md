@@ -49,5 +49,4 @@ Nmap es una herramienta potente y flexible, por lo que hay muchos más parámetr
    * __nmap --script vuln `192.168.1.1`__: Busca vulnerabilidades conocidas en servicios de aplicación.
    * __nmap --script http-enum__ `192.168.1.1`: Lista directorios y archivos de un servidor HTTP.
 
-
 [volver](../readme.md)
