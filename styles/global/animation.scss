@@ -12,6 +12,16 @@
             translateX(0);
     }
 }
+@keyframes glow{
+    to{ text-shadow: 0 0 .5rem #fff;}
+}
+@keyframes rotate{
+    to{ transform: rotate(360deg);}
+}
+@keyframes fade{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
 @keyframes bounce{
     0%{ // Animacion con fotogramas
         transform: rotate(0) translateY(0);
