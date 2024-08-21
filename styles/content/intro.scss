@@ -1,0 +1,85 @@
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333 url("/assets/bg/hyperspace.jpg") center/cover;
+    font-size: min(calc(2vw + .8rem), 5rem);
+    // Perspectiva
+    perspective: 5rem;
+    perspective-origin: top center;
+    overflow-x: hidden;
+    & > * {
+        color: #fa3;
+        font: normal 400 1em 'galaxy';
+    }
+    & h1{
+        transform: rotateX(15deg);
+        font: normal 2em 'jedi';
+        animation: intro 5s ease-out backwards;
+        /* SHORTHAND: 
+            name        animacion asociada
+            duration    tiempo expresado en segundos
+            timing      reproduccion en funcion del tiempo
+            delay       tiempo de espera en segundos
+            count       cantidad de repeticiones
+            fill        implementacion de animacion (
+            - BACKWARDS empieza con estilo de animacion, 
+            - FORWARDS mantiene los estilos de animacion, 
+            - NORMAL vuelve a la normalidad
+            )
+        */
+    }
+    & p{
+        margin-top: calc((2vw + 2.5rem) * -1);
+        transform: skew(15deg) translate(-100vw) scale(.2);
+        animation: subtitle 2s ease-in 3.5s forwards;
+        text-shadow: 0 0 .5rem #248;
+        background: linear-gradient(
+            transparent 20%,
+            #c33,
+            #fff,
+            #c33,
+            transparent 80%
+        )
+    }
+    & a{
+        position: relative;
+        display: block;
+        margin-top: 1.5rem;
+        padding: .5rem;
+        text-decoration: none;
+        &::before{
+            @extend %pseudo;
+            left: 0;
+            top: 0;
+        }
+        &::after{
+            @extend %pseudo;
+            right: 0;
+            bottom: 0;
+        }
+        &:hover{
+            &::before,
+            &::after{
+                width: 100%;
+                opacity: .8;
+            }
+        }
+    }
+}
+
+%pseudo{
+    content: '';
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    background: radial-gradient(
+        #fff,
+        #fe3,
+        transparent 80%
+    );
+    opacity: 0;
+    transition: all .5s ease;
+}
