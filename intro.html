@@ -12,5 +12,14 @@
         <p>Bienvenido al Sitio Web Oficial</p>
         <a href="index.html">Ingresar</a>
     </header>
+    <audio src="assets/media/star-wars-theme.mp3" autoplay muted></audio>
+    <script>
+        const audio = document.querySelector('audio')
+        const playAudio = () => audio.play()
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('a').focus();
+            audio.muted = false;
+        })
+    </script>
 </body>
 </html>
