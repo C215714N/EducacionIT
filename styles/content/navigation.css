@@ -42,6 +42,13 @@ nav button{
 .menu li:is(:first-child,:last-child){
     display: none;
 }
+/* Animaciones Pseudoelementos */
+.menu a::before{
+    transform-origin: bottom center;
+}
+.menu a:hover::before{
+    animation: bounce .75s linear infinite alternate;
+}
 /* Medium Devices (Tablets)*/
 @media screen and (width >= 768px){
     nav button{
