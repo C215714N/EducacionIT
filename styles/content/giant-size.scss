@@ -1,3 +1,5 @@
+// Importacion
+@use "sass:math";
 // Declaraciones
 $functions: lineal, cuadratica, trigonometrica, exponencial, limite;
 $ships: 
@@ -13,23 +15,40 @@ $ships:
     "y-wing-fighter",
     "zeta-class-cargo"
 ;
+.ray{
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: .5rem;
+    background-image: radial-gradient(
+        #fff,
+        var(--color),
+        transparent
+    );
+    top: 2.5rem;
+    right: 30%;
+    animation: shoot .1s linear alternate infinite;
+}
 // Estructura
 .giant-size{
     height: 100vh;
     background: url("/assets/bg/hyperspace.jpg") center/cover;
     overflow: hidden;
     .rotate{
-        animation: rotate 360s linear;
+        animation: rotate 10s linear;
         display: flex;
         flex-wrap: wrap;
         .ship{
-            flex: 1 0 min(320px, 100%);
+            flex: 1 0 min(640px, 100%);
+            position: relative;
             width: 5rem;
             height: 5rem;
+            overflow: visible;
             background: var(--bg) center/contain no-repeat;
             @for $i from 1 through length($ships){
                 $s: nth($ships, $i);
                 &:nth-child(#{$i}n){
+                    --color: hsl(#{$i * 30}, 50%, 50%);
                     --bg: url("/assets/ship/#{$s}.webp");
                 }
             }
@@ -39,17 +58,56 @@ $ships:
                     animation: $f 2s linear $i *.5s alternate infinite;
                 }
             }
+            &::before{
+                @extend .ray;
+                top: 2rem;
+            }
+            &::after{
+                @extend .ray;
+                top: 4rem;
+                animation-delay: .5s;
+            }
         }
     }
 }
-
+@function coords($i, $f){
+    $x: $i;
+    $y: $i / 2;
+    @if $f == "cuadratica" {
+        $y: math.pow($i - 50, 2) / 25;
+        $x: ($i / 2) + 25;
+    }
+    @if $f == "trigonometrica" {
+        $y: math.sin($x / 5) * 10;
+    }
+    @if $f == "exponencial" {
+        $y: math.pow(2, ($i - 50) / 6) * -1;
+    }
+    @if $f == "limite" {
+        @if ($i - 50) == 0 { 
+            $y: 0; 
+        }
+        @else {
+            $y: 50/($i - 50);
+        }
+    }
+    @return translate($x * 1vw, $y * 1vh);
+}
 // Animaciones
 @each $f in $functions{
 @keyframes #{$f}{
     @for $i from 0 through 100{
-        $x: $i;
-        $y: $i / 2;
         #{$i}%{
-            transform: translate($x * 1vw, $y * 1vh);
+            transform: coords($i, $f);
     }}
 }}
+@keyframes shoot{
+    from{
+        width: .1rem;
+        right: 35%
+    }
+    to{
+        width: 5rem;
+        right: 0;
+    }
+}
