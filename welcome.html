@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md | p-2">
+        <a class="navbar-brand" href="">Star Wars</a>
+        <button class="navbar-toggler navbar-toggler-icon border-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+        </button>
+        <ul id="menu" class="navbar-nav navbar-collapse collapse">
+            <li><a class="nav-link disabled" href="intro.html">Intro</a></li>
+            <li><a class="nav-link active" href="#">Sala</a></li>
+            <li><a class="nav-link" href="index.html">Principal</a></li>
+            <li><a class="nav-link" href="#login">Iniciar sesion</a></li>
+        </ul>
+    </nav>
+    <header class="py-5 px-3 | bg-dark bg-gradient text-warning text-center">
+        <h1 class="text-uppercase">La Guerra de las Galaxias</h1>
+        <p class="h3">Que la fuerza te Acompañe</p>
+    </header>
+    <section class="card | my-3 p-0 | container">
+        <h2 class="card-header">Bienvenido al sitio</h2>
+        <p class="card-body">
+            Esto es una pagina homenaje a la franquicia creada por George Lucas. Esperamos que sea de tu agrado, ya que fue hecha con mucho cariño y dedicacion, con la participacion de los alumnos de EducacionIT y Fundacion Pescar.
+        </p>
+        <address class="card-footer">
+            Ante cualquier consulta o recomendacion envianos un mail a la siguiente direccion de correo electronico <a href="mailto:cristiandracedo@hotmail.com">cristiandracedo@hotmail.com</a>
+        </address>
+    </section>
+    <form id="login" action="" class="d-grid gap-2 | container | col-md-6 col-lg-4 col-xxl-2">
+        <h2 class="h5">Accede al sitio</h2>
+        <input class="form-control" type="text">
+        <input class="form-control" type="password">
+        <button class="btn btn-outline-primary">Ingresar</button>
+    </form>
+    <footer>
+        <div class="d-flex justify-content-center flex-wrap | gap-2 p-3">
+            <a class="btn btn-primary" href="">Facebook</a>
+            <a class="btn btn-danger" href="">Youtube</a>
+            <a class="btn btn-info" href="">Twitter</a>
+            <a class="btn btn-success" href="">Whatsapp</a>
+        </div>
+        <div class="row">
+            <div class="border col-sm col-lg-3">col-1</div>
+            <div class="border col-sm col-lg-3">col-2</div>
+            <div class="border col-sm col-lg-3">col-3</div>
+            <div class="border col-lg col-lg-3">col-6</div>
+            <div class="border col-lg-4">col-4</div>
+            <div class="border col-lg">col-8</div>
+            <div class="border col-sm col-lg-4">col-5</div>
+            <div class="border col-sm">col-7</div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
