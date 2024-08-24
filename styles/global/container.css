@@ -47,15 +47,20 @@
 .gap{
     gap: .5rem;
 }
+.img-contain{
+    object-fit: contain;
+}
 .img-cover{
     display: block;
     height: 100%;
     object-fit: cover;
+}
+.picture{
     border: .5rem solid #ccc;
     border-radius: .5rem;
     transition: all .25s ease-out;
 }
-.img-cover:hover{
+.picture:hover{
     position: relative;
     transform: scale(1.1) skewY(-5deg);
 }
