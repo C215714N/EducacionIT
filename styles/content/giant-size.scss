@@ -34,7 +34,7 @@ $ships:
         @if ($i - 50) == 0 { $y: 0; }
         @else {$y: 50/($i - 50); }
     }
-    @return translate($x * 2 - 20vw, $y * 1vh);
+    @return translate($x * 1vw - 10, $y * 1vh);
 }
 @function getPosition($i){
     $x: 0;
@@ -106,7 +106,7 @@ $ships:
             @for $i from 1 through length($functions){
                 $f: nth($functions, $i);
                 &:nth-child(#{$i}n){
-                    animation: $f 2s linear $i *.5s alternate infinite;
+                    animation: $f 5s linear $i *.2s alternate infinite;
                 }
             }
             &::before{
