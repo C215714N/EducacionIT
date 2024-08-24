@@ -15,6 +15,51 @@ $ships:
     "y-wing-fighter",
     "zeta-class-cargo"
 ;
+// Funciones
+@function getCoords($i, $f){
+    $x: $i;
+    $y: $i / 2;
+    $s: 0;
+    @if $f == "cuadratica" {
+        $y: math.pow($i - 50, 2) / 25;
+        $x: ($i / 2) + 25;
+    }
+    @if $f == "trigonometrica" {
+        $y: math.sin($x / 5) * 10;
+    }
+    @if $f == "exponencial" {
+        $y: math.pow(2, ($i - 50) / 6) * -1;
+    }
+    @if $f == "limite" {
+        @if ($i - 50) == 0 { $y: 0; }
+        @else {$y: 50/($i - 50); }
+    }
+    @return translate($x * 2 - 20vw, $y * 1vh);
+}
+@function getPosition($i){
+    $x: 0;
+    $y: 0;
+    @if $i % 2 == 0 { $y: 180deg; }
+    @if $i >= 2 { $x: 15deg; }
+    @else {$x: -15deg; }
+    @return rotate($x) rotateY($y);
+}
+@mixin flexbox(
+    $fd: row,
+    $jc: space-between,
+    $ai: space-between,
+    $g: .5rem,
+    $w: wrap,
+    $d: flex
+){
+    display: $d;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $w;
+    gap: $g
+}
+// Clases de Utilidad
 .ray{
     content: "";
     position: absolute;
@@ -31,15 +76,21 @@ $ships:
 }
 // Estructura
 .giant-size{
+    @include flexbox($w: wrap-reverse);
     height: 100vh;
     background: url("/assets/bg/hyperspace.jpg") center/cover;
     overflow: hidden;
     .rotate{
-        animation: rotate 10s linear;
-        display: flex;
-        flex-wrap: wrap;
+        @include flexbox;
+        flex: 1 0 30%;
+        animation: rotate 360s linear;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}n){
+                transform: getPosition($i);
+            }
+        }
         .ship{
-            flex: 1 0 min(640px, 100%);
+            flex: 1 0 min(100%, 280px);
             position: relative;
             width: 5rem;
             height: 5rem;
@@ -70,35 +121,12 @@ $ships:
         }
     }
 }
-@function coords($i, $f){
-    $x: $i;
-    $y: $i / 2;
-    @if $f == "cuadratica" {
-        $y: math.pow($i - 50, 2) / 25;
-        $x: ($i / 2) + 25;
-    }
-    @if $f == "trigonometrica" {
-        $y: math.sin($x / 5) * 10;
-    }
-    @if $f == "exponencial" {
-        $y: math.pow(2, ($i - 50) / 6) * -1;
-    }
-    @if $f == "limite" {
-        @if ($i - 50) == 0 { 
-            $y: 0; 
-        }
-        @else {
-            $y: 50/($i - 50);
-        }
-    }
-    @return translate($x * 1vw, $y * 1vh);
-}
 // Animaciones
 @each $f in $functions{
 @keyframes #{$f}{
     @for $i from 0 through 100{
-        #{$i}%{
-            transform: coords($i, $f);
+    #{$i}%{
+        transform: getCoords($i, $f);
     }}
 }}
 @keyframes shoot{

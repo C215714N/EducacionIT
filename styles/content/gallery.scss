@@ -34,12 +34,22 @@ $positions: static, relative, absolute, fixed, sticky;
 .gallery{ // Bloque Contenedor
     @extend %p-relative;
     min-height: min(100vh, 480px);
+    overflow: hidden;
     &-item{ // Elemento dentro de la Galeria
         @extend %p-absolute, %cover, %transition;
+        &.active{ z-index: 0; }
+        img{ @extend %cover; }
+    }
+    &.fade &-item{
         opacity: 0;
         &-opaque, // Clase modificadora
         &.active{ opacity: 1; }
-        img{ @extend %cover; }
+    }
+    &.slide &-item{
+        left: -100%;
+        opacity: 1;
+        &.active{ left: 0; }
+        &.active ~ .gallery-item { left: 100%; }
     }
     &-controls{
         @extend %p-absolute, %transition;
