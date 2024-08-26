@@ -1,0 +1,28 @@
+/* Importaciones */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway");
+@import "global/font";
+@import "global/icon";
+/* Reglas generales */
+@import "global/general";
+@import "global/sizes";
+@import "global/container";
+@import "global/layout";
+/* Cabecera */
+@import "global/animation";
+@import "content/header";
+@import "content/intro";
+/* Navegacion */
+@import "content/navigation";
+/* Contenido */
+@import "content/position";
+@import "content/pseudo";
+@import "content/gallery";
+@import "content/giant-size";
+@import "global/aspect-ratio";
+/* Principal */
+@import "content/card";
+@import "content/aside";
+/* Pie de Pagina */
+@import "content/form";
+@import "content/map";
+@import "content/social";

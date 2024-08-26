@@ -1,0 +1,81 @@
+// Atributos de Tamaño
+$limit: 15;
+$queries: 
+    sm      576px       540px,
+    md      768px       720px,
+    lg      992px       960px,
+    xl      1200px      1140px,
+    xxl     1400px      1320px,
+;
+$sizes: 
+    col         width           10%,
+    w           width           10vw,
+    h           height          10vh,
+    min-w       min-width       .75px,
+    min-h       min-height      .15px,
+    max-w       min-width       120px,
+    max-h       min-height      10px,
+    fs          font-size       .5rem,
+    bg          background-size  10%,
+    m           margin          .25rem,
+    o           outline-width   .5px,
+    b           border-width    .5px,
+    r           border-radius   .25rem,
+    p           padding         .25rem,
+    g           gap             .25rem,
+;
+// Atributos de Color
+$colors: 
+    primary     #448,
+    secondary   #c36,
+    light       #eee,
+    dark        #333,
+    success     #3c6,
+    warning     #da3,
+    danger      #c33,
+    info        #36c,
+    none        transparent,
+;
+$attributes:
+    text        color,
+    bg          background-color,
+    outline     outline-color,
+    border      border-color,
+    shade       --shade,
+    shadow      --shadow,
+    line        text-decoration-color,
+;
+@each $prop, $attr in $attributes{
+@each $cname, $cvalue in $colors{
+    .#{$prop}-#{$cname}{ 
+        #{$attr}: $cvalue; 
+        &-subtle{
+            #{$attr}: lighten($cvalue, 15%);
+        }
+        &-emphasis{
+            #{$attr}: darken($cvalue, 15%);
+        }
+    }
+}}
+
+@each $name, $width, $max in $queries{
+    @media screen and (width >= $width){
+        .container, .container-#{$name}{
+            max-width: $max;
+        }
+    }
+    @each $prop, $attr, $unit in $sizes{
+    $xs: nth(nth($queries,1),1);
+    @for $i from 0 through $limit{
+        @if $name == $xs {
+            .#{$prop}-#{$i}{ 
+                #{$attr}: $i * $unit;
+        }} 
+        @media screen and (width >= #{$width}){
+            .#{$prop}-#{$name}-#{$i}{
+                #{$attr}: $i * $unit;
+            }
+        }
+    }
+}
+}

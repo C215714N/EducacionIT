@@ -32,7 +32,6 @@ $ratios: 1 1, 4 3, 16 9, 16 10, 21 9, 21 10;
     padding: 1.5rem;
     background-color: #3338;
     color: #fea;
-    z-index: 1;
 }
 @each $w, $h in $ratios {
     .responsive-#{$w}x#{$h}{
