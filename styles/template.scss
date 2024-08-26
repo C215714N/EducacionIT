@@ -8,21 +8,28 @@ $queries:
     xxl     1400px      1320px,
 ;
 $sizes: 
-    col         width           10%,
-    w           width           10vw,
-    h           height          10vh,
-    min-w       min-width       .75px,
-    min-h       min-height      .15px,
-    max-w       min-width       120px,
-    max-h       min-height      10px,
-    fs          font-size       .5rem,
-    bg          background-size  10%,
-    m           margin          .25rem,
-    o           outline-width   .5px,
-    b           border-width    .5px,
-    r           border-radius   .25rem,
-    p           padding         .25rem,
-    g           gap             .25rem,
+    col         width                   10%/1.5,
+    w           width                   10vw,
+    h           height                  10vh,
+    min-w       min-width               .75px,
+    min-h       min-height              .15px,
+    max-w       min-width               120px,
+    max-h       min-height              10px,
+    fs          font-size               .5rem,
+    fw          font-weight             10,
+    bg          background-size         10%,
+    bg-x        background-position-x   10%,
+    bg-y        background-position-y   10%
+    m           margin                  .25rem,
+    o           outline-width           .5px,
+    b           border-width            .5px,
+    r           border-radius           .25rem,
+    p           padding                 .25rem,
+    g           gap                     .25rem,
+    animation   animation-duration      .5s,
+    transition  transition-duration     .5s,
+    delay       animation-delay         .25s,
+    delay       transition-delay        .25s,
 ;
 // Atributos de Color
 $colors: 
@@ -44,7 +51,38 @@ $attributes:
     shade       --shade,
     shadow      --shadow,
     line        text-decoration-color,
+    accent      accent-color,
 ;
+// Valores predefinidos
+$a: animation;
+$b: none, solid, dotted, dashed, groove, double;
+$c: start, center, end, space-around, space-between, space-evenly, baseline;
+$d: none, inline, inline-block, block, flex, inline-flex, grid, inline-grid, table, inline-table;
+$j: justify;
+$l: disc, circle, square, decimal, decimal-leading-zero, hiragana, katakana, arabic-indic, lower-greek, lower-roman, upper-roman, upper-latin, lower-latin;
+$t: transition;
+
+$timing: ease, ease-in, ease-out, ease-in-out, linear;
+
+$properties: (
+    // General
+    display:                (d: $d),
+    border-style:           (b: $b),
+    list-style-type:        (list: $l),
+    font-weight:            (fw: (lighter, light, normal, bold, bolder)),
+    text-transform:         (text: (uppercase, lowercase, capitalize)),
+    // Flexbox CSS grid
+    #{$j}-content:          (flex-justify: $c),
+    #{$j}-items:            (#{$j}: $c),
+    align-content:          (align: $c),
+    align-items:            (flex-align: $c),
+    flex-wrap:              (flex: (wrap, wrap-reverse, nowrap)),
+    // 
+    #{$a}-direction:        (animation: (normal, alternate, reverse, alternate-reverse)),
+    #{$t}-timing-function:  (transition: $timing),
+    #{$a}-timing-function:  (animation: $timing),
+);
+
 @each $prop, $attr in $attributes{
 @each $cname, $cvalue in $colors{
     .#{$prop}-#{$cname}{ 
@@ -59,23 +97,28 @@ $attributes:
 }}
 
 @each $name, $width, $max in $queries{
-    @media screen and (width >= $width){
+@each $prop, $attr, $unit in $sizes{
+    @for $i from 0 through $limit {
+        .#{$prop}-#{$i}{ #{$attr}: $i * $unit;}
+    } 
+    @media screen and (width >= #{$width}){
         .container, .container-#{$name}{
             max-width: $max;
         }
-    }
-    @each $prop, $attr, $unit in $sizes{
-    $xs: nth(nth($queries,1),1);
     @for $i from 0 through $limit{
-        @if $name == $xs {
-            .#{$prop}-#{$i}{ 
-                #{$attr}: $i * $unit;
-        }} 
-        @media screen and (width >= #{$width}){
-            .#{$prop}-#{$name}-#{$i}{
-                #{$attr}: $i * $unit;
-            }
+        .#{$prop}-#{$name}-#{$i}{ #{$attr}: $i * $unit; }
+    }
+}}}
+
+@each $attribute, $values in $properties{
+@each $cname, $val in $values{
+@each $v in $val{
+    .#{$cname}-#{$v}{
+        #{$attribute}: $v;
+    }
+    @each $name, $width, $max in $queries{
+        .#{$cname}-#{$name}-#{$v}{
+            #{$attribute}: $v;
         }
     }
-}
-}
+}}}
