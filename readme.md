@@ -14,13 +14,20 @@ Esto es una guia para los alumnos de la capacitacion __Network Hacking__ que cur
 
 * [Modelo OSI](./docs/osi.md)
 * Modelo TCP/IP
-    * Aplicacion
+    * [Aplicacion](./docs/aplication.md)
     * [Transporte](./docs/transport.md)
     * [Internet](./docs/network.md)
     * [Acceso a la Red](./docs/datalink.md)
 * [Operacion AND](./docs/ip-and.md)
+* [Seguridad](./docs/security.md)
 * Analisis de Red
     * [Network Mapper](./docs/nmap.md)
     * [Network Firewall](./docs/netfirewall.md)
     * [IP Tables](./docs/iptables.md)
-* [VLAN](./docs/vlan.md)
+* Cisco IOS
+    * [VLAN](./docs/vlan.md)
+    * [VPN](./docs/vpn.md)
+* Conexiones Seguras
+    * [openSSL](./docs/openssl.md)
+    * [openSSH](./docs/openssh.md)
+    * [openVPN](./docs/openvpn.md)
