@@ -5,3 +5,5 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 ## Software
 
 * [Packet Tracer](https://skillsforall.com/resources/lab-downloads?userLang=es-XL)
+* [Driver Identifier](https://www.driveridentifier.com/blog/?p=149)
+* [PuTTY](https://putty.org/)
