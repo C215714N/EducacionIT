@@ -7,3 +7,4 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [Packet Tracer](https://www.netacad.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US)
 * [PuTTY](https://putty.org/)
 * [WireShark](https://www.wireshark.org/)
+* [Driver Identifier](https://www.driveridentifier.com/blog/?p=149)
