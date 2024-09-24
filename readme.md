@@ -5,4 +5,5 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 ## Herramientas
 
 * [Packet Tracer](https://www.netacad.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US)
-
+* [PuTTY](https://putty.org/)
+* [WireShark](https://www.wireshark.org/)
