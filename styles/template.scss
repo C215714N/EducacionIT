@@ -52,11 +52,12 @@ $attributes:
     shadow      --shadow,
     line        text-decoration-color,
     accent      accent-color,
+    caret       caret-color,
 ;
 // Valores predefinidos
 $a: animation;
 $b: none, solid, dotted, dashed, groove, double;
-$c: start, center, end, space-around, space-between, space-evenly, baseline;
+$c: start, center, end, space-around, space-between, space-evenly, stretch, baseline;
 $d: none, inline, inline-block, block, flex, inline-flex, grid, inline-grid, table, inline-table;
 $j: justify;
 $l: disc, circle, square, decimal, decimal-leading-zero, hiragana, katakana, arabic-indic, lower-greek, lower-roman, upper-roman, upper-latin, lower-latin;
@@ -71,6 +72,8 @@ $properties: (
     list-style-type:        (list: $l),
     font-weight:            (fw: (lighter, light, normal, bold, bolder)),
     text-transform:         (text: (uppercase, lowercase, capitalize)),
+    // Background
+    background-repeat:      (bg: (repeat, repeat-x, repeat-y, no-repeat)),
     // Flexbox CSS grid
     #{$j}-content:          (flex-justify: $c),
     #{$j}-items:            (#{$j}: $c),
@@ -79,8 +82,8 @@ $properties: (
     flex-wrap:              (flex: (wrap, wrap-reverse, nowrap)),
     // 
     #{$a}-direction:        (animation: (normal, alternate, reverse, alternate-reverse)),
-    #{$t}-timing-function:  (transition: $timing),
-    #{$a}-timing-function:  (animation: $timing),
+    #{$t}-timing-function:  (#{$t}: $timing),
+    #{$a}-timing-function:  (#{$a}: $timing),
 );
 
 @each $prop, $attr in $attributes{
