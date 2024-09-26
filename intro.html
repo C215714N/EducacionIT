@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <header class="intro">
-        <h1>Star Wars</h1>
-        <p>Bienvenido al Sitio Web Oficial</p>
-        <a href="index.html">Ingresar</a>
+    <header id="root" class="header intro">
+        <h2 style="animation: glow 1s linear alternate infinite;">Presione una tecla para continuar</h2>
     </header>
-    <audio src="assets/media/star-wars-theme.mp3" autoplay muted></audio>
     <script>
-        const audio = document.querySelector('audio')
-        const playAudio = () => audio.play()
+        const root = document.getElementById('root');
+        const events = ['click','keydown']
         document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector('a').focus();
-            audio.muted = false;
+        events.forEach(event => {
+            document.addEventListener(event, () => {
+                root.innerHTML = `
+                <h1>Star Wars</h1>
+                <p>Bienvenido al Sitio Web Oficial</p>
+                <a href="index.html">Ingresar</a>
+                <audio src="assets/media/star-wars-theme.mp3" autoplay></audio>`;
+                root.classList.add("glow")
+            })
         })
+    })
     </script>
 </body>
 </html>
