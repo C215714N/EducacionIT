@@ -8,3 +8,5 @@ Esto es una guia para los alumnos de la capacitacion __Redes Linux__ que cursan 
 * [Linux Debian](https://debian.org)
 * [Linux CentOS](https://centos.org)
 
+## Tabla de Contenidos
+* [Sistema de Archivos](./docs/fs.md)
