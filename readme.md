@@ -89,3 +89,60 @@ Las Redes de area Local Virtuales son una segmentacion del dominio de difusion c
 4. switch# __(verificacion de VLANs)__
 	* __show vlan brief__: muestra las vlans configuradas con sus respectivas interfaces
 	* __show interfaces trunk__ devuelve la configuracion de los enlaces troncales
+
+## Servidor de VLANs
+
+Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion servidor)__
+    * __vtp mode `<server>`__: establece al dispositivo como servidor de VLANs
+    * __vtp domain `<domain>`__: define el dominio a compartir por BPDU para la Topologia
+    * __vtp password `<password>`__: contraseña para el acceso de la configuracion
+2. switch# __(configuracion modo privilegiado)__
+    * __vlan database__: accede al archivo 'vlan.dat'de la memoria flash
+    * __vlan `<vlan-id>` name `<name>`__: crea la vlan y le asigna el nombre indicado
+3. switch(config)# __(mas configuraciones)__
+    * __vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
+    * __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
+
+## Protocolo spanning-tree
+
+Los dispositivos administrables por defecto vienen con el __protocolo de arbol de expansion__ activado, que se utiliza para _prevenir los bucles a nivel de capa 2_. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion global)__
+	* __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge.
+	* __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia.
+2. switch# __(verificacion spanning-tree)__
+	* __show spanning-tree__: muestra la configuracion indicando el Bridge-Id del dispositivo y el Root-Bridge de cada VLAN
+	* __show spanning-tree summary__ indica el estado de las interfaces fisicas (block, learning, listening, forwarding) de cada VLAN
+	* __show spanning-tree detail__: devuelve la configuracion aplicada en cada interfaz fisica del dispositivo (cost, identifier, priority)
+
+## Configuracion Etherchannel
+
+Tecnologia que permite agrupar multiples enlaces redundantes de una misma conexion para que funcionen como uno solo y cuyo ancho de banda final se convierte en la sumatoria de estos. La cantidad maxima de interfaces que se pueden utilizar por grupo es de 8.
+
+1. switch(config)# __(asignacion de enlaces)__
+    * __interface `port-channel <1-48>`__ Submodo de configuracion de Etherchannel
+    * __interface range `<GigabitEthernet 1/0/1-8>`__ Accede al modo de configuracion de rango
+    * __channel-group `<1-48>` mode `<on>`__ Habilitar Etherchannel incondicionalmente
+2. switch(config-if-range)# __(Port aggregation Protocol)__
+    * __channel-protocol `<PAgP>`__ Prepara la interfaz para funcionar con PAgP (Protocolo propietario de CISCO)
+    * __mode `<auto>`__ Habilita PAgP cuando se detecta un dispositivo compatible
+    * __mode `<desirable>`__ Implementa PAgP incondicionalmente
+3. switch(config-if-range)# __(Link aggregation Control Protocol)__
+    * __channel-protocol `<LACP>`__ Prepara la interfaz para funcionar con LACP (Protocolo de Estandar abierto)
+    * __mode `<passive>`__ Habilita LACP cuando se detecta un dispositivo compatible
+    * __mode `<active>`__ Implementa LACP incondicionalmente
+	
+## Protocolo de Enrutamiento redundante
+
+__Hot Standby Router Protocol__ es un protocolo propietario de Cisco que busca asegurar la disponibilidad del servicio de puerta de enlace al hacer partícipes de este servicio a varios routers. Se utiliza en un grupo de routers para seleccionar un dispositivo activo y un dispositivo de respaldo. El dispositivo activo es aquel que se utiliza para enrutar paquetes, y el dispositivo de respaldo es el que toma el control cuando falla el dispositivo activo o cuando se cumplen condiciones previamente establecidas
+
+1. router(config-if)# __(configuracion de interfaz)__
+	* __ip address `<192.168.0.2> <255.255.255.0>`__ establece la direccion de la interfaz
+	* __standby ip `<192.168.0.1>`__ define la direccion del router virtual HSRP.
+	* __standby track `<gigabitEthernet 0/0>`__ realiza seguimiento de la interfaz de salida
+	* __standby preempt__ reduce la prioridad cuando la interfaz de salida falla
+2. router# __(verificacion de la configuracion)__
+	* __show standby__ muestra la configuracion hsrp implementada
+	* __show standby brief__ resumen que muestra los dispositivos activo y de respaldo
