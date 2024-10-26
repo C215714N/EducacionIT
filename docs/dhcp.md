@@ -10,7 +10,6 @@ Tras unas primeras definiciones del protocolo en 1993 en los __RFC 1531__ y __15
 
 * __Debian__
     ```bash
-    sudo apt update
     sudo apt install isc-dhcp-server #instalar servicio
     sudo nano /etc/dhcp/dhcpd.conf # archivo de configuracion
     sudo systemctl restart isc-dhcp-server # reiniciar el servicio
@@ -21,8 +20,8 @@ Tras unas primeras definiciones del protocolo en 1993 en los __RFC 1531__ y __15
     sudo nano /etc/dhcp/dhcpd.conf # archivo de configuración
     sudo systemctl start dhcpd # iniciar el servicio
     ```
-* __Configuración Basica__
-    ```bash
+* __Configuracion Basica__
+    ```yaml
     subnet 192.168.1.0 netmask 255.255.255.0 {
         range 192.168.1.100 192.168.1.200;
         option routers 192.168.1.1;
