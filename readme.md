@@ -71,3 +71,36 @@ Cuando trabajamos en una red previamente configurada y no disponemos de document
 3. switch(config-if)# __(verificacion de vecinos)__
 	* __show cdp neighbors__: Muestra los dispositivos identificados mediante CDP
 	* __show lldp neighbors__: Muestra los dispositivos identificados mediante LLDP
+
+## Configuracion de VLANs
+
+Las Redes de area Local Virtuales son una segmentacion del dominio de difusion capa 2 que se implementan para la separacion de dominios de Red, optimizacion de recursos y reduccion de costos de enlace, pero que a la vez agregan mayor complejidad a la topologia debido a que se pierde la comunicacion entre nodos y es necesario el enrutamiento para que esta se produzca entre segmentos.
+
+1. switch(config)# __(vlan de datos)__
+	* __vlan `<vlan-id>`__: submodo de configuracion de vlan
+	* __name `<vlan>`__: establece el nombre de la vlan
+2. switch(config)# __(vlan de administracion)__
+	* __interface vlan `<vlan-id>`__: submodo de configuracion de interfaz (VLAN)
+	* __ip address `<ip> <subnet mask>`__: define la direccion ip y mascara de subred.
+3. switch(config)# __(definicion de enlaces)__
+	* __interface `<fa0/1>`__: submodo de configuracion de interfaz (FastEthernet 0/1)
+	* __switchport acces vlan `<vlan-id>`__: configura la interfaz en modo de acceso
+	* __switchport mode trunk__: configura la interfaz en modo troncal
+4. switch# __(verificacion de VLANs)__
+	* __show vlan brief__: muestra las vlans configuradas con sus respectivas interfaces
+	* __show interfaces trunk__ devuelve la configuracion de los enlaces troncales
+
+## Servidor de VLANs
+
+Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion servidor)__
+    * __vtp mode `<server>`__: establece al dispositivo como servidor de VLANs
+    * __vtp domain `<domain>`__: define el dominio a compartir por BPDU para la Topologia
+    * __vtp password `<password>`__: contraseña para el acceso de la configuracion
+2. switch# __(configuracion modo privilegiado)__
+    * __vlan database__: accede al archivo 'vlan.dat'de la memoria flash
+    * __vlan `<vlan-id>` name `<name>`__: crea la vlan y le asigna el nombre indicado
+3. switch(config)# __(mas configuraciones)__
+    * __vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
+    * __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
