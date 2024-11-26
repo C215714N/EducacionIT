@@ -18,6 +18,11 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [Servidor de VLANs](#servidor-de-vlans)
 * [Protocolo Spanning-Tree](#protocolo-spanning-tree)
 * [Configuracion EtherChannel](#configuracion-etherchannel)
+* [Protocolo de Enrutamiento Redundante](#protocolo-de-enrutamiento-redundante)
+* [Direccionamiento IPv6 con servicio de DHCP](#direccionamiento-ipv6-con-servicio-de-dhcp)
+* [Seguridad de Puertos](#seguridad-de-puertos)
+* [Inspeccion de Paquetes ARP](#inspeccion-de-paquetes-arp)
+* [Analisis de Paquetes DHCP](#analisis-de-paquetes-dhcp)
 
 ## Configuracion Inicial
 
@@ -156,3 +161,64 @@ __Hot Standby Router Protocol__ es un protocolo propietario de Cisco que busca a
 2. router# __(verificacion de la configuracion)__
 	* __show standby__ muestra la configuracion hsrp implementada
 	* __show standby brief__ resumen que muestra los dispositivos activo y de respaldo
+
+## Direccionamiento IPv6 con Servicio de DHCP
+
+Es un protocolo cliente-servidor que proporciona una configuración administrada de dispositivos sobre IPv6. DHCPv6 funciona sobre el protocolo de transporte UDP. El cliente utiliza una dirección link-local u otra determinada a través de otros mecanismos para transmitir y recibir los mensajes DHCPv6.
+
+1. router(config)# __(Enrutamiento IPv6)__
+	* __ipv6 unicast-routing__ Habilita el enrutamiento de paquetes IPv6 y mensajes Router Advertisement
+	* __ipv6 dhcp pool `<pool-name>`__ Crea un Pool DHCP con el nombre indicado
+2. router(config-dhcp)# __(DHCP StateLess)__
+	* __dns-server `<ipv6-address>`__ Establece la direccion del Servidor de Nombres
+	* __domain-name `<network-domain>`__ Define el nombre de Dominio de la topologia
+3. router(config-dhcp)# __(DHCP StateFul)__
+	* __address prefix `<2002:acad:db6::/64>`__ Establece el prefijo de red para el servicio de dhcp
+4. router(config-if)# __(StateLess Adress AutoConfiguracion)__
+	* __ipv6 enable__ Habilita el protocolo IPv6 en la interfaz seleccionada
+	* __ipv6 address `<2002:acad:db6::1/64>`__ Establece la direccion y el prefijo para el enrutamiento
+	* __ipv6 address `<fe80::01>` link-local__ Define la direccion de enlace local para la comunicacion LAN
+5. router(config-if)# __(Configuracion Servidor DHCPv6)__
+	* __ipv6 dhcp server `<pool-name>`__ Configura la interfaz para funcionar como servidor de dhcp
+	* __ipv6 nd other-config-flag__ Habilita el envio de configuracion de Dominio y servidor mediante dhcp (stateless)
+	* __ipv6 nd managed-config-flag__ Habilita la configuracion de prefijo por parte del servidor dhcp (stateful)
+
+## Seguridad de Puertos
+
+Herrmianta que limita la cantidad de direcciones MAC válidas permitidas en las interfaces del dispositivo. Se permite el acceso a las direcciones MAC de los dispositivos legítimos, mientras que otras direcciones MAC se rechazan. La seguridad de puertos se puede configurar para permitir una o más direcciones. Entre las medidades de seguridad que se pueden tomar se encuentran _protect_, _restrict_ y _shutdown_.
+
+1. switch(config-if)# __(habilitacion port-security)__
+	* __switchport mode access__ configura el puerto en modo de acceso, permitiendo que un dispositivo se conectade directamente.
+	* __switchport port-security__ Habilita la seguridad de puertos en la interfaz seleccionada
+2. switch(config-if)# __(configuracion port-security)__
+	* __switchport port-security maximum `<max-addresses>`__ Define la cantidad maxima de direcciones que pueden aprenderse en la interfaz
+	* __switchport port-security violation `<action>`__ Medida de seguridad cuando se excede la cantidad maxima de direcciones
+3. switch# __(verificacion port-security)__
+	* __show port-security interface `<FastEthernet 0/1>`__ muestra la configuración y estado de port-security en la interfaz.
+	* __show port-security address__ muestra las direcciones aprendidas y la información relacionada con el port-security.
+
+## Inspeccion de paquetes ARP
+
+Configuracion que aumenta la seguridad del tráfico al inspeccionar los paquetes que se encuentran en interfaces definidas como no confiables en la página Configuración de la Interfaz. Cuando un paquete llega a una interfaz no confiable, la inspección ARP observa la dirección IP de origen y la dirección MAC del paquete.
+
+1. switch(config)# __(implementar arp inspection)__
+	* __ip arp inspection vlan `<vlan-id>`__ Habilita la inspección ARP en una VLAN especificada
+	* __ip arp inspection src-mac dst-mac ip__ valida las direcciones MAC de origen y destino, junto con las direcciones IP
+	* __ip arp inspection trust__ Configura la interfaz como confiable, indicando que las entradas en la interfaz
+2. switch# __(verificacion arp inspection)__
+	* __show ip arp inspection__ Muestra la implementacion de la configuracion general de inspeccion arp
+	* __show ip arp inspection interfaces__ Muestra la configuracion del estado en las interfaces del dispositivo
+	* __show ip arp inspection vlan `<vlan-id>`__ Muestra la configuracion implementada en la vlan especificada
+
+## Analisis de paquetes DHCP
+
+__Función de seguridad__ que se utiliza para mitigar ataques relacionados con el protocolo DHCP. Evita que dispositivos no autorizados actúen como servidores DHCP y asignen direcciones IP de forma maliciosa, _previniendo ataques como la suplantación de DHCP_. Al combinarlo __con ARP Inspection__, _se puede mitigar aún más la suplantación de direcciones IP (ARP spoofing)_.
+
+1. switch(config)# __configuracion dhcp snooping__
+	* __ip dhcp snooping__ Permite filtrar y controlar el tráfico DHCP basado en políticas configuradas.
+	* __ip dhcp snooping vlan `<vlan-id>`__ Habilita DHCP snooping en la VLAN especificada
+	* __ip dhcp snooping information option allow-untrusted__ Permite opciones de información DHCP no confiables.
+2. switch# __verificacion dhcp snooping__
+	* __show ip dhcp snooping__ Muestra un resumen de la configuracion revision de paquetes dhcp
+	* __show ip dhcp snooping binding__ Muestra informacion sobre la direcciones asignadas y los dispositivos vinculados
+	* __show ip dhcp snooping database__ Vista detallada de la base de datos que almacena la información de las asignaciones
