@@ -60,4 +60,26 @@ Las amenazas son intentos maliciosos de comprometer la seguridad de un sistema o
 * Activar la autenticación multifactor en todas las cuentas críticas.  
 * Establecer políticas de acceso basado en el principio de privilegio mínimo.
 
+## Sugerencias
+
+La seguridad informática requiere múltiples capas de protección, desde la configuración de firewalls hasta el monitoreo constante.
+
+1. **Mantener sistemas actualizados:**
+   Usa herramientas como **Nessus** para detectar vulnerabilidades.
+2. **Auditorías en Linux:**
+   ```bash
+   auditctl -w /etc/passwd -p wa -k passwd_changes
+   ```
+3. **Segmentación de red con VLANs y DMZ.**
+4. **Reglas de Firewall en Linux:**
+   ```bash
+   # Bloquear tráfico ICMP
+   iptables -A INPUT -p icmp -j DROP
+   ```
+5. **Cifrado en Apache con SSL/TLS:**
+   ```bash
+   a2enmod ssl
+   openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+   ```
+
 [volver](../readme.md)
