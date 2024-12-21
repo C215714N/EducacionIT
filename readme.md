@@ -12,3 +12,5 @@ Esto es una guia para los alumnos de la capacitacion __Network Hacking__ que cur
 * [Seguridad de Red](./docs/security.md)
 * [Wireshark](./docs/wireshark.md)
 * [Network Mapper](./docs/nmap.md)
+* [IP Tables](./docs/iptables.md)
+* [Network Firewall](./docs/netshfw.md)
