@@ -72,14 +72,14 @@ La seguridad informática requiere múltiples capas de protección, desde la con
    ```
 3. **Segmentación de red con VLANs y DMZ.**
 4. **Reglas de Firewall en Linux:**
-   ```bash
-   # Bloquear tráfico ICMP
-   iptables -A INPUT -p icmp -j DROP
-   ```
+  ```bash
+  # Bloquear tráfico ICMP
+  iptables -A INPUT -p icmp -j DROP
+  ```
 5. **Cifrado en Apache con SSL/TLS:**
-   ```bash
-   a2enmod ssl
-   openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
-   ```
+  ```bash
+  a2enmod ssl
+  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+  ```
 
 [volver](../readme.md)

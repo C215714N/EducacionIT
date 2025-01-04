@@ -32,3 +32,5 @@ TShark es la versión de línea de comandos de Wireshark, una herramienta de an�
 *  __tshark -i `eth0` -w `captura.pcap`__ Capturar tráfico en una interfaz y guardar en un archivo
 *  __tshark -i `eth0` -f "`tcp port 80`"__ Filtrar tráfico HTTP en tiempo real
 *  __tshark -r `captura.pcap` -Y "`ip.dst == 192.168.1.1`"__ Analizar capturas almacenadas
+
+[volver](../readme.md)

@@ -10,9 +10,16 @@ Esto es una guia para los alumnos de la capacitacion __Network Hacking__ que cur
 ## Tabla de Contenidos
 
 * [Seguridad de Red](./docs/security.md)
-* [Wireshark](./docs/wireshark.md)
-* [Network Mapper](./docs/nmap.md)
-* [IP Tables](./docs/iptables.md)
-* [Network Firewall](./docs/netshfw.md)
-* [VPN site-to-site](./docs/vpn.md)
-* [WireGuard VPN](./docs/wireguard.md)
+* Analisis de Paquetes
+    * [Wireshark](./docs/wireshark.md)
+    * [Network Mapper](./docs/nmap.md)
+* Filtrado de Paquetes
+    * [IP Tables](./docs/iptables.md)
+    * [Network Firewall](./docs/netshfw.md)
+* Seguridad Integral
+    * [VLANs](./docs/vlan.md)
+    * [OpenSSH](./docs/openssh.md)
+    * [OpenSSL](./docs/openssl.md)
+* Virtual Private Network
+    * [site-to-site](./docs/vpn.md)
+    * [WireGuard](./docs/wireguard.md)
