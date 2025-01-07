@@ -18,6 +18,7 @@ Esto es una guia para los alumnos de la capacitacion __CCNA 2__ que cursan los d
 * [Direccionamiento IPv6 con servicio de DHCP](#direccionamiento-ipv6-con-servicio-de-dhcp)
 * [Seguridad de Puertos](#seguridad-de-puertos)
 * [Inspeccion de Paquetes ARP](#inspeccion-de-paquetes-arp)
+* [Analisis de Paquetes DHCP](#analisis-de-paquetes-dhcp)
 
 ## Configuracion Inicial
 
@@ -178,6 +179,24 @@ Herrmianta que limita la cantidad de direcciones MAC válidas permitidas en las 
 
 Configuracion que aumenta la seguridad del tráfico al inspeccionar los paquetes que se encuentran en interfaces definidas como no confiables en la página Configuración de la Interfaz. Cuando un paquete llega a una interfaz no confiable, la inspección ARP observa la dirección IP de origen y la dirección MAC del paquete.
 
-* __ip arp inspection vlan `<vlan-id>`__ Habilita la inspección ARP en una VLAN especificada
-* __ip arp inspection src-mac dst-mac ip__ valida las direcciones MAC de origen y destino, junto con las direcciones IP
-* __ip arp inspection trust__ Configura la interfaz como confiable, indicando que las entradas en la interfaz
+1. switch(config)# __(implementar arp inspection)__
+	* __ip arp inspection vlan `<vlan-id>`__ Habilita la inspección ARP en una VLAN especificada
+	* __ip arp inspection src-mac dst-mac ip__ valida las direcciones MAC de origen y destino, junto con las direcciones IP
+	* __ip arp inspection trust__ Configura la interfaz como confiable, indicando que las entradas en la interfaz
+2. switch# __(verificacion arp inspection)__
+	* __show ip arp inspection__ Muestra la implementacion de la configuracion general de inspeccion arp
+	* __show ip arp inspection interfaces__ Muestra la configuracion del estado en las interfaces del dispositivo
+	* __show ip arp inspection vlan `<vlan-id>`__ Muestra la configuracion implementada en la vlan especificada
+
+## Analisis de paquetes DHCP
+
+__Función de seguridad__ que se utiliza para mitigar ataques relacionados con el protocolo DHCP. Evita que dispositivos no autorizados actúen como servidores DHCP y asignen direcciones IP de forma maliciosa, _previniendo ataques como la suplantación de DHCP_. Al combinarlo __con ARP Inspection__, _se puede mitigar aún más la suplantación de direcciones IP (ARP spoofing)_.
+
+1. switch(config)# __configuracion dhcp snooping__
+	* __ip dhcp snooping__ Permite filtrar y controlar el tráfico DHCP basado en políticas configuradas.
+	* __ip dhcp snooping vlan `<vlan-id>`__ Habilita DHCP snooping en la VLAN especificada
+	* __ip dhcp snooping information option allow-untrusted__ Permite opciones de información DHCP no confiables.
+2. switch# __verificacion dhcp snooping__
+	* __show ip dhcp snooping__ Muestra un resumen de la configuracion revision de paquetes dhcp
+	* __show ip dhcp snooping binding__ Muestra informacion sobre la direcciones asignadas y los dispositivos vinculados
+	* __show ip dhcp snooping database__ Vista detallada de la base de datos que almacena la información de las asignaciones
