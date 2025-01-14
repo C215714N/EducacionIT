@@ -16,6 +16,7 @@ Esto es una guia para los alumnos de la capacitacion __ccna 2__ que cursan los d
 * [Identificacion de Dispositivos](#identificacion-de-dispositivos)
 * [Configuracion de VLANs](#configuracion-de-vlans)
 * [Servidor de VLANs](#servidor-de-vlans)
+* [Protocolo Spanning-Tree](#protocolo-spanning-tree)
 
 ## Configuracion Inicial
 
@@ -116,3 +117,15 @@ Los dispositivos administrables por defecto vienen con el protocolo de arbol de 
 3. switch(config)# __(mas configuraciones)__
     * __vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
     * __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
+
+## Protocolo spanning-tree
+
+Los dispositivos administrables por defecto vienen con el protocolo de arbol de expansion activado, que se utiliza para prevenir los bucles a nivel de capa 2. Si bien en la mayoria de los casos no hace falta definir esta configuracion, en una red convergente o jerarquica es necesario para un funcionamiento eficiente.
+
+1. switch(config)# __(configuracion global)__
+    * __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge entre los dispositivos que utilizan este protocolo.
+    * __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia, debido a que se omiten las etapas de escucha y aprendizaje.
+2. switch# __(verificacion spanning-tree)__
+	* __show spanning-tree__: muestra la configuracion indicando el Bridge-Id del dispositivo y el Root-Bridge de cada VLAN
+	* __show spanning-tree summary__ indica el estado de las interfaces fisicas (block, learning, listening, forwarding) de cada VLAN
+	* __show spanning-tree detail__: devuelve la configuracion aplicada en cada interfaz fisica del dispositivo (cost, identifier, priority)
