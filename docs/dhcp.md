@@ -6,38 +6,32 @@ DHCP se desarrolló como solución para redes de gran envergadura y ordenadores 
 
 Tras unas primeras definiciones del protocolo en 1993 en los __RFC 1531__ y __1541__, su especificación definitiva llegó en 1997 con el __RFC 2131__. La _IANA (Internet Assigned Numbers Authority)_ provee al protocolo de los puertos UDP 67 y 68; y los puertos 546 y 547 para IPv6.
 
-```yaml
-subnet 192.168.0.0 netmask 255.255.255.0 {
-    range 192.168.0.100 192.168.0.200;
-    option subnet-mask 255.255.255.0;
-    option routers 192.168.0.1;
-    option domain-name-servers 8.8.8.8, 8.8.4.4;
-    default-lease-time 600;
-    max-lease-time 7200;
-}
-```
+## Instalacion del Servicio
 
-```yaml
-subnet 192.168.1.0 netmask 255.255.255.0 {
-    range 192.168.1.100 192.168.1.200;
-    option routers 192.168.1.1;
-    option subnet-mask 255.255.255.0;
-    option domain-name-servers 8.8.8.8, 8.8.4.4;
-    option domain-name "example.com";
-    default-lease-time 600;
-    max-lease-time 7200;
-    
+* __Debian__
+    ```bash
+    sudo apt install isc-dhcp-server #instalar servicio
+    sudo nano /etc/dhcp/dhcpd.conf # archivo de configuracion
+    sudo systemctl restart isc-dhcp-server # reiniciar el servicio
+    ```
+* __CentOS__
+    ```bash
+    sudo yum install dhcp # instalar servicio
+    sudo nano /etc/dhcp/dhcpd.conf # archivo de configuración
+    sudo systemctl start dhcpd # iniciar el servicio
+    ```
+* __Configuracion Basica__
+    ```yaml
+    subnet 192.168.1.0 netmask 255.255.255.0 {
+        range 192.168.1.100 192.168.1.200;
+        option routers 192.168.1.1;
+        option domain-name-servers 8.8.8.8;
+    }
     host server {
         hardware ethernet 00:0C:29:4E:8B:85;
         fixed-address 192.168.1.50;
     }
-
-    host laptop {
-        hardware ethernet 00:1A:A0:1A:4B:1E;
-        fixed-address 192.168.1.101;
-    }
-}
-```
+    ```
 
 # Configuracion dhcpd
 
