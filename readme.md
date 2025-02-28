@@ -14,3 +14,6 @@ Esto es una guia para los alumnos de la capacitacion __network security: server 
 ## Tabla de Contenidos
 
 * [Seguridad Informatica](./docs/security.md)
+* Analisis de Paquetes
+    * [Wireshark](./docs/wireshark.md)
+    * [Network Mapper](./docs/nmap.md)
