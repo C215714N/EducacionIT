@@ -25,3 +25,6 @@ Esto es una guia para los alumnos de la capacitacion __network security: server 
     * [VLANs](./docs/vlan.md)
     * [OpenSSH](./docs/openssh.md)
     * [OpenSSL](./docs/openssl.md)
+* Virtual Private Network
+    * [site-to-site](./docs/vpn-s2s.md)
+    * [WireGuard](./docs/wireguard.md)
