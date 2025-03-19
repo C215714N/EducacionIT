@@ -22,35 +22,35 @@ Para comenzar con la configuración de un Cisco ASA, es necesario acceder al dis
 
 * __Configuracion LAN de Interfaz Interna__
     ```sh
-    ciscoasa(config)# interface GigabitEthernet0/1
-    ciscoasa(config-if)# nameif inside
-    ciscoasa(config-if)# security-level 100
-    ciscoasa(config-if)# ip address 192.168.1.1 255.255.255.0
-    ciscoasa(config-if)# no shutdown
+    interface GigabitEthernet0/1
+    nameif inside
+    security-level 100 # nivel por defecto para inside
+    ip address 192.168.1.1 255.255.255.0
+    no shutdown
     ```
 * __Configuracion WAN de Interfaz Externa__
     ```sh
-    ciscoasa(config)# interface GigabitEthernet0/2
-    ciscoasa(config-if)# nameif outside
-    ciscoasa(config-if)# security-level 0
-    ciscoasa(config-if)# ip address dhcp setroute
-    ciscoasa(config-if)# no shutdown
+    interface GigabitEthernet0/2
+    nameif outside
+    security-level 0 # valor predeterminado
+    ip address dhcp setroute
+    no shutdown
     ```
 * __Configuración de Políticas de Seguridad__
     ```sh
-    ciscoasa(config)# access-list outside_access_in extended permit tcp any host 192.168.1.1 eq www # permite el trafico http entrante
-    ciscoasa(config)# access-group outside_access_in in interface outside # permite todo el trafico saliente
-    ciscoasa(config)# object network obj_any
-    ciscoasa(config-network-object)# subnet 192.168.1.0 255.255.255.0
-    ciscoasa(config)# nat (inside,outside) dynamic interface # habilita la implementacion de NAT
+    access-list outside_access_in extended permit tcp any host 192.168.1.1 eq www # permite el trafico http entrante
+    access-group outside_access_in in interface outside # permite todo el trafico saliente
+    object network obj_any
+    subnet 192.168.1.0 255.255.255.0
+    nat (inside,outside) dynamic interface # habilita la implementacion de NAT
     ```
 * __Configuracion VPN SSL/IPsec__
     ```sh
-    ciscoasa(config)# vpn-tunnel-group VPN_Remoto type remote-access
-    ciscoasa(config)# vpn-tunnel-group VPN_Remoto general-attributes
-    ciscoasa(config-tunnel-general)# address-pool VPN_Pool
-    ciscoasa(config)# tunnel-group VPN_Remoto ipsec-attributes
-    ciscoasa(config-ipsec)# ikev1 pre-shared-key cisco123
+    vpn-tunnel-group VPN_Remoto type remote-access
+    vpn-tunnel-group VPN_Remoto general-attributes
+    address-pool VPN_Pool # configuracion general del tunel
+    tunnel-group VPN_Remoto ipsec-attributes
+    ikev1 pre-shared-key cisco123 # configuracion ipsec
     ```
 
 ## Verificación
