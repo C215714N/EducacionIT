@@ -21,3 +21,7 @@ Esto es una guia para los alumnos de la capacitacion __Network Security Server H
 	* [IP Tables](./docs/iptables.md)
 	* [Network Firewall](./docs/netshfw.md)
 	* [Cisco ASA](./docs/cisco-asa.md)
+* Seguridad Integral
+    * [VLANs](./docs/vlan.md)
+    * [OpenSSH](./docs/openssh.md)
+    * [OpenSSL](./docs/openssl.md)
