@@ -26,3 +26,9 @@ Esto es una guia para los alumnos de la capacitacion __network security: server 
 	* [Network Mapper](./docs/nmap.md)
 * Segmentacion de la Red
 	* [VLANs](./docs/vlan.md)
+	* [Subnetting](./docs/subnetting.md)
+* Filtrado de Paquetes
+	* [IP Tables](./docs/iptables.md)
+	* [Network Firewall](./docs/netshfw.md)
+* Seguridad Integral
+	* [OpenSSH](./docs/openssh.md)
