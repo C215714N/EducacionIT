@@ -12,9 +12,9 @@ Una VLAN es una red lógica que agrupa un conjunto de dispositivos dentro de una
 
 ## Implementacion:
 
-1. __Segmentación por Departamento__: En una empresa, se pueden crear VLANs para separar el tráfico de la red entre los departamentos de administracion, facturacion y ventas.
-2. __Separación de Red de Invitados__: En una organización, se puede crear una VLAN específica para los dispositivos de invitados, separándolos de la red interna para mejorar la seguridad.
-3. __Segmentación por Ubicación__: En una empresa con múltiples sucursales, se pueden crear VLANs para dividir la red por ubicación geográfica, facilitando la gestión y asegurando que el tráfico local permanezca dentro de la sucursal.
+* __Segmentación por Departamento__: En una empresa, se pueden crear VLANs para separar el tráfico de la red entre los departamentos de administracion, facturacion y ventas.
+* __Separación de Red de Invitados__: En una organización, se puede crear una VLAN específica para los dispositivos de invitados, separándolos de la red interna para mejorar la seguridad.
+* __Segmentación por Ubicación__: En una empresa con múltiples sucursales, se pueden crear VLANs para dividir la red por ubicación geográfica, facilitando la gestión y asegurando que el tráfico local permanezca dentro de la sucursal.
 
 ## Configuracion
 
