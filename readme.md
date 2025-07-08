@@ -4,6 +4,6 @@ Esto es una guia para los alumnos de la capacitacion de __Microsoft Excel Avanza
 
 ## Tabla de Contenidos
 
-* Atajos de Teclado ([PDF](./docs/atajos-teclado.doc))
+* [Atajos de Teclado](./docs/excel_shortcuts.pdf)
 * [Validacion de Datos](./docs/validate.md)
 * [Ordenar y Filtrar](./docs/sort.md)
