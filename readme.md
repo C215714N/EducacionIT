@@ -6,3 +6,4 @@ Esto es una guia para los alumnos de la capacitacion de __Microsoft Excel Avanza
 
 * Atajos de Teclado ([PDF](./docs/atajos-teclado.doc))
 * [Validacion de Datos](./docs/validate.md)
+* [Ordenar y Filtrar](./docs/sort.md)
