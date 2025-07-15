@@ -9,3 +9,7 @@ Esto es una guia para los alumnos de la capacitacion __redes linux__ que cursan 
 	* [Debian](https://debian.org)
 	* [CentOS](https://centos.org)
 * [Wireshark](https://wireshark.org)
+
+## Tabla de Contenidos
+* [Particionado](./docs/fdisk.md)
+* [Sistema de Archivos](./docs/fs.md)
