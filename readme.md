@@ -7,3 +7,4 @@ Esto es una guia para los alumnos de la capacitacion de __Microsoft Excel Avanza
 * [Atajos de Teclado](./docs/excel_shortcuts.pdf)
 * [Validacion de Datos](./docs/validate.md)
 * [Ordenar y Filtrar](./docs/sort.md)
+* [Subtotales](./docs/subtotals.md)
