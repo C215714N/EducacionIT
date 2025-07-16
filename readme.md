@@ -33,5 +33,9 @@ Esto es una guia para los alumnos de la capacitacion __network security: server 
 	* [Cisco ASA](./docs/cisco-asa.md)
 * Seguridad Integral
 	* [OpenSSH](./docs/openssh.md)
+	* [OpenSSL](./docs/openssl.md)
 	* [Wireguard](./docs/wireguard.md)
 	* [VPN site-to-site](./docs/vpn-s2s.md)
+* Prevencion de Intrusiones
+	* [snort](./docs/snort.md)
+	* [Suricata](./docs/suricata.md)
