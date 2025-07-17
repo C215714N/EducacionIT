@@ -48,7 +48,6 @@ Es el conjunto de reglas que determinan una __estructuración común de archivos
 | __/usr/X11R6/__ |Directorio relacionado al entorno gráfico|
 | __/usr/local/__ |Jerarquía terciaria para datos locales, es decir, específicos a este host|
 
-
 ## /var/
 
 | Directorio | Descripcion |

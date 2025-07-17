@@ -11,5 +11,12 @@ Esto es una guia para los alumnos de la capacitacion __redes linux__ que cursan 
 * [Wireshark](https://wireshark.org)
 
 ## Tabla de Contenidos
-* [Particionado](./docs/fdisk.md)
-* [Sistema de Archivos](./docs/fs.md)
+
+* Sistemas Operativos
+	* [Particionado](./docs/fdisk.md)
+	* [Sistema de Archivos](./docs/fs.md)
+* Aplicacion
+* Transporte
+* Internet
+* Acceso a Red
+	* [Ethernet](./docs/eth.md)
