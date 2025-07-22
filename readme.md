@@ -17,6 +17,10 @@ Esto es una guia para los alumnos de la capacitacion __redes linux__ que cursan 
 	* [Sistema de Archivos](./docs/fs.md)
 * Aplicacion
 * Transporte
+	* [TCP](./docs/tcp.md)
 * Internet
+	* [ICMP](./docs/icmp.md)
+	* [IP](./docs/ip.md)
 * Acceso a Red
+	* [ARP](./docs/arp.md)
 	* [Ethernet](./docs/eth.md)
