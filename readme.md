@@ -10,3 +10,5 @@ Esto es una guia para los alumnos de la capacitacion de __Microsoft Excel Avanza
 * [Subtotales](./docs/subtotals.md)
 * [Formulas y Funciones](./docs/functions.md)
 * [Funciones Logicas](./docs/logic.md)
+* [Base de Datos](./docs/db.md)
+* [Busqueda y Referencia](./docs/lookup.md)
