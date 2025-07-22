@@ -8,3 +8,4 @@ Esto es una guia para los alumnos de la capacitacion de __Microsoft Excel Avanza
 * [Validacion de Datos](./docs/validate.md)
 * [Ordenar y Filtrar](./docs/sort.md)
 * [Subtotales](./docs/subtotals.md)
+* [Formulas y Funciones](./docs/functions.md)

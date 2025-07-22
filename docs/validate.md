@@ -1,4 +1,3 @@
-
 # Validacion de Datos
 
 Herramienta que permite __restringir el tipo de datos o los valores__ que los usuarios pueden ingresar en una celda, permitiendo mantener la integridad y coherencia de la informacion.
