@@ -1,6 +1,6 @@
 ## Funciones Logicas
 
-Son aquellas que realizan la evaluacion valores _(condiciones)_ y permiten el uso de los operadores __"Y (AND, &)"__, __"O (OR, |)"__ y __"XO (XOR, ^)"__, determinando el resultado dependiendo del cumplimiento o incumplimiento de la condicion.
+Son aquellas que realizan la evaluacion de valores _(condiciones)_ y permiten el uso de los operadores __"Y (AND, &)"__, __"O (OR, |)"__ y __"XO (XOR, ^)"__, determinando el resultado dependiendo del cumplimiento o incumplimiento de la condicion.
 
 |Funcion|Descripcion|
 |-|-|
