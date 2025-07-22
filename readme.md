@@ -9,3 +9,4 @@ Esto es una guia para los alumnos de la capacitacion de __Microsoft Excel Avanza
 * [Ordenar y Filtrar](./docs/sort.md)
 * [Subtotales](./docs/subtotals.md)
 * [Formulas y Funciones](./docs/functions.md)
+* [Funciones Logicas](./docs/logic.md)
