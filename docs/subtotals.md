@@ -29,3 +29,4 @@ Herramienta de subtotales en Excel permite calcular automáticamente sumas, prom
 * Los subtotales insertan filas adicionales, lo que puede afectar otras fórmulas o referencias.
 
 [volver](../readme.md)
+
