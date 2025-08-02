@@ -8,3 +8,8 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 * [Wireshark](https://www.wireshark.org/download.html)
 * [Nmap](http://nmap.org/download.html)
+
+## Tabla de Contenidos
+
+* [Configuracion Inicial](./docs/config.md)
+* [Acceso Remoto](./docs/remote.md)
