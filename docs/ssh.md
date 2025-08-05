@@ -4,22 +4,22 @@ Nombre de un __protocolo y programa__ que lo implementa cuya principal función 
 
 Tambien permite _copiar datos de forma segura, gestionar claves RSA para no escribir contraseñas_ al conectar a los dispositivos y pasar los datos de cualquier otra aplicación por un canal seguro tunelizado mediante SSH y también puede _redirigir el tráfico_ para poder ejecutar programas gráficos remotamente. El puerto TCP asignado es el 22.
 
-## Instalacion del Servicio
+## Instalacion del servicio
 
-* Debian
-    ```bash
+* __Debian__:
+    ``` sh
     sudo apt install openssh-server # instalar el servicio
-    sudo nano /etc/ssh/sshd_config # archivo de configuracion
-    sudo systemctl start ssh # iniciar el servicio
+    sudo nano /etc/ssh/sshd_config  # archivo de configuracion
+    sudo systemctl start ssh        # iniciar el servicio
     ```
-* CentOS
-    ```bash
+* __CentOS__:
+    ``` sh
     sudo yum install openssh-server # instalar el servicio
-    sudo nano /etc/ssh/sshd_config # archivo de configuracion
-    sudo systemctl start ssh # iniciar el servicio
+    sudo nano /etc/ssh/sshd_config  # archivo de configuracion
+    sudo systemctl start ssh        # iniciar el servicio
     ```
-* Configuracion Basica
-    ```
+* __Configuracion Basica__:
+    ```yaml
     Port 22
     Protocol 2 
     MaxAuthTries 3
@@ -29,7 +29,7 @@ Tambien permite _copiar datos de forma segura, gestionar claves RSA para no escr
     ClientAliveInterval 300
     ```
 
-## Comandos sshd
+## Linea de Comandos
 
 | Comando | Descripción |
 |--|--|

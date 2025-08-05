@@ -6,21 +6,21 @@ DHCP se desarrolló como solución para redes de gran envergadura y ordenadores 
 
 Tras unas primeras definiciones del protocolo en 1993 en los __RFC 1531__ y __1541__, su especificación definitiva llegó en 1997 con el __RFC 2131__. La _IANA (Internet Assigned Numbers Authority)_ provee al protocolo de los puertos UDP 67 y 68; y los puertos 546 y 547 para IPv6.
 
-## Instalacion del Servicio
+## Instalacion del servicio
 
-* __Debian__
-    ```bash
-    sudo apt install isc-dhcp-server #instalar servicio
-    sudo nano /etc/dhcp/dhcpd.conf # archivo de configuracion
+* __Debian__:
+    ```sh
+    sudo apt install isc-dhcp-server       # instalar servicio
+    sudo nano /etc/dhcp/dhcpd.conf         # archivo de configuracion
     sudo systemctl restart isc-dhcp-server # reiniciar el servicio
     ```
-* __CentOS__
-    ```bash
-    sudo yum install dhcp # instalar servicio
+* __CentOS__:
+    ```sh
+    sudo yum install dhcp          # instalar servicio
     sudo nano /etc/dhcp/dhcpd.conf # archivo de configuración
-    sudo systemctl start dhcpd # iniciar el servicio
+    sudo systemctl start dhcpd     # iniciar el servicio
     ```
-* __Configuracion Basica__
+* __Configuracion Basica__:
     ```yaml
     subnet 192.168.1.0 netmask 255.255.255.0 {
         range 192.168.1.100 192.168.1.200;
@@ -33,7 +33,7 @@ Tras unas primeras definiciones del protocolo en 1993 en los __RFC 1531__ y __15
     }
     ```
 
-## Configuracion dhcpd
+## Configuracion del servicio
 
 | Opcion | Descripcion |
 |--|--|

@@ -15,17 +15,19 @@ Esto es una guia para los alumnos de la capacitacion __redes linux__ que cursan 
 * Sistemas Operativos
 	* [Particionado](./docs/fdisk.md)
 	* [Sistema de Archivos](./docs/fs.md)
-	* [Mascara de Usuario](./docs/umask.md)
 	* [Gestion de Usuarios](./docs/users.md)
+	* [Mascara de Usuario](./docs/umask.md)
 * Aplicacion
-	* [DHCP](./docs/dhcp.md)
+	[DHCP](./docs/dhcp.md)
+	[SSH](./docs/ssh.md)
+	[CUPS](./docs/cups.md)
+	[SMB](./docs/smb.md)
 * Transporte
-	* [TCP](./docs/tcp.md)
-	* [SSH](./docs/ssh.md)
+	[TCP](./docs/tcp.md)
 * Internet
-	* [ICMP](./docs/icmp.md)
-	* [IP](./docs/ip.md)
-	* [AND](./docs/and.md)
+	[ICMP](./docs/icmp.md)
+	[IP](./docs/ip.md)
+	[AND](./docs/and.md)
 * Acceso a Red
-	* [ARP](./docs/arp.md)
-	* [Ethernet](./docs/eth.md)
+	[ARP](./docs/arp.md)
+	[Ethernet](./docs/eth.md)
