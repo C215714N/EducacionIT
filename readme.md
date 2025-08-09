@@ -16,4 +16,5 @@ Esto es una guia para los alumnos de la capacitacion __ccna2 routing and switchi
 ## Tabla de Contenidos
 
 * [Configuracion Inicial](./docs/config.md)
-* [Acceso Remoto](./docs/remote.md)
+* [Configuracion de Acceso Remoto](./docs/remote.md)
+* [Configuracion de VLANs](./docs/vlan.md)
