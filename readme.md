@@ -15,3 +15,4 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [Configuracion de Acceso Remoto](./docs/remote.md)
 * [Configuracion de VLANs](./docs/vlan.md)
 * [Servidor de VLANs](./docs/vtp.md)
+* [Protocolo Spanning-Tree](./docs/stp.md)
