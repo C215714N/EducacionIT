@@ -13,6 +13,16 @@ El __protocolo de Enlace Virtual__ es utilizado en _redes Cisco_ para la __gesti
     * __vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
     * __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
 
+| Campo | Descripción |
+|-|-|
+| VTP Version | Versión del protocolo (1, 2 o 3) |
+| VTP Message Type | Tipo de mensaje (Summary, Subset, Advertisement)|
+| Management Domain Name | Nombre del dominio VTP |
+| Configuration Revision | Número de revisión de configuración |
+| Updater Identity | Dirección IP del switch que envió el mensaje |
+| Timestamp | Marca de tiempo del mensaje |
+| MD5 Digest | Hash para autenticación |
+
 ## Implementacion
 
 Cuando utilizamos el _protocolo VTP_, los switches de la __capa de acceso__ se configuran en __modo cliente__ y luego se les asignan las vlan que utilizaran sus interfaces, aunque debemos tener en cuenta que las mismas _no se activaran_ hasta que no se actualice la __base de datos del servidor__.

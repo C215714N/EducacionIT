@@ -1,4 +1,3 @@
-
 # Configuracion de VLANs
 
 Las Redes de area Local Virtuales son una __segmentacion del dominio de difusion capa 2__ que se implementan para la _separacion de dominios de Red, optimizacion de recursos y reduccion de costos de enlace_, pero que a la vez agregan __mayor complejidad__ a la topologia debido a que se pierde la comunicacion entre nodos y es necesario el _enrutamiento_ para que esta se produzca entre segmentos.
