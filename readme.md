@@ -13,6 +13,9 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 
 * [Configuracion Inicial](./docs/config.md)
 * [Configuracion de Acceso Remoto](./docs/remote.md)
+* [Verificacion de la Topologia](./docs/verif.md)
+* [Identificacion de Dispositivos](./docs/cdp.md)
 * [Configuracion de VLANs](./docs/vlan.md)
 * [Servidor de VLANs](./docs/vtp.md)
 * [Protocolo Spanning-Tree](./docs/stp.md)
+* [Protocolo de Enrutamiento redundante](./docs/hsrp.md)

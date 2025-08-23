@@ -10,21 +10,6 @@ Los _dispositivos administrables_ por defecto vienen con el protocolo de arbol d
 	* __show spanning-tree summary__ indica el estado de las interfaces fisicas (block, learning, listening, forwarding) de cada VLAN
 	* __show spanning-tree detail__: devuelve la configuracion aplicada en cada interfaz fisica del dispositivo (cost, identifier, priority)
 
-| Campo | Descripción |
-|-|-|
-| Protocol Identifier| Identificador del protocolo (0x0000 para STP) |
-| Protocol Version   | Versión del protocolo (0x00 para STP clásico) |
-| BPDU Type | Tipo de BPDU (0x00 Configuration, 0x80 TCN) |
-| Flags | Indica estado del puerto (Topology Change, etc.)   |
-| Root Bridge ID | ID del puente raíz (prioridad + MAC) |
-| Root Path Cost | Costo acumulado hasta el puente raíz |
-| Bridge ID | ID del puente emisor |
-| Port ID | ID del puerto emisor |
-| Message Age | Tiempo desde que se generó el BPDU |
-| Max Age | Tiempo máximo antes de descartar BPDU |
-| Hello Time | Intervalo entre BPDUs |
-| Forward Delay | Tiempo de transición entre estados |
-
 ## Implementacion
 
 Cuando utilizamos spanning-tree debemos establecer como __root-bridge__ al dispositivo mas cercano a la __capa de nucleo__, porque de esta manera, solamente se bloquearan los enlaces redundantes, obteniendo el _trayecto mas directo_ hacia dicho switch, _optimizando la comunicacion_ con redes externas.
