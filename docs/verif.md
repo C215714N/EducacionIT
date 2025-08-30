@@ -18,10 +18,14 @@ Cuando establecemos la configuracion de los dispositivos de internetworks debemo
 
 ## Implementacion
 
+En caso de trabajar con un switch podemos verificar las candidad de hosts que tienen acceso al mismo, ademas de la configuracion de las interfaces del mismo. Debemos recordar que, si bien no es obligatorio, es necesario configurar una direccion IP a una de las VLANs del dispositivo para poder acceder remotamente al mismo.
+
 ```sh
 show interfaces status
 show mac address-table
 ```
+
+Ya sea que utilicemos un router o configuremos un switch, una vez configurada la direccion IP para la interfaz que vayamos a utilizar, podemos corroborar su correcta configuracion, ademas de las direcciones vecinas aprendidas a traves del protocolo ARP. Debemos tener en cuenta que el switch unicamente agregara las direcciones con las que haya tenido comunicacion directa.
 
 ```sh
 show arp

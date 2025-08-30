@@ -4,6 +4,7 @@ Los _dispositivos administrables_ por defecto vienen con el protocolo de arbol d
 
 1. switch(config)# __(configuracion global)__
     * __spanning-tree vlan `<vlan-id>` priority `<0-61440>`__: habilita el protocolo en la vlan seleccionada y establece el nivel de prioridad para definir el Root-Bridge entre los dispositivos que utilizan este protocolo.
+	* __spanning-tree vlan `<vlan-id>` root `<priority>`__: Indica el estado que debe considerarse, primary o secondary, estableciendo como prioridad predeterminada 24576 y 28672 respectivamente.
     * __spanning-tree mode `<rapid-pvst>`__: define el modo de funcionamiento Rapido para disminuir el tiempo de convergencia de la topologia, debido a que se omiten las etapas de escucha y aprendizaje.
 2. switch# __(verificacion spanning-tree)__
 	* __show spanning-tree__: muestra la configuracion indicando el Bridge-Id del dispositivo y el Root-Bridge de cada VLAN
