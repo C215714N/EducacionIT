@@ -10,16 +10,9 @@ __Hot Standby Router Protocol__ es un protocolo propietario de Cisco que busca a
 	* __show standby__ muestra la configuracion hsrp implementada
 	* __show standby brief__ resumen que muestra los dispositivos activo y de respaldo
 
-| Campo | Descripción | 
-|-|-|
-| Group Number | Número de grupo HSRP. | 
-| Priority | Determina el router activo. | 
-| Virtual IP | IP que comparten los routers. | 
-| Hello Time | Intervalo entre mensajes Hello. |
-
 ## Implementacion
 
-En caso de no especificar el grupo al que pertenece la interfaz standby, se utilizara el valor 0 como valor del mismo, siendo algo bastante practico para una rapida configuracion del protocolo. Para la configuracion de los routers, debemos garantizar que la interfaz configurada de cada dispositivo corresponda a la misma red y la ip virtual sea la misma para todos, de lo contrario no se aplicara la configuracion.
+En caso de no especificar el grupo al que pertenece la _interfaz standby_, se utilizara el __valor 0__ como valor del mismo, siendo algo bastante practico para una rapida configuracion del protocolo. Para la configuracion de los __routers__, debemos garantizar que la interfaz configurada de cada dispositivo corresponda a la misma red y la _ip virtual sea la misma para todos_, de lo contrario no se aplicara la configuracion.
 
 ```sh
 interface GigabitEthernet0/0
@@ -29,8 +22,7 @@ standby track Serial 0/0/0
 standby prempt
 ```
 
-En caso de utilizar un switch multicapa, podemos aprovechar que las interfaces fisicas no se encuentran asociadas a una red, sino que dependen de sus interfaces vlan, permitiendo una mayor flexibilidad a la hora de configurar un router virtual; tambien podemos aprovechar las funciones de seguimiento de interfaces, para reducir de 10 en 10 la prioridad en caso que alguna deje de funcionar, y de esta manera cambie el dispositivo activo.
-
+En caso de utilizar un __switch multicapa__, podemos aprovechar que las interfaces fisicas no se encuentran asociadas a una red, sino que dependen de sus _interfaces vlan_, permitiendo una __mayor flexibilidad__ a la hora de configurar un _router virtual_; tambien podemos aprovechar las funciones de _seguimiento de interfaces_, para reducir de 10 en 10 la prioridad en caso que alguna deje de funcionar, y de esta manera cambie el __dispositivo activo__.
 
 ```sh
 interface vlan 101

@@ -19,3 +19,5 @@ Esto es una guia para los alumnos de la capacitacion __ccna2__ que cursan los di
 * [Servidor de VLANs](./docs/vtp.md)
 * [Protocolo Spanning-Tree](./docs/stp.md)
 * [Protocolo de Enrutamiento redundante](./docs/hsrp.md)
+* [Servidor de DHCP](./docs/dhcp.md)
+* [Direccionamiento IPv6 con Servicio de DHCP](./docs/dhcpv6.md)
