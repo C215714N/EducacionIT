@@ -21,6 +21,7 @@ interface range GigabitEthernet 1/0/1-4
 channel-group 1 mode pagp
 !
 interface port-channel 1
+description TRUNK ETHERCHANNEL
 switchport mode trunk
 ```
 
