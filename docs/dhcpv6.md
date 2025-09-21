@@ -26,7 +26,7 @@ Podemos establecer una configuracion sencilla con __SLAAC (Stateless Adress Auto
 ipv6 unicast-routing
 !
 interface GigabitEthernet 0/0
-description SLAAC Interface
+description SLAAC INTERFACE
 ipv6 enable
 ipv6 address 2001:db6:acad::1/112
 ipv6 address fe80::1 link-local

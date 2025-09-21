@@ -24,6 +24,7 @@ dns-server 8.8.8.8
 domain-name ENTERPRISE.NET
 !
 interface GigabiEthernet 0/0
+description CLIENT INTERFACE
 ip address 10.0.0.10 255.255.255.0
 no shutdown
 ```
