@@ -58,19 +58,19 @@ En caso de utilizar un __router para comunicar las vlans__ debemos configurar la
 
 ```sh
 interface GigabitEthernet 0/0.1
+description ADMIN
 encapsulation dot1Q 10
 ip address 10.0.0.225 255.255.255.224
-description ADMIN
 !
 interface GigabitEthernet 0/0.2
+description SALES
 encapsulation dot1Q 20
 ip address 10.0.0.1 255.255.255.128
-description SALES
 !
 interface GigabitEthernet 0/0.3
+description GUEST
 encapsulation dot1Q 30
 ip address 10.0.0.129 255.255.255.192
-description GUEST
 !
 interface GigabitEthernet 0/0
 no shutdown

@@ -22,16 +22,14 @@ Para acceder remotamente es necesaria una __direccion IP__ y una _ruta predeterm
 enable secret Qej8h8w54q594$
 username c215714n! password VtodyosmD48w58qh#
 !
-! Interfaz Fisica del Router (LAN)
-interface Gi0/0 
+interface Gi0/0
+description LAN_INTERFACE
 ip address 10.0.0.1 255.255.255.0
 no shutdown
 !
-! Acceso por Linea de consola
 line console 0 
 login local
 !
-! Acceso remoto (Virtual TeleType)
 line vty 0 15 
 login local
 transport input ssh

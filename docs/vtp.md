@@ -10,18 +10,8 @@ El __protocolo de Enlace Virtual__ es utilizado en _redes Cisco_ para la __gesti
     * __vlan database__: accede al archivo 'vlan.dat'de la memoria flash
     * __vlan `<vlan-id>` name `<name>`__: crea la vlan y le asigna el nombre indicado
 3. switch(config)# __(otras configuraciones)__
-    * __vtp mode `<client>`__: configura del dispositivo para recibir configuraciones
-    * __vtp mode `<transparent>`__: configuracion que ignora las BPDUs del servidor
-
-| Campo | Descripción |
-|-|-|
-| VTP Version | Versión del protocolo (1, 2 o 3) |
-| VTP Message Type | Tipo de mensaje (Summary, Subset, Advertisement)|
-| Management Domain Name | Nombre del dominio VTP |
-| Configuration Revision | Número de revisión de configuración |
-| Updater Identity | Dirección IP del switch que envió el mensaje |
-| Timestamp | Marca de tiempo del mensaje |
-| MD5 Digest | Hash para autenticación |
+    * __vtp mode `client`__: configura del dispositivo para recibir configuraciones
+    * __vtp mode `transparent`__: configuracion que ignora las BPDUs del servidor
 
 ## Implementacion
 
@@ -31,8 +21,11 @@ Cuando utilizamos el _protocolo VTP_, los switches de la __capa de acceso__ se c
 vtp mode client
 !
 interface range FastEthernet 0/1-16
+description SALES ACCESS
 switchport access vlan 10
+!
 interface range FastEthernet 0/17-24
+description GUEST ACCESS
 switchport acces vlan 20
 ```
 
