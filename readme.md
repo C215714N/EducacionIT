@@ -12,3 +12,9 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [Kali Linux](https://kali.org/)
 * [Wireshark](https://wireshark.org)
 
+## Tabla de Contenidos
+
+* Sistemas Operativos
+	* [Particionado](./docs/fdisk.md)
+	* [Estructura de Arbol](./docs/fs.md)
+	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
