@@ -11,6 +11,9 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [CentOS](https://centos.org)
 	* [Kali Linux](https://kali.org/)
 * [Wireshark](https://wireshark.org)
+* [NMAP](https://nmap.org)
+* [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+* [Packet Tracer](netacad.com/resources/lab-downloads?courseLang=es-XL)
 
 ## Tabla de Contenidos
 
@@ -18,3 +21,11 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
+* [Seguridad Informatica](./docs/security.md)
+* Analisis de Paquetes
+	* [Wireshark](./docs/wireshark.md)
+	* [Network Mapper](./docs/nmap.md)
+* Filtrado de Paquetes
+	* [IP Tables](./docs/iptables.md)
+	* [Network Firewall](./docs/netshfw.md)
+	* [Cisco ASA](./docs/cisco-asa.md)
