@@ -1,4 +1,4 @@
-# Seguridad Informática
+# Seguridad Informatica
 
 La seguridad informática abarca las prácticas, herramientas y procesos para proteger sistemas, redes y datos de accesos no autorizados, alteraciones y destrucción. Se basa en tres pilares fundamentales:
 
