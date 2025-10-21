@@ -30,5 +30,6 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [Network Firewall](./docs/netshfw.md)
 	* [Cisco ASA](./docs/cisco-asa.md)
 * Virtual Private Network
+	* [Diffie-Hellman](./docs/diffie-hellman.md)
 	* [site-to-site](./docs/vpn-s2s.md)
 	* [WireGuard](./docs/wireguard.md)
