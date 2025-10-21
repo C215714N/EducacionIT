@@ -21,6 +21,7 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
+* [Configuracion de Servicios](./docs/config.md)
 * [Seguridad Informatica](./docs/security.md)
 * Analisis de Paquetes
 	* [Wireshark](./docs/wireshark.md)
@@ -33,3 +34,7 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [Diffie-Hellman](./docs/diffie-hellman.md)
 	* [site-to-site](./docs/vpn-s2s.md)
 	* [WireGuard](./docs/wireguard.md)
+* Seguridad Integral
+	* [VLANs](./docs/vlan.md)
+	* [OpenSSH](./docs/openssh.md)
+	* [OpenSSL](./docs/openssl.md)
