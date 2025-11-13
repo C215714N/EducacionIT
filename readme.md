@@ -38,3 +38,6 @@ Esto es una guia para los alumnos de la capacitacion __Network Security: Server 
 	* [VLANs](./docs/vlan.md)
 	* [OpenSSH](./docs/openssh.md)
 	* [OpenSSL](./docs/openssl.md)
+* Prevencion de Intrusiones
+	* [snort](./docs/snort.md)
+	* [Suricata](./docs/suricata.md)
