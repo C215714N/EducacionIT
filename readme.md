@@ -12,3 +12,10 @@ Esto es una guia para los alumnos de la capacitacion __network security server h
 * [Oracle VirtualBox](https://www.virtualbox.org/)
 * [Cisco Packet Tracer](https://www.netacad.com/portal/resources/packet-tracer)
 * [Wireshark](https://wireshark.org)
+
+## Tabla de Contenidos
+
+* Sistemas Operativos
+	* [Particionado](./docs/fdisk.md)
+	* [Estructura de Arbol](./docs/fs.md)
+	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
