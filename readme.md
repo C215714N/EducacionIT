@@ -19,3 +19,5 @@ Esto es una guia para los alumnos de la capacitacion __network security server h
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
+* [Configuracion de Servicios](./docs/config.md)
+* [Seguridad Informatica](./docs/security.md)
