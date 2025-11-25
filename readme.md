@@ -12,6 +12,7 @@ Esto es una guia para los alumnos de la capacitacion __network security server h
 * [Oracle VirtualBox](https://www.virtualbox.org/)
 * [Cisco Packet Tracer](https://www.netacad.com/portal/resources/packet-tracer)
 * [Wireshark](https://wireshark.org)
+* [Network Mapper](https://nmap.org/)
 
 ## Tabla de Contenidos
 
@@ -21,3 +22,6 @@ Esto es una guia para los alumnos de la capacitacion __network security server h
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
 * [Configuracion de Servicios](./docs/config.md)
 * [Seguridad Informatica](./docs/security.md)
+* Analisis de Paquetes
+	* [Wireshark](./docs/wireshark.md)
+	* [Network Mapper](./docs/nmap.md)
