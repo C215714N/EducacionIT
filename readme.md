@@ -25,3 +25,5 @@ Esto es una guia para los alumnos de la capacitacion __network security server h
 * Analisis de Paquetes
 	* [Wireshark](./docs/wireshark.md)
 	* [Network Mapper](./docs/nmap.md)
+* Seguridad Integral
+	* [VLANs](./docs/vlan.md)
