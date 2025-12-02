@@ -13,9 +13,13 @@ Esto es una guia para los alumnos de la capacitacion __Redes Linux__ que cursan 
 
 * [Particionado](./docs/fdisk.md)
 * [Sistema de Archivos](./docs/fs.md)
-* [Modelo TCP/IP](./docs/tcpip.md)
+* [Mascara de Usuario](./docs/umask.md)
+* [Gestion de Usuarios](./docs/users.md)
 * Capa de Aplicacion
 	* [DHCP](./docs/dhcp.md)
+	* [SSH](./docs/ssh.md)
+	* [CUPS](./docs/cups.md)
+	* [SMB](./docs/smb.md)
 * Capa de Transporte
 	* [TCP](./docs/tcp.md)
 	* [UDP](./docs/udp.md)
