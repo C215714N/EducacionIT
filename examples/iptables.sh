@@ -26,10 +26,6 @@ sudo iptables -A OUTPUT -d 8.8.0.0/16 -p udp --dport 53 -j ACCEPT
 sudo iptables -A INPUT -s 8.8.0.0/16 -p udp --sport 5353 -j ACCEPT
 sudo iptables -A OUTPUT -d 8.8.0.0/16 -p udp --dport 5353 -j ACCEPT
 
-# conexiones HTTPS
-sudo iptables -A INPUT -p tcp --sport 443 -j ACCEPT
-sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
-
 # SERVIDORES DE LINUX
 ## DEBIAN
 sudo iptables -A INPUT -s 151.101.0.0/16 -j ACCEPT
@@ -50,3 +46,15 @@ sudo iptables -A INPUT -s 8.43.85.0/24 -j ACCEPT
 sudo iptables -A OUTPUT -d 8.43.85.0/24 -j ACCEPT
 sudo iptables -A INPUT -s 38.145.32.0/24 -j ACCEPT
 sudo iptables -A OUTPUT -d 38.145.32.0/24 -j ACCEPT
+
+# conexiones HTTPS
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT
+
+# mensajes ICMP
+sudo iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+sudo iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+## EducacionIT
+sudo iptables -A INPUT -s 3.163.139.0/24 -p tcp --sport 443 -j ACCEPT
+sudo iptables -A OUTPUT -d 3.163.139.0/24 -p tcp --dport 443 -j ACCEPT
