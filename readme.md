@@ -27,3 +27,9 @@ Esto es una guia para los alumnos de la capacitacion __network security server h
 	* [Network Mapper](./docs/nmap.md)
 * Seguridad Integral
 	* [VLANs](./docs/vlan.md)
+	* [OpenSSH](./docs/openssh.md)
+	* [OpenSSL](./docs/openssl.md)
+* Filtrado de Paquetes
+	* [IP Tables](./docs/iptables.md)
+	* [Network Firewall](./docs/netshfw.md)
+	* [Cisco ASA](./docs/cisco-asa.md)
