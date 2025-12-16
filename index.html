@@ -13,42 +13,49 @@
 
     </nav>
     <!-- Cabecera: Contenido Introductorio -->
-    <header>
-        <h1>Bootstrap</h1>
-        <p>Responsive Web Design</p>
+    <header class="py-5 px-3 | text-center | text-light bg-dark">
+        <h1 class="display-1 | fw-bold text-uppercase">Bootstrap</h1>
+        <p class="h1 | fw-light">Responsive Web Design</p>
     </header>
     <!-- Contenido -->
     <main>
         <!-- Seccion: Contenido Contextualizado -->
-        <section>
+        <section class="p-3">
             <header>
                 <h2>Tipos de Diseño</h2>
                 <p>Evolucion con el paso del tiempo</p>
             </header>
-            <article>
-                <h3>Fluid Design</h3>
-                <p>
+            <article class="card">
+                <h3 class="card-header">Fluid Design</h3>
+                <p class="card-body">
                     Estilo predeterminado, donde el contenido se adapta al tamaño de los contenedores. No se establecen limites y uno de sus principales problemas es que los contenidos se estiran demasiado en pantallas grandes, resultando dificil la lectura de los mismos.
 
                     Una solucion temporal a este problema fue la implementacion del <strong>Liquid Design</strong>, donde se establecian tamaños maximos y minimos para evitar el estiramiento y desbordamiento de contenidos.
                 </p>
             </article>
-            <article>
-                <h3>Adaptive Design</h3>
-                <p>
+            <article class="card">
+                <h3 class="card-header">Adaptive Design</h3>
+                <p class="card-body">
                     Solucion para clientes con poco presupuesto, debido a que se crean diferentes versiones de un mismo sitio, adaptadas a los dispositivos objetivo. El problema con este diseño radica en la duplicidad de contenidos, lo que aumenta el costo de mantenimiento y la carga de trabajo del servidor.
 
                     En muchas ocasiones se utilizaban hojas de estilos diferentes y segun la version, habia contenidos que no aparecian. Ademas de implementar herramientas de redireccionamiento, en base a la resolucion del dispositivo.
                 </p>
             </article>
-            <article>
-                <h3>Responsive Design</h3>
-                <p>
+            <article class="card">
+                <h3 class="card-header">Responsive Design</h3>
+                <p class="card-body">
                     Sugerido por primera vez en una publicacion del sitio <a href="https://alistapart.com/article/responsive-web-design" target="_blank">A List Apart</a> realizada por <strong>Ethan Marcotte</strong>, donde se plantean conceptos como <em>multimedia flexible</em>, <em>sistemas de grillas</em>, etc, implementando por primera vez el concepto <strong>One Web for All</strong>, que da nacimiento al diseño responsivo.
 
                     El mismo consiste en la creacion de una unica estructura donde el contenido se adapta en base a las diferentes resoluciones en tiempo real, utilizando un sistema de grillas basado en porcentajes. Mismo sistema que adoptaria el equipo de Twitter para crear <strong>Bootstrap</strong>
                 </p>
             </article>
+        </section>
+        <section>
+            <h2>Bootstrap</h2>
+            <p>
+                Este framework implementa un a metodologia conocida como <strong>BEM (Block Element Modifier)</strong>, donde cada clase se organiza en contenedores (bloques), cada elemento independiente o que dependa de otro, se le asigna un nombre (elemento) y una vez aplicados dichos estilos, podemos implementar clases que modifiquen el estilo predeterminado (modificadores).
+            </p>
+            
         </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
