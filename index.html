@@ -18,7 +18,7 @@
         <p class="h1 | fw-light">Responsive Web Design</p>
     </header>
     <!-- Contenido -->
-    <main>
+    <main class="container">
         <!-- Seccion: Contenido Contextualizado -->
         <section class="p-3">
             <header>
@@ -53,9 +53,81 @@
         <section>
             <h2>Bootstrap</h2>
             <p>
-                Este framework implementa un a metodologia conocida como <strong>BEM (Block Element Modifier)</strong>, donde cada clase se organiza en contenedores (bloques), cada elemento independiente o que dependa de otro, se le asigna un nombre (elemento) y una vez aplicados dichos estilos, podemos implementar clases que modifiquen el estilo predeterminado (modificadores).
+                Este framework implementa una metodologia conocida como <strong>BEM (Block Element Modifier)</strong>, donde cada clase se organiza en contenedores (bloques), cada elemento independiente o que se encuentre dentro de otro, se le asigna un nombre identificador (elemento) y por ultimo, una vez aplicados dichos estilos, podemos implementar clases que modifiquen el estilo predeterminado (modificadores).
             </p>
-            
+
+            <h3>Puntos de quiebre</h3>
+            <p>
+                Los breakpoints son tamaños de ventanas en los que bootstrap permite introducir cambios en el diseño de la pagina web. Utiliza nombres para identificarlos y los mismos se aplican a las clases existentes. Solamente se implementan en las clases que afecten al tamaño o estructuras de los elementos.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tamaño</th>
+                        <th>Dispositivos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sm</td>
+                        <td>576px</td>
+                        <td>Smartphones</td>
+                    </tr>
+                    <tr>
+                        <td>md</td>
+                        <td>768px</td>
+                        <td>Tablets</td>
+                    </tr>
+                    <tr>
+                        <td>lg</td>
+                        <td>992px</td>
+                        <td>Tablets</td>
+                    </tr>
+                    <tr>
+                        <td>xl</td>
+                        <td>1200px</td>
+                        <td>Netbooks</td>
+                    </tr>
+                    <tr>
+                        <td>xxl</td>
+                        <td>1400px</td>
+                        <td>Notebooks</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3>Sistema de Grillas</h3>
+            <p>
+                Bootstrap implementa una grilla flexible basada en porcentajes, la misma se divide en 12 columnas y cada una representa una porcentaje del 8.33% (col-1) al 100% (col-12). El mismo divide al contenedor en columnas y solamente aplica a los elementos hijos, para utilizarlo correctamente debemos implementar la clase row en el contenedor y la clase <em>col-n</em> para definir cuanto espacio debe ocupar el elemento correspondiente
+            </p>
+            <div class="row">
+                <!-- Primer Fila 4 columnas (total 12) -->
+                <div class="border col-1">col-1</div>
+                <div class="border col-2">col-2</div>
+                <div class="border col-3">col-3</div>
+                <div class="border col-6">col-6</div>
+                <!-- Segunda Fila 2 columnas (total 12) -->
+                <div class="border col-4">col-4</div>
+                <div class="border col-8">col-8</div>
+                <!-- Tercera Fila 2 columnas (total 12) -->
+                <div class="border col-5">col-5</div>
+                <div class="border col-7">col-7</div>
+            </div>
+            <h4>Grilla Responsive</h4>
+            <p>
+                En caso que necesitemos cambiar la estructura dependiendo del tamaño de la ventana, podemos incorporar las clases correspondientes a los breakpoints, para adaptar la grilla a partir de dicho tamaño de pantalla. Por ejemplo si necesito que la etiqueta en pantallas medianas ocupe la mitad de su contenedor, implementariamos la clase <em>col-md-6</em>
+            </p>
+            <div class="row">
+                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-1</div>
+                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-2</div>
+                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-3</div>
+                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-6</div>
+                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-4</div>
+                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-8</div>
+                <div class="border border-dark col-md-6 col-xxl-3">col-5</div>
+                <div class="border border-dark col-md-6 col-xxl-3">col-7</div>
+            </div>
         </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
