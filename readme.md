@@ -5,6 +5,7 @@ Esto es una guia para los alumnos de la capacitacion de __Responsive Web Design 
 ## Tabla de Contenidos
 
 * [Introduccion a Bootstrap](./docs/intro.md)
+* [Configuracion Inicial](./docs/config.md)
 
 ## Enlaces Externos
 
