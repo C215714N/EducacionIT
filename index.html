@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Web Design</title>
     <!-- Estilos CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
-<body>
+<body data-bs-theme="light">
     <!-- Navegacion -->
-    <nav>
-
+    <nav class="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | p-2 | shadow shadow-lg">
+        <a class="navbar-brand" href="#">BS</a>
     </nav>
     <!-- Cabecera: Contenido Introductorio -->
-    <header class="py-5 px-3 | text-center | text-light bg-dark">
+    <header id="header" class="py-5 px-3 | text-center header">
         <h1 class="display-1 | fw-bold text-uppercase">Bootstrap</h1>
         <p class="h1 | fw-light">Responsive Web Design</p>
     </header>
     <!-- Contenido -->
     <main class="container">
         <!-- Seccion: Contenido Contextualizado -->
-        <section class="p-3">
+        <section class="p-3 row">
             <header>
                 <h2>Tipos de Diseño</h2>
                 <p>Evolucion con el paso del tiempo</p>
             </header>
-            <article class="card">
+            <article class="card col-lg p-0 ">
                 <h3 class="card-header">Fluid Design</h3>
                 <p class="card-body">
                     Estilo predeterminado, donde el contenido se adapta al tamaño de los contenedores. No se establecen limites y uno de sus principales problemas es que los contenidos se estiran demasiado en pantallas grandes, resultando dificil la lectura de los mismos.
@@ -33,7 +33,7 @@
                     Una solucion temporal a este problema fue la implementacion del <strong>Liquid Design</strong>, donde se establecian tamaños maximos y minimos para evitar el estiramiento y desbordamiento de contenidos.
                 </p>
             </article>
-            <article class="card">
+            <article class="card col-lg p-0 my-2 my-lg-0 mx-lg-2">
                 <h3 class="card-header">Adaptive Design</h3>
                 <p class="card-body">
                     Solucion para clientes con poco presupuesto, debido a que se crean diferentes versiones de un mismo sitio, adaptadas a los dispositivos objetivo. El problema con este diseño radica en la duplicidad de contenidos, lo que aumenta el costo de mantenimiento y la carga de trabajo del servidor.
@@ -41,8 +41,8 @@
                     En muchas ocasiones se utilizaban hojas de estilos diferentes y segun la version, habia contenidos que no aparecian. Ademas de implementar herramientas de redireccionamiento, en base a la resolucion del dispositivo.
                 </p>
             </article>
-            <article class="card">
-                <h3 class="card-header">Responsive Design</h3>
+            <article class="card col-lg p-0 ">
+                <h3 class="card-header text-light bg-dark">Responsive Design</h3>
                 <p class="card-body">
                     Sugerido por primera vez en una publicacion del sitio <a href="https://alistapart.com/article/responsive-web-design" target="_blank">A List Apart</a> realizada por <strong>Ethan Marcotte</strong>, donde se plantean conceptos como <em>multimedia flexible</em>, <em>sistemas de grillas</em>, etc, implementando por primera vez el concepto <strong>One Web for All</strong>, que da nacimiento al diseño responsivo.
 
@@ -51,90 +51,111 @@
             </article>
         </section>
         <section>
-            <h2>Bootstrap</h2>
+            <h2 class="new-item item">Bootstrap</h2>
             <p>
                 Este framework implementa una metodologia conocida como <strong>BEM (Block Element Modifier)</strong>, donde cada clase se organiza en contenedores (bloques), cada elemento independiente o que se encuentre dentro de otro, se le asigna un nombre identificador (elemento) y por ultimo, una vez aplicados dichos estilos, podemos implementar clases que modifiquen el estilo predeterminado (modificadores).
             </p>
-
-            <h3>Puntos de quiebre</h3>
-            <p>
-                Los breakpoints son tamaños de ventanas en los que bootstrap permite introducir cambios en el diseño de la pagina web. Utiliza nombres para identificarlos y los mismos se aplican a las clases existentes. Solamente se implementan en las clases que afecten al tamaño o estructuras de los elementos.
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Tamaño</th>
-                        <th>Dispositivos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>sm</td>
-                        <td>576px</td>
-                        <td>Smartphones</td>
-                    </tr>
-                    <tr>
-                        <td>md</td>
-                        <td>768px</td>
-                        <td>Tablets</td>
-                    </tr>
-                    <tr>
-                        <td>lg</td>
-                        <td>992px</td>
-                        <td>Tablets</td>
-                    </tr>
-                    <tr>
-                        <td>xl</td>
-                        <td>1200px</td>
-                        <td>Netbooks</td>
-                    </tr>
-                    <tr>
-                        <td>xxl</td>
-                        <td>1400px</td>
-                        <td>Notebooks</td>
-                    </tr>
-                </tbody>
-            </table>
+            <article>
+                <h3>Puntos de quiebre</h3>
+                <p>
+                    Los breakpoints son tamaños de ventanas en los que bootstrap permite introducir cambios en el diseño de la pagina web. Utiliza nombres para identificarlos y los mismos se aplican a las clases existentes. Solamente se implementan en las clases que afecten al tamaño o estructuras de los elementos.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tamaño</th>
+                            <th>Dispositivos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>sm</td>
+                            <td>576px</td>
+                            <td>Smartphones</td>
+                        </tr>
+                        <tr>
+                            <td>md</td>
+                            <td>768px</td>
+                            <td>Tablets</td>
+                        </tr>
+                        <tr>
+                            <td>lg</td>
+                            <td>992px</td>
+                            <td>Tablets</td>
+                        </tr>
+                        <tr>
+                            <td>xl</td>
+                            <td>1200px</td>
+                            <td>Netbooks</td>
+                        </tr>
+                        <tr>
+                            <td>xxl</td>
+                            <td>1400px</td>
+                            <td>Notebooks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
             <hr>
-            <h3>Sistema de Grillas</h3>
-            <p>
-                Bootstrap implementa una grilla flexible basada en porcentajes, la misma se divide en 12 columnas y cada una representa una porcentaje del 8.33% (col-1) al 100% (col-12). El mismo divide al contenedor en columnas y solamente aplica a los elementos hijos, para utilizarlo correctamente debemos implementar la clase row en el contenedor y la clase <em>col-n</em> para definir cuanto espacio debe ocupar el elemento correspondiente
-            </p>
-            <div class="row">
-                <!-- Primer Fila 4 columnas (total 12) -->
-                <div class="border col-1">col-1</div>
-                <div class="border col-2">col-2</div>
-                <div class="border col-3">col-3</div>
-                <div class="border col-6">col-6</div>
-                <!-- Segunda Fila 2 columnas (total 12) -->
-                <div class="border col-4">col-4</div>
-                <div class="border col-8">col-8</div>
-                <!-- Tercera Fila 2 columnas (total 12) -->
-                <div class="border col-5">col-5</div>
-                <div class="border col-7">col-7</div>
-            </div>
-            <h4>Grilla Responsive</h4>
-            <p>
-                En caso que necesitemos cambiar la estructura dependiendo del tamaño de la ventana, podemos incorporar las clases correspondientes a los breakpoints, para adaptar la grilla a partir de dicho tamaño de pantalla. Por ejemplo si necesito que la etiqueta en pantallas medianas ocupe la mitad de su contenedor, implementariamos la clase <em>col-md-6</em>
-            </p>
-            <div class="row">
-                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-1</div>
-                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-2</div>
-                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-3</div>
-                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-6</div>
-                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-4</div>
-                <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-8</div>
-                <div class="border border-dark col-md-6 col-xxl-3">col-5</div>
-                <div class="border border-dark col-md-6 col-xxl-3">col-7</div>
-            </div>
+            <article>
+                <h3>Sistema de Grillas</h3>
+                <p>
+                    Bootstrap implementa una grilla flexible basada en porcentajes, la misma se divide en 12 columnas y cada una representa una porcentaje del 8.33% (col-1) al 100% (col-12). El mismo divide al contenedor en columnas y solamente aplica a los elementos hijos, para utilizarlo correctamente debemos implementar la clase row en el contenedor y la clase <em>col-n</em> para definir cuanto espacio debe ocupar el elemento correspondiente
+                </p>
+                <div class="row">
+                    <!-- Primer Fila 4 columnas (total 12) -->
+                    <div class="border col-1">col-1</div>
+                    <div class="border col-2">col-2</div>
+                    <div class="border col-3">col-3</div>
+                    <div class="border col-6">col-6</div>
+                    <!-- Segunda Fila 2 columnas (total 12) -->
+                    <div class="border col-4">col-4</div>
+                    <div class="border col-8">col-8</div>
+                    <!-- Tercera Fila 2 columnas (total 12) -->
+                    <div class="border col-5">col-5</div>
+                    <div class="border col-7">col-7</div>
+                </div>
+                <h4>Grilla Responsive</h4>
+                <p>
+                    En caso que necesitemos cambiar la estructura dependiendo del tamaño de la ventana, podemos incorporar las clases correspondientes a los breakpoints, para adaptar la grilla a partir de dicho tamaño de pantalla. Por ejemplo si necesito que la etiqueta en pantallas medianas ocupe la mitad de su contenedor, implementariamos la clase <em>col-md-6</em>
+                </p>
+                <div class="row">
+                    <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-1</div>
+                    <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-2</div>
+                    <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-3</div>
+                    <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-6</div>
+                    <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-4</div>
+                    <div class="border border-dark col-md-6 col-lg-4 col-xxl-3">col-8</div>
+                    <div class="border border-dark col-md-6 col-xxl-3">col-5</div>
+                    <div class="border border-dark col-md-6 col-xxl-3">col-7</div>
+                </div>
+            </article>
+            <hr>
+            <article>
+                <h3>Colores</h3>
+                <ul class="list-group">
+                    <li class="list-group-item | p-2 bg-primary">Color primary</li>
+                    <li class="list-group-item | p-2 bg-secondary">Color secondary</li>
+                    <li class="list-group-item | p-2 bg-light">Color light</li>
+                    <li class="list-group-item | p-2 text-light bg-dark">Color dark</li>
+                    <li class="list-group-item | p-2 bg-danger">Color danger</li>
+                    <li class="list-group-item | p-2 bg-warning">Color warning</li>
+                    <li class="list-group-item | p-2 bg-success">Color success</li>
+                    <li class="list-group-item | p-2 bg-info">Color info</li>
+                </ul>
+            </article>
         </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        
+
+        <p>
+            &copy;2025 Todos los derechos Reservados | 
+            Cristian Racedo & compañia - <a href="https://educacionit.com.ar" target="_blank">EducacionIT</a>
+        </p>
     </footer>
     <!-- Logica JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/bootstrap.bundle.js"></script>
 </body>
 </html>
