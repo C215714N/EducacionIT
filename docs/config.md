@@ -8,9 +8,9 @@ Gracias al _CDN_ se puede omitir la descarga del codigo fuente utilizando una ve
 
 ```html
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 ```
 
 ## Package Managers
@@ -19,10 +19,10 @@ Utilizando cualquier __Gestor de Paquetes__ podemos descargar Bootstrap para obt
 
 | Gestor | Comando |
 |-|-|
-| npm | npm install bootstrap |
-| yarn | yarn add bootstrap |
-| Bundler | gem install bootstrap |
-| Composer | composer require twbs/bootstrap |
-| NuGet | Install-Package bootstrap |
+| __npm__ | npm install bootstrap |
+| __yarn__ | yarn add bootstrap |
+| __Bundler__ | gem install bootstrap |
+| __Composer__ | composer require twbs/bootstrap |
+| __NuGet__ | Install-Package bootstrap |
 
 [volver](../readme.md)
