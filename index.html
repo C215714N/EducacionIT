@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Web Design</title>
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body data-bs-theme="light">
     <!-- Navegacion -->
@@ -13,7 +13,7 @@
         <a class="navbar-brand" href="#">BS</a>
     </nav>
     <!-- Cabecera: Contenido Introductorio -->
-    <header id="header" class="py-5 px-3 | text-center header">
+    <header id="header" class="py-5 px-3 | text-center header | text-orange bg-indigo">
         <h1 class="display-1 | fw-bold text-uppercase">Bootstrap</h1>
         <p class="h1 | fw-light">Responsive Web Design</p>
     </header>
@@ -149,7 +149,30 @@
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-
+        <form id="news" class="col-sm-9 col-lg-6 col-xxl-3 | my-3 mx-3 mx-sm-auto py-4 px-3">
+            <h2 class="h5">Suscribite a nuestro newsletter</h2>
+            <!-- Correo Electronico -->
+            <fieldset>
+                <label class="visually-hidden" for="news-email">Ingrese su correo</label>
+                <input class="form-control form-control-sm has-validation" 
+                    id="news-email" 
+                    name="email" 
+                    type="email" 
+                    placeholder="Cristiandracedo@hotmail.com" 
+                    required>
+            </fieldset>
+            <!-- Notificaciones -->
+            <fieldset class="form-check form-switch">
+                <label class="form-check-label" for="news-alerts">Deseo recibir notificaciones</label>
+                <input class="form-check-input" id="news-alerts" type="checkbox" name="accept" value="notificaciones">
+            </fieldset>
+            <!-- Recomendaciones -->
+            <fieldset class="form-check form-switch">
+                <label class="form-check-label" for="news-info">suscribirme a las recomendaciones</label>
+                <input class="form-check-input" id="news-info" type="checkbox" name="accept" value="recomendaciones">
+            </fieldset>
+            <button class="btn btn-outline-success | d-block ms-auto">Aceptar</button>
+        </form>
         <p>
             &copy;2025 Todos los derechos Reservados | 
             Cristian Racedo & compañia - <a href="https://educacionit.com.ar" target="_blank">EducacionIT</a>
