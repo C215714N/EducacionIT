@@ -1,0 +1,28 @@
+$attributes: 
+    text    color,
+    bg      background-color,
+    caret   caret-color,
+    border  border-color,
+    shade   --shade,
+    shadow  --shadow,
+    outline outline-color,
+;
+$colors:
+    blue,   
+    indigo,  
+    purple, 
+    pink, 
+    red,   
+    orange,
+    yellow,
+    green,
+    teal,
+    cyan,
+    black,
+    white;
+
+@each $className, $prop in $attributes {
+    @each $color in $colors {
+        .#{$className}-#{$color}{
+            #{$prop}: var(--bs-#{$color});
+}   }   }
