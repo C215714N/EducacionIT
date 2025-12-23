@@ -7,6 +7,7 @@ Esto es una guia para los alumnos de la capacitacion de __Responsive Web Design 
 * [Introduccion a Bootstrap](./docs/intro.md)
 * [Configuracion Inicial](./docs/config.md)
 * [Registro de Cambios](./docs/changelog.md)
+* [Responsive Breakpoints](./docs/breakpoints.md)
 
 ## Enlaces Externos
 
