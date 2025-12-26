@@ -149,6 +149,66 @@
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
+        <form id="contact" class="was-validated">
+            <h2>Dejanos tu Consulta</h2>
+            <fieldset class="form-floating">
+                <input class="form-control"
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    placeholder="Nombre: Cristian Racedo"
+                    maxlength="50"
+                    required>
+                <label for="contact-name">Ingrese su nombre</label>
+                <p class="valid-feedback">
+                    el nombre parece valido, recuerde que nos contactaremos con usted
+                </p>
+                <p class="invalid-feedback">
+                    el nombre debe escribirse solamente con letras, hasta 50 caracteres maximo 
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <input class="form-control"
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    minlength="8"
+                    placeholder="Correo: CristianDRacedo@hotmail.com"
+                    required>
+                <label for="contact-email">Ingrese su Correo</label>
+                <p class="valid-feedback">
+                    la direccion utilizada parece valida, le enviaremos un mail para confirmar
+                </p>
+                <p class="invalid-feedback">
+                    la direccion de correo debe poseer al menos 8 caracteres y respetar el formato "usuario@dominio"
+                </p>
+            </fieldset>
+            <fieldset class="form-floating">
+                <select id="contact-subject" name="subject">
+                    <option value="frontend">Desarrollo FrontEnd</option>
+                    <option value="backend">Desarrollo BackEnd</option>
+                    <option value="database">Administracion de Bases de Datos</option>
+                </select>
+                <label for="contact-subject">Seleccione un asunto</label>
+            </fieldset>
+            <fieldset class="form-floating">
+                <textarea 
+                    id="contact-message" 
+                    name="message"
+                    minlength="30"
+                    maxlength="200"
+                    placeholder="Mensaje: Buenas, quisiera realizar una consulta sobre..."
+                    required></textarea>
+                <label for="contact-message">Escriba su Consulta</label>
+                <p>
+                    contestaremos su consulta a la brevedad
+                </p>
+                <p>
+                    el mensaje debe contener entre 30 y 200 caracteres maximo
+                </p>
+            </fieldset>
+            <button>Enviar</button>
+        </form>
         <form id="news" class="col-sm-9 col-lg-6 col-xxl-3 | my-3 mx-3 mx-sm-auto py-4 px-3">
             <h2 class="h5">Suscribite a nuestro newsletter</h2>
             <!-- Correo Electronico -->

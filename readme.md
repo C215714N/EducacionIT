@@ -8,6 +8,8 @@ Esto es una guia para los alumnos de la capacitacion de __Responsive Web Design 
 * [Configuracion Inicial](./docs/config.md)
 * [Registro de Cambios](./docs/changelog.md)
 * [Responsive Breakpoints](./docs/breakpoints.md)
+* [Sistema de Grillas](./docs/grid.md)
+* [Paleta de Colores](./docs/colors.md)
 
 ## Enlaces Externos
 
