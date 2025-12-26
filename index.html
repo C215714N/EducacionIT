@@ -149,9 +149,9 @@
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        <form id="contact" class="was-validated">
+        <form id="contact" class="container row | mx-auto p-3">
             <h2>Dejanos tu Consulta</h2>
-            <fieldset class="form-floating">
+            <fieldset class="form-floating col-lg-4 p-1">
                 <input class="form-control"
                     id="contact-name"
                     name="name"
@@ -160,14 +160,14 @@
                     maxlength="50"
                     required>
                 <label for="contact-name">Ingrese su nombre</label>
-                <p class="valid-feedback">
+                <small class="valid-feedback">
                     el nombre parece valido, recuerde que nos contactaremos con usted
-                </p>
-                <p class="invalid-feedback">
+                </small>
+                <small class="invalid-feedback">
                     el nombre debe escribirse solamente con letras, hasta 50 caracteres maximo 
-                </p>
+                </small>
             </fieldset>
-            <fieldset class="form-floating">
+            <fieldset class="form-floating col-lg-8 p-1">
                 <input class="form-control"
                     id="contact-email"
                     name="email"
@@ -176,23 +176,30 @@
                     placeholder="Correo: CristianDRacedo@hotmail.com"
                     required>
                 <label for="contact-email">Ingrese su Correo</label>
-                <p class="valid-feedback">
+                <small class="valid-feedback">
                     la direccion utilizada parece valida, le enviaremos un mail para confirmar
-                </p>
-                <p class="invalid-feedback">
+                </small>
+                <small class="invalid-feedback">
                     la direccion de correo debe poseer al menos 8 caracteres y respetar el formato "usuario@dominio"
-                </p>
+                </small>
             </fieldset>
-            <fieldset class="form-floating">
-                <select id="contact-subject" name="subject">
+            <fieldset class="form-floating p-1">
+                <select class="form-control" id="contact-subject" name="subject">
+                    <option selected hidden>Seleccione un Asunto</option>
                     <option value="frontend">Desarrollo FrontEnd</option>
                     <option value="backend">Desarrollo BackEnd</option>
                     <option value="database">Administracion de Bases de Datos</option>
                 </select>
                 <label for="contact-subject">Seleccione un asunto</label>
+                <small class="valid-feedback">
+                    la consulta sera respondida en base al asunto seleccionado
+                </small>
+                <small class="invalid-feeback">
+                    la seleccion del asunto es obligatoria
+                </small>
             </fieldset>
-            <fieldset class="form-floating">
-                <textarea 
+            <fieldset class="form-floating p-1">
+                <textarea class="form-control"
                     id="contact-message" 
                     name="message"
                     minlength="30"
@@ -200,14 +207,14 @@
                     placeholder="Mensaje: Buenas, quisiera realizar una consulta sobre..."
                     required></textarea>
                 <label for="contact-message">Escriba su Consulta</label>
-                <p>
+                <small class="valid-feedback">
                     contestaremos su consulta a la brevedad
-                </p>
-                <p>
+                </small>
+                <small class="invalid-feedback">
                     el mensaje debe contener entre 30 y 200 caracteres maximo
-                </p>
+                </small>
             </fieldset>
-            <button>Enviar</button>
+            <button class="btn btn-lg btn-primary">Enviar</button>
         </form>
         <form id="news" class="col-sm-9 col-lg-6 col-xxl-3 | my-3 mx-3 mx-sm-auto py-4 px-3">
             <h2 class="h5">Suscribite a nuestro newsletter</h2>
