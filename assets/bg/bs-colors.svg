@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 25" width="6rem" height="2rem">
+    <style>
+        g{
+            display: none;
+        }
+        :target{
+            display: block;
+        }
+        .bg-primary{ fill: #0d6efd;}
+        .bg-secondary{ fill: #6c757d;}
+        .bg-success{ fill: #198754;}
+        .bg-info{ fill: #0dcaf0;}
+        .bg-warning{ fill: #ffc107;}
+        .bg-danger{ fill: #dc3545;}
+        .bg-light{ fill: #f8f9fa;}
+        .bg-dark{ fill: #212529;}
+
+        .bg-primary-emphasis{ fill: #052c65;}
+        .bg-secondary-emphasis{ fill: #2b2f32;}
+        .bg-success-emphasis{ fill: #0a3622;}
+        .bg-info-emphasis{ fill: #055160;}
+        .bg-warning-emphasis{ fill: #664d03;}
+        .bg-danger-emphasis{ fill: #58151c;}
+        .bg-light-emphasis{ fill: #495057;}
+        .bg-dark-emphasis{ fill: #495057;}
+
+        .bg-primary-subtle{ fill: #9ec5fe;}
+        .bg-secondary-subtle{ fill: #c4c8cb;}
+        .bg-success-subtle{ fill: #a3cfbb;}
+        .bg-info-subtle{ fill: #9eeaf9;}
+        .bg-warning-subtle{ fill: #ffe69c;}
+        .bg-danger-subtle{ fill: #f1aeb5;}
+        .bg-light-subtle{ fill: #e9ecef;}
+        .bg-dark-subtle{ fill: #adb5bd;}
+    </style>
+    
+    <g id="primary">
+        <rect x="0" y="0" width="25" height="25" class="bg-primary-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-primary"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-primary-subtle"/>
+    </g>
+    
+    <g id="secondary">
+        <rect x="0" y="0" width="25" height="25" class="bg-secondary-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-secondary"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-secondary-subtle"/>
+    </g>
+    
+    <g id="danger">
+        <rect x="0" y="0" width="25" height="25" class="bg-danger-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-danger"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-danger-subtle"/>
+    </g>
+    
+    <g id="success">
+        <rect x="0" y="0" width="25" height="25" class="bg-success-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-success"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-success-subtle"/>
+    </g>
+    
+    <g id="warning">
+        <rect x="0" y="0" width="25" height="25" class="bg-warning-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-warning"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-warning-subtle"/>
+    </g>
+    
+    <g id="info">
+        <rect x="0" y="0" width="25" height="25" class="bg-info-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-info"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-info-subtle"/>
+    </g>
+    
+    <g id="light">
+        <rect x="0" y="0" width="25" height="25" class="bg-light-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-light"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-light-subtle"/>
+    </g>
+
+    <g id="dark">
+        <rect x="0" y="0" width="25" height="25" class="bg-dark-emphasis"/>
+        <rect x="25" y="0" width="25" height="25" class="bg-dark"/>
+        <rect x="50" y="0" width="25" height="25" class="bg-dark-subtle"/>
+    </g>
+</svg>
