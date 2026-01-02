@@ -9,19 +9,36 @@
 </head>
 <body data-bs-theme="light">
     <!-- Navegacion -->
-    <nav class="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | p-2 | shadow shadow-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark | bg-dark bg-gradient | sticky-top p-2">
         <a class="navbar-brand" href="#">BS</a>
+        <button class="navbar-toggler navbar-toggler-icon | border-0"
+            data-bs-target="ul.navbar-nav"
+            data-bs-toggle="collapse">
+        </button>
+        <ul class="navbar-nav navbar-collapse collapse">
+            <li><a class="nav-link active" href="#header">Inicio</a></li>
+            <li><a class="nav-link" href="#design">Tipos de Diseño</a></li>
+            <li><a class="nav-link" href="#breakpoints">Puntos de Quiebre</a></li>
+            <li><a class="nav-link" href="#gridsystem">Sistema de Grillas</a></li>
+            <li><a class="nav-link" href="#colors">Colores</a></li>
+            <li><a class="nav-link" href="#contact">Contacto</a></li>
+            <li><a class="nav-link disabled" href="about.html">Acerca</a></li>
+            <li class="form-check form-switch">
+                <input id="themeSwitch" type="checkbox" class="form-check-input">
+                <label id="themeLabel" for="themeSwitch" class="text-white" data-bs-theme="auto">Tema claro</label>
+            </li>
+        </ul>
     </nav>
     <!-- Cabecera: Contenido Introductorio -->
-    <header id="header" class="py-5 px-3 | text-center header | text-orange bg-indigo">
+    <header id="header" class="vh-100 d-grid justify-content-center align-content-center py-5 px-3 | text-center header | text-orange bg-indigo bg-gradient">
         <h1 class="display-1 | fw-bold text-uppercase">Bootstrap</h1>
         <p class="h1 | fw-light">Responsive Web Design</p>
     </header>
     <!-- Contenido -->
     <main class="container">
         <!-- Seccion: Contenido Contextualizado -->
-        <section class="p-3 row">
-            <header>
+        <section id="design" class="py-5 p-3 row">
+            <header class="py-3">
                 <h2>Tipos de Diseño</h2>
                 <p>Evolucion con el paso del tiempo</p>
             </header>
@@ -51,12 +68,12 @@
             </article>
         </section>
         <section>
-            <h2 class="new-item item">Bootstrap</h2>
+            <h2>Bootstrap</h2>
             <p>
                 Este framework implementa una metodologia conocida como <strong>BEM (Block Element Modifier)</strong>, donde cada clase se organiza en contenedores (bloques), cada elemento independiente o que se encuentre dentro de otro, se le asigna un nombre identificador (elemento) y por ultimo, una vez aplicados dichos estilos, podemos implementar clases que modifiquen el estilo predeterminado (modificadores).
             </p>
-            <article>
-                <h3>Puntos de quiebre</h3>
+            <article id="breakpoints" class="py-5">
+                <h3 class="py-3">Puntos de quiebre</h3>
                 <p>
                     Los breakpoints son tamaños de ventanas en los que bootstrap permite introducir cambios en el diseño de la pagina web. Utiliza nombres para identificarlos y los mismos se aplican a las clases existentes. Solamente se implementan en las clases que afecten al tamaño o estructuras de los elementos.
                 </p>
@@ -98,8 +115,8 @@
                 </table>
             </article>
             <hr>
-            <article>
-                <h3>Sistema de Grillas</h3>
+            <article id="gridsystem" class="py-5">
+                <h3 class="py-3">Sistema de Grillas</h3>
                 <p>
                     Bootstrap implementa una grilla flexible basada en porcentajes, la misma se divide en 12 columnas y cada una representa una porcentaje del 8.33% (col-1) al 100% (col-12). El mismo divide al contenedor en columnas y solamente aplica a los elementos hijos, para utilizarlo correctamente debemos implementar la clase row en el contenedor y la clase <em>col-n</em> para definir cuanto espacio debe ocupar el elemento correspondiente
                 </p>
@@ -132,8 +149,8 @@
                 </div>
             </article>
             <hr>
-            <article>
-                <h3>Colores</h3>
+            <article id="colors" class="py-5">
+                <h3 class="py-3">Colores</h3>
                 <ul class="list-group">
                     <li class="list-group-item | p-2 bg-primary">Color primary</li>
                     <li class="list-group-item | p-2 bg-secondary">Color secondary</li>
@@ -146,17 +163,36 @@
                 </ul>
             </article>
         </section>
+        <!-- Carousel -->
+        <section id="gallery" class="carousel fade slide">
+            <!-- Carousel Inner -->
+            <ul class="carousel-inner">
+                <li class="carousel-item active"><img src="" alt="..."></li>
+                <li class="carousel-item"><img src="" alt="..."></li>
+                <li class="carousel-item"><img src="" alt="..."></li>
+            </ul>
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#gallery" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#gallery" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#gallery" data-bs-slide-to="2"></button>
+            </div>
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev"></button>
+            <button class="carousel-control-next"></button>
+        </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
     <footer>
-        <form id="contact" class="container row | mx-auto p-3">
-            <h2>Dejanos tu Consulta</h2>
+        <form id="contact" class="container row | col-md-8 col-lg-6 col-xxl-4 | mx-auto py-5 p-3">
+            <h2 class="py-3">Dejanos tu Consulta</h2>
             <fieldset class="form-floating col-lg-4 p-1">
                 <input class="form-control"
                     id="contact-name"
                     name="name"
                     type="text"
                     placeholder="Nombre: Cristian Racedo"
+                    pattern="[A-Z a-z ñÑ]{2,50}"
                     maxlength="50"
                     required>
                 <label for="contact-name">Ingrese su nombre</label>
@@ -247,5 +283,6 @@
     </footer>
     <!-- Logica JS -->
     <script src="scripts/bootstrap.bundle.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
