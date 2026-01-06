@@ -23,7 +23,7 @@
             <li><a class="nav-link" href="#colors">Colores</a></li>
             <li><a class="nav-link" href="#contact">Contacto</a></li>
             <li><a class="nav-link disabled" href="about.html">Acerca</a></li>
-            <li class="form-check form-switch">
+            <li class="ms-lg-auto form-check form-switch">
                 <input id="themeSwitch" type="checkbox" class="form-check-input">
                 <label id="themeLabel" for="themeSwitch" class="text-white" data-bs-theme="auto">Tema claro</label>
             </li>
@@ -164,7 +164,7 @@
             </article>
         </section>
         <!-- Carousel -->
-        <section id="gallery" class="carousel carousel-fade">
+        <section id="gallery" class="carousel carousel-fade slide">
             <!-- Carousel Inner -->
             <ul class="carousel-inner | m-0 p-0">
                 <li class="carousel-item active">
@@ -208,9 +208,84 @@
                 data-bs-slide="next">
             </button>
         </section>
+        <section>
+            <header class="py-3">
+                <h2>Tipos de Unidades</h2>
+                <p>Implementacion en el diseño</p>
+            </header>
+            <ul>
+                <li>
+                    <strong>Absolutas</strong>: Son aquellas que siempre representan la misma medida, indistintamente del dispositivo o pantalla en la que se visualicen y las podemos clasificar segun su implementacion. Se utilizan principalmente para establecer tamaños limites.
+                    <ul>
+                        <li>
+                            <strong>Dimension</strong> se utilizan para definir el tamaño de los contenedores
+                            <ul>
+                                <li><span>mm</span> milímetros</li>
+                                <li><span>cm</span> centímetros</li>
+                                <li><span>in</span> pulgadas (2.54cm)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Tipografia</strong> se implementan en la medida de la fuente
+                            <ul>
+                                <li><span>pc</span> puntos centimétricos (1/6 in)</li>
+                                <li><span>pt</span> puntos (1/72 in)</li>
+                            </ul>
+                        </li>
+                            <strong>Hibrida</strong> si bien son absolutas, dependen de otro elemento externo para su implementacion.
+                            <ul>
+                                <li><span>px (1/96 in)</span> depende de la resolusion del dispositivo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Relativas</strong> Son aquellas que utilizan otro elemento de referencia para establecer su tamaño, al igual que las anteriores se clasifican por su implementacion. Se utilizan para definir los textos y tamaños de los elementos en la interfaz.
+                    <ul class="sizes">
+                        <li>
+                            <strong>Contenedor</strong> se utilizan para definir el tamaño de la caja en base al ancho de su elemento padre.
+                            <span>%</span>
+                        </li>
+                        <li>
+                            <strong>Tipografia</strong> se utilizan para definir el tamaño de la fuente en base a la tipografia en el elemento padre.
+                            <ul>
+                                <li><span>em</span> relativa al ancho de "M"</li>
+                                <li><span>ex</span> relativa al alto de "x"</li>
+                                <li><span>ch</span> relativa al Tamaño de "0"</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Hibrida</strong> se utilizan para definir el tamaño de la caja en base al ancho de su elemento padre.
+                            <ul>
+                                <li><span>rem</span> relativa al tamaño de la fuente del elemento raíz (root EM)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Flexibles</strong> Se utiliza para establecer alturas y tipografia flexibles, ya que se adaptan en base a un elemento padre. Las mismas se clasifican dependiendo del uso que se les da.
+                    <ul>
+                        <li>
+                            <strong>Dimension</strong> Establece el tamaño del elemento o su tipografia en base a la pantalla del dispositivo
+                            <ul>
+                                <li><span>vw</span></li> porcentaje del ancho de la ventana
+                                <li><span>vh</span></li> porcentaje del alto de la ventana
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Relacion de Aspecto</strong> se utiliza para establecer el tamaño de la caja en base a las dimensiones de la ventana, segun sus proporciones.
+                            <ul>
+                                <li><span>vmin</span> relativo a la menor de las dimensiones de la ventana</li>
+                                <li><span>vmax</span> relativo a la mayor de las dimensiones de la ventana</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
-    <footer>
+    <footer id="footer">
         <form id="contact" class="container row | col-md-8 col-lg-6 col-xxl-4 | mx-auto py-5 p-3">
             <h2 class="py-3">Dejanos tu Consulta</h2>
             <fieldset class="form-floating col-lg-4 p-1">
