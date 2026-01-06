@@ -1,0 +1,18 @@
+@media print {
+    * {
+        font-family: serif;
+    }
+    .navbar,
+    #footer {
+        display: none;
+    }
+    section{
+        page-break-inside: avoid;
+    }
+    h1.display-1{
+        font-size: 96pt;
+    }
+    header p.h1{
+        font-size: 48pt;
+    }
+}
