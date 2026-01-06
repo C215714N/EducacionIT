@@ -1,0 +1,24 @@
+$sizes: 
+    shade   text-shadow,
+    shadow  box-shadow,
+;
+$axis: x, y;
+
+@each $class, $prop in $sizes {
+    .#{$class} {
+        #{$prop}: var(--x-axis) var(--y-axis) var(--blur) var(--#{$class});
+    }
+}
+
+@for $i from -10 through 10 {
+    @each $v in $axis {
+        .#{$v}-axis-#{$i} {
+            --#{$v}-axis: #{$i * 1px};
+        }
+} }
+
+@for $i from 0 through 5 {
+    .blur-#{$i}{
+        --blur: #{$i * .1rem};
+    }
+}
