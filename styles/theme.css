@@ -1,0 +1,13 @@
+/* Navegacion */
+.card-header-dark{
+    color: var(--bs-light);
+    background-color: var(--bs-dark);
+}
+#theme-switch ~ label::after {
+    content: attr("data-bs-theme");  
+}
+/* Contenido Principal */
+#gallery .carousel-item img {
+    max-height: min(calc(50vmax), 960px);
+}
+/* Pie de Pagina */
