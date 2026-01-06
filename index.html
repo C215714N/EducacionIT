@@ -164,22 +164,49 @@
             </article>
         </section>
         <!-- Carousel -->
-        <section id="gallery" class="carousel fade slide">
+        <section id="gallery" class="carousel carousel-fade">
             <!-- Carousel Inner -->
-            <ul class="carousel-inner">
-                <li class="carousel-item active"><img src="" alt="..."></li>
-                <li class="carousel-item"><img src="" alt="..."></li>
-                <li class="carousel-item"><img src="" alt="..."></li>
+            <ul class="carousel-inner | m-0 p-0">
+                <li class="carousel-item active">
+                    <p class="carousel-caption py-5 py-md-4 | shade x-axis-5 y-axis-5 blur-2 shade-indigo">
+                        Introduccion
+                    </p>
+                    <img class="w-100 vh-100 d-md-none" src="assets/bg/gallery_01.jpg" alt="fondo abstracto">
+                    <img class="w-100 d-none d-md-block d-lg-none" src="assets/bg/gallery_md_01.jpg" alt="fondo microsoft windows xp">
+                    <img class="w-100 d-none d-lg-block" src="assets/bg/gallery_lg_01.jpg" alt="fondo linux ubuntu disco dingo">
+                </li>
+                <li class="carousel-item">
+                    <p class="carousel-caption py-5 py-md-4 | shade x-axis-5 y-axis-5 blur-2 shade-indigo">
+                        Desarrollo
+                    </p>
+                    <img class="w-100 vh-100 d-md-none" src="assets/bg/gallery_02.jpg" alt="fondo abstracto">
+                    <img class="w-100 d-none d-md-block d-lg-none" src="assets/bg/gallery_md_02.jpg" alt="fondo microsoft windows xp">
+                    <img class="w-100 d-none d-lg-block" src="assets/bg/gallery_lg_02.jpg" alt="fondo linux ubuntu groovy gorilla">
+                </li>
+                <li class="carousel-item">
+                    <p class="carousel-caption py-5 py-md-4 | shade x-axis-5 y-axis-5 blur-2 shade-indigo">
+                        Conclusion
+                    </p>
+                    <img class="w-100 vh-100 d-md-none" src="assets/bg/gallery_03.jpg" alt="fondo abstracto">
+                    <img class="w-100 d-none d-md-block d-lg-none" src="assets/bg/gallery_md_03.jpg" alt="fondo microsoft windows xp">
+                    <img class="w-100 d-none d-lg-block" src="assets/bg/gallery_lg_03.jpg" alt="fondo linux ubuntu jammy jellifish">
+                </li>
             </ul>
             <!-- Carousel Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#gallery" data-bs-slide-to="0"></button>
-                <button type="button" data-bs-target="#gallery" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#gallery" data-bs-slide-to="2"></button>
+            <div class="carousel-indicators | py-5 py-md-2">
+                <button data-bs-target="#gallery" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#gallery" data-bs-slide-to="1"></button>
+                <button data-bs-target="#gallery" data-bs-slide-to="2"></button>
             </div>
             <!-- Carousel controls -->
-            <button class="carousel-control-prev"></button>
-            <button class="carousel-control-next"></button>
+            <button class="carousel-control-prev carousel-control-prev-icon | top-50 translate-middle-y | mx-4" 
+                data-bs-target="#gallery" 
+                data-bs-slide="prev">
+            </button>
+            <button class="carousel-control-next carousel-control-next-icon | top-50 translate-middle-y | mx-4" 
+                data-bs-target="#gallery" 
+                data-bs-slide="next">
+            </button>
         </section>
     </main>
     <!-- Pie de Pagina: Contenido Complementario -->
