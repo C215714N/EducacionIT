@@ -13,6 +13,7 @@ Esto es una guia para los alumnos de la capacitacion de __Responsive Web Design 
 * [Clases de Utilidad](./docs/utilities.md)
 * [Clases de Ayuda](./docs/helpers.md)
 * [Componentes](./docs/components.md)
+* [JavaScript Integrado](./docs/javascript.md)
 
 ## Enlaces Externos
 
