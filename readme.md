@@ -10,6 +10,9 @@ Esto es una guia para los alumnos de la capacitacion de __Responsive Web Design 
 * [Responsive Breakpoints](./docs/breakpoints.md)
 * [Sistema de Grillas](./docs/grid.md)
 * [Paleta de Colores](./docs/colors.md)
+* [Clases de Utilidad](./docs/utilities.md)
+* [Clases de Ayuda](./docs/helpers.md)
+* [Componentes](./docs/components.md)
 
 ## Enlaces Externos
 
