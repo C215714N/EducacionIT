@@ -8,3 +8,8 @@ Esto una guia para los alumnos de la capacitacion __CCNA2 Routing & Switching__ 
 * [Wireshark](https://wireshark.org)
 * [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 * [Driver Identifier](https://www.driveridentifier.com/blog/?p=149)
+
+## Tabla de contenidos
+
+* [Configuracion Inicial](./docs/config.md)
+* [Configuracion de Acceso Remoto](./docs/remote.md)
