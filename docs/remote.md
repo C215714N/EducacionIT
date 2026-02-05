@@ -21,6 +21,8 @@ Para acceder remotamente es necesaria una __direccion IP__ y una _ruta predeterm
 ```sh
 enable secret Qej8h8w54q594$
 username c215714n! password VtodyosmD48w58qh#
+crypto key generate rsa
+1024
 !
 interface Gi0/0
 description LAN_INTERFACE
