@@ -13,3 +13,7 @@ Esto una guia para los alumnos de la capacitacion __CCNA2 Routing & Switching__ 
 
 * [Configuracion Inicial](./docs/config.md)
 * [Configuracion de Acceso Remoto](./docs/remote.md)
+* [Verificacion de la Topologia](./docs/verif.md)
+* [Identificacion de Dispositivos](./docs/cdp.md)
+* [Configuracion de VLANs](./docs/vlan.md)
+* [Servidor de VLANs](./docs/vtp.md)
