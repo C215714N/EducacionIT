@@ -17,3 +17,4 @@ Esto una guia para los alumnos de la capacitacion __CCNA2 Routing & Switching__ 
 * [Identificacion de Dispositivos](./docs/cdp.md)
 * [Configuracion de VLANs](./docs/vlan.md)
 * [Servidor de VLANs](./docs/vtp.md)
+* [Protocolo Spanning Tree](./docs/stp.md)
