@@ -20,3 +20,5 @@ Esto una guia para los alumnos de la capacitacion __CCNA2 Routing & Switching__ 
 * [Protocolo Spanning-Tree](./docs/stp.md)
 * [Configuracion Etherchannel](./docs/etherchannel.md)
 * [Protocolo de Enrutamiento Redundante](./docs/hsrp.md)
+* [Servidor de DHCP](./docs/dhcp.md)
+* [Direccionamiento IPv6 con Servicio de DHCP](./docs/dhcpv6.md)
