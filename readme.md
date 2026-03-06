@@ -19,3 +19,4 @@ Esto una guia para los alumnos de la capacitacion __Network Security: Server Hac
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
+* [Configuracion de Servicios](./docs/config.md)
