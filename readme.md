@@ -22,3 +22,6 @@ Esto una guia para los alumnos de la capacitacion __CCNA2 Routing & Switching__ 
 * [Protocolo de Enrutamiento Redundante](./docs/hsrp.md)
 * [Servidor de DHCP](./docs/dhcp.md)
 * [Direccionamiento IPv6 con Servicio de DHCP](./docs/dhcpv6.md)
+* [Enrutamiento Estatico](./docs/routing.md)
+* [Seguridad de Puertos](./docs/port-security.md)
+* [Inspección ARP Dinamica](./docs/arp-inspection.md)
