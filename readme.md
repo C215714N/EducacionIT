@@ -11,6 +11,8 @@ Esto una guia para los alumnos de la capacitacion __Network Security: Server Hac
     * [Kali Linux](https://kali.org)
 * [Oracle VirtualBox](https://www.virtualbox.org/)
 * [Cisco Packet Tracer](https://www.netacad.com/portal/resources/packet-tracer)
+* [Wireshark](https://www.wireshark.org/)
+* [Nmap](https:/nmap.org)
 
 ## Tabla de Contenidos
 
