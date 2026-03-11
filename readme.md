@@ -22,5 +22,9 @@ Esto una guia para los alumnos de la capacitacion __Network Security: Server Hac
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
 * [Configuracion de Servicios](./docs/config.md)
+* Analisis de Paquetes
+    * [Wireshark](./docs/wireshark.md)
+* Filtrado de Paquetes
+    * [IP Tables](./docs/iptables.md)
 * Seguridad Integral
     * [VLANs](./docs/vlan.md)
