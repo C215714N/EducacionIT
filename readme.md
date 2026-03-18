@@ -26,5 +26,8 @@ Esto una guia para los alumnos de la capacitacion __Network Security: Server Hac
     * [Wireshark](./docs/wireshark.md)
 * Filtrado de Paquetes
     * [IP Tables](./docs/iptables.md)
+    * [Network Firewall](./docs/netshfw.md)
 * Seguridad Integral
     * [VLANs](./docs/vlan.md)
+    * [OpenSSH](./docs/openssh.md)
+    * [OpenSSL](./docs/openssl.md)
