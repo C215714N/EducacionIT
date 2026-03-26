@@ -4,8 +4,10 @@ Esto es una guia para los alumnos de la capacion __Network Security: Server Hack
 
 ## Herramientas
 
+* [Oracle VirtualBox](https://www.virtualbox.org/)
 * Sistemas Operativos
 	* [Debian](https://debian.org)
 	* [Kali](https://kali.org)
 	* [RedHat](https://redhat.com)
 	* [CentOS](https://centos.org)
+* [Packet Tracer](https://www.netacad.com/resources/lab-downloads?userLang=es-XL&courseLang=en-US)
