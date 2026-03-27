@@ -24,10 +24,16 @@ Esto una guia para los alumnos de la capacitacion __Network Security: Server Hac
 * [Configuracion de Servicios](./docs/config.md)
 * Analisis de Paquetes
     * [Wireshark](./docs/wireshark.md)
+    * [Network Mapper](./docs/nmap.md)
 * Filtrado de Paquetes
     * [IP Tables](./docs/iptables.md)
     * [Network Firewall](./docs/netshfw.md)
+    * [Cisco ASA](./docs/cisco-asa.md)
 * Seguridad Integral
     * [VLANs](./docs/vlan.md)
     * [OpenSSH](./docs/openssh.md)
     * [OpenSSL](./docs/openssl.md)
+* Virtual Private Network
+    * [Diffie-Hellman](./docs/diffie-hellman.md)
+    * [VPN Site to Site](./docs/vpn-s2s.md)
+    * [WireGuard](./docs/wireguard.md)
