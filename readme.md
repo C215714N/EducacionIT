@@ -19,3 +19,4 @@ Esto es una guia para los alumnos de la capacion __Network Security: Server Hack
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
+* [Configuracion de Servicios](./docs/config.md)
