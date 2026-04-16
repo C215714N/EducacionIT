@@ -20,3 +20,9 @@ Esto es una guia para los alumnos de la capacion __Network Security: Server Hack
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
 * [Configuracion de Servicios](./docs/config.md)
+* Analisis de Paquetes
+	* [Wireshark](./docs/wireshark.md)
+* Filtrado de Paquetes
+	* [Network Firewall](./docs/netshfw.md)
+* Seguridad Integral
+	* [VLANs](./docs/vlan.md)
