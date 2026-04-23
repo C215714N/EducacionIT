@@ -25,7 +25,14 @@ Esto es una guia para los alumnos de la capacion __Network Security: Server Hack
 	* [Configuracion de Servicios](./docs/config.md)
 * Analisis de Paquetes
 	* [Wireshark](./docs/wireshark.md)
+	* [Network Mapper](./docs/nmap.md)
 * Filtrado de Paquetes
 	* [Network Firewall](./docs/netshfw.md)
+	* [IP Tables](./docs/iptables.md)
 * Seguridad Integral
 	* [VLANs](./docs/vlan.md)
+	* [OpenSSH](./docs/openssh.md)
+	* [OpenSSL](./docs/openssl.md)
+* Virtual Private Network
+	* [Diffie-Hellman](./docs/diffie-hellman.md)
+	* [WireGuard](./docs/wireguard.md)
