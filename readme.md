@@ -37,3 +37,6 @@ Esto una guia para los alumnos de la capacitacion __Network Security: Server Hac
     * [Diffie-Hellman](./docs/diffie-hellman.md)
     * [VPN Site to Site](./docs/vpn-s2s.md)
     * [WireGuard](./docs/wireguard.md)
+* Prevencion de Intrusiones
+    * [Snort](./docs/snort.md)
+    * [Suricata](./docs/suricata.md)
