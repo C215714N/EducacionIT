@@ -29,6 +29,7 @@ Esto es una guia para los alumnos de la capacion __Network Security: Server Hack
 * Filtrado de Paquetes
 	* [Network Firewall](./docs/netshfw.md)
 	* [IP Tables](./docs/iptables.md)
+	* [Cisco ASA](./docs/cisco-asa.md)
 * Seguridad Integral
 	* [VLANs](./docs/vlan.md)
 	* [OpenSSH](./docs/openssh.md)
@@ -36,3 +37,7 @@ Esto es una guia para los alumnos de la capacion __Network Security: Server Hack
 * Virtual Private Network
 	* [Diffie-Hellman](./docs/diffie-hellman.md)
 	* [WireGuard](./docs/wireguard.md)
+	* [VPN Site to Site](./docs/vpn-s2s.md)
+* Prevencion de Intrusiones
+	* [snort](./docs/snort.md)
+	* [Suricata](./docs/suricata.md)
