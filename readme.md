@@ -14,4 +14,6 @@ Esto es una guia para los alumnos de la capacitacion __ccna 3 redes empresariale
 
 ## Tabla de Contenidos
 
-* [OSPF](./docs/ospf.md)
+* [Enrutamiento](./docs/routing.md)
+    * [OSPF](./docs/ospf.md)
+    * [OSPFv3 (IPv6)](./docs/ospfv3.md)
