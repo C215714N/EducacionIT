@@ -7,7 +7,7 @@ __Open Shortest Path First__ es un protocolo de red es estandar abierto para enr
     * __router-id `<ip address>`__: establece un numero identificador para el router en formato IP 
     * __network `<network>` `<wildcard>` area `<area>`__: declara la red que pertenece a la topologia que utiliza OSPF
 2. router# __(verificacion configuracion OSPF)__
-    * __show ip ospf__: muestra la cesonfiguracion de los procesos OSPF
+    * __show ip ospf__: muestra la configuracion de los procesos OSPF
     * __show ip ospf neighbor__: muestra los dispositivos conectados directamente que usan OSPF
     * __show ip ospf database__: muestra informacion relacionada con el mapa de la topologia 
     * __show ip route ospf__: muestra las rutas aprendidas a traves del protocolo OSPF
