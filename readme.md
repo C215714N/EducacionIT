@@ -14,11 +14,13 @@ Esto es una guia para los alumnos de la capacitacion __ccna 3 redes empresariale
 
 ## Tabla de Contenidos
 
-* [Enrutamiento](./docs/routing.md)
-    * [OSPF](./docs/ospf.md)
-    * [OSPFv3 (IPv6)](./docs/ospfv3.md)
-    * [EIGRP](./docs/eigrp.md)
-    * [EIGRPv6](./docs/eigrpv6.md)
+* [Protocolos de Enrutamiento](./docs/routing.md)
+    * Linkstate: 
+        [OSPF](./docs/ospf.md) | 
+        [OSPFv3](./docs/ospfv3.md)
+    * Distance Vector: 
+        [EIGRP](./docs/eigrp.md) |
+        [EIGRPv6](./docs/eigrpv6.md)
 * Filtrado de Paquetes
     * [ACL](./docs/acl.md)
     * [ACLv6](./docs/aclv6.md)
