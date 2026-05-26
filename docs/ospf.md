@@ -18,23 +18,39 @@ __Open Shortest Path First__ es un protocolo de red es estandar abierto para enr
 
 ## Implementacion
 
-Cuando configuramos el __proceso OSPF__ en el dispositivo, para agiliza la comparticion, primero debemos _configurar las redes_. Tambien es necesario definir el __Router ID__ para ubicar el dispositivo con mayor facilidad en la topologia, en caso que este no este definido se utilizara la direccion mas alta de la _interfaz Loopback_ o la _direccion IP mas alta_ de las interfaces fisicas.
+La implementación de OSPF debe adaptarse al contexto de la red y arquitectura de áreas. Esta es la clave de los diferentes escenarios:
+
+### Contextos de Implementación
+
+1. **Redes pequeñas (single-area)**: Un único área (area 0) simplifica la configuración. Todas las interfaces comparten la misma topología OSPF. Adecuado para redes con menos de 50 dispositivos.
+
+2. **Redes medianas/grandes (multi-area)**: Se implementa jerarquía con áreas backbone (area 0) y áreas periphericas. Consideraciones:
+   - Interfaces hacia usuarios finales: `passive-interface` para evitar adyacencias
+   - Interfaces WAN: costos de enlace ajustados según ancho de banda real
+   - Router ID: usar dirección IPv4 loopack dedicada o dirección IP estable
+
+3. **Ambientes de datacenter**: Auto-cost reference-bandwidth ajustado a 10000 o superior para reflejar enlaces 10G/40G/100G.
+
+4. **Consideraciones especiales**:
+   - Redistribución: usar `default-information originate` para rutas estáticas por defecto
+   - Seguridad: autenticación de área y de interfaz para prevenir inyección de rutas falsas
+   - Resumen de rutas: a nivel ABR para reducir LSA en el área backbone
 
 ```sh
 interface Gi0/0
-ip address 10.0.0.1 255.255.255.0
-description LAN NETWORK
+ ip address 10.0.0.1 255.255.255.0
+ description LAN_NETWORK
 !
 interface Gi0/0/0
-ip address 10.0.1.2 255.255.255.252
-description WAN NETWORK
+ ip address 10.0.1.2 255.255.255.252
+ description WAN_NETWORK
 !
 router ospf 10
-router-id 1.1.1.1
-passive-interface Gi0/0
-auto-cost reference-bandwith 100000
-network 10.0.0.0 0.0.0.255 area 0
-network 10.0.1.0 0.0.0.3 area 0
+ router-id 1.1.1.1
+ passive-interface Gi0/0
+ auto-cost reference-bandwidth 10000
+ network 10.0.0.0 0.0.0.255 area 0
+ network 10.0.1.0 0.0.0.3 area 0
 ```
 
 [volver](../readme.md)
