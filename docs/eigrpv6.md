@@ -16,7 +16,24 @@ __EIGRP para IPv6__ funciona de manera similar a EIGRP para IPv4, utilizando el 
 
 ## Implementacion
 
-Ejemplo de configuracion de EIGRP para IPv6. Es vital recordar el comando `no shutdown` dentro del proceso del router.
+La implementación de EIGRP para IPv6 debe considerar los diferentes escenarios de red y los requisitos de tuneleo:
+
+### Contextos de Implementación
+
+1. **Redes IPv6 puras**: EIGRPv6 es alternativa a OSPFv3 cuando toda la infraestructura es CISCO. Requiere mayor planificación de Router ID para identificación única.
+
+2. **Redes con tuneles IPv6 sobre IPv4**: En entornos híbridos, EIGRPv6 coexiste con EIGRP IPv4. Los tuneles requieren `tunnel mode ipv6` y configuración de rutas estáticas para alcanzar los puntos remotos.
+
+3. **Consideraciones especiales**:
+   - El comando `no shutdown` es obligatorio (EIGRPv6 está deshabilitado por defecto)
+   - La autenticación HMAC-SHA-256 se configura a nivel de interfaz: `ipv6 eigrp af-interface`
+   - No existe `network` command; cada interfaz se habilita explícitamente con `ipv6 eigrp <as>`
+
+4. **Distribución de rutas**: Al redistribuir de EIGRPv4 a EIGRPv6, se deben usar tags de rutas para evitar routing loops.
+
+5. **High Availability**: EIGRPv6 soporta Fast Convergence con Hello timers ajustables: `ipv6 hello-interval` y `ipv6 hold-time`.
+
+6. **Seguridad**: Además del authentication, se recomienda usar `passive-interface` en segmentos LAN y `stub` routing en extremos de rama.
 
 ```sh
 ipv6 unicast-routing

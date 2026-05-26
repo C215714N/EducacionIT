@@ -21,23 +21,38 @@ Pero teniendo en cuenta que, de manera predeterminada, los unicos valores habili
 
 ## Implementacion
 
-Ejemplo de configuracion basica de EIGRP utilizando un Sistema Autonomo (AS) y desactivando la sumarizacion automatica.
+La implementación de EIGRP debe considerar el diseño de la red y los requerimientos de convergencia. Los contextos más comunes son:
+
+### Contextos de Implementación
+
+1. **Redes CISCO homogéneas**: EIGRP es óptimo cuando toda la infraestructura es CISCO, ya que es propietario. Ofrece convergencia rápida y no requiere ajustes complejos para redes medianas.
+
+2. **Entornos con múltiples AS (autonomous systems)**: Se utilizan diferentes números de AS para separar dominios de enrutamiento lógicamente (sucursales, departamentos). Requiere ASBR para redistribuir rutas entre AS.
+
+3. **Redes con enlaces de variedad de velocidades**: EIGRP calcula métricas precisadas considerando ancho de banda y delay. Para enlaces asimétricos o políticas de tráfico, se ajustan valores K o se usa `metric weights`.
+
+4. **Consideraciones de seguridad**:
+   - Deshabilitar `auto-summary` para evitar resumidos no deseados
+   - Usar `passive-interface` en segmentos LAN para evitar adyacencias EIGRP innecesarias
+   - Configurar `eigrp log-neighbor-changes` para auditoría
+
+5. **Migración IPv6**: EIGRP para IPv6 requiere habilitar `ipv6 unicast-routing` y configuración por interfaz (no en modo router).
 
 ```sh
 interface Gi0/0
-ip address 10.0.0.1 255.255.255.0
-description LAN NETWORK
+ ip address 10.0.0.1 255.255.255.0
+ description LAN_NETWORK
 !
 interface Gi0/0/0
-ip address 10.0.1.2 255.255.255.252
-description WAN NETWORK
+ ip address 10.0.1.2 255.255.255.252
+ description WAN_NETWORK
 !
 router eigrp 100
-eigrp router-id 1.1.1.1
-network 10.0.0.0 0.0.0.255
-network 10.0.1.0 0.0.0.3
-passive-interface GigabitEthernet0/0
-no auto-summary
+ eigrp router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.255
+ network 10.0.1.0 0.0.0.3
+ passive-interface GigabitEthernet0/0
+ no auto-summary
 ```
 
 [volver](../readme.md)
