@@ -22,7 +22,10 @@ Esto es una guia para los alumnos de la capacitacion __ccna 3 redes empresariale
         [EIGRP](./docs/eigrp.md) |
         [EIGRPv6](./docs/eigrpv6.md)
 * Filtrado de Paquetes
+    * [Wildcard](./docs/wildcard.md)
     * [ACL](./docs/acl.md)
     * [ACLv6](./docs/aclv6.md)
-    * [Mascara Wildcard](./docs/wildcard.md)
-
+    * [NAT](./docs/nat.md)
+* Redes WAN
+    * [PPP](./docs/ppp.md)
+    * [FrameRelay](./docs/frame-relay.md)

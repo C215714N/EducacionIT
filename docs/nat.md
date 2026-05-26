@@ -18,25 +18,49 @@ __Network Address Translation__ es un mecanismo utilizado por los routers para c
 
 ## Implementacion
 
-Ejemplo de configuracion de NAT con sobrecarga (PAT) utilizando una interfaz de salida.
+La implementación de NAT debe considerarse según el escenario de conectividad y disponibilidad de direcciones:
+
+### Contextos de Implementación
+
+1. **NAT dinámico con sobrecarga (PAT)**: Compartir una única dirección pública. Ideal para redes con múltiples hosts y un solo bloque de direcciones públicas. Consideraciones:
+   - ACL debe permitir tráfico de salida (source NAT)
+   - Solo un `ip nat outside` por router
+   - Limite de sesiones simultáneas (registro NAT explosion)
+
+2. **NAT estático (1:1)**: Servidor interno accesible desde internet. Se configuran reglas 1:1 entre IP pública y privada. Requiere ACL para restringir acceso.
+
+3. **NAT dinámico sin sobrecarga**: Asignar direcciones públicas individuales de un pool. Útil para acceso a internet con trazabilidad directa por IP.
+
+4. **NAT con ACL avanzada**: Filtrar tráfico antes del NAT. Protocolos como FTP requieren `ip nat service enable` y `static ftp`. VoIP necesita `ip nat service sip udp port 5060`.
+
+5. **Consideraciones de alta disponibilidad**:
+   - HSRP + NAT: usar `standby 1 ip` con `standby 1 preempt`
+   - NAT redundancy: configurar mismo pool en routers primario/backup
+   - Verificar `show ip nat translations` para sesiones activas
+
+6. **IPv6 NAT (NAT64)**: Traducir direcciones IPv6 a IPv4. Se usa `ipv6 nat` y prefix de traducción. No recomendado para producción (requiere DNS64).
 
 ```sh
-! Definicion del trafico interno (LAN)
-access-list 1 permit 192.168.10.0 0.0.0.255
+! Pool de direcciones públicas y ACL de permitidos
+ip nat pool PUBLIC_POOL 200.1.1.10 200.1.1.20 netmask 255.255.255.248
 !
-! Configuracion de la traduccion dinamica con sobrecarga (overload)
-! Se asocia la ACL 1 con la interfaz de salida WAN
-ip nat inside source list 1 interface GigabitEthernet0/1 overload
+ip access-list extended NAT-ACL
+ permit 192.168.10.0 0.0.0.255
 !
-! Identificacion de interfaces
+! NAT dinámico con sobrecarga
+ip nat inside source list NAT-ACL interface GigabitEthernet0/1 overload
+!
+! NAT estático para servidor
+ip nat inside source static tcp 192.168.10.100 443 200.1.1.100 443 extendable
+!
 interface GigabitEthernet0/0
- description LAN_PRIVATE
+ description PRIVATE_LAN
  ip address 192.168.10.1 255.255.255.0
  ip nat inside
 !
 interface GigabitEthernet0/1
- description WAN_PUBLIC
- ip address 200.1.1.1 255.255.255.252
+ description PUBLIC_WAN
+ ip address dhcp
  ip nat outside
 ```
 
