@@ -50,14 +50,32 @@ El siguiente mapa conceptual describe el flujo de un paquete a traves de un rout
 
 ## Implementacion
 
-Ejemplo de configuracion de una ruta estatica y una ruta por defecto:
+La implementación de rutas estáticas debe considerarse según el contexto del entorno de red:
+
+### Contextos de Implementación
+
+1. **Redes pequeñas de sucursal**: Rutas estáticas son ideales cuando no se justifica el overhead de protocolos dinámicos. Se recomienda usar rutas estáticas simples apuntando a la gateway principal del ISP.
+
+2. **Rutas estáticas flotantes como backup**: Cuando se tiene un enlace primario ( MPLS, fibra) y un enlace secundario (4G/5G), se configuran rutas con distancia administrativa mayor (AD=5+) para que el backup solo se active ante fallos del primario.
+
+3. **Rutas por defecto (default routes)**: Fundamental en redes con acceso a internet. Se debe considerar `ip route 0.0.0.0 0.0.0.0 dhcp` para entornos con cliente DHCP o `ip route 0.0.0.0 0.0.0.0 <interfaz>` para enlaces con gateway desconocido.
+
+4. **Rutas estáticas resumidas**: En topologías con múltiples VLANs o subredes consecutivas, se optimiza la tabla de rutas anunciando un único prefijo summarizado.
+
+5. **Consideraciones de seguridad**: Las rutas estáticas no se ven afectadas por ataques de inundación de routing, pero requieren mantenimiento manual ante cambios de topología.
 
 ```sh
-! Ruta estatica a la red 192.168.2.0/24 via el proximo salto 10.0.0.2
+! Ruta estática a red remota via next-hop
 ip route 192.168.2.0 255.255.255.0 10.0.0.2
-!
-! Ruta por defecto hacia el ISP
-ip route 0.0.0.0 0.0.0.0 Gi0/0/0
+
+! Ruta estática flotante como backup (AD=5)
+ip route 192.168.2.0 255.255.255.0 10.0.0.3 5
+
+! Ruta por defecto hacia ISP
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/0
+
+! Ruta estática resumida para múltiples redes
+ip route 192.168.0.0 255.255.0.0 10.0.0.2
 ```
 
 [volver](../readme.md)
