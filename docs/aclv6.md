@@ -10,11 +10,21 @@
 
 3. ## Implementacion IPv6
 
-Ejemplo de configuracion de una ACL extendida IPv6 para denegar el trafico HTTP de una red especifica hacia un servidor, permitiendo el resto del trafico.
+La implementación de ACL IPv6 difiere de IPv4 y requiere considerar aspectos específicos del entorno dual-stack o puramente IPv6:
+
+* __Redes dual-stack__: ACL IPv6 complementa ACL IPv4 en segmentos donde ambos protocolos coexisten. La política de filtrado puede ser idéntica o diferente según requerimientos de seguridad.
+* __Migración a IPv6__: Durante transición, se aplican ACL IPv6 más restrictivas inicialmente, ya que el tráfico IPv6 aún no está ampliamente estudiado por equipos de seguridad.
+* __Consideraciones de sintaxis__:
+   - Solo ACL nombradas (`ipv6 access-list <name>`)
+   - No existe número implícito para `any` (se usa `permit ipv6 any any`)
+   - No requieren notación wildcard, usan prefijo `/bit-length`
+* __Flujo de tráfico entrante vs saliente__: Similar a IPv4, pero con mayor impacto en equipos que procesan extensiones de encabezado IPv6 (Hop-by-Hop, Routing Header).
+* __Time-based y reflexivo__: IPv6 soporta `time-range` y `reflect` para ACLs dinámicas, útiles para políticas de acceso temporal.
 
 ```sh
 ipv6 access-list WEB_FILTER_V6
-deny tcp 2001:DB8:1::/64 any eq 80
+permit tcp 2001:DB8:1::/64 any eq 443
+permit udp 2001:DB8:1::/64 any eq 135
 permit ipv6 any any
 !
 interface GigabitEthernet0/0
