@@ -26,6 +26,7 @@ Esto es una guia para los alumnos de la capacitacion __ccna 3 redes empresariale
     * [ACL](./docs/acl.md)
     * [ACLv6](./docs/aclv6.md)
     * [NAT](./docs/nat.md)
+    * [QoS](./docs/qos.md)
 * Redes WAN
     * [PPP](./docs/ppp.md)
     * [FrameRelay](./docs/frame-relay.md)
