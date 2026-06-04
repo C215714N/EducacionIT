@@ -16,11 +16,11 @@ Esto es una guia para los alumnos de la capacitacion __ccna 3 redes empresariale
 
 * [Protocolos de Enrutamiento](./docs/routing.md)
     * Linkstate: 
-        [OSPF](./docs/ospf.md) | 
-        [OSPFv3](./docs/ospfv3.md)
+        * [OSPF](./docs/ospf.md)
+        * [OSPFv3](./docs/ospfv3.md)
     * Distance Vector: 
-        [EIGRP](./docs/eigrp.md) |
-        [EIGRPv6](./docs/eigrpv6.md)
+        * [EIGRP](./docs/eigrp.md)
+        * [EIGRPv6](./docs/eigrpv6.md)
 * Filtrado de Paquetes
     * [Wildcard](./docs/wildcard.md)
     * [ACL](./docs/acl.md)
@@ -30,4 +30,5 @@ Esto es una guia para los alumnos de la capacitacion __ccna 3 redes empresariale
     * [PPP](./docs/ppp.md)
     * [FrameRelay](./docs/frame-relay.md)
 * VPN Site-to-Site
+    * [Diffie-Hellman](./docs/diffie-hellman.md)
     * [IPsec](./docs/ipsec.md)
