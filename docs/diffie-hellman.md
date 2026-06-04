@@ -27,7 +27,7 @@ En el intercambio de claves Diffie-Hellman, los números primos se utilizan como
 | Clave | Op.Host A | Op.Host B |
 |-|-|-|
 | __Privada__ | $\textbf{a}=4$ | $\textbf{b}=2$ | 
-| __Publica__ | $\textbf{A}=g^a\mod p\equiv3^4\%5=1$ | $\textbf{B}=g^b\mod p\equiv3^2\%5=4$ |
-| __Compartida__ | $\textbf{S}=B^a\mod p\equiv4^4\%5=1$ | $\textbf{S}=A^b\mod p=1^2\%5=1$ |
+| __Publica__ | $\textbf{A}=g^a\mod p\equiv3^4 \%5=1$ | $\textbf{B}=g^b\mod p\equiv3^2 \%5=4$ |
+| __Compartida__ | $\textbf{S}=B^a\mod p\equiv4^4 \%5=1$ | $\textbf{S}=A^b\mod p=1^2 \%5=1$ |
 
 [volver](../readme.md)
