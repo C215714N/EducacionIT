@@ -20,3 +20,4 @@ Esto es una guia para los alumnos de la capacitacion __ccna2 routing and switchi
 * [Configuracion de VLANs](./docs/vlan.md)
 * [Servidor de VLANs](./docs/vtp.md)
 * [Identificacion de Dispositivos](./docs/cdp.md)
+* [Verificacion de Topologia](./docs/verif.md)
