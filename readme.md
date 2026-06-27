@@ -22,3 +22,4 @@ Esto es una guia para los alumnos de la capacitacion __ccna2 routing and switchi
 * [Identificacion de Dispositivos](./docs/cdp.md)
 * [Verificacion de Topologia](./docs/verif.md)
 * [Protocolo Spanning-Tree](./docs/stp.md)
+* [Enrutamiento Estatico](./docs/routing.md)
