@@ -23,3 +23,4 @@ Esto es una guia para los alumnos de la capacitacion __ccna2 routing and switchi
 * [Verificacion de Topologia](./docs/verif.md)
 * [Protocolo Spanning-Tree](./docs/stp.md)
 * [Enrutamiento Estatico](./docs/routing.md)
+* [Protocolo de Enrutamiento Redundante](./docs/hsrp.md)
