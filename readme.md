@@ -12,4 +12,6 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en Redes: Arqui
 * Analisis de Paquetes
 	* [NMap](https://nmap.org)
 	* [Wireshark](https://wireshark.org)
-* [Imagenes GNS3](https://github.com/hegdepavankumar/Cisco-Images-for-GNS3-and-EVE-NG)
+* [Emulador de Red GNS3](https://www.gns3.com/)
+	* [Servidor GNS3 VM](https://www.gns3.com/software/download-vm)
+	* [Imagenes GNS3 Cisco IOS](https://github.com/hegdepavankumar/Cisco-Images-for-GNS3-and-EVE-NG)
