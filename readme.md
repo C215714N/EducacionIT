@@ -26,7 +26,10 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en Redes: Arqui
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
-* [Configuracion de Servicios](./docs/config.md)
+* Configuracion y Acceso
+	* [Usuarios y Grupos](./docs/users.md)
+	* [Mascara de Usuario](./docs/umask.md)
+	* [Configuracion de Servicios](./docs/config.md)
 * Analisis de Paquetes
 	* [Wireshark](./docs/wireshark.md)
 	* [Network Mapper](./docs/nmap.md)
