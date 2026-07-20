@@ -33,3 +33,7 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en Redes: Arqui
 * Analisis de Paquetes
 	* [Wireshark](./docs/wireshark.md)
 	* [Network Mapper](./docs/nmap.md)
+* Seguridad Integral
+	* [VLANs](./docs/vlan.md)
+	* [OpenSSH](./docs/openssh.md)
+	* [OpenSSL](./docs/openssl.md)
