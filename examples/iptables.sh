@@ -1,15 +1,12 @@
 # !bin/sh
-
 ## REESTABLCER CONFIGURACION
 sudo iptables -F
 sudo iptables -Z
 sudo iptables -t nat -F
 sudo iptables -t nat -Z
-
 ## DIRECTIVAS PREDETERMINADAS
 sudo iptables -P INPUT DROP
 sudo iptables -P OUTPUT DROP
-
 ## COMUNICACION CON GATEWAY
 sudo iptables -A INPUT -s 192.168.0.1 -j ACCEPT
 sudo iptables -A OUTPUT -d 192.168.0.1 -j ACCEPT
@@ -34,3 +31,5 @@ sudo iptables -A INPUT -p tcp --sport 80 -m string --string "github.com" -j ACCE
 sudo iptables -A INPUT -p tcp --sport 443 -m string --string "github.com" -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+## GUARDAR CONFIGURACION
+sudo iptables-save > /etc/iptables/rules.v4

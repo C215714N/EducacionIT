@@ -37,3 +37,7 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en Redes: Arqui
 	* [VLANs](./docs/vlan.md)
 	* [OpenSSH](./docs/openssh.md)
 	* [OpenSSL](./docs/openssl.md)
+* Virtual Private Network
+	* [Diffie-Hellman](./docs/diffie-hellman.md)
+	* [WireGuard](./docs/wireguard.md)
+	* [VPN Site to Site](./docs/vpn-s2s.md)
