@@ -29,3 +29,6 @@ Esto es una guia para los alumnos de la capacitacion __ccna2 routing and switchi
 * [Seguridad de Puertos](./docs/port-security.md)
 * [Inspección ARP Dinamica](./docs/arp-inspection.md)
 * [DHCP Snooping](./docs/dhcp-snooping.md)
+* [BPDUGuard](./docs/bpduguard.md)
+* [Redes Inalambricas (WLAN)](./docs/wlan.md)
+* [AAA (Authentication, Authorization, Accounting)](./docs/aaa.md)
