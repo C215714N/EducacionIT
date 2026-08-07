@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goggle</title>
+    <style>
+        * {
+            font-family: "century gothic", sans-serif;
+        }
+        .blue {
+            color: #36c;
+        }
+        .red {
+            color: #c33;
+        }
+        .yellow {
+            color: #da3;
+        }
+        .green {
+            color: #3c6;
+        }
+        form {
+            margin: auto;
+            max-width: 720px;
+            display: grid;
+            justify-content: center;
+        }
+        .search-input {
+            outline: none;
+            border: none;
+            padding: .5rem;
+            border-radius: 1rem;
+            background-color: #aaa;
+            font-size: 1rem;
+        }
+        .search-input:focus{
+            box-shadow: 0 0 .5rem #333;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border: none;
+        }
+        button {
+            border-radius: .25rem;
+            color: #eee;
+            background-color: #444;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1 class="text-center">
+            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </h1>
+        <input class="search-input" type="text">
+        <fieldset class="btn-group">
+            <button>Buscar con Google</button>
+            <button>Voy a tener Suerte</button>
+        </fieldset>
+    </form>
+</body>
+</html>
