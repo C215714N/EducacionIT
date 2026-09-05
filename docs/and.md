@@ -4,8 +4,8 @@ Para poder establecer una comunicacion, los Hosts deben poseer una direccion IP 
 
 |host data|byte1|byte2|byte3|byte4|
 |----|-----|-----|-----|-----|
-|__ip address__|192|168|0|56|
-|__subnet mask__|255|255|255|0|
+|__address__|192|168|0|56|
+|__netmask__|255|255|255|0|
 |__network__|192|168|0|0|
 |__broadcast__|192|168|0|0|
 
@@ -37,7 +37,7 @@ Por ejemplo, si un router recibe un paquete IP con la direccion de destino __10.
 | 10.54.12.0 | 27 | 32.43.15.14 | 30 |
 | 10.54.12.32 | 27 | 32.43.15.11 | 30 |
 | 10.54.12.64 | 26 | 32.43.15.13 | 126 |
-| 10.54.12.128 | 26 | 32.43.15.14 | 63 |
+| 10.54.12.128 | 26 | 32.43.15.14 | 62 |
 
 Por otro lado, Si la direccion de destino fuese __10.54.12.145__
 la mejor coincidencia seria la red __10.54.12.128/26__ ya que corresponden los primeros 26 bits, mientras que en los casos donde la mascara es mayor, algunos bits difieren.
