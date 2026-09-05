@@ -43,6 +43,7 @@ Es un sistema de impresión que utiliza el __estándar IPP (Internet Printing Pr
     </Printer>
     ```
 
+    
 * __lp `file.pdf`__: Envia un Trabajo de Impresión
 * __lpstat -t__: Consulta el Estado de los Trabajos
 * __cancel ID_del_trabajo__: Cancela un Trabajo Especifico
