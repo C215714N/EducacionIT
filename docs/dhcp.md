@@ -42,7 +42,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
 
 # Configuracion dhcpd
 
-| Option | Descripcion |
+| Opcion | Descripcion |
 |--|--|
 | __subnet__| Bloque de direcciones IP y configuración para una subred específica |
 | __range__| Rango de direcciones IP que el servidor DHCP puede asignar a los clientes |
