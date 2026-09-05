@@ -17,7 +17,6 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
 }
 ```
 
-
 ```yaml
 subnet 192.168.1.0 netmask 255.255.255.0 {
     range 192.168.1.100 192.168.1.200;
@@ -28,12 +27,12 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
     default-lease-time 600;
     max-lease-time 7200;
     
-    host server1 {
+    host server {
         hardware ethernet 00:0C:29:4E:8B:85;
         fixed-address 192.168.1.50;
     }
 
-    host laptop1 {
+    host laptop {
         hardware ethernet 00:1A:A0:1A:4B:1E;
         fixed-address 192.168.1.101;
     }

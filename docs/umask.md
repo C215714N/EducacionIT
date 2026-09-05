@@ -4,7 +4,6 @@ Ultididad que permite implementar __una máscara de modo de creación de archivo
 
 El comportamiento de esta utilidad está __estandarizado por POSIX__ y se describe en el Manual del programador de POSIX. Debido a que umask afecta la máscara actual entorno de ejecución de shell, generalmente se implementa como un comando integrado de un shell.
 
-
 | Permiso | Simbolo | Binario | Octal |
 |--|:--:|:--:|:--:|
 | Ninguno | — | 000 | 0 |

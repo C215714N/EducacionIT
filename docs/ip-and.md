@@ -39,5 +39,5 @@ Por ejemplo, si un router recibe un paquete IP con la direccion de destino __10.
 | 10.54.12.64 | 26 | 32.43.15.13 | 126 |
 | 10.54.12.128 | 26 | 32.43.15.14 | 63 |
 
-Por otro lado, Si la direccion de destino fuese __10.54.12.145__
+En cambio, Si la direccion de destino fuese __10.54.12.145__
 la mejor coincidencia seria la red __10.54.12.128/26__ ya que corresponden los primeros 26 bits, mientras que en los casos donde la mascara es mayor, algunos bits difieren.
