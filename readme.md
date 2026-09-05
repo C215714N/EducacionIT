@@ -24,6 +24,7 @@ Esto es una guia para los alumnos de la capacitacion de __Redes Linux__ que curs
     [TCP](./docs/tcp.md)
     * Capa de Internet
     [IP](./docs/ip.md)
+    [ICMP](./docs/icmp.md)
     * Capa de Acceso a la Red
     [ARP](./docs/arp.md)
     [ETHERNET](./docs/eth.md)
