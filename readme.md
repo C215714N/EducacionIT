@@ -28,3 +28,6 @@ Esto es una guia para los alumnos de la capacitacion __seguridad en redes: arqui
 	* [Particionado](./docs/fdisk.md)
 	* [Estructura de Arbol](./docs/fs.md)
 	* [Sistema de Archivos (Windows)](./docs/diskpart.md)
+* Analisis de Paquetes
+	* [Wireshark](./docs/wireshark.md)
+	* [Network Mapper](./docs/nmap.md)
