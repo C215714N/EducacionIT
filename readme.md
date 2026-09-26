@@ -35,3 +35,7 @@ Esto es una guia para los alumnos de la capacitacion __seguridad en redes: arqui
 	* [Usuarios y Grupos](./docs/users.md)
 	* [Mascara de Usuario](./docs/umask.md)
 	* [Configuracion de Servicios](./docs/config.md)
+* Seguridad Integral
+	* [VLANs](./docs/vlan.md)
+	* [OpenSSH](./docs/openssh.md)
+	* [OpenSSL](./docs/openssl.md)
