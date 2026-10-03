@@ -35,6 +35,10 @@ Esto es una guia para los alumnos de la capacitacion __seguridad en redes: arqui
 	* [Usuarios y Grupos](./docs/users.md)
 	* [Mascara de Usuario](./docs/umask.md)
 	* [Configuracion de Servicios](./docs/config.md)
+* Filtrado de Paquetes
+	* [IPTables](./docs/iptables.md)
+	* [Network Firewall](./docs/netshfw.md)
+	* [Cisco ASA](./docs/cisco-asa.md)
 * Seguridad Integral
 	* [VLANs](./docs/vlan.md)
 	* [OpenSSH](./docs/openssh.md)
