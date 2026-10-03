@@ -1,0 +1,13 @@
+BOOTPROTO=static
+IPADDR=192.168.0.10
+NETMASK=255.255.255.0
+GATEWAY=192.168.0.1
+DNS1=8.8.8.8
+DNS2=8.8.4.4
+ONBOOT=yes
+
+address 192.168.0.10
+netmask 255.255.255.0
+gateway 192.168.0.1
+dns-nameservers 8.8.8.8 8.8.4.4
+

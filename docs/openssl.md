@@ -1,9 +1,9 @@
-## OpenSSL 
+# OpenSSL 
 
 Biblioteca de código abierto que ofrece _herramientas y recursos_ para la __implementación de protocolos de seguridad criptográfica__. Desarrollada inicialmente para soportar __protocolos de seguridad SSL (Secure Sockets Layer)__, pero ha evolucionado para ser __compatible con TLS (Transport Layer Security)__, una versión más segura y moderna del protocolo. 
 Es ampliamente utilizada para asegurar comunicaciones a través de redes, como internet, _mediante el cifrado de datos y la autenticación de usuarios_; está escrita en C y es multiplataforma.
 
-### Características
+## Características
 
 * __Cifrado__: Soporta una amplia variedad de algoritmos de _cifrado simétrico (como AES, DES) y asimétrico (como RSA, DSA, ECDSA)_.
 * __Certificados__: Permite crear, firmar, y gestionar certificados X.509, que son fundamentales para la _autenticación en redes seguras_.
@@ -11,7 +11,7 @@ Es ampliamente utilizada para asegurar comunicaciones a través de redes, como i
 * __Herramienta CLI__: Potente herramienta de línea de comandos que facilita el uso de sus funcionalidades.
 * __Bibliotecas__: Ofrece funcionalidades de seguridad que los desarrolladores pueden integrar en aplicaciones.
 
-### Implementacion
+## Implementacion
 
 * __Seguridad__: Fundamental para configurar servidores web HTTPS, garantizando que las conexiones sean cifradas y seguras.
 * __Certificacion__: Permite la creacion de certificados autofirmados o firmados por una autoridad certificadora (CA).
@@ -20,14 +20,14 @@ Es ampliamente utilizada para asegurar comunicaciones a través de redes, como i
 * __Conexiones Seguras__: Permite crear túneles seguros entre dos puntos, protegiendo la comunicación en aplicaciones como VPNs.
 * __Desarrollo Seguro__: Ampliamente utilizado por desarrolladores para integrar funciones de cifrado, autenticación, y firma digital en sus aplicaciones.
 
-### Configuración
+## Configuración
 
 Se puede configurar OpenSSL para aplicaciones específicas, modificando el archivo de configuración `openssl.cnf` que se encuentra en la carpeta de instalación.
 
 * __Windows__: `C:\Program Files\OpenSSL\bin\`
 * __Linux__: `/etc/ssl/openssl.cnf` o `/usr/lib/ssl/openssl.cnf`
 
-### Ejemplos
+## Ejemplos
 
 * __[ca]__: Define la configuración por defecto para la autoridad certificadora
    ```ini
@@ -76,7 +76,7 @@ Se puede configurar OpenSSL para aplicaciones específicas, modificando el archi
    keyUsage                = critical, cRLSign, keyCertSign
    ```
 
-### Comandos
+## Comandos
 
 Puedes usar OpenSSL para diversas tareas, como generar certificados, claves, y realizar operaciones criptográficas.
 
