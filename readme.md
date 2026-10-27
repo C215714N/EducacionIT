@@ -9,3 +9,6 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
     * [RedHat](https://redhat.com)
     * [Kali](https://kali.org)
     * [CentOS](https://centos.org)
+* Analisis de Paquetes
+    * [NMap](https://nmap.org)
+    * [Wireshark](https://wireshark.org)
