@@ -47,3 +47,6 @@ Esto es una guia para los alumnos de la capacitacion __seguridad en redes: arqui
 	* [Diffie-Hellman](./docs/diffie-hellman.md)
 	* [WireGuard](./docs/wireguard.md)
 	* [VPN site to site](./docs/vpn-s2s.md)
+* Deteccion y Prevencion de Intrusiones
+	* [Snort](./docs/snort.md)
+	* [Suricata](./docs/suricata.md)
