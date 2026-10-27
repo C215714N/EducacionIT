@@ -1,0 +1,13 @@
+# Reglas locales de ejemplo para el servidor Debian.
+# Copiar a /etc/suricata/rules/local.rules y habilitar en rule-files.
+
+# Diez o mas SYN desde un mismo origen en 60 segundos al puerto SSH.
+# Detecta conexiones repetidas, no intentos de autenticacion dentro de SSH.
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22222 (msg:"LOCAL repeated SSH connection attempts"; flags:S; flow:stateless; threshold: type threshold, track by_src, count 10, seconds 60; classtype:attempted-recon; sid:1000001; rev:1;)
+
+# El metodo TRACE suele estar deshabilitado en servidores web.
+alert http $EXTERNAL_NET any -> $HOME_NET 80 (msg:"LOCAL Apache HTTP TRACE method"; flow:established,to_server; http.method; content:"TRACE"; nocase; classtype:web-application-attack; sid:1000002; rev:1;)
+
+# Detecta paquetes de inicio de handshake WireGuard (tipo 1, 148 bytes).
+# No confirma que el peer este autorizado ni que el handshake haya terminado.
+alert udp $EXTERNAL_NET any -> $HOME_NET 51820 (msg:"LOCAL WireGuard handshake initiation observed"; dsize:148; content:"|01 00 00 00|"; offset:0; depth:4; sid:1000003; rev:1;)

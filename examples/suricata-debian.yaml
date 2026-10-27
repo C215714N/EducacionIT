@@ -1,0 +1,17 @@
+# Fragmento para integrar en /etc/suricata/suricata.yaml.
+vars:
+  address-groups:
+    HOME_NET: "[192.168.0.1./24, 10.0.0.0/27]"
+    EXTERNAL_NET: "!$HOME_NET"
+
+  port-groups:
+    HTTP_PORTS: "[80]"
+    SSH_PORTS: "[22, 22222]"
+    TLS_PORTS: "[443]"
+    WIREGUARD_PORTS: "[51820]"
+
+af-packet:
+  - interface: enp0s3
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
