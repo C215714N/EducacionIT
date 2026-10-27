@@ -23,3 +23,7 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
 * [Seguridad Informatica](./docs/security.md)
     * [Pilares de Red](./docs/network_pillars.md)
     * [Seguridad en Redes](./docs/network_security.md)
+* Sistemas Operativos
+    * [Particionado](./docs/fdisk.md)
+    * [Estructura de Arbol](./docs/fs.md)
+    * [Sistema de Archivos (Windows)](./docs/diskpart.md)
