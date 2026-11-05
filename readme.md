@@ -30,3 +30,7 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
 * Analisis de Paquetes
     * [Wireshark](./docs/wireshark.md)
     * [Network Mapper](./docs/nmap.md)
+
+## Topologias
+* [Modelo Jerarquico](./examples/hierarchical-model.pkt)
+* [Protocolo Spanning-Tree](./examples/stp.pkt)
