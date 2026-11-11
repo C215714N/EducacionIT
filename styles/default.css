@@ -1,0 +1,11 @@
+#root{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,3rem), 1fr));
+    justify-content: start;
+    gap: .5rem;
+}
+.control{
+    border-radius: .25rem;
+    padding: .25rem;
+    text-transform: uppercase;
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "type":"GUA",
+        "start": "2000",
+        "end": "3FFF",
+        "prefix": 64
+    },
+    {
+        "type":"ULA",
+        "start": "FC00",
+        "end": "FDFF",
+        "prefix": 7
+    },
+    {
+        "type":"LLA",
+        "start": "FE80",
+        "end": "FEBF",
+        "prefix": 10
+    },
+    {
+        "type":"MA",
+        "start": "FF00",
+        "end": "FFFF",
+        "prefix": 8
+    }
+]
