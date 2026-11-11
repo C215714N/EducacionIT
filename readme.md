@@ -30,10 +30,13 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
 * Analisis de Paquetes
     * [Wireshark](./docs/wireshark.md)
     * [Network Mapper](./docs/nmap.md)
+* Configuracion y Acceso
+	* [Usuarios y Grupos](./docs/users.md)
+	* [Mascara de Usuario](./docs/umask.md)
+	* [Configuracion de Servicios](./docs/config.md)
 * Filtrado de Paquetes
     * [IP Tables](./docs/iptables.md)
     * [Network Firewall](./docs/netshfw.md)
-
 
 ## Topologias
 * [Modelo Jerarquico](./examples/hierarchical-model.pkt)
