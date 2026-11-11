@@ -37,6 +37,8 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
 * Filtrado de Paquetes
     * [IP Tables](./docs/iptables.md)
     * [Network Firewall](./docs/netshfw.md)
+* Seguridad Integral
+    * [OpenSSH](./docs/openssh.md)
 
 ## Topologias
 * [Modelo Jerarquico](./examples/hierarchical-model.pkt)
