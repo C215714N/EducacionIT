@@ -40,7 +40,9 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
 * Seguridad Integral
     * [VLANs](./docs/vlan.md)
     * [OpenSSH](./docs/openssh.md)
+    * [OpenSSL](./docs/openssl.md)
 
 ## Topologias
 * [Modelo Jerarquico](./examples/hierarchical-model.pkt)
 * [Protocolo Spanning-Tree](./examples/stp.pkt)
+* [Proteccion de la Topologia](./examples/network-security.pkt)
