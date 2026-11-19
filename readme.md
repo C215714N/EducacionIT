@@ -38,6 +38,7 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
     * [IP Tables](./docs/iptables.md)
     * [Network Firewall](./docs/netshfw.md)
 * Seguridad Integral
+    * [VLANs](./docs/vlan.md)
     * [OpenSSH](./docs/openssh.md)
 
 ## Topologias
