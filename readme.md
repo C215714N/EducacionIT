@@ -10,4 +10,11 @@ Esto es una guia para los alumnos de la capacitacion __seguridad en redes: arqui
 	* [Kali](https://kali.org)
 	* [CentOS](https://centos.org)
 * [Oracle VirtualBox](https://virtualbox.org/)
-
+* Analisis de Paquetes
+    * [NMap](https://nmap.org)
+    * [Wireshark](https://wireshark.org)
+* Simulacion de Topologias
+    * [Cisco Packet Tracer](https://www.netacad.com/resources/lab-downloads?courseLang=en-US)
+    * [Emulador GNS3](https://www.gns3.com/)
+        * [VM Server](https://www.gns3.com/software/download-vm)
+        * [Cisco IOS](https://github.com/hegdepavankumar/Cisco-Images-for-GNS3-and-EVE-NG)
