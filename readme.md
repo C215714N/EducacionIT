@@ -45,6 +45,9 @@ Esto es una guia para los alumnos de la capacitacion __Seguridad en redes: Arqui
     * [Diffie-Hellman](./docs/diffie-hellman.md)
     * [VPN Site-to-Site](./docs/vpn-s2s.md)
     * [WireGuard](./docs/wireguard.md)
+* Deteccion y Prevencion de Intrusiones
+    * [Snort](./docs/snort.md)
+    * [Suricata](./docs/suricata.md)
 
 ## Topologias
 * [Modelo Jerarquico](./examples/hierarchical-model.pkt)
